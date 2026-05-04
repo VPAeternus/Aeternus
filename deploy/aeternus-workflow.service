@@ -1,0 +1,21 @@
+[Unit]
+Description=Aeternus Workflow Loop Service
+Documentation=https://github.com/aeternus/tradingagents
+After=network.target
+
+[Service]
+Type=simple
+User=aeternus
+WorkingDirectory=/opt/aeternus
+EnvironmentFile=-/etc/aeternus/.env
+
+ExecStart=/usr/local/bin/aeternus workflow-loop
+
+Restart=on-failure
+RestartSec=10
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

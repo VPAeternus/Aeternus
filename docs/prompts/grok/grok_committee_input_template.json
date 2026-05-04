@@ -1,0 +1,28 @@
+{
+  "as_of_date": "YYYY-MM-DD",
+  "tickers": [
+    "TICKER1",
+    "TICKER2"
+  ],
+  "primary_question": "What should we do and why?",
+  "portfolio_context": {
+    "account_mode": "paper",
+    "cash_pct": null,
+    "drawdown_mode": false,
+    "current_positions": []
+  },
+  "baseline_scores": {},
+  "aeternus_packet": {
+    "per_ticker": {}
+  },
+  "x_feed_context": {
+    "summary": "",
+    "high_signal_posts": []
+  },
+  "web_search_allowed": true,
+  "constraints": {
+    "max_position_pct": 0.1,
+    "allow_new_positions": true
+  },
+  "known_gaps": []
+}

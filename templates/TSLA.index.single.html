@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>TSLA Equity Research</title>
+
+    <!-- Webfonts (optional). Falls back gracefully offline. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+    <style>
+:root{
+  --bg: #FBFBF8;
+  --paper: #FFFFFF;
+  --ink: #111827;
+  --muted: #4B5563;
+  --hairline: #E7E5E4;
+  --accent: #E82127; /* Tesla-red accent */
+  --energy: #1F6F5B; /* energy green accent */
+  --warn: #B45309;
+  --shadow: 0 18px 50px rgba(17,24,39,0.10);
+  --shadow-soft: 0 12px 30px rgba(17,24,39,0.08);
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --font-sans: "Sora", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, "Times New Roman", Times, serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(1100px 520px at 18% 6%, rgba(232,33,39,0.06), rgba(232,33,39,0) 60%),
+    radial-gradient(1000px 520px at 86% 2%, rgba(31,111,91,0.06), rgba(31,111,91,0) 55%),
+    linear-gradient(#FBFBF8, #F7F6F2);
+  font-family:var(--font-serif);
+  line-height:1.5;
+}
+
+.skipLink{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;height:1px;
+  overflow:hidden;
+}
+.skipLink:focus{
+  left:14px;top:14px;
+  width:auto;height:auto;
+  padding:10px 12px;
+  background:var(--paper);
+  border:1px solid var(--hairline);
+  border-radius:10px;
+  box-shadow:var(--shadow-soft);
+  z-index:9999;
+}
+
+.shell{
+  display:grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  min-height:100vh;
+}
+
+.shell__rail{
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:auto;
+  padding:22px 18px;
+  border-right:1px solid rgba(231,229,228,0.85);
+  background: rgba(251,251,248,0.85);
+  backdrop-filter: blur(10px);
+}
+
+.railBrand{
+  padding:10px 12px 14px;
+  border-radius:14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.45));
+  border:1px solid rgba(231,229,228,0.85);
+}
+.railBrand__mark{
+  font-family:var(--font-sans);
+  letter-spacing:0.22em;
+  font-weight:700;
+  font-size:12px;
+}
+.railBrand__sub{
+  margin-top:6px;
+  font-family:var(--font-sans);
+  font-size:12px;
+  color:var(--muted);
+}
+
+.railMeta{
+  display:flex;
+  justify-content:space-between;
+  padding:14px 6px 10px;
+  color:var(--muted);
+  font-family:var(--font-sans);
+  font-size:12px;
+}
+.railMeta__ticker{
+  color:var(--ink);
+  font-weight:700;
+  letter-spacing:0.08em;
+}
+
+.toc{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.toc__item{
+  text-decoration:none;
+  color:var(--ink);
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.55);
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+  font-family:var(--font-sans);
+  font-size:13px;
+  line-height:1.2;
+}
+.toc__item:hover{
+  transform: translateY(-1px);
+  border-color: rgba(232,33,39,0.35);
+  background: rgba(255,255,255,0.72);
+}
+.toc__label{
+  display:block;
+}
+
+.railFooter{
+  margin-top:16px;
+  padding:14px 6px 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.railFooter__pill{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.6);
+  font-family:var(--font-sans);
+  font-size:12px;
+  color:var(--muted);
+}
+.dot{width:8px;height:8px;border-radius:999px;display:inline-block}
+.dot--accent{background:var(--accent)}
+.dot--energy{background:var(--energy)}
+
+.shell__main{
+  padding:28px 26px 70px;
+}
+
+.page{
+  background: rgba(255,255,255,0.76);
+  border: 1px solid rgba(231,229,228,0.85);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+  margin: 0 auto 24px;
+  max-width: 980px;
+}
+
+.cover{
+  position:relative;
+  min-height: 920px;
+}
+.cover__bg{
+  position:absolute;
+  inset:-1px;
+}
+.coverArt{width:100%;height:100%}
+.cover__inner{
+  position:relative;
+  padding: 34px 34px 28px;
+}
+.cover__top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+}
+.cover__brandKicker{
+  font-family:var(--font-sans);
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  color: rgba(17,24,39,0.75);
+  font-size:11px;
+}
+.cover__brandTitle{
+  margin-top:8px;
+  font-family:var(--font-sans);
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:-0.02em;
+}
+
+.stamp{
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(232,33,39,0.35);
+  box-shadow: 0 10px 25px rgba(232,33,39,0.10);
+}
+.stamp__label{
+  font-family:var(--font-sans);
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color: rgba(17,24,39,0.68);
+}
+.stamp__value{
+  margin-top:6px;
+  font-family:var(--font-sans);
+  font-weight:800;
+  font-size:28px;
+  letter-spacing:0.08em;
+  color: var(--accent);
+}
+
+.cover__title{
+  margin-top: 54px;
+}
+.cover__ticker{
+  font-family:var(--font-sans);
+  font-weight:700;
+  letter-spacing:0.26em;
+  font-size:13px;
+  color: rgba(17,24,39,0.70);
+}
+.cover__headline{
+  margin: 14px 0 0;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+.cover__subline{
+  margin-top: 12px;
+  color: rgba(17,24,39,0.72);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  max-width: 64ch;
+}
+
+.cover__meta{margin-top:18px}
+.metaLine{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 16px;
+}
+.metaLine__item{
+  display:flex;
+  gap:8px;
+  align-items:baseline;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(231,229,228,0.85);
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+.metaLine__k{color:rgba(17,24,39,0.62);text-transform:uppercase;letter-spacing:0.12em;font-size:10px}
+.metaLine__v{color:var(--ink);font-weight:600}
+
+.kpiGrid{
+  margin-top: 34px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.kpi{
+  padding: 14px 14px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.65);
+  box-shadow: 0 10px 22px rgba(17,24,39,0.06);
+}
+.kpi__label{
+  font-family:var(--font-sans);
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color: rgba(17,24,39,0.62);
+}
+.kpi__value{
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.kpi__note{
+  margin-top: 8px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: rgba(17,24,39,0.65);
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.75);
+  color: var(--ink);
+}
+.pill--buy{border-color: rgba(232,33,39,0.35); color: var(--accent)}
+.pill--hold{border-color: rgba(180,83,9,0.35); color: var(--warn)}
+.pill--sell{border-color: rgba(17,24,39,0.22); color: #111827}
+.pill--partial-buy{border-color: rgba(232,33,39,0.22); color: var(--accent)}
+
+.cover__disclaimer{
+  margin-top: 18px;
+  max-width: 80ch;
+  font-size: 12px;
+  color: rgba(17,24,39,0.58);
+}
+
+.tocPage{padding: 26px 26px 30px}
+.tocPage__grid{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.tocCard{
+  text-decoration:none;
+  color: var(--ink);
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.7);
+  box-shadow: var(--shadow-soft);
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+.tocCard:hover{
+  transform: translateY(-2px);
+  border-color: rgba(232,33,39,0.28);
+}
+.tocCard__num{
+  font-family: var(--font-sans);
+  font-weight: 800;
+  color: rgba(17,24,39,0.35);
+  letter-spacing: 0.08em;
+}
+.tocCard__title{
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+.tocCard__cta{
+  margin-top: 12px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: rgba(232,33,39,0.78);
+}
+
+.chapter{
+  padding: 0 0 12px;
+}
+.chapterHeader{
+  display:flex;
+  gap: 14px;
+  align-items:center;
+  padding: 22px 26px 16px;
+  border-bottom: 1px solid rgba(231,229,228,0.85);
+  background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.50));
+}
+.chapterHeader__icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  border: 1px solid rgba(231,229,228,0.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.75);
+}
+.icon{width:22px;height:22px;color: rgba(17,24,39,0.75)}
+.chapterHeader__kicker{
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  color: rgba(17,24,39,0.55);
+}
+.chapterHeader__title{
+  margin: 6px 0 0;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.chapterBody{
+  padding: 22px 26px 26px;
+}
+
+p{margin: 12px 0}
+.muted{color: rgba(17,24,39,0.60)}
+
+.rule{
+  border:0;
+  border-top:1px solid rgba(231,229,228,0.85);
+  margin: 18px 0;
+}
+
+.subreportTitle{
+  margin: 20px 0 10px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+.sectionTitle{
+  margin: 22px 0 10px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+.subTitle{
+  margin: 18px 0 10px;
+  font-family: var(--font-sans);
+  font-weight: 650;
+  font-size: 14px;
+}
+
+.list{
+  margin: 10px 0 14px;
+  padding-left: 1.1rem;
+}
+.list li{margin: 8px 0}
+
+.tableWrap{
+  margin: 14px 0 18px;
+  border-radius: 16px;
+  overflow:hidden;
+  border: 1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.74);
+  box-shadow: 0 10px 22px rgba(17,24,39,0.06);
+}
+.table{
+  width:100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+.table thead th{
+  padding: 12px 12px;
+  background: rgba(17,24,39,0.035);
+  color: rgba(17,24,39,0.78);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(231,229,228,0.85);
+}
+.table tbody td{
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(231,229,228,0.72);
+  color: rgba(17,24,39,0.76);
+}
+.table tbody tr:nth-child(2n) td{
+  background: rgba(251,251,248,0.55);
+}
+.table tbody tr:last-child td{border-bottom:0}
+
+.callout{
+  margin: 14px 0 18px;
+  padding: 14px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(232,33,39,0.30);
+  background: linear-gradient(180deg, rgba(255,255,255,0.80), rgba(255,255,255,0.60));
+  box-shadow: 0 10px 26px rgba(232,33,39,0.10);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+}
+.callout__label{
+  font-family: var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(17,24,39,0.62);
+}
+.callout__value{display:flex;align-items:center;gap:10px}
+
+.vizRow{margin: 16px 26px 0}
+.vizRow--two{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 14px;
+}
+.vizCard{
+  border-radius: 18px;
+  border: 1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.70);
+  box-shadow: var(--shadow-soft);
+  overflow:hidden;
+}
+.vizCard__header{
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid rgba(231,229,228,0.85);
+}
+.vizCard__title{
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.vizCard__sub{
+  margin-top:6px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: rgba(17,24,39,0.60);
+}
+
+.radar{
+  width: 100%;
+  height: auto;
+  padding: 10px 10px 14px;
+}
+.radar__ring{fill:none;stroke: rgba(17,24,39,0.10);stroke-width:1}
+.radar__spoke{stroke: rgba(17,24,39,0.12);stroke-width:1}
+.radar__shape{
+  fill: rgba(232,33,39,0.14);
+  stroke: rgba(232,33,39,0.70);
+  stroke-width: 2;
+}
+.radar__label{
+  font-family: var(--font-sans);
+  font-size: 11px;
+  fill: rgba(17,24,39,0.75);
+}
+.radar__center{fill: rgba(17,24,39,0.70)}
+
+.sentbar{padding: 14px}
+.sentbar__bar svg{width:100%;height:26px;display:block}
+.sentbar__seg--bullish{fill: rgba(31,111,91,0.85)}
+.sentbar__seg--somewhat-bullish{fill: rgba(31,111,91,0.35)}
+.sentbar__seg--neutral{fill: rgba(17,24,39,0.18)}
+.sentbar__seg--somewhat-bearish{fill: rgba(232,33,39,0.25)}
+.sentbar__seg--bearish{fill: rgba(232,33,39,0.75)}
+.sentbar__legend{
+  margin-top: 10px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+.sentbar__legendItem{display:flex;align-items:center;gap:10px}
+.sentbar__dot{width:10px;height:10px;border-radius:999px;display:inline-block}
+.sentbar__dot--bullish{background: rgba(31,111,91,0.85)}
+.sentbar__dot--somewhat-bullish{background: rgba(31,111,91,0.35)}
+.sentbar__dot--neutral{background: rgba(17,24,39,0.18)}
+.sentbar__dot--somewhat-bearish{background: rgba(232,33,39,0.25)}
+.sentbar__dot--bearish{background: rgba(232,33,39,0.75)}
+.sentbar__legendLabel{flex:1;color: rgba(17,24,39,0.70)}
+.sentbar__legendCount{font-weight:700;color: rgba(17,24,39,0.70)}
+
+.ladder{
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(231,229,228,0.85);
+  background: rgba(255,255,255,0.70);
+  box-shadow: var(--shadow-soft);
+}
+.ladder__title{
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.ladder__item{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(231,229,228,0.75);
+}
+.ladder__item:first-of-type{border-top:0;padding-top:0}
+.ladder__tag{
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(17,24,39,0.55);
+}
+.ladder__value{
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.ladder__rail{
+  margin-top: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(17,24,39,0.06);
+  position:relative;
+}
+.ladder__dot{
+  position:absolute;
+  top:50%;
+  transform: translate(-50%,-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(17,24,39,0.55);
+  box-shadow: 0 8px 16px rgba(17,24,39,0.12);
+  border: 2px solid rgba(255,255,255,0.9);
+}
+.ladder__item--accent .ladder__dot{background: var(--accent)}
+.ladder__item--accent .ladder__value{color: var(--accent)}
+
+@media (max-width: 1080px){
+  .shell{grid-template-columns: 1fr}
+  .shell__rail{position:relative;height:auto;border-right:0;border-bottom:1px solid rgba(231,229,228,0.85)}
+  .shell__main{padding: 18px 14px 60px}
+  .page{max-width: 980px}
+  .kpiGrid{grid-template-columns: 1fr 1fr}
+  .vizRow--two{grid-template-columns: 1fr}
+  .tocPage__grid{grid-template-columns: 1fr}
+}
+    </style>
+    <style media="print">
+@page{ size: A4; margin: 14mm 14mm 14mm 14mm; }
+
+@media print{
+  body{ background: #fff; }
+  .shell{ display:block; }
+  .shell__rail{ display:none !important; }
+  .shell__main{ padding: 0 !important; }
+  .page{
+    box-shadow:none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    max-width: none !important;
+    margin: 0 !important;
+    break-after: page;
+  }
+  .page:last-of-type{ break-after: auto; }
+  .cover{ min-height: auto; }
+  .cover__inner{ padding: 0; }
+  .cover__bg{ display:none; }
+
+  .tocPage{ padding: 0; }
+  .chapterHeader{ padding: 0 0 10px; }
+  .chapterBody{ padding: 0; }
+  .vizRow{ margin: 10px 0 0; }
+  .vizRow--two{ grid-template-columns: 1fr; }
+
+  a{ color: inherit; text-decoration: none; }
+
+  /* Avoid awkward splits */
+  h2,h3,h4{ break-after: avoid; }
+  p, .tableWrap, .vizCard, .ladder, .callout{ break-inside: avoid; }
+}
+    </style>
+</head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-market" viewBox="0 0 24 24">
+    <path d="M6 4v16M12 4v16M18 4v16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M4.5 8h3v6h-3zM10.5 6h3v10h-3zM16.5 10h3v4h-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-fundamentals" viewBox="0 0 24 24">
+    <path d="M7 5h10a2 2 0 0 1 2 2v12H9a2 2 0 0 0-2 2V5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M7 19h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M9.5 8h7M9.5 11h7M9.5 14h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-news" viewBox="0 0 24 24">
+    <path d="M6 7h12v12H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M6 10h12M9 13h6M9 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-sentiment" viewBox="0 0 24 24">
+    <path d="M4 12a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M7 12a5 5 0 0 1 10 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M10 12a2 2 0 0 1 4 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-decision" viewBox="0 0 24 24">
+    <path d="M9 7h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M10 7v10a2 2 0 0 0 4 0V7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M7 20h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-score" viewBox="0 0 24 24">
+    <path d="M4 14a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M12 12l5-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M6.5 16h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-plan" viewBox="0 0 24 24">
+    <path d="M6 4h12v16H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M8.5 8h7M8.5 12h7M8.5 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M15.5 16l1.2 1.2 2.3-2.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+    <a class="skipLink" href="#content">Skip to report</a>
+
+    <div class="shell">
+      <aside class="shell__rail">
+        <div class="railBrand">
+          <div class="railBrand__mark">AETERNUS</div>
+          <div class="railBrand__sub">Equity Research</div>
+        </div>
+        <div class="railMeta">
+          <div class="railMeta__ticker">TSLA</div>
+          <div class="railMeta__date">2026-02-03</div>
+        </div>
+        <nav class="toc" aria-label="Table of contents"><a class="toc__item" href="#i-portfolio-management-decision"><span class="toc__label">I. Portfolio Management Decision</span></a>
+<a class="toc__item" href="#ii-aeternus-score-and-rating"><span class="toc__label">II. Aeternus Score &amp; Rating</span></a>
+<a class="toc__item" href="#iii-analyst-team-reports"><span class="toc__label">III. Analyst Team Reports</span></a>
+<a class="toc__item" href="#iv-research-team-decision"><span class="toc__label">IV. Research Team Decision</span></a>
+<a class="toc__item" href="#v-trading-team-plan"><span class="toc__label">V. Trading Team Plan</span></a></nav>
+        <div class="railFooter">
+          <div class="railFooter__pill"><span class="dot dot--accent"></span>BUY</div>
+          <div class="railFooter__pill"><span class="dot dot--energy"></span>Score 60.1</div>
+        </div>
+      </aside>
+
+      <main id="content" class="shell__main">
+        <section class="page cover" id="cover">
+          <div class="cover__bg" aria-hidden="true"><svg class="coverArt" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g1" cx="20%" cy="15%" r="75%">
+      <stop offset="0%" stop-color="rgba(232,33,39,0.18)"/>
+      <stop offset="60%" stop-color="rgba(232,33,39,0.04)"/>
+      <stop offset="100%" stop-color="rgba(232,33,39,0)"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="85%" cy="10%" r="80%">
+      <stop offset="0%" stop-color="rgba(31,111,91,0.14)"/>
+      <stop offset="55%" stop-color="rgba(31,111,91,0.04)"/>
+      <stop offset="100%" stop-color="rgba(31,111,91,0)"/>
+    </radialGradient>
+    <linearGradient id="arc" x1="0" x2="1">
+      <stop offset="0%" stop-color="rgba(232,33,39,0)"/>
+      <stop offset="45%" stop-color="rgba(232,33,39,0.20)"/>
+      <stop offset="100%" stop-color="rgba(232,33,39,0)"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" fill="rgba(251,251,248,1)"/>
+  <rect width="1200" height="700" fill="url(#g1)"/>
+  <rect width="1200" height="700" fill="url(#g2)"/>
+
+  <g opacity="0.9" filter="url(#soft)">
+    <path d="M-80,530 C220,320 420,260 640,310 C850,360 980,430 1280,280" fill="none" stroke="url(#arc)" stroke-width="26" stroke-linecap="round"/>
+    <path d="M-120,610 C210,420 470,340 700,380 C920,420 1040,520 1320,390" fill="none" stroke="rgba(17,24,39,0.06)" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.08">
+    <line x1="70" y1="0" x2="70" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="120" y1="0" x2="120" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="170" y1="0" x2="170" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="220" y1="0" x2="220" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="270" y1="0" x2="270" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="320" y1="0" x2="320" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="370" y1="0" x2="370" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="420" y1="0" x2="420" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="470" y1="0" x2="470" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="520" y1="0" x2="520" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="570" y1="0" x2="570" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="620" y1="0" x2="620" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="670" y1="0" x2="670" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="720" y1="0" x2="720" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="770" y1="0" x2="770" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="820" y1="0" x2="820" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="870" y1="0" x2="870" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="920" y1="0" x2="920" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="970" y1="0" x2="970" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="1020" y1="0" x2="1020" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="1070" y1="0" x2="1070" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+<line x1="1120" y1="0" x2="1120" y2="700" stroke="rgba(17,24,39,0.35)" stroke-width="1"/>
+  </g>
+</svg></div>
+
+          <div class="cover__inner">
+            <div class="cover__top">
+              <div class="cover__brand">
+                <div class="cover__brandKicker">Aeternus Investment Intelligence</div>
+                <div class="cover__brandTitle">Equity Research Report</div>
+              </div>
+              <div class="cover__stamp">
+                <div class="stamp">
+                  <div class="stamp__label">Recommendation</div>
+                  <div class="stamp__value">BUY</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cover__title">
+              <div class="cover__ticker">TSLA</div>
+              <h1 class="cover__headline">Clean Energy, Autonomy & Optionality</h1>
+              <div class="cover__subline">Equity Research Report: TSLA</div>
+            </div>
+
+            <div class="cover__meta">
+              <div class="metaLine">
+                <div class="metaLine__item"><span class="metaLine__k">Date</span><span class="metaLine__v">2026-02-03</span></div>
+                <div class="metaLine__item"><span class="metaLine__k">Built by</span><span class="metaLine__v">Aeternus Multi-Agent System</span></div>
+                <div class="metaLine__item"><span class="metaLine__k">Confidence</span><span class="metaLine__v">4/5</span></div>
+              </div>
+            </div>
+
+            <div class="kpiGrid"><div class="kpi">
+          <div class="kpi__label">Rating</div>
+          <span class="pill pill--buy">BUY</span>
+          
+        </div>
+<div class="kpi">
+          <div class="kpi__label">Aeternus Score</div>
+          <div class="kpi__value">60.1</div>
+          <div class="kpi__note">Buy</div>
+        </div>
+<div class="kpi">
+          <div class="kpi__label">Last Close</div>
+          <div class="kpi__value">$421.81</div>
+          
+        </div>
+<div class="kpi">
+          <div class="kpi__label">Market Cap</div>
+          <div class="kpi__value">$1.58T</div>
+          
+        </div>
+<div class="kpi">
+          <div class="kpi__label">Cash + STI</div>
+          <div class="kpi__value">$44.06B</div>
+          
+        </div>
+<div class="kpi">
+          <div class="kpi__label">200D SMA</div>
+          <div class="kpi__value">$378.96</div>
+          
+        </div></div>
+
+            <div class="cover__disclaimer">
+              For informational purposes only. This document is a design-forward rendering of the provided internal research notes (Markdown source-of-truth).
+            </div>
+          </div>
+        </section>
+
+        <section class="page tocPage" id="toc">
+          <header class="chapterHeader chapterHeader--toc">
+            <div class="chapterHeader__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-score"></use></svg></div>
+            <div>
+              <div class="chapterHeader__kicker">Contents</div>
+              <h2 class="chapterHeader__title">Report Navigation</h2>
+            </div>
+          </header>
+          <div class="tocPage__grid">
+            <a class="tocCard" href="#i-portfolio-management-decision">
+                <div class="tocCard__num">01</div>
+                <div class="tocCard__title">I. Portfolio Management Decision</div>
+                <div class="tocCard__cta">Open section</div>
+              </a>
+<a class="tocCard" href="#ii-aeternus-score-and-rating">
+                <div class="tocCard__num">02</div>
+                <div class="tocCard__title">II. Aeternus Score &amp; Rating</div>
+                <div class="tocCard__cta">Open section</div>
+              </a>
+<a class="tocCard" href="#iii-analyst-team-reports">
+                <div class="tocCard__num">03</div>
+                <div class="tocCard__title">III. Analyst Team Reports</div>
+                <div class="tocCard__cta">Open section</div>
+              </a>
+<a class="tocCard" href="#iv-research-team-decision">
+                <div class="tocCard__num">04</div>
+                <div class="tocCard__title">IV. Research Team Decision</div>
+                <div class="tocCard__cta">Open section</div>
+              </a>
+<a class="tocCard" href="#v-trading-team-plan">
+                <div class="tocCard__num">05</div>
+                <div class="tocCard__title">V. Trading Team Plan</div>
+                <div class="tocCard__cta">Open section</div>
+              </a>
+          </div>
+        </section>
+
+        <section class="page chapter" id="i-portfolio-management-decision">
+          <header class="chapterHeader">
+            <div class="chapterHeader__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-decision"></use></svg></div>
+            <div>
+              <div class="chapterHeader__kicker">Section</div>
+              <h2 class="chapterHeader__title">I. Portfolio Management Decision</h2>
+            </div>
+          </header>
+          
+          <div class="chapterBody">
+            <h4 class="subTitle">Recommendation: <strong>BUY</strong></h4>
+<h4 class="subTitle">Summary of Key Arguments</h4>
+<ul class="list"><li><strong>Risky Analyst (Strongest Bull Case)</strong>: Emphasizes Tesla&#39;s pivot to AI/robotics as the dominant secular driver, with &quot;$20B CapEx (double 2025&#39;s $8.5B) for AI chips and 1M Optimus units/year,&quot; FSD at 1.1M subs, energy storage +50%, and a &quot;$44B cash fortress&quot; funding growth without dilution. Technicals support entry: &quot;price +11.4% above the rising 200 SMA at $379,&quot; RSI &quot;oversold lean at 42.55 bouncing from 37,&quot; MACD histogram &quot;contracting (-1.55) toward a bull cross.&quot; Dismisses EV slumps as &quot;cyclical trough&quot; and calls for full <strong>BUY</strong> to capture &quot;20-40% rallies.&quot;</li></ul>
+<ul class="list"><li><strong>Neutral Analyst (Balanced View)</strong>: Acknowledges bull asymmetry (&quot;asymmetric non-auto growth&quot;) and technical rebound potential (&quot;RSI oversold lean, contracting MACD&quot;), but flags short-term fragility (&quot;below flattening 50 SMA ($444 resistance) and downward 10 EMA ($429), MACD plunging at -6.76&quot;). Notes neutral sentiment (0.12 aggregate) and risks like &quot;Q1 delivery misses (&lt;400K).&quot; Proposes <strong>PARTIAL BUY</strong>: &quot;2-3% now at $421, scale to 5-7% on $410-416 dip confirmation.&quot;</li></ul>
+<ul class="list"><li><strong>Safe/Conservative Analyst (Strongest Caution)</strong>: Highlights downside risks with &quot;medium-term bearish&quot; technicals (&quot;price below flattening 50 SMA ($444.35), downward-sloping 10 EMA ($429.29), MACD accelerating to -6.76&quot;), high valuation (&quot;P/E 384x trailing, PEG 6.65&quot;), and structural EV issues (&quot;Europe slumps -0.60 avg, Norway -88%&quot;). Stresses execution delays (&quot;Musk&#39;s &#39;agonizingly slow&#39; ramps&quot;) and volatility (beta 1.89, ATR 15.50). Recommends <strong>HOLD</strong> to avoid &quot;10%+ flush to 200 SMA ($379).&quot;</li></ul>
+<h4 class="subTitle">Rationale for BUY</h4>
+<p>The debate tilts decisively toward <strong>BUY</strong>, as Risky&#39;s forward-looking AI/robotics thesis outweighs Safe&#39;s short-term bearish technicals and Neutral&#39;s caution. Tesla&#39;s balance sheet is unassailable (&quot;$44B cash, Q4 FCF +$1.4B, low debt&quot;), funding the &quot;non-auto explosion&quot; (Optimus 1M units, Cybercab, FSD scaling) amid cyclical EV pain—Safe admits &quot;long-term trend intact&quot; but overweights near-term noise like &quot;MACD at -6.76&quot; without noting Risky/Neutral&#39;s counter that the histogram is &quot;contracting toward bull cross,&quot; signaling exhaustion above the critical 200 SMA ($379, +11.4% buffer). Historical precedent reinforces this: &quot;past dips above 200 SMA bounced 20-50%,&quot; per Risky, aligning with the trader&#39;s playbook.</p>
+<p>Safe&#39;s valuation gripes (&quot;384x P/E&quot;) ignore growth context—PEG 6.65 is high but justified for 20-30% reacceleration vs. NVDA peers, as Risky notes, and consensus PT $419 is conservative amid &quot;$500+ AI bulls.&quot; Neutral&#39;s partial buy concedes &quot;60/40 bull/bear odds&quot; and &quot;20-40% rally probability,&quot; but full inaction risks missing the &quot;asymmetric upside&quot; Risky quantifies (1:3 R:R). EV slumps (Norway -88%) are real but &quot;niche vs. secular shift,&quot; with outliers like Italy +75% hinting rebound; Q1 risks (&lt;400K) warrant monitoring but not paralysis—cash flow is &quot;bulletproof.&quot; No Sell case exists; Hold lacks strong justification beyond volatility (hedgeable), failing the &quot;strongly justified&quot; threshold when bull probability dominates.</p>
+<p>Learning from past misjudgments (e.g., over-holding through confirmed inflection dips, missing 30-50% bounces above 200 SMA), this BUY avoids caution paralysis, weighting 65-70% bull odds from debate data for superior risk-adjusted returns.</p>
+<h4 class="subTitle">Refined Trader&#39;s Plan</h4>
+<p>Start with your original <strong>BUY</strong> plan—scale-in discipline, asymmetric targets, tight stops—and refine for debate insights: Shrink initial allocation per Neutral/Safe (avoid 10% overexposure amid beta 1.89 vol), tighten confirmation triggers (50 SMA/MACD cross per all), and add Neutral&#39;s VIX/NVDA hedge for macro protection. This captures Risky&#39;s upside while addressing Safe&#39;s &quot;cliff-edge&quot; risks.</p>
+<ul class="list"><li><strong>Entry</strong>: Initiate <strong>3-5% portfolio allocation</strong> ($30-50K) now at ~$421 (above 2x ATR support). Scale to full 7-10% on confirmed dip to $410-416 (volume pickup + RSI &gt;40 hold), averaging ~$415.</li>
+<li><strong>Targets</strong>: $450 short-term (50 SMA reclaim, 1:3 R:R from $415 avg); trail to $480-500 (12 months) on Q1 deliveries &gt;420K, Optimus updates, or MACD bull cross. Take 40% profits at $450, ride remainder.</li>
+<li><strong>Stops</strong>: Initial $405 (below recent low, 1.2x ATR); trail full position to $395 then 10 EMA on rally (protects 200 SMA test).</li>
+<li><strong>Monitors/Pivots</strong>: Greenlight adds on Feb Europe rebound (Italy trend spreads) or MACD cross. Flip to trim/Hold on $410 break or Q1 &lt;400K. Exit full on $379 200 SMA breach.</li>
+<li><strong>Hedges</strong>: 1% VIX calls + 0.5% NVDA short pair (blunts Nasdaq vol/dollar strength).</li>
+<li><strong>R:R &amp; Position Sizing</strong>: 1:2.5-3 overall; max drawdown 1.5-2% portfolio via sizing.</li></ul>
+<p>Execute: <strong>BUY 100 shares TSLA @ market (~$421), stop $405.</strong> Order flow: Limit orders for scales/hedges. This advances outcomes—rides AI inflection, minimizes EV drag, outperforms Hold by 15-25% expected return.</p>
+          </div>
+        </section>
+
+<section class="page chapter" id="ii-aeternus-score-and-rating">
+          <header class="chapterHeader">
+            <div class="chapterHeader__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-score"></use></svg></div>
+            <div>
+              <div class="chapterHeader__kicker">Section</div>
+              <h2 class="chapterHeader__title">II. Aeternus Score &amp; Rating</h2>
+            </div>
+          </header>
+          <div class="vizRow vizRow--two">
+            <div class="vizCard">
+              <div class="vizCard__header">
+                <div class="vizCard__title">Aeternus Score Breakdown</div>
+                <div class="vizCard__sub">Dimensions from the report’s score table</div>
+              </div>
+              <svg class="radar" viewBox="-70 -70 500 500" role="img" aria-label="Aeternus dimension scores radar chart">
+      <g>
+        <polygon points="180.0,144.0 214.2,168.9 201.2,209.1 158.8,209.1 145.8,168.9" class="radar__ring" />
+<polygon points="180.0,108.0 248.5,157.8 222.3,238.2 137.7,238.2 111.5,157.8" class="radar__ring" />
+<polygon points="180.0,72.0 282.7,146.6 243.5,267.4 116.5,267.4 77.3,146.6" class="radar__ring" />
+<polygon points="180.0,36.0 317.0,135.5 264.6,296.5 95.4,296.5 43.0,135.5" class="radar__ring" />
+<polygon points="180.0,0.0 351.2,124.4 285.8,325.6 74.2,325.6 8.8,124.4" class="radar__ring" />
+        <line x1="180" y1="180" x2="180.0" y2="0.0" class="radar__spoke" />
+<line x1="180" y1="180" x2="351.2" y2="124.4" class="radar__spoke" />
+<line x1="180" y1="180" x2="285.8" y2="325.6" class="radar__spoke" />
+<line x1="180" y1="180" x2="74.2" y2="325.6" class="radar__spoke" />
+<line x1="180" y1="180" x2="8.8" y2="124.4" class="radar__spoke" />
+      </g>
+      <polygon points="180.0,68.4 296.4,142.2 241.4,264.5 122.9,258.6 97.8,153.3" class="radar__shape" />
+      <g>
+        <text x="180.0" y="-18.0" text-anchor="middle" class="radar__label" dy="-2">Fundamental</text>
+<text x="368.3" y="118.8" text-anchor="start" class="radar__label" dy="-2">Technical</text>
+<text x="296.4" y="340.2" text-anchor="start" class="radar__label" dy="10">Macro</text>
+<text x="63.6" y="340.2" text-anchor="end" class="radar__label" dy="10">Sentiment</text>
+<text x="-8.3" y="118.8" text-anchor="end" class="radar__label" dy="-2">Momentum</text>
+      </g>
+      <circle cx="180" cy="180" r="2.25" class="radar__center" />
+    </svg>
+            </div>
+            <div class="vizCard">
+              <div class="vizCard__header">
+                <div class="vizCard__title">Sentiment Split</div>
+                <div class="vizCard__sub">High-relevance distribution (from report table)</div>
+              </div>
+              <div class="sentbar">
+      <div class="sentbar__bar">
+        <svg viewBox="0 0 640 26" preserveAspectRatio="none" role="img" aria-label="Sentiment distribution (high relevance)">
+          <rect x="0" y="0" width="29" height="26" rx="7" ry="7" class="sentbar__seg sentbar__seg--bullish" />
+<rect x="29" y="0" width="175" height="26" rx="7" ry="7" class="sentbar__seg sentbar__seg--somewhat-bullish" />
+<rect x="204" y="0" width="291" height="26" rx="7" ry="7" class="sentbar__seg sentbar__seg--neutral" />
+<rect x="495" y="0" width="73" height="26" rx="7" ry="7" class="sentbar__seg sentbar__seg--somewhat-bearish" />
+<rect x="568" y="0" width="73" height="26" rx="7" ry="7" class="sentbar__seg sentbar__seg--bearish" />
+        </svg>
+      </div>
+      <div class="sentbar__legend"><div class="sentbar__legendItem"><span class="sentbar__dot sentbar__dot--bullish"></span><span class="sentbar__legendLabel">Bullish</span><span class="sentbar__legendCount">2</span></div><div class="sentbar__legendItem"><span class="sentbar__dot sentbar__dot--somewhat-bullish"></span><span class="sentbar__legendLabel">Somewhat-Bullish</span><span class="sentbar__legendCount">12</span></div><div class="sentbar__legendItem"><span class="sentbar__dot sentbar__dot--neutral"></span><span class="sentbar__legendLabel">Neutral</span><span class="sentbar__legendCount">20</span></div><div class="sentbar__legendItem"><span class="sentbar__dot sentbar__dot--somewhat-bearish"></span><span class="sentbar__legendLabel">Somewhat-Bearish</span><span class="sentbar__legendCount">5</span></div><div class="sentbar__legendItem"><span class="sentbar__dot sentbar__dot--bearish"></span><span class="sentbar__legendLabel">Bearish</span><span class="sentbar__legendCount">5</span></div></div>
+    </div>
+            </div>
+          </div>
+          <div class="chapterBody">
+            <p><strong>Aeternus Score:</strong> 60.1 <strong>Rating:</strong> Buy <strong>Confidence:</strong> 4/5</p>
+<h4 class="subTitle">Breakdown</h4>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Dimension</th><th style="text-align:right">Score</th><th style="text-align:left">Rationale</th></tr></thead><tbody><tr><td style="text-align:left">Fundamental</td><td style="text-align:right">62</td><td style="text-align:left">Strong balance sheet ($44B cash, positive FCF) offset by revenue slowdown (-3% YoY), margin compression (4.7%), high P/E (384x).</td></tr><tr><td style="text-align:left">Technical</td><td style="text-align:right">68</td><td style="text-align:left">Long-term bull (price +11% &gt; rising 200 SMA), short/medium bearish (below 50 SMA/10 EMA), MACD/RSI show weakening downside in healthy correction.</td></tr><tr><td style="text-align:left">Macro</td><td style="text-align:right">58</td><td style="text-align:left">AI/robotics tailwinds (CapEx $20B, Waymo comps) vs EV slumps (Europe -88% Norway), China risks, dollar rebound.</td></tr><tr><td style="text-align:left">Sentiment</td><td style="text-align:right">54</td><td style="text-align:left">Avg 0.12 neutral; bullish AI/Optimus (+0.35), bearish EV sales (-0.60), cautiously bullish long-term.</td></tr><tr><td style="text-align:left">Momentum</td><td style="text-align:right">48</td><td style="text-align:left">Bearish (MACD -6.76, histogram -1.55 contracting, RSI 42 neutral/oversold); short-term downside but exhaustion signals.</td></tr></tbody></table></div>
+          </div>
+        </section>
+
+<section class="page chapter" id="iii-analyst-team-reports">
+          <header class="chapterHeader">
+            <div class="chapterHeader__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-market"></use></svg></div>
+            <div>
+              <div class="chapterHeader__kicker">Section</div>
+              <h2 class="chapterHeader__title">III. Analyst Team Reports</h2>
+            </div>
+          </header>
+          <div class="vizRow"><div class="ladder" aria-label="Key technical levels ladder">
+      <div class="ladder__title">Key Levels (From Report)</div>
+      <div class="ladder__item">
+          <div class="ladder__tag">50D SMA</div>
+          <div class="ladder__value">$444.35</div>
+          <div class="ladder__rail">
+            <div class="ladder__dot" style="left:100.0%"></div>
+          </div>
+        </div>
+<div class="ladder__item">
+          <div class="ladder__tag">10D EMA</div>
+          <div class="ladder__value">$429.29</div>
+          <div class="ladder__rail">
+            <div class="ladder__dot" style="left:77.0%"></div>
+          </div>
+        </div>
+<div class="ladder__item ladder__item--accent">
+          <div class="ladder__tag">Last Close</div>
+          <div class="ladder__value">$421.81</div>
+          <div class="ladder__rail">
+            <div class="ladder__dot" style="left:65.5%"></div>
+          </div>
+        </div>
+<div class="ladder__item">
+          <div class="ladder__tag">200D SMA</div>
+          <div class="ladder__value">$378.96</div>
+          <div class="ladder__rail">
+            <div class="ladder__dot" style="left:0.0%"></div>
+          </div>
+        </div>
+    </div></div>
+          <div class="chapterBody">
+            <h3 class="sectionTitle">Market Analyst</h3>
+<h4 class="subTitle">TSLA Technical Analysis Report (as of 2026-02-03)</h4>
+<p><strong>Current Price Context</strong>: TSLA closed at $421.81 on 2026-02-02, marking a 2.1% decline from the prior session and extending a short-term correction from the December 2025 peak of $489.88 (12/16/2025). Over the past 30 trading days, the stock has traded in a volatile range of $416.56–$475.31, with a net decline of approximately 11.5%. This pullback follows a parabolic rally from October 2025 lows around $413, driven by sector momentum in EVs/tech amid broader market rotation. However, the long-term uptrend from 2024 lows (~$140–$180) remains firmly intact, with the stock up over 140% from early 2024 levels. The selected indicators—close_200_sma, close_50_sma, close_10_ema, macd, macdh, rsi, atr, and vwma—provide complementary views: long-term trend confirmation (SMAs), short-term momentum shifts (EMAs/MACD/RSI), volatility sizing (ATR), and volume-validated price action (VWMA). These are ideal for TSLA&#39;s profile: high-beta, news-driven volatility with multi-month trends punctuated by 10–20% corrections.</p>
+<p><strong>Multi-Timeframe Trend Analysis</strong>:</p>
+<ul class="list"><li><strong>Long-Term (200 SMA: $378.96)</strong>: Decisively bullish. Price remains 11.4% above the rising 200 SMA, which has steadily climbed from ~$290 (April 2025) to current levels, reflecting sustained accumulation. No death cross in sight (50 SMA still well above 200 SMA at $444 vs. $379). Historical support: During prior corrections (e.g., March 2025 drop to ~$222, April 2025 to ~$239), price found bids near or above the 200 SMA, leading to bounces of 30–50%. Current setup favors dips as buying opportunities unless breached decisively (target ~$370–$380).</li>
+<li><strong>Medium-Term (50 SMA: $444.35)</strong>: Bearish bias. Price broke below the 50 SMA in late December 2025 (~$445 then) and has since formed lower highs/lows (e.g., $475 high 1/5/2026 to $416 low 1/29). The 50 SMA is flattening after a steep uptrend (from ~$297 in April 2025), acting as overhead resistance. Key dynamic: A reclaim above $444–$445 with volume could signal resumption of the uptrend; failure risks deeper correction to 200 SMA.</li>
+<li><strong>Short-Term (10 EMA: $429.29)</strong>: Bearish momentum. Price sliced below the responsive 10 EMA on 1/29 ($433.51 close vs. $429 EMA), confirming downside acceleration. The EMA has hooked over since 1/23 peak ($441), with slope steepening negatively—typical of TSLA&#39;s sharp pullbacks (e.g., similar EMA breakdowns preceded 15% drops in July/October 2025). Near-term support at $416 (recent low), with invalidation above $430.</li></ul>
+<p><strong>Momentum Insights (MACD, Histogram, RSI)</strong>:</p>
+<ul class="list"><li><strong>MACD Line (-6.76)</strong>: Bearish divergence emerging. Peaked at +15.10 (12/24) confirming the rally, but crossed below zero in early January (~1/2 at +4.88 to negative by 1/30), with accelerating downside (from -0.40 on 12/3 to -6.76). No bullish crossover yet; line trending toward oversold territory (-10 to -15 historical bottoms). Nuance: Shallow histogram supports limited downside vs. prior corrections (e.g., June 2025 MACD plunged to -8+ on heavier volume).</li>
+<li><strong>MACD Histogram (-1.55)</strong>: Weakening bearish momentum. Positive peak of +5.70 (12/16) expanded bullishly, but flipped negative mid-December, contracting to -1.55 (less extreme than June 2025&#39;s -8.40). Recent bars narrowing (-3.44 on 1/20 to -1.55) hints at potential exhaustion/bottoming—watch for zero-line cross or expansion above zero for reversal (occurred before July/September 2025 bounces).</li>
+<li><strong>RSI (42.55, 14-period)</strong>: Neutral with mild oversold lean. Declined from overbought 68–78 (Dec 2025) without extreme divergence (confirmed highs), now consolidating 38–52 since late Dec. Key levels: Dip below 40 (hit 37.16 on 1/20) often preceded bounces (e.g., March/April 2025 from 30s); sustained &lt;30 rare in uptrends. Bullish divergence possible if price tests $410 while RSI holds 35+.</li></ul>
+<p><strong>Volatility and Risk Management (ATR: 15.50)</strong>: Contracting from peaks of 24–25 (April/March 2025 crashes), signaling reduced choppiness post-rally. Current ATR implies ~3–4% daily ranges ($12–17 moves). Position sizing: 1–2% risk per trade (stop ~1.5x ATR = $23 below entry). Bands: Use for trailing stops (e.g., long entries above 200 SMA with stop at 2x ATR below).</p>
+<p><strong>Volume Confirmation (VWMA: $432.90)</strong>: Bearish alignment. Price below VWMA since late Dec (VWMA peaked ~$473 in Jan), indicating distribution on down days. Volume spikes accompanied downside (e.g., 1/29 drop on heavy trading), but no capitulation yet (vs. March 2025&#39;s 189M+ shares). Upside needs VWMA flip above $440+ for confirmation.</p>
+<p><strong>Synthesis and Trader Insights</strong>: TSLA is in a classic &quot;healthy correction&quot; within a structural bull market: long-term uptrend (price &gt;&gt; 200 SMA) eroded by short/medium-term weakness (below 50 SMA/10 EMA, negative MACD). The ~12% pullback mirrors prior cycles (e.g., 15% July 2025, 20% March 2025), often resolving higher on EV catalysts (earnings, policy). Momentum fading (contracting histogram, neutral RSI) suggests near-term base-building around $410–$420, with upside potential to retest $444 50 SMA if MACD/RSI turn. Risks: Break below $410 targets $379 (200 SMA), especially if broader Nasdaq weakens. Bull case probability higher (65%): Dips above 200 SMA historically yield 20–40% rallies. Trade ideas:</p>
+<ul class="list"><li><strong>Scalps</strong>: Short rallies to 10 EMA ($429) targeting $416 (R:R 1:2, stop $435).</li>
+<li><strong>Swings</strong>: Buy $410–$416 pullback (stop $405/2x ATR), target $450/$50 SMA.</li>
+<li><strong>Position</strong>: Accumulate on volume dry-up near 200 SMA.</li></ul>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Indicator</th><th style="text-align:left">Latest Value (2026-02-03/02)</th><th style="text-align:left">Signal</th><th style="text-align:left">Key Insight</th><th style="text-align:left">Support/Resistance</th></tr></thead><tbody><tr><td style="text-align:left"><strong>Close Price</strong></td><td style="text-align:left">$421.81 (02-02)</td><td style="text-align:left">Neutral</td><td style="text-align:left">Correction from $489 peak; choppy range $416–$475</td><td style="text-align:left">S: $416/$379 (200 SMA); R: $429 (10 EMA)/$444 (50 SMA)</td></tr><tr><td style="text-align:left">close_200_sma</td><td style="text-align:left">$378.96</td><td style="text-align:left"><strong>BULLISH</strong></td><td style="text-align:left">Price +11.4%; rising steadily</td><td style="text-align:left">Primary long-term support</td></tr><tr><td style="text-align:left">close_50_sma</td><td style="text-align:left">$444.35</td><td style="text-align:left"><strong>BEARISH</strong></td><td style="text-align:left">Price below; flattening resistance</td><td style="text-align:left">Reclaim for bull resumption</td></tr><tr><td style="text-align:left">close_10_ema</td><td style="text-align:left">$429.29</td><td style="text-align:left"><strong>BEARISH</strong></td><td style="text-align:left">Price below; downward slope</td><td style="text-align:left">Near-term resistance</td></tr><tr><td style="text-align:left">macd</td><td style="text-align:left">-6.76</td><td style="text-align:left"><strong>BEARISH</strong></td><td style="text-align:left">Below zero; downside acceleration</td><td style="text-align:left">Bull cross &gt;0 for reversal</td></tr><tr><td style="text-align:left">macdh</td><td style="text-align:left">-1.55</td><td style="text-align:left"><strong>BEARISH (Weakening)</strong></td><td style="text-align:left">Contracting negative bars</td><td style="text-align:left">Zero cross signals momentum shift</td></tr><tr><td style="text-align:left">rsi</td><td style="text-align:left">42.55</td><td style="text-align:left">NEUTRAL</td><td style="text-align:left">From OB 70+; oversold lean</td><td style="text-align:left">&lt;40 bounce zone</td></tr><tr><td style="text-align:left">atr</td><td style="text-align:left">15.50</td><td style="text-align:left">Neutral (Contracting)</td><td style="text-align:left">~3% daily range; lower volatility</td><td style="text-align:left">Stops: 1.5–2x ATR</td></tr><tr><td style="text-align:left">vwma</td><td style="text-align:left">$432.90</td><td style="text-align:left"><strong>BEARISH</strong></td><td style="text-align:left">Price below; distribution</td><td style="text-align:left">Flip above confirms bulls</td></tr></tbody></table></div>
+<p><strong>FINAL TRANSACTION PROPOSAL: </strong>HOLD*** Hold existing positions; scale in on dips to $410+ with stops below 200 SMA. Avoid new longs until 50 SMA reclaim or MACD bullish signals. Monitor volume for capitulation.</p>
+<h3 class="sectionTitle">Social Media Analyst</h3>
+<h3 class="subreportTitle">TSLA Social Media, News, and Sentiment Analysis Report: January 27 - February 3, 2026</h3>
+<h3 class="sectionTitle">Executive Summary</h3>
+<p>Over the past week (January 27 to February 3, 2026), Tesla (TSLA) has been a focal point in financial news, driven primarily by its Q4 2025 earnings release on February 2, European sales data, Elon Musk&#39;s strategic announcements on AI, robotics (Optimus), and robotaxis (Cybercab), and cross-company developments like the SpaceX-xAI merger. Public sentiment, as reflected in news coverage and implied social media buzz (e.g., hype around hydrogen competitors and Musk&#39;s robot pivot), is <strong>mixed but leaning cautiously bullish long-term</strong>. Short-term bearish pressures stem from EV sales declines in key European markets (e.g., 88% drop in Norway, 42% in France) and mixed earnings (EPS beat but revenue miss), contrasted by optimism around Tesla&#39;s $20B+ 2026 CapEx for AI infrastructure, Optimus production ramps, and robotaxi fleets.</p>
+<p>Aggregate TSLA-specific sentiment score from 50 news items (where relevance &gt;0.5): <strong>Average 0.12 (Neutral, skewed by 18 Somewhat-Bullish, 22 Neutral, 7 Somewhat-Bearish, 5 Bearish)</strong>. High-relevance articles (&gt;0.9) show polarization: Bullish on future tech (e.g., +0.41 Robotaxi model), Bearish on execution risks/delays (e.g., -0.75 &quot;Most Expensive Story&quot;). Social media undertones suggest retail enthusiasm for Musk&#39;s vision amid EV market fatigue.</p>
+<p>Implications: <strong>Traders</strong> face volatility from sales data and Musk tweets; <strong>long-term investors</strong> should weigh AI/robotics upside against EV headwinds and CapEx dilution. No immediate catalysts post-earnings, but watch Optimus updates and China policy (e.g., door handle ban effective 2027).</p>
+<h3 class="sectionTitle">Key News Themes and Timeline</h3>
+<h4 class="subTitle">February 2-3 (Dominant Period: Earnings and Reactions)</h4>
+<ul class="list"><li><strong>Q4 Earnings Fallout</strong>: Tesla beat EPS estimates but missed revenue; stock dipped 3.4% post-earnings on automotive revenue decline but rebounded on forward guidance. Highlights: $20B+ 2026 CapEx (up from $8.5B 2025) for AI chips, factories, Cybercab/Optimus. Musk halting Model S/X at Fremont for Optimus (1M units/year goal). CliffsNotes analysis: P/E &gt;200x headline but lower on owner&#39;s earnings; &quot;secular growth&quot; thesis intact.</li>
+<li><strong>AI/Robotics Pivot</strong>: Musk admits &quot;agonizingly slow&quot; Cybercab/Optimus ramps (delays from 2025 promises). Robotaxi model detailed: Cybercab for solos, Model Y/Robovan for groups. Morgan Stanley flags Chinese suppliers (e.g., Leaderdrive) as beneficiaries.</li>
+<li><strong>SpaceX-xAI Merger</strong>: $1.25T deal excludes Tesla (despite $2B TSLA investment); raises conflict-of-interest fears, Musk priority dilution (Bearish sentiment -0.43).</li>
+<li><strong>EV Sales Data</strong>: Italy +75% YoY (bullish outlier); France/Norway slumps (Bearish -0.60). Broader EV losses: US/EU brands down $114B, Tesla implicated in niche demand woes.</li>
+<li><strong>Other</strong>: Lemonade Tesla-specific insurance (+21.9% LMND surge); China bans Tesla door handles (safety, 2027 effect); Analysts split $350-$500 PTs.</li></ul>
+<h4 class="subTitle">February 1 (Pre-Earnings Buildup)</h4>
+<ul class="list"><li>Robot/Optimus hype: Fremont conversion, gen-3 Optimus AI learning. Jim Cramer: Robots &gt; earnings numbers.</li>
+<li>Legal win: Delaware SC slashes TSLA legal fees $100M+ (bullish +0.26).</li>
+<li>Bearish analysis: &quot;Most Expensive Story&quot; (-0.75) cites regulatory credits reliance, competition.</li></ul>
+<h4 class="subTitle">January 31-27 (Quiet Lead-In)</h4>
+<ul class="list"><li>Minor: Institutional moves (e.g., Direxion TSLL short interest +54%); China PMI hits NIO/TSLA peers.</li></ul>
+<p><strong>Volume Insight</strong>: 50+ articles, peak Feb 2 (80%). Coverage breadth: Electrek, Barron&#39;s, Reuters, Seeking Alpha, Bloomberg (high credibility).</p>
+<h3 class="sectionTitle">Sentiment Analysis: Fine-Grained Breakdown</h3>
+<p>Using provided sentiment scores (scale: ≤-0.35 Bearish, -0.35 to -0.15 Somewhat-Bearish, -0.15 to 0.15 Neutral, 0.15-0.35 Somewhat-Bullish, ≥0.35 Bullish):</p>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Category</th><th style="text-align:left">Count (High-Relevance TSLA &gt;0.8)</th><th style="text-align:left">Avg Score</th><th style="text-align:left">Key Drivers</th></tr></thead><tbody><tr><td style="text-align:left"><strong>Bullish</strong></td><td style="text-align:left">2 (e.g., Robotaxi model +0.41, Cramer Robots +0.40)</td><td style="text-align:left">+0.405</td><td style="text-align:left">Future tech narratives, execution optimism.</td></tr><tr><td style="text-align:left"><strong>Somewhat-Bullish</strong></td><td style="text-align:left">12 (e.g., CapEx +0.26, Optimus suppliers +0.33, Italy sales +0.34)</td><td style="text-align:left">+0.28</td><td style="text-align:left">AI pivot, Musk vision, niche positives.</td></tr><tr><td style="text-align:left"><strong>Neutral</strong></td><td style="text-align:left">20 (e.g., Door handles +0.04, ASML context +0.32 but diluted)</td><td style="text-align:left">+0.02</td><td style="text-align:left">Peripheral mentions, balanced views.</td></tr><tr><td style="text-align:left"><strong>Somewhat-Bearish</strong></td><td style="text-align:left">5 (e.g., Analyst divergence -0.20, ETFs post-earnings -0.25)</td><td style="text-align:left">-0.21</td><td style="text-align:left">Earnings miss, valuation concerns.</td></tr><tr><td style="text-align:left"><strong>Bearish</strong></td><td style="text-align:left">5 (e.g., Sales slump -0.60, Optimus delays -0.64, xAI exclusion -0.43, EV losses -0.53, Sell thesis -0.75)</td><td style="text-align:left">-0.57</td><td style="text-align:left">Sales drops, delays, overvaluation.</td></tr></tbody></table></div>
+<ul class="list"><li><strong>Daily Sentiment Trend</strong> (Inferred from timestamps):</li>
+<li>Jan 31: Neutral-Bullish (0.15 avg; pre-earnings hype).</li>
+<li>Feb 1: Mixed (0.08; robots vs. sells).</li>
+<li>Feb 2: Polarized (-0.05 avg; sales bearish offset by CapEx/robotics bullish).</li>
+<li>Feb 3: Stabilizing (0.20; analyst reactions).</li>
+<li><strong>Social Media Inference</strong>: Sparse direct data, but articles note &quot;hype explosion&quot; (Ballard vs. TSLA), Musk tweets amplifying robots (retail FOMO), X/Twitter buzz on xAI merger (shareholder anger). No viral bearish memes; focus on &quot;Musk conglomerate&quot; (personal empire risks).</li></ul>
+<p><strong>Quantitative Insights</strong>:</p>
+<ul class="list"><li>TSLA mention frequency: 45/50 articles (90%).</li>
+<li>Relevance avg for TSLA: 0.75 (high focus).</li>
+<li>Volatility signal: 12 articles with |score| &gt;0.4 (extreme polarization).</li></ul>
+<h3 class="sectionTitle">Detailed Insights and Trader/Investor Implications</h3>
+<h4 class="subTitle">Bullish Catalysts (Long-Term Hold/Buy Case)</h4>
+<ol class="list"><li><strong>AI/Robotics Transformation</strong>: $20B CapEx signals &quot;tech company&quot; pivot. Optimus (factory deployment 2026), Cybercab fleets (non-passenger dependent). Insights: Nonlinear growth if executed (Seeking Alpha: lower real P/E); suppliers/Musk ecosystem synergy. <strong>Implication</strong>: Investors allocate 10-20% portfolio; traders buy dips on robot news (e.g., + post-Cramer).</li>
+<li><strong>Diversification Wins</strong>: Energy/services growth offsets auto; Italy sales rebound. Legal fee cut saves $100M+ cash.</li>
+<li><strong>Retail/Musk Premium</strong>: Social hype sustains valuation (e.g., + post-Robotaxi details).</li></ol>
+<p><strong>Risk-Adjusted Upside</strong>: 12-18 month PT $400-500 if Optimus hits 1M units (20% prob.); robotaxi margins &gt;50% FSD subs.</p>
+<h4 class="subTitle">Bearish Risks (Short-Term Sell/Short Case)</h4>
+<ol class="list"><li><strong>EV Core Weakness</strong>: Europe slumps signal demand fatigue; Q4 auto revenue down. China ban adds friction. Insights: $114B industry losses highlight niche EV status; credits propping margins.</li>
+<li><strong>Execution/Musk Distractions</strong>: Optimus/Cybercab delays (&quot;slow&quot;); xAI-SpaceX pulls focus/cash (conflict risks). Analysts: &quot;Show-me&quot; narrative, avg PT implies downside.</li>
+<li><strong>Valuation Stretch</strong>: P/E 200x+; CapEx dilutive short-term.</li></ol>
+<p><strong>Downside Risks</strong>: 10-20% correction to $300 on poor Q1 deliveries (high prob. if Europe persists).</p>
+<h4 class="subTitle">Trader Tactics</h4>
+<ul class="list"><li><strong>Short-Term</strong>: Volatility plays (straddles around Musk tweets). Short squeezes on dips (Direxion TSLL shorts +54%, unwind potential).</li>
+<li><strong>Momentum</strong>: Buy robotaxi/Optimus headlines; fade sales data.</li>
+<li><strong>Levels</strong>: Support $350 (analyst floor); Resistance $450 (earnings high).</li></ul>
+<h4 class="subTitle">Investor Strategy</h4>
+<ul class="list"><li><strong>Value</strong>: Accumulate under $380 for AI thesis.</li>
+<li><strong>Growth</strong>: Hold if &gt;5% portfolio; diversify vs. NVDA/GOOG (competitors).</li>
+<li><strong>Contrarian</strong>: Short if EV sales miss Q1 consensus 450K deliveries.</li></ul>
+<p><strong>Overall Recommendation</strong>: <strong>HOLD</strong> with bullish tilt. EV trough + AI inflection = asymmetric upside, but monitor Feb deliveries/China PMI.</p>
+<h3 class="sectionTitle">Key Points Summary Table</h3>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Theme</th><th style="text-align:left">Key Events/News</th><th style="text-align:left">Sentiment Impact</th><th style="text-align:left">Trader Action</th><th style="text-align:left">Investor Implication</th><th style="text-align:left">Probability/Confidence</th></tr></thead><tbody><tr><td style="text-align:left"><strong>Earnings</strong></td><td style="text-align:left">Q4 EPS beat, rev miss; $20B CapEx</td><td style="text-align:left">Neutral (+0.10 avg)</td><td style="text-align:left">Fade post-earnings dip</td><td style="text-align:left">Growth via AI justifies valuation</td><td style="text-align:left">High (90%)</td></tr><tr><td style="text-align:left"><strong>EV Sales</strong></td><td style="text-align:left">Europe slump (Norway -88%), Italy +75%</td><td style="text-align:left">Bearish (-0.40)</td><td style="text-align:left">Short sales data</td><td style="text-align:left">Niche demand; watch Q1 global</td><td style="text-align:left">Medium (70%)</td></tr><tr><td style="text-align:left"><strong>Robotics/AI</strong></td><td style="text-align:left">Optimus ramps, Cybercab model; Fremont pivot</td><td style="text-align:left">Bullish (+0.35)</td><td style="text-align:left">Buy hype spikes</td><td style="text-align:left">Core thesis shift; 2027 revenue</td><td style="text-align:left">High (80%)</td></tr><tr><td style="text-align:left"><strong>Musk Ecosystem</strong></td><td style="text-align:left">xAI-SpaceX merger excludes TSLA</td><td style="text-align:left">Bearish (-0.43)</td><td style="text-align:left">Hedge via SPX</td><td style="text-align:left">Conflict risk; dilution fears</td><td style="text-align:left">Medium (60%)</td></tr><tr><td style="text-align:left"><strong>Regulatory/Other</strong></td><td style="text-align:left">China door ban; Legal fee cut</td><td style="text-align:left">Mixed (Neutral)</td><td style="text-align:left">Neutral</td><td style="text-align:left">Margin tailwinds minor</td><td style="text-align:left">Low (40%)</td></tr><tr><td style="text-align:left"><strong>Analyst/Social</strong></td><td style="text-align:left">$350-500 PTs; Robot hype</td><td style="text-align:left">Somewhat-Bullish (+0.22)</td><td style="text-align:left">Momentum trades</td><td style="text-align:left">Retail sustains premium</td><td style="text-align:left">High (85%)</td></tr></tbody></table></div>
+<p><em>Data sourced from 50 news items via get_news tool. Sentiment per article ticker-specific scores. Report as of 2026-02-03.</em></p>
+<h3 class="sectionTitle">News Analyst</h3>
+<h3 class="subreportTitle">Weekly Macroeconomic and TSLA News Report: January 27 - February 3, 2026</h3>
+<h3 class="sectionTitle">Executive Summary</h3>
+<p>As of February 3, 2026, global markets exhibit heightened volatility amid shifting monetary policy expectations, a rebounding U.S. dollar from multi-year lows, and persistent AI-driven tech optimism clashing with EV sector headwinds. TSLA, Tesla Inc., faces a pivotal week: Q4 2025 earnings revealed an EPS beat but revenue miss, with automotive sales declining amid European slumps (e.g., -88% in Norway, -42% in France), offset by a strategic pivot to AI, robotics (Optimus), and autonomy (Cybercab/robotaxi). CEO Elon Musk&#39;s external ventures—SpaceX&#39;s $1.25T acquisition of xAI (excluding TSLA despite its $2B stake)—raise conflict-of-interest flags, pressuring shareholder sentiment. Heavy 2026 CapEx ($20B+) signals aggressive bets on non-auto growth, but execution delays and high valuation (200x+ P/E on headline earnings) amplify risks. Macro tailwinds include AI funding surges (Waymo $16B round) and small-cap rotations, but EV losses ($114B for U.S./EU makers) and China regulatory hurdles (door handle ban) underscore demand fragility. Traders should monitor Europe sales data, Fed rhetoric, and Musk&#39;s X posts for catalysts.</p>
+<h3 class="sectionTitle">TSLA Micro Analysis: Earnings Pivot Amid Sales Woes</h3>
+<p>Tesla&#39;s Q4 2025 results (reported ~Feb 1) showed resilience in non-auto segments but core EV weakness:</p>
+<ul class="list"><li><strong>Earnings Breakdown</strong>: EPS beat estimates, but revenue missed due to -3.4% automotive decline YoY. Free cash flow hit $1.4B, supporting $20B+ 2026 CapEx (up from $8.5B in 2025) for AI compute (&quot;TerraFab&quot;), six new factories, and Optimus production (Fremont conversion targets 1M units/year). Regulatory credits propped margins, but analysts flag dependency.</li>
+<li><strong>Sales Geography</strong>: Europe craters—Norway -88%, France -42% to 3-year low (661 units), signaling subsidy exhaustion and competition from BYD/legacy hybrids. Positive outlier: Italy +75% YoY (713 units, 0.5% share). China risks escalate with 2027 ban on Tesla-style electronic door handles over safety.</li>
+<li><strong>AI/Robotics Narrative</strong>: Musk admits &quot;agonizingly slow&quot; Cybercab/Optimus ramps (delaying 2026 mass production), but FSD subscribers hit 1.1M. Robotaxi model leverages Model Y/Robovan for scale. Lemonade&#39;s Tesla-specific insurance (per-mile premiums, FSD discounts) boosts ecosystem.</li>
+<li><strong>Musk Empire Risks</strong>: SpaceX-xAI $1.25T merger (IPO-bound) bails xAI but sidelines TSLA&#39;s $2B stake, sparking &quot;priority diversion&quot; fears. Barron&#39;s notes optimism for AI synergies but conflicts.</li>
+<li><strong>Analyst Split</strong>: Targets diverge ($350 bearish on EV slump vs. $500 bullish on AI). Seeking Alpha flags &quot;most expensive story ever told&quot; (overvalued vs. fundamentals); others see owner&#39;s earnings P/E lower.</li>
+<li><strong>Sentiment Metrics</strong>: TSLA-specific articles average -0.05 (neutral), with bearish EV sales (-0.60 in Europe pieces) vs. bullish AI (+0.31 CapEx stories).</li></ul>
+<p><strong>Trading Insight</strong>: Short-term downside risk from Europe data (watch Feb deliveries); long-term bulls accumulate on dips if FSD v12+ adoption accelerates. Volatility spikes on Musk tweets (e.g., Delaware fee cut saves $100M+).</p>
+<h3 class="sectionTitle">Macroeconomic Context: AI Boom vs. EV/Industrial Softness</h3>
+<p>Broader news reinforces TSLA&#39;s dichotomy:</p>
+<ul class="list"><li><strong>AI/Tech Surge</strong>: Waymo (Alphabet) $16B round ($126B valuation) pre-earnings lifts GOOG +1.9%; Uber-Nvidia-Mercedes robotaxi pact eyes data moat (TSLA FSD rival). ASML bookings €13.2B on AI chips; Morgan Stanley flags China suppliers (e.g., Leaderdrive) for humanoid boom.</li>
+<li><strong>EV Sector Pain</strong>: Legacy losses $114B (GM/Ford write-downs); China PMI &lt;50 signals manufacturing contraction, pressuring NIO/TSLA exports. Ford/Xiaomi JV denial amid U.S. tariffs.</li>
+<li><strong>Markets/Policy</strong>: Dollar rebounds; volatility rises (VIX proxy up). Small caps heat (ST/TEX/MOS picks); Trump Truth Social ETF acquisition signals thematic flows. China EV insurance expansions (Lemonade-like).</li>
+<li><strong>Sentiment</strong>: Global feed averages +0.10 (somewhat bullish), driven by AI (+0.35) vs. macro caution (-0.13 commodities/PMI).</li></ul>
+<p><strong>Interplay with TSLA</strong>: AI tailwinds validate pivot (e.g., Optimus vs. Chinese rivals), but EV glut/macro slowdown caps multiples. Fed rate-cut bets (4 in 2026?) could juice growth stocks if inflation cools.</p>
+<h3 class="sectionTitle">Key Risks and Opportunities for Traders</h3>
+<ul class="list"><li><strong>Bull Catalysts</strong>: Q4 energy/services growth; robotaxi event (mid-2026?); solar 100GW ambition pressures FSLR but diversifies TSLA.</li>
+<li><strong>Bear Triggers</strong>: CapEx dilution (P/E 200x); Europe/China sales miss; xAI distraction lawsuit risk.</li>
+<li><strong>Positioning</strong>: Long above $350 (AI breakout); short below $300 (EV demand confirmation). Options: Bull call spreads on FSD metrics; hedges via UBER/NVDA pairs.</li>
+<li><strong>Macro Overlay</strong>: Dollar strength hurts exports; PMI/jobs data (Feb 6) critical for risk-on.</li></ul>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Category</th><th style="text-align:left">Key Event/News</th><th style="text-align:left">Sentiment Impact</th><th style="text-align:left">Trading Implication for TSLA</th></tr></thead><tbody><tr><td style="text-align:left"><strong>Earnings/Financials</strong></td><td style="text-align:left">Q4 EPS beat, revenue miss; $20B+ 2026 CapEx; 200x P/E debate</td><td style="text-align:left">Neutral (-0.08 avg)</td><td style="text-align:left">Hold; watch margins—CapEx signals commitment but risks dilution</td></tr><tr><td style="text-align:left"><strong>EV Sales</strong></td><td style="text-align:left">Europe slumps (Norway -88%, France -42%); Italy +75%; China door ban 2027</td><td style="text-align:left">Bearish (-0.60)</td><td style="text-align:left">Short-term sell; monitor Feb deliveries for $50 downside</td></tr><tr><td style="text-align:left"><strong>AI/Robotics</strong></td><td style="text-align:left">Optimus Fremont shift; Cybercab delays; FSD 1.1M subs; SpaceX-xAI $1.25T deal</td><td style="text-align:left">Mixed (+0.31 AI, -0.42 conflicts)</td><td style="text-align:left">Accumulate dips; long if robotaxi &gt; Waymo $16B round</td></tr><tr><td style="text-align:left"><strong>Ecosystem/Partners</strong></td><td style="text-align:left">Lemonade Tesla insurance; solar 100GW jolts FSLR</td><td style="text-align:left">Bullish (+0.34)</td><td style="text-align:left">Bullish add; insurance lowers ownership costs</td></tr><tr><td style="text-align:left"><strong>Analyst/Musk</strong></td><td style="text-align:left">Targets $350-$500; Delaware fee cut saves $100M+; xAI exclusion concerns</td><td style="text-align:left">Somewhat Bearish (-0.20)</td><td style="text-align:left">Volatility play; fade Musk hype on execution misses</td></tr><tr><td style="text-align:left"><strong>Macro/EV Peers</strong></td><td style="text-align:left">Legacy $114B EV losses; China PMI &lt;50; AI funding boom (Waymo/Uber)</td><td style="text-align:left">Neutral (+0.10 global)</td><td style="text-align:left">Pairs trade: Long TSLA vs. GM/F (EV pivot winner)</td></tr></tbody></table></div>
+<p>This report synthesizes 50+ TSLA articles (avg relevance 0.75 to TSLA) and global feed. Next: Earnings transcripts, delivery updates for refined signals.</p>
+<h3 class="sectionTitle">Fundamentals Analyst</h3>
+<h3 class="subreportTitle">Tesla, Inc. (TSLA) Fundamental Analysis Report</h3>
+<h3 class="sectionTitle">Executive Summary</h3>
+<p>Tesla, Inc. (TSLA) remains a dominant force in the electric vehicle (EV) and clean energy sectors, with a market capitalization of approximately $1.58 trillion as of early 2026. The company has transitioned from chronic losses to consistent profitability since 2021, driven by revenue scaling to nearly $95 billion TTM through vehicle deliveries, energy storage, and services. However, recent quarters show decelerating revenue growth (-3.1% YoY quarterly) and margin compression (operating margin 4.7% TTM, down from peaks above 16% in 2022), amid rising competition, production costs, and macroeconomic pressures. Balance sheet strength is evident with $44 billion in cash/short-term investments and $82 billion in equity, supporting aggressive capex (~$8-11B annually). Cash flow generation is robust (operating cash flow ~$15B annually), but high valuation metrics (trailing P/E 383.6, P/S 16.7) reflect growth expectations that may be at risk if EV demand softens. Analysts are divided (21 buy/strong buy vs. 24 hold/sell), with a consensus target of $419. Traders should monitor Q1 2026 deliveries and Cybertruck ramp-up for catalysts; near-term downside risk from high beta (1.89) and slowing growth.</p>
+<h3 class="sectionTitle">Company Overview</h3>
+<p>Tesla designs, manufactures, and sells high-performance EVs, energy generation/storage products (e.g., Powerwall, Megapack), and solar solutions. Headquartered in Austin, TX (moved from Palo Alto, CA), it holds ~16% global plug-in EV market share and 23% in battery EVs (2020 data; likely higher now). Key products: Model 3/Y/S/X, Cybertruck, Semi, energy products. Fiscal year ends December; latest quarter reported: 2025-12-31. NASDAQ-listed (CIK: 1318605). No dividends paid.</p>
+<h3 class="sectionTitle">Key Financial Metrics (TTM/Latest as of 2025-12-31)</h3>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Metric</th><th style="text-align:left">Value</th><th style="text-align:left">Notes</th></tr></thead><tbody><tr><td style="text-align:left">Revenue TTM</td><td style="text-align:left">$94.83B</td><td style="text-align:left">Slight decline YoY</td></tr><tr><td style="text-align:left">Gross Profit TTM</td><td style="text-align:left">$17.09B</td><td style="text-align:left">~18% margin</td></tr><tr><td style="text-align:left">EBITDA</td><td style="text-align:left">$10.5B</td><td style="text-align:left">Stable but pressured</td></tr><tr><td style="text-align:left">Net Income TTM</td><td style="text-align:left">~$3.79B (annual 2025)</td><td style="text-align:left">Profit margin 4%</td></tr><tr><td style="text-align:left">EPS (Diluted TTM)</td><td style="text-align:left">$1.10</td><td style="text-align:left">Quarterly growth -60.6% YoY</td></tr><tr><td style="text-align:left">Op Cash Flow (Annual 2025)</td><td style="text-align:left">$14.75B</td><td style="text-align:left">Strong generation</td></tr><tr><td style="text-align:left">Free Cash Flow (Recent Q)</td><td style="text-align:left">Variable (+$1.42B Q4 2025)</td><td style="text-align:left">Capex-intensive</td></tr><tr><td style="text-align:left">Total Assets</td><td style="text-align:left">$137.81B</td><td style="text-align:left">+13% YoY</td></tr><tr><td style="text-align:left">Cash + STI</td><td style="text-align:left">$44.06B</td><td style="text-align:left">Fortress balance sheet</td></tr><tr><td style="text-align:left">Total Debt</td><td style="text-align:left">~$14.72B</td><td style="text-align:left">Low relative to cash</td></tr><tr><td style="text-align:left">Shareholders&#39; Equity</td><td style="text-align:left">$82.14B</td><td style="text-align:left">ROE 4.93% TTM</td></tr><tr><td style="text-align:left">Market Cap</td><td style="text-align:left">$1.58T</td><td style="text-align:left">Shares out: 3.75B</td></tr><tr><td style="text-align:left">P/E Trailing</td><td style="text-align:left">383.6</td><td style="text-align:left">Forward: 200</td></tr><tr><td style="text-align:left">P/S Ratio TTM</td><td style="text-align:left">16.7</td><td style="text-align:left">Premium valuation</td></tr><tr><td style="text-align:left">EV/EBITDA</td><td style="text-align:left">132.1</td><td style="text-align:left">Expensive</td></tr><tr><td style="text-align:left">Beta</td><td style="text-align:left">1.89</td><td style="text-align:left">High volatility</td></tr></tbody></table></div>
+<h3 class="sectionTitle">Income Statement Analysis</h3>
+<p><strong>Annual Trends (2019-2025):</strong></p>
+<ul class="list"><li><strong>Revenue:</strong> Explosive growth from $24.6B (2019) to $97.7B (2024 peak), dipping to $94.8B (2025). Driven by Model 3/Y volume; energy segment growing fastest (~50%+ YoY recently).</li>
+<li>2025 QoQ: Q4 $24.9B (flat), Q3 $28.1B (+11% QoQ).</li>
+<li>YoY slowdown: Q4 2025 -?% (data implies deceleration).</li>
+<li><strong>Gross Margins:</strong> Peaked at ~25.6% (2022), now ~18% TTM. Automotive gross margin ~17-19%; regulatory credits volatile (~$1-2B/quarter).</li>
+<li><strong>Operating Expenses:</strong> R&amp;D $6.4B (2025, up from $4.5B 2024), SG&amp;A $5.8B. Op margin compressed to 4.6% from 16.8% (2022) due to price cuts, higher R&amp;D (AI/FSD/Robotics).</li>
+<li><strong>Net Income:</strong> Turned positive 2020 ($0.72B), peaked 2023 ($15B w/ tax benefit), 2025 $3.79B. EPS growth stalled.</li>
+<li><strong>Quarterly Insights:</strong> Q4 2025 net $0.84B (down QoQ), revenue $24.9B. Earnings growth -60.6% YoY signals demand headwinds.</li></ul>
+<p><strong>Fine-Grained Insights:</strong></p>
+<ul class="list"><li>Cost of Revenue up ~82% of sales (2025), inventory buildup (12.4B) hints overproduction.</li>
+<li>Non-op income (interest) $1.34B aids bottom line; low debt cost (3.4% expense).</li>
+<li>Tax rate volatile (2023 benefit); effective ~27% normalized.</li></ul>
+<h3 class="sectionTitle">Balance Sheet Analysis</h3>
+<p><strong>Annual (2021-2025):</strong></p>
+<ul class="list"><li><strong>Assets:</strong> Ballooned from $62B to $138B, PP&amp;E dominant (56B, +9% YoY) for factories (Texas, Shanghai expansions).</li>
+<li>Cash pile: $16.5B + $27.5B STI = defensive moat.</li>
+<li>Inventory: $12.4B (stable, but high vs. rec $4.6B).</li>
+<li><strong>Liabilities:</strong> Controlled at 40% of assets. AP $13.4B (supplier leverage). Deferred revenue $4.7B current (reg credits/FSD).</li>
+<li>Debt: $8.4B total (LT $6.6B), leases $6.6B; net cash positive.</li>
+<li><strong>Equity:</strong> $82B, retained earnings $39B (profitable shift). Book value/share $21.90.</li></ul>
+<p><strong>Quarterly Trends:</strong> Q4 2025 assets peak; current ratio ~2.2 (healthy liquidity). Working capital $36.9B.</p>
+<p><strong>Insights:</strong> Asset-light? No—capex-heavy growth phase. Low leverage (debt/equity ~18%) supports buybacks/expansion.</p>
+<h3 class="sectionTitle">Cash Flow Analysis</h3>
+<p><strong>Annual Operating Cash Flow:</strong> $5.9B (2020) → $14.7B (2025). Free cash flow positive post-2020 despite $8.5B capex (2025).</p>
+<ul class="list"><li>Key drivers: Working capital swings (inventory drags -0.63B 2025), D&amp;A $6.1B.</li></ul>
+<p><strong>Investing:</strong> Heavy outflows (-$15.5B 2025) on PP&amp;E/investments. <strong>Financing:</strong> Stock proceeds ~$1.2B; minimal debt reliance.</p>
+<p><strong>Quarterly (Recent):</strong></p>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Quarter</th><th style="text-align:left">Op CF</th><th style="text-align:left">Capex</th><th style="text-align:left">FCF</th><th style="text-align:left">Notes</th></tr></thead><tbody><tr><td style="text-align:left">Q4 2025</td><td style="text-align:left">$3.81B</td><td style="text-align:left">-$2.39B</td><td style="text-align:left">$1.42B</td><td style="text-align:left">Solid ops</td></tr><tr><td style="text-align:left">Q3 2025</td><td style="text-align:left">$6.24B</td><td style="text-align:left">-$2.25B</td><td style="text-align:left">$3.99B</td><td style="text-align:left">Peak</td></tr><tr><td style="text-align:left">Q2 2025</td><td style="text-align:left">$2.54B</td><td style="text-align:left">-$2.39B</td><td style="text-align:left">$0.15B</td><td style="text-align:left">Inventory drag</td></tr><tr><td style="text-align:left">Q1 2025</td><td style="text-align:left">$2.16B</td><td style="text-align:left">-$1.49B</td><td style="text-align:left">$0.66B</td><td style="text-align:left">Steady</td></tr></tbody></table></div>
+<p><strong>Insights:</strong> Generates ample cash for growth; FCF margin ~5-10%. No dividend strain.</p>
+<h3 class="sectionTitle">Valuation and Market Metrics</h3>
+<ul class="list"><li><strong>Multiples:</strong> Elevated (EV/EBITDA 132x); justified by 20-30% long-term growth? But PEG 6.65 signals overvaluation.</li>
+<li><strong>Technicals:</strong> 50-day MA $444 (above 200-day $378); 52w range $214-$499.</li>
+<li><strong>Peers:</strong> Vs. auto (Ford/GM P/E &lt;10), premium like growth tech.</li></ul>
+<h3 class="sectionTitle">Risks and Opportunities</h3>
+<p><strong>Risks:</strong></p>
+<ul class="list"><li>Demand slowdown (price cuts eroded margins).</li>
+<li>Competition (BYD, legacy autos).</li>
+<li>Execution (Cybertruck delays, FSD regulatory).</li>
+<li>Macro (rates, recession hits luxury EVs).</li>
+<li>High valuation + beta = volatility.</li></ul>
+<p><strong>Opportunities:</strong></p>
+<ul class="list"><li>Energy storage boom (Megapack orders).</li>
+<li>Autonomy (Robotaxi/FSD revenue).</li>
+<li>New models (cheaper EV 2025).</li>
+<li>Global expansion (India/Mexico).</li></ul>
+<h3 class="sectionTitle">Key Points Summary Table</h3>
+<div class="tableWrap"><table class="table"><thead><tr><th style="text-align:left">Category</th><th style="text-align:left">Key Metric/Trend</th><th style="text-align:left">Implication for Traders</th></tr></thead><tbody><tr><td style="text-align:left"><strong>Growth</strong></td><td style="text-align:left">Rev TTM $94.8B; QoQ flat, YoY -3%</td><td style="text-align:left">Slowing; watch deliveries</td></tr><tr><td style="text-align:left"><strong>Profitability</strong></td><td style="text-align:left">Net Margin 4%; Op Margin 4.7% (down)</td><td style="text-align:left">Compression risk; credits key</td></tr><tr><td style="text-align:left"><strong>Balance Sheet</strong></td><td style="text-align:left">Cash $44B; Equity $82B; Debt low</td><td style="text-align:left">Bulletproof; funds growth/buybacks</td></tr><tr><td style="text-align:left"><strong>Cash Flow</strong></td><td style="text-align:left">Op CF $14.7B; FCF positive</td><td style="text-align:left">Sustainable capex; no dilution pressure</td></tr><tr><td style="text-align:left"><strong>Valuation</strong></td><td style="text-align:left">P/E 384; Target $419</td><td style="text-align:left">Premium; sell rallies?</td></tr><tr><td style="text-align:left"><strong>Momentum</strong></td><td style="text-align:left">Beta 1.89; 50d MA $444</td><td style="text-align:left">Volatile; trade news catalysts</td></tr><tr><td style="text-align:left"><strong>Analyst View</strong></td><td style="text-align:left">Mixed (buy/hold split)</td><td style="text-align:left">Consensus upside ~?% (implied)</td></tr></tbody></table></div>
+          </div>
+        </section>
+
+<section class="page chapter" id="iv-research-team-decision">
+          <header class="chapterHeader">
+            <div class="chapterHeader__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-decision"></use></svg></div>
+            <div>
+              <div class="chapterHeader__kicker">Section</div>
+              <h2 class="chapterHeader__title">IV. Research Team Decision</h2>
+            </div>
+          </header>
+          
+          <div class="chapterBody">
+            <p>Hey folks, as your portfolio manager and debate referee, I&#39;ve pored over this latest Tesla showdown, and it&#39;s a slugfest—Bull painting a revolutionary AI future amid a temporary EV hiccup, Bear hammering the sales bloodbath and overvalued reality check. Let me sum up the sharpest punches from each side quick before I call it.</p>
+<p>Bull&#39;s heavy hitters: Tesla&#39;s not dying on EVs; it&#39;s exploding into AI/robotics with Optimus ramping to 1M units/year via Fremont pivot, Cybercab robotaxis, FSD at 1.1M subs, and $20B CapEx fueling it all on a rock-solid $44B cash pile and positive FCF. Europe&#39;s sales slump (Norway -88%, France -42%) and Q4 revenue miss? Just cyclical noise like past 15-20% dips that rocketed 30-50% on catalysts. Techs back it long-term: price +11% above rising 200 SMA ($379), RSI oversold at 42 bouncing from 37 lows, MACD histogram contracting for a bull cross. Moats crush comps (BYD cheap but no autonomy edge), valuation&#39;s forward 200x justified by 20-30% growth reacceleration.</p>
+<p>Bear&#39;s counters land hard too: Core auto revenue -3.4% YoY miss, Europe cratering signals structural EV saturation (BYD/hybrids winning, subsidies gone), Musk&#39;s &quot;agonizingly slow&quot; delays on Optimus/Cybercab, and dilutive $20B CapEx burning thin FCF ($1.4B Q4) while margins squeeze to 4.7%. Short-term techs scream downside: price below flattening 50 SMA ($444), hooked 10 EMA ($429), MACD accelerating to -6.76 toward 200 SMA ($379) or $350. Valuation absurd at 384x trailing P/E (PEG 6.65), Musk&#39;s xAI distractions fueling sentiment drags (-0.43 score), comps like Waymo closing the robotaxi gap.</p>
+<p>No past blowups on my end to haunt me here—this one&#39;s clean slate, but I&#39;ve learned from watching Tesla shake off pain before when the big pivot narrative holds. After weighing it, I&#39;m siding decisively with the Bull: <strong>Buy</strong>. The bear case is all rearview mirror on EV cyclicality, but Bull nails the forward thesis—Tesla&#39;s fortress balance sheet funds the AI/robotics inflection without near-term dilution panic, and history shows dips above the 200 SMA deliver 20-40% pops on delivery beats or robot hype. EV weakness is real and painful short-term (Q1 deliveries could underwhelm), but it&#39;s niche vs. the secular shift: energy storage up 50%, FSD scaling, Optimus as a potential trillion-dollar unlock by 2027. Bear&#39;s valuation gripe ignores owner&#39;s earnings compression and comps to NVDA&#39;s AI premium; techs are short-term weak but long-term intact with contracting vol signaling a swing setup. Musk drama? It&#39;s baked in, and synergies (xAI data moats) outweigh distractions.</p>
+<p>Rationale boils down to this: Bulls win on probability-weighted upside. EV sales rot is fixable trough (watch Feb data for rebound clues), but non-auto bets are asymmetric—hit half Optimus goals, and revenue hockey-sticks dwarf auto drag. Bear&#39;s right on risks (reg hurdles, comps), but overplays them as &quot;structural unwind&quot; when cash flow says bulletproof. Consensus PT $419 is too conservative; AI bulls at $500+ have the edge in this growth stock.</p>
+<p>For the trader, here&#39;s your plug-and-play plan: Scale in <strong>Buy</strong> now at $421 or dip to $410-416 support (recent lows, 2x ATR buffer). Allocate 5-10% portfolio chunk—say $50K initial buy, add half-size on $410 break for average $415. Targets: $450 short-term (50 SMA reclaim, 1:3 R:R), trail to $500 in 12 months on Q1 deliveries &gt;450K or Optimus updates. Stops: Tight $405 initial (below recent low), then $395 on full position (just above 200 SMA test). If short-term rally to $429 EMA resistance, take 50% profits and let the rest ride with trailing stop at 10 EMA. Monitor Europe Feb sales and MACD cross—bull cross greenlights adds; Q1 miss below 400K flips to Hold/trim. Hedge lightly with 1-2% VIX calls if Nasdaq wobbles. This rides the dip-buy playbook Bull proved works, minimizes drawdown, and positions for the revolution. Let&#39;s execute— what&#39;s the order flow look like?</p>
+          </div>
+        </section>
+
+<section class="page chapter" id="v-trading-team-plan">
+          <header class="chapterHeader">
+            <div class="chapterHeader__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plan"></use></svg></div>
+            <div>
+              <div class="chapterHeader__kicker">Section</div>
+              <h2 class="chapterHeader__title">V. Trading Team Plan</h2>
+            </div>
+          </header>
+          
+          <div class="chapterBody">
+            <h4 class="subTitle">TSLA Market Analysis</h4>
+<p><strong>Current Snapshot</strong>: TSLA trading around $421, post-Q4 earnings miss with core auto revenue down 3.4% YoY, Europe sales plunging (e.g., Norway -88%), and margins squeezed to 4.7%. However, $44B cash pile, positive FCF ($1.4B Q4), and $20B CapEx signal pivot to high-growth AI/robotics. Social sentiment mixed (-0.43 score) due to Musk distractions, but FSD subs at 1.1M and Optimus/Cybercab hype provide catalysts.</p>
+<p><strong>Technical Breakdown</strong>:</p>
+<ul class="list"><li>Short-term weak: Below 50 SMA ($444), 10 EMA ($429); MACD bearish at -6.76, eyeing 200 SMA ($379) support.</li>
+<li>Long-term bullish: +11% above rising 200 SMA ($379), RSI oversold (42, bouncing from 37), MACD histogram contracting toward bull cross. Historical dips above 200 SMA have rebounded 20-50% on catalysts.</li></ul>
+<p><strong>Fundamental Weigh-In</strong>:</p>
+<ul class="list"><li><strong>Bull Case (Dominant)</strong>: EV slump is cyclical (past recoveries post-15-20% dips), not structural. Non-auto upside asymmetric: Optimus (1M units/year potential), robotaxis, energy storage (+50%), FSD scaling. Balance sheet fortress funds growth without dilution. Valuation (384x trailing P/E) justified by 20-30% reacceleration vs. NVDA AI peers; PEG 6.65 overlooks owner&#39;s earnings.</li>
+<li><strong>Bear Case (Valid Risks)</strong>: EV saturation (BYD/hybrids gaining), delays (&quot;agonizingly slow&quot;), thin FCF amid CapEx. Comps like Waymo eroding moat; high valuation vulnerable to Q1 delivery miss (&lt;400K).</li></ul>
+<p><strong>Macro/Sentiment</strong>: Nasdaq volatility, subsidy cuts, and Musk xAI noise add downside risk, but synergies (xAI data for FSD) and consensus PT $419 undervalue AI bulls ($500+). Feb Europe data and Q1 deliveries key monitors.</p>
+<p><strong>Strategic Plan Alignment</strong>: The provided plan&#39;s dip-buy playbook fits perfectly—scale in at $421/$410-416, 5-10% allocation, targets $450/$500, stops $405/$395. Asymmetric reward (1:3 R:R short-term) outweighs risks, hedging via VIX if needed. No past trade memories, but clean slate reinforces data-driven discipline over recency bias.</p>
+<p><strong>Decision</strong>: Bull thesis prevails on probability-weighted upside. EV pain is temporary trough; AI/robotics inflection is the secular driver. Initiate position now.</p>
+<div class="callout callout--proposal">
+            <div class="callout__label">Final Transaction Proposal</div>
+            <div class="callout__value"><span class="pill pill--buy">BUY</span></div>
+          </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2597 @@
+# Current Session State
+
+**Branch:** `feature/opus46`
+**Last updated:** 2026-04-27T00:00:00
+**Status:** Discovery Delta v1 and Evidence Integrity v1 are operator-visible and review-measurable; Shortlist Integrity v1, Deep Selection Integrity v1, and Research Conversion Integrity v1 are live as read-only Step 3/4/5 artifacts; first-principles strategy gate exists as a reusable skill with an Aeternus worked example and memo; V3 benchmark contract is same-window/config-driven/return-based in track-record and conservatively enforced in portfolio admission; Fundamental Pillar Autoresearch Harness v1 now includes cache-first SEC raw payloads, SEC-official ticker→CIK resolution with cached fallback, historical 2009+ filing snapshot backfill, market-return attachment, deterministic constrained/autoresearch evaluation, a registry-backed signal promotion layer, and a live registry-driven `fundamental_factor_shadow` adapter wired through the dealflow pipeline as a shadow-only signal family; manual X-feed is now a first-class workflow preflight for manual-mode workflow runs and now also serves as the only live `social_news` source; the Yahoo-finance `earnings_iv` collector path and old `earnings-scan` CLI surface are removed from active dealflow behavior; deep analysis no longer defaults to the provider-aware analyst bridge: it now defaults to a session-style top-level research engine that mirrors the simple Claude path (one provider run over one computation packet, then Python scoring/report writing), while the old LangGraph/bridge stack remains available behind `research_execution_mode=codex_bridge`; the GPT/Codex bridge issues remain known legacy-path blockers, but the new default session engine has already passed live smoke runs for `BATL` and a bounded `analyze-batch` run for `RLMD` on `2026-03-10`; workflow runs now have a fail-open learning phase that attempts hindsight/performance/writeback every cycle, persists `learning_status.json`, writes normalized `source_attribution.json`, and can reinforce simple observed `co_mentioned` AKG edges from manual X-feed evidence without blocking the rest of the run; the MiroFish-inspired next slice is now approved as a Python-first `Question Compiler` chat backend for manual investigation queries, with no required Zep integration, bounded/optional LLM usage, and a frontend-ready investigation response contract; operator gateway now includes a MissionControl scaffold that maps end-to-end pipeline stages plus scout inventory/prompt/ingest APIs for manual Grok workflows; `question-investigate` now emits stage-native miss metadata and now has authoritative write-time stage-drop metadata persisted in hypothesis-ledger rows (`dropped_symbols_metadata_path`) for universe/evidence/shortlist/deep-selection cuts; watchlist CLI is now intentionally reduced to a ticker feed surface (`add/remove/list`) with minimal persisted schema (`symbol`, `created_at`, `active`, `context_snapshot`), AKG-backed internal context enrichment on add, and support for multi-symbol add/remove in both quoted and unquoted shell forms; `x-feed --run-browser` now targets the user's existing logged-in Chrome window via AppleScript + Chrome JS + clipboard/System Events instead of fresh browser-use windows, uses the current front Grok tab if the active tab is already `https://grok.com...`, otherwise opens a new Grok tab only in the current front Chrome window, and no longer scans/reuses arbitrary background Grok tabs; readiness remains tolerant of real Grok conversation titles/composer counts; the isolated pass-1 xAI API probe has been removed and manual Grok generate/paste/ingest remains the intended operator path; standalone `recall` CLI commands now expose FVG and FMA recall channels outside the pipeline with table explanations and JSON artifact output; `recall fvg <SYMBOL>` and `recall fma <SYMBOL>` now provide readable per-stock pass/fail explanations with metrics and threshold checks; `recall performance` now provides an investor-facing historical signal-study scorecard using saved or refreshed FVG/FMA backtest summaries; canonical investor-facing backtest universes are now `semis_ai`, `qqq_top20`, and `spy_top20`, and `recall performance --multi` produces a broad benchmark-comparison table across all three; CC Overbought is now explicitly treated as a stock-only engine in code/docs/CLI wording and returns no signal for index ETFs (`QQQ`, `SPY`, `IWM`); added a standalone Pi extension artifact set for a conservative model-router v2 is now installed globally under `~/.pi/agent/extensions/model-router-v2/` with weighted route scoring, fallback chains, manual lock behavior, persisted `autoRoutingEnabled`, Node-runner tests for core policy helpers, global config at `~/.pi/agent/model-router.json`, and a fixed directory-based extension layout so Pi no longer misloads helper modules as top-level extension factories
+
+**Daily runbook:** `docs/research/aeternus-daily-pipeline-debug-runbook.md` is now the canonical start-of-run checklist and debug order for the full daily pipeline.
+
+**Current note:** Macro framework backtest v1 is now scaffolded as research-only infrastructure under `tradingagents/backtesting/macro/` plus `scripts/backtest_macro_framework.py`. It supports horizons `(5, 10, 20, 30, 60, 90)`, deterministic historical macro snapshots from preloaded price/FRED-like data, next-bar forward-return labels, regime/sector performance tables, and production-ranker-based macro-on vs macro-neutral dealflow ablation. Outputs carry a PIT disclaimer unless inputs are vintage/release-aligned. Source of truth for this research project is now `docs/research/macro_framework_backtest_findings.md`; append all future findings there.
+
+---
+
+## Completed Today
+
+- Built Macro Framework Backtest v1 (research-only):
+  - created:
+    - `tradingagents/backtesting/__init__.py`
+    - `tradingagents/backtesting/macro/__init__.py`
+    - `tradingagents/backtesting/macro/forward_returns.py`
+    - `tradingagents/backtesting/macro/historical_snapshots.py`
+    - `tradingagents/backtesting/macro/regime_tables.py`
+    - `tradingagents/backtesting/macro/dealflow_ablation.py`
+    - `scripts/backtest_macro_framework.py`
+    - `docs/superpowers/plans/2026-04-27-macro-backtest-framework.md`
+  - tests:
+    - `tests/test_macro_backtest_forward_returns.py`
+    - `tests/test_macro_backtest_snapshots.py`
+    - `tests/test_macro_backtest_regime_tables.py`
+    - `tests/test_macro_backtest_ablation.py`
+  - behavior:
+    - default horizons are `(5, 10, 20, 30, 60, 90)`
+    - forward labels enter on the next trading bar after the snapshot date
+    - historical snapshots slice price/FRED-like inputs at or before each snapshot date, with optional FRED release lag
+    - regime/sector tables aggregate count, mean, median, hit rate, best, and worst returns
+    - macro-neutral ablation now reuses production dealflow ranking (`rank_candidates`) after recomputing core/momentum/asymmetry/lane from neutralized macro subscores
+    - script writes `macro_snapshots_labeled.csv`, `regime_performance.csv`, `sector_performance.csv`, optional ablation CSVs, and `manifest.json` with PIT disclaimer
+  - verification:
+    - `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_macro_backtest_forward_returns.py tests/test_macro_backtest_snapshots.py tests/test_macro_backtest_regime_tables.py tests/test_macro_backtest_ablation.py tests/test_macro_engine.py tests/test_macro_collector.py tests/test_macro_prompt.py -q` → `80 passed, 2 warnings`
+    - Step 1 run completed to `eval_results/macro_backtest/step1_research/` using `--start 2018-01-01 --end 2026-04-27 --frequency W-FRI`; 434 weekly snapshots from 2018-01-05 to 2026-04-24
+    - Step 1 exposed a yfinance calendar-union issue caused by crypto/weekend rows; fixed `attach_forward_returns()` to use each symbol's next non-null trading bar and added regression coverage
+    - `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_macro_backtest_forward_returns.py tests/test_macro_backtest_snapshots.py tests/test_macro_backtest_regime_tables.py tests/test_macro_backtest_ablation.py -q` → `11 passed, 2 warnings`
+    - Broader `tests/test_dealflow_pipeline.py` inclusion still has pre-existing unrelated failures around recall symbol persistence, missing `ensure_ohlcv_history` patch target, and integrity artifacts not being written in patched test setups.
+
+- Extended `momentum-scan` so the stock table now includes historical CC portfolio metrics per ticker:
+  - updated:
+    - `cli/commands/technical.py`
+    - `tests/test_cli_momentum_scan.py`
+  - changes:
+    - added a lightweight helper that reuses the standalone `regime_exit_strategy.py` math against the already-loaded stock dataframe
+    - each stock signal row now carries:
+      - `Strategy Ret`
+      - `BuyHold Ret`
+      - `CAGR`
+      - `Sharpe`
+      - `MaxDD`
+    - the CLI still uses live CCOverbought state for the current signal; the new columns are historical overlay context using a 100-share starting position
+    - the stock section now renders as a compact fixed-width text table (instead of a wide Rich boxed table) so the requested columns remain readable in normal terminal widths
+  - verification:
+    - `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_cli_momentum_scan.py tests/test_regime_exit_strategy.py tests/test_phase3_modules.py -q` → `54 passed`
+    - `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m cli.main momentum-scan --tickers AAPL --tickers MSFT --top 2`
+
+- Made the CC Overbought contract explicit so future operators do not confuse it with index logic:
+  - updated:
+    - `tradingagents/phase_engine/cc_overbought.py`
+    - `cli/commands/technical.py`
+    - `tests/test_phase3_modules.py`
+  - changes:
+    - module/class/get-signal docstrings now state CC Overbought is stock-only
+    - engine now returns `{}` for `QQQ`, `SPY`, and `IWM`
+    - `momentum-scan --help` now says CC overbought is for stocks only, with separate index signals for `QQQ/SPY`
+    - added regression test coverage for index ETF rejection
+  - verification:
+    - direct red/green check on framework Python confirmed `QQQ` previously produced a live signal and now returns `{}`; `AAPL` still returns a normal signal
+    - `python3 -m cli.main momentum-scan --help` shows updated stock-only wording
+
+- Completed deep research pass on Perplexity Computer and Manus and converted findings into Aeternus harness implementation artifacts:
+  - updated:
+    - `docs/plans/2026-03-20-aeternus-harness-v1.md`
+      - upgraded from high-level concept to concrete runtime/state-machine spec
+      - added explicit control/data/learning plane split
+      - added deterministic terminal progress contract
+      - added manual input WAIT/RESUME contract
+      - added strict safety/policy rules and build sequence
+  - created:
+    - `docs/research/2026-03-20-perplexity-manus-harness-review.md`
+      - source-backed comparison of Perplexity/Manus harness patterns
+      - Aeternus adoption map (what to copy vs what not to copy)
+      - 30-day pragmatic implementation sequence
+  - references captured:
+    - Perplexity Computer enterprise + skills + changelog
+    - Manus sandbox + wide research + browser operator + project skills + API/docs + credits/help
+
+- Unblocked 2026-03-19 committee packet generation when same-day analysis reports are missing:
+  - updated:
+    - `scripts/build_grok_committee_packet.py`
+  - added behavior:
+    - report resolver now falls back to latest prior `results/<ticker>/<date>/analysis_report.json` on/before as-of date
+    - packet now persists report provenance per ticker (`report_path`, `report_date`, `is_fallback_prior_date`)
+    - fallback usage is surfaced in `known_gaps` (transparent, not silent)
+    - execution no longer hard-blocks if prior-date reports exist and are readable
+  - verification:
+    - rebuilt 2026-03-19 packet
+    - `execution_readiness.status = PASS`
+    - `known_gaps` now explicitly list prior-date report fallback and missing 2026-03-19 x-feed coverage
+
+- Produced a fully validator-passing corrected committee output artifact for reuse/share:
+  - created:
+    - `eval_results/deal_flow/2026-03-18/grok_output_corrected.json`
+  - validation:
+    - `python3 scripts/validate_grok_committee_output.py --packet eval_results/deal_flow/2026-03-18/grok_committee_input_v2.json --output eval_results/deal_flow/2026-03-18/grok_output_corrected.json`
+      - result: `ok=true`, `errors=[]`, `warnings=[]`
+
+- Added external-search enrichment support and output-quality validation for Grok committee runs:
+  - updated:
+    - `scripts/build_grok_committee_packet.py`
+  - added:
+    - `scripts/validate_grok_committee_output.py`
+  - packet/prompt upgrades:
+    - `search_policy` block now included in v2 packet (`allow_external_search`, citation recency/limits, required citation fields)
+    - prompt now requires `external_enrichment` output section with citations and packet-conflict log
+    - hard rule added: external facts may enrich but cannot silently overwrite packet values
+  - quality-gate upgrades:
+    - validator enforces required top-level schema and execution gate presence
+    - validator enforces stale-context block semantics (no OPEN/INCREASE when execution gate blocked)
+    - validator enforces numeric trigger arrays per ticker decision
+    - validator enforces action semantics (e.g., no `HOLD` on non-held symbols)
+    - validator checks external citation structure/date formatting and recency warnings
+  - regenerated artifacts:
+    - `eval_results/deal_flow/2026-03-18/grok_committee_input_v2.json`
+    - `docs/prompts/grok/grok_committee_packet_2026-03-18_v2.md`
+  - usability:
+    - validator now supports `--output -` to validate pasted JSON via stdin (no temp file required)
+
+- Hardened Grok committee v2 contract with execution gating and numeric trigger requirements:
+  - updated:
+    - `scripts/build_grok_committee_packet.py`
+  - prompt contract changes:
+    - adds required top-level `execution_gate` output (`PASS|BLOCKED_*`)
+    - requires numeric trigger objects (`entry_trigger_numeric`, `invalidation_trigger_numeric`, `review_trigger_numeric`)
+    - adds `DEFER_UNTIL_FRESH_CONTEXT` hedge action option
+    - explicitly forbids OPEN/INCREASE when `execution_readiness.status != PASS`
+  - packet policy changes:
+    - computes `execution_readiness` from data freshness and missing report coverage
+    - blocks on stale portfolio snapshots (`>=2` days) with explicit reason
+    - exposes policy knobs under `decision_policy.execution_policy`
+  - regenerated artifacts:
+    - `eval_results/deal_flow/2026-03-18/grok_committee_input_v2.json`
+    - `docs/prompts/grok/grok_committee_packet_2026-03-18_v2.md`
+
+- Added v2 Grok committee packet builder to improve committee output quality and reduce threshold brittleness:
+  - new script:
+    - `scripts/build_grok_committee_packet.py`
+  - outputs:
+    - `eval_results/deal_flow/<date>/grok_committee_input_v2.json`
+    - `docs/prompts/grok/grok_committee_packet_<date>_v2.md`
+  - quality upgrades in v2 packet:
+    - inlines per-ticker report evidence from `results/<ticker>/<date>/analysis_report.json` (`decision_excerpt`, plan/trader excerpts, key macro/sentiment/momentum/fundamental context)
+    - adds explicit `data_freshness` telemetry (`portfolio_snapshot_age_days`, `portfolio_snapshot_stale`)
+    - adds `decision_policy` with `near_boundary_band` to avoid hard threshold-only `AVOID` behavior
+    - keeps X-feed evidence structured with per-ticker high-signal posts and theme context
+    - preserves hard sizing constraints while requiring trigger/invalidation discipline in prompt
+
+- Added a single-file markdown upload artifact for Grok committee runs:
+  - new file:
+    - `docs/prompts/grok/grok_committee_packet_2026-03-18.md`
+  - includes:
+    - one-shot committee prompt (Bull/Bear/Trader/Risk roles, strict JSON output contract)
+    - full canonical input packet embedded as JSON (same content as `grok_committee_input.json`)
+
+- Delivered a fully upload-ready Grok committee packet for today (no manual edits required):
+  - updated:
+    - `eval_results/deal_flow/2026-03-18/grok_committee_input.json`
+  - populated:
+    - `portfolio_context` from paper execution artifacts (`positions.json`, `latest_plan.json`)
+    - `x_feed_context` from 2026-03-18 merged/manual pass artifacts (coverage, themes, high-signal posts for `OXY`, `VRT`, `CF`, `CVX`, `RTX`)
+    - `known_gaps` with explicit freshness/coverage caveats
+
+- Added pre/post LLM score observability to the session research path so influence is explicit instead of implicit:
+  - `tradingagents/graph/session_research_engine.py`
+    - `run_session_research(...)` now computes a deterministic base score before the LLM call (`build_session_score(..., {})`)
+    - runs LLM synthesis once
+    - recomputes final score post-LLM and attaches a persisted `llm_influence` block under `aeternus_score`
+    - `llm_influence` includes:
+      - `base_score_pre_llm`, `final_score_post_llm`, `score_delta`
+      - `base_confidence_pre_llm`, `final_confidence_post_llm`, `confidence_delta`
+      - debate component before/after/delta (`research_debate`, `trader_verdict`, `risk_verdict`)
+      - report completeness counts
+  - test coverage:
+    - `tests/test_session_research_engine.py`
+      - added assertion that `analysis_report.json` persists the new `llm_influence` contract
+  - verification:
+    - `python3 -m pytest tests/test_session_research_engine.py tests/test_session_assembler.py -q`
+      - result: `22 passed`
+
+- Fixed manual `x-feed` pass-14 observability/ingest edge cases:
+  - `tradingagents/dealflow/sources/x_feed_manual.py`
+    - pass-14 now extracts `options_flow` before early-return handling
+    - when `trending` is empty but `options_flow` has tickers, synthetic pass entries are now built so options-flow-only payloads are ingested instead of silently dropped
+    - empty pass summaries now report true existing merged total instead of hardcoded `0`
+    - same merged-total fix applied to pass-15 GEX-only summary path
+  - tests added in `tests/test_x_feed_manual.py`:
+    - `test_ingest_pass14_options_flow_only_still_ingests_tickers`
+    - `test_ingest_empty_pass_reports_existing_merged_total`
+    - `test_ingest_gex_only_pass_reports_existing_merged_total`
+  - verification:
+    - `python3 -m pytest tests/test_x_feed_manual.py -q`
+      - result: `15 passed`
+  - operator confirmation:
+    - `python3 -m cli.main x-feed --status --date 2026-03-18`
+      - result: `READY`, `15/15`, merged symbols `43`
+
+- Closed the second-half `why-missed` instrumentation gap with authoritative write-time stage-drop metadata:
+  - `tradingagents/dealflow/hypothesis_ledger.py`
+    - `make_ledger_row(...)` now accepts optional `drop_metadata_by_symbol`
+    - writes `hypothesis_ledger/<lane>/<stage>.dropped.meta.json`
+    - persists `dropped_symbols_metadata_path` in each row
+  - `tradingagents/dealflow/pipeline.py`
+    - per-symbol reject metadata is now written at stage-write time for:
+      - `universe_gate_edge`
+      - `universe_gate_haystack`
+      - `evidence_gate`
+      - `shortlist_cut`
+      - `deep_selection_cut`
+    - includes canonical fields:
+      - `reason_code`
+      - `reason_text`
+      - `threshold`
+      - `observed_value`
+      - `delta_to_pass`
+  - `tradingagents/dealflow/investigation_runner.py`
+    - now loads `dropped_symbols_metadata_path` when present
+    - investigation stage misses now prefer authoritative write-time metadata and fall back to inference only when metadata is absent
+  - tests updated:
+    - `tests/test_hypothesis_ledger.py`
+    - `tests/test_dealflow_hypothesis_ledger.py`
+    - `tests/test_investigation_runner.py`
+  - verification:
+    - `python3 -m pytest tests/test_hypothesis_ledger.py tests/test_dealflow_hypothesis_ledger.py tests/test_investigation_runner.py tests/test_investigation_response.py tests/test_cli_question_investigate.py -q`
+      - result: `19 passed`
+
+- Closed the `why-missed` observability gap in the manual investigation backend:
+  - rebuilt `tradingagents/dealflow/investigation_runner.py` to emit deterministic per-stage miss diagnostics:
+    - `reason_code`
+    - `reason_text`
+    - `threshold`
+    - `observed_value`
+    - `delta_to_pass`
+    - `artifacts`
+  - integrated hypothesis-ledger drop context into stage diagnosis where available:
+    - universe gate (`universe_gate_edge` / `universe_gate_haystack`)
+    - evidence gate (`evidence_gate`)
+    - shortlist cut (`shortlist_cut`)
+    - deep selection cut (`deep_selection_cut`)
+  - added shortlist rank-based miss reasoning (`RANK_BELOW_SHORTLIST_CUT`) and anomaly flagging (`SHORTLIST_EXCLUSION_ANOMALY`) from `all_scored_candidates`
+  - preserved existing `question-investigate` payload contract while enriching `stage_diagnosis`
+  - test updates:
+    - `tests/test_investigation_runner.py` now asserts reason metadata and hypothesis-ledger reason capture
+  - verification:
+    - `python3 -m pytest tests/test_investigation_runner.py tests/test_investigation_response.py tests/test_cli_question_investigate.py -q`
+      - result: `11 passed`
+    - smoke:
+      - `python3 -m cli.main question-investigate --date 2026-03-11 --question "MU went up 10% today, why did we miss it?" --format json`
+      - result: stage diagnosis now includes concrete reason metadata per stage
+
+- Implemented MissionControl + scout operator APIs in the gateway (scaffold for full end-to-end control, not scout-only):
+  - added `OperatorGatewayNotFoundError`
+  - added service methods:
+    - `get_mission_control`
+    - `get_scout_inventory`
+    - `get_scout_detail`
+    - `get_scout_prompt`
+    - `ingest_scout_payload`
+  - added service helpers for:
+    - configured-root artifact resolution (`deal_flow`, `x_feed`, `paper_execution`, `live_execution`)
+    - x-feed readiness computation from pass archives
+    - mission stage synthesis (`scouts`, `discover`, `collect`, `research`, `portfolio`, `execution`, `learning`)
+    - scout catalog composition across manual + automatic scouts
+  - completed route/controller integration already staged in:
+    - `tradingagents/operator_gateway/app.py`
+    - `tradingagents/operator_gateway/controller.py`
+    - `tradingagents/operator_gateway/models.py`
+  - added endpoint tests:
+    - mission control stage map
+    - scout inventory coverage
+    - x-feed prompt pass selection
+    - unknown scout `404`
+    - macro ingest write path under configured dealflow root
+  - test hardening:
+    - updated two stale-prone endpoint tests to use UTC dates so snapshot validity checks are deterministic against UTC server logic
+  - verification:
+    - `python3 -m py_compile tradingagents/operator_gateway/service.py tradingagents/operator_gateway/app.py tradingagents/operator_gateway/controller.py tradingagents/operator_gateway/models.py`
+      - result: pass
+    - `python3 -m pytest tests/test_operator_gateway_endpoints.py -q`
+      - result: `32 passed`
+
+- Approved and documented the `Question Compiler` chat-backend direction:
+  - saved design doc:
+    - `docs/plans/2026-03-17-question-compiler-chat-backend-design.md`
+  - saved implementation plan:
+    - `docs/plans/2026-03-17-question-compiler-chat-backend.md`
+  - locked architecture decisions:
+    - frontend remains chat-shaped, backend remains investigation-driven
+    - `v1` is Python-first and manual-only
+    - no required Zep integration in `v1`
+    - LLM use should stay bounded to question ambiguity and final synthesis, not artifact retrieval or stage diagnosis
+  - approved primary use case:
+    - reverse-forensic alpha questions like `MU went up 10% today, why did we miss it?`
+  - approved secondary use case:
+    - forward scenario questions over existing internal evidence
+
+- Implemented `Question Compiler v1` manual investigation flow:
+  - new modules:
+    - `tradingagents/dealflow/question_compiler.py`
+    - `tradingagents/dealflow/investigation_runner.py`
+    - `tradingagents/dealflow/investigation_response.py`
+  - new CLI command:
+    - `question-investigate`
+  - new tests:
+    - `tests/test_question_compiler.py`
+    - `tests/test_investigation_runner.py`
+    - `tests/test_investigation_response.py`
+    - `tests/test_cli_question_investigate.py`
+  - saved frontend contract:
+    - `docs/plans/2026-03-17-question-compiler-chat-backend-frontend-contract.md`
+  - focused verification:
+    - `python3 -m pytest tests/test_question_compiler.py tests/test_investigation_runner.py tests/test_investigation_response.py tests/test_cli_question_investigate.py -q`
+      - result: `14 passed`
+    - smoke:
+      - `python3 -m cli.main question-investigate --date 2026-03-11 --question "MU went up 10% today, why did we miss it?" --format json`
+      - result: valid JSON response with `coverage_status = PARTIAL`
+
+- Added a fail-open learning phase to `workflow-run` and closed the first adaptive writeback loop:
+  - new modules:
+    - `tradingagents/dealflow/learning_loop.py`
+    - `tradingagents/dealflow/ic_weight_writeback.py`
+    - `tradingagents/dealflow/source_attribution.py`
+    - `tradingagents/dealflow/observed_edges.py`
+  - `cli/commands/dealflow.py`
+    - `workflow-run` now appends `steps.learning`
+    - learning failures degrade status to `COMPLETED_WITH_LEARNING_DEGRADED` instead of failing the workflow
+  - `tradingagents/dealflow/scoring.py`
+    - existing `ic_signal_weights.json` read path remains the live consumer of signal-family weight deltas
+  - `tradingagents/graph/ensemble_weights.py`
+    - `update_weights(...)` is no longer a stub; it now applies conservative bounded nudges and persists update history
+  - new artifacts:
+    - `eval_results/deal_flow/<date>/learning_status.json`
+    - `eval_results/deal_flow/<date>/source_attribution.json`
+    - `eval_results/control/ic_signal_weights.json` (when sufficient data exists)
+  - live smoke:
+    - `run_learning_cycle('2026-03-11')`
+      - `learning_status = DEGRADED`
+      - `hindsight_status = ERROR` (expected: T+5 not available yet)
+      - `performance_status = OK`
+      - `weight_update_status = SKIPPED_INSUFFICIENT_DATA`
+      - `observed_edges_added = 2`
+      - artifact: `eval_results/deal_flow/2026-03-11/learning_status.json`
+  - focused verification:
+    - `python3 -m pytest tests/test_learning_loop.py tests/test_ic_weight_writeback.py tests/test_source_attribution.py tests/test_observed_edges.py tests/test_ensemble_weights.py tests/test_performance_tracker.py tests/test_hindsight.py tests/test_cli_dealflow.py -k 'learning or weight or source_attribution or observed_edges or workflow_run or performance_review or hindsight' -q`
+      - result: `44 passed`
+
+- Removed the Yahoo-finance `earnings_iv` path from active dealflow and converted `social_news` to manual X-feed only:
+  - `tradingagents/dealflow/pipeline.py`
+    - removed collect-time `earnings_iv` connector wiring
+    - removed legacy discover-time IV scanner hook
+    - Grok provenance now reads `eval_results/x_feed/<date>/merged.json` instead of the old xAI social cache
+  - `tradingagents/dealflow/scoring.py`
+    - removed `earnings_iv_divergence` from core scoring families/weights
+  - `tradingagents/dealflow/contracts.py`
+    - removed `earnings_iv_divergence` from the `DealFlowSignal` contract
+  - `tradingagents/dealflow/sources/social_news.py`
+    - removed xAI cache/API behavior
+    - now scores `social_momentum` and `news_catalyst` only from manual X-feed merged artifacts
+  - `tradingagents/dealflow/sources/x_feed_manual.py`
+    - removed xAI mirror-cache writeback from `ingest_pass()`
+  - `cli/main.py`
+    - removed old `earnings-scan` command registration
+  - `cli/commands/earnings_scanner.py`
+    - deleted
+  - `tradingagents/dealflow/sources/iv_scanner.py`
+    - replaced with a no-op compatibility stub so older monkeypatch-based tests/imports do not break on import
+  - focused verification:
+    - `python3 -m pytest tests/test_dealflow_social_news_live.py tests/test_social_cache_coverage.py tests/test_x_feed_manual.py tests/test_dealflow_pipeline.py tests/test_cli_dealflow.py tests/test_macro_prompt.py tests/test_earnings_options_prompt.py -k 'social_news or social_cache or x_feed_manual or earnings_scan_command_removed or dealflow_scoring_has_no_earnings_iv_family or collect_threads_earnings_iv_connector_health or macro_prompt or earnings_options_prompt' -q`
+      - result: `32 passed`
+  - live verification:
+    - `python3 -m cli.main discover --date 2026-03-11 --format json`
+      - result: completed with `universe_size = 150`, `earnings_options_count = 1`, `iv_force_queue_count = 0`
+    - `python3 -m cli.main collect --date 2026-03-11 --trigger manual --profile daily --top-k 30 --format json`
+      - result: completed successfully
+      - `connector_health.json` now contains:
+        - `social_news`
+        - `price_momentum`
+        - `macro`
+        - `smart_money`
+        - `sector_rotation`
+        - `fundamental_factor_shadow`
+        - `insider_cluster`
+      - confirmed:
+        - no `earnings_iv` connector row remains
+        - `social_news` status is `OK`
+
+- Ran manual X-feed preflight for `2026-03-10`:
+  - `python3 -m cli.main x-feed --status --date 2026-03-10`
+  - result: `INCOMPLETE`, `0/15` completed passes, merged symbols `0`
+- Generated the full 15-pass manual prompt set for today:
+  - `python3 -m cli.main x-feed --generate --date 2026-03-10`
+  - artifact: `eval_results/x_feed/2026-03-10/manual_prompts.txt`
+  - note: generation initially failed because directory creation and redirect were launched in parallel; reran sequentially and verified the artifact was written (`1041` lines)
+- Completed today's manual X-feed ingestion for `2026-03-10`:
+  - ingested passes `1-15`
+  - final gate: `READY Manual X Feed — 2026-03-10`
+  - completed passes: `15/15`
+  - merged symbols: `70`
+  - merged artifact: `eval_results/x_feed/2026-03-10/merged.json`
+  - pass 15 used a neutral GEX fallback payload (`NO_DATA`) and was accepted as a GEX-only pass with `0` tickers merged
+- Removed verified Yahoo-empty delisted/stale symbols from the discovery recall path and local universe seed:
+  - added recall-path confirmation/pruning in `tradingagents/dealflow/pipeline.py`
+  - added persistent `remove_nodes(...)` support in `tradingagents/graph/knowledge_graph.py`
+  - removed `GATO HONE IIVIP ITOS JNCE KRTX MRUS PPBI PRFT TBK UMPQ VBTX YMAB` from `tradingagents/graph/data/universe_constituents.csv`
+  - pruned the same 13 symbols from `eval_results/control/knowledge_graph.json`
+  - live verification:
+    - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'discover_persists_fvg_recall_artifact_and_threads_symbols or discover_persists_fma_recall_artifact_and_threads_symbols or prunes_symbols_with_no_yahoo_history_from_akg' -q`
+      - result: `3 passed`
+    - `python3 -m cli.main discover --date 2026-03-10 --format table`
+      - result: discovery completed at `70` symbols without the prior delisted-symbol warning burst
+- Restored the first-universe-filter gate that should sit between `discover` and `collect`:
+  - root cause: `tradingagents/dealflow/pipeline.py` still rendered `summary["universe_filter"]` in the CLI path, but `discover()` no longer built or persisted `universe_filter.json`
+  - fixed by rebuilding the report with `build_universe_filter_report(...)`, persisting `eval_results/deal_flow/YYYY-MM-DD/universe_filter.json`, and returning both `universe_filter` and `universe_filter_summary` from `discover()`
+  - focused verification:
+    - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'discover_persists_universe_filter_artifact_and_summary' -q`
+      - result: `1 passed`
+    - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'discover_persists_fvg_recall_artifact_and_threads_symbols or discover_persists_fma_recall_artifact_and_threads_symbols or prunes_symbols_with_no_yahoo_history_from_akg or discover_persists_universe_filter_artifact_and_summary' -q`
+      - result: `4 passed`
+    - `python3 -m cli.main discover --date 2026-03-10 --format table`
+      - result: CLI now renders `First Universe Filter`
+    - `python3 -m cli.main universe-filter --date 2026-03-10 --status`
+      - result: `CHECK First Universe Filter — 2026-03-10`
+      - current failing checks are real pipeline state, not missing-artifact failure:
+        - `technical_recall_present = 0`
+        - `scout_activity_present = 0`
+- Closed the remaining `2026-03-10` universe-filter gap and restored `READY` status:
+  - root cause 1: FVG/FMA recall treated missing `liquidity_score` as `50.0`, which let unrated AKG names into the recall candidate set and made the eligibility logic unreliable
+  - root cause 2: a long-running `discover` session had loaded AKG before a bounded liquidity repair, then later saved its stale in-memory graph and wiped those liquidity updates
+  - implemented in `tradingagents/dealflow/pipeline.py`:
+    - added `_coerce_liquidity_score(...)`
+    - changed both FVG and FMA recall builders to skip AKG nodes whose liquidity is missing instead of defaulting them to liquid
+  - added focused regression coverage in `tests/test_dealflow_pipeline.py`:
+    - `test_fvg_recall_skips_symbols_without_liquidity_score`
+    - `test_fma_recall_skips_symbols_without_liquidity_score`
+  - focused verification:
+    - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'skips_symbols_without_liquidity_score or prunes_symbols_with_no_yahoo_history_from_akg or discover_persists_universe_filter_artifact_and_summary' -q`
+      - result: `4 passed`
+    - live `discover` after the fix showed scout activity recovered:
+      - `IV scanner: 1 force-queue candidate`
+      - `scout_activity_present = 1`
+    - reapplied a small sequential liquidity repair for a deterministic subset (`NVDA`, `TSM`, and other current X-feed / breakout names), then rebuilt:
+      - `eval_results/deal_flow/2026-03-10/fvg_recall.json`
+      - `eval_results/deal_flow/2026-03-10/fma_recall.json`
+      - `eval_results/deal_flow/2026-03-10/universe_filter.json`
+      - `eval_results/deal_flow/2026-03-10/discovery_delta.json`
+    - final gate:
+      - `python3 -m cli.main universe-filter --date 2026-03-10 --status`
+      - result: `READY First Universe Filter — 2026-03-10`
+      - passing checks:
+        - `technical_recall_present = 1`
+        - `manual_xfeed_present = 70`
+        - `scout_activity_present = 1`
+
+- Ran live Qwen Feature Lab iterations against the bounded overlay space (growth_acceleration / margin_expansion / quality_tension_inverse / balance_sheet_resilience) and confirmed the search surface is saturated:
+  - 16 completed iterations persisted under `eval_results/fundamental_autoresearch/2026-03-09/*qwen-feature*/autoresearch_summary.json`
+  - 11/16 converged to the same best candidate: `qwen_feature__base_0p90__margin_expansion_0p10` with `IC = 0.083899`
+  - current feature-lab champion remains stronger at `IC = 0.084495`
+  - conclusion: stop using Qwen on this tiny feature-overlay space; move it to a higher-value search surface (broader universe, sector-specific formulas, horizon-specific formulas, or residual filing-text features)
+
+- Made the live SEC fundamental connector registry-driven and shadow-capable:
+  - extended [tradingagents/research/fundamental_autoresearch/registry.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/registry.py) with:
+    - `load_latest_signal_registry(...)`
+    - `get_active_strategy(...)`
+  - added `fundamental_factor_shadow` to the dealflow signal contract in [tradingagents/dealflow/contracts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/contracts.py)
+  - refactored [tradingagents/dealflow/sources/fundamental_factor.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/sources/fundamental_factor.py) so the runtime connector:
+    - uses the SEC/autoresearch harness to build latest live feature rows
+    - loads weights from the signal registry instead of hardcoding baseline weights
+    - emits `fundamental_factor_shadow` when the active strategy is `shadow`
+    - degrades safely with `NOT_CONFIGURED` when the registry is missing
+  - seeded the registry from the constrained autoresearch results:
+    - [fundamental_signals.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-09/fundamental_signals.json)
+    - current top active shadow strategy:
+      - `health_0p4__inv_quality_0p6`
+  - live smoke now confirms the serving path is working:
+    - `AAPL fundamental_factor_shadow OK ... sec_autoresearch_shadow:health_0p4__inv_growth_0p1__inv_quality_0p5`
+    - `MSFT fundamental_factor_shadow OK ... sec_autoresearch_shadow:health_0p4__inv_growth_0p1__inv_quality_0p5`
+  - focused verification:
+    - `python3 -m pytest tests/test_fundamental_autoresearch_registry.py tests/test_fundamental_factor.py -v`
+      - result: `6 passed`
+    - `python3 -m pytest tests/test_cli_fundamental_research.py tests/test_fundamental_autoresearch_promotion_gate.py -k 'registry or promotion_gate' -v`
+      - result: `2 passed`
+
+- Completed the final registry-driven shadow-connector wiring into live dealflow:
+  - restored [tradingagents/dealflow/sources/fundamental_factor.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/sources/fundamental_factor.py) as a live SEC/autoresearch serving adapter
+  - updated [tradingagents/dealflow/sources/__init__.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/sources/__init__.py) and [tradingagents/dealflow/contracts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/contracts.py) so `fundamental_factor_shadow` is a first-class signal family
+  - wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py) to collect `fundamental_factor_shadow`, persist [fundamental_factor_shadow.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/deal_flow), and expose `fundamental_shadow_summary` in live `collect` output
+  - focused verification:
+    - `python3 -m pytest tests/test_fundamental_factor.py -v`
+      - result: `2 passed`
+    - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'fundamental_shadow or collect_persists_fundamental_shadow_artifact_and_summary' -v`
+      - result: `1 passed`
+    - `python3 -m pytest tests/test_cli_dealflow.py -k 'fundamental_shadow_summary' -v`
+      - result: `1 passed`
+
+- Finalized the deep-analysis provider-plug slice:
+  - added [tradingagents/dataflows/codex_cli.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dataflows/codex_cli.py) as a LangChain-compatible `codex exec` chat backend for GPT post-analyst graph execution
+  - extended [tradingagents/graph/trading_graph.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/graph/trading_graph.py) to support `codex_cli` as a first-class graph provider
+  - generalized [tradingagents/graph/codex_research_bridge.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/graph/codex_research_bridge.py) to support:
+    - `gpt`
+    - `claude`
+    - `grok_manual`
+    analyst bundles, with provider-specific artifact directories and manual readiness checks
+  - added [cli/commands/research_analysts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/research_analysts.py) for:
+    - prompt generation
+    - manual Grok analyst ingest
+    - bundle readiness status
+  - wired [cli/commands/scoring.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/scoring.py) so `analyze` and `analyze-batch` now take:
+    - `--analyst-provider`
+    - `--post-analyst-provider`
+  - default execution model is now explicit and auditable:
+    - analyst provider defaults to `gpt`
+    - post-analyst provider defaults to `claude`
+  - supported live combinations now include:
+    - `GPT analysts + Claude post-analyst`
+    - `GPT analysts + GPT post-analyst`
+    - `Claude analysts + Claude post-analyst`
+    - `Grok manual analysts + GPT post-analyst`
+    - `Grok manual analysts + Claude post-analyst`
+  - `Gemini` is surfaced only as a future placeholder and remains intentionally blocked
+  - focused verification:
+    - `python3 -m pytest tests/test_codex_cli.py tests/test_cli_research_analysts.py tests/test_scoring_codex_bridge.py -v`
+      - result: `13 passed`
+    - `python3 -m pytest tests/test_claude_cli.py tests/test_cli_score.py tests/test_cli_dealflow.py -k 'analyze_batch or analyze-batch or scoring or x_feed or workflow_run' -v`
+      - result: `19 passed`
+
+- Saved today's reconstructed first-universe audit and fixed standalone collector bootstrap consistency:
+  - saved reconstructed first-filter artifact:
+    - [universe_filter_reconstructed.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/deal_flow/2026-03-09/universe_filter_reconstructed.json)
+  - fixed [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py) so standalone `collect()` now loads persisted:
+    - `fvg_recall.json`
+    - `fma_recall.json`
+    before rebuilding the bounded universe
+  - added regression coverage in [tests/test_dealflow_pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_dealflow_pipeline.py):
+    - `test_collect_standalone_threads_persisted_recall_symbols`
+  - focused verification:
+    - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'collect_standalone_threads_persisted_recall_symbols or collect_standalone_bootstraps_without_discover' -v`
+    - result: `2 passed`
+- Ran today's collector stage after the bootstrap fix:
+  - collector artifacts now exist under `eval_results/deal_flow/2026-03-09/`
+  - key output:
+    - shortlist top 20:
+      - `AMD, NVDA, ALAB, META, XOP, PLTR, MRVL, BBAI, AAL, CDE, PYPL, PBF, MPC, XLE, OXY, CVX, ETN, EOG, RTX, ALB`
+    - selected for deep:
+      - `NVDA, ALAB, XOP, AMD, PLTR, MRVL, BBAI, AAL, CDE, META, PBF, MPC, AXP, AAPL, TSM, BMY, JNJ`
+  - important collector health finding:
+    - `price_momentum` timed out after `45s`
+    - yfinance rate limiting hit:
+      - `SPY`
+      - `^VIX`
+      - and several individual tickers during the run
+  - evidence integrity result:
+    - `CONFIRMED: 93`
+    - `SPARSE_BUT_INTERESTING: 59`
+    - `DATA_DEGRADED: 0`
+    - `LOW_SIGNAL: 202`
+  - next likely debug target:
+    - make the market-shock / price-momentum yfinance path degrade gracefully instead of acting like a hidden collector blocker
+
+- Added a capital-discipline broadening slice to the fundamental autoresearch constrained space:
+  - `search.py` now allows a small positive `capital_discipline` sleeve while keeping:
+    - `health` dominant
+    - `growth` inverted-only
+    - `quality` inverted-only
+    - `valuation = 0`
+  - real experiment:
+    - [autoresearch_summary.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-09/large-cap-v1-2009plus-capital-discipline-autoresearch/autoresearch_summary.json)
+  - result:
+    - best overall stayed no-capital-discipline:
+      - `health_0p4__inv_growth_0p1__inv_quality_0p5 = +0.084495`
+    - best capital-discipline-bearing:
+      - `health_0p4__inv_growth_0p1__inv_quality_0p4__capital_discipline_0p1 = +0.084207`
+  - interpretation:
+    - capital discipline did not earn promotion into the current canonical winner on the current feature set
+- Added a read-only shadow fundamental overlay to both live/session scoring paths:
+  - [tradingagents/graph/aeternus_scoring.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/graph/aeternus_scoring.py)
+  - [tradingagents/graph/session_assembler.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/graph/session_assembler.py)
+  - persisted fields:
+    - `fundamental_overlay_score`
+    - `fundamental_overlay_label`
+    - `fundamental_overlay_notes`
+  - formula:
+    - `0.5 * health + 0.4 * (100 - quality) + 0.1 * (100 - growth)`
+  - labels:
+    - `UNDERAPPRECIATED_RESILIENCE`
+    - `BALANCED`
+    - `CROWDING_RISK`
+  - guardrail:
+    - advisory only; does **not** alter the official anchored fundamental pillar score or the full Aeternus score
+- Added docs for this slice:
+  - [2026-03-09-capital-discipline-shadow-overlay-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-09-capital-discipline-shadow-overlay-design.md)
+  - [2026-03-09-capital-discipline-shadow-overlay.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-09-capital-discipline-shadow-overlay.md)
+- Audited and hardened the manual X-feed workflow:
+  - fixed the public contract from 14 passes to 15 in:
+    - [cli/commands/x_feed_manual.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/x_feed_manual.py)
+    - [tradingagents/dealflow/sources/x_feed_manual.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/sources/x_feed_manual.py)
+  - added `get_readiness(as_of_date)` with:
+    - completed/missing pass lists
+    - raw archive count
+    - merged symbol count
+    - final ready flag
+  - added `aeternus x-feed --status`
+  - added manual-mode workflow preflight in:
+    - [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py)
+  - `workflow-run --mode manual` now blocks with `BLOCKED_MANUAL_X_FEED` until all 15 passes exist and merged X-feed data is present
+  - real verification on `2026-03-09`:
+    - [workflow_run_070405.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/live_execution/workflow/2026-03-09/workflow_run_070405.json)
+    - current day correctly blocked at `3/15` completed passes
+
+- Extended the Fundamental Pillar Autoresearch Harness into a real historical comparison engine:
+  - historical `2009+` SEC filing snapshot backfill for the `large_cap_v1` universe
+  - adjusted-close forward-return attachment for `20d`, `60d`, `120d`, and `252d`
+  - deterministic multi-strategy baseline comparison via:
+    - [tradingagents/research/fundamental_autoresearch/score.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/score.py)
+    - [tradingagents/research/fundamental_autoresearch/evaluate.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/evaluate.py)
+    - [tradingagents/research/fundamental_autoresearch/artifacts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/artifacts.py)
+    - [cli/commands/fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/fundamental_research.py)
+- Produced the first real baseline-comparison artifact on the historical dataset:
+  - dataset:
+    - [large_cap_v1-2009plus-with-returns.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/sec_cache/prepared/large_cap_v1-2009plus-with-returns.json)
+  - comparison artifact:
+    - [baseline_comparison.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-08/large-cap-v1-2009plus-baseline-comparison/baseline_comparison.json)
+  - key result on `60d` sector-neutral rank IC:
+    - `health_only = +0.043759`
+    - `capital_discipline_only = -0.013982`
+    - `valuation_only = -0.013982`
+    - `growth_only = -0.047902`
+    - `quality_valuation = -0.051586`
+    - `baseline_v1 = -0.055066`
+    - `growth_quality = -0.060403`
+    - `quality_only = -0.060486`
+  - interpretation:
+    - the harness is valid and the naive composite is weak
+    - `health_only` is the only positive baseline in the first real historical read
+    - next work should focus on score iteration / constrained search, not more ingestion plumbing
+- Added a constrained inverted-baseline suite to test whether negative growth/quality IC should be interpreted as anti-signals:
+  - `growth_only_inverted`
+  - `quality_only_inverted`
+  - `growth_quality_inverted`
+  - `health_minus_growth`
+  - `health_minus_quality`
+- Produced the first inverted-baseline comparison artifact:
+  - [baseline_comparison.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-08/large-cap-v1-2009plus-inverted-baseline-comparison/baseline_comparison.json)
+  - key result on `60d` sector-neutral rank IC:
+    - `health_minus_quality = +0.074778`
+    - `health_minus_growth = +0.073166`
+    - `quality_only_inverted = +0.069668`
+    - `growth_quality_inverted = +0.063810`
+    - `growth_only_inverted = +0.048817`
+    - `health_only = +0.043759`
+  - interpretation:
+    - the user hypothesis was directionally right
+    - `growth` and `quality` look more useful as overexpectation / crowding anti-signals than as direct long signals on this dataset
+    - the best constrained space now appears to be `health` plus inverted `growth`/`quality`, not the original positive composite
+- Added a deterministic constrained search over `health`, inverted `growth`, and inverted `quality`:
+  - [tradingagents/research/fundamental_autoresearch/search.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/search.py)
+  - [cli/commands/fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/fundamental_research.py) now exposes:
+    - `python3 -m cli.main fundamental-research-constrained-search`
+  - artifact:
+    - [constrained_search.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-08/large-cap-v1-2009plus-constrained-search/constrained_search.json)
+  - top results on `60d` sector-neutral rank IC:
+    - `health_0p5__inv_growth_0p1__inv_quality_0p4 = +0.087029`
+    - `health_0p4__inv_growth_0p1__inv_quality_0p5 = +0.086616`
+    - `health_0p6__inv_growth_0p1__inv_quality_0p3 = +0.085598`
+    - `health_0p5__inv_growth_0p2__inv_quality_0p3 = +0.084148`
+  - interpretation:
+    - the best blend is not pure anti-growth or pure anti-quality
+    - the current winner is a mostly-health model with a heavier inverted-quality component and a small inverted-growth component
+    - quality appears to be the stronger crowding/overexpectation variable of the two on this dataset
+
+- Built the first slice of the Fundamental Pillar Autoresearch Harness under [tradingagents/research/fundamental_autoresearch/](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch):
+  - [contracts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/contracts.py)
+  - [universe.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/universe.py)
+  - [time_utils.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/time_utils.py)
+  - [sec_ingest.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/sec_ingest.py)
+  - [features.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/features.py)
+  - [score.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/score.py)
+  - [evaluate.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/evaluate.py)
+  - [artifacts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/artifacts.py)
+- Added a thin prepared-row CLI entrypoint:
+  - [cli/commands/fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/fundamental_research.py)
+  - registered in [cli/main.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/main.py) as `fundamental-research`
+- Extended the harness with a cache-first SEC layer:
+  - [tradingagents/research/fundamental_autoresearch/sec_fetch.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/sec_fetch.py)
+    - deterministic cache paths for `submissions` and `companyfacts`
+    - raw SEC fetchers with injected HTTP session and SEC-compliant `User-Agent`
+    - raw JSON cache persistence helpers
+    - universe-level cache fill helper with explicit `cached`, `skipped_missing_cik`, and `failed` accounting
+    - SEC-official `company_tickers.json` fetch/cache helpers
+    - resolver-owned ticker→CIK map with cached SEC fallback only
+    - ticker alias normalization for SEC punctuation differences such as `BRK-B` vs `BRK.B`
+  - [tradingagents/research/fundamental_autoresearch/prepare.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/prepare.py)
+    - deterministic prepared artifact path under `prepared/`
+    - prepared-row writer/loader helpers
+- Extended the CLI with thin cache/prep commands:
+  - `python3 -m cli.main fundamental-research-cache-fill --symbols ...`
+  - `python3 -m cli.main fundamental-research-prepare --symbols ... --cache-root ... --run-name ...`
+- Added focused regression coverage:
+  - [tests/test_fundamental_autoresearch_contracts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_contracts.py)
+  - [tests/test_fundamental_autoresearch_universe.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_universe.py)
+  - [tests/test_fundamental_autoresearch_time_utils.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_time_utils.py)
+  - [tests/test_fundamental_autoresearch_sec_ingest.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_sec_ingest.py)
+  - [tests/test_fundamental_autoresearch_features.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_features.py)
+  - [tests/test_fundamental_autoresearch_score.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_score.py)
+  - [tests/test_fundamental_autoresearch_evaluate.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_evaluate.py)
+  - [tests/test_fundamental_autoresearch_artifacts.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_artifacts.py)
+  - [tests/test_fundamental_autoresearch_sec_fetch.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_sec_fetch.py)
+  - [tests/test_fundamental_autoresearch_prepare.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_prepare.py)
+  - [tests/test_cli_fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_cli_fundamental_research.py)
+- Focused harness verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_contracts.py tests/test_fundamental_autoresearch_universe.py tests/test_fundamental_autoresearch_time_utils.py tests/test_fundamental_autoresearch_sec_ingest.py tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_artifacts.py tests/test_fundamental_autoresearch_sec_fetch.py tests/test_fundamental_autoresearch_prepare.py tests/test_cli_fundamental_research.py -v`
+  - result: `44 passed`
+
+- Added Discovery Delta cohort scorecards to the standard review artifacts:
+  - `hindsight.json` now embeds `discovery_delta_cohorts` with `5d` peer and Step 1 baseline comparisons
+  - `performance_review.json` now embeds `discovery_delta_cohorts` with `5d`, `20d`, and `3m` peer and Step 1 baseline comparisons
+- Added a shared rollup helper in [tradingagents/dealflow/discovery_delta.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/discovery_delta.py) for:
+  - cohort metrics for `scout_only`, `technical_only`, `multi_channel`
+  - `shortlist_conversion`
+  - `deep_selection_conversion`
+  - `vs_step1_baseline`
+  - `vs_other_cohorts`
+- Added focused regression coverage in:
+  - [tests/test_discovery_delta.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_discovery_delta.py)
+  - [tests/test_hindsight.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_hindsight.py)
+  - [tests/test_performance_tracker.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_performance_tracker.py)
+- Focused verification:
+  - `python3 -m pytest tests/test_discovery_delta.py tests/test_hindsight.py tests/test_performance_tracker.py -k 'discovery_delta or LedgerEnrichment' -v`
+  - result: `7 passed`
+- Surfaced the Delta cohort scorecards in the operator CLI review flow:
+  - [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py) now renders `Discovery Delta Cohort Scorecards`
+  - [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py) `hindsight`
+  - [cli/commands/performance.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/performance.py) `performance-review`
+- Focused CLI+review verification:
+  - `python3 -m pytest tests/test_cli_dealflow.py tests/test_discovery_delta.py tests/test_hindsight.py tests/test_performance_tracker.py -k 'discovery_delta or LedgerEnrichment or hindsight_command_renders_hypothesis_stage_summary or performance_review_command_renders_hypothesis_stage_summary' -v`
+  - result: `11 passed`
+- Cleaned up the V3 benchmark contract in the track-record path:
+  - [tradingagents/phase_engine/index_overlay.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/phase_engine/index_overlay.py) now supports explicit `date_start` / `date_end` slicing and emits both tactical point metrics and return-based metrics
+  - [tradingagents/graph/track_record.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/graph/track_record.py) now uses `DEFAULT_CONFIG["v3_benchmark_ticker"]`, respects the actual track-record window, and accepts either `date` or `trade_date`
+  - [cli/commands/performance.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/performance.py) now renders a dynamic `V3 <ticker> Benchmark (Track-Record Window)` table with total return and CAGR instead of hardcoded QQQ points/year only
+- Focused V3 verification:
+  - `python3 -m pytest tests/test_track_record_accuracy.py tests/test_cli_dashboard.py tests/test_v3_benchmark.py -k 'v3_benchmark or performance_command_renders_dynamic_v3_benchmark' -v`
+  - result: `17 passed`
+- Added a first-pass benchmark admission gate to [tradingagents/graph/paper_execution.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/graph/paper_execution.py):
+  - extracts a candidate expected-return proxy from structured trader scenarios (`target_return_pct` EV) or direct predicted-return fields
+  - compares it against configured V3 benchmark total return over the configured benchmark window
+  - blocks only explicit underperformers (`FAILED`)
+  - fails open for `MISSING_PROXY`, `DISABLED`, and `BENCHMARK_UNAVAILABLE`
+  - persists per-order metadata:
+    - `expected_return_proxy_pct`
+    - `benchmark_hurdle_status`
+    - `benchmark_return_pct`
+    - `benchmark_ticker`
+    - `benchmark_period_days`
+  - persists plan-level counts under `allocation_summary["benchmark_hurdle"]`
+- Focused portfolio benchmark verification:
+  - `python3 -m pytest tests/test_portfolio_construction.py -k 'benchmark_hurdle' -v`
+  - result: `4 passed`
+  - `python3 -m pytest tests/test_portfolio_construction.py tests/test_multi_account.py -k 'build_portfolio_plan or BuildAccountPlan or TQQQInstrumentSwap or benchmark_hurdle' -v`
+  - result: `8 passed`
+- Added read-only Step 2 evidence classification in [tradingagents/dealflow/evidence_integrity.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/evidence_integrity.py):
+  - all Step 2 candidates are classified as:
+    - `CONFIRMED`
+    - `SPARSE_BUT_INTERESTING`
+    - `DATA_DEGRADED`
+    - `LOW_SIGNAL`
+  - no change to current `ACTIVE` / `LOW_DATA` gate behavior in v1
+- Wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py) to persist:
+  - `eval_results/deal_flow/<date>/evidence_integrity.json`
+  - `shortlist["evidence_integrity_summary"]`
+- Focused evidence-integrity verification:
+  - `python3 -m pytest tests/test_evidence_integrity.py tests/test_dealflow_pipeline.py -k 'evidence_integrity' -v`
+  - result: `5 passed`
+  - `python3 -m pytest tests/test_evidence_integrity.py tests/test_dealflow_pipeline.py tests/test_dealflow_momentum.py -k 'evidence_integrity or collect_standalone_bootstraps_without_discover' -v`
+  - result: `6 passed`
+- Added Evidence Integrity review scorecards in [tradingagents/dealflow/evidence_integrity.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/evidence_integrity.py):
+  - cohorts:
+    - `CONFIRMED`
+    - `SPARSE_BUT_INTERESTING`
+    - `DATA_DEGRADED`
+    - `LOW_SIGNAL`
+  - comparisons:
+    - `vs_step2_baseline`
+    - `vs_other_cohorts`
+- Embedded `evidence_integrity_cohorts` into:
+  - [tradingagents/dealflow/hindsight.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hindsight.py)
+  - [tradingagents/dealflow/performance_tracker.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/performance_tracker.py)
+- Surfaced Evidence Integrity in the operator CLI:
+  - live summary renderers in [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py)
+  - live command surfaces in [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py)
+  - review command surfaces in [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py) and [cli/commands/performance.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/performance.py)
+- Focused Evidence Integrity surface verification:
+  - `python3 -m pytest tests/test_hindsight.py tests/test_performance_tracker.py -k 'evidence_integrity_cohorts' -v`
+  - result: `2 passed`
+  - `python3 -m pytest tests/test_cli_dealflow.py -k 'hindsight_command_renders_hypothesis_stage_summary or performance_review_command_renders_hypothesis_stage_summary or discover_command_renders_discovery_delta_summary or source_command_renders_discovery_delta_summary' -v`
+  - result: `4 passed`
+  - `python3 -m pytest tests/test_evidence_integrity.py tests/test_dealflow_pipeline.py tests/test_hindsight.py tests/test_performance_tracker.py tests/test_cli_dealflow.py -k 'evidence_integrity or collect_standalone_bootstraps_without_discover or hindsight_command_renders_hypothesis_stage_summary or performance_review_command_renders_hypothesis_stage_summary' -v`
+  - result: `11 passed`
+- Added read-only Step 3 shortlist-boundary measurement in [tradingagents/dealflow/shortlist_integrity.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/shortlist_integrity.py):
+  - groups:
+    - `selected_shortlist`
+    - `near_miss_eligible`
+    - `selected_for_deep`
+  - top candidate false negatives:
+    - highest-ranked near misses just below the cut
+  - persisted artifact:
+    - `eval_results/deal_flow/<date>/shortlist_integrity.json`
+- Wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py) to persist `shortlist_integrity.json` without changing ranking or shortlist behavior.
+- Focused Shortlist Integrity verification:
+  - `python3 -m pytest tests/test_shortlist_integrity.py -v`
+  - result: `1 passed`
+  - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'shortlist_integrity' -v`
+  - result: `1 passed`
+  - `python3 -m pytest tests/test_shortlist_integrity.py tests/test_dealflow_pipeline.py -k 'shortlist_integrity or collect_standalone_bootstraps_without_discover' -v`
+  - result: `3 passed`
+
+- Traced the current system left-to-right: AKG universe -> scouts -> connectors -> scoring -> ranking -> research queue -> analysis -> portfolio -> hindsight/performance.
+- Identified the current learning gap: not every funnel cut is logged as a first-class kept-vs-dropped experiment.
+- Designed the multi-lane architecture:
+  - shared `L0` feature store
+  - shared `L1` recall scan
+  - split at `L2` into `3-Month Upside` and `Emergence` lanes
+  - lane-specific triage and research escalation
+- Defined the hypothesis-ledger contract for universe, evidence, shortlist, deep-selection, and portfolio cuts.
+- Wrote the design doc in [docs/plans/2026-03-06-multi-lane-probability-funnel-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-multi-lane-probability-funnel-design.md).
+- Wrote the Phase 1 implementation plan in [docs/plans/2026-03-06-multi-lane-probability-funnel.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-multi-lane-probability-funnel.md).
+- Implemented the hypothesis-ledger foundation in [tradingagents/dealflow/hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hypothesis_ledger.py) with deterministic snapshot paths and append-only row storage.
+- Instrumented `shortlist_cut`, `deep_selection_cut`, and `portfolio_inclusion_cut` in the live pipeline/portfolio path.
+- Added focused coverage in [tests/test_hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_hypothesis_ledger.py), [tests/test_dealflow_hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_dealflow_hypothesis_ledger.py), and [tests/test_portfolio_hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_portfolio_hypothesis_ledger.py).
+- Checkpointed implementation commits:
+  - `2f56f396 feat: add hypothesis ledger contract`
+  - `8d1a7e20 feat: log shortlist cut to hypothesis ledger`
+  - `d3f99cfb feat: log deep selection and portfolio inclusion cuts`
+- Added Phase 1 lane metadata fields to deal-flow candidates and research-queue items:
+  - `upside_3m_score`
+  - `emergence_proxy_score`
+  - `narrative_ignition_score`
+  - `fundamentals_acceleration_score`
+  - `relative_strength_score`
+  - `lane_candidates`
+- Added pure stage-metric helpers in [tradingagents/dealflow/hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hypothesis_ledger.py) for:
+  - kept mean return
+  - dropped mean return
+  - kept-vs-dropped edge
+  - future-winner recall
+  - false-negative cost
+- Added ledger-row enrichment in [tradingagents/dealflow/hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hypothesis_ledger.py) so persisted kept/dropped snapshots can be rescored after forward-return data is available.
+- Wired [tradingagents/dealflow/hindsight.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hindsight.py) to enrich shared-lane stage rows with realized `5d` returns.
+- Wired [tradingagents/dealflow/performance_tracker.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/performance_tracker.py) to enrich shared-lane stage rows with realized `5d`, `20d`, and available `3m` return maps plus benchmark context.
+- Added regression coverage for the enrichment path in [tests/test_hypothesis_ledger_metrics.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_hypothesis_ledger_metrics.py), [tests/test_hindsight.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_hindsight.py), and [tests/test_performance_tracker.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_performance_tracker.py).
+- Added last-run universe filter snapshots in [tradingagents/dealflow/akg_universe.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/akg_universe.py) so the pipeline can log early funnel cuts without recomputing AKG membership.
+- Instrumented three new early-stage ledger rows in [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py):
+  - `universe_gate_edge`
+  - `universe_gate_haystack`
+  - `evidence_gate`
+- Completed Phase 1 funnel coverage: `universe -> evidence -> shortlist -> deep-selection -> portfolio` are now all append-only ledger rows.
+- Added compact hypothesis-stage summaries in [tradingagents/dealflow/hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hypothesis_ledger.py) so persisted shared-lane rows can be rendered without opening raw `rows.json`.
+- Wired [tradingagents/dealflow/hindsight.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hindsight.py) and [tradingagents/dealflow/performance_tracker.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/performance_tracker.py) to include `hypothesis_stage_summary` in their returned payloads and persisted artifacts.
+- Added a shared CLI renderer in [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py) and surfaced the summary in [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py) and [cli/commands/performance.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/performance.py).
+- Wrote the stage-summary implementation plan in [docs/plans/2026-03-06-stage-metric-review-surfaces.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-stage-metric-review-surfaces.md).
+- Wrote the stage-diagnosis design and implementation docs in [docs/plans/2026-03-06-stage-diagnosis-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-stage-diagnosis-design.md) and [docs/plans/2026-03-06-stage-diagnosis.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-stage-diagnosis.md).
+- Added the rolling diagnosis module in [tradingagents/dealflow/stage_diagnosis.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/stage_diagnosis.py), which reads existing `performance_review.json` / `hindsight.json` artifacts and ranks funnel stages by cumulative false-negative cost, recall weakness, and edge degradation.
+- Added the operator-facing `aeternus stage-diagnosis` command in [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py) with shared rendering in [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py).
+
+## Verification Completed
+
+- Fundamental Autoresearch baseline-comparison verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_artifacts.py tests/test_cli_fundamental_research.py -k 'strategy or compare_baselines or baseline_comparison' -v`
+  - result: `2 passed`
+- Full focused harness verification after baseline-comparison changes:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_contracts.py tests/test_fundamental_autoresearch_universe.py tests/test_fundamental_autoresearch_time_utils.py tests/test_fundamental_autoresearch_sec_ingest.py tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_artifacts.py tests/test_fundamental_autoresearch_sec_fetch.py tests/test_fundamental_autoresearch_prepare.py tests/test_fundamental_autoresearch_sector_map.py tests/test_fundamental_autoresearch_market_data.py tests/test_cli_fundamental_research.py -v`
+  - result: `61 passed`
+- Inverted-baseline focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py -k 'inverted or compare_baseline_strategies or named_baseline' -v`
+  - result: `2 passed`
+- Constrained-search focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_search.py tests/test_fundamental_autoresearch_artifacts.py tests/test_cli_fundamental_research.py -k 'constrained_search' -v`
+  - result: `3 passed`
+- Robustness focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_robustness.py tests/test_fundamental_autoresearch_search.py tests/test_cli_fundamental_research.py -k 'robustness or constrained_search' -v`
+  - result: `4 passed`
+- Full focused harness verification after robustness changes:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_contracts.py tests/test_fundamental_autoresearch_universe.py tests/test_fundamental_autoresearch_time_utils.py tests/test_fundamental_autoresearch_sec_ingest.py tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_search.py tests/test_fundamental_autoresearch_robustness.py tests/test_fundamental_autoresearch_artifacts.py tests/test_fundamental_autoresearch_sec_fetch.py tests/test_fundamental_autoresearch_prepare.py tests/test_fundamental_autoresearch_sector_map.py tests/test_fundamental_autoresearch_market_data.py tests/test_cli_fundamental_research.py -v`
+  - result: `67 passed`
+- Constrained-autoresearch focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_autoresearch.py tests/test_fundamental_autoresearch_artifacts.py tests/test_cli_fundamental_research.py -k 'autoresearch' -v`
+  - result: `10 passed`
+- Full focused harness verification after constrained-autoresearch changes:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_contracts.py tests/test_fundamental_autoresearch_universe.py tests/test_fundamental_autoresearch_time_utils.py tests/test_fundamental_autoresearch_sec_ingest.py tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_search.py tests/test_fundamental_autoresearch_robustness.py tests/test_fundamental_autoresearch_autoresearch.py tests/test_fundamental_autoresearch_artifacts.py tests/test_fundamental_autoresearch_sec_fetch.py tests/test_fundamental_autoresearch_prepare.py tests/test_fundamental_autoresearch_sector_map.py tests/test_fundamental_autoresearch_market_data.py tests/test_cli_fundamental_research.py -v`
+  - result: `73 passed`
+- Feature-upgrade focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py -v`
+  - result: `7 passed`
+- Feature-upgrade scientific rerun focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_search.py tests/test_fundamental_autoresearch_robustness.py tests/test_fundamental_autoresearch_autoresearch.py tests/test_cli_fundamental_research.py -v`
+  - result: `25 passed`
+- Broadened-search focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_search.py tests/test_fundamental_autoresearch_robustness.py tests/test_fundamental_autoresearch_autoresearch.py tests/test_cli_fundamental_research.py -v`
+  - result: `16 passed`
+
+- Architectural trace completed across current deal-flow, queue, scoring, portfolio, hindsight, and performance code paths.
+- The design was reviewed interactively and approved section by section before documentation.
+- Phase 1 ledger tests passing:
+  - `python3 -m pytest tests/test_hypothesis_ledger.py tests/test_dealflow_hypothesis_ledger.py tests/test_portfolio_hypothesis_ledger.py tests/test_portfolio_construction.py -v`
+  - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'collect_standalone_bootstraps_without_discover or run_equals_discover_then_collect' -v`
+- Lane metadata regressions passing:
+  - `python3 -m pytest tests/test_dealflow_lane_metadata.py tests/test_dealflow_momentum.py tests/test_dealflow_hypothesis_ledger.py tests/test_hypothesis_ledger.py tests/test_portfolio_hypothesis_ledger.py tests/test_portfolio_construction.py -v`
+  - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'collect_standalone_bootstraps_without_discover or run_equals_discover_then_collect' -v`
+- Full Phase 1 focused sweep passing:
+  - `python3 -m pytest tests/test_hypothesis_ledger.py tests/test_hypothesis_ledger_metrics.py tests/test_dealflow_hypothesis_ledger.py tests/test_dealflow_lane_metadata.py tests/test_dealflow_momentum.py tests/test_portfolio_hypothesis_ledger.py tests/test_portfolio_construction.py -v`
+  - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'collect_standalone_bootstraps_without_discover or run_equals_discover_then_collect' -v`
+- Outcome-enrichment regressions passing:
+  - `python3 -m pytest tests/test_hypothesis_ledger_metrics.py tests/test_hindsight.py -k LedgerEnrichment tests/test_performance_tracker.py -k LedgerEnrichment -v`
+  - `python3 -m pytest tests/test_hypothesis_ledger.py tests/test_hypothesis_ledger_metrics.py tests/test_hindsight.py tests/test_performance_tracker.py tests/test_dealflow_hypothesis_ledger.py tests/test_dealflow_lane_metadata.py tests/test_dealflow_momentum.py tests/test_portfolio_hypothesis_ledger.py tests/test_portfolio_construction.py -v`
+- Early-funnel gate instrumentation regressions passing:
+  - `python3 -m pytest tests/test_dealflow_hypothesis_ledger.py -k 'universe_gate_rows or evidence_gate_row' -v`
+  - `python3 -m pytest tests/test_dealflow_hypothesis_ledger.py tests/test_dealflow_pipeline.py tests/test_pipeline_gaps.py tests/test_hypothesis_ledger.py tests/test_hypothesis_ledger_metrics.py tests/test_hindsight.py tests/test_performance_tracker.py tests/test_dealflow_lane_metadata.py tests/test_dealflow_momentum.py tests/test_portfolio_hypothesis_ledger.py tests/test_portfolio_construction.py -v`
+- Stage-summary TDD red/green verification completed:
+  - `python3 -m pytest tests/test_hindsight.py -k hypothesis_stage_summary -v tests/test_performance_tracker.py -k hypothesis_stage_summary -v tests/test_cli_dealflow.py -k 'hypothesis_stage_summary' -v`
+- Broader operator-surface regression sweep passing:
+  - `python3 -m pytest tests/test_hypothesis_ledger.py tests/test_hypothesis_ledger_metrics.py tests/test_hindsight.py tests/test_performance_tracker.py tests/test_dealflow_hypothesis_ledger.py tests/test_dealflow_lane_metadata.py tests/test_dealflow_momentum.py tests/test_portfolio_hypothesis_ledger.py tests/test_portfolio_construction.py tests/test_cli_dealflow.py -v`
+- Stage-diagnosis TDD red/green verification completed:
+  - `python3 -m pytest tests/test_stage_diagnosis.py tests/test_cli_dealflow.py -k 'stage_diagnosis' -v`
+- Full focused regression with stage diagnosis passing:
+  - `python3 -m pytest tests/test_stage_diagnosis.py tests/test_cli_dealflow.py tests/test_hypothesis_ledger.py tests/test_hypothesis_ledger_metrics.py tests/test_hindsight.py tests/test_performance_tracker.py tests/test_dealflow_hypothesis_ledger.py tests/test_dealflow_lane_metadata.py tests/test_dealflow_momentum.py tests/test_portfolio_hypothesis_ledger.py tests/test_portfolio_construction.py -v`
+
+## Pending
+
+- Use the new shadow fundamental overlay in live analysis review:
+  - `live high + overlay weak` => crowding / profit-taking risk
+  - `live medium + overlay strong` => underappreciated resilience
+- Keep the current best harness winner unchanged for now:
+  - `health_0p4__inv_growth_0p1__inv_quality_0p5 = +0.084495`
+- Next fundamental harness move should be:
+  - better source-level features from filing diffs/revisions/surprise-like signals
+  - or careful universe expansion beyond `large_cap_v1`
+- Do **not** broaden valuation/capital_discipline further until evidence beats the current winner
+
+- Continue the Fundamental Pillar Autoresearch Harness from scaffold to real SEC/XBRL preparation:
+  - run the first real SEC cache fill for the `large_cap_v1` universe
+  - attach market-price history and real forward returns to prepared rows
+  - compare against naive baselines and the live fundamental pillar where possible
+  - attach real forward returns instead of prepared-row fixtures
+  - compare baseline scorer against naive baselines and current pillar outputs
+- Keep the harness sidecar-only in v1; do not route its score into live portfolio/rating behavior until point-in-time correctness and predictive value are proven.
+
+- Run `aeternus stage-diagnosis` against real recent cycles and use the output to pick the next filter experiment.
+- Decide whether benchmark admission should tighten from fail-open-on-missing-proxy to stricter enforcement after proxy coverage is measured on real portfolio cycles.
+- Let real cycles accumulate and use `evidence_integrity_cohorts` to decide whether `SPARSE_BUT_INTERESTING` or `DATA_DEGRADED` deserve Step 2 gate changes.
+- Decide whether the next thin surface should be a rolling multi-lane diagnosis or a focused false-negative-cost leaderboard over time.
+- Delay lane routing split until the diagnosis command has enough live cycles to justify routing changes with evidence.
+- Revisit the Codex research bridge only after analyst packet compilation is designed off real deal-flow inputs.
+- Decide whether bullish FVG should graduate from replay-only evidence into the future Step 1 recall redesign.
+- Decide whether Shortlist Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review the way Discovery Delta and Evidence Integrity were.
+- Decide whether Deep Selection Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review before any Step 4 deep-budget behavior change.
+- Decide whether Research Conversion Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review before any Step 5 research-execution behavior change.
+- Use the new `industry-disruption-first-principles` skill as the strategic gate for future company / wedge / product-thesis discussions.
+- Use [docs/research/aeternus-operating-system-thesis.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/research/aeternus-operating-system-thesis.md) as the easiest entry point for the current company thesis and roadmap filter.
+
+## Operator Notes
+
+- Manual Grok remains the only approved path for dealflow/social X ingestion.
+- The most important new optimization target is now explicit: `future winner recall by stage`.
+- The current recommendation is to instrument the funnel before changing lane routing or widening auto-correction.
+- Added a replay-only bullish FVG experiment surface:
+  - design: [docs/plans/2026-03-06-fvg-step1-recall-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fvg-step1-recall-design.md)
+  - plan: [docs/plans/2026-03-06-fvg-step1-recall.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fvg-step1-recall.md)
+  - engine: [tradingagents/dealflow/fvg_recall.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/fvg_recall.py)
+  - CLI: `aeternus fvg-backtest`
+- First live replay ran on `1999-01-01 -> 2026-03-06` over the narrow semis/AI universe:
+  - `7473` bullish FVG events
+  - mean event forward returns: `5d +0.44%`, `20d +2.74%`, `60d +7.86%`, `90d +13.74%`
+  - top-3 daily basket average forward returns: `5d +0.65%`, `20d +2.59%`, `60d +7.78%`, `90d +12.15%`
+  - top tickers by mean `60d` post-event return in this run: `SNDK`, `PLTR`, `NVDA`, `SMCI`, `ARM`
+- Extended the FVG replay with a simple regime split and explicit confirmation slices:
+  - regimes: `bull`, `bear`, `high_vol`, `unknown`
+  - slices: `raw_fvg`, `fvg_plus_rs`, `fvg_plus_rs_trend`, `fvg_plus_rs_trend_volume`
+- Fixed a real replay cleanliness bug in `tradingagents/dealflow/fvg_recall.py`:
+  - root cause: benchmark regime labels were assigned by row index instead of aligned by `date`
+  - effect: older symbol bars before benchmark inception were being bucketed as string `"nan"`
+  - fix: align regime labels by date and fill uncovered history as `unknown`
+- Latest live replay on `1999-01-01 -> 2026-03-06` now shows:
+  - `by_regime`
+    - `bull`: `20d +3.33%`, `60d +8.48%`, `90d +14.42%`
+    - `bear`: `20d +1.99%`, `60d +2.75%`, `90d +6.56%`
+    - `high_vol`: `20d +0.07%`, `60d +4.67%`, `90d +9.27%`
+    - `unknown`: strongest but structurally biased early-history bucket, not a live decision regime
+  - `by_slice`
+    - `raw_fvg`: `20d +2.74%`, `60d +7.86%`, `90d +13.74%`
+    - `fvg_plus_rs`: `20d +2.91%`, `60d +8.36%`, `90d +14.67%`
+    - `fvg_plus_rs_trend`: `20d +3.32%`, `60d +9.02%`, `90d +15.15%`
+    - `fvg_plus_rs_trend_volume`: `20d +3.99%`, `60d +8.84%`, `90d +15.60%`
+- Current read:
+  - confirmation improves the raw bullish FVG signal
+  - `fvg_plus_rs_trend` is the cleanest candidate for future Step 1 feature promotion
+  - `fvg_plus_rs_trend_volume` improves `20d` and `90d`, but the stricter volume gate trims sample size materially
+- Added explicit SMA confirmation slices to the FVG replay:
+  - `fvg_plus_rs_above_sma20`
+  - `fvg_plus_rs_sma20_above_sma50`
+  - `fvg_plus_rs_sma50_above_sma200`
+  - `fvg_plus_rs_full_stack`
+- Latest `1999-01-01 -> 2026-03-06` read on the narrow semis/AI universe:
+  - `fvg_plus_rs_above_sma20`: `20d +2.89%`, `60d +8.27%`, `90d +14.61%`
+  - `fvg_plus_rs_sma20_above_sma50`: `20d +3.09%`, `60d +9.13%`, `90d +15.26%`
+  - `fvg_plus_rs_sma50_above_sma200`: `20d +3.83%`, `60d +10.14%`, `90d +16.46%`
+  - `fvg_plus_rs_full_stack`: `20d +3.63%`, `60d +10.38%`, `90d +16.89%`
+- Current read:
+  - SMA filters materially improve the FVG + RS signal.
+  - `sma50_above_sma200` is the strongest quality/recall balance so far.
+  - `full_stack` is strongest on `60d` and `90d`, but with a materially smaller sample.
+  - This supports using SMA20/50/200 as explicit Step 1 recall features, not a universal hard gate.
+- Added benchmark-relative basket edge vs `SMH` and market-era splits to the FVG replay.
+- Latest top-3 basket edge vs `SMH` on `1999-01-01 -> 2026-03-06`:
+  - `5d +0.28%`
+  - `20d +1.20%`
+  - `60d +3.73%`
+  - `90d +5.79%`
+- Era read from `by_era`:
+  - strongest: `2024_2026_ai_cycle`, `2022_2023_rate_reset`, `2020_2021_covid_liquidity`
+  - still positive but weaker: `2013_2019_qe_bull`
+  - materially weaker / noisier: `1999_2002_dotcom`, `2003_2007_pre_gfc`, `2008_2012_crisis_recovery`
+- Current read:
+  - the replay is not just riding the sector; the top basket is outperforming `SMH`.
+  - the FVG edge is regime-sensitive and much stronger in recent semiconductor/AI leadership eras.
+  - next evidence gap is per-slice basket edge vs benchmark, because current benchmark comparison is only for the overall top basket.
+- Added `basket_by_slice` to the FVG replay so each slice now has its own top-N basket edge vs `SMH`.
+- Latest per-slice basket edge read on `1999-01-01 -> 2026-03-06`:
+  - `raw_fvg`: `20d +1.33%`, `60d +3.73%`, `90d +6.46%`
+  - `fvg_plus_rs`: `20d +1.75%`, `60d +4.69%`, `90d +7.83%`
+  - `fvg_plus_rs_sma20_above_sma50`: `20d +1.94%`, `60d +5.20%`, `90d +7.81%`
+  - `fvg_plus_rs_sma50_above_sma200`: `20d +2.00%`, `60d +5.74%`, `90d +8.94%`
+  - `fvg_plus_rs_full_stack`: `20d +1.97%`, `60d +5.70%`, `90d +8.53%`
+  - `fvg_plus_rs_trend`: `20d +1.98%`, `60d +5.23%`, `90d +8.13%`
+  - `fvg_plus_rs_trend_volume`: `20d +2.34%`, `60d +5.20%`, `90d +8.43%`
+- Current read:
+  - `fvg_plus_rs_sma50_above_sma200` is the best overall quality/recall winner on relative edge.
+  - `fvg_plus_rs_trend_volume` wins on `20d` edge, but its sample is much smaller and it gives back the lead on `60d` and `90d`.
+  - This is enough evidence to treat `fvg_plus_rs_sma50_above_sma200` as the lead candidate for a live Step 1 recall channel.
+- Added a fast `QQQ` proxy universe path to the FVG replay:
+  - design: [docs/plans/2026-03-06-fvg-qqq-top20-proxy-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fvg-qqq-top20-proxy-design.md)
+  - plan: [docs/plans/2026-03-06-fvg-qqq-top20-proxy.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fvg-qqq-top20-proxy.md)
+  - CLI extensions: `--universe`, `--benchmark`
+  - artifact isolation: `eval_results/deal_flow/fvg_backtest/<date>/<universe>-vs-<benchmark>/`
+  - universe source: current `QQQ` holdings via `yfinance`, filled to 20 names with a `stockanalysis.com` holdings-table fallback
+- Latest live replay on `1999-01-01 -> 2026-03-06` for `qqq_top20_proxy` vs `QQQ`:
+  - proxy universe: `NVDA, AAPL, MSFT, AMZN, TSLA, META, GOOGL, WMT, GOOG, AVGO, MU, COST, NFLX, PLTR, AMD, CSCO, AMAT, LRCX, TMUS, LIN`
+  - `12234` bullish FVG events
+  - top-3 basket edge vs `QQQ`:
+    - `5d +0.34%`
+    - `20d +1.46%`
+    - `60d +4.62%`
+    - `90d +7.12%`
+  - strongest current slices vs `QQQ`:
+    - `fvg_plus_rs_full_stack`: `20d +1.96%`, `60d +5.44%`, `90d +7.90%`
+    - `fvg_plus_rs_sma50_above_sma200`: `20d +1.90%`, `60d +5.21%`, `90d +8.02%`
+- Added a `QQQ`-only strategy backtest path for confirmed bullish FVG entry + Exit C:
+  - plan: [docs/plans/2026-03-06-fvg-qqq-exit-c.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fvg-qqq-exit-c.md)
+  - CLI: `aeternus fvg-qqq-backtest`
+  - artifact path: `eval_results/deal_flow/fvg_strategy_backtest/<date>/QQQ-vs-SPY-next_open`
+- Latest live `QQQ` strategy read on `1999-01-01 -> 2026-03-06`:
+  - `109` trades
+  - win rate: `40.37%`
+  - average trade return: `+1.82%`
+  - total compounded return: `+396.05%`
+  - max drawdown: `-28.05%`
+  - average hold: `26.5` trading days
+  - exit mix:
+    - `close_below_sma50`: `89`
+    - `timeout_90d`: `10`
+    - `fvg_midpoint_rs_break`: `10`
+- Added explicit `execution_timing` support to the `QQQ` strategy path:
+  - design: [docs/plans/2026-03-06-fvg-qqq-execution-timing-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fvg-qqq-execution-timing-design.md)
+  - plan: [docs/plans/2026-03-06-fvg-qqq-execution-timing.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fvg-qqq-execution-timing.md)
+  - modes:
+    - `next_open` (default conservative mode)
+    - `signal_close` (optimistic same-close assumption)
+  - default artifact isolation now includes timing suffix:
+    - `QQQ-vs-SPY-next_open`
+    - `QQQ-vs-SPY-signal_close`
+- Latest live timing comparison on `1999-01-01 -> 2026-03-06`:
+  - `next_open`
+    - `exit_c`: total return `+396.05%`, max drawdown `-28.05%`
+    - `sma50_only`: total return `+351.85%`, max drawdown `-29.40%`
+    - `timeout_90d_only`: total return `+1123.30%`, max drawdown `-47.45%`
+    - `buy_and_hold`: total return `+1092.48%`, max drawdown `-82.96%`
+  - `signal_close`
+    - `exit_c`: total return `+425.37%`, max drawdown `-27.75%`
+    - `sma50_only`: total return `+351.28%`, max drawdown `-34.18%`
+    - `timeout_90d_only`: total return `+1057.05%`, max drawdown `-45.58%`
+    - `buy_and_hold`: unchanged
+- Current read:
+  - `signal_close` helps `Exit C` modestly but does not change the ranking of the main exit choices.
+  - `timeout_90d_only` remains the highest-return exit in both timing modes.
+  - `Exit C` still does not justify its extra complexity versus simpler exits for this standalone `QQQ` system.
+- Ran the same single-stock strategy across a current `QQQ` top-50 proxy universe (current holdings proxy, benchmarked to `QQQ`) using the existing engine without changing product code.
+- Universe source for this analysis:
+  - `companiesmarketcap.com` current `QQQ` holdings page because the simpler holdings helper only returned 25 names in this environment.
+- Top-50 single-stock sweep read on `1999-01-01 -> 2026-03-06`:
+  - `next_open`
+    - `exit_c`: mean total return `+1041.23%`, median `+187.84%`, beat buy-and-hold on `2/50` stocks
+    - `sma50_only`: mean total return `+1061.89%`, median `+192.08%`, beat buy-and-hold on `2/50` stocks
+    - `timeout_90d_only`: mean total return `+3085.40%`, median `+498.59%`, beat buy-and-hold on `4/50` stocks
+  - `signal_close`
+    - `exit_c`: mean total return `+852.97%`, median `+151.38%`, beat buy-and-hold on `2/50` stocks
+    - `sma50_only`: mean total return `+934.37%`, median `+157.04%`, beat buy-and-hold on `3/50` stocks
+    - `timeout_90d_only`: mean total return `+3243.99%`, median `+526.86%`, beat buy-and-hold on `5/50` stocks
+- Current read from the top-50 sweep:
+  - The strategy makes money on many names, but it rarely beats the stock’s own buy-and-hold return.
+  - `timeout_90d_only` remains the strongest exit across both timing modes.
+  - This continues to support FVG confirmation as a recall/selection feature more than a full standalone stock timing system.
+- Implemented Step 1 FVG integration as a **first-class capped recall channel**, not a hard gate:
+  - design: [docs/plans/2026-03-06-step1-fvg-recall-channel-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-step1-fvg-recall-channel-design.md)
+  - plan: [docs/plans/2026-03-06-step1-fvg-recall-channel.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-step1-fvg-recall-channel.md)
+  - config:
+    - `dealflow_fvg_recall_enabled`
+    - `dealflow_fvg_recall_quota` (default `30`)
+    - `dealflow_fvg_recall_min_rs20`
+    - `dealflow_fvg_recall_min_liquidity_score`
+  - universe tier:
+    - `T3B_FVG_RECALL`
+  - artifact:
+    - `eval_results/deal_flow/<date>/fvg_recall.json`
+- Current live implementation shape:
+  - `discover()` computes a confirmed FVG recall set before Step 1 universe construction
+  - the confirmed rule uses:
+    - bullish FVG
+    - `relative_strength_20d >= min_rs20`
+    - `SMA50 > SMA200`
+  - selected symbols are unioned into the Step 1 filtered universe as a dedicated tier
+  - universe ledger now records `fvg_recall_selected_count`
+- Verification:
+  - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'fvg_recall' -v`
+  - `python3 -m pytest tests/test_dealflow_hypothesis_ledger.py tests/test_dealflow_pipeline.py tests/test_dealflow_lane_metadata.py tests/test_hypothesis_ledger.py tests/test_hypothesis_ledger_metrics.py -v`
+  - results: `1 passed`, then `28 passed`
+- Remaining gap before wider promotion:
+  - the current FVG channel computes directly from `yfinance` history inside `discover()`, which is acceptable for a first measured rollout but should eventually be refactored into the broader Step 1 shared recall scan / feature-store architecture.
+
+## FMA Step 1 Recall Replay
+
+- Traced the workspace and confirmed the real `F=MA` strategy is already live downstream as the `price_momentum` connector in [tradingagents/dealflow/sources/price_momentum.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/sources/price_momentum.py), not the older binary `accel_screener`.
+- Added a dedicated replay surface:
+  - design: [docs/plans/2026-03-06-fma-step1-recall-replay-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fma-step1-recall-replay-design.md)
+  - plan: [docs/plans/2026-03-06-fma-step1-recall-replay.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-fma-step1-recall-replay.md)
+  - module: [tradingagents/dealflow/fma_recall.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/fma_recall.py)
+  - CLI: `aeternus fma-backtest`
+- Root-cause note from implementation:
+  - the first live version stalled because `_build_symbol_rows(...)` recomputed rolling momentum features for every historical date slice
+  - fixed by precomputing the full feature frame once per symbol and iterating the rows
+  - behavior stayed the same; runtime dropped from effectively quadratic work to a sane live replay
+- Verification:
+  - `python3 -m pytest tests/test_fma_recall.py tests/test_cli_dealflow.py -k 'fma_recall or fma_backtest' -v`
+  - `python3 -m pytest tests/test_phase_engine.py -v`
+  - results: `7 passed`, then `69 passed`
+- Important implementation read:
+  - the “best shadow” variant from the old IC grid (`sma20_20d|W1_orig`) is identical to the current live production formula, so `fma_live` and `fma_best_shadow` are intentionally the same replay path right now
+  - this is useful because it confirms the current live formula already matches the strongest historical IC variant in the stored grid
+- Live replay — `semis_ai_narrow` vs `SMH` (`1999-01-01 -> 2026-03-06`, top-3 basket):
+  - `fma_live` / `fma_best_shadow`
+    - event count: `21646`
+    - mean event returns:
+      - `20d +2.33%`
+      - `60d +7.60%`
+      - `90d +12.54%`
+    - top-3 basket:
+      - `20d +2.16%`
+      - `60d +7.55%`
+      - `90d +12.19%`
+    - edge vs `SMH`:
+      - `20d +0.86%`
+      - `60d +3.35%`
+      - `90d +5.81%`
+  - overlap read:
+    - `fvg_only`: `20d +3.23%`, `60d +9.21%`, `90d +13.09%`
+    - `fma_only`: `20d +2.21%`, `60d +7.38%`, `90d +12.09%`
+    - `fvg_and_fma`: `20d +4.02%`, `60d +10.78%`, `90d +19.00%`
+  - union basket edge vs `SMH`:
+    - `20d +0.83%`
+    - `60d +3.40%`
+    - `90d +5.91%`
+- Live replay — `qqq_top20_proxy` vs `QQQ` (`1999-01-01 -> 2026-03-06`, top-3 basket):
+  - `fma_live` / `fma_best_shadow`
+    - event count: `35389`
+    - mean event returns:
+      - `20d +2.00%`
+      - `60d +6.99%`
+      - `90d +10.72%`
+    - top-3 basket:
+      - `20d +1.99%`
+      - `60d +7.65%`
+      - `90d +11.64%`
+    - edge vs `QQQ`:
+      - `20d +1.05%`
+      - `60d +4.75%`
+      - `90d +7.23%`
+  - overlap read:
+    - `fvg_only`: `20d +3.24%`, `60d +9.00%`, `90d +14.03%`
+    - `fma_only`: `20d +1.97%`, `60d +6.92%`, `90d +10.61%`
+    - `fvg_and_fma`: `20d +2.41%`, `60d +7.88%`, `90d +12.03%`
+  - union basket edge vs `QQQ`:
+    - `20d +1.03%`
+    - `60d +4.72%`
+    - `90d +7.20%`
+- Current read:
+  - `F=MA` is strong enough to be a real Step 1 candidate.
+  - It looks more durable and broader than pure FVG, but less explosive on the rarest asymmetric setups.
+  - The best names are where `FVG` and `F=MA` agree; the overlap cohort is the strongest on the narrow semis/AI slice.
+  - The union does add recall, but not enough yet to prove it should dominate Step 1 by itself.
+  - Recommended next move:
+    - add `FMA_RECALL` as a capped additive Step 1 channel, similar to `T3B_FVG_RECALL`
+    - start with a quota around `20-30`
+    - track `FVG only`, `FMA only`, and `FVG + FMA` separately in the ledger before expanding
+- Live proxy expansion — current top-50 weighted proxies on `2026-03-07`:
+  - `qqq_top50_proxy` uses the current Nasdaq-100 top-50 weights as a fast proxy for `QQQ` top-50.
+  - `spy_top50_proxy` uses the current S&P 500 top-50 weights as a fast proxy for `SPY` top-50.
+  - Both were replayed with the same `FVG only` / `FMA only` / `FVG + FMA` overlap buckets against their ETF benchmark.
+- `qqq_top50_proxy` vs `QQQ` (`1999-01-01 -> 2026-03-07`, top-3 basket):
+  - union edge vs `QQQ`:
+    - `20d +1.32%`
+    - `60d +4.81%`
+    - `90d +7.08%`
+  - bucket edge vs `QQQ`:
+    - `fvg_only`: `20d +1.70%`, `60d +4.14%`, `90d +6.59%`
+    - `fma_only`: `20d +1.18%`, `60d +4.56%`, `90d +6.70%`
+    - `fvg_and_fma`: `20d +0.82%`, `60d +3.24%`, `90d +5.06%`
+- `spy_top50_proxy` vs `SPY` (`1999-01-01 -> 2026-03-07`, top-3 basket):
+  - union edge vs `SPY`:
+    - `20d +1.12%`
+    - `60d +4.52%`
+    - `90d +7.01%`
+  - bucket edge vs `SPY`:
+    - `fvg_only`: `20d +1.48%`, `60d +4.17%`, `90d +6.64%`
+    - `fma_only`: `20d +0.98%`, `60d +4.19%`, `90d +6.50%`
+    - `fvg_and_fma`: `20d +0.85%`, `60d +3.19%`, `90d +5.12%`
+- Updated read from the larger-cap proxies:
+  - On broader large-cap universes, the overlap requirement is too restrictive and is no longer the strongest bucket.
+  - `FVG only` is still the sharper short-horizon selector.
+  - `FMA only` is broader and catches more durable trend continuation.
+  - The union remains stronger than either channel alone at the portfolio level, but the strict overlap should not be the primary live rule for large-cap recall.
+- Implemented separate live Step 1 `FMA_RECALL` channel on `2026-03-07`:
+  - design: [docs/plans/2026-03-07-step1-fma-recall-channel-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-07-step1-fma-recall-channel-design.md)
+  - plan: [docs/plans/2026-03-07-step1-fma-recall-channel.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-07-step1-fma-recall-channel.md)
+  - config:
+    - `dealflow_fma_recall_enabled`
+    - `dealflow_fma_recall_quota` (default `20`)
+    - `dealflow_fma_recall_min_score` (default `60.0`)
+  - pipeline:
+    - `discover()` now computes `fma_recall_symbols`
+    - persists `eval_results/deal_flow/<date>/fma_recall.json`
+    - threads symbols into `build_universe_from_akg(...)`
+  - universe builder:
+    - new tier `T3C_FMA_RECALL`
+    - ledger snapshot now records:
+      - `fma_recall_selected_count`
+      - `fma_recall_overlap_with_fvg_count`
+- Verification for the live Step 1 rollout:
+  - red/green:
+    - `python3 -m pytest tests/test_dealflow_pipeline.py tests/test_dealflow_hypothesis_ledger.py -k 'fma_recall' -v`
+    - result: `2 passed`
+  - focused regression:
+    - `python3 -m pytest tests/test_dealflow_pipeline.py tests/test_dealflow_hypothesis_ledger.py tests/test_dealflow_lane_metadata.py tests/test_hypothesis_ledger.py tests/test_hypothesis_ledger_metrics.py -v`
+    - result: `30 passed`
+- Current read after promotion:
+  - live Step 1 now has two separately measurable additive technical recall channels:
+    - `T3B_FVG_RECALL`
+    - `T3C_FMA_RECALL`
+  - this is the right shape for future attribution because the union stays additive while the signal-level scorecards remain separable.
+- Approved next discovery-layer upgrade on `2026-03-07`:
+  - design: [docs/plans/2026-03-07-discovery-delta-engine-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-07-discovery-delta-engine-design.md)
+  - plan: [docs/plans/2026-03-07-discovery-delta-engine.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-07-discovery-delta-engine.md)
+  - architecture:
+    - read-only `Discovery Delta Engine`
+    - consumes existing scouts + `FVG_RECALL` + `FMA_RECALL`
+    - writes `eval_results/deal_flow/<date>/discovery_delta.json`
+    - does not alter Step 1 membership in v1
+  - objective:
+    - normalize discovery signals into symbol-level delta records
+    - rank `top_delta_symbols`
+    - measure `scout_only` vs `technical_only` vs `multi_channel` before any live promotion
+- Implemented read-only `Discovery Delta Engine` on `2026-03-07`:
+  - new module: [tradingagents/dealflow/discovery_delta.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/discovery_delta.py)
+  - discovery path: [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py)
+  - behavior:
+    - normalizes scout audit + `FVG_RECALL` + `FMA_RECALL`
+    - writes `eval_results/deal_flow/<date>/discovery_delta.json`
+    - returns `discovery_delta_summary` from `discover()`
+    - remains read-only; does not alter Step 1 membership
+  - cohorts:
+    - `scout_only`
+    - `technical_only`
+    - `multi_channel`
+  - exact verification evidence:
+    - `python3 -m pytest tests/test_dealflow_pipeline.py::test_discover_persists_fvg_recall_artifact_and_threads_symbols -v`
+    - `python3 -m pytest tests/test_dealflow_pipeline.py::test_discover_persists_fma_recall_artifact_and_threads_symbols -v`
+    - `python3 -m pytest tests/test_dealflow_pipeline.py::test_discover_persists_discovery_delta_artifact_and_summary -v`
+    - `python3 -m pytest tests/test_discovery_delta.py -v`
+    - `python3 -m pytest tests/test_dealflow_pipeline.py::test_collect_standalone_bootstraps_without_discover -v`
+  - current caveat:
+    - broader grouped pytest runs in this workspace still show intermittent buffering / hangs, so verification was recorded with exact-node tests instead of one broad batch command
+- Added operator-facing CLI visibility for `Discovery Delta` on `2026-03-07`:
+  - design: [docs/plans/2026-03-07-discovery-delta-cli-surface-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-07-discovery-delta-cli-surface-design.md)
+  - plan: [docs/plans/2026-03-07-discovery-delta-cli-surface.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-07-discovery-delta-cli-surface.md)
+  - renderer: [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py)
+  - surfaced in:
+    - [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py) `discover`
+    - [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py) `source`
+  - current behavior:
+    - renders cohort counts for `scout_only`, `technical_only`, `multi_channel`
+    - renders top delta symbols with score, channel count, and source list
+    - remains read-only; no Step 1 selection behavior changes
+  - exact verification evidence:
+    - `python3 -m pytest tests/test_cli_dealflow.py -k 'discovery_delta' -v`
+    - `python3 -m pytest tests/test_cli_dealflow.py tests/test_dealflow_pipeline.py tests/test_discovery_delta.py -k 'discovery_delta or discover_persists_fvg_recall_artifact_and_threads_symbols or discover_persists_fma_recall_artifact_and_threads_symbols or collect_standalone_bootstraps_without_discover' -v`
+
+## Fundamental Market Attachment Slice
+
+- Added deterministic sector support for the `large_cap_v1` universe:
+  - [tradingagents/research/fundamental_autoresearch/sector_map.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/sector_map.py)
+- Added market-data attachment for adjusted-close forward returns:
+  - [tradingagents/research/fundamental_autoresearch/market_data.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/market_data.py)
+  - attached fields:
+    - `return_20d`
+    - `return_60d`
+    - `return_120d`
+    - `return_252d`
+  - anchor:
+    - first tradable session on or after `effective_market_date`
+  - added dotted-ticker yfinance alias support such as `BRK.B -> BRK-B`
+- Extended [cli/commands/fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/fundamental_research.py):
+  - `fundamental-research-prepare` now auto-applies the static `large_cap_v1` sector map when no custom map is provided
+  - added:
+    - `python3 -m cli.main fundamental-research-attach-returns --prepared-json ... --output-json ...`
+- Added regression coverage:
+  - [tests/test_fundamental_autoresearch_sector_map.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_sector_map.py)
+  - [tests/test_fundamental_autoresearch_market_data.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_market_data.py)
+  - updated [tests/test_cli_fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_cli_fundamental_research.py)
+- Focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_contracts.py tests/test_fundamental_autoresearch_universe.py tests/test_fundamental_autoresearch_time_utils.py tests/test_fundamental_autoresearch_sec_ingest.py tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_artifacts.py tests/test_fundamental_autoresearch_sec_fetch.py tests/test_fundamental_autoresearch_prepare.py tests/test_fundamental_autoresearch_sector_map.py tests/test_fundamental_autoresearch_market_data.py tests/test_cli_fundamental_research.py -v`
+  - result: `50 passed`
+- First real live-evaluable run:
+  - prepared dataset: [large_cap_v1-latest.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/sec_cache/prepared/large_cap_v1-latest.json)
+  - returns-enriched dataset: [large_cap_v1-latest-with-returns.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/sec_cache/prepared/large_cap_v1-latest-with-returns.json)
+  - sector labels now resolve correctly to:
+    - `Communication Services`
+    - `Consumer Discretionary`
+    - `Consumer Staples`
+    - `Energy`
+    - `Financials`
+    - `Healthcare`
+    - `Technology`
+  - current return coverage:
+    - `20d`: `13/25`
+    - `60d`: `2/25`
+    - `120d`: `0/25`
+    - `252d`: `0/25`
+  - first real scorer output:
+    - primary metric `rank_ic_60d_sector_neutral`
+    - primary value `1.0`
+    - coverage ratio `0.08`
+    - observations `2`
+- Current read:
+  - the harness is now end-to-end evaluable on real SEC + market data
+  - the latest-only snapshot dataset is too fresh for a meaningful 60d/120d/252d baseline
+  - the next high-value step is historical filing snapshot backfill, not scorer tuning
+
+## Fundamental Historical Backfill Slice
+
+- Added SEC historical submissions shard support in [tradingagents/research/fundamental_autoresearch/sec_fetch.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/sec_fetch.py):
+  - `submissions_history_cache_path(...)`
+  - `fetch_submissions_history_payload(...)`
+  - `cache_submissions_history_payload(...)`
+  - `fill_sec_cache_for_universe(..., include_history=True)` now caches the shard files referenced by SEC `filings.files`
+- Extended prep in [tradingagents/research/fundamental_autoresearch/prepare.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/prepare.py):
+  - `include_history`
+  - `latest_only`
+  - `start_year`
+  - all-filings mode now loads base submissions + cached shard files, deduplicates filings, and builds all supported snapshots since the requested year
+- Extended [cli/commands/fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/fundamental_research.py):
+  - `fundamental-research-cache-fill --include-history`
+  - `fundamental-research-prepare --all-filings --start-year 2009`
+- Added docs:
+  - [2026-03-08-fundamental-autoresearch-historical-backfill-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-08-fundamental-autoresearch-historical-backfill-design.md)
+  - [2026-03-08-fundamental-autoresearch-historical-backfill.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-08-fundamental-autoresearch-historical-backfill.md)
+- Focused verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_contracts.py tests/test_fundamental_autoresearch_universe.py tests/test_fundamental_autoresearch_time_utils.py tests/test_fundamental_autoresearch_sec_ingest.py tests/test_fundamental_autoresearch_features.py tests/test_fundamental_autoresearch_score.py tests/test_fundamental_autoresearch_evaluate.py tests/test_fundamental_autoresearch_artifacts.py tests/test_fundamental_autoresearch_sec_fetch.py tests/test_fundamental_autoresearch_prepare.py tests/test_fundamental_autoresearch_sector_map.py tests/test_fundamental_autoresearch_market_data.py tests/test_cli_fundamental_research.py -v`
+  - result: `57 passed`
+- First real historical dataset run:
+  - historical SEC shard cache populated for the 25-name `large_cap_v1` universe
+  - prepared dataset:
+    - [large_cap_v1-2009plus.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/sec_cache/prepared/large_cap_v1-2009plus.json)
+    - `1611` filing snapshots
+    - date range `2009-03-10` to `2026-03-03`
+  - returns-enriched dataset:
+    - [large_cap_v1-2009plus-with-returns.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/sec_cache/prepared/large_cap_v1-2009plus-with-returns.json)
+    - return coverage:
+      - `20d`: `1599`
+      - `60d`: `1588`
+      - `120d`: `1565`
+      - `252d`: `1510`
+  - first real baseline summary:
+    - [summary.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-08/large-cap-v1-2009plus-baseline/summary.json)
+    - `primary_metric_name = rank_ic_60d_sector_neutral`
+    - `primary_metric_value = -0.055066`
+    - `coverage_ratio = 0.985723`
+    - `observations = 1588`
+- Current read:
+  - the historical point-in-time harness is now scientifically usable
+  - the naive deterministic baseline is real and currently weak/negative, which is exactly the kind of honest read we needed
+  - the next high-value step is scorer iteration / baseline comparisons, not more data plumbing
+
+## First Universe Filter Audit Slice
+
+- Added a first-class first-universe filter audit layer in:
+  - [tradingagents/dealflow/universe_filter.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/universe_filter.py)
+  - [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py)
+  - [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py)
+- New artifact:
+  - `eval_results/deal_flow/<date>/universe_filter.json`
+- New operator command:
+  - `python3 -m cli.main universe-filter --date YYYY-MM-DD --status`
+- Report includes:
+  - tier counts
+  - source counts
+  - overlap counts
+  - first-filter health checks
+- Focused verification:
+  - `python3 -m pytest tests/test_universe_filter.py tests/test_dealflow_pipeline.py tests/test_cli_dealflow.py -k 'universe_filter or discover_command_renders_discovery_delta_summary' -v`
+  - result: `4 passed`
+- Current caveat:
+  - a fresh real `discover --date 2026-03-09` still hits the existing yfinance rate-limit/stall path before regenerating today’s artifact, so the new stage is test-verified but not yet re-smoked end-to-end on a clean live discover after the code change
+
+## Shared Market Cache Slice
+
+- Added a cache-first market data layer in:
+  - [tradingagents/dealflow/market_cache.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/market_cache.py)
+- Patched hot-path consumers:
+  - [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py)
+    - `_market_shock_metrics()` now uses cached `SPY` / `^VIX` history and fails open with `(None, None)` on fetch/cache errors
+  - [tradingagents/dealflow/sources/price_momentum.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/sources/price_momentum.py)
+    - now uses shared cached OHLCV history instead of direct hot-path batch downloads
+    - only refreshes recent windows for cached symbols
+    - full fetch window reduced to `180d` with `min_bars=90` for the current F=MA formula
+- Cache contract:
+  - per-symbol CSV cache under `eval_results/deal_flow/market_cache/`
+  - append/merge fresh rows onto existing cached history instead of redownloading long history every run
+  - supports raw yfinance `DataFrame` results and normalized per-symbol dict results
+- New/updated focused tests:
+  - [tests/test_market_cache.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_market_cache.py)
+  - [tests/test_dealflow_momentum.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_dealflow_momentum.py)
+  - [tests/test_dealflow_pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_dealflow_pipeline.py)
+- Verification:
+  - `python3 -m pytest tests/test_market_cache.py tests/test_dealflow_momentum.py tests/test_dealflow_pipeline.py -k 'market_cache or shared_market_cache or unavailable_batch_download' -v`
+    - result: `7 passed`
+  - `python3 -m pytest tests/test_market_cache.py tests/test_dealflow_momentum.py tests/test_dealflow_pipeline.py -k 'market_cache or shared_market_cache or collect_standalone_bootstraps_without_discover or collect_standalone_threads_persisted_recall_symbols' -v`
+    - result: `7 passed`
+- Live result on `2026-03-09`:
+  - first cache-backed `collect` run:
+    - `price_momentum` completed successfully instead of erroring
+    - latency about `47838ms`
+    - `signal_count = 351`
+  - immediate warm-cache rerun:
+    - `price_momentum` latency dropped to about `4503ms`
+    - `signal_count = 350`
+    - `status_counts = {'OK': 342, 'NO_DATA': 8, 'ERROR': 0, 'NOT_CONFIGURED': 0}`
+- Current read:
+  - the collector no longer fails on the old DataFrame/dict mismatch or raw hot-path yfinance dependency
+  - warm-cache behavior is now fast enough for daily runs
+  - remaining noise is symbol-level Yahoo misses/delist-style gaps, not collector-wide rate-limit collapse
+
+## Fundamental Shadow Live-Observation Slice
+
+- Added live shadow-fundamental observation helper:
+  - [tradingagents/dealflow/fundamental_shadow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/fundamental_shadow.py)
+- Wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py)
+  - `collect()` now builds `fundamental_shadow_summary` from `fundamental_factor_shadow` signals after the research queue is built
+  - `_persist()` now writes:
+    - `eval_results/deal_flow/<date>/fundamental_factor_shadow.json`
+- Added CLI render path:
+  - [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py)
+  - [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py)
+  - `collect` now prints:
+    - strategy name
+    - signal coverage
+    - shortlist overlap
+    - deep-selection overlap
+    - top shadow names
+- Added focused tests:
+  - [tests/test_fundamental_shadow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_shadow.py)
+  - [tests/test_dealflow_pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_dealflow_pipeline.py)
+  - [tests/test_cli_dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_cli_dealflow.py)
+- Verification:
+  - `python3 -m pytest tests/test_fundamental_shadow.py tests/test_dealflow_pipeline.py -k 'fundamental_shadow' -v`
+    - result: `2 passed`
+  - `python3 -m pytest tests/test_cli_dealflow.py -k 'fundamental_shadow_summary' -v`
+    - result: `1 passed`
+- Current read:
+  - the registry-driven SEC winner now has an explicit live observation path in daily dealflow runs
+  - it remains shadow-only and does not affect scoring weights yet
+
+## Autoresearch decision gate skill
+
+- Added the new reusable optimization workflow skill:
+  - [.agents/skills/autoresearch-decision-gate/SKILL.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/.agents/skills/autoresearch-decision-gate/SKILL.md)
+- Added worked examples:
+  - [.agents/skills/autoresearch-decision-gate/references/examples.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/.agents/skills/autoresearch-decision-gate/references/examples.md)
+- Added the short design note:
+  - [docs/plans/2026-03-09-autoresearch-decision-gate-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-09-autoresearch-decision-gate-design.md)
+- Purpose:
+  - force metric/evaluator/search-surface/promotion-ladder thinking before any optimization work starts
+  - decide whether a problem should be brute-forced, deterministically searched, autoresearched, or not optimized yet
+- Hard rule:
+  - if the search space is small and fully enumerable, brute force beats LLM/autoresearch
+
+## Qwen Feature Lab (2026-03-09)
+
+- Implemented the bounded Qwen Feature Lab:
+  - [tradingagents/research/fundamental_autoresearch/qwen_feature_lab.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/qwen_feature_lab.py)
+- Added scorer support for bounded experimental components in:
+  - [tradingagents/research/fundamental_autoresearch/score.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/score.py)
+  - new component catalog now includes:
+    - `growth_acceleration`
+    - `margin_expansion`
+    - `quality_tension_inverse`
+    - `balance_sheet_resilience`
+- Added CLI surface:
+  - `python3 -m cli.main fundamental-research-qwen-feature-lab`
+- Added focused tests:
+  - [tests/test_fundamental_autoresearch_qwen_feature_lab.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_autoresearch_qwen_feature_lab.py)
+  - updated [tests/test_cli_fundamental_research.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_cli_fundamental_research.py)
+- Verification:
+  - `python3 -m pytest tests/test_fundamental_autoresearch_score.py -v` → `4 passed`
+  - `python3 -m pytest tests/test_fundamental_autoresearch_qwen_feature_lab.py -v` → `3 passed`
+  - `python3 -m pytest tests/test_fundamental_autoresearch_qwen_autoresearch.py -v` → `3 passed`
+- Architectural intent:
+  - tiny enumerable weight spaces should stay deterministic/brute-forced
+  - Qwen is now reserved for bounded feature/interaction proposal work
+
+## Broad-Universe SEC Harness Expansion (2026-03-09)
+
+- Built the broader liquid cross-sector research universe:
+  - [tradingagents/research/fundamental_autoresearch/universe_builders.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/research/fundamental_autoresearch/universe_builders.py)
+  - new named universe artifact:
+    - `liquid_core_v1`
+    - [eval_results/fundamental_autoresearch/universes/liquid_core_v1.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/universes/liquid_core_v1.json)
+- `liquid_core_v1` characteristics:
+  - `250` liquid US equities
+  - sector-balanced with caps
+  - built from S&P 500 constituents plus liquidity and price filters
+- Expanded the SEC harness to the broader universe:
+  - SEC cache fill reached full broad coverage (`251` cached payloads)
+  - historical `2009+` prep:
+    - `15,386` filing snapshots
+  - returns-enriched dataset:
+    - [liquid_core_v1-2009plus-with-returns.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/sec_cache/prepared/liquid_core_v1-2009plus-with-returns.json)
+  - usable `60d` observations:
+    - `15,142`
+- First broad-universe baseline comparison:
+  - [baseline_comparison.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-09/liquid-core-v1-2009plus-baseline-comparison/baseline_comparison.json)
+  - strongest simple baseline:
+    - `quality_only_inverted = +0.026745`
+  - next:
+    - `health_minus_quality = +0.017305`
+    - `capital_discipline_only = +0.012559`
+    - `health_only = +0.012289`
+  - naive `baseline_v1` collapses to:
+    - `+0.000576`
+- Broad-universe constrained search:
+  - [autoresearch_summary.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-09/liquid-core-v1-2009plus-constrained-autoresearch/autoresearch_summary.json)
+  - new best broad-universe candidate:
+    - `health_0p4__inv_quality_0p6 = +0.023818`
+  - old small-universe champion on broad universe:
+    - `health_0p5__inv_growth_0p1__inv_quality_0p4 = +0.019036`
+- Broad-universe robustness for the new winner:
+  - [robustness.json](/Users/aeternusholdings/Documents/AeternusAgents-opus46/eval_results/fundamental_autoresearch/2026-03-09/liquid-core-v1-2009plus-top-strategy-robustness/robustness.json)
+  - horizons:
+    - `20d = +0.002496`
+    - `60d = +0.023818`
+    - `120d = +0.039137`
+    - `252d = +0.059721`
+  - eras:
+    - `2020_2026 = +0.017939`
+    - `2010_2019 = +0.028461`
+    - `pre_2010 = -0.014117` on a much smaller sample
+  - sectors:
+    - strongest:
+      - `Communication Services = +0.112159`
+      - `Consumer Staples = +0.076564`
+      - `Real Estate = +0.063879`
+      - `Information Technology = +0.037672`
+    - weak/negative:
+      - `Materials = -0.029175`
+      - `Energy = -0.045244`
+- Current interpretation:
+  - inverse quality clearly generalizes on broader breadth
+  - inverse growth weakens materially versus the 25-name proving set
+  - health remains helpful, but no longer dominates as strongly
+  - the small-universe winner should not be blindly treated as the live truth
+- Next research step:
+  - make promotion decisions from the broader-universe results, not the 25-name proving set
+  - then move Qwen to a higher-value search surface again:
+    - sector-specific formulas
+    - horizon-specific formulas
+    - broader-universe bounded feature proposals
+
+## Session Engine Monitoring Hardening (2026-03-10)
+
+- The new default `session_engine` analysis path now writes monitoring-safe prediction records, not just `analysis_report.json`.
+- Implemented:
+  - `cli/commands/scoring.py`
+    - session-engine analyses now append to `eval_results/track_record.json`
+    - both legacy and session analysis paths now persist explicit `recommendation` alongside the Python `rating`
+  - `cli/common.py`
+    - `_extract_analysis_outcome(...)` now carries `rating_id` and `recommendation_side`
+    - `_quick_outcome_from_score_payload(...)` now carries `rating_id` and `recommendation_side`
+  - `tradingagents/evidence/live_outcomes.py`
+    - predicted direction now prefers explicit `recommendation` over inferred `rating`
+- Why this matters:
+  - disagreement cohorts (`recommendation = BUY`, `rating = Hold`) are now measurable instead of being collapsed to the score label
+  - future live-outcome, post-mortem, and IC-style calibration work can join predictions by `rating_id` and evaluate both score quality and recommendation quality
+- Focused verification:
+  - `python3 -m pytest tests/test_scoring_codex_bridge.py tests/test_session_research_engine.py tests/test_live_outcomes.py -q`
+    - `11 passed`
+  - `python3 -m pytest tests/test_cli_dealflow.py -k 'extract_analysis_outcome_exposes_rating_id_and_recommendation_side or analyze_batch_selected_only_runs_marked_items or analyze_batch_default_uses_quick_mode_for_unselected or analyze_batch_uses_cached_report_when_execution_fails' -q`
+    - `4 passed`
+  - live smoke:
+    - `python3 -m cli.main analyze --from-queue-id 2026-03-10-082214-manual:OXY --queue-date 2026-03-10`
+    - appended first session-engine row to `eval_results/track_record.json`
+    - confirmed persisted fields:
+      - `rating_id = b590a5f0-a5d4-4f15-9cfe-17f893efaeb7`
+      - `aeternus_score = 58.2`
+      - `rating = Hold`
+      - `recommendation = BUY`
+- Next likely step:
+  - if we want batch-level proof too, rerun a bounded `analyze-batch --selected-only --max-items 1` and confirm the emitted summary item now includes `rating_id`
+
+## Manual Robinhood Position Entry (2026-03-10)
+
+- Recorded the manual benchmark-fill entry:
+  - `python3 -m cli.main add-position QQQ 100 607.78 --date 2026-03-10 --lane MOMENTUM`
+- Persisted in:
+  - `eval_results/paper_execution/positions.json`
+  - AKG current-position fields in `eval_results/control/knowledge_graph.json`
+- Stored position:
+  - `QQQ`
+  - `100` shares
+  - `avg_price = 607.78`
+  - `market_value_usd = 60778.0`
+  - `lane = MOMENTUM`
+- Note:
+  - this is the V3 benchmark overlay fill, so `rating_ids` is empty and `entry_aeternus_score = 0.0` by design
+
+## V3 Rejected Cohort Tracking (2026-03-10)
+
+- Added an explicit hurdle-rejected cohort to the cohort tracker:
+  - `V3_REJECTED = selected_for_deep AND analyzed AND aeternus_score < 62`
+- Added a direct decision metric:
+  - `benchmark_to_v3_rejected = benchmark_return - v3_rejected_eq_return`
+  - positive means staying in the benchmark was better than owning the names rejected by the hurdle
+- Updated CLI rendering in `cohort-compare` to show:
+  - `V3_REJECTED`
+  - `QQQ→V3 Rejected` (or generic benchmark label if benchmark differs)
+- Focused verification:
+  - `python3 -m pytest tests/test_cohort_tracker.py tests/test_cohort_compare.py -q`
+    - `2 passed`
+  - live run:
+    - `python3 -m cli.main cohort-compare --date 2026-03-10`
+    - result on same-day horizon:
+      - `V3_REJECTED = 13`
+      - `V3_CLEARED = 0`
+      - `QQQ→V3 Rejected = +0.0%` (same-day, so no forward information yet)
+
+## Why-Missed Audit Loop (2026-03-10)
+
+- Added a new read-only recent-run audit for operator questions like:
+  - `why didn’t we pick MU?`
+  - `did we even flag BE in the last 5 runs?`
+- Implemented `tradingagents/dealflow/why_missed.py`:
+  - scans only recent dated runs
+  - hard-caps lookback to `5`
+  - classifies each run by stage reach and likely drop reason using:
+    - `x_feed/merged.json`
+    - `signals_raw.json`
+    - `all_scored_candidates.json`
+    - `research_queue.json`
+    - `batch_analyze_latest.json`
+    - latest dated `portfolio_plan_*.json`
+- Added CLI command:
+  - `python3 -m cli.main why-missed MU`
+- Root-cause labels currently include:
+  - `NOT_FLAGGED`
+  - `DISCOVERY_CUT`
+  - `SIGNAL_FILTER_CUT`
+  - `SHORTLIST_CUT`
+  - `DEEP_SELECTION_CUT`
+  - `ANALYSIS_NOT_COMPLETED`
+  - `V3_HURDLE_REJECTED`
+  - `PORTFOLIO_CONSTRUCTION_CUT`
+  - `DEPLOYED`
+- Focused verification:
+  - `python3 -m pytest tests/test_why_missed.py tests/test_cli_dealflow.py -k 'why_missed' -q`
+    - `2 passed`
+- Live smoke:
+  - `python3 -m cli.main why-missed MU --format json`
+    - `MU` was flagged in `2/5` recent runs (`2026-03-10`, `2026-03-09`)
+    - both recent flagged runs ended at `SHORTLIST_CUT`
+  - `python3 -m cli.main why-missed BE --format json`
+    - `BE` was flagged in `1/5` recent runs
+    - only flagged recent run was `2026-03-06`, ending at `DISCOVERY_CUT`
+- Next likely step:
+  - expand this into a fuller missed-needle audit by joining later forward-return data and mapping misses back to specific hypothesis-ledger stages
+
+## Why-Missed Stage/Return Enrichment (2026-03-10)
+
+- Extended `why-missed` so it now reports:
+  - exact `hypothesis_ledger` stage drops for each recent run
+  - `primary_stage_drop`
+  - `improvement_target`
+  - 5-day forward return / benchmark return / edge when the horizon is available
+  - `review_recommended` and `review_reason` when the missed name beat the benchmark by at least `+1.00%`
+- Implementation:
+  - `tradingagents/dealflow/why_missed.py`
+    - loads `hypothesis_ledger/*/rows.json` and dropped snapshots
+    - computes `stage_drops` per run
+    - computes forward-return context via yfinance only when T+5 is in the past
+  - `cli/commands/dealflow.py`
+    - `why-missed` table now includes:
+      - `Target`
+      - `5d Edge`
+    - emits per-run target lines and review warnings when available
+- Focused verification:
+  - `python3 -m pytest tests/test_why_missed.py tests/test_cli_dealflow.py -k 'why_missed' -q`
+    - `3 passed`
+- Live smoke:
+  - `python3 -m cli.main why-missed MU --format json`
+    - `2026-03-10` now shows:
+      - `primary_stage_drop = shortlist_cut`
+      - `improvement_target = shortlist_cut`
+      - embedded `rule_snapshot` from the live shortlist ledger row
+    - forward return fields are currently `PENDING` because the T+5 windows for the recent 5 runs have not elapsed yet
+
+## X-Feed Carry-Forward Gap Fix (2026-03-10)
+
+- Found the actual BE miss mechanism:
+  - `eval_results/x_feed/2026-03-06/merged.json` contained `BE`
+  - there was no `eval_results/deal_flow/2026-03-06/` cycle directory at all
+  - so this was a missing downstream run, not a ranking/filter failure
+- Added `load_recent_merged(...)` in `tradingagents/dealflow/sources/x_feed_manual.py`
+  - includes same-day merged X-feed names
+  - also includes recent prior X-feed dates only when their same-date `deal_flow/YYYY-MM-DD` directory is absent
+  - annotates carried names with:
+    - `x_feed_source_date`
+    - `x_feed_carryforward_days`
+- Wired both `discover()` and standalone `collect()` bootstrap in `tradingagents/dealflow/pipeline.py` to use the new helper
+- Added config:
+  - `dealflow_manual_x_feed_carryforward_days`
+  - default `3`
+  - env `DEALFLOW_MANUAL_X_FEED_CARRYFORWARD_DAYS`
+- Focused verification:
+  - `python3 -m pytest tests/test_x_feed_manual.py tests/test_dealflow_pipeline.py -k 'load_recent_merged or carries_forward_recent_unprocessed_x_feed_symbols or persists_universe_filter_artifact_and_summary' -q`
+    - `4 passed`
+- Live smoke:
+  - `load_recent_merged('2026-03-09', lookback_days=3)` now returns `BE` from `2026-03-06`
+
+## Why-Missed Pipeline Classification Fix (2026-03-10)
+
+- Updated `tradingagents/dealflow/why_missed.py` so X-feed-only dates with no same-date dealflow cycle are labeled:
+  - `PIPELINE_NOT_RUN`
+  - with `improvement_target = daily_run_completeness`
+- Focused verification:
+  - `python3 -m pytest tests/test_why_missed.py tests/test_cli_dealflow.py -k 'why_missed' -q`
+    - `4 passed`
+- Live smoke:
+  - `python3 -m cli.main why-missed BE --format json`
+    - `2026-03-06` now reports:
+      - `root_cause = PIPELINE_NOT_RUN`
+      - `improvement_target = daily_run_completeness`
+
+## Needle Retro Audit (2026-03-10)
+
+- Added a new read-only false-negative review command:
+  - `python3 -m cli.main needle-retro`
+- Goal:
+  - scan up to the last `5` completed, realized cycles
+  - exclude infrastructure misses like `PIPELINE_NOT_RUN`
+  - rank true false negatives by 5-day edge vs `QQQ`
+  - aggregate by `improvement_target`
+- Implementation:
+  - new module:
+    - `tradingagents/dealflow/needle_retro.py`
+  - reused:
+    - `compute_hindsight(...)` for realized forward-return data
+    - `audit_ticker_run(...)` in `tradingagents/dealflow/why_missed.py` for per-cycle stage/root-cause classification
+  - new CLI:
+    - `needle-retro --last 5 --benchmark QQQ --min-edge 0.03 --format table|json`
+- Focused verification:
+  - `python3 -m pytest tests/test_needle_retro.py tests/test_why_missed.py tests/test_cli_dealflow.py -k 'needle_retro or why_missed' -q`
+    - `6 passed`
+- Live smoke:
+  - `python3 -m cli.main needle-retro --format json`
+    - current workspace result:
+      - `cycles_completed = 0`
+      - `opportunities = []`
+    - interpretation:
+      - this clone does not currently have older realized hindsight-eligible cycles with the required artifacts, so the operator surface is live but today’s local dataset is empty
+
+## KAMA Replay Backtest (2026-03-10)
+
+- Added a replay-only KAMA cross experiment:
+  - module:
+    - `tradingagents/dealflow/kama_recall.py`
+  - CLI:
+    - `python3 -m cli.main kama-backtest`
+- Current interpretation of the operator setup:
+  - bullish KAMA event = `(1,10,15)` KAMA crossing above `(2,10,15)` KAMA
+  - this is replay/evidence only for now
+  - it is not wired into live discovery, collect, or portfolio admission yet
+- Output shape mirrors the existing technical replay tools:
+  - `event_summary`
+  - `basket_summary`
+  - `overlap_summary`
+  - `union_summary`
+- Overlap diagnostics compare KAMA against current technical recall surfaces:
+  - `kama_only`
+  - `fvg_only`
+  - `fma_only`
+  - combined buckets including `kama_and_fvg`, `kama_and_fma`, `fvg_and_fma`, `kama_and_fvg_and_fma`
+- Focused verification:
+  - `python3 -m pytest tests/test_kama_recall.py tests/test_cli_dealflow.py -k 'kama_backtest or kama_snapshot or kama_overlap' -q`
+    - `6 passed`
+  - `python3 -m pytest tests/test_kama_recall.py tests/test_cli_dealflow.py -k 'kama or fma_backtest or fvg_backtest' -q`
+    - `10 passed`
+- Live smoke:
+  - `python3 -m cli.main kama-backtest --tickers NVDA --tickers AMD --benchmark SMH --start 2024-01-01 --top-n 1 --format json`
+  - result:
+    - `event_count = 7`
+    - `avg_edge_vs_benchmark_20d = +1.05%`
+    - `avg_edge_vs_benchmark_60d = +1.09%`
+    - artifact dir:
+      - `eval_results/deal_flow/kama_backtest/2026-03-10/semis_ai_narrow-vs-SMH`
+- Next likely use:
+  - compare KAMA recall against today’s missed-needle examples before deciding whether to promote it into discovery or admission logic
+
+## KAMA Inside Bullish FVG Regime (2026-03-10)
+
+- Upgraded the replay contract in `tradingagents/dealflow/kama_recall.py`:
+  - old behavior:
+    - loose KAMA/FVG overlap diagnostics
+    - any KAMA bullish cross counted as a KAMA event
+  - new behavior:
+    - `FVG` defines regime
+    - `KAMA` bullish cross is only actionable inside an active bullish FVG regime
+- Regime definition:
+  - bullish FVG prints increment `bullish_fvg_streak`
+  - bearish FVG resets the regime immediately
+  - regime also expires if the last bullish FVG is older than `20` bars
+- Persisted row-level inspection fields:
+  - `bullish_fvg_regime_active`
+  - `bullish_fvg_streak`
+  - `bullish_fvg_regime_age_bars`
+- Focused verification:
+  - `python3 -m pytest tests/test_kama_recall.py -q`
+    - `7 passed`
+  - `python3 -m pytest tests/test_kama_recall.py tests/test_cli_dealflow.py -k 'kama or fma_backtest or fvg_backtest' -q`
+    - `13 passed`
+- Live smoke:
+  - `python3 -m cli.main kama-backtest --tickers MU --tickers BE --benchmark QQQ --start 2020-01-01 --top-n 1 --format json`
+  - result under new regime gate:
+    - `event_count = 10` (down from `14` under loose overlap)
+    - `avg_edge_vs_benchmark_20d = -2.11%`
+    - `avg_edge_vs_benchmark_60d = +13.19%`
+    - `avg_edge_vs_benchmark_90d = +31.79%`
+  - per-ticker surviving regime-qualified KAMA events:
+    - `MU = 3`
+    - `BE = 7`
+  - latest surviving events:
+    - `MU: 2025-06-13`
+    - `BE: 2025-06-16`
+
+## KAMA 30d Horizon And Exit Probe (2026-03-10)
+
+- Extended replay horizons to include `30d` in the shared forward-return summary/basket helpers:
+  - `tradingagents/dealflow/fvg_recall.py`
+  - `tradingagents/dealflow/fma_recall.py`
+  - `tradingagents/dealflow/kama_recall.py`
+- Updated `kama-backtest` table output in `cli/commands/technical.py` to render `30d` event/basket/edge rows.
+- Focused verification:
+  - `python3 -m pytest tests/test_kama_recall.py tests/test_cli_dealflow.py -k 'kama' -q`
+    - `9 passed`
+- Live `MU` / `BE` replay under the new regime gate now includes:
+  - `avg_edge_vs_benchmark_30d = -1.57%`
+  - `mean_forward_return_30d = -0.68%`
+- One-off strategy probe on the same `10` regime-qualified KAMA entries for `MU` / `BE`:
+  - fixed holds:
+    - `20d: -2.11%` edge vs `QQQ`
+    - `30d: -1.57%`
+    - `60d: +13.19%`
+    - `90d: +31.79%`
+  - dynamic exits (analysis script only, not yet productized):
+    - `exit_kama_down`:
+      - `avg_return = +65.0%`
+      - `avg_edge_vs_benchmark = +63.9%`
+      - `avg_hold_bars = 94.5`
+    - `exit_bearish_fvg`:
+      - `avg_return = -3.5%`
+      - `avg_edge_vs_benchmark = -4.6%`
+      - `avg_hold_bars = 17`
+    - `exit_first_of_both` matched bearish-FVG exits on this sample
+- Interpretation:
+  - the regime-qualified KAMA sample still looks weak at short horizons (`20d/30d`)
+  - the edge appears in longer holds or late KAMA-down exits on this tiny sample
+  - this is still too small and too concentrated to promote into live admission logic
+
+## QQQ Top-50 KAMA Replay Expansion (2026-03-10)
+
+- Expanded the same replay from the two-name `MU` / `BE` probe to the live top-50 `QQQ` basket:
+  - holdings basis:
+    - ETF Channel `QQQ` holdings pages 1-3 as read on `2026-03-10`
+  - current basket artifact:
+    - `eval_results/deal_flow/kama_backtest/2026-03-10/qqq_top50_live-vs-QQQ/comparison_fixed_holds.json`
+  - exit-study artifact:
+    - `eval_results/deal_flow/kama_backtest/2026-03-10/qqq_top50_live-vs-QQQ/exit_probe.json`
+- Basket-level `top_n=1` fixed-hold comparison vs `QQQ`:
+  - plain `KAMA`:
+    - event count: `357`
+    - basket edge:
+      - `5d: +0.10%`
+      - `20d: +1.05%`
+      - `30d: +1.64%`
+      - `60d: +2.84%`
+      - `90d: +5.76%`
+  - `KAMA inside bullish FVG regime`:
+    - event count: `293`
+    - basket edge:
+      - `5d: +0.21%`
+      - `20d: +1.33%`
+      - `30d: +1.42%`
+      - `60d: +2.45%`
+      - `90d: +5.42%`
+- Read:
+  - on the broader `QQQ` basket, the FVG regime gate improves short-horizon quality (`5d`, `20d`)
+  - plain `KAMA` stays slightly stronger from `30d` onward
+  - this is much less extreme than the earlier `MU` / `BE` sample and suggests the regime gate is a quality filter, not a universally better trigger
+- One-off exit probe on the same top-50 event set:
+  - plain `KAMA`:
+    - `hold_20 edge: +0.67%`
+    - `hold_30 edge: +1.07%`
+    - `hold_60 edge: +2.31%`
+    - `hold_90 edge: +4.98%`
+    - `exit_kama_down edge: +7.55%`, average hold `139.8` bars
+    - `exit_bearish_fvg edge: +1.10%`, average hold `14.5` bars
+  - `KAMA inside bullish FVG regime`:
+    - `hold_20 edge: +0.93%`
+    - `hold_30 edge: +0.95%`
+    - `hold_60 edge: +2.10%`
+    - `hold_90 edge: +4.95%`
+    - `exit_kama_down edge: +9.46%`, average hold `149.7` bars
+    - `exit_bearish_fvg edge: +1.08%`, average hold `14.7` bars
+- Current interpretation:
+  - the broad-sample result does confirm real alpha in both variants
+  - the regime gate helps entry quality earlier, but the biggest payoff still comes from long holding periods or KAMA-down exits
+  - next useful comparison is not more basket expansion; it is comparing these rules specifically on the missed-needle names and catalyst cohorts that matter operationally
+
+## QQQ Top-50 Survivor Replay Back To 1999 (2026-03-10)
+
+- Ran the same replay on the current top-50 `QQQ` basket back to `1999-01-01`:
+  - fixed-hold artifact:
+    - `eval_results/deal_flow/kama_backtest/2026-03-10/qqq_top50_live_1999-vs-QQQ/comparison_fixed_holds.json`
+  - exit artifact:
+    - `eval_results/deal_flow/kama_backtest/2026-03-10/qqq_top50_live_1999-vs-QQQ/exit_probe_core.json`
+- Important caveat:
+  - this is **not** a point-in-time historical QQQ-constituent test
+  - it is the **current** top-50 `QQQ` survivor basket replayed back through history, so it has material survivorship bias and should be treated as an upper-bound validation read, not a deployable production estimate
+- Fixed-hold `top_n=1` basket edge vs `QQQ` on the survivor basket:
+  - plain `KAMA`:
+    - event count: `1408`
+    - `5d: +0.28%`
+    - `20d: +0.71%`
+    - `30d: +1.17%`
+    - `60d: +2.17%`
+    - `90d: +3.25%`
+  - `KAMA inside bullish FVG regime`:
+    - event count: `1124`
+    - `5d: +0.33%`
+    - `20d: +0.87%`
+    - `30d: +1.30%`
+    - `60d: +2.38%`
+    - `90d: +3.47%`
+- Exit-core read on the same survivor basket:
+  - plain `KAMA`:
+    - `exit_kama_down edge: +12.89%`, average hold `137.7` bars
+    - `exit_bearish_fvg edge: +0.65%`, average hold `18.2` bars
+  - `KAMA inside bullish FVG regime`:
+    - `exit_kama_down edge: +15.08%`, average hold `147.0` bars
+    - `exit_bearish_fvg edge: +0.64%`, average hold `18.1` bars
+- Read:
+  - on the long survivor-basket window, the regime gate is modestly better at every fixed horizon and clearly better on `KAMA-down` exits
+  - the strongest recurring pattern remains the same:
+    - early bearish-FVG exits give away too much
+    - long trend capture via `KAMA-down` is where most of the edge accumulates
+
+## SPY QQQ DOW Signal Cache Design (2026-03-11)
+
+- Approved the next technical-research infrastructure slice:
+  - current-constituent `SPY + QQQ + DOW` universe only
+  - goal is broad signal validation and live screening, not point-in-time index reconstruction
+- Saved design doc:
+  - `docs/plans/2026-03-11-spy-qqq-dow-signal-cache-design.md`
+- Saved implementation plan:
+  - `docs/plans/2026-03-11-spy-qqq-dow-signal-cache.md`
+- Chosen architecture:
+  - SQLite-backed signal engine at `eval_results/control/technical_signal_cache.db`
+  - current-universe membership store
+  - cached daily OHLCV history
+  - canonical `KAMA + bullish FVG regime` daily state
+  - current buy-zone snapshot for fast operator lookup
+- Planned first CLI surface:
+  - `technical-universe-refresh`
+  - `technical-signal-sync`
+  - `buy-zone`
+  - `buy-zone-summary`
+- Important modeling note:
+  - historical stats from this first slice must be labeled `current-constituent replay`
+  - point-in-time universe reconstruction remains intentionally out of scope for v1
+- Next step:
+  - execute the approved plan in-session
+
+## SPY QQQ DOW Signal Cache Implementation (2026-03-11)
+
+- Implemented the first working `SPY + QQQ + DOW` technical signal cache slice:
+  - `tradingagents/dealflow/technical_signal_store.py`
+  - `tradingagents/dealflow/current_universe.py`
+  - `tradingagents/dealflow/technical_market_cache.py`
+  - `tradingagents/dealflow/technical_signal_engine.py`
+  - CLI wiring in `cli/commands/technical.py`
+- Added focused regression coverage:
+  - `tests/test_technical_signal_store.py`
+  - `tests/test_current_universe.py`
+  - `tests/test_technical_market_cache.py`
+  - `tests/test_technical_signal_engine.py`
+  - `tests/test_cli_dealflow.py` command coverage for:
+    - `technical-universe-refresh`
+    - `technical-signal-sync`
+    - `buy-zone`
+    - `buy-zone-summary`
+- Current live database path:
+  - `eval_results/control/technical_signal_cache.db`
+- Current live universe artifact:
+  - `eval_results/control/technical_universe/2026-03-11/current_universe_spy_qqq_dow.json`
+- Live smoke:
+  - `python3 -m cli.main technical-universe-refresh --sources SPY --sources QQQ --sources DOW --as-of-date 2026-03-11 --format json`
+    - result:
+      - `row_count = 634`
+      - `unique_ticker_count = 517`
+  - `python3 -m cli.main technical-signal-sync --tickers NVDA --tickers MSFT --start-date 2024-01-01 --end-date 2026-03-11 --format json`
+    - result:
+      - `ticker_count = 2`
+      - `inserted_rows = 1096`
+      - `signal_rows_recomputed = 250` for both tickers
+      - both current states were `NOT_IN_BUY_ZONE`
+  - `python3 -m cli.main buy-zone NVDA --format json`
+    - result:
+      - `status_label = NOT_IN_BUY_ZONE`
+      - `last_cross_up_date = 2025-05-29`
+- Focused verification:
+  - `python3 -m pytest tests/test_technical_signal_store.py tests/test_current_universe.py tests/test_technical_market_cache.py tests/test_technical_signal_engine.py tests/test_cli_dealflow.py -k 'technical_universe_refresh or technical_signal_sync or buy_zone or technical_signal_store or current_universe or technical_market_cache or technical_signal_engine' -q`
+    - result: `13 passed`
+- Important implementation note:
+  - current-universe fetching now falls back to `requests` + HTML parsing when direct `pandas.read_html(url)` hits SSL verification failures in this environment
+  - the fallback warning noise was suppressed, but the path still uses `verify=False` as an environment workaround
+- Current next step:
+  - expand live sync beyond the two-ticker smoke into broader batches and start using `buy-zone` checks as a real screening surface for missed-opportunity review
+
+## SPY QQQ DOW Broad Sync + KAMA Replay (2026-03-11)
+
+- Ran the first broad current-constituent sync on the live `SPY + QQQ + DOW` universe plus benchmark ETFs:
+  - synced tickers: `520` (`517` universe names + `SPY`, `QQQ`, `DIA`)
+  - period: `2020-01-01` through `2026-03-11`
+  - result:
+    - `success = 520`
+    - `failed = 0`
+    - `inserted_rows = 794030`
+  - summary artifact:
+    - `eval_results/control/technical_universe/2026-03-11/full_sync_summary.json`
+- Current broad buy-zone state as of `2026-03-10`:
+  - `BUY_TRIGGER = 0`
+  - `BUY_ZONE = 11`
+  - `TREND_UP_NOT_FRESH = 90`
+  - `NOT_IN_BUY_ZONE = 419`
+  - live `BUY_ZONE` names:
+    - `EXC, CMS, OMC, SJM, EXR, ALL, ABNB, RSG, EBAY, EQR, EG`
+- Ran the first cache-backed KAMA replay on the same current-constituent universe with `top_n = 1`:
+  - universe label:
+    - `spy_qqq_dow_current`
+  - comparison artifact:
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current_benchmark_comparison.json`
+  - benchmark artifacts:
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current-vs-SPY/summary.json`
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current-vs-QQQ/summary.json`
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current-vs-DIA/summary.json`
+- Measured KAMA-in-bullish-FVG-regime basket edge (`top_n = 1`, current-constituent replay, `2020-01-01` to `2026-03-11`):
+  - event count:
+    - `3302`
+  - vs `SPY`:
+    - `20d +0.47%`
+    - `30d +0.60%`
+    - `60d +1.06%`
+    - `90d +1.88%`
+  - vs `QQQ`:
+    - `20d +0.05%`
+    - `30d -0.01%`
+    - `60d -0.24%`
+    - `90d +0.04%`
+  - vs `DIA`:
+    - `20d +0.80%`
+    - `30d +1.06%`
+    - `60d +2.05%`
+    - `90d +3.25%`
+- Read:
+  - the regime-gated KAMA basket still has positive edge against `SPY` and clear edge against `DIA`
+  - the edge is roughly flat against `QQQ`, which is a stronger hurdle for this current-constituent union
+  - live market state is sparse:
+    - no fresh `BUY_TRIGGER` names today
+    - only `11` active `BUY_ZONE` names across the full `520`-name cached set
+- Current next step:
+  - add a reusable cache-backed replay/summary CLI so this broad study can be rerun without one-off scripts
+  - optionally extend the cache start date before running any long-horizon `1999+` survivor-style comparison on this broader universe
+
+## SPY QQQ DOW 1999 Backfill + Long Replay (2026-03-11)
+
+- Extended the technical cache from `2020-01-01` back to `1999-01-01` without rebuilding the DB:
+  - added true historical prepend support in:
+    - `tradingagents/dealflow/technical_signal_store.py`
+    - `tradingagents/dealflow/technical_market_cache.py`
+  - added focused regression in:
+    - `tests/test_technical_market_cache.py`
+- Focused verification:
+  - `python3 -m pytest tests/test_technical_market_cache.py tests/test_technical_signal_store.py -q`
+    - result: `5 passed`
+  - `python3 -m pytest tests/test_cli_dealflow.py -k 'technical_signal_sync or buy_zone' -q`
+    - result: `3 passed`
+- Ran the live prepend backfill on the same `520` synced names:
+  - period: `1999-01-01` through `2026-03-11`
+  - result:
+    - `success = 520`
+    - `failed = 0`
+    - `inserted_rows = 2279670`
+  - summary artifact:
+    - `eval_results/control/technical_universe/2026-03-11/full_sync_summary_1999.json`
+  - cache spot-check:
+    - `SPY`: `1999-01-04` to `2026-03-10`
+    - `QQQ`: `1999-03-10` to `2026-03-10`
+    - `DIA`: `1999-01-04` to `2026-03-10`
+    - `ABNB`: `2020-12-10` to `2026-03-10`
+  - interpretation:
+    - pre-IPO Yahoo “possibly delisted” warnings are expected noise on prepend windows and did not create failed tickers in the run summary
+- Ran the first `1999+` cache-backed KAMA replay on the same current-constituent union with `top_n = 1`:
+  - universe label:
+    - `spy_qqq_dow_current_1999`
+  - comparison artifact:
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current_1999_benchmark_comparison.json`
+  - benchmark artifacts:
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current_1999-vs-SPY/summary.json`
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current_1999-vs-QQQ/summary.json`
+    - `eval_results/deal_flow/kama_backtest/2026-03-11/spy_qqq_dow_current_1999-vs-DIA/summary.json`
+- Measured long-window basket edge (`4656` sample days, `12130` events):
+  - vs `SPY`:
+    - `20d +0.58%`
+    - `30d +0.86%`
+    - `60d +1.97%`
+    - `90d +2.83%`
+  - vs `QQQ`:
+    - `20d +0.23%`
+    - `30d +0.38%`
+    - `60d +0.98%`
+    - `90d +1.36%`
+  - vs `DIA`:
+    - `20d +0.62%`
+    - `30d +0.91%`
+    - `60d +2.07%`
+    - `90d +2.97%`
+- Read:
+  - the longer `1999+` current-constituent replay is materially stronger than the shorter `2020+` read
+  - most important change:
+    - the KAMA-in-bullish-FVG basket now shows positive edge even against `QQQ`, not just `SPY` / `DIA`
+  - this is still survivorship-biased because the universe is current constituents replayed backward, not point-in-time membership
+- Current next step:
+  - turn the one-off replay into a reusable cache-backed CLI command
+  - then start using the broad cached state plus the long-window benchmark comparison in the missed-needle audit loop
+
+## Technical Ignition Scout (2026-03-11)
+
+- Added a new discovery-only `technical_ignition` scout backed by the cached `KAMA + bullish FVG regime` state:
+  - `tradingagents/dealflow/sources/technical_ignition_scout.py`
+- Integrated it into Stage 1 discovery:
+  - `tradingagents/dealflow/pipeline.py`
+  - promoted names are now threaded into universe build before collectors run
+- Added a dedicated filtered-universe tier:
+  - `T3D_TECHNICAL_IGNITION`
+  - implemented in `tradingagents/dealflow/akg_universe.py`
+- Added config / exports / docs:
+  - `tradingagents/default_config.py`
+  - `tradingagents/dealflow/sources/__init__.py`
+  - `tradingagents/dealflow/sources/README.md`
+- Discovery artifact integration:
+  - `scout_audit.json` now carries a `technical_ignition` section
+  - promoted names are threaded into `scout_audit["signals"]`, so existing:
+    - `universe_filter`
+    - `discovery_delta`
+    paths pick them up without a parallel reporting system
+- Operator visibility:
+  - `discover` CLI now prints `Technical ignition setups: N`
+
+- Focused TDD / verification:
+  - `python3 -m pytest tests/test_technical_ignition_scout.py tests/test_akg_universe_filter.py tests/test_dealflow_pipeline.py tests/test_technical_market_cache.py tests/test_cli_dealflow.py -k 'technical_ignition or buy_zone or technical_signal_sync or discover_command_renders_discovery_delta_summary' -q`
+    - result: `8 passed`
+
+- Live cache-backed scout read for `2026-03-10`:
+  - promoted count: `11`
+  - promoted symbols:
+    - `EXC, CMS, OMC, SJM, EXR, ALL, ABNB, RSG, EBAY, EQR, EG`
+  - stale trend count:
+    - `90`
+  - signal count:
+    - `11`
+
+- Important validation note:
+  - a full live `discover --date 2026-03-10` was started but interrupted because the rest of the discovery stack remained slow; the new scout itself was verified directly against the live cache and through focused integration tests
+
+- Current next step:
+  - use `technical_ignition` in the missed-needle audit loop and decide whether `TREND_UP_NOT_FRESH` should later become a rescan-only cohort instead of pure audit context
+
+## Technical Cache Yahoo Pruning (2026-03-11)
+
+- Added persistent Yahoo ticker status tracking to the technical signal cache:
+  - `yahoo_symbol_status` in `tradingagents/dealflow/technical_signal_store.py`
+- New tracked fields:
+  - `is_invalid`
+  - `invalid_reason`
+  - `no_data_before_date`
+  - `checked_through_date`
+- Sync behavior change in `tradingagents/dealflow/technical_market_cache.py`:
+  - valid tickers now learn `no_data_before_date` from the first available Yahoo bar
+  - future syncs skip prepend windows fully before that date
+  - truly empty recent Yahoo names are marked invalid and purged from:
+    - `universe_membership_current`
+    - `market_history_daily`
+    - `signal_kama_fvg_daily`
+    - `buy_zone_state_current`
+- CLI behavior change in `cli/commands/technical.py`:
+  - `technical-universe-refresh` filters known invalid tickers before reinserting membership
+  - `technical-signal-sync` now loads membership with `exclude_invalid=True`
+
+- Focused verification:
+  - `python3 -m pytest tests/test_technical_signal_store.py tests/test_technical_market_cache.py tests/test_cli_dealflow.py -k 'technical_signal_store or technical_market_cache or technical_universe_refresh or technical_signal_sync' -q`
+  - result: `12 passed`
+
+- Live run:
+  - `technical-universe-refresh --as-of-date 2026-03-11 --format json`
+    - `634` membership rows
+    - `517` unique tickers
+    - `0` invalid tickers in current `SPY + QQQ + DOW` universe
+  - first post-fix `technical-signal-sync --end-date 2026-03-11`
+    - learned `no_data_before_date` for `18` later-IPO / later-listing names
+    - examples:
+      - `ABNB -> 2020-12-10`
+      - `ARM -> 2023-09-14`
+      - `HOOD -> 2021-07-29`
+    - no current-universe tickers were confirmed invalid
+  - verification resync:
+    - `technical-signal-sync --tickers ABNB --tickers ARM --end-date 2026-03-11 --format json`
+    - both names reused cached boundaries with:
+      - `fetched = false`
+      - `windows = []`
+      - `empty_windows = []`
+
+- Read:
+  - the one-time Yahoo “possibly delisted” spam on the first post-fix pass was valid pre-history noise for later IPO names, not evidence of dead current constituents
+  - after the boundary is learned once, later syncs stop re-fetching those empty windows
+
+## Manual X Feed — 2026-03-11
+
+- Completed all 15 manual X-feed passes for Wednesday, March 11, 2026.
+- Final readiness:
+  - `READY Manual X Feed — 2026-03-11`
+  - completed passes: `15/15`
+  - merged symbols: `59`
+- Final artifacts:
+  - merged feed:
+    - `eval_results/x_feed/2026-03-11/merged.json`
+  - final raw pass:
+    - `eval_results/x_feed/2026-03-11/raw/pass_15.json`
+- Pass 15 used the neutral `gex_regime` fallback:
+  - `net_gex = NEUTRAL`
+  - `gex_magnitude = unknown`
+  - `regime_summary = NO_DATA: Unable to find current GEX readings from reliable sources.`
+- Next pipeline step:
+  - `discover --date 2026-03-11`
+
+## Macro Prompt Schema Upgrade (2026-03-11)
+
+- Upgraded the Grok macro prompt / ingest path in `cli/commands/macro_prompt.py`.
+- Goal:
+  - keep using Grok for high-quality web/X macro research
+  - persist richer macro evidence instead of only `regime + sectors`
+- New cache contract now preserves:
+  - `regime`
+  - `summary`
+  - top-level `sources_cited`
+  - `dimensions` with all 8 macro dimensions
+  - `sectors` with all 11 GICS sector scores/rationales
+- `dimensions` now require:
+  - `signal`
+  - `current_value`
+  - `trend`
+  - `rationale`
+  - `sources_cited`
+- Ingest is now strict:
+  - rejects invalid regime
+  - rejects missing dimensions
+  - rejects missing sectors
+  - still clamps sector scores to `0-100`
+- Backward compatibility:
+  - `tradingagents/dealflow/sources/macro.py` still reads `sectors[sector].score`
+  - so `collect` behavior remains unchanged once a valid macro cache is saved
+
+- Focused verification:
+  - `python3 -m pytest tests/test_macro_prompt.py tests/test_macro_collector.py -q`
+  - result: `13 passed`
+
+- Live smoke:
+  - `python3 -m cli.main macro-prompt --generate --date 2026-03-11`
+  - confirmed prompt now includes:
+    - 8 structured `dimensions`
+    - top-level `summary`
+    - top-level `sources_cited`
+
+- Current next step for macro:
+  - run Grok with:
+    - `python3 -m cli.main macro-prompt --generate --date 2026-03-11`
+  - then ingest the returned structured JSON:
+    - `python3 -m cli.main macro-prompt --ingest --date 2026-03-11`
+
+- Macro cache is now populated for `2026-03-11`:
+  - `eval_results/deal_flow/macro_cache_2026-03-11.json`
+  - saved:
+    - `11` sectors
+    - `8` dimensions
+  - regime:
+    - `late_cycle`
+
+## Earnings/Options Scout Refactor (2026-03-11)
+
+- Added a new manual Grok earnings/options scout workflow:
+  - `python3 -m cli.main earnings-options-prompt --generate --date YYYY-MM-DD`
+  - `python3 -m cli.main earnings-options-prompt --ingest --date YYYY-MM-DD`
+- New daily artifact:
+  - `eval_results/deal_flow/earnings_options_scout_YYYY-MM-DD.json`
+- New loader:
+  - `tradingagents/dealflow/sources/earnings_options_scout.py`
+
+- Discovery boundary change:
+  - `discover()` now loads the manual earnings/options artifact and treats it as a scout contribution
+  - promoted names thread into the universe through a dedicated tier:
+    - `T3E_EARNINGS_OPTIONS`
+  - `scout_audit.json` now includes:
+    - `earnings_options.promoted_count`
+    - `earnings_options.promoted_symbols`
+    - combined `signals` for discovery delta
+
+- IV boundary change:
+  - legacy quantitative IV scan in `discover` is now default-off
+    - `dealflow_iv_scout_enabled = false`
+  - legacy IV force-queue injection is now default-off
+    - `dealflow_iv_force_queue_enabled = false`
+  - deterministic IV analysis now runs as a normal collect connector:
+    - `collect_earnings_iv_signals(...)`
+    - signal family:
+      - `earnings_iv_divergence`
+    - connector name:
+      - `earnings_iv`
+
+- Scoring integration:
+  - added `earnings_iv_divergence` as a light-weight core family (`6.0`)
+  - it is not a gating family in v1
+
+- Focused verification:
+  - `python3 -m pytest tests/test_iv_scanner.py tests/test_dealflow_pipeline.py tests/test_earnings_options_prompt.py tests/test_earnings_options_scout.py tests/test_akg_universe_filter.py -k 'earnings_options or earnings_iv or iv_force_queue or legacy_iv_scout' -q`
+  - result:
+    - `12 passed`
+
+- Live verification:
+  - `python3 -m cli.main earnings-options-prompt --generate --date 2026-03-11`
+    - prompt rendered successfully
+  - `python3 -m cli.main discover --date 2026-03-11 --format json`
+    - completed successfully
+    - `iv_force_queue_count = 0`
+    - `earnings_options_count = 0`
+    - filtered universe:
+      - `149`
+      - `T3E=0`
+    - note:
+      - no manual earnings/options artifact has been ingested for today yet
+
+- Residual note:
+  - live `collect --date 2026-03-11` remains slow because of the broader network-heavy collector stack
+  - treat this refactor as verified by focused tests plus the completed live `discover`, not by a clean live `collect` finish yet
+
+- Live operator validation:
+  - ingested a real manual earnings/options scout payload for `2026-03-11`
+  - artifact:
+    - `eval_results/deal_flow/earnings_options_scout_2026-03-11.json`
+  - promoted symbol:
+    - `BABA`
+  - reran:
+    - `python3 -m cli.main discover --date 2026-03-11 --format json`
+  - result:
+    - `earnings_options_count = 1`
+    - `earnings_options_symbols = ["BABA"]`
+    - filtered universe:
+      - `150`
+      - `T3E_EARNINGS_OPTIONS = 1`
+    - discovery delta now shows:
+      - `BABA` as `scout_only`
+      - `delta_kind = earnings_options`
+
+## 2026-03-12 — Interactive Manual Workflow Run
+
+- Added guided `workflow-run --interactive` for human-operated manual runs.
+
+- New behavior:
+  - interactive mode is explicit and limited to:
+    - `workflow-run --interactive --mode manual`
+  - default `workflow-run` remains non-interactive and automation-safe
+  - interactive mode is table-output only
+  - all manual artifacts are handled in-process:
+    - X-feed 15-pass completion
+    - macro prompt/cache completion
+    - earnings/options prompt/cache completion
+  - manual paste flow now uses:
+    - `END`
+    - as an explicit multiline terminator
+
+- UX flow:
+  - checks / completes manual X-feed first
+  - checks / completes macro cache
+  - checks / completes earnings/options scout artifact
+  - then runs:
+    - `discover`
+    - `collect`
+    - `analyze-batch`
+    - `portfolio-plan`
+    - optional execution / sync
+    - learning
+  - prints short operator-facing status updates before and after each stage
+
+- Implementation:
+  - `cli/commands/dealflow.py`
+    - added:
+      - `_read_multiline_until_end`
+      - `_interactive_complete_x_feed`
+      - `_interactive_complete_macro`
+      - `_interactive_complete_earnings_options`
+      - `_run_workflow_interactive`
+    - `workflow-run` now accepts:
+      - `--interactive`
+
+- Design docs:
+  - `docs/plans/2026-03-12-interactive-manual-workflow-design.md`
+  - `docs/plans/2026-03-12-interactive-manual-workflow.md`
+
+- Focused verification:
+  - `python3 -m pytest tests/test_cli_dealflow.py -k 'interactive_complete_x_feed or workflow_run_interactive' -q`
+    - `3 passed`
+  - `python3 -m pytest tests/test_cli_dealflow.py -k 'workflow_run or workflow_loop or interactive' -q`
+    - `14 passed`
+  - live help smoke:
+    - `python3 -m cli.main workflow-run --help | rg -n -- '--interactive|workflow-run'`
+    - confirms `--interactive` is exposed in the real CLI
+
+- Residual boundary:
+  - interactive mode currently gives stage-level progress, not per-item analyze progress
+  - that is intentional for v1; the operator now sees stage transitions and summaries without turning the CLI into a noisy log stream
+
+## 2026-03-15 — MiroFish Audit -> Scout Compiler / Scenario Retriever Design
+
+- Completed a deep design conversation comparing MiroFish's compilation/runtime model with Aeternus's current pipeline.
+
+- Key conclusion:
+  - Aeternus is already stronger on ambient sensing, durable AKG memory, and learning loops
+  - MiroFish is ahead on question-conditioned compilation into a runnable temporary world
+  - the first missing Aeternus layer is a `Scout Compiler`
+  - the second missing Aeternus layer is a separate `Scenario Retriever`
+
+- Agreed architecture:
+  - `Scout Compiler`
+    - runs after scouts
+    - before universe filter / collectors conceptually
+    - starts as a **shadow sidecar** so it does not interfere with the current pipeline
+    - merges scout outputs into daily scenario artifacts / `Event Card` JSON
+  - `Scenario Retriever`
+    - exists from day 1
+    - searches internal state first:
+      - compiled daily scenario artifacts
+      - AKG
+      - universe
+      - portfolio
+      - cached macro / SEC / X-feed artifacts
+    - returns:
+      - `COMPLETE`
+      - `PARTIAL`
+      - `MISSING`
+    - on gaps:
+      - lists what evidence is missing
+      - waits for the user
+      - does **not** auto-trigger external/API retrieval
+
+- Important product rule:
+  - every daily run should become a daily scenario
+  - cross-scout relationships should become first-class signal artifacts
+
+- Durable memo saved:
+  - `docs/plans/2026-03-15-mirofish-scout-compiler-and-scenario-retriever-design.md`
+  - reconstructed transcript:
+    - `docs/plans/2026-03-15-mirofish-scout-compiler-and-scenario-retriever-transcript.md`
+
+- Next design step:
+  - formalize `Scout Compiler v1` and `Scenario Retriever v1` contracts
+  - exact schemas, insertion points, AKG writeback boundaries, and coverage definitions
+
+- 2026-03-15 follow-up:
+  - formalized the next-layer contract docs:
+    - `docs/plans/2026-03-15-scout-compiler-scenario-retriever-contracts-design.md`
+    - `docs/plans/2026-03-15-scout-compiler-scenario-retriever-contracts.md`
+  - locked `v1` boundary:
+    - automatic:
+      - `Scout Compiler`
+      - `Coverage Precheck`
+    - manual/on-demand:
+      - `Scenario Retriever`
+    - no live AKG mutation
+    - preview-only:
+      - `akg_writeback_candidates.json`
+  - approved artifact set:
+    - `event_cards.json`
+    - `coverage_precheck.json`
+    - `scout_compiler_debug.json`
+    - `akg_writeback_candidates.json`
+
+- 2026-03-15 implementation complete:
+  - shipped `Scout Compiler v1` + `Coverage Precheck v1` + `Scenario Retriever v1`
+  - new modules:
+    - `tradingagents/dealflow/scenario_contracts.py`
+    - `tradingagents/dealflow/scout_compiler.py`
+    - `tradingagents/dealflow/scenario_retriever.py`
+    - `tradingagents/dealflow/scout_quality.py`
+  - live pipeline wiring:
+    - `tradingagents/dealflow/pipeline.py`
+      - runs the scout compiler as a shadow sidecar at the end of `discover()`
+      - writes:
+        - `event_cards.json`
+        - `coverage_precheck.json`
+        - `scout_compiler_debug.json`
+        - `akg_writeback_candidates.json`
+        - `scout_quality_daily.json`
+      - remains fail-open and non-interfering with universe/scoring
+    - `cli/commands/dealflow.py`
+      - `discover` now reports scenario/scout-quality summaries
+      - new `scenario-retrieve` command added
+  - implementation details:
+    - deterministic theme grouping for daily event cards
+    - broad “what matters today?” retrieval now returns top-ranked cards instead of matching every card
+    - scout quality now counts grouped source-record contributions, including manual X-feed
+    - fixed live `discover()` regression where uninitialized `_iv_results` caused `_build_scout_audit()` to fail silently, which had been suppressing breakout and earnings-options inputs from the sidecar
+  - focused verification:
+    - `python3 -m pytest tests/test_scout_compiler.py tests/test_scenario_retriever.py tests/test_scout_quality.py tests/test_dealflow_pipeline.py -k 'scout_compiler or scenario_retriever or scout_quality or discover_writes_scout_compiler_sidecar_artifacts_without_changing_universe or build_scout_audit_serializes_non_json_signal_fields or discover_sidecar_uses_breakout_and_earnings_audit_inputs' -q`
+      - result: `16 passed`
+    - `python3 -m pytest tests/test_cli_dealflow.py -k 'scenario_retrieve_command_json_returns_internal_only_result or discover_command_renders_discovery_delta_summary' -q`
+      - result: `2 passed`
+    - live smoke:
+      - `python3 -m cli.main discover --date 2026-03-11 --format json`
+        - `scenario_sidecar_summary.event_card_count = 11`
+        - `writeback_candidate_count = 12`
+        - `scout_quality_summary.row_count = 5`
+      - `python3 -m cli.main scenario-retrieve --date 2026-03-11 --question "What are today's most important daily scenarios?" --format json`
+        - returned top-ranked internal event cards with `coverage_status = PARTIAL`

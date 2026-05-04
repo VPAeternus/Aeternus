@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeternus Capital — System Loop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #0a1628;
+  --surface:    #0f1e30;
+  --surface-el: #142640;
+  --border:     rgba(201, 168, 76, 0.18);
+  --border-hi:  rgba(201, 168, 76, 0.45);
+  --text:       #ede5cc;
+  --text-dim:   #5e7088;
+  --gold:       #c9a84c;
+  --gold-glow:  rgba(201, 168, 76, 0.35);
+  --gold-dim:   rgba(201, 168, 76, 0.08);
+  --sage:       #4d8f68;
+  --terra:      #c04a30;
+  --serif:      'Instrument Serif', Georgia, serif;
+  --mono:       'Source Code Pro', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  padding: 56px 24px 16px;
+}
+.header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ── Loop Visualization (SVG ring) ── */
+.loop-container {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 24px auto 8px;
+  aspect-ratio: 1;
+}
+
+.loop-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Stage Nodes on the ring ── */
+.stage-node {
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+.stage-node:hover { transform: scale(1.08); }
+.stage-node circle.ring {
+  fill: var(--surface);
+  stroke: var(--gold);
+  stroke-width: 2;
+  transition: stroke-width 0.2s, fill 0.2s;
+}
+.stage-node.active circle.ring {
+  stroke-width: 3;
+  fill: var(--surface-el);
+  filter: drop-shadow(0 0 12px var(--gold-glow));
+}
+.stage-node text.num {
+  fill: var(--gold);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+.stage-node text.label {
+  fill: var(--text);
+  font-family: var(--serif);
+  font-size: 10.5px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+/* ── Animated connection arcs ── */
+.arc-path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  opacity: 0.25;
+  stroke-dasharray: 6 4;
+  animation: flowDash 1.8s linear infinite;
+}
+.arc-path.feedback {
+  stroke: var(--sage);
+  stroke-width: 2;
+  opacity: 0.5;
+  stroke-dasharray: 8 6;
+  animation: flowDash 2.4s linear infinite;
+}
+@keyframes flowDash {
+  to { stroke-dashoffset: -20; }
+}
+
+/* Arrow markers */
+.arrow-gold { fill: var(--gold); opacity: 0.4; }
+.arrow-sage { fill: var(--sage); opacity: 0.6; }
+
+/* Center label */
+.center-label {
+  font-family: var(--serif);
+  font-size: 14px;
+  fill: var(--text-dim);
+  text-anchor: middle;
+}
+.center-icon {
+  font-size: 22px;
+  text-anchor: middle;
+}
+
+/* ── Instruction ── */
+.instruction {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-bottom: 32px;
+  letter-spacing: 0.08em;
+}
+
+/* ── Detail Cards ── */
+.cards {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.card.active {
+  border-color: var(--border-hi);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+.card-header:hover { background: var(--gold-dim); }
+
+.card-num {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--gold);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  flex: 1;
+}
+.card-chevron {
+  color: var(--gold);
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.card.active .card-chevron { transform: rotate(90deg); }
+
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+.card.active .card-body {
+  max-height: 1200px;
+}
+.card-content {
+  padding: 0 24px 24px;
+}
+
+/* ── Card interior styles ── */
+.card-content h4 {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 16px 0 8px;
+}
+.card-content h4:first-child { margin-top: 0; }
+
+.card-content p,
+.card-content li {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+.card-content ul {
+  list-style: none;
+  padding: 0;
+}
+.card-content li {
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.card-content li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.6;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 8px 0;
+}
+.stat-pill {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: var(--surface-el);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.stat-pill .val {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.weight-bar {
+  display: flex;
+  gap: 2px;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0 6px;
+}
+.weight-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.flow-visual {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  background: var(--surface-el);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 10px 0;
+  line-height: 1.8;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+.flow-visual .gold { color: var(--gold); }
+.flow-visual .sage { color: var(--sage); }
+.flow-visual .terra { color: var(--terra); }
+.flow-visual .dim { color: var(--text-dim); }
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+.feedback-item {
+  background: var(--surface-el);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.feedback-item h5 {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.feedback-item p {
+  font-size: 0.82rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .header { padding: 36px 16px 12px; }
+  .loop-container { max-width: 340px; margin: 16px auto 4px; }
+  .cards { padding: 0 12px 60px; }
+  .card-header { padding: 14px 16px; }
+  .card-content { padding: 0 16px 20px; }
+  .feedback-grid { grid-template-columns: 1fr; }
+  .stage-node text.label { font-size: 8px; }
+}
+
+@media (max-width: 480px) {
+  .loop-container { max-width: 280px; }
+  .stat-row { flex-direction: column; gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>The Aeternus System Loop</h1>
+  <div class="subtitle">Autonomous Investment Intelligence &mdash; A Closed Learning System</div>
+</div>
+
+<!-- ── Circular Loop SVG ── -->
+<div class="loop-container">
+  <svg class="loop-svg" viewBox="0 0 600 600" id="loopSvg">
+    <defs>
+      <marker id="arrowGold" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6" class="arrow-gold"/>
+      </marker>
+      <marker id="arrowSage" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6" class="arrow-sage"/>
+      </marker>
+      <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="rgba(201,168,76,0.06)"/>
+        <stop offset="100%" stop-color="rgba(201,168,76,0)"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Center glow -->
+    <circle cx="300" cy="300" r="120" fill="url(#centerGlow)"/>
+    <text x="300" y="288" class="center-icon">&#x221E;</text>
+    <text x="300" y="316" class="center-label">Closed Loop</text>
+
+    <!-- Arcs and nodes generated by JS -->
+    <g id="arcsGroup"></g>
+    <g id="nodesGroup"></g>
+  </svg>
+</div>
+
+<div class="instruction">Click a stage to explore &middot; Scroll down for details</div>
+
+<!-- ── Detail Cards ── -->
+<div class="cards" id="cards">
+
+  <!-- Stage 1 -->
+  <div class="card" data-stage="1">
+    <div class="card-header">
+      <div class="card-num">1</div>
+      <div class="card-title">Universe Discovery</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>Aeternus Knowledge Graph</h4>
+      <div class="stat-row">
+        <span class="stat-pill"><span class="val">4,500+</span> nodes</span>
+        <span class="stat-pill"><span class="val">200+</span> directed edges</span>
+        <span class="stat-pill"><span class="val">5</span> emergence tiers</span>
+      </div>
+      <div class="flow-visual"><span class="dim">DARK</span> &rarr; <span class="dim">ROCKY</span> &rarr; <span class="gold">ATMOSPHERE</span> &rarr; <span class="gold">HABITABLE</span> &rarr; <span class="sage">SCORED</span></div>
+      <p>Every investable security lives as a node in a directed weighted graph. Nodes progress through emergence tiers as evidence accumulates. The graph encodes supply chain relationships, sector affinity, and causal linkages.</p>
+      <h4>Dark Matter Detection</h4>
+      <p>Nodes with high graph centrality but no analyst score represent <em>forward alpha candidates</em> &mdash; securities the market hasn't yet priced. These are surfaced automatically.</p>
+      <h4>5 Structural Forces</h4>
+      <ul>
+        <li>AI Compute Infrastructure</li>
+        <li>Chip Supply Chain Decoupling</li>
+        <li>Nuclear Energy Renaissance</li>
+        <li>Critical Minerals Security</li>
+        <li>Defense Modernization</li>
+      </ul>
+      <p>Each force defines a "What Must Be True" thesis. The graph maps which companies sit at the nexus of these forces.</p>
+    </div></div>
+  </div>
+
+  <!-- Stage 2 -->
+  <div class="card" data-stage="2">
+    <div class="card-header">
+      <div class="card-num">2</div>
+      <div class="card-title">Signal Sourcing</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>14 Parallel Connectors</h4>
+      <div class="stat-row">
+        <span class="stat-pill"><span class="val">8</span> workers</span>
+        <span class="stat-pill"><span class="val">45s</span> timeout</span>
+        <span class="stat-pill">ThreadPoolExecutor</span>
+      </div>
+      <p>Each connector independently scans a signal domain and returns standardized evidence packets.</p>
+      <div class="flow-visual"><span class="gold">Social/News</span> &middot; Price Momentum &middot; <span class="gold">Macro Regime</span> &middot; Smart Money (SEC 13F + Congress)
+Sector Rotation &middot; <span class="gold">Breakout Discovery</span> &middot; Finviz Insider &middot; Cashtag Velocity
+<span class="gold">Causal Chain</span> &middot; Earnings Catalyst &middot; Forward Anticipation &middot; Insider Cluster
+SEC Catalyst (8-K/Form 4) &middot; Dark Node Scanner</div>
+      <h4>Output per connector</h4>
+      <ul>
+        <li><strong>symbol</strong> &mdash; resolved ticker</li>
+        <li><strong>signal_family</strong> &mdash; source category</li>
+        <li><strong>raw_score</strong> &mdash; connector-specific strength</li>
+        <li><strong>evidence_count</strong> &mdash; supporting data points</li>
+        <li><strong>freshness</strong> &mdash; seconds since data generation</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- Stage 3 -->
+  <div class="card" data-stage="3">
+    <div class="card-header">
+      <div class="card-num">3</div>
+      <div class="card-title">Scoring &amp; Ranking</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>3 Composite Scores</h4>
+      <ul>
+        <li><strong>CORE</strong> &mdash; weighted signal average across all connector families</li>
+        <li><strong>MOMENTUM</strong> &mdash; 60% price action + 30% cashtag velocity + 10% news sentiment</li>
+        <li><strong>ASYMMETRY</strong> &mdash; reward-to-risk ratio from catalyst timing</li>
+      </ul>
+      <h4>Lane Assignment</h4>
+      <div class="flow-visual"><span class="gold">CORE lane</span>: deep-value + multi-signal convergence
+<span class="sage">MOMENTUM lane</span>: score &ge; 68, social velocity confirmation required</div>
+      <h4>Quality Gate</h4>
+      <div class="stat-row">
+        <span class="stat-pill">min <span class="val">3</span> signal families</span>
+        <span class="stat-pill">min <span class="val">5</span> evidence items</span>
+      </div>
+      <p>Only candidates that clear both thresholds enter the research queue. The top 8 by triage score proceed to full multi-agent analysis.</p>
+    </div></div>
+  </div>
+
+  <!-- Stage 4 -->
+  <div class="card" data-stage="4">
+    <div class="card-header">
+      <div class="card-num">4</div>
+      <div class="card-title">Multi-Agent Analysis</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>LangGraph Orchestration</h4>
+      <p>Each candidate enters a structured multi-agent debate, modeled on institutional equity research desks.</p>
+      <div class="flow-visual"><span class="gold">Phase A: 4 Analysts (parallel)</span>
+  Fundamentals &middot; Market/Technical &middot; Sentiment &middot; News
+  &darr;
+<span class="gold">4 Deep-Thinking Reviewers</span>
+  Each critiques its analyst's report independently
+  &darr;
+<span class="sage">Bull vs Bear Debate (3 rounds)</span>
+  Round 3 = cross-examination (must rebut, cannot introduce new arguments)
+  &darr;
+Research Manager &rarr; Investment Plan
+  &darr;
+<span class="gold">Trader Verdict</span>
+  Structured output: action, conviction, invalidation conditions</div>
+      <h4>Key Design</h4>
+      <ul>
+        <li>Analysts and reviewers run in parallel &mdash; 4 tracks simultaneously</li>
+        <li>Bull/Bear researchers must build on analyst findings, not rehash</li>
+        <li>Trader verdict includes explicit <em>invalidation conditions</em> for exit enforcement</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- Stage 5 -->
+  <div class="card" data-stage="5">
+    <div class="card-header">
+      <div class="card-num">5</div>
+      <div class="card-title">Risk Debate</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>3 Risk Perspectives</h4>
+      <div class="flow-visual"><span class="terra">Risky Analyst</span> &middot; Neutral Analyst &middot; <span class="sage">Safe Analyst</span>
+  &darr; parallel assessment &darr;
+<span class="gold">Risk Judge</span> &mdash; synthesizes with credibility context</div>
+      <h4>Context Injection</h4>
+      <ul>
+        <li><strong>Credibility brief</strong> &mdash; Bayesian accuracy scores for each agent and pillar (from past trades)</li>
+        <li><strong>Track record stats</strong> &mdash; historical win rate, avg gain/loss, Sharpe context</li>
+        <li><strong>Stress test brief</strong> &mdash; CVaR exposure under disaster scenarios</li>
+        <li><strong>Regime alert</strong> &mdash; current macro regime and its implications</li>
+      </ul>
+      <p>The Risk Judge doesn't just weigh opinions &mdash; it knows which agents have been <em>right before</em> and adjusts accordingly.</p>
+    </div></div>
+  </div>
+
+  <!-- Stage 6 -->
+  <div class="card" data-stage="6">
+    <div class="card-header">
+      <div class="card-num">6</div>
+      <div class="card-title">5-Pillar Scoring</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>Pillar Weights</h4>
+      <div class="weight-bar">
+        <span style="width:30%;background:var(--gold)" title="Fundamental 30%"></span>
+        <span style="width:25%;background:#7a6b2e" title="Coherence 25%"></span>
+        <span style="width:20%;background:#4d8f68" title="Macro 20%"></span>
+        <span style="width:15%;background:#5a8ab5" title="Sentiment 15%"></span>
+        <span style="width:10%;background:#8a6dbf" title="Momentum 10%"></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-pill">Fundamental <span class="val">30%</span></span>
+        <span class="stat-pill">Coherence <span class="val">25%</span></span>
+        <span class="stat-pill">Macro <span class="val">20%</span></span>
+        <span class="stat-pill">Sentiment <span class="val">15%</span></span>
+        <span class="stat-pill">Momentum <span class="val">10%</span></span>
+      </div>
+      <h4>Regime-Adaptive Weights</h4>
+      <p>9 market regimes (bull/neutral/bear &times; expanding/stable/contracting) shift pillar emphasis. In a bear regime, Macro and Coherence gain weight; in a bull, Momentum and Sentiment rise.</p>
+      <h4>Coherence Engine</h4>
+      <p>Detects 8 named contradiction patterns across pillars:</p>
+      <div class="flow-visual"><span class="terra">VALUE_TRAP</span> &middot; <span class="terra">FALLING_KNIFE</span> &middot; MOMENTUM_DIVERGENCE &middot; CROWDED_TRADE
+MACRO_HEADWIND &middot; SENTIMENT_DISCONNECT &middot; QUALITY_MIRAGE &middot; CATALYST_MISMATCH</div>
+      <h4>Epistemic Transparency</h4>
+      <ul>
+        <li>Data coverage tier per pillar (how much evidence backs the score)</li>
+        <li>Weakest pillar identification (where the thesis is most vulnerable)</li>
+        <li>Fama-French 3-factor alpha decomposition (stock-picking alpha vs market beta)</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- Stage 7 -->
+  <div class="card" data-stage="7">
+    <div class="card-header">
+      <div class="card-num">7</div>
+      <div class="card-title">Portfolio Construction</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>8 Pre-Trade Gates</h4>
+      <div class="flow-visual"><span class="val">1.</span> Score floor  &middot;  <span class="val">2.</span> Liquidity check  &middot;  <span class="val">3.</span> ADV participation cap
+<span class="val">4.</span> Sector concentration  &middot;  <span class="val">5.</span> Covariance veto  &middot;  <span class="val">6.</span> Liability hurdle
+<span class="val">7.</span> Margin cap  &middot;  <span class="val">8.</span> Slippage guard</div>
+      <h4>Position Sizing</h4>
+      <ul>
+        <li><strong>Kelly Criterion</strong> &mdash; fractional 0.25&times;, activated after 10+ closed trades</li>
+        <li><strong>Regime-scaled caps</strong> &mdash; Normal: 25% max &rarr; Crisis: 10% max per position</li>
+      </ul>
+      <h4>Liability Hurdle</h4>
+      <p>Every position must clear SOFR + 200bps + regime premium. If a position can't beat the risk-free rate with a meaningful spread, it doesn't enter the portfolio.</p>
+    </div></div>
+  </div>
+
+  <!-- Stage 8 -->
+  <div class="card" data-stage="8">
+    <div class="card-header">
+      <div class="card-num">8</div>
+      <div class="card-title">Execution &amp; Monitoring</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>Execution Modes</h4>
+      <div class="stat-row">
+        <span class="stat-pill">Paper</span>
+        <span class="stat-pill">Alpaca Paper</span>
+        <span class="stat-pill">Alpaca Live</span>
+      </div>
+      <h4>Execution Quality</h4>
+      <ul>
+        <li><strong>Slippage simulation</strong> for paper mode to model realistic fills</li>
+        <li><strong>Implementation shortfall</strong> tracking: reference price vs filled price in basis points</li>
+      </ul>
+      <h4>Phase Engine Override</h4>
+      <p>The Wyckoff phase classifier runs independently and can halt or hedge any position. It overrides all other signals during heightened risk.</p>
+      <h4>Exit Hierarchy</h4>
+      <div class="flow-visual"><span class="terra">Overlays</span> &rarr; Thesis Invalidated &rarr; Conviction Decay &rarr; Stop-Loss &rarr; Trailing &rarr; Take-Profit &rarr; <span class="dim">Max Hold</span></div>
+      <p>Exits are enforced in strict priority order. An overlay (like a Wyckoff distribution signal) supersedes all other exit logic.</p>
+    </div></div>
+  </div>
+
+  <!-- Stage 9 -->
+  <div class="card" data-stage="9">
+    <div class="card-header">
+      <div class="card-num">9</div>
+      <div class="card-title">Performance Measurement</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <h4>Equity Curve Analytics</h4>
+      <div class="stat-row">
+        <span class="stat-pill">NAV</span>
+        <span class="stat-pill">Sharpe</span>
+        <span class="stat-pill">Sortino</span>
+        <span class="stat-pill">Calmar</span>
+        <span class="stat-pill">Max Drawdown</span>
+      </div>
+      <h4>Execution Cost Analysis</h4>
+      <ul>
+        <li>Implementation shortfall decomposed by side (buy/sell) and lane (core/hedge/momentum)</li>
+        <li>Slippage tracking at order level in basis points</li>
+      </ul>
+      <h4>Stress Testing</h4>
+      <ul>
+        <li>CVaR at 95% confidence</li>
+        <li>4 named disaster scenarios (2008 GFC, COVID crash, rate shock, sector contagion)</li>
+      </ul>
+      <h4>Benchmark</h4>
+      <p>Every position is measured against a V3 index hurdle (QQQ-based). A minimum AeternusScore of 62 is required &mdash; if the system can't demonstrably beat the index, it doesn't trade.</p>
+    </div></div>
+  </div>
+
+  <!-- Stage 10 -->
+  <div class="card" data-stage="10">
+    <div class="card-header">
+      <div class="card-num">10</div>
+      <div class="card-title">The Learning Loop</div>
+      <div class="card-chevron">&#x25B6;</div>
+    </div>
+    <div class="card-body"><div class="card-content">
+      <p style="margin-bottom:14px;color:var(--gold);font-style:italic;">Every outcome strengthens the next decision. The system feeds results back into Stage 1, closing the loop.</p>
+      <div class="feedback-grid">
+        <div class="feedback-item">
+          <h5>1. Credibility Ledger</h5>
+          <p>Bayesian Beta(2,2) prior tracks accuracy of 5 agents + 5 pillars. Scores are injected into the risk debate &mdash; agents that have been wrong get discounted automatically.</p>
+        </div>
+        <div class="feedback-item">
+          <h5>2. Investment Committee</h5>
+          <p>Weekly automated review reads calibration data and writes signal weight adjustments, confidence re-calibration, and sector overrides. Each directive expires after 7 days.</p>
+        </div>
+        <div class="feedback-item">
+          <h5>3. Hebbian Node Learning</h5>
+          <p>Win &rarr; node weight +5%. Loss &rarr; node weight &minus;8% (asymmetric, range 0.5&ndash;2.0&times;). Winners rise in universe ranking; losers fade. Graph learns which nodes produce alpha.</p>
+        </div>
+        <div class="feedback-item">
+          <h5>4. Calibration Engine</h5>
+          <p>Predicted win rate vs actual win rate per confidence bucket. Detects systematic over- or under-confidence and corrects future conviction levels.</p>
+        </div>
+        <div class="feedback-item">
+          <h5>5. Factor Fingerprinting</h5>
+          <p>Every closed trade carries its entry pillar breakdown and weight regime. Enables factor-level quality analysis: which pillars actually predicted returns?</p>
+        </div>
+        <div class="feedback-item">
+          <h5>6. Edge Strengthening</h5>
+          <p>Supply chain edges gain +0.05 &times; confidence per re-confirmation. Centrality calculations strengthen well-corroborated relationships, making the graph smarter over time.</p>
+        </div>
+      </div>
+      <div class="flow-visual" style="text-align:center;margin-top:12px;">
+<span class="sage">Outcomes</span> &rarr; Credibility + Hebbian + Calibration &rarr; <span class="gold">Stronger Universe Discovery</span>
+<span class="dim">The loop closes. Every trade makes the system better.</span></div>
+    </div></div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Aeternus Capital &middot; System Architecture &middot; March 2026 &middot; Confidential
+</div>
+
+<script>
+(function() {
+  const STAGES = [
+    { num: 1,  label: 'Universe\nDiscovery' },
+    { num: 2,  label: 'Signal\nSourcing' },
+    { num: 3,  label: 'Scoring &\nRanking' },
+    { num: 4,  label: 'Multi-Agent\nAnalysis' },
+    { num: 5,  label: 'Risk\nDebate' },
+    { num: 6,  label: '5-Pillar\nScoring' },
+    { num: 7,  label: 'Portfolio\nConstruction' },
+    { num: 8,  label: 'Execution &\nMonitoring' },
+    { num: 9,  label: 'Performance\nMeasurement' },
+    { num: 10, label: 'Learning\nLoop' },
+  ];
+
+  const CX = 300, CY = 300, R = 220, NODE_R = 32;
+  const LABEL_R = R + 46;
+  const svg = document.getElementById('loopSvg');
+  const arcsG = document.getElementById('arcsGroup');
+  const nodesG = document.getElementById('nodesGroup');
+
+  // Compute positions (start from top, go clockwise)
+  const positions = STAGES.map((s, i) => {
+    const angle = (i / STAGES.length) * Math.PI * 2 - Math.PI / 2;
+    return {
+      x: CX + R * Math.cos(angle),
+      y: CY + R * Math.sin(angle),
+      lx: CX + LABEL_R * Math.cos(angle),
+      ly: CY + LABEL_R * Math.sin(angle),
+      angle
+    };
+  });
+
+  // Draw arc connections
+  for (let i = 0; i < STAGES.length; i++) {
+    const from = positions[i];
+    const to = positions[(i + 1) % STAGES.length];
+    const isFeedback = i === STAGES.length - 1;
+
+    // Calculate points offset from node edge
+    const dx = to.x - from.x;
+    const dy = to.y - from.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const nx = dx / dist;
+    const ny = dy / dist;
+
+    const x1 = from.x + nx * (NODE_R + 4);
+    const y1 = from.y + ny * (NODE_R + 4);
+    const x2 = to.x - nx * (NODE_R + 10);
+    const y2 = to.y - ny * (NODE_R + 10);
+
+    // Curved arc (slight bend toward center for clockwise feel)
+    const midX = (x1 + x2) / 2;
+    const midY = (y1 + y2) / 2;
+    const perpX = -(y2 - y1);
+    const perpY = (x2 - x1);
+    const curveFactor = isFeedback ? 0.15 : 0.08;
+    // Bend toward center
+    const toCenterX = CX - midX;
+    const toCenterY = CY - midY;
+    const toCenterDist = Math.sqrt(toCenterX * toCenterX + toCenterY * toCenterY);
+    const cpX = midX + toCenterX / toCenterDist * dist * curveFactor;
+    const cpY = midY + toCenterY / toCenterDist * dist * curveFactor;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M${x1},${y1} Q${cpX},${cpY} ${x2},${y2}`);
+    path.setAttribute('class', isFeedback ? 'arc-path feedback' : 'arc-path');
+    path.setAttribute('marker-end', isFeedback ? 'url(#arrowSage)' : 'url(#arrowGold)');
+    arcsG.appendChild(path);
+  }
+
+  // Draw nodes
+  STAGES.forEach((s, i) => {
+    const pos = positions[i];
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'stage-node');
+    g.setAttribute('data-stage', s.num);
+
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('class', 'ring');
+    circle.setAttribute('cx', pos.x);
+    circle.setAttribute('cy', pos.y);
+    circle.setAttribute('r', NODE_R);
+    g.appendChild(circle);
+
+    const numText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    numText.setAttribute('class', 'num');
+    numText.setAttribute('x', pos.x);
+    numText.setAttribute('y', pos.y);
+    numText.textContent = s.num;
+    g.appendChild(numText);
+
+    // Label outside the ring
+    const lines = s.label.split('\n');
+    lines.forEach((line, li) => {
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.setAttribute('class', 'label');
+      label.setAttribute('x', pos.lx);
+      label.setAttribute('y', pos.ly + (li - (lines.length - 1) / 2) * 13);
+      label.textContent = line;
+      g.appendChild(label);
+    });
+
+    g.addEventListener('click', () => activateStage(s.num));
+    nodesG.appendChild(g);
+  });
+
+  // Card interaction
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.querySelector('.card-header').addEventListener('click', () => {
+      const stage = parseInt(card.dataset.stage);
+      activateStage(stage, card.classList.contains('active'));
+    });
+  });
+
+  function activateStage(num, toggle) {
+    // Update SVG nodes
+    document.querySelectorAll('.stage-node').forEach(n => {
+      n.classList.toggle('active', parseInt(n.dataset.stage) === num && !toggle);
+    });
+
+    // Update cards
+    cards.forEach(c => {
+      const isTarget = parseInt(c.dataset.stage) === num;
+      if (isTarget) {
+        if (toggle) {
+          c.classList.remove('active');
+        } else {
+          c.classList.add('active');
+          // Smooth scroll to card
+          setTimeout(() => {
+            c.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      } else {
+        c.classList.remove('active');
+      }
+    });
+  }
+
+  // Auto-open Stage 1 on load
+  setTimeout(() => activateStage(1), 600);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    branches: [main, "feature/*"]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: python -m pytest tests/ -v --tb=short
+      - name: Syntax check
+        run: python -c "import ast; import glob; [ast.parse(open(f).read()) for f in glob.glob('**/*.py', recursive=True)]"

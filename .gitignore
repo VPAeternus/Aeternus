@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.env
+
+# Project specific
+results/
+eval_results/
+tradingagents/dataflows/data_cache/
+logs/
+memory/sessions/
+
+# IDEs
+.idea/
+.vscode/
+.DS_Store
+
+# Agent artifacts
+.gemini/
+.agent/
+.agents/
+.claude/settings.local.json
+.codex/
+.opencode/
+
+# Docs build output
+site/
+
+# Operator UI (Expo)
+operator_ui/node_modules/
+operator_ui/.expo/
+operator_ui/.env
+research/cache/

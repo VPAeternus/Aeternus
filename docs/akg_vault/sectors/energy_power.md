@@ -1,0 +1,77 @@
+---
+sector: energy_power
+---
+
+# Energy Power
+
+## Companies
+- [[VRT]] — centrality: 0.555556, signal: 0.0, score: null
+- [[EQIX]] — centrality: 0.333333, signal: 0.0, score: null
+- [[BWXT]] — centrality: 0.333333, signal: 0.0, score: null
+- [[DLR]] — centrality: 0.222222, signal: 0.0, score: null
+- [[OKLO]] — centrality: 0.222222, signal: 0.0, score: null
+- [[IREN]] — centrality: 0.111111, signal: 0.0, score: null
+- [[CIFR]] — centrality: 0.0, signal: 0.0, score: null
+- [[WULF]] — centrality: 0.0, signal: 0.0, score: null
+- [[AEE]] — centrality: 0.0, signal: 0.0, score: null
+- [[AEP]] — centrality: 0.0, signal: 0.0, score: null
+- [[AES]] — centrality: 0.0, signal: 0.0, score: null
+- [[APA]] — centrality: 0.0, signal: 0.0, score: null
+- [[ATO]] — centrality: 0.0, signal: 0.0, score: null
+- [[AWK]] — centrality: 0.0, signal: 0.0, score: null
+- [[BKR]] — centrality: 0.0, signal: 0.0, score: null
+- [[CEG]] — centrality: 0.0, signal: 0.0, score: null
+- [[CMS]] — centrality: 0.0, signal: 0.0, score: null
+- [[CNP]] — centrality: 0.0, signal: 0.0, score: null
+- [[COP]] — centrality: 0.0, signal: 0.0, score: null
+- [[CTRA]] — centrality: 0.0, signal: 0.0, score: null
+- [[CVX]] — centrality: 0.0, signal: 0.0, score: null
+- [[D]] — centrality: 0.0, signal: 0.0, score: null
+- [[DTE]] — centrality: 0.0, signal: 0.0, score: null
+- [[DUK]] — centrality: 0.0, signal: 0.0, score: null
+- [[DVN]] — centrality: 0.0, signal: 0.0, score: null
+- [[ED]] — centrality: 0.0, signal: 0.0, score: null
+- [[EIX]] — centrality: 0.0, signal: 0.0, score: null
+- [[EOG]] — centrality: 0.0, signal: 0.0, score: null
+- [[EQT]] — centrality: 0.0, signal: 0.0, score: null
+- [[ES]] — centrality: 0.0, signal: 0.0, score: null
+- [[ETR]] — centrality: 0.0, signal: 0.0, score: null
+- [[EVRG]] — centrality: 0.0, signal: 0.0, score: null
+- [[EXC]] — centrality: 0.0, signal: 0.0, score: null
+- [[EXE]] — centrality: 0.0, signal: 0.0, score: null
+- [[FANG]] — centrality: 0.0, signal: 0.0, score: null
+- [[FE]] — centrality: 0.0, signal: 0.0, score: null
+- [[GPRE]] — centrality: 0.0, signal: 0.0, score: null
+- [[HAL]] — centrality: 0.0, signal: 0.0, score: null
+- [[KMI]] — centrality: 0.0, signal: 0.0, score: null
+- [[LNT]] — centrality: 0.0, signal: 0.0, score: null
+- [[MPC]] — centrality: 0.0, signal: 0.0, score: null
+- [[NEE]] — centrality: 0.0, signal: 0.0, score: null
+- [[NI]] — centrality: 0.0, signal: 0.0, score: null
+- [[NRG]] — centrality: 0.0, signal: 0.0, score: null
+- [[OKE]] — centrality: 0.0, signal: 0.0, score: null
+- [[OTTR]] — centrality: 0.0, signal: 0.0, score: null
+- [[OXY]] — centrality: 0.0, signal: 0.0, score: null
+- [[PCG]] — centrality: 0.0, signal: 0.0, score: null
+- [[PEG]] — centrality: 0.0, signal: 0.0, score: null
+- [[PNW]] — centrality: 0.0, signal: 0.0, score: null
+- [[PPL]] — centrality: 0.0, signal: 0.0, score: null
+- [[PSX]] — centrality: 0.0, signal: 0.0, score: null
+- [[REX]] — centrality: 0.0, signal: 0.0, score: null
+- [[SLB]] — centrality: 0.0, signal: 0.0, score: null
+- [[SO]] — centrality: 0.0, signal: 0.0, score: null
+- [[SRE]] — centrality: 0.0, signal: 0.0, score: null
+- [[TALO]] — centrality: 0.0, signal: 0.0, score: null
+- [[TPL]] — centrality: 0.0, signal: 0.0, score: null
+- [[TRGP]] — centrality: 0.0, signal: 0.0, score: null
+- [[VLO]] — centrality: 0.0, signal: 0.0, score: null
+- [[VST]] — centrality: 0.0, signal: 0.0, score: null
+- [[WEC]] — centrality: 0.0, signal: 0.0, score: null
+- [[WMB]] — centrality: 0.0, signal: 0.0, score: null
+- [[WTTR]] — centrality: 0.0, signal: 0.0, score: null
+- [[XEL]] — centrality: 0.0, signal: 0.0, score: null
+- [[XOM]] — centrality: 0.0, signal: 0.0, score: null
+- [[YORW]] — centrality: 0.0, signal: 0.0, score: null
+- [[CCJ]] — centrality: 0.0, signal: 0.0, score: null
+- [[UEC]] — centrality: 0.0, signal: 0.0, score: null
+- [[AMSC]] — centrality: 0.0, signal: 0.0, score: null

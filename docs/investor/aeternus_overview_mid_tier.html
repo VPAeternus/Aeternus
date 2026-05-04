@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeternus Capital — Technical Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ── Token system ── */
+:root {
+  --bg:            #0a1628;
+  --surface:       #0f2040;
+  --surface-el:    #142850;
+  --border:        rgba(26, 160, 200, 0.18);
+  --border-strong: rgba(26, 160, 200, 0.35);
+  --text:          #c2daf0;
+  --text-dim:      #5a7a9a;
+  --teal:          #1a9fc8;
+  --teal-dim:      rgba(26, 159, 200, 0.10);
+  --green:         #3aaa72;
+  --amber:         #c88a2a;
+  --red:           #c23a3a;
+  --mono:          'IBM Plex Mono', monospace;
+  --sans:          'IBM Plex Sans', sans-serif;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Blueprint grid ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(26, 160, 200, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 160, 200, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Slide shell ── */
+.slide {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 52px 72px 76px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1;
+}
+.slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Print */
+@media print {
+  body { overflow: visible; }
+  .slide {
+    position: relative;
+    inset: auto;
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+    page-break-after: always;
+    min-height: 100vh;
+    display: flex;
+  }
+  .dot-nav, .slide-counter { display: none !important; }
+}
+
+/* ── Watermark ── */
+.watermark {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  opacity: 0.45;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* ── Dot nav ── */
+.dot-nav {
+  position: fixed;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+.dot-nav span {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+  opacity: 0.4;
+}
+.dot-nav span.active {
+  background: var(--teal);
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* ── Slide counter ── */
+.slide-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 28px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  z-index: 100;
+}
+
+/* ── Shared typography ── */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.slide h2 {
+  font-family: var(--sans);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 32px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ── Tag pill ── */
+.tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: var(--teal-dim);
+  border: 1px solid rgba(26, 160, 200, 0.22);
+  color: var(--teal);
+  white-space: nowrap;
+}
+
+/* ── Number formatting ── */
+.num {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+.pos { color: var(--green); }
+.neg { color: var(--red); }
+.neu { color: var(--amber); }
+
+
+/* ══════════════════════════════════════════
+   SLIDE 1 — TITLE
+══════════════════════════════════════════ */
+#s1 { text-align: center; }
+
+#s1::after {
+  content: '';
+  position: absolute;
+  top: 32px; left: 32px; right: 32px; bottom: 56px;
+  border: 1px solid rgba(26, 160, 200, 0.07);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.s1-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 52px;
+  display: block;
+}
+#s1 h1 {
+  font-family: var(--mono);
+  font-size: 56px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  max-width: 840px;
+  margin-bottom: 30px;
+}
+.s1-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-dim);
+  max-width: 700px;
+  line-height: 1.75;
+  margin-bottom: 54px;
+}
+.s1-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 22px;
+  background: var(--surface);
+}
+.s1-badge .s1-date {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+}
+.s1-badge .s1-conf {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--teal);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-left: 1px solid var(--border);
+  padding-left: 20px;
+}
+
+
+/* ══════════════════════════════════════════
+   SLIDE 2 — PIPELINE
+══════════════════════════════════════════ */
+#s2 { justify-content: flex-start; padding-top: 44px; }
+#s2 .s2-head { text-align: center; width: 100%; margin-bottom: 24px; }
+#s2 .s2-head h2 { margin-bottom: 0; }
+
+.pipeline-wrap {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  max-width: 1140px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pipeline-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30px;
+  flex-shrink: 0;
+  padding-top: 14px;
+}
+.spine-dot {
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+}
+.spine-line {
+  width: 2px;
+  flex: 1;
+  background: rgba(26, 160, 200, 0.15);
+  min-height: 16px;
+}
+.spine-dot.c-teal  { background: var(--teal);  border-color: rgba(26,160,200,0.25); }
+.spine-dot.c-blue  { background: #1a70c8;       border-color: rgba(26,112,200,0.25); }
+.spine-dot.c-green { background: var(--green);  border-color: rgba(58,170,114,0.25); }
+.spine-dot.c-amber { background: var(--amber);  border-color: rgba(200,138,42,0.25); }
+.spine-dot.c-red   { background: var(--red);    border-color: rgba(194,58,58,0.25); }
+
+.pipeline-stages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ps {
+  display: flex;
+  flex-direction: column;
+  padding: 9px 0 9px 18px;
+  justify-content: center;
+  min-height: 68px;
+}
+.ps-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 3px;
+}
+.ps-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  min-width: 16px;
+}
+.ps-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.ps-body {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.5;
+  padding-left: 26px;
+  max-width: 840px;
+  margin-bottom: 5px;
+}
+.ps-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-left: 26px;
+}
+
+
+/* ══════════════════════════════════════════
+   SLIDE 3 — AGENT ARCHITECTURE
+══════════════════════════════════════════ */
+.agent-flow {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.agent-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+.ab {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 14px;
+  text-align: center;
+  min-width: 128px;
+  flex: 1;
+  max-width: 190px;
+}
+.ab.wide { max-width: 100%; flex: none; width: 100%; }
+.ab .ab-name {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--text);
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.ab .ab-sub {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 3px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+.ab.teal-b  { border-color: rgba(26,160,200,0.42); }
+.ab.green-b { border-color: rgba(58,170,114,0.42); }
+.ab.amber-b { border-color: rgba(200,138,42,0.42); }
+
+.arr-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+  gap: 1px;
+}
+.arr-down .a-line { width: 2px; height: 14px; background: rgba(26,160,200,0.28); }
+.arr-down .a-head {
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid rgba(26,160,200,0.42);
+}
+.arr-down .a-lbl {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 2px 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.inline-arr {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  color: var(--text-dim);
+  font-size: 14px;
+  font-family: var(--mono);
+  flex-shrink: 0;
+}
+
+.sub-note {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 3px;
+  letter-spacing: 0.5px;
+}
+
+.agent-note {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--text-dim);
+  text-align: center;
+  max-width: 760px;
+  line-height: 1.6;
+  margin-top: 10px;
+  padding: 11px 18px;
+  border: 1px solid rgba(26,160,200,0.10);
+  border-radius: 4px;
+  background: rgba(26,160,200,0.03);
+}
+
+
+/* ══════════════════════════════════════════
+   SLIDE 4 — UNIVERSE BRAIN
+══════════════════════════════════════════ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  width: 100%;
+  max-width: 1060px;
+}
+.cpanel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 22px 24px;
+}
+.cpanel-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.cpanel ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cpanel ul li {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.55;
+  padding-left: 12px;
+  position: relative;
+}
+.cpanel ul li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 7px;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--teal);
+  opacity: 0.45;
+}
+.cpanel ul li strong {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.tier-chain {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin: 10px 0 6px;
+}
+.tn {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid;
+  letter-spacing: 0.4px;
+}
+.tn.t0 { color: #4a6a8a; border-color: rgba(74,106,138,0.3); background: rgba(74,106,138,0.08); }
+.tn.t1 { color: #6a7a8a; border-color: rgba(106,122,138,0.3); background: rgba(106,122,138,0.08); }
+.tn.t2 { color: var(--amber); border-color: rgba(200,138,42,0.3); background: rgba(200,138,42,0.07); }
+.tn.t3 { color: var(--teal); border-color: rgba(26,160,200,0.38); background: rgba(26,160,200,0.08); }
+.tn.t4 { color: var(--green); border-color: rgba(58,170,114,0.38); background: rgba(58,170,114,0.08); }
+.tn-arr { font-family: var(--mono); font-size: 11px; color: var(--text-dim); }
+
+.causal-ex {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: rgba(58,170,114,0.05);
+  border: 1px solid rgba(58,170,114,0.18);
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--green);
+  line-height: 1.65;
+}
+
+
+/* ══════════════════════════════════════════
+   SLIDE 5 — RISK ARCHITECTURE
+══════════════════════════════════════════ */
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  width: 100%;
+  max-width: 1060px;
+  margin-bottom: 18px;
+}
+.lane {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 16px 17px;
+  background: var(--surface);
+}
+.lane.tl { border-color: rgba(26,160,200,0.38); }
+.lane.am { border-color: rgba(200,138,42,0.38); }
+.lane.gr { border-color: rgba(58,170,114,0.38); }
+.lane-name {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.lane.tl .lane-name { color: var(--teal); }
+.lane.am .lane-name { color: var(--amber); }
+.lane.gr .lane-name { color: var(--green); }
+.lane ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.lane ul li {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.5;
+  padding-left: 10px;
+  position: relative;
+}
+.lane ul li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 7px;
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  opacity: 0.55;
+}
+.lane.tl ul li::before { background: var(--teal); }
+.lane.am ul li::before { background: var(--amber); }
+.lane.gr ul li::before { background: var(--green); }
+
+.gates-tbl {
+  width: 100%;
+  max-width: 1060px;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.gates-tbl th {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 7px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.gates-tbl td {
+  padding: 7px 14px;
+  color: var(--text-dim);
+  border-bottom: 1px solid rgba(26,160,200,0.06);
+  vertical-align: top;
+  line-height: 1.4;
+  font-weight: 300;
+}
+.gates-tbl td:first-child {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.gates-tbl td:last-child {
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+.gate-foot {
+  font-size: 10.5px;
+  font-weight: 300;
+  color: var(--text-dim);
+  text-align: center;
+  max-width: 1060px;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+
+/* ══════════════════════════════════════════
+   SLIDE 6 — SCORING ENGINE
+══════════════════════════════════════════ */
+#s6 { justify-content: flex-start; padding-top: 44px; }
+#s6 .s6-head { text-align: center; width: 100%; margin-bottom: 22px; }
+#s6 .s6-head h2 { margin-bottom: 0; }
+
+.score-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 26px;
+  width: 100%;
+  max-width: 1060px;
+}
+
+.pillar-bars { display: flex; flex-direction: column; gap: 13px; }
+.prow { display: flex; flex-direction: column; gap: 4px; }
+.prow-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.prow-name {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.prow-pct {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal);
+}
+.bar-track {
+  height: 5px;
+  background: rgba(26,160,200,0.10);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.bar-fill { height: 100%; background: var(--teal); border-radius: 2px; opacity: 0.7; }
+.prow-desc {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.score-right { display: flex; flex-direction: column; gap: 14px; }
+
+.regime-pnl {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 15px 16px;
+}
+.regime-pnl-title {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+.rrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(26,160,200,0.06);
+}
+.rrow:last-child { border-bottom: none; }
+.rrow .rl { font-family: var(--mono); font-size: 9.5px; color: var(--text-dim); letter-spacing: 0.5px; }
+.rrow .ru { font-family: var(--mono); font-size: 9.5px; color: var(--green); }
+.rrow .rd { font-family: var(--mono); font-size: 9.5px; color: var(--red); }
+.rrow .rh { font-family: var(--mono); font-size: 9.5px; color: var(--text); font-weight: 600; }
+
+.coherence-note {
+  background: rgba(26,160,200,0.04);
+  border: 1px solid rgba(26,160,200,0.17);
+  border-radius: 4px;
+  padding: 13px 15px;
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.coherence-note strong { color: var(--teal); font-weight: 500; }
+
+
+/* ══════════════════════════════════════════
+   SLIDE 7 — PERFORMANCE
+══════════════════════════════════════════ */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 26px;
+}
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px 18px;
+  text-align: center;
+}
+.kpi-val {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.kpi-lbl {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+.perf-tbl {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.perf-tbl th {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 8px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.perf-tbl td {
+  padding: 9px 14px;
+  border-bottom: 1px solid rgba(26,160,200,0.06);
+  color: var(--text-dim);
+  font-weight: 300;
+  vertical-align: middle;
+}
+.perf-tbl td:first-child { color: var(--text); font-weight: 400; }
+.pn { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; }
+
+.regime-note-s7 {
+  max-width: 900px;
+  font-size: 11px;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 9px;
+  font-style: italic;
+}
+.disclaimer {
+  max-width: 900px;
+  font-size: 9.5px;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+
+
+/* ══════════════════════════════════════════
+   SLIDE 8 — OPERATIONAL PROPERTIES
+══════════════════════════════════════════ */
+.props-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 1060px;
+}
+.prop-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 15px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s;
+}
+.prop-card:hover { border-color: rgba(26,160,200,0.36); }
+.prop-title {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+}
+.prop-body {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.55;
+  flex: 1;
+}
+.footer-stamp {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--text-dim);
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  opacity: 0.55;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 1 — TITLE
+══════════════════════════════════════════ -->
+<section class="slide active" id="s1">
+  <span class="s1-label">Aeternus Capital &mdash; System Architecture</span>
+  <h1>Technical Overview</h1>
+  <p class="s1-subtitle">Multi-agent AI investment platform combining LLM reasoning, quantitative scoring, causal chain signal propagation, and adaptive risk management in a fully autonomous end-to-end pipeline.</p>
+  <div class="s1-badge">
+    <span class="s1-date">March 2026</span>
+    <span class="s1-conf">Confidential &middot; For Accredited Investors</span>
+  </div>
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SLIDE 2 — PIPELINE
+══════════════════════════════════════════ -->
+<section class="slide" id="s2">
+  <div class="s2-head">
+    <div class="eyebrow">Pipeline Architecture</div>
+    <h2>Six Stages. Fully Autonomous.</h2>
+  </div>
+
+  <div class="pipeline-wrap">
+    <div class="pipeline-spine">
+      <div class="spine-dot c-teal"></div>
+      <div class="spine-line"></div>
+      <div class="spine-dot c-teal"></div>
+      <div class="spine-line"></div>
+      <div class="spine-dot c-blue"></div>
+      <div class="spine-line"></div>
+      <div class="spine-dot c-green"></div>
+      <div class="spine-line"></div>
+      <div class="spine-dot c-amber"></div>
+      <div class="spine-line"></div>
+      <div class="spine-dot c-red"></div>
+    </div>
+
+    <div class="pipeline-stages">
+
+      <div class="ps">
+        <div class="ps-top">
+          <span class="ps-num">01</span>
+          <span class="ps-title">Signal Discovery</span>
+        </div>
+        <p class="ps-body">AKG Universe Brain (2,000+ tickers, 5 emergence tiers). 7 signal connectors run on schedule: SEC 8-K Catalyst, Finviz insider / smart money, Cashtag velocity, Macro signals (FRED / yield curve / credit spreads), Momentum engine, Fundamental engine, Causal Chain propagator. Daily ranked research queue produced.</p>
+        <div class="ps-tags"><span class="tag">AKG Graph</span><span class="tag">EDGAR</span><span class="tag">FRED</span><span class="tag">Finviz</span><span class="tag">BFS Propagation</span></div>
+      </div>
+
+      <div class="ps">
+        <div class="ps-top">
+          <span class="ps-num">02</span>
+          <span class="ps-title">Multi-Agent Analysis</span>
+        </div>
+        <p class="ps-body">4 analyst agents run in parallel (fundamental, technical, sentiment, macro). Each followed by a deep-thinking reviewer. Cross-pillar Coherence Engine detects contradictory signals across all tracks simultaneously.</p>
+        <div class="ps-tags"><span class="tag">LangGraph Fan-Out</span><span class="tag">Coherence Engine</span><span class="tag">4 Deep Reviewers</span></div>
+      </div>
+
+      <div class="ps">
+        <div class="ps-top">
+          <span class="ps-num">03</span>
+          <span class="ps-title">Structured Debate</span>
+        </div>
+        <p class="ps-body">Bull and bear researchers build competing theses independently. Research Manager adjudicates. Red Team Agent probes for logical flaws (config-gated). Trader Agent produces structured verdict: entry levels, position sizing, invalidation conditions.</p>
+        <div class="ps-tags"><span class="tag">Bull/Bear Debate</span><span class="tag">Red Team Agent</span><span class="tag">Trader Verdict</span></div>
+      </div>
+
+      <div class="ps">
+        <div class="ps-top">
+          <span class="ps-num">04</span>
+          <span class="ps-title">Scoring &amp; Portfolio Construction</span>
+        </div>
+        <p class="ps-body">5-pillar composite score (0&ndash;100). Regime-adaptive weights. Benchmark hurdle rate threshold. Kelly criterion position sizing with iterative concentration capping. Capital allocator with covariance gating.</p>
+        <div class="ps-tags"><span class="tag">5-Pillar Score</span><span class="tag">Kelly Sizing</span><span class="tag">Regime Weights</span></div>
+      </div>
+
+      <div class="ps">
+        <div class="ps-top">
+          <span class="ps-num">05</span>
+          <span class="ps-title">Risk Overlays &amp; Execution</span>
+        </div>
+        <p class="ps-body">Three independent execution lanes: Core long / Hedge Wyckoff / Momentum V3. Pre-trade gates: HWM check, concentration limit, supply chain cluster check, correlation guard, regime gate. Alpaca paper + live broker integration.</p>
+        <div class="ps-tags"><span class="tag">Wyckoff Phase Engine</span><span class="tag">5 Pre-Trade Gates</span><span class="tag">Alpaca Broker</span></div>
+      </div>
+
+      <div class="ps">
+        <div class="ps-top">
+          <span class="ps-num">06</span>
+          <span class="ps-title">Position Management &amp; Learning</span>
+        </div>
+        <p class="ps-body">Daily thesis monitor (NONE / WATCH / STRESS / CRITICAL). Priority exit cascade: overlay &rarr; thesis invalidated &rarr; conviction decay &rarr; stop &rarr; trailing &rarr; take profit. Outcomes feed back to AKG via Hebbian weighting. Agent credibility ledger updates per pillar per regime.</p>
+        <div class="ps-tags"><span class="tag">Thesis Monitor</span><span class="tag">Hebbian Weights</span><span class="tag">Credibility Ledger</span></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SLIDE 3 — AGENT ARCHITECTURE
+══════════════════════════════════════════ -->
+<section class="slide" id="s3">
+  <div class="eyebrow">Agent Architecture</div>
+  <h2>13 Agents. No Single Point of Failure.</h2>
+
+  <div class="agent-flow">
+
+    <div class="agent-row">
+      <div class="ab teal-b">
+        <div class="ab-name">Fundamental<br>Analyst</div>
+        <div class="ab-sub">F-Score, EV/EBITDA, margins</div>
+      </div>
+      <div class="ab teal-b">
+        <div class="ab-name">Technical<br>Analyst</div>
+        <div class="ab-sub">Price, RSI, MACD, momentum</div>
+      </div>
+      <div class="ab teal-b">
+        <div class="ab-name">Sentiment<br>Analyst</div>
+        <div class="ab-sub">News blend, social velocity</div>
+      </div>
+      <div class="ab teal-b">
+        <div class="ab-name">Macro<br>Analyst</div>
+        <div class="ab-sub">FRED, yield curve, credit</div>
+      </div>
+    </div>
+
+    <div class="arr-down">
+      <div class="a-line"></div>
+      <div class="a-lbl">4 deep reviewers challenge each track</div>
+      <div class="a-head"></div>
+    </div>
+
+    <div class="agent-row" style="max-width:700px;">
+      <div class="ab">
+        <div class="ab-name">Bull Researcher</div>
+        <div class="ab-sub">Builds long thesis</div>
+      </div>
+      <div class="inline-arr">&#8596;</div>
+      <div class="ab">
+        <div class="ab-name">Bear Researcher</div>
+        <div class="ab-sub">Builds short thesis</div>
+      </div>
+      <div class="inline-arr">&#8594;</div>
+      <div class="ab teal-b">
+        <div class="ab-name">Research Manager</div>
+        <div class="ab-sub">Adjudicates + resolves</div>
+      </div>
+    </div>
+    <div class="sub-note">+ Red Team Agent (adversarial critique, config-gated)</div>
+
+    <div class="arr-down">
+      <div class="a-line"></div>
+      <div class="a-head"></div>
+    </div>
+
+    <div class="agent-row" style="max-width:760px;">
+      <div class="ab green-b">
+        <div class="ab-name">Trader Agent</div>
+        <div class="ab-sub">Entry, sizing, invalidation</div>
+      </div>
+      <div class="inline-arr">&#8594;</div>
+      <div class="ab amber-b">
+        <div class="ab-name">Risk Debate (3)</div>
+        <div class="ab-sub">3 independent risk analysts</div>
+      </div>
+      <div class="inline-arr">&#8594;</div>
+      <div class="ab green-b">
+        <div class="ab-name">Portfolio Manager</div>
+        <div class="ab-sub">Final sizing + approval</div>
+      </div>
+    </div>
+
+    <div class="arr-down">
+      <div class="a-line"></div>
+      <div class="a-head"></div>
+    </div>
+
+    <div class="agent-row" style="max-width:760px;">
+      <div class="ab wide amber-b">
+        <div class="ab-name">Investment Committee</div>
+        <div class="ab-sub">Weekly weight updates via Beta(2,2) credibility ledger &middot; Requires 10+ closed trades &middot; TTL-expiring delta files</div>
+      </div>
+    </div>
+
+    <p class="agent-note">Every agent operates with its own data context and reasoning chain. Consensus requires passing through multiple independent review stages. No agent can unilaterally approve a position.</p>
+
+  </div>
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SLIDE 4 — UNIVERSE BRAIN
+══════════════════════════════════════════ -->
+<section class="slide" id="s4">
+  <div class="eyebrow">Signal Intelligence</div>
+  <h2>AKG: the Universe Brain. Causal chain propagation: the alpha edge.</h2>
+
+  <div class="two-col">
+
+    <div class="cpanel">
+      <div class="cpanel-title">AKG Universe Brain</div>
+      <div class="tier-chain">
+        <span class="tn t0">DARK</span>
+        <span class="tn-arr">&#8594;</span>
+        <span class="tn t1">ROCKY</span>
+        <span class="tn-arr">&#8594;</span>
+        <span class="tn t2">ATMOSPHERE</span>
+        <span class="tn-arr">&#8594;</span>
+        <span class="tn t3">HABITABLE</span>
+        <span class="tn-arr">&#8594;</span>
+        <span class="tn t4">SCORED</span>
+      </div>
+      <ul style="margin-top:12px;">
+        <li><strong>Living directed weighted graph</strong> of 2,000+ tickers. Every node carries score history, position state, fundamentals cache, and outcome weight.</li>
+        <li><strong>Emergence score</strong> = 0.40 &times; centrality + 0.40 &times; velocity_z + 0.20 &times; sentiment &mdash; multiplied by Hebbian outcome weight.</li>
+        <li><strong>Writers (scheduled, not in pipeline):</strong> Sector Scout (20h), Cashtag Enricher (4h), SEC Catalyst (8-K / Form 4), Analysis write-back, Execution write-back.</li>
+        <li><strong>Pipeline reads for free.</strong> Zero API cost for universe expansion via <span class="tag">akg.get_emerging_planets()</span></li>
+        <li><strong>Hebbian outcome weights:</strong> +0.05 per win, &minus;0.08 per loss. Winners surface faster in every subsequent ranking pass.</li>
+        <li><strong>Fundamentals cache:</strong> 90-day TTL per node. One API call cached for the full quarter.</li>
+      </ul>
+    </div>
+
+    <div class="cpanel">
+      <div class="cpanel-title">Causal Chain Propagator</div>
+      <ul>
+        <li><strong>BFS traversal</strong> of AKG supply chain edges from a catalyst company. Hop-1 upstream suppliers, Hop-2+ downstream customers.</li>
+        <li><strong>EARNINGS_BEAT:</strong> upstream &times;0.35 magnitude &middot; downstream &times;0.12</li>
+        <li><strong>EARNINGS_MISS:</strong> upstream &times;&minus;0.40 &middot; downstream &times;&minus;0.15</li>
+        <li><strong>Alpha window:</strong> 8&ndash;15 days. Market prices direct effect immediately; second-order effects lag behind.</li>
+        <li><strong>Noise floor:</strong> |predicted impact| &lt; 1.5% &rarr; discarded. Prevents low-signal pollution of the research queue.</li>
+        <li><strong>Capacity:</strong> 10 candidates max per event &middot; 48h TTL &middot; auto-expiry.</li>
+      </ul>
+      <div class="causal-ex">
+        // Example: NVDA +18% earnings beat<br>
+        AMAT (upstream supplier, hop-1)<br>
+        &rarr; flagged POSITIVE candidate<br>
+        &rarr; predicted impact: +6.3%<br>
+        &rarr; alpha window: T+8 to T+15
+      </div>
+    </div>
+
+  </div>
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SLIDE 5 — RISK ARCHITECTURE
+══════════════════════════════════════════ -->
+<section class="slide" id="s5">
+  <div class="eyebrow">Risk Management</div>
+  <h2>Three lanes. Five gates. One discipline.</h2>
+
+  <div class="three-col">
+    <div class="lane tl">
+      <div class="lane-name">Core Lane</div>
+      <ul>
+        <li>Deal flow &rarr; long equity positions</li>
+        <li>Covariance-gated capital allocator</li>
+        <li>Max 15% single-name concentration</li>
+        <li>Drawdown circuit breaker at 5% from HWM</li>
+        <li>Kelly criterion sizing, iteratively capped</li>
+        <li>Benchmark hurdle rate required to enter</li>
+      </ul>
+    </div>
+
+    <div class="lane am">
+      <div class="lane-name">Hedge Lane</div>
+      <ul>
+        <li>Wyckoff phase engine: S2 / S4 detection</li>
+        <li>Independent of all long signals</li>
+        <li>Covered call timing: 96 / 99 QQQ names</li>
+        <li>PhaseOverlay fires ~15% of trading days</li>
+        <li>RegimeExit overbought fires ~6.7% of days</li>
+        <li>91% beat buy-and-hold &middot; 94 stocks &middot; 25 yr</li>
+      </ul>
+    </div>
+
+    <div class="lane gr">
+      <div class="lane-name">Momentum Lane</div>
+      <ul>
+        <li>V3 Index Overlay: QQQ / SPY management</li>
+        <li>RTH and overnight legs, separately managed</li>
+        <li>148 structural bleeder names confirmed</li>
+        <li>Bleeders verified P10&ndash;P80 bps filter (S&amp;P 500)</li>
+        <li>Vol quintile gates magnitude, not eligibility</li>
+        <li>QQQ &gt; SMA200 regime gate required</li>
+      </ul>
+    </div>
+  </div>
+
+  <table class="gates-tbl">
+    <thead>
+      <tr>
+        <th>Gate</th>
+        <th>What it checks</th>
+        <th>Trigger condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. HWM Circuit Breaker</td>
+        <td>Portfolio NAV vs. high-water mark</td>
+        <td>5% drawdown &rarr; capital preservation mode</td>
+      </tr>
+      <tr>
+        <td>2. Concentration Check</td>
+        <td>Single-name % of gross exposure</td>
+        <td>&gt;15% &rarr; order blocked</td>
+      </tr>
+      <tr>
+        <td>3. Supply Chain Cluster</td>
+        <td>Portfolio BFS analysis via AKG graph</td>
+        <td>&gt;40% NAV in one cluster &rarr; warning flag</td>
+      </tr>
+      <tr>
+        <td>4. Correlation Guard</td>
+        <td>Pairwise portfolio correlation matrix</td>
+        <td>Flags concentrated regime exposure</td>
+      </tr>
+      <tr>
+        <td>5. Regime Gate</td>
+        <td>Market regime (VIX, 2s10s, capital flows)</td>
+        <td>Weight adjustment per detected regime</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="gate-foot">All five gates must pass before any order reaches the broker. Zero human discretion required at execution time.</p>
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SLIDE 6 — SCORING ENGINE
+══════════════════════════════════════════ -->
+<section class="slide" id="s6">
+  <div class="s6-head">
+    <div class="eyebrow">Scoring Engine</div>
+    <h2>Five pillars. One composite score.</h2>
+  </div>
+
+  <div class="score-grid">
+
+    <div class="pillar-bars">
+
+      <div class="prow">
+        <div class="prow-head"><span class="prow-name">Fundamental</span><span class="prow-pct">30%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        <div class="prow-desc">P/E ratio, operating margins, Piotroski F-Score, EV/EBITDA. 90-day AKG fundamentals cache &mdash; one API call per quarter per ticker.</div>
+      </div>
+
+      <div class="prow">
+        <div class="prow-head"><span class="prow-name">Coherence</span><span class="prow-pct">25%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:83.3%"></div></div>
+        <div class="prow-desc">Cross-pillar signal alignment score. Contradiction penalty applied when fundamental, sentiment, and macro signals conflict. Meta-analysis reduces conviction on diverging tracks.</div>
+      </div>
+
+      <div class="prow">
+        <div class="prow-head"><span class="prow-name">Macro</span><span class="prow-pct">20%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:66.7%"></div></div>
+        <div class="prow-desc">FRED yield curve (2s10s spread), credit spreads (HYG / LQD), capital flows regime, inflation phase classification, market breadth (RSP / SPY ratio).</div>
+      </div>
+
+      <div class="prow">
+        <div class="prow-head"><span class="prow-name">Sentiment</span><span class="prow-pct">15%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+        <div class="prow-desc">News sentiment blend (Alpha Vantage 60% / text extraction 40%), social cashtag velocity z-score, options flow (put/call skew, IV surface, OI structure).</div>
+      </div>
+
+      <div class="prow">
+        <div class="prow-head"><span class="prow-name">Momentum</span><span class="prow-pct">10%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:33.3%"></div></div>
+        <div class="prow-desc">4 price momentum sub-scores. Fama-French alpha decomposition (7-day cache). RSI / MACD signal integration. Factor loading vs. market, size, and value factors.</div>
+      </div>
+
+    </div>
+
+    <div class="score-right">
+
+      <div class="regime-pnl">
+        <div class="regime-pnl-title">Regime Adaptation</div>
+        <div class="rrow"><span class="rl rh">BEARISH regime</span></div>
+        <div class="rrow" style="padding-left:10px;"><span class="rl">Macro weight</span><span class="ru">+5 pts</span></div>
+        <div class="rrow" style="padding-left:10px;"><span class="rl">Fundamental weight</span><span class="ru">+4 pts</span></div>
+        <div class="rrow" style="padding-left:10px;"><span class="rl">Momentum weight</span><span class="rd">&minus;5 pts</span></div>
+        <div class="rrow"><span class="rl rh">BULLISH regime</span></div>
+        <div class="rrow" style="padding-left:10px;"><span class="rl">Momentum weight</span><span class="ru">+5 pts</span></div>
+        <div class="rrow" style="padding-left:10px;"><span class="rl">Sentiment / cashtag</span><span class="ru">+3 pts</span></div>
+        <div class="rrow" style="padding-left:10px; border-bottom:none;"><span class="rl">Macro weight</span><span class="rd">&minus;4 pts</span></div>
+      </div>
+
+      <div class="coherence-note">
+        <strong>Coherence is the only pillar no traditional quant model contains.</strong> It detects when multiple signal types contradict each other and penalizes conviction accordingly. A stock with strong fundamentals but bearish macro and negative sentiment receives a lower Coherence score, preventing overconfident entry.
+      </div>
+
+    </div>
+
+  </div>
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SLIDE 7 — PERFORMANCE
+══════════════════════════════════════════ -->
+<section class="slide" id="s7">
+  <div class="eyebrow">Quantitative Evidence</div>
+  <h2>Hedge Engine &middot; 20-Year Backtest</h2>
+
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-val pos num">24.7%</div>
+      <div class="kpi-lbl">CAGR</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-val pos num">1.47</div>
+      <div class="kpi-lbl">Sharpe Ratio</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-val neu num">&minus;17.0%</div>
+      <div class="kpi-lbl">Max Drawdown</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-val pos num">85&times;</div>
+      <div class="kpi-lbl">Capital Multiple</div>
+    </div>
+  </div>
+
+  <table class="perf-tbl">
+    <thead>
+      <tr>
+        <th>Stress Period</th>
+        <th>Duration</th>
+        <th style="text-align:right;">QQQ Return</th>
+        <th style="text-align:right;">Aeternus Return</th>
+        <th style="text-align:right;">Outperformance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Global Financial Crisis</td>
+        <td>Sep 2008 &ndash; Mar 2009</td>
+        <td class="pn neg">&minus;43.5%</td>
+        <td class="pn pos">+7.8%</td>
+        <td class="pn pos">+51.3 pts</td>
+      </tr>
+      <tr>
+        <td>COVID Crash</td>
+        <td>Feb &ndash; Mar 2020</td>
+        <td class="pn neg">&minus;28.1%</td>
+        <td class="pn pos">+14.9%</td>
+        <td class="pn pos">+43.0 pts</td>
+      </tr>
+      <tr>
+        <td>2022 Bear Market</td>
+        <td>Jan &ndash; Oct 2022</td>
+        <td class="pn neg">&minus;36.3%</td>
+        <td class="pn neu">&minus;12.1%</td>
+        <td class="pn pos">+24.2 pts</td>
+      </tr>
+      <tr>
+        <td>2025 Tariff Shock</td>
+        <td>Feb &ndash; Apr 2025</td>
+        <td class="pn neg">&minus;16.4%</td>
+        <td class="pn neu">&minus;7.3%</td>
+        <td class="pn pos">+9.1 pts</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="regime-note-s7">Regime-exit signal: 91% beat buy-and-hold across 94 S&amp;P 500 stocks over 25 years of daily data.</p>
+  <p class="disclaimer">Past performance is not indicative of future results. Backtested results are hypothetical and do not reflect actual trading. Actual performance may differ materially from backtested results.</p>
+
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SLIDE 8 — OPERATIONAL PROPERTIES
+══════════════════════════════════════════ -->
+<section class="slide" id="s8">
+  <div class="eyebrow">Production Grade</div>
+  <h2>What makes this institutional-quality infrastructure.</h2>
+
+  <div class="props-grid">
+
+    <div class="prop-card">
+      <div class="prop-title">Deterministic Reproducibility</div>
+      <div class="prop-body">Same inputs always produce same outputs. Every decision has a traceable audit trail from signal source to execution order, with full intermediate state logged.</div>
+      <span class="tag">Audit Trail</span>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-title">Paper &rarr; Live Parity</div>
+      <div class="prop-body">Identical code path for paper and live execution. State is never cross-contaminated. Position parity checks are mandatory before any live order is submitted to the broker.</div>
+      <span class="tag">Broker Adapter Layer</span>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-title">$0 Marginal LLM Cost</div>
+      <div class="prop-body">Full pipeline runs at zero external API cost via Claude subscription compute. Fundamental data under $0.01/ticker. Social and macro data free via EDGAR, FRED, and yfinance.</div>
+      <span class="tag">Claude CLI Provider</span>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-title">111 Tests Passing</div>
+      <div class="prop-body">Complete unit and integration test coverage across all critical paths. Zero regressions across 78 commits in three months of active development and architecture iteration.</div>
+      <span class="tag">pytest</span>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-title">Outcome Learning Loop</div>
+      <div class="prop-body">Hebbian weighting on closed trade outcomes. Agent credibility ledger (Bayesian Beta distribution) tracks accuracy per agent, per pillar, per market regime independently.</div>
+      <span class="tag">+0.05 win / &minus;0.08 loss</span>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-title">Agent Credibility Ledger</div>
+      <div class="prop-body">Beta(2,2) prior, updates on every closed trade outcome. Consensus Paradox detection flags when high-credibility agents disagree. Risk debate reasoning weighted accordingly.</div>
+      <span class="tag">Beta(2,2) Bayesian</span>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-title">Pre-Trade Risk Gates</div>
+      <div class="prop-body">Five mandatory validation checks before every order: drawdown circuit breaker (HWM), concentration limits, supply chain cluster analysis, correlation guard, and regime gate.</div>
+      <span class="tag">5 Gates &middot; Zero Bypass</span>
+    </div>
+
+    <div class="prop-card">
+      <div class="prop-title">CLI Control Plane</div>
+      <div class="prop-body">34 commands covering the full pipeline. Operators can run, monitor, override, and audit every system component end-to-end without touching source code.</div>
+      <span class="tag">34 CLI Commands</span>
+    </div>
+
+  </div>
+
+  <div class="footer-stamp">78 commits &nbsp;&middot;&nbsp; 349,000+ lines written &nbsp;&middot;&nbsp; Built March 2026</div>
+  <div class="watermark">CONFIDENTIAL &mdash; AETERNUS CAPITAL &mdash; NOT FOR DISTRIBUTION</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav class="dot-nav" id="dotNav"></nav>
+<div class="slide-counter" id="slideCounter"></div>
+
+<script>
+(function () {
+  var slides = Array.from(document.querySelectorAll('.slide'));
+  var dotNav = document.getElementById('dotNav');
+  var counter = document.getElementById('slideCounter');
+  var current = 0;
+  var locked = false;
+
+  // Build dots
+  slides.forEach(function (_, i) {
+    var d = document.createElement('span');
+    d.addEventListener('click', function () { goTo(i); });
+    dotNav.appendChild(d);
+  });
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function updateUI() {
+    var dots = dotNav.querySelectorAll('span');
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+    counter.textContent = pad(current + 1) + ' / ' + pad(slides.length);
+  }
+
+  function goTo(n) {
+    if (locked) return;
+    if (n < 0 || n >= slides.length || n === current) return;
+    locked = true;
+    slides[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    updateUI();
+    setTimeout(function () { locked = false; }, 430);
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  // Keyboard
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
+  });
+
+  // Touch swipe
+  var tx = 0;
+  document.addEventListener('touchstart', function (e) {
+    tx = e.touches[0].clientX;
+  }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+  }, { passive: true });
+
+  // Init
+  slides.forEach(function (s) { s.classList.remove('active'); });
+  slides[0].classList.add('active');
+  updateUI();
+}());
+</script>
+
+</body>
+</html>

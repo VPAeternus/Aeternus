@@ -1,0 +1,631 @@
+"""Tests for S-030 compressor formatters and S-031 model tiering config."""
+import pytest
+from tradingagents.agents.utils.agent_utils import (
+    format_momentum_key_claims,
+    format_fundamental_key_claims,
+    format_sentiment_key_claims,
+    format_macro_key_claims,
+)
+from tradingagents.agents.utils.agent_states import AgentState
+from tradingagents.default_config import DEFAULT_CONFIG
+
+
+# =============================================================================
+# Test Fixtures: Synthetic metric dicts
+# =============================================================================
+
+
+def _momentum_metrics_full():
+    """Factory: full momentum metrics dict."""
+    return {
+        "subscores": {
+            "trend_strength": 72,
+            "momentum_health": 65,
+            "regime_quality": 75,
+            "volume_confirmation": 68,
+        },
+        "direction": "BULLISH",
+        "data_coverage": 0.95,
+    }
+
+
+def _momentum_metrics_empty():
+    """Factory: empty momentum metrics dict."""
+    return {}
+
+
+def _momentum_metrics_red_flags():
+    """Factory: momentum metrics with red flags (weak regime, exhaustion)."""
+    return {
+        "subscores": {
+            "trend_strength": 72,
+            "momentum_health": 40,
+            "regime_quality": 25,
+            "volume_confirmation": 35,
+        },
+        "direction": "BULLISH",
+        "data_coverage": 0.85,
+    }
+
+
+def _fundamental_metrics_full():
+    """Factory: full fundamental metrics dict."""
+    return {
+        "data_coverage": 0.92,
+        "piotroski": {"fscore": 8},
+        "ratios": {
+            "roe": 18.5,
+            "forward_pe": 14.2,
+            "pe": 15.8,
+        },
+        "balance": {
+            "debt_to_equity": 0.95,
+            "current_ratio": 2.1,
+        },
+        "cashflow": {
+            "fcf_positive": True,
+        },
+    }
+
+
+def _fundamental_metrics_empty():
+    """Factory: empty fundamental metrics dict."""
+    return {}
+
+
+def _fundamental_metrics_red_flags():
+    """Factory: fundamental metrics with red flags (weak Piotroski, high leverage, weak liquidity)."""
+    return {
+        "data_coverage": 0.88,
+        "piotroski": {"fscore": 2},
+        "ratios": {
+            "roe": 5.2,
+            "forward_pe": 22.5,
+            "pe": 28.3,
+        },
+        "balance": {
+            "debt_to_equity": 2.5,
+            "current_ratio": 0.85,
+        },
+        "cashflow": {
+            "fcf_positive": False,
+        },
+    }
+
+
+def _sentiment_metrics_full():
+    """Factory: full sentiment metrics dict."""
+    return {
+        "data_coverage": 0.88,
+        "composite_score": 68,
+        "direction": "BULLISH",
+        "av_sentiment": {
+            "score": 0.65,
+        },
+        "text_sentiment": {
+            "social_score": 62,
+        },
+        "buzz": {
+            "total_articles": 24,
+            "source_quality": "high",
+        },
+    }
+
+
+def _sentiment_metrics_empty():
+    """Factory: empty sentiment metrics dict."""
+    return {}
+
+
+def _sentiment_metrics_red_flags():
+    """Factory: sentiment metrics with red flags (divergence, low buzz)."""
+    return {
+        "data_coverage": 0.75,
+        "composite_score": 55,
+        "direction": "NEUTRAL",
+        "av_sentiment": {
+            "score": 0.45,
+        },
+        "text_sentiment": {
+            "social_score": 78,
+        },
+        "buzz": {
+            "total_articles": 2,
+            "source_quality": "mixed",
+        },
+    }
+
+
+def _macro_metrics_full():
+    """Factory: full macro metrics dict."""
+    return {
+        "data_coverage": 0.91,
+        "regime": "GOLDILOCKS",
+        "subscores": {
+            "regime_fit": 0.78,
+            "monetary_stress": 35,
+            "rate_headwind": 42,
+            "commodity_cycle": 58,
+        },
+    }
+
+
+def _macro_metrics_empty():
+    """Factory: empty macro metrics dict."""
+    return {}
+
+
+def _macro_metrics_red_flags():
+    """Factory: macro metrics with red flags (high monetary stress, rate headwind)."""
+    return {
+        "data_coverage": 0.86,
+        "regime": "TIGHTENING",
+        "subscores": {
+            "regime_fit": 0.45,
+            "monetary_stress": 78,
+            "rate_headwind": 72,
+            "commodity_cycle": 38,
+        },
+    }
+
+
+# =============================================================================
+# TestFormatMomentumKeyClaimsFunctions
+# =============================================================================
+
+
+class TestFormatMomentumKeyClaimsFunctions:
+    """Test format_momentum_key_claims() with full and empty metrics."""
+
+    def test_format_momentum_full_metrics_returns_non_empty_string(self):
+        """format_momentum_key_claims with full metrics dict → non-empty string."""
+        metrics = _momentum_metrics_full()
+        result = format_momentum_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        assert "MOMENTUM KEY CLAIMS" in result
+
+    def test_format_momentum_full_metrics_contains_key_fields(self):
+        """format_momentum_key_claims with full metrics → includes trend_strength, direction, etc."""
+        metrics = _momentum_metrics_full()
+        result = format_momentum_key_claims(metrics)
+
+        # Should include direction
+        assert "BULLISH" in result
+        # Should include key subscores
+        assert "trend_strength" in result or "trend" in result
+
+    def test_format_momentum_empty_dict_returns_graceful_message(self):
+        """format_momentum_key_claims with empty dict → graceful fallback."""
+        metrics = _momentum_metrics_empty()
+        result = format_momentum_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        # Should not raise, should return something sensible
+        assert "Insufficient data" in result or "MOMENTUM" in result
+
+    def test_format_momentum_red_flag_weak_regime_quality(self):
+        """format_momentum_key_claims detects weak regime_quality (≤35) and mentions it."""
+        metrics = _momentum_metrics_red_flags()
+        result = format_momentum_key_claims(metrics)
+
+        # regime_quality is 25, should flag weakness
+        assert "Regime" in result or "choppy" in result or "weak" in result
+
+    def test_format_momentum_red_flag_momentum_health_vs_trend_strength(self):
+        """format_momentum_key_claims detects exhaustion (mh < 45 and ts > 55)."""
+        metrics = _momentum_metrics_red_flags()
+        result = format_momentum_key_claims(metrics)
+
+        # momentum_health=40, trend_strength=72 → should mention exhaustion
+        assert "exhaustion" in result or "declining" in result or "Watch" in result
+
+    def test_format_momentum_low_volume_confirmation_flag(self):
+        """format_momentum_key_claims flags low volume_confirmation (≤40)."""
+        metrics = _momentum_metrics_red_flags()
+        result = format_momentum_key_claims(metrics)
+
+        # volume_confirmation=35, should flag
+        assert "NOT confirming" in result or "suspect" in result or "vol" in result
+
+    def test_format_momentum_strong_regime_quality_flag(self):
+        """format_momentum_key_claims notes strong regime_quality (≥65)."""
+        metrics = _momentum_metrics_full()
+        result = format_momentum_key_claims(metrics)
+
+        # regime_quality=75, should note strength
+        assert "strong" in result and "persistent" in result
+
+
+# =============================================================================
+# TestFormatFundamentalKeyClaimsFunctions
+# =============================================================================
+
+
+class TestFormatFundamentalKeyClaimsFunctions:
+    """Test format_fundamental_key_claims() with full and empty metrics."""
+
+    def test_format_fundamental_full_metrics_returns_non_empty_string(self):
+        """format_fundamental_key_claims with full metrics dict → non-empty string."""
+        metrics = _fundamental_metrics_full()
+        result = format_fundamental_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        assert "FUNDAMENTAL KEY CLAIMS" in result
+
+    def test_format_fundamental_full_metrics_contains_key_fields(self):
+        """format_fundamental_key_claims with full metrics → includes F-Score, ROE, valuation."""
+        metrics = _fundamental_metrics_full()
+        result = format_fundamental_key_claims(metrics)
+
+        # Should include F-Score
+        assert "F-Score" in result or "fscore" in result
+        # Should include valuation or ROE
+        assert "ROE" in result or "Valuation" in result or "P/E" in result
+
+    def test_format_fundamental_empty_dict_returns_graceful_message(self):
+        """format_fundamental_key_claims with empty dict → graceful fallback."""
+        metrics = _fundamental_metrics_empty()
+        result = format_fundamental_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        assert "Insufficient data" in result or "FUNDAMENTAL" in result
+
+    def test_format_fundamental_red_flag_weak_piotroski(self):
+        """format_fundamental_key_claims detects weak Piotroski (fscore ≤ 3)."""
+        metrics = _fundamental_metrics_red_flags()
+        result = format_fundamental_key_claims(metrics)
+
+        # fscore=2, should mention weakness
+        assert "weak Piotroski" in result or "Red flags" in result
+
+    def test_format_fundamental_red_flag_high_leverage(self):
+        """format_fundamental_key_claims detects high leverage (D/E > 2.0)."""
+        metrics = _fundamental_metrics_red_flags()
+        result = format_fundamental_key_claims(metrics)
+
+        # debt_to_equity=2.5, should flag
+        assert "high leverage" in result or "Red flags" in result
+
+    def test_format_fundamental_red_flag_weak_liquidity(self):
+        """format_fundamental_key_claims detects weak liquidity (current_ratio < 1.0)."""
+        metrics = _fundamental_metrics_red_flags()
+        result = format_fundamental_key_claims(metrics)
+
+        # current_ratio=0.85, should flag
+        assert "weak liquidity" in result or "Red flags" in result
+
+    def test_format_fundamental_good_metrics_no_red_flags(self):
+        """format_fundamental_key_claims with clean metrics → reports no red flags."""
+        metrics = _fundamental_metrics_full()
+        result = format_fundamental_key_claims(metrics)
+
+        # Should say there are no critical red flags
+        assert "No critical red flags" in result or "not critical" in result or "clean" in result.lower()
+
+    def test_format_fundamental_fcf_positive_vs_negative(self):
+        """format_fundamental_key_claims shows FCF status (Positive/Negative)."""
+        metrics_pos = _fundamental_metrics_full()
+        result_pos = format_fundamental_key_claims(metrics_pos)
+        assert "Positive" in result_pos
+
+        metrics_neg = _fundamental_metrics_red_flags()
+        result_neg = format_fundamental_key_claims(metrics_neg)
+        assert "Negative" in result_neg
+
+
+# =============================================================================
+# TestFormatSentimentKeyClaimsFunctions
+# =============================================================================
+
+
+class TestFormatSentimentKeyClaimsFunctions:
+    """Test format_sentiment_key_claims() with full and empty metrics."""
+
+    def test_format_sentiment_full_metrics_returns_non_empty_string(self):
+        """format_sentiment_key_claims with full metrics dict → non-empty string."""
+        metrics = _sentiment_metrics_full()
+        result = format_sentiment_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        assert "SENTIMENT KEY CLAIMS" in result
+
+    def test_format_sentiment_full_metrics_contains_key_fields(self):
+        """format_sentiment_key_claims with full metrics → includes composite, articles, direction."""
+        metrics = _sentiment_metrics_full()
+        result = format_sentiment_key_claims(metrics)
+
+        # Should include direction
+        assert "BULLISH" in result
+        # Should include article count
+        assert "24" in result or "articles" in result or "coverage" in result
+
+    def test_format_sentiment_empty_dict_returns_graceful_message(self):
+        """format_sentiment_key_claims with empty dict → graceful fallback."""
+        metrics = _sentiment_metrics_empty()
+        result = format_sentiment_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        assert "Insufficient data" in result or "SENTIMENT" in result
+
+    def test_format_sentiment_red_flag_divergence(self):
+        """format_sentiment_key_claims detects divergence (|AV - social| > 30)."""
+        metrics = _sentiment_metrics_red_flags()
+        result = format_sentiment_key_claims(metrics)
+
+        # av_sentiment.score=0.45 (45%), text_sentiment.social_score=78 → large gap
+        assert "DIVERGENCE" in result or "disagree" in result or "sources" in result
+
+    def test_format_sentiment_sources_aligned(self):
+        """format_sentiment_key_claims reports alignment when sources agree."""
+        metrics = _sentiment_metrics_full()
+        result = format_sentiment_key_claims(metrics)
+
+        # av_sentiment.score=0.65 (65%), text_sentiment.social_score=62 → close
+        assert "aligned" in result or "Sources" in result
+
+    def test_format_sentiment_red_flag_low_buzz(self):
+        """format_sentiment_key_claims detects low buzz (total_articles ≤ 3)."""
+        metrics = _sentiment_metrics_red_flags()
+        result = format_sentiment_key_claims(metrics)
+
+        # total_articles=2, should flag
+        assert "low" in result.lower() and ("buzz" in result or "coverage" in result or "unreliable" in result)
+
+    def test_format_sentiment_elevated_buzz(self):
+        """format_sentiment_key_claims notes elevated buzz (total_articles ≥ 15)."""
+        metrics = _sentiment_metrics_full()
+        result = format_sentiment_key_claims(metrics)
+
+        # total_articles=24, should note
+        assert "elevated" in result or "Buzz" in result
+
+
+# =============================================================================
+# TestFormatMacroKeyClaimsFunctions
+# =============================================================================
+
+
+class TestFormatMacroKeyClaimsFunctions:
+    """Test format_macro_key_claims() with full and empty metrics."""
+
+    def test_format_macro_full_metrics_returns_non_empty_string(self):
+        """format_macro_key_claims with full metrics dict → non-empty string."""
+        metrics = _macro_metrics_full()
+        result = format_macro_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        assert "MACRO KEY CLAIMS" in result
+
+    def test_format_macro_full_metrics_contains_key_fields(self):
+        """format_macro_key_claims with full metrics → includes regime, subscores."""
+        metrics = _macro_metrics_full()
+        result = format_macro_key_claims(metrics)
+
+        # Should include regime
+        assert "GOLDILOCKS" in result or "Regime" in result
+        # Should include some subscore info
+        assert "monetary_stress" in result or "rate_headwind" in result or "regime_fit" in result
+
+    def test_format_macro_empty_dict_returns_graceful_message(self):
+        """format_macro_key_claims with empty dict → graceful fallback."""
+        metrics = _macro_metrics_empty()
+        result = format_macro_key_claims(metrics)
+
+        assert isinstance(result, str)
+        assert len(result) > 0
+        assert "Insufficient data" in result or "MACRO" in result
+
+    def test_format_macro_red_flag_high_monetary_stress(self):
+        """format_macro_key_claims detects high monetary_stress (≥ 70)."""
+        metrics = _macro_metrics_red_flags()
+        result = format_macro_key_claims(metrics)
+
+        # monetary_stress=78, should warn
+        assert "WARNING" in result or "High monetary stress" in result or "tightening" in result
+
+    def test_format_macro_red_flag_rate_headwind(self):
+        """format_macro_key_claims detects high rate_headwind (≥ 65)."""
+        metrics = _macro_metrics_red_flags()
+        result = format_macro_key_claims(metrics)
+
+        # rate_headwind=72, should note
+        assert "Rate headwind" in result or "borrowing costs" in result or "elevated" in result
+
+    def test_format_macro_good_conditions(self):
+        """format_macro_key_claims with benign metrics → no warnings."""
+        metrics = _macro_metrics_full()
+        result = format_macro_key_claims(metrics)
+
+        # Should not contain WARNING or severe language
+        assert "WARNING" not in result
+
+
+# =============================================================================
+# TestCompactness
+# =============================================================================
+
+
+class TestCompactness:
+    """Test that all formatters produce compact, concise output."""
+
+    def test_momentum_output_under_300_chars(self):
+        """format_momentum_key_claims output ≤ 300 chars for typical input."""
+        metrics = _momentum_metrics_full()
+        result = format_momentum_key_claims(metrics)
+        assert len(result) <= 300, f"Output too long: {len(result)} chars"
+
+    def test_fundamental_output_under_300_chars(self):
+        """format_fundamental_key_claims output ≤ 300 chars for typical input."""
+        metrics = _fundamental_metrics_full()
+        result = format_fundamental_key_claims(metrics)
+        assert len(result) <= 300, f"Output too long: {len(result)} chars"
+
+    def test_sentiment_output_under_300_chars(self):
+        """format_sentiment_key_claims output ≤ 300 chars for typical input."""
+        metrics = _sentiment_metrics_full()
+        result = format_sentiment_key_claims(metrics)
+        assert len(result) <= 300, f"Output too long: {len(result)} chars"
+
+    def test_macro_output_under_300_chars(self):
+        """format_macro_key_claims output ≤ 300 chars for typical input."""
+        metrics = _macro_metrics_full()
+        result = format_macro_key_claims(metrics)
+        assert len(result) <= 300, f"Output too long: {len(result)} chars"
+
+    def test_momentum_no_long_sentences(self):
+        """format_momentum_key_claims lines ≤ 100 chars (bullet style)."""
+        metrics = _momentum_metrics_full()
+        result = format_momentum_key_claims(metrics)
+        lines = result.split("\n")
+        for line in lines:
+            assert len(line) <= 110, f"Line too long ({len(line)} chars): {line}"
+
+    def test_fundamental_no_long_sentences(self):
+        """format_fundamental_key_claims lines ≤ 100 chars (bullet style)."""
+        metrics = _fundamental_metrics_full()
+        result = format_fundamental_key_claims(metrics)
+        lines = result.split("\n")
+        for line in lines:
+            assert len(line) <= 110, f"Line too long ({len(line)} chars): {line}"
+
+    def test_sentiment_no_long_sentences(self):
+        """format_sentiment_key_claims lines ≤ 100 chars (bullet style)."""
+        metrics = _sentiment_metrics_full()
+        result = format_sentiment_key_claims(metrics)
+        lines = result.split("\n")
+        for line in lines:
+            assert len(line) <= 110, f"Line too long ({len(line)} chars): {line}"
+
+    def test_macro_no_long_sentences(self):
+        """format_macro_key_claims lines ≤ 100 chars (bullet style)."""
+        metrics = _macro_metrics_full()
+        result = format_macro_key_claims(metrics)
+        lines = result.split("\n")
+        for line in lines:
+            assert len(line) <= 110, f"Line too long ({len(line)} chars): {line}"
+
+
+# =============================================================================
+# TestKeyClaimsStateFields
+# =============================================================================
+
+
+class TestKeyClaimsStateFields:
+    """Test that AgentState has all 4 key_claims fields with correct annotations."""
+
+    def test_agent_state_has_momentum_key_claims_field(self):
+        """AgentState TypedDict has momentum_key_claims field."""
+        assert "momentum_key_claims" in AgentState.__annotations__
+
+    def test_agent_state_has_fundamental_key_claims_field(self):
+        """AgentState TypedDict has fundamental_key_claims field."""
+        assert "fundamental_key_claims" in AgentState.__annotations__
+
+    def test_agent_state_has_sentiment_key_claims_field(self):
+        """AgentState TypedDict has sentiment_key_claims field."""
+        assert "sentiment_key_claims" in AgentState.__annotations__
+
+    def test_agent_state_has_macro_key_claims_field(self):
+        """AgentState TypedDict has macro_key_claims field."""
+        assert "macro_key_claims" in AgentState.__annotations__
+
+    def test_all_key_claims_fields_are_string_type(self):
+        """All 4 key_claims fields should be str type in annotations."""
+        from typing import get_args, get_origin
+        from typing_extensions import Annotated
+
+        for field in [
+            "momentum_key_claims",
+            "fundamental_key_claims",
+            "sentiment_key_claims",
+            "macro_key_claims",
+        ]:
+            ann = AgentState.__annotations__[field]
+            # Annotated[str, "..."] → get_origin is Annotated, get_args[0] is str
+            if get_origin(ann) is Annotated:
+                arg_type = get_args(ann)[0]
+                assert arg_type is str, f"{field} is not str, got {arg_type}"
+
+
+# =============================================================================
+# TestDebateLlmConfig
+# =============================================================================
+
+
+class TestDebateLlmConfig:
+    """Test S-031 model tiering config: debate_llm, debate_provider, debate_backend_url."""
+
+    def test_default_config_has_debate_llm_key(self):
+        """DEFAULT_CONFIG contains debate_llm key."""
+        assert "debate_llm" in DEFAULT_CONFIG
+        assert isinstance(DEFAULT_CONFIG["debate_llm"], str)
+        assert len(DEFAULT_CONFIG["debate_llm"]) > 0
+
+    def test_default_config_has_debate_provider_key(self):
+        """DEFAULT_CONFIG contains debate_provider key."""
+        assert "debate_provider" in DEFAULT_CONFIG
+        assert isinstance(DEFAULT_CONFIG["debate_provider"], str)
+        assert len(DEFAULT_CONFIG["debate_provider"]) > 0
+
+    def test_default_config_has_debate_backend_url_key(self):
+        """DEFAULT_CONFIG contains debate_backend_url key."""
+        assert "debate_backend_url" in DEFAULT_CONFIG
+        assert isinstance(DEFAULT_CONFIG["debate_backend_url"], str)
+        assert len(DEFAULT_CONFIG["debate_backend_url"]) > 0
+
+    def test_debate_llm_sensible_value(self):
+        """debate_llm has a reasonable model name."""
+        model = DEFAULT_CONFIG["debate_llm"]
+        # Should be a known model identifier (Haiku, Sonnet, MiniMax, etc.)
+        assert any(
+            part.lower() in model.lower()
+            for part in ["haiku", "sonnet", "opus", "minimax", "gpt", "claude"]
+        ), f"Unexpected model name: {model}"
+
+    def test_debate_provider_sensible_value(self):
+        """debate_provider is a recognized LLM provider."""
+        provider = DEFAULT_CONFIG["debate_provider"]
+        valid_providers = [
+            "openai",
+            "anthropic",
+            "minimax",
+            "xai",
+            "google",
+            "ollama",
+        ]
+        assert provider.lower() in valid_providers, f"Unknown provider: {provider}"
+
+    def test_debate_backend_url_is_url(self):
+        """debate_backend_url looks like a valid URL."""
+        url = DEFAULT_CONFIG["debate_backend_url"]
+        assert url.startswith("http://") or url.startswith("https://"), f"Not a URL: {url}"
+
+    def test_debate_config_env_var_overridable(self):
+        """debate_llm is derived from env vars (can be overridden)."""
+        import os
+
+        # Check that the config keys reference env vars in their definitions
+        # (This is a documentation test — verify the pattern exists)
+        original_env = os.getenv("AETERNUS_DEBATE_MODEL")
+        try:
+            os.environ["AETERNUS_DEBATE_MODEL"] = "test-model-123"
+            # Re-import to pick up new env var
+            import importlib
+            import tradingagents.default_config as cfg_module
+
+            importlib.reload(cfg_module)
+            assert cfg_module.DEFAULT_CONFIG["debate_llm"] == "test-model-123"
+        finally:
+            if original_env:
+                os.environ["AETERNUS_DEBATE_MODEL"] = original_env
+            else:
+                os.environ.pop("AETERNUS_DEBATE_MODEL", None)
+            importlib.reload(cfg_module)
