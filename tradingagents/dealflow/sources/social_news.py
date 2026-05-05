@@ -53,15 +53,25 @@ def collect_social_news_signals(
 
         sentiment = _coerce_float(merged_hit.get("sentiment"), default=0.0, lo=-1.0, hi=1.0)
         mentions = _coerce_int(merged_hit.get("mentions_estimate"), default=1, lo=1)
+        explicit_evidence_count = "evidence_count" in merged_hit
+        evidence_count = _coerce_int(merged_hit.get("evidence_count"), default=mentions, lo=1)
         velocity_trend = str(merged_hit.get("velocity_trend", "stable") or "stable").strip().lower()
         catalyst = str(merged_hit.get("catalyst", "") or "").strip() or None
+        no_source = bool(merged_hit.get("no_source_found")) or (catalyst and "NO_SOURCE_FOUND" in catalyst.upper())
+        theme_score = _coerce_float(merged_hit.get("theme_emergence_score"), default=0.0, lo=0.0, hi=100.0)
 
         velocity_bonus = {"rising": 5.0, "stable": 0.0, "falling": -5.0}.get(velocity_trend, 0.0)
-        mention_bonus = min(15.0, float(mentions) * 3.0)
+        if "buzz_rank" in merged_hit:
+            mention_bonus = min(15.0, max(1.0, 31.0 - float(mentions)) * 0.5)
+        else:
+            mention_bonus = min(15.0, float(mentions) * 3.0)
+        evidence_bonus = min(12.0, float(evidence_count) * 2.0) if explicit_evidence_count else 0.0
+        theme_bonus = min(10.0, theme_score * 0.10)
+        source_penalty = -12.0 if no_source else 0.0
 
-        social_raw = _clamp(50.0 + 30.0 * sentiment + mention_bonus + velocity_bonus)
-        catalyst_bonus = 8.0 if catalyst else 0.0
-        news_raw = _clamp(40.0 + 20.0 * abs(sentiment) + mention_bonus + velocity_bonus + catalyst_bonus)
+        social_raw = _clamp(50.0 + 30.0 * sentiment + mention_bonus + evidence_bonus + velocity_bonus + theme_bonus + source_penalty)
+        catalyst_bonus = 0.0 if no_source else (8.0 if catalyst else 0.0)
+        news_raw = _clamp(40.0 + 20.0 * abs(sentiment) + mention_bonus + evidence_bonus + velocity_bonus + catalyst_bonus + theme_bonus + source_penalty)
 
         for family, raw_score in (
             ("social_momentum", social_raw),
@@ -74,7 +84,7 @@ def collect_social_news_signals(
                     "raw_score": float(raw_score),
                     "z_score": 0.0,
                     "direction": _direction_from_score(raw_score),
-                    "evidence_count": mentions,
+                    "evidence_count": evidence_count,
                     "freshness_hours": 24.0,
                     "source_status": "OK",
                     "source_name": "manual_x_feed",

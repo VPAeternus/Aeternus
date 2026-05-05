@@ -88,14 +88,19 @@ EXAMPLE OF A BAD ENTRY (do NOT return entries like this):
 
 Return up to 30 tickers ranked by buzz. Return JSON only — no prose before or after:
 
-{{"trending": [{{"ticker": "NVDA", "buzz_rank": 1, "sentiment": "BULLISH", "velocity": "ACCELERATING", "catalyst": "@account: specific reason with detail", "sector": "Technology"}}, ...]}}
+{{"trending": [{{"ticker": "NVDA", "buzz_rank": 1, "sentiment": "BULLISH", "velocity": "ACCELERATING", "catalyst": "@account: specific reason with detail", "sector": "Technology", "accounts_cited": ["@account"], "theme_links": ["ai_infrastructure"], "co_mentions": ["AMD", "MRVL"], "why_this_is_new": "new today vs prior chatter", "order_type": "first_order"}}, ...]}}
 
 Field rules:
 - buzz_rank: integer, 1 = most talked about
 - sentiment: VERY_BULLISH | BULLISH | NEUTRAL | BEARISH | VERY_BEARISH
 - velocity: ACCELERATING | STEADY | FADING
 - catalyst: MUST include @account or specific source. One sentence with specific detail, not generic. If no source found, write "NO_SOURCE_FOUND: [general observation]"
-- sector: GICS sector label"""
+- sector: GICS sector label
+- accounts_cited: X accounts explicitly cited; empty only if NO_SOURCE_FOUND
+- theme_links: snake_case themes connected to this ticker
+- co_mentions: related US equity tickers mentioned in the same thesis
+- why_this_is_new: one sentence explaining novelty/acceleration today
+- order_type: first_order | second_order | hedge | unknown"""
 
 _THEMATIC_PROMPT = """\
 You are a financial markets analyst scanning X (Twitter) right now.
@@ -332,8 +337,14 @@ def parse_pass(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
         catalyst = str(item.get("catalyst", ""))[:200]
         sector = str(item.get("sector", ""))[:50]
 
+        accounts_cited = _normalize_accounts(item.get("accounts_cited")) or _extract_accounts(catalyst)
+        theme_links = _normalize_string_list(item.get("theme_links") or item.get("themes"))
+        co_mentions = [s for s in _normalize_symbol_list(item.get("co_mentions")) if s != ticker]
+        no_source = "NO_SOURCE_FOUND" in catalyst.upper() or not accounts_cited
+
         entries.append({
             "ticker": ticker,
+            "buzz_rank": buzz_rank,
             "mentions_estimate": buzz_rank,
             "sentiment": sentiment,
             "velocity_trend": velocity_trend,
@@ -342,9 +353,54 @@ def parse_pass(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
             "pass_number": pass_num,
             "source_pass_type": pass_type,
             "timestamp": now_iso,
+            "accounts_cited": accounts_cited,
+            "theme_links": theme_links,
+            "co_mentions": co_mentions,
+            "why_this_is_new": str(item.get("why_this_is_new", ""))[:240],
+            "order_type": str(item.get("order_type", "unknown") or "unknown")[:30],
+            "source_quality": "unverified" if no_source else "cited",
+            "no_source_found": bool(no_source),
         })
 
     return entries
+
+
+def _normalize_string_list(raw: Any) -> List[str]:
+    if raw is None:
+        return []
+    if isinstance(raw, str):
+        raw = [raw]
+    if not isinstance(raw, list):
+        return []
+    values: List[str] = []
+    for item in raw:
+        text = str(item or "").strip()
+        if text and text not in values:
+            values.append(text[:80])
+    return values
+
+
+def _normalize_accounts(raw: Any) -> List[str]:
+    accounts = []
+    for item in _normalize_string_list(raw):
+        if not item.startswith("@"):
+            item = "@" + item.lstrip("@")
+        if re.match(r"^@[A-Za-z0-9_]{1,15}$", item) and item not in accounts:
+            accounts.append(item)
+    return accounts
+
+
+def _extract_accounts(text: str) -> List[str]:
+    return _normalize_accounts(re.findall(r"@[A-Za-z0-9_]{1,15}", str(text or "")))
+
+
+def _normalize_symbol_list(raw: Any) -> List[str]:
+    symbols = []
+    for item in _normalize_string_list(raw):
+        ticker = item.strip().upper().replace(".", "-")
+        if _is_valid_ticker(ticker) and ticker not in symbols:
+            symbols.append(ticker)
+    return symbols
 
 
 def _extract_options_flow_payload(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
@@ -437,6 +493,10 @@ def _merged_path(as_of_date: str) -> str:
     return os.path.join("eval_results", "x_feed", as_of_date, "merged.json")
 
 
+def _theme_graph_path(as_of_date: str) -> str:
+    return os.path.join("eval_results", "x_feed", as_of_date, "theme_emergence_graph.json")
+
+
 def get_readiness(as_of_date: str) -> Dict[str, Any]:
     """Return manual X-feed readiness for a given date."""
     raw_dir = _raw_dir(as_of_date)
@@ -527,6 +587,106 @@ def save_merged(as_of_date: str, merged: Dict[str, Dict[str, Any]]) -> str:
     return path
 
 
+def save_theme_emergence_graph(as_of_date: str, graph: Dict[str, Any]) -> str:
+    path = _theme_graph_path(as_of_date)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(graph, f, indent=2)
+    return path
+
+
+def _merge_entry_preserving_evidence(merged: Dict[str, Dict[str, Any]], entry: Dict[str, Any]) -> None:
+    ticker = str(entry.get("ticker", "")).upper().strip()
+    if not ticker:
+        return
+    existing = dict(merged.get(ticker, {}) or {})
+    evidence = list(existing.get("evidence", []) or [])
+    observation = dict(entry)
+    observation.pop("evidence", None)
+    evidence.append(observation)
+
+    cited_evidence = [e for e in evidence if not bool(e.get("no_source_found"))]
+    score_rows = cited_evidence or evidence
+    latest = dict(score_rows[-1])
+    latest["ticker"] = ticker
+    latest["evidence"] = evidence
+    latest["pass_numbers"] = sorted({int(e.get("pass_number", 0) or 0) for e in evidence if e.get("pass_number")})
+    latest["source_pass_types"] = sorted({str(e.get("source_pass_type", "")) for e in evidence if e.get("source_pass_type")})
+    latest["accounts_cited"] = sorted({a for e in evidence for a in list(e.get("accounts_cited", []) or [])})
+    latest["theme_links"] = sorted({t for e in evidence for t in list(e.get("theme_links", []) or [])})
+    latest["co_mentions"] = sorted({s for e in evidence for s in list(e.get("co_mentions", []) or []) if s != ticker})
+    latest["evidence_count"] = max(1, len(latest["accounts_cited"])) + max(0, len(evidence) - 1)
+    latest["no_source_found"] = not bool(latest["accounts_cited"])
+    latest["theme_emergence_score"] = _theme_emergence_score(latest)
+    merged[ticker] = latest
+
+
+def _theme_emergence_score(row: Dict[str, Any]) -> float:
+    evidence = list(row.get("evidence", []) or [])
+    accounts = set(row.get("accounts_cited", []) or [])
+    themes = set(row.get("theme_links", []) or [])
+    co_mentions = set(row.get("co_mentions", []) or [])
+    velocity_bonus = {"rising": 18.0, "stable": 8.0, "falling": -6.0}.get(str(row.get("velocity_trend", "stable")), 0.0)
+    source_penalty = -20.0 if row.get("no_source_found") else 0.0
+    score = 35.0 + min(25.0, len(accounts) * 6.0) + min(15.0, len(themes) * 5.0) + min(10.0, len(co_mentions) * 2.0) + min(12.0, len(evidence) * 3.0) + velocity_bonus + source_penalty
+    return float(round(max(0.0, min(100.0, score)), 4))
+
+
+def build_theme_emergence_graph(as_of_date: str, merged: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
+    account_edges: List[Dict[str, Any]] = []
+    theme_edges: List[Dict[str, Any]] = []
+    co_mention_edges: List[Dict[str, Any]] = []
+    themes: Dict[str, Dict[str, Any]] = {}
+    tickers: Dict[str, Dict[str, Any]] = {}
+
+    for ticker, row in sorted((merged or {}).items()):
+        symbol = str(ticker).upper().strip()
+        if not symbol:
+            continue
+        tickers[symbol] = {
+            "theme_emergence_score": float(row.get("theme_emergence_score", 0.0) or 0.0),
+            "evidence_count": int(row.get("evidence_count", 0) or 0),
+            "accounts_cited": list(row.get("accounts_cited", []) or []),
+            "theme_links": list(row.get("theme_links", []) or []),
+            "co_mentions": list(row.get("co_mentions", []) or []),
+            "source_pass_types": list(row.get("source_pass_types", []) or []),
+        }
+        for account in row.get("accounts_cited", []) or []:
+            account_edges.append({"from": account, "to": symbol, "type": "account_mentions_ticker"})
+        for theme in row.get("theme_links", []) or []:
+            theme_edges.append({"from": symbol, "to": theme, "type": "ticker_linked_to_theme"})
+            bucket = themes.setdefault(theme, {"tickers": set(), "accounts": set(), "sectors": set()})
+            bucket["tickers"].add(symbol)
+            bucket["accounts"].update(row.get("accounts_cited", []) or [])
+            if row.get("sector"):
+                bucket["sectors"].add(str(row.get("sector")))
+        for peer in row.get("co_mentions", []) or []:
+            co_mention_edges.append({"from": symbol, "to": peer, "type": "ticker_co_mentioned"})
+
+    theme_rows = {}
+    for theme, data in themes.items():
+        tickerset = sorted(data["tickers"])
+        accounts = sorted(data["accounts"])
+        sectors = sorted(data["sectors"])
+        theme_rows[theme] = {
+            "tickers": tickerset,
+            "accounts": accounts,
+            "sectors": sectors,
+            "theme_emergence_score": float(round(min(100.0, 30.0 + len(tickerset) * 8.0 + len(accounts) * 5.0 + len(sectors) * 4.0), 4)),
+        }
+
+    return {
+        "date": as_of_date,
+        "tickers": tickers,
+        "themes": theme_rows,
+        "edges": account_edges + theme_edges + co_mention_edges,
+        "prompt_design_recommendation": {
+            "keep_pass_count": 15,
+            "reason": "Broad sector recall is useful; graph merge removes destructive overlap. Future compression can combine low-yield passes after yield telemetry.",
+        },
+    }
+
+
 def ingest_pass(
     as_of_date: str,
     raw_text: str,
@@ -609,11 +769,13 @@ def ingest_pass(
     _compute_batch_velocity_z(cohort)
     entries = list(cohort.values())
 
-    # 4. Merge (later pass wins)
+    # 4. Merge without losing prior-pass evidence.
     merged = load_merged(as_of_date)
     for e in entries:
-        merged[e["ticker"]] = e
+        _merge_entry_preserving_evidence(merged, e)
     save_merged(as_of_date, merged)
+    graph = build_theme_emergence_graph(as_of_date, merged)
+    save_theme_emergence_graph(as_of_date, graph)
 
     # 5. Extract themes from pass 12
     themes = []

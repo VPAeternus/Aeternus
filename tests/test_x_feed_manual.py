@@ -57,6 +57,7 @@ def test_parse_pass_valid_json():
     entries = parse_pass(VALID_JSON, 1)
     assert len(entries) == 3
     assert entries[0]["ticker"] == "NVDA"
+    assert entries[0]["buzz_rank"] == 1
     assert entries[0]["mentions_estimate"] == 1
     assert entries[0]["sentiment"] == 0.5  # BULLISH
     assert entries[0]["velocity_trend"] == "rising"  # ACCELERATING
@@ -81,12 +82,13 @@ def test_parse_pass_handles_markdown_fence():
     assert entries[0]["ticker"] == "NVDA"
 
 
-def test_dedup_later_pass_wins(tmp_path, monkeypatch):
+def test_merge_preserves_multi_pass_evidence(tmp_path, monkeypatch):
     from tradingagents.dealflow.sources import x_feed_manual as mod
 
-    # Redirect merged path to tmp
+    # Redirect artifact paths to tmp
     monkeypatch.setattr(mod, "_merged_path", lambda d: str(tmp_path / "merged.json"))
     monkeypatch.setattr(mod, "_raw_dir", lambda d: str(tmp_path / "raw"))
+    monkeypatch.setattr(mod, "_theme_graph_path", lambda d: str(tmp_path / "theme_emergence_graph.json"))
 
     # Stub out AKG and cache writes
     monkeypatch.setattr(
@@ -101,7 +103,7 @@ def test_dedup_later_pass_wins(tmp_path, monkeypatch):
     ]})
     mod.ingest_pass("2026-03-05", pass1, 1)
 
-    # Pass 2: NVDA bearish (should overwrite)
+    # Pass 2: NVDA bearish (should add evidence without losing pass 1)
     pass2 = json.dumps({"trending": [
         {"ticker": "NVDA", "buzz_rank": 1, "sentiment": "BEARISH", "velocity": "FADING", "catalyst": "Pass 2", "sector": "Tech"},
     ]})
@@ -109,7 +111,10 @@ def test_dedup_later_pass_wins(tmp_path, monkeypatch):
 
     merged = mod.load_merged("2026-03-05")
     assert merged["NVDA"]["pass_number"] == 2
-    assert merged["NVDA"]["sentiment"] == -0.5  # BEARISH
+    assert merged["NVDA"]["sentiment"] == -0.5  # latest scoring row
+    assert merged["NVDA"]["pass_numbers"] == [1, 2]
+    assert len(merged["NVDA"]["evidence"]) == 2
+    assert (tmp_path / "theme_emergence_graph.json").exists()
 
 
 def test_save_raw_never_overwrites(tmp_path, monkeypatch):
