@@ -1,0 +1,34 @@
+{
+  "policy_id": "top15_180d_excess_v1",
+  "description": "Adaptive 13F watchlist manager roster: top 15 proper managers ranked by average 180d excess return, with Situational Awareness included as a limited-history special watchlist manager until it meets normal sample gates.",
+  "rank_metric": "avg_excess_return_180d",
+  "rank_descending": true,
+  "manager_count": 15,
+  "required_actions": ["new"],
+  "eligibility": {
+    "proper_manager_status": "approved",
+    "min_event_count": 20,
+    "min_completed_180d_count": 15,
+    "min_manager_aum_usd": 1000000000,
+    "min_position_count": 10,
+    "max_position_count": 250,
+    "min_top10_concentration": 0.25,
+    "max_top10_concentration": 0.95
+  },
+  "special_watchlist": [
+    {
+      "manager_id": "situational_awareness",
+      "manager_name": "Situational Awareness LP",
+      "manager_cik": "0002045724",
+      "reason": "Extreme early 13F performance; below normal completed-180d sample threshold.",
+      "limited_history": true
+    }
+  ],
+  "hysteresis": {
+    "promote_rank_lte": 15,
+    "retain_rank_lte": 20,
+    "drop_if_fails_eligibility": true
+  },
+  "rebalance_frequency": "quarterly_after_13f_filing_window",
+  "pit_contract": "Rank only on events whose returns were observable before roster effective date; entry remains next trading day after SEC filing date."
+}
