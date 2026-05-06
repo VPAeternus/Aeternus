@@ -39,7 +39,8 @@ from .akg_universe import (
     get_last_universe_ledger,
     get_last_universe_tier_map,
 )
-from .discovery_delta import build_discovery_delta
+from .akg_writeback import writeback_scores_to_akg, writeback_signals_to_akg
+from .discovery_reports import empty_discovery_delta, write_discovery_delta_report, write_theme_heatmap_report
 from .fma_recall import _build_fma_feature_frame, score_fma_cross_section
 from .fvg_recall import _build_feature_frame, _extract_ohlcv_frame
 from .scout_compiler import run_scout_compiler_sidecar
@@ -101,101 +102,6 @@ def _load_open_position_symbols() -> List[str]:
         if str(symbol or "").strip() and isinstance(row, dict)
     )
 
-
-
-# ---------------------------------------------------------------------------
-# S-080: AKG signal writeback — maps pipeline signal dicts to enrich_node_*
-# ---------------------------------------------------------------------------
-_DIRECTION_MAP = {"BULLISH": "bullish", "BEARISH": "bearish", "NEUTRAL": "neutral"}
-_REGIME_MAP = {"BULLISH": "risk_on", "BEARISH": "risk_off", "NEUTRAL": "neutral"}
-
-
-def writeback_scores_to_akg(
-    akg,
-    candidates: List[Dict],
-    normalized_signals: List[Dict],
-    as_of_date: str,
-) -> int:
-    """Write composite scores and source provenance to AKG nodes after scoring.
-
-    This enables hindsight accuracy testing: compare pipeline_core_score at
-    scoring time against actual returns measured later.
-
-    Returns the number of nodes updated.
-    """
-    # Build per-symbol source provenance from normalized signals.
-    source_tags: Dict[str, set] = {}
-    for sig in normalized_signals:
-        if str(sig.get("source_status", "")) != "OK":
-            continue
-        sym = str(sig.get("symbol", "")).upper().strip()
-        src = str(sig.get("source_name", "")).strip()
-        if sym and src:
-            source_tags.setdefault(sym, set()).add(src)
-
-    count = 0
-    for cand in candidates:
-        ticker = str(cand.get("symbol", "")).upper().strip()
-        if not ticker or ticker not in akg._nodes:
-            continue
-        node = akg._nodes[ticker]
-        node["pipeline_core_score"] = round(float(cand.get("core_score", 0)), 4)
-        node["pipeline_momentum_score"] = round(float(cand.get("momentum_score", 0)), 4)
-        node["pipeline_asymmetry_score"] = round(float(cand.get("asymmetry_score", 0)), 4)
-        node["pipeline_lane"] = str(cand.get("lane", "CORE"))
-        node["pipeline_scored_at"] = as_of_date
-        # Source provenance — join all source_name tags for this symbol.
-        tags = source_tags.get(ticker, set())
-        if tags:
-            node["pipeline_source_tags"] = sorted(tags)
-        count += 1
-    return count
-
-
-def writeback_signals_to_akg(akg, signals: List[Dict], as_of_date: str) -> int:
-    """Write pipeline signal dicts back to AKG nodes via enrich_node_* methods.
-
-    Returns the number of enrichments written.
-    """
-    social_news_pairs: Dict[str, Dict[str, float]] = {}
-    write_count = 0
-
-    for sig in signals:
-        if sig.get("source_status") != "OK":
-            continue
-        ticker = str(sig.get("symbol", "")).upper().strip()
-        if not ticker:
-            continue
-        family = sig.get("signal_family", "")
-        score = float(sig.get("raw_score", 0))
-        direction = str(sig.get("direction", "NEUTRAL"))
-
-        if family == "price_momentum":
-            akg.enrich_node_price_momentum(ticker, score, rs_spy=0.0, as_of_date=as_of_date)
-            write_count += 1
-        elif family == "smart_money":
-            akg.enrich_node_smart_money(ticker, score, direction=_DIRECTION_MAP.get(direction, "neutral"), as_of_date=as_of_date)
-            write_count += 1
-        elif family == "insider_cluster":
-            buyer = int(sig.get("cluster_size") or sig.get("evidence_count", 0))
-            akg.enrich_node_insider_cluster(ticker, score, buyer_count=buyer, as_of_date=as_of_date)
-            write_count += 1
-        elif family == "social_momentum":
-            social_news_pairs.setdefault(ticker, {"social": 0.0, "news": 0.0})["social"] = score
-        elif family == "news_catalyst":
-            social_news_pairs.setdefault(ticker, {"social": 0.0, "news": 0.0})["news"] = score
-        elif family == "sector_rotation":
-            akg.enrich_node_sector_rotation(ticker, score, as_of_date=as_of_date)
-            write_count += 1
-        elif family == "macro_regime_fit":
-            akg.enrich_node_macro_regime(ticker, score, regime_tag=_REGIME_MAP.get(direction, "neutral"), as_of_date=as_of_date)
-            write_count += 1
-
-    for sn_ticker, sn_scores in social_news_pairs.items():
-        akg.enrich_node_social_news(sn_ticker, social_score=sn_scores["social"], news_catalyst_score=sn_scores["news"], as_of_date=as_of_date)
-        write_count += 1
-
-    return write_count
 
 
 class DealFlowPipeline:
@@ -400,27 +306,21 @@ class DealFlowPipeline:
         self._last_universe_filter_summary = universe_filter_summary
 
         try:
-            from tradingagents.dealflow.theme_heatmap import write_theme_heatmap
             _heatmap_akg = _AKG.load() if _AKG_AVAILABLE and _AKG is not None else None
-            if _heatmap_akg is not None:
-                write_theme_heatmap(_heatmap_akg, as_of_date=as_of_date)
+            write_theme_heatmap_report(_heatmap_akg, as_of_date=as_of_date)
         except Exception:
             pass
 
         try:
-            discovery_delta = build_discovery_delta(
+            discovery_delta = write_discovery_delta_report(
                 as_of_date=as_of_date,
+                out_dir=out_dir,
                 scout_audit=scout_audit,
                 fvg_recall=fvg_recall_artifact,
                 fma_recall=fma_recall_artifact,
             )
-            (out_dir / "discovery_delta.json").write_text(json.dumps(discovery_delta, indent=2))
         except Exception:
-            discovery_delta = {
-                "coverage_summary": {"signal_count": 0, "record_count": 0},
-                "cohorts": {"scout_only": [], "technical_only": [], "multi_channel": []},
-                "top_delta_symbols": [],
-            }
+            discovery_delta = empty_discovery_delta()
         self._last_discovery_delta = discovery_delta
 
         scenario_sidecar_summary: Dict[str, Any] = {

@@ -17,7 +17,7 @@ def build_theme_heatmap(akg: Any, *, as_of_date: str) -> Dict[str, Any]:
     for theme_id, info in aliases.items():
         buckets[str(theme_id)] = _empty_bucket(str(theme_id), str(info.get("theme_name") or theme_id))
 
-    for node in getattr(akg, "_nodes", {}).values():
+    for node in _iter_nodes(akg):
         if node.get("node_type") != "company":
             continue
         ticker = str(node.get("id", "")).upper().strip()
@@ -130,7 +130,7 @@ def _add_node_to_bucket(bucket: Dict[str, Any], node: Dict[str, Any]) -> None:
 
 
 def _add_active_theme_nodes(akg: Any, buckets: Dict[str, Dict[str, Any]], aliases: Dict[str, Dict[str, Any]]) -> None:
-    for node in getattr(akg, "_nodes", {}).values():
+    for node in _iter_nodes(akg):
         if node.get("node_type") != "theme":
             continue
         theme_id = canonicalize_theme_id(str(node.get("id", "")), aliases)
@@ -141,8 +141,8 @@ def _add_active_theme_nodes(akg: Any, buckets: Dict[str, Dict[str, Any]], aliase
 
 
 def _add_edge_linked_tickers(akg: Any, buckets: Dict[str, Dict[str, Any]], aliases: Dict[str, Dict[str, Any]]) -> None:
-    nodes = getattr(akg, "_nodes", {})
-    for edge in getattr(akg, "_edges", []):
+    nodes = _node_map(akg)
+    for edge in _iter_edges(akg):
         source = str(edge.get("source", "")).upper().strip()
         target = str(edge.get("target", "")).strip()
         rel = str(edge.get("relationship", ""))
@@ -159,6 +159,22 @@ def _add_edge_linked_tickers(akg: Any, buckets: Dict[str, Dict[str, Any]], alias
         bucket = buckets.setdefault(theme_id, _empty_bucket(theme_id, theme_id))
         bucket["_linked_tickers"].add(ticker)
         bucket["linked_edge_count"] += 1
+
+
+def _iter_nodes(akg: Any):
+    if hasattr(akg, "iter_nodes"):
+        return akg.iter_nodes()
+    return iter(tuple(getattr(akg, "_nodes", {}).values()))
+
+
+def _iter_edges(akg: Any):
+    if hasattr(akg, "iter_edges"):
+        return akg.iter_edges()
+    return iter(tuple(getattr(akg, "_edges", [])))
+
+
+def _node_map(akg: Any) -> Dict[str, Dict[str, Any]]:
+    return {str(node.get("id", "")): node for node in _iter_nodes(akg)}
 
 
 def _float(raw: Any) -> float:

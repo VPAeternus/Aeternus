@@ -36,7 +36,8 @@ def write_theme_acceleration_to_akg(akg: Any, rows: Iterable[dict[str, Any]], as
         }
         akg.update_theme_acceleration_signal(ticker, payload)
         attempted += 1
-        effective_score = int(getattr(akg, "_nodes", {}).get(ticker, {}).get("signal_theme_acceleration_score") or 0)
+        node = akg.get_node(ticker) if hasattr(akg, "get_node") else getattr(akg, "_nodes", {}).get(ticker, {})
+        effective_score = int((node or {}).get("signal_theme_acceleration_score") or 0)
         if effective_score > 0:
             effective += 1
         if payload["theme_evidence"] and effective_score > 0:
@@ -75,9 +76,14 @@ def _write_theme_edges(akg: Any, ticker: str, payload: dict[str, Any]) -> int:
 
 
 def _ensure_theme_node(akg: Any, theme_id: str) -> None:
-    existing = getattr(akg, "_nodes", {}).get(theme_id)
+    existing = akg.get_node(theme_id) if hasattr(akg, "get_node") else getattr(akg, "_nodes", {}).get(theme_id)
     if existing is None:
-        akg.add_node(theme_id, node_type="theme")
+        if hasattr(akg, "add_theme_node"):
+            akg.add_theme_node(theme_id)
+        else:
+            akg.add_node(theme_id, node_type="theme")
+    elif hasattr(akg, "update_node_field"):
+        akg.update_node_field(theme_id, "node_type", "theme")
     else:
         existing["node_type"] = "theme"
 

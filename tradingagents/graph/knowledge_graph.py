@@ -500,6 +500,22 @@ class AeternusKnowledgeGraph:
     # Node operations
     # ------------------------------------------------------------------
 
+    def get_node(self, node_id: str) -> Optional[dict]:
+        """Return node dict by exact ID, or None when absent.
+
+        Transitional public API for callers that previously read _nodes directly.
+        Returns the live node dict so existing mutation semantics are preserved.
+        """
+        return self._nodes.get(node_id)
+
+    def iter_nodes(self):
+        """Iterate over a snapshot container of live node dicts."""
+        return iter(tuple(self._nodes.values()))
+
+    def iter_edges(self):
+        """Iterate over a snapshot container of live edge dicts."""
+        return iter(tuple(self._edges))
+
     def add_node(self, node_id: str, node_type: str = "company", sector: Optional[str] = None,
                  display_name: Optional[str] = None, metadata: Optional[dict] = None) -> None:
         """
@@ -957,10 +973,6 @@ class AeternusKnowledgeGraph:
                 node["active"] = False
                 node["deactivated_date"] = dt.date.today().isoformat()
         return True
-
-    def get_nodes_by_type(self, node_type: str) -> list:
-        """Return list of node dicts matching the given node_type."""
-        return [node for node in self._nodes.values() if node.get("node_type") == node_type]
 
     def get_active_themes(self) -> list:
         """Return list of theme node dicts where active=True, sorted by conviction desc."""

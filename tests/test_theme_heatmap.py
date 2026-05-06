@@ -2,6 +2,38 @@ from tradingagents.dealflow.theme_heatmap import build_theme_heatmap
 from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
 
 
+class PublicOnlyAKG:
+    def __init__(self):
+        self.nodes = [
+            {"id": "optical_networking", "node_type": "theme"},
+            {
+                "id": "GLW",
+                "node_type": "company",
+                "primary_theme": "optical_networking",
+                "signal_theme_acceleration_score": 10,
+                "theme_evidence": ["Optical demand drove growth."],
+            },
+        ]
+        self.edges = [
+            {"source": "GLW", "target": "optical_networking", "relationship": "catalyst_beneficiary"}
+        ]
+
+    def iter_nodes(self):
+        return iter(self.nodes)
+
+    def iter_edges(self):
+        return iter(self.edges)
+
+
+def test_theme_heatmap_uses_public_akg_iteration_api():
+    heatmap = build_theme_heatmap(PublicOnlyAKG(), as_of_date="2026-05-05")
+    optical = next(row for row in heatmap["themes"] if row["theme_id"] == "optical_networking")
+    assert optical["active_theme_node_count"] == 1
+    assert optical["linked_edge_count"] == 1
+    assert optical["linked_ticker_count"] == 1
+    assert optical["number_with_filing_acceleration"] == 1
+
+
 def test_theme_heatmap_counts_theme_acceleration_and_momentum():
     g = AeternusKnowledgeGraph()
     g.update_theme_acceleration_signal("GLW", {

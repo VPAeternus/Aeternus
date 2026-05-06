@@ -17,6 +17,26 @@ import pytest
 from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
 
 
+def test_get_nodes_by_type_returns_matching_nodes():
+    g = AeternusKnowledgeGraph()
+    g.add_node("GLW", node_type="company")
+    g.add_theme_node("optical_networking")
+
+    assert [node["id"] for node in g.get_nodes_by_type("theme")] == ["optical_networking"]
+
+
+def test_public_node_and_edge_iteration_snapshot_api():
+    g = AeternusKnowledgeGraph()
+    g.add_node("GLW", node_type="company")
+    g.add_theme_node("optical_networking")
+    g.add_edge("GLW", "optical_networking", "catalyst_beneficiary", confidence=0.9, evidence_source="test")
+
+    assert g.get_node("GLW")["id"] == "GLW"
+    assert g.get_node("MISSING") is None
+    assert any(node["id"] == "GLW" for node in g.iter_nodes())
+    assert any(edge["target"] == "optical_networking" for edge in g.iter_edges())
+
+
 # ---------------------------------------------------------------------------
 # Test 1: add_node is idempotent
 # ---------------------------------------------------------------------------
