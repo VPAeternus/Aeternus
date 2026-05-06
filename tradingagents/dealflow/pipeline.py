@@ -22,6 +22,7 @@ from .collect_artifacts import write_collect_artifacts
 from .collect_ledger import write_collect_ledger_rows
 from .contracts import DealFlowShortlist, EventTriggerResult, ResearchQueue, ResearchQueueItem
 from .hypothesis_ledger import append_ledger_row, make_ledger_row
+from .manual_merge_policy import apply_manual_merge_policy
 from .manual_watchlist import list_active_ideas, validate_symbol_liquidity
 from .negative_constraints import check_symbol_theme_suppression
 from .ranking import rank_candidates
@@ -1955,259 +1956,15 @@ class DealFlowPipeline:
         manual_ideas: List[Dict[str, Any]],
         top_k: int,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
-        shortlist: List[Dict[str, Any]] = [dict(row) for row in ranked_auto[:top_k]]
-        candidate_map = {
-            str(row.get("symbol", "")).upper().strip(): dict(row) for row in candidates
-        }
-        selected_symbols = {
-            str(row.get("symbol", "")).upper().strip() for row in shortlist if row.get("symbol")
-        }
-
-        for row in shortlist:
-            row["source"] = str(row.get("source", "AUTO")).upper()
-            row["manual_note"] = str(row.get("manual_note", ""))
-            row["manual_priority"] = int(row.get("manual_priority", 0) or 0)
-
-        min_slots = int(self.config.get("dealflow_manual_slots_min", 2))
-        max_slots = int(self.config.get("dealflow_manual_slots_max", 4))
-        target_slots = int(self.config.get("dealflow_manual_slots_target", 3))
-        target_slots = max(min_slots, min(max_slots, target_slots))
-        min_adv = float(self.config.get("dealflow_manual_min_adv_usd", 50_000_000))
-        force_insert = bool(self.config.get("dealflow_manual_force_insert", True))
-        max_sector_count = int(self.config.get("dealflow_max_sector_count", 5))
-        max_asset_class_count = int(self.config.get("dealflow_max_asset_class_count", 8))
-
-        decisions: List[Dict[str, Any]] = []
-        include_candidates: List[Tuple[Dict[str, Any], Dict[str, Any]]] = []
-        reinforced = 0
-        rejected = 0
-
-        ordered_manual = sorted(
-            [dict(idea) for idea in manual_ideas],
-            key=lambda i: (
-                -int(i.get("priority", 0) or 0),
-                str(i.get("created_at", "")),
-                str(i.get("symbol", "")),
-            ),
+        return apply_manual_merge_policy(
+            ranked_auto=ranked_auto,
+            candidates=candidates,
+            manual_ideas=manual_ideas,
+            top_k=top_k,
+            config=self.config,
+            synthesize_manual_candidate=self._synthesize_manual_candidate,
+            validate_liquidity=validate_symbol_liquidity,
         )
-
-        for idea in ordered_manual:
-            symbol = str(idea.get("symbol", "")).upper().strip()
-            lane_pref = str(idea.get("lane_preference", "CORE")).upper()
-            note = str(idea.get("note", ""))
-            priority = int(idea.get("priority", 3) or 3)
-
-            if not symbol:
-                rejected += 1
-                decisions.append(
-                    self._manual_decision_row(
-                        symbol="",
-                        action="REJECTED",
-                        reason="Missing symbol.",
-                        priority=priority,
-                        lane_preference=lane_pref,
-                        note=note,
-                    )
-                )
-                continue
-
-            if symbol in selected_symbols:
-                reinforced += 1
-                self._mark_manual_reinforced(shortlist, symbol=symbol, note=note, priority=priority)
-                decisions.append(
-                    self._manual_decision_row(
-                        symbol=symbol,
-                        action="REINFORCED",
-                        reason="Already present in auto shortlist; marked as manual reinforced.",
-                        priority=priority,
-                        lane_preference=lane_pref,
-                        note=note,
-                    )
-                )
-                continue
-
-            candidate = candidate_map.get(symbol)
-            if not candidate:
-                candidate = self._synthesize_manual_candidate(
-                    symbol=symbol,
-                    lane_preference=lane_pref,
-                )
-
-            if str(candidate.get("status", "LOW_DATA")) != "ACTIVE":
-                candidate = dict(candidate)
-                candidate["status"] = "ACTIVE"
-                tags = list(candidate.get("risk_tags", []))
-                if "Manual override (low data)" not in tags:
-                    tags.append("Manual override (low data)")
-                candidate["risk_tags"] = tags
-            else:
-                candidate = dict(candidate)
-
-            if lane_pref in {"CORE", "MOMENTUM"}:
-                candidate["lane"] = lane_pref
-
-            liquid_ok, adv = validate_symbol_liquidity(symbol=symbol, min_adv_usd=min_adv)
-            if not liquid_ok:
-                if not force_insert:
-                    rejected += 1
-                    decisions.append(
-                        self._manual_decision_row(
-                            symbol=symbol,
-                            action="REJECTED",
-                            reason=f"Liquidity gate failed (ADV={adv:.2f}, min={min_adv:.2f}).",
-                            priority=priority,
-                            lane_preference=lane_pref,
-                            note=note,
-                            lane=str(candidate.get("lane", "CORE")),
-                        )
-                    )
-                    continue
-                tags = list(candidate.get("risk_tags", []))
-                if adv <= 0.0:
-                    if "Manual liquidity unchecked" not in tags:
-                        tags.append("Manual liquidity unchecked")
-                else:
-                    if "Manual liquidity override" not in tags:
-                        tags.append("Manual liquidity override")
-                candidate["risk_tags"] = tags
-
-            include_candidates.append((idea, candidate))
-
-        include_candidates.sort(
-            key=lambda pair: (
-                -int(pair[0].get("priority", 0) or 0),
-                -self._manual_candidate_rank_score(pair[1], str(pair[0].get("lane_preference", "CORE"))),
-                str(pair[1].get("symbol", "")),
-            )
-        )
-
-        included = 0
-        include_slots = min(len(include_candidates), target_slots)
-        for idea, base_candidate in include_candidates:
-            if included >= include_slots:
-                break
-
-            candidate = dict(base_candidate)
-            symbol = str(candidate.get("symbol", "")).upper().strip()
-            priority = int(idea.get("priority", 3) or 3)
-            lane_pref = str(idea.get("lane_preference", "CORE")).upper()
-            note = str(idea.get("note", ""))
-            candidate["source"] = "MANUAL"
-            candidate["source_detail"] = "MANUAL_WATCHLIST"
-            candidate["manual_note"] = note
-            candidate["manual_priority"] = priority
-            risk_tags = list(candidate.get("risk_tags", []))
-            if "Manual watchlist" not in risk_tags:
-                risk_tags.append("Manual watchlist")
-            candidate["risk_tags"] = risk_tags
-
-            replace_idx = self._find_lowest_auto_index(shortlist)
-            if replace_idx is None and len(shortlist) >= top_k:
-                rejected += 1
-                decisions.append(
-                    self._manual_decision_row(
-                        symbol=symbol,
-                        action="REJECTED",
-                        reason="No replaceable auto slot available.",
-                        priority=priority,
-                        lane_preference=lane_pref,
-                        note=note,
-                        lane=str(candidate.get("lane", "CORE")),
-                    )
-                )
-                continue
-
-            if not self._respects_diversification_caps(
-                shortlist=shortlist,
-                candidate=candidate,
-                replace_idx=replace_idx,
-                max_sector_count=max_sector_count,
-                max_asset_class_count=max_asset_class_count,
-            ):
-                if not force_insert:
-                    rejected += 1
-                    decisions.append(
-                        self._manual_decision_row(
-                            symbol=symbol,
-                            action="REJECTED",
-                            reason="Diversification caps rejected insertion.",
-                            priority=priority,
-                            lane_preference=lane_pref,
-                            note=note,
-                            lane=str(candidate.get("lane", "CORE")),
-                        )
-                    )
-                    continue
-                tags = list(candidate.get("risk_tags", []))
-                if "Manual cap override" not in tags:
-                    tags.append("Manual cap override")
-                candidate["risk_tags"] = tags
-
-            replaced_symbol = None
-            if replace_idx is not None and replace_idx < len(shortlist):
-                replaced_symbol = str(shortlist[replace_idx].get("symbol", ""))
-                shortlist.pop(replace_idx)
-                selected_symbols.discard(replaced_symbol.upper().strip())
-            shortlist.append(candidate)
-            selected_symbols.add(symbol)
-            included += 1
-
-            reason = "Inserted via manual slot."
-            if replaced_symbol:
-                reason = f"Inserted via manual slot, replaced {replaced_symbol}."
-            if "Manual cap override" in list(candidate.get("risk_tags", [])):
-                reason += " Diversification cap override applied."
-            if "Manual liquidity override" in list(candidate.get("risk_tags", [])):
-                reason += " Liquidity override applied."
-            if "Manual liquidity unchecked" in list(candidate.get("risk_tags", [])):
-                reason += " Liquidity check unavailable."
-            decisions.append(
-                self._manual_decision_row(
-                    symbol=symbol,
-                    action="INCLUDED",
-                    reason=reason,
-                    priority=priority,
-                    lane_preference=lane_pref,
-                    note=note,
-                    lane=str(candidate.get("lane", "CORE")),
-                )
-            )
-
-        # Keep deterministic rank ordering after manual overlay.
-        shortlist.sort(
-            key=lambda row: (
-                -self._candidate_rank_score(row),
-                float(row.get("freshness_hours", 9999.0)),
-                str(row.get("symbol", "")),
-            )
-        )
-        shortlist = shortlist[:top_k]
-        for idx, row in enumerate(shortlist, start=1):
-            row["rank"] = idx
-
-        rank_map = {
-            str(row.get("symbol", "")).upper().strip(): int(row.get("rank", 0) or 0)
-            for row in shortlist
-        }
-        for row in decisions:
-            symbol = str(row.get("symbol", "")).upper().strip()
-            row["selected_rank"] = rank_map.get(symbol)
-        manual_symbols = sorted(
-            {
-                str(row.get("symbol", "")).upper().strip()
-                for row in shortlist
-                if str(row.get("source", "AUTO")).upper() == "MANUAL"
-            }
-        )
-        summary = {
-            "requested": len(ordered_manual),
-            "included": included,
-            "reinforced": reinforced,
-            "rejected": rejected,
-            "manual_symbols": manual_symbols,
-            "decisions": decisions,
-        }
-        return shortlist, summary
 
     def _mark_manual_reinforced(
         self,
@@ -2371,7 +2128,10 @@ class DealFlowPipeline:
         except Exception:
             pass
         if not inferred_sector or inferred_sector == "Unclassified Equity":
-            if inferred_asset_class == "CommodityProxy":
+            baseline_sector = {"TSLA": "Consumer Discretionary"}.get(normalized_symbol)
+            if baseline_sector:
+                inferred_sector = baseline_sector
+            elif inferred_asset_class == "CommodityProxy":
                 inferred_sector = "Commodities"
             elif inferred_asset_class == "ETF":
                 inferred_sector = "ETF"
