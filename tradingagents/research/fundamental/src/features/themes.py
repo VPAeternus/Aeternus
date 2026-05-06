@@ -10,6 +10,11 @@ import yaml
 
 from src.features.common import clean, flag, to_float
 
+try:
+    from tradingagents.dealflow.theme_aliases import match_theme_aliases
+except Exception:  # pragma: no cover
+    match_theme_aliases = None
+
 
 THEME_CONFIG = Path(__file__).resolve().parents[1] / "config" / "theme_taxonomy.yaml"
 SCORING_CONFIG = Path(__file__).resolve().parents[1] / "config" / "theme_scoring_rules.yaml"
@@ -73,6 +78,9 @@ def detect_candidate_themes(row: dict[str, Any], filing_text: str = "") -> list[
     source = clean(row.get("theme_source")) or "filing"
 
     names = [primary, *secondary, *tags]
+    alias_matches = match_theme_aliases(" ".join([primary, *secondary, *tags, *evidence, filing_text])) if match_theme_aliases else []
+    for match in alias_matches:
+        names.append(str(match.get("theme_id") or ""))
     seen: set[str] = set()
     out: list[dict[str, Any]] = []
     for name in names:

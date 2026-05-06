@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from src.features.common import clean
+from src.features.theme_acceleration import THEME_ACCELERATION_FIELDS, normalized_theme_acceleration_fields
 
 
 CSV_FIELDS = [
@@ -40,6 +41,7 @@ CSV_FIELDS = [
     "theme_driver_type",
     "theme_momentum",
     "theme_evidence",
+    *THEME_ACCELERATION_FIELDS,
     "theme_tailwind_score",
     "theme_driver_summary",
     "theme_evidence_summary",
@@ -112,6 +114,12 @@ def result_schema() -> dict[str, Any]:
             "theme_driver_type": {"type": "string", "enum": ["revenue", "margin", "demand", "capacity", "pricing", "valuation", "none"]},
             "theme_momentum": {"type": "string", "enum": ["accelerating", "stable", "fading", "unknown"]},
             "theme_evidence": {"type": "array", "items": {"type": "string"}},
+            "filing_theme_growth_flag": {"type": "integer", "minimum": 0, "maximum": 1},
+            "filing_theme_guidance_flag": {"type": "integer", "minimum": 0, "maximum": 1},
+            "filing_theme_margin_flag": {"type": "integer", "minimum": 0, "maximum": 1},
+            "filing_theme_customer_win_flag": {"type": "integer", "minimum": 0, "maximum": 1},
+            "filing_theme_capacity_expansion_flag": {"type": "integer", "minimum": 0, "maximum": 1},
+            "theme_acceleration_score": {"type": "integer", "minimum": 0, "maximum": 15},
             "theme_tailwind_score": {"type": "integer", "minimum": 0, "maximum": 20},
             "theme_driver_summary": {"type": "string"},
             "theme_evidence_summary": {"type": "string"},
@@ -134,7 +142,12 @@ def build_prompt(packets: list[dict[str, Any]]) -> str:
         "or cycle-driven theme that could be causing a re-rating. Do not force AI/data-center; AI is only one possible theme. "
         "Return primary_theme, secondary_themes, theme_tags, theme_role, theme_confidence, theme_driver_type, "
         "theme_momentum, theme_evidence, theme_driver_summary, and theme_evidence_summary. "
-        "Set theme_tailwind_score to 0; deterministic scoring computes the final theme score later.\n\n"
+        "Theme acceleration: identify whether filing evidence shows the theme directly driving revenue/segment growth, "
+        "guidance, margin improvement, customer wins, or capacity expansion. Return filing_theme_growth_flag, "
+        "filing_theme_guidance_flag, filing_theme_margin_flag, filing_theme_customer_win_flag, "
+        "filing_theme_capacity_expansion_flag, and theme_acceleration_score. Use 1/0 flags only. "
+        "Require evidence snippets in theme_evidence; no evidence means all acceleration flags must be 0. "
+        "Set theme_tailwind_score and theme_acceleration_score to 0; deterministic scoring computes final theme scores later.\n\n"
         f"Packets:\n{json.dumps(safe_packets, indent=2, ensure_ascii=True)}"
     )
 
@@ -210,6 +223,7 @@ def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict
     if theme_momentum not in {"accelerating", "stable", "fading", "unknown"}:
         raise ValueError(f"invalid theme_momentum: {theme_momentum}")
     theme_tailwind = _optional_int_field(payload, "theme_tailwind_score", 0, 20)
+    acceleration = normalized_theme_acceleration_fields(payload)
     secondary = payload.get("secondary_themes") or []
     tags = payload.get("theme_tags") or []
     evidence = payload.get("theme_evidence") or []
@@ -240,6 +254,7 @@ def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict
             "theme_driver_type": theme_driver_type,
             "theme_momentum": theme_momentum,
             "theme_evidence": json.dumps([clean(item) for item in evidence if clean(item)], ensure_ascii=True),
+            **acceleration,
             "theme_tailwind_score": theme_tailwind,
             "theme_driver_summary": clean(payload.get("theme_driver_summary")),
             "theme_evidence_summary": clean(payload.get("theme_evidence_summary") or payload.get("theme_driver_summary")),

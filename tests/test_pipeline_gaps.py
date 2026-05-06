@@ -119,6 +119,20 @@ def test_rescan_candidates_finds_scored_with_recent():
     assert "AAPL" in tickers
 
 
+def test_rescan_candidates_finds_theme_acceleration_rescan():
+    """Theme acceleration flag uses existing T5 rescan path even before SCORED tier."""
+    akg = _fresh_akg()
+    akg.update_theme_acceleration_signal("GLW", {
+        "as_of_date": dt.date.today().isoformat(),
+        "theme_acceleration_score": 8,
+        "theme_evidence": ["Optical demand drove segment growth."],
+    })
+
+    candidates = akg.get_rescan_candidates(max_age_days=7)
+    tickers = [c["id"] for c in candidates]
+    assert "GLW" in tickers
+
+
 def test_rescan_candidates_ignores_stale():
     """SCORED node with old signal_*_updated must NOT appear in rescan candidates."""
     akg = _fresh_akg()

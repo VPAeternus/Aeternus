@@ -234,6 +234,7 @@ EMERGENCE_SIGNALS = [
     ("signal_sector_rotation_score", 0.0, 100.0,   5, False),
     ("signal_macro_score",           0.0, 100.0,   5, False),
     ("signal_value_score",           0.0, 100.0,   2, False),
+    ("signal_theme_acceleration_score", 0.0, 15.0, 8, False),
 ]
 
 
@@ -687,7 +688,9 @@ class AeternusKnowledgeGraph:
         for node in self._nodes.values():
             if node.get("node_type") != "company":
                 continue
-            if node.get("emergence_tier") != "SCORED":
+            is_scored_rescan = node.get("emergence_tier") == "SCORED"
+            is_theme_acceleration_rescan = bool(node.get("theme_acceleration_rescan_flag"))
+            if not (is_scored_rescan or is_theme_acceleration_rescan):
                 continue
             has_recent = False
             for key, val in node.items():
@@ -803,6 +806,18 @@ class AeternusKnowledgeGraph:
             "signal_macro_score",
             "signal_macro_regime_tag",
             "signal_macro_updated",
+            # AKG Theme Acceleration fields
+            "primary_theme",
+            "secondary_themes",
+            "theme_role",
+            "theme_confidence",
+            "theme_driver_type",
+            "theme_momentum",
+            "theme_evidence",
+            "signal_theme_acceleration_score",
+            "signal_theme_acceleration_updated",
+            "theme_acceleration_reason",
+            "theme_acceleration_research_visibility",
         ]
         for node in self._nodes.values():
             for field in _none_fields:
@@ -818,6 +833,8 @@ class AeternusKnowledgeGraph:
                 node["active_themes"] = []
             if "priority_score" not in node:
                 node["priority_score"] = 0.0
+            if "theme_acceleration_rescan_flag" not in node:
+                node["theme_acceleration_rescan_flag"] = False
             # S-044 analysis memory list field
             if "score_history" not in node:
                 node["score_history"] = []
@@ -1178,6 +1195,67 @@ class AeternusKnowledgeGraph:
         node["signal_macro_regime_tag"] = regime_tag
         node["signal_macro_updated"] = as_of_date
         self.compute_emergence_score(ticker)
+
+    def update_theme_acceleration_signal(self, ticker: str, payload: dict) -> None:
+        """Write filing-confirmed theme acceleration fields to an AKG node."""
+        symbol = str(ticker or "").upper().strip()
+        if not symbol:
+            return
+        if symbol not in self._nodes:
+            self.add_node(symbol, node_type="company")
+        node = self._nodes[symbol]
+        node.setdefault("theme_acceleration_rescan_flag", False)
+        score = _clamp_float(payload.get("theme_acceleration_score"), 0.0, 15.0)
+        as_of_date = str(payload.get("as_of_date") or payload.get("signal_theme_acceleration_updated") or "")
+        evidence = payload.get("theme_evidence") or []
+        if isinstance(evidence, str):
+            evidence = [evidence] if evidence.strip() else []
+        evidence = [str(item).strip() for item in evidence if str(item).strip()]
+        if not evidence:
+            score = 0.0
+        node["primary_theme"] = str(payload.get("primary_theme") or "").strip() or None
+        secondary = payload.get("secondary_themes") or []
+        if isinstance(secondary, str):
+            secondary = [secondary] if secondary.strip() else []
+        node["secondary_themes"] = [str(item).strip() for item in secondary if str(item).strip()]
+        node["theme_role"] = str(payload.get("theme_role") or "").strip() or None
+        node["theme_confidence"] = str(payload.get("theme_confidence") or "").strip() or None
+        node["theme_driver_type"] = str(payload.get("theme_driver_type") or "").strip() or None
+        node["theme_momentum"] = str(payload.get("theme_momentum") or "").strip() or None
+        node["theme_evidence"] = evidence
+        node["signal_theme_acceleration_score"] = round(score, 4)
+        node["signal_theme_acceleration_updated"] = as_of_date or None
+        reason = str(payload.get("theme_acceleration_reason") or payload.get("theme_driver_summary") or "").strip()
+        node["theme_acceleration_reason"] = reason or None
+        confidence = str(node.get("theme_confidence") or "").lower()
+        node["theme_acceleration_research_visibility"] = bool(score >= 10.0 and confidence in {"medium", "high"})
+        if score >= 5.0:
+            node["theme_acceleration_rescan_flag"] = True
+        self.compute_emergence_score(symbol)
+
+    def mark_theme_acceleration_rescan(self, ticker: str, reason: str = "") -> None:
+        symbol = str(ticker or "").upper().strip()
+        if not symbol:
+            return
+        if symbol not in self._nodes:
+            self.add_node(symbol, node_type="company")
+        self._nodes[symbol]["theme_acceleration_rescan_flag"] = True
+        if reason:
+            self._nodes[symbol]["theme_acceleration_reason"] = str(reason)
+
+    def get_theme_acceleration_candidates(self, as_of_date: str | None = None) -> List[dict]:
+        """Return company nodes flagged for theme-acceleration rescan."""
+        candidates = []
+        for node in self._nodes.values():
+            if node.get("node_type") != "company":
+                continue
+            if not node.get("theme_acceleration_rescan_flag"):
+                continue
+            updated = str(node.get("signal_theme_acceleration_updated") or "")
+            if as_of_date and updated and updated > str(as_of_date):
+                continue
+            candidates.append(node)
+        return sorted(candidates, key=lambda n: float(n.get("signal_theme_acceleration_score") or 0), reverse=True)
 
     def compute_emergence_score(self, ticker: str) -> float:
         """
@@ -2514,6 +2592,14 @@ class AeternusKnowledgeGraph:
             "stress_level": level,
             "stressed_claims": stressed,
         }
+
+
+def _clamp_float(raw, lo: float, hi: float) -> float:
+    try:
+        value = float(raw)
+    except Exception:
+        value = lo
+    return max(lo, min(hi, value))
 
 
 def _sanitize_filename(name: str) -> str:

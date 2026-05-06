@@ -1,0 +1,126 @@
+themes:
+  ai_data_center:
+    theme_name: AI Data Center Infrastructure
+    aliases:
+      - AI data center
+      - gen AI infrastructure
+      - generative AI infrastructure
+      - hyperscaler capex
+      - GPU cluster
+      - AI inference
+      - accelerated computing
+      - data center power
+    theme_roles:
+      - platform_leader
+      - infrastructure_provider
+      - supplier
+      - hidden_beneficiary
+    theme_example_tickers: [NVDA, AMD, AVGO, VRT, PWR]
+    theme_edge_types: [catalyst_beneficiary, supply_chain]
+
+  optical_networking:
+    theme_name: Optical Networking / Photonics
+    aliases:
+      - optical communications
+      - silicon photonics
+      - co-packaged optics
+      - CPO
+      - high-speed optical
+      - transceiver
+      - 800G
+      - 1.6T
+      - photonics
+      - indium phosphide
+    theme_roles:
+      - supplier
+      - infrastructure_provider
+      - bottleneck_supplier
+      - hidden_beneficiary
+    theme_example_tickers: [LITE, COHR, AAOI, AXTI, CRDO, GLW]
+    theme_edge_types: [catalyst_beneficiary, supply_chain]
+
+  semiconductor_materials:
+    theme_name: Semiconductor Materials
+    aliases:
+      - compound semiconductor
+      - indium phosphide
+      - gallium arsenide
+      - germanium substrate
+      - wafer substrate
+      - silicon carbide
+      - gallium nitride
+    theme_roles:
+      - materials_supplier
+      - supplier
+      - bottleneck_supplier
+      - hidden_beneficiary
+    theme_example_tickers: [AXTI, AEHR]
+    theme_edge_types: [supply_chain, catalyst_beneficiary]
+
+  semicap_equipment:
+    theme_name: Semiconductor Capital Equipment
+    aliases:
+      - semiconductor equipment
+      - wafer fab equipment
+      - test equipment
+      - burn-in
+      - etch
+      - deposition
+      - fluid delivery
+      - capital equipment
+    theme_roles:
+      - semicap_supplier
+      - supplier
+      - bottleneck_supplier
+    theme_example_tickers: [AEHR, ICHR, AMAT, LRCX, KLAC]
+    theme_edge_types: [supply_chain, catalyst_beneficiary]
+
+  data_center_test:
+    theme_name: AI Data Center Test / Validation
+    aliases:
+      - data center test
+      - AI networking test
+      - ethernet fabric
+      - optical test
+      - validation
+      - 800G testing
+      - 1.6T testing
+    theme_roles:
+      - test_equipment_provider
+      - supplier
+      - hidden_beneficiary
+    theme_example_tickers: [VIAV]
+    theme_edge_types: [supply_chain, catalyst_beneficiary]
+
+  grid_power:
+    theme_name: Grid / Power Infrastructure
+    aliases:
+      - grid
+      - power infrastructure
+      - transmission
+      - electrification
+      - utility capex
+      - data center power
+    theme_roles:
+      - infrastructure_provider
+      - direct_beneficiary
+      - supplier
+    theme_example_tickers: [PWR, ETN, GEV, VRT]
+    theme_edge_types: [catalyst_beneficiary, supply_chain]
+
+  rare_metals:
+    theme_name: Rare Metals / Critical Minerals
+    aliases:
+      - rare earth
+      - critical minerals
+      - lithium
+      - copper
+      - uranium
+      - cobalt
+      - nickel
+    theme_roles:
+      - commodity_exposure
+      - materials_supplier
+      - supplier
+    theme_example_tickers: []
+    theme_edge_types: [catalyst_beneficiary, supply_chain]

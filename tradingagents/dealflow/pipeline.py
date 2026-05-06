@@ -400,6 +400,14 @@ class DealFlowPipeline:
         self._last_universe_filter_summary = universe_filter_summary
 
         try:
+            from tradingagents.dealflow.theme_heatmap import write_theme_heatmap
+            _heatmap_akg = _AKG.load() if _AKG_AVAILABLE and _AKG is not None else None
+            if _heatmap_akg is not None:
+                write_theme_heatmap(_heatmap_akg, as_of_date=as_of_date)
+        except Exception:
+            pass
+
+        try:
             discovery_delta = build_discovery_delta(
                 as_of_date=as_of_date,
                 scout_audit=scout_audit,
