@@ -63,9 +63,12 @@ R-002  paper_execution.py split   ~3-4h      Most complex; can run in parallel w
 
 ## Task R-005: Haptic Engine Deduplication
 
+Status: N/A in current tree — both documented HapticEngine paths are absent and `operator_ui/` has no haptic imports.
+Do not recreate haptics here; revisit only if product needs haptic behavior restored.
+
 Files: `operator_ui/src/components/shared/HapticEngine.ts` and `operator_ui/src/lib/HapticEngine.ts`
 
-These are byte-identical. Do this:
+These were documented as byte-identical. Do this only if both files reappear:
 1. Search the entire `operator_ui/` tree for imports of `components/shared/HapticEngine`.
 2. Update any found imports to `lib/HapticEngine` (or `@/lib/HapticEngine` if the codebase uses path aliases).
 3. Delete `operator_ui/src/components/shared/HapticEngine.ts`.
@@ -76,6 +79,9 @@ Commit: `chore: remove duplicate HapticEngine (keep lib canonical)`
 ---
 
 ## Task R-001: CLI Split Audit
+
+Status: Passed current-tree audit — `cli/main.py` is thin import/registration only; no command implementation remains there.
+Verification used `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m cli.main --help`; command list loaded with no import errors.
 
 1. Read `cli/main.py` (35 LOC).
 2. Read each file in `cli/commands/`.
