@@ -410,6 +410,7 @@ class DealFlowPipeline:
         insider_result: Dict[str, Any],
         technical_ignition_result: Optional[Dict[str, Any]] = None,
         thirteenf_result: Optional[Dict[str, Any]] = None,
+        **_legacy_kwargs: Any,
     ) -> Dict[str, Any]:
         """Build a compact audit dict from scout return values."""
         audit = build_and_write_scout_audit(
@@ -810,9 +811,13 @@ class DealFlowPipeline:
             except Exception:
                 pass
             manual_symbols = sorted(manual_symbols_set)
+            fvg_recall_symbols = _load_json_file(Path("eval_results") / "deal_flow" / as_of_date / "fvg_recall.json") or {}
+            fma_recall_symbols = _load_json_file(Path("eval_results") / "deal_flow" / as_of_date / "fma_recall.json") or {}
             universe = build_universe_from_akg(
                 extra_symbols=manual_symbols,
                 config=self.config,
+                fvg_recall_symbols=list(fvg_recall_symbols.get("selected_symbols", []) or []),
+                fma_recall_symbols=list(fma_recall_symbols.get("selected_symbols", []) or []),
             )
             self._last_universe_ledger = self._resolve_universe_ledger(
                 universe,

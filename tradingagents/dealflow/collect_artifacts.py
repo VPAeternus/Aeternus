@@ -6,6 +6,10 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+from tradingagents.dealflow.deep_selection_integrity import build_deep_selection_integrity_report
+from tradingagents.dealflow.evidence_integrity import build_evidence_integrity_report, summarize_evidence_integrity
+from tradingagents.dealflow.shortlist_integrity import build_shortlist_integrity_report
+
 
 def write_collect_artifacts(
     *,
@@ -58,12 +62,77 @@ def write_collect_artifacts(
     latest_path.parent.mkdir(parents=True, exist_ok=True)
     latest_path.write_text(json.dumps(research_queue, indent=2))
 
+    _write_integrity_artifacts(
+        as_of_date=as_of_date,
+        base=base,
+        normalized_signals=normalized_signals,
+        shortlist=shortlist,
+        research_queue=research_queue,
+        connector_health=connector_health,
+        all_scored_candidates=list(all_scored_candidates or []),
+    )
+    (base / "shortlist_top20.json").write_text(json.dumps(shortlist, indent=2))
     _write_x_feed_provenance(
         as_of_date=as_of_date,
         base=base,
         x_feed_root=Path(x_feed_root),
         shortlist=shortlist,
     )
+
+
+def _write_integrity_artifacts(*, as_of_date: str, base: Path, normalized_signals: List[Dict], shortlist: Dict[str, Any], research_queue: Dict[str, Any], connector_health: List[Dict[str, Any]], all_scored_candidates: List[Dict[str, Any]]) -> None:
+    try:
+        evidence = build_evidence_integrity_report(
+            candidates=all_scored_candidates,
+            signals=normalized_signals,
+            connector_health=connector_health,
+            rule_snapshot={"min_signal_families": 3, "min_evidence_count": 5},
+        )
+        (base / "evidence_integrity.json").write_text(json.dumps(evidence, indent=2))
+        shortlist["evidence_integrity_summary"] = summarize_evidence_integrity(evidence)
+    except Exception:
+        pass
+    try:
+        report = build_shortlist_integrity_report(
+            as_of_date=as_of_date,
+            all_scored_candidates=all_scored_candidates,
+            shortlist=shortlist,
+            research_queue=research_queue,
+        )
+        (base / "shortlist_integrity.json").write_text(json.dumps(report, indent=2))
+    except Exception:
+        pass
+    try:
+        report = build_deep_selection_integrity_report(
+            as_of_date=as_of_date,
+            shortlist=shortlist,
+            research_queue=research_queue,
+        )
+        (base / "deep_selection_integrity.json").write_text(json.dumps(report, indent=2))
+    except Exception:
+        pass
+    shadows = [row for row in normalized_signals if str(row.get("signal_family", "")) == "fundamental_factor_shadow"]
+    if shadows:
+        selected_symbols = {
+            str(item.get("symbol", "")).upper().strip()
+            for item in research_queue.get("items", [])
+            if item.get("selected_for_deep")
+        }
+        shadow_symbols = {str(row.get("symbol", "")).upper().strip() for row in shadows}
+        strategy_name = ""
+        source_name = str(shadows[0].get("source_name", "")) if shadows else ""
+        if ":" in source_name:
+            strategy_name = source_name.split(":", 1)[1]
+        payload = {
+            "strategy_name": strategy_name,
+            "coverage_summary": {
+                "signal_count": len(shadows),
+                "selected_for_deep_overlap_count": len(selected_symbols & shadow_symbols),
+            },
+            "signals": shadows,
+        }
+        shortlist["fundamental_shadow_summary"] = {"coverage_summary": dict(payload["coverage_summary"])}
+        (base / "fundamental_factor_shadow.json").write_text(json.dumps(payload, indent=2))
 
 
 def _safe_float(raw: Any) -> float:

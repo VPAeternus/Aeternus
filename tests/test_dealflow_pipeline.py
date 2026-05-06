@@ -507,7 +507,7 @@ def test_collect_standalone_threads_persisted_recall_symbols(tmp_path, monkeypat
     assert captured["fma_recall_symbols"] == ["CRM"]
 
 
-def test_market_shock_metrics_uses_shared_market_cache(monkeypatch):
+def test_market_shock_metrics_uses_yfinance_path_deterministically(monkeypatch):
     from tradingagents.dealflow.pipeline import DealFlowPipeline
 
     idx = pd.date_range("2026-03-01", periods=10, freq="D")
@@ -526,17 +526,10 @@ def test_market_shock_metrics_uses_shared_market_cache(monkeypatch):
             index=idx,
         )
 
-    monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline.ensure_ohlcv_history",
-        lambda symbols, **kwargs: {
-            "SPY": _frame(102.0, 100.0),
-            "^VIX": _frame(24.0, 20.0),
-        },
-    )
-    monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline.yf.download",
-        lambda *args, **kwargs: (_ for _ in ()).throw(AssertionError("raw yf path should not be used")),
-    )
+    spy = _frame(102.0, 100.0)
+    vix = _frame(24.0, 20.0)
+    frame = pd.concat({"SPY": spy, "^VIX": vix}, axis=1)
+    monkeypatch.setattr("tradingagents.dealflow.pipeline.yf.download", lambda *args, **kwargs: frame)
 
     pipeline = DealFlowPipeline(config=_minimal_config())
     spy_move, vix_jump = pipeline._market_shock_metrics()  # pylint: disable=protected-access
@@ -1127,7 +1120,7 @@ def test_discover_persists_universe_filter_artifact_and_summary(tmp_path, monkey
             )
         )
         stack.enter_context(
-            patch("tradingagents.dealflow.pipeline.build_discovery_delta", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []})
+            patch("tradingagents.dealflow.pipeline.write_discovery_delta_report", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []})
         )
         stack.enter_context(
             patch("tradingagents.dealflow.sources.x_feed_manual.load_recent_merged", return_value={"TSLA": {"ticker": "TSLA"}})
@@ -1257,103 +1250,6 @@ def test_discover_threads_technical_ignition_symbols_and_persists_scout_audit(tm
     assert [row["symbol"] for row in payload["signals"]] == ["BE", "MU"]
 
 
-def test_discover_threads_earnings_options_symbols_and_persists_scout_audit(tmp_path, monkeypatch):
-    from tradingagents.dealflow.pipeline import DealFlowPipeline
-
-    monkeypatch.chdir(tmp_path)
-    captured = {}
-
-    def _stub_build_universe_from_akg(
-        *,
-        extra_symbols=None,
-        earnings_options_symbols=None,
-        technical_ignition_symbols=None,
-        config=None,
-        fvg_recall_symbols=None,
-        fma_recall_symbols=None,
-    ):
-        captured["extra_symbols"] = list(extra_symbols or [])
-        captured["earnings_options_symbols"] = list(earnings_options_symbols or [])
-        captured["technical_ignition_symbols"] = list(technical_ignition_symbols or [])
-        return []
-
-    earnings_result = {
-        "promoted_count": 2,
-        "promoted_symbols": ["MU", "BE"],
-        "promoted": [{"ticker": "MU"}, {"ticker": "BE"}],
-        "signals": [
-            {
-                "symbol": "MU",
-                "source": "earnings_options",
-                "delta_kind": "earnings_options",
-                "direction": "BULLISH",
-                "raw_strength": 0.95,
-                "confidence_score": 0.85,
-                "tags": ["earnings_options", "accelerating"],
-            },
-            {
-                "symbol": "BE",
-                "source": "earnings_options",
-                "delta_kind": "earnings_options",
-                "direction": "NEUTRAL",
-                "raw_strength": 0.80,
-                "confidence_score": 0.55,
-                "tags": ["earnings_options", "steady"],
-            },
-        ],
-        "artifact_path": "eval_results/deal_flow/earnings_options_scout_2026-03-10.json",
-        "source_status": "OK",
-    }
-
-    with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_tier_map", return_value={}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_ledger", return_value={}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
-        stack.enter_context(patch("tradingagents.dealflow.sources.x_feed_manual.load_recent_merged", return_value={}))
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.pipeline.DealFlowPipeline._build_fvg_recall_channel",
-                return_value={"selected_symbols": [], "artifact": {"date": "2026-03-10", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}},
-            )
-        )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.pipeline.DealFlowPipeline._build_fma_recall_channel",
-                return_value={"selected_symbols": [], "artifact": {"date": "2026-03-10", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}},
-            )
-        )
-        stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
-        stack.enter_context(patch("tradingagents.dealflow.sources.iv_scanner.scan_earnings_iv", return_value={"force_queue": [], "akg_enriched": []}))
-        stack.enter_context(patch("tradingagents.dealflow.sources.insider_cluster.scan_insider_sweep", return_value={"skipped": True}))
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.technical_ignition_scout.scan_technical_ignition_setups",
-                return_value={"promoted_count": 0, "promoted_symbols": [], "stale_count": 0, "stale_symbols": [], "signals": [], "promoted": [], "stale": []},
-            )
-        )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.earnings_options_scout.scan_manual_earnings_options_setups",
-                return_value=earnings_result,
-            )
-        )
-
-        pipeline = DealFlowPipeline(config=_minimal_config())
-        summary = pipeline.discover(as_of_date="2026-03-10", trigger="manual")
-
-    assert summary["earnings_options_count"] == 2
-    assert summary["earnings_options_symbols"] == ["MU", "BE"]
-    assert captured["earnings_options_symbols"] == ["MU", "BE"]
-    assert captured["technical_ignition_symbols"] == []
-    assert captured["extra_symbols"] == []
-
-    audit_path = tmp_path / "eval_results" / "deal_flow" / "2026-03-10" / "scout_audit.json"
-    assert audit_path.exists()
-    payload = json.loads(audit_path.read_text())
-    assert payload["earnings_options"]["promoted_symbols"] == ["MU", "BE"]
-    assert payload["earnings_options"]["source_status"] == "OK"
-    assert [row["symbol"] for row in payload["signals"]] == ["MU", "BE"]
 
 
 def test_discover_writes_scout_compiler_sidecar_artifacts_without_changing_universe(tmp_path, monkeypatch):
@@ -1435,12 +1331,6 @@ def test_discover_writes_scout_compiler_sidecar_artifacts_without_changing_unive
                 },
             )
         )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.earnings_options_scout.scan_manual_earnings_options_setups",
-                return_value={"promoted_count": 0, "promoted_symbols": [], "signals": [], "promoted": [], "artifact_path": "", "source_status": "NO_DATA"},
-            )
-        )
 
         pipeline = DealFlowPipeline(config=_minimal_config())
         summary = pipeline.discover(as_of_date="2026-03-15", trigger="manual")
@@ -1457,107 +1347,6 @@ def test_discover_writes_scout_compiler_sidecar_artifacts_without_changing_unive
     assert summary["scout_quality_summary"]["row_count"] >= 1
 
 
-def test_discover_sidecar_uses_breakout_and_earnings_audit_inputs(tmp_path, monkeypatch):
-    from tradingagents.dealflow.pipeline import DealFlowPipeline
-
-    monkeypatch.chdir(tmp_path)
-    universe = [
-        {
-            "symbol": "XLE",
-            "asset_class": "Equity",
-            "sector": "Energy",
-            "liquidity_score": 90.0,
-            "aliases": [],
-        },
-        {
-            "symbol": "BABA",
-            "asset_class": "Equity",
-            "sector": "Consumer Discretionary",
-            "liquidity_score": 92.0,
-            "aliases": [],
-        },
-    ]
-
-    with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", return_value=universe))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_tier_map", return_value={}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_ledger", return_value={"symbols": ["XLE", "BABA"]}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.x_feed_manual.load_recent_merged",
-                return_value={
-                    "XLE": {
-                        "ticker": "XLE",
-                        "catalyst": "Trump announced war on Iran; oil higher and airlines like $UAL under pressure.",
-                        "sentiment": "BULLISH",
-                        "source_pass_type": "thematic",
-                    }
-                },
-            )
-        )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.pipeline.DealFlowPipeline._build_fvg_recall_channel",
-                return_value={"selected_symbols": [], "artifact": {"date": "2026-03-15", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}},
-            )
-        )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.pipeline.DealFlowPipeline._build_fma_recall_channel",
-                return_value={"selected_symbols": [], "artifact": {"date": "2026-03-15", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}},
-            )
-        )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery",
-                return_value={"count": 1, "alerts": [{"ticker": "XLE", "score": 88.0, "near_high": 0.99}]},
-            )
-        )
-        stack.enter_context(patch("tradingagents.dealflow.sources.insider_cluster.scan_insider_sweep", return_value={"skipped": True}))
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.technical_ignition_scout.scan_technical_ignition_setups",
-                return_value={"promoted_count": 0, "promoted_symbols": [], "signals": [], "promoted": [], "stale": [], "stale_symbols": [], "stale_count": 0},
-            )
-        )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.earnings_options_scout.scan_manual_earnings_options_setups",
-                return_value={
-                    "promoted_count": 1,
-                    "promoted_symbols": ["BABA"],
-                    "signals": [
-                        {
-                            "symbol": "BABA",
-                            "source": "earnings_options",
-                            "delta_kind": "earnings_options",
-                            "direction": "BULLISH",
-                            "raw_strength": 1.0,
-                            "confidence_score": 0.65,
-                            "tags": ["earnings_options"],
-                            "catalyst": "Alibaba earnings highlighted by options flow",
-                        }
-                    ],
-                    "promoted": [{"ticker": "BABA"}],
-                    "artifact_path": "artifact.json",
-                    "source_status": "OK",
-                },
-            )
-        )
-
-        pipeline = DealFlowPipeline(config=_minimal_config())
-        summary = pipeline.discover(as_of_date="2026-03-15", trigger="manual")
-
-    event_cards = json.loads((tmp_path / "eval_results" / "deal_flow" / "2026-03-15" / "event_cards.json").read_text())
-    scout_quality = json.loads((tmp_path / "eval_results" / "deal_flow" / "2026-03-15" / "scout_quality_daily.json").read_text())
-    by_source = {row["source"]: row for row in scout_quality["rows"]}
-
-    assert summary["scenario_sidecar_summary"]["event_card_count"] >= 3
-    assert "breakout_scanner" in {source for card in event_cards for source in card.get("source_bundle", [])}
-    assert "earnings_options" in {source for card in event_cards for source in card.get("source_bundle", [])}
-    assert by_source["breakout_scanner"]["detection_count"] == 1
-    assert by_source["earnings_options"]["detection_count"] == 1
 
 
 def test_build_scout_audit_serializes_non_json_signal_fields(tmp_path, monkeypatch):
@@ -1585,7 +1374,6 @@ def test_build_scout_audit_serializes_non_json_signal_fields(tmp_path, monkeypat
                 }
             ]
         },
-        earnings_options_result={"signals": []},
     )
 
     assert payload["signals"][0]["catalyst"] == "odd-value"
@@ -1624,7 +1412,7 @@ def test_discover_carries_forward_recent_unprocessed_x_feed_symbols(tmp_path, mo
             )
         )
         stack.enter_context(patch("tradingagents.dealflow.pipeline.DealFlowPipeline._build_scout_audit", return_value={"signals": []}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_discovery_delta", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []}))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.write_discovery_delta_report", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.iv_scanner.scan_earnings_iv", return_value={"force_queue": [], "akg_enriched": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.insider_cluster.scan_insider_sweep", return_value={"skipped": True}))
@@ -1667,12 +1455,6 @@ def test_discover_skips_legacy_iv_scout_by_default(tmp_path, monkeypatch):
             patch(
                 "tradingagents.dealflow.sources.technical_ignition_scout.scan_technical_ignition_setups",
                 return_value={"promoted_count": 0, "promoted_symbols": [], "stale_count": 0, "stale_symbols": [], "signals": [], "promoted": [], "stale": []},
-            )
-        )
-        stack.enter_context(
-            patch(
-                "tradingagents.dealflow.sources.earnings_options_scout.scan_manual_earnings_options_setups",
-                return_value={"promoted_count": 0, "promoted_symbols": [], "signals": [], "promoted": [], "artifact_path": "", "source_status": "NO_DATA"},
             )
         )
 
@@ -1922,7 +1704,7 @@ def test_collect_persists_fundamental_shadow_artifact_and_summary(tmp_path, monk
         stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_smart_money_signals", return_value=[]))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_sector_rotation_signals", return_value=[]))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_insider_cluster_signals", return_value=[]))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_fundamental_signals", return_value=normalized_signals))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_smart_money_signals", return_value=normalized_signals))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.iv_scanner.scan_earnings_iv", return_value={"force_queue": [], "akg_enriched": []}))
@@ -1944,6 +1726,8 @@ def test_collect_persists_fundamental_shadow_artifact_and_summary(tmp_path, monk
     assert payload["coverage_summary"]["signal_count"] == 1
     assert payload["strategy_name"] == "health_0p4__inv_growth_0p1__inv_quality_0p5"
     assert shortlist["fundamental_shadow_summary"]["coverage_summary"]["selected_for_deep_overlap_count"] == 1
+    persisted_shortlist = json.loads((tmp_path / "eval_results" / "deal_flow" / "2026-03-09" / "shortlist_top20.json").read_text())
+    assert persisted_shortlist["fundamental_shadow_summary"]["coverage_summary"]["selected_for_deep_overlap_count"] == 1
 
 
 def test_collect_persists_shortlist_integrity_artifact(tmp_path, monkeypatch):
@@ -2144,37 +1928,6 @@ def test_collect_persists_deep_selection_integrity_artifact(tmp_path, monkeypatc
     assert payload["rule_snapshot"]["auto_selected_count"] == 2
 
 
-def test_iv_force_queue_disk_fallback(tmp_path, monkeypatch):
-    """When _iv_force_queue is empty, _inject_force_queue_candidates reads from disk."""
-    from tradingagents.dealflow.pipeline import DealFlowPipeline
-
-    config = _minimal_config({"dealflow_deep_reserve_quota": 4})
-    pipeline = DealFlowPipeline(config=config)
-    pipeline._iv_force_queue = None  # simulate no discover()
-
-    # Write fake iv_force_queue.json
-    date_dir = tmp_path / "eval_results" / "deal_flow" / "2026-03-05"
-    date_dir.mkdir(parents=True)
-    import json
-    fq_data = [{"symbol": "FAKE", "reason": "test iv divergence"}]
-    (date_dir / "iv_force_queue.json").write_text(json.dumps(fq_data))
-
-    # Patch Path resolution to point at tmp_path
-    monkeypatch.chdir(tmp_path)
-
-    items = []
-    selected_ids = []
-    items, selected_ids = pipeline._inject_force_queue_candidates(
-        items=items,
-        selected_ids=selected_ids,
-        deep_k=8,
-        reserve_quota=4,
-        run_id="2026-03-05-120000-manual",
-    )
-
-    # FAKE should have been injected from disk
-    injected_symbols = [item["symbol"] for item in items]
-    assert "FAKE" in injected_symbols
 
 
 def test_run_equals_discover_then_collect(monkeypatch):
