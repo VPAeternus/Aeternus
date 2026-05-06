@@ -171,7 +171,7 @@ def run_quarter_pipeline(
             theme_acceleration_akg_writeback_attempted_count = int(writeback_stats.get("attempted_count", 0))
             theme_acceleration_akg_writeback_count = int(writeback_stats.get("effective_signal_count", 0))
             theme_acceleration_akg_edge_write_count = int(writeback_stats.get("edge_write_count", 0))
-            if theme_acceleration_akg_writeback_count or theme_acceleration_akg_edge_write_count:
+            if theme_acceleration_akg_writeback_attempted_count:
                 akg.save()
         except Exception as exc:
             theme_acceleration_akg_writeback_count = 0
