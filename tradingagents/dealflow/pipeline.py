@@ -19,21 +19,19 @@ from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.context import get_event_state
 
 from .contracts import DealFlowShortlist, EventTriggerResult, ResearchQueue, ResearchQueueItem
-from .fundamental_shadow import build_fundamental_shadow_report
 from .hypothesis_ledger import append_ledger_row, make_ledger_row
 from .manual_watchlist import list_active_ideas, validate_symbol_liquidity
 from .negative_constraints import check_symbol_theme_suppression
 from .ranking import rank_candidates
 from .scoring import CORE_SCORE_WEIGHTS, detect_needles, score_candidates
 from .sources import (
-    collect_fundamental_signals,
-    collect_macro_signals,
     collect_price_momentum_signals,
     collect_sector_rotation_signals,
     collect_smart_money_signals,
     collect_social_news_signals,
     collect_insider_cluster_signals,
     scan_breakout_discovery,
+    scan_thirteenf_watchlist,
 )
 from .themes import select_research_playbook, why_now_text
 from .akg_universe import (
@@ -92,11 +90,6 @@ def _load_json_file(path: Path) -> Any:
         return json.loads(path.read_text())
     except Exception:
         return None
-
-
-def _load_macro_cache(as_of_date: str) -> Dict[str, Any]:
-    payload = _load_json_file(Path("eval_results") / "deal_flow" / f"macro_cache_{as_of_date}.json")
-    return dict(payload or {})
 
 
 def _load_open_position_symbols() -> List[str]:
@@ -240,7 +233,6 @@ class DealFlowPipeline:
         }
         x_feed_merged: Dict[str, Any] = {}
         technical_ignition_result: Dict[str, Any] = {}
-        earnings_options_result: Dict[str, Any] = {}
 
         # Include x-feed social tickers in universe
         try:
@@ -307,7 +299,6 @@ class DealFlowPipeline:
             print(f"[pipeline] insider sweep error: {exc}", file=_sys.stderr)
 
         technical_ignition_symbols: List[str] = []
-        earnings_options_symbols: List[str] = []
         if bool(self.config.get("dealflow_technical_ignition_enabled", True)):
             try:
                 from tradingagents.dealflow.sources.technical_ignition_scout import scan_technical_ignition_setups
@@ -325,31 +316,34 @@ class DealFlowPipeline:
                 import sys as _sys
                 print(f"[pipeline] technical ignition scout error: {exc}", file=_sys.stderr)
 
-        if bool(self.config.get("dealflow_earnings_options_scout_enabled", True)):
+        thirteenf_result: Dict[str, Any] = {}
+        thirteenf_symbols: List[str] = []
+        if bool(self.config.get("dealflow_thirteenf_watchlist_enabled", True)):
             try:
-                from tradingagents.dealflow.sources.earnings_options_scout import scan_manual_earnings_options_setups
-                earnings_options_result = scan_manual_earnings_options_setups(as_of_date=as_of_date)
-                earnings_options_symbols = list(earnings_options_result.get("promoted_symbols", []) or [])
-                if earnings_options_symbols:
+                thirteenf_result = scan_thirteenf_watchlist(
+                    as_of_date=as_of_date,
+                    max_filings_per_manager=int(self.config.get("dealflow_thirteenf_max_filings_per_manager", 6)),
+                    min_value_usd=float(self.config.get("dealflow_thirteenf_min_value_usd", 10_000_000.0)),
+                )
+                thirteenf_symbols = list(thirteenf_result.get("symbols", []) or [])
+                if thirteenf_symbols:
                     print(
-                        f"[pipeline] earnings/options scout: {len(earnings_options_symbols)} promoted "
-                        f"({', '.join(earnings_options_symbols[:5])})"
+                        f"[pipeline] 13F watchlist scout: {len(thirteenf_symbols)} symbols "
+                        f"({', '.join(thirteenf_symbols[:5])})"
                     )
             except Exception as exc:
                 import sys as _sys
-                print(f"[pipeline] earnings/options scout error: {exc}", file=_sys.stderr)
+                print(f"[pipeline] 13F watchlist scout error: {exc}", file=_sys.stderr)
 
         # --- Build universe AFTER scouts have updated AKG ---
         universe_kwargs = {
-            "extra_symbols": manual_symbols,
+            "extra_symbols": sorted(set(manual_symbols) | set(thirteenf_symbols)),
             "fvg_recall_symbols": fvg_recall_symbols,
             "fma_recall_symbols": fma_recall_symbols,
             "config": self.config,
         }
         if technical_ignition_symbols:
             universe_kwargs["technical_ignition_symbols"] = technical_ignition_symbols
-        if earnings_options_symbols:
-            universe_kwargs["earnings_options_symbols"] = earnings_options_symbols
         universe = build_universe_from_akg(**universe_kwargs)
 
         tier_map = get_last_universe_tier_map()
@@ -359,7 +353,6 @@ class DealFlowPipeline:
             print(f"[pipeline] filtered universe: {len(universe)} symbols "
                   f"(T1={tier_counts.get('T1_ANCHOR', 0)} T2={tier_counts.get('T2_NEIGHBOR', 0)} "
                   f"T3={tier_counts.get('T3_SCOUT', 0)} T3D={tier_counts.get('T3D_TECHNICAL_IGNITION', 0)} "
-                  f"T3E={tier_counts.get('T3E_EARNINGS_OPTIONS', 0)} "
                   f"T4={tier_counts.get('T4_DARK', 0)} MANUAL={tier_counts.get('MANUAL', 0)})")
 
         # Store results for collect() to consume
@@ -382,7 +375,7 @@ class DealFlowPipeline:
                 _iv_results,
                 _insider_result,
                 technical_ignition_result,
-                earnings_options_result,
+                thirteenf_result,
             )
         except Exception:
             scout_audit = {}
@@ -436,7 +429,7 @@ class DealFlowPipeline:
                 discovery_delta=discovery_delta,
                 universe_filter=universe_filter_report or {"symbols": [str(row.get("symbol", "")).upper().strip() for row in universe]},
                 x_feed_merged=x_feed_merged,
-                macro_cache=_load_macro_cache(as_of_date),
+                macro_cache={},
                 holdings=_load_open_position_symbols(),
             )
         except Exception:
@@ -474,8 +467,6 @@ class DealFlowPipeline:
             "iv_force_queue_count": iv_count,
             "technical_ignition_count": len(technical_ignition_symbols),
             "technical_ignition_symbols": technical_ignition_symbols,
-            "earnings_options_count": len(earnings_options_symbols),
-            "earnings_options_symbols": earnings_options_symbols,
             "insider_summary": insider_summary,
             "manual_symbols": manual_symbols,
             "fvg_recall_symbols": fvg_recall_symbols,
@@ -500,13 +491,12 @@ class DealFlowPipeline:
         iv_result: Dict[str, Any],
         insider_result: Dict[str, Any],
         technical_ignition_result: Optional[Dict[str, Any]] = None,
-        earnings_options_result: Optional[Dict[str, Any]] = None,
+        thirteenf_result: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """Build a compact audit dict from scout return values."""
         technical_ignition_payload = dict(technical_ignition_result or {})
-        earnings_options_payload = dict(earnings_options_result or {})
+        thirteenf_payload = dict(thirteenf_result or {})
         combined_signals = list(technical_ignition_payload.get("signals", []) or [])
-        combined_signals.extend(list(earnings_options_payload.get("signals", []) or []))
         audit: Dict[str, Any] = {
             "date": as_of_date,
             "timestamp": dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -539,12 +529,11 @@ class DealFlowPipeline:
                 "stale_symbols": list(technical_ignition_payload.get("stale_symbols", []) or []),
                 "stale": list(technical_ignition_payload.get("stale", []) or []),
             },
-            "earnings_options": {
-                "promoted_count": int(earnings_options_payload.get("promoted_count", 0) or 0),
-                "promoted_symbols": list(earnings_options_payload.get("promoted_symbols", []) or []),
-                "promoted": list(earnings_options_payload.get("promoted", []) or []),
-                "artifact_path": earnings_options_payload.get("artifact_path"),
-                "source_status": earnings_options_payload.get("source_status", "NO_DATA"),
+            "thirteenf_watchlist": {
+                "candidate_count": int(thirteenf_payload.get("candidate_count", 0) or 0),
+                "symbols": list(thirteenf_payload.get("symbols", []) or []),
+                "candidates": list(thirteenf_payload.get("candidates", []) or []),
+                "policy_id": thirteenf_payload.get("policy_id", ""),
             },
             "signals": combined_signals,
         }
@@ -637,7 +626,60 @@ class DealFlowPipeline:
             "symbol_frames": symbol_frames,
         }
 
+    def _preflight_akg_liquidity(self, as_of_date: str) -> Dict[str, Any]:
+        min_coverage = float(self.config.get("dealflow_liquidity_preflight_min_coverage", 0.80))
+        max_age_days = int(self.config.get("dealflow_liquidity_preflight_max_age_days", 1))
+        refresh_enabled = bool(self.config.get("dealflow_liquidity_preflight_refresh_enabled", True))
+        report: Dict[str, Any] = {
+            "date": as_of_date,
+            "company_count": 0,
+            "fresh_count": 0,
+            "coverage": 0.0,
+            "max_age_days": max_age_days,
+            "min_coverage": min_coverage,
+            "refresh_attempted": False,
+            "refresh_result": {},
+            "status": "UNKNOWN",
+        }
+
+        def _compute() -> Dict[str, Any]:
+            from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
+            akg = AeternusKnowledgeGraph.load()
+            company_nodes = [n for n in akg._nodes.values() if n.get("node_type") == "company"]
+            fresh = 0
+            try:
+                as_of = dt.datetime.strptime(as_of_date, "%Y-%m-%d").date()
+            except Exception:
+                as_of = dt.date.today()
+            for node in company_nodes:
+                if _coerce_liquidity_score(node.get("liquidity_score")) is None:
+                    continue
+                cached = str(node.get("liquidity_cached_at") or "").strip()
+                try:
+                    cached_date = dt.datetime.strptime(cached, "%Y-%m-%d").date()
+                except Exception:
+                    continue
+                if (as_of - cached_date).days <= max_age_days:
+                    fresh += 1
+            total = len(company_nodes)
+            coverage = (fresh / total) if total else 1.0
+            return {"company_count": total, "fresh_count": fresh, "coverage": coverage}
+
+        try:
+            report.update(_compute())
+            if report["coverage"] < min_coverage and refresh_enabled:
+                report["refresh_attempted"] = True
+                from tradingagents.dealflow.sources.universe_seeder import refresh_liquidity
+                report["refresh_result"] = dict(refresh_liquidity())
+                report.update(_compute())
+            report["status"] = "OK" if report["coverage"] >= min_coverage else "LOW_COVERAGE"
+        except Exception as exc:
+            report["status"] = "ERROR"
+            report["error"] = str(exc)
+        return report
+
     def _build_fvg_recall_channel(self, as_of_date: str) -> Dict[str, Any]:
+        liquidity_preflight = self._preflight_akg_liquidity(as_of_date)
         if not bool(self.config.get("dealflow_fvg_recall_enabled", True)):
             return {
                 "selected_symbols": [],
@@ -719,6 +761,7 @@ class DealFlowPipeline:
             "quota": quota,
             "rows": selected_rows,
             "invalid_symbols_removed": invalid_symbols_removed if "invalid_symbols_removed" in locals() else [],
+            "liquidity_preflight": liquidity_preflight,
             "rule_snapshot": {
                 "enabled": True,
                 "quota": quota,
@@ -738,6 +781,7 @@ class DealFlowPipeline:
         }
 
     def _build_fma_recall_channel(self, as_of_date: str) -> Dict[str, Any]:
+        liquidity_preflight = self._preflight_akg_liquidity(as_of_date)
         if not bool(self.config.get("dealflow_fma_recall_enabled", True)):
             return {
                 "selected_symbols": [],
@@ -837,6 +881,7 @@ class DealFlowPipeline:
             "quota": quota,
             "rows": selected_rows,
             "invalid_symbols_removed": invalid_symbols_removed if "invalid_symbols_removed" in locals() else [],
+            "liquidity_preflight": liquidity_preflight,
             "rule_snapshot": {
                 "enabled": True,
                 "quota": quota,
@@ -921,7 +966,6 @@ class DealFlowPipeline:
                 "config": self.config,
             }),
             ("price_momentum", collect_price_momentum_signals, (universe,), {}),
-            ("macro", collect_macro_signals, (universe,), {"as_of_date": as_of_date}),
             ("smart_money", collect_smart_money_signals, (universe,), {
                 "as_of_date": as_of_date,
                 "config": self.config,
@@ -929,18 +973,6 @@ class DealFlowPipeline:
             ("sector_rotation", collect_sector_rotation_signals, (universe,), {}),
         ])
 
-        if bool(self.config.get("dealflow_fundamental_factor_enabled", True)):
-            connector_tasks.append(
-                (
-                    "fundamental_factor_shadow",
-                    collect_fundamental_signals,
-                    (universe,),
-                    {
-                        "as_of_date": as_of_date,
-                        "config": self.config,
-                    },
-                )
-            )
 
         if bool(self.config.get("dealflow_insider_cluster_enabled", True)):
             connector_tasks.append(("insider_cluster", collect_insider_cluster_signals, (universe,), {
@@ -2269,17 +2301,6 @@ class DealFlowPipeline:
         (base / "manual_merge.json").write_text(json.dumps(manual_merge, indent=2))
         (base / "shortlist_top20.json").write_text(json.dumps(shortlist, indent=2))
         (base / "research_queue.json").write_text(json.dumps(research_queue, indent=2))
-        fundamental_shadow_summary = build_fundamental_shadow_report(
-            as_of_date,
-            normalized_signals,
-            shortlist,
-            research_queue,
-        )
-        shortlist["fundamental_shadow_summary"] = fundamental_shadow_summary
-        (base / "fundamental_factor_shadow.json").write_text(
-            json.dumps(fundamental_shadow_summary, indent=2)
-        )
-
         # Full scored candidate list — all symbols that passed the evidence gate,
         # not just the top-k shortlist. Enables hindsight on the ranking cutoff.
         if all_scored_candidates:
