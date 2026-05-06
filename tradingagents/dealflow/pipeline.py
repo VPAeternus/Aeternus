@@ -43,6 +43,7 @@ from .akg_writeback import writeback_scores_to_akg, writeback_signals_to_akg
 from .discovery_reports import empty_discovery_delta, write_discovery_delta_report, write_theme_heatmap_report
 from .fma_recall import _build_fma_feature_frame, score_fma_cross_section
 from .fvg_recall import _build_feature_frame, _extract_ohlcv_frame
+from .scout_audit_report import build_and_write_scout_audit
 from .scout_compiler import run_scout_compiler_sidecar
 from .scout_quality import build_scout_quality_daily, persist_scout_quality_daily
 from .universe_filter import build_universe_filter_report, summarize_universe_filter
@@ -402,54 +403,14 @@ class DealFlowPipeline:
         thirteenf_result: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """Build a compact audit dict from scout return values."""
-        technical_ignition_payload = dict(technical_ignition_result or {})
-        thirteenf_payload = dict(thirteenf_result or {})
-        combined_signals = list(technical_ignition_payload.get("signals", []) or [])
-        audit: Dict[str, Any] = {
-            "date": as_of_date,
-            "timestamp": dt.datetime.now(dt.timezone.utc).isoformat(),
-            "breakout": {
-                "count": len(breakout_result.get("alerts", [])),
-                "alerts": [
-                    {"ticker": a["ticker"], "score": a.get("score"), "near_high": round(a.get("near_high", 0), 4)}
-                    for a in breakout_result.get("alerts", [])
-                ],
-            },
-            "iv": {
-                "force_queue": [e.get("ticker") for e in iv_result.get("force_queue", [])],
-                "akg_enriched": iv_result.get("akg_enriched", []),
-            },
-            "insider": {
-                "buy_clusters": [
-                    {"ticker": c.get("ticker"), "score": c.get("cluster_score"), "distinct_insiders": c.get("distinct_insiders")}
-                    for c in insider_result.get("buy_clusters", [])
-                ],
-                "sell_clusters": [
-                    {"ticker": c.get("ticker"), "score": c.get("cluster_score"), "distinct_insiders": c.get("distinct_insiders")}
-                    for c in insider_result.get("sell_clusters", [])
-                ],
-            },
-            "technical_ignition": {
-                "promoted_count": int(technical_ignition_payload.get("promoted_count", 0) or 0),
-                "promoted_symbols": list(technical_ignition_payload.get("promoted_symbols", []) or []),
-                "promoted": list(technical_ignition_payload.get("promoted", []) or []),
-                "stale_count": int(technical_ignition_payload.get("stale_count", 0) or 0),
-                "stale_symbols": list(technical_ignition_payload.get("stale_symbols", []) or []),
-                "stale": list(technical_ignition_payload.get("stale", []) or []),
-            },
-            "thirteenf_watchlist": {
-                "candidate_count": int(thirteenf_payload.get("candidate_count", 0) or 0),
-                "symbols": list(thirteenf_payload.get("symbols", []) or []),
-                "candidates": list(thirteenf_payload.get("candidates", []) or []),
-                "policy_id": thirteenf_payload.get("policy_id", ""),
-            },
-            "signals": combined_signals,
-        }
-        audit = json.loads(json.dumps(audit, default=str))
-        # Persist
-        out_dir = Path("eval_results") / "deal_flow" / as_of_date
-        out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / "scout_audit.json").write_text(json.dumps(audit, indent=2))
+        audit = build_and_write_scout_audit(
+            as_of_date=as_of_date,
+            breakout_result=breakout_result,
+            iv_result=iv_result,
+            insider_result=insider_result,
+            technical_ignition_result=technical_ignition_result,
+            thirteenf_result=thirteenf_result,
+        )
         self._last_scout_audit = audit
         return audit
 
