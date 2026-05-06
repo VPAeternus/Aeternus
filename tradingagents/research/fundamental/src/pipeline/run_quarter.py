@@ -157,6 +157,9 @@ def run_quarter_pipeline(
 
     post_llm_rows = _load_optional(post_llm_path)
     theme_acceleration_akg_writeback_count = 0
+    theme_acceleration_akg_writeback_attempted_count = 0
+    theme_acceleration_akg_edge_write_count = 0
+    theme_acceleration_akg_writeback_error = ""
     if post_llm_rows:
         write_table(lake_root, "post_llm_scores", add_run_lineage(post_llm_rows, pipeline_run_id=run_id, as_of_date=as_of, source_hash=source_file_hash(post_llm_path)))
         try:
@@ -164,11 +167,17 @@ def run_quarter_pipeline(
             from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
 
             akg = AeternusKnowledgeGraph.load()
-            theme_acceleration_akg_writeback_count = write_theme_acceleration_to_akg(akg, post_llm_rows, as_of)
-            if theme_acceleration_akg_writeback_count:
+            writeback_stats = write_theme_acceleration_to_akg(akg, post_llm_rows, as_of)
+            theme_acceleration_akg_writeback_attempted_count = int(writeback_stats.get("attempted_count", 0))
+            theme_acceleration_akg_writeback_count = int(writeback_stats.get("effective_signal_count", 0))
+            theme_acceleration_akg_edge_write_count = int(writeback_stats.get("edge_write_count", 0))
+            if theme_acceleration_akg_writeback_count or theme_acceleration_akg_edge_write_count:
                 akg.save()
-        except Exception:
+        except Exception as exc:
             theme_acceleration_akg_writeback_count = 0
+            theme_acceleration_akg_writeback_attempted_count = 0
+            theme_acceleration_akg_edge_write_count = 0
+            theme_acceleration_akg_writeback_error = str(exc)
     elif not skip_llm:
         raise RuntimeError("post_llm_path required unless skip_llm=True")
 
@@ -194,6 +203,9 @@ def run_quarter_pipeline(
         "research_memos": len(memos),
         "positions": len(positions),
         "theme_acceleration_akg_writeback_count": theme_acceleration_akg_writeback_count,
+        "theme_acceleration_akg_writeback_attempted_count": theme_acceleration_akg_writeback_attempted_count,
+        "theme_acceleration_akg_edge_write_count": theme_acceleration_akg_edge_write_count,
+        "theme_acceleration_akg_writeback_error": theme_acceleration_akg_writeback_error,
         "skipped_sec_fetch": skip_sec_fetch,
         "skipped_llm": skip_llm,
         "skipped_price_fetch": skip_price_fetch,

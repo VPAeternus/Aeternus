@@ -22,7 +22,7 @@ def test_llm_result_writeback_to_akg_promotes_glw_to_rescan():
         }
     ], "2026-05-05")
 
-    assert count == 1
+    assert count == {"attempted_count": 1, "effective_signal_count": 1, "edge_write_count": 2}
     node = akg._nodes["GLW"]
     assert node["primary_theme"] == "ai_data_center"
     assert node["secondary_themes"] == ["optical_networking"]
@@ -55,3 +55,21 @@ def test_write_theme_acceleration_to_akg_requires_evidence():
     node = akg._nodes["GLW"]
     assert node["signal_theme_acceleration_score"] == 0
     assert node["theme_acceleration_rescan_flag"] is False
+
+
+def test_writeback_missing_evidence_does_not_write_theme_edges():
+    akg = AeternusKnowledgeGraph()
+    write_theme_acceleration_to_akg(
+        akg,
+        [{
+            "ticker": "GLW",
+            "primary_theme": "AI Data Center Infrastructure",
+            "theme_acceleration_score": 15,
+            "theme_evidence": "",
+        }],
+        "2026-05-05",
+    )
+
+    assert akg._nodes["GLW"]["signal_theme_acceleration_score"] == 0
+    assert akg._nodes["GLW"]["theme_acceleration_rescan_flag"] is False
+    assert not any(edge["source"] == "GLW" for edge in akg._edges)

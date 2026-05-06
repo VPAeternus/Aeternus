@@ -8,7 +8,7 @@ FUNDAMENTAL_ROOT = ROOT / "tradingagents" / "research" / "fundamental"
 if str(FUNDAMENTAL_ROOT) not in sys.path:
     sys.path.insert(0, str(FUNDAMENTAL_ROOT))
 
-from src.features.themes import detect_candidate_themes
+from src.features.themes import assign_theme_tailwind_score, detect_candidate_themes
 
 
 def test_canonicalize_theme_id_maps_theme_name_and_alias():
@@ -42,6 +42,22 @@ def test_detect_candidate_themes_includes_alias_matches():
         "theme_evidence": ["Management cited 1.6T optical communications demand."],
     })
     assert "optical_networking" in {row["theme_id"] for row in rows}
+
+
+def test_tailwind_score_uses_canonical_primary_theme_for_cohort_strength():
+    score = assign_theme_tailwind_score(
+        {
+            "ticker": "GLW",
+            "primary_theme": "AI Data Center Infrastructure",
+            "theme_role": "supplier",
+            "theme_confidence": "high",
+            "theme_evidence": ["AI data center demand drove revenue."],
+            "causal_change": 3,
+            "theme_driver_type": "revenue",
+        },
+        cohort_scores={"ai_data_center": {"theme_cohort_strength": "strong"}},
+    )
+    assert score >= 10
 
 
 def test_detect_candidate_themes_uses_alias_role_hint_when_role_missing():

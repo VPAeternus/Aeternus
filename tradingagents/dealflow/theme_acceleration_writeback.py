@@ -8,13 +8,15 @@ from typing import Any, Iterable
 from tradingagents.dealflow.theme_aliases import canonicalize_theme_id, load_theme_aliases
 
 
-def write_theme_acceleration_to_akg(akg: Any, rows: Iterable[dict[str, Any]], as_of_date: str) -> int:
+def write_theme_acceleration_to_akg(akg: Any, rows: Iterable[dict[str, Any]], as_of_date: str) -> dict[str, int]:
     """Write LLM/fundamental theme acceleration output rows into AKG nodes.
 
-    Returns count of rows attempted with valid ticker. AKG enforces evidence-required
+    Returns attempted/effective/edge write counts. AKG enforces evidence-required
     score zeroing and rescan/research-visibility thresholds.
     """
-    count = 0
+    attempted = 0
+    effective = 0
+    edge_count = 0
     aliases = load_theme_aliases()
     for row in rows:
         ticker = str(row.get("ticker", "")).upper().strip()
@@ -33,12 +35,17 @@ def write_theme_acceleration_to_akg(akg: Any, rows: Iterable[dict[str, Any]], as
             "theme_acceleration_reason": "filing_theme_acceleration",
         }
         akg.update_theme_acceleration_signal(ticker, payload)
-        _write_theme_edges(akg, ticker, payload)
-        count += 1
-    return count
+        attempted += 1
+        effective_score = int(getattr(akg, "_nodes", {}).get(ticker, {}).get("signal_theme_acceleration_score") or 0)
+        if effective_score > 0:
+            effective += 1
+        if payload["theme_evidence"] and effective_score > 0:
+            edge_count += _write_theme_edges(akg, ticker, payload)
+    return {"attempted_count": attempted, "effective_signal_count": effective, "edge_write_count": edge_count}
 
 
-def _write_theme_edges(akg: Any, ticker: str, payload: dict[str, Any]) -> None:
+def _write_theme_edges(akg: Any, ticker: str, payload: dict[str, Any]) -> int:
+    count = 0
     confidence = _theme_confidence_to_float(payload.get("theme_confidence"))
     primary = str(payload.get("primary_theme") or "").strip()
     if primary:
@@ -50,6 +57,7 @@ def _write_theme_edges(akg: Any, ticker: str, payload: dict[str, Any]) -> None:
             confidence=confidence,
             evidence_source="filing_theme_acceleration",
         )
+        count += 1
     for theme_id in payload.get("secondary_themes") or []:
         secondary = str(theme_id or "").strip()
         if not secondary or secondary == primary:
@@ -62,6 +70,8 @@ def _write_theme_edges(akg: Any, ticker: str, payload: dict[str, Any]) -> None:
             confidence=confidence,
             evidence_source="filing_theme_acceleration",
         )
+        count += 1
+    return count
 
 
 def _ensure_theme_node(akg: Any, theme_id: str) -> None:

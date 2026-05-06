@@ -125,7 +125,9 @@ def _cohort_strength_value(row: dict[str, Any], cohort_scores: dict[str, Any]) -
     row_strength = clean(row.get("theme_cohort_strength")).lower()
     if row_strength:
         return row_strength
-    primary = _normalise_theme_id(clean(row.get("primary_theme") or row.get("theme_primary")))
+    raw_primary = clean(row.get("primary_theme") or row.get("theme_primary"))
+    aliases = load_theme_aliases() if load_theme_aliases else {}
+    primary = canonicalize_theme_id(raw_primary, aliases) if canonicalize_theme_id else _normalise_theme_id(raw_primary)
     if primary and primary in cohort_scores:
         return clean(cohort_scores[primary].get("theme_cohort_strength")).lower()
     return "inactive"
