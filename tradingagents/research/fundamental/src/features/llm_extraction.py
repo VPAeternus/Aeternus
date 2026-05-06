@@ -1,0 +1,354 @@
+from __future__ import annotations
+
+import csv
+import json
+import re
+import shutil
+import subprocess
+import tempfile
+from pathlib import Path
+from typing import Any, Callable
+
+from src.features.common import clean
+
+
+CSV_FIELDS = [
+    "sample_id",
+    "quarter",
+    "ticker",
+    "event_date",
+    "causal_change",
+    "proof_alignment",
+    "durability",
+    "operating_leverage_quality",
+    "negative_revision_risk",
+    "story_vs_numbers_gap_penalty",
+    "narrative_delta_score",
+    "narrative_delta_bucket",
+    "score_addition",
+    "detected_driver_category",
+    "detected_driver_name",
+    "evidence_positive",
+    "evidence_risk",
+    "confidence",
+    "blocking_issues",
+    "primary_theme",
+    "secondary_themes",
+    "theme_tags",
+    "theme_role",
+    "theme_confidence",
+    "theme_driver_type",
+    "theme_momentum",
+    "theme_evidence",
+    "theme_tailwind_score",
+    "theme_driver_summary",
+    "theme_evidence_summary",
+]
+
+BLOCKED_PACKET_FIELDS = {
+    "return_10d_pct",
+    "return_20d_pct",
+    "return_30d_pct",
+    "return_60d_pct",
+    "return_90d_pct",
+    "entry_open",
+    "tradable_date",
+}
+
+
+def read_packets(path: Path) -> list[dict[str, Any]]:
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def scrub_packet(packet: dict[str, Any]) -> dict[str, Any]:
+    return {key: value for key, value in packet.items() if key not in BLOCKED_PACKET_FIELDS}
+
+
+def result_schema() -> dict[str, Any]:
+    item = {
+        "type": "object",
+        "additionalProperties": False,
+        "properties": {
+            "sample_id": {"type": "string"},
+            "quarter": {"type": "string"},
+            "ticker": {"type": "string"},
+            "event_date": {"type": "string"},
+            "causal_change": {"type": "integer", "minimum": 0, "maximum": 3},
+            "proof_alignment": {"type": "integer", "minimum": 0, "maximum": 3},
+            "durability": {"type": "integer", "minimum": 0, "maximum": 2},
+            "operating_leverage_quality": {"type": "integer", "minimum": 0, "maximum": 2},
+            "negative_revision_risk": {"type": "integer", "minimum": 0, "maximum": 5},
+            "story_vs_numbers_gap_penalty": {"type": "integer", "minimum": 0, "maximum": 3},
+            "narrative_delta_score": {"type": "integer", "minimum": -5, "maximum": 10},
+            "narrative_delta_bucket": {
+                "type": "string",
+                "enum": ["inflecting", "constructive", "neutral", "deteriorating", "unscorable"],
+            },
+            "score_addition": {"type": "integer", "minimum": -3, "maximum": 3},
+            "detected_driver_category": {"type": "string"},
+            "detected_driver_name": {"type": "string"},
+            "evidence_positive": {"type": "string"},
+            "evidence_risk": {"type": "string"},
+            "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+            "blocking_issues": {"type": "string"},
+            "primary_theme": {"type": "string"},
+            "secondary_themes": {"type": "array", "items": {"type": "string"}},
+            "theme_tags": {"type": "array", "items": {"type": "string"}},
+            "theme_role": {
+                "type": "string",
+                "enum": [
+                    "direct_beneficiary",
+                    "supplier",
+                    "customer_exposure",
+                    "infrastructure_provider",
+                    "commodity_exposure",
+                    "platform_leader",
+                    "turnaround_with_theme_tailwind",
+                    "indirect_beneficiary",
+                    "none",
+                ],
+            },
+            "theme_confidence": {"type": "string", "enum": ["none", "low", "medium", "high"]},
+            "theme_driver_type": {"type": "string", "enum": ["revenue", "margin", "demand", "capacity", "pricing", "valuation", "none"]},
+            "theme_momentum": {"type": "string", "enum": ["accelerating", "stable", "fading", "unknown"]},
+            "theme_evidence": {"type": "array", "items": {"type": "string"}},
+            "theme_tailwind_score": {"type": "integer", "minimum": 0, "maximum": 20},
+            "theme_driver_summary": {"type": "string"},
+            "theme_evidence_summary": {"type": "string"},
+        },
+        "required": CSV_FIELDS,
+    }
+    return {"type": "object", "additionalProperties": False, "properties": {"results": {"type": "array", "items": item}}, "required": ["results"]}
+
+
+def build_prompt(packets: list[dict[str, Any]]) -> str:
+    safe_packets = [scrub_packet(packet) for packet in packets]
+    return (
+        "Review SEC 8-K Item 2.02 / EX-99.1 evidence packets. "
+        "Use only packet evidence. Do not use stock price, future returns, news, analyst expectations, or outside knowledge. "
+        "Return JSON only with key `results`. Formula: narrative_delta_score = causal_change + proof_alignment + durability "
+        "+ operating_leverage_quality - negative_revision_risk - story_vs_numbers_gap_penalty. "
+        "Bucket: >=7 inflecting, 3-6 constructive, 0-2 neutral, <0 deteriorating. "
+        "score_addition: inflecting 3, constructive 1, neutral 0, deteriorating -3; if negative_revision_risk >= 4 then -3.\n\n"
+        "Adaptive theme classification: identify any macro, sector, product, commodity, infrastructure, technology, "
+        "or cycle-driven theme that could be causing a re-rating. Do not force AI/data-center; AI is only one possible theme. "
+        "Return primary_theme, secondary_themes, theme_tags, theme_role, theme_confidence, theme_driver_type, "
+        "theme_momentum, theme_evidence, theme_driver_summary, and theme_evidence_summary. "
+        "Set theme_tailwind_score to 0; deterministic scoring computes the final theme score later.\n\n"
+        f"Packets:\n{json.dumps(safe_packets, indent=2, ensure_ascii=True)}"
+    )
+
+
+def _int_field(row: dict[str, Any], key: str, lo: int, hi: int) -> int:
+    try:
+        value = int(row.get(key))
+    except (TypeError, ValueError):
+        raise ValueError(f"{key} invalid: {row.get(key)!r}") from None
+    if value < lo or value > hi:
+        raise ValueError(f"{key} out of range: {value}")
+    return value
+
+
+def _optional_int_field(row: dict[str, Any], key: str, lo: int, hi: int, default: int = 0) -> int:
+    if key not in row or clean(row.get(key)) == "":
+        return default
+    return _int_field(row, key, lo, hi)
+
+
+def _bucket_for(score: int) -> str:
+    if score >= 7:
+        return "inflecting"
+    if score >= 3:
+        return "constructive"
+    if score >= 0:
+        return "neutral"
+    return "deteriorating"
+
+
+def _score_addition_for(bucket: str, risk: int) -> int:
+    if risk >= 4:
+        return -3
+    return {"inflecting": 3, "constructive": 1, "neutral": 0, "deteriorating": -3, "unscorable": 0}[bucket]
+
+
+def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict[str, Any]:
+    if clean(payload.get("sample_id")) != clean(packet.get("sample_id")):
+        raise ValueError(f"sample_id mismatch: {payload.get('sample_id')} != {packet.get('sample_id')}")
+    causal = _int_field(payload, "causal_change", 0, 3)
+    proof = _int_field(payload, "proof_alignment", 0, 3)
+    durability = _int_field(payload, "durability", 0, 2)
+    op_leverage = _int_field(payload, "operating_leverage_quality", 0, 2)
+    risk = _int_field(payload, "negative_revision_risk", 0, 5)
+    gap = _int_field(payload, "story_vs_numbers_gap_penalty", 0, 3)
+    score = max(-5, min(10, causal + proof + durability + op_leverage - risk - gap))
+    bucket = "unscorable" if clean(payload.get("narrative_delta_bucket")) == "unscorable" else _bucket_for(score)
+    if bucket == "unscorable" and not clean(payload.get("blocking_issues")):
+        raise ValueError("unscorable requires blocking_issues")
+    confidence = clean(payload.get("confidence")).lower()
+    if confidence not in {"low", "medium", "high"}:
+        raise ValueError(f"invalid confidence: {confidence}")
+    theme_confidence = clean(payload.get("theme_confidence") or "none").lower()
+    if theme_confidence not in {"none", "low", "medium", "high"}:
+        raise ValueError(f"invalid theme_confidence: {theme_confidence}")
+    theme_role = clean(payload.get("theme_role") or "none")
+    if theme_role not in {
+        "direct_beneficiary",
+        "supplier",
+        "customer_exposure",
+        "infrastructure_provider",
+        "commodity_exposure",
+        "platform_leader",
+        "turnaround_with_theme_tailwind",
+        "indirect_beneficiary",
+        "none",
+    }:
+        raise ValueError(f"invalid theme_role: {theme_role}")
+    theme_driver_type = clean(payload.get("theme_driver_type") or "none")
+    if theme_driver_type not in {"revenue", "margin", "demand", "capacity", "pricing", "valuation", "none"}:
+        raise ValueError(f"invalid theme_driver_type: {theme_driver_type}")
+    theme_momentum = clean(payload.get("theme_momentum") or "unknown")
+    if theme_momentum not in {"accelerating", "stable", "fading", "unknown"}:
+        raise ValueError(f"invalid theme_momentum: {theme_momentum}")
+    theme_tailwind = _optional_int_field(payload, "theme_tailwind_score", 0, 20)
+    secondary = payload.get("secondary_themes") or []
+    tags = payload.get("theme_tags") or []
+    evidence = payload.get("theme_evidence") or []
+    if not isinstance(secondary, list) or not isinstance(tags, list) or not isinstance(evidence, list):
+        raise ValueError("theme list fields must be arrays")
+    normalized = {field: payload.get(field, "") for field in CSV_FIELDS}
+    normalized.update(
+        {
+            "sample_id": clean(packet.get("sample_id")),
+            "quarter": clean(payload.get("quarter") or packet.get("quarter")),
+            "ticker": clean(payload.get("ticker") or packet.get("ticker")),
+            "event_date": clean(payload.get("event_date") or packet.get("event_date")),
+            "causal_change": causal,
+            "proof_alignment": proof,
+            "durability": durability,
+            "operating_leverage_quality": op_leverage,
+            "negative_revision_risk": risk,
+            "story_vs_numbers_gap_penalty": gap,
+            "narrative_delta_score": score,
+            "narrative_delta_bucket": bucket,
+            "score_addition": _score_addition_for(bucket, risk),
+            "confidence": confidence,
+            "primary_theme": clean(payload.get("primary_theme")),
+            "secondary_themes": json.dumps([clean(item) for item in secondary if clean(item)], ensure_ascii=True),
+            "theme_tags": json.dumps([clean(item) for item in tags if clean(item)], ensure_ascii=True),
+            "theme_role": theme_role,
+            "theme_confidence": theme_confidence,
+            "theme_driver_type": theme_driver_type,
+            "theme_momentum": theme_momentum,
+            "theme_evidence": json.dumps([clean(item) for item in evidence if clean(item)], ensure_ascii=True),
+            "theme_tailwind_score": theme_tailwind,
+            "theme_driver_summary": clean(payload.get("theme_driver_summary")),
+            "theme_evidence_summary": clean(payload.get("theme_evidence_summary") or payload.get("theme_driver_summary")),
+        }
+    )
+    return normalized
+
+
+def extract_json_payload(raw: str) -> Any:
+    text = raw.strip()
+    if text.startswith("```"):
+        text = re.sub(r"^```(?:json)?\s*", "", text)
+        text = re.sub(r"\s*```$", "", text)
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        start_candidates = [idx for idx in [text.find("{"), text.find("[")] if idx != -1]
+        if not start_candidates:
+            raise
+        start = min(start_candidates)
+        end = max(text.rfind("}"), text.rfind("]"))
+        if end <= start:
+            raise
+        return json.loads(text[start : end + 1])
+
+
+def codex_invoker(prompt: str, schema: dict[str, Any], model: str, reasoning_effort: str) -> str:
+    codex_path = shutil.which("codex") or "/Applications/Codex.app/Contents/Resources/codex"
+    with tempfile.NamedTemporaryFile("w", suffix=".json", encoding="utf-8", delete=False) as handle:
+        json.dump(schema, handle)
+        schema_path = handle.name
+    proc = subprocess.run(
+        [
+            codex_path,
+            "exec",
+            "-m",
+            model,
+            "-c",
+            f'model_reasoning_effort="{reasoning_effort}"',
+            "--skip-git-repo-check",
+            "--sandbox",
+            "read-only",
+            "--output-schema",
+            schema_path,
+            prompt,
+        ],
+        text=True,
+        capture_output=True,
+    )
+    stdout, stderr = proc.stdout, proc.stderr
+    if proc.returncode != 0:
+        raise RuntimeError(f"codex exit {proc.returncode}: {stderr[-1200:]}")
+    return stdout
+
+
+def _batched(items: list[dict[str, Any]], size: int) -> list[list[dict[str, Any]]]:
+    return [items[idx : idx + size] for idx in range(0, len(items), size)]
+
+
+def run_llm_batches(
+    packets: list[dict[str, Any]],
+    *,
+    output_dir: Path,
+    invoker: Callable[[str, dict[str, Any], str, str], str] = codex_invoker,
+    model: str,
+    reasoning_effort: str,
+    batch_size: int = 8,
+    resume: bool = True,
+    max_attempts: int = 2,
+) -> list[dict[str, Any]]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    written: list[dict[str, Any]] = []
+    schema = result_schema()
+    for batch_index, batch in enumerate(_batched(packets, batch_size), start=1):
+        out_path = output_dir / f"batch_{batch_index:04d}.json"
+        if resume and out_path.exists():
+            written.extend(json.loads(out_path.read_text(encoding="utf-8")))
+            continue
+        prompt = build_prompt(batch)
+        (output_dir / f"batch_{batch_index:04d}_prompt.txt").write_text(prompt, encoding="utf-8")
+        last_error: Exception | None = None
+        for attempt in range(1, max_attempts + 1):
+            try:
+                raw = invoker(prompt, schema, model, reasoning_effort)
+                (output_dir / f"batch_{batch_index:04d}_attempt_{attempt}_raw.txt").write_text(raw, encoding="utf-8")
+                parsed = extract_json_payload(raw)
+                results = parsed["results"] if isinstance(parsed, dict) and "results" in parsed else parsed
+                if not isinstance(results, list) or len(results) != len(batch):
+                    raise ValueError("LLM result count mismatch")
+                normalized = [validate_llm_result(result, packet) for result, packet in zip(results, batch)]
+                out_path.write_text(json.dumps(normalized, indent=2), encoding="utf-8")
+                written.extend(normalized)
+                break
+            except Exception as exc:  # noqa: BLE001
+                last_error = exc
+                (output_dir / f"batch_{batch_index:04d}_attempt_{attempt}_error.txt").write_text(str(exc), encoding="utf-8")
+        else:
+            raise RuntimeError(f"batch_{batch_index:04d} failed: {last_error}")
+    return written
+
+
+def write_consolidated_csv(output_dir: Path, output_csv: Path) -> Path:
+    rows: list[dict[str, Any]] = []
+    for path in sorted(output_dir.glob("batch_*.json")):
+        if re.fullmatch(r"batch_\d{4}\.json", path.name):
+            rows.extend(json.loads(path.read_text(encoding="utf-8")))
+    output_csv.parent.mkdir(parents=True, exist_ok=True)
+    with output_csv.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(rows)
+    return output_csv

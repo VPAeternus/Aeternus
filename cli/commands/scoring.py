@@ -1093,11 +1093,6 @@ def analyze_batch(
     skipped_count = 0
     analysis_mode_counts = {"DEEP": 0, "QUICK": 0}
 
-    # Pre-warm macro cache once — macro data is market-wide, not per-ticker.
-    # All Macro Reviewer nodes will get cache hits instead of triggering fetches.
-    from tradingagents.agents.utils.macro_engine import pre_warm_macro_cache
-    pre_warm_macro_cache()
-
     for item in queue_items:
         queue_id = str(item.get("queue_id", "")).strip()
         symbol = str(item.get("symbol", "")).upper().strip()

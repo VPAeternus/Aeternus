@@ -252,11 +252,7 @@ def _compute_fundamental_overlay(fundamental_sub: Optional[Dict[str, int]]) -> D
 
 
 def _compute_fundamental_shadow_signal(fundamental_sub: Optional[Dict[str, int]]) -> Dict[str, Any]:
-    from tradingagents.research.fundamental_autoresearch.shadow_signal import (
-        compute_shadow_fundamental_signal,
-    )
-
-    return compute_shadow_fundamental_signal(fundamental_sub)
+    return {"strategy": None, "gate_status": None, "recommended_status": None}
 
 
 def _compute_sentiment_sub(metrics: Dict[str, Any]) -> Dict[str, int]:
@@ -359,22 +355,12 @@ def gather_computation_data(
     # Ensure .env is loaded (API keys) and SSL certs are configured
     _ensure_env()
     from tradingagents.dataflows.interface import route_to_vendor
-    from tradingagents.agents.utils.fundamental_engine import build_fundamental_snapshot
     from tradingagents.agents.utils.sentiment_engine import build_sentiment_snapshot
-    from tradingagents.agents.utils.macro_engine import build_macro_snapshot, pre_warm_macro_cache
     from tradingagents.agents.utils.momentum_engine import build_momentum_snapshot
     from tradingagents.agents.utils.options_engine import build_options_snapshot
     from tradingagents.agents.utils.flow_toxicity_engine import build_flow_toxicity_snapshot
 
-    # Fundamentals
-    def _gather_fundamentals():
-        overview = _safe_call(route_to_vendor, "get_fundamentals", ticker, date)
-        balance_sheet = _safe_call(route_to_vendor, "get_balance_sheet", ticker, "quarterly", date)
-        cashflow = _safe_call(route_to_vendor, "get_cashflow", ticker, "quarterly", date)
-        income_stmt = _safe_call(route_to_vendor, "get_income_statement", ticker, "quarterly", date)
-        return build_fundamental_snapshot(overview, balance_sheet, cashflow, income_stmt)
-
-    fundamental_metrics = _safe_call(_gather_fundamentals)
+    fundamental_metrics = {}
 
     # Sentiment
     def _gather_sentiment():
@@ -385,12 +371,7 @@ def gather_computation_data(
 
     sentiment_metrics = _safe_call(_gather_sentiment)
 
-    # Macro
-    def _gather_macro():
-        pre_warm_macro_cache()
-        return build_macro_snapshot(ticker, sector, asset_class)
-
-    macro_metrics = _safe_call(_gather_macro)
+    macro_metrics = {}
 
     # Momentum
     momentum_metrics = _safe_call(build_momentum_snapshot, ticker, date)

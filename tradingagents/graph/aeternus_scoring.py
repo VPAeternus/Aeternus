@@ -15,7 +15,6 @@ from .fama_french import get_ff_factors
 from .epistemic import build_epistemic_report
 from .calibration import build_calibration_report
 from tradingagents.agents.utils.agent_utils import extract_text_content, make_cached_system_message
-from tradingagents.research.fundamental_autoresearch.shadow_signal import compute_shadow_fundamental_signal
 
 # Minimum data_coverage (0.0–1.0) for computation engine metrics to anchor a pillar score.
 # Below this threshold, the pillar falls back to LLM-scored estimate.
@@ -182,7 +181,11 @@ class AeternusScorer:
         else:
             anchored_fundamental = None
         fundamental_overlay = self.compute_fundamental_overlay(fundamental_sub)
-        fundamental_shadow = compute_shadow_fundamental_signal(fundamental_sub)
+        fundamental_shadow = {
+            "strategy": None,
+            "gate_status": None,
+            "recommended_status": None,
+        }
 
         # Compute anchored sentiment sub-scores if metrics provided
         sentiment_sub = None

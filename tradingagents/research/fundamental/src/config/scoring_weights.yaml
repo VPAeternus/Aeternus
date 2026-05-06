@@ -1,0 +1,15 @@
+tier_structure_score_max: 30
+llm_business_improvement_score_max: 45
+fundamental_rerating_score_max: 15
+theme_tailwind_score_max: 20
+theme_external_confirmation_score_max: legacy_only
+market_regime_penalty: excluded
+kill_review_cap: 20
+market_repricing_score:
+  score_le_0_and_qoq_20: 6
+  score_le_0_and_qoq_50_additional: 4
+  score_le_0_and_qoq_100_additional: 4
+  persistent_repricing_wave: 5
+  adaptive_theme_confirmed: 5
+  theme_plus_repricing: 5
+  cap: 20

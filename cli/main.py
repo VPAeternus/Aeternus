@@ -37,15 +37,13 @@ importlib.import_module("cli.commands.universe_seeder")  # akg-seed
 # importlib.import_module("cli.commands.x_feed_scout")     # x-discover — disabled (xAI API not used, replaced by x-feed manual workflow)
 importlib.import_module("cli.commands.breakout_scanner")  # breakout-scan
 # importlib.import_module("cli.commands.social_prompt")      # social-prompt — deleted (replaced by x-feed 13-pass workflow)
-importlib.import_module("cli.commands.macro_prompt")       # macro-prompt
-importlib.import_module("cli.commands.earnings_options_prompt")  # earnings-options-prompt
 importlib.import_module("cli.commands.x_feed_manual")      # x-feed
 importlib.import_module("cli.commands.research_analysts") # research-analysts
 importlib.import_module("cli.commands.position_review")    # position-review
 importlib.import_module("cli.commands.manual_positions")   # add-position, remove-position
 importlib.import_module("cli.commands.cohort_compare")     # cohort-compare
 importlib.import_module("cli.commands.symphony")           # symphony-status
-importlib.import_module("cli.commands.fundamental_research")  # fundamental-research
+importlib.import_module("cli.commands.fundamental")        # fundamental
 importlib.import_module("cli.commands.context")            # event-state
 importlib.import_module("cli.commands.recall")             # recall fvg, recall fma
 

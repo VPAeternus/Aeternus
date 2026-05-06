@@ -28,10 +28,6 @@ from tradingagents.dataflows.config import set_config
 from tradingagents.agents.utils.agent_utils import (
     get_stock_data,
     get_indicators,
-    get_fundamentals,
-    get_balance_sheet,
-    get_cashflow,
-    get_income_statement,
     get_news,
     get_insider_sentiment,
     get_insider_transactions,
@@ -58,7 +54,7 @@ class TradingAgentsGraph:
 
     def __init__(
         self,
-        selected_analysts=["market", "social", "news", "fundamentals"],
+        selected_analysts=["market", "social", "news"],
         debug=False,
         config: Dict[str, Any] = None,
     ):
@@ -344,15 +340,6 @@ class TradingAgentsGraph:
                     get_global_news,
                     get_insider_sentiment,
                     get_insider_transactions,
-                ]
-            ),
-            "fundamentals": ToolNode(
-                [
-                    # Fundamental analysis tools
-                    get_fundamentals,
-                    get_balance_sheet,
-                    get_cashflow,
-                    get_income_statement,
                 ]
             ),
         }

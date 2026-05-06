@@ -1,0 +1,18 @@
+[project]
+name = "aeternusagents-fundamental"
+version = "0.1.0"
+description = "Standalone live fundamental stock-screening framework"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas>=3.0.1",
+    "pyarrow>=20.0.0",
+    "requests>=2.32.5",
+    "yfinance>=1.2.0",
+    "PyYAML>=6.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]

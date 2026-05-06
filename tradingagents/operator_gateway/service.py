@@ -513,14 +513,6 @@ class OperatorGatewayService:
                 "Ingest writes raw archives plus merged symbols for this date.",
             ]
             return detail
-        if scout_id_norm == "macro_prompt":
-            detail["prompt_text"] = self._build_macro_prompt(resolved_date)
-            detail["ingest_schema"] = {
-                "required": ["raw_payload"],
-                "optional": ["as_of_date"],
-            }
-            detail["notes"] = ["Macro payload must include all 8 dimensions and all 11 sectors."]
-            return detail
         if scout_id_norm == "earnings_options_prompt":
             detail["prompt_text"] = self._build_earnings_options_prompt(resolved_date)
             detail["ingest_schema"] = {
@@ -555,14 +547,6 @@ class OperatorGatewayService:
                     "Paste into Grok, then POST raw output to /ops/scouts/x_feed_manual/ingest "
                     "with the same pass_num."
                 ),
-            }
-        if scout_id_norm == "macro_prompt":
-            return {
-                "scout_id": scout_id_norm,
-                "as_of_date": resolved_date,
-                "pass_num": None,
-                "prompt_text": self._build_macro_prompt(resolved_date),
-                "copy_hint": "Paste into Grok, then POST output to /ops/scouts/macro_prompt/ingest.",
             }
         if scout_id_norm == "earnings_options_prompt":
             return {
@@ -628,26 +612,6 @@ class OperatorGatewayService:
                     "completed_passes": len(list(readiness.get("completed_passes", []) or [])),
                     "required_passes": len(list(readiness.get("required_passes", []) or [])),
                     "merged_symbol_count": int(readiness.get("merged_symbol_count", 0) or 0),
-                },
-            }
-
-        if scout_id_norm == "macro_prompt":
-            parsed = self._extract_json_payload(payload_text)
-            from cli.commands.macro_prompt import _validate_macro_payload
-
-            normalized = _validate_macro_payload(parsed)
-            path = self._macro_cache_path(resolved_date)
-            write_json_locked(path, normalized)
-            return {
-                "scout_id": scout_id_norm,
-                "as_of_date": resolved_date,
-                "status": "SAVED",
-                "message": "Macro cache updated.",
-                "artifact_paths": [str(path)],
-                "metrics": {
-                    "regime": str(normalized.get("regime") or ""),
-                    "dimension_count": len(dict(normalized.get("dimensions", {}) or {})),
-                    "sector_count": len(dict(normalized.get("sectors", {}) or {})),
                 },
             }
 
@@ -1373,8 +1337,6 @@ class OperatorGatewayService:
         scout_audit_path = date_dir / "scout_audit.json"
         scout_audit = self._safe_read_json(scout_audit_path)
         x_feed = self._compute_x_feed_readiness(as_of_date)
-        macro_path = self._macro_cache_path(as_of_date)
-        macro_payload = self._safe_read_json(macro_path)
         earnings_path = self._earnings_options_scout_path(as_of_date)
         earnings_payload = self._safe_read_json(earnings_path)
         event_cards_path = date_dir / "event_cards.json"
@@ -1394,7 +1356,6 @@ class OperatorGatewayService:
             else 0
         )
         earnings_promoted = len(list((earnings_payload.get("trending", []) or [])) if earnings_payload else [])
-        macro_sectors = len(dict(macro_payload.get("sectors", {}) or {})) if macro_payload else 0
         x_completed = len(list(x_feed.get("completed_passes", []) or []))
         x_required = len(list(x_feed.get("required_passes", []) or []))
 
@@ -1429,36 +1390,6 @@ class OperatorGatewayService:
                     },
                     {
                         "action_id": "ingest_pass",
-                        "label": "Ingest Grok Output",
-                        "kind": "ingest",
-                        "requires_manual_input": True,
-                    },
-                ],
-            }
-        )
-        scouts.append(
-            {
-                "scout_id": "macro_prompt",
-                "label": "Macro Regime Prompt",
-                "category": "macro",
-                "mode": "manual",
-                "status": "READY" if macro_sectors > 0 else ("NO_DATA" if macro_path.exists() else "MISSING"),
-                "description": "Manual macro prompt + ingest for 8 dimensions and 11 sectors.",
-                "last_run_at_utc": self._latest_artifact_timestamp([macro_path]),
-                "metrics": {
-                    "regime": str(macro_payload.get("regime") or "") if macro_payload else "",
-                    "sector_count": macro_sectors,
-                },
-                "artifacts": self._existing_artifact_strings([macro_path]),
-                "actions": [
-                    {
-                        "action_id": "generate_prompt",
-                        "label": "Get Prompt",
-                        "kind": "prompt",
-                        "requires_manual_input": False,
-                    },
-                    {
-                        "action_id": "ingest_payload",
                         "label": "Ingest Grok Output",
                         "kind": "ingest",
                         "requires_manual_input": True,
@@ -1596,12 +1527,6 @@ class OperatorGatewayService:
         raise OperatorGatewayError(
             f"Invalid pass_num={effective_pass}. Valid range is 1-{len(prompts)}."
         )
-
-    @staticmethod
-    def _build_macro_prompt(as_of_date: str) -> str:
-        from cli.commands.macro_prompt import _MACRO_PROMPT_TEMPLATE
-
-        return str(_MACRO_PROMPT_TEMPLATE).replace("__DATE__", as_of_date)
 
     @staticmethod
     def _build_earnings_options_prompt(as_of_date: str) -> str:

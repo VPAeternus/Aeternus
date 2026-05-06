@@ -615,26 +615,6 @@ def _gather_force_evidence(force: StructuralForce) -> str:
         if len(ticker_lines) > 1:  # has evidence beyond the header
             lines.extend(ticker_lines)
 
-    # Macro evidence (once, FORWARD)
-    try:
-        from tradingagents.agents.utils.macro_engine import build_macro_snapshot
-        macro = build_macro_snapshot("SPY")
-        if macro:
-            regime = macro.get("regime", "unknown")
-            vix = macro.get("indicators", {}).get("vix")
-            credit = macro.get("indicators", {}).get("credit_spread")
-            yc = macro.get("indicators", {}).get("yield_curve_2s10s")
-            parts = [f"regime={regime}"]
-            if vix is not None:
-                parts.append(f"VIX={vix:.1f}")
-            if credit is not None:
-                parts.append(f"credit_spread={credit:.2f}")
-            if yc is not None:
-                parts.append(f"2s10s={yc:.2f}")
-            lines.append(f"\n[FORWARD] Macro: {', '.join(parts)}")
-    except Exception:
-        pass
-
     return "\n".join(lines) if lines else ""
 
 

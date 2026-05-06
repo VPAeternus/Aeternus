@@ -1,0 +1,20 @@
+cap: 20
+direct_exposure_high_confidence: 5
+direct_exposure_medium_confidence: 3
+indirect_exposure: 2
+cohort_strong: 5
+cohort_active: 5
+cohort_emerging: 3
+cohort_fading: -3
+cohort_overheated_extended: -5
+leader_or_direct_beneficiary: 5
+explicit_filing_mention: 3
+revenue_or_backlog_evidence: 3
+margin_or_pricing_evidence: 2
+requires_confirmation:
+  min_confidence: medium
+  excluded_roles: ["indirect_beneficiary", "none"]
+  any_of:
+    - causal_change_eq_3
+    - repricing_momentum_extension
+    - positive_repricing_status

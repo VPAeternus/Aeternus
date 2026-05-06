@@ -47,7 +47,7 @@ class GraphSetup:
         self.config = config or {}
 
     def setup_graph(
-        self, selected_analysts=["market", "social", "news", "fundamentals"]
+        self, selected_analysts=["market", "social", "news"]
     ):
         """Set up and compile the agent workflow graph.
 
@@ -56,14 +56,14 @@ class GraphSetup:
                 - "market": Market analyst
                 - "social": Social media analyst
                 - "news": News analyst
-                - "fundamentals": Fundamentals analyst
         """
         if len(selected_analysts) == 0:
             raise ValueError("Trading Agents Graph Setup Error: no analysts selected!")
 
         # Create analyst nodes
         analyst_nodes = {}
-        has_fundamentals = "fundamentals" in selected_analysts
+        if "fundamentals" in selected_analysts:
+            raise ValueError("Fundamentals framework has been removed from this baseline")
         has_social = "social" in selected_analysts
         has_market = "market" in selected_analysts
 
@@ -82,10 +82,6 @@ class GraphSetup:
                 self.quick_thinking_llm
             )
 
-        if has_fundamentals:
-            analyst_nodes["fundamentals"] = create_fundamentals_analyst(
-                self.quick_thinking_llm
-            )
 
         # Create researcher and manager nodes
         bull_researcher_node = create_bull_researcher(
@@ -114,22 +110,12 @@ class GraphSetup:
         for analyst_type, node in analyst_nodes.items():
             workflow.add_node(f"{analyst_type.capitalize()} Analyst", node)
 
-        # Add Fundamental Reviewer node (deep-thinking critique layer)
-        if has_fundamentals:
-            reviewer_node = create_fundamentals_reviewer(self.deep_thinking_llm)
-            workflow.add_node("Fundamental Reviewer", reviewer_node)
-
         # Add Sentiment Reviewer node (deep-thinking critique layer)
         if has_social:
             sentiment_reviewer_node = create_sentiment_reviewer(self.deep_thinking_llm)
             workflow.add_node("Sentiment Reviewer", sentiment_reviewer_node)
 
-        # Add Macro Reviewer node (deep-thinking critique layer)
         has_news = "news" in selected_analysts
-        if has_news:
-            macro_reviewer_node = create_macro_reviewer(self.deep_thinking_llm)
-            workflow.add_node("Macro Reviewer", macro_reviewer_node)
-
         # Add Momentum Reviewer node (deep-thinking critique layer)
         if has_market:
             momentum_reviewer_node = create_momentum_reviewer(self.deep_thinking_llm)
@@ -154,25 +140,19 @@ class GraphSetup:
         for analyst_type in selected_analysts:
             current_analyst = f"{analyst_type.capitalize()} Analyst"
 
-            if analyst_type == "fundamentals" and has_fundamentals:
-                workflow.add_edge(current_analyst, "Fundamental Reviewer")
-            elif analyst_type == "social" and has_social:
+            if analyst_type == "social" and has_social:
                 workflow.add_edge(current_analyst, "Sentiment Reviewer")
             elif analyst_type == "news" and has_news:
-                workflow.add_edge(current_analyst, "Macro Reviewer")
+                workflow.add_edge(current_analyst, "research_join")
             elif analyst_type == "market" and has_market:
                 workflow.add_edge(current_analyst, "Momentum Reviewer")
 
         # research_join barrier: all selected reviewers converge here
         workflow.add_node("research_join", lambda state: {})
-        if has_fundamentals:
-            workflow.add_edge("Fundamental Reviewer", "research_join")
         if has_market:
             workflow.add_edge("Momentum Reviewer", "research_join")
         if has_social:
             workflow.add_edge("Sentiment Reviewer", "research_join")
-        if has_news:
-            workflow.add_edge("Macro Reviewer", "research_join")
         workflow.add_edge("research_join", "Bull Researcher")
 
         # Add remaining edges

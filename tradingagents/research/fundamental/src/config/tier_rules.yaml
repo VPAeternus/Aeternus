@@ -1,0 +1,96 @@
+tier_0:
+  entry_open_lt: 25
+  revenue_buckets: ["<$100M", "$100M-$500M", "$500M-$1B", "$1B-$2B", "$2B-$10B"]
+tier_1:
+  entry_open_lt: 15
+  revenue_buckets: ["<$100M", "$100M-$500M", "$500M-$1B", "$1B-$2B", "$2B-$10B"]
+tier_2:
+  entry_open_lt: 10
+  revenue_buckets: ["<$100M", "$100M-$500M", "$500M-$1B", "$1B-$2B", "$2B-$10B"]
+tier_3:
+  inherits: tier_1
+  pre_llm_fundamental_score_lte: 0
+tier_4:
+  entry_open_lt: 5
+  revenue_buckets: ["<$100M", "$100M-$500M", "$500M-$1B", "$1B-$2B", "$2B-$10B"]
+hp0_high_price_broad:
+  entry_open_gte: 25
+  pre_llm_fundamental_bucket_not: not_scored
+  use: tracking_only
+  buyable_tier: false
+hp1_quality_pullback:
+  entry_open_gte: 25
+  entry_qoq_pct_lte: -20
+  pre_llm_fundamental_buckets: ["good", "strong"]
+  pre_llm_fundamental_bucket_not: not_scored
+  use: tracking_only
+  buyable_tier: false
+  requires_post_llm_causal_support: true
+  requires_macro_stabilization: true
+  requires_valuation_still_attractive: true
+hp2_dislocation_momentum_priority:
+  entry_open_gte: 25
+  pre_llm_fundamental_score_lte: 0
+  entry_qoq_pct_gte: 20
+  pre_llm_fundamental_bucket_not: not_scored
+  use: tracking_only
+  buyable_tier: false
+  pattern: "higher-price weak/dislocated name already being re-rated"
+hp2_dislocation_momentum_watch:
+  entry_qoq_pct_gte: 15
+  entry_qoq_pct_lt: 20
+  entry_open_gte: 25
+  pre_llm_fundamental_score_lte: 0
+  pre_llm_fundamental_bucket_not: not_scored
+  use: research_watch_tag
+  buyable_tier: false
+hp3_large_quality_theme_exception:
+  entry_open_gte: 25
+  revenue_bucket: ">$10B"
+  pre_llm_fundamental_score_gte: 8
+  pre_llm_fundamental_bucket_not: not_scored
+  use: tracking_only
+  buyable_tier: false
+  requires_theme_confirmation: true
+  requires_post_llm_causal_support: true
+  requires_sector_cohort_strength: true
+hp4_score_reacceleration_watch:
+  entry_open_gte: 25
+  score_change_gte: 2
+  entry_qoq_pct_gte: 10
+  pre_llm_fundamental_bucket_not: not_scored
+  use: watch_ranking_tag_only
+  buyable_tier: false
+  requires_llm_causal_improvement: true
+extended_candidate_universe:
+  any_of:
+    - tier_0_bucket
+    - hp1_quality_pullback
+    - hp2_dislocation_momentum_priority
+    - hp3_large_quality_theme_exception
+extended_research_universe:
+  any_of:
+    - tier_0_bucket
+    - hp1_quality_pullback
+    - hp2_dislocation_momentum_watch
+    - hp3_large_quality_theme_exception
+    - hp4_score_reacceleration_watch
+repricing_momentum:
+  rm1_low_price_dislocation_momentum:
+    max_entry_open: 25
+    max_score: 0
+    min_entry_qoq_pct: 20
+  rm2_weak_acceleration:
+    max_entry_open: 25
+    bucket: weak
+    min_entry_qoq_pct: 20
+  rm3_mid_price_dislocation_momentum:
+    min_entry_open: 15
+    max_entry_open: 25
+    max_score: 0
+    min_entry_qoq_pct: 20
+  rm4_persistent_repricing_wave:
+    max_entry_open: 25
+    max_score: 0
+    min_entry_qoq_pct: 20
+    min_prior_entry_qoq_pct: 20

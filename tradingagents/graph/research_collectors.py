@@ -97,50 +97,14 @@ def collect_news_data(ticker: str, trade_date: str) -> dict:
 
 
 def collect_fundamentals_data(ticker: str, trade_date: str) -> dict:
-    """Collect fundamental snapshot and valuation context for a ticker."""
-    from tradingagents.agents.utils.fundamental_data_tools import _guard_fundamental_payload
-    from tradingagents.agents.utils.fundamental_engine import (
-        build_fundamental_snapshot,
-        compute_yfinance_snapshot,
-    )
-    from tradingagents.dataflows.y_finance import get_ticker_info
-
-    errors = []
-
-    # Fundamental snapshot (same logic as get_fundamental_snapshot tool)
-    snapshot = ""
-    data_coverage = 0.0
-    piotroski_available = False
-    try:
-        overview = route_to_vendor("get_fundamentals", ticker, trade_date)
-        balance_sheet = route_to_vendor("get_balance_sheet", ticker, "quarterly", trade_date)
-        cashflow = route_to_vendor("get_cashflow", ticker, "quarterly", trade_date)
-        income_stmt = route_to_vendor("get_income_statement", ticker, "quarterly", trade_date)
-        snap = build_fundamental_snapshot(overview, balance_sheet, cashflow, income_stmt)
-        data_coverage = snap.get("data_coverage", 0.0)
-        piotroski_available = snap.get("piotroski", {}).get("fscore") is not None
-        snapshot = _guard_fundamental_payload(json.dumps(snap, default=str))
-    except Exception as e:
-        errors.append(f"snapshot: {e}")
-
-    # Valuation context (same logic as get_valuation_context tool)
-    valuation = ""
-    valuation_fields = 0
-    try:
-        info = get_ticker_info(ticker)
-        val = compute_yfinance_snapshot(info)
-        valuation_fields = sum(1 for v in val.values() if v is not None)
-        valuation = json.dumps(val, default=str)
-    except Exception as e:
-        errors.append(f"valuation: {e}")
-
+    """Fundamental framework removed."""
     return {
-        "snapshot": snapshot,
-        "valuation": valuation,
+        "snapshot": "",
+        "valuation": "",
         "quality": {
-            "data_coverage": data_coverage,
-            "piotroski_available": piotroski_available,
-            "valuation_fields": valuation_fields,
-            "fetch_errors": errors,
+            "data_coverage": 0.0,
+            "piotroski_available": False,
+            "valuation_fields": 0,
+            "fetch_errors": ["fundamental_framework_removed"],
         },
     }

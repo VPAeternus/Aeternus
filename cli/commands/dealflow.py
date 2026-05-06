@@ -747,6 +747,7 @@ def _read_multiline_until_end(prompt_label: str = "JSON payload") -> str:
 def _interactive_complete_x_feed(as_of_date: str) -> Dict[str, Any]:
     from tradingagents.dealflow.sources.x_feed_manual import (
         PASS_CONFIGS,
+        finalize_x_feed,
         generate_prompts,
         get_readiness,
         ingest_pass,
@@ -777,92 +778,10 @@ def _interactive_complete_x_feed(as_of_date: str) -> Dict[str, Any]:
             f"merged={int(result.get('tickers_merged', 0) or 0)}"
         )
         readiness = get_readiness(as_of_date)
+    if not readiness.get("missing_passes") and int(readiness.get("merged_symbol_count", 0) or 0) > 0:
+        finalize_x_feed(as_of_date)
+        readiness = get_readiness(as_of_date)
     return readiness
-
-
-def _interactive_complete_macro(as_of_date: str) -> Dict[str, Any]:
-    from cli.commands.macro_prompt import _MACRO_PROMPT_TEMPLATE, _validate_macro_payload
-    from tradingagents.dealflow.sources.macro import _load_macro_cache, _save_macro_cache
-    from tradingagents.dealflow.sources.social_news import _extract_json_payload
-
-    existing = _load_macro_cache(as_of_date)
-    if isinstance(existing, dict) and isinstance(existing.get("sectors"), dict) and existing.get("sectors"):
-        return {
-            "regime": str(existing.get("regime") or ""),
-            "sector_count": len(existing.get("sectors", {})),
-            "dimension_count": len(existing.get("dimensions", {})) if isinstance(existing.get("dimensions"), dict) else 0,
-            "path": str(Path("eval_results") / "deal_flow" / f"macro_cache_{as_of_date}.json"),
-            "source": "existing",
-        }
-
-    console.rule("[bold]Macro Prompt[/bold]")
-    console.print(_MACRO_PROMPT_TEMPLATE.replace("__DATE__", as_of_date))
-    console.print()
-    try:
-        raw = _read_multiline_until_end(prompt_label="macro JSON")
-    except ValueError as exc:
-        console.print(f"[red]{exc}[/red]")
-        raise typer.Exit(1)
-
-    parsed = _extract_json_payload(raw)
-    if not isinstance(parsed, dict):
-        console.print("[red]Invalid JSON — could not parse a JSON object[/red]")
-        raise typer.Exit(1)
-    try:
-        result = _validate_macro_payload(parsed)
-    except ValueError as exc:
-        console.print(f"[red]{exc}[/red]")
-        raise typer.Exit(1)
-    path = _save_macro_cache(as_of_date, result)
-    return {
-        "regime": str(result.get("regime") or ""),
-        "sector_count": len(result.get("sectors", {})),
-        "dimension_count": len(result.get("dimensions", {})),
-        "path": str(path),
-        "source": "ingested",
-    }
-
-
-def _interactive_complete_earnings_options(as_of_date: str) -> Dict[str, Any]:
-    from cli.commands.earnings_options_prompt import _PROMPT_TEMPLATE, _validate_payload
-    from tradingagents.dealflow.sources.earnings_options_scout import (
-        load_earnings_options_scout,
-        save_earnings_options_scout,
-    )
-    from tradingagents.dealflow.sources.social_news import _extract_json_payload
-
-    existing = load_earnings_options_scout(as_of_date)
-    if isinstance(existing, dict) and isinstance(existing.get("trending"), list):
-        return {
-            "setup_count": len(existing.get("trending", [])),
-            "path": str(Path("eval_results") / "deal_flow" / f"earnings_options_scout_{as_of_date}.json"),
-            "source": "existing",
-        }
-
-    console.rule("[bold]Earnings / Options Prompt[/bold]")
-    console.print(_PROMPT_TEMPLATE.replace("__DATE__", as_of_date))
-    console.print()
-    try:
-        raw = _read_multiline_until_end(prompt_label="earnings/options JSON")
-    except ValueError as exc:
-        console.print(f"[red]{exc}[/red]")
-        raise typer.Exit(1)
-
-    parsed = _extract_json_payload(raw)
-    if not isinstance(parsed, dict):
-        console.print("[red]Invalid JSON — could not parse a JSON object[/red]")
-        raise typer.Exit(1)
-    try:
-        result = _validate_payload(parsed)
-    except ValueError as exc:
-        console.print(f"[red]{exc}[/red]")
-        raise typer.Exit(1)
-    path = save_earnings_options_scout(as_of_date, result)
-    return {
-        "setup_count": len(result.get("trending", [])),
-        "path": str(path),
-        "source": "ingested",
-    }
 
 
 def _render_interactive_discover_summary(summary: Dict[str, Any]) -> None:
@@ -870,8 +789,7 @@ def _render_interactive_discover_summary(summary: Dict[str, Any]) -> None:
     console.print(
         f"[green]Discovery complete[/green] | universe={int(summary.get('universe_size', 0) or 0)} | "
         f"breakout={int(summary.get('breakout_count', 0) or 0)} | "
-        f"technical_ignition={int(summary.get('technical_ignition_count', 0) or 0)} | "
-        f"earnings_options={int(summary.get('earnings_options_count', 0) or 0)}"
+        f"technical_ignition={int(summary.get('technical_ignition_count', 0) or 0)}"
     )
     if insider:
         console.print(
@@ -967,26 +885,12 @@ def _run_workflow_interactive(
             f"merged={int(x_feed_readiness.get('merged_symbol_count', 0) or 0)}"
         )
 
-    macro_result = _interactive_complete_macro(run_date_hint)
-    workflow["steps"]["macro_prompt"] = dict(macro_result)
-    console.print(
-        f"[green]Macro cache saved[/green] | regime={macro_result.get('regime') or 'N/A'} | "
-        f"sectors={int(macro_result.get('sector_count', 0) or 0)}"
-    )
-
-    earnings_options_result = _interactive_complete_earnings_options(run_date_hint)
-    workflow["steps"]["earnings_options_prompt"] = dict(earnings_options_result)
-    console.print(
-        f"[green]Earnings/options scout saved[/green] | "
-        f"setups={int(earnings_options_result.get('setup_count', 0) or 0)}"
-    )
-
     run_config = _apply_run_profile_overrides(DEFAULT_CONFIG.copy(), run_profile)
     pipeline = DealFlowPipeline(config=run_config)
 
     console.print(
         "Following scouts are now going to run: "
-        "breakout, technical_ignition, insider, FVG recall, FMA recall, earnings_options"
+        "breakout, technical_ignition, insider, FVG recall, FMA recall"
     )
     discover_summary = pipeline.discover(as_of_date=run_date_hint, trigger="manual")
     workflow["steps"]["discover"] = dict(discover_summary)
@@ -994,8 +898,7 @@ def _run_workflow_interactive(
 
     console.print(
         "Following collectors are now going to run: "
-        "social_news, price_momentum, macro, smart_money, sector_rotation, "
-        "fundamental_factor_shadow, insider_cluster"
+        "social_news, price_momentum, sector_rotation, insider_cluster"
     )
     shortlist, research_queue, normalized_signals, event_state = pipeline.collect(
         as_of_date=run_date_hint,
@@ -1540,8 +1443,11 @@ def workflow_run(
     }
 
     if run_mode == "manual" and require_manual_x_feed:
-        from tradingagents.dealflow.sources.x_feed_manual import get_readiness
+        from tradingagents.dealflow.sources.x_feed_manual import finalize_x_feed, get_readiness, get_readiness_pre_finalize
 
+        pre_x_feed = get_readiness_pre_finalize(run_date_hint)
+        if not pre_x_feed.get("missing_passes") and int(pre_x_feed.get("merged_symbol_count", 0) or 0) > 0:
+            finalize_x_feed(run_date_hint)
         x_feed_readiness = get_readiness(run_date_hint)
         workflow["steps"]["manual_x_feed"] = x_feed_readiness
         if not bool(x_feed_readiness.get("ready")):

@@ -1,0 +1,11 @@
+min_avg_dollar_volume: 500000
+min_market_cap: 0
+entry_score_buy_threshold: 75
+entry_score_research_threshold: 65
+price_vs_signal_soft_limit: 15
+price_vs_signal_hard_limit: 50
+manual_override_allowed_outcomes:
+  - approved_buy
+  - force_watchlist
+  - force_reject
+  - ignore_kill_review
