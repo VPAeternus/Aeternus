@@ -338,4 +338,35 @@ def scan_dod_contract_spikes(
         except Exception as e:
             print(f"[dod_contract_scout] AKG save error: {e}", file=sys.stderr)
 
+    if not dry_run:
+        try:
+            from tradingagents.dealflow.scout_audit import append_scout_audit
+            records = [
+                {
+                    "sector": spike.sector,
+                    "recent_total_usd": spike.recent_total_usd,
+                    "baseline_total_usd": spike.baseline_total_usd,
+                    "z_score": spike.z_score,
+                    "top_recipients": list(spike.top_recipients),
+                    "award_count": spike.award_count,
+                    "direction": spike.direction,
+                    "confidence": spike.confidence,
+                }
+                for spike in spikes
+            ]
+            symbols = [f"DOD_{spike.sector}" for spike in spikes]
+            append_scout_audit(
+                scout="dod_scan",
+                as_of_date=today_str,
+                symbols=symbols,
+                records=records,
+                metadata={
+                    "lookback_days": int(lookback_days),
+                    "baseline_days": int(baseline_days),
+                    "sector_count": len(CONTRACT_SECTORS),
+                },
+            )
+        except Exception as e:
+            print(f"[dod_contract_scout] audit write error: {e}", file=sys.stderr)
+
     return spikes

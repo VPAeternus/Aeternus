@@ -205,7 +205,7 @@ def test_get_readiness_reports_missing_passes(tmp_path, monkeypatch):
     assert readiness["merged_symbol_count"] == 1
 
 
-def test_get_readiness_ready_when_all_passes_and_merged_exist(tmp_path, monkeypatch):
+def test_get_readiness_requires_finalized_manifest(tmp_path, monkeypatch):
     from tradingagents.dealflow.sources import x_feed_manual as mod
 
     raw_dir = tmp_path / "raw"
@@ -213,12 +213,22 @@ def test_get_readiness_ready_when_all_passes_and_merged_exist(tmp_path, monkeypa
     for pass_num in range(1, 16):
         (raw_dir / f"pass_{pass_num:02d}.json").write_text("{}")
     merged_path = tmp_path / "merged.json"
+    graph_path = tmp_path / "theme_emergence_graph.json"
+    manifest_path = tmp_path / "final_manifest.json"
     merged_path.write_text(json.dumps({"NVDA": {"ticker": "NVDA"}, "MSFT": {"ticker": "MSFT"}}))
 
     monkeypatch.setattr(mod, "_raw_dir", lambda d: str(raw_dir))
     monkeypatch.setattr(mod, "_merged_path", lambda d: str(merged_path))
+    monkeypatch.setattr(mod, "_theme_graph_path", lambda d: str(graph_path))
+    monkeypatch.setattr(mod, "_final_manifest_path", lambda d: str(manifest_path))
 
     readiness = mod.get_readiness("2026-03-09")
+    assert readiness["ready"] is False
+    assert readiness["finalized"] is False
+
+    manifest = mod.finalize_x_feed("2026-03-09")
+    readiness = mod.get_readiness("2026-03-09")
+    assert manifest["finalized"] is True
     assert readiness["ready"] is True
     assert readiness["missing_passes"] == []
     assert readiness["merged_symbol_count"] == 2
@@ -322,6 +332,38 @@ def test_ingest_empty_pass_reports_existing_merged_total(tmp_path, monkeypatch):
     assert result["tickers_parsed"] == 0
     assert result["tickers_merged"] == 1
     assert result["akg_written"] == 0
+
+
+def test_theme_normalization_maps_raw_themes_and_catalyst_text():
+    from tradingagents.dealflow.sources.x_feed_manual import parse_pass
+
+    raw = json.dumps({"trending": [{
+        "ticker": "MU",
+        "buzz_rank": 1,
+        "sentiment": "BULLISH",
+        "velocity": "ACCELERATING",
+        "catalyst": "@acct flags HBM and data center AI memory demand",
+        "sector": "Technology",
+        "theme_links": ["earnings", "hbm", "analyst_upgrade"],
+    }]})
+
+    row = parse_pass(raw, 1)[0]
+    assert row["theme_links"] == ["ai_data_center_infrastructure"]
+    assert row["catalyst_tags"] == ["earnings", "analyst_upgrade"]
+    assert row["raw_theme_links"] == ["earnings", "hbm", "analyst_upgrade"]
+
+
+def test_theme_graph_filters_noncanonical_one_ticker_themes():
+    from tradingagents.dealflow.sources.x_feed_manual import build_theme_emergence_graph
+
+    merged = {
+        "ABC": {"ticker": "ABC", "theme_links": ["one_off_story"], "accounts_cited": ["@a"], "co_mentions": [], "evidence_count": 1},
+        "MU": {"ticker": "MU", "theme_links": ["ai_data_center_infrastructure"], "accounts_cited": ["@b"], "co_mentions": [], "evidence_count": 1},
+    }
+    graph = build_theme_emergence_graph("2026-05-05", merged)
+    assert "one_off_story" not in graph["themes"]
+    assert "one_off_story" in graph["filtered_one_ticker_themes"]
+    assert "ai_data_center_infrastructure" in graph["themes"]
 
 
 def test_ingest_gex_only_pass_reports_existing_merged_total(tmp_path, monkeypatch):

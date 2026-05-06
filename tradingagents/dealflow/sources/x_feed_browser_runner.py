@@ -496,7 +496,7 @@ def run_browser_passes(
     prompt_provider: Optional[Callable[[str], List[Tuple[int, str, str]]]] = None,
     ingest_func: Optional[Callable[[str, str, int, bool], Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
-    from tradingagents.dealflow.sources.x_feed_manual import generate_prompts, get_readiness, ingest_pass
+    from tradingagents.dealflow.sources.x_feed_manual import finalize_x_feed, generate_prompts, get_readiness, ingest_pass
 
     prompt_provider = prompt_provider or generate_prompts
     ingest_func = ingest_func or ingest_pass
@@ -537,7 +537,9 @@ def run_browser_passes(
         completed_passes.append(pass_num)
 
     readiness = {}
+    final_manifest = {}
     if not dry_run:
+        final_manifest = dict(finalize_x_feed(as_of_date))
         readiness = dict(get_readiness(as_of_date))
 
     return {
@@ -548,5 +550,6 @@ def run_browser_passes(
         "failed_passes": [],
         "results": results,
         "readiness": readiness,
+        "final_manifest": final_manifest,
         "dry_run": bool(dry_run),
     }

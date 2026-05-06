@@ -253,7 +253,19 @@ aeternus rating-history <UUID>
 
 Generate and inspect the automated shortlist queue:
 
+Daily technical scout preflight:
+
+- `technical-universe-refresh` rebuilds the current technical universe from configured index sources (`SPY`, `QQQ`, `DOW`) and stores the deduped membership snapshot in `eval_results/control/technical_universe/` plus the SQLite technical cache. This answers: “what symbols should technical scouts consider today?”
+- `technical-signal-sync` syncs OHLCV history for that universe into `eval_results/control/technical_signal_cache.db`, then recomputes current KAMA/FVG signal state. This answers: “which current-universe names have live technical ignition/recall setups?”
+- Run these before breakout/technical ignition/FVG/FMA recall so later scouts use current membership and fresh price-derived signals.
+
 ```bash
+# Refresh current technical universe snapshot
+python -m cli.main technical-universe-refresh --as-of-date 2026-05-05 --format table
+
+# Sync OHLCV and recompute KAMA/FVG technical signals
+python -m cli.main technical-signal-sync --format table
+
 # Run deal-flow shortlist + queue (default profile is low-cost daily)
 aeternus source --date 2026-02-06 --trigger manual --top-k 30 --format table
 

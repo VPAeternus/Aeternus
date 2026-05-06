@@ -410,4 +410,32 @@ def scan_commodity_shock_clusters(
         except Exception as e:
             print(f"[commodity_shock_scout] AKG save error: {e}", file=sys.stderr)
 
+    if not dry_run:
+        try:
+            from tradingagents.dealflow.scout_audit import append_scout_audit
+            records = [
+                {
+                    "cluster": alert.cluster_name,
+                    "confidence": alert.confidence,
+                    "direction": alert.direction,
+                    "triggered_instruments": list(alert.triggered_instruments),
+                    "volume_z_max": alert.volume_z_max,
+                }
+                for alert in alerts
+            ]
+            symbols = [ticker for alert in alerts for ticker in alert.triggered_instruments]
+            append_scout_audit(
+                scout="commodity_scan",
+                as_of_date=today_str,
+                symbols=symbols,
+                records=records,
+                metadata={
+                    "lookback_days": int(lookback_days),
+                    "baseline_days": int(baseline_days),
+                    "cluster_count": len(CLUSTERS),
+                },
+            )
+        except Exception as e:
+            print(f"[commodity_shock_scout] audit write error: {e}", file=sys.stderr)
+
     return alerts

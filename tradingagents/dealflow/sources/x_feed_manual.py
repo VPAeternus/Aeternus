@@ -47,6 +47,41 @@ PASS_CONFIGS: List[Dict[str, str]] = [
 PASS_NUMBERS: Tuple[int, ...] = tuple(int(cfg["pass"]) for cfg in PASS_CONFIGS)
 _PASS_FILE_RE = re.compile(r"^pass_(\d{2})(?:_v\d+)?\.json$")
 
+_MICRO_CATALYST_TAGS = {
+    "earnings", "earnings_beat", "earnings_catalyst", "analyst_upgrade",
+    "guidance_outlook", "post_earnings_reaction", "fda_label_expansion",
+    "phase_3_clinical_success", "acquisition_speculation", "m_a_bid",
+    "acquisition_proposal", "financing_doubts", "breakout_retest",
+    "ceo_warning",
+}
+
+_CANONICAL_THEME_ALIASES = {
+    "ai_memory": "ai_data_center_infrastructure",
+    "hbm": "ai_data_center_infrastructure",
+    "data_center": "ai_data_center_infrastructure",
+    "ai_data_center": "ai_data_center_infrastructure",
+    "ai_demand": "ai_data_center_infrastructure",
+    "rare_earth_magnets": "critical_minerals_supply_chain",
+    "rare_earth_setups": "critical_minerals_supply_chain",
+    "critical_minerals": "critical_minerals_supply_chain",
+    "oil_price_surge": "oil_supply_shock",
+    "hormuz_closure": "oil_supply_shock",
+    "geopolitical_supply_shock": "oil_supply_shock",
+    "drone_programs": "defense_autonomy",
+    "directed_energy": "defense_autonomy",
+    "military_readiness": "defense_autonomy",
+    "humanoid_robots": "robotics_automation",
+}
+
+_CATALYST_THEME_PATTERNS = [
+    ("ai_data_center_infrastructure", re.compile(r"\b(AI|HBM|data centers?|hyperscaler|Blackwell|ASIC|memory)\b", re.I)),
+    ("critical_minerals_supply_chain", re.compile(r"\b(rare earth|critical mineral|magnet|lithium|copper|uranium)\b", re.I)),
+    ("oil_supply_shock", re.compile(r"\b(Hormuz|oil supply|crude|OPEC|geopolitical supply)\b", re.I)),
+    ("defense_autonomy", re.compile(r"\b(drone|directed energy|missile|defense|military|Pentagon)\b", re.I)),
+    ("robotics_automation", re.compile(r"\b(robot|humanoid|automation)\b", re.I)),
+    ("grid_power_infrastructure", re.compile(r"\b(grid|power demand|electricity|utility|nuclear|SMR)\b", re.I)),
+]
+
 _SECTOR_PROMPT_TEMPLATE = """\
 You are a financial markets analyst scanning X (Twitter) right now.
 
@@ -338,7 +373,8 @@ def parse_pass(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
         sector = str(item.get("sector", ""))[:50]
 
         accounts_cited = _normalize_accounts(item.get("accounts_cited")) or _extract_accounts(catalyst)
-        theme_links = _normalize_string_list(item.get("theme_links") or item.get("themes"))
+        raw_theme_links = _normalize_string_list(item.get("theme_links") or item.get("themes"))
+        theme_links, catalyst_tags = _normalize_themes(raw_theme_links, catalyst)
         co_mentions = [s for s in _normalize_symbol_list(item.get("co_mentions")) if s != ticker]
         no_source = "NO_SOURCE_FOUND" in catalyst.upper() or not accounts_cited
 
@@ -354,7 +390,9 @@ def parse_pass(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
             "source_pass_type": pass_type,
             "timestamp": now_iso,
             "accounts_cited": accounts_cited,
+            "raw_theme_links": raw_theme_links,
             "theme_links": theme_links,
+            "catalyst_tags": catalyst_tags,
             "co_mentions": co_mentions,
             "why_this_is_new": str(item.get("why_this_is_new", ""))[:240],
             "order_type": str(item.get("order_type", "unknown") or "unknown")[:30],
@@ -401,6 +439,33 @@ def _normalize_symbol_list(raw: Any) -> List[str]:
         if _is_valid_ticker(ticker) and ticker not in symbols:
             symbols.append(ticker)
     return symbols
+
+
+def _theme_key(raw: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", str(raw or "").strip().lower()).strip("_")
+
+
+def _normalize_themes(raw_theme_links: List[str], catalyst: str) -> Tuple[List[str], List[str]]:
+    themes: List[str] = []
+    catalyst_tags: List[str] = []
+
+    for raw in raw_theme_links:
+        key = _theme_key(raw)
+        if not key:
+            continue
+        if key in _MICRO_CATALYST_TAGS:
+            if key not in catalyst_tags:
+                catalyst_tags.append(key)
+            continue
+        canonical = _CANONICAL_THEME_ALIASES.get(key, key)
+        if canonical not in themes:
+            themes.append(canonical)
+
+    for canonical, pattern in _CATALYST_THEME_PATTERNS:
+        if pattern.search(str(catalyst or "")) and canonical not in themes:
+            themes.append(canonical)
+
+    return themes, catalyst_tags
 
 
 def _extract_options_flow_payload(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
@@ -497,6 +562,10 @@ def _theme_graph_path(as_of_date: str) -> str:
     return os.path.join("eval_results", "x_feed", as_of_date, "theme_emergence_graph.json")
 
 
+def _final_manifest_path(as_of_date: str) -> str:
+    return os.path.join("eval_results", "x_feed", as_of_date, "final_manifest.json")
+
+
 def get_readiness(as_of_date: str) -> Dict[str, Any]:
     """Return manual X-feed readiness for a given date."""
     raw_dir = _raw_dir(as_of_date)
@@ -512,9 +581,14 @@ def get_readiness(as_of_date: str) -> Dict[str, Any]:
 
     merged = load_merged(as_of_date)
     merged_path = _merged_path(as_of_date)
+    graph_path = _theme_graph_path(as_of_date)
+    manifest_path = _final_manifest_path(as_of_date)
     merged_exists = os.path.isfile(merged_path)
+    graph_exists = os.path.isfile(graph_path)
+    manifest = load_final_manifest(as_of_date)
     missing_passes = [p for p in PASS_NUMBERS if p not in completed_passes]
-    ready = not missing_passes and merged_exists and bool(merged)
+    finalized = bool(manifest.get("finalized")) and graph_exists
+    ready = not missing_passes and merged_exists and bool(merged) and finalized
 
     return {
         "date": as_of_date,
@@ -526,6 +600,11 @@ def get_readiness(as_of_date: str) -> Dict[str, Any]:
         "merged_exists": merged_exists,
         "merged_path": merged_path,
         "merged_symbol_count": len(merged),
+        "theme_graph_exists": graph_exists,
+        "theme_graph_path": graph_path,
+        "final_manifest_exists": os.path.isfile(manifest_path),
+        "final_manifest_path": manifest_path,
+        "finalized": finalized,
         "ready": ready,
     }
 
@@ -595,6 +674,86 @@ def save_theme_emergence_graph(as_of_date: str, graph: Dict[str, Any]) -> str:
     return path
 
 
+def load_final_manifest(as_of_date: str) -> Dict[str, Any]:
+    path = _final_manifest_path(as_of_date)
+    if not os.path.isfile(path):
+        return {}
+    try:
+        with open(path, "r") as f:
+            payload = json.load(f)
+        return payload if isinstance(payload, dict) else {}
+    except Exception:
+        return {}
+
+
+def finalize_x_feed(as_of_date: str) -> Dict[str, Any]:
+    """Rebuild final X-feed artifacts after all pass input is complete."""
+    readiness = get_readiness_pre_finalize(as_of_date)
+    merged = load_merged(as_of_date)
+    graph = build_theme_emergence_graph(as_of_date, merged)
+    graph_path = save_theme_emergence_graph(as_of_date, graph)
+
+    pass_counts = {str(p): 0 for p in PASS_NUMBERS}
+    duplicate_pass_symbols: Dict[str, List[int]] = {}
+    for symbol, row in merged.items():
+        seen: List[int] = []
+        for evidence in list(row.get("evidence", []) or []):
+            pnum = int(evidence.get("pass_number", 0) or 0)
+            if pnum:
+                pass_counts[str(pnum)] = int(pass_counts.get(str(pnum), 0)) + 1
+                seen.append(pnum)
+        if len(seen) != len(set(seen)):
+            duplicate_pass_symbols[str(symbol)] = seen
+
+    low_yield_passes = [int(p) for p, count in pass_counts.items() if int(count) == 0]
+    manifest = {
+        "date": as_of_date,
+        "finalized": True,
+        "finalized_at": dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
+        "completed_passes": list(readiness.get("completed_passes", [])),
+        "missing_passes": list(readiness.get("missing_passes", [])),
+        "symbol_count": len(merged),
+        "theme_count": len(graph.get("themes", {}) or {}),
+        "edge_count": len(graph.get("edges", []) or []),
+        "filtered_one_ticker_theme_count": len(graph.get("filtered_one_ticker_themes", []) or []),
+        "low_yield_passes": low_yield_passes,
+        "pass_ticker_counts": pass_counts,
+        "duplicate_pass_symbols": duplicate_pass_symbols,
+        "merged_path": _merged_path(as_of_date),
+        "theme_graph_path": graph_path,
+        "ready_for_dealflow": not readiness.get("missing_passes") and bool(merged),
+    }
+    path = _final_manifest_path(as_of_date)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(manifest, f, indent=2)
+    return manifest
+
+
+def get_readiness_pre_finalize(as_of_date: str) -> Dict[str, Any]:
+    raw_dir = _raw_dir(as_of_date)
+    completed_passes = set()
+    raw_archives: List[str] = []
+    if os.path.isdir(raw_dir):
+        for name in sorted(os.listdir(raw_dir)):
+            match = _PASS_FILE_RE.match(name)
+            if not match:
+                continue
+            completed_passes.add(int(match.group(1)))
+            raw_archives.append(os.path.join(raw_dir, name))
+    merged = load_merged(as_of_date)
+    missing_passes = [p for p in PASS_NUMBERS if p not in completed_passes]
+    return {
+        "date": as_of_date,
+        "required_passes": list(PASS_NUMBERS),
+        "completed_passes": sorted(completed_passes),
+        "missing_passes": missing_passes,
+        "raw_archive_count": len(raw_archives),
+        "raw_archives": raw_archives,
+        "merged_symbol_count": len(merged),
+    }
+
+
 def _merge_entry_preserving_evidence(merged: Dict[str, Dict[str, Any]], entry: Dict[str, Any]) -> None:
     ticker = str(entry.get("ticker", "")).upper().strip()
     if not ticker:
@@ -613,7 +772,9 @@ def _merge_entry_preserving_evidence(merged: Dict[str, Dict[str, Any]], entry: D
     latest["pass_numbers"] = sorted({int(e.get("pass_number", 0) or 0) for e in evidence if e.get("pass_number")})
     latest["source_pass_types"] = sorted({str(e.get("source_pass_type", "")) for e in evidence if e.get("source_pass_type")})
     latest["accounts_cited"] = sorted({a for e in evidence for a in list(e.get("accounts_cited", []) or [])})
+    latest["raw_theme_links"] = sorted({t for e in evidence for t in list(e.get("raw_theme_links", []) or [])})
     latest["theme_links"] = sorted({t for e in evidence for t in list(e.get("theme_links", []) or [])})
+    latest["catalyst_tags"] = sorted({t for e in evidence for t in list(e.get("catalyst_tags", []) or [])})
     latest["co_mentions"] = sorted({s for e in evidence for s in list(e.get("co_mentions", []) or []) if s != ticker})
     latest["evidence_count"] = max(1, len(latest["accounts_cited"])) + max(0, len(evidence) - 1)
     latest["no_source_found"] = not bool(latest["accounts_cited"])
@@ -643,17 +804,23 @@ def build_theme_emergence_graph(as_of_date: str, merged: Dict[str, Dict[str, Any
         symbol = str(ticker).upper().strip()
         if not symbol:
             continue
+        normalized_themes, catalyst_tags = _normalize_themes(
+            _normalize_string_list(row.get("theme_links", []) or []),
+            str(row.get("catalyst", "") or ""),
+        )
         tickers[symbol] = {
             "theme_emergence_score": float(row.get("theme_emergence_score", 0.0) or 0.0),
             "evidence_count": int(row.get("evidence_count", 0) or 0),
             "accounts_cited": list(row.get("accounts_cited", []) or []),
-            "theme_links": list(row.get("theme_links", []) or []),
+            "theme_links": normalized_themes,
+            "raw_theme_links": list(row.get("raw_theme_links", row.get("theme_links", [])) or []),
+            "catalyst_tags": sorted(set(list(row.get("catalyst_tags", []) or []) + catalyst_tags)),
             "co_mentions": list(row.get("co_mentions", []) or []),
             "source_pass_types": list(row.get("source_pass_types", []) or []),
         }
         for account in row.get("accounts_cited", []) or []:
             account_edges.append({"from": account, "to": symbol, "type": "account_mentions_ticker"})
-        for theme in row.get("theme_links", []) or []:
+        for theme in normalized_themes:
             theme_edges.append({"from": symbol, "to": theme, "type": "ticker_linked_to_theme"})
             bucket = themes.setdefault(theme, {"tickers": set(), "accounts": set(), "sectors": set()})
             bucket["tickers"].add(symbol)
@@ -664,10 +831,14 @@ def build_theme_emergence_graph(as_of_date: str, merged: Dict[str, Dict[str, Any
             co_mention_edges.append({"from": symbol, "to": peer, "type": "ticker_co_mentioned"})
 
     theme_rows = {}
+    filtered_one_ticker_themes = []
     for theme, data in themes.items():
         tickerset = sorted(data["tickers"])
         accounts = sorted(data["accounts"])
         sectors = sorted(data["sectors"])
+        if len(tickerset) < 2 and theme not in set(_CANONICAL_THEME_ALIASES.values()):
+            filtered_one_ticker_themes.append(theme)
+            continue
         theme_rows[theme] = {
             "tickers": tickerset,
             "accounts": accounts,
@@ -679,7 +850,8 @@ def build_theme_emergence_graph(as_of_date: str, merged: Dict[str, Dict[str, Any
         "date": as_of_date,
         "tickers": tickers,
         "themes": theme_rows,
-        "edges": account_edges + theme_edges + co_mention_edges,
+        "filtered_one_ticker_themes": sorted(filtered_one_ticker_themes),
+        "edges": account_edges + [e for e in theme_edges if e.get("to") in theme_rows] + co_mention_edges,
         "prompt_design_recommendation": {
             "keep_pass_count": 15,
             "reason": "Broad sector recall is useful; graph merge removes destructive overlap. Future compression can combine low-yield passes after yield telemetry.",

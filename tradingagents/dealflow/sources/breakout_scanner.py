@@ -178,6 +178,20 @@ def scan_breakout_discovery(
                 )
             akg.save()
 
+        audit = {}
+        if not dry_run:
+            try:
+                from tradingagents.dealflow.scout_audit import append_scout_audit
+                audit = append_scout_audit(
+                    scout="breakout_scan",
+                    as_of_date=date_str,
+                    symbols=[a.get("ticker", "") for a in alerts],
+                    records=alerts,
+                    metadata={"universe_scanned": len(liquid), "score_threshold": _SCORE_THRESHOLD},
+                )
+            except Exception:
+                audit = {}
+
         return {
             "ran": True,
             "trade_date": date_str,
@@ -185,6 +199,8 @@ def scan_breakout_discovery(
             "alerts": alerts,
             "count": len(alerts),
             "dry_run": dry_run,
+            "audit_path": str(Path("eval_results") / "deal_flow" / date_str / "scout_audit.json") if not dry_run else "",
+            "audit_count": int(audit.get("count", 0) or 0),
         }
     except Exception as exc:
         print(f"[breakout_scanner] scan failed: {exc}", file=sys.stderr)

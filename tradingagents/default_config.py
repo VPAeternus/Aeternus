@@ -84,20 +84,8 @@ DEFAULT_CONFIG = {
         "SEC_API_USER_AGENT",
         "AeternusAgentsAG/1.0 (research@aeternus.ai)",
     ),
-    "dealflow_sec_manager_ciks": os.getenv(
-        "DEALFLOW_SEC_MANAGER_CIKS",
-        "1067983,1350694,1029160,1603466",
-    ),
-    "dealflow_congress_senate_url": os.getenv(
-        "DEALFLOW_CONGRESS_SENATE_URL",
-        "https://raw.githubusercontent.com/timothycarambat/senate-stock-watcher-data/master/aggregate/all_transactions.json",
-    ),
-    "dealflow_smart_money_lookback_days": int(
-        os.getenv("DEALFLOW_SMART_MONEY_LOOKBACK_DAYS", "120")
-    ),
-    "dealflow_congress_max_staleness_days": int(
-        os.getenv("DEALFLOW_CONGRESS_MAX_STALENESS_DAYS", "120")
-    ),
+    # Legacy smart_money connector retired; 13F sourcing now uses the PIT-tested
+    # thirteenf_watchlist scout. Congress trades require separate backtest before use.
     "dealflow_social_max_symbol_calls": int(
         os.getenv("DEALFLOW_SOCIAL_MAX_SYMBOL_CALLS", "35")
     ),
@@ -111,10 +99,6 @@ DEFAULT_CONFIG = {
     "dealflow_manual_x_feed_carryforward_days": int(
         os.getenv("DEALFLOW_MANUAL_X_FEED_CARRYFORWARD_DAYS", "3")
     ),
-    "dealflow_earnings_options_scout_enabled": os.getenv(
-        "DEALFLOW_EARNINGS_OPTIONS_SCOUT_ENABLED", "true"
-    ).lower()
-    == "true",
     "dealflow_technical_ignition_enabled": os.getenv(
         "DEALFLOW_TECHNICAL_IGNITION_ENABLED", "true"
     ).lower()
@@ -503,7 +487,7 @@ DEFAULT_CONFIG = {
     ),
     "dealflow_step1_required_connectors": os.getenv(
         "DEALFLOW_STEP1_REQUIRED_CONNECTORS",
-        "social_news,price_momentum,macro,smart_money",
+        "social_news,price_momentum,macro",
     ),
     "dealflow_step1_optional_connectors": os.getenv(
         "DEALFLOW_STEP1_OPTIONAL_CONNECTORS",

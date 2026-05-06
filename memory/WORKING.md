@@ -1,16 +1,53 @@
 # Current Session State
 
 **Branch:** `feature/opus46`
-**Last updated:** 2026-05-05T00:00:00
+**Last updated:** 2026-05-06T08:28:16-04:00
 **Status:** Discovery Delta v1 and Evidence Integrity v1 are operator-visible and review-measurable; Shortlist Integrity v1, Deep Selection Integrity v1, and Research Conversion Integrity v1 are live as read-only Step 3/4/5 artifacts; first-principles strategy gate exists as a reusable skill with an Aeternus worked example and memo; V3 benchmark contract is same-window/config-driven/return-based in track-record and conservatively enforced in portfolio admission; Fundamental Pillar Autoresearch Harness v1 now includes cache-first SEC raw payloads, SEC-official ticker→CIK resolution with cached fallback, historical 2009+ filing snapshot backfill, market-return attachment, deterministic constrained/autoresearch evaluation, a registry-backed signal promotion layer, and a live registry-driven `fundamental_factor_shadow` adapter wired through the dealflow pipeline as a shadow-only signal family; manual X-feed is now a first-class workflow preflight for manual-mode workflow runs and now also serves as the only live `social_news` source, with Theme Emergence Graph v1 preserving per-pass evidence and account/ticker/theme/co-mention edges instead of destructive ticker overwrites; the Yahoo-finance `earnings_iv` collector path and old `earnings-scan` CLI surface are removed from active dealflow behavior; deep analysis no longer defaults to the provider-aware analyst bridge: it now defaults to a session-style top-level research engine that mirrors the simple Claude path (one provider run over one computation packet, then Python scoring/report writing), while the old LangGraph/bridge stack remains available behind `research_execution_mode=codex_bridge`; the GPT/Codex bridge issues remain known legacy-path blockers, but the new default session engine has already passed live smoke runs for `BATL` and a bounded `analyze-batch` run for `RLMD` on `2026-03-10`; workflow runs now have a fail-open learning phase that attempts hindsight/performance/writeback every cycle, persists `learning_status.json`, writes normalized `source_attribution.json`, and can reinforce simple observed `co_mentioned` AKG edges from manual X-feed evidence without blocking the rest of the run; the MiroFish-inspired next slice is now approved as a Python-first `Question Compiler` chat backend for manual investigation queries, with no required Zep integration, bounded/optional LLM usage, and a frontend-ready investigation response contract; operator gateway now includes a MissionControl scaffold that maps end-to-end pipeline stages plus scout inventory/prompt/ingest APIs for manual Grok workflows; `question-investigate` now emits stage-native miss metadata and now has authoritative write-time stage-drop metadata persisted in hypothesis-ledger rows (`dropped_symbols_metadata_path`) for universe/evidence/shortlist/deep-selection cuts; watchlist CLI is now intentionally reduced to a ticker feed surface (`add/remove/list`) with minimal persisted schema (`symbol`, `created_at`, `active`, `context_snapshot`), AKG-backed internal context enrichment on add, and support for multi-symbol add/remove in both quoted and unquoted shell forms; `x-feed --run-browser` now targets the user's existing logged-in Chrome window via AppleScript + Chrome JS + clipboard/System Events instead of fresh browser-use windows, uses the current front Grok tab if the active tab is already `https://grok.com...`, otherwise opens a new Grok tab only in the current front Chrome window, and no longer scans/reuses arbitrary background Grok tabs; readiness remains tolerant of real Grok conversation titles/composer counts; the isolated pass-1 xAI API probe has been removed and manual Grok generate/paste/ingest remains the intended operator path; standalone `recall` CLI commands now expose FVG and FMA recall channels outside the pipeline with table explanations and JSON artifact output; `recall fvg <SYMBOL>` and `recall fma <SYMBOL>` now provide readable per-stock pass/fail explanations with metrics and threshold checks; `recall performance` now provides an investor-facing historical signal-study scorecard using saved or refreshed FVG/FMA backtest summaries; canonical investor-facing backtest universes are now `semis_ai`, `qqq_top20`, and `spy_top20`, and `recall performance --multi` produces a broad benchmark-comparison table across all three; CC Overbought is now explicitly treated as a stock-only engine in code/docs/CLI wording and returns no signal for index ETFs (`QQQ`, `SPY`, `IWM`); added a standalone Pi extension artifact set for a conservative model-router v2 is now installed globally under `~/.pi/agent/extensions/model-router-v2/` with weighted route scoring, fallback chains, manual lock behavior, persisted `autoRoutingEnabled`, Node-runner tests for core policy helpers, global config at `~/.pi/agent/model-router.json`, and a fixed directory-based extension layout so Pi no longer misloads helper modules as top-level extension factories
 
 **Daily runbook:** `docs/research/aeternus-daily-pipeline-debug-runbook.md` is now the canonical start-of-run checklist and debug order for the full daily pipeline.
+
+**Current note:** 2026-05-05 scout pre-source sequence is partially complete: X-feed finalized (41 symbols, 8 canonical themes after normalization), technical universe/signal sync complete (516 tickers, 24 buy-zone), breakout_scan found 13 symbols, commodity_scan/dod_scan found 0, liquidity preflight refreshed AKG liquidity (728/745 company nodes), FVG recall found LITE/MU/SNDK, FMA recall found AMD/AMZN/AVGO/GOOG/INTC/MU/SNDK, and `eval_results/deal_flow/2026-05-05/scout_ticker_summary.{md,json}` now records ticker attribution by scout. Manual earnings/options scout has been removed from active workflow.
 
 **Current note:** Macro framework backtest v1 is now scaffolded as research-only infrastructure under `tradingagents/backtesting/macro/` plus `scripts/backtest_macro_framework.py`. It supports horizons `(5, 10, 20, 30, 60, 90)`, deterministic historical macro snapshots from preloaded price/FRED-like data, next-bar forward-return labels, regime/sector performance tables, and production-ranker-based macro-on vs macro-neutral dealflow ablation. Outputs carry a PIT disclaimer unless inputs are vintage/release-aligned. Source of truth for this research project is now `docs/research/macro_framework_backtest_findings.md`; append all future findings there.
 
 ---
 
 ## Completed Today
+
+- Daily X-feed Grok automation ran for `2026-05-06`:
+  - completed passes `1-15`
+  - target model used: `Grok 4.3 (beta)`
+  - final readiness: `ready=True`, finalized manifest exists
+  - raw archives: 15
+  - merged symbols: 34
+  - Theme Emergence Graph: 34 tickers, 6 multi-ticker themes, 110 edges
+  - edge types: `account_mentions_ticker`, `ticker_linked_to_theme`, `ticker_co_mentioned`
+  - low-yield valid passes: `5`, `6`, `7`, `8`, `15`
+  - operational note: system `python3` lacks `langchain_openai`; use `uv run` for future automation execution
+
+- Tested Computer Use against X-feed manual prompt #1:
+  - used Computer Use to drive the existing logged-in Chrome/Grok project chat
+  - submitted pass #1, `Technology & Semiconductors`, on `2026-05-05`
+  - Grok returned valid JSON parsed by the existing X-feed parser
+  - ingested live result as `eval_results/x_feed/2026-05-05/raw/pass_01_v2.json`
+  - parsed/merged 5 tickers: `AMD`, `MU`, `SNDK`, `LITE`, `SMCI`
+  - wrote 5 AKG evidence rows
+  - generated/updated `eval_results/x_feed/2026-05-05/theme_emergence_graph.json`
+  - graph had 35 edges across `account_mentions_ticker`, `ticker_linked_to_theme`, and `ticker_co_mentioned`
+  - caveat: Grok's response Copy button failed with `Document is not focused`; extraction succeeded through Chrome page text plus repo parser
+  - repo runtime still has no direct local Computer Use CLI/Python module bridge, so fully reusable in-repo automation needs a bridge/harness layer
+
+- Ran ad hoc X-feed completion for `2026-05-05`:
+  - pass #1 was already ingested; completed missing passes `2-15`
+  - first attempt stopped before prompt submission because old runner expected Grok `Expert` while UI now reports `Auto`
+  - reran using current Grok model `Grok 4.3 (beta)` and skipped model switching
+  - completed passes: `1-15`
+  - failed passes: none
+  - readiness: `ready=True`
+  - raw archives: 16, including versioned `pass_01_v2.json`
+  - merged symbols: 41
+  - `theme_emergence_graph.json`: 41 tickers, 110 themes, 296 edges
+  - edge types: `account_mentions_ticker`, `ticker_linked_to_theme`, `ticker_co_mentioned`
 
 - Fixed context-mode skill conflict caused by `UPSTREAM-CREDITS.md` missing skill metadata:
   - updated `/opt/homebrew/lib/node_modules/context-mode/skills/UPSTREAM-CREDITS.md`

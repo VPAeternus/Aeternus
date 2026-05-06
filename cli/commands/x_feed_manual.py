@@ -60,8 +60,11 @@ def _do_generate():
 
 
 def _do_status(as_of_date: str):
-    from tradingagents.dealflow.sources.x_feed_manual import get_readiness
+    from tradingagents.dealflow.sources.x_feed_manual import finalize_x_feed, get_readiness, get_readiness_pre_finalize
 
+    pre = get_readiness_pre_finalize(as_of_date)
+    if not pre.get("missing_passes") and int(pre.get("merged_symbol_count", 0) or 0) > 0:
+        finalize_x_feed(as_of_date)
     payload = get_readiness(as_of_date)
     status_label = "[green]READY[/green]" if payload.get("ready") else "[yellow]INCOMPLETE[/yellow]"
     console.print(f"{status_label} Manual X Feed — {as_of_date}")
@@ -70,7 +73,9 @@ def _do_status(as_of_date: str):
     if missing:
         console.print(f"  Missing passes: {', '.join(str(p) for p in missing)}")
     console.print(f"  Merged symbols: {int(payload.get('merged_symbol_count', 0) or 0)}")
+    console.print(f"  Finalized: {'yes' if payload.get('finalized') else 'no'}")
     console.print(f"  Merged path: {payload.get('merged_path')}")
+    console.print(f"  Theme graph: {payload.get('theme_graph_path')}")
 
 
 def _do_run_browser(as_of_date: str, start_pass: int, end_pass: int, profile: str, dry_run: bool):
@@ -102,6 +107,13 @@ def _do_run_browser(as_of_date: str, start_pass: int, end_pass: int, profile: st
             f"merged={int(result.get('tickers_merged', 0) or 0)}"
         )
 
+    final_manifest = dict(payload.get("final_manifest") or {})
+    if final_manifest:
+        console.print(
+            f"  Final manifest: symbols={int(final_manifest.get('symbol_count', 0) or 0)} | "
+            f"themes={int(final_manifest.get('theme_count', 0) or 0)} | "
+            f"edges={int(final_manifest.get('edge_count', 0) or 0)}"
+        )
     readiness = dict(payload.get("readiness") or {})
     if readiness:
         ready_label = "yes" if bool(readiness.get("ready")) else "no"
