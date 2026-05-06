@@ -18,6 +18,7 @@ import yfinance as yf
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.context import get_event_state
 
+from .collect_artifacts import write_collect_artifacts
 from .contracts import DealFlowShortlist, EventTriggerResult, ResearchQueue, ResearchQueueItem
 from .hypothesis_ledger import append_ledger_row, make_ledger_row
 from .manual_watchlist import list_active_ideas, validate_symbol_liquidity
@@ -2158,77 +2159,18 @@ class DealFlowPipeline:
         )
         append_ledger_row(base_dir=base, lane="shared", row=shortlist_cut_row)
 
-        (base / "signals_raw.json").write_text(json.dumps(normalized_signals, indent=2))
-        (base / "connector_health.json").write_text(json.dumps(connector_health, indent=2))
-        (base / "family_contributions.json").write_text(json.dumps(family_contribution_report, indent=2))
-        (base / "cashtag_events.json").write_text(json.dumps(cashtag_events, indent=2))
-        (base / "momentum_board.json").write_text(json.dumps(momentum_board, indent=2))
-        (base / "manual_merge.json").write_text(json.dumps(manual_merge, indent=2))
-        (base / "shortlist_top20.json").write_text(json.dumps(shortlist, indent=2))
-        (base / "research_queue.json").write_text(json.dumps(research_queue, indent=2))
-        # Full scored candidate list — all symbols that passed the evidence gate,
-        # not just the top-k shortlist. Enables hindsight on the ranking cutoff.
-        if all_scored_candidates:
-            scored_slim = []
-            shortlist_syms = {
-                str(c.get("symbol", "")).upper() for c in shortlist.get("candidates", [])
-            }
-            for c in sorted(all_scored_candidates, key=lambda x: -float(x.get("momentum_score", 0))):
-                scored_slim.append({
-                    "symbol": c.get("symbol"),
-                    "lane": c.get("lane"),
-                    "status": c.get("status"),
-                    "core_score": c.get("core_score"),
-                    "momentum_score": c.get("momentum_score"),
-                    "asymmetry_score": c.get("asymmetry_score"),
-                    "active_families": c.get("active_families"),
-                    "evidence_count": c.get("evidence_count"),
-                    "sector": c.get("sector"),
-                    "in_shortlist": str(c.get("symbol", "")).upper() in shortlist_syms,
-                })
-            (base / "all_scored_candidates.json").write_text(json.dumps(scored_slim, indent=2))
-
-        latest_path = Path("eval_results") / "deal_flow" / "latest_research_queue.json"
-        latest_path.parent.mkdir(parents=True, exist_ok=True)
-        latest_path.write_text(json.dumps(research_queue, indent=2))
-
-        # Grok provenance — join manual X-feed input with pipeline scores for backtest.
-        grok_cache_path = Path("eval_results") / "x_feed" / as_of_date / "merged.json"
-        if grok_cache_path.is_file():
-            try:
-                grok_data = json.loads(grok_cache_path.read_text())
-                candidate_map = {
-                    str(c.get("symbol", "")).upper(): c
-                    for c in shortlist.get("candidates", [])
-                }
-                provenance_tickers = []
-                for sym, grok_fields in grok_data.items():
-                    cand = candidate_map.get(sym)
-                    provenance_tickers.append({
-                        "symbol": sym,
-                        "grok_sentiment": grok_fields.get("sentiment"),
-                        "grok_mentions_estimate": grok_fields.get("mentions_estimate"),
-                        "grok_catalyst": grok_fields.get("catalyst"),
-                        "grok_velocity_trend": grok_fields.get("velocity_trend"),
-                        "grok_pass_number": grok_fields.get("pass_number"),
-                        "grok_source_pass_type": grok_fields.get("source_pass_type"),
-                        "in_shortlist": cand is not None,
-                        "pipeline_rank": cand.get("rank") if cand else None,
-                        "pipeline_lane": cand.get("lane") if cand else None,
-                        "pipeline_core_score": cand.get("core_score") if cand else None,
-                        "pipeline_momentum_score": cand.get("momentum_score") if cand else None,
-                        "pipeline_asymmetry_score": cand.get("asymmetry_score") if cand else None,
-                    })
-                provenance = {
-                    "date": as_of_date,
-                    "source": "grok_manual_deep_research",
-                    "tickers_ingested": len(grok_data),
-                    "tickers_in_shortlist": sum(1 for t in provenance_tickers if t["in_shortlist"]),
-                    "tickers": provenance_tickers,
-                }
-                (base / "grok_provenance.json").write_text(json.dumps(provenance, indent=2))
-            except Exception:
-                pass
+        write_collect_artifacts(
+            as_of_date=as_of_date,
+            normalized_signals=normalized_signals,
+            shortlist=shortlist,
+            research_queue=research_queue,
+            cashtag_events=cashtag_events,
+            momentum_board=momentum_board,
+            connector_health=connector_health,
+            family_contribution_report=family_contribution_report,
+            manual_merge=manual_merge,
+            all_scored_candidates=all_scored_candidates,
+        )
 
     def _evaluate_event_trigger(self, as_of_date: str) -> EventTriggerResult:
         payload = get_event_state(
