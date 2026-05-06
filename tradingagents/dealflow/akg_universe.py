@@ -199,7 +199,7 @@ def build_filtered_universe(
         rid = str(node.get("id", "")).upper().strip()
         if rid:
             rescan_set.add(rid)
-    rescan_set -= anchor_set | neighbor_set | scout_set | dark_set
+    rescan_set -= anchor_set | neighbor_set | scout_set
 
     # T6: Portfolio — open positions must never fall out of the universe
     portfolio_set: set[str] = set()

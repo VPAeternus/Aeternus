@@ -11,8 +11,10 @@ import yaml
 from src.features.common import clean, flag, to_float
 
 try:
-    from tradingagents.dealflow.theme_aliases import match_theme_aliases
+    from tradingagents.dealflow.theme_aliases import canonicalize_theme_id, load_theme_aliases, match_theme_aliases
 except Exception:  # pragma: no cover
+    canonicalize_theme_id = None
+    load_theme_aliases = None
     match_theme_aliases = None
 
 
@@ -78,15 +80,21 @@ def detect_candidate_themes(row: dict[str, Any], filing_text: str = "") -> list[
     source = clean(row.get("theme_source")) or "filing"
 
     names = [primary, *secondary, *tags]
-    alias_matches = match_theme_aliases(" ".join([primary, *secondary, *tags, *evidence, filing_text])) if match_theme_aliases else []
+    aliases = load_theme_aliases() if load_theme_aliases else {}
+    alias_matches = match_theme_aliases(" ".join([primary, *secondary, *tags, *evidence, filing_text]), aliases) if match_theme_aliases else []
+    alias_role_by_theme: dict[str, str] = {}
     for match in alias_matches:
-        names.append(str(match.get("theme_id") or ""))
+        matched_theme_id = str(match.get("theme_id") or "")
+        names.append(matched_theme_id)
+        roles = match.get("theme_roles") or []
+        if roles:
+            alias_role_by_theme[matched_theme_id] = clean(roles[0]).lower()
     seen: set[str] = set()
     out: list[dict[str, Any]] = []
     for name in names:
         if not name:
             continue
-        theme_id = _normalise_theme_id(name)
+        theme_id = canonicalize_theme_id(name, aliases) if canonicalize_theme_id else _normalise_theme_id(name)
         if theme_id in seen:
             continue
         seen.add(theme_id)
@@ -96,7 +104,7 @@ def detect_candidate_themes(row: dict[str, Any], filing_text: str = "") -> list[
                 "quarter": clean(row.get("quarter")),
                 "theme_id": theme_id,
                 "theme_name": name,
-                "theme_role": role,
+                "theme_role": alias_role_by_theme.get(theme_id, role) if role in {"", "none"} else role,
                 "theme_confidence": confidence,
                 "theme_evidence": " | ".join(evidence),
                 "theme_source": source,

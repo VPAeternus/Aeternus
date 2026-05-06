@@ -156,8 +156,19 @@ def run_quarter_pipeline(
     packet_path.write_text("\n".join(json.dumps(packet, ensure_ascii=False) for packet in packets), encoding="utf-8")
 
     post_llm_rows = _load_optional(post_llm_path)
+    theme_acceleration_akg_writeback_count = 0
     if post_llm_rows:
         write_table(lake_root, "post_llm_scores", add_run_lineage(post_llm_rows, pipeline_run_id=run_id, as_of_date=as_of, source_hash=source_file_hash(post_llm_path)))
+        try:
+            from tradingagents.dealflow.theme_acceleration_writeback import write_theme_acceleration_to_akg
+            from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
+
+            akg = AeternusKnowledgeGraph.load()
+            theme_acceleration_akg_writeback_count = write_theme_acceleration_to_akg(akg, post_llm_rows, as_of)
+            if theme_acceleration_akg_writeback_count:
+                akg.save()
+        except Exception:
+            theme_acceleration_akg_writeback_count = 0
     elif not skip_llm:
         raise RuntimeError("post_llm_path required unless skip_llm=True")
 
@@ -182,6 +193,7 @@ def run_quarter_pipeline(
         "investment_decisions": len(decisions),
         "research_memos": len(memos),
         "positions": len(positions),
+        "theme_acceleration_akg_writeback_count": theme_acceleration_akg_writeback_count,
         "skipped_sec_fetch": skip_sec_fetch,
         "skipped_llm": skip_llm,
         "skipped_price_fetch": skip_price_fetch,

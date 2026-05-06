@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
-from tradingagents.dealflow.theme_aliases import load_theme_aliases
+from tradingagents.dealflow.theme_aliases import canonicalize_theme_id, load_theme_aliases
 
 
 def build_theme_heatmap(akg: Any, *, as_of_date: str) -> Dict[str, Any]:
@@ -23,12 +23,13 @@ def build_theme_heatmap(akg: Any, *, as_of_date: str) -> Dict[str, Any]:
         ticker = str(node.get("id", "")).upper().strip()
         if not ticker:
             continue
-        theme_ids = _node_theme_ids(node)
+        theme_ids = _node_theme_ids(node, aliases)
         for theme_id in theme_ids:
             bucket = buckets.setdefault(theme_id, _empty_bucket(theme_id, theme_id))
             _add_node_to_bucket(bucket, node)
 
-    _add_edge_linked_tickers(akg, buckets)
+    _add_active_theme_nodes(akg, buckets, aliases)
+    _add_edge_linked_tickers(akg, buckets, aliases)
 
     themes = []
     for bucket in buckets.values():
@@ -39,7 +40,8 @@ def build_theme_heatmap(akg: Any, *, as_of_date: str) -> Dict[str, Any]:
         evidence = bucket.pop("_evidence", [])
         top_tickers = sorted(bucket.pop("_top_ticker_rows", []), key=lambda r: (-r["score"], r["ticker"]))[:10]
         bucket.update({
-            "active_theme_node_count": int(bucket.get("active_theme_node_count", 0)),
+            "active_theme_node_count": len(bucket.pop("_active_theme_nodes", set())),
+            "linked_edge_count": int(bucket.get("linked_edge_count", 0)),
             "linked_ticker_count": len(set(linked) | set(tickers)),
             "number_with_emergence_signals": int(bucket.get("number_with_emergence_signals", 0)),
             "number_with_price_momentum": int(bucket.get("number_with_price_momentum", 0)),
@@ -78,9 +80,11 @@ def _empty_bucket(theme_id: str, theme_name: str) -> Dict[str, Any]:
         "theme_id": theme_id,
         "theme_name": theme_name,
         "active_theme_node_count": 0,
+        "linked_edge_count": 0,
         "number_with_emergence_signals": 0,
         "number_with_price_momentum": 0,
         "number_with_filing_acceleration": 0,
+        "_active_theme_nodes": set(),
         "_linked_tickers": set(),
         "_tickers": set(),
         "_momentum_scores": [],
@@ -90,7 +94,7 @@ def _empty_bucket(theme_id: str, theme_name: str) -> Dict[str, Any]:
     }
 
 
-def _node_theme_ids(node: Dict[str, Any]) -> List[str]:
+def _node_theme_ids(node: Dict[str, Any], aliases: Dict[str, Dict[str, Any]]) -> List[str]:
     raw = []
     if node.get("primary_theme"):
         raw.append(node.get("primary_theme"))
@@ -98,7 +102,7 @@ def _node_theme_ids(node: Dict[str, Any]) -> List[str]:
     raw.extend(node.get("theme_links") or [])
     out = []
     for item in raw:
-        tid = str(item or "").strip().lower().replace(" ", "_")
+        tid = canonicalize_theme_id(str(item or ""), aliases)
         if tid and tid not in out:
             out.append(tid)
     return out
@@ -125,7 +129,18 @@ def _add_node_to_bucket(bucket: Dict[str, Any], node: Dict[str, Any]) -> None:
     bucket["_top_ticker_rows"].append({"ticker": ticker, "score": score})
 
 
-def _add_edge_linked_tickers(akg: Any, buckets: Dict[str, Dict[str, Any]]) -> None:
+def _add_active_theme_nodes(akg: Any, buckets: Dict[str, Dict[str, Any]], aliases: Dict[str, Dict[str, Any]]) -> None:
+    for node in getattr(akg, "_nodes", {}).values():
+        if node.get("node_type") != "theme":
+            continue
+        theme_id = canonicalize_theme_id(str(node.get("id", "")), aliases)
+        if not theme_id:
+            continue
+        bucket = buckets.setdefault(theme_id, _empty_bucket(theme_id, theme_id))
+        bucket["_active_theme_nodes"].add(str(node.get("id", theme_id)))
+
+
+def _add_edge_linked_tickers(akg: Any, buckets: Dict[str, Dict[str, Any]], aliases: Dict[str, Dict[str, Any]]) -> None:
     nodes = getattr(akg, "_nodes", {})
     for edge in getattr(akg, "_edges", []):
         source = str(edge.get("source", "")).upper().strip()
@@ -134,16 +149,16 @@ def _add_edge_linked_tickers(akg: Any, buckets: Dict[str, Dict[str, Any]]) -> No
         if rel not in {"catalyst_beneficiary", "supply_chain", "theme_exposure"}:
             continue
         if source in nodes and nodes[source].get("node_type") == "company":
-            theme_id = target.lower()
+            theme_id = canonicalize_theme_id(target, aliases)
             ticker = source
         elif target.upper() in nodes and nodes[target.upper()].get("node_type") == "company":
-            theme_id = source.lower()
+            theme_id = canonicalize_theme_id(source, aliases)
             ticker = target.upper()
         else:
             continue
         bucket = buckets.setdefault(theme_id, _empty_bucket(theme_id, theme_id))
         bucket["_linked_tickers"].add(ticker)
-        bucket["active_theme_node_count"] += 1
+        bucket["linked_edge_count"] += 1
 
 
 def _float(raw: Any) -> float:
