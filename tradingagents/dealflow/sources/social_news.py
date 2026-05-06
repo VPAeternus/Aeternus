@@ -20,6 +20,7 @@ def collect_social_news_signals(
     symbols = [row["symbol"] for row in sorted_universe[:max_symbol_calls]]
 
     merged_data = _load_manual_x_feed(as_of_date)
+    quality_data = _load_evidence_quality(as_of_date, merged_data)
 
     # Manual merged artifact reads are free, so extend coverage to any universe symbol
     # present in the merged set even if it fell outside the top-K liquidity slice.
@@ -51,6 +52,10 @@ def collect_social_news_signals(
                 )
             continue
 
+        quality_hit = quality_data.get(symbol, {})
+        quality_score = _coerce_float(quality_hit.get("evidence_quality_score"), default=50.0, lo=0.0, hi=100.0)
+        quality_multiplier = 0.75 + 0.50 * (quality_score / 100.0)
+
         sentiment = _coerce_float(merged_hit.get("sentiment"), default=0.0, lo=-1.0, hi=1.0)
         mentions = _coerce_int(merged_hit.get("mentions_estimate"), default=1, lo=1)
         explicit_evidence_count = "evidence_count" in merged_hit
@@ -69,9 +74,11 @@ def collect_social_news_signals(
         theme_bonus = min(10.0, theme_score * 0.10)
         source_penalty = -12.0 if no_source else 0.0
 
-        social_raw = _clamp(50.0 + 30.0 * sentiment + mention_bonus + evidence_bonus + velocity_bonus + theme_bonus + source_penalty)
+        social_base = 50.0 + 30.0 * sentiment + mention_bonus + evidence_bonus + velocity_bonus + theme_bonus + source_penalty
         catalyst_bonus = 0.0 if no_source else (8.0 if catalyst else 0.0)
-        news_raw = _clamp(40.0 + 20.0 * abs(sentiment) + mention_bonus + evidence_bonus + velocity_bonus + catalyst_bonus + theme_bonus + source_penalty)
+        news_base = 40.0 + 20.0 * abs(sentiment) + mention_bonus + evidence_bonus + velocity_bonus + catalyst_bonus + theme_bonus + source_penalty
+        social_raw = _clamp(50.0 + (social_base - 50.0) * quality_multiplier)
+        news_raw = _clamp(40.0 + (news_base - 40.0) * quality_multiplier)
 
         for family, raw_score in (
             ("social_momentum", social_raw),
@@ -88,10 +95,20 @@ def collect_social_news_signals(
                     "freshness_hours": 24.0,
                     "source_status": "OK",
                     "source_name": "manual_x_feed",
+                    "evidence_quality_score": quality_score,
+                    "quality_components": quality_hit.get("quality_components", {}),
                 }
             )
 
     return signals
+
+
+def _load_evidence_quality(as_of_date: str, merged_data: Dict[str, Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+    try:
+        from tradingagents.dealflow.evidence_quality import build_x_feed_evidence_quality
+        return build_x_feed_evidence_quality(as_of_date=as_of_date, merged=merged_data)
+    except Exception:
+        return {}
 
 
 def _load_manual_x_feed(as_of_date: str) -> Dict[str, Dict[str, Any]]:

@@ -966,10 +966,6 @@ class DealFlowPipeline:
                 "config": self.config,
             }),
             ("price_momentum", collect_price_momentum_signals, (universe,), {}),
-            ("smart_money", collect_smart_money_signals, (universe,), {
-                "as_of_date": as_of_date,
-                "config": self.config,
-            }),
             ("sector_rotation", collect_sector_rotation_signals, (universe,), {}),
         ])
 
