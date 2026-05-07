@@ -37,12 +37,24 @@ def run_collect_stage(
     top_k: int,
     akg_available: bool,
     akg_cls: Any,
+    deps: Dict[str, Any] | None = None,
 ) -> Tuple[DealFlowShortlist, ResearchQueue, List[dict], EventTriggerResult]:
+    deps = deps or {}
+    build_universe = deps.get("build_universe_from_akg", build_universe_from_akg)
+    get_universe_ledger = deps.get("get_last_universe_ledger", get_last_universe_ledger)
+    list_ideas = deps.get("list_active_ideas", list_active_ideas)
+    collect_social = deps.get("collect_social_news_signals", collect_social_news_signals)
+    collect_price = deps.get("collect_price_momentum_signals", collect_price_momentum_signals)
+    collect_sector = deps.get("collect_sector_rotation_signals", collect_sector_rotation_signals)
+    collect_insider = deps.get("collect_insider_cluster_signals", collect_insider_cluster_signals)
+    score = deps.get("score_candidates", score_candidates)
+    rank = deps.get("rank_candidates", rank_candidates)
+
     # Bootstrap if discover() wasn't called
     universe = getattr(pipeline, "_last_universe", None)
     if universe is None:
         watchlist_path = pipeline._watchlist_path()
-        manual_ideas = list_active_ideas(as_of_date=as_of_date, path=watchlist_path)
+        manual_ideas = list_ideas(as_of_date=as_of_date, path=watchlist_path)
         manual_symbols_set = {
             str(idea.get("symbol", "")).upper().strip()
             for idea in manual_ideas
@@ -61,7 +73,7 @@ def run_collect_stage(
         manual_symbols = sorted(manual_symbols_set)
         fvg_recall_symbols = _load_json_file(Path("eval_results") / "deal_flow" / as_of_date / "fvg_recall.json") or {}
         fma_recall_symbols = _load_json_file(Path("eval_results") / "deal_flow" / as_of_date / "fma_recall.json") or {}
-        universe = build_universe_from_akg(
+        universe = build_universe(
             extra_symbols=manual_symbols,
             config=pipeline.config,
             fvg_recall_symbols=list(fvg_recall_symbols.get("selected_symbols", []) or []),
@@ -69,7 +81,7 @@ def run_collect_stage(
         )
         pipeline._last_universe_ledger = pipeline._resolve_universe_ledger(
             universe,
-            get_last_universe_ledger(),
+            get_universe_ledger(),
         )
         pipeline._last_manual_ideas = manual_ideas
         pipeline._last_manual_symbols = manual_symbols
@@ -91,18 +103,18 @@ def run_collect_stage(
     # Parallel execution of independent connectors.
     connector_tasks = []
     connector_tasks.extend([
-        ("social_news", collect_social_news_signals, (universe,), {
+        ("social_news", collect_social, (universe,), {
             "as_of_date": as_of_date,
             "max_symbol_calls": int(pipeline.config.get("dealflow_social_max_symbol_calls", 35)),
             "config": pipeline.config,
         }),
-        ("price_momentum", collect_price_momentum_signals, (universe,), {}),
-        ("sector_rotation", collect_sector_rotation_signals, (universe,), {}),
+        ("price_momentum", collect_price, (universe,), {}),
+        ("sector_rotation", collect_sector, (universe,), {}),
     ])
 
 
     if bool(pipeline.config.get("dealflow_insider_cluster_enabled", True)):
-        connector_tasks.append(("insider_cluster", collect_insider_cluster_signals, (universe,), {
+        connector_tasks.append(("insider_cluster", collect_insider, (universe,), {
             "as_of_date": as_of_date,
             "config": pipeline.config,
         }))
@@ -165,7 +177,7 @@ def run_collect_stage(
             import sys as _sys
             print(f"[pipeline] AKG writeback/emergence error: {exc}", file=_sys.stderr)
 
-    normalized_signals, candidates = score_candidates(
+    normalized_signals, candidates = score(
         universe=universe,
         signals=signals,
         min_signal_families=int(pipeline.config.get("dealflow_min_signal_families", 3)),
@@ -224,7 +236,7 @@ def run_collect_stage(
             candidate["accel_signal"] = "NEUTRAL"
             candidate["accel_description"] = ""
 
-    ranked_auto = rank_candidates(
+    ranked_auto = rank(
         candidates,
         top_k=top_k,
         max_sector_count=int(pipeline.config.get("dealflow_max_sector_count", 5)),

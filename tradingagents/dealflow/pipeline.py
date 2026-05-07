@@ -217,6 +217,17 @@ class DealFlowPipeline:
             top_k=top_k,
             akg_available=_AKG_AVAILABLE,
             akg_cls=_AKG,
+            deps={
+                "build_universe_from_akg": build_universe_from_akg,
+                "get_last_universe_ledger": get_last_universe_ledger,
+                "list_active_ideas": list_active_ideas,
+                "collect_social_news_signals": collect_social_news_signals,
+                "collect_price_momentum_signals": collect_price_momentum_signals,
+                "collect_sector_rotation_signals": collect_sector_rotation_signals,
+                "collect_insider_cluster_signals": collect_insider_cluster_signals,
+                "score_candidates": score_candidates,
+                "rank_candidates": rank_candidates,
+            },
         )
 
     def _collect_connector_signals(self, name: str, collector, *args, **kwargs) -> Tuple[List[Dict], Dict[str, Any]]:
