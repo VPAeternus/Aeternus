@@ -5,7 +5,6 @@ from __future__ import annotations
 import datetime as dt
 import json
 import logging
-import os
 import time
 import uuid
 from pathlib import Path
@@ -15,21 +14,35 @@ import requests
 import yfinance as yf
 
 from .track_record import TrackRecord
-from tradingagents.broker_adapters.alpaca import AlpacaBrokerAdapter
-from tradingagents.dealflow.control_io import read_json_locked, write_json_locked
 from tradingagents.dealflow.hypothesis_ledger import append_ledger_row, make_ledger_row
 from tradingagents.default_config import DEFAULT_CONFIG
+from tradingagents.execution.alpaca_client import (
+    RETRYABLE_STATUS_CODES,
+    alpaca_get_json as _alpaca_get_json,
+    alpaca_headers as _alpaca_headers,
+    format_qty as _format_qty,
+    get_broker_adapter as _get_broker_adapter,
+    normalize_alpaca_base_url as _normalize_alpaca_base_url,
+    resolve_alpaca_credentials as _resolve_alpaca_credentials,
+    submit_alpaca_order as _submit_alpaca_order,
+)
+from tradingagents.execution.constants import (
+    EXECUTION_MODE_ALPACA_LIVE,
+    EXECUTION_MODE_ALPACA_PAPER,
+    EXECUTION_MODE_LIVE,
+    EXECUTION_MODE_PAPER,
+    INTENT_CATEGORY_HEDGE,
+    SUCCESS_STATUSES,
+    TERMINAL_BROKER_STATUSES,
+)
+from tradingagents.execution.json_io import load_json as _load_json, save_json as _save_json
+from tradingagents.execution.modes import (
+    clamp_float as _clamp_float,
+    env_bool as _env_bool,
+    normalize_execution_mode as _normalize_execution_mode,
+)
 
 logger = logging.getLogger(__name__)
-
-
-SUCCESS_STATUSES = {"SUCCESS", "SUCCESS_CACHED"}
-EXECUTION_MODE_PAPER = "paper"
-EXECUTION_MODE_LIVE = "live"
-EXECUTION_MODE_ALPACA_PAPER = "alpaca-paper"
-EXECUTION_MODE_ALPACA_LIVE = "alpaca-live"
-TERMINAL_BROKER_STATUSES = {"FILLED", "CANCELED", "REJECTED", "EXPIRED", "REPLACED"}
-INTENT_CATEGORY_HEDGE = "HEDGE"
 
 
 class ExecutionAdapter(Protocol):
@@ -3193,15 +3206,6 @@ def _apply_slippage(reference_price: float, side: str, bps: float) -> float:
     return reference_price * (1.0 - slip)
 
 
-def _load_json(path: Path, default: Any = None) -> Any:
-    return read_json_locked(path, default_factory=lambda: default)
-
-
-def _save_json(path: Path, payload: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    write_json_locked(path, payload)
-
-
 def _as_string_list(raw: Any) -> List[str]:
     if isinstance(raw, list):
         values = [str(v).strip() for v in raw if str(v).strip()]
@@ -3244,10 +3248,6 @@ def _extract_order_notional_usd(order: Dict[str, Any]) -> float:
     return 0.0
 
 
-def _clamp_float(value: float, lo: float, hi: float) -> float:
-    return max(lo, min(hi, value))
-
-
 def _current_signed_notional(position_row: Any) -> float:
     if not isinstance(position_row, dict):
         return 0.0
@@ -3267,125 +3267,11 @@ def _count_rejected_reasons(rows: List[Dict[str, Any]]) -> Dict[str, int]:
     return counts
 
 
-def _normalize_execution_mode(mode: str) -> str:
-    text = str(mode or EXECUTION_MODE_PAPER).strip().lower().replace("_", "-")
-    if text == "alpaca":
-        return EXECUTION_MODE_ALPACA_PAPER
-    return text
-
-
-def _resolve_alpaca_credentials(mode: str) -> tuple[str, str, str, float]:
-    normalized_mode = _normalize_execution_mode(mode)
-    explicit_base = str(os.getenv("ALPACA_API_BASE_URL", "")).strip()
-    if explicit_base:
-        base_url = explicit_base
-    elif normalized_mode == EXECUTION_MODE_ALPACA_LIVE:
-        base_url = str(
-            os.getenv("ALPACA_LIVE_API_BASE_URL", "https://api.alpaca.markets")
-        ).strip()
-    else:
-        base_url = str(
-            os.getenv(
-                "ALPACA_PAPER_API_BASE_URL", "https://paper-api.alpaca.markets"
-            )
-        ).strip()
-
-    api_key_id = str(
-        os.getenv("APCA_API_KEY_ID", "") or os.getenv("ALPACA_API_KEY_ID", "")
-    ).strip()
-    api_secret_key = str(
-        os.getenv("APCA_API_SECRET_KEY", "") or os.getenv("ALPACA_API_SECRET_KEY", "")
-    ).strip()
-    timeout = max(
-        1.0,
-        float(os.getenv("ALPACA_REQUEST_TIMEOUT_SECONDS", "15")),
-    )
-    return _normalize_alpaca_base_url(base_url), api_key_id, api_secret_key, timeout
-
-
-def _alpaca_headers(api_key_id: str, api_secret_key: str) -> Dict[str, str]:
-    return {
-        "APCA-API-KEY-ID": api_key_id,
-        "APCA-API-SECRET-KEY": api_secret_key,
-        "Accept": "application/json",
-    }
-
-
-RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
-
-
-def _get_broker_adapter() -> AlpacaBrokerAdapter:
-    """Return a module-level singleton AlpacaBrokerAdapter."""
-    if not hasattr(_get_broker_adapter, "_instance"):
-        _get_broker_adapter._instance = AlpacaBrokerAdapter()  # type: ignore[attr-defined]
-    return _get_broker_adapter._instance  # type: ignore[attr-defined]
-
-
-def _alpaca_get_json(
-    base_url: str,
-    endpoint: str,
-    headers: Dict[str, str],
-    timeout_seconds: float,
-    params: Optional[Dict[str, Any]] = None,
-    max_retries: int = 3,
-) -> tuple[Any, Optional[str]]:
-    """Delegate to AlpacaBrokerAdapter.get_json(). Preserves (payload, error) signature."""
-    return _get_broker_adapter().get_json(
-        endpoint=endpoint,
-        method="GET",
-        params=params,
-        base_url_override=base_url,
-        max_retries=max_retries,
-    )
-
-
-def _submit_alpaca_order(
-    base_url: str,
-    api_key_id: str,
-    api_secret_key: str,
-    payload: Dict[str, Any],
-    timeout_seconds: float,
-    max_retries: int = 3,
-) -> Dict[str, Any]:
-    """Delegate to AlpacaBrokerAdapter.get_json(). Raises ValueError on failure."""
-    data, error = _get_broker_adapter().get_json(
-        endpoint="/v2/orders",
-        method="POST",
-        json_body=payload,
-        base_url_override=base_url,
-        max_retries=max_retries,
-    )
-    if error:
-        raise ValueError(f"Alpaca order submit failed: {error}")
-    if not isinstance(data, dict):
-        raise ValueError("Alpaca order submit returned invalid payload.")
-    return data
-
-
-def _format_qty(quantity: float) -> str:
-    text = f"{float(quantity):.6f}".rstrip("0").rstrip(".")
-    return text if text else "0"
-
-
-def _normalize_alpaca_base_url(raw_url: str) -> str:
-    text = str(raw_url or "").strip().rstrip("/")
-    if text.lower().endswith("/v2"):
-        text = text[:-3]
-    return text
-
-
 def _coerce_order_quantity(raw_qty: float, whole_shares: bool) -> float:
     qty = max(0.0, float(raw_qty))
     if whole_shares:
         return float(int(qty))
     return qty
-
-
-def _env_bool(name: str, default: bool) -> bool:
-    raw = os.getenv(name)
-    if raw is None:
-        return bool(default)
-    return str(raw).strip().lower() in {"1", "true", "yes", "y", "on"}
 
 
 def _parse_iso(raw: Any) -> Optional[dt.datetime]:
