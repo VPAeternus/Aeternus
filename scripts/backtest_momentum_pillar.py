@@ -98,7 +98,8 @@ def _score_rows(df: pd.DataFrame) -> pd.DataFrame:
             + regime_quality * 0.20
             + volume_confirmation * 0.10
         )
-        next_return = float(df.iloc[i + 1]["close"] / df.iloc[i]["close"] - 1.0)
+        next_close_return = float(df.iloc[i + 1]["close"] / df.iloc[i]["close"] - 1.0)
+        next_open_close_return = float(df.iloc[i + 1]["close"] / df.iloc[i + 1]["open"] - 1.0)
 
         rows.append(
             {
@@ -110,7 +111,8 @@ def _score_rows(df: pd.DataFrame) -> pd.DataFrame:
                 "regime_quality": regime_quality,
                 "volume_confirmation": volume_confirmation,
                 "signal_state": state_machine["signal_state"],
-                "next_return": next_return,
+                "next_return": next_close_return,
+                "next_open_close_return": next_open_close_return,
             }
         )
 
@@ -200,25 +202,26 @@ def walk_forward_audit(ticker: str, start: str, eval_start: str | None = None) -
     }
 
 
-def run(ticker: str, start: str, thresholds: list[int]) -> dict:
+def run(ticker: str, start: str, thresholds: list[int], entry: str = "close") -> dict:
     df = data_engine.load(ticker, start).copy()
     scored = _score_rows(df)
     if scored.empty:
         raise RuntimeError(f"No scored rows for {ticker}")
 
+    return_col = "next_open_close_return" if entry == "next_open" else "next_return"
     latest = scored.iloc[-1]
     bucket_rows = []
     for low, high in [(0, 40), (40, 50), (50, 55), (55, 65), (65, 101)]:
         bucket = scored[(scored["score"] >= low) & (scored["score"] < high)]
         if bucket.empty:
             continue
-        stats = _annualized_stats(bucket["next_return"])
+        stats = _annualized_stats(bucket[return_col])
         bucket_rows.append(
             {
                 "bucket": f"{low}-{high}",
                 "days": int(len(bucket)),
-                "avg_next_day_pct": round(float(bucket["next_return"].mean() * 100.0), 4),
-                "win_rate_pct": round(float((bucket["next_return"] > 0).mean() * 100.0), 2),
+                "avg_next_day_pct": round(float(bucket[return_col].mean() * 100.0), 4),
+                "win_rate_pct": round(float((bucket[return_col] > 0).mean() * 100.0), 2),
                 **stats,
             }
         )
@@ -226,7 +229,7 @@ def run(ticker: str, start: str, thresholds: list[int]) -> dict:
     strategies = []
     for threshold in thresholds:
         signal = scored["score"] >= threshold
-        strategy_returns = np.where(signal, scored["next_return"], 0.0)
+        strategy_returns = np.where(signal, scored[return_col], 0.0)
         strategies.append(
             {
                 "threshold": threshold,
@@ -257,7 +260,8 @@ def run(ticker: str, start: str, thresholds: list[int]) -> dict:
         },
         "buckets": bucket_rows,
         "strategies": strategies,
-        "buy_hold": _annualized_stats(scored["next_return"]),
+        "entry": entry,
+        "buy_hold": _annualized_stats(scored[return_col]),
     }
 
 
@@ -266,6 +270,7 @@ def main() -> None:
     parser.add_argument("--ticker", default="MU")
     parser.add_argument("--start", default="2000-01-01")
     parser.add_argument("--thresholds", default="50,55,60,65,70")
+    parser.add_argument("--entry", choices=["close", "next_open"], default="close")
     parser.add_argument("--audit-walk-forward", action="store_true")
     parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
@@ -277,16 +282,17 @@ def main() -> None:
         return
 
     thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
-    result = run(args.ticker, args.start, thresholds)
+    result = run(args.ticker, args.start, thresholds, entry=args.entry)
 
     print(f"{result['ticker']} momentum pillar backtest")
     print(f"Period: {result['start']} -> {result['end']} ({result['days']} scored days)")
     print(f"Latest: {result['latest']}")
+    print(f"Entry mode: {result['entry']}")
     print(f"1-day IC: {result['one_day_ic']}")
     print("\nBuckets:")
     for row in result["buckets"]:
         print(row)
-    print("\nStrategies: long next day if score >= threshold, else cash")
+    print("\nStrategies: long if score >= threshold, else cash")
     for row in result["strategies"]:
         print(row)
     print("\nBuy/hold:")
