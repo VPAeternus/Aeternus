@@ -13,6 +13,8 @@ import importlib.util
 import math
 from pathlib import Path
 from typing import Iterable
+import contextlib
+import io
 
 import numpy as np
 import pandas as pd
@@ -271,6 +273,55 @@ def run(ticker: str, start: str, thresholds: list[int], entry: str = "close") ->
     }
 
 
+def _default_top_unique() -> list[str]:
+    # Current top holdings by weight, manually fixed for reproducibility.
+    qqq_top = ["MSFT", "NVDA", "AAPL", "AMZN", "META", "AVGO", "GOOGL", "GOOG", "TSLA", "COST"]
+    spy_top = ["MSFT", "NVDA", "AAPL", "AMZN", "META", "AVGO", "GOOGL", "BRK-B", "GOOG", "TSLA"]
+    out = []
+    for ticker in qqq_top + spy_top:
+        if ticker not in out:
+            out.append(ticker)
+    return out[:10]
+
+
+def _run_batch(tickers: list[str], start: str, thresholds: list[int], entry: str) -> None:
+    rows = []
+    for ticker in tickers:
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                result = run(ticker, start, thresholds, entry=entry)
+            best = max(result["strategies"], key=lambda row: row["sharpe"])
+            buy_hold = result["buy_hold"]
+            rows.append({
+                "ticker": result["ticker"],
+                "best_threshold": best["threshold"],
+                "best_cagr_pct": best["cagr_pct"],
+                "best_sharpe": best["sharpe"],
+                "best_max_dd_pct": best["max_drawdown_pct"],
+                "best_exposure_pct": best["exposure_pct"],
+                "buy_hold_cagr_pct": buy_hold["cagr_pct"],
+                "buy_hold_sharpe": buy_hold["sharpe"],
+                "buy_hold_max_dd_pct": buy_hold["max_drawdown_pct"],
+            })
+            print(rows[-1])
+        except Exception as exc:
+            print({"ticker": ticker, "error": str(exc)})
+    if rows:
+        frame = pd.DataFrame(rows)
+        print("\nBatch summary")
+        print({
+            "tickers": len(frame),
+            "avg_best_cagr_pct": round(float(frame["best_cagr_pct"].mean()), 2),
+            "avg_best_sharpe": round(float(frame["best_sharpe"].mean()), 3),
+            "avg_best_max_dd_pct": round(float(frame["best_max_dd_pct"].mean()), 2),
+            "avg_buy_hold_cagr_pct": round(float(frame["buy_hold_cagr_pct"].mean()), 2),
+            "avg_buy_hold_sharpe": round(float(frame["buy_hold_sharpe"].mean()), 3),
+            "avg_buy_hold_max_dd_pct": round(float(frame["buy_hold_max_dd_pct"].mean()), 2),
+            "outperformed_cagr_count": int((frame["best_cagr_pct"] > frame["buy_hold_cagr_pct"]).sum()),
+            "outperformed_sharpe_count": int((frame["best_sharpe"] > frame["buy_hold_sharpe"]).sum()),
+        })
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Backtest Aeternus momentum pillar")
     parser.add_argument("--ticker", default="MU")
@@ -278,8 +329,14 @@ def main() -> None:
     parser.add_argument("--thresholds", default="50,55,60,65,70")
     parser.add_argument("--entry", choices=["close", "next_open", "next_open_to_open"], default="close")
     parser.add_argument("--audit-walk-forward", action="store_true")
+    parser.add_argument("--batch-top-qqq-spy", action="store_true", help="Run top 10 unique current QQQ/SPY holdings")
     parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
+
+    if args.batch_top_qqq_spy:
+        thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
+        _run_batch(_default_top_unique(), args.start, thresholds, args.entry)
+        return
 
     if args.audit_walk_forward:
         audit = walk_forward_audit(args.ticker, args.start, args.eval_start)
