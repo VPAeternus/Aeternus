@@ -13,9 +13,6 @@ This strategy never opens long trades. Bullish FVGs are tracked only as support 
 - `run_ifvg_v3.py` — direct CLI runner for one or more tickers.
 - `watchlist_manager.py` — stores tickers in `watchlist.db`.
 - `data_cache.py` — reads/updates daily OHLC cache in `market_data_cache/`.
-- `generate_pm_report.py` — filters live signals into PM report artifacts.
-- `proximity_engine.py` — checks live distance to resting limit prices.
-- `dashboard/` — Next.js viewer over generated CSV/JSON files.
 
 ## Run From This Folder
 
@@ -29,6 +26,7 @@ Optional:
 ```bash
 python3 run_ifvg_v3.py MU NVDA AMD
 python3 run_ifvg_v3.py MU --no-vix
+python3 run_ifvg_v3.py MU --no-refresh
 python3 run_ifvg_v3.py MU --start-date 2010-01-01
 ```
 
@@ -79,18 +77,13 @@ Short-only.
 - `portfolio_ticker_results.csv`
 - `live_signals.json`
 
-`generate_pm_report.py` reads those and writes:
+`run_ifvg_v3.py` appends:
 
-- `execution_reports/execution_report_YYYY-MM-DD.md`
-- `execution_reports/pm_conviction_stack.json`
-
-`proximity_engine.py` writes:
-
-- `execution_reports/proximity_data.json`
+- `ifvg_v3_results_history.csv`
+- `ifvg_v3_all_trades_history.csv`
 
 ## Known Issues
 
 - Direct VIX download path inside `ifvg_strategy_v3.py` currently behaves differently than the preloaded VIX path used by `portfolio_v3.py`.
-- Empty `live_signals.json` makes `generate_pm_report.py` exit early without writing an empty daily report.
 - Single-ticker tests overwrite global output files.
 - Watchlist metadata may be missing unless enrichment has been run.

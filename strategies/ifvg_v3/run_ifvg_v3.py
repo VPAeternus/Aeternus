@@ -15,6 +15,19 @@ from portfolio_v3 import V3PortfolioExecutor
 
 RESULTS_HISTORY_FILE = Path("ifvg_v3_results_history.csv")
 TRADES_HISTORY_FILE = Path("ifvg_v3_all_trades_history.csv")
+RESULTS_HISTORY_COLUMNS = [
+    "run_at",
+    "Ticker",
+    "Trades",
+    "Win Rate",
+    "Total PnL",
+    "Avg R:R",
+    "target_pct",
+    "sma50_filter",
+    "sma10_exit",
+    "vix_filter",
+    "refresh_data",
+]
 
 
 def _append_results_history(results: pd.DataFrame, args: argparse.Namespace) -> Path:
@@ -27,13 +40,15 @@ def _append_results_history(results: pd.DataFrame, args: argparse.Namespace) -> 
     history_rows["sma10_exit"] = "CLOSE"
     history_rows["vix_filter"] = not args.no_vix
     history_rows["refresh_data"] = not args.no_refresh
+    history_rows = history_rows.reindex(columns=RESULTS_HISTORY_COLUMNS)
 
     if RESULTS_HISTORY_FILE.exists():
-        existing = pd.read_csv(RESULTS_HISTORY_FILE)
+        existing = pd.read_csv(RESULTS_HISTORY_FILE).reindex(columns=RESULTS_HISTORY_COLUMNS)
         combined = pd.concat([existing, history_rows], ignore_index=True)
     else:
         combined = history_rows
 
+    combined = combined.reindex(columns=RESULTS_HISTORY_COLUMNS)
     combined.to_csv(RESULTS_HISTORY_FILE, index=False)
     return RESULTS_HISTORY_FILE
 
