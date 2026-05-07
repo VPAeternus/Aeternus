@@ -36,6 +36,11 @@ from tradingagents.execution.constants import (
     SUCCESS_STATUSES,
     TERMINAL_BROKER_STATUSES,
 )
+from tradingagents.execution.fills import (
+    apply_slippage as _apply_slippage,
+    coerce_order_quantity as _coerce_order_quantity,
+    recommendation_to_side as _recommendation_to_side,
+)
 from tradingagents.execution.json_io import load_json as _load_json, save_json as _save_json
 from tradingagents.execution.modes import (
     clamp_float as _clamp_float,
@@ -2960,15 +2965,6 @@ def _apply_fill_to_position(open_positions: Dict[str, Any], order: Dict[str, Any
     }
 
 
-def _recommendation_to_side(recommendation: str, long_only: bool) -> str:
-    rec = str(recommendation or "").upper()
-    if "BUY" in rec:
-        return "BUY"
-    if "SELL" in rec:
-        return "SKIP" if long_only else "SELL"
-    return "SKIP"
-
-
 def _extract_reference_price(item: Dict[str, Any], analysis: Dict[str, Any]) -> Optional[float]:
     aet_score = analysis.get("aeternus_score", {}) if isinstance(analysis, dict) else {}
     if isinstance(aet_score, dict):
@@ -3077,13 +3073,6 @@ def _extract_rating_id(analysis: Dict[str, Any]) -> str:
     return ""
 
 
-def _apply_slippage(reference_price: float, side: str, bps: float) -> float:
-    slip = max(0.0, float(bps)) / 10000.0
-    if str(side).upper() == "BUY":
-        return reference_price * (1.0 + slip)
-    return reference_price * (1.0 - slip)
-
-
 def _as_string_list(raw: Any) -> List[str]:
     if isinstance(raw, list):
         values = [str(v).strip() for v in raw if str(v).strip()]
@@ -3143,13 +3132,6 @@ def _count_rejected_reasons(rows: List[Dict[str, Any]]) -> Dict[str, int]:
         reason = str(row.get("reason", "UNKNOWN")).upper()
         counts[reason] = counts.get(reason, 0) + 1
     return counts
-
-
-def _coerce_order_quantity(raw_qty: float, whole_shares: bool) -> float:
-    qty = max(0.0, float(raw_qty))
-    if whole_shares:
-        return float(int(qty))
-    return qty
 
 
 def _parse_iso(raw: Any) -> Optional[dt.datetime]:
