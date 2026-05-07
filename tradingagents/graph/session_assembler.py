@@ -396,10 +396,9 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
     if momentum_metrics and not _mom_gated:
         momentum_sub = _compute_momentum_sub(momentum_metrics)
         anchored_momentum = round(
-            momentum_sub["trend_strength"] * 0.40
-            + momentum_sub["momentum_health"] * 0.30
-            + momentum_sub["regime_quality"] * 0.20
-            + momentum_sub["volume_confirmation"] * 0.10,
+            momentum_sub["trend_strength"] * 0.33
+            + momentum_sub["momentum_health"] * 0.34
+            + momentum_sub["regime_quality"] * 0.33,
         )
         anchored_momentum = max(0, min(100, anchored_momentum))
     else:

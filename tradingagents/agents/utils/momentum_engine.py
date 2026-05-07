@@ -376,12 +376,12 @@ def build_momentum_snapshot(ticker: str, trade_date: str = None) -> Dict[str, An
         regime_quality = _score_regime_quality(invested_pct_2y, exits_ob, exits_fs, exits_dc)
         volume_confirmation = _score_volume_confirmation(volume, vol_sma20, close, sma20)
 
-        # Composite
+        # Composite. Volume is retained as diagnostic only; backtests showed it
+        # added noise versus a balanced trend/health/regime score.
         composite_score = _clamp(
-            trend_strength * 0.40
-            + momentum_health * 0.30
-            + regime_quality * 0.20
-            + volume_confirmation * 0.10
+            trend_strength * 0.33
+            + momentum_health * 0.34
+            + regime_quality * 0.33
         )
 
         if composite_score >= 65:

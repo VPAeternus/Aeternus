@@ -42,7 +42,7 @@ def _load_momentum_engine():
 
 
 WEIGHT_SETS = {
-    "current_40_30_20_10": {"trend_strength": 0.40, "momentum_health": 0.30, "regime_quality": 0.20, "volume_confirmation": 0.10},
+    "legacy_40_30_20_10": {"trend_strength": 0.40, "momentum_health": 0.30, "regime_quality": 0.20, "volume_confirmation": 0.10},
     "regime_30_20_40_10": {"trend_strength": 0.30, "momentum_health": 0.20, "regime_quality": 0.40, "volume_confirmation": 0.10},
     "regime_30_15_45_10": {"trend_strength": 0.30, "momentum_health": 0.15, "regime_quality": 0.45, "volume_confirmation": 0.10},
     "balanced_30_25_35_10": {"trend_strength": 0.30, "momentum_health": 0.25, "regime_quality": 0.35, "volume_confirmation": 0.10},
@@ -133,10 +133,9 @@ def _score_rows(df: pd.DataFrame) -> pd.DataFrame:
         )
         volume_confirmation = mom._score_volume_confirmation(volume, vol_sma20, close, sma20)
         score = mom._clamp(
-            trend * 0.40
-            + health * 0.30
-            + regime_quality * 0.20
-            + volume_confirmation * 0.10
+            trend * 0.33
+            + health * 0.34
+            + regime_quality * 0.33
         )
         next_close_return = float(df.iloc[i + 1]["close"] / df.iloc[i]["close"] - 1.0)
         next_open_close_return = float(df.iloc[i + 1]["close"] / df.iloc[i + 1]["open"] - 1.0)
@@ -198,10 +197,9 @@ def walk_forward_audit(ticker: str, start: str, eval_start: str | None = None) -
         )
         volume_confirmation = mom._score_volume_confirmation(volume, vol_sma20, close, sma20)
         score = mom._clamp(
-            trend * 0.40
-            + health * 0.30
-            + regime_quality * 0.20
-            + volume_confirmation * 0.10
+            trend * 0.33
+            + health * 0.34
+            + regime_quality * 0.33
         )
         return {
             "score": score,

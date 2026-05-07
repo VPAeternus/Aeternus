@@ -854,13 +854,14 @@ def test_composite_is_weighted_average_of_subscores(monkeypatch):
     
     subscores = result["subscores"]
     expected_composite = (
-        subscores["trend_strength"] * 0.40 +
-        subscores["momentum_health"] * 0.30 +
-        subscores["regime_quality"] * 0.20 +
-        subscores["volume_confirmation"] * 0.10
+        subscores["trend_strength"] * 0.33 +
+        subscores["momentum_health"] * 0.34 +
+        subscores["regime_quality"] * 0.33
     )
     
-    # Composite should be close to expected (within rounding)
+    # Composite should be close to expected (within rounding) and ignore
+    # volume_confirmation, which is retained only as a diagnostic subscore.
+    assert "volume_confirmation" in subscores
     assert abs(result["composite_score"] - int(expected_composite)) <= 1
 
 
