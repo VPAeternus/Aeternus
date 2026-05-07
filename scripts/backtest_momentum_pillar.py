@@ -41,6 +41,14 @@ def _load_momentum_engine():
     return module
 
 
+WEIGHT_SETS = {
+    "current_40_30_20_10": {"trend_strength": 0.40, "momentum_health": 0.30, "regime_quality": 0.20, "volume_confirmation": 0.10},
+    "regime_30_20_40_10": {"trend_strength": 0.30, "momentum_health": 0.20, "regime_quality": 0.40, "volume_confirmation": 0.10},
+    "regime_30_15_45_10": {"trend_strength": 0.30, "momentum_health": 0.15, "regime_quality": 0.45, "volume_confirmation": 0.10},
+    "balanced_30_25_35_10": {"trend_strength": 0.30, "momentum_health": 0.25, "regime_quality": 0.35, "volume_confirmation": 0.10},
+}
+
+
 def _annualized_stats(returns: Iterable[float]) -> dict:
     r = pd.Series(list(returns), dtype="float64")
     if r.empty:
@@ -206,17 +214,105 @@ def walk_forward_audit(ticker: str, start: str, eval_start: str | None = None) -
     }
 
 
+def _apply_weights(scored: pd.DataFrame, weights: dict[str, float]) -> pd.Series:
+    return (
+        scored["trend_strength"] * weights["trend_strength"]
+        + scored["momentum_health"] * weights["momentum_health"]
+        + scored["regime_quality"] * weights["regime_quality"]
+        + scored["volume_confirmation"] * weights["volume_confirmation"]
+    ).clip(0, 100).astype(int)
+
+
+def _return_column(entry: str) -> str:
+    return {
+        "close": "next_return",
+        "next_open": "next_open_close_return",
+        "next_open_to_open": "next_open_to_open_return",
+    }[entry]
+
+
+def _strategy_returns(scored: pd.DataFrame, score: pd.Series, threshold: int, return_col: str) -> pd.Series:
+    signal = score >= threshold
+    return pd.Series(np.where(signal, scored[return_col], 0.0), index=scored.index)
+
+
+def walk_forward_weight_grid(
+    ticker: str,
+    start: str,
+    entry: str,
+    thresholds: list[int],
+    train_years: int = 5,
+    test_years: int = 1,
+    rebalance: str = "annual",
+) -> dict:
+    """Walk-forward select weight set + threshold on train, apply to unseen test.
+
+    Rebalance cadence: annual by default. That matches slow-moving regime quality;
+    monthly/quarterly would invite overfitting and unnecessary turnover.
+    """
+    if rebalance != "annual":
+        raise ValueError("Only annual rebalance is supported for now")
+
+    df = data_engine.load(ticker, start).copy()
+    scored = _score_rows(df).dropna().reset_index(drop=True)
+    return_col = _return_column(entry)
+    scored = scored.dropna(subset=[return_col]).reset_index(drop=True)
+    scored["year"] = pd.to_datetime(scored["date"]).dt.year
+    years = sorted(scored["year"].unique())
+
+    folds = []
+    oos_returns = []
+    for idx in range(train_years, len(years), test_years):
+        train_year_set = set(years[idx - train_years:idx])
+        test_year_set = set(years[idx:idx + test_years])
+        train = scored[scored["year"].isin(train_year_set)]
+        test = scored[scored["year"].isin(test_year_set)]
+        if train.empty or test.empty:
+            continue
+
+        candidates = []
+        for weight_name, weights in WEIGHT_SETS.items():
+            train_score = _apply_weights(train, weights)
+            for threshold in thresholds:
+                stats = _annualized_stats(_strategy_returns(train, train_score, threshold, return_col))
+                candidates.append((stats["sharpe"], stats["cagr_pct"], weight_name, threshold, weights))
+        candidates.sort(reverse=True)
+        _, _, weight_name, threshold, weights = candidates[0]
+
+        test_score = _apply_weights(test, weights)
+        test_returns = _strategy_returns(test, test_score, threshold, return_col)
+        oos_returns.extend(test_returns.tolist())
+        test_stats = _annualized_stats(test_returns)
+        folds.append({
+            "train_years": f"{min(train_year_set)}-{max(train_year_set)}",
+            "test_years": f"{min(test_year_set)}-{max(test_year_set)}",
+            "weight_set": weight_name,
+            "threshold": threshold,
+            **test_stats,
+        })
+
+    buy_hold = _annualized_stats(scored[return_col])
+    oos = _annualized_stats(oos_returns)
+    return {
+        "ticker": ticker.upper(),
+        "entry": entry,
+        "rebalance": rebalance,
+        "train_years": train_years,
+        "test_years": test_years,
+        "folds": folds,
+        "oos": oos,
+        "buy_hold": buy_hold,
+        "fold_count": len(folds),
+    }
+
+
 def run(ticker: str, start: str, thresholds: list[int], entry: str = "close") -> dict:
     df = data_engine.load(ticker, start).copy()
     scored = _score_rows(df)
     if scored.empty:
         raise RuntimeError(f"No scored rows for {ticker}")
 
-    return_col = {
-        "close": "next_return",
-        "next_open": "next_open_close_return",
-        "next_open_to_open": "next_open_to_open_return",
-    }[entry]
+    return_col = _return_column(entry)
     latest = scored.iloc[-1]
     bucket_rows = []
     for low, high in [(0, 40), (40, 50), (50, 55), (55, 65), (65, 101)]:
@@ -330,8 +426,24 @@ def main() -> None:
     parser.add_argument("--entry", choices=["close", "next_open", "next_open_to_open"], default="close")
     parser.add_argument("--audit-walk-forward", action="store_true")
     parser.add_argument("--batch-top-qqq-spy", action="store_true", help="Run top 10 unique current QQQ/SPY holdings")
+    parser.add_argument("--walk-forward-grid", action="store_true", help="Walk-forward select momentum weights/threshold")
+    parser.add_argument("--train-years", type=int, default=5)
+    parser.add_argument("--test-years", type=int, default=1)
     parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
+
+    if args.walk_forward_grid:
+        thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
+        result = walk_forward_weight_grid(
+            args.ticker,
+            args.start,
+            args.entry,
+            thresholds,
+            train_years=args.train_years,
+            test_years=args.test_years,
+        )
+        print(result)
+        return
 
     if args.batch_top_qqq_spy:
         thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
