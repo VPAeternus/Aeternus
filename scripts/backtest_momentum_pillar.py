@@ -100,6 +100,7 @@ def _score_rows(df: pd.DataFrame) -> pd.DataFrame:
         )
         next_close_return = float(df.iloc[i + 1]["close"] / df.iloc[i]["close"] - 1.0)
         next_open_close_return = float(df.iloc[i + 1]["close"] / df.iloc[i + 1]["open"] - 1.0)
+        next_open_to_open_return = float(df.iloc[i + 2]["open"] / df.iloc[i + 1]["open"] - 1.0) if i + 2 < len(df) else np.nan
 
         rows.append(
             {
@@ -113,6 +114,7 @@ def _score_rows(df: pd.DataFrame) -> pd.DataFrame:
                 "signal_state": state_machine["signal_state"],
                 "next_return": next_close_return,
                 "next_open_close_return": next_open_close_return,
+                "next_open_to_open_return": next_open_to_open_return,
             }
         )
 
@@ -208,7 +210,11 @@ def run(ticker: str, start: str, thresholds: list[int], entry: str = "close") ->
     if scored.empty:
         raise RuntimeError(f"No scored rows for {ticker}")
 
-    return_col = "next_open_close_return" if entry == "next_open" else "next_return"
+    return_col = {
+        "close": "next_return",
+        "next_open": "next_open_close_return",
+        "next_open_to_open": "next_open_to_open_return",
+    }[entry]
     latest = scored.iloc[-1]
     bucket_rows = []
     for low, high in [(0, 40), (40, 50), (50, 55), (55, 65), (65, 101)]:
@@ -270,7 +276,7 @@ def main() -> None:
     parser.add_argument("--ticker", default="MU")
     parser.add_argument("--start", default="2000-01-01")
     parser.add_argument("--thresholds", default="50,55,60,65,70")
-    parser.add_argument("--entry", choices=["close", "next_open"], default="close")
+    parser.add_argument("--entry", choices=["close", "next_open", "next_open_to_open"], default="close")
     parser.add_argument("--audit-walk-forward", action="store_true")
     parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
