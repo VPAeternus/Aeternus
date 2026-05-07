@@ -49,6 +49,36 @@ WEIGHT_SETS = {
 }
 
 
+def _constrained_weight_grid(step: int = 10) -> dict[str, dict[str, float]]:
+    """Small ex-ante grid to avoid arbitrary formulas and limit data snooping."""
+    out = {}
+    for trend in range(20, 61, step):
+        for health in range(10, 51, step):
+            for regime in range(20, 61, step):
+                for volume in range(0, 11, step):
+                    if trend + health + regime + volume != 100:
+                        continue
+                    name = f"grid_{trend}_{health}_{regime}_{volume}"
+                    out[name] = {
+                        "trend_strength": trend / 100.0,
+                        "momentum_health": health / 100.0,
+                        "regime_quality": regime / 100.0,
+                        "volume_confirmation": volume / 100.0,
+                    }
+    return out
+
+
+CONSTRAINED_WEIGHT_GRID = _constrained_weight_grid()
+
+
+def _weight_candidates(weight_mode: str) -> dict[str, dict[str, float]]:
+    if weight_mode == "predefined":
+        return WEIGHT_SETS
+    if weight_mode == "constrained":
+        return CONSTRAINED_WEIGHT_GRID
+    raise ValueError("weight_mode must be 'predefined' or 'constrained'")
+
+
 def _annualized_stats(returns: Iterable[float]) -> dict:
     r = pd.Series(list(returns), dtype="float64")
     if r.empty:
@@ -245,6 +275,7 @@ def walk_forward_weight_grid(
     test_years: int = 1,
     rebalance: str = "annual",
     select_metric: str = "sharpe",
+    weight_mode: str = "predefined",
 ) -> dict:
     """Walk-forward select weight set + threshold on train, apply to unseen test.
 
@@ -255,6 +286,7 @@ def walk_forward_weight_grid(
         raise ValueError("select_metric must be 'sharpe' or 'cagr'")
     if rebalance != "annual":
         raise ValueError("Only annual rebalance is supported for now")
+    weight_sets = _weight_candidates(weight_mode)
 
     df = data_engine.load(ticker, start).copy()
     scored = _score_rows(df).dropna().reset_index(drop=True)
@@ -274,7 +306,7 @@ def walk_forward_weight_grid(
             continue
 
         candidates = []
-        for weight_name, weights in WEIGHT_SETS.items():
+        for weight_name, weights in weight_sets.items():
             train_score = _apply_weights(train, weights)
             for threshold in thresholds:
                 stats = _annualized_stats(_strategy_returns(train, train_score, threshold, return_col))
@@ -303,6 +335,8 @@ def walk_forward_weight_grid(
         "entry": entry,
         "rebalance": rebalance,
         "select_metric": select_metric,
+        "weight_mode": weight_mode,
+        "weight_candidate_count": len(weight_sets),
         "train_years": train_years,
         "test_years": test_years,
         "folds": folds,
@@ -412,6 +446,8 @@ def _run_batch(tickers: list[str], start: str, thresholds: list[int], entry: str
                 rows.append({
                     "ticker": result["ticker"],
                     "fold_count": result["fold_count"],
+                    "weight_mode": result.get("weight_mode"),
+                    "weight_candidate_count": result.get("weight_candidate_count"),
                     "best_cagr_pct": oos["cagr_pct"],
                     "best_sharpe": oos["sharpe"],
                     "best_max_dd_pct": oos["max_drawdown_pct"],
@@ -450,6 +486,7 @@ def main() -> None:
     parser.add_argument("--train-years", type=int, default=5)
     parser.add_argument("--test-years", type=int, default=1)
     parser.add_argument("--select-metric", choices=["sharpe", "cagr"], default="sharpe")
+    parser.add_argument("--weight-mode", choices=["predefined", "constrained"], default="predefined")
     parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
 
@@ -466,6 +503,7 @@ def main() -> None:
                     train_years=args.train_years,
                     test_years=args.test_years,
                     select_metric=args.select_metric,
+                    weight_mode=args.weight_mode,
                 )
                 _run_batch(_default_top_unique(), args.start, thresholds, args.entry)
             finally:
@@ -484,6 +522,7 @@ def main() -> None:
             train_years=args.train_years,
             test_years=args.test_years,
             select_metric=args.select_metric,
+            weight_mode=args.weight_mode,
         )
         print(result)
         return
