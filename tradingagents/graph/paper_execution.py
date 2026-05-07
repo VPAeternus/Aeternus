@@ -43,6 +43,13 @@ from tradingagents.execution.constants import (
     SUCCESS_STATUSES,
     TERMINAL_BROKER_STATUSES,
 )
+from tradingagents.execution.formatting import (
+    as_string_list as _as_string_list,
+    build_client_order_id as _build_client_order_id,
+    now_iso as _now_iso,
+    parse_iso as _parse_iso,
+    parse_iso_or_now as _parse_iso_or_now,
+)
 from tradingagents.execution.fills import (
     apply_slippage as _apply_slippage,
     coerce_order_quantity as _coerce_order_quantity,
@@ -3080,28 +3087,6 @@ def _extract_rating_id(analysis: Dict[str, Any]) -> str:
     return ""
 
 
-def _as_string_list(raw: Any) -> List[str]:
-    if isinstance(raw, list):
-        values = [str(v).strip() for v in raw if str(v).strip()]
-    else:
-        values = []
-    seen: List[str] = []
-    for value in values:
-        if value not in seen:
-            seen.append(value)
-    return seen
-
-
-def _now_iso() -> str:
-    return dt.datetime.now(dt.timezone.utc).isoformat()
-
-
-def _build_client_order_id(plan_id: str, symbol: str, ordinal: int) -> str:
-    compact = str(plan_id).replace("-", "")[:10]
-    ticker = str(symbol or "").upper().strip()[:8]
-    return f"{compact}-{ticker}-{int(ordinal):03d}"
-
-
 def _extract_order_notional_usd(order: Dict[str, Any]) -> float:
     raw_notional = order.get("target_notional_usd")
     try:
@@ -3139,26 +3124,5 @@ def _count_rejected_reasons(rows: List[Dict[str, Any]]) -> Dict[str, int]:
         reason = str(row.get("reason", "UNKNOWN")).upper()
         counts[reason] = counts.get(reason, 0) + 1
     return counts
-
-
-def _parse_iso(raw: Any) -> Optional[dt.datetime]:
-    text = str(raw or "").strip()
-    if not text:
-        return None
-    normalized = text.replace("Z", "+00:00")
-    try:
-        value = dt.datetime.fromisoformat(normalized)
-    except ValueError:
-        return None
-    if value.tzinfo is None:
-        return value.replace(tzinfo=dt.timezone.utc)
-    return value.astimezone(dt.timezone.utc)
-
-
-def _parse_iso_or_now(raw: Any) -> dt.datetime:
-    parsed = _parse_iso(raw)
-    if parsed is not None:
-        return parsed
-    return dt.datetime.now(dt.timezone.utc)
 
 
