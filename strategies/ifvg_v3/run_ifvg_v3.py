@@ -26,6 +26,7 @@ def _append_results_history(results: pd.DataFrame, args: argparse.Namespace) -> 
     history_rows["sma50_filter"] = "BELOW"
     history_rows["sma10_exit"] = "CLOSE"
     history_rows["vix_filter"] = not args.no_vix
+    history_rows["refresh_data"] = not args.no_refresh
 
     if RESULTS_HISTORY_FILE.exists():
         existing = pd.read_csv(RESULTS_HISTORY_FILE)
@@ -59,6 +60,7 @@ def _append_trades_history(executor: V3PortfolioExecutor, args: argparse.Namespa
         "sma50_filter",
         "sma10_exit",
         "vix_filter",
+        "refresh_data",
     ]
 
     rows = []
@@ -81,6 +83,7 @@ def _append_trades_history(executor: V3PortfolioExecutor, args: argparse.Namespa
         trade_rows["sma50_filter"] = "BELOW"
         trade_rows["sma10_exit"] = "CLOSE"
         trade_rows["vix_filter"] = not args.no_vix
+        trade_rows["refresh_data"] = not args.no_refresh
         trade_rows = trade_rows[cols]
     else:
         trade_rows = pd.DataFrame(columns=cols)
@@ -102,6 +105,11 @@ def main() -> None:
     parser.add_argument("--start-date", default="2000-01-01")
     parser.add_argument("--target-pct", type=float, default=0.05)
     parser.add_argument("--no-vix", action="store_true", help="Disable VIX entry filter")
+    parser.add_argument(
+        "--no-refresh",
+        action="store_true",
+        help="Use cached market data only; do not call Yahoo Finance for missing/stale data.",
+    )
     args = parser.parse_args()
 
     tickers = [t.upper().strip() for t in args.tickers]
@@ -112,6 +120,7 @@ def main() -> None:
         sma50_filter="BELOW",
         sma10_exit="CLOSE",
         vix_filter=not args.no_vix,
+        refresh_data=not args.no_refresh,
     )
     executor.run_portfolio()
     executor.generate_report()

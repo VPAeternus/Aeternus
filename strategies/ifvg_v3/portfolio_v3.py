@@ -13,13 +13,14 @@ class V3PortfolioExecutor:
     global mathematical performance into a single report.
     """
     def __init__(self, tickers=None, start_date="2000-01-01", target_pct=0.05, 
-                 sma50_filter="BELOW", sma10_exit="CLOSE", vix_filter=True):
+                 sma50_filter="BELOW", sma10_exit="CLOSE", vix_filter=True, refresh_data=True):
         self.tickers = tickers if tickers else watchlist_manager.get_tickers()
         self.start_date = start_date
         self.target_pct = target_pct
         self.sma50_filter = sma50_filter
         self.sma10_exit = sma10_exit
         self.vix_filter = vix_filter
+        self.refresh_data = refresh_data
         
         # Tracking
         self.portfolio_trades = []
@@ -38,7 +39,8 @@ class V3PortfolioExecutor:
                 sma10_exit=self.sma10_exit,
                 vix_filter=self.vix_filter,
                 verbose=False,
-                preloaded_vix=preloaded_vix
+                preloaded_vix=preloaded_vix,
+                refresh_data=self.refresh_data
             )
             bot.download_data()
             bot.run_simulation()
@@ -61,7 +63,7 @@ class V3PortfolioExecutor:
         if self.vix_filter:
             print("[*] Pre-fetching Global VIX data using Data Cache...")
             start_dt = pd.to_datetime(self.start_date) - pd.DateOffset(days=365)
-            vix_df = data_cache.get_cached_ticker_data("^VIX", start_dt.strftime("%Y-%m-%d"))
+            vix_df = data_cache.get_cached_ticker_data("^VIX", start_dt.strftime("%Y-%m-%d"), refresh=self.refresh_data)
             preloaded_vix = vix_df
             
         print(f"[*] Beginning threaded execution mapped across {len(self.tickers)} tickers...")

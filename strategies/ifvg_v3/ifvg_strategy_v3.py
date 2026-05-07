@@ -38,7 +38,7 @@ class Trade:
     status: str = "OPEN"
 
 class EquilibriumStrategyV3:
-    def __init__(self, ticker="QQQ", start_date="2000-01-01", target_pct=0.10, sma50_filter="ANY", sma10_exit="CLOSE", vix_filter=False, verbose=True, preloaded_vix=None, entry_level=0.618):
+    def __init__(self, ticker="QQQ", start_date="2000-01-01", target_pct=0.10, sma50_filter="ANY", sma10_exit="CLOSE", vix_filter=False, verbose=True, preloaded_vix=None, entry_level=0.618, refresh_data=True):
         self.ticker = ticker
         self.start_date = start_date
         self.target_pct = target_pct
@@ -48,6 +48,7 @@ class EquilibriumStrategyV3:
         self.verbose = verbose
         self.entry_level = entry_level
         self.preloaded_vix = preloaded_vix
+        self.refresh_data = refresh_data
         self.data: pd.DataFrame = None
         self.vix_data: pd.DataFrame = None
         
@@ -70,7 +71,7 @@ class EquilibriumStrategyV3:
         if hasattr(self, 'verbose') and self.verbose:
             print(f"Downloading Structural Data for {self.ticker}...")
         
-        df = data_cache.get_cached_ticker_data(self.ticker, self.start_date)
+        df = data_cache.get_cached_ticker_data(self.ticker, self.start_date, refresh=self.refresh_data)
         
         # Calculate Technical Baselines
         df['sma50'] = df['close'].rolling(window=50).mean()

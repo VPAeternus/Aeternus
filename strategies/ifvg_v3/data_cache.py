@@ -7,10 +7,12 @@ import threading
 CACHE_DIR = "market_data_cache"
 _download_lock = threading.Lock()
 
-def get_cached_ticker_data(ticker, start_date):
+def get_cached_ticker_data(ticker, start_date, refresh=True):
     """
     Retrieves ticker data from local CSV cache.
-    If missing or outdated, fetches the delta from Yahoo Finance and appends it.
+    If refresh is enabled and cache is outdated, fetches only the missing
+    delta from Yahoo Finance and appends it. It does not redownload a full
+    history unless the cache file is missing or unreadable.
     """
     os.makedirs(CACHE_DIR, exist_ok=True)
     safe_ticker = ticker.replace("^", "") # For ^VIX
@@ -27,7 +29,7 @@ def get_cached_ticker_data(ticker, start_date):
             
             last_date = df.index[-1].date()
             
-            if last_date < today:
+            if refresh and last_date < today:
                 fetch_start = last_date + datetime.timedelta(days=1)
                 with _download_lock:
                     new_df = yf.download(ticker, start=fetch_start.strftime("%Y-%m-%d"), progress=False, auto_adjust=False)
@@ -54,7 +56,11 @@ def get_cached_ticker_data(ticker, start_date):
              print(f"[-] Cache read failed for {ticker}: {e}. Redownloading.")
              pass
 
-    # Full Download
+    if not refresh:
+        print(f"[!] No cache available for {ticker}; returning empty data because refresh is disabled.")
+        return pd.DataFrame()
+
+    # Full download only happens for missing/unreadable cache files.
     start_dt = pd.to_datetime(start_date) - pd.DateOffset(days=365)
     with _download_lock:
         df = yf.download(ticker, start=start_dt.strftime("%Y-%m-%d"), progress=False, auto_adjust=False)
