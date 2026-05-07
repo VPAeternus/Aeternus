@@ -458,6 +458,70 @@ def test_collect_standalone_bootstraps_without_discover(monkeypatch):
     assert shortlist["date"] == "2026-03-05"
 
 
+def test_discover_then_collect_writes_queue_artifacts_and_ledger(tmp_path, monkeypatch):
+    from tradingagents.dealflow.pipeline import DealFlowPipeline
+
+    monkeypatch.chdir(tmp_path)
+    universe = [{"symbol": "GLW", "asset_class": "Equity", "sector": "Technology", "liquidity_score": 90.0, "aliases": []}]
+    candidate = {
+        "symbol": "GLW",
+        "asset_class": "Equity",
+        "sector": "Technology",
+        "liquidity_score": 90.0,
+        "subscores": {},
+        "deal_flow_score": 85.0,
+        "core_score": 90.0,
+        "momentum_score": 70.0,
+        "asymmetry_score": 65.0,
+        "active_families": 3,
+        "evidence_count": 6,
+        "freshness_hours": 4.0,
+        "status": "ACTIVE",
+        "risk_tags": [],
+        "trend_tags": [],
+        "lane": "CORE",
+        "source": "AUTO",
+        "source_detail": "AUTO_MODEL",
+        "manual_note": "",
+        "manual_priority": 0,
+        "reason": "selected",
+    }
+
+    with ExitStack() as stack:
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", return_value=universe))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_tier_map", return_value={"GLW": "T1_ANCHOR"}))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_ledger", return_value={"symbols": ["GLW"], "kept_symbols": ["GLW"], "rule_snapshot": {}}))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.sources.x_feed_manual.load_recent_merged", return_value={}))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.DealFlowPipeline._build_fvg_recall_channel", return_value={"selected_symbols": [], "artifact": {"date": "2026-05-05", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}}))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.DealFlowPipeline._build_fma_recall_channel", return_value={"selected_symbols": [], "artifact": {"date": "2026-05-05", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}}))
+        stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
+        stack.enter_context(patch("tradingagents.dealflow.sources.insider_cluster.scan_insider_sweep", return_value={"skipped": True}))
+        stack.enter_context(patch("tradingagents.dealflow.sources.technical_ignition_scout.scan_technical_ignition_setups", return_value={"promoted_count": 0, "promoted_symbols": [], "stale_count": 0, "stale_symbols": [], "signals": [], "promoted": [], "stale": []}))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.scan_thirteenf_watchlist", return_value={"candidate_count": 0, "symbols": [], "candidates": []}))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline._AKG_AVAILABLE", False))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_social_news_signals", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_price_momentum_signals", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_macro_signals", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_smart_money_signals", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_sector_rotation_signals", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_insider_cluster_signals", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.score_candidates", return_value=([], [candidate])))
+        stack.enter_context(patch("tradingagents.dealflow.pipeline.rank_candidates", return_value=[{**candidate, "rank": 1}]))
+
+        pipeline = DealFlowPipeline(config=_minimal_config({"dealflow_thirteenf_watchlist_enabled": False, "dealflow_technical_ignition_enabled": False, "dealflow_min_signal_families": 1}))
+        discover_summary = pipeline.discover(as_of_date="2026-05-05", trigger="manual")
+        shortlist, queue, signals, event = pipeline.collect(as_of_date="2026-05-05", trigger="manual", top_k=1)
+
+    base = tmp_path / "eval_results" / "deal_flow" / "2026-05-05"
+    assert discover_summary["universe_size"] == 1
+    assert (base / "scout_audit.json").exists()
+    assert json.loads((base / "research_queue.json").read_text())["selected_queue_ids"] == queue["selected_queue_ids"]
+    rows = json.loads((base / "hypothesis_ledger" / "shared" / "rows.json").read_text())
+    assert {row["stage_id"] for row in rows} >= {"universe_gate_edge", "evidence_gate", "shortlist_cut", "deep_selection_cut"}
+    assert shortlist["candidates"][0]["symbol"] == "GLW"
+
+
 def test_collect_standalone_threads_persisted_recall_symbols(tmp_path, monkeypatch):
     from tradingagents.dealflow.pipeline import DealFlowPipeline
 
