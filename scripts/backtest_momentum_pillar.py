@@ -117,6 +117,89 @@ def _score_rows(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows).dropna()
 
 
+def walk_forward_audit(ticker: str, start: str, eval_start: str | None = None) -> dict:
+    """Compare cached indicator scoring to indicators recomputed on each prefix.
+
+    Use ``start`` as the data warmup start and ``eval_start`` as the first date
+    to check. This avoids false mismatches from intentionally-warmed indicators.
+    """
+    df = data_engine.load(ticker, start).copy()
+    raw_cols = [c for c in ["date", "open", "high", "low", "close", "volume", "vix"] if c in df.columns]
+    raw = df[raw_cols].copy()
+    mom = _load_momentum_engine()
+
+    def score_last(indicator_df: pd.DataFrame) -> dict | None:
+        hist = indicator_df.copy()
+        if len(hist) < 252:
+            return None
+        hist["accel"] = mom._compute_accel(hist["close"], hist["sma3"], lb=5)
+        last = hist.iloc[-1]
+        last_pct = hist["accel"].expanding(min_periods=252).rank(pct=True).iloc[-1]
+        accel_pct = float(last_pct) if not pd.isna(last_pct) else 0.5
+        state_machine = mom._run_cc_overbought_window(hist, holdout=3, window=504)
+        close = float(last["close"])
+        sma10 = float(last.get("sma10", np.nan))
+        sma20 = float(last.get("sma20", np.nan))
+        sma50 = float(last.get("sma50", np.nan))
+        sma200 = float(last.get("sma200", np.nan))
+        volume = float(last.get("volume", np.nan))
+        vol_sma20 = float(last.get("vol_sma20", np.nan))
+        trend = mom._score_trend_strength(close, sma10, sma20, sma50, sma200)
+        health = mom._score_momentum_health(accel_pct)
+        regime_quality = mom._score_regime_quality(
+            state_machine["invested_pct"],
+            state_machine["exits_ob"],
+            state_machine["exits_fs"],
+            state_machine["exits_dc"],
+        )
+        volume_confirmation = mom._score_volume_confirmation(volume, vol_sma20, close, sma20)
+        score = mom._clamp(
+            trend * 0.40
+            + health * 0.30
+            + regime_quality * 0.20
+            + volume_confirmation * 0.10
+        )
+        return {
+            "score": score,
+            "trend_strength": trend,
+            "momentum_health": health,
+            "regime_quality": regime_quality,
+            "volume_confirmation": volume_confirmation,
+            "signal_state": str(state_machine["signal_state"]),
+        }
+
+    mismatches = []
+    material_mismatches = 0
+    checked = 0
+    first_idx = 0
+    if eval_start:
+        matches = df.index[df["date"] >= pd.to_datetime(eval_start)]
+        if len(matches) == 0:
+            raise RuntimeError(f"No rows on/after eval_start={eval_start}")
+        first_idx = int(matches[0])
+
+    for i in range(max(first_idx, 251), len(df) - 1):
+        if i + 1 < 252:
+            continue
+        cached = score_last(df.iloc[: i + 1].copy())
+        recomputed = data_engine._compute_indicators(raw.iloc[: i + 1].copy())
+        walked = score_last(recomputed)
+        if cached is None or walked is None:
+            continue
+        checked += 1
+        diffs = {k: (cached[k], walked[k]) for k in cached if cached[k] != walked[k]}
+        if diffs:
+            mismatches.append({"date": str(df.iloc[i]["date"])[:10], "diffs": diffs})
+            material_mismatches += 1
+
+    return {
+        "checked_days": checked,
+        "mismatch_days": len(mismatches),
+        "material_mismatch_days": material_mismatches,
+        "first_mismatches": mismatches[:10],
+    }
+
+
 def run(ticker: str, start: str, thresholds: list[int]) -> dict:
     df = data_engine.load(ticker, start).copy()
     scored = _score_rows(df)
@@ -183,7 +266,15 @@ def main() -> None:
     parser.add_argument("--ticker", default="MU")
     parser.add_argument("--start", default="2000-01-01")
     parser.add_argument("--thresholds", default="50,55,60,65,70")
+    parser.add_argument("--audit-walk-forward", action="store_true")
+    parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
+
+    if args.audit_walk_forward:
+        audit = walk_forward_audit(args.ticker, args.start, args.eval_start)
+        print("Walk-forward audit: cached indicators vs recomputed truncated-prefix indicators")
+        print(audit)
+        return
 
     thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
     result = run(args.ticker, args.start, thresholds)
