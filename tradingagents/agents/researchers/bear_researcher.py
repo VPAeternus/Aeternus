@@ -9,11 +9,10 @@ def create_bear_researcher(llm, memory):
 
         current_response = investment_debate_state.get("current_response", "")
         market_research_report = state["market_report"]
-        sentiment_report = state["sentiment_report"]
         news_report = state["news_report"]
         fundamentals_report = state["fundamentals_report"]
 
-        curr_situation = f"{market_research_report}\n\n{sentiment_report}\n\n{news_report}\n\n{fundamentals_report}"
+        curr_situation = f"{market_research_report}\n\n{news_report}\n\n{fundamentals_report}"
         evidence_brief = build_evidence_brief(state)
         past_memories = memory.get_memories(curr_situation, n_matches=2)
 
@@ -30,7 +29,7 @@ def create_bear_researcher(llm, memory):
 EVIDENCE HIERARCHY:
 1. HARD DATA — deteriorating metrics, negative trends, overvaluation signals (strongest)
 2. STRUCTURAL RISKS — business model threats, competitive displacement, regulatory exposure
-3. CYCLICAL RISKS — macro headwinds, sector rotation, sentiment extremes (weakest alone)
+3. CYCLICAL RISKS — macro headwinds, sector rotation, positioning extremes (weakest alone)
 
 YOUR ARGUMENT MUST:
 - Identify the DOWNSIDE VARIANT PERCEPTION: what risk is the market underpricing?
@@ -40,7 +39,6 @@ YOUR ARGUMENT MUST:
 
 ANALYST REPORTS:
 Market/Technical: {market_research_report}
-Sentiment: {sentiment_report}
 News/Macro: {news_report}
 Fundamentals: {fundamentals_report}
 

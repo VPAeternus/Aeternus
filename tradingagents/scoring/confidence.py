@@ -54,7 +54,6 @@ def map_accuracy_to_factor(value: Any) -> int:
 def compute_data_quality_factor(state: Dict[str, Any]) -> int:
     keys = [
         "market_report",
-        "sentiment_report",
         "news_report",
         "fundamentals_report",
         "investment_plan",

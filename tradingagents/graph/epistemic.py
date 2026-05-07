@@ -153,7 +153,6 @@ _TIER_ORDER = {"LOW": 0, "MEDIUM": 1, "HIGH": 2}
 
 _PILLAR_BUILDERS = {
     "fundamental": _build_fundamental_confidence,
-    "sentiment": _build_sentiment_confidence,
     "macro": _build_macro_confidence,
     "momentum": _build_momentum_confidence,
 }
@@ -163,7 +162,6 @@ _FALLBACK = {"level": "LOW", "data_coverage": 0.0, "notes": ["Data unavailable"]
 
 def build_epistemic_report(
     fundamental_metrics,
-    sentiment_metrics,
     macro_metrics,
     momentum_metrics,
     options_metrics,
@@ -177,7 +175,7 @@ def build_epistemic_report(
 
     Parameters
     ----------
-    fundamental_metrics, sentiment_metrics, macro_metrics, momentum_metrics,
+    fundamental_metrics, macro_metrics, momentum_metrics,
     options_metrics : dict or None
         Per-pillar computed metric dicts. May be None or empty.
     coherence_snapshot : dict or None
@@ -196,7 +194,6 @@ def build_epistemic_report(
     """
     pillar_metrics_map = {
         "fundamental": fundamental_metrics or {},
-        "sentiment": sentiment_metrics or {},
         "macro": macro_metrics or {},
         "momentum": momentum_metrics or {},
     }

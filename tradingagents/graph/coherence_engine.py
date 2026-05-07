@@ -17,8 +17,7 @@ def build_coherence_snapshot(
     alignment = _compute_directional_alignment(pillar_composites, directions)
     conviction = _compute_conviction_strength(pillar_composites)
     interaction_score, detected = _compute_interaction_patterns(
-        pillar_composites, fundamental_sub, macro_sub, sentiment_sub, momentum_sub,
-        sentiment_low_coverage=sentiment_low_coverage,
+        pillar_composites, fundamental_sub, macro_sub, momentum_sub,
     )
     stability = _compute_narrative_stability(pillar_composites)
 
@@ -114,20 +113,11 @@ def _compute_interaction_patterns(
     composites: Dict[str, int],
     fundamental_sub: Optional[Dict[str, int]],
     macro_sub: Optional[Dict[str, int]],
-    sentiment_sub: Optional[Dict[str, int]],
     momentum_sub: Optional[Dict[str, int]],
-    sentiment_low_coverage: bool = False,
 ) -> Tuple[int, List[Dict[str, Any]]]:
     f = composites.get("fundamental", 50)
     m = composites.get("macro", 50)
-    s = composites.get("sentiment", 50)
     mo = composites.get("momentum", 50)
-
-    # Neutralize sentiment in pattern evaluation when low coverage.
-    # Low article count (< 5) produces ~30-39 scores that look bearish
-    # but represent data absence, not real bearish signal.
-    if sentiment_low_coverage:
-        s = 50
 
     patterns = [
         {
@@ -141,32 +131,11 @@ def _compute_interaction_patterns(
             "description": "Good numbers but market disagrees",
         },
         {
-            "name": "MOMENTUM_CROWDING",
-            "conditions": [
-                (s, ">", 70),
-                (mo, ">", 70),
-                (f, "<", 50),
-            ],
-            "adjustment": -15,
-            "description": "Hot trade with no fundamental backing",
-        },
-        {
-            "name": "CONTRARIAN_SETUP",
-            "conditions": [
-                (s, "<", 35),
-                (f, ">", 65),
-                (m, ">", 50),
-            ],
-            "adjustment": +15,
-            "description": "Hated stock with solid fundamentals",
-        },
-        {
             "name": "RISING_TIDE",
             "conditions": [
                 (f, ">", 60),
                 (m, ">", 60),
                 (mo, ">", 60),
-                (s, ">", 50),
             ],
             "adjustment": +20,
             "description": "All signals aligned bullish",
@@ -176,7 +145,6 @@ def _compute_interaction_patterns(
             "conditions": [
                 (mo, "<", 30),
                 (f, "<", 40),
-                (s, "<", 40),
             ],
             "adjustment": -20,
             "description": "Everything negative",
@@ -192,28 +160,6 @@ def _compute_interaction_patterns(
             "other_val": mo,
             "other_threshold": 55,
             "other_op": ">",
-        },
-        {
-            "name": "QUALITY_DIVERGENCE",
-            "conditions": None,  # handled separately
-            "adjustment": +10,
-            "description": "High quality ignored by market",
-            "fundamental_sub_key": "quality",
-            "fundamental_sub_threshold": 75,
-            "fundamental_sub_op": ">",
-            "other_val": s,
-            "other_threshold": 45,
-            "other_op": "<",
-        },
-        {
-            "name": "SMART_MONEY_DISAGREES",
-            "conditions": [
-                (f, "<", 45),
-                (mo, ">", 65),
-                (s, ">", 65),
-            ],
-            "adjustment": -12,
-            "description": "Momentum chasing with weak fundamentals",
         },
     ]
 
@@ -239,26 +185,6 @@ def _compute_interaction_patterns(
                 diffs = [
                     (pat["macro_sub_threshold"] - regime_fit) / 20,
                     (pat["other_val"] - pat["other_threshold"]) / 20,
-                ]
-                conf = min(1.0, sum(diffs) / len(diffs))
-                score += adj
-                detected.append({"name": name, "confidence": round(conf, 2), "adjustment": adj, "description": desc})
-            continue
-
-        if name == "QUALITY_DIVERGENCE":
-            quality = (
-                fundamental_sub.get(pat["fundamental_sub_key"])
-                if fundamental_sub and pat["fundamental_sub_key"] in fundamental_sub
-                else None
-            )
-            if quality is None:
-                continue
-            cond1 = quality > pat["fundamental_sub_threshold"]
-            cond2 = pat["other_val"] < pat["other_threshold"]
-            if cond1 and cond2:
-                diffs = [
-                    (quality - pat["fundamental_sub_threshold"]) / 20,
-                    (pat["other_threshold"] - pat["other_val"]) / 20,
                 ]
                 conf = min(1.0, sum(diffs) / len(diffs))
                 score += adj

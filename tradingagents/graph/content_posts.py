@@ -219,7 +219,7 @@ def generate_analysis_post(report: dict) -> str:
 
     # Pillar table
     pillar_lines = ["KEY NUMBERS:"]
-    pillar_order = ["fundamental", "coherence", "macro", "sentiment", "momentum"]
+    pillar_order = ["fundamental", "coherence", "macro", "momentum"]
     for p in pillar_order:
         s = _fmt_score(breakdown.get(p))
         w = weights.get(p)
@@ -252,7 +252,6 @@ def generate_article(report: dict) -> str:
     # Narrative sections
     fundamentals = report.get("fundamentals_report", "")
     market = report.get("market_report", "")
-    sentiment = report.get("sentiment_report", "")
     news = report.get("news_report", "")
 
     # Debate
@@ -325,11 +324,6 @@ def generate_article(report: dict) -> str:
         sections.append("## Technical & Momentum Analysis")
         sections.append(market)
 
-    # Sentiment
-    if sentiment:
-        sections.append("## Sentiment & Social Analysis")
-        sections.append(sentiment)
-
     # News
     if news:
         sections.append("## News & Catalyst Analysis")
@@ -384,7 +378,6 @@ def generate_article(report: dict) -> str:
         ("Fundamental", weights.get("fundamental"), breakdown.get("fundamental"), fund_sub),
         ("Coherence", weights.get("coherence"), breakdown.get("coherence"), coh_sub),
         ("Macro", weights.get("macro"), breakdown.get("macro"), macro_sub),
-        ("Sentiment", weights.get("sentiment"), breakdown.get("sentiment"), sent_sub),
         ("Momentum", weights.get("momentum"), breakdown.get("momentum"), mom_sub),
     ]
     for name, w, s, sub in pillar_data:

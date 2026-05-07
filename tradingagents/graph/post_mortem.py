@@ -18,7 +18,7 @@ from .regime_weights import REGIME_WEIGHTS, get_weights
 # Helpers
 # ---------------------------------------------------------------------------
 
-_PILLARS = ("fundamental", "coherence", "macro", "sentiment", "momentum")
+_PILLARS = ("fundamental", "coherence", "macro", "momentum")
 
 
 def _rating_from_score(score: float) -> str:

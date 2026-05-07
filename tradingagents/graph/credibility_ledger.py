@@ -15,7 +15,7 @@ from .post_mortem import PostMortemEngine
 _AGENTS = ("investment_judge", "risk_judge", "trader", "bull_side", "bear_side")
 
 # Pillars tracked (must match post_mortem._PILLARS)
-_PILLARS = ("fundamental", "coherence", "macro", "sentiment", "momentum")
+_PILLARS = ("fundamental", "coherence", "macro", "momentum")
 
 # Minimum closed trades before producing a full brief
 _MIN_TRADES = 5

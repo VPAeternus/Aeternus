@@ -2,8 +2,7 @@
 
 No LLM calls. Loads price/indicator data via data_engine (handles caching),
 runs the CC overbought state machine validated over 25 years / 94 stocks, and
-returns a structured snapshot dict — same discipline as fundamental_engine.py
-and sentiment_engine.py.
+returns a structured snapshot dict.
 
 Entry points:
     build_momentum_snapshot(ticker, trade_date) -> dict

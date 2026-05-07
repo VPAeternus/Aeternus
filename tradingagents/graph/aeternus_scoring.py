@@ -30,7 +30,6 @@ class _ScorerLLMResponse(BaseModel):
     fundamental_score: int = Field(default=50, ge=0, le=100)
     technical_score: int = Field(default=50, ge=0, le=100)
     macro_score: int = Field(default=50, ge=0, le=100)
-    sentiment_score: int = Field(default=50, ge=0, le=100)
     momentum_score: int = Field(default=50, ge=0, le=100)
     confidence: int = Field(default=3, ge=1, le=5)
     confidence_factors: Optional[Dict[str, int]] = None
@@ -62,7 +61,6 @@ class AeternusRating(TypedDict):
     fundamental_shadow_strategy: Optional[str]
     fundamental_shadow_gate_status: Optional[str]
     fundamental_shadow_recommended_status: Optional[str]
-    sentiment_sub: Optional[Dict[str, int]]
     macro_sub: Optional[Dict[str, int]]
     momentum_sub: Optional[Dict[str, int]]
     options_sub: Optional[Dict[str, Any]]
@@ -109,7 +107,6 @@ class AeternusScorer:
         price_target: Optional[float] = None,
         catalyst: Optional[str] = None,
         fundamental_metrics: Optional[Dict[str, Any]] = None,
-        sentiment_metrics: Optional[Dict[str, Any]] = None,
         macro_metrics: Optional[Dict[str, Any]] = None,
         momentum_metrics: Optional[Dict[str, Any]] = None,
         options_metrics: Optional[Dict[str, Any]] = None,
@@ -130,7 +127,6 @@ class AeternusScorer:
         payload = {
             "ticker": resolved_ticker,
             "market_report": state.get("market_report", ""),
-            "sentiment_report": state.get("sentiment_report", ""),
             "news_report": state.get("news_report", ""),
             "fundamentals_report": state.get("fundamentals_report", ""),
             "investment_plan": state.get("investment_plan", ""),
@@ -190,46 +186,14 @@ class AeternusScorer:
             "recommended_status": None,
         }
 
-        # Compute anchored sentiment sub-scores if metrics provided
-        sentiment_sub = None
-        _sent_cov = (sentiment_metrics or {}).get("data_coverage", 0.0)
-        _sent_gated = sentiment_metrics is not None and _sent_cov < MIN_ANCHOR_COVERAGE
-        if sentiment_metrics and not _sent_gated:
-            sentiment_sub = self._compute_sentiment_sub(sentiment_metrics)
-            anchored_sentiment = round(
-                sentiment_sub["polarity"] * 0.40
-                + sentiment_sub["buzz"] * 0.30
-                + sentiment_sub["catalyst"] * 0.30,
-            )
-            anchored_sentiment = max(0, min(100, anchored_sentiment))
-        else:
-            anchored_sentiment = None
-
-        # Detect low-coverage sentiment (< 5 articles → buzz sub < 40).
-        # This is data absence, not bearish signal — neutralize in coherence.
-        _sentiment_low_coverage = (
-            sentiment_sub is not None
-            and int(sentiment_sub.get("buzz", 50)) < 40
-        )
-
-        # Blend options-derived sentiment when available
         options_sub = None
-        if options_metrics and options_metrics.get("sentiment_score") is not None:
+        if options_metrics:
             options_sub = {
-                "sentiment_score": options_metrics["sentiment_score"],
                 "fear_greed": options_metrics.get("fear_greed", "NEUTRAL"),
                 "put_call_volume_ratio": options_metrics.get("put_call_volume_ratio"),
                 "iv_skew": options_metrics.get("iv_skew"),
             }
-            options_sentiment = options_metrics["sentiment_score"]
-            if anchored_sentiment is not None:
-                anchored_sentiment = round(anchored_sentiment * 0.70 + options_sentiment * 0.30)
-                anchored_sentiment = max(0, min(100, anchored_sentiment))
-            else:
-                # If no text-based sentiment, use options as sole anchor
-                anchored_sentiment = options_sentiment
 
-        # Blend flow toxicity into sentiment when available (15% weight)
         flow_toxicity_sub = None
         if flow_toxicity_metrics and flow_toxicity_metrics.get("composite_score") is not None:
             flow_toxicity_sub = {
@@ -238,12 +202,6 @@ class AeternusScorer:
                 "vpin_proxy": flow_toxicity_metrics.get("vpin_proxy"),
                 "direction": flow_toxicity_metrics.get("direction", "NEUTRAL"),
             }
-            ft_score = flow_toxicity_metrics["composite_score"]
-            if anchored_sentiment is not None:
-                anchored_sentiment = round(anchored_sentiment * 0.85 + ft_score * 0.15)
-                anchored_sentiment = max(0, min(100, anchored_sentiment))
-            else:
-                anchored_sentiment = ft_score
 
         # Compute anchored macro sub-scores if metrics provided
         macro_sub = None
@@ -278,16 +236,13 @@ class AeternusScorer:
 
         data_quality_gate = {
             "fundamental": _fund_gated,
-            "sentiment": _sent_gated,
             "macro": _macro_gated,
             "momentum": _mom_gated,
-            "sentiment_low_coverage": _sentiment_low_coverage,
         }
 
         scores = {
             "fundamental": anchored_fundamental if anchored_fundamental is not None else self._clamp_score(data.get("fundamental_score", 50)),
             "macro": anchored_macro if anchored_macro is not None else self._clamp_score(data.get("macro_score", 50)),
-            "sentiment": anchored_sentiment if anchored_sentiment is not None else self._clamp_score(data.get("sentiment_score", 50)),
             "momentum": anchored_momentum if anchored_momentum is not None else self._clamp_score(data.get("momentum_score", 50)),
         }
 
@@ -296,9 +251,9 @@ class AeternusScorer:
             pillar_composites=scores,
             fundamental_sub=fundamental_sub,
             macro_sub=macro_sub,
-            sentiment_sub=sentiment_sub,
+            sentiment_sub=None,
             momentum_sub=momentum_sub,
-            sentiment_low_coverage=_sentiment_low_coverage,
+            sentiment_low_coverage=False,
         )
         coherence_sub = coherence_snapshot["subscores"]
         scores["coherence"] = coherence_snapshot["composite_score"]
@@ -316,7 +271,6 @@ class AeternusScorer:
             "fundamental":     scores["fundamental"],
             "coherence":       scores["coherence"],
             "macro":           scores["macro"],
-            "sentiment":       scores["sentiment"],
             "momentum":        scores["momentum"],
             "research_debate": research_debate_score,
             "trader_verdict":  trader_verdict_score,
@@ -325,7 +279,7 @@ class AeternusScorer:
 
         # Determine active models (non-None scores)
         active_models = {k for k, v in model_scores.items() if v is not None}
-        quant_pillars = {"fundamental", "coherence", "macro", "sentiment", "momentum"}
+        quant_pillars = {"fundamental", "coherence", "macro", "momentum"}
 
         if not active_models - quant_pillars:
             # No debate voices — pure quant fallback (identical to previous behavior)
@@ -334,7 +288,6 @@ class AeternusScorer:
                 scores["fundamental"] * quant_weights["fundamental"]
                 + scores["coherence"]  * quant_weights["coherence"]
                 + scores["macro"]      * quant_weights["macro"]
-                + scores["sentiment"]  * quant_weights["sentiment"]
                 + scores["momentum"]   * quant_weights["momentum"],
                 2,
             )
@@ -367,7 +320,6 @@ class AeternusScorer:
         try:
             epistemic = build_epistemic_report(
                 fundamental_metrics=fundamental_metrics,
-                sentiment_metrics=sentiment_metrics,
                 macro_metrics=macro_metrics,
                 momentum_metrics=momentum_metrics,
                 options_metrics=options_metrics,
@@ -444,7 +396,6 @@ class AeternusScorer:
             fundamental_shadow_strategy=fundamental_shadow["strategy"],
             fundamental_shadow_gate_status=fundamental_shadow["gate_status"],
             fundamental_shadow_recommended_status=fundamental_shadow["recommended_status"],
-            sentiment_sub=sentiment_sub,
             macro_sub=macro_sub,
             momentum_sub=momentum_sub,
             options_sub=options_sub,
@@ -658,92 +609,6 @@ class AeternusScorer:
         return score
 
     # --- End anchored sub-scores ---
-
-    # --- Anchored sentiment sub-score computation ---
-
-    def _compute_sentiment_sub(self, metrics: Dict[str, Any]) -> Dict[str, int]:
-        """Compute 3 sentiment sub-scores from Python-computed metrics.
-        Sub-scores: polarity, buzz, catalyst (each 0-100).
-
-        When source is "dealflow", maps deal flow subscores directly:
-          social_momentum → polarity, cashtag_momentum → buzz, news_catalyst → catalyst
-        """
-        if metrics.get("source") == "dealflow":
-            return {
-                "polarity": max(0, min(100, int(metrics.get("social_momentum", 50)))),
-                "buzz": max(0, min(100, int(metrics.get("cashtag_momentum", 50)))),
-                "catalyst": max(0, min(100, int(metrics.get("news_catalyst", 50)))),
-            }
-        polarity = self._score_polarity(metrics)
-        buzz = self._score_buzz(metrics)
-        catalyst = self._score_catalyst(metrics)
-        return {
-            "polarity": max(0, min(100, polarity)),
-            "buzz": max(0, min(100, buzz)),
-            "catalyst": max(0, min(100, catalyst)),
-        }
-
-    def _score_polarity(self, m: Dict[str, Any]) -> int:
-        """Polarity sub-score from composite_score or AV sentiment."""
-        composite = m.get("composite_score")
-        if composite is not None:
-            return self._clamp_score(composite)
-
-        av = m.get("av_sentiment", {})
-        av_score = av.get("score")
-        if av_score is not None:
-            # AV avg_score is in [-1, 1], map to [0, 100]
-            return self._clamp_score(50.0 + 40.0 * av_score)
-
-        text = m.get("text_sentiment", {})
-        text_score = text.get("social_score")
-        if text_score is not None:
-            return self._clamp_score(text_score)
-
-        return 50
-
-    def _score_buzz(self, m: Dict[str, Any]) -> int:
-        """Buzz sub-score from article count thresholds."""
-        buzz = m.get("buzz", {})
-        total = buzz.get("total_articles", 0)
-
-        if total >= 30:
-            score = 85
-        elif total >= 15:
-            score = 70
-        elif total >= 5:
-            score = 50
-        else:
-            score = 30
-
-        # Bonus for AV structured data
-        quality = buzz.get("source_quality", "low")
-        if quality == "high":
-            score += 10
-        elif quality == "medium":
-            score += 5
-
-        return score
-
-    def _score_catalyst(self, m: Dict[str, Any]) -> int:
-        """Catalyst sub-score from catalyst_score and direction alignment."""
-        text = m.get("text_sentiment", {})
-        catalyst_raw = text.get("catalyst_score")
-
-        if catalyst_raw is None:
-            return 50
-
-        score = self._clamp_score(catalyst_raw)
-
-        # Bonus if catalyst direction aligns with polarity
-        direction = m.get("direction")
-        text_direction = text.get("direction")
-        if direction and text_direction and direction == text_direction and direction != "NEUTRAL":
-            score = min(100, score + 10)
-
-        return score
-
-    # --- End anchored sentiment sub-scores ---
 
     # --- Anchored macro sub-score computation ---
 

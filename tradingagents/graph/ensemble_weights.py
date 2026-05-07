@@ -19,9 +19,8 @@ INITIAL_WEIGHTS: Dict[str, float] = {
     "fundamental":     0.22,
     "coherence":       0.15,
     "macro":           0.13,
-    "momentum":        0.10,
-    "sentiment":       0.10,
-    "research_debate": 0.10,
+    "momentum":        0.15,
+    "research_debate": 0.15,
     "trader_verdict":  0.10,
     "risk_verdict":    0.10,
 }
@@ -30,22 +29,21 @@ WEIGHT_CLAMPS: Dict[str, tuple] = {
     "fundamental":     (0.10, 0.35),
     "coherence":       (0.05, 0.25),
     "macro":           (0.05, 0.25),
-    "momentum":        (0.05, 0.20),
-    "sentiment":       (0.03, 0.20),
-    "research_debate": (0.03, 0.20),
+    "momentum":        (0.05, 0.25),
+    "research_debate": (0.03, 0.25),
     "trader_verdict":  (0.03, 0.20),
     "risk_verdict":    (0.03, 0.20),
 }
 
 REGIME_MODIFIERS: Dict[str, Dict[str, float]] = {
     "BULL":            {"momentum": +0.03, "trader_verdict": +0.02, "macro": -0.03, "coherence": -0.02},
-    "BEAR":            {"coherence": +0.03, "macro": +0.03, "risk_verdict": +0.03, "sentiment": -0.03, "momentum": -0.03, "trader_verdict": -0.03},
-    "VOL_SHOCK":       {"macro": +0.08, "risk_verdict": +0.03, "sentiment": -0.05, "momentum": -0.03, "trader_verdict": -0.03},
-    "HIGH_VOL":        {"macro": +0.03, "coherence": +0.02, "risk_verdict": +0.02, "sentiment": -0.03, "trader_verdict": -0.02, "momentum": -0.02},
-    "RISK_OFF":        {"coherence": +0.03, "macro": +0.03, "risk_verdict": +0.03, "sentiment": -0.04, "trader_verdict": -0.03, "momentum": -0.02},
-    "INFLATION_SHOCK": {"macro": +0.08, "fundamental": -0.02, "sentiment": -0.05, "trader_verdict": -0.02, "momentum": +0.01},
-    "RATES_UPTREND":   {"fundamental": +0.03, "macro": +0.03, "momentum": -0.03, "sentiment": -0.03},
-    "EUPHORIA":        {"coherence": +0.05, "risk_verdict": +0.05, "momentum": -0.03, "sentiment": -0.03, "trader_verdict": -0.02, "fundamental": -0.02},
+    "BEAR":            {"coherence": +0.03, "macro": +0.03, "risk_verdict": +0.03, "momentum": -0.03, "trader_verdict": -0.03},
+    "VOL_SHOCK":       {"macro": +0.08, "risk_verdict": +0.03, "momentum": -0.03, "trader_verdict": -0.03},
+    "HIGH_VOL":        {"macro": +0.03, "coherence": +0.02, "risk_verdict": +0.02, "trader_verdict": -0.02, "momentum": -0.02},
+    "RISK_OFF":        {"coherence": +0.03, "macro": +0.03, "risk_verdict": +0.03, "trader_verdict": -0.03, "momentum": -0.02},
+    "INFLATION_SHOCK": {"macro": +0.08, "fundamental": -0.02, "trader_verdict": -0.02, "momentum": +0.01},
+    "RATES_UPTREND":   {"fundamental": +0.03, "macro": +0.03, "momentum": -0.03},
+    "EUPHORIA":        {"coherence": +0.05, "risk_verdict": +0.05, "momentum": -0.03, "trader_verdict": -0.02, "fundamental": -0.02},
 }
 
 DEFAULT_PATH = "eval_results/control/ensemble_weights.json"

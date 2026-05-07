@@ -1,7 +1,7 @@
-"""Options-derived sentiment engine.
+"""Options positioning engine.
 
 Pure Python engine (no LLM) that fetches options chain data via yfinance
-and computes sentiment signals from derivatives positioning.
+and computes positioning signals from derivatives data.
 
 Entry point: build_options_snapshot(ticker) -> dict or None
 """
@@ -149,13 +149,13 @@ def build_options_snapshot(ticker: str) -> Optional[Dict[str, Any]]:
         skew_score = _score_iv_skew(iv_skew)
         oi_score = _score_oi_ratio(put_call_oi_ratio)
 
-        sentiment_score = round(pc_score * 0.40 + skew_score * 0.30 + oi_score * 0.30)
-        sentiment_score = max(0, min(100, sentiment_score))
+        positioning_score = round(pc_score * 0.40 + skew_score * 0.30 + oi_score * 0.30)
+        positioning_score = max(0, min(100, positioning_score))
 
         # Fear/Greed classification
-        if sentiment_score < 35:
+        if positioning_score < 35:
             fear_greed = "FEAR"
-        elif sentiment_score > 65:
+        elif positioning_score > 65:
             fear_greed = "GREED"
         else:
             fear_greed = "NEUTRAL"
@@ -175,7 +175,7 @@ def build_options_snapshot(ticker: str) -> Optional[Dict[str, Any]]:
             "put_call_oi_ratio": round(put_call_oi_ratio, 4),
             "iv_skew": round(iv_skew, 4),
             "atm_iv": round(atm_iv, 4),
-            "sentiment_score": sentiment_score,
+            "positioning_score": positioning_score,
             "fear_greed": fear_greed,
             "expirations_analyzed": len(target_expirations),
             "data_coverage": data_coverage,

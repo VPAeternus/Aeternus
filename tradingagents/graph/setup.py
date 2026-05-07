@@ -47,14 +47,13 @@ class GraphSetup:
         self.config = config or {}
 
     def setup_graph(
-        self, selected_analysts=["market", "social", "news"]
+        self, selected_analysts=["market", "news"]
     ):
         """Set up and compile the agent workflow graph.
 
         Args:
             selected_analysts (list): List of analyst types to include. Options are:
                 - "market": Market analyst
-                - "social": Social media analyst
                 - "news": News analyst
         """
         if len(selected_analysts) == 0:
@@ -64,16 +63,12 @@ class GraphSetup:
         analyst_nodes = {}
         if "fundamentals" in selected_analysts:
             raise ValueError("Fundamentals framework has been removed from this baseline")
-        has_social = "social" in selected_analysts
+        if "social" in selected_analysts:
+            raise ValueError("Social analyst has been removed from the scoring pipeline")
         has_market = "market" in selected_analysts
 
         if "market" in selected_analysts:
             analyst_nodes["market"] = create_market_analyst(
-                self.quick_thinking_llm
-            )
-
-        if "social" in selected_analysts:
-            analyst_nodes["social"] = create_social_media_analyst(
                 self.quick_thinking_llm
             )
 
@@ -110,11 +105,6 @@ class GraphSetup:
         for analyst_type, node in analyst_nodes.items():
             workflow.add_node(f"{analyst_type.capitalize()} Analyst", node)
 
-        # Add Sentiment Reviewer node (deep-thinking critique layer)
-        if has_social:
-            sentiment_reviewer_node = create_sentiment_reviewer(self.deep_thinking_llm)
-            workflow.add_node("Sentiment Reviewer", sentiment_reviewer_node)
-
         has_news = "news" in selected_analysts
         # Add Momentum Reviewer node (deep-thinking critique layer)
         if has_market:
@@ -140,9 +130,7 @@ class GraphSetup:
         for analyst_type in selected_analysts:
             current_analyst = f"{analyst_type.capitalize()} Analyst"
 
-            if analyst_type == "social" and has_social:
-                workflow.add_edge(current_analyst, "Sentiment Reviewer")
-            elif analyst_type == "news" and has_news:
+            if analyst_type == "news" and has_news:
                 workflow.add_edge(current_analyst, "research_join")
             elif analyst_type == "market" and has_market:
                 workflow.add_edge(current_analyst, "Momentum Reviewer")
@@ -151,8 +139,6 @@ class GraphSetup:
         workflow.add_node("research_join", lambda state: {})
         if has_market:
             workflow.add_edge("Momentum Reviewer", "research_join")
-        if has_social:
-            workflow.add_edge("Sentiment Reviewer", "research_join")
         workflow.add_edge("research_join", "Bull Researcher")
 
         # Add remaining edges
@@ -201,9 +187,7 @@ class GraphSetup:
     def setup_post_analyst_graph(self):
         """Compile a graph that starts after analyst collection.
 
-        The initial state is expected to already contain the four analyst
-        report fields (`market_report`, `sentiment_report`, `news_report`,
-        `fundamentals_report`).
+        The initial state is expected to already contain analyst report fields.
         """
         bull_researcher_node = create_bull_researcher(
             self.quick_thinking_llm, self.bull_memory

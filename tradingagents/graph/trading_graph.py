@@ -32,8 +32,6 @@ from tradingagents.agents.utils.agent_utils import (
     get_insider_sentiment,
     get_insider_transactions,
     get_global_news,
-    get_sentiment_snapshot,
-    get_social_sentiment,
 )
 from tradingagents.agents.utils.options_engine import build_options_snapshot
 from tradingagents.agents.utils.flow_toxicity_engine import build_flow_toxicity_snapshot
@@ -54,7 +52,7 @@ class TradingAgentsGraph:
 
     def __init__(
         self,
-        selected_analysts=["market", "social", "news"],
+        selected_analysts=["market", "news"],
         debug=False,
         config: Dict[str, Any] = None,
     ):
@@ -327,12 +325,6 @@ class TradingAgentsGraph:
                     get_indicators,
                 ]
             ),
-            "social": ToolNode(
-                [
-                    get_sentiment_snapshot,
-                    get_social_sentiment,
-                ]
-            ),
             "news": ToolNode(
                 [
                     # News and insider information
@@ -406,7 +398,6 @@ class TradingAgentsGraph:
         # Validate agent outputs — log warnings for empty/None fields, but do not crash
         _agent_output_fields = [
             "market_report",
-            "sentiment_report",
             "news_report",
             "fundamentals_report",
             "trader_investment_plan",
@@ -454,7 +445,6 @@ class TradingAgentsGraph:
             date=trade_date,
             price_at_rating=_price_at_rating,
             fundamental_metrics=final_state.get("fundamental_metrics") or None,
-            sentiment_metrics=final_state.get("sentiment_metrics") or None,
             macro_metrics=final_state.get("macro_metrics") or None,
             momentum_metrics=final_state.get("momentum_metrics") or None,
             options_metrics=options_metrics,
@@ -491,7 +481,6 @@ class TradingAgentsGraph:
             "company_of_interest": final_state["company_of_interest"],
             "trade_date": final_state["trade_date"],
             "market_report": final_state["market_report"],
-            "sentiment_report": final_state["sentiment_report"],
             "news_report": final_state["news_report"],
             "fundamentals_report": final_state["fundamentals_report"],
             "investment_debate_state": {
@@ -516,7 +505,6 @@ class TradingAgentsGraph:
             "investment_plan": final_state["investment_plan"],
             "final_trade_decision": final_state["final_trade_decision"],
             "fundamental_metrics": final_state.get("fundamental_metrics", {}),
-            "sentiment_metrics": final_state.get("sentiment_metrics", {}),
             "macro_metrics": final_state.get("macro_metrics", {}),
             "momentum_metrics": final_state.get("momentum_metrics", {}),
             "dealflow_context": final_state.get("dealflow_context", {}),

@@ -11,7 +11,6 @@ def create_safe_debator(llm, memory=None):
         current_neutral_response = risk_debate_state.get("current_neutral_response", "")
 
         market_research_report = state["market_report"]
-        sentiment_report = state["sentiment_report"]
         news_report = state["news_report"]
         fundamentals_report = state["fundamentals_report"]
 
@@ -24,7 +23,7 @@ def create_safe_debator(llm, memory=None):
 
         past_memory_str = ""
         if memory:
-            curr_situation = f"{market_research_report}\n\n{sentiment_report}\n\n{news_report}\n\n{fundamentals_report}"
+            curr_situation = f"{market_research_report}\n\n{news_report}\n\n{fundamentals_report}"
             past_memories = memory.get_memories(curr_situation, n_matches=2)
             for rec in past_memories:
                 past_memory_str += rec["recommendation"] + "\n\n"
@@ -42,7 +41,7 @@ YOUR FRAMEWORK — Tail Risk & Capital Preservation:
 - Identify specific loss scenarios with rough probability estimates (not just "it could go down")
 - Assess correlation risk: does this position add diversification or concentration to the portfolio?
 - Name the maximum drawdown scenario and how it would affect portfolio recovery time
-- Cite specific risk metrics: volatility, debt levels, macro headwinds, sentiment extremes
+- Cite specific risk metrics: volatility, debt levels, macro headwinds, positioning extremes
 
 DEBATE CONTEXT:
 Aggressive argument: {current_risky_response}
@@ -51,7 +50,6 @@ History: {history}
 
 DATA:
 Market: {market_research_report}
-Sentiment: {sentiment_report}
 News: {news_report}
 Fundamentals: {fundamentals_report}
 

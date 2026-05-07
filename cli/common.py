@@ -176,8 +176,7 @@ class MessageBuffer:
         self.agent_status = {
             # Analyst Team
             "Market Analyst": "pending",
-            "Social Analyst": "pending",
-            "News Analyst": "pending",
+                    "News Analyst": "pending",
             "Fundamentals Analyst": "pending",
             # Research Team
             "Bull Researcher": "pending",
@@ -195,8 +194,7 @@ class MessageBuffer:
         self.current_agent = None
         self.report_sections = {
             "market_report": None,
-            "sentiment_report": None,
-            "news_report": None,
+                    "news_report": None,
             "fundamentals_report": None,
             "investment_plan": None,
             "trader_investment_plan": None,
@@ -238,8 +236,7 @@ class MessageBuffer:
             # Format the current section for display
             section_titles = {
                 "market_report": "Market Analysis",
-                "sentiment_report": "Social Sentiment",
-                "news_report": "News Analysis",
+                            "news_report": "News Analysis",
                 "fundamentals_report": "Fundamentals Analysis",
                 "investment_plan": "Research Team Decision",
                 "trader_investment_plan": "Trading Team Plan",
@@ -277,16 +274,13 @@ class MessageBuffer:
             self.report_sections[section]
             for section in [
                 "market_report",
-                "sentiment_report",
-                "news_report",
+                            "news_report",
                 "fundamentals_report",
             ]
         ):
             report_parts.append("# IV. Detailed Analyst Team Reports\n")
             if self.report_sections["market_report"]:
                 report_parts.append(f"## Market Analyst\n{self.report_sections['market_report']}\n")
-            if self.report_sections["sentiment_report"]:
-                report_parts.append(f"## Social Media Analyst\n{self.report_sections['sentiment_report']}\n")
             if self.report_sections["news_report"]:
                 report_parts.append(f"## News Analyst\n{self.report_sections['news_report']}\n")
             if self.report_sections["fundamentals_report"]:
@@ -369,7 +363,6 @@ def update_display(layout, spinner_text=None):
     teams = {
         "Analyst Team": [
             "Market Analyst",
-            "Social Analyst",
             "News Analyst",
             "Fundamentals Analyst",
         ],
@@ -682,17 +675,6 @@ def display_complete_report(final_state):
             Panel(
                 Markdown(final_state["market_report"]),
                 title="Market Analyst",
-                border_style="blue",
-                padding=(1, 2),
-            )
-        )
-
-    # Social Analyst Report
-    if final_state.get("sentiment_report"):
-        analyst_reports.append(
-            Panel(
-                Markdown(final_state["sentiment_report"]),
-                title="Social Analyst",
                 border_style="blue",
                 padding=(1, 2),
             )
@@ -1109,7 +1091,6 @@ def format_aeternus_score_markdown(score_payload: dict, thesis_check: dict = Non
         f"| Fundamental | {breakdown.get('fundamental', 'N/A')} | {rationales.get('fundamental', '')} |",
         f"| Technical | {breakdown.get('technical', 'N/A')} | {rationales.get('technical', '')} |",
         f"| Macro | {breakdown.get('macro', 'N/A')} | {rationales.get('macro', '')} |",
-        f"| Sentiment | {breakdown.get('sentiment', 'N/A')} | {rationales.get('sentiment', '')} |",
         f"| Momentum | {breakdown.get('momentum', 'N/A')} | {rationales.get('momentum', '')} |",
         "",
         "### Sector Context",

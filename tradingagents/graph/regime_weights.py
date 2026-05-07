@@ -3,15 +3,15 @@
 from typing import Dict
 
 REGIME_WEIGHTS: Dict[str, Dict[str, float]] = {
-    "NEUTRAL":          {"fundamental": 0.30, "coherence": 0.25, "macro": 0.20, "sentiment": 0.15, "momentum": 0.10},
-    "BULL":             {"fundamental": 0.30, "coherence": 0.25, "macro": 0.15, "sentiment": 0.15, "momentum": 0.15},
-    "BEAR":             {"fundamental": 0.25, "coherence": 0.30, "macro": 0.25, "sentiment": 0.10, "momentum": 0.10},
-    "VOL_SHOCK":        {"fundamental": 0.20, "coherence": 0.20, "macro": 0.35, "sentiment": 0.10, "momentum": 0.15},
-    "HIGH_VOL":         {"fundamental": 0.25, "coherence": 0.25, "macro": 0.25, "sentiment": 0.10, "momentum": 0.15},
-    "RISK_OFF":         {"fundamental": 0.25, "coherence": 0.30, "macro": 0.25, "sentiment": 0.10, "momentum": 0.10},
-    "INFLATION_SHOCK":  {"fundamental": 0.20, "coherence": 0.20, "macro": 0.35, "sentiment": 0.10, "momentum": 0.15},
-    "RATES_UPTREND":    {"fundamental": 0.30, "coherence": 0.25, "macro": 0.25, "sentiment": 0.10, "momentum": 0.10},
-    "EUPHORIA":         {"fundamental": 0.20, "coherence": 0.35, "macro": 0.15, "sentiment": 0.15, "momentum": 0.15},
+    "NEUTRAL":          {"fundamental": 0.35, "coherence": 0.30, "macro": 0.23, "momentum": 0.12},
+    "BULL":             {"fundamental": 0.35, "coherence": 0.29, "macro": 0.18, "momentum": 0.18},
+    "BEAR":             {"fundamental": 0.28, "coherence": 0.34, "macro": 0.27, "momentum": 0.11},
+    "VOL_SHOCK":        {"fundamental": 0.22, "coherence": 0.22, "macro": 0.39, "momentum": 0.17},
+    "HIGH_VOL":         {"fundamental": 0.28, "coherence": 0.28, "macro": 0.28, "momentum": 0.16},
+    "RISK_OFF":         {"fundamental": 0.28, "coherence": 0.34, "macro": 0.27, "momentum": 0.11},
+    "INFLATION_SHOCK":  {"fundamental": 0.22, "coherence": 0.22, "macro": 0.39, "momentum": 0.17},
+    "RATES_UPTREND":    {"fundamental": 0.33, "coherence": 0.28, "macro": 0.28, "momentum": 0.11},
+    "EUPHORIA":         {"fundamental": 0.24, "coherence": 0.41, "macro": 0.18, "momentum": 0.17},
 }
 
 DEFAULT_WEIGHTS: Dict[str, float] = REGIME_WEIGHTS["NEUTRAL"]

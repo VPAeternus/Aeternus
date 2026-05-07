@@ -31,7 +31,6 @@ Rules:
 
 Required JSON keys:
 - market_report
-- sentiment_report
 - news_report
 - fundamentals_report
 - investment_plan
@@ -50,7 +49,6 @@ Recommendation: **SELL**
 _REPORT_COMPLETENESS_KEYS = (
     "fundamentals_report",
     "market_report",
-    "sentiment_report",
     "news_report",
     "investment_plan",
     "final_trade_decision",
@@ -183,7 +181,6 @@ def _normalize_outputs(
     outputs = dict(payload or {})
     for key in (
         "market_report",
-        "sentiment_report",
         "news_report",
         "fundamentals_report",
         "investment_plan",

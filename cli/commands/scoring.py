@@ -349,7 +349,6 @@ def run_analysis(selections: Optional[Dict[str, Any]] = None):
             for section_name, content in bundle_reports.items():
                 message_buffer.update_report_section(section_name, content)
             message_buffer.update_agent_status("Market Analyst", "completed")
-            message_buffer.update_agent_status("Social Analyst", "completed")
             message_buffer.update_agent_status("News Analyst", "completed")
             message_buffer.update_agent_status("Fundamentals Analyst", "completed")
             update_research_team_status("in_progress")
@@ -394,23 +393,6 @@ def run_analysis(selections: Optional[Dict[str, Any]] = None):
                             "market_report", chunk["market_report"]
                         )
                         message_buffer.update_agent_status("Market Analyst", "completed")
-                        # Set next analyst to in_progress
-                        if "social" in selections["analysts"]:
-                            message_buffer.update_agent_status(
-                                "Social Analyst", "in_progress"
-                            )
-
-                    if "sentiment_report" in chunk and chunk["sentiment_report"]:
-                        message_buffer.update_report_section(
-                            "sentiment_report", chunk["sentiment_report"]
-                        )
-                        message_buffer.update_agent_status("Social Analyst", "completed")
-                        # Set next analyst to in_progress
-                        if "news" in selections["analysts"]:
-                            message_buffer.update_agent_status(
-                                "News Analyst", "in_progress"
-                            )
-
                     if "news_report" in chunk and chunk["news_report"]:
                         message_buffer.update_report_section(
                             "news_report", chunk["news_report"]
@@ -595,8 +577,7 @@ def run_analysis(selections: Optional[Dict[str, Any]] = None):
         if use_codex_bridge:
             for report_key in (
                 "market_report",
-                "sentiment_report",
-                "news_report",
+                        "news_report",
                 "fundamentals_report",
             ):
                 if report_key not in final_state and report_key in init_agent_state:
@@ -609,8 +590,7 @@ def run_analysis(selections: Optional[Dict[str, Any]] = None):
             ticker=selections["ticker"],
             date=selections["analysis_date"],
             fundamental_metrics=final_state.get("fundamental_metrics") or None,
-            sentiment_metrics=final_state.get("sentiment_metrics") or None,
-        )
+            )
 
         # Extract thesis summary from trader plan for AKG storage
         trader_plan = final_state.get("trader_investment_plan", "")

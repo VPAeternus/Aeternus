@@ -11,7 +11,6 @@ def create_risky_debator(llm, memory=None):
         current_neutral_response = risk_debate_state.get("current_neutral_response", "")
 
         market_research_report = state["market_report"]
-        sentiment_report = state["sentiment_report"]
         news_report = state["news_report"]
         fundamentals_report = state["fundamentals_report"]
 
@@ -24,7 +23,7 @@ def create_risky_debator(llm, memory=None):
 
         past_memory_str = ""
         if memory:
-            curr_situation = f"{market_research_report}\n\n{sentiment_report}\n\n{news_report}\n\n{fundamentals_report}"
+            curr_situation = f"{market_research_report}\n\n{news_report}\n\n{fundamentals_report}"
             past_memories = memory.get_memories(curr_situation, n_matches=2)
             for rec in past_memories:
                 past_memory_str += rec["recommendation"] + "\n\n"
@@ -42,7 +41,7 @@ YOUR FRAMEWORK — Expected Value & Asymmetry:
 - Quantify the upside/downside ratio. If upside > 2x downside with reasonable probability, the trade has positive EV.
 - Identify what the conservative analyst is WRONG about with specific data
 - Name the opportunity cost of NOT taking this position
-- Cite specific metrics: growth rates, momentum scores, sentiment direction, valuation relative to growth
+- Cite specific metrics: growth rates, momentum scores, valuation relative to growth
 
 DEBATE CONTEXT:
 Conservative argument: {current_safe_response}
@@ -51,7 +50,6 @@ History: {history}
 
 DATA:
 Market: {market_research_report}
-Sentiment: {sentiment_report}
 News: {news_report}
 Fundamentals: {fundamentals_report}
 

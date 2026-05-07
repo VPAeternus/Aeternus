@@ -15,11 +15,6 @@ PILLAR_CLAIM_MAP = {
         "stress_signal": "fundamental",
         "stress_threshold": 45,
     },
-    "sentiment": {
-        "claim": "Positive market sentiment continues",
-        "stress_signal": "sentiment",
-        "stress_threshold": 45,
-    },
     "macro": {
         "claim": "Favorable macro regime (rates, credit spreads, yield curve)",
         "stress_signal": "macro",

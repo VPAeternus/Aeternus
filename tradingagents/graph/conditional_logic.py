@@ -36,16 +36,6 @@ class ConditionalLogic:
             return "tools_market"
         return "Msg Clear Market"
 
-    def should_continue_social(self, state: AgentState):
-        """Determine if social media analysis should continue."""
-        messages = state["messages"]
-        last_message = messages[-1]
-        if self._tool_call_iterations(messages) >= self.max_tool_iterations_per_analyst:
-            return "Msg Clear Social"
-        if last_message.tool_calls:
-            return "tools_social"
-        return "Msg Clear Social"
-
     def should_continue_news(self, state: AgentState):
         """Determine if news analysis should continue."""
         messages = state["messages"]

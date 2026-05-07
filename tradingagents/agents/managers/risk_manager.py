@@ -14,14 +14,13 @@ def create_risk_manager(llm, memory):
         market_research_report = state["market_report"]
         news_report = state["news_report"]
         fundamentals_report = state["fundamentals_report"]
-        sentiment_report = state["sentiment_report"]
         trader_plan = state["investment_plan"]
         pretrade_risk_brief = state.get("pretrade_risk_brief", "")
         portfolio_context = state.get("portfolio_context", "")
         drawdown_mode = state.get("drawdown_mode", False)
         structured_trader_verdict = state.get("structured_trader_verdict", {})
 
-        curr_situation = f"{market_research_report}\n\n{sentiment_report}\n\n{news_report}\n\n{fundamentals_report}"
+        curr_situation = f"{market_research_report}\n\n{news_report}\n\n{fundamentals_report}"
         past_memories = memory.get_memories(curr_situation, n_matches=2)
 
         past_memory_str = ""

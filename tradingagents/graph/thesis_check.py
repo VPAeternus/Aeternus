@@ -27,7 +27,6 @@ class ThesisChecker:
             "ticker": resolved_ticker,
             "date": resolved_date,
             "market_report": state.get("market_report", ""),
-            "sentiment_report": state.get("sentiment_report", ""),
             "news_report": state.get("news_report", ""),
             "investment_plan": state.get("investment_plan", ""),
             "final_trade_decision": state.get("final_trade_decision", ""),
@@ -35,7 +34,7 @@ class ThesisChecker:
 
         system_message = (
             "You are an investment thesis comparator. Use the provided daily market "
-            "signals, indicators, news, and sentiment to determine whether the current "
+            "signals, indicators, and news to determine whether the current "
             "investment thesis should change today. Return strict JSON only."
         )
         schema_hint = {

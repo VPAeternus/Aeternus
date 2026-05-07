@@ -59,8 +59,6 @@ from tradingagents.agents.utils.news_data_tools import (
     get_insider_sentiment,
     get_insider_transactions,
     get_global_news,
-    get_sentiment_snapshot,
-    get_social_sentiment,
 )
 
 def build_evidence_brief(state: dict) -> str:
@@ -91,20 +89,6 @@ def build_evidence_brief(state: dict) -> str:
         lines.append(f"Fundamental: {', '.join(parts) if parts else 'Unavailable'}")
     else:
         lines.append("Fundamental: Unavailable")
-
-    sm = state.get("sentiment_metrics") or {}
-    if sm:
-        parts = []
-        if sm.get("composite_score") is not None:
-            parts.append(f"Polarity {sm['composite_score']}/100")
-        buzz = sm.get("buzz", {})
-        if buzz.get("total_articles") is not None:
-            parts.append(f"Articles {buzz['total_articles']}")
-        if sm.get("direction"):
-            parts.append(f"Direction {sm['direction']}")
-        lines.append(f"Sentiment: {', '.join(parts) if parts else 'Unavailable'}")
-    else:
-        lines.append("Sentiment: Unavailable")
 
     mm = state.get("macro_metrics") or {}
     if mm:

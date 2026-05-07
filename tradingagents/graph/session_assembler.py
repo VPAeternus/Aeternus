@@ -185,52 +185,6 @@ def _score_valuation(m: Dict[str, Any]) -> int:
     return score
 
 
-def _score_polarity(m: Dict[str, Any]) -> int:
-    composite = m.get("composite_score")
-    if composite is not None:
-        return _clamp_score(composite)
-    av = m.get("av_sentiment", {})
-    av_score = av.get("score")
-    if av_score is not None:
-        return _clamp_score(50.0 + 40.0 * av_score)
-    text = m.get("text_sentiment", {})
-    text_score = text.get("social_score")
-    if text_score is not None:
-        return _clamp_score(text_score)
-    return 50
-
-
-def _score_buzz(m: Dict[str, Any]) -> int:
-    buzz = m.get("buzz", {})
-    total = buzz.get("total_articles", 0)
-    if total >= 30:
-        score = 85
-    elif total >= 15:
-        score = 70
-    elif total >= 5:
-        score = 50
-    else:
-        score = 30
-    quality = buzz.get("source_quality", "low")
-    if quality == "high":
-        score += 10
-    elif quality == "medium":
-        score += 5
-    return score
-
-
-def _score_catalyst(m: Dict[str, Any]) -> int:
-    text = m.get("text_sentiment", {})
-    catalyst_raw = text.get("catalyst_score")
-    if catalyst_raw is None:
-        return 50
-    score = _clamp_score(catalyst_raw)
-    direction = m.get("direction")
-    text_direction = text.get("direction")
-    if direction and text_direction and direction == text_direction and direction != "NEUTRAL":
-        score = min(100, score + 10)
-    return score
-
 
 def _compute_fundamental_sub(metrics: Dict[str, Any]) -> Dict[str, int]:
     quality = _score_quality(metrics)
@@ -254,22 +208,6 @@ def _compute_fundamental_overlay(fundamental_sub: Optional[Dict[str, int]]) -> D
 def _compute_fundamental_shadow_signal(fundamental_sub: Optional[Dict[str, int]]) -> Dict[str, Any]:
     return {"strategy": None, "gate_status": None, "recommended_status": None}
 
-
-def _compute_sentiment_sub(metrics: Dict[str, Any]) -> Dict[str, int]:
-    if metrics.get("source") == "dealflow":
-        return {
-            "polarity": max(0, min(100, int(metrics.get("social_momentum", 50)))),
-            "buzz": max(0, min(100, int(metrics.get("social_momentum", 50)))),
-            "catalyst": max(0, min(100, int(metrics.get("news_catalyst", 50)))),
-        }
-    polarity = _score_polarity(metrics)
-    buzz = _score_buzz(metrics)
-    catalyst = _score_catalyst(metrics)
-    return {
-        "polarity": max(0, min(100, polarity)),
-        "buzz": max(0, min(100, buzz)),
-        "catalyst": max(0, min(100, catalyst)),
-    }
 
 
 def _compute_macro_sub(metrics: Dict[str, Any]) -> Dict[str, int]:
@@ -354,22 +292,11 @@ def gather_computation_data(
     """Run all pure-Python computation engines. No LLM calls."""
     # Ensure .env is loaded (API keys) and SSL certs are configured
     _ensure_env()
-    from tradingagents.dataflows.interface import route_to_vendor
-    from tradingagents.agents.utils.sentiment_engine import build_sentiment_snapshot
     from tradingagents.agents.utils.momentum_engine import build_momentum_snapshot
     from tradingagents.agents.utils.options_engine import build_options_snapshot
     from tradingagents.agents.utils.flow_toxicity_engine import build_flow_toxicity_snapshot
 
     fundamental_metrics = {}
-
-    # Sentiment
-    def _gather_sentiment():
-        start_date = (datetime.strptime(date, "%Y-%m-%d") - timedelta(days=7)).strftime("%Y-%m-%d")
-        av_raw = _safe_call(route_to_vendor, "get_news", ticker, start_date, date)
-        xai_raw = _safe_call(route_to_vendor, "get_news", f"${ticker} social media sentiment", start_date, date)
-        return build_sentiment_snapshot(av_raw or "", xai_raw or "", ticker)
-
-    sentiment_metrics = _safe_call(_gather_sentiment)
 
     macro_metrics = {}
 
@@ -388,7 +315,6 @@ def gather_computation_data(
         "ticker": ticker,
         "date": date,
         "fundamental_metrics": fundamental_metrics or {},
-        "sentiment_metrics": sentiment_metrics or {},
         "momentum_metrics": momentum_metrics or {},
         "macro_metrics": macro_metrics or {},
         "options_metrics": options_metrics or {},
@@ -407,7 +333,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
     from tradingagents.graph.fama_french import get_ff_factors
 
     fundamental_metrics = computation_data.get("fundamental_metrics") or {}
-    sentiment_metrics = computation_data.get("sentiment_metrics") or {}
     macro_metrics = computation_data.get("macro_metrics") or {}
     momentum_metrics = computation_data.get("momentum_metrics") or {}
     options_metrics = computation_data.get("options_metrics") or {}
@@ -431,38 +356,14 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
     fundamental_overlay = _compute_fundamental_overlay(fundamental_sub)
     fundamental_shadow = _compute_fundamental_shadow_signal(fundamental_sub)
 
-    # 2. Sentiment sub-scores
-    sentiment_sub = None
-    _sent_cov = sentiment_metrics.get("data_coverage", 0.0)
-    _sent_gated = bool(sentiment_metrics) and _sent_cov < MIN_ANCHOR_COVERAGE
-    if sentiment_metrics and not _sent_gated:
-        sentiment_sub = _compute_sentiment_sub(sentiment_metrics)
-        anchored_sentiment = round(
-            sentiment_sub["polarity"] * 0.40
-            + sentiment_sub["buzz"] * 0.30
-            + sentiment_sub["catalyst"] * 0.30,
-        )
-        anchored_sentiment = max(0, min(100, anchored_sentiment))
-    else:
-        anchored_sentiment = 50
-
-    # Blend options sentiment (70/30 or 100% options when no text)
     options_sub = None
-    if options_metrics and options_metrics.get("sentiment_score") is not None:
+    if options_metrics:
         options_sub = {
-            "sentiment_score": options_metrics["sentiment_score"],
             "fear_greed": options_metrics.get("fear_greed", "NEUTRAL"),
             "put_call_volume_ratio": options_metrics.get("put_call_volume_ratio"),
             "iv_skew": options_metrics.get("iv_skew"),
         }
-        options_sentiment = options_metrics["sentiment_score"]
-        if sentiment_sub is not None:
-            anchored_sentiment = round(anchored_sentiment * 0.70 + options_sentiment * 0.30)
-            anchored_sentiment = max(0, min(100, anchored_sentiment))
-        else:
-            anchored_sentiment = options_sentiment
 
-    # Blend flow toxicity (85/15)
     flow_toxicity_sub = None
     if flow_toxicity_metrics and flow_toxicity_metrics.get("composite_score") is not None:
         flow_toxicity_sub = {
@@ -471,12 +372,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
             "vpin_proxy": flow_toxicity_metrics.get("vpin_proxy"),
             "direction": flow_toxicity_metrics.get("direction", "NEUTRAL"),
         }
-        ft_score = flow_toxicity_metrics["composite_score"]
-        if anchored_sentiment != 50 or sentiment_sub is not None or options_sub is not None:
-            anchored_sentiment = round(anchored_sentiment * 0.85 + ft_score * 0.15)
-            anchored_sentiment = max(0, min(100, anchored_sentiment))
-        else:
-            anchored_sentiment = ft_score
 
     # 3. Macro sub-scores
     macro_sub = None
@@ -512,7 +407,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
 
     data_quality_gate = {
         "fundamental": _fund_gated,
-        "sentiment": _sent_gated,
         "macro": _macro_gated,
         "momentum": _mom_gated,
     }
@@ -521,7 +415,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
     scores = {
         "fundamental": anchored_fundamental,
         "macro": anchored_macro,
-        "sentiment": anchored_sentiment,
         "momentum": anchored_momentum,
     }
 
@@ -531,7 +424,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
         pillar_composites=scores,
         fundamental_sub=fundamental_sub,
         macro_sub=macro_sub,
-        sentiment_sub=sentiment_sub,
         momentum_sub=momentum_sub,
     )
     if not coherence_snapshot:
@@ -559,28 +451,23 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
         "fundamental":     scores["fundamental"],
         "coherence":       scores["coherence"],
         "macro":           scores["macro"],
-        "sentiment":       scores["sentiment"],
         "momentum":        scores["momentum"],
         "research_debate": research_debate_score,
         "trader_verdict":  trader_verdict_score,
         "risk_verdict":    risk_verdict_score,
     }
     active_models = {k for k, v in model_scores.items() if v is not None}
-    quant_pillars = {"fundamental", "coherence", "macro", "sentiment", "momentum"}
+    quant_pillars = {"fundamental", "coherence", "macro", "momentum"}
 
     if not active_models - quant_pillars:
         # No debate voices — pure quant fallback
         weights = _safe_call(get_weights, regime)
         if not weights:
-            weights = {
-                "fundamental": 0.30, "coherence": 0.25,
-                "macro": 0.20, "sentiment": 0.15, "momentum": 0.10,
-            }
+            weights = {"fundamental": 0.35, "coherence": 0.30, "macro": 0.23, "momentum": 0.12}
         aeternus_score = round(
             scores["fundamental"] * weights["fundamental"]
             + scores["coherence"] * weights["coherence"]
             + scores["macro"] * weights["macro"]
-            + scores["sentiment"] * weights["sentiment"]
             + scores["momentum"] * weights["momentum"],
             2,
         )
@@ -598,7 +485,7 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
     # Quant-only reference score (drift monitor)
     quant_weights_ref = _safe_call(get_weights, regime)
     if not quant_weights_ref:
-        quant_weights_ref = {"fundamental": 0.30, "coherence": 0.25, "macro": 0.20, "sentiment": 0.15, "momentum": 0.10}
+        quant_weights_ref = {"fundamental": 0.35, "coherence": 0.30, "macro": 0.23, "momentum": 0.12}
     quant_only_score = round(
         sum(scores[p] * quant_weights_ref[p] for p in quant_weights_ref), 2
     )
@@ -656,7 +543,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
         from tradingagents.graph.epistemic import build_epistemic_report
         epistemic = build_epistemic_report(
             fundamental_metrics=fundamental_metrics,
-            sentiment_metrics=sentiment_metrics,
             macro_metrics=macro_metrics,
             momentum_metrics=momentum_metrics,
             options_metrics=options_metrics,
@@ -697,8 +583,8 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
 
     # 12. Confidence from data quality
     keys = [
-        "fundamentals_report", "market_report", "sentiment_report",
-        "news_report", "investment_plan", "final_trade_decision",
+        "fundamentals_report", "market_report", "news_report",
+        "investment_plan", "final_trade_decision",
     ]
     present = sum(1 for k in keys if sonnet_outputs.get(k))
     data_quality = max(1, min(5, round(1 + (4 * present / len(keys)))))
@@ -739,7 +625,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
         "fundamental_shadow_strategy": fundamental_shadow["strategy"],
         "fundamental_shadow_gate_status": fundamental_shadow["gate_status"],
         "fundamental_shadow_recommended_status": fundamental_shadow["recommended_status"],
-        "sentiment_sub": sentiment_sub,
         "macro_sub": macro_sub,
         "momentum_sub": momentum_sub,
         "options_sub": options_sub,
@@ -780,7 +665,6 @@ def write_analysis_report(
         "trade_date": date,
         "fundamentals_report": sonnet_outputs.get("fundamentals_report", ""),
         "market_report": sonnet_outputs.get("market_report", ""),
-        "sentiment_report": sonnet_outputs.get("sentiment_report", ""),
         "news_report": sonnet_outputs.get("news_report", ""),
         "investment_debate_state": sonnet_outputs.get("investment_debate_state", {}),
         "risk_debate_state": sonnet_outputs.get("risk_debate_state", {}),
@@ -790,7 +674,6 @@ def write_analysis_report(
         "structured_trader_verdict": sonnet_outputs.get("structured_trader_verdict", {}),
         "structured_verdict": sonnet_outputs.get("structured_verdict", {}),
         "fundamental_metrics": computation_data.get("fundamental_metrics", {}),
-        "sentiment_metrics": computation_data.get("sentiment_metrics", {}),
         "macro_metrics": computation_data.get("macro_metrics", {}),
         "momentum_metrics": computation_data.get("momentum_metrics", {}),
         "aeternus_score": score_dict,

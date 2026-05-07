@@ -69,7 +69,6 @@ class AgentState(MessagesState):
 
     # research step
     market_report: Annotated[str, "Report from the Market Analyst"]
-    sentiment_report: Annotated[str, "Report from the Social Media Analyst"]
     news_report: Annotated[
         str, "Report from the News Researcher of current world affairs"
     ]
@@ -101,9 +100,6 @@ class AgentState(MessagesState):
 
     # Computed fundamental metrics from Python engine
     fundamental_metrics: Annotated[dict, "Computed fundamental metrics from Python engine"]
-
-    # Computed sentiment metrics from Python engine
-    sentiment_metrics: Annotated[dict, "Computed sentiment metrics from Python engine"]
 
     # Computed macro regime metrics from Python engine
     macro_metrics: Annotated[dict, "Computed macro regime metrics from Python engine"]

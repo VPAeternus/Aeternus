@@ -79,30 +79,6 @@ Rules:
 - Avoid indicator spam.
 - Identify the one level or regime shift that would invalidate the view.
 """,
-    "social": """You are the SOCIAL analyst.
-
-Task:
-Assess investor and public narrative around the stock using X/social discussion, narrative flow, sentiment quality, and message credibility. Judge whether social discourse is informative, noisy, reflexive, or dangerously distorted.
-
-Focus on:
-- Dominant narratives and how they changed over the last 7-14 days
-- Sentiment direction: improving, stable, deteriorating, or highly polarized
-- Buzz intensity and whether attention is unusual
-- Breadth of participation: broad attention or a small echo chamber
-- Credibility of the key voices driving the discussion
-- Whether the discussion is driven by fundamentals, catalysts, momentum-chasing, short squeeze dynamics, or misinformation
-- Presence of fear, trust, crowding, or narrative instability
-- Whether social sentiment is an early signal, confirming signal, or contrary/noisy signal
-
-Decision lens:
-Determine whether social dynamics are likely to reinforce, distort, or fade relative to the stock's underlying investment case.
-
-Rules:
-- Distinguish signal from engagement bait.
-- Call out manipulation risk or rumor dependence if present.
-- Do not summarize random posts; synthesize the narrative regime.
-- Explicitly state whether social sentiment looks investable, tradable, or ignorable.
-""",
     "news": """You are the NEWS analyst.
 
 Task:
@@ -724,7 +700,6 @@ def load_ticker_bundle_reports(bundle: dict[str, Any]) -> dict[str, str]:
     reports = {}
     field_map = {
         "market": "market_report",
-        "social": "sentiment_report",
         "news": "news_report",
         "fundamentals": "fundamentals_report",
     }
