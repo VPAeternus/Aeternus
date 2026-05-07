@@ -386,19 +386,33 @@ def _run_batch(tickers: list[str], start: str, thresholds: list[int], entry: str
         try:
             with contextlib.redirect_stdout(io.StringIO()):
                 result = run(ticker, start, thresholds, entry=entry)
-            best = max(result["strategies"], key=lambda row: row["sharpe"])
-            buy_hold = result["buy_hold"]
-            rows.append({
-                "ticker": result["ticker"],
-                "best_threshold": best["threshold"],
-                "best_cagr_pct": best["cagr_pct"],
-                "best_sharpe": best["sharpe"],
-                "best_max_dd_pct": best["max_drawdown_pct"],
-                "best_exposure_pct": best["exposure_pct"],
-                "buy_hold_cagr_pct": buy_hold["cagr_pct"],
-                "buy_hold_sharpe": buy_hold["sharpe"],
-                "buy_hold_max_dd_pct": buy_hold["max_drawdown_pct"],
-            })
+            if isinstance(result.get("strategies"), list):
+                best = max(result["strategies"], key=lambda row: row["sharpe"])
+                buy_hold = result["buy_hold"]
+                rows.append({
+                    "ticker": result["ticker"],
+                    "best_threshold": best["threshold"],
+                    "best_cagr_pct": best["cagr_pct"],
+                    "best_sharpe": best["sharpe"],
+                    "best_max_dd_pct": best["max_drawdown_pct"],
+                    "best_exposure_pct": best["exposure_pct"],
+                    "buy_hold_cagr_pct": buy_hold["cagr_pct"],
+                    "buy_hold_sharpe": buy_hold["sharpe"],
+                    "buy_hold_max_dd_pct": buy_hold["max_drawdown_pct"],
+                })
+            else:
+                buy_hold = result["buy_hold"]
+                oos = result["oos"]
+                rows.append({
+                    "ticker": result["ticker"],
+                    "fold_count": result["fold_count"],
+                    "best_cagr_pct": oos["cagr_pct"],
+                    "best_sharpe": oos["sharpe"],
+                    "best_max_dd_pct": oos["max_drawdown_pct"],
+                    "buy_hold_cagr_pct": buy_hold["cagr_pct"],
+                    "buy_hold_sharpe": buy_hold["sharpe"],
+                    "buy_hold_max_dd_pct": buy_hold["max_drawdown_pct"],
+                })
             print(rows[-1])
         except Exception as exc:
             print({"ticker": ticker, "error": str(exc)})
@@ -432,6 +446,26 @@ def main() -> None:
     parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
 
+    if args.batch_top_qqq_spy:
+        thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
+        if args.walk_forward_grid:
+            original_run = run
+            try:
+                globals()["run"] = lambda ticker, start, thresholds, entry="close": walk_forward_weight_grid(
+                    ticker,
+                    start,
+                    entry,
+                    thresholds,
+                    train_years=args.train_years,
+                    test_years=args.test_years,
+                )
+                _run_batch(_default_top_unique(), args.start, thresholds, args.entry)
+            finally:
+                globals()["run"] = original_run
+        else:
+            _run_batch(_default_top_unique(), args.start, thresholds, args.entry)
+        return
+
     if args.walk_forward_grid:
         thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
         result = walk_forward_weight_grid(
@@ -443,11 +477,6 @@ def main() -> None:
             test_years=args.test_years,
         )
         print(result)
-        return
-
-    if args.batch_top_qqq_spy:
-        thresholds = [int(x.strip()) for x in args.thresholds.split(",") if x.strip()]
-        _run_batch(_default_top_unique(), args.start, thresholds, args.entry)
         return
 
     if args.audit_walk_forward:
