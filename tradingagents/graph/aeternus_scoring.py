@@ -15,6 +15,7 @@ from .fama_french import get_ff_factors
 from .epistemic import build_epistemic_report
 from .calibration import build_calibration_report
 from tradingagents.agents.utils.agent_utils import extract_text_content, make_cached_system_message
+from tradingagents.scoring import confidence as confidence_helpers
 
 # Minimum data_coverage (0.0–1.0) for computation engine metrics to anchor a pillar score.
 # Below this threshold, the pillar falls back to LLM-scored estimate.
@@ -942,73 +943,27 @@ class AeternusScorer:
         )
 
     def _is_nonempty(self, value: Any) -> bool:
-        if value is None:
-            return False
-        if isinstance(value, str):
-            return bool(value.strip())
-        if isinstance(value, (list, tuple, dict, set)):
-            return len(value) > 0
-        return bool(value)
+        return confidence_helpers.is_nonempty(value)
 
     def _normalize_factor(self, value: Any, default: int = 3) -> int:
-        try:
-            num = float(value)
-            # Accept both 1-5 and 0-100 inputs from model responses.
-            if num > 5:
-                num = num / 20.0
-            return self._clamp_confidence(num)
-        except (TypeError, ValueError):
-            return default
+        return confidence_helpers.normalize_factor(value, default=default)
 
     def _map_accuracy_to_factor(self, value: Any) -> int:
-        if value is None:
-            return 3
-        try:
-            num = float(value)
-            if num > 1:
-                num = num / 100.0
-            num = max(0.0, min(1.0, num))
-            return self._clamp_confidence(1 + (4 * num))
-        except (TypeError, ValueError):
-            return 3
+        return confidence_helpers.map_accuracy_to_factor(value)
 
     def _compute_data_quality_factor(self, state: Dict[str, Any]) -> int:
-        keys = [
-            "market_report",
-            "sentiment_report",
-            "news_report",
-            "fundamentals_report",
-            "investment_plan",
-            "final_trade_decision",
-        ]
-        present = 0
-        for key in keys:
-            if self._is_nonempty(state.get(key)):
-                present += 1
-        return self._clamp_confidence(round(1 + (4 * present / len(keys))))
+        return confidence_helpers.compute_data_quality_factor(state)
 
     def _compute_historical_accuracy_factor(
         self,
         sector: Optional[str],
         confidence_level: int,
     ) -> int:
-        if not self.track_record:
-            return 3
-
-        accuracy = None
-        try:
-            if sector and sector != "Unknown":
-                accuracy = self.track_record.get_accuracy_by_sector(sector)
-        except Exception:
-            accuracy = None
-
-        if accuracy is None:
-            try:
-                accuracy = self.track_record.get_accuracy_by_confidence(confidence_level)
-            except Exception:
-                accuracy = None
-
-        return self._map_accuracy_to_factor(accuracy)
+        return confidence_helpers.compute_historical_accuracy_factor(
+            track_record=self.track_record,
+            sector=sector,
+            confidence_level=confidence_level,
+        )
 
     def _compute_confidence_factors(
         self,
@@ -1018,39 +973,17 @@ class AeternusScorer:
         price_target: Optional[float],
         catalyst: Optional[str],
     ) -> Dict[str, int]:
-        llm_factors = llm_data.get("confidence_factors", {}) or {}
-        llm_confidence = self._normalize_factor(llm_data.get("confidence"), default=3)
-
-        data_quality = self._compute_data_quality_factor(state)
-        thesis_clarity = self._normalize_factor(
-            llm_factors.get("thesis_clarity"),
-            default=llm_confidence,
-        )
-        catalyst_default = 4 if (price_target is not None or self._is_nonempty(catalyst)) else 2
-        catalyst_proximity = self._normalize_factor(
-            llm_factors.get("catalyst_proximity"),
-            default=catalyst_default,
-        )
-        historical_accuracy = self._compute_historical_accuracy_factor(
+        return confidence_helpers.compute_confidence_factors(
+            state=state,
+            llm_data=llm_data,
             sector=sector,
-            confidence_level=llm_confidence,
+            price_target=price_target,
+            catalyst=catalyst,
+            track_record=self.track_record,
         )
-
-        return {
-            "data_quality": data_quality,
-            "thesis_clarity": thesis_clarity,
-            "catalyst_proximity": catalyst_proximity,
-            "historical_accuracy": historical_accuracy,
-        }
 
     def _compute_weighted_confidence(self, factors: Dict[str, int]) -> int:
-        weighted = (
-            (factors["data_quality"] * 0.30)
-            + (factors["thesis_clarity"] * 0.25)
-            + (factors["catalyst_proximity"] * 0.25)
-            + (factors["historical_accuracy"] * 0.20)
-        )
-        return self._clamp_confidence(round(weighted))
+        return confidence_helpers.compute_weighted_confidence(factors)
 
     def _safe_parse_json(self, text: str) -> Dict[str, Any]:
         if not text:
@@ -1080,11 +1013,7 @@ class AeternusScorer:
         return max(0, min(100, num))
 
     def _clamp_confidence(self, value: Any) -> int:
-        try:
-            num = int(round(float(value)))
-        except (TypeError, ValueError):
-            return 3
-        return max(1, min(5, num))
+        return confidence_helpers.clamp_confidence(value)
 
     # --- Debate voice signal extraction (ensemble inputs) ---
 
