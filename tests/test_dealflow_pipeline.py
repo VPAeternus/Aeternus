@@ -488,17 +488,17 @@ def test_discover_then_collect_writes_queue_artifacts_and_ledger(tmp_path, monke
     }
 
     with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", return_value=universe))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_tier_map", return_value={"GLW": "T1_ANCHOR"}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_ledger", return_value={"symbols": ["GLW"], "kept_symbols": ["GLW"], "rule_snapshot": {}}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.build_universe_from_akg", return_value=universe))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.get_last_universe_tier_map", return_value={"GLW": "T1_ANCHOR"}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.get_last_universe_ledger", return_value={"symbols": ["GLW"], "kept_symbols": ["GLW"], "rule_snapshot": {}}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.list_active_ideas", return_value=[]))
         stack.enter_context(patch("tradingagents.dealflow.sources.x_feed_manual.load_recent_merged", return_value={}))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.DealFlowPipeline._build_fvg_recall_channel", return_value={"selected_symbols": [], "artifact": {"date": "2026-05-05", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}}))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.DealFlowPipeline._build_fma_recall_channel", return_value={"selected_symbols": [], "artifact": {"date": "2026-05-05", "selected_symbols": [], "rows": [], "quota": 0, "rule_snapshot": {"enabled": True}}}))
         stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.insider_cluster.scan_insider_sweep", return_value={"skipped": True}))
         stack.enter_context(patch("tradingagents.dealflow.sources.technical_ignition_scout.scan_technical_ignition_setups", return_value={"promoted_count": 0, "promoted_symbols": [], "stale_count": 0, "stale_symbols": [], "signals": [], "promoted": [], "stale": []}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.scan_thirteenf_watchlist", return_value={"candidate_count": 0, "symbols": [], "candidates": []}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.scan_thirteenf_watchlist", return_value={"candidate_count": 0, "symbols": [], "candidates": []}))
         stack.enter_context(patch("tradingagents.dealflow.pipeline._AKG_AVAILABLE", False))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_social_news_signals", return_value=[]))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.collect_price_momentum_signals", return_value=[]))
@@ -631,8 +631,8 @@ def test_discover_persists_fvg_recall_artifact_and_threads_symbols(tmp_path, mon
         ]
 
     with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.list_active_ideas", return_value=[]))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.iv_scanner.scan_earnings_iv", return_value={"force_queue": [], "akg_enriched": []}))
@@ -719,8 +719,8 @@ def test_discover_persists_fma_recall_artifact_and_threads_symbols(tmp_path, mon
         ]
 
     with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.list_active_ideas", return_value=[]))
         stack.enter_context(patch("tradingagents.dealflow.pipeline.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.iv_scanner.scan_earnings_iv", return_value={"force_queue": [], "akg_enriched": []}))
@@ -1124,17 +1124,17 @@ def test_discover_persists_universe_filter_artifact_and_summary(tmp_path, monkey
 
     with ExitStack() as stack:
         stack.enter_context(
-            patch("tradingagents.dealflow.pipeline.build_universe_from_akg", return_value=universe)
+            patch("tradingagents.dealflow.discovery_stage.build_universe_from_akg", return_value=universe)
         )
         stack.enter_context(
             patch(
-                "tradingagents.dealflow.pipeline.get_last_universe_tier_map",
+                "tradingagents.dealflow.discovery_stage.get_last_universe_tier_map",
                 return_value={"AAPL": "T1_ANCHOR", "NVDA": "T3B_FVG_RECALL", "TSLA": "MANUAL"},
             )
         )
         stack.enter_context(
             patch(
-                "tradingagents.dealflow.pipeline.get_last_universe_ledger",
+                "tradingagents.dealflow.discovery_stage.get_last_universe_ledger",
                 return_value={
                     "kept_symbols": ["AAPL", "NVDA"],
                     "candidate_drop_symbols": ["TSLA"],
@@ -1143,7 +1143,7 @@ def test_discover_persists_universe_filter_artifact_and_summary(tmp_path, monkey
                 },
             )
         )
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[{"symbol": "TSLA"}]))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.list_active_ideas", return_value=[{"symbol": "TSLA"}]))
         stack.enter_context(
                 patch(
                     "tradingagents.dealflow.pipeline.DealFlowPipeline._build_fvg_recall_channel",
@@ -1184,7 +1184,7 @@ def test_discover_persists_universe_filter_artifact_and_summary(tmp_path, monkey
             )
         )
         stack.enter_context(
-            patch("tradingagents.dealflow.pipeline.write_discovery_delta_report", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []})
+            patch("tradingagents.dealflow.discovery_stage.write_discovery_delta_report", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []})
         )
         stack.enter_context(
             patch("tradingagents.dealflow.sources.x_feed_manual.load_recent_merged", return_value={"TSLA": {"ticker": "TSLA"}})
@@ -1260,10 +1260,10 @@ def test_discover_threads_technical_ignition_symbols_and_persists_scout_audit(tm
     }
 
     with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_tier_map", return_value={}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_ledger", return_value={}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.get_last_universe_tier_map", return_value={}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.get_last_universe_ledger", return_value={}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.list_active_ideas", return_value=[]))
         stack.enter_context(
             patch(
                 "tradingagents.dealflow.sources.x_feed_manual.load_recent_merged",
@@ -1338,10 +1338,10 @@ def test_discover_writes_scout_compiler_sidecar_artifacts_without_changing_unive
     ]
 
     with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", return_value=universe))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_tier_map", return_value={}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.get_last_universe_ledger", return_value={"symbols": ["XLE", "UAL"]}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.build_universe_from_akg", return_value=universe))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.get_last_universe_tier_map", return_value={}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.get_last_universe_ledger", return_value={"symbols": ["XLE", "UAL"]}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.list_active_ideas", return_value=[]))
         stack.enter_context(
             patch(
                 "tradingagents.dealflow.sources.x_feed_manual.load_recent_merged",
@@ -1455,8 +1455,8 @@ def test_discover_carries_forward_recent_unprocessed_x_feed_symbols(tmp_path, mo
         return []
 
     with ExitStack() as stack:
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.list_active_ideas", return_value=[]))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.build_universe_from_akg", side_effect=_stub_build_universe_from_akg))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.list_active_ideas", return_value=[]))
         stack.enter_context(
             patch(
                 "tradingagents.dealflow.sources.x_feed_manual.load_recent_merged",
@@ -1476,7 +1476,7 @@ def test_discover_carries_forward_recent_unprocessed_x_feed_symbols(tmp_path, mo
             )
         )
         stack.enter_context(patch("tradingagents.dealflow.pipeline.DealFlowPipeline._build_scout_audit", return_value={"signals": []}))
-        stack.enter_context(patch("tradingagents.dealflow.pipeline.write_discovery_delta_report", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []}))
+        stack.enter_context(patch("tradingagents.dealflow.discovery_stage.write_discovery_delta_report", return_value={"coverage_summary": {}, "cohorts": {}, "top_delta_symbols": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.breakout_scanner.scan_breakout_discovery", return_value={"count": 0, "alerts": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.iv_scanner.scan_earnings_iv", return_value={"force_queue": [], "akg_enriched": []}))
         stack.enter_context(patch("tradingagents.dealflow.sources.insider_cluster.scan_insider_sweep", return_value={"skipped": True}))
