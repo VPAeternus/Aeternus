@@ -13,6 +13,7 @@ import importlib.util
 import math
 from pathlib import Path
 from typing import Iterable
+import hashlib
 import contextlib
 import io
 
@@ -22,13 +23,10 @@ import pandas as pd
 from tradingagents.phase_engine import data_engine
 
 
-MOMENTUM_ENGINE_PATH = (
-    Path(__file__).resolve().parents[1]
-    / "tradingagents"
-    / "agents"
-    / "utils"
-    / "momentum_engine.py"
-)
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+MOMENTUM_ENGINE_PATH = PROJECT_ROOT / "tradingagents" / "agents" / "utils" / "momentum_engine.py"
+SCORE_CACHE_DIR = PROJECT_ROOT / ".cache" / "momentum_pillar_scores"
+SCORE_CACHE_VERSION = "v2_balanced_no_volume"
 
 
 def _load_momentum_engine():
@@ -95,6 +93,28 @@ def _annualized_stats(returns: Iterable[float]) -> dict:
         "sharpe": round(sharpe, 3),
         "max_drawdown_pct": round(max_drawdown * 100.0, 2),
     }
+
+
+def _cache_path(ticker: str, start: str, df: pd.DataFrame) -> Path:
+    first = str(df["date"].min())[:10] if "date" in df.columns and not df.empty else "none"
+    last = str(df["date"].max())[:10] if "date" in df.columns and not df.empty else "none"
+    source_hash = hashlib.sha256(
+        Path(__file__).read_bytes() + MOMENTUM_ENGINE_PATH.read_bytes()
+    ).hexdigest()[:16]
+    key = f"{SCORE_CACHE_VERSION}|{source_hash}|{ticker.upper()}|{start}|{len(df)}|{first}|{last}"
+    digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]
+    return SCORE_CACHE_DIR / f"{ticker.upper()}_{digest}.pkl"
+
+
+def _score_rows_cached(ticker: str, start: str) -> pd.DataFrame:
+    df = data_engine.load(ticker, start).copy()
+    path = _cache_path(ticker, start, df)
+    if path.exists():
+        return pd.read_pickle(path)
+    scored = _score_rows(df)
+    SCORE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    scored.to_pickle(path)
+    return scored
 
 
 def _score_rows(df: pd.DataFrame) -> pd.DataFrame:
@@ -286,8 +306,7 @@ def walk_forward_weight_grid(
         raise ValueError("Only annual rebalance is supported for now")
     weight_sets = _weight_candidates(weight_mode)
 
-    df = data_engine.load(ticker, start).copy()
-    scored = _score_rows(df).dropna().reset_index(drop=True)
+    scored = _score_rows_cached(ticker, start).dropna().reset_index(drop=True)
     return_col = _return_column(entry)
     scored = scored.dropna(subset=[return_col]).reset_index(drop=True)
     scored["year"] = pd.to_datetime(scored["date"]).dt.year
@@ -345,8 +364,7 @@ def walk_forward_weight_grid(
 
 
 def run(ticker: str, start: str, thresholds: list[int], entry: str = "close") -> dict:
-    df = data_engine.load(ticker, start).copy()
-    scored = _score_rows(df)
+    scored = _score_rows_cached(ticker, start)
     if scored.empty:
         raise RuntimeError(f"No scored rows for {ticker}")
 
