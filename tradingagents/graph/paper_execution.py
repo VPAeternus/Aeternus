@@ -8,7 +8,7 @@ import logging
 import time
 import uuid
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional, Protocol, Sequence, Tuple
+from typing import Any, Dict, List, Literal, Optional, Sequence, Tuple
 
 import requests
 import yfinance as yf
@@ -16,6 +16,7 @@ import yfinance as yf
 from .track_record import TrackRecord
 from tradingagents.dealflow.hypothesis_ledger import append_ledger_row, make_ledger_row
 from tradingagents.default_config import DEFAULT_CONFIG
+from tradingagents.execution import adapters as execution_adapters
 from tradingagents.execution.alpaca_client import (
     RETRYABLE_STATUS_CODES,
     alpaca_get_json as _alpaca_get_json,
@@ -45,148 +46,25 @@ from tradingagents.execution.modes import (
 logger = logging.getLogger(__name__)
 
 
-class ExecutionAdapter(Protocol):
-    """Execution adapter interface for future broker integrations."""
-
-    mode: str
-
-    def execute_plan(
-        self,
-        plan: Dict[str, Any],
-        orders_path: str,
-        positions_path: str,
-        fill_price_slippage_bps: float,
-    ) -> Dict[str, Any]:
-        ...
-
-    def close_position(
-        self,
-        symbol: str,
-        close_price: float,
-        close_date: str,
-        positions_path: str,
-        closed_trades_path: str,
-        track_record: Optional[TrackRecord],
-    ) -> Dict[str, Any]:
-        ...
+ExecutionAdapter = execution_adapters.ExecutionAdapter
+PaperExecutionAdapter = execution_adapters.PaperExecutionAdapter
+LiveExecutionAdapter = execution_adapters.LiveExecutionAdapter
+AlpacaExecutionAdapter = execution_adapters.AlpacaExecutionAdapter
 
 
-class PaperExecutionAdapter:
-    """Paper execution adapter with broker-compatible method signatures."""
-
-    mode = EXECUTION_MODE_PAPER
-
-    def execute_plan(
-        self,
-        plan: Dict[str, Any],
-        orders_path: str,
-        positions_path: str,
-        fill_price_slippage_bps: float,
-    ) -> Dict[str, Any]:
-        return execute_paper_plan(
-            plan=plan,
-            orders_path=orders_path,
-            positions_path=positions_path,
-            fill_price_slippage_bps=fill_price_slippage_bps,
-        )
-
-    def close_position(
-        self,
-        symbol: str,
-        close_price: float,
-        close_date: str,
-        positions_path: str,
-        closed_trades_path: str,
-        track_record: Optional[TrackRecord],
-    ) -> Dict[str, Any]:
-        return close_paper_position(
-            symbol=symbol,
-            close_price=close_price,
-            close_date=close_date,
-            positions_path=positions_path,
-            closed_trades_path=closed_trades_path,
-            track_record=track_record,
-        )
-
-
-class LiveExecutionAdapter:
-    """Safe live adapter scaffold: queue intents, do not place broker orders yet."""
-
-    mode = EXECUTION_MODE_LIVE
-
-    def execute_plan(
-        self,
-        plan: Dict[str, Any],
-        orders_path: str,
-        positions_path: str,
-        fill_price_slippage_bps: float,
-    ) -> Dict[str, Any]:
-        return execute_live_plan(
-            plan=plan,
-            outbox_path=orders_path,
-        )
-
-    def close_position(
-        self,
-        symbol: str,
-        close_price: float,
-        close_date: str,
-        positions_path: str,
-        closed_trades_path: str,
-        track_record: Optional[TrackRecord],
-    ) -> Dict[str, Any]:
-        return close_alpaca_position(
-            symbol=symbol,
-            mode=EXECUTION_MODE_ALPACA_PAPER,
-        )
-
-
-class AlpacaExecutionAdapter:
-    """Alpaca adapter for direct order submission (paper/live)."""
-
-    def __init__(self, mode: str):
-        self.mode = _normalize_execution_mode(mode)
-        self.is_paper = self.mode == EXECUTION_MODE_ALPACA_PAPER
-
-    def execute_plan(
-        self,
-        plan: Dict[str, Any],
-        orders_path: str,
-        positions_path: str,
-        fill_price_slippage_bps: float,
-    ) -> Dict[str, Any]:
-        del positions_path, fill_price_slippage_bps  # Not used for broker submission.
-        return execute_alpaca_plan(
-            plan=plan,
-            outbox_path=orders_path,
-            mode=self.mode,
-        )
-
-    def close_position(
-        self,
-        symbol: str,
-        close_price: float,
-        close_date: str,
-        positions_path: str,
-        closed_trades_path: str,
-        track_record: Optional[TrackRecord],
-    ) -> Dict[str, Any]:
-        return close_alpaca_position(
-            symbol=symbol,
-            mode=self.mode,
-        )
+def _adapter_deps() -> Dict[str, Any]:
+    return {
+        "execute_paper_plan": execute_paper_plan,
+        "close_paper_position": close_paper_position,
+        "execute_live_plan": execute_live_plan,
+        "close_alpaca_position": close_alpaca_position,
+        "execute_alpaca_plan": execute_alpaca_plan,
+    }
 
 
 def get_execution_adapter(mode: str = EXECUTION_MODE_PAPER) -> ExecutionAdapter:
     """Resolve execution adapter by mode."""
-    normalized = _normalize_execution_mode(mode)
-    if normalized == EXECUTION_MODE_PAPER:
-        return PaperExecutionAdapter()
-    if normalized == EXECUTION_MODE_LIVE:
-        return LiveExecutionAdapter()
-    if normalized in {EXECUTION_MODE_ALPACA_PAPER, EXECUTION_MODE_ALPACA_LIVE}:
-        return AlpacaExecutionAdapter(mode=normalized)
-    raise ValueError(f"Unsupported execution mode: {mode}")
+    return execution_adapters.get_execution_adapter(mode=mode, deps=_adapter_deps())
 
 
 def build_portfolio_plan(
