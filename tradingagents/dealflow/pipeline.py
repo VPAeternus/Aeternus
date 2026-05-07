@@ -23,7 +23,6 @@ from .connector_runtime import (
     summarize_connector_health,
 )
 from .contracts import DealFlowShortlist, EventTriggerResult, ResearchQueue, ResearchQueueItem
-from .hypothesis_ledger import append_ledger_row, make_ledger_row
 from .manual_merge_policy import apply_manual_merge_policy
 from .manual_watchlist import list_active_ideas, validate_symbol_liquidity
 from .negative_constraints import check_symbol_theme_suppression
@@ -39,7 +38,6 @@ from .sources import (
     scan_breakout_discovery,
     scan_thirteenf_watchlist,
 )
-from .themes import select_research_playbook, why_now_text
 from .akg_universe import (
     build_universe_from_akg,
     get_last_universe_ledger,
@@ -47,8 +45,6 @@ from .akg_universe import (
 )
 from .akg_writeback import writeback_scores_to_akg, writeback_signals_to_akg
 from .discovery_stage import run_discovery_stage
-from .discovery_reports import empty_discovery_delta, write_discovery_delta_report, write_theme_heatmap_report
-from .fvg_recall import _extract_ohlcv_frame
 from .recall_channels import (
     build_fma_recall_channel,
     build_fvg_recall_channel,
@@ -58,9 +54,6 @@ from .recall_channels import (
     prune_invalid_recall_symbols,
 )
 from .scout_audit_report import build_and_write_scout_audit
-from .scout_compiler import run_scout_compiler_sidecar
-from .scout_quality import build_scout_quality_daily, persist_scout_quality_daily
-from .universe_filter import build_universe_filter_report, summarize_universe_filter
 
 
 # ---------------------------------------------------------------------------
