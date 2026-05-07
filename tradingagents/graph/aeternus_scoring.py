@@ -16,6 +16,7 @@ from .epistemic import build_epistemic_report
 from .calibration import build_calibration_report
 from tradingagents.agents.utils.agent_utils import extract_text_content, make_cached_system_message
 from tradingagents.scoring import confidence as confidence_helpers
+from tradingagents.scoring import rating as rating_helpers
 
 # Minimum data_coverage (0.0–1.0) for computation engine metrics to anchor a pillar score.
 # Below this threshold, the pillar falls back to LLM-scored estimate.
@@ -1006,11 +1007,7 @@ class AeternusScorer:
             return {}
 
     def _clamp_score(self, value: Any) -> int:
-        try:
-            num = int(round(float(value)))
-        except (TypeError, ValueError):
-            return 50
-        return max(0, min(100, num))
+        return rating_helpers.clamp_score(value)
 
     def _clamp_confidence(self, value: Any) -> int:
         return confidence_helpers.clamp_confidence(value)
@@ -1143,12 +1140,4 @@ class AeternusScorer:
     # --- End debate voice extraction ---
 
     def _rating_from_score(self, score: float) -> str:
-        if score >= 80:
-            return "Strong Buy"
-        if score >= 60:
-            return "Buy"
-        if score >= 40:
-            return "Hold"
-        if score >= 20:
-            return "Sell"
-        return "Strong Sell"
+        return rating_helpers.rating_from_score(score)
