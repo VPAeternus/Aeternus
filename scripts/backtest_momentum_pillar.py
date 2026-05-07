@@ -244,12 +244,15 @@ def walk_forward_weight_grid(
     train_years: int = 5,
     test_years: int = 1,
     rebalance: str = "annual",
+    select_metric: str = "sharpe",
 ) -> dict:
     """Walk-forward select weight set + threshold on train, apply to unseen test.
 
     Rebalance cadence: annual by default. That matches slow-moving regime quality;
     monthly/quarterly would invite overfitting and unnecessary turnover.
     """
+    if select_metric not in {"sharpe", "cagr"}:
+        raise ValueError("select_metric must be 'sharpe' or 'cagr'")
     if rebalance != "annual":
         raise ValueError("Only annual rebalance is supported for now")
 
@@ -275,7 +278,9 @@ def walk_forward_weight_grid(
             train_score = _apply_weights(train, weights)
             for threshold in thresholds:
                 stats = _annualized_stats(_strategy_returns(train, train_score, threshold, return_col))
-                candidates.append((stats["sharpe"], stats["cagr_pct"], weight_name, threshold, weights))
+                primary = stats["cagr_pct"] if select_metric == "cagr" else stats["sharpe"]
+                secondary = stats["sharpe"] if select_metric == "cagr" else stats["cagr_pct"]
+                candidates.append((primary, secondary, weight_name, threshold, weights))
         candidates.sort(reverse=True)
         _, _, weight_name, threshold, weights = candidates[0]
 
@@ -297,6 +302,7 @@ def walk_forward_weight_grid(
         "ticker": ticker.upper(),
         "entry": entry,
         "rebalance": rebalance,
+        "select_metric": select_metric,
         "train_years": train_years,
         "test_years": test_years,
         "folds": folds,
@@ -443,6 +449,7 @@ def main() -> None:
     parser.add_argument("--walk-forward-grid", action="store_true", help="Walk-forward select momentum weights/threshold")
     parser.add_argument("--train-years", type=int, default=5)
     parser.add_argument("--test-years", type=int, default=1)
+    parser.add_argument("--select-metric", choices=["sharpe", "cagr"], default="sharpe")
     parser.add_argument("--eval-start", default=None, help="First date to check during walk-forward audit")
     args = parser.parse_args()
 
@@ -458,6 +465,7 @@ def main() -> None:
                     thresholds,
                     train_years=args.train_years,
                     test_years=args.test_years,
+                    select_metric=args.select_metric,
                 )
                 _run_batch(_default_top_unique(), args.start, thresholds, args.entry)
             finally:
@@ -475,6 +483,7 @@ def main() -> None:
             thresholds,
             train_years=args.train_years,
             test_years=args.test_years,
+            select_metric=args.select_metric,
         )
         print(result)
         return
