@@ -408,14 +408,30 @@ def run(ticker: str, start: str, thresholds: list[int], entry: str = "close") ->
 
 
 def _default_top_unique() -> list[str]:
-    # Current top holdings by weight, manually fixed for reproducibility.
-    qqq_top = ["MSFT", "NVDA", "AAPL", "AMZN", "META", "AVGO", "GOOGL", "GOOG", "TSLA", "COST"]
-    spy_top = ["MSFT", "NVDA", "AAPL", "AMZN", "META", "AVGO", "GOOGL", "BRK-B", "GOOG", "TSLA"]
+    # Current large-weight QQQ/SPY holdings, manually fixed for reproducibility.
+    # Use hyphenated share-class tickers because data_engine/yfinance accepts them.
+    qqq_top = [
+        "MSFT", "NVDA", "AAPL", "AMZN", "META", "AVGO", "GOOGL", "GOOG", "TSLA", "COST",
+        "NFLX", "TMUS", "PLTR", "CSCO", "AMD", "LIN", "PEP", "ISRG", "INTU", "BKNG",
+        "QCOM", "TXN", "AMGN", "AMAT", "ADBE", "HON", "GILD", "PANW", "CMCSA", "ADP",
+        "MELI", "VRTX", "SBUX", "ADI", "LRCX", "MU", "KLAC", "CRWD", "CDNS", "CEG",
+        "MDLZ", "MAR", "ORLY", "ABNB", "CTAS", "DASH", "SNPS", "PYPL", "REGN", "FTNT",
+    ]
+    spy_top = [
+        "MSFT", "NVDA", "AAPL", "AMZN", "META", "AVGO", "GOOGL", "BRK-B", "GOOG", "TSLA",
+        "JPM", "LLY", "V", "NFLX", "XOM", "MA", "COST", "WMT", "PG", "JNJ",
+        "HD", "ABBV", "BAC", "KO", "PM", "PLTR", "UNH", "GE", "CSCO", "IBM",
+        "WFC", "CVX", "ABT", "CRM", "MS", "LIN", "AXP", "MCD", "MRK", "DIS",
+        "T", "GS", "NOW", "UBER", "RTX", "PEP", "INTU", "BX", "AMD", "VZ",
+    ]
     out = []
-    for ticker in qqq_top + spy_top:
-        if ticker not in out:
-            out.append(ticker)
-    return out[:10]
+    for qqq_ticker, spy_ticker in zip(qqq_top, spy_top):
+        for ticker in (qqq_ticker, spy_ticker):
+            if ticker not in out:
+                out.append(ticker)
+            if len(out) >= 50:
+                return out
+    return out[:50]
 
 
 def _run_batch(tickers: list[str], start: str, thresholds: list[int], entry: str) -> None:
@@ -479,7 +495,7 @@ def main() -> None:
     parser.add_argument("--thresholds", default="50,55,60,65,70")
     parser.add_argument("--entry", choices=["close", "next_open", "next_open_to_open"], default="close")
     parser.add_argument("--audit-walk-forward", action="store_true")
-    parser.add_argument("--batch-top-qqq-spy", action="store_true", help="Run top 10 unique current QQQ/SPY holdings")
+    parser.add_argument("--batch-top-qqq-spy", action="store_true", help="Run top 50 unique current QQQ/SPY holdings")
     parser.add_argument("--walk-forward-grid", action="store_true", help="Walk-forward select momentum weights/threshold")
     parser.add_argument("--train-years", type=int, default=5)
     parser.add_argument("--test-years", type=int, default=1)
