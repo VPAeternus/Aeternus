@@ -25,6 +25,7 @@ class V3PortfolioExecutor:
         self.portfolio_trades = []
         self.ticker_results = []
         self.live_signals = []
+        self.strategy_runs = {}
         self.enriched_data = watchlist_manager.get_enriched_tickers()
         
     def _process_ticker(self, ticker, preloaded_vix):
@@ -77,6 +78,7 @@ class V3PortfolioExecutor:
                     
                 _, bot = future.result()
                 if bot:
+                    self.strategy_runs[ticker] = bot
                     # Aggregate trades
                     for t in bot.trades:
                         self.portfolio_trades.append(t)

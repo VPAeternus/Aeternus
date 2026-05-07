@@ -37,10 +37,11 @@ def _append_results_history(results: pd.DataFrame, args: argparse.Namespace) -> 
     return RESULTS_HISTORY_FILE
 
 
-def _append_trades_history(trades: list, args: argparse.Namespace) -> Path:
+def _append_trades_history(executor: V3PortfolioExecutor, args: argparse.Namespace) -> Path:
     run_at = dt.datetime.now().isoformat(timespec="seconds")
     cols = [
         "run_at",
+        "record_state",
         "ticker",
         "type",
         "status",
@@ -60,8 +61,20 @@ def _append_trades_history(trades: list, args: argparse.Namespace) -> Path:
         "vix_filter",
     ]
 
-    if trades:
-        trade_rows = pd.DataFrame([t.__dict__ for t in trades])
+    rows = []
+    for trade in executor.portfolio_trades:
+        row = trade.__dict__.copy()
+        row["record_state"] = "CLOSED_TRADE"
+        rows.append(row)
+
+    for bot in executor.strategy_runs.values():
+        for trade in bot.active_shorts:
+            row = trade.__dict__.copy()
+            row["record_state"] = "OPEN_TRADE"
+            rows.append(row)
+
+    if rows:
+        trade_rows = pd.DataFrame(rows)
         trade_rows.insert(0, "run_at", run_at)
         trade_rows["start_date"] = args.start_date
         trade_rows["target_pct"] = args.target_pct
@@ -73,11 +86,12 @@ def _append_trades_history(trades: list, args: argparse.Namespace) -> Path:
         trade_rows = pd.DataFrame(columns=cols)
 
     if TRADES_HISTORY_FILE.exists():
-        existing = pd.read_csv(TRADES_HISTORY_FILE)
+        existing = pd.read_csv(TRADES_HISTORY_FILE).reindex(columns=cols)
         combined = pd.concat([existing, trade_rows], ignore_index=True)
     else:
         combined = trade_rows
 
+    combined = combined.reindex(columns=cols)
     combined.to_csv(TRADES_HISTORY_FILE, index=False)
     return TRADES_HISTORY_FILE
 
@@ -101,7 +115,7 @@ def main() -> None:
     )
     executor.run_portfolio()
     executor.generate_report()
-    trades_history_path = _append_trades_history(executor.portfolio_trades, args)
+    trades_history_path = _append_trades_history(executor, args)
 
     results_path = Path("portfolio_ticker_results.csv")
     signals_path = Path("live_signals.json")
