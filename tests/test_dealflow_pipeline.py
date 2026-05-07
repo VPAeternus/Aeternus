@@ -819,15 +819,15 @@ def test_fvg_recall_prunes_symbols_with_no_yahoo_history_from_akg(monkeypatch):
         lambda: fake_akg,
     )
     monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline.yf.download",
+        "tradingagents.dealflow.recall_channels.yf.download",
         lambda *args, **kwargs: _history_for("GOOD", "QQQ"),
     )
     monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline.DealFlowPipeline._has_recent_yahoo_history",
-        lambda self, symbol: False,
+        "tradingagents.dealflow.recall_channels.has_recent_yahoo_history",
+        lambda symbol: False,
     )
     monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline._build_feature_frame",
+        "tradingagents.dealflow.recall_channels._build_feature_frame",
         lambda *args, **kwargs: pd.DataFrame(
             [
                 {
@@ -895,9 +895,9 @@ def test_fvg_recall_skips_symbols_without_liquidity_score(monkeypatch):
         captured["symbols"] = list(symbols)
         return _history_for("LIQ", "QQQ")
 
-    monkeypatch.setattr("tradingagents.dealflow.pipeline.yf.download", _download)
+    monkeypatch.setattr("tradingagents.dealflow.recall_channels.yf.download", _download)
     monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline._build_feature_frame",
+        "tradingagents.dealflow.recall_channels._build_feature_frame",
         lambda *args, **kwargs: pd.DataFrame(
             [
                 {
@@ -963,9 +963,9 @@ def test_fma_recall_skips_symbols_without_liquidity_score(monkeypatch):
         captured["symbols"] = list(symbols)
         return _history_for("LIQ", "QQQ")
 
-    monkeypatch.setattr("tradingagents.dealflow.pipeline.yf.download", _download)
+    monkeypatch.setattr("tradingagents.dealflow.recall_channels.yf.download", _download)
     monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline._build_fma_feature_frame",
+        "tradingagents.dealflow.recall_channels._build_fma_feature_frame",
         lambda *args, **kwargs: pd.DataFrame(
             [
                 {
@@ -980,7 +980,7 @@ def test_fma_recall_skips_symbols_without_liquidity_score(monkeypatch):
         ),
     )
     monkeypatch.setattr(
-        "tradingagents.dealflow.pipeline.score_fma_cross_section",
+        "tradingagents.dealflow.recall_channels.score_fma_cross_section",
         lambda snapshots, variant="fma_live": {
             str(row.get("ticker", "")).upper().strip(): 87.0 for row in snapshots
         },

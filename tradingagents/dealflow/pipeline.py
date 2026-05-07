@@ -3,12 +3,8 @@
 from __future__ import annotations
 
 import datetime as dt
-import contextlib
-import io
 import json
-import time
-from statistics import median
-from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -20,6 +16,12 @@ from tradingagents.context import get_event_state
 
 from .collect_artifacts import write_collect_artifacts
 from .collect_ledger import write_collect_ledger_rows
+from .connector_runtime import (
+    build_connector_health_entry,
+    collect_connector_signals,
+    run_connector_with_timeout,
+    summarize_connector_health,
+)
 from .contracts import DealFlowShortlist, EventTriggerResult, ResearchQueue, ResearchQueueItem
 from .hypothesis_ledger import append_ledger_row, make_ledger_row
 from .manual_merge_policy import apply_manual_merge_policy
@@ -45,8 +47,15 @@ from .akg_universe import (
 )
 from .akg_writeback import writeback_scores_to_akg, writeback_signals_to_akg
 from .discovery_reports import empty_discovery_delta, write_discovery_delta_report, write_theme_heatmap_report
-from .fma_recall import _build_fma_feature_frame, score_fma_cross_section
-from .fvg_recall import _build_feature_frame, _extract_ohlcv_frame
+from .fvg_recall import _extract_ohlcv_frame
+from .recall_channels import (
+    build_fma_recall_channel,
+    build_fvg_recall_channel,
+    has_recent_yahoo_history,
+    preflight_akg_liquidity,
+    prepare_recall_market_data,
+    prune_invalid_recall_symbols,
+)
 from .scout_audit_report import build_and_write_scout_audit
 from .scout_compiler import run_scout_compiler_sidecar
 from .scout_quality import build_scout_quality_daily, persist_scout_quality_daily
@@ -425,37 +434,10 @@ class DealFlowPipeline:
         return audit
 
     def _has_recent_yahoo_history(self, symbol: str) -> bool:
-        normalized = self._normalize_symbol(symbol)
-        if not normalized:
-            return True
-        try:
-            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
-                frame = yf.download(
-                    normalized,
-                    period="1mo",
-                    interval="1d",
-                    auto_adjust=False,
-                    progress=False,
-                    threads=False,
-                )
-        except Exception:
-            # Unknown fetch failures should not trigger destructive pruning.
-            return True
-        extracted = _extract_ohlcv_frame(frame, normalized)
-        return extracted is not None and not extracted.empty
+        return has_recent_yahoo_history(symbol)
 
     def _prune_invalid_recall_symbols(self, akg: Any, symbols: List[str]) -> List[str]:
-        normalized = [self._normalize_symbol(symbol) for symbol in symbols]
-        normalized = [symbol for symbol in normalized if symbol]
-        if not normalized or akg is None or not hasattr(akg, "remove_nodes"):
-            return []
-        try:
-            removed = int(akg.remove_nodes(normalized) or 0)
-            if removed > 0 and hasattr(akg, "save"):
-                akg.save()
-        except Exception:
-            return []
-        return normalized if removed > 0 else []
+        return prune_invalid_recall_symbols(akg, symbols)
 
     def _prepare_recall_market_data(
         self,
@@ -464,316 +446,20 @@ class DealFlowPipeline:
         candidate_symbols: List[str],
         as_of_date: str,
     ) -> Dict[str, Any]:
-        deduped = sorted(dict.fromkeys(self._normalize_symbol(symbol) for symbol in candidate_symbols if symbol))
-        if not deduped:
-            return {
-                "benchmark_frame": None,
-                "candidate_symbols": [],
-                "invalid_symbols_removed": [],
-                "symbol_frames": {},
-            }
-
-        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
-            history = yf.download(
-                deduped + ["QQQ"],
-                start="1999-01-01",
-                end=as_of_date,
-                interval="1d",
-                auto_adjust=False,
-                progress=False,
-                group_by="ticker",
-                threads=False,
-            )
-
-        benchmark_frame = _extract_ohlcv_frame(history, "QQQ")
-        symbol_frames: Dict[str, pd.DataFrame] = {}
-        missing_symbols: List[str] = []
-        for symbol in deduped:
-            frame = _extract_ohlcv_frame(history, symbol)
-            if frame is None or frame.empty:
-                missing_symbols.append(symbol)
-                continue
-            symbol_frames[symbol] = frame
-
-        confirmed_missing = [symbol for symbol in missing_symbols if not self._has_recent_yahoo_history(symbol)]
-        invalid_symbols_removed = self._prune_invalid_recall_symbols(akg, confirmed_missing)
-
-        return {
-            "benchmark_frame": benchmark_frame,
-            "candidate_symbols": sorted(symbol_frames.keys()),
-            "invalid_symbols_removed": invalid_symbols_removed,
-            "symbol_frames": symbol_frames,
-        }
+        return prepare_recall_market_data(
+            akg=akg,
+            candidate_symbols=candidate_symbols,
+            as_of_date=as_of_date,
+        )
 
     def _preflight_akg_liquidity(self, as_of_date: str) -> Dict[str, Any]:
-        min_coverage = float(self.config.get("dealflow_liquidity_preflight_min_coverage", 0.80))
-        max_age_days = int(self.config.get("dealflow_liquidity_preflight_max_age_days", 1))
-        refresh_enabled = bool(self.config.get("dealflow_liquidity_preflight_refresh_enabled", True))
-        report: Dict[str, Any] = {
-            "date": as_of_date,
-            "company_count": 0,
-            "fresh_count": 0,
-            "coverage": 0.0,
-            "max_age_days": max_age_days,
-            "min_coverage": min_coverage,
-            "refresh_attempted": False,
-            "refresh_result": {},
-            "status": "UNKNOWN",
-        }
-
-        def _compute() -> Dict[str, Any]:
-            from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
-            akg = AeternusKnowledgeGraph.load()
-            company_nodes = [n for n in akg._nodes.values() if n.get("node_type") == "company"]
-            fresh = 0
-            try:
-                as_of = dt.datetime.strptime(as_of_date, "%Y-%m-%d").date()
-            except Exception:
-                as_of = dt.date.today()
-            for node in company_nodes:
-                if _coerce_liquidity_score(node.get("liquidity_score")) is None:
-                    continue
-                cached = str(node.get("liquidity_cached_at") or "").strip()
-                try:
-                    cached_date = dt.datetime.strptime(cached, "%Y-%m-%d").date()
-                except Exception:
-                    continue
-                if (as_of - cached_date).days <= max_age_days:
-                    fresh += 1
-            total = len(company_nodes)
-            coverage = (fresh / total) if total else 1.0
-            return {"company_count": total, "fresh_count": fresh, "coverage": coverage}
-
-        try:
-            report.update(_compute())
-            if report["coverage"] < min_coverage and refresh_enabled:
-                report["refresh_attempted"] = True
-                from tradingagents.dealflow.sources.universe_seeder import refresh_liquidity
-                report["refresh_result"] = dict(refresh_liquidity())
-                report.update(_compute())
-            report["status"] = "OK" if report["coverage"] >= min_coverage else "LOW_COVERAGE"
-        except Exception as exc:
-            report["status"] = "ERROR"
-            report["error"] = str(exc)
-        return report
+        return preflight_akg_liquidity(as_of_date, self.config)
 
     def _build_fvg_recall_channel(self, as_of_date: str) -> Dict[str, Any]:
-        liquidity_preflight = self._preflight_akg_liquidity(as_of_date)
-        if not bool(self.config.get("dealflow_fvg_recall_enabled", True)):
-            return {
-                "selected_symbols": [],
-                "artifact": {
-                    "date": as_of_date,
-                    "selected_symbols": [],
-                    "quota": 0,
-                    "rule_snapshot": {"enabled": False},
-                },
-            }
-
-        quota = int(self.config.get("dealflow_fvg_recall_quota", 30))
-        min_rs20 = float(self.config.get("dealflow_fvg_recall_min_rs20", 0.03))
-        min_liquidity_score = float(self.config.get("dealflow_fvg_recall_min_liquidity_score", 30.0))
-        selected_rows: List[Dict[str, Any]] = []
-
-        try:
-            from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
-
-            akg = AeternusKnowledgeGraph.load()
-            candidate_symbols: List[str] = []
-            for node in akg._nodes.values():
-                if node.get("node_type") != "company":
-                    continue
-                symbol = self._normalize_symbol(node.get("id", ""))
-                if not symbol:
-                    continue
-                asset_class = str(node.get("asset_class") or "Equity")
-                liquidity_score = _coerce_liquidity_score(node.get("liquidity_score"))
-                if (
-                    asset_class != "Equity"
-                    or liquidity_score is None
-                    or liquidity_score < min_liquidity_score
-                ):
-                    continue
-                candidate_symbols.append(symbol)
-
-            candidate_symbols = sorted(dict.fromkeys(candidate_symbols))
-            invalid_symbols_removed: List[str] = []
-            if candidate_symbols:
-                market_data = self._prepare_recall_market_data(
-                    akg=akg,
-                    candidate_symbols=candidate_symbols,
-                    as_of_date=as_of_date,
-                )
-                benchmark_frame = market_data.get("benchmark_frame")
-                invalid_symbols_removed = list(market_data.get("invalid_symbols_removed") or [])
-                for symbol in market_data.get("candidate_symbols", []):
-                    frame = market_data.get("symbol_frames", {}).get(symbol)
-                    if frame is None or frame.empty or benchmark_frame is None or benchmark_frame.empty:
-                        continue
-                    features = _build_feature_frame(frame, benchmark_frame=benchmark_frame, atr_floor=0.25)
-                    if features.empty:
-                        continue
-                    row = features.iloc[-1]
-                    if not bool(row.get("bullish_fvg_present", False)):
-                        continue
-                    if float(row.get("relative_strength_20d", 0.0) or 0.0) < min_rs20:
-                        continue
-                    if not bool(row.get("sma50_above_sma200", False)):
-                        continue
-                    selected_rows.append(
-                        {
-                            "symbol": symbol,
-                            "score": float(row.get("score", 0.0) or 0.0),
-                            "relative_strength_20d": float(row.get("relative_strength_20d", 0.0) or 0.0),
-                            "sma50_above_sma200": bool(row.get("sma50_above_sma200", False)),
-                            "bullish_fvg_present": True,
-                        }
-                    )
-        except Exception:
-            selected_rows = []
-
-        selected_rows.sort(key=lambda row: (-float(row.get("score", 0.0)), str(row.get("symbol", ""))))
-        selected_rows = selected_rows[: max(0, quota)]
-        artifact = {
-            "date": as_of_date,
-            "selected_symbols": [row["symbol"] for row in selected_rows],
-            "quota": quota,
-            "rows": selected_rows,
-            "invalid_symbols_removed": invalid_symbols_removed if "invalid_symbols_removed" in locals() else [],
-            "liquidity_preflight": liquidity_preflight,
-            "rule_snapshot": {
-                "enabled": True,
-                "quota": quota,
-                "min_rs20": min_rs20,
-                "min_liquidity_score": min_liquidity_score,
-                "required_confirmation": [
-                    "bullish_fvg_present",
-                    "relative_strength_20d",
-                    "sma50_above_sma200",
-                ],
-            },
-        }
-
-        return {
-            "selected_symbols": list(artifact["selected_symbols"]),
-            "artifact": artifact,
-        }
+        return build_fvg_recall_channel(as_of_date, self.config)
 
     def _build_fma_recall_channel(self, as_of_date: str) -> Dict[str, Any]:
-        liquidity_preflight = self._preflight_akg_liquidity(as_of_date)
-        if not bool(self.config.get("dealflow_fma_recall_enabled", True)):
-            return {
-                "selected_symbols": [],
-                "artifact": {
-                    "date": as_of_date,
-                    "selected_symbols": [],
-                    "quota": 0,
-                    "rule_snapshot": {"enabled": False},
-                },
-            }
-
-        quota = int(self.config.get("dealflow_fma_recall_quota", 20))
-        min_score = float(self.config.get("dealflow_fma_recall_min_score", 60.0))
-        min_liquidity_score = float(self.config.get("dealflow_fvg_recall_min_liquidity_score", 30.0))
-        snapshots: List[Dict[str, Any]] = []
-
-        try:
-            from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
-
-            akg = AeternusKnowledgeGraph.load()
-            candidate_symbols: List[str] = []
-            for node in akg._nodes.values():
-                if node.get("node_type") != "company":
-                    continue
-                symbol = self._normalize_symbol(node.get("id", ""))
-                if not symbol:
-                    continue
-                asset_class = str(node.get("asset_class") or "Equity")
-                liquidity_score = _coerce_liquidity_score(node.get("liquidity_score"))
-                if (
-                    asset_class != "Equity"
-                    or liquidity_score is None
-                    or liquidity_score < min_liquidity_score
-                ):
-                    continue
-                candidate_symbols.append(symbol)
-
-            candidate_symbols = sorted(dict.fromkeys(candidate_symbols))
-            invalid_symbols_removed: List[str] = []
-            if candidate_symbols:
-                market_data = self._prepare_recall_market_data(
-                    akg=akg,
-                    candidate_symbols=candidate_symbols,
-                    as_of_date=as_of_date,
-                )
-                benchmark_frame = market_data.get("benchmark_frame")
-                invalid_symbols_removed = list(market_data.get("invalid_symbols_removed") or [])
-                for symbol in market_data.get("candidate_symbols", []):
-                    frame = market_data.get("symbol_frames", {}).get(symbol)
-                    if frame is None or frame.empty or benchmark_frame is None or benchmark_frame.empty:
-                        continue
-                    features = _build_fma_feature_frame(frame, benchmark_frame=benchmark_frame, variant="fma_live")
-                    if features.empty:
-                        continue
-                    row = features.iloc[-1]
-                    if not bool(row.get("valid", False)):
-                        continue
-                    snapshots.append(
-                        {
-                            "ticker": symbol,
-                            "variant": "fma_live",
-                            "valid": True,
-                            "velocity_60d": float(row.get("velocity_60d", 0.0) or 0.0),
-                            "accel_value": float(row.get("accel_value", 0.0) or 0.0),
-                            "mass_ratio": float(row.get("mass_ratio", 0.0) or 0.0),
-                            "force_value": float(row.get("force_value", 0.0) or 0.0),
-                            "relative_strength_60d": float(row.get("relative_strength_60d", 0.0) or 0.0),
-                        }
-                    )
-        except Exception:
-            snapshots = []
-
-        scores = score_fma_cross_section(snapshots, variant="fma_live")
-        selected_rows: List[Dict[str, Any]] = []
-        for snapshot in snapshots:
-            symbol = str(snapshot.get("ticker", "")).upper().strip()
-            score = float(scores.get(symbol, 0.0) or 0.0)
-            if score < min_score:
-                continue
-            selected_rows.append(
-                {
-                    "symbol": symbol,
-                    "score": score,
-                    "velocity_60d": float(snapshot.get("velocity_60d", 0.0) or 0.0),
-                    "accel_value": float(snapshot.get("accel_value", 0.0) or 0.0),
-                    "mass_ratio": float(snapshot.get("mass_ratio", 0.0) or 0.0),
-                    "force_value": float(snapshot.get("force_value", 0.0) or 0.0),
-                    "relative_strength_60d": float(snapshot.get("relative_strength_60d", 0.0) or 0.0),
-                }
-            )
-
-        selected_rows.sort(key=lambda row: (-float(row.get("score", 0.0)), str(row.get("symbol", ""))))
-        selected_rows = selected_rows[: max(0, quota)]
-        artifact = {
-            "date": as_of_date,
-            "selected_symbols": [row["symbol"] for row in selected_rows],
-            "quota": quota,
-            "rows": selected_rows,
-            "invalid_symbols_removed": invalid_symbols_removed if "invalid_symbols_removed" in locals() else [],
-            "liquidity_preflight": liquidity_preflight,
-            "rule_snapshot": {
-                "enabled": True,
-                "quota": quota,
-                "min_score": min_score,
-                "min_liquidity_score": min_liquidity_score,
-                "required_confirmation": ["fma_live_score"],
-            },
-        }
-
-        return {
-            "selected_symbols": list(artifact["selected_symbols"]),
-            "artifact": artifact,
-        }
+        return build_fma_recall_channel(as_of_date, self.config)
 
     # ------------------------------------------------------------------
     # Stage 2: Collection — connectors, scoring, ranking, persist
@@ -1033,36 +719,14 @@ class DealFlowPipeline:
         return shortlist, research_queue, normalized_signals, event_state
 
     def _collect_connector_signals(self, name: str, collector, *args, **kwargs) -> Tuple[List[Dict], Dict[str, Any]]:
-        start = time.perf_counter()
-        error_message = ""
-        signals: List[Dict] = []
-        timeout_seconds = float(self.config.get("dealflow_connector_timeout_seconds", 45.0))
-        max_attempts = max(1, int(self.config.get("dealflow_connector_max_attempts", 2)))
-        for attempt in range(1, max_attempts + 1):
-            try:
-                payload = self._run_connector_with_timeout(
-                    collector,
-                    timeout_seconds=timeout_seconds,
-                    args=args,
-                    kwargs=kwargs,
-                )
-                signals = list(payload)
-                error_message = ""
-                break
-            except Exception as exc:
-                signals = []
-                error_message = str(exc)
-                if attempt < max_attempts:
-                    # Small backoff for transient connector failures (DNS/rate spikes/timeouts).
-                    time.sleep(min(0.5, 0.15 * attempt))
-        latency_ms = (time.perf_counter() - start) * 1000.0
-        health = self._build_connector_health_entry(
-            connector_name=name,
-            signals=signals,
-            latency_ms=latency_ms,
-            error_message=error_message,
+        return collect_connector_signals(
+            name,
+            collector,
+            *args,
+            timeout_seconds=float(self.config.get("dealflow_connector_timeout_seconds", 45.0)),
+            max_attempts=max(1, int(self.config.get("dealflow_connector_max_attempts", 2))),
+            **kwargs,
         )
-        return signals, health
 
     def _run_connector_with_timeout(
         self,
@@ -1071,18 +735,12 @@ class DealFlowPipeline:
         args: tuple,
         kwargs: Dict[str, Any],
     ):
-        executor = ThreadPoolExecutor(max_workers=1)
-        try:
-            future = executor.submit(collector, *args, **kwargs)
-            try:
-                return future.result(timeout=max(0.01, float(timeout_seconds)))
-            except FuturesTimeoutError as exc:
-                future.cancel()
-                raise TimeoutError(
-                    f"Connector timed out after {float(timeout_seconds):.1f}s"
-                ) from exc
-        finally:
-            executor.shutdown(wait=False, cancel_futures=True)
+        return run_connector_with_timeout(
+            collector,
+            timeout_seconds=timeout_seconds,
+            args=args,
+            kwargs=kwargs,
+        )
 
     def _build_connector_health_entry(
         self,
@@ -1093,78 +751,17 @@ class DealFlowPipeline:
         status_override: Optional[str] = None,
         metadata: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
-        status_counts = {"OK": 0, "NO_DATA": 0, "ERROR": 0, "NOT_CONFIGURED": 0}
-        evidence_total = 0
-        freshness_ok: List[float] = []
-        sources: set[str] = set()
-        families: set[str] = set()
-
-        for sig in signals:
-            status = str(sig.get("source_status", "NO_DATA"))
-            if status not in status_counts:
-                status = "NO_DATA"
-            status_counts[status] += 1
-            evidence_total += int(sig.get("evidence_count", 0) or 0)
-
-            source_name = str(sig.get("source_name", "") or "").strip()
-            if source_name:
-                sources.add(source_name)
-            family = str(sig.get("signal_family", "") or "").strip()
-            if family:
-                families.add(family)
-
-            if status == "OK":
-                freshness_ok.append(float(sig.get("freshness_hours", 9999.0) or 9999.0))
-
-        final_status = "NO_DATA"
-        if status_override in {"OK", "NO_DATA", "ERROR", "NOT_CONFIGURED"}:
-            final_status = status_override
-        elif error_message:
-            final_status = "ERROR"
-        elif status_counts["OK"] > 0:
-            final_status = "OK"
-        elif status_counts["ERROR"] > 0:
-            final_status = "ERROR"
-        elif status_counts["NOT_CONFIGURED"] > 0 and status_counts["NO_DATA"] == 0:
-            final_status = "NOT_CONFIGURED"
-
-        signal_count = len(signals)
-        ok_coverage_pct = 0.0
-        if signal_count > 0:
-            ok_coverage_pct = (status_counts["OK"] / float(signal_count)) * 100.0
-
-        entry: Dict[str, Any] = {
-            "connector": connector_name,
-            "status": final_status,
-            "latency_ms": float(round(latency_ms, 2)),
-            "signal_count": signal_count,
-            "status_counts": status_counts,
-            "ok_coverage_pct": float(round(ok_coverage_pct, 2)),
-            "evidence_total": int(evidence_total),
-            "freshness_min_hours": float(round(min(freshness_ok), 4)) if freshness_ok else None,
-            "freshness_median_hours": float(round(median(freshness_ok), 4)) if freshness_ok else None,
-            "source_names": sorted(sources),
-            "signal_families": sorted(families),
-            "error": error_message if final_status == "ERROR" else "",
-        }
-        if metadata:
-            entry.update(metadata)
-        return entry
+        return build_connector_health_entry(
+            connector_name=connector_name,
+            signals=signals,
+            latency_ms=latency_ms,
+            error_message=error_message,
+            status_override=status_override,
+            metadata=metadata,
+        )
 
     def _summarize_connector_health(self, connector_health: List[Dict[str, Any]]) -> Dict[str, Any]:
-        total = len(connector_health)
-        status_totals = {"OK": 0, "NO_DATA": 0, "ERROR": 0, "NOT_CONFIGURED": 0}
-        for row in connector_health:
-            status = str(row.get("status", "NO_DATA"))
-            if status not in status_totals:
-                status = "NO_DATA"
-            status_totals[status] += 1
-        return {
-            "connectors_total": total,
-            "status_totals": status_totals,
-            "degraded": status_totals["ERROR"] > 0,
-            "not_configured": status_totals["NOT_CONFIGURED"],
-        }
+        return summarize_connector_health(connector_health)
 
     def _build_family_contribution_report(self, shortlist: DealFlowShortlist) -> Dict[str, Any]:
         candidates = shortlist.get("candidates", [])
