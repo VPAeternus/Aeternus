@@ -16,6 +16,7 @@ from .epistemic import build_epistemic_report
 from .calibration import build_calibration_report
 from tradingagents.agents.utils.agent_utils import extract_text_content, make_cached_system_message
 from tradingagents.scoring import confidence as confidence_helpers
+from tradingagents.scoring import json_utils as scoring_json_utils
 from tradingagents.scoring import rating as rating_helpers
 
 # Minimum data_coverage (0.0–1.0) for computation engine metrics to anchor a pillar score.
@@ -987,24 +988,7 @@ class AeternusScorer:
         return confidence_helpers.compute_weighted_confidence(factors)
 
     def _safe_parse_json(self, text: str) -> Dict[str, Any]:
-        if not text:
-            return {}
-
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            pass
-
-        # Try to recover JSON inside the text
-        start = text.find("{")
-        end = text.rfind("}")
-        if start == -1 or end == -1 or end <= start:
-            return {}
-
-        try:
-            return json.loads(text[start : end + 1])
-        except json.JSONDecodeError:
-            return {}
+        return scoring_json_utils.safe_parse_json(text)
 
     def _clamp_score(self, value: Any) -> int:
         return rating_helpers.clamp_score(value)
