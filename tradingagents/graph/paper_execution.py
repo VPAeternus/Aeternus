@@ -56,6 +56,12 @@ from tradingagents.execution.fills import (
     recommendation_to_side as _recommendation_to_side,
 )
 from tradingagents.execution.json_io import load_json as _load_json, save_json as _save_json
+from tradingagents.execution.market_prices import (
+    extract_last_close_from_frame as _extract_last_close_from_frame,
+    extract_reference_price as _extract_reference_price,
+    fetch_reference_price_from_market as _fetch_reference_price_from_market,
+    parse_analysis_date as _parse_analysis_date,
+)
 from tradingagents.execution.modes import (
     clamp_float as _clamp_float,
     env_bool as _env_bool,
@@ -2979,103 +2985,12 @@ def _apply_fill_to_position(open_positions: Dict[str, Any], order: Dict[str, Any
     }
 
 
-def _extract_reference_price(item: Dict[str, Any], analysis: Dict[str, Any]) -> Optional[float]:
-    aet_score = analysis.get("aeternus_score", {}) if isinstance(analysis, dict) else {}
-    if isinstance(aet_score, dict):
-        value = aet_score.get("price_at_rating")
-        try:
-            if value is not None:
-                return float(value)
-        except (TypeError, ValueError):
-            pass
-
-    market_data = analysis.get("market_data", {}) if isinstance(analysis, dict) else {}
-    if isinstance(market_data, dict):
-        try:
-            close = market_data.get("close")
-            if close is not None:
-                return float(close)
-        except (TypeError, ValueError):
-            pass
-
-    return None
 
 
-def _fetch_reference_price_from_market(symbol: str, analysis_date: str) -> Optional[float]:
-    ticker = str(symbol or "").upper().strip()
-    if not ticker:
-        return None
-
-    anchor_date = _parse_analysis_date(analysis_date)
-    start = (anchor_date - dt.timedelta(days=7)).isoformat()
-    end = (anchor_date + dt.timedelta(days=5)).isoformat()
-
-    try:
-        frame = yf.download(
-            ticker,
-            start=start,
-            end=end,
-            interval="1d",
-            auto_adjust=False,
-            progress=False,
-            threads=False,
-        )
-    except Exception:
-        frame = None
-
-    close = _extract_last_close_from_frame(frame)
-    if close is not None and close > 0:
-        return float(close)
-
-    # Final fallback: latest month snapshot when date-window request is empty.
-    try:
-        hist = yf.Ticker(ticker).history(period="1mo", interval="1d", auto_adjust=False)
-    except Exception:
-        hist = None
-    close = _extract_last_close_from_frame(hist)
-    if close is not None and close > 0:
-        return float(close)
-    return None
 
 
-def _extract_last_close_from_frame(frame: Any) -> Optional[float]:
-    if frame is None:
-        return None
-    try:
-        if getattr(frame, "empty", True):
-            return None
-        close_col = frame.get("Close")
-        if close_col is None:
-            return None
-        # yfinance may return a Series or DataFrame depending on shape.
-        if hasattr(close_col, "dropna"):
-            close_non_null = close_col.dropna()
-            if getattr(close_non_null, "empty", True):
-                return None
-            if hasattr(close_non_null, "iloc"):
-                last = close_non_null.iloc[-1]
-                if hasattr(last, "iloc"):
-                    # DataFrame row: take the first value.
-                    last = last.iloc[0]
-                return float(last)
-    except Exception:
-        return None
-    return None
 
 
-def _parse_analysis_date(raw: str) -> dt.date:
-    text = str(raw or "").strip()
-    if not text:
-        return dt.datetime.now(dt.timezone.utc).date()
-    for fmt in ("%Y-%m-%d", "%Y/%m/%d"):
-        try:
-            return dt.datetime.strptime(text, fmt).date()
-        except ValueError:
-            continue
-    try:
-        return dt.datetime.fromisoformat(text.replace("Z", "+00:00")).date()
-    except ValueError:
-        return dt.datetime.now(dt.timezone.utc).date()
 
 
 def _extract_rating_id(analysis: Dict[str, Any]) -> str:
