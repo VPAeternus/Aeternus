@@ -15,14 +15,14 @@ def _sample_report():
         "market_report": "TEST is in an ABOVE_200_BELOW_50 regime with bullish momentum acceleration.",
         "sentiment_report": "Sentiment is neutral with limited social media coverage.",
         "news_report": "No major catalysts identified in the near term.",
-        "investment_debate_state": {
+        "legacy_removed_state": {
             "bull_history": "The bull case rests on exceptional earnings growth of 25% YoY and expanding margins. The balance sheet is fortress-grade with zero debt. Revenue acceleration is confirmed across all segments.",
             "bear_history": "The bear case highlights elevated valuation at 35x forward P/E with macro headwinds from rising rates. Insider selling has increased in recent quarters.",
-            "history": "Both sides agree on fundamental quality. The debate centers on whether the premium valuation is justified given macro uncertainty.",
+            "history": "Both sides agree on fundamental quality. The discussion centers on whether the premium valuation is justified given macro uncertainty.",
             "judge_decision": "VERDICT: TEST is a BUY at current levels on a 6-12 month horizon. The earnings growth of 25% justifies the premium multiple. Conviction 3/5.",
             "current_response": "",
         },
-        "risk_debate_state": {
+        "legacy_removed_state": {
             "risky_history": "Aggressive view: position at 6-8% given strong fundamentals.",
             "safe_history": "Conservative view: cap at 3% due to valuation risk.",
             "neutral_history": "Balanced view: 4-5% is appropriate with stop below 200-day MA.",

@@ -259,7 +259,7 @@ def compute_stress_metrics(
 def build_stress_brief(
     positions_path: str = "eval_results/paper_execution/positions.json",
 ) -> str:
-    """Build formatted stress brief for injection into risk debate prompts."""
+    """Build formatted stress brief for injection into risk discussion prompts."""
     metrics = compute_stress_metrics(positions_path=positions_path)
 
     if metrics["positions_analyzed"] == 0:

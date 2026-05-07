@@ -107,14 +107,14 @@ def _mock_sonnet_outputs():
         "market_report": "Uptrend with healthy momentum...",
         "sentiment_report": "Positive sentiment driven by earnings beat...",
         "news_report": "Key catalyst: FDA approval pending...",
-        "investment_debate_state": {
+        "legacy_removed_state": {
             "bull_history": "Strong growth trajectory...",
             "bear_history": "Valuation concerns at current multiples...",
             "history": "Bull case prevails with caveats...",
             "current_response": "",
             "judge_decision": "Lean bullish with position sizing discipline.",
         },
-        "risk_debate_state": {
+        "legacy_removed_state": {
             "risky_history": "Go full position...",
             "safe_history": "Wait for pullback...",
             "neutral_history": "Scale in gradually...",
@@ -408,7 +408,7 @@ class TestWriteAnalysisReport:
         assert data["company_of_interest"] == "TSLA"
         assert data["trade_date"] == "2026-02-25"
         for key in ("fundamentals_report", "market_report", "sentiment_report",
-                     "news_report", "investment_debate_state", "risk_debate_state",
+                     "news_report", "legacy_removed_state", "legacy_removed_state",
                      "structured_trader_verdict", "aeternus_score"):
             assert key in data
 

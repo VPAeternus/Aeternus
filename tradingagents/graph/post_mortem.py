@@ -166,12 +166,8 @@ class PostMortemEngine:
         # Agent accuracy
         agent_accuracy = {}
         if report_found:
-            invest_debate = (report or {}).get("investment_debate_state", {})
-            risk_debate = (report or {}).get("risk_debate_state", {})
             trader_text = (report or {}).get("trader_investment_plan", "")
-            agent_accuracy = self.compute_agent_accuracy(
-                invest_debate, risk_debate, trader_text, return_pct
-            )
+            agent_accuracy = self.compute_agent_accuracy(trader_text, return_pct)
 
         # Counterfactual
         counterfactual = self.compute_counterfactual(breakdown, weight_regime) if report_found else {}
@@ -228,46 +224,16 @@ class PostMortemEngine:
 
     def compute_agent_accuracy(
         self,
-        invest_debate: Dict[str, Any],
-        risk_debate: Dict[str, Any],
         trader_text: str,
         return_pct: float,
     ) -> Dict[str, Dict[str, str]]:
-        result: Dict[str, Dict[str, str]] = {}
-
-        # Investment judge
-        inv_judge_text = invest_debate.get("judge_decision", "")
-        inv_decision = _extract_decision(inv_judge_text)
-        result["investment_judge"] = {
-            "decision": inv_decision,
-            "verdict": _decision_verdict(inv_decision, return_pct),
-        }
-
-        # Risk judge
-        risk_judge_text = risk_debate.get("judge_decision", "")
-        risk_decision = _extract_decision(risk_judge_text)
-        result["risk_judge"] = {
-            "decision": risk_decision,
-            "verdict": _decision_verdict(risk_decision, return_pct),
-        }
-
-        # Trader
         trader_decision = _extract_decision(trader_text)
-        result["trader"] = {
-            "decision": trader_decision,
-            "verdict": _decision_verdict(trader_decision, return_pct),
+        return {
+            "trader": {
+                "decision": trader_decision,
+                "verdict": _decision_verdict(trader_decision, return_pct),
+            }
         }
-
-        # Bull / bear sides
-        positive = return_pct > 0
-        result["bull_side"] = {
-            "verdict": "CORRECT" if positive else "INCORRECT",
-        }
-        result["bear_side"] = {
-            "verdict": "INCORRECT" if positive else "CORRECT",
-        }
-
-        return result
 
     # ------------------------------------------------------------------
     # Counterfactual Scoring
@@ -411,7 +377,7 @@ class PostMortemEngine:
         if aa:
             lines.append("")
             lines.append("Agent Verdicts:")
-            for agent_name in ("investment_judge", "risk_judge", "trader", "bull_side", "bear_side"):
+            for agent_name in ("trader",):
                 a = aa.get(agent_name)
                 if a:
                     decision = a.get("decision", "")

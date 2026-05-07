@@ -65,7 +65,7 @@ def _make_report(
     rating="Hold",
     weight_regime="NEUTRAL",
     judge_decision="**Recommendation: SELL**",
-    risk_judge_decision="**RECOMMENDATION: SELL**",
+    trader_decision="**RECOMMENDATION: SELL**",
     trader_text="**Recommendation: HOLD**",
     bull_history="Bull argues BUY",
     bear_history="Bear argues SELL",
@@ -86,13 +86,13 @@ def _make_report(
             },
             "weight_regime": weight_regime,
         },
-        "investment_debate_state": {
+        "legacy_removed_state": {
             "judge_decision": judge_decision,
             "bull_history": bull_history,
             "bear_history": bear_history,
         },
-        "risk_debate_state": {
-            "judge_decision": risk_judge_decision,
+        "legacy_removed_state": {
+            "judge_decision": trader_decision,
         },
         "trader_investment_plan": trader_text,
     }
@@ -218,14 +218,14 @@ class TestAgentAccuracy:
     def test_agents_with_positive_return(self):
         engine = PostMortemEngine()
         result = engine.compute_agent_accuracy(
-            invest_debate={"judge_decision": "Recommendation: SELL"},
-            risk_debate={"judge_decision": "RECOMMENDATION: SELL"},
+            invest_discussion={"judge_decision": "Recommendation: SELL"},
+            risk_discussion={"judge_decision": "RECOMMENDATION: SELL"},
             trader_text="Recommendation: HOLD",
             return_pct=59.69,
         )
         assert result["investment_judge"]["decision"] == "SELL"
         assert result["investment_judge"]["verdict"] == "INCORRECT"
-        assert result["risk_judge"]["verdict"] == "INCORRECT"
+        assert result["trader"]["verdict"] == "INCORRECT"
         assert result["trader"]["decision"] == "HOLD"
         assert result["trader"]["verdict"] == "NEUTRAL"
         assert result["bull_side"]["verdict"] == "CORRECT"
@@ -234,18 +234,18 @@ class TestAgentAccuracy:
     def test_agents_with_negative_return(self):
         engine = PostMortemEngine()
         result = engine.compute_agent_accuracy(
-            invest_debate={"judge_decision": "Recommendation: SELL"},
-            risk_debate={"judge_decision": "RECOMMENDATION: SELL"},
+            invest_discussion={"judge_decision": "Recommendation: SELL"},
+            risk_discussion={"judge_decision": "RECOMMENDATION: SELL"},
             trader_text="Recommendation: SELL",
             return_pct=-20.0,
         )
         assert result["investment_judge"]["verdict"] == "CORRECT"
-        assert result["risk_judge"]["verdict"] == "CORRECT"
+        assert result["trader"]["verdict"] == "CORRECT"
         assert result["trader"]["verdict"] == "CORRECT"
         assert result["bull_side"]["verdict"] == "INCORRECT"
         assert result["bear_side"]["verdict"] == "CORRECT"
 
-    def test_empty_debate(self):
+    def test_empty_discussion(self):
         engine = PostMortemEngine()
         result = engine.compute_agent_accuracy({}, {}, "", 10.0)
         assert result["investment_judge"]["decision"] == "UNKNOWN"

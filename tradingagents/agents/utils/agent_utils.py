@@ -62,7 +62,7 @@ from tradingagents.agents.utils.news_data_tools import (
 )
 
 def build_evidence_brief(state: dict) -> str:
-    """Format Python-computed metrics into a compact evidence string for debate prompts."""
+    """Format Python-computed metrics into a compact evidence string for discussion prompts."""
     lines = ["--- EVIDENCE BRIEF (Computed Metrics) ---"]
 
     fm = state.get("fundamental_metrics") or {}

@@ -42,7 +42,7 @@ def _format_trader_verdict(verdict: TraderVerdict) -> str:
     return "\n".join(lines)
 
 
-def create_trader(llm, memory):
+def create_trader(llm, memory=None):
     def trader_node(state, name):
         company_name = state["company_of_interest"]
         investment_plan = state["investment_plan"]
@@ -51,12 +51,12 @@ def create_trader(llm, memory):
         fundamentals_report = state["fundamentals_report"]
 
         curr_situation = f"{market_research_report}\n\n{news_report}\n\n{fundamentals_report}"
-        past_memories = memory.get_memories(curr_situation, n_matches=2)
-
         past_memory_str = ""
-        if past_memories:
-            for i, rec in enumerate(past_memories, 1):
-                past_memory_str += rec["recommendation"] + "\n\n"
+        if memory is not None:
+            past_memories = memory.get_memories(curr_situation, n_matches=2)
+            if past_memories:
+                for i, rec in enumerate(past_memories, 1):
+                    past_memory_str += rec["recommendation"] + "\n\n"
 
         trade_lessons = state.get("trade_lessons", "")
         if trade_lessons:
@@ -114,12 +114,12 @@ Max 220 words. Trade construction, not research restating.""",
         ]
 
         # Try structured output, fall back to free-form text
-        structured_verdict = {}
+        structured_trader_output = {}
         try:
             structured_llm = llm.with_structured_output(TraderVerdict)
             verdict = structured_llm.invoke(messages)
             trader_text = _format_trader_verdict(verdict)
-            structured_verdict = verdict.model_dump()
+            structured_trader_output = verdict.model_dump()
         except Exception as exc:
             logger.warning("Structured trader output failed, falling back to text: %s", exc)
             result = llm.invoke(messages)
@@ -128,7 +128,8 @@ Max 220 words. Trade construction, not research restating.""",
         return {
             "messages": [{"role": "assistant", "content": trader_text}],
             "trader_investment_plan": trader_text,
-            "structured_trader_verdict": structured_verdict,
+            "final_trade_decision": trader_text,
+            "structured_trader_verdict": structured_trader_output,
             "sender": name,
         }
 

@@ -12,7 +12,7 @@ from .post_mortem import PostMortemEngine
 
 
 # Agents tracked in the ledger (must match post_mortem agent_accuracy keys)
-_AGENTS = ("investment_judge", "risk_judge", "trader", "bull_side", "bear_side")
+_AGENTS = ("trader",)
 
 # Pillars tracked (must match post_mortem._PILLARS)
 _PILLARS = ("fundamental", "coherence", "macro", "momentum")
@@ -368,7 +368,7 @@ class CredibilityLedger:
         patterns: List[str] = []
 
         # Investment judge: regime-specific underperformance
-        ij_info = agent_scores.get("investment_judge", {})
+        ij_info = agent_scores.get("trader", {})
         for regime, stats in ij_info.get("by_regime", {}).items():
             if stats.get("total", 0) >= 3 and stats.get("accuracy", 0.5) < 0.40:
                 patterns.append(
@@ -377,16 +377,16 @@ class CredibilityLedger:
                 )
 
         # Risk judge: regime-specific underperformance
-        rj_info = agent_scores.get("risk_judge", {})
+        rj_info = agent_scores.get("trader", {})
         for regime, stats in rj_info.get("by_regime", {}).items():
             if stats.get("total", 0) >= 3 and stats.get("accuracy", 0.5) < 0.40:
                 patterns.append(
-                    f"Risk Judge underperforms in {regime} regimes "
+                    f"Trader underperforms in {regime} regimes "
                     f"({stats['accuracy']:.0%} accuracy, {stats['total']} trades)"
                 )
 
         # Bear side consistently wrong in a regime
-        bear_info = agent_scores.get("bear_side", {})
+        bear_info = agent_scores.get("trader", {})
         for regime, stats in bear_info.get("by_regime", {}).items():
             if stats.get("total", 0) >= 3 and stats.get("accuracy", 0.5) < 0.35:
                 wrong_count = stats["total"] - stats["wins"]
@@ -438,11 +438,10 @@ class CredibilityLedger:
 def _agent_display_name(agent: str) -> str:
     """Convert agent key to display name."""
     names = {
-        "investment_judge": "Investment Judge",
-        "risk_judge": "Risk Judge",
-        "trader": "Trader",
-        "bull_side": "Bull side",
-        "bear_side": "Bear side",
+        "trader": "Investment Judge",
+                "trader": "Trader",
+        "trader": "Bull side",
+        "trader": "Bear side",
     }
     return names.get(agent, agent)
 

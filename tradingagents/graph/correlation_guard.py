@@ -1,7 +1,7 @@
 """Portfolio Correlation Guard.
 
 Computes pairwise correlation matrix and effective number of independent bets
-from open position return series. Returns a formatted brief for the risk debate.
+from open position return series. Returns a formatted brief for the risk discussion.
 Pure local Python + yfinance + numpy — no LLM calls.
 """
 from __future__ import annotations
@@ -16,7 +16,7 @@ def build_correlation_brief(
     symbols: List[str],
     lookback_days: int = 60,
 ) -> str:
-    """Compute portfolio correlation and return formatted brief for risk debate.
+    """Compute portfolio correlation and return formatted brief for risk discussion.
 
     Args:
         symbols: List of ticker symbols from open positions.

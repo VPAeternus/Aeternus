@@ -2,7 +2,7 @@
 
 Pure Python module for session analysis mode — gathers computation engine
 data and computes AeternusScorer-equivalent scores without LLM API calls.
-The LLM reasoning (analyst reports, debate, trader verdict) comes from
+The LLM reasoning (analyst reports, discussion, trader verdict) comes from
 Sonnet subagents in the Claude Code session, not from API calls.
 """
 
@@ -431,56 +431,18 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
     coherence_sub = coherence_snapshot.get("subscores", {})
     scores["coherence"] = coherence_snapshot.get("composite_score", 50)
 
-    # 7. Regime weights + ensemble blend
+    # 7. Regime weights
     regime = macro_metrics.get("regime", "NEUTRAL")
-
-    # Extract debate voice scores from Sonnet outputs (same logic as AeternusScorer)
-    from tradingagents.graph.aeternus_scoring import AeternusScorer
-    _scorer_inst = AeternusScorer.__new__(AeternusScorer)
-    _state_for_debate = {
-        "investment_debate_state": sonnet_outputs.get("investment_debate_state"),
-        "investment_plan": sonnet_outputs.get("investment_plan", ""),
-        "structured_trader_verdict": sonnet_outputs.get("structured_trader_verdict"),
-        "structured_verdict": sonnet_outputs.get("structured_verdict"),
-    }
-    research_debate_score = _scorer_inst._extract_research_debate_score(_state_for_debate)
-    trader_verdict_score = _scorer_inst._extract_trader_verdict_score(_state_for_debate)
-    risk_verdict_score = _scorer_inst._extract_risk_verdict_score(_state_for_debate)
-
-    model_scores = {
-        "fundamental":     scores["fundamental"],
-        "coherence":       scores["coherence"],
-        "macro":           scores["macro"],
-        "momentum":        scores["momentum"],
-        "research_debate": research_debate_score,
-        "trader_verdict":  trader_verdict_score,
-        "risk_verdict":    risk_verdict_score,
-    }
-    active_models = {k for k, v in model_scores.items() if v is not None}
-    quant_pillars = {"fundamental", "coherence", "macro", "momentum"}
-
-    if not active_models - quant_pillars:
-        # No debate voices — pure quant fallback
-        weights = _safe_call(get_weights, regime)
-        if not weights:
-            weights = {"fundamental": 0.35, "coherence": 0.30, "macro": 0.23, "momentum": 0.12}
-        aeternus_score = round(
-            scores["fundamental"] * weights["fundamental"]
-            + scores["coherence"] * weights["coherence"]
-            + scores["macro"] * weights["macro"]
-            + scores["momentum"] * weights["momentum"],
-            2,
-        )
-        effective_weights = weights
-    else:
-        from tradingagents.graph.ensemble_weights import EnsembleWeightStore
-        ensemble_store = EnsembleWeightStore.load()
-        effective_weights = ensemble_store.get_effective_weights(regime, active_models)
-        aeternus_score = round(
-            sum(model_scores[k] * effective_weights[k] for k in active_models),
-            2,
-        )
-        weights = effective_weights
+    weights = _safe_call(get_weights, regime)
+    if not weights:
+        weights = {"fundamental": 0.35, "coherence": 0.30, "macro": 0.23, "momentum": 0.12}
+    aeternus_score = round(
+        scores["fundamental"] * weights["fundamental"]
+        + scores["coherence"] * weights["coherence"]
+        + scores["macro"] * weights["macro"]
+        + scores["momentum"] * weights["momentum"],
+        2,
+    )
 
     # Quant-only reference score (drift monitor)
     quant_weights_ref = _safe_call(get_weights, regime)
@@ -640,8 +602,6 @@ def build_session_score(computation_data: dict, sonnet_outputs: dict) -> dict:
         "data_quality_gate": data_quality_gate,
         "epistemic_summary": epistemic_summary,
         "ic_adjustments_applied": ic_adjustments_applied,
-        "ensemble_weights": effective_weights,
-        "ensemble_model_scores": {k: v for k, v in model_scores.items()},
         "quant_only_score": quant_only_score,
         "timestamp": datetime.now().isoformat(),
     }
@@ -666,13 +626,10 @@ def write_analysis_report(
         "fundamentals_report": sonnet_outputs.get("fundamentals_report", ""),
         "market_report": sonnet_outputs.get("market_report", ""),
         "news_report": sonnet_outputs.get("news_report", ""),
-        "investment_debate_state": sonnet_outputs.get("investment_debate_state", {}),
-        "risk_debate_state": sonnet_outputs.get("risk_debate_state", {}),
         "trader_investment_decision": sonnet_outputs.get("trader_investment_decision", ""),
         "investment_plan": sonnet_outputs.get("investment_plan", ""),
         "final_trade_decision": sonnet_outputs.get("final_trade_decision", ""),
         "structured_trader_verdict": sonnet_outputs.get("structured_trader_verdict", {}),
-        "structured_verdict": sonnet_outputs.get("structured_verdict", {}),
         "fundamental_metrics": computation_data.get("fundamental_metrics", {}),
         "macro_metrics": computation_data.get("macro_metrics", {}),
         "momentum_metrics": computation_data.get("momentum_metrics", {}),

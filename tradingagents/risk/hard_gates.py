@@ -1,6 +1,6 @@
 """Quantitative risk hard gates for pre-trade evaluation.
 
-These gates supplement the LLM-based risk debate with deterministic,
+These gates supplement the LLM-based risk discussion with deterministic,
 non-overridable checks on position concentration, sector exposure,
 and portfolio-level correlation risk.
 """

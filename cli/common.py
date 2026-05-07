@@ -179,16 +179,10 @@ class MessageBuffer:
                     "News Analyst": "pending",
             "Fundamentals Analyst": "pending",
             # Research Team
-            "Bull Researcher": "pending",
-            "Bear Researcher": "pending",
-            "Research Manager": "pending",
-            # Trading Team
+                                    # Trading Team
             "Trader": "pending",
             # Risk Management Team
-            "Risky Analyst": "pending",
-            "Neutral Analyst": "pending",
-            "Safe Analyst": "pending",
-            # Portfolio Management Team
+                                    # Portfolio Management Team
             "Portfolio Manager": "pending",
         }
         self.current_agent = None
@@ -366,9 +360,7 @@ def update_display(layout, spinner_text=None):
             "News Analyst",
             "Fundamentals Analyst",
         ],
-        "Research Team": ["Bull Researcher", "Bear Researcher", "Research Manager"],
         "Trading Team": ["Trader"],
-        "Risk Management": ["Risky Analyst", "Neutral Analyst", "Safe Analyst"],
         "Portfolio Management": ["Portfolio Manager"],
     }
 
@@ -664,7 +656,6 @@ def get_analysis_date():
 def display_complete_report(final_state):
     """Display the complete analysis report with team-based panels."""
     console.print("\n[bold green]Complete Analysis Report[/bold green]\n")
-    risk_state = final_state.get("risk_debate_state") or {}
 
     # I. Analyst Team Reports
     analyst_reports = []
@@ -712,54 +703,6 @@ def display_complete_report(final_state):
             )
         )
 
-    # II. Research Team Reports
-    if final_state.get("investment_debate_state"):
-        research_reports = []
-        debate_state = final_state["investment_debate_state"]
-
-        # Bull Researcher Analysis
-        if debate_state.get("bull_history"):
-            research_reports.append(
-                Panel(
-                    Markdown(debate_state["bull_history"]),
-                    title="Bull Researcher",
-                    border_style="blue",
-                    padding=(1, 2),
-                )
-            )
-
-        # Bear Researcher Analysis
-        if debate_state.get("bear_history"):
-            research_reports.append(
-                Panel(
-                    Markdown(debate_state["bear_history"]),
-                    title="Bear Researcher",
-                    border_style="blue",
-                    padding=(1, 2),
-                )
-            )
-
-        # Research Manager Decision
-        if debate_state.get("judge_decision"):
-            research_reports.append(
-                Panel(
-                    Markdown(debate_state["judge_decision"]),
-                    title="Research Manager",
-                    border_style="blue",
-                    padding=(1, 2),
-                )
-            )
-
-        if research_reports:
-            console.print(
-                Panel(
-                    Columns(research_reports, equal=True, expand=True),
-                    title="II. Research Team Decision",
-                    border_style="magenta",
-                    padding=(1, 2),
-                )
-            )
-
     # III. Trading Team Reports
     if final_state.get("trader_investment_plan"):
         console.print(
@@ -772,69 +715,6 @@ def display_complete_report(final_state):
                 ),
                 title="III. Trading Team Plan",
                 border_style="yellow",
-                padding=(1, 2),
-            )
-        )
-
-    # IV. Risk Management Team Reports
-    if risk_state:
-        risk_reports = []
-
-        # Aggressive (Risky) Analyst Analysis
-        if risk_state.get("risky_history"):
-            risk_reports.append(
-                Panel(
-                    Markdown(risk_state["risky_history"]),
-                    title="Aggressive Analyst",
-                    border_style="blue",
-                    padding=(1, 2),
-                )
-            )
-
-        # Conservative (Safe) Analyst Analysis
-        if risk_state.get("safe_history"):
-            risk_reports.append(
-                Panel(
-                    Markdown(risk_state["safe_history"]),
-                    title="Conservative Analyst",
-                    border_style="blue",
-                    padding=(1, 2),
-                )
-            )
-
-        # Neutral Analyst Analysis
-        if risk_state.get("neutral_history"):
-            risk_reports.append(
-                Panel(
-                    Markdown(risk_state["neutral_history"]),
-                    title="Neutral Analyst",
-                    border_style="blue",
-                    padding=(1, 2),
-                )
-            )
-
-        if risk_reports:
-            console.print(
-                Panel(
-                    Columns(risk_reports, equal=True, expand=True),
-                    title="IV. Risk Management Team Decision",
-                    border_style="red",
-                    padding=(1, 2),
-                )
-            )
-
-    # V. Portfolio Manager Decision
-    if risk_state.get("judge_decision"):
-        console.print(
-            Panel(
-                Panel(
-                    Markdown(risk_state["judge_decision"]),
-                    title="Portfolio Manager",
-                    border_style="blue",
-                    padding=(1, 2),
-                ),
-                title="V. Portfolio Manager Decision",
-                border_style="green",
                 padding=(1, 2),
             )
         )
@@ -1330,7 +1210,7 @@ def _build_noninteractive_selections(
             AnalystType.NEWS,
             AnalystType.FUNDAMENTALS,
         ],
-        "research_depth": int(DEFAULT_CONFIG.get("max_debate_rounds", 1)),
+        "research_depth": 1,
         "llm_provider": provider,
         "backend_url": backend_url,
         "shallow_thinker": quick_model,
@@ -4067,7 +3947,7 @@ def _lane_summary(candidates: List[Dict[str, Any]]) -> Dict[str, int]:
 
 def update_research_team_status(status):
     """Update status for all research team members and trader."""
-    research_team = ["Bull Researcher", "Bear Researcher", "Research Manager", "Trader"]
+    research_team = ["Trader"]
     for agent in research_team:
         message_buffer.update_agent_status(agent, status)
 

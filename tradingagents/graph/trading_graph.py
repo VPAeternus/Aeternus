@@ -16,12 +16,8 @@ from langgraph.prebuilt import ToolNode
 
 from tradingagents.agents import *
 from tradingagents.default_config import DEFAULT_CONFIG
-from tradingagents.agents.utils.memory import FinancialSituationMemory, TradeMemory
-from tradingagents.agents.utils.agent_states import (
-    AgentState,
-    InvestDebateState,
-    RiskDebateState,
-)
+from tradingagents.agents.utils.memory import TradeMemory
+from tradingagents.agents.utils.agent_states import AgentState
 from tradingagents.dataflows.config import set_config
 
 # Import the new abstract tool methods from agent_utils
@@ -39,7 +35,6 @@ from tradingagents.agents.utils.flow_toxicity_engine import build_flow_toxicity_
 from .conditional_logic import ConditionalLogic
 from .setup import GraphSetup
 from .propagation import Propagator
-from .reflection import Reflector
 from .signal_processing import SignalProcessor
 from .aeternus_scoring import AeternusScorer
 from .sector_context import SectorContext
@@ -256,14 +251,6 @@ class TradingAgentsGraph:
                 )
 
         # Initialize memories
-        self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
-        self.bear_memory = FinancialSituationMemory("bear_memory", self.config)
-        self.trader_memory = FinancialSituationMemory("trader_memory", self.config)
-        self.invest_judge_memory = FinancialSituationMemory("invest_judge_memory", self.config)
-        self.risk_manager_memory = FinancialSituationMemory("risk_manager_memory", self.config)
-        self.risky_memory = FinancialSituationMemory("risky_memory", self.config)
-        self.safe_memory = FinancialSituationMemory("safe_memory", self.config)
-        self.neutral_memory = FinancialSituationMemory("neutral_memory", self.config)
         self.trade_memory = TradeMemory()
 
         # Create tool nodes
@@ -271,8 +258,6 @@ class TradingAgentsGraph:
 
         # Initialize components
         self.conditional_logic = ConditionalLogic(
-            max_debate_rounds=int(self.config.get("max_debate_rounds", 1)),
-            max_risk_discuss_rounds=int(self.config.get("max_risk_discuss_rounds", 1)),
             max_tool_iterations_per_analyst=int(
                 self.config.get("max_tool_iterations_per_analyst", 6)
             ),
@@ -281,20 +266,11 @@ class TradingAgentsGraph:
             self.quick_thinking_llm,
             self.deep_thinking_llm,
             self.tool_nodes,
-            self.bull_memory,
-            self.bear_memory,
-            self.trader_memory,
-            self.invest_judge_memory,
-            self.risk_manager_memory,
-            risky_memory=self.risky_memory,
-            safe_memory=self.safe_memory,
-            neutral_memory=self.neutral_memory,
             conditional_logic=self.conditional_logic,
             config=self.config,
         )
 
         self.propagator = Propagator()
-        self.reflector = Reflector(self.quick_thinking_llm)
         self.signal_processor = SignalProcessor(self.quick_thinking_llm)
         self.sector_context = SectorContext()
         self.track_record = TrackRecord()
@@ -360,7 +336,7 @@ class TradingAgentsGraph:
                     init_agent_state.get("trade_lessons", "") + "\n\n" + provenance
                 ).strip()
 
-        # Build portfolio context for risk debate
+        # Build portfolio context for risk discussion
         from tradingagents.graph.portfolio_context import build_portfolio_context
         execution_mode = self.config.get("execution_mode", "paper")
         portfolio_ctx = build_portfolio_context(
@@ -460,18 +436,13 @@ class TradingAgentsGraph:
         except Exception as exc:
             logger.warning("AKG rating writeback failed for %s: %s", company_name, exc)
 
-        # Store current state for reflection
+        # Store current state
         self.curr_state = final_state
 
         # Log state
         self._log_state(trade_date, final_state)
 
-        # Extract signal from structured verdict if available, else fallback to LLM
-        structured = final_state.get("structured_verdict") or {}
-        if structured.get("decision") in ("BUY", "SELL", "HOLD"):
-            signal = structured["decision"]
-        else:
-            signal = self.process_signal(final_state["final_trade_decision"])
+        signal = self.process_signal(final_state.get("final_trade_decision", ""))
 
         return final_state, signal
 
@@ -483,25 +454,7 @@ class TradingAgentsGraph:
             "market_report": final_state["market_report"],
             "news_report": final_state["news_report"],
             "fundamentals_report": final_state["fundamentals_report"],
-            "investment_debate_state": {
-                "bull_history": final_state["investment_debate_state"]["bull_history"],
-                "bear_history": final_state["investment_debate_state"]["bear_history"],
-                "history": final_state["investment_debate_state"]["history"],
-                "current_response": final_state["investment_debate_state"][
-                    "current_response"
-                ],
-                "judge_decision": final_state["investment_debate_state"][
-                    "judge_decision"
-                ],
-            },
             "trader_investment_decision": final_state["trader_investment_plan"],
-            "risk_debate_state": {
-                "risky_history": final_state["risk_debate_state"]["risky_history"],
-                "safe_history": final_state["risk_debate_state"]["safe_history"],
-                "neutral_history": final_state["risk_debate_state"]["neutral_history"],
-                "history": final_state["risk_debate_state"]["history"],
-                "judge_decision": final_state["risk_debate_state"]["judge_decision"],
-            },
             "investment_plan": final_state["investment_plan"],
             "final_trade_decision": final_state["final_trade_decision"],
             "fundamental_metrics": final_state.get("fundamental_metrics", {}),
@@ -509,7 +462,6 @@ class TradingAgentsGraph:
             "momentum_metrics": final_state.get("momentum_metrics", {}),
             "dealflow_context": final_state.get("dealflow_context", {}),
             "aeternus_score": final_state.get("aeternus_score", {}),
-            "structured_verdict": final_state.get("structured_verdict", {}),
             "structured_trader_verdict": final_state.get("structured_trader_verdict", {}),
             "portfolio_context": final_state.get("portfolio_context", ""),
             "drawdown_mode": final_state.get("drawdown_mode", False),
@@ -526,33 +478,6 @@ class TradingAgentsGraph:
             "w",
         ) as f:
             json.dump(self.log_states_dict, f, indent=4)
-
-    def reflect_and_remember(self, returns_losses):
-        """Reflect on decisions and update memory based on returns."""
-        self.reflector.reflect_bull_researcher(
-            self.curr_state, returns_losses, self.bull_memory
-        )
-        self.reflector.reflect_bear_researcher(
-            self.curr_state, returns_losses, self.bear_memory
-        )
-        self.reflector.reflect_trader(
-            self.curr_state, returns_losses, self.trader_memory
-        )
-        self.reflector.reflect_invest_judge(
-            self.curr_state, returns_losses, self.invest_judge_memory
-        )
-        self.reflector.reflect_risk_manager(
-            self.curr_state, returns_losses, self.risk_manager_memory
-        )
-        self.reflector.reflect_risky_debator(
-            self.curr_state, returns_losses, self.risky_memory
-        )
-        self.reflector.reflect_safe_debator(
-            self.curr_state, returns_losses, self.safe_memory
-        )
-        self.reflector.reflect_neutral_debator(
-            self.curr_state, returns_losses, self.neutral_memory
-        )
 
     def process_signal(self, full_signal):
         """Process a signal to extract the core decision."""

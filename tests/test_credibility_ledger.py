@@ -42,7 +42,7 @@ def _make_attribution(
     if agent_decisions is None:
         agent_decisions = {
             "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-            "risk_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
+            "trader": {"decision": "HOLD", "verdict": "NEUTRAL"},
             "trader": {"decision": "BUY", "verdict": "CORRECT"},
             "bull_side": {"verdict": "CORRECT"},
             "bear_side": {"verdict": "INCORRECT"},
@@ -170,8 +170,8 @@ class TestAgentDisplayName:
     def test_investment_judge_display(self):
         assert _agent_display_name("investment_judge") == "Investment Judge"
 
-    def test_risk_judge_display(self):
-        assert _agent_display_name("risk_judge") == "Risk Judge"
+    def test_trader_display(self):
+        assert _agent_display_name("trader") == "Trader"
 
     def test_trader_display(self):
         assert _agent_display_name("trader") == "Trader"
@@ -211,7 +211,7 @@ class TestComputeAgentScores:
         attr = _make_attribution(
             agent_decisions={
                 "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                "risk_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
+                "trader": {"decision": "HOLD", "verdict": "NEUTRAL"},
                 "trader": {"decision": "BUY", "verdict": "CORRECT"},
                 "bull_side": {"verdict": "CORRECT"},
                 "bear_side": {"verdict": "INCORRECT"},
@@ -229,7 +229,7 @@ class TestComputeAgentScores:
         attr = _make_attribution(
             agent_decisions={
                 "investment_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
-                "risk_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
+                "trader": {"decision": "HOLD", "verdict": "NEUTRAL"},
                 "trader": {"decision": "BUY", "verdict": "CORRECT"},
                 "bull_side": {"verdict": "CORRECT"},
                 "bear_side": {"verdict": "INCORRECT"},
@@ -248,7 +248,7 @@ class TestComputeAgentScores:
             regime="BULL",
             agent_decisions={
                 "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                "trader": {"decision": "BUY", "verdict": "CORRECT"},
                 "trader": {"decision": "BUY", "verdict": "CORRECT"},
                 "bull_side": {"verdict": "CORRECT"},
                 "bear_side": {"verdict": "INCORRECT"},
@@ -258,7 +258,7 @@ class TestComputeAgentScores:
             regime="BEAR",
             agent_decisions={
                 "investment_judge": {"decision": "SELL", "verdict": "INCORRECT"},
-                "risk_judge": {"decision": "SELL", "verdict": "INCORRECT"},
+                "trader": {"decision": "SELL", "verdict": "INCORRECT"},
                 "trader": {"decision": "BUY", "verdict": "INCORRECT"},
                 "bull_side": {"verdict": "INCORRECT"},
                 "bear_side": {"verdict": "CORRECT"},
@@ -280,7 +280,7 @@ class TestComputeAgentScores:
         attr1 = _make_attribution(
             agent_decisions={
                 "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                "trader": {"decision": "BUY", "verdict": "CORRECT"},
                 "trader": {"decision": "BUY", "verdict": "CORRECT"},
                 "bull_side": {"verdict": "CORRECT"},
                 "bear_side": {"verdict": "INCORRECT"},
@@ -290,7 +290,7 @@ class TestComputeAgentScores:
             return_pct=-10.0,
             agent_decisions={
                 "investment_judge": {"decision": "SELL", "verdict": "CORRECT"},
-                "risk_judge": {"decision": "SELL", "verdict": "CORRECT"},
+                "trader": {"decision": "SELL", "verdict": "CORRECT"},
                 "trader": {"decision": "SELL", "verdict": "CORRECT"},
                 "bull_side": {"verdict": "INCORRECT"},
                 "bear_side": {"verdict": "CORRECT"},
@@ -388,7 +388,7 @@ class TestDetectPatterns:
                         "decision": "BUY" if i == 0 else "SELL",
                         "verdict": "CORRECT" if i == 0 else "INCORRECT",
                     },
-                    "risk_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
+                    "trader": {"decision": "HOLD", "verdict": "NEUTRAL"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},
@@ -415,7 +415,7 @@ class TestDetectPatterns:
                 return_pct=10.0,  # Positive return
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},  # Bull wins
                     "bear_side": {"verdict": "INCORRECT"},  # Bear loses
@@ -528,7 +528,7 @@ class TestBuildCredibilityBrief:
                 regime="BULL",
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},
@@ -571,7 +571,7 @@ class TestBuildCredibilityBrief:
                         "decision": "SELL",
                         "verdict": "INCORRECT",
                     },
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},
@@ -706,7 +706,7 @@ class TestEdgeCases:
                 return_pct=10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
+                    "trader": {"decision": "HOLD", "verdict": "NEUTRAL"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},
@@ -717,7 +717,7 @@ class TestEdgeCases:
                 return_pct=-10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "SELL", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "SELL", "verdict": "CORRECT"},
+                    "trader": {"decision": "SELL", "verdict": "CORRECT"},
                     "trader": {"decision": "SELL", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "INCORRECT"},
                     "bear_side": {"verdict": "CORRECT"},
@@ -751,7 +751,7 @@ class TestEdgeCases:
                 return_pct=10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "SELL", "verdict": "INCORRECT"},
-                    "risk_judge": {"decision": "SELL", "verdict": "INCORRECT"},
+                    "trader": {"decision": "SELL", "verdict": "INCORRECT"},
                     "trader": {"decision": "SELL", "verdict": "INCORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},
@@ -843,7 +843,7 @@ class TestConsensusParadox:
                 return_pct=10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "CORRECT"},  # All agree
@@ -874,7 +874,7 @@ class TestConsensusParadox:
                 return_pct=10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},  # 3 CORRECT
                     "bull_side": {"verdict": "INCORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},  # 2 INCORRECT
@@ -906,7 +906,7 @@ class TestConsensusParadox:
                 return_pct=-10.0,  # LOSS
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "INCORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "INCORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "INCORRECT"},
                     "trader": {"decision": "BUY", "verdict": "INCORRECT"},
                     "bull_side": {"verdict": "INCORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},  # All agree and lose
@@ -921,7 +921,7 @@ class TestConsensusParadox:
                 return_pct=10.0,  # WIN
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},  # 3 CORRECT
                     "bull_side": {"verdict": "INCORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},  # 2 INCORRECT
@@ -953,7 +953,7 @@ class TestConsensusParadox:
                 return_pct=10.0,  # WIN
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "CORRECT"},  # All agree and win
@@ -968,7 +968,7 @@ class TestConsensusParadox:
                 return_pct=10.0,  # WIN
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},  # 3 CORRECT
                     "bull_side": {"verdict": "INCORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},  # 2 INCORRECT
@@ -997,7 +997,7 @@ class TestConsensusParadox:
         attr = _make_attribution(
             agent_decisions={
                 "investment_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
-                "risk_judge": {"decision": "HOLD", "verdict": "NEUTRAL"},
+                "trader": {"decision": "HOLD", "verdict": "NEUTRAL"},
                 "trader": {"decision": "HOLD", "verdict": "NEUTRAL"},
                 "bull_side": {"verdict": "CORRECT"},
                 "bear_side": {"verdict": "INCORRECT"},  # Only 2 directional
@@ -1028,7 +1028,7 @@ class TestConsensusParadox:
                 return_pct=10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "CORRECT"},
                     "bear_side": {"verdict": "CORRECT"},
@@ -1058,7 +1058,7 @@ class TestConsensusParadox:
                 return_pct=-10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "INCORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "INCORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "INCORRECT"},
                     "trader": {"decision": "BUY", "verdict": "INCORRECT"},
                     "bull_side": {"verdict": "INCORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},
@@ -1072,7 +1072,7 @@ class TestConsensusParadox:
                 return_pct=10.0,
                 agent_decisions={
                     "investment_judge": {"decision": "BUY", "verdict": "CORRECT"},
-                    "risk_judge": {"decision": "BUY", "verdict": "CORRECT"},
+                    "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "trader": {"decision": "BUY", "verdict": "CORRECT"},
                     "bull_side": {"verdict": "INCORRECT"},
                     "bear_side": {"verdict": "INCORRECT"},

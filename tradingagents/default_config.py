@@ -52,10 +52,8 @@ DEFAULT_CONFIG = {
     # Only applies when llm_provider == "anthropic". Set False to disable.
     "anthropic_adaptive_thinking": True,
     # Debate and discussion settings
-    # 1 round = fastest (best case, judge decides after single exchange ~4 min debate)
-    # 3 rounds = most thorough (~10 min debate). Use 1 for batch/live, 3 for high-conviction names.
-    "max_debate_rounds": 1,
-    "max_risk_discuss_rounds": 1,
+    # 1 round = fastest (best case, judge decides after single exchange ~4 min discussion)
+    # 3 rounds = most thorough (~10 min discussion). Use 1 for batch/live, 3 for high-conviction names.
     "max_tool_iterations_per_analyst": int(
         os.getenv("AETERNUS_MAX_TOOL_ITERATIONS_PER_ANALYST", "3")
     ),

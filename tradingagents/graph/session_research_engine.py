@@ -226,20 +226,6 @@ def _merge_llm_influence(
     final_value = _score_or_none(final_score.get("aeternus_score"))
     base_conf = base_score.get("confidence")
     final_conf = final_score.get("confidence")
-    base_models = dict(base_score.get("ensemble_model_scores") or {})
-    final_models = dict(final_score.get("ensemble_model_scores") or {})
-    debate_components = {}
-    for key in ("research_debate", "trader_verdict", "risk_verdict"):
-        before = base_models.get(key)
-        after = final_models.get(key)
-        debate_components[key] = {
-            "before": before,
-            "after": after,
-            "delta": _delta_or_none(before, after),
-        }
-    active_debate_components = sorted(
-        key for key, payload in debate_components.items() if payload.get("after") is not None
-    )
     present = sum(1 for key in _REPORT_COMPLETENESS_KEYS if str(outputs.get(key, "")).strip())
     influence = {
         "base_score_pre_llm": base_value,
@@ -248,8 +234,6 @@ def _merge_llm_influence(
         "base_confidence_pre_llm": base_conf,
         "final_confidence_post_llm": final_conf,
         "confidence_delta": _delta_or_none(base_conf, final_conf),
-        "debate_components": debate_components,
-        "active_debate_components": active_debate_components,
         "report_completeness": {
             "present_keys": present,
             "total_keys": len(_REPORT_COMPLETENESS_KEYS),

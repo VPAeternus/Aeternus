@@ -166,7 +166,7 @@ def _days_since(date_str: str) -> int:
 def build_regime_alert(
     state_path: str = "eval_results/control/regime_state.json",
 ) -> str:
-    """Build formatted regime alert for risk debate. Empty if no transition."""
+    """Build formatted regime alert for risk discussion. Empty if no transition."""
     result = check_regime_transition(state_path=state_path)
     alert = result.get("alert", "")
     if not alert:

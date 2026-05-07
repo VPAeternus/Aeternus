@@ -24,8 +24,8 @@ class _StubMessageBuffer:
             "Social Analyst": "pending",
             "News Analyst": "pending",
             "Fundamentals Analyst": "pending",
-            "Bull Researcher": "pending",
-            "Bear Researcher": "pending",
+            "Trader": "pending",
+            "Trader": "pending",
             "Research Manager": "pending",
             "Risky Analyst": "pending",
             "Safe Analyst": "pending",
@@ -104,8 +104,8 @@ def test_run_analysis_uses_codex_bridge_path(tmp_path, monkeypatch):
                 "fundamentals_report": init_state["fundamentals_report"],
                 "final_trade_decision": "BUY AAPL",
                 "trader_investment_plan": "",
-                "investment_debate_state": {},
-                "risk_debate_state": {},
+                "legacy_removed_state": {},
+                "legacy_removed_state": {},
             }
 
     class _FullGraphRunner:

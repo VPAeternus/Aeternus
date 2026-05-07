@@ -1,7 +1,6 @@
 # tradingagents/graph/aeternus_scoring.py
 
 import json
-import re
 from datetime import datetime
 from typing import Any, Dict, List, Optional, TypedDict
 import uuid
@@ -9,7 +8,6 @@ import uuid
 from pydantic import BaseModel, Field
 
 from .coherence_engine import build_coherence_snapshot
-from .ensemble_weights import EnsembleWeightStore
 from .regime_weights import get_weights
 from .fama_french import get_ff_factors
 from .epistemic import build_epistemic_report
@@ -76,8 +74,6 @@ class AeternusRating(TypedDict):
     data_quality_gate: Optional[Dict[str, bool]]
     epistemic_summary: Optional[Dict[str, str]]
     ic_adjustments_applied: Optional[bool]
-    ensemble_weights: Optional[Dict[str, float]]
-    ensemble_model_scores: Optional[Dict[str, Any]]
     quant_only_score: Optional[float]
     timestamp: str
 
@@ -261,45 +257,15 @@ class AeternusScorer:
         # Regime-adaptive weights
         regime = (macro_metrics or {}).get("regime", "NEUTRAL")
 
-        # Extract debate voice scores
-        research_debate_score = self._extract_research_debate_score(state)
-        trader_verdict_score = self._extract_trader_verdict_score(state)
-        risk_verdict_score = self._extract_risk_verdict_score(state)
-
-        # Build 8-model signal dict
-        model_scores = {
-            "fundamental":     scores["fundamental"],
-            "coherence":       scores["coherence"],
-            "macro":           scores["macro"],
-            "momentum":        scores["momentum"],
-            "research_debate": research_debate_score,
-            "trader_verdict":  trader_verdict_score,
-            "risk_verdict":    risk_verdict_score,
-        }
-
-        # Determine active models (non-None scores)
-        active_models = {k for k, v in model_scores.items() if v is not None}
-        quant_pillars = {"fundamental", "coherence", "macro", "momentum"}
-
-        if not active_models - quant_pillars:
-            # No debate voices — pure quant fallback (identical to previous behavior)
-            quant_weights = get_weights(regime)
-            aeternus_score = round(
-                scores["fundamental"] * quant_weights["fundamental"]
-                + scores["coherence"]  * quant_weights["coherence"]
-                + scores["macro"]      * quant_weights["macro"]
-                + scores["momentum"]   * quant_weights["momentum"],
-                2,
-            )
-            effective_weights = quant_weights
-        else:
-            # Ensemble blend with debate voices
-            ensemble_store = EnsembleWeightStore.load()
-            effective_weights = ensemble_store.get_effective_weights(regime, active_models)
-            aeternus_score = round(
-                sum(model_scores[k] * effective_weights[k] for k in active_models),
-                2,
-            )
+        quant_weights = get_weights(regime)
+        aeternus_score = round(
+            scores["fundamental"] * quant_weights["fundamental"]
+            + scores["coherence"]  * quant_weights["coherence"]
+            + scores["macro"]      * quant_weights["macro"]
+            + scores["momentum"]   * quant_weights["momentum"],
+            2,
+        )
+        effective_weights = quant_weights
 
         # Quant-only reference score (for drift monitoring)
         quant_weights_ref = get_weights(regime)
@@ -411,8 +377,6 @@ class AeternusScorer:
             data_quality_gate=data_quality_gate,
             epistemic_summary=epistemic_summary,
             ic_adjustments_applied=ic_adjustments_applied,
-            ensemble_weights=effective_weights,
-            ensemble_model_scores={k: v for k, v in model_scores.items()},
             quant_only_score=quant_only_score,
             timestamp=datetime.now().isoformat()
         )
@@ -860,133 +824,6 @@ class AeternusScorer:
 
     def _clamp_confidence(self, value: Any) -> int:
         return confidence_helpers.clamp_confidence(value)
-
-    # --- Debate voice signal extraction (ensemble inputs) ---
-
-    _DIRECTION_BASE = {"BUY": 65, "SELL": 35, "HOLD": 50}
-
-    def _extract_research_debate_score(self, state: Dict[str, Any]) -> Optional[int]:
-        """Extract 0-100 score from research debate (bull/bear synthesis).
-
-        Source: state["investment_debate_state"]["judge_decision"] string.
-        Fallback: keyword scan on investment_plan with default conviction=3.
-        """
-        judge_text = None
-        debate_state = state.get("investment_debate_state")
-        if isinstance(debate_state, dict):
-            judge_text = debate_state.get("judge_decision")
-
-        decision, conviction, bull_str, bear_str = None, 3, 3, 3
-
-        if judge_text and isinstance(judge_text, str):
-            # Try structured format: "Decision: BUY | Conviction: 4/5 | Bull Strength: 4/5 | Bear Strength: 2/5"
-            m = re.search(r"Decision:\s*(BUY|SELL|HOLD)", judge_text, re.IGNORECASE)
-            if m:
-                decision = m.group(1).upper()
-            m = re.search(r"Conviction:\s*(\d)", judge_text)
-            if m:
-                conviction = max(1, min(5, int(m.group(1))))
-            m = re.search(r"Bull\s*Strength:\s*(\d)", judge_text)
-            if m:
-                bull_str = max(1, min(5, int(m.group(1))))
-            m = re.search(r"Bear\s*Strength:\s*(\d)", judge_text)
-            if m:
-                bear_str = max(1, min(5, int(m.group(1))))
-
-        # Fallback: keyword scan on investment_plan
-        if decision is None:
-            plan_text = str(state.get("investment_plan", ""))[:500].upper()
-            if not plan_text:
-                return None
-            for kw in ("SELL", "SHORT", "BEARISH"):
-                if kw in plan_text:
-                    decision = "SELL"
-                    break
-            if decision is None:
-                for kw in ("BUY", "LONG", "BULLISH"):
-                    if kw in plan_text:
-                        decision = "BUY"
-                        break
-            if decision is None:
-                for kw in ("HOLD", "NEUTRAL"):
-                    if kw in plan_text:
-                        decision = "HOLD"
-                        break
-            if decision is None:
-                return None
-
-        direction_base = self._DIRECTION_BASE[decision]
-        conviction_mod = (conviction - 3) * 5
-        context_mod = max(-12, min(12, (bull_str - bear_str) * 3))
-        return max(0, min(100, direction_base + conviction_mod + context_mod))
-
-    def _extract_trader_verdict_score(self, state: Dict[str, Any]) -> Optional[int]:
-        """Extract 0-100 score from structured trader verdict.
-
-        Source: state["structured_trader_verdict"] (TraderVerdict dict).
-        """
-        verdict = state.get("structured_trader_verdict")
-        if not verdict or not isinstance(verdict, dict) or "decision" not in verdict:
-            return None
-
-        decision = verdict["decision"].upper()
-        if decision not in self._DIRECTION_BASE:
-            return None
-
-        conviction = max(1, min(5, int(verdict.get("conviction", 3))))
-        position_size_pct = float(verdict.get("position_size_pct", 0.05))
-
-        direction_base = self._DIRECTION_BASE[decision]
-        conviction_mod = (conviction - 3) * 5
-        size_mod = max(-4, min(5, round((position_size_pct - 0.05) * 100)))
-
-        # Scenario probability-weighted EV
-        scenario_ev = 0.0
-        for s in verdict.get("scenarios", []):
-            prob = float(s.get("probability", 0))
-            ret = float(s.get("target_return_pct", 0) or 0)
-            scenario_ev += prob * ret
-        scenario_mod = max(-8, min(8, round(scenario_ev * 2)))
-
-        return max(0, min(100, direction_base + conviction_mod + size_mod + scenario_mod))
-
-    def _extract_risk_verdict_score(self, state: Dict[str, Any]) -> Optional[int]:
-        """Extract 0-100 score from structured risk verdict.
-
-        Source: state["structured_verdict"] (RiskVerdict dict).
-        """
-        verdict = state.get("structured_verdict")
-        if not verdict or not isinstance(verdict, dict) or "decision" not in verdict:
-            return None
-
-        decision = verdict["decision"].upper()
-        if decision not in self._DIRECTION_BASE:
-            return None
-
-        conviction = max(1, min(5, int(verdict.get("conviction", 3))))
-
-        direction_base = self._DIRECTION_BASE[decision]
-        conviction_mod = (conviction - 3) * 5
-
-        # Hedge directive modifier
-        hedge = verdict.get("hedge_directive", "NO_CHANGE")
-        hedge_mod = {"INCREASE_HEDGE": -5, "NO_CHANGE": 0, "DECREASE_HEDGE": 3}.get(hedge, 0)
-
-        # Dissent modifier
-        dissent_mod = 0
-        for d in verdict.get("dissent_records", []):
-            dissent_mod -= min(int(d.get("dissent_strength", 0)), 3)
-
-        # Drawdown modifier
-        drawdown_mod = -8 if verdict.get("drawdown_mode") else 0
-
-        # Position size modifier
-        max_pos = float(verdict.get("max_position_pct", 0.05))
-        position_mod = max(-3, min(3, round((max_pos - 0.05) * 60)))
-
-        return max(0, min(100, direction_base + conviction_mod + hedge_mod + dissent_mod + drawdown_mod + position_mod))
-
-    # --- End debate voice extraction ---
 
     def _rating_from_score(self, score: float) -> str:
         return rating_helpers.rating_from_score(score)

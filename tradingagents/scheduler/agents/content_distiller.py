@@ -21,7 +21,7 @@ Your job is to translate internal trading decisions into transparent, authentic 
 
 RULES:
 - Never hide uncertainty. If the bull case was 60/40 vs bear, say so explicitly.
-- Show the debate, not just the conclusion. What did the bear case argue? Why did it lose?
+- Show the trade-off, not just the conclusion. What is the strongest counterargument? Why did the final decision win?
 - Include actual numbers: scores, conviction levels, key metrics that drove the decision.
 - Do not use marketing language. No "exciting opportunity" or "strong conviction play."
 - Do not predict the future. Say what the system decided and why, not what will happen.
@@ -45,7 +45,7 @@ THREAD_PROMPT = """Generate a 5-7 post thread explaining this investment decisio
 Post 1: The decision (ticker, direction, conviction level as a percentage)
 Post 2: The bull case — what argues FOR this position
 Post 3: The bear case — what argues AGAINST (include the strongest counterargument)
-Post 4: What tipped the balance — the key factor that resolved the debate
+Post 4: What tipped the balance — the key factor that resolved the trade-off
 Post 5: Key metrics (include actual numbers: scores, ratios, whatever drove the analysis)
 Post 6 (if warranted): Risk acknowledgment — what would change this view
 Post 7 (optional): One-line process note ("This is post #N in our live track record. Every decision is logged.")

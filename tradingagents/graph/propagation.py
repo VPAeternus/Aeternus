@@ -1,11 +1,7 @@
 # TradingAgents/graph/propagation.py
 
 from typing import Any, Dict, List, Optional
-from tradingagents.agents.utils.agent_states import (
-    AgentState,
-    InvestDebateState,
-    RiskDebateState,
-)
+from tradingagents.agents.utils.agent_states import AgentState
 
 
 def format_dealflow_provenance(ctx: Optional[Dict[str, Any]]) -> str:
@@ -77,18 +73,6 @@ class Propagator:
             "messages": [("human", company_name)],
             "company_of_interest": company_name,
             "trade_date": str(trade_date),
-            "investment_debate_state": InvestDebateState(
-                {"history": "", "current_response": "", "count": 0}
-            ),
-            "risk_debate_state": RiskDebateState(
-                {
-                    "history": "",
-                    "current_risky_response": "",
-                    "current_safe_response": "",
-                    "current_neutral_response": "",
-                    "count": 0,
-                }
-            ),
             "market_report": "",
             "fundamentals_report": "",
             "news_report": "",
@@ -101,7 +85,6 @@ class Propagator:
             "macro_metrics": {},
             "momentum_metrics": {},
             "dealflow_context": {},
-            "structured_verdict": {},
             "trade_lessons": "",
             "aeternus_score": {},
             "structured_trader_verdict": {},

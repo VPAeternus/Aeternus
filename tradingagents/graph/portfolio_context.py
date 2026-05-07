@@ -1,9 +1,9 @@
 """
-Portfolio context builder for risk debate prompts.
+Portfolio context builder for risk discussion prompts.
 
 Pure Python — no LLM calls, no network I/O.
 Aggregates open positions, calibration data, and drawdown state
-into a formatted string injected into risk debater prompts.
+into a formatted string injected into risk discussionr prompts.
 """
 from __future__ import annotations
 
@@ -158,7 +158,7 @@ def build_portfolio_context(
     market_regime: Optional[Dict[str, Any]] = None,
 ) -> str:
     """
-    Build a compact portfolio context string for risk debater prompts.
+    Build a compact portfolio context string for risk discussionr prompts.
 
     Sources:
     - Open positions from paper or live execution state
@@ -170,7 +170,7 @@ def build_portfolio_context(
         market_regime: Market regime dict from state, if available
 
     Returns:
-        Formatted string for injection into risk debate prompts.
+        Formatted string for injection into risk discussion prompts.
     """
     # Determine positions path
     mode = str(execution_mode or "paper").lower().strip()
@@ -221,7 +221,7 @@ def build_portfolio_context(
             sections.append("")
             sections.append(corr_brief)
     except Exception:
-        pass  # Never crash the risk debate over correlation data
+        pass  # Never crash the risk discussion over correlation data
 
     # Supply chain concentration narrative
     try:
@@ -231,7 +231,7 @@ def build_portfolio_context(
             sections.append("")
             sections.append(narrative)
     except Exception:
-        pass  # Never crash the risk debate over supply chain data
+        pass  # Never crash the risk discussion over supply chain data
 
     # Agent credibility brief
     try:
@@ -243,7 +243,7 @@ def build_portfolio_context(
             sections.append("")
             sections.append(credibility_brief)
     except Exception:
-        pass  # Never crash the risk debate over credibility data
+        pass  # Never crash the risk discussion over credibility data
 
     # Stress test brief
     try:
@@ -253,7 +253,7 @@ def build_portfolio_context(
             sections.append("")
             sections.append(stress_brief)
     except Exception:
-        pass  # Never crash the risk debate over stress test data
+        pass  # Never crash the risk discussion over stress test data
 
     # Geopolitical alert brief
     try:
@@ -301,7 +301,7 @@ def build_portfolio_context(
             sections.append("")
             sections.append("\n".join(geo_lines))
     except Exception:
-        pass  # Never crash the risk debate over geopolitical data
+        pass  # Never crash the risk discussion over geopolitical data
 
     # Regime transition alert
     try:
@@ -311,7 +311,7 @@ def build_portfolio_context(
             sections.append("")
             sections.append(regime_alert)
     except Exception:
-        pass  # Never crash the risk debate over regime data
+        pass  # Never crash the risk discussion over regime data
 
     sections.append("")
     sections.append("=== END PORTFOLIO CONTEXT ===")

@@ -149,15 +149,15 @@ def test_run_session_research_persists_llm_influence_block(tmp_path, monkeypatch
                 "rating": "Buy",
                 "confidence": 1,
                 "breakdown": {},
-                "ensemble_model_scores": {
+                "legacy_removed_scores": {
                     "fundamental": 62,
                     "coherence": 58,
                     "macro": 61,
                     "sentiment": 57,
                     "momentum": 59,
-                    "research_debate": None,
+                    "legacy_research_component": None,
                     "trader_verdict": None,
-                    "risk_verdict": None,
+                    "legacy_risk_component": None,
                 },
                 "timestamp": "2026-03-10T09:00:00",
             }
@@ -169,15 +169,15 @@ def test_run_session_research_persists_llm_influence_block(tmp_path, monkeypatch
             "rating": "Buy",
             "confidence": 4,
             "breakdown": {},
-            "ensemble_model_scores": {
+            "legacy_removed_scores": {
                 "fundamental": 62,
                 "coherence": 58,
                 "macro": 61,
                 "sentiment": 57,
                 "momentum": 59,
-                "research_debate": 66,
+                "legacy_research_component": 66,
                 "trader_verdict": 68,
-                "risk_verdict": 55,
+                "legacy_risk_component": 55,
             },
             "timestamp": "2026-03-10T09:00:01",
         }
@@ -214,11 +214,11 @@ def test_run_session_research_persists_llm_influence_block(tmp_path, monkeypatch
     assert score_block["aeternus_score"] == 64.5
     assert influence["score_delta"] == 4.5
     assert influence["confidence_delta"] == 3.0
-    assert influence["debate_components"]["research_debate"]["before"] is None
-    assert influence["debate_components"]["research_debate"]["after"] == 66
-    assert influence["debate_components"]["research_debate"]["delta"] is None
-    assert influence["active_debate_components"] == [
-        "research_debate",
-        "risk_verdict",
+    assert influence["discussion_components"]["legacy_research_component"]["before"] is None
+    assert influence["discussion_components"]["legacy_research_component"]["after"] == 66
+    assert influence["discussion_components"]["legacy_research_component"]["delta"] is None
+    assert influence["active_discussion_components"] == [
+        "legacy_research_component",
+        "legacy_risk_component",
         "trader_verdict",
     ]

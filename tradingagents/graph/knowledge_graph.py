@@ -1341,13 +1341,7 @@ class AeternusKnowledgeGraph:
         if thesis:
             node["last_thesis_summary"] = str(thesis)[:150]
 
-        # Ensemble data (per-model scores, weights, quant-only reference)
-        ensemble_model_scores = rating.get("ensemble_model_scores")
-        if ensemble_model_scores:
-            node["last_ensemble_model_scores"] = ensemble_model_scores
-        ensemble_weights = rating.get("ensemble_weights")
-        if ensemble_weights:
-            node["last_ensemble_weights"] = ensemble_weights
+        # Quant-only reference
         quant_only_score = rating.get("quant_only_score")
         if quant_only_score is not None:
             node["last_quant_only_score"] = quant_only_score
@@ -1360,12 +1354,10 @@ class AeternusKnowledgeGraph:
         if weight_regime:
             node["last_weight_regime"] = weight_regime
 
-        # Rolling score history (last 10) — now includes ensemble data
+        # Rolling score history (last 10)
         if score is not None:
             history = node.get("score_history") or []
             entry = {"date": date, "score": score, "rating": rating_str}
-            if ensemble_model_scores:
-                entry["ensemble_model_scores"] = ensemble_model_scores
             if quant_only_score is not None:
                 entry["quant_only_score"] = quant_only_score
             history.append(entry)

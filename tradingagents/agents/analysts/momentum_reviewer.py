@@ -1,6 +1,6 @@
 """Momentum Reviewer — deep-thinking critique layer for momentum regime analysis.
 
-Sits between the Market Analyst (technical) and the Bull/Bear debate.
+Sits between the Market Analyst (technical) and the analyst discussion.
 The market analyst gathers technical data cheaply; the reviewer applies SOTA reasoning
 to interpret, challenge, and enhance the analysis using computed momentum metrics.
 """

@@ -218,8 +218,6 @@ def post_mortem(
     summary_table.add_column("Return", justify="right")
     summary_table.add_column("Score", justify="right")
     summary_table.add_column("Regime", style="magenta")
-    summary_table.add_column("Inv Judge", justify="center")
-    summary_table.add_column("Risk Judge", justify="center")
     summary_table.add_column("Trader", justify="center")
     summary_table.add_column("Pillars R/W/N", justify="center")
 
@@ -232,8 +230,6 @@ def post_mortem(
         pillar_str = f"{ps.get('right_count', 0)}/{ps.get('wrong_count', 0)}/{ps.get('neutral_count', 0)}"
 
         aa = attr.get("agent_accuracy", {})
-        inv_v = aa.get("investment_judge", {}).get("verdict", "-")
-        risk_v = aa.get("risk_judge", {}).get("verdict", "-")
         trader_v = aa.get("trader", {}).get("verdict", "-")
 
         summary_table.add_row(
@@ -242,8 +238,6 @@ def post_mortem(
             ret_str,
             str(attr.get("entry_score", "")),
             attr.get("weight_regime", ""),
-            inv_v,
-            risk_v,
             trader_v,
             pillar_str,
         )
@@ -521,7 +515,7 @@ def credibility(
     if regime_label:
         agent_table.add_column(f"In {regime_label}", justify="right")
 
-    for agent_key in ("investment_judge", "risk_judge", "trader", "bull_side", "bear_side"):
+    for agent_key in ("trader",):
         info = agents.get(agent_key, {})
         overall = info.get("overall", {})
         acc = overall.get("accuracy", 0.5)
