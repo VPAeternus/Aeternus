@@ -34,6 +34,12 @@ from tradingagents.graph.kg_seed_data import (
     _DEFAULT_KG_PATH,
     _YFINANCE_SECTOR_MAP,
 )
+from tradingagents.graph.kg_templates import (
+    clamp_float as _template_clamp_float,
+    edge_template,
+    node_template,
+    sanitize_filename as _template_sanitize_filename,
+)
 
 
 
@@ -61,143 +67,12 @@ from tradingagents.graph.kg_seed_data import (
 
 def _node_template(node_id: str, node_type: str = "company", sector: Optional[str] = None,
                    display_name: Optional[str] = None, metadata: Optional[dict] = None) -> dict:
-    return {
-        "id": node_id,
-        "node_type": node_type,
-        "sector": sector,
-        "display_name": display_name or node_id,
-        "signal_strength": 0.0,
-        "centrality": 0.0,
-        "times_surfaced": 0,
-        "last_surfaced": None,
-        "aeternus_score": None,
-        "thesis_track_record": {"confirmed": 0, "invalidated": 0},
-        "metadata": metadata or {},
-        # Social-attention fields (S-037)
-        "cashtag_velocity_z": None,
-        "cashtag_mentions_7d": None,
-        "cashtag_velocity_trend": None,
-        "cashtag_sentiment": None,
-        "cashtag_last_updated": None,
-        "sec_event_type": None,
-        "sec_event_date": None,
-        "emergence_score": None,
-        "emergence_tier": None,
-        "emergence_n_sources": 0,
-        # Activation fields (S-040) — used by theme and sector nodes
-        "active": False,
-        "activation_date": None,
-        "deactivation_date": None,
-        "macro_trigger": None,
-        "conviction": 0.0,
-        "expected_duration_months": None,
-        "active_themes": [],
-        "priority_score": 0.0,
-        "activated_date": None,
-        "deactivated_date": None,
-        # Analysis memory (S-044) — written by record_rating()
-        "last_aeternus_score": None,    # float (0-100) from most recent full analysis
-        "last_aeternus_rating": None,   # str ("Strong Buy", "Buy", "Hold", "Sell", "Strong Sell")
-        "last_scored_date": None,       # ISO date string of last analysis
-        "last_conviction": None,        # int 1-5 confidence from scorer
-        "last_catalyst": None,          # str — key catalyst truncated to 200 chars
-        "score_history": [],            # list of {date, score, rating} — rolling last 10
-        # Execution memory (S-045) — written by set_current_position() and close_position()
-        "current_position": None,       # dict {shares, entry_price, entry_date} or None
-        "last_closed_position": None,   # dict {exit_date, exit_price, realized_return_pct, hold_days} or None
-        # Fundamentals cache (S-046) — written by fundamental_engine.py
-        "fundamentals_snapshot": None,  # dict — cached fundamental metrics
-        "fundamentals_fetched_at": None, # ISO date string — when snapshot was taken
-        "earnings_date_next": None,     # ISO date string — next earnings date (TTL: until date passes)
-        # Outcome weight feedback (S-047) — Hebbian learning
-        "outcome_weight": 1.0,          # float 0.5–2.0, multiplies emergence score
-        "outcome_stats": None,          # dict {n_trades, n_wins, win_rate, avg_return, avg_hold_days}
-        # Cluster detection fields (S-050) — computed by detect_clusters()
-        "cluster_strength": 0.0,          # float 0.0–1.0: (rising_pct × avg_emergence)
-        "cluster_avg_emergence": 0.0,     # float: mean emergence score of company nodes in sector
-        "cluster_rising_count": 0,        # int: nodes with emergence_score >= 0.2 (ATMOSPHERE+)
-        "cluster_total_nodes": 0,         # int: total company nodes in sector
-        "cluster_last_computed": None,    # ISO date string
-        "cluster_candidate": False,       # bool: True if cluster_strength >= threshold AND sector inactive
-        # Theme naming fields (S-050b) — written by name_cluster_theme()
-        "cluster_theme_name": None,                  # str: human-readable theme name ("AI Inference Edge")
-        "cluster_theme_hypothesis": None,            # str: 1-sentence thesis
-        "cluster_theme_named_at": None,              # ISO date string
-        "cluster_theme_strength_at_naming": 0.0,    # float: cluster_strength when named (for re-naming gate)
-        "cluster_theme_is_coincidence": None,        # bool: True if cluster is likely coincidental
-        "cluster_theme_confidence": None,            # float 0-1: thesis confidence
-        "cluster_theme_missing_players": None,       # list of {ticker, reasoning} — potential additions
-        # Perplexity enrichment cache (S-051) — written by scheduler
-        "perplexity_enrichment": None,      # str: enrichment text from sonar
-        "perplexity_enriched_at": None,     # ISO date string
-        # Market ignorance enrichment (S-056) — written by market_ignorance.compute_market_ignorance()
-        "market_ignorance_score_real": None,  # float: real ignorance score (0=known, 1=invisible)
-        "analyst_count": None,                # int: number of sell-side analysts covering
-        "institutional_pct": None,            # float: fraction held by institutions (0.0–1.0)
-        "market_ignorance_cached_at": None,   # ISO date string: when last computed
-        # Breakout discovery fields
-        "breakout_score": None,          # float 0-100: breakout score from scanner
-        "breakout_near_high": None,      # float 0-1: proximity to 52-week high
-        "breakout_vol_ratio": None,      # float: volume ratio vs 60-day baseline
-        "breakout_last_updated": None,   # ISO date string
-        # IV divergence fields (populated by iv_scanner)
-        "iv_implied_move_pct": None,     # float: ATM straddle implied move %
-        "iv_historical_move_pct": None,  # float: avg historical earnings surprise %
-        "iv_divergence": None,           # float: (historical - implied) / implied
-        "iv_signal": None,               # "UNDERPRICED" | "OVERPRICED" | "NEUTRAL" | None
-        "iv_earnings_date": None,        # ISO date of upcoming earnings
-        "iv_scanned_at": None,           # ISO date of last scan
-        # Universe metadata (populated by seeder)
-        "asset_class": None,             # "Equity" | "ETF" | "CommodityProxy" | None
-        "sector_gics": None,             # GICS sector label ("Technology", "Healthcare", etc.)
-        "aliases": [],                   # List[str] — cashtag aliases (["gold", "xau"])
-        "liquidity_score": None,         # float 0-100: percentile of 60-day avg dollar volume
-        "liquidity_cached_at": None,     # ISO date string
-        # S-078: Signal memory slots — one group per signal type
-        # SEC catalyst
-        "signal_sec_catalyst_score": None,       # float 0-100
-        "signal_sec_catalyst_direction": None,   # "bullish" | "bearish"
-        "signal_sec_catalyst_updated": None,     # ISO date string
-        # Insider buying
-        "signal_insider_score": None,            # float 0-100
-        "signal_insider_buyer_count": None,      # int
-        "signal_insider_updated": None,          # ISO date string
-        # Smart money
-        "signal_smart_money_score": None,        # float 0-100
-        "signal_smart_money_direction": None,    # "bullish" | "bearish"
-        "signal_smart_money_updated": None,      # ISO date string
-        # Price momentum
-        "signal_momentum_score": None,           # float 0-100
-        "signal_momentum_rs_spy": None,          # float: relative strength vs SPY
-        "signal_momentum_updated": None,         # ISO date string
-        # Sector rotation
-        "signal_sector_rotation_score": None,    # float 0-100
-        "signal_sector_rotation_updated": None,  # ISO date string
-        # Social / news
-        "signal_social_score": None,             # float 0-100
-        "signal_news_catalyst_score": None,      # float 0-100
-        "signal_social_news_updated": None,      # ISO date string
-        # Value overlay
-        "signal_value_score": None,              # float 0-100
-        "signal_value_updated": None,            # ISO date string
-        # Macro regime
-        "signal_macro_score": None,              # float 0-100
-        "signal_macro_regime_tag": None,         # "risk_on" | "risk_off" | "neutral"
-        "signal_macro_updated": None,            # ISO date string
-    }
+    return node_template(node_id, node_type=node_type, sector=sector, display_name=display_name, metadata=metadata)
 
 
 def _edge_template(source: str, target: str, relationship: str,
                    confidence: float, evidence_source: str) -> dict:
-    return {
-        "source": source,
-        "target": target,
-        "relationship": relationship,
-        "weight": round(min(1.0, max(0.0, confidence)), 6),
-        "evidence_count": 1,
-        "last_confirmed": dt.date.today().isoformat(),
-        "evidence_sources": [evidence_source],
-    }
+    return edge_template(source, target, relationship, confidence, evidence_source)
 
 
 class AeternusKnowledgeGraph:
@@ -2428,15 +2303,9 @@ class AeternusKnowledgeGraph:
 
 
 def _clamp_float(raw, lo: float, hi: float) -> float:
-    try:
-        value = float(raw)
-    except Exception:
-        value = lo
-    return max(lo, min(hi, value))
+    return _template_clamp_float(raw, lo, hi)
 
 
 def _sanitize_filename(name: str) -> str:
     """Replace characters unsafe in filenames."""
-    for ch in r"/\:":
-        name = name.replace(ch, "_")
-    return name
+    return _template_sanitize_filename(name)
