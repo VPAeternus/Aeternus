@@ -19,7 +19,6 @@ Usage:
 """
 
 import datetime as dt
-import json
 import os
 from collections import defaultdict, deque
 from pathlib import Path
@@ -34,7 +33,7 @@ from tradingagents.graph.kg_seed_data import (
     _DEFAULT_KG_PATH,
     _YFINANCE_SECTOR_MAP,
 )
-from tradingagents.graph import kg_rendering
+from tradingagents.graph import kg_rendering, kg_serialization
 from tradingagents.graph.kg_templates import (
     clamp_float as _template_clamp_float,
     edge_template,
@@ -102,62 +101,12 @@ class AeternusKnowledgeGraph:
     @classmethod
     def load(cls, path=None) -> "AeternusKnowledgeGraph":
         """Load from JSON at path. Initialize from seed if file missing."""
-        if path is None:
-            path = _DEFAULT_KG_PATH
-        path = Path(path)
-
-        if not path.exists():
-            g = cls()
-            g._seed()
-            return g
-
-        try:
-            raw = path.read_text(encoding="utf-8")
-        except OSError as e:
-            raise ValueError(f"AKG: cannot read {path}: {e}") from e
-
-        try:
-            g = cls.from_json(raw)
-        except (json.JSONDecodeError, KeyError, TypeError) as e:
-            raise ValueError(f"AKG: malformed JSON at {path}: {e}") from e
-
-        company_nodes = [
-            node for node in g._nodes.values()
-            if node.get("node_type") == "company"
-        ]
-        if not company_nodes or not g._edges:
-            g._seed()
-            g.get_centrality_scores()
-            refreshed_company_nodes = [
-                node for node in g._nodes.values()
-                if node.get("node_type") == "company"
-            ]
-            if refreshed_company_nodes:
-                g.save(path)
-        return g
+        return kg_serialization.load_graph(cls, path, _DEFAULT_KG_PATH)
 
     @classmethod
     def from_json(cls, json_str: str) -> "AeternusKnowledgeGraph":
         """Deserialize from a JSON string. Rebuilds adjacency indexes."""
-        data = json.loads(json_str)
-        g = cls()
-        g._version = data.get("version", 1)
-        g._created_at = data.get("created_at", g._created_at)
-        g._updated_at = data.get("updated_at", g._updated_at)
-        g._nodes = data.get("nodes", {})
-
-        for i, edge in enumerate(data.get("edges", [])):
-            g._edges.append(edge)
-            src = edge["source"]
-            tgt = edge["target"]
-            rel = edge["relationship"]
-            g._adj_out[src].append(i)
-            g._adj_in[tgt].append(i)
-            g._edge_index[(src, tgt, rel)] = i
-
-        g._causal_events = data.get("causal_events", {})
-        g._backfill_node_defaults()
-        return g
+        return kg_serialization.graph_from_json(cls, json_str)
 
     # ------------------------------------------------------------------
     # Persistence
@@ -165,33 +114,14 @@ class AeternusKnowledgeGraph:
 
     def to_json(self, path=None) -> str:
         """Serialize to JSON string; optionally write to path atomically."""
-        self._updated_at = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
-        payload = {
-            "version": self._version,
-            "created_at": self._created_at,
-            "updated_at": self._updated_at,
-            "nodes": self._nodes,
-            "edges": self._edges,
-            "causal_events": self._causal_events,
-        }
-        json_str = json.dumps(payload, indent=2, ensure_ascii=False)
-        if path is not None:
-            self._atomic_write(Path(path), json_str)
-        return json_str
+        return kg_serialization.graph_to_json(self, path)
 
     def save(self, path=None) -> None:
         """Atomic write to path (default: eval_results/control/knowledge_graph.json)."""
-        if path is None:
-            path = _DEFAULT_KG_PATH
-        path = Path(path)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        json_str = self.to_json()  # updates _updated_at
-        self._atomic_write(path, json_str)
+        kg_serialization.save_graph(self, path, _DEFAULT_KG_PATH)
 
     def _atomic_write(self, path: Path, content: str) -> None:
-        tmp_path = path.with_suffix(".tmp")
-        tmp_path.write_text(content, encoding="utf-8")
-        os.replace(str(tmp_path), str(path))
+        kg_serialization.atomic_write(path, content)
 
     # ------------------------------------------------------------------
     # Node operations
