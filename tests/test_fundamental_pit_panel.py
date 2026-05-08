@@ -4,6 +4,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 from tradingagents.research.fundamental.backtests.pit_panel import (
     FORBIDDEN_SELECTION_COLUMNS,
     OUTCOME_LABEL_COLUMNS,
@@ -51,64 +53,68 @@ def test_forbidden_label_columns_not_in_selection_schema(tmp_path):
     assert schema["forbidden_overlap"] == []
 
 
-def test_winner_loser_labels_derive_from_return_90d_pct(tmp_path):
+def test_invalid_as_of_date_fails_fast(tmp_path):
     input_csv = tmp_path / "scores.csv"
-    _write_csv(
-        input_csv,
+    _write_csv(input_csv, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2099-01-05", "entry_open": "10", "return_90d_pct": "10"}])
+
+    with pytest.raises(ValueError, match="Invalid --as-of-date"):
+        build_pit_panel([input_csv], tmp_path / "out", as_of_date="not-a-date")
+
+
+def test_cli_invalid_as_of_date_exits_cleanly(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(input_csv, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2099-01-05", "entry_open": "10", "return_90d_pct": "10"}])
+
+    result = subprocess.run(
         [
-            {"ticker": "WIN", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "30"},
-            {"ticker": "LOSE", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "-30"},
-            {"ticker": "MID", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "5"},
+            sys.executable,
+            "-m",
+            "tradingagents.research.fundamental.backtests.pit_panel",
+            str(input_csv),
+            "--output-dir",
+            str(tmp_path / "out"),
+            "--as-of-date",
+            "bogus",
         ],
+        capture_output=True,
+        text=True,
     )
 
-    out = tmp_path / "out"
-    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
-
-    by_ticker = {r["ticker"]: r for r in _read_panel(out / "pit_fundamental_panel.csv")}
-    assert by_ticker["WIN"]["winner_90d_30pct"] == "True"
-    assert by_ticker["WIN"]["loser_90d_minus30pct"] == "False"
-    assert by_ticker["LOSE"]["winner_90d_30pct"] == "False"
-    assert by_ticker["LOSE"]["loser_90d_minus30pct"] == "True"
-    assert by_ticker["MID"]["winner_90d_30pct"] == "False"
-    assert by_ticker["MID"]["loser_90d_minus30pct"] == "False"
+    assert result.returncode == 2
+    assert "Invalid --as-of-date" in result.stderr
+    assert "Traceback" not in result.stderr
 
 
-def test_future_date_anomaly_and_eligibility_behavior(tmp_path):
-    input_csv = tmp_path / "scores.csv"
-    _write_csv(
-        input_csv,
+def test_no_header_csv_errors_by_default(tmp_path):
+    input_csv = tmp_path / "empty.csv"
+    input_csv.write_text("", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="no header row"):
+        build_pit_panel([input_csv], tmp_path / "out", as_of_date="2026-01-06")
+
+
+def test_cli_no_header_csv_exits_cleanly(tmp_path):
+    input_csv = tmp_path / "empty.csv"
+    input_csv.write_text("", encoding="utf-8")
+
+    result = subprocess.run(
         [
-            {"ticker": "FUT", "quarter": "2025Q4", "tradable_date": "2026-01-07", "entry_open": "10", "return_90d_pct": "40"},
-            {"ticker": "MISS", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "", "return_90d_pct": "40"},
-            {"ticker": "NOLABEL", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10"},
-            {"ticker": "OK", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "40"},
+            sys.executable,
+            "-m",
+            "tradingagents.research.fundamental.backtests.pit_panel",
+            str(input_csv),
+            "--output-dir",
+            str(tmp_path / "out"),
+            "--as-of-date",
+            "2026-01-06",
         ],
+        capture_output=True,
+        text=True,
     )
 
-    out = tmp_path / "out"
-    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
-
-    by_ticker = {r["ticker"]: r for r in _read_panel(out / "pit_fundamental_panel.csv")}
-    assert by_ticker["FUT"]["is_future_date_anomaly"] == "True"
-    assert by_ticker["FUT"]["eligible_for_backtest"] == "False"
-    assert by_ticker["MISS"]["eligible_for_backtest"] == "False"
-    assert by_ticker["NOLABEL"]["eligible_for_backtest"] == "False"
-    assert by_ticker["OK"]["eligible_for_backtest"] == "True"
-
-
-def test_manifest_includes_input_hashes_and_missing_fields(tmp_path):
-    input_csv = tmp_path / "scores.csv"
-    _write_csv(input_csv, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"}])
-
-    out = tmp_path / "out"
-    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
-
-    manifest = json.loads((out / "run_manifest.json").read_text())
-    assert manifest["input_files"][0]["path"] == str(input_csv)
-    assert len(manifest["input_files"][0]["sha256"]) == 64
-    assert "entry_qoq_pct" in manifest["missing_selection_fields_by_source"][str(input_csv)]
-    assert "return_10d_pct" in manifest["missing_label_fields_by_source"][str(input_csv)]
+    assert result.returncode == 2
+    assert "no header row" in result.stderr
+    assert "Traceback" not in result.stderr
 
 
 def test_header_only_csv_preserves_manifest_fieldnames(tmp_path):
@@ -127,6 +133,64 @@ def test_header_only_csv_preserves_manifest_fieldnames(tmp_path):
     assert "entry_open" not in missing_selection
     assert "return_90d_pct" not in missing_labels
     assert manifest["input_files"][0]["row_count"] == 0
+
+
+def test_future_date_anomaly_and_eligibility_behavior(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(
+        input_csv,
+        [
+            {"ticker": "FUT", "quarter": "2025Q4", "tradable_date": "2026-01-07", "entry_open": "10", "return_90d_pct": "40"},
+            {"ticker": "OK", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "40"},
+        ],
+    )
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    by_ticker = {r["ticker"]: r for r in _read_panel(out / "pit_fundamental_panel.csv")}
+    assert by_ticker["FUT"]["is_future_date_anomaly"] == "True"
+    assert by_ticker["FUT"]["eligible_for_backtest"] == "False"
+    assert by_ticker["OK"]["eligible_for_backtest"] == "True"
+
+
+def test_winner_loser_labels_derive_from_return_90d_pct(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(
+        input_csv,
+        [
+            {"ticker": "WIN", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "30"},
+            {"ticker": "LOSE", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "-30"},
+            {"ticker": "MID", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "5"},
+        ],
+    )
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    by_ticker = {r["ticker"]: r for r in _read_panel(out / "pit_fundamental_panel.csv")}
+    assert by_ticker["WIN"]["winner_90d_30pct"] == "True"
+    assert by_ticker["LOSE"]["loser_90d_minus30pct"] == "True"
+    assert by_ticker["MID"]["winner_90d_30pct"] == "False"
+    assert by_ticker["MID"]["loser_90d_minus30pct"] == "False"
+
+
+def test_manifest_includes_hashes_versions_and_missing_fields(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(input_csv, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"}])
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    manifest = json.loads((out / "run_manifest.json").read_text())
+    assert manifest["panel_version"] == "fundamental_pit_panel_v1"
+    assert manifest["schema_version"] == "fundamental_pit_schema_v1"
+    assert manifest["input_files"][0]["path"] == str(input_csv)
+    assert len(manifest["input_files"][0]["sha256"]) == 64
+    assert {p["path"] for p in manifest["output_files"]} == {str(out / name) for name in {"pit_fundamental_panel.csv", "feature_schema.json", "label_schema.json", "README_ANALYSIS.md"}}
+    assert all(len(p["sha256"]) == 64 for p in manifest["output_files"])
+    assert "entry_qoq_pct" in manifest["missing_selection_fields_by_source"][str(input_csv)]
+    assert "return_10d_pct" in manifest["missing_label_fields_by_source"][str(input_csv)]
 
 
 def test_module_cli_smoke_writes_exact_sidecars(tmp_path):
@@ -194,10 +258,10 @@ def test_missing_required_eligibility_fields_are_not_backtest_eligible(tmp_path)
     _write_csv(
         input_csv,
         [
-            {"ticker": "", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10", "case": "missing_ticker"},
-            {"ticker": "MISSQ", "quarter": "", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10", "case": "missing_quarter"},
-            {"ticker": "MISSD", "quarter": "2025Q4", "tradable_date": "", "entry_open": "10", "return_90d_pct": "10", "case": "missing_date"},
-            {"ticker": "MISSO", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "", "return_90d_pct": "10", "case": "missing_open"},
+            {"ticker": "", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"},
+            {"ticker": "MISSQ", "quarter": "", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"},
+            {"ticker": "MISSD", "quarter": "2025Q4", "tradable_date": "", "entry_open": "10", "return_90d_pct": "10"},
+            {"ticker": "MISSO", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "", "return_90d_pct": "10"},
         ],
     )
 

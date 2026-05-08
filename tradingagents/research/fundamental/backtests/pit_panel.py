@@ -10,10 +10,14 @@ import argparse
 import csv
 import hashlib
 import json
+import sys
 from datetime import date, datetime
 from pathlib import Path
 from typing import Any, Iterable
 from uuid import uuid4
+
+PANEL_VERSION = "fundamental_pit_panel_v1"
+SCHEMA_VERSION = "fundamental_pit_schema_v1"
 
 SELECTION_FEATURE_COLUMNS = [
     "ticker",
@@ -147,6 +151,17 @@ def _parse_date(value: Any) -> date | None:
         return None
 
 
+def _parse_required_as_of_date(value: str | date | None) -> date:
+    if isinstance(value, date):
+        return value
+    if value is None or str(value).strip() == "":
+        return date.today()
+    parsed = _parse_date(value)
+    if parsed is None:
+        raise ValueError(f"Invalid --as-of-date {value!r}; expected YYYY-MM-DD")
+    return parsed
+
+
 def _float_or_none(value: Any) -> float | None:
     text = str(value or "").strip()
     if text == "":
@@ -164,8 +179,10 @@ def _bool_text(value: bool) -> str:
 def _read_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
     with path.open(newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh)
+        if reader.fieldnames is None:
+            raise ValueError(f"Input CSV has no header row: {path}")
         rows = list(reader)
-        return rows, list(reader.fieldnames or [])
+        return rows, list(reader.fieldnames)
 
 
 def _write_csv(path: Path, rows: list[dict[str, Any]], columns: list[str]) -> None:
@@ -177,6 +194,7 @@ def _write_csv(path: Path, rows: list[dict[str, Any]], columns: list[str]) -> No
 
 def _schema(columns: Iterable[str], missing: dict[str, list[str]]) -> dict[str, Any]:
     return {
+        "schema_version": SCHEMA_VERSION,
         "columns": list(columns),
         "missing_fields_by_source": missing,
         "guardrail": "Outcome labels are excluded from selection features.",
@@ -198,7 +216,7 @@ def build_pit_panel(
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
     run_id = pipeline_run_id or f"pit-{uuid4()}"
-    cutoff = as_of_date if isinstance(as_of_date, date) else _parse_date(as_of_date) if as_of_date else date.today()
+    cutoff = _parse_required_as_of_date(as_of_date)
 
     rows: list[dict[str, Any]] = []
     missing_selection: dict[str, list[str]] = {}
@@ -221,7 +239,7 @@ def build_pit_panel(
             row.update({c: raw.get(c, "") for c in METADATA_COLUMNS})
 
             tradable = _parse_date(row.get("tradable_date"))
-            is_future = bool(tradable and cutoff and tradable > cutoff)
+            is_future = bool(tradable and tradable > cutoff)
             ret90 = _float_or_none(row.get("return_90d_pct"))
             row["winner_90d_30pct"] = _bool_text(ret90 is not None and ret90 >= 30.0)
             row["loser_90d_minus30pct"] = _bool_text(ret90 is not None and ret90 <= -30.0)
@@ -242,11 +260,22 @@ def build_pit_panel(
     feature_schema["forbidden_overlap"] = sorted(set(SELECTION_FEATURE_COLUMNS) & FORBIDDEN_SELECTION_COLUMNS)
     label_schema["derived_labels"] = {"winner_90d_30pct": "return_90d_pct >= 30", "loser_90d_minus30pct": "return_90d_pct <= -30"}
 
+    feature_path = out / "feature_schema.json"
+    label_path = out / "label_schema.json"
+    readme_path = out / "README_ANALYSIS.md"
+    feature_path.write_text(json.dumps(feature_schema, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    label_path.write_text(json.dumps(label_schema, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    readme_path.write_text(_readme(), encoding="utf-8")
+
+    output_files = [panel_path, feature_path, label_path, readme_path]
     manifest = {
         "pipeline_run_id": run_id,
-        "as_of_date": cutoff.isoformat() if cutoff else None,
+        "panel_version": PANEL_VERSION,
+        "schema_version": SCHEMA_VERSION,
+        "as_of_date": cutoff.isoformat(),
         "row_count": len(rows),
         "input_files": input_manifest,
+        "output_files": [{"path": str(path), "sha256": _file_sha256(path)} for path in output_files],
         "missing_selection_fields_by_source": missing_selection,
         "missing_label_fields_by_source": missing_labels,
         "missing_metadata_fields_by_source": missing_metadata,
@@ -256,10 +285,7 @@ def build_pit_panel(
         "forbidden_selection_columns": sorted(FORBIDDEN_SELECTION_COLUMNS),
     }
 
-    (out / "feature_schema.json").write_text(json.dumps(feature_schema, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    (out / "label_schema.json").write_text(json.dumps(label_schema, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (out / "run_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    (out / "README_ANALYSIS.md").write_text(_readme(), encoding="utf-8")
     return manifest
 
 
@@ -286,7 +312,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--as-of-date", default=None, help="Run/as-of date for future-date anomaly checks")
     parser.add_argument("--pipeline-run-id", default=None)
     args = parser.parse_args(argv)
-    manifest = build_pit_panel(args.input_csvs, args.output_dir, args.as_of_date, args.pipeline_run_id)
+    try:
+        manifest = build_pit_panel(args.input_csvs, args.output_dir, args.as_of_date, args.pipeline_run_id)
+    except ValueError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
     print(json.dumps({"row_count": manifest["row_count"], "output_dir": args.output_dir}, sort_keys=True))
     return 0
 
