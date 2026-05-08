@@ -1,0 +1,139 @@
+{
+  "manifest_version": "fundamental_backtest_handoff_v1",
+  "created_at": "2026-05-08",
+  "source_input": {
+    "path": "tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv",
+    "sha256": "d4e372fc03381721028e8c3bc98c3e12958c9110874736f434a70cc9f2b9975b",
+    "row_count": 22304
+  },
+  "preflight_audit": {
+    "row_count": 22304,
+    "ticker_count": 1279,
+    "quarter_count": 19,
+    "observed_quarter_min": "2021Q4",
+    "observed_quarter_max": "2026Q2",
+    "non_empty_return_90d_pct_count": 21182,
+    "duplicate_quarter_ticker_count": 0,
+    "missing_required_source_columns": []
+  },
+  "provenance_caveats": [
+    "Source filename says 2021Q4_2026Q1_partial, but observed_quarter_max is 2026Q2; all observed rows through 2026Q2 were included."
+  ],
+  "warnings": [
+    "Outcome labels are diagnostic only and excluded from selection.",
+    "Return labels, monitoring scores, final score, and rank score are not used for selection."
+  ],
+  "row_counts": {
+    "pit_fundamental_panel": 22304,
+    "selected_names_by_quarter": 519,
+    "strategy_by_quarter": 54,
+    "strategy_summary": 3,
+    "variant_summary": 3,
+    "misses_analysis": 1080,
+    "theme_bucket_summary": 47,
+    "rm_hp_tier_contribution": 21
+  },
+  "eligible_row_counts": {
+    "pit_eligible_for_backtest": 21182,
+    "top10_input_eligible_rows": 21182
+  },
+  "variant_pick_counts": {
+    "entry_score_top10": 173,
+    "high_conviction_top10_v1": 173,
+    "high_conviction_top10_v2_final": 173
+  },
+  "missing_pit_fields": {
+    "selection_fields": [
+      "theme_acceleration_score",
+      "theme_acceleration_research_visibility",
+      "theme_acceleration_rescan_flag",
+      "akg_universe_tier",
+      "macro_mode",
+      "macro_spy",
+      "macro_entry_action",
+      "macro_position_size_multiplier"
+    ],
+    "label_fields": [
+      "is_partial_live_quarter"
+    ],
+    "metadata_fields": [
+      "scoring_formula_version",
+      "tier_rule_version",
+      "hp_rule_version",
+      "rm_rule_version",
+      "theme_rule_version",
+      "macro_rule_version"
+    ]
+  },
+  "output_files": [
+    {
+      "path": "outputs/fundamental_backtest/pit_fundamental_panel.csv",
+      "sha256": "c5020b5f1680bb8cb9f1d927188ab246a9c4f37c2fc70a8029abe82639705219",
+      "row_count": 22304
+    },
+    {
+      "path": "outputs/fundamental_backtest/feature_schema.json",
+      "sha256": "a65a6e9eb1edc49360e3d8b52918dadf8ee6f6b6f4bc0d3cffe708e845ffee92"
+    },
+    {
+      "path": "outputs/fundamental_backtest/label_schema.json",
+      "sha256": "817ace410433e085049cf81df6b8bc56139f08e439525d565e5f1fbdc110a0c1"
+    },
+    {
+      "path": "outputs/fundamental_backtest/run_manifest.json",
+      "sha256": "17f9d0cdba923d6cc5045179123a46501c0b608372c81763789b1f6dcd33e2d1"
+    },
+    {
+      "path": "outputs/fundamental_backtest/README_ANALYSIS.md",
+      "sha256": "bb13bae9a63946c734ed0c72f813d3407309772aa64d31688c70c2276aa3a0d1"
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/selected_names_by_quarter.csv",
+      "sha256": "8ffaa892de52b312132c4743eeb435de96ae1110e091342c12988181e08ebfd3",
+      "row_count": 519
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/strategy_by_quarter.csv",
+      "sha256": "d5402157a4ed7f03444b5a009227fa3835715dc4bc2cea738224500b3912b74d",
+      "row_count": 54
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/strategy_summary.csv",
+      "sha256": "a0e665ccf84b37ccecf900ee1d69de7b0d4cf72e982dcb22d24af300628c2ab5",
+      "row_count": 3
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/variant_summary.csv",
+      "sha256": "e1fe08382aed5f87596ec52741a4c666fc5527fc41b0036496e7f0489df655f8",
+      "row_count": 3
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/misses_analysis.csv",
+      "sha256": "c4e9471a4db8130bce961e0561f697f757b31cd3b0a8a3e162f07dd22c230d6d",
+      "row_count": 1080
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/theme_bucket_summary.csv",
+      "sha256": "d0100ab38ff3d5db1ad599d6d463b1aa15005e9a4a48e110ff5544843ce697ab",
+      "row_count": 47
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/rm_hp_tier_contribution.csv",
+      "sha256": "da41ee97ff9129368d0749b0c6bf6353da0b215264768bf68af64c2a8882b66e",
+      "row_count": 21
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/run_manifest.json",
+      "sha256": "48f98ef6b9878a2a4550820dcd9301ae9dadf5a8db02041505f6364b36f78330"
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top10/README_ANALYSIS.md",
+      "sha256": "84279aa513537eb886dd84145b741a2cfe83d9cd9c8d1c955d2b7948bca24943"
+    },
+    {
+      "path": "outputs/fundamental_backtest/ANALYST_README.md",
+      "sha256": "fb9f52302160899b64d077a2a22aae388db466cdddca72c4ecd23b8fab56e9bb"
+    }
+  ],
+  "manifest_hash_note": "HANDOFF_MANIFEST.json is excluded from output_files hashes to avoid self-referential stale hashes."
+}

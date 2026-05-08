@@ -1,0 +1,25 @@
+{
+  "columns": [
+    "return_10d_pct",
+    "return_20d_pct",
+    "return_30d_pct",
+    "return_60d_pct",
+    "return_90d_pct",
+    "winner_90d_30pct",
+    "loser_90d_minus30pct",
+    "is_partial_live_quarter",
+    "is_future_date_anomaly",
+    "eligible_for_backtest"
+  ],
+  "derived_labels": {
+    "loser_90d_minus30pct": "return_90d_pct <= -30",
+    "winner_90d_30pct": "return_90d_pct >= 30"
+  },
+  "guardrail": "Outcome labels are excluded from selection features.",
+  "missing_fields_by_source": {
+    "tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv": [
+      "is_partial_live_quarter"
+    ]
+  },
+  "schema_version": "fundamental_pit_schema_v1"
+}

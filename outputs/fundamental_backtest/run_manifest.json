@@ -1,0 +1,164 @@
+{
+  "as_of_date": "2026-05-11",
+  "forbidden_selection_columns": [
+    "eligible_for_backtest",
+    "forward_return_pct",
+    "future_return_pct",
+    "is_future_date_anomaly",
+    "is_partial_live_quarter",
+    "label",
+    "loser_90d_minus30pct",
+    "max_forward_return_pct",
+    "return_10d_pct",
+    "return_20d_pct",
+    "return_30d_pct",
+    "return_60d_pct",
+    "return_90d_pct",
+    "target",
+    "winner_90d_30pct"
+  ],
+  "input_files": [
+    {
+      "path": "tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv",
+      "row_count": 22304,
+      "sha256": "d4e372fc03381721028e8c3bc98c3e12958c9110874736f434a70cc9f2b9975b"
+    }
+  ],
+  "metadata_columns": [
+    "pipeline_run_id",
+    "scoring_formula_version",
+    "tier_rule_version",
+    "hp_rule_version",
+    "rm_rule_version",
+    "theme_rule_version",
+    "macro_rule_version",
+    "source_file_hash"
+  ],
+  "missing_label_fields_by_source": {
+    "tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv": [
+      "is_partial_live_quarter"
+    ]
+  },
+  "missing_metadata_fields_by_source": {
+    "tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv": [
+      "scoring_formula_version",
+      "tier_rule_version",
+      "hp_rule_version",
+      "rm_rule_version",
+      "theme_rule_version",
+      "macro_rule_version"
+    ]
+  },
+  "missing_selection_fields_by_source": {
+    "tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv": [
+      "theme_acceleration_score",
+      "theme_acceleration_research_visibility",
+      "theme_acceleration_rescan_flag",
+      "akg_universe_tier",
+      "macro_mode",
+      "macro_spy",
+      "macro_entry_action",
+      "macro_position_size_multiplier"
+    ]
+  },
+  "outcome_label_columns": [
+    "return_10d_pct",
+    "return_20d_pct",
+    "return_30d_pct",
+    "return_60d_pct",
+    "return_90d_pct",
+    "winner_90d_30pct",
+    "loser_90d_minus30pct",
+    "is_partial_live_quarter",
+    "is_future_date_anomaly",
+    "eligible_for_backtest"
+  ],
+  "output_files": [
+    {
+      "path": "outputs/fundamental_backtest/pit_fundamental_panel.csv",
+      "sha256": "c5020b5f1680bb8cb9f1d927188ab246a9c4f37c2fc70a8029abe82639705219"
+    },
+    {
+      "path": "outputs/fundamental_backtest/feature_schema.json",
+      "sha256": "a65a6e9eb1edc49360e3d8b52918dadf8ee6f6b6f4bc0d3cffe708e845ffee92"
+    },
+    {
+      "path": "outputs/fundamental_backtest/label_schema.json",
+      "sha256": "817ace410433e085049cf81df6b8bc56139f08e439525d565e5f1fbdc110a0c1"
+    },
+    {
+      "path": "outputs/fundamental_backtest/README_ANALYSIS.md",
+      "sha256": "bb13bae9a63946c734ed0c72f813d3407309772aa64d31688c70c2276aa3a0d1"
+    }
+  ],
+  "panel_version": "fundamental_pit_panel_v1",
+  "pipeline_run_id": "historical-combined-observed-2021Q4-2026Q2",
+  "row_count": 22304,
+  "schema_version": "fundamental_pit_schema_v1",
+  "selection_feature_columns": [
+    "ticker",
+    "quarter",
+    "tradable_date",
+    "entry_open",
+    "entry_qoq_pct",
+    "prior_entry_qoq_pct",
+    "score_change",
+    "pre_llm_fundamental_score",
+    "pre_llm_fundamental_bucket",
+    "revenue_bucket",
+    "tier_0_bucket",
+    "tier_1_bucket",
+    "tier_2_bucket",
+    "tier_3_bucket",
+    "tier_4_bucket",
+    "hp0_high_price_broad",
+    "hp1_quality_pullback",
+    "hp2_dislocation_momentum_priority",
+    "hp2_dislocation_momentum_watch",
+    "hp3_large_quality_theme_exception",
+    "hp4_score_reacceleration_watch",
+    "hp_production_extension",
+    "hp_research_extension",
+    "hp_LLM_best",
+    "rm1_low_price_dislocation_momentum",
+    "rm2_weak_acceleration",
+    "rm3_mid_price_dislocation_momentum",
+    "rm4_persistent_repricing_wave",
+    "repricing_momentum_extension",
+    "repricing_momentum_priority",
+    "market_repricing_score",
+    "rm_buy_review_flag",
+    "post_llm_candidate_flag",
+    "post_llm_high_priority_flag",
+    "post_llm_demote_flag",
+    "causal_change",
+    "negative_revision_risk",
+    "narrative_delta_bucket",
+    "operating_leverage_quality",
+    "durability",
+    "score_addition",
+    "primary_theme",
+    "secondary_themes",
+    "theme_role",
+    "theme_confidence",
+    "theme_driver_type",
+    "theme_momentum",
+    "theme_acceleration_score",
+    "theme_tailwind_score",
+    "theme_acceleration_research_visibility",
+    "theme_acceleration_rescan_flag",
+    "akg_universe_tier",
+    "macro_mode",
+    "macro_spy",
+    "macro_entry_action",
+    "macro_position_size_multiplier",
+    "tier_structure_score",
+    "hp_structure_score",
+    "total_structure_score",
+    "llm_business_improvement_score",
+    "fundamental_rerating_score",
+    "risk_penalty_score",
+    "entry_raw_score",
+    "entry_score_0_100"
+  ]
+}
