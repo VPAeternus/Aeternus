@@ -27,6 +27,9 @@ CSV_FIELDS = [
     "narrative_delta_score",
     "narrative_delta_bucket",
     "score_addition",
+    "post_llm_candidate_flag",
+    "post_llm_high_priority_flag",
+    "post_llm_demote_flag",
     "detected_driver_category",
     "detected_driver_name",
     "evidence_positive",
@@ -124,8 +127,12 @@ def result_schema() -> dict[str, Any]:
             "theme_driver_summary": {"type": "string"},
             "theme_evidence_summary": {"type": "string"},
         },
-        "required": CSV_FIELDS,
+        # Structured-output schemas require `required` to match declared properties.
+        # Post-LLM flags are deterministic derived fields added after validation,
+        # so they are intentionally not requested from the model.
+        "required": [],
     }
+    item["required"] = list(item["properties"].keys())
     return {"type": "object", "additionalProperties": False, "properties": {"results": {"type": "array", "items": item}}, "required": ["results"]}
 
 
@@ -245,6 +252,9 @@ def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict
             "narrative_delta_score": score,
             "narrative_delta_bucket": bucket,
             "score_addition": _score_addition_for(bucket, risk),
+            "post_llm_candidate_flag": int(bucket in {"inflecting", "constructive"} and risk <= 3),
+            "post_llm_high_priority_flag": int(score >= 7 and proof >= 3 and op_leverage >= 2 and risk <= 2),
+            "post_llm_demote_flag": int(risk >= 4 or gap >= 2 or bucket == "deteriorating"),
             "confidence": confidence,
             "primary_theme": clean(payload.get("primary_theme")),
             "secondary_themes": json.dumps([clean(item) for item in secondary if clean(item)], ensure_ascii=True),
@@ -356,11 +366,25 @@ def run_llm_batches(
     return written
 
 
+def _ensure_post_llm_flags(row: dict[str, Any]) -> dict[str, Any]:
+    out = dict(row)
+    risk = _optional_int_field(out, "negative_revision_risk", 0, 5)
+    gap = _optional_int_field(out, "story_vs_numbers_gap_penalty", 0, 3)
+    score = _optional_int_field(out, "narrative_delta_score", -5, 10)
+    proof = _optional_int_field(out, "proof_alignment", 0, 3)
+    op_leverage = _optional_int_field(out, "operating_leverage_quality", 0, 2)
+    bucket = clean(out.get("narrative_delta_bucket"))
+    out.setdefault("post_llm_candidate_flag", int(bucket in {"inflecting", "constructive"} and risk <= 3))
+    out.setdefault("post_llm_high_priority_flag", int(score >= 7 and proof >= 3 and op_leverage >= 2 and risk <= 2))
+    out.setdefault("post_llm_demote_flag", int(risk >= 4 or gap >= 2 or bucket == "deteriorating"))
+    return out
+
+
 def write_consolidated_csv(output_dir: Path, output_csv: Path) -> Path:
     rows: list[dict[str, Any]] = []
     for path in sorted(output_dir.glob("batch_*.json")):
         if re.fullmatch(r"batch_\d{4}\.json", path.name):
-            rows.extend(json.loads(path.read_text(encoding="utf-8")))
+            rows.extend(_ensure_post_llm_flags(row) for row in json.loads(path.read_text(encoding="utf-8")))
     output_csv.parent.mkdir(parents=True, exist_ok=True)
     with output_csv.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS, extrasaction="ignore")

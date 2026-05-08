@@ -9,6 +9,37 @@ from src.reporting.daily_report import write_daily_reports
 from src.storage import read_table, write_table
 
 
+def test_run_quarter_normalizes_float_cik_from_csv(tmp_path: Path):
+    universe = tmp_path / "universe.csv"
+    universe.write_text("ticker,quarter,cik\nABC,2026Q1,1109116.0\n", encoding="utf-8")
+    calls = []
+
+    class FakeClient:
+        def submissions(self, cik):
+            calls.append(cik)
+            return {"filings": {"recent": {"form": [], "filingDate": [], "reportDate": [], "accessionNumber": [], "items": [], "primaryDocument": [], "acceptanceDateTime": []}}}
+
+        def companyfacts(self, cik):
+            return {"facts": {}}
+
+    import src.pipeline.run_quarter as rq
+    original = rq.SecClient
+    rq.SecClient = lambda: FakeClient()
+    try:
+        run_quarter_pipeline(
+            quarter="2026Q1",
+            universe_path=universe,
+            as_of="2026-05-02",
+            lake_root=tmp_path / "lake",
+            skip_llm=True,
+            skip_price_fetch=True,
+        )
+    finally:
+        rq.SecClient = original
+
+    assert calls == ["1109116"]
+
+
 def test_fake_quarter_end_to_end_no_network_no_llm(tmp_path: Path):
     universe = tmp_path / "universe.csv"
     universe.write_text(

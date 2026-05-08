@@ -1,10 +1,18 @@
 # Current Session State
 
 **Branch:** `feature/opus46`
-**Last updated:** 2026-05-06T08:28:16-04:00
+**Last updated:** 2026-05-08T08:31:39-04:00
 **Status:** Discovery Delta v1 and Evidence Integrity v1 are operator-visible and review-measurable; Shortlist Integrity v1, Deep Selection Integrity v1, and Research Conversion Integrity v1 are live as read-only Step 3/4/5 artifacts; first-principles strategy gate exists as a reusable skill with an Aeternus worked example and memo; V3 benchmark contract is same-window/config-driven/return-based in track-record and conservatively enforced in portfolio admission; Fundamental Pillar Autoresearch Harness v1 now includes cache-first SEC raw payloads, SEC-official ticker→CIK resolution with cached fallback, historical 2009+ filing snapshot backfill, market-return attachment, deterministic constrained/autoresearch evaluation, a registry-backed signal promotion layer, and a live registry-driven `fundamental_factor_shadow` adapter wired through the dealflow pipeline as a shadow-only signal family; manual X-feed is now a first-class workflow preflight for manual-mode workflow runs and now also serves as the only live `social_news` source, with Theme Emergence Graph v1 preserving per-pass evidence and account/ticker/theme/co-mention edges instead of destructive ticker overwrites; the Yahoo-finance `earnings_iv` collector path and old `earnings-scan` CLI surface are removed from active dealflow behavior; deep analysis no longer defaults to the provider-aware analyst bridge: it now defaults to a session-style top-level research engine that mirrors the simple Claude path (one provider run over one computation packet, then Python scoring/report writing), while the old LangGraph/bridge stack remains available behind `research_execution_mode=codex_bridge`; the GPT/Codex bridge issues remain known legacy-path blockers, but the new default session engine has already passed live smoke runs for `BATL` and a bounded `analyze-batch` run for `RLMD` on `2026-03-10`; workflow runs now have a fail-open learning phase that attempts hindsight/performance/writeback every cycle, persists `learning_status.json`, writes normalized `source_attribution.json`, and can reinforce simple observed `co_mentioned` AKG edges from manual X-feed evidence without blocking the rest of the run; the MiroFish-inspired next slice is now approved as a Python-first `Question Compiler` chat backend for manual investigation queries, with no required Zep integration, bounded/optional LLM usage, and a frontend-ready investigation response contract; operator gateway now includes a MissionControl scaffold that maps end-to-end pipeline stages plus scout inventory/prompt/ingest APIs for manual Grok workflows; `question-investigate` now emits stage-native miss metadata and now has authoritative write-time stage-drop metadata persisted in hypothesis-ledger rows (`dropped_symbols_metadata_path`) for universe/evidence/shortlist/deep-selection cuts; watchlist CLI is now intentionally reduced to a ticker feed surface (`add/remove/list`) with minimal persisted schema (`symbol`, `created_at`, `active`, `context_snapshot`), AKG-backed internal context enrichment on add, and support for multi-symbol add/remove in both quoted and unquoted shell forms; `x-feed --run-browser` now targets the user's existing logged-in Chrome window via AppleScript + Chrome JS + clipboard/System Events instead of fresh browser-use windows, uses the current front Grok tab if the active tab is already `https://grok.com...`, otherwise opens a new Grok tab only in the current front Chrome window, and no longer scans/reuses arbitrary background Grok tabs; readiness remains tolerant of real Grok conversation titles/composer counts; the isolated pass-1 xAI API probe has been removed and manual Grok generate/paste/ingest remains the intended operator path; standalone `recall` CLI commands now expose FVG and FMA recall channels outside the pipeline with table explanations and JSON artifact output; `recall fvg <SYMBOL>` and `recall fma <SYMBOL>` now provide readable per-stock pass/fail explanations with metrics and threshold checks; `recall performance` now provides an investor-facing historical signal-study scorecard using saved or refreshed FVG/FMA backtest summaries; canonical investor-facing backtest universes are now `semis_ai`, `qqq_top20`, and `spy_top20`, and `recall performance --multi` produces a broad benchmark-comparison table across all three; CC Overbought is now explicitly treated as a stock-only engine in code/docs/CLI wording and returns no signal for index ETFs (`QQQ`, `SPY`, `IWM`); added a standalone Pi extension artifact set for a conservative model-router v2 is now installed globally under `~/.pi/agent/extensions/model-router-v2/` with weighted route scoring, fallback chains, manual lock behavior, persisted `autoRoutingEnabled`, Node-runner tests for core policy helpers, global config at `~/.pi/agent/model-router.json`, and a fixed directory-based extension layout so Pi no longer misloads helper modules as top-level extension factories
 
 **Daily runbook:** `docs/research/aeternus-daily-pipeline-debug-runbook.md` is now the canonical start-of-run checklist and debug order for the full daily pipeline.
+
+**Current note:** Fundamental SEC cleanup/audit completed for `eval_results/fundamental/2026-05-07_full` and `2026-05-08_xfeed_sec_test`. Source-of-truth SEC pipeline logic now lives under `tradingagents/research/fundamental/src/sec_pipeline/`, including promoted `cache_coverage_manifest.py` and `cleanup_audit.py`; run-folder `sec_*.py` files are thin wrappers only. Each run has `sec_reproducibility_manifest.json` and `sec_cleanup_manifest.json`; immutable artifacts and SQLite sidecars were kept. Verification: `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_sec_pipeline_cleanup_audit.py -q` -> `5 passed`.
+
+**Current note:** Dealflow collect now writes a single authoritative deduped ticker handoff for downstream/fundamental research: `eval_results/deal_flow/<date>/final_dealflow_tickers.json` and `.txt`, plus latest pointers under `eval_results/deal_flow/latest_final_dealflow_tickers.*`. Contract is `AUTHORITATIVE_DEALFLOW_TICKER_HANDOFF_V1`; source is the full `all_scored_candidates` dealflow universe, not the narrowed deep-research queue. It preserves scored-candidate order, uppercases symbols, and dedupes. 2026-05-07 regenerated handoff contains 165 tickers.
+
+**Current note:** Full 2026-05-07 fundamental framework run completed on the 165-name dealflow universe. Output root is `eval_results/fundamental/2026-05-07_full`; final CSV is `eval_results/fundamental/2026-05-07_full/fundamental_final_scores_2026-05-07.csv`. Run included SEC fetch, Codex LLM extraction, post-LLM scoring, price fetch, and final candidate scoring. Summary: 165 rows, LLM `complete=24` / `not_required=141`, decisions `pass=158` / `watchlist=7`, top scores `COMP=93 A+`, `EVC=89 A+`, `TALO=74 B`, `PINS=69 B`, `LRCX=67 B`, `ET=67 B`, `SNDK=66 B`. Fixes applied: CIK float normalization in `run_quarter.py`; derived post-LLM flags in `llm_extraction.py`. Verification: targeted tests `11 passed`.
+
+**Current note:** 2021Q4-2026Q1 SEC full-history cache coverage manifest for the same 165-name universe is built under `eval_results/fundamental/2026-05-07_full`. Files: `sec_coverage_manifest_2021Q4_2026Q1.csv`, `sec_fetch_queue_resumable.json`, `sec_coverage_blockers.json`, `sec_coverage_summary.json`, `sec_cache_coverage_manifest.py`. Stop gate fired before downloading missing inputs because blockers exist: unresolved CIK `BITF` plus 14 foreign/no domestic 10-Q/10-K issuers (`ARM`, `ASML`, `BDRX`, `BTDR`, `CNQ`, `CRML`, `DFSC`, `INFY`, `NBIS`, `PAAS`, `PN`, `POET`, `TSEM`, `TSM`). Current counts: 2,970 ticker-quarter rows, `CACHED_READY=4`, `NEEDS_FETCH=2375`, `BLOCKED_METADATA_OR_ISSUER_REALITY=573`, `BLOCKED_UNRESOLVED_CIK=18`, resumable queue items `7444`. Decide blocker policy before fetch resume.
 
 **Current note:** IFVG V3 standalone scanner now appends every CLI run to local cumulative CSV artifacts: `strategies/ifvg_v3/ifvg_v3_results_history.csv` for per-ticker summaries and `strategies/ifvg_v3/ifvg_v3_all_trades_history.csv` for all trade rows. The all-trades CSV includes `record_state` (`CLOSED_TRADE` or `OPEN_TRADE`) and captures active open shorts from the strategy state. These runtime CSVs are git-ignored. Latest smoke universe was de-duped top-10 QQQ plus top-10 SPY holdings, with no open shorts and live resting short-limit signals for `META` and `BRK-B` on 2026-05-06.
 
@@ -21,6 +29,28 @@
 ---
 
 ## Completed Today
+
+- Daily X-feed Grok automation ran for `2026-05-08`:
+  - completed passes `1-15`
+  - target model used: `Grok 4.3 (beta)`
+  - final readiness: `ready=True`, finalized manifest exists
+  - raw archives: 15
+  - merged symbols: 32
+  - Theme Emergence Graph: 32 tickers, 7 multi-ticker themes, 80 edges
+  - edge types: `account_mentions_ticker`, `ticker_linked_to_theme`, `ticker_co_mentioned`
+  - low-yield valid passes: `1`, `5`, `6`, `7`, `14`, `15`
+  - operational note: Grok composer paste failed with current ProseMirror editor; direct DOM set + input event worked
+  - operational note: pass 12 timed out in runner but was recovered from completed Grok page text and ingested
+
+- Daily X-feed Grok automation ran for `2026-05-07`:
+  - completed passes `1-15`
+  - target model used: `Grok 4.3 (beta)`
+  - final readiness: `ready=True`, finalized manifest exists
+  - raw archives: 15
+  - merged symbols: 21
+  - Theme Emergence Graph: 21 tickers, 5 multi-ticker themes, 110 edges
+  - edge types: `account_mentions_ticker`, `ticker_linked_to_theme`, `ticker_co_mentioned`
+  - low-yield valid passes: `14`, `15`
 
 - Daily X-feed Grok automation ran for `2026-05-06`:
   - completed passes `1-15`
@@ -2645,3 +2675,30 @@
         - `scout_quality_summary.row_count = 5`
       - `python3 -m cli.main scenario-retrieve --date 2026-03-11 --question "What are today's most important daily scenarios?" --format json`
         - returned top-ranked internal event cards with `coverage_status = PARTIAL`
+
+
+## Current cleanup artifact
+
+- Generated `eval_results/sec_filings_older_than_2018.csv` listing 16,497 local SEC cache files older than 2018 (~37.5 GiB source bytes).
+- No deletion performed; use manifest for archive/move/delete review.
+
+
+## Current SEC offload state
+
+- Older-than-2016 SEC cache manifest/path list created: `eval_results/sec_filings_older_than_2016.csv`, `.paths`.
+- Manifest uploaded to Google Drive Sheet: https://docs.google.com/spreadsheets/d/1Tzdx445JsS_BP7pCKUfoR4Yg31ZaWAU6YioLJVt2Yng
+- Raw files still local; need Drive Desktop mount, `rclone`, or raw Drive upload capability to offload 8,090 files (~17.1 GiB).
+
+
+## Current SEC cache cleanup state
+
+- Deleted SEC cache files prior to 2015: 4,133 files, ~8.4 GiB freed.
+- Deletion manifest retained: `eval_results/sec_filings_deleted_prior_to_2015_manifest.csv`; path list: `.paths`.
+- Remaining SEC cache size: ~264 GiB, dominated by `filings_html` (~163 GiB) and `sec_docs_html` (~74 GiB).
+
+
+## Current SEC cache cleanup state - after 2016 deletion
+
+- Deleted SEC cache parsed-year 2016 files: 4,131 files, ~9.7 GiB freed.
+- Deletion manifest retained: `eval_results/sec_filings_deleted_2016_manifest.csv`; path list: `.paths`.
+- Current free disk: ~20 GiB. Remaining SEC cache: ~255 GiB.

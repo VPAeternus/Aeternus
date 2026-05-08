@@ -39,7 +39,6 @@ def write_collect_artifacts(
     (base / "manual_merge.json").write_text(json.dumps(manual_merge, indent=2))
     (base / "shortlist_top20.json").write_text(json.dumps(shortlist, indent=2))
     (base / "research_queue.json").write_text(json.dumps(research_queue, indent=2))
-
     scored_slim = []
     if all_scored_candidates:
         shortlist_syms = {str(c.get("symbol", "")).upper() for c in shortlist.get("candidates", [])}
@@ -57,6 +56,12 @@ def write_collect_artifacts(
                 "in_shortlist": str(c.get("symbol", "")).upper() in shortlist_syms,
             })
     (base / "all_scored_candidates.json").write_text(json.dumps(scored_slim, indent=2))
+    _write_final_dealflow_tickers(
+        as_of_date=as_of_date,
+        root=root,
+        base=base,
+        all_scored_candidates=scored_slim,
+    )
 
     latest_path = root / "latest_research_queue.json"
     latest_path.parent.mkdir(parents=True, exist_ok=True)
@@ -133,6 +138,47 @@ def _write_integrity_artifacts(*, as_of_date: str, base: Path, normalized_signal
         }
         shortlist["fundamental_shadow_summary"] = {"coverage_summary": dict(payload["coverage_summary"])}
         (base / "fundamental_factor_shadow.json").write_text(json.dumps(payload, indent=2))
+
+
+def _write_final_dealflow_tickers(*, as_of_date: str, root: Path, base: Path, all_scored_candidates: List[Dict[str, Any]]) -> None:
+    """Persist the single authoritative full-universe ticker handoff for fundamental scoring."""
+    source_stage = "all_scored_candidates"
+    by_symbol: Dict[str, Dict[str, Any]] = {}
+    tickers: List[str] = []
+    for item in all_scored_candidates:
+        symbol = str(item.get("symbol", "")).upper().strip()
+        if not symbol or symbol in by_symbol:
+            continue
+        by_symbol[symbol] = item
+        tickers.append(symbol)
+    metadata_by_ticker = {
+        symbol: {
+            "lane": by_symbol[symbol].get("lane"),
+            "sector": by_symbol[symbol].get("sector"),
+            "core_score": by_symbol[symbol].get("core_score"),
+            "momentum_score": by_symbol[symbol].get("momentum_score"),
+            "asymmetry_score": by_symbol[symbol].get("asymmetry_score"),
+            "status": by_symbol[symbol].get("status"),
+            "active_families": by_symbol[symbol].get("active_families"),
+            "evidence_count": by_symbol[symbol].get("evidence_count"),
+            "in_shortlist": bool(by_symbol[symbol].get("in_shortlist", False)),
+        }
+        for symbol in tickers
+    }
+    payload = {
+        "date": as_of_date,
+        "source_stage": source_stage,
+        "count": len(tickers),
+        "tickers": tickers,
+        "metadata_by_ticker": metadata_by_ticker,
+        "contract": "AUTHORITATIVE_DEALFLOW_TICKER_HANDOFF_V1",
+    }
+    json_text = json.dumps(payload, indent=2)
+    txt_text = "\n".join(tickers) + ("\n" if tickers else "")
+    (base / "final_dealflow_tickers.json").write_text(json_text)
+    (base / "final_dealflow_tickers.txt").write_text(txt_text)
+    (root / "latest_final_dealflow_tickers.json").write_text(json_text)
+    (root / "latest_final_dealflow_tickers.txt").write_text(txt_text)
 
 
 def _safe_float(raw: Any) -> float:

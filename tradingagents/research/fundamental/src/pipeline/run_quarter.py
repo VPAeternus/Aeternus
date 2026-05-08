@@ -32,6 +32,18 @@ def _prior_quarter(quarter: str) -> str:
     return f"{year}Q{q - 1}"
 
 
+def _normalize_cik(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text or text.lower() == "nan":
+        return ""
+    if text.endswith(".0"):
+        text = text[:-2]
+    try:
+        return str(int(float(text)))
+    except (TypeError, ValueError):
+        return text
+
+
 def _to_float(value: Any) -> float | None:
     try:
         if value in {"", None}:
@@ -88,7 +100,7 @@ def run_quarter_pipeline(
         enriched_universe = []
         for row in universe:
             ticker = str(row.get("ticker", "")).upper()
-            cik = str(row.get("cik", ""))
+            cik = _normalize_cik(row.get("cik", ""))
             if cik:
                 submissions = client.submissions(cik)
                 start, end = quarter_bounds(quarter)
