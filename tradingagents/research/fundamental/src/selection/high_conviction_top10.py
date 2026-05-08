@@ -195,6 +195,8 @@ def select_high_conviction_top15_exception_sleeve(
         "selection_date": str(getattr(config, "selection_date", "") if not isinstance(config, Mapping) else config.get("selection_date", "")),
         "coverage_gating": bool(config.get("coverage_gating", False)) if isinstance(config, Mapping) else False,
     }
+    coverage_enabled = bool(core_config.get("coverage_gating"))
+    coverage = _build_coverage(coverage_rows or []) if coverage_enabled else {}
     core_result = select_high_conviction_top10(rows, core_config, coverage_rows)
     core_rows = [dict(r) for r in core_result["selected_rows"]]
     for rank, row in enumerate(core_rows, start=1):
@@ -205,7 +207,7 @@ def select_high_conviction_top15_exception_sleeve(
         row.setdefault("right_tail_exception_reason_codes", [])
         row.setdefault("right_tail_exception_warning_codes", [])
         _annotate_operating_guidance(row)
-    exceptions, warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(core_rows, rows, cfg)
+    exceptions, warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(core_rows, rows, cfg, coverage, coverage_enabled)
     selected = core_rows + exceptions
     for row in selected:
         row["operating_setting"] = TOP15_OPERATING_SETTING
@@ -310,9 +312,14 @@ def _has_llm_or_hp_confirmation(row: Mapping[str, Any]) -> bool:
     return _truthy(row.get("hp_LLM_best")) or _signal_count(row, HP_SIGNAL_FIELDS) > 0
 
 
-def _is_right_tail_exception_candidate(row: Mapping[str, Any], cfg: RightTailExceptionConfig) -> tuple[bool, list[str]]:
+def _is_right_tail_exception_candidate(
+    row: Mapping[str, Any],
+    cfg: RightTailExceptionConfig,
+    coverage: dict[str, dict[str, int]] | None = None,
+    coverage_enabled: bool = False,
+) -> tuple[bool, list[str]]:
     reasons: list[str] = []
-    assessed = _assess_row(dict(row), 0, normalize_config({"min_score": 0, "require_confidence": False}), {}, False)
+    assessed = _assess_row(dict(row), 0, normalize_config({"min_score": 0, "require_confidence": False}), coverage or {}, coverage_enabled)
     hard = [r for r in assessed["reason_codes"] if r != "SCORE_BELOW_THRESHOLD"]
     if hard:
         return False, hard
@@ -344,7 +351,18 @@ def _is_right_tail_exception_candidate(row: Mapping[str, Any], cfg: RightTailExc
 
 def _right_tail_exception_score(row: Mapping[str, Any]) -> tuple[float, dict[str, float]]:
     parts: dict[str, float] = {"entry_score_0_100": _to_float(row.get("entry_score_0_100")) or 0.0}
-    adders = [("single_rm_signal_bucket", 15, _single_rm_signal_bucket(row)), ("rm_buy_review_flag", 8, _truthy(row.get("rm_buy_review_flag"))), ("repricing_momentum_priority", 8, _truthy(row.get("repricing_momentum_priority"))), ("market_repricing_score_gte_10", 8, (_to_float(row.get("market_repricing_score")) or 0) >= 10), ("hp_LLM_best", 8, _truthy(row.get("hp_LLM_best"))), ("hp_signal_count", 6, _signal_count(row, HP_SIGNAL_FIELDS) > 0), ("primary_theme", 8, bool(str(row.get("primary_theme", "")).strip())), ("theme_tailwind_score", 6, (_to_float(row.get("theme_tailwind_score")) or 0) > 0), ("theme_acceleration_research_visibility", 10, _truthy(row.get("theme_acceleration_research_visibility"))), ("akg_t5_rescan", 8, str(row.get("akg_universe_tier", "")).strip().upper() == "T5_RESCAN")]
+    adders = [
+        ("single_rm_signal_bucket", 15, _single_rm_signal_bucket(row)),
+        ("rm_buy_review_flag", 8, _truthy(row.get("rm_buy_review_flag"))),
+        ("repricing_momentum_priority", 8, _truthy(row.get("repricing_momentum_priority"))),
+        ("market_repricing_score_gte_10", 8, (_to_float(row.get("market_repricing_score")) or 0) >= 10),
+        ("hp_LLM_best", 8, _truthy(row.get("hp_LLM_best"))),
+        ("hp_signal_count", 6, _signal_count(row, HP_SIGNAL_FIELDS) > 0),
+        ("primary_theme", 8, bool(str(row.get("primary_theme", "")).strip())),
+        ("theme_tailwind_score", 6, (_to_float(row.get("theme_tailwind_score")) or 0) > 0),
+        ("theme_acceleration_research_visibility", 10, _truthy(row.get("theme_acceleration_research_visibility"))),
+        ("akg_t5_rescan", 8, str(row.get("akg_universe_tier", "")).strip().upper() == "T5_RESCAN"),
+    ]
     for name, value, ok in adders:
         if ok:
             parts[name] = float(value)
@@ -357,7 +375,13 @@ def _right_tail_exception_score(row: Mapping[str, Any]) -> tuple[float, dict[str
     return round(sum(parts.values()), 6), parts
 
 
-def _select_exception_sleeve(core_rows: Sequence[Mapping[str, Any]], all_rows: Sequence[Mapping[str, Any]], cfg: RightTailExceptionConfig) -> tuple[list[dict], list[str]]:
+def _select_exception_sleeve(
+    core_rows: Sequence[Mapping[str, Any]],
+    all_rows: Sequence[Mapping[str, Any]],
+    cfg: RightTailExceptionConfig,
+    coverage: dict[str, dict[str, int]] | None = None,
+    coverage_enabled: bool = False,
+) -> tuple[list[dict], list[str]]:
     core_tickers = {str(r.get("ticker", "")).upper() for r in core_rows}
     candidates: list[dict[str, Any]] = []
     for raw in all_rows:
@@ -365,7 +389,7 @@ def _select_exception_sleeve(core_rows: Sequence[Mapping[str, Any]], all_rows: S
         ticker = str(row.get("ticker") or row.get("symbol") or "").strip().upper()
         if not ticker or ticker in core_tickers:
             continue
-        ok, reasons = _is_right_tail_exception_candidate(row, cfg)
+        ok, reasons = _is_right_tail_exception_candidate(row, cfg, coverage, coverage_enabled)
         if not ok:
             continue
         score, parts = _right_tail_exception_score(row)
@@ -480,8 +504,11 @@ def _top15_operating_recommendation_snapshot(selected: Sequence[Mapping[str, Any
         "operating_setting": "high_conviction_top15_v3_exception_sleeve",
         "validation_status": "observed-data extension; not full AKG+macro production v2 validation",
         "top_n": int(cfg.core_n + cfg.exception_slots),
+        "core_n": int(cfg.core_n),
+        "exception_slots": int(cfg.exception_slots),
+        "exception_selected_count": sum(1 for row in selected if row.get("selected_sleeve") == "right_tail_exception"),
         "portfolio_max_positions": 10,
-        "recommendation": "Core 10 are primary buy-underwriting candidates; exception sleeve names are right-tail research / starter-underwriting candidates. Do not equal-weight all 15 automatically.",
+        "recommendation": f"Core {cfg.core_n} are primary buy-underwriting candidates; exception sleeve names are right-tail research / starter-underwriting candidates. Do not equal-weight all {cfg.core_n + cfg.exception_slots} automatically.",
         "selected_count": len(selected),
     }
 
@@ -491,6 +518,10 @@ def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
     date = str(result.get("date") or result.get("config_snapshot", {}).get("selection_date") or "")
     rows = result.get("selected_rows", [])
     if rec.get("operating_setting") == "high_conviction_top15_v3_exception_sleeve":
+        exception_cfg = result.get("config_snapshot", {}).get("right_tail_exception_config", {})
+        core_count = len([row for row in rows if row.get("selected_sleeve") == "core"])
+        exception_count = len([row for row in rows if row.get("selected_sleeve") == "right_tail_exception"])
+        exception_slots = rec.get("exception_slots", exception_cfg.get("exception_slots", 0))
         lines = [
             "# Fundamental High-Conviction Top-15 Daily Recommendation",
             "",
@@ -500,8 +531,8 @@ def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
             "",
             "## Recommendation",
             "",
-            "Core 10 are primary buy-underwriting candidates.",
-            "Exception 5 are right-tail research / starter-underwriting candidates.",
+            f"Core {core_count} are primary buy-underwriting candidates.",
+            f"Exception sleeve selected {exception_count} of {exception_slots} configured slots as right-tail research / starter-underwriting candidates.",
             "Do not equal-weight all 15 automatically.",
             "Use high_conviction_top15_v3_exception_sleeve as observed-data extension; do not claim full AKG+macro production v2 validation.",
             "",

@@ -119,6 +119,24 @@ def test_exception_sleeve_does_not_use_return_labels():
     assert result["exception_rows"][0]["ticker"] == "GOOD"
 
 
+def test_exception_sleeve_applies_coverage_gate():
+    rows = [row(f"C{i}", 100 - i) for i in range(10)] + [
+        row("BAD", 80, rm1_low_price_dislocation_momentum="1", primary_theme="ai"),
+        row("GOOD", 30, rm1_low_price_dislocation_momentum="1", primary_theme="energy"),
+    ]
+    coverage_rows = [
+        *[{"ticker": f"C{i}", "status": "CACHED_READY"} for i in range(10)],
+        {"ticker": "BAD", "status": "NEEDS_FETCH"},
+        {"ticker": "GOOD", "status": "CACHED_READY"},
+    ]
+    result = select_high_conviction_top15_exception_sleeve(
+        rows,
+        {"enabled": True, "exception_slots": 1, "coverage_gating": True},
+        coverage_rows,
+    )
+    assert [r["ticker"] for r in result["exception_rows"]] == ["GOOD"]
+
+
 def test_daily_recommendation_labels_exceptions_as_starter_or_research(tmp_path):
     scores = tmp_path / "scores.csv"
     out = tmp_path / "out"
@@ -149,3 +167,5 @@ def test_top15_rows_use_top15_operating_setting(tmp_path):
     assert {r["operating_setting"] for r in result["selected_rows"]} == {"high_conviction_top15_v3_exception_sleeve"}
     text = (out / "high_conviction_top15_daily_recommendation.md").read_text(encoding="utf-8")
     assert "Operating setting: `high_conviction_top15_v3_exception_sleeve`" in text
+    assert "Exception sleeve selected 1 of 1 configured slots" in text
+    assert "Exception 5" not in text
