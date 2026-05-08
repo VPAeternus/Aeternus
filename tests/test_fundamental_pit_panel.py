@@ -117,6 +117,22 @@ def test_cli_no_header_csv_exits_cleanly(tmp_path):
     assert "Traceback" not in result.stderr
 
 
+def test_headerless_data_csv_rejected_to_prevent_silent_data_loss(tmp_path):
+    input_csv = tmp_path / "headerless.csv"
+    input_csv.write_text("A,2025Q4,2026-01-05,10,31\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="missing required header"):
+        build_pit_panel([input_csv], tmp_path / "out", as_of_date="2026-01-06")
+
+
+def test_wrong_header_csv_rejected_to_prevent_silent_data_loss(tmp_path):
+    input_csv = tmp_path / "wrong_headers.csv"
+    _write_csv(input_csv, [{"symbol": "A", "period": "2025Q4", "date": "2026-01-05", "open": "10"}])
+
+    with pytest.raises(ValueError, match="missing required header"):
+        build_pit_panel([input_csv], tmp_path / "out", as_of_date="2026-01-06")
+
+
 def test_header_only_csv_preserves_manifest_fieldnames(tmp_path):
     input_csv = tmp_path / "scores.csv"
     _write_csv(input_csv, [], fieldnames=["ticker", "quarter", "tradable_date", "entry_open", "return_90d_pct"])

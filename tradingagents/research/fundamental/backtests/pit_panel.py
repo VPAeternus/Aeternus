@@ -119,6 +119,7 @@ FORBIDDEN_SELECTION_COLUMNS = set(OUTCOME_LABEL_COLUMNS) | {
 }
 
 REQUIRED_ELIGIBILITY_COLUMNS = ["ticker", "quarter", "tradable_date", "entry_open"]
+REQUIRED_INPUT_HEADERS = REQUIRED_ELIGIBILITY_COLUMNS
 DEFAULT_OUTPUT_DIR = Path("outputs/fundamental_backtest")
 
 
@@ -181,8 +182,15 @@ def _read_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
         reader = csv.DictReader(fh)
         if reader.fieldnames is None:
             raise ValueError(f"Input CSV has no header row: {path}")
+        fieldnames = list(reader.fieldnames)
+        missing_required_headers = [header for header in REQUIRED_INPUT_HEADERS if header not in fieldnames]
+        if missing_required_headers:
+            raise ValueError(
+                f"Input CSV missing required header(s) {missing_required_headers}: {path}. "
+                f"Required headers are {REQUIRED_INPUT_HEADERS}. Headers are case-sensitive."
+            )
         rows = list(reader)
-        return rows, list(reader.fieldnames)
+        return rows, fieldnames
 
 
 def _write_csv(path: Path, rows: list[dict[str, Any]], columns: list[str]) -> None:
