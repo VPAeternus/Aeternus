@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 from uuid import uuid4
 
+from tradingagents.research.fundamental.backtests.pit_panel import SELECTION_FEATURE_COLUMNS
 from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top10
 
 RUNNER_VERSION = "fundamental_high_conviction_top10_backtest_task3_v1"
@@ -117,8 +118,22 @@ def _rate(rows: Sequence[Mapping[str, Any]], col: str) -> str:
 
 
 def _feature_columns(headers: Sequence[str]) -> list[str]:
-    forbidden = {h for h in headers if h in OUTCOME_COLUMNS or h.startswith("return_") or h.startswith("forward_")}
-    return [h for h in headers if h not in forbidden]
+    allowlist = set(SELECTION_FEATURE_COLUMNS)
+    return [h for h in headers if h in allowlist]
+
+
+def _validate_unique_ticker_quarter(rows: Sequence[Mapping[str, Any]]) -> None:
+    seen: dict[tuple[str, str], int] = {}
+    duplicates: list[str] = []
+    for idx, row in enumerate(rows, start=2):
+        key = (str(row.get("quarter", "")).strip(), str(row.get("ticker", "")).strip().upper())
+        if key in seen:
+            duplicates.append(f"quarter={key[0]} ticker={key[1]} rows={seen[key]},{idx}")
+        else:
+            seen[key] = idx
+    if duplicates:
+        sample = "; ".join(duplicates[:5])
+        raise ValueError(f"PIT panel has duplicate (quarter,ticker) row(s); expected one row per ticker-quarter: {sample}")
 
 
 def _decorative_columns(headers: Sequence[str]) -> list[str]:
@@ -174,12 +189,13 @@ def _summarize(variant: str, quarter: str, picks: Sequence[Mapping[str, Any]], e
 
 
 def _aggregate_strategy(variant: str, picks: Sequence[Mapping[str, Any]], quarter_rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
-    quarters = {r["quarter"] for r in quarter_rows if r["variant"] == variant}
-    row: dict[str, Any] = {"variant": variant, "quarter_count": len(quarters), "total_picks": len(picks), "avg_picks_per_quarter": f"{len(picks) / len(quarters):.6f}" if quarters else ""}
+    variant_quarters = [r for r in quarter_rows if r["variant"] == variant]
+    quarter_count = len(variant_quarters)
+    row: dict[str, Any] = {"variant": variant, "quarter_count": quarter_count, "total_picks": len(picks), "avg_picks_per_quarter": f"{len(picks) / quarter_count:.6f}" if quarter_count else ""}
     for col in LABEL_COLUMNS:
-        row[f"avg_{col}"] = _avg(picks, col)
-    row["winner_90d_30pct_rate"] = _rate(picks, "winner_90d_30pct")
-    row["loser_90d_minus30pct_rate"] = _rate(picks, "loser_90d_minus30pct")
+        row[f"avg_{col}"] = _avg(variant_quarters, f"avg_{col}")
+    row["winner_90d_30pct_rate"] = _avg(variant_quarters, "winner_90d_30pct_rate")
+    row["loser_90d_minus30pct_rate"] = _avg(variant_quarters, "loser_90d_minus30pct_rate")
     return row
 
 
@@ -204,6 +220,7 @@ def _bucket_summaries(picks: Sequence[Mapping[str, Any]]) -> tuple[list[dict[str
 def run_high_conviction_top10_backtest(pit_panel_csv: str | Path, output_dir: str | Path = DEFAULT_OUTPUT_DIR, run_id: str | None = None) -> dict[str, Any]:
     panel_path = Path(pit_panel_csv)
     rows, headers = _read_csv(panel_path)
+    _validate_unique_ticker_quarter(rows)
     feature_cols = _feature_columns(headers)
     decorative_cols = _decorative_columns(headers)
     groups = _eligible_groups(rows)
@@ -259,8 +276,10 @@ def run_high_conviction_top10_backtest(pit_panel_csv: str | Path, output_dir: st
         "run_id": backtest_run_id,
         "runner_version": RUNNER_VERSION,
         "input_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)},
-        "label_feature_separation_guardrail": "Selection receives feature-only rows with return_/forward_/winner/loser outcome columns removed; labels are copied only after selection.",
+        "label_feature_separation_guardrail": "Selection receives only Task 2 PIT allowlisted feature columns intersected with input headers; eligible_for_backtest is used only for filtering; labels are copied only after selection.",
         "feature_columns_used_for_selection": feature_cols,
+        "selection_feature_allowlist_source": "tradingagents.research.fundamental.backtests.pit_panel.SELECTION_FEATURE_COLUMNS",
+        "columns_excluded_from_selection": sorted(set(headers) - set(feature_cols)),
         "forbidden_outcome_columns_removed_from_selection": sorted(set(headers) - set(feature_cols)),
         "variant_configs": VARIANTS,
         "quarter_count": len(groups),
@@ -268,10 +287,9 @@ def run_high_conviction_top10_backtest(pit_panel_csv: str | Path, output_dir: st
         "pick_count": len(selected_rows),
         "variant_pick_counts": {v: sum(1 for r in selected_rows if r["variant"] == v) for v in VARIANTS},
         "output_hashes": {p.name: _file_sha256(p) for p in output_paths},
+        "manifest_hash_note": "run_manifest.json excluded from output_hashes to avoid self-referential stale hash.",
     }
     manifest_path = out / "run_manifest.json"
-    manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    manifest["output_hashes"]["run_manifest.json"] = _file_sha256(manifest_path)
     manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return manifest
 
@@ -301,7 +319,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         manifest = run_high_conviction_top10_backtest(args.pit_panel_csv, args.output_dir, args.run_id)
-    except ValueError as exc:
+    except (ValueError, OSError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
     print(json.dumps({"pick_count": manifest["pick_count"], "quarter_count": manifest["quarter_count"], "output_dir": args.output_dir}, sort_keys=True))

@@ -6,7 +6,9 @@ from pathlib import Path
 
 import pytest
 
+import tradingagents.research.fundamental.backtests.high_conviction_top10 as backtest_module
 from tradingagents.research.fundamental.backtests.high_conviction_top10 import main, run_high_conviction_top10_backtest
+from tradingagents.research.fundamental.backtests.pit_panel import SELECTION_FEATURE_COLUMNS
 
 REQUIRED_OUTPUTS = {
     "selected_names_by_quarter.csv",
@@ -112,6 +114,29 @@ def test_entry_score_variant_ranks_score_desc_then_ticker(tmp_path):
     assert len(picks) == 10
 
 
+def test_selector_receives_strict_task2_allowlist_only(tmp_path, monkeypatch):
+    panel = tmp_path / "pit_panel.csv"
+    rows = _panel_rows(3)
+    for row in rows:
+        row["outcome_like_alpha_not_allowlisted"] = "999"
+        row["eligible_for_backtest"] = "True"
+    _write_csv(panel, rows)
+    captured_keys = []
+
+    def fake_selector(safe_rows, config):
+        captured_keys.extend(safe_rows[0].keys())
+        return {"selected_rows": safe_rows[:1]}
+
+    monkeypatch.setattr(backtest_module, "select_high_conviction_top10", fake_selector)
+
+    run_high_conviction_top10_backtest(panel, tmp_path / "out")
+
+    assert captured_keys
+    assert set(captured_keys).issubset(set(SELECTION_FEATURE_COLUMNS))
+    assert "eligible_for_backtest" not in captured_keys
+    assert "outcome_like_alpha_not_allowlisted" not in captured_keys
+
+
 def test_labels_attached_post_selection_do_not_affect_ranking(tmp_path):
     panel_a = tmp_path / "a.csv"
     panel_b = tmp_path / "b.csv"
@@ -132,6 +157,15 @@ def test_labels_attached_post_selection_do_not_affect_ranking(tmp_path):
 
     assert selected(tmp_path / "out_a") == selected(tmp_path / "out_b")
     assert "return_90d_pct" in json.loads((tmp_path / "out_a" / "run_manifest.json").read_text())["forbidden_outcome_columns_removed_from_selection"]
+
+
+def test_duplicate_quarter_ticker_rows_fail_fast(tmp_path):
+    panel = tmp_path / "pit_panel.csv"
+    duplicate = {**_panel_rows(1)[0]}
+    _write_csv(panel, _panel_rows(1) + [duplicate])
+
+    with pytest.raises(ValueError, match=r"duplicate \(quarter,ticker\)"):
+        run_high_conviction_top10_backtest(panel, tmp_path / "out")
 
 
 def test_shortfall_with_fewer_than_10_eligible_rows(tmp_path):
@@ -198,6 +232,47 @@ def test_module_cli_explicit_output_dir_contract(tmp_path):
 
     assert json.loads(result.stdout)["quarter_count"] == 1
     assert {p.name for p in out.iterdir()} == REQUIRED_OUTPUTS
+
+
+def test_strategy_summary_averages_quarterly_portfolio_returns_not_pooled_picks(tmp_path):
+    panel = tmp_path / "pit_panel.csv"
+    q1 = _panel_rows(10, "2025Q4")
+    q2 = _panel_rows(2, "2026Q1")
+    for row in q1:
+        row["return_90d_pct"] = "10"
+    for row in q2:
+        row["return_90d_pct"] = "100"
+    _write_csv(panel, q1 + q2)
+
+    run_high_conviction_top10_backtest(panel, tmp_path / "out")
+
+    summary = {r["variant"]: r for r in _read_csv(tmp_path / "out" / "strategy_summary.csv")}
+    assert summary["entry_score_top10"]["avg_return_90d_pct"] == "55.000000"
+
+
+def test_manifest_excludes_self_hash(tmp_path):
+    panel = tmp_path / "pit_panel.csv"
+    _write_csv(panel, _panel_rows())
+
+    run_high_conviction_top10_backtest(panel, tmp_path / "out")
+
+    manifest = json.loads((tmp_path / "out" / "run_manifest.json").read_text())
+    assert "run_manifest.json" not in manifest["output_hashes"]
+    assert "self-referential" in manifest["manifest_hash_note"]
+
+
+def test_module_cli_missing_file_returns_exit_2_without_traceback(tmp_path):
+    missing = tmp_path / "missing.csv"
+
+    result = subprocess.run(
+        [sys.executable, "-m", "tradingagents.research.fundamental.backtests.high_conviction_top10", str(missing), "--output-dir", str(tmp_path / "out")],
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode == 2
+    assert "error:" in result.stderr
+    assert "Traceback" not in result.stderr
 
 
 def test_multi_quarter_grouping_reflected_in_outputs(tmp_path):
