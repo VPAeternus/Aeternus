@@ -366,6 +366,33 @@ It decides:
 
 Did the selected-for-deep names actually deserve the research budget more than the near-misses?
 
+## Fundamental Top-10 daily handoff
+
+Run this after the dealflow framework has finalized the day's ticker handoff and the fundamental framework has produced final scores.
+
+Inputs:
+
+- `eval_results/deal_flow/YYYY-MM-DD/final_dealflow_tickers.json`
+- `eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv` or the run-specific final-scores CSV
+
+Command:
+
+```bash
+python3 -m cli.main fundamental-top10 \
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --date YYYY-MM-DD \
+  --top-n 10
+```
+
+Outputs:
+
+- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10.csv`
+- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10.json`
+- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10_daily_recommendation.md`
+
+Operating rule: use `high_conviction_top10_v2_final` as observed-data v2, not fully validated AKG+macro v2. Prioritize `rm_signal_bucket=1` as the single-RM-signal bucket; be cautious with `rm_signal_bucket=2+` and HP names unless LLM/theme/valuation evidence is strong. Apply macro permission manually until PIT macro history is validated. Continue forward-validating AKG theme acceleration / T5_RESCAN because historical PIT fields are blank.
+
 ## Stage 10: Research Execution
 
 ### What this stage is
@@ -468,11 +495,13 @@ Use this exact order:
 5. Run `collect`.
 6. Inspect `connector_health.json`, `evidence_integrity.json`, `all_scored_candidates.json`.
 7. Inspect `shortlist_top20.json`, `shortlist_integrity.json`, `research_queue.json`, `deep_selection_integrity.json`.
-8. Run `analyze-batch`.
-9. Inspect `research_conversion_integrity.json`.
-10. Run `portfolio-plan` only after the above looks sane.
-11. Run execution/sync only if this is a capital-bearing run.
-12. Run hindsight/performance/stage-diagnosis after enough forward time has passed.
+8. Run the fundamental framework on the finalized ticker handoff when the daily fundamental Top-10 is needed.
+9. Run `fundamental-top10` and inspect `high_conviction_top10_daily_recommendation.md`.
+10. Run `analyze-batch`.
+11. Inspect `research_conversion_integrity.json`.
+12. Run `portfolio-plan` only after the above looks sane.
+13. Run execution/sync only if this is a capital-bearing run.
+14. Run hindsight/performance/stage-diagnosis after enough forward time has passed.
 
 ## What To Debug First
 

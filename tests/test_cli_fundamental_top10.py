@@ -65,6 +65,8 @@ def test_fundamental_top10_smoke_writes_csv_json(tmp_path):
     json_path = out / "high_conviction_top10.json"
     assert csv_path.exists()
     assert json_path.exists()
+    recommendation_path = out / "high_conviction_top10_daily_recommendation.md"
+    assert recommendation_path.exists()
 
     with csv_path.open("r", newline="", encoding="utf-8") as fh:
         rows = list(csv.DictReader(fh))
@@ -74,7 +76,15 @@ def test_fundamental_top10_smoke_writes_csv_json(tmp_path):
     payload = json.loads(json_path.read_text(encoding="utf-8"))
     assert payload["date"] == "2026-05-08"
     assert payload["output_paths"]["csv"] == str(csv_path)
+    assert payload["output_paths"]["recommendation_md"] == str(recommendation_path)
     assert payload["summary"]["selected_count"] == 2
+    assert payload["operating_recommendation"]["operating_setting"] == "high_conviction_top10_v2_final"
+    recommendation_text = recommendation_path.read_text(encoding="utf-8")
+    assert "single-RM-signal bucket" in recommendation_text
+    assert "Be more cautious with RM 2+" in recommendation_text
+    assert "higher-left-tail-risk" in recommendation_text
+    assert "Apply macro permission manually/live" in recommendation_text
+    assert "forward-validating AKG theme acceleration / T5_RESCAN" in recommendation_text
 
 
 def test_fundamental_top10_rejects_non_positive_top_n(tmp_path):

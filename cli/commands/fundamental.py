@@ -112,7 +112,8 @@ def fundamental_top10(
         console.print(json.dumps(result, indent=2, sort_keys=True))
     else:
         _print_top10_table(result.get("selected_rows", []))
-        console.print(f"[green]Wrote[/green] {result['output_paths']['csv']} | {result['output_paths']['json']}")
+        paths = result["output_paths"]
+        console.print(f"[green]Wrote[/green] {paths['csv']} | {paths['json']} | {paths['recommendation_md']}")
 
 
 @app.command("fundamental")

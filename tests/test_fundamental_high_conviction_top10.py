@@ -237,12 +237,32 @@ def test_not_blocked_document_status_does_not_reject():
     assert [r["ticker"] for r in result["selected_rows"]] == ["A"]
 
 
-def test_select_from_csv_writes_csv_and_json(tmp_path):
+def test_selected_rows_include_daily_operating_guidance():
+    result = select_high_conviction_top10(
+        [
+            row("ONE", 90, rm_buy_review_flag="1"),
+            row("TWO", 89, rm1_low_price_dislocation_momentum="1", rm_buy_review_flag="1", hp_production_extension="1"),
+        ],
+        {"top_n": 2},
+    )
+
+    by_ticker = {r["ticker"]: r for r in result["selected_rows"]}
+    assert by_ticker["ONE"]["operating_setting"] == "high_conviction_top10_v2_final"
+    assert by_ticker["ONE"]["rm_signal_bucket"] == "1"
+    assert by_ticker["ONE"]["rm_operating_guidance"] == "PRIORITIZE_SINGLE_RM_SIGNAL_BUCKET"
+    assert by_ticker["TWO"]["rm_signal_bucket"] == "2+"
+    assert by_ticker["TWO"]["hp_signal_bucket"] == "1"
+    assert result["operating_recommendation"]["portfolio_max_positions"] == 10
+    assert "not necessarily the literal rm1" in result["operating_recommendation"]["rm_bucket_note"]
+
+
+def test_select_from_csv_writes_csv_json_and_daily_recommendation(tmp_path):
     scores = tmp_path / "scores.csv"
     with scores.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(row("A").keys()))
+        sample = row("A", 80, "high", rm_buy_review_flag="1")
+        writer = csv.DictWriter(fh, fieldnames=list(sample.keys()))
         writer.writeheader()
-        writer.writerow(row("A", 80, "high"))
+        writer.writerow(sample)
 
     result = select_from_csv(scores, tmp_path / "out", {"selection_date": "2026-05-08"})
 
@@ -250,3 +270,14 @@ def test_select_from_csv_writes_csv_and_json(tmp_path):
     assert result["date"] == "2026-05-08"
     assert (tmp_path / "out" / "high_conviction_top10.csv").exists()
     assert (tmp_path / "out" / "high_conviction_top10.json").exists()
+    recommendation = tmp_path / "out" / "high_conviction_top10_daily_recommendation.md"
+    assert recommendation.exists()
+    text = recommendation.read_text(encoding="utf-8")
+    assert "Use portfolio max positions = 10" in text
+    assert "single-RM-signal bucket" in text
+    assert "Be more cautious with RM 2+ unless LLM/theme/valuation evidence is very strong" in text
+    assert "Treat HP names as useful but higher-left-tail-risk" in text
+    assert "Apply macro permission manually/live until PIT macro fields are historically validated" in text
+    assert "Continue forward-validating AKG theme acceleration / T5_RESCAN" in text
+    assert "not fully validated AKG+macro production v2" in text
+    assert result["output_paths"]["recommendation_md"] == str(recommendation)

@@ -28,6 +28,35 @@ EXPLICIT_OVERRIDE_FIELDS = {
 RM_OVERRIDE_RE = re.compile(r"^rm[1-4]_(?:priority|high_priority|llm_supported|extension|rescan|candidate|signal|confirmed)$")
 HP_OVERRIDE_RE = re.compile(r"^hp\d+_(?:priority|high_priority|llm_supported|extension|rescan|candidate|signal|confirmed)$")
 TIER_OVERRIDE_RE = re.compile(r"^tier\d+_L\d+_(?:priority|high_priority|llm_supported|rescan|signal|confirmed)$")
+OPERATING_SETTING = "high_conviction_top10_v2_final"
+RM_SIGNAL_FIELDS = (
+    "rm1_low_price_dislocation_momentum",
+    "rm2_weak_acceleration",
+    "rm3_mid_price_dislocation_momentum",
+    "rm4_persistent_repricing_wave",
+    "rm_buy_review_flag",
+)
+HP_SIGNAL_FIELDS = (
+    "hp0_high_price_broad",
+    "hp1_quality_pullback",
+    "hp2_dislocation_momentum_priority",
+    "hp2_dislocation_momentum_watch",
+    "hp3_large_quality_theme_exception",
+    "hp4_score_reacceleration_watch",
+    "hp_production_extension",
+    "hp_research_extension",
+    "hp_LLM_best",
+)
+DAILY_RECOMMENDATION_BULLETS = [
+    "Run broad discovery / source Top-30.",
+    "Deep-analyze selected names.",
+    "Use portfolio max positions = 10.",
+    "Prioritize single-RM-signal bucket candidates.",
+    "Be more cautious with RM 2+ unless LLM/theme/valuation evidence is very strong.",
+    "Treat HP names as useful but higher-left-tail-risk.",
+    "Apply macro permission manually/live until PIT macro fields are historically validated.",
+    "Continue forward-validating AKG theme acceleration / T5_RESCAN because historical PIT fields are blank.",
+]
 
 
 @dataclass(frozen=True)
@@ -91,6 +120,7 @@ def select_high_conviction_top10(
     for rank, row in enumerate(selected, start=1):
         row["selection_rank"] = rank
         row["selected"] = True
+        _annotate_operating_guidance(row)
     for row in ranked:
         if row["_row_id"] not in selected_ids:
             row["selected"] = False
@@ -117,6 +147,7 @@ def select_high_conviction_top10(
         },
         "config_snapshot": cfg,
         "config": cfg,
+        "operating_recommendation": _operating_recommendation_snapshot(selected_public, cfg),
     }
 
 
@@ -135,11 +166,117 @@ def select_from_csv(
     date = str(result["config_snapshot"].get("selection_date") or "")
     csv_path = out_root / "high_conviction_top10.csv"
     json_path = out_root / "high_conviction_top10.json"
+    recommendation_path = out_root / "high_conviction_top10_daily_recommendation.md"
     result["date"] = date
-    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path)}
+    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "recommendation_md": str(recommendation_path)}
     _write_csv(csv_path, result["selected_rows"])
     json_path.write_text(json.dumps(result, indent=2, sort_keys=True), encoding="utf-8")
+    recommendation_path.write_text(_daily_recommendation_markdown(result), encoding="utf-8")
     return result
+
+
+def _signal_bucket(row: Mapping[str, Any], fields: Sequence[str]) -> tuple[str, list[str]]:
+    active = [field for field in fields if field in row and _truthy(row.get(field))]
+    if len(active) >= 2:
+        return "2+", active
+    return str(len(active)), active
+
+
+def _annotate_operating_guidance(row: dict[str, Any]) -> None:
+    rm_bucket, rm_active = _signal_bucket(row, RM_SIGNAL_FIELDS)
+    hp_bucket, hp_active = _signal_bucket(row, HP_SIGNAL_FIELDS)
+    row["operating_setting"] = OPERATING_SETTING
+    row["operating_setting_validation_status"] = "observed_data_v2_not_full_akg_macro_validation"
+    row["portfolio_max_positions"] = 10
+    row["rm_signal_bucket"] = rm_bucket
+    row["rm_active_fields"] = rm_active
+    if rm_bucket == "1":
+        row["rm_operating_guidance"] = "PRIORITIZE_SINGLE_RM_SIGNAL_BUCKET"
+    elif rm_bucket == "2+":
+        row["rm_operating_guidance"] = "CAUTION_MULTI_RM_SIGNAL_BUCKET_REQUIRES_STRONG_LLM_THEME_VALUATION"
+    else:
+        row["rm_operating_guidance"] = "NO_RM_SIGNAL_BUCKET_PRIORITY"
+    row["hp_signal_bucket"] = hp_bucket
+    row["hp_active_fields"] = hp_active
+    row["hp_operating_guidance"] = "HP_USEFUL_BUT_HIGHER_LEFT_TAIL_RISK" if hp_bucket != "0" else "NO_HP_LEFT_TAIL_RISK_FLAG"
+    row["macro_permission_guidance"] = "APPLY_MANUAL_LIVE_MACRO_PERMISSION_UNTIL_PIT_MACRO_VALIDATED"
+    row["akg_theme_validation_guidance"] = "FORWARD_VALIDATE_AKG_THEME_ACCELERATION_AND_T5_RESCAN"
+
+
+def _operating_recommendation_snapshot(selected: Sequence[Mapping[str, Any]], cfg: Mapping[str, Any]) -> dict[str, Any]:
+    return {
+        "operating_setting": OPERATING_SETTING,
+        "validation_status": "observed-data v2; not fully validated AKG+macro production v2",
+        "top_n": int(cfg.get("top_n", 10) or 10),
+        "portfolio_max_positions": 10,
+        "recommendation": "Use high_conviction_top10_v2_final as the operating setting, but treat it as observed-data v2, not fully validated AKG+macro v2.",
+        "operational_steps": DAILY_RECOMMENDATION_BULLETS,
+        "selected_count": len(selected),
+        "single_rm_signal_selected_count": sum(1 for row in selected if str(row.get("rm_signal_bucket", "")) == "1"),
+        "multi_rm_signal_selected_count": sum(1 for row in selected if str(row.get("rm_signal_bucket", "")) == "2+"),
+        "hp_selected_count": sum(1 for row in selected if str(row.get("hp_signal_bucket", "0")) != "0"),
+        "rm_bucket_note": "rm_signal_bucket=1 means exactly one RM-related signal was active; it is not necessarily the literal rm1_low_price_dislocation_momentum rule.",
+    }
+
+
+def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
+    rec = result.get("operating_recommendation", {})
+    date = str(result.get("date") or result.get("config_snapshot", {}).get("selection_date") or "")
+    rows = result.get("selected_rows", [])
+    lines = [
+        "# Fundamental High-Conviction Top-10 Daily Recommendation",
+        "",
+        f"Date: `{date}`" if date else "Date: `not_provided`",
+        f"Operating setting: `{OPERATING_SETTING}`",
+        "Validation label: `observed-data v2, not fully validated AKG+macro production v2`",
+        "",
+        "## Recommendation",
+        "",
+        str(rec.get("recommendation") or "Use high_conviction_top10_v2_final as the operating setting, with observed-data caveats."),
+        "",
+        "## Operational checklist",
+        "",
+    ]
+    lines.extend(f"{idx}. {bullet}" for idx, bullet in enumerate(DAILY_RECOMMENDATION_BULLETS, start=1))
+    lines.extend(
+        [
+            "",
+            "## RM bucket wording",
+            "",
+            "`rm_signal_bucket=1` means exactly one RM-related signal was active. It is not necessarily the literal `rm1_low_price_dislocation_momentum` rule.",
+            "`rm_signal_bucket=2+` means multiple RM-related signals were active and should be treated more cautiously unless LLM/theme/valuation evidence is very strong.",
+            "",
+            "## Selected names",
+            "",
+            "| rank | ticker | score | composite | rm_signal_bucket | rm_guidance | hp_signal_bucket | hp_guidance |",
+            "| --- | --- | ---: | ---: | --- | --- | --- | --- |",
+        ]
+    )
+    for row in rows:
+        lines.append(
+            "| {rank} | {ticker} | {score} | {composite} | {rm_bucket} | {rm_guidance} | {hp_bucket} | {hp_guidance} |".format(
+                rank=row.get("selection_rank", ""),
+                ticker=row.get("ticker", ""),
+                score=row.get("score", row.get("entry_score_0_100", "")),
+                composite=row.get("composite_score", ""),
+                rm_bucket=row.get("rm_signal_bucket", ""),
+                rm_guidance=row.get("rm_operating_guidance", ""),
+                hp_bucket=row.get("hp_signal_bucket", ""),
+                hp_guidance=row.get("hp_operating_guidance", ""),
+            )
+        )
+    lines.extend(
+        [
+            "",
+            "## Caveats",
+            "",
+            "- Apply macro permission manually/live until PIT macro fields are historically validated.",
+            "- Continue forward-validating AKG theme acceleration / T5_RESCAN because historical PIT fields are blank.",
+            "- This artifact is a daily operating recommendation after finalized dealflow/fundamental scores, not a claim that full AKG+macro production v2 has been historically validated.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
 
 
 def _assess_row(

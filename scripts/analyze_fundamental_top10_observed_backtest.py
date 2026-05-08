@@ -771,7 +771,40 @@ See `outputs/fundamental_backtest/analysis/missed_right_tail_mechanical_exclusio
 
 ## Live-use recommendation from observed data
 
-Use the observed v2 / high-conviction framework as the current operating setting, but prioritize `rm_signal_bucket=1` candidates for manual underwriting. Read that as the single-RM-signal bucket, not necessarily the literal RM1 rule. Be more cautious with `rm_signal_bucket=2+` multi-RM-signal candidates unless LLM/theme/valuation evidence is unusually strong. Keep source Top-30 -> deep analysis -> max 10 portfolio plan rather than relying on raw source Top-10.
+For live use today: use `high_conviction_top10_v2_final` as the operating setting, but treat it as observed-data v2, not fully validated AKG+macro v2.
+
+Operationally:
+
+1. Run broad discovery / source Top-30.
+2. Deep-analyze selected names.
+3. Use portfolio max positions = 10.
+4. Prioritize single-RM-signal bucket candidates.
+5. Be more cautious with RM 2+ unless LLM/theme/valuation evidence is very strong.
+6. Treat HP names as useful but higher-left-tail-risk.
+7. Apply macro permission manually/live until PIT macro fields are historically validated.
+8. Continue forward-validating AKG theme acceleration / T5_RESCAN because historical PIT fields are blank.
+
+The package gives enough support to make this recommendation, while correctly avoiding the unsupported claim that full AKG+macro production v2 is historically validated. `rm_signal_bucket=1` means exactly one RM-related signal was active; it is not necessarily the literal RM1 rule.
+
+## Daily framework output
+
+After the dealflow framework has finalized the day's ticker handoff and the fundamental framework has produced final scores, run:
+
+```bash
+python3 -m cli.main fundamental-top10 \\
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \\
+  --output-root eval_results/fundamental/YYYY-MM-DD \\
+  --date YYYY-MM-DD \\
+  --top-n 10
+```
+
+Daily outputs:
+
+- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10.csv`
+- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10.json`
+- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10_daily_recommendation.md`
+
+The daily recommendation artifact carries the observed-data v2 label, portfolio max positions = 10, single-RM-signal priority, RM 2+/HP caution flags, manual macro permission caveat, and AKG/T5 forward-validation caveat.
 
 ## Future validation required before claiming full v2
 
