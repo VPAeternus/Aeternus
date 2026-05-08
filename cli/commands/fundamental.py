@@ -30,6 +30,26 @@ def _print_top10_table(rows: list[dict]) -> None:
     console.print(table)
 
 
+def _print_top15_table(rows: list[dict]) -> None:
+    table = Table(title="Fundamental High-Conviction Top 15")
+    table.add_column("Sleeve")
+    table.add_column("Rank", justify="right")
+    table.add_column("Ticker", style="bold green")
+    table.add_column("Treatment")
+    table.add_column("Score", justify="right")
+    table.add_column("Exception", justify="right")
+    for idx, row in enumerate(rows, start=1):
+        table.add_row(
+            str(row.get("selected_sleeve", "")),
+            str(row.get("selected_sleeve_rank") or row.get("selection_rank") or idx),
+            str(row.get("ticker", "")),
+            str(row.get("portfolio_treatment", "")),
+            str(row.get("score", row.get("entry_score_0_100", ""))),
+            str(row.get("right_tail_exception_score", "")),
+        )
+    console.print(table)
+
+
 def _print_candidate_scores(lake_root: Path) -> None:
     try:
         import pandas as pd
@@ -112,6 +132,50 @@ def fundamental_top10(
         console.print(json.dumps(result, indent=2, sort_keys=True))
     else:
         _print_top10_table(result.get("selected_rows", []))
+        paths = result["output_paths"]
+        console.print(f"[green]Wrote[/green] {paths['csv']} | {paths['json']} | {paths['recommendation_md']}")
+
+
+@app.command("fundamental-top15")
+def fundamental_top15(
+    scores_csv: str = typer.Option(..., "--scores-csv", help="Required final fundamental scores CSV path"),
+    coverage_manifest: str = typer.Option("", "--coverage-manifest", help="Optional SEC coverage manifest CSV path"),
+    output_root: str = typer.Option("", "--output-root", help="Output root; defaults to scores CSV parent or eval_results/fundamental/<date>"),
+    date: str = typer.Option("", "--date", help="Selection date YYYY-MM-DD"),
+    core_n: int = typer.Option(10, "--core-n", min=1, help="Core names to select"),
+    exception_slots: int = typer.Option(5, "--exception-slots", min=0, help="Right-tail exception slots"),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Select Top-15 queue: Top-10 core plus right-tail exception sleeve."""
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_top15_from_csv
+
+    fmt = format.strip().lower()
+    if fmt not in {"table", "json"}:
+        console.print("[red]--format must be table or json[/red]")
+        raise typer.Exit(1)
+    scores_path = Path(scores_csv)
+    if not scores_path.exists():
+        console.print(f"[red]scores CSV not found: {scores_path}[/red]")
+        raise typer.Exit(1)
+    coverage_path = Path(coverage_manifest) if coverage_manifest.strip() else None
+    if coverage_path is not None and not coverage_path.exists():
+        console.print(f"[red]coverage manifest not found: {coverage_path}[/red]")
+        raise typer.Exit(1)
+    selection_date = date.strip()
+    out_root = Path(output_root.strip()) if output_root.strip() else (
+        Path("eval_results") / "fundamental" / selection_date if selection_date else scores_path.parent
+    )
+    config = {
+        "selection_date": selection_date,
+        "enabled": True,
+        "core_n": core_n,
+        "exception_slots": exception_slots,
+    }
+    result = select_top15_from_csv(scores_path, out_root, config, coverage_path)
+    if fmt == "json":
+        console.print(json.dumps(result, indent=2, sort_keys=True))
+    else:
+        _print_top15_table(result.get("selected_rows", []))
         paths = result["output_paths"]
         console.print(f"[green]Wrote[/green] {paths['csv']} | {paths['json']} | {paths['recommendation_md']}")
 

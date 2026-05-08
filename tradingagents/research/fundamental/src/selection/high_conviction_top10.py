@@ -75,6 +75,19 @@ class HighConvictionConfig:
     selection_date: str = ""
 
 
+@dataclass(frozen=True)
+class RightTailExceptionConfig:
+    enabled: bool = False
+    core_n: int = 10
+    exception_slots: int = 5
+    min_exception_entry_score: float = 20.0
+    near_threshold_entry_score: float = 65.0
+    max_rm2plus_slots: int = 2
+    max_no_theme_no_llm_exceptions: int = 2
+    max_same_theme: int = 2
+    max_same_sector: int = 3
+
+
 def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     base = asdict(HighConvictionConfig())
     if config:
@@ -88,6 +101,25 @@ def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     base["min_confidence"] = float(base["min_confidence"])
     base["theme_acceleration_override_score"] = float(base["theme_acceleration_override_score"])
     return base
+
+
+def _normalize_exception_config(config: Mapping[str, Any] | RightTailExceptionConfig | None) -> RightTailExceptionConfig:
+    base = asdict(RightTailExceptionConfig())
+    if isinstance(config, RightTailExceptionConfig):
+        base.update(asdict(config))
+    elif config:
+        nested = config.get("right_tail_exception_config") if isinstance(config.get("right_tail_exception_config"), Mapping) else config
+        for key, value in nested.items():
+            if key in base and value is not None:
+                base[key] = value
+    base["enabled"] = bool(base["enabled"])
+    for key in ("core_n", "exception_slots", "max_rm2plus_slots", "max_no_theme_no_llm_exceptions", "max_same_theme", "max_same_sector"):
+        base[key] = int(base[key])
+    for key in ("min_exception_entry_score", "near_threshold_entry_score"):
+        base[key] = float(base[key])
+    if base["core_n"] <= 0 or base["exception_slots"] < 0:
+        raise ValueError("core_n must be > 0 and exception_slots must be >= 0")
+    return RightTailExceptionConfig(**base)
 
 
 def select_high_conviction_top10(
@@ -151,6 +183,49 @@ def select_high_conviction_top10(
     }
 
 
+def select_high_conviction_top15_exception_sleeve(
+    rows: Sequence[Mapping[str, Any]],
+    config: Mapping[str, Any] | RightTailExceptionConfig | None,
+    coverage_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, Any]:
+    cfg = _normalize_exception_config(config)
+    core_config = {
+        "top_n": int(cfg.core_n),
+        "selection_date": str(getattr(config, "selection_date", "") if not isinstance(config, Mapping) else config.get("selection_date", "")),
+    }
+    core_result = select_high_conviction_top10(rows, core_config, coverage_rows)
+    core_rows = [dict(r) for r in core_result["selected_rows"]]
+    for rank, row in enumerate(core_rows, start=1):
+        row["selected_sleeve"] = "core"
+        row["selected_sleeve_rank"] = rank
+        row["portfolio_treatment"] = "core_buy_underwriting"
+        row.setdefault("right_tail_exception_score", "")
+        row.setdefault("right_tail_exception_reason_codes", [])
+        row.setdefault("right_tail_exception_warning_codes", [])
+        _annotate_operating_guidance(row)
+    exceptions, warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(core_rows, rows, cfg)
+    selected = core_rows + exceptions
+    return {
+        "selected_rows": selected,
+        "selected": selected,
+        "core_rows": core_rows,
+        "exception_rows": exceptions,
+        "rejected_rows": core_result.get("rejected_rows", []),
+        "rejected": core_result.get("rejected_rows", []),
+        "summary": {
+            "input_count": len(rows),
+            "selected_count": len(selected),
+            "core_count": len(core_rows),
+            "exception_count": len(exceptions),
+            "top_n": len(selected),
+            "warnings": list(core_result.get("summary", {}).get("warnings", [])) + warnings,
+        },
+        "config_snapshot": {**core_result.get("config_snapshot", {}), "right_tail_exception_config": asdict(cfg)},
+        "config": {**core_result.get("config_snapshot", {}), "right_tail_exception_config": asdict(cfg)},
+        "operating_recommendation": _top15_operating_recommendation_snapshot(selected, cfg),
+    }
+
+
 def select_from_csv(
     scores_csv: str | Path,
     output_root: str | Path,
@@ -175,11 +250,170 @@ def select_from_csv(
     return result
 
 
+def select_top15_from_csv(
+    scores_csv: str | Path,
+    output_root: str | Path,
+    config: Mapping[str, Any] | RightTailExceptionConfig | None,
+    coverage_manifest: str | Path | None = None,
+) -> dict[str, Any]:
+    scores_path = Path(scores_csv)
+    out_root = Path(output_root)
+    rows = _read_csv(scores_path)
+    coverage_rows = _read_csv(Path(coverage_manifest)) if coverage_manifest else None
+    result = select_high_conviction_top15_exception_sleeve(rows, config, coverage_rows)
+    out_root.mkdir(parents=True, exist_ok=True)
+    date = str(result["config_snapshot"].get("selection_date") or (config.get("selection_date", "") if isinstance(config, Mapping) else ""))
+    csv_path = out_root / "high_conviction_top15.csv"
+    json_path = out_root / "high_conviction_top15.json"
+    recommendation_path = out_root / "high_conviction_top15_daily_recommendation.md"
+    result["date"] = date
+    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "recommendation_md": str(recommendation_path)}
+    _write_csv(csv_path, result["selected_rows"])
+    json_path.write_text(json.dumps(result, indent=2, sort_keys=True), encoding="utf-8")
+    recommendation_path.write_text(_daily_recommendation_markdown(result), encoding="utf-8")
+    return result
+
+
+def _signal_count(row: Mapping[str, Any], fields: Sequence[str]) -> int:
+    return len([field for field in fields if field in row and _truthy(row.get(field))])
+
+
 def _signal_bucket(row: Mapping[str, Any], fields: Sequence[str]) -> tuple[str, list[str]]:
     active = [field for field in fields if field in row and _truthy(row.get(field))]
     if len(active) >= 2:
         return "2+", active
     return str(len(active)), active
+
+
+def _single_rm_signal_bucket(row: Mapping[str, Any]) -> bool:
+    return _signal_count(row, RM_SIGNAL_FIELDS) == 1
+
+
+def _rm_signal_bucket(row: Mapping[str, Any]) -> str:
+    return _signal_bucket(row, RM_SIGNAL_FIELDS)[0]
+
+
+def _hp_signal_bucket(row: Mapping[str, Any]) -> str:
+    return _signal_bucket(row, HP_SIGNAL_FIELDS)[0]
+
+
+def _has_theme_or_akg_confirmation(row: Mapping[str, Any]) -> bool:
+    return bool(str(row.get("primary_theme", "")).strip()) or _to_float(row.get("theme_tailwind_score")) not in (None, 0.0) or _truthy(row.get("theme_acceleration_research_visibility")) or str(row.get("akg_universe_tier", "")).strip().upper() == "T5_RESCAN"
+
+
+def _has_llm_or_hp_confirmation(row: Mapping[str, Any]) -> bool:
+    return _truthy(row.get("hp_LLM_best")) or _signal_count(row, HP_SIGNAL_FIELDS) > 0
+
+
+def _is_right_tail_exception_candidate(row: Mapping[str, Any], cfg: RightTailExceptionConfig) -> tuple[bool, list[str]]:
+    reasons: list[str] = []
+    assessed = _assess_row(dict(row), 0, normalize_config({"min_score": 0, "require_confidence": False}), {}, False)
+    hard = [r for r in assessed["reason_codes"] if r != "SCORE_BELOW_THRESHOLD"]
+    if hard:
+        return False, hard
+    if str(row.get("hard_reject_reason", "")).strip():
+        return False, ["HARD_REJECT_REASON_PRESENT"]
+    if _truthy(row.get("post_llm_demote_flag")):
+        return False, ["POST_LLM_DEMOTE"]
+    score = _to_float(row.get("entry_score_0_100"))
+    if score is None or score < cfg.min_exception_entry_score:
+        return False, ["ENTRY_SCORE_BELOW_EXCEPTION_MIN"]
+    near = score >= cfg.near_threshold_entry_score and _truthy(row.get("rm_buy_review_flag")) and (_truthy(row.get("hp_LLM_best")) or _signal_count(row, HP_SIGNAL_FIELDS) > 0 or (_to_float(row.get("market_repricing_score")) or 0) >= 10)
+    signals = []
+    checks = {
+        "SINGLE_RM_SIGNAL_BUCKET": _single_rm_signal_bucket(row),
+        "RM_BUY_REVIEW": _truthy(row.get("rm_buy_review_flag")),
+        "REPRICING_MOMENTUM_PRIORITY": _truthy(row.get("repricing_momentum_priority")),
+        "MARKET_REPRICING": (_to_float(row.get("market_repricing_score")) or 0) >= 10,
+        "HP_LLM_BEST": _truthy(row.get("hp_LLM_best")),
+        "HP_SIGNAL": _signal_count(row, HP_SIGNAL_FIELDS) > 0,
+        "THEME_TAILWIND": (_to_float(row.get("theme_tailwind_score")) or 0) > 0,
+        "PRIMARY_THEME": bool(str(row.get("primary_theme", "")).strip()),
+        "THEME_ACCELERATION_VISIBILITY": _truthy(row.get("theme_acceleration_research_visibility")),
+        "AKG_T5_RESCAN": str(row.get("akg_universe_tier", "")).strip().upper() == "T5_RESCAN",
+    }
+    signals = [k for k, v in checks.items() if v]
+    if near:
+        signals.append("NEAR_THRESHOLD_EXCEPTION")
+    return (bool(signals), signals if signals else ["NO_RIGHT_TAIL_SIGNAL"])
+
+
+def _right_tail_exception_score(row: Mapping[str, Any]) -> tuple[float, dict[str, float]]:
+    parts: dict[str, float] = {"entry_score_0_100": _to_float(row.get("entry_score_0_100")) or 0.0}
+    adders = [("single_rm_signal_bucket", 15, _single_rm_signal_bucket(row)), ("rm_buy_review_flag", 8, _truthy(row.get("rm_buy_review_flag"))), ("repricing_momentum_priority", 8, _truthy(row.get("repricing_momentum_priority"))), ("market_repricing_score_gte_10", 8, (_to_float(row.get("market_repricing_score")) or 0) >= 10), ("hp_LLM_best", 8, _truthy(row.get("hp_LLM_best"))), ("hp_signal_count", 6, _signal_count(row, HP_SIGNAL_FIELDS) > 0), ("primary_theme", 8, bool(str(row.get("primary_theme", "")).strip())), ("theme_tailwind_score", 6, (_to_float(row.get("theme_tailwind_score")) or 0) > 0), ("theme_acceleration_research_visibility", 10, _truthy(row.get("theme_acceleration_research_visibility"))), ("akg_t5_rescan", 8, str(row.get("akg_universe_tier", "")).strip().upper() == "T5_RESCAN")]
+    for name, value, ok in adders:
+        if ok:
+            parts[name] = float(value)
+    if _rm_signal_bucket(row) == "2+" and not (_has_theme_or_akg_confirmation(row) or _has_llm_or_hp_confirmation(row)):
+        parts["rm2plus_no_confirmation_penalty"] = -10.0
+    if (_to_float(row.get("risk_penalty_score")) or 0) >= 10:
+        parts["risk_penalty"] = -10.0
+    if _truthy(row.get("post_llm_demote_flag")):
+        parts["post_llm_demote_penalty"] = -15.0
+    return round(sum(parts.values()), 6), parts
+
+
+def _select_exception_sleeve(core_rows: Sequence[Mapping[str, Any]], all_rows: Sequence[Mapping[str, Any]], cfg: RightTailExceptionConfig) -> tuple[list[dict], list[str]]:
+    core_tickers = {str(r.get("ticker", "")).upper() for r in core_rows}
+    candidates: list[dict[str, Any]] = []
+    for raw in all_rows:
+        row = dict(raw)
+        ticker = str(row.get("ticker") or row.get("symbol") or "").strip().upper()
+        if not ticker or ticker in core_tickers:
+            continue
+        ok, reasons = _is_right_tail_exception_candidate(row, cfg)
+        if not ok:
+            continue
+        score, parts = _right_tail_exception_score(row)
+        row["ticker"] = ticker
+        row["right_tail_exception_score"] = score
+        row["right_tail_exception_score_contributions"] = parts
+        row["right_tail_exception_reason_codes"] = reasons
+        _annotate_operating_guidance(row)
+        candidates.append(row)
+    candidates.sort(key=lambda r: (-(r["right_tail_exception_score"]), -(_to_float(r.get("entry_score_0_100")) or 0), -(_to_float(r.get("market_repricing_score")) or 0), r["ticker"]))
+    selected: list[dict] = []
+    warnings: list[str] = []
+    rm2plain = no_theme = 0
+    theme_counts: dict[str, int] = {}
+    sector_counts: dict[str, int] = {}
+    for row in candidates:
+        confirms = _has_theme_or_akg_confirmation(row) or _has_llm_or_hp_confirmation(row)
+        theme = str(row.get("primary_theme", "")).strip().lower()
+        sector = str(row.get("sector", "")).strip().lower()
+        if _rm_signal_bucket(row) == "2+" and not confirms and rm2plain >= cfg.max_rm2plus_slots:
+            warnings.append("MAX_RM2PLUS_SLOTS_REACHED")
+            continue
+        if not confirms and no_theme >= cfg.max_no_theme_no_llm_exceptions:
+            warnings.append("MAX_NO_THEME_NO_LLM_EXCEPTIONS_REACHED")
+            continue
+        if theme and theme_counts.get(theme, 0) >= cfg.max_same_theme:
+            warnings.append("MAX_SAME_THEME_REACHED")
+            continue
+        if sector and sector_counts.get(sector, 0) >= cfg.max_same_sector:
+            warnings.append("MAX_SAME_SECTOR_REACHED")
+            continue
+        selected.append(row)
+        if _rm_signal_bucket(row) == "2+" and not confirms:
+            rm2plain += 1
+        if not confirms:
+            no_theme += 1
+        if theme:
+            theme_counts[theme] = theme_counts.get(theme, 0) + 1
+        if sector:
+            sector_counts[sector] = sector_counts.get(sector, 0) + 1
+        if len(selected) >= cfg.exception_slots:
+            break
+    if len(selected) < cfg.exception_slots:
+        warnings.append(f"EXCEPTION_SHORTFALL_SELECTED_{len(selected)}_OF_{cfg.exception_slots}")
+    for rank, row in enumerate(selected, start=1):
+        row["selected_sleeve"] = "right_tail_exception"
+        row["selected_sleeve_rank"] = rank
+        row["portfolio_treatment"] = "exception_research_or_starter_underwriting"
+        row["right_tail_exception_warning_codes"] = warnings
+    if sum(1 for r in selected if _single_rm_signal_bucket(r)) < min(2, len([c for c in candidates if _single_rm_signal_bucket(c)])):
+        warnings.append("MIN_SINGLE_RM_PRIORITY_NOT_FILLED")
+    return [_public_row(r) for r in selected], sorted(set(warnings))
 
 
 def _annotate_operating_guidance(row: dict[str, Any]) -> None:
@@ -219,10 +453,46 @@ def _operating_recommendation_snapshot(selected: Sequence[Mapping[str, Any]], cf
     }
 
 
+def _top15_operating_recommendation_snapshot(selected: Sequence[Mapping[str, Any]], cfg: RightTailExceptionConfig) -> dict[str, Any]:
+    return {
+        "operating_setting": "high_conviction_top15_v3_exception_sleeve",
+        "validation_status": "observed-data extension; not full AKG+macro production v2 validation",
+        "top_n": int(cfg.core_n + cfg.exception_slots),
+        "portfolio_max_positions": 10,
+        "recommendation": "Core 10 are primary buy-underwriting candidates; exception sleeve names are right-tail research / starter-underwriting candidates. Do not equal-weight all 15 automatically.",
+        "selected_count": len(selected),
+    }
+
+
 def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
     rec = result.get("operating_recommendation", {})
     date = str(result.get("date") or result.get("config_snapshot", {}).get("selection_date") or "")
     rows = result.get("selected_rows", [])
+    if rec.get("operating_setting") == "high_conviction_top15_v3_exception_sleeve":
+        lines = [
+            "# Fundamental High-Conviction Top-15 Daily Recommendation",
+            "",
+            f"Date: `{date}`" if date else "Date: `not_provided`",
+            "Operating setting: `high_conviction_top15_v3_exception_sleeve`",
+            "Validation label: `observed-data extension, not fully validated AKG+macro production v2`",
+            "",
+            "## Recommendation",
+            "",
+            "Core 10 are primary buy-underwriting candidates.",
+            "Exception 5 are right-tail research / starter-underwriting candidates.",
+            "Do not equal-weight all 15 automatically.",
+            "Use high_conviction_top15_v3_exception_sleeve as observed-data extension; do not claim full AKG+macro production v2 validation.",
+            "",
+            "## Selected names",
+            "",
+            "| sleeve | rank | ticker | treatment | score | exception_score | reasons |",
+            "| --- | ---: | --- | --- | ---: | ---: | --- |",
+        ]
+        for row in rows:
+            lines.append("| {sleeve} | {rank} | {ticker} | {treatment} | {score} | {exscore} | {reasons} |".format(
+                sleeve=row.get("selected_sleeve", ""), rank=row.get("selected_sleeve_rank", row.get("selection_rank", "")), ticker=row.get("ticker", ""), treatment=row.get("portfolio_treatment", ""), score=row.get("score", row.get("entry_score_0_100", "")), exscore=row.get("right_tail_exception_score", ""), reasons=",".join(str(x) for x in row.get("right_tail_exception_reason_codes", [])),
+            ))
+        return "\n".join(lines) + "\n"
     lines = [
         "# Fundamental High-Conviction Top-10 Daily Recommendation",
         "",
