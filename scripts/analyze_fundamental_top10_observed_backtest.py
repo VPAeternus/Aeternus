@@ -806,6 +806,17 @@ Daily outputs:
 
 The daily recommendation artifact carries the observed-data v2 label, portfolio max positions = 10, single-RM-signal priority, RM 2+/HP caution flags, manual macro permission caveat, and AKG/T5 forward-validation caveat.
 
+## Next test: Top-15 exception sleeve
+
+The next observed-data extension is the Top-15 right-tail exception sleeve: 10 core high-conviction names plus up to 5 right-tail exception research/starter-underwriting names. Top-10 remains the core buy-underwriting sleeve. Exception names are not automatic equal-weight buys.
+
+Implementation/analysis artifacts:
+
+- `docs/research/fundamental_top15_exception_sleeve_implementation_plan.md`
+- `docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md`
+- `outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/`
+- `outputs/fundamental_backtest/analysis_top15_exception/`
+
 ## Future validation required before claiming full v2
 
 Before claiming full live AKG+macro production v2 validation, populate or forward-test these PIT fields: `theme_acceleration_score`, `theme_acceleration_research_visibility`, `theme_acceleration_rescan_flag`, `akg_universe_tier`, `macro_mode`, `macro_spy`, `macro_entry_action`, and `macro_position_size_multiplier`.

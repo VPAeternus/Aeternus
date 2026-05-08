@@ -1,0 +1,28 @@
+{
+  "analysis_version": "fundamental_top15_exception_sleeve_observed_analysis_v1",
+  "bundle_dir": "outputs/fundamental_backtest/high_conviction_top15_exception_sleeve",
+  "bundle_manifest_target_summary": {
+    "AAOI": "missed",
+    "AEHR": "missed",
+    "AXTI": "missed",
+    "BE": "missed",
+    "CRDO": "selected",
+    "CRNC": "missed",
+    "CVNA": "missed",
+    "ICHR": "missed",
+    "SNDK": "missed"
+  },
+  "input_manifest_sha256": "4226335059397d29f79e198db2f854d96d253ba572e0c93341ebb148a1171279",
+  "outputs": {
+    "docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md": "c1d55491841334d46e77c9ea765e4442e56949765698f84a7729e4f47e6a7f6f",
+    "outputs/fundamental_backtest/analysis_top15_exception/adoption_criteria_check.csv": "e8fc029d40cce63ecd46cafee99d167d8f22f747784c6b03821089b0e34fdfa4",
+    "outputs/fundamental_backtest/analysis_top15_exception/core_vs_exception_summary.csv": "a139db242a222c20e6114549d056d321b7fb5eef7313fe7e3645cc1b7ced387b",
+    "outputs/fundamental_backtest/analysis_top15_exception/exception_sleeve_drivers.csv": "f2e416e5db584557ed6c217c9635b0bf6b70f68129a1e9cd2eb041c4a836144b",
+    "outputs/fundamental_backtest/analysis_top15_exception/left_tail_penalty_comparison.csv": "af80d2c42d78ee3c7a2729cde2f56373bb4ff5c8859e346775b29939bcaf1a61",
+    "outputs/fundamental_backtest/analysis_top15_exception/missed_right_tail_after_top15.csv": "ed4e100283d68992b87eeb26194fb19c1917badaa831ab654a10e808bf698cd0",
+    "outputs/fundamental_backtest/analysis_top15_exception/target_right_tail_capture.csv": "75ec5ccfbb5b9c682a97930e92589b909c0da4a653f651a091626b7394cf64b8",
+    "outputs/fundamental_backtest/analysis_top15_exception/variant_comparison.csv": "078bba36f9c435197bd1d72745a2b05de8db65f094c9861abfcc6d9a53d1179a"
+  },
+  "prior_analysis_dir": "outputs/fundamental_backtest/analysis",
+  "scope": "observed-data Top-15 exception-sleeve analysis; not full AKG+macro production validation"
+}
