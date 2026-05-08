@@ -4,7 +4,30 @@ from __future__ import annotations
 from cli.common import *  # noqa: F401,F403
 
 import datetime as _dt
+import json
 import sys as _sys
+
+
+def _print_top10_table(rows: list[dict]) -> None:
+    table = Table(title="Fundamental High-Conviction Top 10")
+    table.add_column("Rank", justify="right")
+    table.add_column("Ticker", style="bold green")
+    table.add_column("Composite", justify="right")
+    table.add_column("Score", justify="right")
+    table.add_column("Confidence", justify="right")
+    table.add_column("Lane")
+    table.add_column("Reasons")
+    for idx, row in enumerate(rows, start=1):
+        table.add_row(
+            str(row.get("selection_rank") or row.get("selection_order") or idx),
+            str(row.get("ticker", "")),
+            str(row.get("composite_score", "")),
+            str(row.get("score", row.get("entry_score_0_100", ""))),
+            str(row.get("confidence_numeric", row.get("confidence", ""))),
+            str(row.get("lane_normalized", row.get("lane", ""))),
+            ",".join(str(x) for x in row.get("reason_codes", [])),
+        )
+    console.print(table)
 
 
 def _print_candidate_scores(lake_root: Path) -> None:
@@ -42,6 +65,54 @@ def _print_candidate_scores(lake_root: Path) -> None:
             str(row.get("document_status", "")),
         )
     console.print(table)
+
+
+@app.command("fundamental-top10")
+def fundamental_top10(
+    scores_csv: str = typer.Option(..., "--scores-csv", help="Required final fundamental scores CSV path"),
+    coverage_manifest: str = typer.Option("", "--coverage-manifest", help="Optional SEC coverage manifest CSV path"),
+    output_root: str = typer.Option("", "--output-root", help="Output root; defaults to scores CSV parent or eval_results/fundamental/<date>"),
+    date: str = typer.Option("", "--date", help="Selection date YYYY-MM-DD"),
+    top_n: int = typer.Option(10, "--top-n", min=1, help="Number of names to select"),
+    min_score: float = typer.Option(70.0, "--min-score", help="Minimum score threshold"),
+    min_confidence: float = typer.Option(3.0, "--min-confidence", help="Minimum confidence threshold"),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Select post-score high-conviction fundamental Top-N names."""
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_from_csv
+
+    fmt = format.strip().lower()
+    if fmt not in {"table", "json"}:
+        console.print("[red]--format must be table or json[/red]")
+        raise typer.Exit(1)
+
+    scores_path = Path(scores_csv)
+    if not scores_path.exists():
+        console.print(f"[red]scores CSV not found: {scores_path}[/red]")
+        raise typer.Exit(1)
+    coverage_path = Path(coverage_manifest) if coverage_manifest.strip() else None
+    if coverage_path is not None and not coverage_path.exists():
+        console.print(f"[red]coverage manifest not found: {coverage_path}[/red]")
+        raise typer.Exit(1)
+
+    selection_date = date.strip()
+    out_root = Path(output_root.strip()) if output_root.strip() else (
+        Path("eval_results") / "fundamental" / selection_date if selection_date else scores_path.parent
+    )
+    config = {
+        "top_n": top_n,
+        "min_score": min_score,
+        "min_confidence": min_confidence,
+        "selection_date": selection_date,
+        "coverage_gating": coverage_path is not None,
+    }
+    result = select_from_csv(scores_path, out_root, config, coverage_path)
+
+    if fmt == "json":
+        console.print(json.dumps(result, indent=2, sort_keys=True))
+    else:
+        _print_top10_table(result.get("selected_rows", []))
+        console.print(f"[green]Wrote[/green] {result['output_paths']['csv']} | {result['output_paths']['json']}")
 
 
 @app.command("fundamental")
