@@ -45,6 +45,8 @@ def test_forbidden_future_and_monitoring_columns_do_not_change_entry_score():
             "return_60d_pct": "999",
             "return_90d_pct": "999",
             "current_return_pct": "999",
+            "return_since_signal_pct": "999",
+            "return_since_purchase_pct": "999",
             "active_monitoring_score_0_100": "100",
             "monitoring_score_0_100": "100",
         }
@@ -52,6 +54,8 @@ def test_forbidden_future_and_monitoring_columns_do_not_change_entry_score():
 
     assert injected["entry_raw_score"] == baseline["entry_raw_score"]
     assert injected["entry_score_0_100"] == baseline["entry_score_0_100"]
+    assert "return_since_signal_pct" not in injected["entry_score_inputs"]
+    assert "return_since_purchase_pct" not in injected["entry_score_inputs"]
 
 
 def test_build_signal_tables_expands_hp_features_before_scoring():
@@ -62,6 +66,20 @@ def test_build_signal_tables_expands_hp_features_before_scoring():
     assert row["hp_structure_score"] == 18
     assert row["total_structure_score"] == 18
     assert row["entry_raw_score"] >= 18
+
+
+def test_build_signal_tables_preserves_input_row_order_after_batch_expansion():
+    rows = [
+        _base_row(ticker="ZZZ", entry_qoq_pct="25"),
+        _base_row(ticker="AAA", entry_qoq_pct="5"),
+        _base_row(ticker="MMM", entry_qoq_pct="40"),
+    ]
+
+    signal_rows, tier_rows, pre_rows = build_signal_tables(rows, as_of="2026-05-08")
+
+    assert [row["ticker"] for row in signal_rows] == ["ZZZ", "AAA", "MMM"]
+    assert [row["ticker"] for row in tier_rows] == ["ZZZ", "AAA", "MMM"]
+    assert [row["ticker"] for row in pre_rows] == ["ZZZ", "AAA", "MMM"]
 
 
 def test_add_entry_qoq_pct_persists_prior_entry_qoq_pct_from_prior_row():

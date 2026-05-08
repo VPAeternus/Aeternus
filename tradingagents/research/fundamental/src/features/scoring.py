@@ -15,6 +15,8 @@ ENTRY_SCORE_FORBIDDEN_COLUMNS = {
     "return_60d_pct",
     "return_90d_pct",
     "current_return_pct",
+    "return_since_signal_pct",
+    "return_since_purchase_pct",
     "active_monitoring_score_0_100",
     "monitoring_score_0_100",
 }

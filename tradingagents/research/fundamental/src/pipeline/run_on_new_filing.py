@@ -61,11 +61,11 @@ def build_signal_tables(
     output: list[dict[str, Any]] = []
     tier_rows: list[dict[str, Any]] = []
     pre_rows: list[dict[str, Any]] = []
-    for original in rows:
+    for input_order, original in enumerate(rows):
         base = _strip_monitoring_columns(original)
         if "pre_llm_fundamental_bucket" not in base:
             base.update(build_pre_llm_score(base))
-        bases.append(base)
+        bases.append({**base, "__input_order": input_order})
         pre_rows.append(
             {
                 "ticker": base.get("ticker", ""),
@@ -95,6 +95,8 @@ def build_signal_tables(
         )
     if bases:
         expanded_rows = add_repricing_momentum(add_hp_subtiers(pd.DataFrame(bases))).fillna("").to_dict("records")
+        expanded_rows = sorted(expanded_rows, key=lambda row: int(row.get("__input_order", 0)))
+        expanded_rows = [{key: value for key, value in row.items() if key != "__input_order"} for row in expanded_rows]
     else:
         expanded_rows = []
     prior_by_key = {_row_key(row): row for row in expanded_rows}
