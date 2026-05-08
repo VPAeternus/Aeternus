@@ -1,0 +1,65 @@
+{
+  "duplicate_selected_headers": [],
+  "duplicate_ticker_quarter_count": 0,
+  "eligible_row_count": 21182,
+  "forbidden_selection_overlap": [],
+  "loser_90d_label_mismatch_count": 0,
+  "manifest_hash_failure_count": 0,
+  "manifest_hash_failures": [],
+  "missing_akg_macro_available_counts": {
+    "akg_universe_tier": 0,
+    "macro_entry_action": 0,
+    "macro_mode": 0,
+    "macro_position_size_multiplier": 0,
+    "macro_spy": 0,
+    "theme_acceleration_rescan_flag": 0,
+    "theme_acceleration_research_visibility": 0,
+    "theme_acceleration_score": 0
+  },
+  "monitoring_final_rank_fields_forbidden": [
+    "active_monitoring_score_0_100",
+    "current_return_pct",
+    "final_rank_score_0_100",
+    "monitoring_score_0_100",
+    "rank_score_0_100",
+    "return_since_purchase_pct",
+    "return_since_signal_pct"
+  ],
+  "monitoring_final_rank_fields_in_selection_features": [],
+  "non_empty_return_90d_pct_count": 21182,
+  "observed_quarter_max": "2026Q2",
+  "observed_quarter_min": "2021Q4",
+  "outcome_labels_in_selection_features": [],
+  "partial_periods": {
+    "2026Q1": {
+      "eligible_rows": 134,
+      "rows": 1255,
+      "selected_pick_counts": {
+        "entry_score_top10": 3,
+        "high_conviction_top10_v1": 3,
+        "high_conviction_top10_v2_final": 3
+      },
+      "shortfall_by_variant": {
+        "entry_score_top10": "True",
+        "high_conviction_top10_v1": "True",
+        "high_conviction_top10_v2_final": "True"
+      }
+    },
+    "2026Q2": {
+      "eligible_rows": 0,
+      "rows": 1,
+      "selected_pick_counts": {}
+    }
+  },
+  "passed": true,
+  "pit_row_count": 22304,
+  "quarter_count": 19,
+  "selected_row_count": 519,
+  "ticker_count": 1279,
+  "variant_pick_counts": {
+    "entry_score_top10": 173,
+    "high_conviction_top10_v1": 173,
+    "high_conviction_top10_v2_final": 173
+  },
+  "winner_90d_label_mismatch_count": 0
+}

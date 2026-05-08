@@ -1,0 +1,20 @@
+{
+  "analysis_version": "fundamental_top10_observed_backtest_analysis_v1",
+  "core_handoff_manifest": "outputs/fundamental_backtest/HANDOFF_MANIFEST.json",
+  "not_a_full_production_v2_validation_reason": "AKG theme acceleration and macro fields are blank/missing in the PIT panel.",
+  "outputs": {
+    "docs/research/fundamental_top10_observed_backtest_analysis.md": "3ae7cffb68908bed66d4510f69f705e06579f0c7973e8af824119e0e2ca0c9b7",
+    "outputs/fundamental_backtest/analysis/2025Q1_drawdown_attribution.csv": "946d3e14f06a21e3ae6ac983bd100d6823b19ef295edbdc47d730826fcf3429c",
+    "outputs/fundamental_backtest/analysis/field_availability_audit.csv": "d1f77aed6bdd5a896ce4c117d65faac4c4c2139c109c05525f7f753e30e33d8a",
+    "outputs/fundamental_backtest/analysis/hp_bucket_tail_risk_analysis.csv": "a60be765dd2a1aa7b642e9ec7737cfcfa8e2d8e16ea359c532d92852009aa6d3",
+    "outputs/fundamental_backtest/analysis/missed_right_tail_mechanical_exclusions.csv": "406f36b247547246520b0fa41b6ddc413cc8594f41d3488b2f722e99e0f552f9",
+    "outputs/fundamental_backtest/analysis/qa_leakage_verification.json": "804eac3963a966792910c9e4290581413ec1e78a1976f119bce50ff248cfd113",
+    "outputs/fundamental_backtest/analysis/rm1_vs_rm2plus_drivers.csv": "b392185c0d6c1a80fec0c6de3b6bcf0cec272e100665c805564874aeda2e0eba",
+    "outputs/fundamental_backtest/analysis/top_winners_losers_repeat_ticker_contribution.csv": "87d2a596fe247e6be43ec085b3f9f618d2373d5adc8f660b194be0f1aed5851c",
+    "outputs/fundamental_backtest/analysis/variant_interpretation_matrix.csv": "ca19d40b6b5a16adb78df1affa21b34d74e126a82a03ffd37e5a593196fba0c8",
+    "outputs/fundamental_backtest/analysis/variant_overlap_delta_by_quarter.csv": "906e662585c165660d4f89665a7142748fd50e0e4d5d22c403d7bd3b02e5ca36"
+  },
+  "qa_passed": true,
+  "scope_label": "High-Conviction Top-10 Observed-Data Backtest",
+  "source_bundle": "outputs/fundamental_backtest"
+}

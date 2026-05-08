@@ -1,0 +1,95 @@
+field,available_count,missing_count,used_in_selection,used_as_label,interpretation
+ticker,22304,0,yes,no,Selection-time feature from PIT panel.
+quarter,22304,0,yes,no,Selection-time feature from PIT panel.
+tradable_date,22304,0,yes,no,Selection-time feature from PIT panel.
+entry_open,22304,0,yes,no,Selection-time feature from PIT panel.
+entry_qoq_pct,21025,1279,yes,no,Selection-time feature from PIT panel.
+prior_entry_qoq_pct,19714,2590,yes,no,Selection-time feature from PIT panel.
+score_change,20874,1430,yes,no,Selection-time feature from PIT panel.
+pre_llm_fundamental_score,22152,152,yes,no,Selection-time feature from PIT panel.
+pre_llm_fundamental_bucket,22304,0,yes,no,Selection-time feature from PIT panel.
+revenue_bucket,22203,101,yes,no,Selection-time feature from PIT panel.
+tier_0_bucket,6756,15548,yes,no,Selection-time feature from PIT panel.
+tier_1_bucket,3925,18379,yes,no,Selection-time feature from PIT panel.
+tier_2_bucket,2341,19963,yes,no,Selection-time feature from PIT panel.
+tier_3_bucket,1304,21000,yes,no,Selection-time feature from PIT panel.
+tier_4_bucket,763,21541,yes,no,Selection-time feature from PIT panel.
+hp0_high_price_broad,15305,6999,yes,no,Selection-time feature from PIT panel.
+hp1_quality_pullback,842,21462,yes,no,Selection-time feature from PIT panel.
+hp2_dislocation_momentum_priority,416,21888,yes,no,Selection-time feature from PIT panel.
+hp2_dislocation_momentum_watch,110,22194,yes,no,Selection-time feature from PIT panel.
+hp3_large_quality_theme_exception,214,22090,yes,no,Selection-time feature from PIT panel.
+hp4_score_reacceleration_watch,895,21409,yes,no,Selection-time feature from PIT panel.
+hp_production_extension,1462,20842,yes,no,Selection-time feature from PIT panel.
+hp_research_extension,2416,19888,yes,no,Selection-time feature from PIT panel.
+hp_LLM_best,22304,0,yes,no,Selection-time feature from PIT panel.
+rm1_low_price_dislocation_momentum,402,21902,yes,no,Selection-time feature from PIT panel.
+rm2_weak_acceleration,313,21991,yes,no,Selection-time feature from PIT panel.
+rm3_mid_price_dislocation_momentum,149,22155,yes,no,Selection-time feature from PIT panel.
+rm4_persistent_repricing_wave,67,22237,yes,no,Selection-time feature from PIT panel.
+repricing_momentum_extension,402,21902,yes,no,Selection-time feature from PIT panel.
+repricing_momentum_priority,358,21946,yes,no,Selection-time feature from PIT panel.
+market_repricing_score,22304,0,yes,no,Selection-time feature from PIT panel.
+rm_buy_review_flag,22304,0,yes,no,Selection-time feature from PIT panel.
+post_llm_candidate_flag,6311,15993,yes,no,Selection-time feature from PIT panel.
+post_llm_high_priority_flag,6311,15993,yes,no,Selection-time feature from PIT panel.
+post_llm_demote_flag,6311,15993,yes,no,Selection-time feature from PIT panel.
+causal_change,6311,15993,yes,no,Selection-time feature from PIT panel.
+negative_revision_risk,6311,15993,yes,no,Selection-time feature from PIT panel.
+narrative_delta_bucket,6311,15993,yes,no,Selection-time feature from PIT panel.
+operating_leverage_quality,6311,15993,yes,no,Selection-time feature from PIT panel.
+durability,6311,15993,yes,no,Selection-time feature from PIT panel.
+score_addition,6311,15993,yes,no,Selection-time feature from PIT panel.
+primary_theme,52,22252,yes,no,Selection-time feature from PIT panel.
+secondary_themes,53,22251,yes,no,Selection-time feature from PIT panel.
+theme_role,52,22252,yes,no,Selection-time feature from PIT panel.
+theme_confidence,52,22252,yes,no,Selection-time feature from PIT panel.
+theme_driver_type,52,22252,yes,no,Selection-time feature from PIT panel.
+theme_momentum,53,22251,yes,no,Selection-time feature from PIT panel.
+theme_acceleration_score,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+theme_tailwind_score,22304,0,yes,no,Selection-time feature from PIT panel.
+theme_acceleration_research_visibility,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+theme_acceleration_rescan_flag,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+akg_universe_tier,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+macro_mode,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+macro_spy,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+macro_entry_action,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+macro_position_size_multiplier,0,22304,allowlisted_but_unavailable,no,"Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle."
+tier_structure_score,22304,0,yes,no,Selection-time feature from PIT panel.
+hp_structure_score,22304,0,yes,no,Selection-time feature from PIT panel.
+total_structure_score,22304,0,yes,no,Selection-time feature from PIT panel.
+llm_business_improvement_score,22304,0,yes,no,Selection-time feature from PIT panel.
+fundamental_rerating_score,22304,0,yes,no,Selection-time feature from PIT panel.
+risk_penalty_score,22304,0,yes,no,Selection-time feature from PIT panel.
+entry_raw_score,22304,0,yes,no,Selection-time feature from PIT panel.
+entry_score_0_100,22304,0,yes,no,Selection-time feature from PIT panel.
+return_10d_pct,22303,1,no_forbidden,yes,Outcome label; diagnostic only and attached after selection.
+return_20d_pct,22301,3,no_forbidden,yes,Outcome label; diagnostic only and attached after selection.
+return_30d_pct,22294,10,no_forbidden,yes,Outcome label; diagnostic only and attached after selection.
+return_60d_pct,22028,276,no_forbidden,yes,Outcome label; diagnostic only and attached after selection.
+return_90d_pct,21182,1122,no_forbidden,yes,Outcome label; diagnostic only and attached after selection.
+winner_90d_30pct,22304,0,no_forbidden,yes,Outcome label; diagnostic only and attached after selection.
+loser_90d_minus30pct,22304,0,no_forbidden,yes,Outcome label; diagnostic only and attached after selection.
+is_partial_live_quarter,0,22304,no_forbidden,yes,Explicitly excluded/forbidden from selection.
+is_future_date_anomaly,22304,0,no_forbidden,yes,Explicitly excluded/forbidden from selection.
+eligible_for_backtest,22304,0,filter_only,filter_label,Explicitly excluded/forbidden from selection.
+pipeline_run_id,22304,0,no,no,Metadata or diagnostic field.
+scoring_formula_version,0,22304,no,no,Metadata or diagnostic field.
+tier_rule_version,0,22304,no,no,Metadata or diagnostic field.
+hp_rule_version,0,22304,no,no,Metadata or diagnostic field.
+rm_rule_version,0,22304,no,no,Metadata or diagnostic field.
+theme_rule_version,0,22304,no,no,Metadata or diagnostic field.
+macro_rule_version,0,22304,no,no,Metadata or diagnostic field.
+source_file_hash,22304,0,no,no,Metadata or diagnostic field.
+active_monitoring_score_0_100,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+current_return_pct,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+final_rank_score_0_100,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+forward_return_pct,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+future_return_pct,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+label,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+max_forward_return_pct,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+monitoring_score_0_100,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+rank_score_0_100,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+return_since_purchase_pct,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+return_since_signal_pct,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.
+target,0,22304,no_forbidden,no,Explicitly excluded/forbidden from selection.

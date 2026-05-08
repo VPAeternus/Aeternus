@@ -1,0 +1,145 @@
+# High-Conviction Top-10 Observed-Data Backtest
+
+## Bottom line
+
+The committed bundle is valid for a better observed-data Top-10 backtest analysis. It is not a full live AKG+macro production v2 validation because AKG theme acceleration and macro fields are blank/missing in the PIT panel.
+
+Core counts reconciled from the committed artifacts:
+
+- PIT panel rows: `22,304`
+- Eligible backtest rows: `21,182`
+- Selected rows: `519`
+- Variants: `3`
+- Picks per variant: `{'entry_score_top10': 173, 'high_conviction_top10_v1': 173, 'high_conviction_top10_v2_final': 173}`
+- Observed quarters: `2021Q4` through `2026Q2`
+
+## QA / leakage verification
+
+QA status: `PASS`.
+
+- Outcome labels are diagnostic only: `forbidden_selection_overlap=[]` and `outcome_labels_in_selection_features=[]`.
+- Monitoring/final-rank/current-return fields are excluded from selection: `monitoring_final_rank_fields_in_selection_features=[]`; forbidden set `['active_monitoring_score_0_100', 'current_return_pct', 'final_rank_score_0_100', 'monitoring_score_0_100', 'rank_score_0_100', 'return_since_purchase_pct', 'return_since_signal_pct']`.
+- Winner/loser labels reconcile to `return_90d_pct`: winner mismatches `0`, loser mismatches `0`.
+- Duplicate ticker-quarter rows: `0`.
+- Manifest hash failures: `0`.
+- `selected_names_by_quarter.csv` duplicate headers: `[]`.
+- `2026Q1` is partial/shortfall: `{'rows': 1255, 'eligible_rows': 134, 'selected_pick_counts': {'entry_score_top10': 3, 'high_conviction_top10_v1': 3, 'high_conviction_top10_v2_final': 3}, 'shortfall_by_variant': {'entry_score_top10': 'True', 'high_conviction_top10_v1': 'True', 'high_conviction_top10_v2_final': 'True'}}`.
+- `2026Q2` is present in the source but not eligible for 90d backtest selection: `{'rows': 1, 'eligible_rows': 0, 'selected_pick_counts': {}}`.
+
+Missing AKG/macro field availability:
+
+| field | available | used_in_selection | interpretation |
+| --- | --- | --- | --- |
+| theme_acceleration_score | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+| theme_acceleration_research_visibility | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+| theme_acceleration_rescan_flag | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+| akg_universe_tier | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+| macro_mode | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+| macro_spy | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+| macro_entry_action | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+| macro_position_size_multiplier | 0 | allowlisted_but_unavailable | Source-missing PIT field; retained blank/unavailable, not valid positive or negative evidence in this bundle. |
+
+## Variant interpretation matrix
+
+| variant | tests | does_not_test |
+| --- | --- | --- |
+| entry_score_top10 | Raw entry-score Top-10 among eligible rows with entry_score_0_100 >= 70. | HP override, RM override, AKG theme acceleration override, T5_RESCAN override, and macro blocking. |
+| high_conviction_top10_v1 | Entry-score baseline plus HP production+LLM override and HP/risk-penalty high-conviction score adjustments. | RM override, AKG theme acceleration/T5_RESCAN override, and macro blocking. |
+| high_conviction_top10_v2_final | Observed v2 columns: v1 plus RM/repricing priority and market repricing boosts, post-LLM demote penalty, and macro-block logic if populated. | Full live AKG+macro production v2, because theme acceleration, AKG tier, and macro fields are blank/missing in this PIT panel. |
+
+## Main strategy result
+
+| variant | picks | avg_90d | +30_hit | -30_loser |
+| --- | --- | --- | --- | --- |
+| entry_score_top10 | 173 | 15.26% | 25.19% | 6.11% |
+| high_conviction_top10_v1 | 173 | 15.49% | 26.85% | 7.22% |
+| high_conviction_top10_v2_final | 173 | 15.50% | 26.85% | 7.22% |
+
+Read-through: high-conviction v1/v2 improve the +30% hit rate versus raw entry-score Top-10, but with a higher -30% loser rate. v2 does not materially beat v1 in this bundle because the fields that make v2 uniquely AKG/macro-aware are unavailable.
+
+## Quarter-by-quarter read
+
+Strong v2 quarters:
+
+| quarter | avg_90d | +30_hit |
+| --- | --- | --- |
+| 2025Q3 | 50.32% | 40.00% |
+| 2023Q4 | 35.15% | 50.00% |
+| 2022Q4 | 23.95% | 30.00% |
+| 2024Q3 | 23.21% | 40.00% |
+
+Weak v2 quarters:
+
+| quarter | avg_90d | -30_loser |
+| --- | --- | --- |
+| 2025Q1 | -15.93% | 20.00% |
+| 2024Q2 | -3.36% | 0.00% |
+| 2022Q1 | -3.06% | 10.00% |
+
+The 2025Q1 drawdown remains the clearest case for macro permission / risk-on filtering. This bundle cannot measure that protection because macro fields are blank.
+
+## RM contribution
+
+| rm_bucket | picks | avg_90d | +30_hit | -30_loser |
+| --- | --- | --- | --- | --- |
+| 0 | 81 | 6.40% | 18.52% | 7.41% |
+| 1 | 36 | 45.69% | 58.33% | 2.78% |
+| 2+ | 56 | 8.87% | 17.86% | 10.71% |
+
+Observed result: RM=1 is the strongest discovered bucket. RM=2+ is weaker and has higher left-tail risk than RM=1. Treat this as a routing/manual-underwriting signal, not proof that one causal mechanism explains returns.
+
+## HP contribution
+
+| hp_bucket | picks | avg_90d | +30_hit | -30_loser |
+| --- | --- | --- | --- | --- |
+| 0 | 121 | 15.18% | 24.79% | 5.79% |
+| 2+ | 52 | 15.84% | 30.77% | 11.54% |
+
+HP improves +30% capture in v2, but also increases the -30% loser rate. HP candidates need valuation/current-price and risk discipline.
+
+## Theme caveat
+
+For `high_conviction_top10_v2_final`, `UNKNOWN` accounts for `158` of `173` picks. Named-theme rows are small-sample and directional only:
+
+| theme | picks | avg_90d |
+| --- | --- | --- |
+| Flexible power infrastructure for HPC and bitcoin mining | 1 | 337.70% |
+| datacenter optical network transition | 1 | 103.34% |
+| hyperscale 400G optical ramp | 1 | 99.28% |
+| AI memory and storage acceleration | 1 | 79.99% |
+| 800G and CATV demand ramp | 1 | 63.35% |
+
+The real theme acceleration module still needs PIT-populated fields before production claims are justified.
+
+## Missed right-tail mechanical exclusions
+
+These rows are mechanical exclusions, not proof of why the stock moved or proof the framework should have bought them.
+
+| right_tail_bucket | mechanical_exclusion_category | count |
+| --- | --- | --- |
+| 2x_to_5x | eligible_but_ranked_below_top10 | 9 |
+| 2x_to_5x | not_variant_eligible | 74 |
+| 5x_to_10x | not_variant_eligible | 2 |
+
+See `outputs/fundamental_backtest/analysis/missed_right_tail_mechanical_exclusions.csv` for ticker-level rows.
+
+## Live-use recommendation from observed data
+
+Use the observed v2 / high-conviction framework as the current operating setting, but prioritize RM=1 candidates for manual underwriting. Be more cautious with RM=2+ unless LLM/theme/valuation evidence is unusually strong. Keep source Top-30 -> deep analysis -> max 10 portfolio plan rather than relying on raw source Top-10.
+
+## Future validation required before claiming full v2
+
+Before claiming full live AKG+macro production v2 validation, populate or forward-test these PIT fields: `theme_acceleration_score`, `theme_acceleration_research_visibility`, `theme_acceleration_rescan_flag`, `akg_universe_tier`, `macro_mode`, `macro_spy`, `macro_entry_action`, and `macro_position_size_multiplier`.
+
+## Companion outputs
+
+- `outputs/fundamental_backtest/analysis/field_availability_audit.csv`
+- `outputs/fundamental_backtest/analysis/variant_interpretation_matrix.csv`
+- `outputs/fundamental_backtest/analysis/rm1_vs_rm2plus_drivers.csv`
+- `outputs/fundamental_backtest/analysis/hp_bucket_tail_risk_analysis.csv`
+- `outputs/fundamental_backtest/analysis/variant_overlap_delta_by_quarter.csv`
+- `outputs/fundamental_backtest/analysis/top_winners_losers_repeat_ticker_contribution.csv`
+- `outputs/fundamental_backtest/analysis/2025Q1_drawdown_attribution.csv`
+- `outputs/fundamental_backtest/analysis/missed_right_tail_mechanical_exclusions.csv`
+- `outputs/fundamental_backtest/analysis/qa_leakage_verification.json`
+- `outputs/fundamental_backtest/analysis/analysis_manifest.json`
