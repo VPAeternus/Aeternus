@@ -634,7 +634,7 @@ def write_report(
     rm_v2 = contrib[(contrib["variant"] == "high_conviction_top10_v2_final") & (contrib["dimension"] == "rm")].copy()
     rm_rows = [
         {
-            "rm_bucket": row["bucket"],
+            "rm_signal_bucket": row["bucket"],
             "picks": row["pick_count"],
             "avg_90d": pct_points(row["avg_return_90d_pct"]),
             "+30_hit": pct_decimal(row["winner_90d_30pct_rate"]),
@@ -743,9 +743,9 @@ The 2025Q1 drawdown remains the clearest case for macro permission / risk-on fil
 
 ## RM contribution
 
-{md_table(rm_rows, ['rm_bucket', 'picks', 'avg_90d', '+30_hit', '-30_loser'])}
+{md_table(rm_rows, ['rm_signal_bucket', 'picks', 'avg_90d', '+30_hit', '-30_loser'])}
 
-Observed result: RM=1 is the strongest discovered bucket. RM=2+ is weaker and has higher left-tail risk than RM=1. Treat this as a routing/manual-underwriting signal, not proof that one causal mechanism explains returns.
+Observed result: the strongest bucket is the single-RM-signal bucket, labeled `rm_signal_bucket=1`. This is not necessarily the literal `rm1_low_price_dislocation_momentum` rule; it means exactly one RM-related signal was active. The `rm_signal_bucket=2+` multi-RM-signal bucket is weaker and has higher left-tail risk than the single-signal bucket. Treat this as a routing/manual-underwriting signal, not proof that one causal mechanism explains returns.
 
 ## HP contribution
 
@@ -771,7 +771,7 @@ See `outputs/fundamental_backtest/analysis/missed_right_tail_mechanical_exclusio
 
 ## Live-use recommendation from observed data
 
-Use the observed v2 / high-conviction framework as the current operating setting, but prioritize RM=1 candidates for manual underwriting. Be more cautious with RM=2+ unless LLM/theme/valuation evidence is unusually strong. Keep source Top-30 -> deep analysis -> max 10 portfolio plan rather than relying on raw source Top-10.
+Use the observed v2 / high-conviction framework as the current operating setting, but prioritize `rm_signal_bucket=1` candidates for manual underwriting. Read that as the single-RM-signal bucket, not necessarily the literal RM1 rule. Be more cautious with `rm_signal_bucket=2+` multi-RM-signal candidates unless LLM/theme/valuation evidence is unusually strong. Keep source Top-30 -> deep analysis -> max 10 portfolio plan rather than relying on raw source Top-10.
 
 ## Future validation required before claiming full v2
 
@@ -781,7 +781,7 @@ Before claiming full live AKG+macro production v2 validation, populate or forwar
 
 - `outputs/fundamental_backtest/analysis/field_availability_audit.csv`
 - `outputs/fundamental_backtest/analysis/variant_interpretation_matrix.csv`
-- `outputs/fundamental_backtest/analysis/rm1_vs_rm2plus_drivers.csv`
+- `outputs/fundamental_backtest/analysis/rm1_vs_rm2plus_drivers.csv` (legacy filename; rows use `rm_signal_bucket`, where `1` means one RM-related signal active, not necessarily the literal RM1 rule)
 - `outputs/fundamental_backtest/analysis/hp_bucket_tail_risk_analysis.csv`
 - `outputs/fundamental_backtest/analysis/variant_overlap_delta_by_quarter.csv`
 - `outputs/fundamental_backtest/analysis/top_winners_losers_repeat_ticker_contribution.csv`
