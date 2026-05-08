@@ -33,7 +33,18 @@ from tradingagents.research.fundamental.src.selection.high_conviction_top10 impo
 
 RUNNER_VERSION = "fundamental_high_conviction_top15_exception_sleeve_backtest_v1"
 DEFAULT_OUTPUT_DIR = Path("outputs/fundamental_backtest/high_conviction_top15_exception_sleeve")
-TARGET_RIGHT_TAIL_NAMES = ["CRNC", "CVNA", "SNDK", "AAOI", "BE", "AXTI", "AEHR", "ICHR", "CRDO"]
+TARGET_RIGHT_TAIL_EVENTS = {
+    "CRNC": "2024Q4",
+    "CVNA": "2023Q2",
+    "SNDK": "2025Q3",
+    "AAOI": "2023Q2",
+    "BE": "2025Q3",
+    "AXTI": "2026Q1",
+    "AEHR": "2026Q1",
+    "ICHR": "2026Q1",
+    "CRDO": "2024Q3",
+}
+TARGET_RIGHT_TAIL_NAMES = list(TARGET_RIGHT_TAIL_EVENTS)
 TOP15_VARIANTS: dict[str, RightTailExceptionConfig] = {
     "high_conviction_top15_v3_exception_sleeve": RightTailExceptionConfig(enabled=True, core_n=10, exception_slots=5),
     "top15_conservative_10_core_3_exception": RightTailExceptionConfig(enabled=True, core_n=10, exception_slots=3),
@@ -223,7 +234,11 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "missed_right_tail_after_top15.csv", missed, ["ticker", "quarter", "return_90d_pct", "mechanical_status_after"])
     (out / "README_ANALYSIS.md").write_text(_readme(), encoding="utf-8")
     safe_cols_manifest = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and c not in FORBIDDEN_SELECTION_COLUMNS]]))
-    manifest = {"run_id": run_id or f"top15-exception-{uuid4()}", "runner_version": RUNNER_VERSION, "inputs": {"pit_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)}, "prior_selected": {"path": str(prior_path), "sha256": _file_sha256(prior_path), "row_count": len(baseline)}}, "variant_configs": {k: cfg.__dict__ for k, cfg in TOP15_VARIANTS.items()}, "forbidden_selection_columns_removed_excluded": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS), "feature_columns_used_for_selection": safe_cols_manifest, "columns_excluded_from_selection": sorted(set(headers) - set(safe_cols_manifest)), "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.", "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.", "target_missed_name_capture_summary": {t: next((r["top15_status"] for r in comparison if r["ticker"] == t), "not_present") for t in TARGET_RIGHT_TAIL_NAMES}, "quarter_count": len(groups), "eligible_row_count": sum(len(v) for v in groups.values())}
+    target_summary = {
+        ticker: next((r["top15_status"] for r in comparison if r["ticker"] == ticker and r["quarter"] == quarter), "not_present")
+        for ticker, quarter in TARGET_RIGHT_TAIL_EVENTS.items()
+    }
+    manifest = {"run_id": run_id or f"top15-exception-{uuid4()}", "runner_version": RUNNER_VERSION, "inputs": {"pit_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)}, "prior_selected": {"path": str(prior_path), "sha256": _file_sha256(prior_path), "row_count": len(baseline)}}, "variant_configs": {k: cfg.__dict__ for k, cfg in TOP15_VARIANTS.items()}, "forbidden_selection_columns_removed_excluded": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS), "feature_columns_used_for_selection": safe_cols_manifest, "columns_excluded_from_selection": sorted(set(headers) - set(safe_cols_manifest)), "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.", "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.", "target_right_tail_events": TARGET_RIGHT_TAIL_EVENTS, "target_missed_name_capture_summary": target_summary, "quarter_count": len(groups), "eligible_row_count": sum(len(v) for v in groups.values())}
     manifest["output_hashes"] = {name: _file_sha256(out / name) for name in OUTPUT_FILES}
     (out / "run_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return manifest

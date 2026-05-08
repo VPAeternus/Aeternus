@@ -336,6 +336,7 @@ def _is_right_tail_exception_candidate(
         "SINGLE_RM_SIGNAL_BUCKET": _single_rm_signal_bucket(row),
         "RM_BUY_REVIEW": _truthy(row.get("rm_buy_review_flag")),
         "REPRICING_MOMENTUM_PRIORITY": _truthy(row.get("repricing_momentum_priority")),
+        "MARKET_REPRICING": (_to_float(row.get("market_repricing_score")) or 0) >= 10,
         "HP_LLM_BEST": _truthy(row.get("hp_LLM_best")),
         "HP_SIGNAL": _signal_count(row, HP_SIGNAL_FIELDS) > 0,
         "THEME_TAILWIND": (_to_float(row.get("theme_tailwind_score")) or 0) > 0,

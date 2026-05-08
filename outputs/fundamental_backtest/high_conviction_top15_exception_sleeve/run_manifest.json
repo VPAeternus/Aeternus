@@ -116,12 +116,12 @@
     "left_tail_penalty_comparison.csv": "aad1da43b8980c2b067061895948547eb502b79cefc4593eed2644d29791465a",
     "missed_right_tail_after_top15.csv": "81270dc6ba5071b89bb955034325f75d63bb8fd208c91d0f1891f8de6188732c",
     "right_tail_capture_comparison.csv": "030cae2207bc3e86bda749ac822bd6549bc0964bfcc4f55e920b3ecb5d90663f",
-    "selected_names_by_quarter_top15.csv": "79a260b1241a4e93591f46249c8ccec87f8e790d74cbe37b1d8ceb0ef0176a97",
+    "selected_names_by_quarter_top15.csv": "ddf3368ff7ba6b36b3322428baa7ededb3e4f9e1f92d9d6d1c00b2e203d526d4",
     "strategy_by_quarter_top15.csv": "1bd66b7c2c061b2dde5216372a2869d1564f694a08b4f37eca4efa843cff8e7d",
     "strategy_summary_top15.csv": "6936687e0a5ed6167580d8b31feecbeb640971244572a5a41623f9e582c5bb8d"
   },
   "quarter_count": 18,
-  "run_id": "top15-exception-b271553d-30e3-4cad-b8e3-f9ebf0a038d0",
+  "run_id": "top15-exception-f722367a-cc57-48c7-8fa8-5a24488ff136",
   "runner_version": "fundamental_high_conviction_top15_exception_sleeve_backtest_v1",
   "target_missed_name_capture_summary": {
     "AAOI": "missed",
@@ -133,6 +133,17 @@
     "CVNA": "missed",
     "ICHR": "missed",
     "SNDK": "missed"
+  },
+  "target_right_tail_events": {
+    "AAOI": "2023Q2",
+    "AEHR": "2026Q1",
+    "AXTI": "2026Q1",
+    "BE": "2025Q3",
+    "CRDO": "2024Q3",
+    "CRNC": "2024Q4",
+    "CVNA": "2023Q2",
+    "ICHR": "2026Q1",
+    "SNDK": "2025Q3"
   },
   "variant_configs": {
     "high_conviction_top15_v3_exception_sleeve": {

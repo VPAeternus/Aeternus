@@ -61,19 +61,19 @@ Interpretation: main Top-15 v3 clears the quantitative research-queue tests, but
 
 ## Target right-tail capture
 
-| ticker | present | status | best_90d | selected_quarters |
-| --- | --- | --- | --- | --- |
-| CRNC | True | missed | 431.05% |  |
-| CVNA | True | missed | 416.35% |  |
-| SNDK | True | missed | 324.98% |  |
-| AAOI | True | selected | 311.88% | 2023Q4 |
-| BE | True | missed | 290.50% |  |
-| AXTI | True | missed | 196.78% |  |
-| AEHR | True | missed | 188.12% |  |
-| ICHR | True | missed | 144.92% |  |
-| CRDO | True | selected | 152.51% | 2024Q3 |
+| ticker | target_quarter | present | status | target_90d | selected_quarters |
+| --- | --- | --- | --- | --- | --- |
+| CRNC | 2024Q4 | True | missed | 431.05% |  |
+| CVNA | 2023Q2 | True | missed | 416.35% |  |
+| SNDK | 2025Q3 | True | missed | 324.98% |  |
+| AAOI | 2023Q2 | True | missed | 311.88% |  |
+| BE | 2025Q3 | True | missed | 290.50% |  |
+| AXTI | 2026Q1 | True | missed | 196.78% |  |
+| AEHR | 2026Q1 | True | missed | 188.12% |  |
+| ICHR | 2026Q1 | True | missed | 144.92% |  |
+| CRDO | 2024Q3 | True | selected | 152.51% | 2024Q3 |
 
-The sleeve captured `AAOI`, `CRDO` from the named target set but still missed most low-score RM/theme-wave examples. That means the exception sleeve helps, but it does not fully solve messy right-tail discovery.
+The sleeve captured `CRDO` from the named target set but still missed most low-score RM/theme-wave examples. That means the exception sleeve helps, but it does not fully solve messy right-tail discovery.
 
 ## No-leakage and caveats
 

@@ -52,10 +52,10 @@ def test_exception_candidate_allows_low_entry_score_with_rm_signal():
     assert "SINGLE_RM_SIGNAL_BUCKET" in reasons
 
 
-def test_market_repricing_alone_does_not_allow_low_score_exception():
+def test_market_repricing_alone_allows_low_score_exception():
     ok, reasons = _is_right_tail_exception_candidate(row("MRKT", 50, market_repricing_score="10"), RightTailExceptionConfig(enabled=True))
-    assert ok is False
-    assert reasons == ["NO_RIGHT_TAIL_SIGNAL"]
+    assert ok is True
+    assert "MARKET_REPRICING" in reasons
 
 
 def test_exception_candidate_blocks_post_llm_demote():

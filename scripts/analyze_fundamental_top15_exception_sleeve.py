@@ -9,7 +9,18 @@ from typing import Any
 
 import pandas as pd
 
-TARGET_NAMES = ["CRNC", "CVNA", "SNDK", "AAOI", "BE", "AXTI", "AEHR", "ICHR", "CRDO"]
+TARGET_EVENTS = {
+    "CRNC": "2024Q4",
+    "CVNA": "2023Q2",
+    "SNDK": "2025Q3",
+    "AAOI": "2023Q2",
+    "BE": "2025Q3",
+    "AXTI": "2026Q1",
+    "AEHR": "2026Q1",
+    "ICHR": "2026Q1",
+    "CRDO": "2024Q3",
+}
+TARGET_NAMES = list(TARGET_EVENTS)
 MAIN_VARIANT = "high_conviction_top15_v3_exception_sleeve"
 BASELINE = "high_conviction_top10_v2_final"
 
@@ -74,20 +85,22 @@ def build_adoption_check(summary: pd.DataFrame, contribution: pd.DataFrame) -> p
 
 def build_target_capture(right_tail: pd.DataFrame) -> pd.DataFrame:
     rows = []
-    for ticker in TARGET_NAMES:
-        sub = right_tail[right_tail["ticker"].str.upper() == ticker]
+    for ticker, target_quarter in TARGET_EVENTS.items():
+        all_sub = right_tail[right_tail["ticker"].str.upper() == ticker]
+        sub = all_sub[all_sub["quarter"] == target_quarter]
         if sub.empty:
-            rows.append({"ticker": ticker, "present_in_right_tail": False, "best_return_90d_pct": "", "top15_status": "not_present", "selected_quarters": ""})
+            rows.append({"ticker": ticker, "target_quarter": target_quarter, "present_in_right_tail": False, "target_return_90d_pct": "", "top15_status": "not_present", "selected_quarters": "", "all_quarters": ";".join(sorted(all_sub["quarter"].unique())) if not all_sub.empty else ""})
             continue
         selected = sub[sub["top15_status"] == "selected"]
         rows.append(
             {
                 "ticker": ticker,
+                "target_quarter": target_quarter,
                 "present_in_right_tail": True,
-                "best_return_90d_pct": num(sub["return_90d_pct"]).max(),
+                "target_return_90d_pct": num(sub["return_90d_pct"]).max(),
                 "top15_status": "selected" if not selected.empty else "missed",
                 "selected_quarters": ";".join(sorted(selected["quarter"].unique())) if not selected.empty else "",
-                "all_quarters": ";".join(sorted(sub["quarter"].unique())),
+                "all_quarters": ";".join(sorted(all_sub["quarter"].unique())),
             }
         )
     return pd.DataFrame(rows)
@@ -140,7 +153,7 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     main = summary[summary["variant"] == MAIN_VARIANT].iloc[0]
     main_exc = contrib[(contrib["variant"] == MAIN_VARIANT) & (contrib["sleeve"] == "right_tail_exception")].iloc[0]
     target_rows = [
-        {"ticker": r.ticker, "present": r.present_in_right_tail, "status": r.top15_status, "best_90d": pct(r.best_return_90d_pct) if str(r.best_return_90d_pct) else "", "selected_quarters": getattr(r, "selected_quarters", "")}
+        {"ticker": r.ticker, "target_quarter": r.target_quarter, "present": r.present_in_right_tail, "status": r.top15_status, "target_90d": pct(r.target_return_90d_pct) if str(r.target_return_90d_pct) else "", "selected_quarters": getattr(r, "selected_quarters", "")}
         for r in target_capture.itertuples(index=False)
     ]
     summary_rows = [
@@ -197,7 +210,7 @@ Interpretation: main Top-15 v3 clears the quantitative research-queue tests, but
 
 ## Target right-tail capture
 
-{md_table(target_rows, ['ticker', 'present', 'status', 'best_90d', 'selected_quarters'])}
+{md_table(target_rows, ['ticker', 'target_quarter', 'present', 'status', 'target_90d', 'selected_quarters'])}
 
 The sleeve captured {captured_text} from the named target set but still missed most low-score RM/theme-wave examples. That means the exception sleeve helps, but it does not fully solve messy right-tail discovery.
 
