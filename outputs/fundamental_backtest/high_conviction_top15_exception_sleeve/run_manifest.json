@@ -107,20 +107,21 @@
       "sha256": "8ffaa892de52b312132c4743eeb435de96ae1110e091342c12988181e08ebfd3"
     }
   },
-  "no_leakage_statement": "Top15 selector receives only allowlisted selection-time feature columns; labels/returns are attached after selection is frozen.",
+  "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.",
+  "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.",
   "output_hashes": {
     "README_ANALYSIS.md": "45370eb920c4f21bd3629f0208a244de6c7128677adad17844ab01df247b18dc",
-    "core_vs_exception_contribution.csv": "07235f880482940bf8f453dca4ad8ca0cd6f03061afcbf61b64540a30e4c7daa",
-    "exception_slot_diagnostics.csv": "2bac008eb75cb57efd5e9698784f777326f69fc8adb01b843e0340523009c708",
-    "left_tail_penalty_comparison.csv": "f387906b40154727ea3e149182b13199afd58eadd6f260879353ddc95561809c",
-    "missed_right_tail_after_top15.csv": "13087c6225e91ec61e2245dcb5689cbd237d15c5833a906e70bd3a5b2c510b37",
-    "right_tail_capture_comparison.csv": "bb738b8a6b0a60d6072176595a237ceef01be21ab652e0b7511f8c4979658819",
-    "selected_names_by_quarter_top15.csv": "db1b88705ca6a3fde84b1e691a9c5d51fba80999c61adb2fc1b452c3da02c8ae",
-    "strategy_by_quarter_top15.csv": "44916e18854798a6605623eb8d1e5c376686b235a7f11b661a8b1335c88947fc",
-    "strategy_summary_top15.csv": "16c6ad6d9fb4ae767b1c16d57a5ac45baa983fb9eb0f8c1befe4a19e78a3e570"
+    "core_vs_exception_contribution.csv": "f90df5c6bc48802173fc461a522120771d115e5354df6f2f2eae9062d468b76d",
+    "exception_slot_diagnostics.csv": "0a0b2441e2a1cd876d0e3877c52b82d299dab541e6033c0716275b18a7cb5cde",
+    "left_tail_penalty_comparison.csv": "aad1da43b8980c2b067061895948547eb502b79cefc4593eed2644d29791465a",
+    "missed_right_tail_after_top15.csv": "81270dc6ba5071b89bb955034325f75d63bb8fd208c91d0f1891f8de6188732c",
+    "right_tail_capture_comparison.csv": "030cae2207bc3e86bda749ac822bd6549bc0964bfcc4f55e920b3ecb5d90663f",
+    "selected_names_by_quarter_top15.csv": "79a260b1241a4e93591f46249c8ccec87f8e790d74cbe37b1d8ceb0ef0176a97",
+    "strategy_by_quarter_top15.csv": "1bd66b7c2c061b2dde5216372a2869d1564f694a08b4f37eca4efa843cff8e7d",
+    "strategy_summary_top15.csv": "6936687e0a5ed6167580d8b31feecbeb640971244572a5a41623f9e582c5bb8d"
   },
   "quarter_count": 18,
-  "run_id": "top15-exception-ae75d9c7-6cfd-4ad6-9573-d1e3e77f97c1",
+  "run_id": "top15-exception-b271553d-30e3-4cad-b8e3-f9ebf0a038d0",
   "runner_version": "fundamental_high_conviction_top15_exception_sleeve_backtest_v1",
   "target_missed_name_capture_summary": {
     "AAOI": "missed",

@@ -51,6 +51,13 @@ OUTPUT_FILES = [
     "missed_right_tail_after_top15.csv",
     "README_ANALYSIS.md",
 ]
+SAFE_SELECTOR_REQUIRED_COLUMNS = {
+    "confidence",
+    "cik",
+    "cik_status",
+    "document_status",
+    "hard_reject_reason",
+}
 
 
 def _read_any_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
@@ -154,17 +161,36 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     quarter_rows: list[dict[str, Any]] = []
     diagnostics: list[dict[str, Any]] = []
     status = _status_map(baseline)
+    baseline_by_quarter: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in baseline:
+        baseline_by_quarter[str(row.get("quarter"))].append(row)
+    for qrows in baseline_by_quarter.values():
+        qrows.sort(key=lambda r: int(_to_float(r.get("selection_rank")) or 999999))
 
     for q in sorted(groups):
         eligible = sorted(groups[q], key=lambda r: str(r.get("ticker", "")).upper())
         quarter_rows.append(_summarize_quarter(BASELINE_VARIANT, q, [r for r in baseline if r.get("quarter") == q], len(eligible), 10))
-        safe = [{c: r.get(c, "") for c in feature_cols} for r in eligible]
+        safe_cols = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and c not in FORBIDDEN_SELECTION_COLUMNS]]))
+        safe = [{c: r.get(c, "") for c in safe_cols} for r in eligible]
         by_ticker = {str(r.get("ticker", "")).upper(): r for r in eligible}
         for variant, cfg in TOP15_VARIANTS.items():
             result = select_high_conviction_top15_exception_sleeve(safe, cfg)
             frozen = []
-            for rank, r in enumerate(result["selected_rows"], 1):
-                ticker = str(r.get("ticker", "")).upper(); frozen.append(_freeze(r, by_ticker[ticker], variant, q, rank))
+            core_tickers: set[str] = set()
+            for rank, baseline_core in enumerate(baseline_by_quarter.get(q, [])[: cfg.core_n], 1):
+                ticker = str(baseline_core.get("ticker", "")).upper()
+                if ticker not in by_ticker:
+                    continue
+                core_tickers.add(ticker)
+                frozen.append(_freeze({**baseline_core, "selected_sleeve": "core", "selected_sleeve_rank": rank}, by_ticker[ticker], variant, q, rank))
+            exception_rank = 0
+            for r in result["selected_rows"]:
+                ticker = str(r.get("ticker", "")).upper()
+                if ticker in core_tickers or r.get("selected_sleeve") != "right_tail_exception":
+                    continue
+                exception_rank += 1
+                frozen.append(_freeze(r, by_ticker[ticker], variant, q, len(frozen) + 1))
+                frozen[-1]["selected_sleeve_rank"] = exception_rank
             selected_rows.extend(frozen); quarter_rows.append(_summarize_quarter(variant, q, frozen, len(eligible), cfg.core_n + cfg.exception_slots))
             status.update(_status_map(frozen))
             exception_rows = [r for r in frozen if r.get("selected_sleeve") == "right_tail_exception"]
@@ -176,8 +202,9 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     summary = [_aggregate(v, [r for r in selected_rows if r["variant"] == v], quarter_rows) for v in variants]
     right_tail = [r for r in rows if _truthy(r.get("eligible_for_backtest")) and (_to_float(r.get("return_90d_pct")) or -999) >= 100]
     comparison = []
+    main_top15_variant = "high_conviction_top15_v3_exception_sleeve"
     for r in right_tail:
-        q, t = str(r.get("quarter")), str(r.get("ticker", "")).upper(); top15_hit = next((status.get((v, q, t)) for v in TOP15_VARIANTS if status.get((v, q, t))), None)
+        q, t = str(r.get("quarter")), str(r.get("ticker", "")).upper(); top15_hit = status.get((main_top15_variant, q, t))
         comparison.append({"ticker": t, "quarter": q, "return_90d_pct": r.get("return_90d_pct"), "old_v2_status": "selected" if status.get((BASELINE_VARIANT, q, t)) else "missed", "top15_status": "selected" if top15_hit else "missed", "selected_sleeve": top15_hit.get("selected_sleeve", "") if top15_hit else "", "selected_sleeve_rank": top15_hit.get("selected_sleeve_rank", "") if top15_hit else "", "right_tail_exception_score": top15_hit.get("right_tail_exception_score", "") if top15_hit else "", "mechanical_exclusion_before": _mechanical(r, status.get((BASELINE_VARIANT, q, t))), "mechanical_status_after": _mechanical(r, top15_hit)})
     for t in TARGET_RIGHT_TAIL_NAMES:
         if not any(r["ticker"] == t for r in comparison):
@@ -195,7 +222,8 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "left_tail_penalty_comparison.csv", left_tail, ["variant", "loser_90d_minus30pct_rate", "avg_return_90d_pct", "2025Q1_avg_90d", "2025Q1_loser_rate", "delta_loser_rate_vs_top10"])
     _write_csv(out / "missed_right_tail_after_top15.csv", missed, ["ticker", "quarter", "return_90d_pct", "mechanical_status_after"])
     (out / "README_ANALYSIS.md").write_text(_readme(), encoding="utf-8")
-    manifest = {"run_id": run_id or f"top15-exception-{uuid4()}", "runner_version": RUNNER_VERSION, "inputs": {"pit_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)}, "prior_selected": {"path": str(prior_path), "sha256": _file_sha256(prior_path), "row_count": len(baseline)}}, "variant_configs": {k: cfg.__dict__ for k, cfg in TOP15_VARIANTS.items()}, "forbidden_selection_columns_removed_excluded": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS), "feature_columns_used_for_selection": feature_cols, "columns_excluded_from_selection": sorted(set(headers) - set(feature_cols)), "no_leakage_statement": "Top15 selector receives only allowlisted selection-time feature columns; labels/returns are attached after selection is frozen.", "target_missed_name_capture_summary": {t: next((r["top15_status"] for r in comparison if r["ticker"] == t), "not_present") for t in TARGET_RIGHT_TAIL_NAMES}, "quarter_count": len(groups), "eligible_row_count": sum(len(v) for v in groups.values())}
+    safe_cols_manifest = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and c not in FORBIDDEN_SELECTION_COLUMNS]]))
+    manifest = {"run_id": run_id or f"top15-exception-{uuid4()}", "runner_version": RUNNER_VERSION, "inputs": {"pit_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)}, "prior_selected": {"path": str(prior_path), "sha256": _file_sha256(prior_path), "row_count": len(baseline)}}, "variant_configs": {k: cfg.__dict__ for k, cfg in TOP15_VARIANTS.items()}, "forbidden_selection_columns_removed_excluded": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS), "feature_columns_used_for_selection": safe_cols_manifest, "columns_excluded_from_selection": sorted(set(headers) - set(safe_cols_manifest)), "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.", "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.", "target_missed_name_capture_summary": {t: next((r["top15_status"] for r in comparison if r["ticker"] == t), "not_present") for t in TARGET_RIGHT_TAIL_NAMES}, "quarter_count": len(groups), "eligible_row_count": sum(len(v) for v in groups.values())}
     manifest["output_hashes"] = {name: _file_sha256(out / name) for name in OUTPUT_FILES}
     (out / "run_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return manifest

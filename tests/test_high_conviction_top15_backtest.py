@@ -84,6 +84,43 @@ def test_core_vs_exception_contribution_present(tmp_path):
     assert {r["sleeve"] for r in rows} >= {"core", "right_tail_exception"}
 
 
+def test_top15_main_variant_includes_core_sleeve_rows(tmp_path):
+    out, _ = _fixture(tmp_path)
+    rows = _read_rows(out / "selected_names_by_quarter_top15.csv")
+    core = [
+        r
+        for r in rows
+        if r["variant"] == "high_conviction_top15_v3_exception_sleeve" and r["selected_sleeve"] == "core"
+    ]
+    assert len(core) == 10
+
+
+def test_baseline_top10_name_is_preserved_in_top15_core(tmp_path):
+    out, _ = _fixture(tmp_path)
+    rows = _read_rows(out / "selected_names_by_quarter_top15.csv")
+    baseline = {
+        (r["quarter"], r["ticker"])
+        for r in rows
+        if r["variant"] == "high_conviction_top10_v2_final"
+    }
+    top15_core = {
+        (r["quarter"], r["ticker"])
+        for r in rows
+        if r["variant"] == "high_conviction_top15_v3_exception_sleeve" and r["selected_sleeve"] == "core"
+    }
+    assert baseline <= top15_core
+
+
+def test_right_tail_capture_cannot_mark_old_selected_as_top15_missed(tmp_path):
+    out, _ = _fixture(tmp_path)
+    rows = _read_rows(out / "right_tail_capture_comparison.csv")
+    assert not [
+        r
+        for r in rows
+        if r["old_v2_status"] == "selected" and r["top15_status"] == "missed"
+    ]
+
+
 def test_right_tail_capture_comparison_includes_target_miss_names(tmp_path):
     out, _ = _fixture(tmp_path)
     rows = _read_rows(out / "right_tail_capture_comparison.csv")
@@ -105,3 +142,12 @@ def test_selection_forbidden_columns_excluded(tmp_path):
     assert "return_90d_pct" in forbidden
     assert "return_90d_pct" not in data["feature_columns_used_for_selection"]
     assert manifest["no_leakage_statement"]
+
+
+def test_manifest_notes_self_hash_exclusion_and_hashes_other_outputs(tmp_path):
+    out, _ = _fixture(tmp_path)
+    data = json.loads((out / "run_manifest.json").read_text(encoding="utf-8"))
+    output_names = {p.name for p in out.iterdir() if p.is_file() and p.name != "run_manifest.json"}
+    assert data["manifest_hash_note"]
+    assert set(data["output_hashes"]) == output_names
+    assert "run_manifest.json" not in data["output_hashes"]
