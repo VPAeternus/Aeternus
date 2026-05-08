@@ -100,6 +100,45 @@ def test_entry_score_variant_excludes_below_70_and_ranks_score_desc_then_ticker(
     assert all(r["hc_score"] == r["entry_score_0_100"] + ".000000" for r in picks)
 
 
+def test_v1_v2_rank_hc_desc_then_entry_desc_then_ticker_asc(tmp_path):
+    panel = tmp_path / "pit_panel.csv"
+    rows = _panel_rows(5)
+    base_flags = {
+        "hp_production_extension": "False",
+        "hp_LLM_best": "False",
+        "repricing_momentum_priority": "False",
+        "market_repricing_score": "0",
+        "rm_buy_review_flag": "False",
+        "theme_acceleration_research_visibility": "False",
+        "akg_universe_tier": "",
+        "macro_entry_action": "",
+        "risk_penalty_score": "0",
+        "post_llm_demote_flag": "0",
+    }
+    for row in rows:
+        row.update(base_flags)
+    rows[0].update({"ticker": "ENTRY96", "entry_score_0_100": "96"})
+    rows[1].update({"ticker": "HP80", "entry_score_0_100": "80", "hp_production_extension": "True", "hp_LLM_best": "True"})
+    rows[2].update({"ticker": "ENTRY95", "entry_score_0_100": "95"})
+    rows[3].update({"ticker": "CCC", "entry_score_0_100": "94"})
+    rows[4].update({"ticker": "BBB", "entry_score_0_100": "94"})
+    _write_csv(panel, rows)
+
+    run_high_conviction_top10_backtest(panel, tmp_path / "out")
+
+    selected = _read_csv(tmp_path / "out" / "selected_names_by_quarter.csv")
+    expected = [
+        ("1", "ENTRY96", "96", "96.000000"),
+        ("2", "HP80", "80", "96.000000"),
+        ("3", "ENTRY95", "95", "95.000000"),
+        ("4", "BBB", "94", "94.000000"),
+        ("5", "CCC", "94", "94.000000"),
+    ]
+    for variant in ["high_conviction_top10_v1", "high_conviction_top10_v2_final"]:
+        picks = [r for r in selected if r["variant"] == variant]
+        assert [(r["selection_rank"], r["ticker"], r["entry_score_0_100"], r["hc_score"]) for r in picks] == expected
+
+
 def test_selection_features_use_strict_allowlist_without_forbidden_columns(tmp_path):
     panel = tmp_path / "pit_panel.csv"
     rows = _panel_rows(3)
