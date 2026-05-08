@@ -29,6 +29,7 @@ RM_OVERRIDE_RE = re.compile(r"^rm[1-4]_(?:priority|high_priority|llm_supported|e
 HP_OVERRIDE_RE = re.compile(r"^hp\d+_(?:priority|high_priority|llm_supported|extension|rescan|candidate|signal|confirmed)$")
 TIER_OVERRIDE_RE = re.compile(r"^tier\d+_L\d+_(?:priority|high_priority|llm_supported|rescan|signal|confirmed)$")
 OPERATING_SETTING = "high_conviction_top10_v2_final"
+TOP15_OPERATING_SETTING = "high_conviction_top15_v3_exception_sleeve"
 RM_SIGNAL_FIELDS = (
     "rm1_low_price_dislocation_momentum",
     "rm2_weak_acceleration",
@@ -192,6 +193,7 @@ def select_high_conviction_top15_exception_sleeve(
     core_config = {
         "top_n": int(cfg.core_n),
         "selection_date": str(getattr(config, "selection_date", "") if not isinstance(config, Mapping) else config.get("selection_date", "")),
+        "coverage_gating": bool(config.get("coverage_gating", False)) if isinstance(config, Mapping) else False,
     }
     core_result = select_high_conviction_top10(rows, core_config, coverage_rows)
     core_rows = [dict(r) for r in core_result["selected_rows"]]
@@ -205,6 +207,9 @@ def select_high_conviction_top15_exception_sleeve(
         _annotate_operating_guidance(row)
     exceptions, warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(core_rows, rows, cfg)
     selected = core_rows + exceptions
+    for row in selected:
+        row["operating_setting"] = TOP15_OPERATING_SETTING
+        row["operating_setting_validation_status"] = "observed_data_top15_exception_sleeve_not_full_akg_macro_validation"
     return {
         "selected_rows": selected,
         "selected": selected,
@@ -324,7 +329,6 @@ def _is_right_tail_exception_candidate(row: Mapping[str, Any], cfg: RightTailExc
         "SINGLE_RM_SIGNAL_BUCKET": _single_rm_signal_bucket(row),
         "RM_BUY_REVIEW": _truthy(row.get("rm_buy_review_flag")),
         "REPRICING_MOMENTUM_PRIORITY": _truthy(row.get("repricing_momentum_priority")),
-        "MARKET_REPRICING": (_to_float(row.get("market_repricing_score")) or 0) >= 10,
         "HP_LLM_BEST": _truthy(row.get("hp_LLM_best")),
         "HP_SIGNAL": _signal_count(row, HP_SIGNAL_FIELDS) > 0,
         "THEME_TAILWIND": (_to_float(row.get("theme_tailwind_score")) or 0) > 0,
@@ -373,27 +377,33 @@ def _select_exception_sleeve(core_rows: Sequence[Mapping[str, Any]], all_rows: S
         candidates.append(row)
     candidates.sort(key=lambda r: (-(r["right_tail_exception_score"]), -(_to_float(r.get("entry_score_0_100")) or 0), -(_to_float(r.get("market_repricing_score")) or 0), r["ticker"]))
     selected: list[dict] = []
+    selected_ids: set[int] = set()
     warnings: list[str] = []
     rm2plain = no_theme = 0
     theme_counts: dict[str, int] = {}
     sector_counts: dict[str, int] = {}
-    for row in candidates:
+
+    def try_add(row: dict[str, Any]) -> bool:
+        nonlocal rm2plain, no_theme
+        if len(selected) >= cfg.exception_slots:
+            return False
         confirms = _has_theme_or_akg_confirmation(row) or _has_llm_or_hp_confirmation(row)
         theme = str(row.get("primary_theme", "")).strip().lower()
         sector = str(row.get("sector", "")).strip().lower()
         if _rm_signal_bucket(row) == "2+" and not confirms and rm2plain >= cfg.max_rm2plus_slots:
             warnings.append("MAX_RM2PLUS_SLOTS_REACHED")
-            continue
+            return False
         if not confirms and no_theme >= cfg.max_no_theme_no_llm_exceptions:
             warnings.append("MAX_NO_THEME_NO_LLM_EXCEPTIONS_REACHED")
-            continue
+            return False
         if theme and theme_counts.get(theme, 0) >= cfg.max_same_theme:
             warnings.append("MAX_SAME_THEME_REACHED")
-            continue
+            return False
         if sector and sector_counts.get(sector, 0) >= cfg.max_same_sector:
             warnings.append("MAX_SAME_SECTOR_REACHED")
-            continue
+            return False
         selected.append(row)
+        selected_ids.add(id(row))
         if _rm_signal_bucket(row) == "2+" and not confirms:
             rm2plain += 1
         if not confirms:
@@ -402,8 +412,20 @@ def _select_exception_sleeve(core_rows: Sequence[Mapping[str, Any]], all_rows: S
             theme_counts[theme] = theme_counts.get(theme, 0) + 1
         if sector:
             sector_counts[sector] = sector_counts.get(sector, 0) + 1
+        return True
+
+    single_rm_candidates = [row for row in candidates if _single_rm_signal_bucket(row)]
+    single_rm_target = min(2, cfg.exception_slots, len(single_rm_candidates))
+    for row in single_rm_candidates:
+        if sum(1 for picked in selected if _single_rm_signal_bucket(picked)) >= single_rm_target:
+            break
+        try_add(row)
+    for row in candidates:
+        if id(row) in selected_ids:
+            continue
         if len(selected) >= cfg.exception_slots:
             break
+        try_add(row)
     if len(selected) < cfg.exception_slots:
         warnings.append(f"EXCEPTION_SHORTFALL_SELECTED_{len(selected)}_OF_{cfg.exception_slots}")
     for rank, row in enumerate(selected, start=1):

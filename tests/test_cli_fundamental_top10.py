@@ -97,6 +97,42 @@ def test_fundamental_top10_rejects_non_positive_top_n(tmp_path):
     assert "Invalid value" in result.output or "top_n must be > 0" in result.output
 
 
+def test_fundamental_top15_coverage_manifest_blocks_uncovered_core_names(tmp_path):
+    scores = tmp_path / "scores.csv"
+    coverage = tmp_path / "coverage.csv"
+    out = tmp_path / "out"
+    rows = [_row("AAA", 95), _row("BBB", 94)] + [_row(f"C{i}", 90 - i) for i in range(10)]
+    _write_scores(scores, rows)
+    with coverage.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=["ticker", "status"])
+        writer.writeheader()
+        writer.writerow({"ticker": "AAA", "status": "NEEDS_FETCH"})
+        for item in rows[1:]:
+            writer.writerow({"ticker": item["ticker"], "status": "CACHED_READY"})
+
+    result = runner.invoke(
+        app,
+        [
+            "fundamental-top15",
+            "--scores-csv",
+            str(scores),
+            "--coverage-manifest",
+            str(coverage),
+            "--output-root",
+            str(out),
+            "--exception-slots",
+            "0",
+            "--format",
+            "json",
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    payload = json.loads((out / "high_conviction_top15.json").read_text(encoding="utf-8"))
+    assert "AAA" not in [row["ticker"] for row in payload["selected_rows"]]
+    assert payload["config_snapshot"]["coverage_gating"] is True
+
+
 def test_fundamental_top10_enables_coverage_gating_when_manifest_provided(tmp_path):
     scores = tmp_path / "scores.csv"
     coverage = tmp_path / "coverage.csv"

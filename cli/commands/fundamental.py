@@ -170,6 +170,7 @@ def fundamental_top15(
         "enabled": True,
         "core_n": core_n,
         "exception_slots": exception_slots,
+        "coverage_gating": coverage_path is not None,
     }
     result = select_top15_from_csv(scores_path, out_root, config, coverage_path)
     if fmt == "json":
