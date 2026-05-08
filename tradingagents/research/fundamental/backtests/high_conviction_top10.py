@@ -24,6 +24,10 @@ REQUIRED_HEADERS = {"ticker", "quarter", "tradable_date", "entry_open", "entry_s
 LABEL_COLUMNS = ["return_10d_pct", "return_20d_pct", "return_30d_pct", "return_60d_pct", "return_90d_pct"]
 OUTCOME_COLUMNS = set(LABEL_COLUMNS) | {"winner_90d_30pct", "loser_90d_minus30pct"}
 FORBIDDEN_SELECTION_COLUMNS = {
+    "label",
+    "target",
+    "future_return_pct",
+    "forward_return_pct",
     "return_10d_pct",
     "return_20d_pct",
     "return_30d_pct",
@@ -90,7 +94,13 @@ def _write_csv(path: Path, rows: Sequence[Mapping[str, Any]], preferred: Sequenc
 
 
 def _truthy(value: Any) -> bool:
-    return str(value).strip().lower() in {"true", "1", "yes", "y"}
+    text = str(value).strip().lower()
+    if not text or text in {"none", "null", "nan", "na", "n/a"}:
+        return False
+    try:
+        return float(text) != 0.0
+    except ValueError:
+        return text in {"true", "yes", "y"}
 
 
 def _to_float(value: Any) -> float | None:
@@ -270,7 +280,18 @@ def _aggregate_strategy(variant: str, picks: Sequence[Mapping[str, Any]], quarte
 
 
 def _bucket_count(row: Mapping[str, Any], prefix: str) -> str:
-    count = sum(1 for k, v in row.items() if prefix in k.lower() and str(v).strip() not in {"", "0", "False", "false"})
+    false_text = {"", "false", "no", "n", "none", "null", "nan", "na", "n/a"}
+
+    def has_value(value: Any) -> bool:
+        text = str(value).strip().lower()
+        if text in false_text:
+            return False
+        try:
+            return float(text) != 0.0
+        except ValueError:
+            return True
+
+    count = sum(1 for k, v in row.items() if prefix in k.lower() and has_value(v))
     return "2+" if count >= 2 else str(count)
 
 

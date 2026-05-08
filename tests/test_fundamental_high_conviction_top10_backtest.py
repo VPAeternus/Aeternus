@@ -117,6 +117,42 @@ def test_selection_features_use_strict_allowlist_without_forbidden_columns(tmp_p
     assert "outcome_like_alpha_not_allowlisted" in manifest["columns_excluded_from_selection"]
 
 
+def test_numeric_float_strings_parse_for_eligibility_and_hp_rm_flags(tmp_path):
+    panel = tmp_path / "pit_panel.csv"
+    rows = _panel_rows(6)
+    for row in rows:
+        row.update(
+            {
+                "entry_score_0_100": "50",
+                "eligible_for_backtest": "1.0",
+                "hp_production_extension": "0.0",
+                "hp_LLM_best": "0.0",
+                "repricing_momentum_priority": "0.0",
+                "market_repricing_score": "0",
+                "rm_buy_review_flag": "0.0",
+                "theme_acceleration_research_visibility": "0.0",
+            }
+        )
+    rows[0].update({"ticker": "HPFLOAT", "entry_score_0_100": "60", "hp_production_extension": "1.0", "hp_LLM_best": "1.0"})
+    rows[1].update({"ticker": "HPZERO", "entry_score_0_100": "60", "hp_production_extension": "0.0", "hp_LLM_best": "0.0"})
+    rows[2].update({"ticker": "RMFLOAT", "repricing_momentum_priority": "1.0", "rm_buy_review_flag": "1.0"})
+    rows[3].update({"ticker": "RMZERO", "repricing_momentum_priority": "0.0", "rm_buy_review_flag": "0.0"})
+    rows[4].update({"ticker": "INELZERO", "entry_score_0_100": "99", "eligible_for_backtest": "0.0"})
+    _write_csv(panel, rows)
+
+    manifest = run_high_conviction_top10_backtest(panel, tmp_path / "out")
+
+    selected = _read_csv(tmp_path / "out" / "selected_names_by_quarter.csv")
+    v1_tickers = {r["ticker"] for r in selected if r["variant"] == "high_conviction_top10_v1"}
+    v2_tickers = {r["ticker"] for r in selected if r["variant"] == "high_conviction_top10_v2_final"}
+    assert manifest["eligible_row_count"] == 5
+    assert "HPFLOAT" in v1_tickers
+    assert "HPZERO" not in v1_tickers
+    assert "RMFLOAT" in v2_tickers
+    assert "RMZERO" not in v2_tickers
+    assert "INELZERO" not in {r["ticker"] for r in selected}
+
+
 def test_v1_admits_hp_override_rejects_59_and_computes_exact_hc_score(tmp_path):
     panel = tmp_path / "pit_panel.csv"
     rows = _panel_rows(6)
