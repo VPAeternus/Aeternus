@@ -153,6 +153,23 @@ def test_daily_recommendation_labels_exceptions_as_starter_or_research(tmp_path)
     assert result["output_paths"]["csv"].endswith("high_conviction_top15.csv")
 
 
+def test_daily_recommendation_uses_configured_queue_capacity(tmp_path):
+    scores = tmp_path / "scores.csv"
+    out = tmp_path / "out"
+    rows = [row(f"C{i}", 100 - i) for i in range(2)] + [row("E", 30, rm1_low_price_dislocation_momentum="1", primary_theme="theme")]
+    fieldnames = sorted({key for item in rows for key in item})
+    with scores.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    select_top15_from_csv(scores, out, {"enabled": True, "core_n": 2, "exception_slots": 1, "selection_date": "2026-05-08"})
+
+    text = (out / "high_conviction_top15_daily_recommendation.md").read_text(encoding="utf-8")
+    assert "all 15" not in text
+    assert "Do not equal-weight all 3 automatically" in text
+
+
 def test_top15_rows_use_top15_operating_setting(tmp_path):
     scores = tmp_path / "scores.csv"
     out = tmp_path / "out"

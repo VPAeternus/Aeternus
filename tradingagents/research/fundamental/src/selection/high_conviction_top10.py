@@ -522,6 +522,9 @@ def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
         core_count = len([row for row in rows if row.get("selected_sleeve") == "core"])
         exception_count = len([row for row in rows if row.get("selected_sleeve") == "right_tail_exception"])
         exception_slots = rec.get("exception_slots", exception_cfg.get("exception_slots", 0))
+        queue_capacity = int(rec.get("core_n", exception_cfg.get("core_n", core_count)) or core_count) + int(exception_slots or 0)
+        if queue_capacity <= 0:
+            queue_capacity = len(rows)
         lines = [
             "# Fundamental High-Conviction Top-15 Daily Recommendation",
             "",
@@ -533,7 +536,7 @@ def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
             "",
             f"Core {core_count} are primary buy-underwriting candidates.",
             f"Exception sleeve selected {exception_count} of {exception_slots} configured slots as right-tail research / starter-underwriting candidates.",
-            "Do not equal-weight all 15 automatically.",
+            f"Do not equal-weight all {queue_capacity} automatically.",
             "Use high_conviction_top15_v3_exception_sleeve as observed-data extension; do not claim full AKG+macro production v2 validation.",
             "",
             "## Selected names",
