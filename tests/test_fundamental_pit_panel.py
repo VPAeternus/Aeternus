@@ -8,6 +8,7 @@ import pytest
 
 from tradingagents.research.fundamental.backtests.pit_panel import (
     FORBIDDEN_SELECTION_COLUMNS,
+    METADATA_COLUMNS,
     OUTCOME_LABEL_COLUMNS,
     SELECTION_FEATURE_COLUMNS,
     build_pit_panel,
@@ -34,9 +35,13 @@ def test_output_contains_required_columns_when_input_missing_fields(tmp_path):
     out = tmp_path / "out"
     build_pit_panel([input_csv], out, as_of_date="2026-01-06")
 
-    rows = _read_panel(out / "pit_fundamental_panel.csv")
+    with (out / "pit_fundamental_panel.csv").open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        rows = list(reader)
+    expected_columns = SELECTION_FEATURE_COLUMNS + OUTCOME_LABEL_COLUMNS + METADATA_COLUMNS
+    assert reader.fieldnames == expected_columns
     assert rows[0]["ticker"] == "A"
-    for column in SELECTION_FEATURE_COLUMNS + OUTCOME_LABEL_COLUMNS:
+    for column in expected_columns:
         assert column in rows[0]
     assert rows[0]["entry_qoq_pct"] == ""
 
@@ -300,5 +305,55 @@ def test_readme_and_schemas_separate_selection_features_and_labels(tmp_path):
     readme = (out / "README_ANALYSIS.md").read_text()
     assert "return_10d_pct" in label_schema["columns"]
     assert "return_10d_pct" not in feature_schema["columns"]
+    assert "winner_90d_30pct" in label_schema["columns"]
+    assert "loser_90d_minus30pct" in label_schema["columns"]
     assert "selection-time features" in readme
     assert "outcome labels" in readme
+    assert "Missing PIT-unproven theme/macro fields stay blank" in readme
+
+
+def test_missing_theme_macro_pit_fields_stay_blank_and_manifested(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(
+        input_csv,
+        [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"}],
+    )
+    missing_pit_fields = {
+        "theme_acceleration_score",
+        "theme_acceleration_research_visibility",
+        "theme_acceleration_rescan_flag",
+        "akg_universe_tier",
+        "macro_mode",
+        "macro_spy",
+        "macro_entry_action",
+        "macro_position_size_multiplier",
+    }
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    row = _read_panel(out / "pit_fundamental_panel.csv")[0]
+    manifest = json.loads((out / "run_manifest.json").read_text())
+    missing_selection = set(manifest["missing_selection_fields_by_source"][str(input_csv)])
+    assert missing_pit_fields.issubset(missing_selection)
+    assert all(row[field] == "" for field in missing_pit_fields)
+
+
+def test_winner_loser_ignore_input_flags_and_use_only_return_90d_pct(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(
+        input_csv,
+        [
+            {"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "29.9", "winner_90d_30pct": "True", "loser_90d_minus30pct": "True"},
+            {"ticker": "B", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "-29.9", "winner_90d_30pct": "True", "loser_90d_minus30pct": "True"},
+        ],
+    )
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    by_ticker = {r["ticker"]: r for r in _read_panel(out / "pit_fundamental_panel.csv")}
+    assert by_ticker["A"]["winner_90d_30pct"] == "False"
+    assert by_ticker["A"]["loser_90d_minus30pct"] == "False"
+    assert by_ticker["B"]["winner_90d_30pct"] == "False"
+    assert by_ticker["B"]["loser_90d_minus30pct"] == "False"
