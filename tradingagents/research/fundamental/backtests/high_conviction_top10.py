@@ -79,13 +79,13 @@ def _read_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
 
 
 def _write_csv(path: Path, rows: Sequence[Mapping[str, Any]], preferred: Sequence[str] = ()) -> None:
-    cols = list(preferred)
+    cols = list(dict.fromkeys(preferred))
     for row in rows:
         for key in row:
             if key not in cols:
                 cols.append(key)
     if not cols:
-        cols = list(preferred) or ["empty"]
+        cols = ["empty"]
     with path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
         writer.writeheader()

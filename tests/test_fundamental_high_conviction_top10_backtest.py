@@ -336,6 +336,45 @@ def test_misses_theme_and_hp_rm_tier_outputs_aggregate(tmp_path):
     assert {r["dimension"] for r in contrib} == {"hp", "rm", "tier"}
 
 
+def test_selected_names_header_dedupes_decorative_columns_also_explicitly_preferred(tmp_path):
+    panel = tmp_path / "pit_panel.csv"
+    duplicate_preferred_decorative = [
+        "hp_production_extension",
+        "hp_LLM_best",
+        "rm_buy_review_flag",
+        "theme_acceleration_research_visibility",
+        "akg_universe_tier",
+    ]
+    rows = _panel_rows(10)
+    for row in rows:
+        row.update(
+            {
+                "hp_production_extension": "True",
+                "hp_LLM_best": "False",
+                "repricing_momentum_priority": "False",
+                "market_repricing_score": "0",
+                "rm_buy_review_flag": "True",
+                "theme_acceleration_research_visibility": "False",
+                "akg_universe_tier": "tier1",
+                "macro_entry_action": "BUY",
+                "risk_penalty_score": "0",
+                "post_llm_demote_flag": "0",
+            }
+        )
+    fieldnames = list(dict.fromkeys(k for row in rows for k in row))
+    for col in duplicate_preferred_decorative:
+        assert col in fieldnames
+    _write_csv(panel, rows, fieldnames=fieldnames)
+
+    run_high_conviction_top10_backtest(panel, tmp_path / "out")
+
+    with (tmp_path / "out" / "selected_names_by_quarter.csv").open(newline="", encoding="utf-8") as fh:
+        headers = next(csv.reader(fh))
+    assert len(headers) == len(set(headers))
+    for col in duplicate_preferred_decorative:
+        assert headers.count(col) == 1
+
+
 def test_missing_required_panel_headers_fail_fast(tmp_path):
     panel = tmp_path / "bad.csv"
     _write_csv(panel, [{"ticker": "AAA", "quarter": "2025Q4"}])
