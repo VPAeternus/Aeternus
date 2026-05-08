@@ -17,36 +17,32 @@ from typing import Any, Mapping, Sequence
 from uuid import uuid4
 
 from tradingagents.research.fundamental.backtests.pit_panel import SELECTION_FEATURE_COLUMNS
-from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top10
 
 RUNNER_VERSION = "fundamental_high_conviction_top10_backtest_task3_v1"
 DEFAULT_OUTPUT_DIR = Path("outputs/fundamental_backtest/high_conviction_top10")
 REQUIRED_HEADERS = {"ticker", "quarter", "tradable_date", "entry_open", "entry_score_0_100", "eligible_for_backtest"}
 LABEL_COLUMNS = ["return_10d_pct", "return_20d_pct", "return_30d_pct", "return_60d_pct", "return_90d_pct"]
 OUTCOME_COLUMNS = set(LABEL_COLUMNS) | {"winner_90d_30pct", "loser_90d_minus30pct"}
+FORBIDDEN_SELECTION_COLUMNS = {
+    "return_10d_pct",
+    "return_20d_pct",
+    "return_30d_pct",
+    "return_60d_pct",
+    "return_90d_pct",
+    "winner_90d_30pct",
+    "loser_90d_minus30pct",
+    "monitoring_score_0_100",
+    "active_monitoring_score_0_100",
+    "final_rank_score_0_100",
+    "rank_score_0_100",
+    "current_return_pct",
+    "return_since_signal_pct",
+    "return_since_purchase_pct",
+}
 VARIANTS: dict[str, dict[str, Any]] = {
-    "entry_score_top10": {"kind": "entry_score", "top_n": 10},
-    "high_conviction_top10_v1": {
-        "kind": "selector",
-        "top_n": 10,
-        "min_score": 70,
-        "min_confidence": 3,
-        "require_confidence": False,
-        "allow_overrides": True,
-        "coverage_gating": False,
-    },
-    "high_conviction_top10_v2_final": {
-        "kind": "selector",
-        "top_n": 10,
-        "min_score": 75,
-        "min_confidence": 3,
-        "require_confidence": False,
-        "allow_overrides": True,
-        "coverage_gating": False,
-        "core_target": 6,
-        "momentum_target": 2,
-        "opportunistic_target": 2,
-    },
+    "entry_score_top10": {"kind": "entry_score_formula", "top_n": 10, "min_entry_score": 70},
+    "high_conviction_top10_v1": {"kind": "hc_formula_v1", "top_n": 10},
+    "high_conviction_top10_v2_final": {"kind": "hc_formula_v2_final", "top_n": 10},
 }
 OUTPUT_FILES = [
     "selected_names_by_quarter.csv",
@@ -118,7 +114,7 @@ def _rate(rows: Sequence[Mapping[str, Any]], col: str) -> str:
 
 
 def _feature_columns(headers: Sequence[str]) -> list[str]:
-    allowlist = set(SELECTION_FEATURE_COLUMNS)
+    allowlist = set(SELECTION_FEATURE_COLUMNS) - FORBIDDEN_SELECTION_COLUMNS
     return [h for h in headers if h in allowlist]
 
 
@@ -161,22 +157,96 @@ def _freeze_selection_row(row: Mapping[str, Any], original: Mapping[str, Any], v
     return out
 
 
-def _select_entry_score(rows: Sequence[dict[str, str]]) -> list[dict[str, Any]]:
-    ranked = sorted(rows, key=lambda r: (-(_to_float(r.get("entry_score_0_100")) or float("-inf")), str(r.get("ticker", "")).upper()))
-    selected = []
-    for rank, row in enumerate(ranked[:10], 1):
-        selected.append({**row, "score": row.get("entry_score_0_100", ""), "composite_score": row.get("entry_score_0_100", ""), "selection_rank": rank, "selected": True})
-    return selected
+def _with_score(row: Mapping[str, Any], hc_score: float) -> dict[str, Any]:
+    return {
+        **row,
+        "hc_score": f"{hc_score:.6f}",
+        "score": f"{hc_score:.6f}",
+        "composite_score": f"{hc_score:.6f}",
+        "selected": True,
+    }
+
+
+def _rank_top10(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+    ranked = sorted(rows, key=lambda r: (-(_to_float(r.get("hc_score")) or float("-inf")), -(_to_float(r.get("entry_score_0_100")) or float("-inf")), str(r.get("ticker", "")).upper()))
+    return [{**row, "selection_rank": rank} for rank, row in enumerate(ranked[:10], 1)]
+
+
+def _entry_score(row: Mapping[str, Any]) -> float:
+    return _to_float(row.get("entry_score_0_100")) or 0.0
+
+
+def _macro_blocks_v2(row: Mapping[str, Any]) -> bool:
+    return str(row.get("macro_entry_action", "")).strip().lower() in {"no_new_buy", "watchlist_only"}
+
+
+def _v1_score(row: Mapping[str, Any]) -> float:
+    score = _entry_score(row)
+    hp_llm_best = _truthy(row.get("hp_LLM_best"))
+    hp_production = _truthy(row.get("hp_production_extension"))
+    if hp_llm_best:
+        score += 8
+    if hp_production and hp_llm_best:
+        score += 8
+    if (_to_float(row.get("risk_penalty_score")) or 0.0) >= 15:
+        score -= 5
+    return score
+
+
+def _v2_score(row: Mapping[str, Any]) -> float:
+    score = _v1_score(row)
+    if _truthy(row.get("repricing_momentum_priority")):
+        score += 8
+    if (_to_float(row.get("market_repricing_score")) or 0.0) >= 14:
+        score += 6
+    if _truthy(row.get("theme_acceleration_research_visibility")):
+        score += 6
+    if str(row.get("akg_universe_tier", "")).strip() == "T5_RESCAN":
+        score += 4
+    if _truthy(row.get("post_llm_demote_flag")):
+        score -= 10
+    return score
+
+
+def _select_entry_score(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+    candidates = [_with_score(r, _entry_score(r)) for r in rows if _entry_score(r) >= 70]
+    ranked = sorted(candidates, key=lambda r: (-(_to_float(r.get("hc_score")) or float("-inf")), str(r.get("ticker", "")).upper()))
+    return [{**row, "selection_rank": rank} for rank, row in enumerate(ranked[:10], 1)]
+
+
+def _select_v1(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+    candidates = []
+    for row in rows:
+        entry_score = _entry_score(row)
+        hp_override = _truthy(row.get("hp_production_extension")) and _truthy(row.get("hp_LLM_best")) and entry_score >= 60
+        if entry_score >= 70 or hp_override:
+            candidates.append(_with_score(row, _v1_score(row)))
+    return _rank_top10(candidates)
+
+
+def _select_v2(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+    candidates = []
+    for row in rows:
+        if _macro_blocks_v2(row):
+            continue
+        entry_score = _entry_score(row)
+        hp_override = _truthy(row.get("hp_production_extension")) and _truthy(row.get("hp_LLM_best")) and entry_score >= 60
+        rm_override = _truthy(row.get("repricing_momentum_priority")) and ((_to_float(row.get("market_repricing_score")) or 0.0) >= 14 or _truthy(row.get("rm_buy_review_flag")))
+        theme_or_t5 = _truthy(row.get("theme_acceleration_research_visibility")) or str(row.get("akg_universe_tier", "")).strip() == "T5_RESCAN"
+        if entry_score >= 70 or hp_override or rm_override or theme_or_t5:
+            candidates.append(_with_score(row, _v2_score(row)))
+    return _rank_top10(candidates)
 
 
 def _select_variant(name: str, rows: Sequence[dict[str, str]], feature_cols: Sequence[str]) -> list[dict[str, Any]]:
-    cfg = dict(VARIANTS[name])
-    kind = cfg.pop("kind")
-    if kind == "entry_score":
-        return _select_entry_score([{c: r.get(c, "") for c in feature_cols} for r in rows])
-    cfg["score_field"] = "entry_score_0_100"
     safe_rows = [{c: r.get(c, "") for c in feature_cols} for r in rows]
-    return select_high_conviction_top10(safe_rows, cfg)["selected_rows"]
+    if name == "entry_score_top10":
+        return _select_entry_score(safe_rows)
+    if name == "high_conviction_top10_v1":
+        return _select_v1(safe_rows)
+    if name == "high_conviction_top10_v2_final":
+        return _select_v2(safe_rows)
+    raise ValueError(f"Unknown variant: {name}")
 
 
 def _summarize(variant: str, quarter: str, picks: Sequence[Mapping[str, Any]], eligible_count: int) -> dict[str, Any]:
@@ -262,7 +332,7 @@ def run_high_conviction_top10_backtest(pit_panel_csv: str | Path, output_dir: st
     ]
     theme_rows, contrib_rows = _bucket_summaries(selected_rows)
 
-    _write_csv(out / "selected_names_by_quarter.csv", selected_rows, ["variant", "quarter", "snapshot_date", "tradable_date", "selection_rank", "ticker", "entry_score_0_100", "score", "composite_score", *decorative_cols, *OUTCOME_COLUMNS])
+    _write_csv(out / "selected_names_by_quarter.csv", selected_rows, ["variant", "quarter", "snapshot_date", "tradable_date", "selection_rank", "ticker", "hc_score", "entry_score_0_100", "score", "composite_score", *decorative_cols, "hp_production_extension", "hp_LLM_best", "repricing_momentum_priority", "market_repricing_score", "rm_buy_review_flag", "theme_acceleration_research_visibility", "akg_universe_tier", "macro_entry_action", "risk_penalty_score", "post_llm_demote_flag", *OUTCOME_COLUMNS])
     _write_csv(out / "strategy_by_quarter.csv", strategy_quarter_rows, ["variant", "quarter", "pick_count", "eligible_count", "shortfall"])
     _write_csv(out / "strategy_summary.csv", strategy_summary_rows, ["variant", "quarter_count", "total_picks", "avg_picks_per_quarter"])
     _write_csv(out / "variant_summary.csv", variant_summary_rows, ["variant", "config", "quarter_count", "total_picks", "avg_picks_per_quarter", "shortfall_quarters"])
@@ -277,10 +347,11 @@ def run_high_conviction_top10_backtest(pit_panel_csv: str | Path, output_dir: st
         "runner_version": RUNNER_VERSION,
         "input_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)},
         "label_feature_separation_guardrail": "Selection receives only Task 2 PIT allowlisted feature columns intersected with input headers; eligible_for_backtest is used only for filtering; labels are copied only after selection.",
+        "selection_forbidden_columns": sorted(FORBIDDEN_SELECTION_COLUMNS),
         "feature_columns_used_for_selection": feature_cols,
-        "selection_feature_allowlist_source": "tradingagents.research.fundamental.backtests.pit_panel.SELECTION_FEATURE_COLUMNS",
+        "selection_feature_allowlist_source": "tradingagents.research.fundamental.backtests.pit_panel.SELECTION_FEATURE_COLUMNS minus explicit forbidden selection columns",
         "columns_excluded_from_selection": sorted(set(headers) - set(feature_cols)),
-        "forbidden_outcome_columns_removed_from_selection": sorted(set(headers) - set(feature_cols)),
+        "forbidden_outcome_columns_removed_from_selection": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS),
         "variant_configs": VARIANTS,
         "quarter_count": len(groups),
         "eligible_row_count": sum(len(v) for v in groups.values()),
