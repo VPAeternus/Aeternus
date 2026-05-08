@@ -311,7 +311,13 @@ def _lane(row: Mapping[str, Any]) -> str:
 
 
 def _truthy(value: Any) -> bool:
-    return str(value).strip().lower() in {"1", "true", "yes", "y", "high", "priority", "t5_rescan"}
+    text = str(value if value is not None else "").strip().lower()
+    if text in {"", "nan", "none", "null", "false", "no", "n", "low", "0"}:
+        return False
+    numeric = _to_float(text)
+    if numeric is not None:
+        return numeric != 0
+    return text in {"1", "true", "yes", "y", "high", "priority", "t5_rescan"}
 
 
 def _parse_confidence(value: Any) -> float | None:

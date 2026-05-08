@@ -56,6 +56,23 @@ def test_override_bypasses_min_score_only_when_hard_gates_pass():
     assert "SCORE_BELOW_THRESHOLD" not in result["selected_rows"][0]["reason_codes"]
 
 
+def test_override_numeric_csv_boolean_strings_are_parsed():
+    result = select_high_conviction_top10(
+        [
+            row("ON", score=65, theme_acceleration_rescan_flag="1.0"),
+            row("OFF", score=64, theme_acceleration_rescan_flag="0.0"),
+        ],
+        {"top_n": 10, "min_score": 70, "min_confidence": 3},
+    )
+
+    assert [r["ticker"] for r in result["selected_rows"]] == ["ON"]
+    selected = result["selected_rows"][0]
+    assert "OVERRIDE_THEME_ACCELERATION_RESCAN_FLAG" in selected["override_reason_codes"]
+    rejected = next(r for r in result["rejected_rows"] if r["ticker"] == "OFF")
+    assert "SCORE_BELOW_THRESHOLD" in rejected["reason_codes"]
+    assert rejected["override_reason_codes"] == []
+
+
 def test_generic_rescan_does_not_override_score_but_t5_rescan_does():
     result = select_high_conviction_top10(
         [row("GEN", 65, source="manual rescan requested"), row("T5", 64, thesis_tags="T5_RESCAN")],
