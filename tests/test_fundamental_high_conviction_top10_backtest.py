@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from tradingagents.research.fundamental.backtests.high_conviction_top10 import run_high_conviction_top10_backtest
+from tradingagents.research.fundamental.backtests.high_conviction_top10 import main, run_high_conviction_top10_backtest
 
 REQUIRED_OUTPUTS = {
     "selected_names_by_quarter.csv",
@@ -73,7 +73,30 @@ def test_writes_required_outputs_and_locked_variants(tmp_path):
     assert {p.name for p in (tmp_path / "out").iterdir()} == REQUIRED_OUTPUTS
     selected = _read_csv(tmp_path / "out" / "selected_names_by_quarter.csv")
     assert {r["variant"] for r in selected} == VARIANTS
-    assert set(manifest["variant_configs"]) == VARIANTS
+    assert manifest["variant_configs"] == {
+        "entry_score_top10": {"kind": "entry_score", "top_n": 10},
+        "high_conviction_top10_v1": {
+            "kind": "selector",
+            "top_n": 10,
+            "min_score": 70,
+            "min_confidence": 3,
+            "require_confidence": False,
+            "allow_overrides": True,
+            "coverage_gating": False,
+        },
+        "high_conviction_top10_v2_final": {
+            "kind": "selector",
+            "top_n": 10,
+            "min_score": 75,
+            "min_confidence": 3,
+            "require_confidence": False,
+            "allow_overrides": True,
+            "coverage_gating": False,
+            "core_target": 6,
+            "momentum_target": 2,
+            "opportunistic_target": 2,
+        },
+    }
     assert "return_90d_pct" in selected[0]
     assert "label" in manifest["label_feature_separation_guardrail"] or "Selection receives feature-only" in manifest["label_feature_separation_guardrail"]
 
@@ -148,7 +171,20 @@ def test_missing_required_panel_headers_fail_fast(tmp_path):
         run_high_conviction_top10_backtest(panel, tmp_path / "out")
 
 
-def test_module_cli_default_contract(tmp_path):
+def test_main_default_output_dir_contract(tmp_path, monkeypatch, capsys):
+    panel = tmp_path / "pit_panel.csv"
+    _write_csv(panel, _panel_rows(10))
+    monkeypatch.chdir(tmp_path)
+
+    assert main([str(panel)]) == 0
+
+    captured = capsys.readouterr()
+    default_out = tmp_path / "outputs" / "fundamental_backtest" / "high_conviction_top10"
+    assert json.loads(captured.out)["output_dir"] == "outputs/fundamental_backtest/high_conviction_top10"
+    assert {p.name for p in default_out.iterdir()} == REQUIRED_OUTPUTS
+
+
+def test_module_cli_explicit_output_dir_contract(tmp_path):
     panel = tmp_path / "pit_panel.csv"
     _write_csv(panel, _panel_rows(10))
     out = tmp_path / "out"
@@ -162,3 +198,18 @@ def test_module_cli_default_contract(tmp_path):
 
     assert json.loads(result.stdout)["quarter_count"] == 1
     assert {p.name for p in out.iterdir()} == REQUIRED_OUTPUTS
+
+
+def test_multi_quarter_grouping_reflected_in_outputs(tmp_path):
+    panel = tmp_path / "pit_panel.csv"
+    _write_csv(panel, _panel_rows(12, "2025Q4") + _panel_rows(12, "2026Q1"))
+
+    manifest = run_high_conviction_top10_backtest(panel, tmp_path / "out")
+
+    assert manifest["quarter_count"] == 2
+    by_quarter = _read_csv(tmp_path / "out" / "strategy_by_quarter.csv")
+    assert {r["quarter"] for r in by_quarter} == {"2025Q4", "2026Q1"}
+    assert {r["variant"] for r in by_quarter} == VARIANTS
+    assert len(by_quarter) == len(VARIANTS) * 2
+    variant_summary = _read_csv(tmp_path / "out" / "variant_summary.csv")
+    assert {r["variant"]: r["quarter_count"] for r in variant_summary} == {v: "2" for v in VARIANTS}
