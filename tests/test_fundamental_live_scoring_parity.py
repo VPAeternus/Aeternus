@@ -5,7 +5,8 @@ FUNDAMENTAL_ROOT = Path(__file__).resolve().parents[1] / "tradingagents" / "rese
 if str(FUNDAMENTAL_ROOT) not in sys.path:
     sys.path.insert(0, str(FUNDAMENTAL_ROOT))
 
-from src.features.scoring import compute_entry_score
+from src.features.hp_subtiers import HP_LABELS
+from src.features.scoring import compute_entry_score, hp_structure_score
 from src.pipeline.run_on_new_filing import build_signal_tables
 from src.pipeline.run_quarter import _add_entry_qoq_pct
 
@@ -56,6 +57,21 @@ def test_forbidden_future_and_monitoring_columns_do_not_change_entry_score():
     assert injected["entry_score_0_100"] == baseline["entry_score_0_100"]
     assert "return_since_signal_pct" not in injected["entry_score_inputs"]
     assert "return_since_purchase_pct" not in injected["entry_score_inputs"]
+
+
+def test_hp_structure_score_uses_strict_hp_boolean_fields():
+    for false_value in ["0", "False", "false", ""]:
+        assert hp_structure_score({"hp2_dislocation_momentum_priority": false_value}) == 0
+
+    assert hp_structure_score({"hp2_dislocation_momentum_priority": 1}) == 18
+    assert hp_structure_score({"hp2_dislocation_momentum_priority": "true"}) == 18
+
+
+def test_hp_structure_score_allows_only_known_hp_label_strings():
+    label = HP_LABELS["hp2_dislocation_momentum_priority"]
+
+    assert hp_structure_score({"hp2_dislocation_momentum_priority": label}) == 18
+    assert hp_structure_score({"hp2_dislocation_momentum_priority": "arbitrary non-empty label"}) == 0
 
 
 def test_build_signal_tables_expands_hp_features_before_scoring():

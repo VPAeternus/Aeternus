@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from src.features.common import clamp, clean, flag, prior_quarter, to_float, to_int
+from src.features.hp_subtiers import HP_LABELS
 from src.features.post_llm_scores import REQUIRED_LLM_FIELDS
 from src.features.themes import assign_theme_tailwind_score, detect_candidate_themes
 from src.features.underwriting import rm_buy_review_flag
@@ -37,20 +38,25 @@ def tier_structure_score(row: dict[str, Any]) -> int:
     return min(score, 30)
 
 
+def _hp_field_enabled(row: dict[str, Any], column: str) -> bool:
+    value = row.get(column)
+    return flag(value) or clean(value) == HP_LABELS[column]
+
+
 def hp_structure_score(row: dict[str, Any]) -> int:
     existing = to_float(row.get("hp_structure_score"))
     if existing is not None:
         return max(0, min(30, int(existing)))
     score = 0
-    if flag(row.get("hp1_quality_pullback")) or clean(row.get("hp1_quality_pullback")):
+    if _hp_field_enabled(row, "hp1_quality_pullback"):
         score = max(score, 15)
-    if flag(row.get("hp2_dislocation_momentum_priority")) or clean(row.get("hp2_dislocation_momentum_priority")):
+    if _hp_field_enabled(row, "hp2_dislocation_momentum_priority"):
         score = max(score, 18)
-    if flag(row.get("hp2_dislocation_momentum_watch")) or clean(row.get("hp2_dislocation_momentum_watch")):
+    if _hp_field_enabled(row, "hp2_dislocation_momentum_watch"):
         score = max(score, 8)
-    if flag(row.get("hp3_large_quality_theme_exception")) or clean(row.get("hp3_large_quality_theme_exception")):
+    if _hp_field_enabled(row, "hp3_large_quality_theme_exception"):
         score = max(score, 10)
-    if flag(row.get("hp4_score_reacceleration_watch")) or clean(row.get("hp4_score_reacceleration_watch")):
+    if _hp_field_enabled(row, "hp4_score_reacceleration_watch"):
         score = max(score, 8)
     return min(score, 30)
 
