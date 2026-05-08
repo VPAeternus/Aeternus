@@ -4,9 +4,13 @@ import argparse
 from pathlib import Path
 from typing import Any
 
+import pandas as pd
+
+from src.features.hp_subtiers import add_hp_subtiers
 from src.features.monitoring import compute_monitoring_status
 from src.features.post_llm_scores import classify_llm_status
 from src.features.pre_llm_scores import build_pre_llm_score
+from src.features.repricing_momentum import add_repricing_momentum
 from src.features.scoring import ENTRY_SCORE_FORBIDDEN_COLUMNS, compute_entry_score, prior_key
 from src.features.signal_freshness import compute_signal_freshness
 from src.features.tiers import assign_subtiers, assign_tiers
@@ -53,7 +57,7 @@ def build_signal_tables(
     post_llm_rows: list[dict[str, Any]] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     rows = _merge_by_key(rows, post_llm_rows or [])
-    prior_by_key = {_row_key(row): row for row in rows}
+    bases: list[dict[str, Any]] = []
     output: list[dict[str, Any]] = []
     tier_rows: list[dict[str, Any]] = []
     pre_rows: list[dict[str, Any]] = []
@@ -61,6 +65,7 @@ def build_signal_tables(
         base = _strip_monitoring_columns(original)
         if "pre_llm_fundamental_bucket" not in base:
             base.update(build_pre_llm_score(base))
+        bases.append(base)
         pre_rows.append(
             {
                 "ticker": base.get("ticker", ""),
@@ -88,6 +93,12 @@ def build_signal_tables(
                 "missing_fields": base.get("pre_llm_fundamental_missing_fields", ""),
             }
         )
+    if bases:
+        expanded_rows = add_repricing_momentum(add_hp_subtiers(pd.DataFrame(bases))).fillna("").to_dict("records")
+    else:
+        expanded_rows = []
+    prior_by_key = {_row_key(row): row for row in expanded_rows}
+    for base in expanded_rows:
         tiers = assign_tiers(base)
         merged = {**base, **tiers}
         llm = classify_llm_status(merged, merged)

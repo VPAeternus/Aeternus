@@ -66,6 +66,10 @@ def _add_entry_qoq_pct(rows: list[dict[str, Any]], prior_rows: list[dict[str, An
             row["entry_qoq_pct"] = round((current_entry / prior_entry - 1) * 100, 4)
         else:
             row.setdefault("entry_qoq_pct", "")
+        if prior.get("entry_qoq_pct") not in {None, ""}:
+            row["prior_entry_qoq_pct"] = prior.get("entry_qoq_pct")
+        else:
+            row.setdefault("prior_entry_qoq_pct", "")
         current_score = _to_float(row.get("pre_llm_fundamental_score"))
         prior_score = _to_float(prior.get("pre_llm_fundamental_score"))
         if current_score is not None and prior_score is not None:

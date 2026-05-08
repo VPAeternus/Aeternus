@@ -35,6 +35,24 @@ def tier_structure_score(row: dict[str, Any]) -> int:
     return min(score, 30)
 
 
+def hp_structure_score(row: dict[str, Any]) -> int:
+    existing = to_float(row.get("hp_structure_score"))
+    if existing is not None:
+        return max(0, min(30, int(existing)))
+    score = 0
+    if flag(row.get("hp1_quality_pullback")) or clean(row.get("hp1_quality_pullback")):
+        score = max(score, 15)
+    if flag(row.get("hp2_dislocation_momentum_priority")) or clean(row.get("hp2_dislocation_momentum_priority")):
+        score = max(score, 18)
+    if flag(row.get("hp2_dislocation_momentum_watch")) or clean(row.get("hp2_dislocation_momentum_watch")):
+        score = max(score, 8)
+    if flag(row.get("hp3_large_quality_theme_exception")) or clean(row.get("hp3_large_quality_theme_exception")):
+        score = max(score, 10)
+    if flag(row.get("hp4_score_reacceleration_watch")) or clean(row.get("hp4_score_reacceleration_watch")):
+        score = max(score, 8)
+    return min(score, 30)
+
+
 def llm_business_improvement_score(row: dict[str, Any], prior_score_addition: int | None = None) -> int:
     score = 0
     if flag(row.get("post_llm_candidate_flag")):
@@ -186,19 +204,23 @@ def compute_entry_score(row: dict[str, Any], prior_row: dict[str, Any] | None = 
     missing_llm = missing_critical_llm_fields(clean_row)
     reject = hard_reject_reason(clean_row)
     tier_score = tier_structure_score(clean_row)
+    hp_score = hp_structure_score(clean_row)
+    total_structure_score = max(tier_score, hp_score)
     llm_score = llm_business_improvement_score(clean_row, to_int(prior.get("score_addition")) if clean(prior.get("score_addition")) else None)
     fundamental_score = fundamental_rerating_score(clean_row, to_float(prior.get("pre_llm_fundamental_score")))
     repricing_score = market_repricing_score(clean_row)
     rm_review = rm_buy_review_flag({**clean_row, "market_repricing_score": repricing_score})
     theme_score = theme_tailwind_score(clean_row)
     penalty = risk_penalty_score(clean_row, missing_llm)
-    raw_score = tier_score + llm_score + fundamental_score + repricing_score + theme_score - penalty
+    raw_score = total_structure_score + llm_score + fundamental_score + repricing_score + theme_score - penalty
     entry_score = 0 if reject else clamp(raw_score)
     return {
         "prior_score_addition": clean(prior.get("score_addition")),
         "prior_pre_llm_fundamental_score": clean(prior.get("pre_llm_fundamental_score")),
         "missing_critical_llm_fields": missing_llm,
         "tier_structure_score": tier_score,
+        "hp_structure_score": hp_score,
+        "total_structure_score": total_structure_score,
         "llm_business_improvement_score": llm_score,
         "fundamental_rerating_score": fundamental_score,
         "market_repricing_score": repricing_score,
