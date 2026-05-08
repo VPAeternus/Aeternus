@@ -1,5 +1,7 @@
 import csv
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 from tradingagents.research.fundamental.backtests.pit_panel import (
@@ -10,8 +12,8 @@ from tradingagents.research.fundamental.backtests.pit_panel import (
 )
 
 
-def _write_csv(path: Path, rows):
-    fieldnames = sorted({k for row in rows for k in row})
+def _write_csv(path: Path, rows, fieldnames=None):
+    fieldnames = fieldnames or sorted({k for row in rows for k in row})
     with path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames)
         writer.writeheader()
@@ -107,3 +109,116 @@ def test_manifest_includes_input_hashes_and_missing_fields(tmp_path):
     assert len(manifest["input_files"][0]["sha256"]) == 64
     assert "entry_qoq_pct" in manifest["missing_selection_fields_by_source"][str(input_csv)]
     assert "return_10d_pct" in manifest["missing_label_fields_by_source"][str(input_csv)]
+
+
+def test_header_only_csv_preserves_manifest_fieldnames(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(input_csv, [], fieldnames=["ticker", "quarter", "tradable_date", "entry_open", "return_90d_pct"])
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    manifest = json.loads((out / "run_manifest.json").read_text())
+    missing_selection = manifest["missing_selection_fields_by_source"][str(input_csv)]
+    missing_labels = manifest["missing_label_fields_by_source"][str(input_csv)]
+    assert "ticker" not in missing_selection
+    assert "quarter" not in missing_selection
+    assert "tradable_date" not in missing_selection
+    assert "entry_open" not in missing_selection
+    assert "return_90d_pct" not in missing_labels
+    assert manifest["input_files"][0]["row_count"] == 0
+
+
+def test_module_cli_smoke_writes_exact_sidecars(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(input_csv, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"}])
+    out = tmp_path / "out"
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "tradingagents.research.fundamental.backtests.pit_panel",
+            str(input_csv),
+            "--output-dir",
+            str(out),
+            "--as-of-date",
+            "2026-01-06",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert json.loads(result.stdout)["row_count"] == 1
+    assert {p.name for p in out.iterdir()} == {
+        "pit_fundamental_panel.csv",
+        "feature_schema.json",
+        "label_schema.json",
+        "run_manifest.json",
+        "README_ANALYSIS.md",
+    }
+
+
+def test_multiple_input_files_append_rows_deterministically(tmp_path):
+    first = tmp_path / "first.csv"
+    second = tmp_path / "second.csv"
+    _write_csv(first, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"}])
+    _write_csv(second, [{"ticker": "B", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "20", "return_90d_pct": "20"}])
+
+    out = tmp_path / "out"
+    build_pit_panel([first, second], out, as_of_date="2026-01-06")
+
+    rows = _read_panel(out / "pit_fundamental_panel.csv")
+    assert [r["ticker"] for r in rows] == ["A", "B"]
+
+
+def test_metadata_columns_exist_in_output(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(input_csv, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"}])
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06", pipeline_run_id="run-1")
+
+    with (out / "pit_fundamental_panel.csv").open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        metadata = {"pipeline_run_id", "scoring_formula_version", "tier_rule_version", "hp_rule_version", "rm_rule_version", "theme_rule_version", "macro_rule_version", "source_file_hash"}
+        assert metadata.issubset(reader.fieldnames or [])
+        row = next(reader)
+    assert row["pipeline_run_id"] == "run-1"
+    assert len(row["source_file_hash"]) == 64
+
+
+def test_missing_required_eligibility_fields_are_not_backtest_eligible(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(
+        input_csv,
+        [
+            {"ticker": "", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10", "case": "missing_ticker"},
+            {"ticker": "MISSQ", "quarter": "", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10", "case": "missing_quarter"},
+            {"ticker": "MISSD", "quarter": "2025Q4", "tradable_date": "", "entry_open": "10", "return_90d_pct": "10", "case": "missing_date"},
+            {"ticker": "MISSO", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "", "return_90d_pct": "10", "case": "missing_open"},
+        ],
+    )
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    rows = _read_panel(out / "pit_fundamental_panel.csv")
+    assert [r["eligible_for_backtest"] for r in rows] == ["False", "False", "False", "False"]
+
+
+def test_readme_and_schemas_separate_selection_features_and_labels(tmp_path):
+    input_csv = tmp_path / "scores.csv"
+    _write_csv(input_csv, [{"ticker": "A", "quarter": "2025Q4", "tradable_date": "2026-01-05", "entry_open": "10", "return_90d_pct": "10"}])
+
+    out = tmp_path / "out"
+    build_pit_panel([input_csv], out, as_of_date="2026-01-06")
+
+    feature_schema = json.loads((out / "feature_schema.json").read_text())
+    label_schema = json.loads((out / "label_schema.json").read_text())
+    readme = (out / "README_ANALYSIS.md").read_text()
+    assert "return_10d_pct" in label_schema["columns"]
+    assert "return_10d_pct" not in feature_schema["columns"]
+    assert "selection-time features" in readme
+    assert "outcome labels" in readme

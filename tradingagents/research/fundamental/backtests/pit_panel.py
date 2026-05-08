@@ -161,9 +161,11 @@ def _bool_text(value: bool) -> str:
     return "True" if value else "False"
 
 
-def _read_csv(path: Path) -> list[dict[str, str]]:
+def _read_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
     with path.open(newline="", encoding="utf-8") as fh:
-        return list(csv.DictReader(fh))
+        reader = csv.DictReader(fh)
+        rows = list(reader)
+        return rows, list(reader.fieldnames or [])
 
 
 def _write_csv(path: Path, rows: list[dict[str, Any]], columns: list[str]) -> None:
@@ -205,8 +207,8 @@ def build_pit_panel(
     input_manifest: list[dict[str, Any]] = []
 
     for path in paths:
-        source_rows = _read_csv(path)
-        fieldnames = set(source_rows[0].keys()) if source_rows else set()
+        source_rows, source_fieldnames = _read_csv(path)
+        fieldnames = set(source_fieldnames)
         source_hash = _file_sha256(path)
         missing_selection[str(path)] = [c for c in SELECTION_FEATURE_COLUMNS if c not in fieldnames]
         missing_labels[str(path)] = [c for c in OUTCOME_LABEL_COLUMNS if c not in fieldnames and c not in {"winner_90d_30pct", "loser_90d_minus30pct", "is_future_date_anomaly", "eligible_for_backtest"}]
