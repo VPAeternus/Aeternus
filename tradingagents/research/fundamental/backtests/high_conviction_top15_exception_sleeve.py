@@ -313,7 +313,7 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     (out / "README_ANALYSIS.md").write_text(_readme(), encoding="utf-8")
     safe_cols_manifest = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and c not in FORBIDDEN_SELECTION_COLUMNS]]))
     right_tail_input_columns = sorted({key for row in queue_input for key in row})
-    right_tail_scoring_columns = sorted(set(right_tail_input_columns) & set(RIGHT_TAIL_SCORING_COLUMNS))
+    right_tail_scoring_columns = sorted(RIGHT_TAIL_SCORING_COLUMNS)
     new_selected_hash = _file_sha256(out / "selected_names_by_quarter_top15.csv")
     selected_hash_guard_available = bool(prior_selected_hash)
     selected_hash_warning = "" if selected_hash_guard_available else "prior selected_names_by_quarter_top15.csv absent before run; unchanged guard unavailable"

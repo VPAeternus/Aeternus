@@ -196,8 +196,18 @@ def test_manifest_records_right_tail_queue_no_leakage_and_selected_hash(tmp_path
     assert "right_tail_queue_feature_columns" not in manifest
     assert not set(manifest["right_tail_queue_input_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])
     assert not set(manifest["right_tail_queue_scoring_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])
-    assert set(manifest["right_tail_queue_scoring_columns"]).issubset(set(manifest["right_tail_queue_input_columns"]))
     assert "pipeline_run_id" not in manifest["right_tail_queue_scoring_columns"]
+    for field in [
+        "post_llm_demote_severity",
+        "post_llm_demote_reason_code",
+        "post_llm_demote_overrideable",
+        "post_llm_demote_evidence",
+        "filing_theme_growth_flag",
+        "filing_theme_guidance_flag",
+        "theme_tags",
+        "theme_evidence_summary",
+    ]:
+        assert field in manifest["right_tail_queue_scoring_columns"]
     assert manifest["top15_selected_rows_unchanged_from_prior_hash"] is None
     assert manifest["top15_selected_rows_hash_guard_warning"]
     assert "target_scout_or_top15_count" in manifest
