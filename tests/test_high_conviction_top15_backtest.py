@@ -6,6 +6,7 @@ from tradingagents.research.fundamental.backtests.high_conviction_top15_exceptio
     TARGET_RIGHT_TAIL_NAMES,
     run_high_conviction_top15_exception_sleeve_backtest,
 )
+from tradingagents.research.fundamental.src.selection.right_tail_queues import RIGHT_TAIL_SCORING_COLUMNS
 
 
 def _row(ticker, quarter="2025Q1", score=80, ret90=10, **extra):
@@ -219,6 +220,13 @@ def test_manifest_records_right_tail_queue_no_leakage_and_selected_hash(tmp_path
     manifest = json.loads((out / "run_manifest.json").read_text())
     assert manifest["top15_selected_rows_unchanged_from_prior_hash"] is True
     assert manifest["prior_selected_names_by_quarter_top15_sha256"] == manifest["new_selected_names_by_quarter_top15_sha256"]
+
+
+def test_right_tail_manifest_scoring_columns_match_constant(tmp_path):
+    out, _ = _fixture(tmp_path)
+    manifest = json.loads((out / "run_manifest.json").read_text())
+
+    assert set(manifest["right_tail_queue_scoring_columns"]) == set(RIGHT_TAIL_SCORING_COLUMNS)
 
 
 def test_v4_diagnostics_are_visibility_not_buy_list(tmp_path):
