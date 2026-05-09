@@ -159,6 +159,9 @@ def test_right_tail_visibility_queue_outputs_exist(tmp_path):
         "top15_exception_candidate_queue.csv",
         "right_tail_scout_queue.csv",
         "demote_review_queue.csv",
+        "demote_review_priority_1.csv",
+        "demote_review_priority_2.csv",
+        "demote_review_low_priority.csv",
         "thin_signal_watchlist_queue.csv",
         "thin_signal_watchlist_top100.csv",
         "right_tail_evidence_score_diagnostics.csv",
@@ -231,6 +234,7 @@ def test_top15_analysis_emits_queue_visibility_tables(tmp_path):
     assert (analysis_out / "right_tail_queue_summary.csv").exists()
     assert (analysis_out / "target_visibility_metrics.csv").exists()
     assert (analysis_out / "target_miss_rescue_audit.csv").exists()
+    assert (analysis_out / "demote_review_priority_1.csv").exists()
     assert (analysis_out / "thin_signal_watchlist_top100.csv").exists()
     text = report.read_text()
     assert "Right-Tail Scout + Demote Review" in text

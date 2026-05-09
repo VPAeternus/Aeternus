@@ -135,6 +135,9 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     candidate_queue = read_csv(bundle_dir / "top15_exception_candidate_queue.csv")
     scout_queue = read_csv(bundle_dir / "right_tail_scout_queue.csv")
     demote_queue = read_csv(bundle_dir / "demote_review_queue.csv")
+    demote_priority_1 = read_csv(bundle_dir / "demote_review_priority_1.csv")
+    demote_priority_2 = read_csv(bundle_dir / "demote_review_priority_2.csv")
+    demote_low_priority = read_csv(bundle_dir / "demote_review_low_priority.csv")
     thin_signal_queue = read_csv(bundle_dir / "thin_signal_watchlist_queue.csv")
     thin_signal_top100 = read_csv(bundle_dir / "thin_signal_watchlist_top100.csv")
     diagnostics_queue = read_csv(bundle_dir / "right_tail_evidence_score_diagnostics.csv")
@@ -150,7 +153,10 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     queue_summary = pd.DataFrame([
         {"queue": "top15_exception_candidate", "row_count": len(candidate_queue), "avg_right_tail_evidence_score": num(candidate_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "right_tail_scout", "row_count": len(scout_queue), "avg_right_tail_evidence_score": num(scout_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
-        {"queue": "demote_review", "row_count": len(demote_queue), "avg_right_tail_evidence_score": num(demote_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "demote_review_full_audit", "row_count": len(demote_queue), "avg_right_tail_evidence_score": num(demote_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "demote_review_priority_1_daily", "row_count": len(demote_priority_1), "avg_right_tail_evidence_score": num(demote_priority_1.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "demote_review_priority_2", "row_count": len(demote_priority_2), "avg_right_tail_evidence_score": num(demote_priority_2.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "demote_review_low_priority", "row_count": len(demote_low_priority), "avg_right_tail_evidence_score": num(demote_low_priority.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "thin_signal_watchlist_full_audit", "row_count": len(thin_signal_queue), "avg_right_tail_evidence_score": num(thin_signal_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "thin_signal_watchlist_top25_daily", "row_count": min(25, len(thin_signal_top100)), "avg_right_tail_evidence_score": num(thin_signal_top100.head(25).get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "thin_signal_watchlist_top50_daily", "row_count": min(50, len(thin_signal_top100)), "avg_right_tail_evidence_score": num(thin_signal_top100.head(50).get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
@@ -181,6 +187,9 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         "top15_exception_candidate_queue.csv": candidate_queue,
         "right_tail_scout_queue.csv": scout_queue,
         "demote_review_queue.csv": demote_queue,
+        "demote_review_priority_1.csv": demote_priority_1,
+        "demote_review_priority_2.csv": demote_priority_2,
+        "demote_review_low_priority.csv": demote_low_priority,
         "thin_signal_watchlist_queue.csv": thin_signal_queue,
         "thin_signal_watchlist_top100.csv": thin_signal_top100,
     }
@@ -269,8 +278,9 @@ Final behavior:
 1. Top-10 Core: clean buy-underwriting queue.
 2. Top-15 Exception Sleeve: selected right-tail exception/starter-underwriting rows; output unchanged.
 3. Top-15 Exception Candidate Queue: visibility/staging only.
-4. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
-5. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
+4. Demote Review: full file is audit-only; daily PM consumption uses `demote_review_priority_1.csv`.
+5. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
+6. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
 ## No-leakage and caveats
 
@@ -292,6 +302,7 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/demote_review_priority_1.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_top100.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`

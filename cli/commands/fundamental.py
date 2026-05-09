@@ -223,7 +223,7 @@ def fundamental_right_tail_queues(
         console.print(json.dumps(result, indent=2, sort_keys=True))
     else:
         paths = result["output_paths"]
-        console.print(f"[green]Wrote[/green] {paths['top15_exception_candidate_queue']} | {paths['right_tail_scout_queue']} | {paths['demote_review_queue']} | {paths['thin_signal_watchlist_queue']} | {paths['thin_signal_watchlist_top100']} | {paths['right_tail_evidence_score_diagnostics']}")
+        console.print(f"[green]Wrote[/green] {paths['top15_exception_candidate_queue']} | {paths['right_tail_scout_queue']} | {paths['demote_review_priority_1']} | {paths['demote_review_queue']} | {paths['thin_signal_watchlist_queue']} | {paths['thin_signal_watchlist_top100']} | {paths['right_tail_evidence_score_diagnostics']}")
         if "target_miss_rescue_audit" in paths:
             console.print(f"[green]Target audit[/green] {paths['target_miss_rescue_audit']}")
 

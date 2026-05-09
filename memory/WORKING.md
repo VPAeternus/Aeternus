@@ -8,6 +8,8 @@
 
 **Current note:** Thin-signal watchlist PM cap added. Full `thin_signal_watchlist_queue.csv` remains audit-only (`1,213` rows historical), with new ranked `thin_signal_watchlist_top100.csv` for daily consumption. Analysis report now surfaces Top25/Top50/Top100 daily cuts while preserving Top15 selected hash guard `true`. Verification: focused pytest `34 passed, 2 warnings`. Last updated 2026-05-09T15:21:11.
 
+**Current note:** Demote-review priority bands added. Full demote review remains audit-only (`332` rows historical); daily PM view is `demote_review_priority_1.csv` (`99` rows), with `priority_2` (`233`) and low priority (`0`) retained. Top15 selected hash guard remains `true`. Verification: focused pytest `35 passed, 2 warnings`. Last updated 2026-05-09T15:24:40.
+
 **Daily runbook:** `docs/research/aeternus-daily-pipeline-debug-runbook.md` is now the canonical start-of-run checklist and debug order for the full daily pipeline.
 
 **Current note:** Right-Tail Scout/Demote Review implementation is in progress and mostly complete through backtest/analysis regeneration. Added shared `signal_utils.py`, `right_tail_queues.py`, demote severity schema/defaults, daily `fundamental-right-tail-queues`, Top15 backtest queue outputs, v4 visibility diagnostics, analysis queue tables, and runbook docs. Regenerated Top15 bundle/analysis. Current historical target metrics: visibility `6/9`, actionable `6/9`, buy-underwriting `1/9`; Top15 selected hash guard `true`; manifest hash validation `0` failures. Focused tests: `78 passed, 2 warnings`. Caveat: final commit/final Oracle gate still pending.

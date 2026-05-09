@@ -38,6 +38,7 @@ from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     build_right_tail_queues,
     build_target_visibility_audit,
     rank_thin_signal_watchlist,
+    split_demote_review_priority,
 )
 
 RUNNER_VERSION = "fundamental_high_conviction_top15_exception_sleeve_backtest_v1"
@@ -72,6 +73,9 @@ OUTPUT_FILES = [
     "top15_exception_candidate_queue.csv",
     "right_tail_scout_queue.csv",
     "demote_review_queue.csv",
+    "demote_review_priority_1.csv",
+    "demote_review_priority_2.csv",
+    "demote_review_low_priority.csv",
     "thin_signal_watchlist_queue.csv",
     "thin_signal_watchlist_top100.csv",
     "right_tail_evidence_score_diagnostics.csv",
@@ -297,6 +301,10 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "right_tail_scout_queue.csv", queues["right_tail_scout_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "demote_review_queue.csv", queues["demote_review_queue"], QUEUE_CSV_FIELDS)
     thin_signal_top100 = rank_thin_signal_watchlist(queues["thin_signal_watchlist_queue"], 100)
+    demote_priority = split_demote_review_priority(queues["demote_review_queue"])
+    _write_csv(out / "demote_review_priority_1.csv", demote_priority["priority_1"], QUEUE_CSV_FIELDS)
+    _write_csv(out / "demote_review_priority_2.csv", demote_priority["priority_2"], QUEUE_CSV_FIELDS)
+    _write_csv(out / "demote_review_low_priority.csv", demote_priority["low_priority"], QUEUE_CSV_FIELDS)
     _write_csv(out / "thin_signal_watchlist_queue.csv", queues["thin_signal_watchlist_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "thin_signal_watchlist_top100.csv", thin_signal_top100, QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_evidence_score_diagnostics.csv", queues["right_tail_evidence_score_diagnostics"], QUEUE_CSV_FIELDS)
@@ -329,6 +337,9 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
             "top15_exception_candidate_queue": "top15_exception_candidate_queue.csv",
             "right_tail_scout_queue": "right_tail_scout_queue.csv",
             "demote_review_queue": "demote_review_queue.csv",
+            "demote_review_priority_1": "demote_review_priority_1.csv",
+            "demote_review_priority_2": "demote_review_priority_2.csv",
+            "demote_review_low_priority": "demote_review_low_priority.csv",
             "thin_signal_watchlist_queue": "thin_signal_watchlist_queue.csv",
             "thin_signal_watchlist_top100": "thin_signal_watchlist_top100.csv",
             "right_tail_evidence_score_diagnostics": "right_tail_evidence_score_diagnostics.csv",
@@ -351,6 +362,9 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.",
         "target_right_tail_events": TARGET_RIGHT_TAIL_EVENTS,
         "target_missed_name_capture_summary": target_summary,
+        "demote_review_priority_1_count": len(demote_priority["priority_1"]),
+        "demote_review_priority_2_count": len(demote_priority["priority_2"]),
+        "demote_review_low_priority_count": len(demote_priority["low_priority"]),
         "thin_signal_watchlist_count": len(queues["thin_signal_watchlist_queue"]),
         "thin_signal_watchlist_top100_count": len(thin_signal_top100),
         "target_event_count": len(target_audit),

@@ -58,6 +58,9 @@ def test_fundamental_right_tail_queues_writes_default_daily_outputs_without_targ
         "top15_exception_candidate_queue.csv",
         "right_tail_scout_queue.csv",
         "demote_review_queue.csv",
+        "demote_review_priority_1.csv",
+        "demote_review_priority_2.csv",
+        "demote_review_low_priority.csv",
         "thin_signal_watchlist_queue.csv",
         "thin_signal_watchlist_top100.csv",
         "right_tail_evidence_score_diagnostics.csv",
@@ -68,6 +71,7 @@ def test_fundamental_right_tail_queues_writes_default_daily_outputs_without_targ
     payload = json.loads((out / "right_tail_queues.json").read_text())
     assert payload["date"] == "2026-05-09"
     assert "thin_signal_watchlist_top100" in payload["output_paths"]
+    assert "demote_review_priority_1" in payload["output_paths"]
 
 
 def test_fundamental_right_tail_queues_writes_target_audit_only_when_requested(tmp_path):

@@ -299,6 +299,43 @@ def build_right_tail_queues(rows: Sequence[Mapping[str, Any]], top15_selected_ke
     return {key: sorted(value, key=sorter) for key, value in queues.items()}
 
 
+DEMOTE_REVIEW_PRIORITY_1_REASON_CODES = {
+    "akg_t5_rescan",
+    "market_repricing_score_gte_10",
+    "market_repricing_score_gte_14",
+    "primary_theme",
+    "theme_tailwind_score",
+    "theme_acceleration_research_visibility",
+    "filing_theme_growth_flag",
+    "filing_theme_guidance_flag",
+    "active_theme_supplier_or_bottleneck_role",
+    "single_rm_signal_bucket",
+    "repricing_momentum_priority",
+    "repricing_momentum_extension",
+    "rm_buy_review_market_repricing_override",
+}
+
+
+def split_demote_review_priority(rows: Sequence[Mapping[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    bands = {"priority_1": [], "priority_2": [], "low_priority": []}
+    for row in rows:
+        item = dict(row)
+        score = to_float(item.get("right_tail_evidence_score")) or 0.0
+        reasons = set(_clean(item.get("right_tail_reason_codes")).split(";")) - {""}
+        priority_1_evidence = bool(reasons & DEMOTE_REVIEW_PRIORITY_1_REASON_CODES)
+        if score >= 10 or priority_1_evidence:
+            item["demote_review_priority"] = "priority_1"
+            bands["priority_1"].append(item)
+        elif score >= 0 and reasons:
+            item["demote_review_priority"] = "priority_2"
+            bands["priority_2"].append(item)
+        else:
+            item["demote_review_priority"] = "low_priority"
+            bands["low_priority"].append(item)
+    sorter = lambda r: (-(to_float(r.get("right_tail_evidence_score")) or 0.0), _clean(r.get("ticker")).upper(), _clean(r.get("quarter")))
+    return {key: sorted(value, key=sorter) for key, value in bands.items()}
+
+
 def rank_thin_signal_watchlist(rows: Sequence[Mapping[str, Any]], limit: int = 100) -> list[dict[str, Any]]:
     ranked = sorted(
         [dict(row) for row in rows],
@@ -340,6 +377,7 @@ QUEUE_CSV_FIELDS = [
     "theme_tailwind_score",
     "why_demoted",
     "why_still_interesting",
+    "demote_review_priority",
 ]
 
 TARGET_AUDIT_FIELDS = [
@@ -459,10 +497,14 @@ def select_right_tail_queues_from_csv(
     if top15_path is None or not top15_path.exists():
         warnings.append("Top15 selected CSV not provided; scout queues may include already-selected Top15 names.")
     queues = build_right_tail_queues(rows, parse_top15_selected_keys(top15_path))
+    thin_signal_top100 = rank_thin_signal_watchlist(queues["thin_signal_watchlist_queue"], 100)
+    demote_priority = split_demote_review_priority(queues["demote_review_queue"])
     _write_csv(out / "top15_exception_candidate_queue.csv", queues["top15_exception_candidate_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_scout_queue.csv", queues["right_tail_scout_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "demote_review_queue.csv", queues["demote_review_queue"], QUEUE_CSV_FIELDS)
-    thin_signal_top100 = rank_thin_signal_watchlist(queues["thin_signal_watchlist_queue"], 100)
+    _write_csv(out / "demote_review_priority_1.csv", demote_priority["priority_1"], QUEUE_CSV_FIELDS)
+    _write_csv(out / "demote_review_priority_2.csv", demote_priority["priority_2"], QUEUE_CSV_FIELDS)
+    _write_csv(out / "demote_review_low_priority.csv", demote_priority["low_priority"], QUEUE_CSV_FIELDS)
     _write_csv(out / "thin_signal_watchlist_queue.csv", queues["thin_signal_watchlist_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "thin_signal_watchlist_top100.csv", thin_signal_top100, QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_evidence_score_diagnostics.csv", queues["right_tail_evidence_score_diagnostics"], QUEUE_CSV_FIELDS)
@@ -470,6 +512,9 @@ def select_right_tail_queues_from_csv(
         "top15_exception_candidate_queue": str(out / "top15_exception_candidate_queue.csv"),
         "right_tail_scout_queue": str(out / "right_tail_scout_queue.csv"),
         "demote_review_queue": str(out / "demote_review_queue.csv"),
+        "demote_review_priority_1": str(out / "demote_review_priority_1.csv"),
+        "demote_review_priority_2": str(out / "demote_review_priority_2.csv"),
+        "demote_review_low_priority": str(out / "demote_review_low_priority.csv"),
         "thin_signal_watchlist_queue": str(out / "thin_signal_watchlist_queue.csv"),
         "thin_signal_watchlist_top100": str(out / "thin_signal_watchlist_top100.csv"),
         "right_tail_evidence_score_diagnostics": str(out / "right_tail_evidence_score_diagnostics.csv"),
@@ -485,6 +530,9 @@ def select_right_tail_queues_from_csv(
             "top15_exception_candidate_count": len(queues["top15_exception_candidate_queue"]),
             "right_tail_scout_count": len(queues["right_tail_scout_queue"]),
             "demote_review_count": len(queues["demote_review_queue"]),
+            "demote_review_priority_1_count": len(demote_priority["priority_1"]),
+            "demote_review_priority_2_count": len(demote_priority["priority_2"]),
+            "demote_review_low_priority_count": len(demote_priority["low_priority"]),
             "thin_signal_watchlist_count": len(queues["thin_signal_watchlist_queue"]),
             "thin_signal_watchlist_top25_count": min(25, len(thin_signal_top100)),
             "thin_signal_watchlist_top50_count": min(50, len(thin_signal_top100)),

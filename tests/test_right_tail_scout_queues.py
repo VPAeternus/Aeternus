@@ -7,6 +7,7 @@ from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     build_target_visibility_audit,
     rank_thin_signal_watchlist,
     select_right_tail_queues_from_csv,
+    split_demote_review_priority,
 )
 
 
@@ -169,6 +170,21 @@ def test_forbidden_columns_are_removed_before_scoring():
     assert "final_rank_score_0_100" not in diag["right_tail_score_input_columns"].split(";")
 
 
+def test_split_demote_review_priority_bands_pm_view():
+    rows = [
+        {"ticker": "AKG", "right_tail_evidence_score": "-3", "right_tail_reason_codes": "akg_t5_rescan"},
+        {"ticker": "TEN", "right_tail_evidence_score": "10", "right_tail_reason_codes": ""},
+        {"ticker": "POS", "right_tail_evidence_score": "5", "right_tail_reason_codes": "rm_buy_review_flag"},
+        {"ticker": "NEG", "right_tail_evidence_score": "-5", "right_tail_reason_codes": "hard_demote"},
+    ]
+
+    bands = split_demote_review_priority(rows)
+
+    assert {r["ticker"] for r in bands["priority_1"]} == {"AKG", "TEN"}
+    assert [r["ticker"] for r in bands["priority_2"]] == ["POS"]
+    assert [r["ticker"] for r in bands["low_priority"]] == ["NEG"]
+
+
 def test_rank_thin_signal_watchlist_caps_and_sorts_for_pm_consumption():
     rows = [
         {"ticker": "ZZZ", "right_tail_evidence_score": "20", "market_repricing_score": "9", "entry_qoq_pct": "3"},
@@ -196,6 +212,9 @@ def test_select_right_tail_queues_from_csv_writes_no_target_audit_by_default(tmp
 
     assert (out / "right_tail_scout_queue.csv").exists()
     assert (out / "top15_exception_candidate_queue.csv").exists()
+    assert (out / "demote_review_priority_1.csv").exists()
+    assert (out / "demote_review_priority_2.csv").exists()
+    assert (out / "demote_review_low_priority.csv").exists()
     assert (out / "thin_signal_watchlist_top100.csv").exists()
     assert not (out / "target_miss_rescue_audit.csv").exists()
     assert result["warnings"]

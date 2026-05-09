@@ -83,7 +83,10 @@ These queues are visibility/research outputs, not buy lists. A target can be vis
 | --- | --- | --- |
 | top15_exception_candidate | 0 |  |
 | right_tail_scout | 18 | 31.444444444444443 |
-| demote_review | 332 | 4.9397590361445785 |
+| demote_review_full_audit | 332 | 4.9397590361445785 |
+| demote_review_priority_1_daily | 99 | 11.858585858585858 |
+| demote_review_priority_2 | 233 | 2.0 |
+| demote_review_low_priority | 0 |  |
 | thin_signal_watchlist_full_audit | 1213 | 12.530915086562242 |
 | thin_signal_watchlist_top25_daily | 25 | 31.84 |
 | thin_signal_watchlist_top50_daily | 50 | 26.92 |
@@ -106,8 +109,9 @@ Final behavior:
 1. Top-10 Core: clean buy-underwriting queue.
 2. Top-15 Exception Sleeve: selected right-tail exception/starter-underwriting rows; output unchanged.
 3. Top-15 Exception Candidate Queue: visibility/staging only.
-4. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
-5. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
+4. Demote Review: full file is audit-only; daily PM consumption uses `demote_review_priority_1.csv`.
+5. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
+6. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
 ## No-leakage and caveats
 
@@ -129,6 +133,7 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/demote_review_priority_1.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_top100.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`
