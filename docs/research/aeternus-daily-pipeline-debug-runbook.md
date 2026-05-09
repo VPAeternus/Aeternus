@@ -418,9 +418,23 @@ Default outputs:
 
 - `top15_exception_candidate_queue.csv`
 - `right_tail_scout_queue.csv`
-- `demote_review_queue.csv`
+- `demote_review_queue.csv` full audit queue
+- `demote_review_priority_1.csv` daily PM demote-review view
+- `demote_review_priority_2.csv`
+- `demote_review_low_priority.csv`
+- `thin_signal_watchlist_queue.csv` full audit queue
+- `thin_signal_watchlist_top100.csv` daily PM thin-signal view; use Top 25 / Top 50 / Top 100 cuts
 - `right_tail_evidence_score_diagnostics.csv`
 - `right_tail_queues.json`
+
+Daily review order:
+
+1. Top-15 core / exception names
+2. `right_tail_scout_queue.csv`
+3. `demote_review_priority_1.csv`
+4. top-ranked names from `thin_signal_watchlist_top100.csv`
+
+Do not treat scout, demote-review, or thin-signal queues as buy lists. Approved live use is visibility/research only after Top-15.
 
 Optional historical/debug target audit:
 
