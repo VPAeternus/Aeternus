@@ -33,6 +33,7 @@ from tradingagents.research.fundamental.src.selection.high_conviction_top10 impo
 from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS,
     QUEUE_CSV_FIELDS,
+    RIGHT_TAIL_SCORING_COLUMNS,
     TARGET_AUDIT_FIELDS,
     build_right_tail_queues,
     build_target_visibility_audit,
@@ -267,8 +268,11 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
             audit_row["target_buy_underwriting_routed"] = 1
             audit_row["target_visibility_routed"] = 1
             audit_row["target_actionable_research_routed"] = 1
+            audit_row["target_scout_or_top15_routed"] = 1
     visibility_count = sum(str(r.get("target_visibility_routed")) == "1" for r in target_audit)
     actionable_count = sum(str(r.get("target_actionable_research_routed")) == "1" for r in target_audit)
+    scout_or_top15_count = sum(str(r.get("target_scout_or_top15_routed")) == "1" for r in target_audit)
+    demote_review_count = sum(str(r.get("target_demote_review_routed")) == "1" for r in target_audit)
     buy_count = sum(str(r.get("target_buy_underwriting_routed")) == "1" for r in target_audit)
     soft_demote_routed_count = sum(
         str(r.get("target_actionable_research_routed")) == "1"
@@ -281,9 +285,9 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         if r.get("miss_failure_mode") == "ENTRY_SCORE_BELOW_EXCEPTION_MIN"
     )
     v4_rows = [
-        {"variant": "top15_v4_exception_plus_scout", "routed_target_count": visibility_count, "visibility_routed_count": visibility_count, "actionable_research_routed_count": actionable_count, "buy_underwriting_routed_count": buy_count, "description": "Top15 selected plus scout/demote visibility routes; visibility diagnostic, not a buy list."},
-        {"variant": "top15_v4_soft_demote_override", "routed_target_count": soft_demote_routed_count, "visibility_routed_count": visibility_count, "actionable_research_routed_count": actionable_count, "buy_underwriting_routed_count": buy_count, "description": "Soft/unknown demote visibility routing diagnostic; hard demotes stay blocked from buy underwriting."},
-        {"variant": "top15_v4_theme_akg_supplier_rescue", "routed_target_count": supplier_routed_count, "visibility_routed_count": visibility_count, "actionable_research_routed_count": actionable_count, "buy_underwriting_routed_count": buy_count, "description": "Low-entry theme supplier/AKG-style visibility diagnostic, not selected buy underwriting."},
+        {"variant": "top15_v4_exception_plus_scout", "routed_target_count": visibility_count, "visibility_routed_count": visibility_count, "actionable_research_routed_count": actionable_count, "scout_or_top15_routed_count": scout_or_top15_count, "demote_review_routed_count": demote_review_count, "buy_underwriting_routed_count": buy_count, "description": "Top15 selected plus scout/demote/watchlist visibility routes; visibility diagnostic, not a buy list."},
+        {"variant": "top15_v4_soft_demote_override", "routed_target_count": soft_demote_routed_count, "visibility_routed_count": visibility_count, "actionable_research_routed_count": actionable_count, "scout_or_top15_routed_count": scout_or_top15_count, "demote_review_routed_count": demote_review_count, "buy_underwriting_routed_count": buy_count, "description": "Soft/unknown demote visibility diagnostic; demote review is actionable only with positive evidence, never buy underwriting."},
+        {"variant": "top15_v4_theme_akg_supplier_rescue", "routed_target_count": supplier_routed_count, "visibility_routed_count": visibility_count, "actionable_research_routed_count": actionable_count, "scout_or_top15_routed_count": scout_or_top15_count, "demote_review_routed_count": demote_review_count, "buy_underwriting_routed_count": buy_count, "description": "Low-entry theme supplier/AKG-style visibility diagnostic, not selected buy underwriting."},
     ]
 
     _write_csv(out / "missed_right_tail_after_top15.csv", missed, ["ticker", "quarter", "return_90d_pct", "mechanical_status_after"])
@@ -293,10 +297,11 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "thin_signal_watchlist_queue.csv", queues["thin_signal_watchlist_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_evidence_score_diagnostics.csv", queues["right_tail_evidence_score_diagnostics"], QUEUE_CSV_FIELDS)
     _write_csv(out / "target_miss_rescue_audit.csv", target_audit, TARGET_AUDIT_FIELDS)
-    _write_csv(out / "v4_rescue_variant_summary.csv", v4_rows, ["variant", "routed_target_count", "visibility_routed_count", "actionable_research_routed_count", "buy_underwriting_routed_count", "description"])
+    _write_csv(out / "v4_rescue_variant_summary.csv", v4_rows, ["variant", "routed_target_count", "visibility_routed_count", "actionable_research_routed_count", "scout_or_top15_routed_count", "demote_review_routed_count", "buy_underwriting_routed_count", "description"])
     (out / "README_ANALYSIS.md").write_text(_readme(), encoding="utf-8")
     safe_cols_manifest = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and c not in FORBIDDEN_SELECTION_COLUMNS]]))
-    score_input_columns = sorted({key for row in queue_input for key in row})
+    right_tail_input_columns = sorted({key for row in queue_input for key in row})
+    right_tail_scoring_columns = sorted(set(right_tail_input_columns) & set(RIGHT_TAIL_SCORING_COLUMNS))
     new_selected_hash = _file_sha256(out / "selected_names_by_quarter_top15.csv")
     selected_hash_guard_available = bool(prior_selected_hash)
     selected_hash_warning = "" if selected_hash_guard_available else "prior selected_names_by_quarter_top15.csv absent before run; unchanged guard unavailable"
@@ -304,7 +309,49 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         ticker: next((r["top15_status"] for r in comparison if r["ticker"] == ticker and r["quarter"] == quarter), "not_present")
         for ticker, quarter in TARGET_RIGHT_TAIL_EVENTS.items()
     }
-    manifest = {"run_id": run_id or f"top15-exception-{uuid4()}", "runner_version": RUNNER_VERSION, "inputs": {"pit_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)}, "prior_selected": {"path": str(prior_path), "sha256": _file_sha256(prior_path), "row_count": len(baseline)}}, "variant_configs": {k: cfg.__dict__ for k, cfg in TOP15_VARIANTS.items()}, "forbidden_selection_columns_removed_excluded": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS), "feature_columns_used_for_selection": safe_cols_manifest, "columns_excluded_from_selection": sorted(set(headers) - set(safe_cols_manifest)), "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.", "right_tail_queue_outputs": {"top15_exception_candidate_queue": "top15_exception_candidate_queue.csv", "right_tail_scout_queue": "right_tail_scout_queue.csv", "demote_review_queue": "demote_review_queue.csv", "thin_signal_watchlist_queue": "thin_signal_watchlist_queue.csv", "right_tail_evidence_score_diagnostics": "right_tail_evidence_score_diagnostics.csv", "target_miss_rescue_audit": "target_miss_rescue_audit.csv", "v4_rescue_variant_summary": "v4_rescue_variant_summary.csv"}, "right_tail_queue_forbidden_columns": sorted(FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS), "right_tail_queue_feature_columns": score_input_columns, "right_tail_queue_no_leakage_statement": "Forbidden return/monitoring/final-rank/current-return/return_since fields are removed before scoring/routing.", "prior_selected_names_by_quarter_top15_sha256": prior_selected_hash, "new_selected_names_by_quarter_top15_sha256": new_selected_hash, "top15_selected_rows_unchanged_from_prior_hash": (prior_selected_hash == new_selected_hash) if selected_hash_guard_available else None, "top15_selected_rows_hash_guard_warning": selected_hash_warning, "target_visibility_routed_count": visibility_count, "target_actionable_research_routed_count": actionable_count, "target_buy_underwriting_routed_count": buy_count, "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.", "target_right_tail_events": TARGET_RIGHT_TAIL_EVENTS, "target_missed_name_capture_summary": target_summary, "quarter_count": len(groups), "eligible_row_count": sum(len(v) for v in groups.values())}
+    manifest = {
+        "run_id": run_id or f"top15-exception-{uuid4()}",
+        "runner_version": RUNNER_VERSION,
+        "inputs": {
+            "pit_panel": {"path": str(panel_path), "sha256": _file_sha256(panel_path), "row_count": len(rows)},
+            "prior_selected": {"path": str(prior_path), "sha256": _file_sha256(prior_path), "row_count": len(baseline)},
+        },
+        "variant_configs": {k: cfg.__dict__ for k, cfg in TOP15_VARIANTS.items()},
+        "forbidden_selection_columns_removed_excluded": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS),
+        "feature_columns_used_for_selection": safe_cols_manifest,
+        "columns_excluded_from_selection": sorted(set(headers) - set(safe_cols_manifest)),
+        "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.",
+        "right_tail_queue_outputs": {
+            "top15_exception_candidate_queue": "top15_exception_candidate_queue.csv",
+            "right_tail_scout_queue": "right_tail_scout_queue.csv",
+            "demote_review_queue": "demote_review_queue.csv",
+            "thin_signal_watchlist_queue": "thin_signal_watchlist_queue.csv",
+            "right_tail_evidence_score_diagnostics": "right_tail_evidence_score_diagnostics.csv",
+            "target_miss_rescue_audit": "target_miss_rescue_audit.csv",
+            "v4_rescue_variant_summary": "v4_rescue_variant_summary.csv",
+        },
+        "right_tail_queue_forbidden_columns": sorted(FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS),
+        "right_tail_queue_input_columns": right_tail_input_columns,
+        "right_tail_queue_scoring_columns": right_tail_scoring_columns,
+        "right_tail_queue_no_leakage_statement": "Forbidden return/monitoring/final-rank/current-return/return_since fields are removed before scoring/routing; input columns include pass-through fields, scoring columns are the right-tail fields actually referenced by scoring/routing.",
+        "prior_selected_names_by_quarter_top15_sha256": prior_selected_hash,
+        "new_selected_names_by_quarter_top15_sha256": new_selected_hash,
+        "top15_selected_rows_unchanged_from_prior_hash": (prior_selected_hash == new_selected_hash) if selected_hash_guard_available else None,
+        "top15_selected_rows_hash_guard_warning": selected_hash_warning,
+        "target_visibility_routed_count": visibility_count,
+        "target_actionable_research_routed_count": actionable_count,
+        "target_scout_or_top15_count": scout_or_top15_count,
+        "target_demote_review_count": demote_review_count,
+        "target_buy_underwriting_routed_count": buy_count,
+        "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.",
+        "target_right_tail_events": TARGET_RIGHT_TAIL_EVENTS,
+        "target_missed_name_capture_summary": target_summary,
+        "target_event_count": len(target_audit),
+        "target_event_top15_status": target_summary,
+        "quarter_count": len(groups),
+        "eligible_row_count": sum(len(v) for v in groups.values()),
+        "output_dir": str(out),
+    }
     manifest["output_hashes"] = {name: _file_sha256(out / name) for name in OUTPUT_FILES}
     (out / "run_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return manifest

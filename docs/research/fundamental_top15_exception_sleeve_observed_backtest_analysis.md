@@ -77,7 +77,7 @@ The sleeve captured `CRDO` from the named target set but still missed most low-s
 
 ## Right-Tail Scout + Demote Review
 
-These queues are visibility/research outputs, not buy lists. A target can be visibility-routed without being selected into Top-15. `blocked_hard_demote` counts as visibility only, not actionable research or buy underwriting; non-hard `demote_review` is human research review, not buy underwriting.
+These queues are visibility/research outputs, not buy lists. A target can be visibility-routed without being selected into Top-15. `blocked_hard_demote` counts as visibility only, not actionable research or buy underwriting; non-hard `demote_review` is human research review and counts as actionable only when positive right-tail evidence is present.
 
 | queue | row_count | avg_right_tail_evidence_score |
 | --- | --- | --- |
@@ -93,6 +93,8 @@ Target visibility metrics:
 | --- | --- |
 | target_visibility_routed_count | 9 |
 | target_actionable_research_routed_count | 6 |
+| target_scout_or_top15_routed_count | 2 |
+| target_demote_review_routed_count | 4 |
 | target_buy_underwriting_routed_count | 1 |
 | target_event_count | 9 |
 

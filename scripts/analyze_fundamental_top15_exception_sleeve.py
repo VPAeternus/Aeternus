@@ -156,6 +156,8 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     target_visibility_metrics = pd.DataFrame([
         {"metric": "target_visibility_routed_count", "value": int(num(target_visibility_audit["target_visibility_routed"]).fillna(0).sum()) if "target_visibility_routed" in target_visibility_audit else 0},
         {"metric": "target_actionable_research_routed_count", "value": int(num(target_visibility_audit["target_actionable_research_routed"]).fillna(0).sum()) if "target_actionable_research_routed" in target_visibility_audit else 0},
+        {"metric": "target_scout_or_top15_routed_count", "value": int(num(target_visibility_audit["target_scout_or_top15_routed"]).fillna(0).sum()) if "target_scout_or_top15_routed" in target_visibility_audit else 0},
+        {"metric": "target_demote_review_routed_count", "value": int(num(target_visibility_audit["target_demote_review_routed"]).fillna(0).sum()) if "target_demote_review_routed" in target_visibility_audit else 0},
         {"metric": "target_buy_underwriting_routed_count", "value": int(num(target_visibility_audit["target_buy_underwriting_routed"]).fillna(0).sum()) if "target_buy_underwriting_routed" in target_visibility_audit else 0},
         {"metric": "target_event_count", "value": len(target_visibility_audit)},
     ])
@@ -249,7 +251,7 @@ The sleeve captured {captured_text} from the named target set but still missed m
 
 ## Right-Tail Scout + Demote Review
 
-These queues are visibility/research outputs, not buy lists. A target can be visibility-routed without being selected into Top-15. `blocked_hard_demote` counts as visibility only, not actionable research or buy underwriting; non-hard `demote_review` is human research review, not buy underwriting.
+These queues are visibility/research outputs, not buy lists. A target can be visibility-routed without being selected into Top-15. `blocked_hard_demote` counts as visibility only, not actionable research or buy underwriting; non-hard `demote_review` is human research review and counts as actionable only when positive right-tail evidence is present.
 
 {md_table(queue_summary_rows, ['queue', 'row_count', 'avg_right_tail_evidence_score'])}
 

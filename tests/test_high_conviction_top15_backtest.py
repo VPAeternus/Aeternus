@@ -177,6 +177,8 @@ def test_target_audit_has_visibility_metric_columns(tmp_path):
         "routed_visibility_layer",
         "target_visibility_routed",
         "target_actionable_research_routed",
+        "target_scout_or_top15_routed",
+        "target_demote_review_routed",
         "target_buy_underwriting_routed",
     }
     assert required.issubset(rows[0])
@@ -187,9 +189,15 @@ def test_manifest_records_right_tail_queue_no_leakage_and_selected_hash(tmp_path
     out, _ = _fixture(tmp_path)
     manifest = json.loads((out / "run_manifest.json").read_text())
     assert "right_tail_queue_outputs" in manifest
-    assert not set(manifest["right_tail_queue_feature_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])
+    assert "right_tail_queue_feature_columns" not in manifest
+    assert not set(manifest["right_tail_queue_input_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])
+    assert not set(manifest["right_tail_queue_scoring_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])
+    assert set(manifest["right_tail_queue_scoring_columns"]).issubset(set(manifest["right_tail_queue_input_columns"]))
+    assert "pipeline_run_id" not in manifest["right_tail_queue_scoring_columns"]
     assert manifest["top15_selected_rows_unchanged_from_prior_hash"] is None
     assert manifest["top15_selected_rows_hash_guard_warning"]
+    assert "target_scout_or_top15_count" in manifest
+    assert "target_demote_review_count" in manifest
 
     pit = tmp_path / "pit.csv"
     prior = tmp_path / "prior.csv"
@@ -208,6 +216,7 @@ def test_v4_diagnostics_are_visibility_not_buy_list(tmp_path):
         "top15_v4_theme_akg_supplier_rescue",
     }
     assert all("visibility" in r["description"].lower() for r in rows)
+    assert {"scout_or_top15_routed_count", "demote_review_routed_count"}.issubset(rows[0])
 
 
 def test_top15_analysis_emits_queue_visibility_tables(tmp_path):
@@ -227,3 +236,5 @@ def test_top15_analysis_emits_queue_visibility_tables(tmp_path):
     assert "visibility-routed" in text
     assert "`blocked_hard_demote` counts as visibility only" in text
     assert "non-hard `demote_review` is human research review" in text
+    assert "target_scout_or_top15_routed_count" in (analysis_out / "target_visibility_metrics.csv").read_text()
+    assert "target_demote_review_routed_count" in (analysis_out / "target_visibility_metrics.csv").read_text()

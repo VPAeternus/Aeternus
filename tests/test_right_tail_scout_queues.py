@@ -4,6 +4,7 @@ from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     classify_demote_severity,
     compute_right_tail_evidence_score,
     build_right_tail_queues,
+    build_target_visibility_audit,
     select_right_tail_queues_from_csv,
 )
 
@@ -190,6 +191,25 @@ def test_target_events_csv_preserves_duplicate_tickers_across_quarters(tmp_path)
     from tradingagents.research.fundamental.src.selection.right_tail_queues import read_target_events_csv
 
     assert read_target_events_csv(target) == [("AAOI", "2023Q2"), ("AAOI", "2024Q3")]
+
+
+def test_target_visibility_audit_splits_visibility_actionable_and_demote_review():
+    diagnostics = [
+        {"ticker": "HARD", "quarter": "2026Q1", "right_tail_queue_type": "blocked_hard_demote", "right_tail_reason_codes": "primary_theme"},
+        {"ticker": "SOFT", "quarter": "2026Q1", "right_tail_queue_type": "demote_review", "right_tail_reason_codes": "primary_theme"},
+        {"ticker": "EMPTY", "quarter": "2026Q1", "right_tail_queue_type": "demote_review", "right_tail_reason_codes": ""},
+        {"ticker": "SCOUT", "quarter": "2026Q1", "right_tail_queue_type": "right_tail_scout", "right_tail_reason_codes": "primary_theme"},
+    ]
+    audit = {r["ticker"]: r for r in build_target_visibility_audit([], diagnostics, [("HARD", "2026Q1"), ("SOFT", "2026Q1"), ("EMPTY", "2026Q1"), ("SCOUT", "2026Q1")])}
+
+    assert audit["HARD"]["target_visibility_routed"] == 1
+    assert audit["HARD"]["target_actionable_research_routed"] == 0
+    assert audit["HARD"]["target_demote_review_routed"] == 0
+    assert audit["SOFT"]["target_actionable_research_routed"] == 1
+    assert audit["SOFT"]["target_demote_review_routed"] == 1
+    assert audit["EMPTY"]["target_visibility_routed"] == 1
+    assert audit["EMPTY"]["target_actionable_research_routed"] == 0
+    assert audit["SCOUT"]["target_scout_or_top15_routed"] == 1
 
 
 def test_empty_queue_csv_uses_stable_headers(tmp_path):

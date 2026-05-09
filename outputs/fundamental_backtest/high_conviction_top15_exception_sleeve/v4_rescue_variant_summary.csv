@@ -1,4 +1,4 @@
-variant,routed_target_count,visibility_routed_count,actionable_research_routed_count,buy_underwriting_routed_count,description
-top15_v4_exception_plus_scout,9,9,6,1,"Top15 selected plus scout/demote visibility routes; visibility diagnostic, not a buy list."
-top15_v4_soft_demote_override,4,9,6,1,Soft/unknown demote visibility routing diagnostic; hard demotes stay blocked from buy underwriting.
-top15_v4_theme_akg_supplier_rescue,3,9,6,1,"Low-entry theme supplier/AKG-style visibility diagnostic, not selected buy underwriting."
+variant,routed_target_count,visibility_routed_count,actionable_research_routed_count,scout_or_top15_routed_count,demote_review_routed_count,buy_underwriting_routed_count,description
+top15_v4_exception_plus_scout,9,9,6,2,4,1,"Top15 selected plus scout/demote/watchlist visibility routes; visibility diagnostic, not a buy list."
+top15_v4_soft_demote_override,4,9,6,2,4,1,"Soft/unknown demote visibility diagnostic; demote review is actionable only with positive evidence, never buy underwriting."
+top15_v4_theme_akg_supplier_rescue,3,9,6,2,4,1,"Low-entry theme supplier/AKG-style visibility diagnostic, not selected buy underwriting."

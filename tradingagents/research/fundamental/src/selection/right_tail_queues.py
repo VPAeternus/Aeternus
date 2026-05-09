@@ -25,6 +25,35 @@ SUPPLIER_THEME_ROLES = {"supplier", "infrastructure_provider", "commodity_exposu
 SUPPLIER_KEYWORDS = ("bottleneck", "semicap", "semi cap", "materials", "optical", "supplier")
 CORE_RM_SIGNAL_FIELDS = tuple(field for field in RM_SIGNAL_FIELDS if field != "rm_buy_review_flag")
 
+RIGHT_TAIL_SCORING_COLUMNS = tuple(sorted({
+    *CORE_RM_SIGNAL_FIELDS,
+    *HP_SIGNAL_FIELDS,
+    "akg_universe_tier",
+    "blocking_issues",
+    "entry_score_0_100",
+    "evidence_risk",
+    "filing_theme_growth_flag",
+    "filing_theme_guidance_flag",
+    "market_repricing_score",
+    "post_llm_demote_evidence",
+    "post_llm_demote_flag",
+    "post_llm_demote_overrideable",
+    "post_llm_demote_reason_code",
+    "post_llm_demote_severity",
+    "primary_theme",
+    "repricing_momentum_extension",
+    "repricing_momentum_priority",
+    "risk_penalty_score",
+    "rm_buy_review_flag",
+    "theme_acceleration_research_visibility",
+    "theme_evidence_summary",
+    "theme_role",
+    "theme_tags",
+    "theme_tailwind_score",
+    "ticker",
+    "quarter",
+}))
+
 
 @dataclass(frozen=True)
 class RightTailQueueConfig:
@@ -309,6 +338,8 @@ TARGET_AUDIT_FIELDS = [
     "right_tail_recommended_action",
     "target_visibility_routed",
     "target_actionable_research_routed",
+    "target_scout_or_top15_routed",
+    "target_demote_review_routed",
     "target_buy_underwriting_routed",
 ]
 
@@ -364,7 +395,10 @@ def build_target_visibility_audit(rows: Sequence[Mapping[str, Any]], diagnostics
         layer = diag.get("right_tail_queue_type", "not_present")
         selected = layer == "already_selected_top15"
         visibility = selected or layer in {"top15_exception_candidate", "right_tail_scout", "demote_review", "blocked_hard_demote", "thin_signal_watchlist"}
-        actionable = selected or layer in {"top15_exception_candidate", "right_tail_scout", "demote_review"}
+        scout_or_top15 = selected or layer in {"top15_exception_candidate", "right_tail_scout"}
+        demote_review = layer == "demote_review"
+        positive_evidence = bool(_clean(diag.get("right_tail_reason_codes")))
+        actionable = scout_or_top15 or (demote_review and positive_evidence)
         if selected:
             failure_mode = "SELECTED_IN_TOP15_V3"
         elif truthy(raw.get("post_llm_demote_flag")):
@@ -386,6 +420,8 @@ def build_target_visibility_audit(rows: Sequence[Mapping[str, Any]], diagnostics
             "right_tail_recommended_action": diag.get("right_tail_recommended_action", ""),
             "target_visibility_routed": int(visibility),
             "target_actionable_research_routed": int(actionable),
+            "target_scout_or_top15_routed": int(scout_or_top15),
+            "target_demote_review_routed": int(demote_review),
             "target_buy_underwriting_routed": int(selected),
         })
     return audit
