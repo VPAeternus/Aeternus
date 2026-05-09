@@ -163,9 +163,9 @@ def _recommended_action(queue_type: str, severity: str) -> str:
     return "ignore"
 
 
-def _annotate_queue_row(row: Mapping[str, Any], queue_type: str, score: float, parts: dict[str, float], input_columns: Sequence[str]) -> dict[str, Any]:
+def _annotate_queue_row(row: Mapping[str, Any], queue_type: str, score: float, parts: dict[str, float], input_columns: Sequence[str], extra_reason_codes: Sequence[str] = ()) -> dict[str, Any]:
     severity = classify_demote_severity(row)
-    reason_codes = [key for key, value in parts.items() if value > 0]
+    reason_codes = [key for key, value in parts.items() if value > 0] + list(extra_reason_codes)
     return {
         "ticker": _clean(row.get("ticker")).upper(),
         "quarter": _clean(row.get("quarter")),
@@ -211,6 +211,8 @@ def build_right_tail_queues(rows: Sequence[Mapping[str, Any]], top15_selected_ke
         demote_candidate = _demote_review_candidate(row)
         queue_type = "ignore"
         target_queue = ""
+        extra_reason_codes: list[str] = []
+        rm_buy_market_override = truthy(row.get("rm_buy_review_flag")) and (to_float(row.get("market_repricing_score")) or 0.0) >= 14
         if selected_key in top15_selected_keys:
             queue_type = "already_selected_top15"
         elif severity == "hard":
@@ -231,13 +233,17 @@ def build_right_tail_queues(rows: Sequence[Mapping[str, Any]], top15_selected_ke
         elif severity == "soft" and demote_candidate:
             queue_type = "demote_review"
             target_queue = "demote_review_queue"
+        elif severity == "none" and rm_buy_market_override:
+            queue_type = "right_tail_scout"
+            target_queue = "right_tail_scout_queue"
+            extra_reason_codes.append("rm_buy_review_market_repricing_override")
         elif score >= cfg.scout_threshold:
             queue_type = "right_tail_scout"
             target_queue = "right_tail_scout_queue"
         elif score >= cfg.watchlist_threshold:
             queue_type = "watchlist_only"
             target_queue = "watchlist_only_queue"
-        annotated = _annotate_queue_row(row, queue_type, score, parts, input_columns)
+        annotated = _annotate_queue_row(row, queue_type, score, parts, input_columns, extra_reason_codes)
         if target_queue:
             queues[target_queue].append(annotated)
         queues["right_tail_evidence_score_diagnostics"].append(annotated)

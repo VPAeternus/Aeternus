@@ -202,3 +202,17 @@ def test_empty_queue_csv_uses_stable_headers(tmp_path):
     header = (out / "top15_exception_candidate_queue.csv").read_text(encoding="utf-8").splitlines()[0]
     assert "ticker" in header
     assert "right_tail_queue_type" in header
+
+
+def test_rm_buy_review_market_repricing_override_routes_to_scout_below_threshold():
+    row = {
+        "ticker": "AXTI",
+        "quarter": "2026Q1",
+        "rm_buy_review_flag": "1",
+        "market_repricing_score": "14",
+    }
+    result = build_right_tail_queues([row], top15_selected_keys=set())
+    scout = result["right_tail_scout_queue"][0]
+    assert scout["ticker"] == "AXTI"
+    assert float(scout["right_tail_evidence_score"]) == 32.0
+    assert "rm_buy_review_market_repricing_override" in scout["right_tail_reason_codes"]

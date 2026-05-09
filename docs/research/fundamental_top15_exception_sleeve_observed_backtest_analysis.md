@@ -75,6 +75,33 @@ Interpretation: main Top-15 v3 clears the quantitative research-queue tests, but
 
 The sleeve captured `CRDO` from the named target set but still missed most low-score RM/theme-wave examples. That means the exception sleeve helps, but it does not fully solve messy right-tail discovery.
 
+## Right-Tail Scout + Demote Review
+
+These queues are visibility/research outputs, not buy lists. A target can be visibility-routed without being selected into Top-15. `blocked_hard_demote` counts as visibility only, not actionable research or buy underwriting; non-hard `demote_review` is human research review, not buy underwriting.
+
+| queue | row_count | avg_right_tail_evidence_score |
+| --- | --- | --- |
+| top15_exception_candidate | 0 |  |
+| right_tail_scout | 18 | 31.444444444444443 |
+| demote_review | 2281 | -7.496711968434897 |
+| diagnostics | 21182 | 0.05381928052119724 |
+
+Target visibility metrics:
+
+| metric | value |
+| --- | --- |
+| target_visibility_routed_count | 6 |
+| target_actionable_research_routed_count | 6 |
+| target_buy_underwriting_routed_count | 1 |
+| target_event_count | 9 |
+
+Final behavior:
+
+1. Top-10 Core: clean buy-underwriting queue.
+2. Top-15 Exception Sleeve: selected right-tail exception/starter-underwriting rows; output unchanged.
+3. Top-15 Exception Candidate Queue: visibility/staging only.
+4. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
+
 ## No-leakage and caveats
 
 - Selector receives selection-time fields only; returns are attached after selection is frozen.
@@ -91,4 +118,8 @@ The sleeve captured `CRDO` from the named target set but still missed most low-s
 - `outputs/fundamental_backtest/analysis_top15_exception/core_vs_exception_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/left_tail_penalty_comparison.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/missed_right_tail_after_top15.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/right_tail_queue_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`

@@ -1,0 +1,10 @@
+ticker,target_quarter,selected_in_top15_v3,selected_sleeve,miss_failure_mode,routed_visibility_layer,right_tail_evidence_score,right_tail_recommended_action,target_visibility_routed,target_actionable_research_routed,target_buy_underwriting_routed
+CRNC,2024Q4,0,,POST_LLM_DEMOTE,demote_review,2.000000,unknown_demote_needs_human_review,1,1,0
+CVNA,2023Q2,0,,POST_LLM_DEMOTE,demote_review,2.000000,unknown_demote_needs_human_review,1,1,0
+SNDK,2025Q3,0,,ENTRY_SCORE_BELOW_EXCEPTION_MIN,ignore,12.000000,ignore,0,0,0
+AAOI,2023Q2,0,,POST_LLM_DEMOTE,demote_review,12.000000,unknown_demote_needs_human_review,1,1,0
+BE,2025Q3,0,,POST_LLM_DEMOTE,demote_review,12.000000,unknown_demote_needs_human_review,1,1,0
+AXTI,2026Q1,0,,NOT_RANKED_IN_SELECTED_SLOTS,right_tail_scout,32.000000,scout_research,1,1,0
+AEHR,2026Q1,0,,ENTRY_SCORE_BELOW_EXCEPTION_MIN,ignore,12.000000,ignore,0,0,0
+ICHR,2026Q1,0,,ENTRY_SCORE_BELOW_EXCEPTION_MIN,ignore,12.000000,ignore,0,0,0
+CRDO,2024Q3,1,right_tail_exception,SELECTED_IN_TOP15_V3,already_selected_top15,34.000000,already_selected_top15_no_queue_action,1,1,1

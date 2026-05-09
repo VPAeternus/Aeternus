@@ -393,6 +393,48 @@ Outputs:
 
 Operating rule: use `high_conviction_top10_v2_final` as observed-data v2, not fully validated AKG+macro v2. Prioritize `rm_signal_bucket=1` as the single-RM-signal bucket; be cautious with `rm_signal_bucket=2+` and HP names unless LLM/theme/valuation evidence is strong. Apply macro permission manually until PIT macro history is validated. Continue forward-validating AKG theme acceleration / T5_RESCAN because historical PIT fields are blank.
 
+## Fundamental Top-15 + right-tail visibility daily handoff
+
+Run Top-15 after Top-10 when the PM wants the core plus right-tail exception/starter-underwriting sleeve:
+
+```bash
+python3 -m cli.main fundamental-top15 \
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --date YYYY-MM-DD
+```
+
+Then run visibility queues:
+
+```bash
+python3 -m cli.main fundamental-right-tail-queues \
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
+  --top15-selected-csv eval_results/fundamental/YYYY-MM-DD/high_conviction_top15.csv \
+  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --date YYYY-MM-DD
+```
+
+Default outputs:
+
+- `top15_exception_candidate_queue.csv`
+- `right_tail_scout_queue.csv`
+- `demote_review_queue.csv`
+- `right_tail_evidence_score_diagnostics.csv`
+- `right_tail_queues.json`
+
+Optional historical/debug target audit:
+
+```bash
+python3 -m cli.main fundamental-right-tail-queues \
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
+  --top15-selected-csv eval_results/fundamental/YYYY-MM-DD/high_conviction_top15.csv \
+  --target-events-csv docs/research/right_tail_target_events.csv \
+  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --date YYYY-MM-DD
+```
+
+Without `--target-events-csv`, no `target_miss_rescue_audit.csv` is written in daily live mode. These queues are visibility/research queues, not buy lists.
+
 ## Stage 10: Research Execution
 
 ### What this stage is
