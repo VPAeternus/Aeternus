@@ -30,6 +30,10 @@ CSV_FIELDS = [
     "post_llm_candidate_flag",
     "post_llm_high_priority_flag",
     "post_llm_demote_flag",
+    "post_llm_demote_severity",
+    "post_llm_demote_reason_code",
+    "post_llm_demote_overrideable",
+    "post_llm_demote_evidence",
     "detected_driver_category",
     "detected_driver_name",
     "evidence_positive",
@@ -49,6 +53,24 @@ CSV_FIELDS = [
     "theme_driver_summary",
     "theme_evidence_summary",
 ]
+
+DEMOTE_SEVERITIES = {"none", "soft", "hard", "unknown"}
+DEMOTE_REASON_CODES = {
+    "",
+    "weak_fundamentals",
+    "cyclical_trough",
+    "high_leverage",
+    "inventory_digesting",
+    "margin_pressure",
+    "customer_concentration",
+    "liquidity_risk",
+    "dilution_risk",
+    "going_concern",
+    "accounting_quality",
+    "fraud_or_integrity",
+    "broken_thesis",
+    "missing_filings",
+}
 
 BLOCKED_PACKET_FIELDS = {
     "return_10d_pct",
@@ -90,6 +112,10 @@ def result_schema() -> dict[str, Any]:
                 "enum": ["inflecting", "constructive", "neutral", "deteriorating", "unscorable"],
             },
             "score_addition": {"type": "integer", "minimum": -3, "maximum": 3},
+            "post_llm_demote_severity": {"type": "string", "enum": sorted(DEMOTE_SEVERITIES)},
+            "post_llm_demote_reason_code": {"type": "string", "enum": sorted(DEMOTE_REASON_CODES)},
+            "post_llm_demote_overrideable": {"type": "integer", "minimum": 0, "maximum": 1},
+            "post_llm_demote_evidence": {"type": "string"},
             "detected_driver_category": {"type": "string"},
             "detected_driver_name": {"type": "string"},
             "evidence_positive": {"type": "string"},
@@ -155,6 +181,11 @@ def build_prompt(packets: list[dict[str, Any]]) -> str:
         "filing_theme_capacity_expansion_flag, and theme_acceleration_score. Use 1/0 flags only. "
         "Require evidence snippets in theme_evidence; no evidence means all acceleration flags must be 0. "
         "Set theme_tailwind_score and theme_acceleration_score to 0; deterministic scoring computes final theme scores later.\n\n"
+        "Demote severity: if post_llm_demote_flag would be true, classify severity as soft, hard, or unknown. "
+        "Hard means integrity, missing filing, going-concern, broken-thesis, or ununderwritable risk. "
+        "Soft means ugly but potentially re-ratable. Unknown means demote signal exists but severity is unclear. "
+        "Overrideable=1 only when evidence says a soft demote may still deserve starter underwriting. "
+        "Return post_llm_demote_severity, post_llm_demote_reason_code, post_llm_demote_overrideable, and post_llm_demote_evidence.\n\n"
         f"Packets:\n{json.dumps(safe_packets, indent=2, ensure_ascii=True)}"
     )
 
@@ -230,6 +261,22 @@ def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict
     if theme_momentum not in {"accelerating", "stable", "fading", "unknown"}:
         raise ValueError(f"invalid theme_momentum: {theme_momentum}")
     theme_tailwind = _optional_int_field(payload, "theme_tailwind_score", 0, 20)
+    demote_severity = clean(payload.get("post_llm_demote_severity") or "none").lower()
+    if demote_severity not in DEMOTE_SEVERITIES:
+        raise ValueError(f"invalid post_llm_demote_severity: {demote_severity}")
+    demote_reason = clean(payload.get("post_llm_demote_reason_code"))
+    if demote_reason not in DEMOTE_REASON_CODES:
+        raise ValueError(f"invalid post_llm_demote_reason_code: {demote_reason}")
+    demote_overrideable = _optional_int_field(payload, "post_llm_demote_overrideable", 0, 1)
+    demote_evidence = clean(payload.get("post_llm_demote_evidence"))
+    derived_demote = int(risk >= 4 or gap >= 2 or bucket == "deteriorating")
+    severity_demote = int(demote_severity in {"soft", "hard", "unknown"})
+    if demote_severity == "none" and derived_demote:
+        demote_severity = "unknown"
+    if demote_severity == "none" and not derived_demote:
+        demote_reason = ""
+        demote_evidence = ""
+        demote_overrideable = 0
     acceleration = normalized_theme_acceleration_fields(payload)
     secondary = payload.get("secondary_themes") or []
     tags = payload.get("theme_tags") or []
@@ -254,7 +301,11 @@ def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict
             "score_addition": _score_addition_for(bucket, risk),
             "post_llm_candidate_flag": int(bucket in {"inflecting", "constructive"} and risk <= 3),
             "post_llm_high_priority_flag": int(score >= 7 and proof >= 3 and op_leverage >= 2 and risk <= 2),
-            "post_llm_demote_flag": int(risk >= 4 or gap >= 2 or bucket == "deteriorating"),
+            "post_llm_demote_flag": int(derived_demote or severity_demote),
+            "post_llm_demote_severity": demote_severity,
+            "post_llm_demote_reason_code": demote_reason,
+            "post_llm_demote_overrideable": demote_overrideable,
+            "post_llm_demote_evidence": demote_evidence,
             "confidence": confidence,
             "primary_theme": clean(payload.get("primary_theme")),
             "secondary_themes": json.dumps([clean(item) for item in secondary if clean(item)], ensure_ascii=True),
@@ -376,7 +427,18 @@ def _ensure_post_llm_flags(row: dict[str, Any]) -> dict[str, Any]:
     bucket = clean(out.get("narrative_delta_bucket"))
     out.setdefault("post_llm_candidate_flag", int(bucket in {"inflecting", "constructive"} and risk <= 3))
     out.setdefault("post_llm_high_priority_flag", int(score >= 7 and proof >= 3 and op_leverage >= 2 and risk <= 2))
-    out.setdefault("post_llm_demote_flag", int(risk >= 4 or gap >= 2 or bucket == "deteriorating"))
+    derived_demote = int(risk >= 4 or gap >= 2 or bucket == "deteriorating")
+    severity = clean(out.get("post_llm_demote_severity") or "none").lower()
+    if severity not in DEMOTE_SEVERITIES:
+        severity = "unknown" if derived_demote else "none"
+    severity_demote = int(severity in {"soft", "hard", "unknown"})
+    if severity == "none" and derived_demote:
+        severity = "unknown"
+    out.setdefault("post_llm_demote_flag", int(derived_demote or severity_demote))
+    out.setdefault("post_llm_demote_severity", severity)
+    out.setdefault("post_llm_demote_reason_code", "")
+    out.setdefault("post_llm_demote_overrideable", 0)
+    out.setdefault("post_llm_demote_evidence", "")
     return out
 
 
