@@ -1,11 +1,56 @@
+import csv
+
 from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     classify_demote_severity,
     compute_right_tail_evidence_score,
+    build_right_tail_queues,
+    select_right_tail_queues_from_csv,
 )
 
 
 def row(**extra):
     base = {"ticker": "TST", "entry_score_0_100": "30"}
+    base.update(extra)
+    return base
+
+
+def clean_candidate_row(ticker="CAND", quarter="2025Q1", **extra):
+    base = {
+        "ticker": ticker,
+        "quarter": quarter,
+        "primary_theme": "AI optical supplier",
+        "theme_role": "supplier",
+        "market_repricing_score": "14",
+        "theme_tailwind_score": "8",
+        "filing_theme_growth_flag": "1",
+        "repricing_momentum_priority": "1",
+    }
+    base.update(extra)
+    return base
+
+
+def high_score_soft_demote_row(**extra):
+    base = clean_candidate_row(
+        ticker="SOFT",
+        post_llm_demote_flag="1",
+        post_llm_demote_severity="soft",
+        rm1_low_price_dislocation_momentum="1",
+        rm_buy_review_flag="1",
+        hp_LLM_best="1",
+        theme_acceleration_research_visibility="1",
+    )
+    base.update(extra)
+    return base
+
+
+def high_score_unknown_demote_row(**extra):
+    base = high_score_soft_demote_row(ticker="UNK", post_llm_demote_severity="unknown", post_llm_demote_overrideable="1")
+    base.update(extra)
+    return base
+
+
+def high_score_hard_demote_row(**extra):
+    base = high_score_soft_demote_row(ticker="BAD", post_llm_demote_severity="hard", post_llm_demote_reason_code="fraud_or_integrity", post_llm_demote_overrideable="1")
     base.update(extra)
     return base
 
@@ -58,10 +103,102 @@ def test_ichr_style_supplier_row_clears_scout_threshold():
 
 
 def test_demote_flag_without_new_fields_defaults_unknown():
-    severity = classify_demote_severity({"post_llm_demote_flag": "1"})
-    assert severity == "unknown"
+    assert classify_demote_severity({"post_llm_demote_flag": "1"}) == "unknown"
 
 
 def test_demote_false_defaults_none():
-    severity = classify_demote_severity({"post_llm_demote_flag": "0"})
-    assert severity == "none"
+    assert classify_demote_severity({"post_llm_demote_flag": "0"}) == "none"
+
+
+def test_low_entry_theme_supplier_routes_to_scout_not_candidate():
+    result = build_right_tail_queues([clean_candidate_row(ticker="ICHR", quarter="2026Q1", repricing_momentum_priority="")], top15_selected_keys=set())
+    assert result["right_tail_scout_queue"][0]["ticker"] == "ICHR"
+    assert result["top15_exception_candidate_queue"] == []
+
+
+def test_repricing_momentum_flags_can_create_demote_review_candidate():
+    rows = [{
+        "ticker": "BE",
+        "quarter": "2025Q3",
+        "post_llm_demote_flag": "1",
+        "post_llm_demote_severity": "unknown",
+        "repricing_momentum_priority": "1",
+    }]
+    result = build_right_tail_queues(rows, top15_selected_keys=set())
+    assert result["demote_review_queue"][0]["ticker"] == "BE"
+
+
+def test_soft_demote_requires_overrideable_for_candidate_queue():
+    candidate = high_score_soft_demote_row(post_llm_demote_overrideable="0")
+    result = build_right_tail_queues([candidate], top15_selected_keys=set())
+    assert result["top15_exception_candidate_queue"] == []
+    assert result["right_tail_scout_queue"] or result["demote_review_queue"]
+
+    candidate["post_llm_demote_overrideable"] = "1"
+    result = build_right_tail_queues([candidate], top15_selected_keys=set())
+    assert result["top15_exception_candidate_queue"][0]["ticker"] == candidate["ticker"]
+
+
+def test_unknown_demote_never_enters_candidate_queue():
+    result = build_right_tail_queues([high_score_unknown_demote_row()], top15_selected_keys=set())
+    assert result["top15_exception_candidate_queue"] == []
+    assert result["demote_review_queue"][0]["right_tail_queue_type"] == "demote_review"
+
+
+def test_hard_demote_never_enters_candidate_queue():
+    result = build_right_tail_queues([high_score_hard_demote_row()], top15_selected_keys=set())
+    assert result["top15_exception_candidate_queue"] == []
+    assert result["demote_review_queue"][0]["right_tail_queue_type"] == "blocked_hard_demote"
+
+
+def test_already_selected_top15_name_is_suppressed_from_visibility_queues():
+    candidate = clean_candidate_row(ticker="CRDO", quarter="2024Q3")
+    result = build_right_tail_queues([candidate], top15_selected_keys={("CRDO", "2024Q3")})
+    assert result["top15_exception_candidate_queue"] == []
+    assert result["right_tail_scout_queue"] == []
+    assert result["right_tail_evidence_score_diagnostics"][0]["right_tail_queue_type"] == "already_selected_top15"
+
+
+def test_forbidden_columns_are_removed_before_scoring():
+    candidate = {"ticker": "A", "rm_buy_review_flag": "1", "return_90d_pct": "999", "final_rank_score_0_100": "100"}
+    result = build_right_tail_queues([candidate], top15_selected_keys=set())
+    diag = result["right_tail_evidence_score_diagnostics"][0]
+    assert "return_90d_pct" not in diag["right_tail_score_input_columns"].split(";")
+    assert "final_rank_score_0_100" not in diag["right_tail_score_input_columns"].split(";")
+
+
+def test_select_right_tail_queues_from_csv_writes_no_target_audit_by_default(tmp_path):
+    scores = tmp_path / "scores.csv"
+    out = tmp_path / "out"
+    rows = [clean_candidate_row(ticker="ICHR", quarter="2026Q1", repricing_momentum_priority="")]
+    with scores.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=sorted(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    result = select_right_tail_queues_from_csv(scores, out, selection_date="2026-05-09")
+
+    assert (out / "right_tail_scout_queue.csv").exists()
+    assert (out / "top15_exception_candidate_queue.csv").exists()
+    assert not (out / "target_miss_rescue_audit.csv").exists()
+    assert result["warnings"]
+
+
+def test_target_events_csv_preserves_duplicate_tickers_across_quarters(tmp_path):
+    target = tmp_path / "targets.csv"
+    target.write_text("ticker,quarter\nAAOI,2023Q2\nAAOI,2024Q3\n", encoding="utf-8")
+    from tradingagents.research.fundamental.src.selection.right_tail_queues import read_target_events_csv
+
+    assert read_target_events_csv(target) == [("AAOI", "2023Q2"), ("AAOI", "2024Q3")]
+
+
+def test_empty_queue_csv_uses_stable_headers(tmp_path):
+    scores = tmp_path / "scores.csv"
+    out = tmp_path / "out"
+    scores.write_text("ticker,quarter\nEMPTY,2026Q1\n", encoding="utf-8")
+
+    select_right_tail_queues_from_csv(scores, out)
+
+    header = (out / "top15_exception_candidate_queue.csv").read_text(encoding="utf-8").splitlines()[0]
+    assert "ticker" in header
+    assert "right_tail_queue_type" in header

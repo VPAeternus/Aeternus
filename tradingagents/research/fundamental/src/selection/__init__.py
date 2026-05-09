@@ -10,7 +10,12 @@ from .high_conviction_top10 import (
     select_high_conviction_top15_exception_sleeve,
     select_top15_from_csv,
 )
-from .right_tail_queues import classify_demote_severity, compute_right_tail_evidence_score
+from .right_tail_queues import (
+    build_right_tail_queues,
+    classify_demote_severity,
+    compute_right_tail_evidence_score,
+    select_right_tail_queues_from_csv,
+)
 
 __all__ = [
     "HighConvictionConfig",
@@ -20,6 +25,8 @@ __all__ = [
     "select_high_conviction_top10",
     "select_high_conviction_top15_exception_sleeve",
     "select_top15_from_csv",
+    "build_right_tail_queues",
     "classify_demote_severity",
     "compute_right_tail_evidence_score",
+    "select_right_tail_queues_from_csv",
 ]
