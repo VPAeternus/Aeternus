@@ -45,7 +45,7 @@ def _fixture(tmp_path):
     prior = tmp_path / "prior.csv"
     out = tmp_path / "out"
     rows = [_row(f"C{i}", score=100 - i, ret90=5 + i) for i in range(10)]
-    rows += [_row("CRNC", score=30, ret90=120, rm1_low_price_dislocation_momentum="1", primary_theme="ai")]
+    rows += [_row("CRNC", quarter="2024Q4", score=30, ret90=120, rm1_low_price_dislocation_momentum="1", primary_theme="ai")]
     rows += [_row("MISS", score=10, ret90=150)]
     for ticker in TARGET_RIGHT_TAIL_NAMES[1:]:
         rows.append(_row(ticker, score=30, ret90=0, eligible_for_backtest="False"))
@@ -151,3 +151,59 @@ def test_manifest_notes_self_hash_exclusion_and_hashes_other_outputs(tmp_path):
     assert data["manifest_hash_note"]
     assert set(data["output_hashes"]) == output_names
     assert "run_manifest.json" not in data["output_hashes"]
+
+
+def test_right_tail_visibility_queue_outputs_exist(tmp_path):
+    out, _ = _fixture(tmp_path)
+    for name in [
+        "top15_exception_candidate_queue.csv",
+        "right_tail_scout_queue.csv",
+        "demote_review_queue.csv",
+        "right_tail_evidence_score_diagnostics.csv",
+        "target_miss_rescue_audit.csv",
+        "v4_rescue_variant_summary.csv",
+    ]:
+        assert (out / name).exists()
+
+
+def test_target_audit_has_visibility_metric_columns(tmp_path):
+    out, _ = _fixture(tmp_path)
+    rows = _read_rows(out / "target_miss_rescue_audit.csv")
+    required = {
+        "miss_failure_mode",
+        "selected_in_top15_v3",
+        "selected_sleeve",
+        "routed_visibility_layer",
+        "target_visibility_routed",
+        "target_actionable_research_routed",
+        "target_buy_underwriting_routed",
+    }
+    assert required.issubset(rows[0])
+    assert any(r["ticker"] == "CRNC" and r["target_buy_underwriting_routed"] == "1" for r in rows)
+
+
+def test_manifest_records_right_tail_queue_no_leakage_and_selected_hash(tmp_path):
+    out, _ = _fixture(tmp_path)
+    manifest = json.loads((out / "run_manifest.json").read_text())
+    assert "right_tail_queue_outputs" in manifest
+    assert not set(manifest["right_tail_queue_feature_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])
+    assert manifest["top15_selected_rows_unchanged_from_prior_hash"] is None
+    assert manifest["top15_selected_rows_hash_guard_warning"]
+
+    pit = tmp_path / "pit.csv"
+    prior = tmp_path / "prior.csv"
+    run_high_conviction_top15_exception_sleeve_backtest(pit, prior, out)
+    manifest = json.loads((out / "run_manifest.json").read_text())
+    assert manifest["top15_selected_rows_unchanged_from_prior_hash"] is True
+    assert manifest["prior_selected_names_by_quarter_top15_sha256"] == manifest["new_selected_names_by_quarter_top15_sha256"]
+
+
+def test_v4_diagnostics_are_visibility_not_buy_list(tmp_path):
+    out, _ = _fixture(tmp_path)
+    rows = _read_rows(out / "v4_rescue_variant_summary.csv")
+    assert {r["variant"] for r in rows} >= {
+        "top15_v4_exception_plus_scout",
+        "top15_v4_soft_demote_override",
+        "top15_v4_theme_akg_supplier_rescue",
+    }
+    assert all("visibility" in r["description"].lower() for r in rows)
