@@ -83,7 +83,7 @@ These queues are visibility/research outputs, not buy lists. A target can be vis
 | --- | --- | --- |
 | top15_exception_candidate | 0 |  |
 | right_tail_scout | 18 | 31.444444444444443 |
-| demote_review | 2281 | -7.496711968434897 |
+| demote_review | 332 | 4.9397590361445785 |
 | diagnostics | 21182 | 0.05381928052119724 |
 
 Target visibility metrics:

@@ -218,9 +218,12 @@ def build_right_tail_queues(rows: Sequence[Mapping[str, Any]], top15_selected_ke
         elif severity == "hard":
             queue_type = "blocked_hard_demote"
             target_queue = "demote_review_queue"
-        elif severity == "unknown":
+        elif severity == "unknown" and (demote_candidate or score >= 15):
             queue_type = "demote_review"
             target_queue = "demote_review_queue"
+        elif severity == "unknown":
+            queue_type = "watchlist_only" if score >= cfg.watchlist_threshold else "ignore"
+            target_queue = "watchlist_only_queue" if queue_type == "watchlist_only" else ""
         elif severity == "soft" and _is_overrideable(row) and score >= cfg.soft_demote_top15_candidate_threshold:
             queue_type = "top15_exception_candidate"
             target_queue = "top15_exception_candidate_queue"
