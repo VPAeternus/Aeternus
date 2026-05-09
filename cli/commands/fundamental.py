@@ -181,6 +181,53 @@ def fundamental_top15(
         console.print(f"[green]Wrote[/green] {paths['csv']} | {paths['json']} | {paths['recommendation_md']}")
 
 
+@app.command("fundamental-right-tail-queues")
+def fundamental_right_tail_queues(
+    scores_csv: str = typer.Option(..., "--scores-csv", help="Required final fundamental scores CSV path"),
+    top15_selected_csv: str = typer.Option("", "--top15-selected-csv", help="Optional high_conviction_top15.csv path for already-selected suppression"),
+    target_events_csv: str = typer.Option("", "--target-events-csv", help="Optional historical/debug target events CSV"),
+    output_root: str = typer.Option("", "--output-root", help="Output root; defaults to scores CSV parent"),
+    date: str = typer.Option("", "--date", help="Selection date YYYY-MM-DD"),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Emit right-tail visibility queues from final fundamental scores."""
+    from tradingagents.research.fundamental.src.selection.right_tail_queues import select_right_tail_queues_from_csv
+
+    fmt = format.strip().lower()
+    if fmt not in {"table", "json"}:
+        console.print("[red]--format must be table or json[/red]")
+        raise typer.Exit(1)
+    scores_path = Path(scores_csv)
+    if not scores_path.exists():
+        console.print(f"[red]scores CSV not found: {scores_path}[/red]")
+        raise typer.Exit(1)
+    top15_path = Path(top15_selected_csv) if top15_selected_csv.strip() else None
+    if top15_path is not None and not top15_path.exists():
+        console.print(f"[yellow]Top15 selected CSV not provided or not found: {top15_path}; scout queues may include already-selected Top15 names.[/yellow]")
+        top15_path = None
+    elif top15_path is None:
+        console.print("[yellow]Top15 selected CSV not provided; scout queues may include already-selected Top15 names.[/yellow]")
+    target_path = Path(target_events_csv) if target_events_csv.strip() else None
+    if target_path is not None and not target_path.exists():
+        console.print(f"[red]target events CSV not found: {target_path}[/red]")
+        raise typer.Exit(1)
+    out_root = Path(output_root.strip()) if output_root.strip() else scores_path.parent
+    result = select_right_tail_queues_from_csv(
+        scores_path,
+        out_root,
+        top15_selected_csv=top15_path,
+        target_events_csv=target_path,
+        selection_date=date.strip(),
+    )
+    if fmt == "json":
+        console.print(json.dumps(result, indent=2, sort_keys=True))
+    else:
+        paths = result["output_paths"]
+        console.print(f"[green]Wrote[/green] {paths['top15_exception_candidate_queue']} | {paths['right_tail_scout_queue']} | {paths['demote_review_queue']} | {paths['right_tail_evidence_score_diagnostics']}")
+        if "target_miss_rescue_audit" in paths:
+            console.print(f"[green]Target audit[/green] {paths['target_miss_rescue_audit']}")
+
+
 @app.command("fundamental")
 def fundamental(
     date: str = typer.Option("", "--date", help="Dealflow queue date YYYY-MM-DD; defaults to today"),
