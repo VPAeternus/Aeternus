@@ -58,6 +58,7 @@ def test_fundamental_right_tail_queues_writes_default_daily_outputs_without_targ
         "top15_exception_candidate_queue.csv",
         "right_tail_scout_queue.csv",
         "demote_review_queue.csv",
+        "thin_signal_watchlist_queue.csv",
         "right_tail_evidence_score_diagnostics.csv",
         "right_tail_queues.json",
     ]:

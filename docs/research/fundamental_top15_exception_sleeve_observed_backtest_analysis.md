@@ -84,13 +84,14 @@ These queues are visibility/research outputs, not buy lists. A target can be vis
 | top15_exception_candidate | 0 |  |
 | right_tail_scout | 18 | 31.444444444444443 |
 | demote_review | 332 | 4.9397590361445785 |
+| thin_signal_watchlist | 1213 | 12.530915086562242 |
 | diagnostics | 21182 | 0.05381928052119724 |
 
 Target visibility metrics:
 
 | metric | value |
 | --- | --- |
-| target_visibility_routed_count | 6 |
+| target_visibility_routed_count | 9 |
 | target_actionable_research_routed_count | 6 |
 | target_buy_underwriting_routed_count | 1 |
 | target_event_count | 9 |
@@ -100,7 +101,8 @@ Final behavior:
 1. Top-10 Core: clean buy-underwriting queue.
 2. Top-15 Exception Sleeve: selected right-tail exception/starter-underwriting rows; output unchanged.
 3. Top-15 Exception Candidate Queue: visibility/staging only.
-4. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
+4. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; monitor for new theme or filing evidence.
+5. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
 ## No-leakage and caveats
 
@@ -122,4 +124,5 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`

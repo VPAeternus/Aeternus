@@ -159,6 +159,7 @@ def test_right_tail_visibility_queue_outputs_exist(tmp_path):
         "top15_exception_candidate_queue.csv",
         "right_tail_scout_queue.csv",
         "demote_review_queue.csv",
+        "thin_signal_watchlist_queue.csv",
         "right_tail_evidence_score_diagnostics.csv",
         "target_miss_rescue_audit.csv",
         "v4_rescue_variant_summary.csv",

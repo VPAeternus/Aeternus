@@ -135,6 +135,7 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     candidate_queue = read_csv(bundle_dir / "top15_exception_candidate_queue.csv")
     scout_queue = read_csv(bundle_dir / "right_tail_scout_queue.csv")
     demote_queue = read_csv(bundle_dir / "demote_review_queue.csv")
+    thin_signal_queue = read_csv(bundle_dir / "thin_signal_watchlist_queue.csv")
     diagnostics_queue = read_csv(bundle_dir / "right_tail_evidence_score_diagnostics.csv")
     target_visibility_audit = read_csv(bundle_dir / "target_miss_rescue_audit.csv")
     v4_diagnostics = read_csv(bundle_dir / "v4_rescue_variant_summary.csv")
@@ -149,6 +150,7 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         {"queue": "top15_exception_candidate", "row_count": len(candidate_queue), "avg_right_tail_evidence_score": num(candidate_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "right_tail_scout", "row_count": len(scout_queue), "avg_right_tail_evidence_score": num(scout_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "demote_review", "row_count": len(demote_queue), "avg_right_tail_evidence_score": num(demote_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "thin_signal_watchlist", "row_count": len(thin_signal_queue), "avg_right_tail_evidence_score": num(thin_signal_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "diagnostics", "row_count": len(diagnostics_queue), "avg_right_tail_evidence_score": num(diagnostics_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
     ])
     target_visibility_metrics = pd.DataFrame([
@@ -173,6 +175,7 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         "top15_exception_candidate_queue.csv": candidate_queue,
         "right_tail_scout_queue.csv": scout_queue,
         "demote_review_queue.csv": demote_queue,
+        "thin_signal_watchlist_queue.csv": thin_signal_queue,
     }
     for name, df in outputs.items():
         write_df(df, out_dir / name)
@@ -259,7 +262,8 @@ Final behavior:
 1. Top-10 Core: clean buy-underwriting queue.
 2. Top-15 Exception Sleeve: selected right-tail exception/starter-underwriting rows; output unchanged.
 3. Top-15 Exception Candidate Queue: visibility/staging only.
-4. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
+4. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; monitor for new theme or filing evidence.
+5. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
 ## No-leakage and caveats
 
@@ -281,6 +285,7 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`
 """
     report_path.parent.mkdir(parents=True, exist_ok=True)

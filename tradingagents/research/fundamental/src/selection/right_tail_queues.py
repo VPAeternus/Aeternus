@@ -139,6 +139,15 @@ def _demote_review_candidate(row: Mapping[str, Any]) -> bool:
     ])
 
 
+def _thin_signal_candidate(row: Mapping[str, Any]) -> bool:
+    return any([
+        truthy(row.get("rm_buy_review_flag")),
+        _single_rm_signal_bucket(row),
+        signal_count(row, HP_SIGNAL_FIELDS) > 0,
+        (to_float(row.get("market_repricing_score")) or 0.0) >= 6,
+    ])
+
+
 def _dedupe_reason_codes(codes: Sequence[str]) -> str:
     return ";".join(sorted({code for code in codes if code}))
 
@@ -158,6 +167,8 @@ def _recommended_action(queue_type: str, severity: str) -> str:
         return "scout_research"
     if queue_type == "demote_review":
         return "demote_review"
+    if queue_type == "thin_signal_watchlist":
+        return "thin_signal_monitor_for_new_theme_or_filing_evidence"
     if queue_type == "watchlist_only":
         return "watchlist_monitor_only"
     return "ignore"
@@ -198,6 +209,7 @@ def build_right_tail_queues(rows: Sequence[Mapping[str, Any]], top15_selected_ke
         "right_tail_scout_queue": [],
         "demote_review_queue": [],
         "watchlist_only_queue": [],
+        "thin_signal_watchlist_queue": [],
         "right_tail_evidence_score_diagnostics": [],
     }
     for raw in rows:
@@ -246,6 +258,9 @@ def build_right_tail_queues(rows: Sequence[Mapping[str, Any]], top15_selected_ke
         elif score >= cfg.watchlist_threshold:
             queue_type = "watchlist_only"
             target_queue = "watchlist_only_queue"
+        elif severity != "hard" and _thin_signal_candidate(row):
+            queue_type = "thin_signal_watchlist"
+            target_queue = "thin_signal_watchlist_queue"
         annotated = _annotate_queue_row(row, queue_type, score, parts, input_columns, extra_reason_codes)
         if target_queue:
             queues[target_queue].append(annotated)
@@ -348,7 +363,7 @@ def build_target_visibility_audit(rows: Sequence[Mapping[str, Any]], diagnostics
         diag = diag_by_key.get(key, {})
         layer = diag.get("right_tail_queue_type", "not_present")
         selected = layer == "already_selected_top15"
-        visibility = selected or layer in {"top15_exception_candidate", "right_tail_scout", "demote_review", "blocked_hard_demote"}
+        visibility = selected or layer in {"top15_exception_candidate", "right_tail_scout", "demote_review", "blocked_hard_demote", "thin_signal_watchlist"}
         actionable = selected or layer in {"top15_exception_candidate", "right_tail_scout", "demote_review"}
         if selected:
             failure_mode = "SELECTED_IN_TOP15_V3"
@@ -396,11 +411,13 @@ def select_right_tail_queues_from_csv(
     _write_csv(out / "top15_exception_candidate_queue.csv", queues["top15_exception_candidate_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_scout_queue.csv", queues["right_tail_scout_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "demote_review_queue.csv", queues["demote_review_queue"], QUEUE_CSV_FIELDS)
+    _write_csv(out / "thin_signal_watchlist_queue.csv", queues["thin_signal_watchlist_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_evidence_score_diagnostics.csv", queues["right_tail_evidence_score_diagnostics"], QUEUE_CSV_FIELDS)
     output_paths = {
         "top15_exception_candidate_queue": str(out / "top15_exception_candidate_queue.csv"),
         "right_tail_scout_queue": str(out / "right_tail_scout_queue.csv"),
         "demote_review_queue": str(out / "demote_review_queue.csv"),
+        "thin_signal_watchlist_queue": str(out / "thin_signal_watchlist_queue.csv"),
         "right_tail_evidence_score_diagnostics": str(out / "right_tail_evidence_score_diagnostics.csv"),
         "json": str(out / "right_tail_queues.json"),
     }
@@ -414,6 +431,7 @@ def select_right_tail_queues_from_csv(
             "top15_exception_candidate_count": len(queues["top15_exception_candidate_queue"]),
             "right_tail_scout_count": len(queues["right_tail_scout_queue"]),
             "demote_review_count": len(queues["demote_review_queue"]),
+            "thin_signal_watchlist_count": len(queues["thin_signal_watchlist_queue"]),
             "diagnostics_count": len(queues["right_tail_evidence_score_diagnostics"]),
         },
         "warnings": warnings,
