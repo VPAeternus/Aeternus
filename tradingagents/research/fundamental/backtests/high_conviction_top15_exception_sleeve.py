@@ -37,6 +37,7 @@ from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     TARGET_AUDIT_FIELDS,
     build_right_tail_queues,
     build_target_visibility_audit,
+    rank_thin_signal_watchlist,
 )
 
 RUNNER_VERSION = "fundamental_high_conviction_top15_exception_sleeve_backtest_v1"
@@ -72,6 +73,7 @@ OUTPUT_FILES = [
     "right_tail_scout_queue.csv",
     "demote_review_queue.csv",
     "thin_signal_watchlist_queue.csv",
+    "thin_signal_watchlist_top100.csv",
     "right_tail_evidence_score_diagnostics.csv",
     "target_miss_rescue_audit.csv",
     "v4_rescue_variant_summary.csv",
@@ -294,7 +296,9 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "top15_exception_candidate_queue.csv", queues["top15_exception_candidate_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_scout_queue.csv", queues["right_tail_scout_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "demote_review_queue.csv", queues["demote_review_queue"], QUEUE_CSV_FIELDS)
+    thin_signal_top100 = rank_thin_signal_watchlist(queues["thin_signal_watchlist_queue"], 100)
     _write_csv(out / "thin_signal_watchlist_queue.csv", queues["thin_signal_watchlist_queue"], QUEUE_CSV_FIELDS)
+    _write_csv(out / "thin_signal_watchlist_top100.csv", thin_signal_top100, QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_evidence_score_diagnostics.csv", queues["right_tail_evidence_score_diagnostics"], QUEUE_CSV_FIELDS)
     _write_csv(out / "target_miss_rescue_audit.csv", target_audit, TARGET_AUDIT_FIELDS)
     _write_csv(out / "v4_rescue_variant_summary.csv", v4_rows, ["variant", "routed_target_count", "visibility_routed_count", "actionable_research_routed_count", "scout_or_top15_routed_count", "demote_review_routed_count", "buy_underwriting_routed_count", "description"])
@@ -326,6 +330,7 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
             "right_tail_scout_queue": "right_tail_scout_queue.csv",
             "demote_review_queue": "demote_review_queue.csv",
             "thin_signal_watchlist_queue": "thin_signal_watchlist_queue.csv",
+            "thin_signal_watchlist_top100": "thin_signal_watchlist_top100.csv",
             "right_tail_evidence_score_diagnostics": "right_tail_evidence_score_diagnostics.csv",
             "target_miss_rescue_audit": "target_miss_rescue_audit.csv",
             "v4_rescue_variant_summary": "v4_rescue_variant_summary.csv",
@@ -346,6 +351,8 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         "manifest_hash_note": "run_manifest.json is excluded from output_hashes because hashing the manifest inside itself is unstable; all other files in this output directory are hashed after write.",
         "target_right_tail_events": TARGET_RIGHT_TAIL_EVENTS,
         "target_missed_name_capture_summary": target_summary,
+        "thin_signal_watchlist_count": len(queues["thin_signal_watchlist_queue"]),
+        "thin_signal_watchlist_top100_count": len(thin_signal_top100),
         "target_event_count": len(target_audit),
         "target_event_top15_status": target_summary,
         "quarter_count": len(groups),

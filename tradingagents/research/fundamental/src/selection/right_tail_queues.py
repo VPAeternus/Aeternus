@@ -221,6 +221,7 @@ def _annotate_queue_row(row: Mapping[str, Any], queue_type: str, score: float, p
         "right_tail_score_parts": json.dumps(parts, sort_keys=True),
         "right_tail_score_input_columns": ";".join(sorted(input_columns)),
         "market_repricing_score": _clean(row.get("market_repricing_score")),
+        "entry_qoq_pct": _clean(row.get("entry_qoq_pct")),
         "repricing_momentum_priority": _clean(row.get("repricing_momentum_priority")),
         "repricing_momentum_extension": _clean(row.get("repricing_momentum_extension")),
         "primary_theme": _clean(row.get("primary_theme")),
@@ -298,6 +299,19 @@ def build_right_tail_queues(rows: Sequence[Mapping[str, Any]], top15_selected_ke
     return {key: sorted(value, key=sorter) for key, value in queues.items()}
 
 
+def rank_thin_signal_watchlist(rows: Sequence[Mapping[str, Any]], limit: int = 100) -> list[dict[str, Any]]:
+    ranked = sorted(
+        [dict(row) for row in rows],
+        key=lambda r: (
+            -(to_float(r.get("right_tail_evidence_score")) or 0.0),
+            -(to_float(r.get("market_repricing_score")) or 0.0),
+            -(to_float(r.get("entry_qoq_pct")) or 0.0),
+            _clean(r.get("ticker")).upper(),
+        ),
+    )
+    return ranked[:limit]
+
+
 def _read_csv(path: Path) -> list[dict[str, Any]]:
     with path.open(newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
@@ -318,6 +332,7 @@ QUEUE_CSV_FIELDS = [
     "right_tail_score_parts",
     "right_tail_score_input_columns",
     "market_repricing_score",
+    "entry_qoq_pct",
     "repricing_momentum_priority",
     "repricing_momentum_extension",
     "primary_theme",
@@ -447,13 +462,16 @@ def select_right_tail_queues_from_csv(
     _write_csv(out / "top15_exception_candidate_queue.csv", queues["top15_exception_candidate_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_scout_queue.csv", queues["right_tail_scout_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "demote_review_queue.csv", queues["demote_review_queue"], QUEUE_CSV_FIELDS)
+    thin_signal_top100 = rank_thin_signal_watchlist(queues["thin_signal_watchlist_queue"], 100)
     _write_csv(out / "thin_signal_watchlist_queue.csv", queues["thin_signal_watchlist_queue"], QUEUE_CSV_FIELDS)
+    _write_csv(out / "thin_signal_watchlist_top100.csv", thin_signal_top100, QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_evidence_score_diagnostics.csv", queues["right_tail_evidence_score_diagnostics"], QUEUE_CSV_FIELDS)
     output_paths = {
         "top15_exception_candidate_queue": str(out / "top15_exception_candidate_queue.csv"),
         "right_tail_scout_queue": str(out / "right_tail_scout_queue.csv"),
         "demote_review_queue": str(out / "demote_review_queue.csv"),
         "thin_signal_watchlist_queue": str(out / "thin_signal_watchlist_queue.csv"),
+        "thin_signal_watchlist_top100": str(out / "thin_signal_watchlist_top100.csv"),
         "right_tail_evidence_score_diagnostics": str(out / "right_tail_evidence_score_diagnostics.csv"),
         "json": str(out / "right_tail_queues.json"),
     }
@@ -468,6 +486,9 @@ def select_right_tail_queues_from_csv(
             "right_tail_scout_count": len(queues["right_tail_scout_queue"]),
             "demote_review_count": len(queues["demote_review_queue"]),
             "thin_signal_watchlist_count": len(queues["thin_signal_watchlist_queue"]),
+            "thin_signal_watchlist_top25_count": min(25, len(thin_signal_top100)),
+            "thin_signal_watchlist_top50_count": min(50, len(thin_signal_top100)),
+            "thin_signal_watchlist_top100_count": len(thin_signal_top100),
             "diagnostics_count": len(queues["right_tail_evidence_score_diagnostics"]),
         },
         "warnings": warnings,

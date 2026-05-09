@@ -5,6 +5,7 @@ from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     compute_right_tail_evidence_score,
     build_right_tail_queues,
     build_target_visibility_audit,
+    rank_thin_signal_watchlist,
     select_right_tail_queues_from_csv,
 )
 
@@ -168,6 +169,20 @@ def test_forbidden_columns_are_removed_before_scoring():
     assert "final_rank_score_0_100" not in diag["right_tail_score_input_columns"].split(";")
 
 
+def test_rank_thin_signal_watchlist_caps_and_sorts_for_pm_consumption():
+    rows = [
+        {"ticker": "ZZZ", "right_tail_evidence_score": "20", "market_repricing_score": "9", "entry_qoq_pct": "3"},
+        {"ticker": "AAA", "right_tail_evidence_score": "20", "market_repricing_score": "9", "entry_qoq_pct": "3"},
+        {"ticker": "MID", "right_tail_evidence_score": "20", "market_repricing_score": "8", "entry_qoq_pct": "99"},
+        {"ticker": "TOP", "right_tail_evidence_score": "30", "market_repricing_score": "1", "entry_qoq_pct": "1"},
+        {"ticker": "QOQ", "right_tail_evidence_score": "20", "market_repricing_score": "9", "entry_qoq_pct": "8"},
+    ]
+
+    ranked = rank_thin_signal_watchlist(rows, limit=3)
+
+    assert [r["ticker"] for r in ranked] == ["TOP", "QOQ", "AAA"]
+
+
 def test_select_right_tail_queues_from_csv_writes_no_target_audit_by_default(tmp_path):
     scores = tmp_path / "scores.csv"
     out = tmp_path / "out"
@@ -181,6 +196,7 @@ def test_select_right_tail_queues_from_csv_writes_no_target_audit_by_default(tmp
 
     assert (out / "right_tail_scout_queue.csv").exists()
     assert (out / "top15_exception_candidate_queue.csv").exists()
+    assert (out / "thin_signal_watchlist_top100.csv").exists()
     assert not (out / "target_miss_rescue_audit.csv").exists()
     assert result["warnings"]
 
