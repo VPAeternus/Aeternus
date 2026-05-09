@@ -117,6 +117,9 @@ def build_exception_drivers(selected: pd.DataFrame) -> pd.DataFrame:
         "primary_theme", "theme_tailwind_score", "market_repricing_score", "right_tail_exception_reason_codes",
         "right_tail_exception_warning_codes",
     ]
+    for col in cols:
+        if col not in exc.columns:
+            exc[col] = ""
     return exc.sort_values("return_90d_num", ascending=False)[cols]
 
 
@@ -129,6 +132,12 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     right_tail = read_csv(bundle_dir / "right_tail_capture_comparison.csv")
     left_tail = read_csv(bundle_dir / "left_tail_penalty_comparison.csv")
     missed = read_csv(bundle_dir / "missed_right_tail_after_top15.csv")
+    candidate_queue = read_csv(bundle_dir / "top15_exception_candidate_queue.csv")
+    scout_queue = read_csv(bundle_dir / "right_tail_scout_queue.csv")
+    demote_queue = read_csv(bundle_dir / "demote_review_queue.csv")
+    diagnostics_queue = read_csv(bundle_dir / "right_tail_evidence_score_diagnostics.csv")
+    target_visibility_audit = read_csv(bundle_dir / "target_miss_rescue_audit.csv")
+    v4_diagnostics = read_csv(bundle_dir / "v4_rescue_variant_summary.csv")
     manifest = json.loads((bundle_dir / "run_manifest.json").read_text())
 
     adoption = build_adoption_check(summary, contrib)
@@ -136,6 +145,18 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     exception_drivers = build_exception_drivers(selected)
     variant_comparison = summary.copy()
     sleeve_summary = contrib.copy()
+    queue_summary = pd.DataFrame([
+        {"queue": "top15_exception_candidate", "row_count": len(candidate_queue), "avg_right_tail_evidence_score": num(candidate_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "right_tail_scout", "row_count": len(scout_queue), "avg_right_tail_evidence_score": num(scout_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "demote_review", "row_count": len(demote_queue), "avg_right_tail_evidence_score": num(demote_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "diagnostics", "row_count": len(diagnostics_queue), "avg_right_tail_evidence_score": num(diagnostics_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+    ])
+    target_visibility_metrics = pd.DataFrame([
+        {"metric": "target_visibility_routed_count", "value": int(num(target_visibility_audit["target_visibility_routed"]).fillna(0).sum()) if "target_visibility_routed" in target_visibility_audit else 0},
+        {"metric": "target_actionable_research_routed_count", "value": int(num(target_visibility_audit["target_actionable_research_routed"]).fillna(0).sum()) if "target_actionable_research_routed" in target_visibility_audit else 0},
+        {"metric": "target_buy_underwriting_routed_count", "value": int(num(target_visibility_audit["target_buy_underwriting_routed"]).fillna(0).sum()) if "target_buy_underwriting_routed" in target_visibility_audit else 0},
+        {"metric": "target_event_count", "value": len(target_visibility_audit)},
+    ])
 
     outputs = {
         "variant_comparison.csv": variant_comparison,
@@ -145,6 +166,13 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         "core_vs_exception_summary.csv": sleeve_summary,
         "left_tail_penalty_comparison.csv": left_tail,
         "missed_right_tail_after_top15.csv": missed,
+        "right_tail_queue_summary.csv": queue_summary,
+        "target_visibility_metrics.csv": target_visibility_metrics,
+        "target_miss_rescue_audit.csv": target_visibility_audit,
+        "v4_rescue_variant_summary.csv": v4_diagnostics,
+        "top15_exception_candidate_queue.csv": candidate_queue,
+        "right_tail_scout_queue.csv": scout_queue,
+        "demote_review_queue.csv": demote_queue,
     }
     for name, df in outputs.items():
         write_df(df, out_dir / name)
@@ -167,6 +195,8 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
 
     captured_targets = sorted(target_capture[target_capture["top15_status"] == "selected"]["ticker"].tolist())
     captured_text = ", ".join(f"`{ticker}`" for ticker in captured_targets) if captured_targets else "none"
+    target_metric_rows = target_visibility_metrics.to_dict("records")
+    queue_summary_rows = queue_summary.fillna("").to_dict("records")
 
     report = f"""# Fundamental Top-15 Exception Sleeve Observed Backtest Analysis
 
@@ -214,6 +244,23 @@ Interpretation: main Top-15 v3 clears the quantitative research-queue tests, but
 
 The sleeve captured {captured_text} from the named target set but still missed most low-score RM/theme-wave examples. That means the exception sleeve helps, but it does not fully solve messy right-tail discovery.
 
+## Right-Tail Scout + Demote Review
+
+These queues are visibility/research outputs, not buy lists. A target can be visibility-routed without being selected into Top-15. `blocked_hard_demote` counts as visibility only, not actionable research or buy underwriting; non-hard `demote_review` is human research review, not buy underwriting.
+
+{md_table(queue_summary_rows, ['queue', 'row_count', 'avg_right_tail_evidence_score'])}
+
+Target visibility metrics:
+
+{md_table(target_metric_rows, ['metric', 'value'])}
+
+Final behavior:
+
+1. Top-10 Core: clean buy-underwriting queue.
+2. Top-15 Exception Sleeve: selected right-tail exception/starter-underwriting rows; output unchanged.
+3. Top-15 Exception Candidate Queue: visibility/staging only.
+4. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
+
 ## No-leakage and caveats
 
 - Selector receives selection-time fields only; returns are attached after selection is frozen.
@@ -230,6 +277,10 @@ The sleeve captured {captured_text} from the named target set but still missed m
 - `outputs/fundamental_backtest/analysis_top15_exception/core_vs_exception_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/left_tail_penalty_comparison.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/missed_right_tail_after_top15.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/right_tail_queue_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`
 """
     report_path.parent.mkdir(parents=True, exist_ok=True)

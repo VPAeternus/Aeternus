@@ -207,3 +207,22 @@ def test_v4_diagnostics_are_visibility_not_buy_list(tmp_path):
         "top15_v4_theme_akg_supplier_rescue",
     }
     assert all("visibility" in r["description"].lower() for r in rows)
+
+
+def test_top15_analysis_emits_queue_visibility_tables(tmp_path):
+    from scripts.analyze_fundamental_top15_exception_sleeve import run
+
+    out_bundle, _ = _fixture(tmp_path)
+    analysis_out = tmp_path / "analysis"
+    report = tmp_path / "report.md"
+    run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+
+    assert (analysis_out / "right_tail_queue_summary.csv").exists()
+    assert (analysis_out / "target_visibility_metrics.csv").exists()
+    assert (analysis_out / "target_miss_rescue_audit.csv").exists()
+    text = report.read_text()
+    assert "Right-Tail Scout + Demote Review" in text
+    assert "visibility/research outputs, not buy lists" in text
+    assert "visibility-routed" in text
+    assert "`blocked_hard_demote` counts as visibility only" in text
+    assert "non-hard `demote_review` is human research review" in text
