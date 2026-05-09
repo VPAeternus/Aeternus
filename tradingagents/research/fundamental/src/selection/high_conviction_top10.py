@@ -8,6 +8,17 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
+from .signal_utils import (
+    HP_SIGNAL_FIELDS,
+    RM_SIGNAL_FIELDS,
+    hp_signal_bucket,
+    rm_signal_bucket,
+    signal_bucket,
+    signal_count,
+    to_float,
+    truthy,
+)
+
 
 HARD_REJECT_DOC_STATUSES = {
     "blocked", "invalid", "missing", "missing_docs", "no_docs", "fetch_failed",
@@ -30,24 +41,6 @@ HP_OVERRIDE_RE = re.compile(r"^hp\d+_(?:priority|high_priority|llm_supported|ext
 TIER_OVERRIDE_RE = re.compile(r"^tier\d+_L\d+_(?:priority|high_priority|llm_supported|rescan|signal|confirmed)$")
 OPERATING_SETTING = "high_conviction_top10_v2_final"
 TOP15_OPERATING_SETTING = "high_conviction_top15_v3_exception_sleeve"
-RM_SIGNAL_FIELDS = (
-    "rm1_low_price_dislocation_momentum",
-    "rm2_weak_acceleration",
-    "rm3_mid_price_dislocation_momentum",
-    "rm4_persistent_repricing_wave",
-    "rm_buy_review_flag",
-)
-HP_SIGNAL_FIELDS = (
-    "hp0_high_price_broad",
-    "hp1_quality_pullback",
-    "hp2_dislocation_momentum_priority",
-    "hp2_dislocation_momentum_watch",
-    "hp3_large_quality_theme_exception",
-    "hp4_score_reacceleration_watch",
-    "hp_production_extension",
-    "hp_research_extension",
-    "hp_LLM_best",
-)
 DAILY_RECOMMENDATION_BULLETS = [
     "Run broad discovery / source Top-30.",
     "Deep-analyze selected names.",
@@ -281,15 +274,10 @@ def select_top15_from_csv(
     return result
 
 
-def _signal_count(row: Mapping[str, Any], fields: Sequence[str]) -> int:
-    return len([field for field in fields if field in row and _truthy(row.get(field))])
-
-
-def _signal_bucket(row: Mapping[str, Any], fields: Sequence[str]) -> tuple[str, list[str]]:
-    active = [field for field in fields if field in row and _truthy(row.get(field))]
-    if len(active) >= 2:
-        return "2+", active
-    return str(len(active)), active
+_truthy = truthy
+_to_float = to_float
+_signal_count = signal_count
+_signal_bucket = signal_bucket
 
 
 def _single_rm_signal_bucket(row: Mapping[str, Any]) -> bool:
@@ -297,11 +285,11 @@ def _single_rm_signal_bucket(row: Mapping[str, Any]) -> bool:
 
 
 def _rm_signal_bucket(row: Mapping[str, Any]) -> str:
-    return _signal_bucket(row, RM_SIGNAL_FIELDS)[0]
+    return rm_signal_bucket(row)
 
 
 def _hp_signal_bucket(row: Mapping[str, Any]) -> str:
-    return _signal_bucket(row, HP_SIGNAL_FIELDS)[0]
+    return hp_signal_bucket(row)
 
 
 def _has_theme_or_akg_confirmation(row: Mapping[str, Any]) -> bool:
@@ -774,30 +762,11 @@ def _lane(row: Mapping[str, Any]) -> str:
     return "core"
 
 
-def _truthy(value: Any) -> bool:
-    text = str(value if value is not None else "").strip().lower()
-    if text in {"", "nan", "none", "null", "false", "no", "n", "low", "0"}:
-        return False
-    numeric = _to_float(text)
-    if numeric is not None:
-        return numeric != 0
-    return text in {"1", "true", "yes", "y", "high", "priority", "t5_rescan"}
-
-
 def _parse_confidence(value: Any) -> float | None:
     numeric = _to_float(value)
     if numeric is not None:
         return numeric
     return CONFIDENCE_LABELS.get(str(value).strip().lower())
-
-
-def _to_float(value: Any) -> float | None:
-    try:
-        if value is None or str(value).strip() == "":
-            return None
-        return float(value)
-    except (TypeError, ValueError):
-        return None
 
 
 def _read_csv(path: Path) -> list[dict[str, Any]]:
