@@ -28,6 +28,9 @@ def _row(ticker, quarter="2025Q1", score=80, ret90=10, **extra):
         "cik": "123",
         "cik_status": "resolved",
         "document_status": "CACHED_READY",
+        "akg_universe_tier": "",
+        "macro_entry_action": "",
+        "source_file_hash": "fixture-source-hash",
     }
     row.update(extra)
     return row
@@ -41,7 +44,8 @@ def _write_csv(path: Path, rows):
         writer.writerows(rows)
 
 
-def _fixture(tmp_path):
+def _fixture(tmp_path, inject_forbidden=False):
+    tmp_path.mkdir(parents=True, exist_ok=True)
     pit = tmp_path / "pit.csv"
     prior = tmp_path / "prior.csv"
     out = tmp_path / "out"
@@ -50,6 +54,17 @@ def _fixture(tmp_path):
     rows += [_row("MISS", score=10, ret90=150)]
     for ticker in TARGET_RIGHT_TAIL_NAMES[1:]:
         rows.append(_row(ticker, score=30, ret90=0, eligible_for_backtest="False"))
+    if inject_forbidden:
+        for idx, row in enumerate(rows):
+            row.update({
+                "return_999d_pct": "999999" if idx % 2 else "-999999",
+                "return_since_signal_extreme_pct": "999999",
+                "future_return_pct": "999999",
+                "winner_future_label": "1",
+                "target_label": "BUY_NOW",
+                "final_current_return_rank": "1",
+                "monitoring_score_shadow": "100",
+            })
     _write_csv(pit, rows)
     baseline = [dict(r, variant="high_conviction_top10_v2_final", selection_rank=i + 1) for i, r in enumerate(rows[:10])]
     _write_csv(prior, baseline)
@@ -166,6 +181,7 @@ def test_right_tail_visibility_queue_outputs_exist(tmp_path):
         "thin_signal_watchlist_queue.csv",
         "thin_signal_watchlist_top100.csv",
         "right_tail_evidence_score_diagnostics.csv",
+        "pit_feature_lineage_audit.csv",
         "target_miss_rescue_audit.csv",
         "v4_rescue_variant_summary.csv",
     ]:
@@ -227,6 +243,43 @@ def test_right_tail_manifest_scoring_columns_match_constant(tmp_path):
     manifest = json.loads((out / "run_manifest.json").read_text())
 
     assert set(manifest["right_tail_queue_scoring_columns"]) == set(RIGHT_TAIL_SCORING_COLUMNS)
+
+
+def test_pit_feature_lineage_audit_covers_selection_and_right_tail_fields(tmp_path):
+    out, _ = _fixture(tmp_path)
+    manifest = json.loads((out / "run_manifest.json").read_text())
+    audit = _read_rows(out / "pit_feature_lineage_audit.csv")
+    by_field = {row["field"]: row for row in audit}
+
+    assert set(manifest["feature_columns_used_for_selection"]) <= set(by_field)
+    assert set(RIGHT_TAIL_SCORING_COLUMNS) <= set(by_field)
+    assert by_field["entry_score_0_100"]["layer"] == "both"
+    assert by_field["akg_universe_tier"]["pit_status"] == "not_full_production_v2_validated_missing_pit_provenance"
+    assert by_field["primary_theme"]["pit_status"] == "not_full_production_v2_validated"
+    assert by_field["macro_entry_action"]["pit_status"] == "not_full_production_v2_validated"
+    assert "pit_feature_lineage_status_counts" in manifest
+    assert "pit_feature_lineage_audit.csv" in manifest["output_hashes"]
+    assert manifest["right_tail_queue_outputs"]["pit_feature_lineage_audit"] == "pit_feature_lineage_audit.csv"
+
+
+def test_injected_forbidden_columns_do_not_change_top15_or_right_tail_outputs(tmp_path):
+    clean_out, _ = _fixture(tmp_path / "clean")
+    injected_out, _ = _fixture(tmp_path / "injected", inject_forbidden=True)
+
+    for name in [
+        "selected_names_by_quarter_top15.csv",
+        "top15_exception_candidate_queue.csv",
+        "right_tail_scout_queue.csv",
+        "demote_review_queue.csv",
+        "thin_signal_watchlist_queue.csv",
+        "right_tail_evidence_score_diagnostics.csv",
+    ]:
+        assert (injected_out / name).read_text(encoding="utf-8") == (clean_out / name).read_text(encoding="utf-8")
+
+    manifest = json.loads((injected_out / "run_manifest.json").read_text())
+    assert "return_999d_pct" in manifest["forbidden_selection_columns_removed_excluded"]
+    assert "target_label" in manifest["right_tail_queue_forbidden_columns"]
+    assert "return_999d_pct" not in manifest["right_tail_queue_input_columns"]
 
 
 def test_v4_diagnostics_are_visibility_not_buy_list(tmp_path):

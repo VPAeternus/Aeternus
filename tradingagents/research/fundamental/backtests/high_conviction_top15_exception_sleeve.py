@@ -6,7 +6,7 @@ import csv
 import hashlib
 import json
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 from uuid import uuid4
@@ -37,6 +37,7 @@ from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     TARGET_AUDIT_FIELDS,
     build_right_tail_queues,
     build_target_visibility_audit,
+    is_forbidden_right_tail_routing_column,
     rank_thin_signal_watchlist,
     split_demote_review_priority,
 )
@@ -79,6 +80,7 @@ OUTPUT_FILES = [
     "thin_signal_watchlist_queue.csv",
     "thin_signal_watchlist_top100.csv",
     "right_tail_evidence_score_diagnostics.csv",
+    "pit_feature_lineage_audit.csv",
     "target_miss_rescue_audit.csv",
     "v4_rescue_variant_summary.csv",
     "README_ANALYSIS.md",
@@ -90,6 +92,91 @@ SAFE_SELECTOR_REQUIRED_COLUMNS = {
     "document_status",
     "hard_reject_reason",
 }
+PIT_AUDIT_FIELDS = ["field", "layer", "present_in_input", "pit_provenance_field", "pit_status", "notes"]
+
+
+def _is_forbidden_selection_column(column: str) -> bool:
+    name = str(column or "").strip().lower()
+    return name in FORBIDDEN_SELECTION_COLUMNS or is_forbidden_right_tail_routing_column(name)
+
+
+def _is_forbidden_output_extra_column(column: str) -> bool:
+    return _is_forbidden_selection_column(column) and column not in OUTCOME_COLUMNS
+
+
+def _pit_family(field: str) -> str:
+    name = field.lower()
+    if name == "akg_universe_tier" or name.startswith("akg_"):
+        return "akg"
+    if name.startswith("macro_"):
+        return "macro"
+    if name.startswith("theme_") or name.startswith("filing_theme_") or name in {"primary_theme", "secondary_themes"}:
+        return "theme"
+    if name.startswith("rm") or name.startswith("repricing_") or name == "market_repricing_score":
+        return "rm"
+    if name.startswith("hp"):
+        return "hp"
+    if name.startswith("tier_") or name == "tier_structure_score":
+        return "tier"
+    if "score" in name or name.startswith("post_llm_"):
+        return "scoring"
+    return "source"
+
+
+def _pit_provenance_candidates(field: str) -> tuple[str, ...]:
+    family = _pit_family(field)
+    return {
+        "akg": ("akg_pit_snapshot_id", "akg_rule_version", "source_file_hash"),
+        "macro": ("macro_rule_version", "source_file_hash"),
+        "theme": ("theme_rule_version", "source_file_hash"),
+        "rm": ("rm_rule_version", "source_file_hash"),
+        "hp": ("hp_rule_version", "source_file_hash"),
+        "tier": ("tier_rule_version", "source_file_hash"),
+        "scoring": ("scoring_formula_version", "source_file_hash"),
+        "source": ("source_file_hash", "pipeline_run_id"),
+    }[family]
+
+
+def _build_pit_feature_lineage_audit(headers: Sequence[str], selection_fields: Sequence[str], right_tail_fields: Sequence[str]) -> list[dict[str, Any]]:
+    header_set = set(headers)
+    selection_set = set(selection_fields)
+    right_tail_set = set(right_tail_fields)
+    rows: list[dict[str, Any]] = []
+    for field in sorted(selection_set | right_tail_set):
+        in_selection = field in selection_set
+        in_right_tail = field in right_tail_set
+        layer = "both" if in_selection and in_right_tail else "top15_selection" if in_selection else "right_tail_routing"
+        family = _pit_family(field)
+        candidates = _pit_provenance_candidates(field)
+        present_provenance = [candidate for candidate in candidates if candidate in header_set]
+        present = field in header_set
+        if not present:
+            status = "field_missing_unavailable_or_neutral"
+            notes = "Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable."
+        elif family == "akg" and not any(c.startswith("akg_") for c in present_provenance):
+            status = "not_full_production_v2_validated_missing_pit_provenance"
+            notes = "AKG/T5_RESCAN field present but no dedicated AKG PIT snapshot provenance; audit only, not full production-v2 validated."
+        elif family in {"theme", "macro"}:
+            status = "not_full_production_v2_validated"
+            notes = f"{family} field present; rule/source provenance is documented but full historical PIT {family} provenance remains a production-v2 dependency."
+        elif present_provenance and set(present_provenance) <= {"source_file_hash", "pipeline_run_id"}:
+            status = "source_only_not_field_validated"
+            notes = "Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+        elif present_provenance:
+            status = "pit_documented"
+            notes = "PIT lineage has source/rule provenance column in input manifest."
+        else:
+            status = "pit_provenance_unavailable"
+            notes = "No PIT provenance column found in input; audit-only until provenance is added."
+        rows.append({
+            "field": field,
+            "layer": layer,
+            "present_in_input": int(present),
+            "pit_provenance_field": ";".join(present_provenance) if present_provenance else ";".join(candidates),
+            "pit_status": status,
+            "notes": notes,
+        })
+    return rows
 
 
 def _read_any_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
@@ -99,7 +186,7 @@ def _read_any_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
 
 
 def _freeze(row: Mapping[str, Any], original: Mapping[str, Any], variant: str, quarter: str, rank: int) -> dict[str, Any]:
-    out = dict(row)
+    out = {k: v for k, v in dict(row).items() if not _is_forbidden_output_extra_column(str(k))}
     out.update({c: original.get(c, "") for c in OUTCOME_COLUMNS if c in original})
     out.update({"variant": variant, "quarter": quarter, "snapshot_date": original.get("tradable_date", ""), "tradable_date": original.get("tradable_date", ""), "selection_rank": rank, "ticker": str(original.get("ticker", row.get("ticker", ""))).upper()})
     out.setdefault("selected_sleeve", "core")
@@ -135,7 +222,11 @@ def _aggregate(variant: str, picks: Sequence[Mapping[str, Any]], quarters: Seque
 
 def _baseline_rows(prior_path: Path) -> list[dict[str, Any]]:
     rows, _ = _read_any_csv(prior_path)
-    out = [dict(r, selected_sleeve="core", selected_sleeve_rank=r.get("selection_rank", "")) for r in rows if r.get("variant") == BASELINE_VARIANT]
+    out = [
+        {**{k: v for k, v in r.items() if not _is_forbidden_output_extra_column(str(k))}, "selected_sleeve": "core", "selected_sleeve_rank": r.get("selection_rank", "")}
+        for r in rows
+        if r.get("variant") == BASELINE_VARIANT
+    ]
     return out
 
 
@@ -202,7 +293,7 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     for q in sorted(groups):
         eligible = sorted(groups[q], key=lambda r: str(r.get("ticker", "")).upper())
         quarter_rows.append(_summarize_quarter(BASELINE_VARIANT, q, [r for r in baseline if r.get("quarter") == q], len(eligible), 10))
-        safe_cols = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and c not in FORBIDDEN_SELECTION_COLUMNS]]))
+        safe_cols = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and not _is_forbidden_selection_column(c)]]))
         safe = [{c: r.get(c, "") for c in safe_cols} for r in eligible]
         by_ticker = {str(r.get("ticker", "")).upper(): r for r in eligible}
         for variant, cfg in TOP15_VARIANTS.items():
@@ -260,7 +351,7 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         if row.get("variant") == main_top15_variant
     }
     queue_input = [
-        {k: v for k, v in row.items() if k not in FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS}
+        {k: v for k, v in row.items() if not is_forbidden_right_tail_routing_column(str(k))}
         for row in rows
         if _truthy(row.get("eligible_for_backtest"))
     ]
@@ -296,6 +387,7 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         {"variant": "top15_v4_theme_akg_supplier_rescue", "routed_target_count": supplier_routed_count, "visibility_routed_count": visibility_count, "actionable_research_routed_count": actionable_count, "scout_or_top15_routed_count": scout_or_top15_count, "demote_review_routed_count": demote_review_count, "buy_underwriting_routed_count": buy_count, "description": "Low-entry theme supplier/AKG-style visibility diagnostic, not selected buy underwriting."},
     ]
 
+    safe_cols_manifest = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and not _is_forbidden_selection_column(c)]]))
     _write_csv(out / "missed_right_tail_after_top15.csv", missed, ["ticker", "quarter", "return_90d_pct", "mechanical_status_after"])
     _write_csv(out / "top15_exception_candidate_queue.csv", queues["top15_exception_candidate_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_scout_queue.csv", queues["right_tail_scout_queue"], QUEUE_CSV_FIELDS)
@@ -308,12 +400,20 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "thin_signal_watchlist_queue.csv", queues["thin_signal_watchlist_queue"], QUEUE_CSV_FIELDS)
     _write_csv(out / "thin_signal_watchlist_top100.csv", thin_signal_top100, QUEUE_CSV_FIELDS)
     _write_csv(out / "right_tail_evidence_score_diagnostics.csv", queues["right_tail_evidence_score_diagnostics"], QUEUE_CSV_FIELDS)
+    pit_audit_rows = _build_pit_feature_lineage_audit(headers, safe_cols_manifest, RIGHT_TAIL_SCORING_COLUMNS)
+    _write_csv(out / "pit_feature_lineage_audit.csv", pit_audit_rows, PIT_AUDIT_FIELDS)
     _write_csv(out / "target_miss_rescue_audit.csv", target_audit, TARGET_AUDIT_FIELDS)
     _write_csv(out / "v4_rescue_variant_summary.csv", v4_rows, ["variant", "routed_target_count", "visibility_routed_count", "actionable_research_routed_count", "scout_or_top15_routed_count", "demote_review_routed_count", "buy_underwriting_routed_count", "description"])
     (out / "README_ANALYSIS.md").write_text(_readme(), encoding="utf-8")
-    safe_cols_manifest = list(dict.fromkeys([*feature_cols, *[c for c in headers if c in SAFE_SELECTOR_REQUIRED_COLUMNS and c not in FORBIDDEN_SELECTION_COLUMNS]]))
     right_tail_input_columns = sorted({key for row in queue_input for key in row})
     right_tail_scoring_columns = list(RIGHT_TAIL_SCORING_COLUMNS)
+    forbidden_selection_input_columns = sorted({h for h in headers if _is_forbidden_selection_column(h)})
+    forbidden_right_tail_input_columns = sorted({h for h in headers if is_forbidden_right_tail_routing_column(h)})
+    if any(_is_forbidden_selection_column(c) for c in safe_cols_manifest):
+        raise ValueError("forbidden forward-looking column reached Top15 selector inputs")
+    if any(is_forbidden_right_tail_routing_column(c) for c in right_tail_input_columns):
+        raise ValueError("forbidden forward-looking column reached right-tail routing inputs")
+    pit_audit_status_counts = dict(sorted(Counter(r["pit_status"] for r in pit_audit_rows).items()))
     new_selected_hash = _file_sha256(out / "selected_names_by_quarter_top15.csv")
     selected_hash_guard_available = bool(prior_selected_hash)
     selected_hash_warning = "" if selected_hash_guard_available else "prior selected_names_by_quarter_top15.csv absent before run; unchanged guard unavailable"
@@ -329,7 +429,7 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
             "prior_selected": {"path": str(prior_path), "sha256": _file_sha256(prior_path), "row_count": len(baseline)},
         },
         "variant_configs": {k: cfg.__dict__ for k, cfg in TOP15_VARIANTS.items()},
-        "forbidden_selection_columns_removed_excluded": sorted(set(headers) & FORBIDDEN_SELECTION_COLUMNS),
+        "forbidden_selection_columns_removed_excluded": forbidden_selection_input_columns,
         "feature_columns_used_for_selection": safe_cols_manifest,
         "columns_excluded_from_selection": sorted(set(headers) - set(safe_cols_manifest)),
         "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.",
@@ -343,13 +443,16 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
             "thin_signal_watchlist_queue": "thin_signal_watchlist_queue.csv",
             "thin_signal_watchlist_top100": "thin_signal_watchlist_top100.csv",
             "right_tail_evidence_score_diagnostics": "right_tail_evidence_score_diagnostics.csv",
+            "pit_feature_lineage_audit": "pit_feature_lineage_audit.csv",
             "target_miss_rescue_audit": "target_miss_rescue_audit.csv",
             "v4_rescue_variant_summary": "v4_rescue_variant_summary.csv",
         },
-        "right_tail_queue_forbidden_columns": sorted(FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS),
+        "right_tail_queue_forbidden_columns": sorted(set(FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS) | set(forbidden_right_tail_input_columns)),
         "right_tail_queue_input_columns": right_tail_input_columns,
         "right_tail_queue_scoring_columns": right_tail_scoring_columns,
-        "right_tail_queue_no_leakage_statement": "Forbidden return/monitoring/final-rank/current-return/return_since fields are removed before scoring/routing; input columns include pass-through fields, scoring columns are the right-tail fields actually referenced by scoring/routing.",
+        "right_tail_queue_no_leakage_statement": "Forbidden return/monitoring/final-rank/current-return/return_since/target/label/winner/loser fields are removed before scoring/routing; input columns include pass-through fields, scoring columns are the right-tail fields actually referenced by scoring/routing.",
+        "pit_feature_lineage_audit_output": "pit_feature_lineage_audit.csv",
+        "pit_feature_lineage_status_counts": pit_audit_status_counts,
         "prior_selected_names_by_quarter_top15_sha256": prior_selected_hash,
         "new_selected_names_by_quarter_top15_sha256": new_selected_hash,
         "top15_selected_rows_unchanged_from_prior_hash": (prior_selected_hash == new_selected_hash) if selected_hash_guard_available else None,

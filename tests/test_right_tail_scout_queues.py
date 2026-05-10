@@ -163,11 +163,37 @@ def test_already_selected_top15_name_is_suppressed_from_visibility_queues():
 
 
 def test_forbidden_columns_are_removed_before_scoring():
-    candidate = {"ticker": "A", "rm_buy_review_flag": "1", "return_90d_pct": "999", "final_rank_score_0_100": "100"}
+    candidate = {"ticker": "A", "rm_buy_review_flag": "1", "return_90d_pct": "999", "final_rank_score_0_100": "100", "winner_reason": "PIT note", "final_quality_score": "7"}
     result = build_right_tail_queues([candidate], top15_selected_keys=set())
     diag = result["right_tail_evidence_score_diagnostics"][0]
-    assert "return_90d_pct" not in diag["right_tail_score_input_columns"].split(";")
-    assert "final_rank_score_0_100" not in diag["right_tail_score_input_columns"].split(";")
+    input_columns = diag["right_tail_score_input_columns"].split(";")
+    assert "return_90d_pct" not in input_columns
+    assert "final_rank_score_0_100" not in input_columns
+    assert "winner_reason" in input_columns
+    assert "final_quality_score" in input_columns
+
+
+def test_extreme_forward_looking_columns_do_not_change_queue_routing():
+    base_rows = [
+        clean_candidate_row(ticker="SCOUT", market_repricing_score="10", repricing_momentum_priority=""),
+        high_score_soft_demote_row(post_llm_demote_overrideable="1"),
+        {"ticker": "THIN", "quarter": "2026Q1", "rm_buy_review_flag": "1"},
+    ]
+    injected_rows = []
+    for row_data in base_rows:
+        item = dict(row_data)
+        item.update({
+            "return_999d_pct": "999999",
+            "return_since_signal_extreme_pct": "999999",
+            "future_return_pct": "999999",
+            "winner_future_label": "1",
+            "target_label": "BUY_NOW",
+            "final_current_return_rank": "1",
+            "monitoring_score_shadow": "100",
+        })
+        injected_rows.append(item)
+
+    assert build_right_tail_queues(base_rows, top15_selected_keys=set()) == build_right_tail_queues(injected_rows, top15_selected_keys=set())
 
 
 def test_split_demote_review_priority_bands_pm_view():

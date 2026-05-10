@@ -12,6 +12,8 @@
 
 **Current note:** Right-tail manifest scoring-column audit fixed. `right_tail_queue_scoring_columns` now reports the full referenced field contract, not only fields present in the current input CSV; includes demote severity/reason/override/evidence, filing theme flags, theme tags, and theme evidence summary. Top15 selected hash guard remains `true`. Verification: focused pytest `35 passed, 2 warnings`. Last updated 2026-05-09T15:30:27.
 
+**Current note:** PIT/live-readiness QA audit implemented under oversight. Added `pit_feature_lineage_audit.csv` for Top15 selection/right-tail fields, tightened forward-looking column stripping/tests without changing selected rows, and documented production-v2 PIT AKG/theme/macro caveat in runbook. Top15 selected hash guard remains `true`; PIT audit rows `74` with status counts: `36` pit_documented, `14` not_full_production_v2_validated, `13` source_only_not_field_validated, `10` unavailable/neutral, `1` AKG missing provenance. Verification: focused pytest `39 passed, 2 warnings`; regenerated Top15 backtest/analysis. Last updated 2026-05-10T08:25:42.
+
 **Daily runbook:** `docs/research/aeternus-daily-pipeline-debug-runbook.md` is now the canonical start-of-run checklist and debug order for the full daily pipeline.
 
 **Current note:** Right-Tail Scout/Demote Review implementation is in progress and mostly complete through backtest/analysis regeneration. Added shared `signal_utils.py`, `right_tail_queues.py`, demote severity schema/defaults, daily `fundamental-right-tail-queues`, Top15 backtest queue outputs, v4 visibility diagnostics, analysis queue tables, and runbook docs. Regenerated Top15 bundle/analysis. Current historical target metrics: visibility `6/9`, actionable `6/9`, buy-underwriting `1/9`; Top15 selected hash guard `true`; manifest hash validation `0` failures. Focused tests: `78 passed, 2 warnings`. Caveat: final commit/final Oracle gate still pending.
@@ -55,6 +57,13 @@
 ---
 
 ## Completed Today
+
+- Daily X-feed Grok automation attempted for `2026-05-10`:
+  - initial readiness: no completed passes; missing `1-15`
+  - target model observed: `Grok 4.3 (beta)`
+  - result: blocked before ingest; raw archives remain `0`, readiness `ready=False`
+  - failure: pass `1` timed out and recovery could not extract parser-valid JSON from the intended Grok tab
+  - operational note: active Chrome/Grok state was shared with a user conversation; future automation needs a stable dedicated Chrome window/tab target rather than active-tab targeting
 
 - Daily X-feed Grok automation ran for `2026-05-09`:
   - completed passes `1-15`

@@ -434,7 +434,7 @@ Daily review order:
 3. `demote_review_priority_1.csv`
 4. top-ranked names from `thin_signal_watchlist_top100.csv`
 
-Do not treat scout, demote-review, or thin-signal queues as buy lists. Approved live use is visibility/research only after Top-15.
+Do not treat scout, demote-review, or thin-signal queues as buy lists. Approved live use is visibility/research only after Top-15 selection is frozen. Full production-v2 historical validation still depends on PIT AKG/theme/macro provenance; missing provenance should remain visible in audit artifacts, not silently neutralized.
 
 Optional historical/debug target audit:
 

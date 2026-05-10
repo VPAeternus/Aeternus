@@ -20,6 +20,21 @@ FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS = {
     "monitoring_score_0_100", "active_monitoring_score_0_100", "final_rank_score_0_100",
     "rank_score_0_100", "current_return_pct", "return_since_signal_pct", "return_since_purchase_pct",
 }
+FORBIDDEN_RIGHT_TAIL_ROUTING_PREFIXES = (
+    "return_",
+    "return_since_",
+    "future_return",
+    "forward_return",
+    "label_",
+)
+FORBIDDEN_RIGHT_TAIL_ROUTING_TARGET_LABELS = {
+    "target",
+    "target_label",
+    "target_outcome",
+    "target_return",
+    "target_rank",
+    "target_score",
+}
 
 SUPPLIER_THEME_ROLES = {"supplier", "infrastructure_provider", "commodity_exposure", "turnaround_with_theme_tailwind"}
 SUPPLIER_KEYWORDS = ("bottleneck", "semicap", "semi cap", "materials", "optical", "supplier")
@@ -145,8 +160,31 @@ def compute_right_tail_evidence_score(row: Mapping[str, Any]) -> tuple[float, di
     return float(sum(parts.values())), parts
 
 
+def is_forbidden_right_tail_routing_column(column: str) -> bool:
+    name = _clean(column).lower()
+    if not name:
+        return False
+    if name in FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS or name in {"label", *FORBIDDEN_RIGHT_TAIL_ROUTING_TARGET_LABELS}:
+        return True
+    if name.startswith(FORBIDDEN_RIGHT_TAIL_ROUTING_PREFIXES):
+        return True
+    if name.startswith(("winner_", "loser_")) and any(token in name for token in ("label", "return", "pct")):
+        return True
+    if name.endswith("_label") and name.startswith(("target_", "future_", "forward_")):
+        return True
+    if name.startswith(("monitoring_score", "active_monitoring_score")):
+        return True
+    if name.startswith("final_") and ("return" in name or "rank" in name):
+        return True
+    if name.startswith("current_") and ("return" in name or "rank" in name):
+        return True
+    if name.startswith("rank_") and "score" in name:
+        return True
+    return False
+
+
 def _strip_forbidden_columns(row: Mapping[str, Any]) -> dict[str, Any]:
-    return {key: value for key, value in dict(row).items() if key not in FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS}
+    return {key: value for key, value in dict(row).items() if not is_forbidden_right_tail_routing_column(str(key))}
 
 
 def _is_overrideable(row: Mapping[str, Any]) -> bool:

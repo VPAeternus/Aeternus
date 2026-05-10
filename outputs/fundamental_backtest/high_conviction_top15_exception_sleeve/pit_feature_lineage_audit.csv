@@ -1,0 +1,75 @@
+field,layer,present_in_input,pit_provenance_field,pit_status,notes
+akg_universe_tier,both,1,source_file_hash,not_full_production_v2_validated_missing_pit_provenance,"AKG/T5_RESCAN field present but no dedicated AKG PIT snapshot provenance; audit only, not full production-v2 validated."
+blocking_issues,right_tail_routing,0,source_file_hash;pipeline_run_id,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+causal_change,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+durability,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+entry_open,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+entry_qoq_pct,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+entry_raw_score,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+entry_score_0_100,both,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+evidence_risk,right_tail_routing,0,source_file_hash;pipeline_run_id,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+filing_theme_growth_flag,right_tail_routing,0,theme_rule_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+filing_theme_guidance_flag,right_tail_routing,0,theme_rule_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+fundamental_rerating_score,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp0_high_price_broad,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp1_quality_pullback,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp2_dislocation_momentum_priority,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp2_dislocation_momentum_watch,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp3_large_quality_theme_exception,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp4_score_reacceleration_watch,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp_LLM_best,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp_production_extension,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp_research_extension,both,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+hp_structure_score,top15_selection,1,hp_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+llm_business_improvement_score,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+macro_entry_action,top15_selection,1,macro_rule_version;source_file_hash,not_full_production_v2_validated,macro field present; rule/source provenance is documented but full historical PIT macro provenance remains a production-v2 dependency.
+macro_mode,top15_selection,1,macro_rule_version;source_file_hash,not_full_production_v2_validated,macro field present; rule/source provenance is documented but full historical PIT macro provenance remains a production-v2 dependency.
+macro_position_size_multiplier,top15_selection,1,macro_rule_version;source_file_hash,not_full_production_v2_validated,macro field present; rule/source provenance is documented but full historical PIT macro provenance remains a production-v2 dependency.
+macro_spy,top15_selection,1,macro_rule_version;source_file_hash,not_full_production_v2_validated,macro field present; rule/source provenance is documented but full historical PIT macro provenance remains a production-v2 dependency.
+market_repricing_score,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+narrative_delta_bucket,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+negative_revision_risk,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+operating_leverage_quality,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+post_llm_candidate_flag,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+post_llm_demote_evidence,right_tail_routing,0,scoring_formula_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+post_llm_demote_flag,both,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+post_llm_demote_overrideable,right_tail_routing,0,scoring_formula_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+post_llm_demote_reason_code,right_tail_routing,0,scoring_formula_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+post_llm_demote_severity,right_tail_routing,0,scoring_formula_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+post_llm_high_priority_flag,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+pre_llm_fundamental_bucket,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+pre_llm_fundamental_score,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+primary_theme,both,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+prior_entry_qoq_pct,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+quarter,both,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+repricing_momentum_extension,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+repricing_momentum_priority,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+revenue_bucket,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+risk_penalty_score,both,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+rm1_low_price_dislocation_momentum,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+rm2_weak_acceleration,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+rm3_mid_price_dislocation_momentum,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+rm4_persistent_repricing_wave,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+rm_buy_review_flag,both,1,rm_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+score_addition,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+score_change,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+secondary_themes,top15_selection,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_acceleration_rescan_flag,top15_selection,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_acceleration_research_visibility,both,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_acceleration_score,top15_selection,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_confidence,top15_selection,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_driver_type,top15_selection,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_evidence_summary,right_tail_routing,0,theme_rule_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+theme_momentum,top15_selection,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_role,both,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+theme_tags,right_tail_routing,0,theme_rule_version;source_file_hash,field_missing_unavailable_or_neutral,Field absent from PIT panel; treated as unavailable/neutral by existing scoring where applicable.
+theme_tailwind_score,both,1,theme_rule_version;source_file_hash,not_full_production_v2_validated,theme field present; rule/source provenance is documented but full historical PIT theme provenance remains a production-v2 dependency.
+ticker,both,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
+tier_0_bucket,top15_selection,1,tier_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+tier_1_bucket,top15_selection,1,tier_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+tier_2_bucket,top15_selection,1,tier_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+tier_3_bucket,top15_selection,1,tier_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+tier_4_bucket,top15_selection,1,tier_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+tier_structure_score,top15_selection,1,tier_rule_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+total_structure_score,top15_selection,1,scoring_formula_version;source_file_hash,pit_documented,PIT lineage has source/rule provenance column in input manifest.
+tradable_date,top15_selection,1,source_file_hash;pipeline_run_id,source_only_not_field_validated,"Input source/run provenance is present, but field-level PIT/as-of provenance is not separately validated."
