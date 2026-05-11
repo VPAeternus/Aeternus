@@ -15,16 +15,7 @@ def format_dealflow_provenance(ctx: Optional[Dict[str, Any]]) -> str:
 
     lines = ["=== DEAL FLOW PROVENANCE ==="]
 
-    # Core score
-    score = ctx.get("deal_flow_score") or ctx.get("core_score")
     subscores = ctx.get("subscores", {}) or {}
-    if score is not None:
-        parts = [f"core_score {score}"]
-        for key in ("momentum_score", "asymmetry_score"):
-            val = subscores.get(key) or ctx.get(key)
-            if val is not None:
-                parts.append(f"{key} {val}")
-        lines.append(f"Surfaced by deal flow: {', '.join(parts)}")
 
     # Top signals
     signal_keys = [

@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GHC",
+    "cik": "104889",
+    "event_date": "2024-07-31",
+    "event_accession": "0000104889-24-000042",
+    "primary_8k_doc": "ghc-20240731.htm",
+    "exhibit_docs": [
+      "a2024q28-kexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GHC_000010488924000042_ghc-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GHC_000010488924000042_a2024q28-kexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GHC",
+    "cik": "104889",
+    "entity_name": "GRAHAM HOLDINGS CO",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1031546000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "52272000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7187730000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-57802000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1954000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "22811000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.050673",
+    "operating_cash_flow_to_revenue": "0.022113",
+    "assets_to_revenue": "6.96792",
+    "financing_cash_flow_to_revenue": "-0.056034",
+    "investing_cash_flow_to_revenue": "-0.001894"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues increased at education, healthcare and automotive, partially offset by declines at television broadcasting, manufacturing and other businesses.",
+      "sales of cost method investments 0.",
+      "operating income of $25.",
+      "net income attributable to common shares of $103.",
+      "net income attributable to common shares was $56.",
+      "net income attributable to common shares was $107."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "airment charges at World of Good Brands (WGB) and declines at television broadcasting, manufacturing and other businesses, partially offset by increases at education, healthcare and automotive.",
+      "airment charges at WGB and declines at television broadcasting, manufacturing, automotive and other businesses, partially offset by increases at education and healthcare.",
+      "ains on m arketable equity securities in the second quarter and first six months of 2024, respectively, compared to $78.",
+      "ains on marketable equity securities in the second quarter and first six months of 2023, respectively.",
+      "aining authorization for 167,617 shares as of June 30, 2024.",
+      "air value of the mandatorily redeemable noncontrolling interest at Graham Healthcare Group (GHG)."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges at World of Good Brands (WGB) and declines at television broadcasting, manufacturing and other businesses, partially offset by increases at education, healthcare and automotive.",
+      "impairment charges at WGB and declines at television broadcasting, manufacturing, automotive and other businesses, partially offset by increases at education and healthcare.",
+      "Impairment of Goodwill and Other Long-Lived Assets plus Depreciation Expense and Pension Expense.",
+      "Impairment of Long-Lived Assets plus Depreciation Expense and Pension Expense.",
+      "impairment charges 4.",
+      "Charges related to non-operating Voluntary Retirement Incentive Program and Separation Incentive Programs 2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1185.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "751.299988",
+    "return_10d_pct": "-5.3800",
+    "return_20d_pct": "0.6668",
+    "return_30d_pct": "2.1097",
+    "return_60d_pct": "9.3731",
+    "return_90d_pct": "11.9965"
+  },
+  "text_stats": {
+    "primary_text_len": 2926,
+    "exhibit_text_len": 24985,
+    "combined_text_len": 27913
+  }
+}

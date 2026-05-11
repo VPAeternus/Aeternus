@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FTAI",
+    "cik": "1590364",
+    "event_date": "2024-07-24",
+    "event_accession": "0001140361-24-033916",
+    "primary_8k_doc": "ef20032834_8k.htm",
+    "exhibit_docs": [
+      "ef20032834_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FTAI_000114036124033916_ef20032834_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FTAI_000114036124033916_ef20032834_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FTAI",
+    "cik": "1590364",
+    "entity_name": "FTAI Aviation Ltd.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "292718000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "29397000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2964685000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-38445000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-12323000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "38697000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.100428",
+    "operating_cash_flow_to_revenue": "0.132199",
+    "assets_to_revenue": "10.128127",
+    "financing_cash_flow_to_revenue": "-0.131338",
+    "investing_cash_flow_to_revenue": "-0.042099"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Earnings per share: Basic $ (2.",
+      "cash flows with the potential for earnings growth and asset appreciation."
+    ],
+    "guidance_evidence": [
+      "expects to induct an additional 30 by year end."
+    ],
+    "wave_or_demand_evidence": [
+      "customers worldwide.",
+      "customer base.",
+      "AI Aviation Ltd.",
+      "AI) (the “Company” or “FTAI”) today reported financial results for the second quarter 2024.",
+      "AI has inducted 20 V2500 engines year to date and expects to induct an additional 30 by year end.",
+      "AI’s Module Factory ™ now has over 50 active customers worldwide."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss Attributable to Shareholders $ (228,205 ) Basic Loss per Ordinary Share $ (2.",
+      "Loss per Ordinary Share $ (2.",
+      "uncertainties that could cause actual results to differ materially from those described in the forward-looking statements, many of which are beyond the Company’s control.",
+      "uncertainties emerge from time to time, and it is not possible for the Company to predict or assess the impact of every factor that may cause its actual results to differ from those contained in any forward-looking statements.",
+      "loss) income (219,870 ) 54,753 (180,248 ) 84,150 Less: Dividends on preferred shares 8,335 8,335 16,670 15,126 Net (loss) income attributable to shareholders $ (228,205 ) $ 46,418 $ (196,918 ) $ 69,024 (Loss) Earnings per share: Basic $ (2.",
+      "losses) of unconsolidated entities and the non-controlling share of Adjusted EBITDA."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "109.110001",
+    "return_10d_pct": "-10.9339",
+    "return_20d_pct": "-4.2159",
+    "return_30d_pct": "11.9512",
+    "return_60d_pct": "19.1458",
+    "return_90d_pct": "29.0716"
+  },
+  "text_stats": {
+    "primary_text_len": 4623,
+    "exhibit_text_len": 13536,
+    "combined_text_len": 18161
+  }
+}

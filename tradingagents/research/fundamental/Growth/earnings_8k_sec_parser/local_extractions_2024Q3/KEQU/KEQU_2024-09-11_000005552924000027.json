@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KEQU",
+    "cik": "55529",
+    "event_date": "2024-09-11",
+    "event_accession": "0000055529-24-000027",
+    "primary_8k_doc": "kequ-20240911.htm",
+    "exhibit_docs": [
+      "prfy25q1earningsrelease-wa.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KEQU_000005552924000027_kequ-20240911.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KEQU_000005552924000027_prfy25q1earningsrelease-wa.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KEQU",
+    "cik": "55529",
+    "entity_name": "KEWAUNEE SCIENTIFIC CORP /DE/",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "219494000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-28",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "738000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-28",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "118898000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-28",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "14931000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-28",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "-4148000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-28",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "-3790000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-28",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.003362",
+    "operating_cash_flow_to_revenue": "-0.017267",
+    "assets_to_revenue": "0.541691",
+    "financing_cash_flow_to_revenue": "0.068025",
+    "investing_cash_flow_to_revenue": "-0.018898"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $49,839,000 from the prior year's first quarter.",
+      "sales of $35,420,000 in the prior year quarter.",
+      "sales of $14,419,000 in the prior year quarter.",
+      "Sales offices are located in the United States, India, Saudi Arabia, and Singapore.",
+      "earnings per share was $0.",
+      "earnings per share of $0."
+    ],
+    "guidance_evidence": [
+      "projects impacted our ability to ship products and deliver services leading to a slightly down quarter when compared to the prior year first quarter.",
+      "projects remains high, providing a line of sight to another strong year for the Company."
+    ],
+    "wave_or_demand_evidence": [
+      "backlog was $159.",
+      "demand remaining stable across all end-markets.",
+      "customer construction site delays in India which pushed out the timing of deliveries.",
+      "backlog remains strong and quoting for new projects remains high, providing a line of sight to another strong year for the Company.",
+      "aining stable across all end-markets.",
+      "aid Thomas D."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in India which pushed out the timing of deliveries.",
+      "delays in India on multiple projects impacted our ability to ship products and deliver services leading to a slightly down quarter when compared to the prior year first quarter.",
+      "decrease of 2.",
+      "decrease of 28.",
+      "decrease of 10.",
+      "decline in sales is attributable to customer construction site delays in India which pushed out the timing of deliveries."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-12",
+    "entry_open": "38.660000",
+    "return_10d_pct": "-14.2783",
+    "return_20d_pct": "-17.8996",
+    "return_30d_pct": "-15.0543",
+    "return_60d_pct": "-2.7419",
+    "return_90d_pct": "10.7863"
+  },
+  "text_stats": {
+    "primary_text_len": 3545,
+    "exhibit_text_len": 14801,
+    "combined_text_len": 18348
+  }
+}

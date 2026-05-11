@@ -15,7 +15,7 @@ LIVE = DEFAULT_LIVE
 STATE_DB = OUT / 'sec_incremental_state.sqlite'
 MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
 QUEUE_JSON = OUT / 'sec_fetch_queue_resumable.json'
-ELIGIBLE_JSON = OUT / 'final_dealflow_research_queue_sec_eligible.json'
+ELIGIBLE_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
 UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
 PARSER_VERSION = 'sec-delta-v2-wrapper-aware-complete-submission-object-gated'
 
@@ -29,7 +29,7 @@ def configure(*, out: Path | str | None = None, live: Path | str | None = None) 
     STATE_DB = OUT / 'sec_incremental_state.sqlite'
     MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
     QUEUE_JSON = OUT / 'sec_fetch_queue_resumable.json'
-    ELIGIBLE_JSON = OUT / 'final_dealflow_research_queue_sec_eligible.json'
+    ELIGIBLE_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
     UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
 
 

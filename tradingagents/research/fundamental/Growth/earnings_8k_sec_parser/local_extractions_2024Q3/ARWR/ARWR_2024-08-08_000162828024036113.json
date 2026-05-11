@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ARWR",
+    "cik": "879407",
+    "event_date": "2024-08-08",
+    "event_accession": "0001628280-24-036113",
+    "primary_8k_doc": "arwr-20240808.htm",
+    "exhibit_docs": [
+      "arwr-202408088kex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARWR_000162828024036113_arwr-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARWR_000162828024036113_arwr-202408088kex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ARWR",
+    "cik": "879407",
+    "entity_name": "ARROWHEAD PHARMACEUTICALS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "208813000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "7350000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "765552000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "251096000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-116759000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-107187000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.035199",
+    "operating_cash_flow_to_revenue": "-0.513316",
+    "assets_to_revenue": "3.666209",
+    "financing_cash_flow_to_revenue": "1.202492",
+    "investing_cash_flow_to_revenue": "-0.559156"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [
+      "forecast” or “continue” or the negative of these words or other variations thereof or comparable terminology are intended to identify such forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Christopher Anzalone, Ph.",
+      "Ai therapeutics.",
+      "ails Investors may access a live audio webcast on the Company's website at https://ir.",
+      "ailable approximately two hours after the conclusion of the call.",
+      "ailable at Arrowhead’s option, subject to mutual agreement between Sixth Street and Arrowhead, during the seven-year term of the agreement.",
+      "Ai Molecule (TRiM TM ) platform, is designed to lower levels of lipoprotein(a), a genetically determined risk factor for cardiovascular disease."
+    ],
+    "warning_or_risk_evidence": [
+      "loss including noncontrolling interest (173,977) (104,125) Net loss attributable to noncontrolling interest, net of tax (3,184) (1,179) Net loss attributable to Arrowhead Pharmaceuticals, Inc.",
+      "loss per share attributable to Arrowhead Pharmaceuticals, Inc.",
+      "uncertainties described in our most recent Annual Report on Form 10-K, subsequent Quarterly Reports on Form 10-Q and other documents filed with the Securities and Exchange Commission from time to time."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "25.000000",
+    "return_10d_pct": "-6.6000",
+    "return_20d_pct": "-3.6800",
+    "return_30d_pct": "-12.9600",
+    "return_60d_pct": "-27.9200",
+    "return_90d_pct": "-14.4400"
+  },
+  "text_stats": {
+    "primary_text_len": 3431,
+    "exhibit_text_len": 19158,
+    "combined_text_len": 22591
+  }
+}

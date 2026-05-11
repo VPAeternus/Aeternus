@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DGII",
+    "cik": "854775",
+    "event_date": "2024-08-07",
+    "event_accession": "0000854775-24-000027",
+    "primary_8k_doc": "dgii-20240807.htm",
+    "exhibit_docs": [
+      "dgii-ex991_20240807.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DGII_000085477524000027_dgii-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DGII_000085477524000027_dgii-ex991_20240807.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DGII",
+    "cik": "854775",
+    "entity_name": "Digi International Inc",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "220450000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "11678000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "835531000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-10187000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-2855000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "9607000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.052973",
+    "operating_cash_flow_to_revenue": "0.043579",
+    "assets_to_revenue": "3.790116",
+    "financing_cash_flow_to_revenue": "-0.04621",
+    "investing_cash_flow_to_revenue": "-0.012951"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $105M, Record End of Quarter ARR of $113M Cash Flow From Operations of $25M (Minneapolis, MN, August 7, 2024) - Digi International ® Inc.",
+      "Revenue was $105 million, a decrease of 6%.",
+      "revenue of $80 million decreased $7.",
+      "revenue of $25 million increased $0.",
+      "Net income was $10 million, compared to $7 million.",
+      "Net income per diluted share was $0."
+    ],
+    "guidance_evidence": [
+      "Guidance Digi remains steadfast in achieving our new long term strategic goals of doubling ARR and Adjusted EBITDA to $200 million within the next five years.",
+      "outlook on ARR growth for fiscal 2024 improves to greater than 5%.",
+      "guidance previously provided.",
+      "guidance or longer-term targets for Adjusted net income per share as well as Adjusted EBITDA targets on a non-GAAP basis.",
+      "expected to be up approximately 1%, with revenue projection to be down approximately 5% year over year."
+    ],
+    "wave_or_demand_evidence": [
+      "customers remain cautious on demand.",
+      "customers create next-generation connected products and deploy and manage critical communications infrastructures in demanding environments with high levels of security and reliability.",
+      "customers connect over 100 million things and growing.",
+      "airing expert service with our solutions which offer compelling choices for our channel and end users.",
+      "ainst our revolving credit facility, reducing our net outstanding debt to $152 million at quarter end and debt net of cash and cash equivalents to $123 million.",
+      "ain continues to normalize, as demonstrated by the decline in our inventory balance."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory.",
+      "inventory ended the quarter at $57 million, compared to $74 million at September 30, 2023, reflecting continued efforts to manage inventory levels.",
+      "inventory adjustments and reduced inflationary pressures.",
+      "inventory levels as our supply chain continues to normalize, as demonstrated by the decline in our inventory balance.",
+      "inventory levels, perceived marketplace opportunities, interest expense savings and statements regarding our mission and vision.",
+      "charges and gains that were actually recognized by Digi."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 105,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "25.230000",
+    "return_10d_pct": "15.6163",
+    "return_20d_pct": "12.0888",
+    "return_30d_pct": "7.8082",
+    "return_60d_pct": "16.3298",
+    "return_90d_pct": "27.6655"
+  },
+  "text_stats": {
+    "primary_text_len": 3521,
+    "exhibit_text_len": 20144,
+    "combined_text_len": 23667
+  }
+}

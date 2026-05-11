@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AHR",
+    "cik": "1632970",
+    "event_date": "2024-08-05",
+    "event_accession": "0001632970-24-000076",
+    "primary_8k_doc": "ahr-20240805.htm",
+    "exhibit_docs": [
+      "exhibit991q22024earningsre.htm",
+      "exhibit992q22024suppleme.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AHR_000163297024000076_ahr-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AHR_000163297024000076_exhibit991q22024earningsre.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AHR_000163297024000076_exhibit992q22024suppleme.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AHR",
+    "cik": "1632970",
+    "entity_name": "American Healthcare REIT, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "452226000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-14",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-25872000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-14",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4577933000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-14",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-14300000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-14",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-33319000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-14",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "23862000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-14",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.05721",
+    "operating_cash_flow_to_revenue": "0.052766",
+    "assets_to_revenue": "10.123109",
+    "financing_cash_flow_to_revenue": "-0.031621",
+    "investing_cash_flow_to_revenue": "-0.073678"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of assets, and plans for Trilogy may be considered forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended.",
+      "GAAP net income attributable to common stockholders of $0.",
+      "GAAP net income of $2.",
+      "Operating Income (“NOI”) growth of 15.",
+      "Net income (loss) calculated in accordance with GAAP to NAREIT FFO and NFFO can be found within the Non-GAAP reconciliations in this earnings release.",
+      "net income (loss) or cash flow provided from operating activities as determined in accordance with GAAP and should not be considered as alternative measures of profitability or liquidity."
+    ],
+    "guidance_evidence": [
+      "Guidance American Healthcare REIT, Inc.",
+      "guidance.",
+      "guidance for the year ending December 31, 2024 by 700 basis points at the midpoint from a range of 5.",
+      "guidance for the year ending December 31, 2024 by $0.",
+      "guidance for the year ending December 31, 2024, is partially offset by the increase in interest expense expectations.",
+      "guidance and NFFO guidance."
+    ],
+    "wave_or_demand_evidence": [
+      "Demand for healthcare real estate is evident in our portfolio performance.",
+      "demand-supply imbalance present in long-term care,” said Danny Prosky, the Company’s President and Chief Executive Officer.",
+      "ail: investorrelations@ahcreit.",
+      "aid Danny Prosky, the Company’s President and Chief Executive Officer.",
+      "ailed below.",
+      "ains strong."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment on depreciated real estate assets, net gain or loss on sale of real estate assets, stock-based compensation, casualty loss, non-Same-Store revenues and non-Same-Store operating expenses.",
+      "impairments of real estate investments, impairment of intangible assets and goodwill, and non-recurring one-time items.",
+      "impairment write-downs of certain real estate assets and investments, plus depreciation and amortization related to real estate, after adjustments for unconsolidated partnerships and joint ventures.",
+      "impairment charges are excluded from the calculation of FFO as described above, investors are cautioned that impairments are based on estimated future undiscounted cash flows.",
+      "impairment of intangible assets and goodwill, income or loss from unconsolidated entities, gain on re-measurement of previously held equity interest, foreign currency gain or loss, other income or expense and income tax benefit or expense.",
+      "impairment on depreciated real estate assets, net gain or loss on sale of real estate assets, stock-based compensation, casualty loss, non-Same-Store revenues, and non-Same-Store operating expenses."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 65,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "16.360001",
+    "return_10d_pct": "16.1980",
+    "return_20d_pct": "29.2787",
+    "return_30d_pct": "35.0244",
+    "return_60d_pct": "52.4450",
+    "return_90d_pct": "56.9071"
+  },
+  "text_stats": {
+    "primary_text_len": 3841,
+    "exhibit_text_len": 99676,
+    "combined_text_len": 103519
+  }
+}

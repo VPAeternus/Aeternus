@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "VSAT",
+    "cik": "797721",
+    "event_date": "2024-08-07",
+    "event_accession": "0001193125-24-195897",
+    "primary_8k_doc": "d859154d8k.htm",
+    "exhibit_docs": [
+      "d859154dex991.htm",
+      "d859154dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VSAT_000119312524195897_d859154d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VSAT_000119312524195897_d859154dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VSAT_000119312524195897_d859154dex992.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "VSAT",
+    "cik": "797721",
+    "entity_name": "VIASAT, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2417179000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-29",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "-15534000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-29",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "7730337000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-29",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "643630000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-29",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-1129843000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-29",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "505641000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-29",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.006426",
+    "operating_cash_flow_to_revenue": "0.209186",
+    "assets_to_revenue": "3.198082",
+    "financing_cash_flow_to_revenue": "0.266273",
+    "investing_cash_flow_to_revenue": "-0.467422"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $1.",
+      "revenue increased 37% YoY due primarily to recurring contributions from certain licensing agreements and tactical networking products  Communication Services revenue grew 48% YoY due to the addition of Inmarsat.",
+      "revenue increased 48% YoY to $827 million driven by the Inmarsat acquisition.",
+      "revenue decreased 2% YoY.",
+      "revenues were flat YoY with aviation and government satcom growth offsetting declines in FS&O and maritime.",
+      "revenue was $300 million, a 37% increase YoY."
+    ],
+    "guidance_evidence": [
+      "outlook for FY2025.",
+      "guidance, we continue to expect an inflection to positive free cash flow by the end of Q1 FY2026.",
+      "outlook.",
+      "Outlook We are raising our outlook slightly to reflect strong Q1 FY2025 results and pipeline confidence, despite continued OEM commercial aircraft delays.",
+      "outlook and maintaining our view for FY2026.",
+      "guidance given uncertainties with delayed OEM commercial aircraft deliveries."
+    ],
+    "wave_or_demand_evidence": [
+      "orders, existing and new backlog, and order pipeline enable us to increase our outlook for FY2025.",
+      "demand across all vertical markets, especially in the highest demand times and places.",
+      "demand profile.",
+      "customers.",
+      "demand is soaring due to greater penetration and inexorable increases in per user/per platform bandwidth consumption.",
+      "customers AWARDS, REVENUE AND ADJ."
+    ],
+    "warning_or_risk_evidence": [
+      "delays), solid defense orders, existing and new backlog, and order pipeline enable us to increase our outlook for FY2025.",
+      "delays.",
+      "delayed OEM commercial aircraft deliveries.",
+      "delays in approving U.",
+      "impairment and related charges, net  5,496 900,000 Adjusted EBITDA (5) $ 357,735 $ 383,110 $ 486,290 AN ITEMIZED RECONCILIATION BETWEEN NET INCOME (LOSS) ATTRIBUTABLE TO VIASAT, INC.",
+      "impairment and related charges, net  5,496 900,000 Adjusted EBITDA from continuing operations $ 357,735 $ 383,110 $ 486,290 AN ITEMIZED RECONCILIATION BETWEEN NET INCOME (LOSS) ATTRIBUTABLE TO VIASAT, INC."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1100,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "20.520000",
+    "return_10d_pct": "-12.5244",
+    "return_20d_pct": "-22.6608",
+    "return_30d_pct": "-22.1735",
+    "return_60d_pct": "-45.2729",
+    "return_90d_pct": "-49.9025"
+  },
+  "text_stats": {
+    "primary_text_len": 3681,
+    "exhibit_text_len": 54136,
+    "combined_text_len": 57819
+  }
+}

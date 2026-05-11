@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CAKE",
+    "cik": "887596",
+    "event_date": "2024-07-31",
+    "event_accession": "0001104659-24-084383",
+    "primary_8k_doc": "tm2420407d1_8k.htm",
+    "exhibit_docs": [
+      "tm2420407d1_ex99-1.htm",
+      "tm2420407d1_ex99-2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CAKE_000110465924084383_tm2420407d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CAKE_000110465924084383_tm2420407d1_ex99-1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CAKE_000110465924084383_tm2420407d1_ex99-2.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CAKE",
+    "cik": "887596",
+    "entity_name": "THE CHEESECAKE FACTORY INCORPORATED",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2100609000",
+    "revenue_fact_name": "SalesRevenueNet",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-02-28",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2015-12-29",
+    "net_income_value": "28050000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-04",
+    "assets_value": "2840383000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-01-02",
+    "financing_cash_flow_value": "-25558000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-04",
+    "investing_cash_flow_value": "-38162000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-04",
+    "operating_cash_flow_value": "65035000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-04",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.013353",
+    "operating_cash_flow_to_revenue": "0.03096",
+    "assets_to_revenue": "1.352171",
+    "financing_cash_flow_to_revenue": "-0.012167",
+    "investing_cash_flow_to_revenue": "-0.018167"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $904.",
+      "REVENUE OFF-PREMISE AWS FOR FY 2023(2) $51.",
+      "Net income and diluted net income per share were $52.",
+      "net income and adjusted net income per share for the second quarter of fiscal 2024 were $53.",
+      "Net income $ 52,444 5.",
+      "net income per share $ 1."
+    ],
+    "guidance_evidence": [
+      "expected growth rates in the casual dining industry • Differentiation and strong foothold in the off-premise channel CAKE AT A GLANCE 5 (1) Market data as of July 2, 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for the distinct, high-quality dining experiences we provide our guests and brand affinity for our namesake concept has been pivotal in supporting our continued outperformance of the broader casual dining industry.",
+      "demand and sales performance at our new restaurant openings underscores the broad appeal of our experiential concepts.",
+      "customers.",
+      "demand and restaurant development.",
+      "airment of assets and lease termination income.",
+      "aid David Overton, Chairman and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of assets and lease termination income.",
+      "Impairment of assets and lease termination (income)/expenses (188 ) 0.",
+      "Impairment of assets and lease termination (income)/expenses (0.",
+      "impairment of assets and lease termination (income)/expenses recorded in the thirteen and twenty-six weeks ended July 2, 2024 and July 4, 2023 can be found in the Selected Segment Information table.",
+      "restrictions & reopening timelines 31 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020(1) 2021(2) 2022(2) 2023(2) Comparison to pre-pandemic sales (2019) (1) 2020 results reflect the impact of the COVID-19 pandemic.",
+      "Impairment of assets and lease termination expenses (income)(1) 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 904,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "38.750000",
+    "return_10d_pct": "-6.8645",
+    "return_20d_pct": "0.0000",
+    "return_30d_pct": "0.4645",
+    "return_60d_pct": "4.6452",
+    "return_90d_pct": "20.3613"
+  },
+  "text_stats": {
+    "primary_text_len": 4418,
+    "exhibit_text_len": 45158,
+    "combined_text_len": 49578
+  }
+}

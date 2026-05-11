@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PENN",
+    "cik": "921738",
+    "event_date": "2024-08-08",
+    "event_accession": "0000921738-24-000026",
+    "primary_8k_doc": "penn-20240808.htm",
+    "exhibit_docs": [
+      "exhibit991-q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PENN_000092173824000026_penn-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PENN_000092173824000026_exhibit991-q22024.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PENN",
+    "cik": "921738",
+    "entity_name": "PENN ENTERTAINMENT, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1673300000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "514500000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "16064200000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-83000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-378200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "147700000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.307476",
+    "operating_cash_flow_to_revenue": "0.088269",
+    "assets_to_revenue": "9.600311",
+    "financing_cash_flow_to_revenue": "-0.049603",
+    "investing_cash_flow_to_revenue": "-0.22602"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $1.",
+      "Revenues of $232.",
+      "Net income (loss) $ (27.",
+      "EPS”) to Adjusted EPS (approximate EPS impact shown, per share; positive adjustments represent charges to income): For the three months ended June 30, 2024 2023 Diluted earnings (loss) per share $ (0.",
+      "net income (loss) adjustments (1) — 0.",
+      "EPS $ (0."
+    ],
+    "guidance_evidence": [
+      "expected revenue and Adjusted EBITDA results.",
+      "projects, all of which remain on budget and on schedule.",
+      "projects because it provides a perspective on the current effects of operating decisions separated from the substantial non-operational depreciation charges and financing costs of such projects.",
+      "expects,” “believes,” “estimates,” “projects,” “intends,” “plans,” “goal,” “seeks,” “may,” “will,” “should,” or “anticipates” or the negative or other variations of these or similar words, or by discussions of future events, strategies or risks and uncertainties."
+    ],
+    "wave_or_demand_evidence": [
+      "customers remain a key growth driver for us, as our PENN Play™ database has grown to approximately 31 million members, including 3.",
+      "customer engagement when we launch ESPN BET in New York in late August 2 , where we will benefit from ESPN’s extensive linear and digital reach.",
+      "customer ecosystem.",
+      "customer loyalty program, which offers our approximately 31 million members a unique set of rewards and experiences across business channels.",
+      "ainment Reports Second Quarter Results WYOMISSING, PA (August 8, 2024) - PENN Entertainment, Inc.",
+      "aid: “Our retail properties delivered solid results this quarter as our best-in-class team of operators continues to execute across our diverse portfolio of market leading assets."
+    ],
+    "warning_or_risk_evidence": [
+      "charges to income): For the three months ended June 30, 2024 2023 Diluted earnings (loss) per share $ (0.",
+      "charges (0.",
+      "charges (2.",
+      "charges and financing costs of such projects.",
+      "charges; gains/losses on the disposal of assets; foreign currency gains/losses; transaction related expenses; business interruption insurance proce eds; net gains/losses related to equity investments; and other.",
+      "loss of $102."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1400,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "18.830000",
+    "return_10d_pct": "6.3728",
+    "return_20d_pct": "-1.4870",
+    "return_30d_pct": "-6.1604",
+    "return_60d_pct": "-1.8587",
+    "return_90d_pct": "7.3818"
+  },
+  "text_stats": {
+    "primary_text_len": 3297,
+    "exhibit_text_len": 34077,
+    "combined_text_len": 37376
+  }
+}

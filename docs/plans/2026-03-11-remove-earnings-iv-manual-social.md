@@ -51,7 +51,7 @@ Run the same command and confirm green.
 - Modify: `tests/test_iv_scanner.py`
 - Modify: `tests/test_cli_dealflow.py`
 - Test: `tradingagents/dealflow/pipeline.py`
-- Test: `tradingagents/dealflow/scoring.py`
+- Test: `legacy pre-fundamental scorer`
 - Test: `tradingagents/dealflow/contracts.py`
 
 **Step 1: Write the failing tests**

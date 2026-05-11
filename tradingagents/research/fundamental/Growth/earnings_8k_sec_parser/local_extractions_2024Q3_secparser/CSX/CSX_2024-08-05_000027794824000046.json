@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CSX",
+    "cik": "277948",
+    "event_date": "2024-08-05",
+    "event_accession": "0000277948-24-000046",
+    "primary_8k_doc": "csx-20240805.htm",
+    "exhibit_docs": [
+      "pressrelease_q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CSX_000027794824000046_csx-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CSX_000027794824000046_pressrelease_q22024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CSX",
+    "cik": "277948",
+    "entity_name": "CSX CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3706000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-18",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "987000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-18",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "42408000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-18",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-1438000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-18",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-480000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-18",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1251000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-18",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.266325",
+    "operating_cash_flow_to_revenue": "0.337561",
+    "assets_to_revenue": "11.443065",
+    "financing_cash_flow_to_revenue": "-0.388019",
+    "investing_cash_flow_to_revenue": "-0.12952"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue totaled $3.",
+      "operating income of $1.",
+      "operating income, margin, and earnings per share,” said Joe Hinrichs, president and chief executive officer.",
+      "Operating income of $1.",
+      "EPS of $0.",
+      "operating income and earnings per share utilize revised financial results for past periods, as described in the notes of our quarterly financial report."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "customers over the second quarter, allowing us to deliver strong sequential increases in volume, operating income, margin, and earnings per share,” said Joe Hinrichs, president and chief executive officer.",
+      "customers across a broad array of markets, including energy, industrial, construction, agricultural, and consumer products.",
+      "ained focused on efficiently serving our customers over the second quarter, allowing us to deliver strong sequential increases in volume, operating income, margin, and earnings per share,” said Joe Hinrichs, president and chief executive officer.",
+      "ailroad’s performance, including our team’s effective response to the disruptions at the Port of Baltimore.",
+      "ainder of 2024.",
+      "ains and growth in intermodal and merchandise volume were offset by declines in export coal prices, a reduction in other revenue, and lower fuel surcharge."
+    ],
+    "warning_or_risk_evidence": [
+      "charge.",
+      "preliminary” and similar expressions.",
+      "declines in export coal prices, a reduction in other revenue, and lower fuel surcharge.",
+      "decreased 1% compared to the same period in 2023 while increasing 8% from Q1 2024.",
+      "uncertainties, and actual performance or results could differ materially from that anticipated by any forward-looking statements.",
+      "uncertainty associated with projecting economic and business conditions."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "pressrelease_q22024.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1 - PRESS RELEASE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CSX Corp. Announces Second Quarter 2024 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "JACKSONVILLE, Fla. – August 5, 2024 – CSX Corp. (NASDAQ: CSX) today announced Second quarter 2024 operating income of $1.45 billion compared to $1.47 billion in the prior year period. Net earnings were $963 million, or $0.49 per diluted share, compared to $984 million, or $0.49 per diluted share, in the same period last year. Total volume of 1.58 million units for the quarter was 2% higher compared to second quarter 2023.“CSX remained focused on efficiently serving our customers over the second quarter, allowing us to deliver strong sequential increases in volume, operating income, margin, and earnings per share,” said Joe Hinrichs, president and chief executive officer. “I am proud of our railroad’s performance, including our team’s effective response to the disruptions at the Port of Baltimore. As we continue to execute through shifting markets, CSX is well-positioned to achieve solid year-over-year margin expansion over the remainder of 2024.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second Quarter Financial Highlights1"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Revenue totaled $3.70 billion for the quarter, which was flat year-over-year as the positive effects of merchandise pricing gains and growth in intermodal and merchandise volume were offset by declines in export coal prices, a reduction in other revenue, and lower fuel surcharge.•Operating income of $1.45 billion decreased 1% compared to the same period in 2023 while increasing 8% from Q1 2024. CSX’s operating margin was 39.1% for the quarter, declining 50 basis points year-over-year but increasing 280 basis points sequentially.•Diluted EPS of $0.49 was flat compared to the prior year but increased 9% compared to the previous quarter.CSX executives will conduct a conference call with the investment community this afternoon, August 5, at 4:30 p.m. Eastern Time. Investors, media and the public may listen to the conference call by dialing 1-888-510-2008. For callers outside the U.S., dial 1-646-960-0306. Participants should dial in 10 minutes prior to the call and enter in 3368220 as the passcode. In conjunction with the call, a live webcast will be accessible and presentation materials will be posted on the company's website at http://investors.csx.com. Following the earnings call, a webcast replay of the presentation will be archived on the company website.This earnings announcement, as well as additional detailed financial information, is contained in the CSX Quarterly Financial Report available through the company’s website at http://investors.csx.com and on Form 8-K with the Securities and Exchange Commission.1Year-over-year and sequential comparisons for operating income and earnings per share utilize revised financial results for past periods, as described in the notes of our quarterly financial report."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About CSX and its Disclosures"
+    },
+    {
+      "type": "TextElement",
+      "text": "CSX, based in Jacksonville, Florida, is a premier transportation company. It provides rail, intermodal and rail-to-truck transload services and solutions to customers across a broad array of markets, including energy, industrial, construction, agricultural, and consumer products. For nearly 200 years, CSX has played a critical role in the nation's economic expansion and industrial development. Its network connects every major metropolitan area in the eastern United States, where nearly two-thirds of the nation's population resides. It also links more than 240 short-line railroads and more than 70 ocean, river and lake ports with major population centers and farming towns alike.This announcement, as well as additional financial information, is available on the company's website at http://investors.csx.com. CSX also uses social media channels to communicate information about the company. Although social media channels are not intended to be the primary method of disclosure for material information, it is possible that certain information CSX posts on social media could be deemed to be material. Therefore, we encourage investors, the media, and others interested in the company to review the information we post on X, formerly known as Twitter, (http://twitter.com/CSX) and on Facebook (http://www.facebook.com/OfficialCSX). The social media channels used by CSX may be updated from time to time. More information about CSX Corporation and its subsidiaries is available at www.csx.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Disclosure"
+    },
+    {
+      "type": "TextElement",
+      "text": "CSX reports its financial results in accordance with accounting principles generally accepted in the United States of America (U.S. GAAP). CSX also uses certain non-GAAP measures that fall within the meaning of Securities and Exchange Commission Regulation G and Regulation S-K Item 10(e), which may provide users of the financial information with additional meaningful comparison to prior reported results. Non-GAAP measures do not have standardized definitions and are not defined by U.S. GAAP. Therefore, CSX’s non-GAAP measures are unlikely to be comparable to similar measures presented by other companies. The presentation of these non-GAAP measures should not be considered in isolation from, as a substitute for, or as superior to the financial information presented in accordance with GAAP."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "This information and other statements by the company may contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act with respect to, among other items: projections and estimates of earnings, revenues, margins, volumes, rates, cost-savings, expenses, taxes, liquidity, capital expenditures, dividends, share repurchases or other financial items, statements of management's plans, strategies and objectives for future operations, and management's expectations as to future performance and operations and the time by which objectives will be achieved, statements concerning proposed new services, and statements regarding future economic, industry or market conditions or performance. Forward-looking statements are typically identified by words or phrases such as “will,” “should,” “believe,” “expect,” “anticipate,” “project,” “estimate,” “preliminary” and similar expressions. Forward-looking statements speak only as of the date they are made, and the company undertakes no obligation to update or revise any forward-looking statement. If the company updates any forward-looking statement, no inference should be drawn that the company will make additional updates with respect to that statement or any other forward-looking statements.Forward-looking statements are subject to a number of risks and uncertainties, and actual performance or results could differ materially from that anticipated by any forward-looking statements. Factors that may cause actual results to differ materially from those contemplated by any forward-looking statements include, among others: (i) the company's success in implementing its financial and operational initiatives; (ii) changes in domestic or international economic, political or business conditions, including those affecting the transportation industry (such as the impact of industry competition, conditions, performance and consolidation); (iii) legislative or regulatory changes; (iv) the inherent business risks associated with safety and security; (v) the outcome of claims and litigation involving or affecting the company; (vi) natural events such as severe weather conditions or pandemic health crises; and (vii) the inherent uncertainty associated with projecting economic and business conditions.Other important assumptions and factors that could cause actual results to differ materially from those in the forward-looking statements are specified in the company's SEC reports, accessible on the SEC's website at www.sec.gov and the company's website at www.csx.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Contact:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Matthew Korn, CFA, Investor Relations904-366-4515Bryan Tucker, Corporate Communications855-955-6397"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 3700.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue totaled $3.70 billion"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "32.139999",
+    "return_10d_pct": "3.9826",
+    "return_20d_pct": "4.7604",
+    "return_30d_pct": "5.8494",
+    "return_60d_pct": "4.6982",
+    "return_90d_pct": "3.7959"
+  },
+  "text_stats": {
+    "primary_text_len": 3739,
+    "exhibit_text_len": 7939,
+    "combined_text_len": 11680,
+    "semantic_text_len": 7965,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

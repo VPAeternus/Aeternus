@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GNRC",
+    "cik": "1474735",
+    "event_date": "",
+    "event_accession": "0001437749-24-023974",
+    "primary_8k_doc": "ex_705212.htm",
+    "exhibit_docs": [
+      "gnrc20240730_8k.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GNRC_000143774924023974_ex_705212.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GNRC_000143774924023974_gnrc20240730_8k.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GNRC",
+    "cik": "1474735",
+    "entity_name": "GENERAC HOLDINGS INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "887910000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "12430000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5093312000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "63673000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-41286000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-18559000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.013999",
+    "operating_cash_flow_to_revenue": "-0.020902",
+    "assets_to_revenue": "5.736293",
+    "financing_cash_flow_to_revenue": "0.071711",
+    "investing_cash_flow_to_revenue": "-0.046498"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales offers additional financial metrics which, when coupled with U.",
+      "Net Income, Free Cash Flow, and Core Sales, which are not in accordance with generally accepted accounting principles (“U.",
+      "Net Income, Free Cash Flow, and Core Sales offers additional financial metrics which, when coupled with U.",
+      "Net Income, Free Cash Flow, and Core Sales in different historical periods, our investors can evaluate our operating performance excluding the impact of certain items.",
+      "Free Cash Flow, and Core Sales, which are not in accordance with generally accepted accounting principles (“U.",
+      "Free Cash Flow, and Core Sales offers additional financial metrics which, when coupled with U."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "ained in Item 2.",
+      "ain financial information, specifically Adjusted EBITDA, Adjusted Net Income, Free Cash Flow, and Core Sales, which are not in accordance with generally accepted accounting principles (“U.",
+      "ain items.",
+      "ain Officers; Election of Directors; Appointment of Certain Officers; Compensation Arrangements of Certain Officers.",
+      "ailable for issuance under the 2019 Plan by 3,900,000 shares, extends its term to 2034, and makes certain other design changes.",
+      "ail in the Company’s proxy statement filed with the Securities and Exchange Commission on Schedule 14A on April 29, 2024 in connection with the Company’s annual meeting of stockholders held on June 13, 2024."
+    ],
+    "warning_or_risk_evidence": []
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 32127,
+    "exhibit_text_len": 6846,
+    "combined_text_len": 38975
+  }
+}

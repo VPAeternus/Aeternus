@@ -1,0 +1,1742 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NUE",
+    "cik": "73309",
+    "event_date": "2024-07-22",
+    "event_accession": "0001193125-24-182285",
+    "primary_8k_doc": "d860082d8k.htm",
+    "exhibit_docs": [
+      "d860082dex991.htm",
+      "d860082dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NUE_000119312524182285_d860082d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NUE_000119312524182285_d860082dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NUE_000119312524182285_d860082dex992.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NUE",
+    "cik": "73309",
+    "entity_name": "NUCOR CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "8709980000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "1136542000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "35340499000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-920674000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-769783000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "1207173000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.130487",
+    "operating_cash_flow_to_revenue": "0.138597",
+    "assets_to_revenue": "4.057472",
+    "financing_cash_flow_to_revenue": "-0.105703",
+    "investing_cash_flow_to_revenue": "-0.088379"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $8.",
+      "net sales decreased 1% to $8.",
+      "net sales of $16.",
+      "net sales of $18.",
+      "earnings per share: Basic $ 2.",
+      "Earnings Per Share (diluted) ✓ $3."
+    ],
+    "guidance_evidence": [
+      "outlooks at Standard & Poors and Fitch Ratings and a positive outlook at Moodys.",
+      "Outlook We expect earnings in the third quarter of 2024 to decrease compared to the second quarter of 2024.",
+      "outlook from Stable to Positive ✓ $128 Million in Dividend Payments ✓ Safest first half in Nucor history SAFETY ✓ Injury & Illness rate of 0.",
+      "Outlook APPENDIX 16 BROAD SUITE OF PRODUCTS WELL SUITED TO DATA CENTER APPLICATIONS NUCOR PRODUCT OFFERING 17 SUMMARY OF MAJOR CAPEX PROJECTS Est.",
+      "projects were approximately $137 million, or $0.",
+      "projects were approximately $262 million, or $0."
+    ],
+    "wave_or_demand_evidence": [
+      "customers in the second quarter of 2024, a 1% increase compared with the first quarter of 2024 and a 5% decrease compared with the second quarter of 2023.",
+      "customers represented 21% of total steel mill shipments in the second quarter of 2024, compared with 21% in the first quarter of 2024 and 20% in the second quarter of 2023.",
+      "customers in the second quarter of 2024 increased 11% compared with the first quarter of 2024 and decreased 10% compared with the second quarter of 2023.",
+      "customers in the first six months of 2024 were approximately 12,513,000 tons, a decrease of 4% compared with the first six months of 2023, and the average sales price per ton in the first six months of 2024 decreased 7% compared with the first six months of 2023.",
+      "customers STRATEGIC GROWTH INITIATIVES ✓ Pending acquisition of Rytec significantly expands our commercial overhead door offering 4 1 EBITDA is a non-GAAP financial measure.",
+      "customer base of leading advances Nucor’s presence in $2."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments of assets.",
+      "decreased 1% to $8.",
+      "decreased 15% compared with $9.",
+      "decreased 2% compared with the first quarter of 2024 and decreased 11% compared with the second quarter of 2023.",
+      "decrease compared with the second quarter of 2023.",
+      "decreased 2% as compared to the second quarter of 2023."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d860082dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "TextElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 Second Quarter of 2024 Highlights  Net earnings attributable to Nucor stockholders of $645.2 million, or $2.68 per diluted share.  Net sales of $8.08 billion.  Net earnings before noncontrolling interests of $712.1 million; EBITDA of $1.23 billion. CHARLOTTE, N.C.  July 22, 2024 - Nucor Corporation (NYSE: NUE) today announced consolidated net earnings attributable to Nucor stockholders of $645.2 million, or $2.68 per diluted share, for the second quarter of 2024. By comparison, Nucor reported consolidated net earnings attributable to Nucor stockholders of $844.8 million, or $3.46 per diluted share, for the first quarter of 2024 and $1.46 billion, or $5.81 per diluted share, for the second quarter of 2023. In the first six months of 2024, Nucor reported consolidated net earnings attributable to Nucor stockholders of $1.49 billion, or $6.14 per diluted share, compared with consolidated net earnings attributable to Nucor stockholders of $2.60 billion, or $10.26 per diluted share, in the first six months of 2023. While market conditions have softened compared to recent record-setting years, Nucor remains focused on its long-term growth strategy and has returned more than $1.7 billion to investors through June, said Leon Topalian, Nucors Chair, President and Chief Executive Officer. Nucors strategy to grow our core steelmaking operations and expand into steel-adjacent downstream markets positions the company to create attractive shareholder value and improve the companys through-cycle earnings profile. I am incredibly proud of the 32,000 men and women of Nucor who are executing this growth plan while achieving the safest start to any year in Nucors history.Selected Segment Data Earnings (loss) before income taxes and noncontrolling interests by segment for the second quarter and first six months of 2024 and 2023 were as follows (in thousands):"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months (13 Weeks) Ended Six Months (26 Weeks) Ended June 29, 2024 July 1, 2023 June 29, 2024 July 1, 2023 Steel mills $ 645,315 $ 1,403,547 $ 1,747,566 $ 2,241,935 Steel products 441,391 1,010,789 952,950 1,981,591 Raw materials 39,396 138,411 48,977 196,551 Corporate/eliminations (227,939 ) (502,965 ) (625,989 ) (773,511 ) $ 898,163 $ 2,049,782 $ 2,123,504 $ 3,646,566"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 1 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Financial Review Nucors consolidated net sales decreased 1% to $8.08 billion in the second quarter of 2024 compared with $8.14 billion in the first quarter of 2024 and decreased 15% compared with $9.52 billion in the second quarter of 2023. Average sales price per ton in the second quarter of 2024 decreased 2% compared with the first quarter of 2024 and decreased 11% compared with the second quarter of 2023. A total of approximately 6,289,000 tons were shipped to outside customers in the second quarter of 2024, a 1% increase compared with the first quarter of 2024 and a 5% decrease compared with the second quarter of 2023. Total steel mill shipments in the second quarter of 2024 were comparable to the first quarter of 2024 and decreased 2% as compared to the second quarter of 2023. Steel mill shipments to internal customers represented 21% of total steel mill shipments in the second quarter of 2024, compared with 21% in the first quarter of 2024 and 20% in the second quarter of 2023. Downstream steel product shipments to outside customers in the second quarter of 2024 increased 11% compared with the first quarter of 2024 and decreased 10% compared with the second quarter of 2023. In the first six months of 2024, Nucors consolidated net sales of $16.21 billion decreased 11% compared with consolidated net sales of $18.23 billion reported in the first six months of 2023. Total tons shipped to outside customers in the first six months of 2024 were approximately 12,513,000 tons, a decrease of 4% compared with the first six months of 2023, and the average sales price per ton in the first six months of 2024 decreased 7% compared with the first six months of 2023. The average scrap and scrap substitute cost per gross ton used in the second quarter of 2024 was $396, a 6% decrease compared to $421 in the first quarter of 2024 and a 13% decrease compared to $455 in the second quarter of 2023. The average scrap and scrap substitute cost per gross ton used in the first six months of 2024 was $409, a 6% decrease compared to $435 in the first six months of 2023. Pre-operating and start-up costs related to the Companys growth projects were approximately $137 million, or $0.43 per diluted share, in the second quarter of 2024, compared with approximately $125 million, or $0.39 per diluted share, in the first quarter of 2024 and approximately $90 million, or $0.27 per diluted share, in the second quarter of 2023. In the first six months of 2024, pre-operating and start-up costs related to the Companys growth projects were approximately $262 million, or $0.82 per diluted share, compared with approximately $172 million, or $0.52 per diluted share, in the first six months of 2023. Overall operating rates at the Companys steel mills decreased to 75% in the second quarter of 2024 as compared to 82% in the first quarter of 2024 and 84% in the second quarter of 2023. Operating rates in the first six months of 2024 decreased to 79% as compared to 82% in the first six months of 2023."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 2 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Financial Strength At the end of the second quarter of 2024, we had $5.43 billion in cash and cash equivalents and short-term investments on hand. The Companys $1.75 billion revolving credit facility remains undrawn and does not expire until November 2026. Nucor continues to have the strongest credit ratings in the North American steel sector (A-/A-/Baa1) with stable outlooks at Standard & Poors and Fitch Ratings and a positive outlook at Moodys. Commitment to Returning Capital to Stockholders During the second quarter of 2024, Nucor repurchased approximately 2.9 million shares of its common stock at an average price of $170.70 per share (approximately 8.5 million shares during the first six months of 2024 at an average price of $177.30 per share). As of June 29, 2024, Nucor had approximately $1.82 billion remaining authorized and available for repurchases under its share repurchase program. This share repurchase authorization is discretionary and has no scheduled expiration date. On June 6, 2024, Nucors Board of Directors declared a cash dividend of $0.54 per share. This cash dividend is payable on August 9, 2024, to stockholders of record as of June 28, 2024, and is Nucors 205th consecutive quarterly cash dividend. Second Quarter of 2024 Analysis The largest driver of the decrease in earnings in the second quarter of 2024 as compared to the first quarter of 2024 was the decreased earnings of the steel mills segment, primarily due to lower average selling prices, and, to a lesser extent, decreased volumes. The steel products segment had decreased earnings in the second quarter of 2024 as compared to the first quarter of 2024 due to lower average selling prices, partially offset by increased volumes. Earnings in the raw materials segment increased in the second quarter of 2024 as compared to the first quarter of 2024 due to the increased profitability of our direct reduced iron facilities. Third Quarter of 2024 Outlook We expect earnings in the third quarter of 2024 to decrease compared to the second quarter of 2024. The largest driver for the expected decrease in earnings in the third quarter of 2024 is the expected decrease in earnings of the steel mills segment, primarily due to lower average selling prices. We expect earnings in the steel products segment to decrease in the third quarter of 2024 as compared to the second quarter of 2024 due to lower average selling prices. The earnings of the raw materials segment are expected to decrease in the third quarter of 2024 as compared to the second quarter of 2024. Earnings Conference Call You are invited to listen to the live broadcast of Nucors conference call during which management will discuss Nucors second quarter results on July 23, 2024 at 10:00 a.m. Eastern Time. The call can be accessed via webcast from the Investor Relations section of Nucors website (nucor.com/investors). A presentation with supplemental information to accompany the call has been posted to Nucors Investor Relations website. A playback of the webcast will be posted to the same site within one day of the live event."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 3 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "About Nucor Nucor and its affiliates are manufacturers of steel and steel products, with operating facilities in the United States, Canada and Mexico. Products produced include: carbon and alloy steel  in bars, beams, sheet and plate; hollow structural section tubing; electrical conduit; steel racking; steel piling; steel joists and joist girders; steel deck; fabricated concrete reinforcing steel; cold finished steel; precision castings; steel fasteners; metal building systems; insulated metal panels; overhead doors; steel grating; wire and wire mesh; and utility structures. Nucor, through The David J. Joseph Company and its affiliates, also brokers ferrous and nonferrous metals, pig iron and hot briquetted iron / direct reduced iron; supplies ferro-alloys; and processes ferrous and nonferrous scrap. Nucor is North Americas largest recycler. Non-GAAP Financial Measures The Company uses certain non-GAAP (Generally Accepted Accounting Principles) financial measures in this news release, including EBITDA. Generally, a non-GAAP financial measure is a numerical measure of a companys performance or financial position that either excludes or includes amounts that are not normally excluded or included in the most directly comparable financial measure calculated and presented in accordance with GAAP. We define EBITDA as net earnings before noncontrolling interests, adding back the following items: interest (income) expense, net; provision for income taxes; depreciation; and amortization. Please note that other companies might define their non-GAAP financial measures differently than we do. Management presents the non-GAAP financial measure of EBITDA in this news release because it considers it to be an important supplemental measure of performance. Management believes that this non-GAAP financial measure provides additional insight for analysts and investors evaluating the Companys financial and operational performance by providing a consistent basis of comparison across periods. Forward-Looking Statements Certain statements contained in this news release are forward-looking statements that involve risks and uncertainties which we expect will or may occur in the future and may impact our business, financial condition and results of operations. The words anticipate, believe, expect, intend, project, may, will, should, could and similar expressions are intended to identify those forward-looking statements. These forward-looking statements reflect the Companys best judgment based on current information, and, although we base these statements on circumstances that we believe to be reasonable when made, there can be no assurance that future events will not affect the accuracy of such forward-looking information. As such, the forward-looking statements are not guarantees of future performance, and actual results may vary materially"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 4 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "from the projected results and expectations discussed in this news release. Factors that might cause the Companys actual results to differ materially from those anticipated in forward-looking statements include, but are not limited to: (1) competitive pressure on sales and pricing, including pressure from imports and substitute materials; (2) U.S. and foreign trade policies affecting steel imports or exports; (3) the sensitivity of the results of our operations to general market conditions, and in particular, prevailing market steel prices and changes in the supply and cost of raw materials, including pig iron, iron ore and scrap steel; (4) the availability and cost of electricity and natural gas, which could negatively affect our cost of steel production or result in a delay or cancellation of existing or future drilling within our natural gas drilling programs; (5) critical equipment failures and business interruptions; (6) market demand for steel products, which, in the case of many of our products, is driven by the level of nonresidential construction activity in the United States; (7) impairment in the recorded value of inventory, equity investments, fixed assets, goodwill or other long-lived assets; (8) uncertainties and volatility surrounding the global economy, including excess world capacity for steel production, inflation and interest rate changes; (9) fluctuations in currency conversion rates; (10) significant changes in laws or government regulations affecting environmental compliance, including legislation and regulations that result in greater regulation of greenhouse gas emissions that could increase our energy costs, capital expenditures and operating costs or cause one or more of our permits to be revoked or make it more difficult to obtain permit modifications; (11) the cyclical nature of the steel industry; (12) capital investments and their impact on our performance; (13) our safety performance; (14) our ability to integrate businesses we acquire; and (15) the impact of any pandemic or public health situation. These and other factors are discussed in Nucors regulatory filings with the United States Securities and Exchange Commission, including those in Item 1A. Risk Factors of Nucors Annual Report on Form 10-K for the year ended December 31, 2023. The forward-looking statements contained in this news release speak only as of this date, and Nucor does not assume any obligation to update them, except as may be required by applicable law. Contact Information For Investor/Analyst Inquiries  Jack Sullivan, 704-264-8942, or Paul Donnelly, 704-264-8807 For Media Inquiries - Katherine Miller, 704-353-9015"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 5 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Tonnage Data"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months (13 Weeks) Ended Six Months (26 Weeks) Ended June 29,2024 July 1, 2023 PercentChange June 29,2024 July 1, 2023 PercentChange Steel mills total shipments: Sheet 2,869 2,786 3 % 5,843 5,605 4 % Bars 2,005 2,122 -6 % 3,917 4,291 -9 % Structural 512 505 1 % 1,062 1,041 2 % Plate 448 520 -14 % 860 974 -12 % Other 33 46 -28 % 75 103 -27 % 5,867 5,979 -2 % 11,757 12,014 -2 % Sales tons to outside customers: Steel mills 4,617 4,774 -3 % 9,293 9,578 -3 % Joist 103 142 -27 % 202 277 -27 % Deck 82 107 -23 % 163 206 -21 % Cold finished 96 112 -14 % 195 229 -15 % Rebar fabrication products 265 332 -20 % 503 611 -18 % Piling 158 113 40 % 256 214 20 % Tubular products 214 239 -10 % 422 514 -18 % Other steel products 156 148 5 % 298 283 5 % Raw materials 598 621 -4 % 1,181 1,119 6 % 6,289 6,588 -5 % 12,513 13,031 -4 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 6 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Statements of Earnings (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months (13 Weeks) Ended Six Months (26 Weeks) Ended June 29, 2024 July 1, 2023 June 29, 2024 July 1, 2023 Net sales $ 8,077,172 $ 9,523,256 $ 16,214,255 $ 18,233,236 Costs, expenses and other: Cost of products sold 6,883,117 7,021,582 13,497,020 13,733,360 Marketing, administrative and other expenses 307,230 453,388 652,625 843,283 Equity in earnings of unconsolidated affiliates (9,032 ) (6,094 ) (18,801 ) (4,754 ) Interest (income) expense, net (2,306 ) 4,598 (40,093 ) 14,781 7,179,009 7,473,474 14,090,751 14,586,670 Earnings before income taxes and noncontrolling interests 898,163 2,049,782 2,123,504 3,646,566 Provision for income taxes 186,020 462,707 452,399 827,862 Net earnings before noncontrolling interests 712,143 1,587,075 1,671,105 2,818,704 Earnings attributable to noncontrolling interests 66,926 125,721 181,047 220,808 Net earnings attributable to Nucor stockholders $ 645,217 $ 1,461,354 $ 1,490,058 $ 2,597,896 Net earnings per share: Basic $ 2.68 $ 5.82 $ 6.15 $ 10.28 Diluted $ 2.68 $ 5.81 $ 6.14 $ 10.26 Average shares outstanding: Basic 239,580 250,144 241,329 251,876 Diluted 239,935 250,524 241,528 252,334"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 7 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Balance Sheets (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 29, 2024 Dec. 31, 2023 ASSETS Current assets: Cash and cash equivalents $ 4,638,978 $ 6,383,298 Short-term investments 795,180 747,479 Accounts receivable, net 3,113,079 2,953,311 Inventories, net 5,255,843 5,577,758 Other current assets 455,042 724,012 Total current assets 14,258,122 16,385,858 Property, plant and equipment, net 11,999,189 11,049,767 Restricted cash and cash equivalents  3,494 Goodwill 4,000,144 3,968,847 Other intangible assets, net 3,051,479 3,108,015 Other assets 876,291 824,518 Total assets $ 34,185,225 $ 35,340,499 LIABILITIES Current liabilities: Short-term debt $ 168,510 $ 119,211 Current portion of long-term debt and finance lease obligations 1,075,203 74,102 Accounts payable 1,744,657 2,020,289 Salaries, wages and related accruals 857,481 1,326,390 Accrued expenses and other current liabilities 1,019,410 1,054,517 Total current liabilities 4,865,261 4,594,509 Long-term debt and finance lease obligations due after one year 5,648,555 6,648,873 Deferred credits and other liabilities 1,898,901 1,973,363 Total liabilities 12,412,717 13,216,745 Commitments and contingencies EQUITY Nucor stockholders equity: Common stock 152,061 152,061 Additional paid-in capital 2,189,371 2,176,243 Retained earnings 29,991,834 28,762,045 Accumulated other comprehensive loss, net of income taxes (177,638 ) (162,072 ) Treasury stock (11,432,103 ) (9,987,643 ) Total Nucor stockholders equity 20,723,525 20,940,634 Noncontrolling interests 1,048,983 1,183,120 Total equity 21,772,508 22,123,754 Total liabilities and equity $ 34,185,225 $ 35,340,499"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 8 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Statements of Cash Flows (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months (26 Weeks) Ended June 29, 2024 July 1, 2023 Operating activities: Net earnings before noncontrolling interests $ 1,671,105 $ 2,818,704 Adjustments: Depreciation 527,626 448,836 Amortization 119,850 117,231 Stock-based compensation 82,725 83,587 Deferred income taxes (77,611 ) (44,609 ) Distributions from affiliates 7,877 18,621 Equity in earnings of unconsolidated affiliates (18,801 ) (4,754 ) Changes in assets and liabilities (exclusive of acquisitions and dispositions): Accounts receivable (153,856 ) (270,314 ) Inventories 333,247 (174,437 ) Accounts payable (314,761 ) 242,071 Federal income taxes 132,931 396,341 Salaries, wages and related accruals (426,098 ) (573,993 ) Other operating activities 60,697 70,313 Cash provided by operating activities 1,944,931 3,127,597 Investing activities: Capital expenditures (1,471,234 ) (1,057,086 ) Investment in and advances to affiliates (79 ) (35,078 ) Disposition of plant and equipment 9,530 5,289 Acquisitions (net of cash acquired) (108,943 )  Purchases of investments (886,892 ) (701,639 ) Proceeds from the sale of investments 855,965 408,854 Other investing activities 1,324  Cash used in investing activities (1,600,329 ) (1,379,660 ) Financing activities: Net change in short-term debt 49,299 (15,742 ) Repayment of long-term debt (5,000 ) (5,000 ) Proceeds from exercise of stock options 3,357 7,123 Payment of tax withholdings on certain stock-based compensation (47,018 ) (42,120 ) Distributions to noncontrolling interests (315,189 ) (388,771 ) Cash dividends (264,367 ) (259,894 ) Acquisition of treasury stock (1,501,283 ) (876,698 ) Other financing activities (7,065 ) (8,296 ) Cash used in financing activities (2,087,266 ) (1,589,398 ) Effect of exchange rate changes on cash (5,150 ) 3,469 Increase (decrease) in cash and cash equivalents and restricted cash and cash equivalents (1,747,814 ) 162,008 Cash and cash equivalents and restricted cash and cash equivalents - beginning of year 6,386,792 4,361,220 Cash and cash equivalents and restricted cash and cash equivalents - end of six months $ 4,638,978 $ 4,523,228 Non-cash investing activity: Change in accrued plant and equipment purchases $ 37,106 $ (36,580 )"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 9 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "News Release"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Reports Results for the Second Quarter of 2024 (Continued)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Non-GAAP Financial Measures Reconciliation of EBITDA (Unaudited) (In thousands) Three Months (13 Weeks) Ended 6 Months (26 Weeks) Ended June 29, 2024 July 1, 2023 June 29, 2024 July 1, 2023 Net earnings before noncontrolling interests $ 712,143 $ 1,587,075 $ 1,671,105 $ 2,818,704 Depreciation 270,688 227,747 527,626 448,836 Amortization 61,167 58,462 119,850 117,231 Interest (income) expense, net (2,306 ) 4,598 (40,093 ) 14,781 Provision for income taxes 186,020 462,707 452,399 827,862 EBITDA $ 1,227,712 $ 2,340,589 $ 2,730,887 $ 4,227,414"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 10 of 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nucor Executive Offices: 1915 Rexford Road, Charlotte, North Carolina 28211"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Phone 704-366-7000 Fax 704-362-4208 www.nucor.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "d860082dex992.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.2 SECOND QUARTER 2024 EARNINGS CALL LEON TOPALIAN Chair, President and CEO STEVE LAXTON Executive Vice President and CFO July 23, 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "FORWARD-LOOKING STATEMENTS Certain statements made in this presentation may constitute forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These statements involve risks and uncertainties. The words “anticipate,” “believe,” “expect,” “intend,” “may,” “project,” “will,” “should,” “could” and similar expressions are intended to identify forward-looking statements. These forward-looking statements reflect the Company’s best judgment based on current information, and although we base these statements on circumstances that we believe to be reasonable when made, there can be no assurance that future events will not affect the accuracy of such forward-looking information. The Company does not undertake any obligation to update these statements. The forward-looking statements are not guarantees of future performance, and actual results may vary materially from the projected results and expectations discussed in this presentation. Factors that might cause the Company’s actual results to differ materially from those anticipated in forward- looking statements include, but are not limited to: (1) competitive pressure on sales and pricing, including pressure from imports and substitute materials; (2) U.S. and foreign trade policies affecting steel imports or exports; (3) the sensitivity of the results of our operations to general market conditions, and in particular, prevailing market steel prices and changes in the supply and cost of raw materials, including pig iron, iron ore and scrap steel; (4) the availability and cost of electricity and natural gas, which could negatively affect our cost of steel production or result in a delay or cancellation of existing or future drilling within our natural gas drilling programs; (5) critical equipment failures and business interruptions; (6) market demand for steel products, which, in the case of many of our products, is driven by the level of nonresidential construction activity in the United States; (7) impairment in the recorded value of inventory, equity investments, fixed assets, goodwill or other long- lived assets; (8) uncertainties and volatility surrounding the global economy, including excess world capacity for steel production, inflation and interest rate changes; (9) fluctuations in currency conversion rates; (10) significant changes in laws or government regulations affecting environmental compliance, including legislation and regulations that result in greater regulation of greenhouse gas emissions that could increase our energy costs, capital expenditures and operating costs or cause one or more of our permits to be revoked or make it more difficult to obtain permit modifications; (11) the cyclical nature of the steel industry; (12) capital investments and their impact on our performance; (13) our safety performance; (14) our ability to integrate businesses we acquire; (15) the impact of the COVID-19 pandemic, any variants of the virus, and any other similar public health situation; and (16) the risks discussed in “Item 1A. Risk Factors” of the Company’s Annual Report on Form 10-K for the year ended December 31, 2023 and elsewhere therein and in the other reports we file with the U.S. Securities and Exchange Commission. 2"
+    },
+    {
+      "type": "TextElement",
+      "text": "NON-GAAP FINANCIAL MEASURES The Company uses certain non-GAAP (Generally Accepted Accounting Principles) financial measures in this news release, including EBITDA and Free Cash Flow (FCF). Generally, a non-GAAP financial measure is a numerical measure of a company’s performance or financial position that either excludes or includes amounts that are not normally excluded or included in the most directly comparable financial measure calculated and presented in accordance with GAAP. We define EBITDA as net earnings before noncontrolling interests adding back the following items: interest expense, net; provision for income taxes; depreciation; amortization; and losses and impairments of assets. We define Free Cash Flow (FCF) as Cash Provided by Operating Activities less Capital Expenditures. Please note that other companies might define their non-GAAP financial measures differently than we do. Management presents the non-GAAP financial measures of EBITDA and FCF in this news release because it considers them to be an important supplemental measure of performance. Management believes that these non-GAAP financial measures provide additional insight for analysts and investors evaluating the Company’s financial and operational performance by providing a consistent basis of comparison across periods. Non-GAAP financial measures have limitations as an analytical tool. Investors are encouraged to review the reconciliation of non-GAAP financial measures to their most directly comparable GAAP financial measures provided in this presentation, including in the accompanying tables located in the Appendix. 3"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024: EXECUTING ON MULTIPLE FRONTS 1 ✓✓ $ $1 1.5 .2 3 Bil bliilo lio nn E E BI BI TT DD AA FINANCIAL ✓ $645 million Net Earnings ✓ $845 Million Net Earnings PERFORMANCE ✓ $2.68 Earnings Per Share (diluted) ✓ $3.46 Earnings Per Share (diluted) ✓ $1 Billion in Share Repurchases ✓ $500 million in Q2 Share Repurchases (~2.9 million shares) CAPITAL ALLOCATION ✓✓ Red $801 u ces millsh ion a re in Q co 2 uCap nt by ~ ex; $6 5.5 80 m m illiio llin on sh in a an resnounced Acquisitions & BALANCE SHEET ✓ Moody’s revised Nucor’s credit outlook from Stable to Positive ✓ $128 Million in Dividend Payments ✓ Safest first half in Nucor history SAFETY ✓ Injury & Illness rate of 0.74 YTD PERFORMANCE ✓ 52 of 109 divisions with Zero Recordables YTD ✓ Construction milestones at Lexington (bar) & West Virginia (sheet) CONSTRUCTION AND ✓ Grand opening of new Gallatin tube mill RAMP-UPS ✓ Record production quarters for Gallatin (sheet) & Brandenburg (plate) ✓ Acquisition of Southwest Data Products expands our growing suite of solutions for data center customers STRATEGIC GROWTH INITIATIVES ✓ Pending acquisition of Rytec significantly expands our commercial overhead door offering 4 1 EBITDA is a non-GAAP financial measure. For a reconciliation of non-GAAP measures, please refer to the Appendix."
+    },
+    {
+      "type": "TextElement",
+      "text": "EXPANDING OUR SUITE OF DOWNSTREAM CAPABILITIES AND SOLUTIONS RYTEC SOUTHWEST DATA PRODUCTS I • An industry leader in high-growth mkt • A leading player in the high- • Known for product quality, on-time performance door market delivery, and skilled install services Strategic Fit • Complements C.H.I. offerings and • Exceptional customer base of leading advances Nucor’s presence in $2.4B ✓ ✓ hyperscalers and co-locators U.S. commercial overhead door mkt • ~130 teammates highly regarded by • ~300 highly engaged teammates Cultural Fit leading hyperscalers and co-locators ✓ ✓ • High teens EBITDA margin • +20% EBITDA margins Higher Margins ✓ ✓ Lower Capital • Modern, highly automated facilities. • Very low capital intensity, FCF/EBITDA > 90% FCF/EBITDA >90% Intensity ✓ ✓ • Double digit top line growth for the five • Data center market growing at double- Higher Growth years ended 2023 digit rate ✓ ✓ Earnings • Significant recurring aftermarket • Replacement cycle on data center services and parts revenue stream cabinets and racking: ~ 2 years Stability ✓✓ 5"
+    },
+    {
+      "type": "TextElement",
+      "text": "A LONG-TERM STRATEGY TO DRIVE GROWTH AND CREATE SHAREHOLDER VALUE STRATEGY INITIATIVES & INVESTMENTS ▪ Leverage our market intelligence and ▪ Advanced separation technology flexible supply chain to provide lower- ▪ Carbon Capture & Storage (DRI) cost, more sustainable inputs RAW MATERIALS ▪ Investing in low-emission ironmaking and process gas capabilities ▪ Shifting mix to higher-margin products▪ West Virginia Sheet Mill ▪ Creating value through our cost ▪ Brandenburg, KY Plate Mill STEEL MILLS advantages, sustainability leadership ▪ Micro mill Bar projects and broad set of capabilities ▪ Offer customers a comprehensive set of ▪ Investments in automation to solutions with best-in-class service, decrease costs and improve safety deserving of premium pricing STEEL PRODUCTS ▪ New product development ▪ Create value by cross-selling more products through our Solutions team ▪ Grow in complementary businesses ▪ Recent and pending acquisitions of aligned with steel-intensive mega-trends Southwest Data Products and Rytec EXPAND BEYOND▪ Pursue opportunities with attractive ▪ Broadening customer base with new growth and margins, steady FCF and high- channels to market & cross-selling synergy potential ▪ New greenfield projects 6"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SIGNIFICANT PROGRESS TO DATE, BUT PLENTY MORE TO ACCOMPLISH WEST VIRGINIA SHEET MILL REGIONAL BAR MICRO MILLS GROW BRANDENBURG PLATE MILL THE GALLATIN SHEET & TUBE EXPANSION CORE CALIFORNIA STEEL INDUSTRIES (CSI) VALUE-ADDED FINISHING LINES 2021 2023 2025 2027+ INSULATED METAL PANELS WAREHOUSE SYSTEMS OVERHEAD DOORS EXPAND BEYOND TOWERS & STRUCTURES DATA CENTER INFRASTRUCTURE NEW DOWNSTREAM PLATFORMS 7"
+    },
+    {
+      "type": "TextElement",
+      "text": "REPOSITIONING THE BUSINESS TO DOUBLE NUCOR'S “THROUGH CYCLE” EARNINGS POTENTIAL • Midway through our multi-year capex plan designed to double Nucor’s through-cycle EBITDA • Investments to further diversify our set of capabilities and generate more sustained earnings • Many recently completed projects yet to reach full earnings potential 2H 2024 – beyond ~$6.7 • Maintain strong $5.9 2020 – 1H 2024 balance sheet • $8.8B CAPEX • Return >40% earnings to shareholders $2.3 • $11.4B Returned to Shareholders • Investing ~$6.5B (1) through 2027 in 8 key • $5.8B Acquisitions $3.2 growth projects $0.5 • Focus on completing construction projects safely and on-budget $3.6 $2.7 • Begin to reduce pre- operating start-up costs 2017-2019 Average LTM 6/29/24 FUTURE (Baseline) STATE STEEL MILLS + RAW MATERIALS STEEL PRODUCTS 1 Includes $565M Rytec transaction announced on June 3, 2024, but not yet closed 2 EBITDA is before non-controlling interest expense. Allocation of Consolidated EBITDA to segments is derived by allocating corporate 8 overhead in proportion to each segment’s pre-tax earnings. (2) EBITDA in $Billions"
+    },
+    {
+      "type": "TextElement",
+      "text": "ELEVATED IMPORTS OF VARIOUS STEEL PRODUCTS PUTTING PRESSURE ON PRICING Impacts on U.S. Import Surge – Key Nucor Products 1H 2024 vs. 1H 2023 Domestic Steel Producers Corrosion Resistant Sheet +705,000mt +50.3% • Compression of domestic steel prices Wire Rod +144,000mt +36.8% • Industry capacity factor down to 76.4% Cold Rolled Sheet +170,000mt +29.8% th through July 6 Hot Rolled Sheet +97,000mt +10.7% • U.S. carbon footprint increases due to steel consumed from non-domestic producers Cut-To-Length Plate +25,000mt +8.4% Remedies to Address Impact Annual U.S. Import Data All Carbon & Alloy Steel Import Surge 40 30% • Enact Leveling the Playing Field Act 2.0 30 27% 27 30 27 25 24% 19 20 14• Maintain Vietnam's Non-Market Economy Status 13 21% 12 10 18% • Enforce Section 232 agreements with Mexico 0 15% and Canada 2018 2019 2020 2021 2022 2023 2023 2024 1H 2H 1H International Trade Administration, U.S. Dept. of Commerce data through June 2024 (includes June SIMA permits and May final imports) 9 Million Metric Tons % ADC"
+    },
+    {
+      "type": "TextElement",
+      "text": "CONSOLIDATED FINANCIAL RESULTS ($s in billions except per share data) 1 Diluted EPS EBITDA 2023 2024 2023 2024 $10.26 $4.23 $6.14 $2.73 $5.81 $2.34 $2.68 $1.23 Q2 YTD Q2 YTD Q2 YTD Q2 YTD 2 Capex Returns to Shareholders 2023 2024 2023 2024 $1.77 $1.47 $1.14 $1.06 $0.80 $0.58 $0.53 $0.63 Q2 YTD Q2 YTD Q2 YTD Q2 YTD (1) EBITDA is a non-GAAP financial measure. For a reconciliation of non-GAAP measures, please refer to the Appendix 10 (2) Returns to Shareholders include dividends and share repurchases"
+    },
+    {
+      "type": "TextElement",
+      "text": "SEGMENT RESULTS (a) PRE-TAX SEGMENT EARNINGS Q2 2024 SEGMENT RESULTS VS PRIOR (LAST 5 QTRS, $M) QUARTER $138 • Relatively flat volumes STEEL • lower avg selling price & metal margin $1,011 MILLS $71 • 41% lower EBT/ton $10 $512 $807 • higher volumes $39 STEEL • lower avg selling price, $656 $441 higher material costs PRODUCTS $1,404 $1,102 • 23% lower EBT/ton $883 $588 $645 ($14) ($151) ($213) ($228) ($398) RAW • Lower volumes ($503) MATERIALS • Lower avg selling price Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 • Lower operating costs Steel Mills Steel Products Raw Materials Corporate/Eliminations (1) Total segment earnings before income taxes and non-controlling interests 11"
+    },
+    {
+      "type": "TextElement",
+      "text": "BALANCE SHEET & CAPITAL ALLOCATION 25% REDUCTION TO SHARECOUNT SINCE 2017 COMMITTED TO A STRONG BALANCE SHEET Shares rounded to closest million xLTM $USD in millions 318 1 as of June 29, 2024 Amount EBITDA % cap Total Debt 6,892 ~1.2x 24% 237 Cash and Cash Equivalents 5,434 Net Debt 1,458 Total Equity & Non-Controlling Int. 21,773 76% Total Book Capitalization 28,665 100% 2017 2019 2021 2023 Q2 2024 RETURNS TO SHAREHOLDERS (2020 – Q2 2024) CASH RETURNS RETURNS AS A % OF NET EARNINGS 118% ✓ Committed to at least 40% of annual net earnings DIVIDENDS returned to Nucor shareholders $2.3B 74% 55% 46% 43% $11.4B 40% SHARE REPURCHASES $9.1B 2020 2021 2022 2023 2024 YTD 1 EBITDA is a non-GAAP financial measure. For a reconciliation of non-GAAP measures, please refer to the Appendix. 12 2 Long-Term Debt includes Current Portion of Long-Term Debt and Finance Lease Obligations"
+    },
+    {
+      "type": "TextElement",
+      "text": "CAPEX PLAN FUNDED WITH ROBUST OPERATING CASHFLOW AND HEALTHY BALANCE SHEET $3,000 FCF Line = Operating Cashflow minus Capex Annual Annual Annual Cash Period Operating (1) Capex FCF Balance $2,500 Cashflow 2017 – 2019 $2.1B $1.0B $1.1B $1.4B (average) $2,000 2021 – 2023 $7.8B $1.9B $5.9B $4.9B (average) $1,500 $5.9B $2.6B $3.3B $5.4B LTM Q2 ’24 $1,000 Operating Cashflow $500 $0 Capex -$500 -$1,000 2017 2018 2019 2020 2021 2022 2023 ’24 YTD $millions QUARTERLY CAPEX QUARTERLY OPERATING CASH FLOW QUARTERLY FCF (1) Represents average year-end cash, cash equivalents and short-term investments during multi-year periods. For LTM period, represents balance at end of Q2 ‘24. 13"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q3 2024 OUTLOOK IMPACT ON Q3 SEGMENT EXPECTATIONS FOR Q3 2024 EARNINGS VS Q2 • Primarily due to lower average selling prices Steel Mills • Expected to decrease due to lower average Steel Products selling prices • Decreased profitability, and lower DRI Raw Materials shipments due to planned outages • Intercompany eliminations expected to be Corp / Eliminations lower (a net positive to earnings) Steel Mills • Steel Mills conversion costs per ton expected to be generally flat Conversion Costs Consolidated • Overall lower compared to Q2 Earnings 14"
+    },
+    {
+      "type": "TextElement",
+      "text": "MEDIUM-TERM OUTLOOK FOR KEY END MARKETS NUE Primary Markets and % of Total External Shipments (2023) HEAVY EQUIPMENT, TRADITIONAL CONSTRUCTION & AUTO & CONSUMER TRANSPORTATION, AND RENEWABLE INFRASTRUCTURE DURABLES LOGISTICS & OTHER ENERGY % NUE ‘23 Shipments: 53% 25% 13% 9% • Advanced Manufacturing (CHIPS, EV, Battery) • Renewable Energy • Data Centers • Electric Transmission • Bridge & Highway • Institutional Buildings • Traditional • Traditional Energy • Heavy Equipment • Light Vehicles Manufacturing • Truck & Trailer • Appliances • Residential Construct. • Rail • HVAC & Water Heaters • Agriculture • Warehouse • Barge • Traditional Office 15 Market Outlook"
+    },
+    {
+      "type": "TitleElement",
+      "text": "APPENDIX 16"
+    },
+    {
+      "type": "TitleElement",
+      "text": "BROAD SUITE OF PRODUCTS WELL SUITED TO DATA CENTER APPLICATIONS NUCOR PRODUCT OFFERING 17"
+    },
+    {
+      "type": "TextElement",
+      "text": "SUMMARY OF MAJOR CAPEX PROJECTS Est. Capex Project Investment Rationale Est. Completion ($ millions) Kingman, AZ • 600,000 tpa melt shop to increase regional flexibility Early 2025 $150 Melt Shop • Allows Utah bar mill to transition toward higher value bar products Lexington, NC • New 430,000 tpa micro mill H1 2025 $440 Rebar Micro Mill • Serving high-growth Southeast and mid-Atlantic markets Decatur, AL & • Highly automated manufacturing complexes Crawfordsville, IN • Increases Nucor Towers & Structures ability to provide Mid 2025 $370 Transmission Tower Plants engineered solutions to utility infrastructure customers • Crawfordsville, IN Adding continuous galvanizing (300,000 tpa) and prepaint Late 2025 $430 Coating Complex (250,000 tpa) lines to better serve regional construction market • Berkeley, SC 500,000 tpa galvanizing line to increase participation in regional Mid 2026 $430 Galvanizing Line automotive and consumer durables markets • 3,000,000 tpa sheet mill with low cost and low GHG profile Apple Grove, WV • Product mix includes ~66% value-added, finished products Late 2026 $3,500 Sheet Mill • Located in the heart of America’s largest regional sheet market CSI, Fontana, CA • 500,000 tpa galvanizing capability to serve western U.S. market Mid 2027 $375 Galvanizing Line • Pacific Northwest Mill location still TBD Late 2027 $860 • Rebar Micro Mill 650,000 tpa rebar micro mill to better serve northwest bar market Total Est Capex $6.5 BN 18"
+    },
+    {
+      "type": "TextElement",
+      "text": "SEGMENT RESULTS: STEEL MILLS AND STEEL PRODUCTS STEEL MILLS % Change Versus Q2 2024 vs. Q1 2024 Shipments (tons in thousands) Q2 ’24 Q1 ’24 Q2 ’23 Prior Qtr. Prior Year Sheet 2,869 2,974 2,786 -4% 3% • Overall flat shipments Bars 2,005 1,912 2,122 5% -6% • Lower realized pricing and metal margin Structural 512 550 505 -7% 1% Plate 448 412 520 9% -14% Other Steel 33 42 46 -21% -28% Total Shipments 5,867 5,890 5,979 0% -2% 1 EBT ($ in millions) $645 $1,102 $1,404 -42% -54% 1 EBT /Ton ($) $110 $187 $235 -41% -53% STEEL PRODUCTS % Change Versus Q2 2024 vs. Q1 2024 Shipments (tons in thousands) Q2 ’24 Q1 ’24 Q2 ’23 Prior Qtr. Prior Year Tubular 214 208 239 3% -10% Joist & Deck 185 180 249 3% -26% • Higher shipments Rebar Fabrication 265 238 332 11% -20% • Lower realized pricing & higher material Piling 158 98 113 61% 40% costs Cold finished 96 99 112 -3% -14% Other 156 142 148 10% 5% Total Shipments 1,074 965 1,193 11% -10% 1 EBT ($ in millions) $441 $512 $1,011 -14% -56% 1 EBT /Ton ($) $411 $531 $847 -23% -52% 1 EBT refers to Earnings (loss) before income taxes and noncontrolling interests as disclosed 19 in relevant Nucor quarterly earnings news release"
+    },
+    {
+      "type": "TextElement",
+      "text": "SEGMENT RESULTS: RAW MATERIALS RAW MATERIALS % Change Versus Q2 2024 vs. Q1 2024 Production (tons in thousands) Q2 ’24 Q1 ’24 Q2 ’23 Prior Qtr. Prior Year DRI 987 1,066 1,028 -7% -4% • Lower production and average pricing Scrap Processing 1,037 1,049 1,075 -1% -4% per ton 1 Total Production 2,024 2,115 2,103 -4% -4% • Lower operating expenses 2 EBT ($ in millions) $40 $10 $138 300% -71% 1 Total production excluding scrap brokerage activities. 2 EBT refers to Earnings (loss) before income taxes and noncontrolling interests as disclosed in relevant 20 Nucor quarterly earnings news release"
+    },
+    {
+      "type": "TitleElement",
+      "text": "QUARTERLY SALES AND EARNINGS DATA EARNINGS SALES TONS (THOUSANDS) TO OUTSIDE CUSTOMERS (LOSS) BEFORE STEEL STEEL PRODUCTS INCOME TAXES COMP. SALES OTHER TOTAL PRICE TOTAL STEEL STEEL COLD REBAR TUBULAR STEEL STEEL RAW TOTAL NET SALES PER $ PER YEAR SHEET BARS STRUCTURAL PLATE STEEL JOISTS DECK FINISH FAB PILING PRODS PRODS PRODS MATLS TONS ($ 000’S) TON ($) ($ 000’S) TON 2024 Q1 2,517 1,344 431 384 4,676 99 81 99 238 98 208 142 965 583 6,224 $8,137,083 $1,307 $1,111,220 $188 Q2 2,318 1,445 407 417 4,617 103 82 96 265 158 214 156 1,074 598 6,289 $8,077,172 $1,284 $831,237 $139 Q3 Q4 YEAR 2023 Q1 2,384 1,550 440 430 4,804 135 99 117 279 101 275 135 1,141 498 6,443 $8,709,980 $1,352 $1,501,697 $244 Q2 2,404 1,481 399 490 4,774 142 107 112 332 113 239 148 1,193 621 6,588 $9,523,256 $1,446 $1,924,061 $306 Q3 2,305 1,408 439 426 4,578 127 104 103 307 117 223 160 1,141 521 6,240 $8,775,734 $1,406 $1,468,333 $247 Q4 2,239 1,402 414 341 4,396 106 91 96 251 102 212 153 1,011 527 5,934 $7,704,531 $1,298 $990,676 $175 YEAR 9,332 5,841 1,692 1,687 18,552 510 401 428 1,169 433 949 596 4,486 2,167 25,205 $34,713,501 $1,377 $5,884,767 $245 21"
+    },
+    {
+      "type": "TextElement",
+      "text": "QUARTERLY SALES PRICES & SCRAP COST STEEL MILLS AVERAGE SCRAP AND SCRAP AVG TOTAL SUBSTITUTE COST EXTERNAL STEEL TOTAL SALES PRICE STRUCTURAL SHEET BARS PLATE PRODUCTS PER GROSS PER NET STEEL PER NET TON TON USED TON USED 2024 2024 st st 1 Quarter $1,079 $993 $1,417 $1,334 $1,108 $2,608 $421 $376 1 Quarter nd nd 2 Quarter $1,015 $942 $1,374 $1,301 $1,051 $2,517 2 Quarter $396 $354 First Half $1,048 $967 $1,396 $1,317 $1,079 $2,560 First Half $409 $365 rd 3 Quarter rd 3 Quarter Nine Months Nine Months th th 4 Quarter 4 Quarter YEAR YEAR 2023 2023 st st 1 Quarter $876 $1,031 $1,452 $1,490 $1,035 $2,872 1 Quarter $414 $370 nd nd 2 Quarter $1,103 $1,080 $1,456 $1,506 $1,168 $2,884 2 Quarter $455 $406 $990 $1,055 $1,454 $1,499 $1,101 $2,878 $435 $388 First Half First Half rd rd 3 Quarter $1,021 $1,029 $1,429 $1,558 $1,114 $2,837 3 Quarter $415 $371 Nine Months $1,000 $1,047 $1,445 $1,517 $1,105 $2,865 Nine Months $429 $383 th th 4 Quarter $914 $961 $1,407 $1,407 $1,015 $2,776 4 Quarter $397 $354 YEAR $979 $1,026 $1,436 $1,495 $1,084 $2,845 YEAR $421 $376 22"
+    },
+    {
+      "type": "TextElement",
+      "text": "RECONCILIATION OF GAAP TO NON-GAAP MEASURE - EBITDA $ in millions 2020 2021 2022 2023 YTD ‘23 YTD ‘24 LTM Net earnings before non-controlling $836 $7,122 $8,080 $4,913 $2,819 $1,671 $3,765 interests Net Interest expense $153 $159 $170 ($30) $15 ($40) ($85) Income taxes -- $2,078 $2,165 $1,360 $828 $452 $984 Depreciation expense $702 $735 $827 $930 $449 $528 $1,009 Amortization expense $83 $129 $235 $238 $117 $120 $241 Losses and $614 $62 $102 -- -- -- -- impairments of assets $7,411 $4,227 $2,731 $5,915 EBITDA $2,388 $10,292 $11,579 23"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF GAAP TO NON-GAAP MEASURE – FREE CASH FLOW (FCF) $ in millions YTD YTD 2020 2021 2022 2023 LTM 2023 2024 CASH PROVIDED BY $2,697 $6,231 $10,072 $7,112 $3,128 $1,945 $5,929 OPERATING ACTIVITIES CAPITAL EXPENDITURES ($1,543) ($1,622) ($1,948) ($2,214) ($1,057) ($1,471) ($2,628) FREE CASH FLOW $1,154 $4,609 $8,124 $4,898 $2,071 $474 $3,301 24"
+    },
+    {
+      "type": "TextElement",
+      "text": "INDUSTRY LEADING GHG INTENSITY 2023 GHG INTENSITY COMPARISON 1 1 Overall Global and BF-BOF Global Scope 1, 2 and 3 Intensities are based on Worldsteel Association’s latest sustainability indicator report. 25"
+    },
+    {
+      "type": "TextElement",
+      "text": "2023 SUSTAINABILITY REPORT HIGHLIGHTS th • 5 consecutive year of improved safety, with 0.71 injury & illness rate – 25% lower than prior year SAFETY & • 28 Nucor divisions had zero recordable injuries in 2023 TEAMMATES • An employer of choice with a + 90% retention rate • 93% of teammates feel a sense of pride in their work • Committed to meaningful GHG emissions reduction toward net zero in 2050 - consistent with IEA decarbonization pathway for the steel sector • Supporting U.S. transition to clean power ENERGY & GHG • Investing in Nuclear REDUCTION GOALS • Sourcing incremental renewable power through PPAs • Working to implement on-site renewable power generation and storage • Investing in CCS and novel, low or no GHG iron-making technologies • Eight-member Board of Directors: seven independent, three women (two of whom are minority women) GOVERNANCE • Our CEO and our entire executive team are fully engaged in Nucor’s progress toward achieving our sustainability goals and initiatives 26"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "News Release",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net earnings attributable to Nucor stockholders of $645.2 million, or $2.68 per diluted share."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net sales of $8.08 billion."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net earnings before noncontrolling interests of $712.1 million; EBITDA of $1.23 billion."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        10,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "",
+          "",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          ""
+        ],
+        [
+          "",
+          "",
+          "June 29, 2024",
+          "June 29, 2024",
+          "",
+          "",
+          "July 1, 2023",
+          "July 1, 2023",
+          "",
+          "",
+          "June 29, 2024",
+          "June 29, 2024",
+          "",
+          "",
+          "July 1, 2023",
+          "July 1, 2023",
+          ""
+        ],
+        [
+          "Steel mills",
+          "",
+          "$",
+          "645315",
+          "",
+          "",
+          "$",
+          "1403547",
+          "",
+          "",
+          "$",
+          "1747566",
+          "",
+          "",
+          "$",
+          "2241935",
+          ""
+        ],
+        [
+          "Steel products",
+          "",
+          "",
+          "441391",
+          "",
+          "",
+          "",
+          "1010789",
+          "",
+          "",
+          "",
+          "952950",
+          "",
+          "",
+          "",
+          "1981591",
+          ""
+        ],
+        [
+          "Raw materials",
+          "",
+          "",
+          "39396",
+          "",
+          "",
+          "",
+          "138411",
+          "",
+          "",
+          "",
+          "48977",
+          "",
+          "",
+          "",
+          "196551",
+          ""
+        ],
+        [
+          "Corporate/eliminations",
+          "",
+          "",
+          "(227,939",
+          ")",
+          "",
+          "",
+          "(502,965",
+          ")",
+          "",
+          "",
+          "(625,989",
+          ")",
+          "",
+          "",
+          "(773,511",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "$",
+          "898163",
+          "",
+          "",
+          "$",
+          "2049782",
+          "",
+          "",
+          "$",
+          "2123504",
+          "",
+          "",
+          "$",
+          "3646566",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "News Release",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "News Release",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "News Release",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "News Release",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "News Release",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        25,
+        25
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "Three Months (13 Weeks) Ended",
+          "",
+          "",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          "Six Months (26 Weeks) Ended",
+          ""
+        ],
+        [
+          "",
+          "",
+          "June 29, 2024",
+          "June 29, 2024",
+          "",
+          "",
+          "July 1, 2023",
+          "July 1, 2023",
+          "",
+          "",
+          "Percent Change",
+          "Percent Change",
+          "",
+          "",
+          "June 29, 2024",
+          "June 29, 2024",
+          "",
+          "",
+          "July 1, 2023",
+          "July 1, 2023",
+          "",
+          "",
+          "Percent Change",
+          "Percent Change",
+          ""
+        ],
+        [
+          "Steel mills total shipments:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sheet",
+          "",
+          "",
+          "2869",
+          "",
+          "",
+          "",
+          "2786",
+          "",
+          "",
+          "",
+          "3",
+          "%",
+          "",
+          "",
+          "5843",
+          "",
+          "",
+          "",
+          "5605",
+          "",
+          "",
+          "",
+          "4",
+          "%"
+        ],
+        [
+          "Bars",
+          "",
+          "",
+          "2005",
+          "",
+          "",
+          "",
+          "2122",
+          "",
+          "",
+          "",
+          "-6",
+          "%",
+          "",
+          "",
+          "3917",
+          "",
+          "",
+          "",
+          "4291",
+          "",
+          "",
+          "",
+          "-9",
+          "%"
+        ],
+        [
+          "Structural",
+          "",
+          "",
+          "512",
+          "",
+          "",
+          "",
+          "505",
+          "",
+          "",
+          "",
+          "1",
+          "%",
+          "",
+          "",
+          "1062",
+          "",
+          "",
+          "",
+          "1041",
+          "",
+          "",
+          "",
+          "2",
+          "%"
+        ],
+        [
+          "Plate",
+          "",
+          "",
+          "448",
+          "",
+          "",
+          "",
+          "520",
+          "",
+          "",
+          "",
+          "-14",
+          "%",
+          "",
+          "",
+          "860",
+          "",
+          "",
+          "",
+          "974",
+          "",
+          "",
+          "",
+          "-12",
+          "%"
+        ],
+        [
+          "Other",
+          "",
+          "",
+          "33",
+          "",
+          "",
+          "",
+          "46",
+          "",
+          "",
+          "",
+          "-28",
+          "%",
+          "",
+          "",
+          "75",
+          "",
+          "",
+          "",
+          "103",
+          "",
+          "",
+          "",
+          "-27",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "5867",
+          "",
+          "",
+          "",
+          "5979",
+          "",
+          "",
+          "",
+          "-2",
+          "%",
+          "",
+          "",
+          "11757",
+          "",
+          "",
+          "",
+          "12014",
+          "",
+          "",
+          "",
+          "-2",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sales tons to outside customers:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Steel mills",
+          "",
+          "",
+          "4617",
+          "",
+          "",
+          "",
+          "4774",
+          "",
+          "",
+          "",
+          "-3",
+          "%",
+          "",
+          "",
+          "9293",
+          "",
+          "",
+          "",
+          "9578",
+          "",
+          "",
+          "",
+          "-3",
+          "%"
+        ],
+        [
+          "Joist",
+          "",
+          "",
+          "103",
+          "",
+          "",
+          "",
+          "142",
+          "",
+          "",
+          "",
+          "-27",
+          "%",
+          "",
+          "",
+          "202",
+          "",
+          "",
+          "",
+          "277",
+          "",
+          "",
+          "",
+          "-27",
+          "%"
+        ],
+        [
+          "Deck",
+          "",
+          "",
+          "82",
+          "",
+          "",
+          "",
+          "107",
+          "",
+          "",
+          "",
+          "-23",
+          "%",
+          "",
+          "",
+          "163",
+          "",
+          "",
+          "",
+          "206",
+          "",
+          "",
+          "",
+          "-21",
+          "%"
+        ],
+        [
+          "Cold finished",
+          "",
+          "",
+          "96",
+          "",
+          "",
+          "",
+          "112",
+          "",
+          "",
+          "",
+          "-14",
+          "%",
+          "",
+          "",
+          "195",
+          "",
+          "",
+          "",
+          "229",
+          "",
+          "",
+          "",
+          "-15",
+          "%"
+        ],
+        [
+          "Rebar fabrication products",
+          "",
+          "",
+          "265",
+          "",
+          "",
+          "",
+          "332",
+          "",
+          "",
+          "",
+          "-20",
+          "%",
+          "",
+          "",
+          "503",
+          "",
+          "",
+          "",
+          "611",
+          "",
+          "",
+          "",
+          "-18",
+          "%"
+        ],
+        [
+          "Piling",
+          "",
+          "",
+          "158",
+          "",
+          "",
+          "",
+          "113",
+          "",
+          "",
+          "",
+          "40",
+          "%",
+          "",
+          "",
+          "256",
+          "",
+          "",
+          "",
+          "214",
+          "",
+          "",
+          "",
+          "20",
+          "%"
+        ],
+        [
+          "Tubular products",
+          "",
+          "",
+          "214",
+          "",
+          "",
+          "",
+          "239",
+          "",
+          "",
+          "",
+          "-10",
+          "%",
+          "",
+          "",
+          "422",
+          "",
+          "",
+          "",
+          "514",
+          "",
+          "",
+          "",
+          "-18",
+          "%"
+        ],
+        [
+          "Other steel products",
+          "",
+          "",
+          "156",
+          "",
+          "",
+          "",
+          "148",
+          "",
+          "",
+          "",
+          "5",
+          "%",
+          "",
+          "",
+          "298",
+          "",
+          "",
+          "",
+          "283",
+          "",
+          "",
+          "",
+          "5",
+          "%"
+        ],
+        [
+          "Raw materials",
+          "",
+          "",
+          "598",
+          "",
+          "",
+          "",
+          "621",
+          "",
+          "",
+          "",
+          "-4",
+          "%",
+          "",
+          "",
+          "1181",
+          "",
+          "",
+          "",
+          "1119",
+          "",
+          "",
+          "",
+          "6",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "6289",
+          "",
+          "",
+          "",
+          "6588",
+          "",
+          "",
+          "",
+          "-5",
+          "%",
+          "",
+          "",
+          "12513",
+          "",
+          "",
+          "",
+          "13031",
+          "",
+          "",
+          "",
+          "-4",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "News Release",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 8080.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net sales of $8.08 billion"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-23",
+    "entry_open": "160.500000",
+    "return_10d_pct": "-5.8878",
+    "return_20d_pct": "-11.9315",
+    "return_30d_pct": "-8.8972",
+    "return_60d_pct": "-8.4112",
+    "return_90d_pct": "-2.7352"
+  },
+  "text_stats": {
+    "primary_text_len": 3895,
+    "exhibit_text_len": 45596,
+    "combined_text_len": 49493,
+    "semantic_text_len": 45589,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

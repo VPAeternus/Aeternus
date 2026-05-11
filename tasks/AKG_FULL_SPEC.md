@@ -692,7 +692,7 @@ python -m pytest tests/ -v --ignore=tests/test_cli_dealflow.py --ignore=tests/te
                     │   → skip API fetch if cached < 90 days   │
                     │                                          │
                     │ 8 parallel connectors → score → rank     │
-                    │ → research queue → analysis → portfolio  │
+                    │ → fundamental review list → analysis → portfolio  │
                     └──────────────┬──────────────────────────┘
                                    │ writes back after analysis
                                    ▼

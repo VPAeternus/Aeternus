@@ -1,0 +1,1712 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TROX",
+    "cik": "1530804",
+    "event_date": "2024-08-02",
+    "event_accession": "0001140361-24-035449",
+    "primary_8k_doc": "ef20033493_8k.htm",
+    "exhibit_docs": [
+      "ef20033493_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TROX_000114036124035449_ef20033493_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TROX_000114036124035449_ef20033493_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TROX",
+    "cik": "1530804",
+    "entity_name": "TRONOX HOLDINGS PLC",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "708000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "23000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6134000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "120000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-91000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-79000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.032486",
+    "operating_cash_flow_to_revenue": "-0.111582",
+    "assets_to_revenue": "8.663842",
+    "financing_cash_flow_to_revenue": "0.169492",
+    "investing_cash_flow_to_revenue": "-0.128531"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $820 million, an increase of 3% primarily driven by higher TiO2 volumes, partially offset by lower pricing.",
+      "sales was $653 million, an increase of 7% driven by an 16% increase in volumes, partially offset by a 8% decrease in average selling prices including mix, and a 1% decrease due to exchange rates.",
+      "sales increased 8%, driven by an 8% increase in sales volumes, while price increases were partially offset by mix.",
+      "revenue decreased 11% to $85 million, driven by a 15% decrease in average selling prices, partially offset by a 4% increase in volumes.",
+      "revenue decreased 3%, driven by a 4% decrease in volumes, partially offset by a 1% increase in average selling prices including mix.",
+      "net income of $10 million; adjusted net income was $12 million (non-GAAP) • GAAP diluted earnings per share of $0."
+    ],
+    "guidance_evidence": [
+      "guidance of $160-180 million, and an Adjusted EBITDA margin of 19.",
+      "outlook is based on Tronox's views on current global economic activity and is subject to changes and impacts associated with the macroeconomic conditions, global supply chain, and inflation-related challenges, among others.",
+      "Outlook Chief Executive Officer John D.",
+      "guidance and demonstrated the continued recovery across both TiO2 and zircon.",
+      "guidance ranges for the fourth quarter at this time, based on our current forecast and improved utilization rates, we expect our second half Adjusted EBITDA will be stronger than the first half.",
+      "guidance prepared and presented in accordance with U."
+    ],
+    "wave_or_demand_evidence": [
+      "demand increase across all regions, consistent with seasonal trends.",
+      "demand remained relatively stable compared to the first quarter.",
+      "demand to remain relatively stable, with third quarter volumes in-line with second quarter levels (an increase of ~160% compared to Q3 2023).",
+      "customers' advantage and co-products that contribute significant value to our portfolio.",
+      "customer's needs.",
+      "demand for our end-use products; disruptions in production at our mining and manufacturing facilities; and other financial, economic, competitive, environmental, political, legal and regulatory factors."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertain, out of the Company's control or cannot be reasonably predicted.",
+      "Loss) $ 10 $ (269 ) n/ m $ (9 ) n/ m Net Income (Loss) attributable to Tronox $ 16 $ (269 ) n/ m $ (9 ) n/ m GAAP diluted earnings (loss) per share $ 0.",
+      "loss) per share $ 0.",
+      "decline in-line with normal seasonal patterns by approximately 2-4% compared to the second quarter (an increase in the high-teens range compared to Q3 2023).",
+      "decrease in average selling prices including mix, and a 1% decrease due to exchange rates.",
+      "decreased 11% to $85 million, driven by a 15% decrease in average selling prices, partially offset by a 4% increase in volumes."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ef20033493_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: Summit Financial Document created using Broadridge PROfile 24.6.2.5244 Copyright 1995 - 2024 Broadridge PROfilePageNumberReset%Num%1%% | Page%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Tronox Reports Second Quarter 2024 Financial Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Delivered results within previously guided ranges"
+    },
+    {
+      "type": "TextElement",
+      "text": "STAMFORD, Conn., August 1, 2024/PRNewswire/ — Tronox Holdings plc (NYSE:TROX) (“Tronox” or the “Company”), the world’s leading integrated manufacturer of titanium dioxide (\"TiO2\") pigment, today reported its financial results for the quarter ending June 30, 2024, as follows:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second Quarter 2024 Financial Highlights: • Produced revenue of $820 million, a 6% increase compared to the prior quarter, or a 3% increase compared to the prior year • Generated income from operations of $76 million, and net income of $10 million; adjusted net income was $12 million (non-GAAP) • GAAP diluted earnings per share of $0.10; Adjusted diluted earnings per share was $0.07 (non-GAAP) • Delivered Adjusted EBITDA of $161 million, within previously issued guidance of $160-180 million, and an Adjusted EBITDA margin of 19.6% (non-GAAP) • Invested $76 million in capital expenditures in the quarter • Generated $84 million in free cash flow in the quarter (non-GAAP) Q3 2024 Outlook: • TiO2 volumes expected to decline approximately 2-4% compared to Q2 2024 (an increase in the high-teens range compared to Q3 2023) • Zircon volumes expected to be relatively flat compared to Q2 2024 (an increase of ~160% compared to Q3 2023) • Adjusted EBITDA expected to be $145-165 million and Adjusted EBITDA margin to be in the high-teens"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "This outlook is based on Tronox's views on current global economic activity and is subject to changes and impacts associated with the macroeconomic conditions, global supply chain, and inflation-related challenges, among others."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "------"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "Note: For the Company's guidance with respect to third quarter 2024 non-GAAP measures, we are not able to provide without unreasonable effort the most directly comparable GAAP financial measure, or reconciliation to such GAAP financial measure, because certain items that impact such measures are uncertain, out of the Company's control or cannot be reasonably predicted."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1 | Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Summary of Select Financial Results for the Quarter Ending June 30, 2024"
+    },
+    {
+      "type": "TableElement",
+      "text": "($M unless otherwise noted) Q2 2024 Q2 2023 Y-o-Y%∆ Q1 2024 Q-o-Q%∆ Revenue $ 820 $ 794 3 % $ 774 6 % TiO2 $ 653 $ 611 7 % $ 605 8 % Zircon $ 85 $ 95 (11 ) % $ 88 (3 %) Other products $ 82 $ 88 (7 ) % $ 81 1 % Income from operations $ 76 $ 84 (10 ) % $ 41 85 % Net Income (Loss) $ 10 $ (269 ) n/ m $ (9 ) n/ m Net Income (Loss) attributable to Tronox $ 16 $ (269 ) n/ m $ (9 ) n/ m GAAP diluted earnings (loss) per share $ 0.10 $ (1.72 ) n/ m $ (0.06 ) n/ m Adjusted diluted earnings (loss) per share $ 0.07 $ 0.16 (56 ) % $ (0.05 ) n/ m Adjusted EBITDA $ 161 $ 168 (4 ) % $ 131 23 % Adjusted EBITDA Margin % 19.6 % 21.2 % (160) bps 16.9 % 270 bps Free cash flow $ 84 $ 81 4 % $ (105 ) n/ m"
+    },
+    {
+      "type": "TableElement",
+      "text": "Y-o-Y % ∆ Q-o-Q % ∆ Volume Price / Mix FX Volume Price / Mix FX TiO2 16 % (8 )% (1 )% 8 % 0 % 0 % Zircon 4 % (15 )% — (4 )% 1 % —"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CEO's Remarks and Outlook"
+    },
+    {
+      "type": "TextElement",
+      "text": "Chief Executive Officer John D. Romano commented, “Tronox’s second quarter performance was consistent with our previous guidance and demonstrated the continued recovery across both TiO2 and zircon. Our TiO2 volumes increased 8% compared to the first quarter, or 16% compared to the prior year quarter, as we continued to see demand increase across all regions, consistent with seasonal trends. Zircon demand remained relatively stable compared to the first quarter. Pricing for both TiO2 and zircon increased from the first quarter into the second, as expected, partially offset by unfavorable mix. We generated $84 million in free cash flow in the quarter and returned $41 million to shareholders in the form of dividends.“On the operations side, our average pigment plant utilization rate in the second quarter was lower than targeted, driven by short-term challenges relating to ramping up our assets. As a result, we incurred higher costs in the second quarter than anticipated and delivered Adjusted EBITDA at the lower end of our guided range. While this will impact the margins of pigment sold in the third quarter, the operating challenges we experienced during the ramp up in the second quarter are resolved, and our average pigment plant utilization rate for July was in the range of 80%.\"Mr. Romano added, “While the macro backdrop for the second half of 2024 is expected to be less robust than previously anticipated, Tronox has realized and expects to continue to realize considerable growth compared to 2023. For the third quarter, we expect TiO2 volumes to decline in-line with normal seasonal patterns by approximately 2-4% compared to the second quarter (an increase in the high-teens range compared to Q3 2023). We expect zircon demand to remain relatively stable, with third quarter volumes in-line with second quarter levels (an increase of ~160% compared to Q3 2023). As previously referenced, the higher cost pigment tons manufactured in the second quarter will result in lower profitability as they are sold in the third quarter. As a result, we expect third quarter Adjusted EBITDA to be between $145-165 million and our Adjusted EBITDA margin to be in the high-teens. Furthermore, although we will not be providing any specific guidance ranges for the fourth quarter at this time, based on our current forecast and improved utilization rates, we expect our second half Adjusted EBITDA will be stronger than the first half.”Mr. Romano concluded, “Our team is highly focused on ensuring we deliver on our commitments to our stakeholders. Our vertically integrated business model serves as a differentiator for Tronox by providing security of supply from a global footprint that we can leverage to our customers' advantage and co-products that contribute significant value to our portfolio. We are now running our pigment plants in the range of 80% utilization rates, and we expect to continue running at this rate through the second half of the year. This will result in an improvement in pigment manufacturing costs and a step up in earnings power in the fourth quarter. Our results would not be possible without the ongoing efforts of our Tronox team. I would like to take this opportunity to thank the Tronox team for their dedication to operating safely and their steadfast commitment to fulfilling our customer's needs.\""
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2 | Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3 | Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second Quarter 2024 Results"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Comparisons are to prior year (Q2 2024 vs. Q2 2023) unless otherwise noted)"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company recorded second quarter revenue of $820 million, an increase of 3% primarily driven by higher TiO2 volumes, partially offset by lower pricing.Revenue from TiO2 sales was $653 million, an increase of 7% driven by an 16% increase in volumes, partially offset by a 8% decrease in average selling prices including mix, and a 1% decrease due to exchange rates. Sequentially, TiO2 sales increased 8%, driven by an 8% increase in sales volumes, while price increases were partially offset by mix.Zircon revenue decreased 11% to $85 million, driven by a 15% decrease in average selling prices, partially offset by a 4% increase in volumes. Sequentially, zircon revenue decreased 3%, driven by a 4% decrease in volumes, partially offset by a 1% increase in average selling prices including mix.Revenue from other products was $82 million, a decline of 7% year-over-year primarily due to decreases in pig iron sales volumes and average selling prices. Sequentially, revenue from other products increased 1% primarily due to increased volumes across various products.Net income attributable to Tronox in the quarter was $16 million, or $0.10 per diluted share, compared to net loss attributable to Tronox of $269 million, or a loss of $1.72 per diluted share in the year-ago period. Adjusted net income attributable to Tronox (non-GAAP) was $12 million, or $0.07 per diluted share.Adjusted EBITDA of $161 million represented a 4% decrease, driven primarily by headwinds from average selling prices and mix impacts, partially offset by tailwinds from improved production costs, higher sales volumes, and favorable freight costs and exchange rates. Adjusted EBITDA margin was 19.6%.Sequentially, Adjusted EBITDA increased 23% due to improved production costs, higher TiO2 sales volumes and average selling prices, partially offset by headwinds from exchange rates.The Company's selling, general and administrative expenses were $74 million for the quarter, an increase of 1%. Tronox's net interest expense in the quarter was $40 million. Depreciation, depletion and amortization expense was $72 million."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4 | Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Balance Sheet, Cash Flow and Capital Allocation"
+    },
+    {
+      "type": "TextElement",
+      "text": "Tronox ended the quarter with $2.8 billion of total debt, $2.6 billion of net debt and a net leverage ratio of 5.2x on a trailing twelve-month basis. Available liquidity at the end of the quarter totaled $680 million, including $201 million in cash and cash equivalents and $479 million available under our revolving credit agreements. There are no significant debt maturities until 2028 and no financial covenants on the Company's term loans or bonds.Free cash flow for the quarter was $84 million. Capital expenditures were $76 million, including investments in the Company's key capital projects to extend existing mines reaching their end of life and sustain the Company's vertical integration benefit. The Company returned $41 million to shareholders in the form of dividends in the quarter, reflecting payments for both first and second quarter declared dividends."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Sustainability"
+    },
+    {
+      "type": "TextElement",
+      "text": "This week, Tronox published its 2023 sustainability report reinforcing previously established sustainability targets including: path to carbon neutrality by 2050 with scope 1 and 2 carbon intensity reduction targets of 50% by 2030 against a 2019 baseline and net zero by 2050; scope 3 emissions targets to decrease carbon emissions intensity by 9% by 2025 and 16% by 2030 against a 2021 baseline; and recommitting to eliminating waste to external landfills by 2050. The Company reduced its 2025 scope 1 and 2 target to 25% (from 35%) to align with the latest anticipated timing of its second renewable project in South Africa, now expected to come online by 2027. The report includes facts, figures and case studies that illustrate our ongoing commitment to sustainability and the strategic initiatives that will allow us to maintain our privilege to operate. Please visit our website and download our 2023 sustainability report to learn more about these initiatives and more underway at Tronox."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5 | Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Webcast Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "Tronox will conduct a webcast conference call on Friday, August 2, 2024, at 10:00 AM ET (New York). The live call is open to the public via internet broadcast and telephone."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Internet Broadcast: http://investor.tronox.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Dial-in Telephone Numbers:"
+    },
+    {
+      "type": "TextElement",
+      "text": "United States: +1 (800) 549-8228International: +44 80 0279 7040Conference ID: 81362Conference Call Presentation Slides will be used during the conference call and made available on our website: http://investor.tronox.comConference Call Replay: Available via the internet and telephone beginning on August 2, 2024, by 1:00 PM ET, until August 7, 2024, 11:59 PM ET."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Internet Replay: http://investor.tronox.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Replay Dial-in Telephone Numbers:"
+    },
+    {
+      "type": "TextElement",
+      "text": "US Toll Free: +1 (888) 660-6264International: +44 20 8609 4320 Replay Access Code: 81362 #"
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Tronox"
+    },
+    {
+      "type": "TextElement",
+      "text": "Tronox Holdings plc is one of the world's leading producers of high-quality titanium products, including titanium dioxide pigment, specialty-grade titanium dioxide products and high-purity titanium chemicals, and zircon. We mine titanium-bearing mineral sands and operate upgrading facilities that produce high-grade titanium feedstock materials, pig iron and other minerals, including the rare earth-bearing mineral, monazite. With approximately 6,500 employees across six continents, our rich diversity, unmatched vertical integration model, and unparalleled operational and technical expertise across the value chain, position Tronox as the preeminent titanium dioxide producer in the world. For more information about how our products add brightness and durability to paints, plastics, paper and other everyday products, visit tronox.com."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6 | Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Cautionary Statement about Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "Statements in this release that are not historical are forward-looking statements within the meaning of the U.S. Private Securities Litigation Reform Act of 1995. These forward-looking statements, which are subject to known and unknown risks, uncertainties and assumptions about us, may include projections of our future financial and operational performance, anticipated completion of extensions and upgrades to our mining operations, anticipated trends in our business and industry, anticipated costs, benefits and timing of capital projects including planned mining expansions, the Company's anticipated capital allocation strategy including future capital expenditures, and our sustainability goals, commitments and programs. These statements are only predictions based on our current expectations and projections about future events. There are important factors that could cause our actual results, level of activity, performance, actual costs, benefits and timing of capital projects, or achievements to differ materially from the results, level of activity, performance, anticipated costs, benefits and timing of capital projects, or achievements expressed or implied by the forward-looking statements. Significant risks and uncertainties may relate to, but are not limited to, macroeconomic conditions; inflationary pressures and energy costs; currency movements; political instability, including the ongoing conflicts in Eastern Europe and the Middle East and any expansion of such conflicts, and other geopolitical events; supply chain disruptions; market conditions and price volatility for titanium dioxide, zircon and other feedstock materials, as well as global and regional economic downturns, that adversely affect the demand for our end-use products; disruptions in production at our mining and manufacturing facilities; and other financial, economic, competitive, environmental, political, legal and regulatory factors. These and other risk factors are discussed in the Company's filings with the Securities and Exchange Commission.Moreover, we operate in a very competitive and rapidly changing environment. New risks and uncertainties emerge from time to time, and it is not possible for our management to predict all risks and uncertainties, nor can management assess the impact of all factors on our business or the extent to which any factor, or combination of factors, may cause actual results to differ materially from those contained in any forward-looking statements. Although we believe the expectations reflected in the forward-looking statements are reasonable, we cannot guarantee future results, level of activity, performance, synergies or achievements. Neither we nor any other person assumes responsibility for the accuracy or completeness of any of these forward-looking statements. You should not rely upon forward-looking statements as predictions of future events. Unless otherwise required by applicable laws, we undertake no obligation to update or revise any forward-looking statements, whether because of new information or future developments."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7 | Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Use of Non-GAAP Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "To provide investors and others with additional information regarding the financial results of Tronox Holdings plc, we have disclosed in this release certain non-U.S. GAAP operating performance measures of EBITDA, Adjusted EBITDA, Adjusted EBITDA margin and Adjusted net income attributable to Tronox, including its presentation on a per share basis, a non-U.S. GAAP liquidity measure of Free Cash Flow and net leverage ratio on a trailing twelve-month basis. These non-U.S. GAAP financial measures are a supplement to and not a substitute for or superior to, the Company's results presented in accordance with U.S. GAAP. The non-U.S. GAAP financial measures presented by the Company may be different from non-U.S. GAAP financial measures presented by other companies. Specifically, the Company believes the non-U.S. GAAP information provides useful measures to investors regarding the Company's financial performance by excluding certain costs and expenses that the Company believes are not indicative of its core operating results. The presentation of these non-U.S. GAAP financial measures is not meant to be considered in isolation or as a substitute for results or guidance prepared and presented in accordance with U.S. GAAP. A reconciliation of the non-U.S. GAAP financial measures to U.S. GAAP results is included herein.Media & Investor Contact: Jennifer Guenther +1.646.960.6598"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8 | Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TRONOX HOLDINGS PLC"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (U.S. GAAP)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Millions of U.S. dollars, except share and per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Net sales $ 820 $ 794 $ 1,594 $ 1,502 Cost of goods sold 670 637 1,324 1,212 Gross profit 150 157 270 290 Selling, general and administrative expenses 74 73 153 144 Income from operations 76 84 117 146 Interest expense (42 ) (38 ) (84 ) (71 ) Interest income 2 3 6 6 Other income, net 19 4 18 6 Income before income taxes 55 53 57 87 Income tax provision (45 ) (322 ) (56 ) (331 ) Net income (loss) 10 (269 ) 1 (244 ) Net (loss) income attributable to noncontrolling interest (6 ) — (6 ) 2 Net income (loss) attributable to Tronox Holdings plc $ 16 $ (269 ) $ 7 $ (246 ) Earnings (loss) per share: Basic $ 0.10 $ (1.72 ) $ 0.04 $ (1.58 ) Diluted $ 0.10 $ (1.72 ) $ 0.04 $ (1.58 ) Weighted average shares outstanding, basic (in thousands) 158,117 156,780 157,730 155,986 Weighted average shares outstanding, diluted (in thousands) 159,288 156,780 158,902 155,986 Other Operating Data: Capital expenditures 76 55 152 148 Depreciation, depletion and amortization expense 72 68 144 139"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TRONOX HOLDINGS PLC"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NON-U.S. GAAP FINANCIAL MEASURES"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Millions of U.S. dollars, except share and per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NET INCOME (LOSS) ATTRIBUTABLE TO TRONOX HOLDINGS PLC (U.S. GAAP)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "TO ADJUSTED NET INCOME ATTRIBUTABLE TO TRONOX HOLDINGS PLC (NON-U.S. GAAP)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Net income (loss) attributable to Tronox Holdings plc (U.S. GAAP) $ 16 $ (269 ) $ 7 $ (246 ) Sale of royalty interest (a) (21 ) — (21 ) — Tax valuation allowance (b) 16 293 16 293 Other (c) 1 — 2 1 Adjusted net income attributable to Tronox Holdings plc (non-U.S. GAAP) (1) $ 12 $ 24 $ 4 $ 48 Diluted net income (loss) per share (U.S. GAAP) $ 0.10 $ (1.72 ) $ 0.04 $ (1.58 ) Sale of royalty interest, per share (0.14 ) — (0.13 ) — Tax valuation allowance, per share 0.10 1.87 0.10 1.87 Other, per share 0.01 — 0.01 0.01 Diluted adjusted net income per share attributable to Tronox Holdings plc (non-U.S. GAAP) (2) $ 0.07 $ 0.16 $ 0.02 $ 0.31 Weighted average shares outstanding, diluted (in thousands) 159,288 157,159 158,902 157,059"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Only the sale of royalty interest and certain other items have been tax impacted whereas certain other items were not tax impacted as they were recorded in jurisdictions with full valuation allowances. (2) Diluted adjusted net income per share attributable to Tronox Holdings plc was calculated from exact, not rounded Adjusted net income attributable to Tronox Holdings plc and share information. (a) Represents the sale of a royalty interest in certain Canadian mineral properties, net of associated transaction costs included in \"Other income, net\" in the unaudited Condensed Consolidated Statements of Operations. (b) 2024 amount represents the establishment of a full valuation allowance against the deferred tax assets within our Brazilian jurisdiction. 2023 amount represents the establishment of a full valuation allowance against the deferred tax assets within our Australian jurisdiction. (c) Represents other activity not representative of the ongoing operations of the Company."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TRONOX HOLDINGS PLC"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Millions of U.S. dollars, except share and per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 December 31, 2023 ASSETS Current Assets Cash and cash equivalents $ 201 $ 273 Accounts receivable (net of allowance for credit losses of $5 million and $3 million as of June 30, 2024 and December 31, 2023, respectively) 382 290 Inventories, net 1,424 1,421 Prepaid and other assets 210 141 Income taxes receivable 9 10 Total current assets 2,226 2,135 Noncurrent Assets Property, plant and equipment, net 1,841 1,835 Mineral leaseholds, net 639 654 Intangible assets, net 246 243 Lease right of use assets, net 130 132 Deferred tax assets 888 917 Other long-term assets 126 218 Total assets $ 6,096 $ 6,134 LIABILITIES AND EQUITY Current Liabilities Accounts payable $ 457 $ 461 Accrued liabilities 243 230 Short-term lease liabilities 20 24 Short-term debt — 11 Long-term debt due within one year 26 27 Total current liabilities 746 753 Noncurrent Liabilities Long-term debt, net 2,781 2,786 Pension and postretirement healthcare benefits 101 104 Asset retirement obligations 182 172 Environmental liabilities 47 48 Long-term lease liabilities 103 103 Deferred tax liabilities 171 149 Other long-term liabilities 34 39 Total liabilities 4,165 4,154 Commitments and Contingencies Shareholders’ Equity Tronox Holdings plc ordinary shares, par value $0.01 — 157,912,468 shares issued and outstanding at June 30, 2024 and 156,793,755 shares issued and outstanding at December 31, 2023 2 2 Capital in excess of par value 2,074 2,064 Retained earnings 651 684 Accumulated other comprehensive loss (829 ) (814 ) Total Tronox Holdings plc shareholders’ equity 1,898 1,936 Noncontrolling interest 33 44 Total equity 1,931 1,980 Total liabilities and equity $ 6,096 $ 6,134"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TRONOX HOLDINGS PLC"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Millions of U.S. dollars)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, 2024 2023 Cash Flows from Operating Activities: Net income (loss) $ 1 $ (244 ) Adjustments to reconcile net income (loss) to net cash provided by operating activities: Depreciation, depletion and amortization 144 139 Deferred income taxes 46 310 Share-based compensation expense 10 11 Amortization of deferred debt issuance costs and discount on debt 5 4 Other non-cash items affecting net income (loss) 13 26 Changes in assets and liabilities: Increase in accounts receivable, net of allowance for credit losses (97 ) (1 ) Decrease (increase) in inventories, net 8 (131 ) Decrease in prepaid and other assets 10 9 Increase (decrease) in accounts payable and accrued liabilities 13 (43 ) Net changes in income tax payables and receivables (2 ) (4 ) Changes in other non-current assets and liabilities (20 ) (19 ) Cash provided by operating activities 131 57 Cash Flows from Investing Activities: Capital expenditures (152 ) (148 ) Proceeds from sale of assets 16 3 Cash used in investing activities (136 ) (145 ) Cash Flows from Financing Activities: Repayments of short-term debt (11 ) (50 ) Repayments of long-term debt (9 ) (9 ) Proceeds from short-term debt - 201 Debt issuance costs (2 ) - Dividends paid (41 ) (50 ) Cash (used in) provided by financing activities (63 ) 92 Effects of exchange rate changes on cash and cash equivalents (4 ) (1 ) Net (decrease) increase in cash and cash equivalents (72 ) 3 Cash and cash equivalents at beginning of period 273 164 Cash and cash equivalents at end of period $ 201 $ 167"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TRONOX HOLDINGS PLC"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NET INCOME (LOSS) TO EBITDA AND ADJUSTED EBITDA, ADJUSTED EBITDA AS A % OF NET SALES AND NET DEBT TO TRAILING-TWELVE MONTHS ADJUSTED EBITDA (NON-U.S. GAAP)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Millions of U.S. dollars)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Net income (loss) (U.S. GAAP) $ 10 $ (269 ) 1 (244 ) Interest expense 42 38 84 71 Interest income (2 ) (3 ) (6 ) (6 ) Income tax provision 45 322 56 331 Depreciation, depletion and amortization expense 72 68 144 139 EBITDA (non-U.S. GAAP) 167 156 279 291 Share-based compensation (a) 4 5 10 11 Accretion expense and other adjustments to asset retirement obligations and environmental liabilities (b) 7 6 14 8 Accounts receivable securitization program (c) 4 3 7 5 Foreign currency remeasurement (d) 4 (5 ) 2 (6 ) Sale of royalty interest (e) (28 ) — (28 ) — Other items (f) 3 3 8 5 Adjusted EBITDA (non-U.S. GAAP) $ 161 $ 168 $ 292 $ 314"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 2023 Net sales $ 820 $ 794 Net income (loss) (U.S. GAAP) $ 10 $ (269 ) Net income (loss) (U.S. GAAP) as a % of Net sales 1.2 % (33.9 )% Adjusted EBITDA (non-U.S. GAAP) (see above) as a % of Net sales 19.6 % 21.2 %"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 December 31, 2023 Long-term debt, net $ 2,781 $ 2,786 Short-term debt — 11 Long-term debt due within one year 26 27 (Less) Cash and cash equivalents (201 ) (273 ) Net debt $ 2,606 $ 2,551 Trailing-twelve month Adjusted EBITDA (non-U.S. GAAP) $ 502 $ 524 Net debt to trailing-twelve month Adjusted EBITDA (non-U.S. GAAP) (see above) 5.2 x 4.9 x"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) Represents non-cash share-based compensation. (b) Primarily represents accretion expense and other noncash adjustments to asset retirement obligations and environmental liabilities. (c) Primarily represents expenses associated with the Company's accounts receivable securitization program which is used as a source of liquidity in the Company's overall capital structure. (d) Represents realized and unrealized gains and losses associated with foreign currency remeasurement related to third-party and intercompany receivables and liabilities denominated in a currency other than the functional currency of the entity holding them, which are included in “Other income, net” in the unaudited Condensed Consolidated Statements of Operations. (e) Represents the sale of a royalty interest in certain Canadian mineral properties, net of associated transaction costs included in \"Other income, net\" in the unaudited Condensed Consolidated Statements of Operations. (f) Includes noncash pension and postretirement costs, asset write-offs and other items included in “Selling general and administrative expenses”, “Cost of goods sold” and “Other income, net” in the unaudited Condensed Consolidated Statements of Operations."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TRONOX HOLDINGS PLC"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FREE CASH FLOW (NON-U.S. GAAP)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Millions of U.S. dollars)"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table reconciles cash used in operating activities to free cash flow for the three and six months ended June 30, 2024:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, 2024 Three Months Ended March 31, 2024 Three Months Ended June 30, 2024 Cash used in operating activities $ 131 $ (29 ) $ 160 Capital expenditures (152 ) (76 ) (76 ) Free cash flow (non-U.S. GAAP) $ (21 ) $ (105 ) $ 84"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TRONOX HOLDINGS PLC"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF TRAILING TWELVE MONTH NET (LOSS) INCOME TO EBITDA AND ADJUSTED EBITDA (NON-U.S. GAAP)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Millions of U.S. dollars)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Trailing Twelve Month Adjusted EBITDA September 30, 2023 December 31, 2023 March 31, 2024 June 30, 2024 Net (loss) income (U.S. GAAP) $ (14 ) $ (56 ) $ (9 ) $ 10 $ (69 ) Interest expense 42 45 42 42 171 Interest income (4 ) (8 ) (4 ) (2 ) (18 ) Income tax provision 8 24 11 45 88 Depreciation, depletion and amortization expense 67 69 72 72 280 EBITDA (non-U.S. GAAP) 99 74 112 167 452 Share-based compensation (a) 4 6 6 4 20 Foreign currency remeasurement (b) (1 ) 1 (2 ) 4 2 Accretion expense and other adjustments to asset retirement obligations and environmental liabilities (c) 6 8 7 7 28 Accounts receivable securitization program (d) 4 3 3 4 14 Sale of royalty interest (e) — — — (28 ) (28 ) Other items (f) 4 2 5 3 14 Adjusted EBITDA (non-U.S. GAAP) $ 116 $ 94 $ 131 $ 161 $ 502"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) Represents non-cash share-based compensation. (b) Represents realized and unrealized gains and losses associated with foreign currency remeasurement related to third-party and intercompany receivables and liabilities denominated in a currency other than the functional currency of the entity holding them, which are included in “Other income, net” in the unaudited Condensed Consolidated Statements of Operations. (c) Primarily represents accretion expense and other noncash adjustments to asset retirement obligations and environmental liabilities. (d) Primarily represents expenses associated with the Company's accounts receivable securitization program which is used as a source of liquidity in the Company's overall capital structure. (e) Represents the sale of a royalty interest in certain Canadian mineral properties, net of associated transaction costs included in \"Other income, net\" in the unaudited Condensed Consolidated Statements of Operations. (f) Includes noncash pension and postretirement costs, asset write-offs, severance expense and other items included in “Selling general and administrative expenses”, “Cost of goods sold” and “Other income, net” in the unaudited Condensed Consolidated Statements of Operations."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Produced revenue of $820 million, a 6% increase compared to the prior quarter, or a 3% increase compared to the prior year"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Generated income from operations of $76 million, and net income of $10 million; adjusted net income was $12 million (non-GAAP)"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "GAAP diluted earnings per share of $0.10; Adjusted diluted earnings per share was $0.07 (non-GAAP)"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Delivered Adjusted EBITDA of $161 million, within previously issued guidance of $160-180 million, and an Adjusted EBITDA margin of 19.6% (non-GAAP)"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Invested $76 million in capital expenditures in the quarter"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Generated $84 million in free cash flow in the quarter (non-GAAP)"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "TiO2 volumes expected to decline approximately 2-4% compared to Q2 2024 (an increase in the high-teens range compared to Q3 2023)"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Zircon volumes expected to be relatively flat compared to Q2 2024 (an increase of ~160% compared to Q3 2023)"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Adjusted EBITDA expected to be $145-165 million and Adjusted EBITDA margin to be in the high-teens"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        14,
+        22
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "rows": [
+        [
+          "($M unless otherwise noted)",
+          "",
+          "",
+          "Q2 2024",
+          "",
+          "",
+          "",
+          "Q2 2023",
+          "",
+          "",
+          "",
+          "Y-o-Y%∆",
+          "",
+          "",
+          "",
+          "",
+          "Q1 2024",
+          "",
+          "",
+          "",
+          "Q-o-Q%∆",
+          ""
+        ],
+        [
+          "Revenue",
+          "",
+          "$",
+          "820",
+          "",
+          "",
+          "$",
+          "794",
+          "",
+          "",
+          "",
+          "3",
+          "",
+          "%",
+          "",
+          "$",
+          "774",
+          "",
+          "",
+          "",
+          "6",
+          "%"
+        ],
+        [
+          "TiO2",
+          "",
+          "$",
+          "653",
+          "",
+          "",
+          "$",
+          "611",
+          "",
+          "",
+          "",
+          "7",
+          "",
+          "%",
+          "",
+          "$",
+          "605",
+          "",
+          "",
+          "",
+          "8",
+          "%"
+        ],
+        [
+          "Zircon",
+          "",
+          "$",
+          "85",
+          "",
+          "",
+          "$",
+          "95",
+          "",
+          "",
+          "",
+          "(11",
+          ")",
+          "%",
+          "",
+          "$",
+          "88",
+          "",
+          "",
+          "",
+          "(3",
+          "%)"
+        ],
+        [
+          "Other products",
+          "",
+          "$",
+          "82",
+          "",
+          "",
+          "$",
+          "88",
+          "",
+          "",
+          "",
+          "(7",
+          ")",
+          "%",
+          "",
+          "$",
+          "81",
+          "",
+          "",
+          "",
+          "1",
+          "%"
+        ],
+        [
+          "Income from operations",
+          "",
+          "$",
+          "76",
+          "",
+          "",
+          "$",
+          "84",
+          "",
+          "",
+          "",
+          "(10",
+          ")",
+          "%",
+          "",
+          "$",
+          "41",
+          "",
+          "",
+          "",
+          "85",
+          "%"
+        ],
+        [
+          "Net Income (Loss)",
+          "",
+          "$",
+          "10",
+          "",
+          "",
+          "$",
+          "(269",
+          ")",
+          "",
+          "",
+          "n/",
+          "",
+          "m",
+          "",
+          "$",
+          "(9",
+          ")",
+          "",
+          "",
+          "n/",
+          "m"
+        ],
+        [
+          "Net Income (Loss) attributable to Tronox",
+          "",
+          "$",
+          "16",
+          "",
+          "",
+          "$",
+          "(269",
+          ")",
+          "",
+          "",
+          "n/",
+          "",
+          "m",
+          "",
+          "$",
+          "(9",
+          ")",
+          "",
+          "",
+          "n/",
+          "m"
+        ],
+        [
+          "GAAP diluted earnings (loss) per share",
+          "",
+          "$",
+          "0.10",
+          "",
+          "",
+          "$",
+          "(1.72",
+          ")",
+          "",
+          "",
+          "n/",
+          "",
+          "m",
+          "",
+          "$",
+          "(0.06",
+          ")",
+          "",
+          "",
+          "n/",
+          "m"
+        ],
+        [
+          "Adjusted diluted earnings (loss) per share",
+          "",
+          "$",
+          "0.07",
+          "",
+          "",
+          "$",
+          "0.16",
+          "",
+          "",
+          "",
+          "(56",
+          ")",
+          "%",
+          "",
+          "$",
+          "(0.05",
+          ")",
+          "",
+          "",
+          "n/",
+          "m"
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "161",
+          "",
+          "",
+          "$",
+          "168",
+          "",
+          "",
+          "",
+          "(4",
+          ")",
+          "%",
+          "",
+          "$",
+          "131",
+          "",
+          "",
+          "",
+          "23",
+          "%"
+        ],
+        [
+          "Adjusted EBITDA Margin %",
+          "",
+          "",
+          "19.6",
+          "%",
+          "",
+          "",
+          "21.2",
+          "%",
+          "",
+          "(160)",
+          "(160)",
+          "bps",
+          "bps",
+          "",
+          "",
+          "16.9",
+          "%",
+          "",
+          "270.0",
+          "270",
+          "bps"
+        ],
+        [
+          "Free cash flow",
+          "",
+          "$",
+          "84",
+          "",
+          "",
+          "$",
+          "81",
+          "",
+          "",
+          "",
+          "4",
+          "",
+          "%",
+          "",
+          "$",
+          "(105",
+          ")",
+          "",
+          "",
+          "n/",
+          "m"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        4,
+        25
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "Y-o-Y % ∆",
+          "",
+          "",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          "Q-o-Q % ∆",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Volume",
+          "Volume",
+          "",
+          "",
+          "Price / Mix",
+          "Price / Mix",
+          "",
+          "",
+          "FX",
+          "FX",
+          "",
+          "",
+          "Volume",
+          "Volume",
+          "",
+          "",
+          "Price / Mix",
+          "Price / Mix",
+          "",
+          "",
+          "FX",
+          "FX",
+          ""
+        ],
+        [
+          "TiO2",
+          "",
+          "",
+          "16",
+          "%",
+          "",
+          "",
+          "(8",
+          ")%",
+          "",
+          "",
+          "(1",
+          ")%",
+          "",
+          "",
+          "8",
+          "%",
+          "",
+          "",
+          "0",
+          "%",
+          "",
+          "",
+          "0",
+          "%"
+        ],
+        [
+          "Zircon",
+          "",
+          "",
+          "4",
+          "%",
+          "",
+          "",
+          "(15",
+          ")%",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(4",
+          ")%",
+          "",
+          "",
+          "1",
+          "%",
+          "",
+          "",
+          "—",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        26,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Net sales",
+          "",
+          "$",
+          "820",
+          "",
+          "",
+          "$",
+          "794",
+          "",
+          "",
+          "$",
+          "1594",
+          "",
+          "",
+          "$",
+          "1502",
+          ""
+        ],
+        [
+          "Cost of goods sold",
+          "",
+          "",
+          "670",
+          "",
+          "",
+          "",
+          "637",
+          "",
+          "",
+          "",
+          "1324",
+          "",
+          "",
+          "",
+          "1212",
+          ""
+        ],
+        [
+          "Gross profit",
+          "",
+          "",
+          "150",
+          "",
+          "",
+          "",
+          "157",
+          "",
+          "",
+          "",
+          "270",
+          "",
+          "",
+          "",
+          "290",
+          ""
+        ],
+        [
+          "Selling, general and administrative expenses",
+          "",
+          "",
+          "74",
+          "",
+          "",
+          "",
+          "73",
+          "",
+          "",
+          "",
+          "153",
+          "",
+          "",
+          "",
+          "144",
+          ""
+        ],
+        [
+          "Income from operations",
+          "",
+          "",
+          "76",
+          "",
+          "",
+          "",
+          "84",
+          "",
+          "",
+          "",
+          "117",
+          "",
+          "",
+          "",
+          "146",
+          ""
+        ],
+        [
+          "Interest expense",
+          "",
+          "",
+          "(42",
+          ")",
+          "",
+          "",
+          "(38",
+          ")",
+          "",
+          "",
+          "(84",
+          ")",
+          "",
+          "",
+          "(71",
+          ")"
+        ],
+        [
+          "Interest income",
+          "",
+          "",
+          "2",
+          "",
+          "",
+          "",
+          "3",
+          "",
+          "",
+          "",
+          "6",
+          "",
+          "",
+          "",
+          "6",
+          ""
+        ],
+        [
+          "Other income, net",
+          "",
+          "",
+          "19",
+          "",
+          "",
+          "",
+          "4",
+          "",
+          "",
+          "",
+          "18",
+          "",
+          "",
+          "",
+          "6",
+          ""
+        ],
+        [
+          "Income before income taxes",
+          "",
+          "",
+          "55",
+          "",
+          "",
+          "",
+          "53",
+          "",
+          "",
+          "",
+          "57",
+          "",
+          "",
+          "",
+          "87",
+          ""
+        ],
+        [
+          "Income tax provision",
+          "",
+          "",
+          "(45",
+          ")",
+          "",
+          "",
+          "(322",
+          ")",
+          "",
+          "",
+          "(56",
+          ")",
+          "",
+          "",
+          "(331",
+          ")"
+        ],
+        [
+          "Net income (loss)",
+          "",
+          "",
+          "10",
+          "",
+          "",
+          "",
+          "(269",
+          ")",
+          "",
+          "",
+          "1",
+          "",
+          "",
+          "",
+          "(244",
+          ")"
+        ],
+        [
+          "Net (loss) income attributable to noncontrolling interest",
+          "",
+          "",
+          "(6",
+          ")",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(6",
+          ")",
+          "",
+          "",
+          "2",
+          ""
+        ],
+        [
+          "Net income (loss) attributable to Tronox Holdings plc",
+          "",
+          "$",
+          "16",
+          "",
+          "",
+          "$",
+          "(269",
+          ")",
+          "",
+          "$",
+          "7",
+          "",
+          "",
+          "$",
+          "(246",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Earnings (loss) per share:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic",
+          "",
+          "$",
+          "0.10",
+          "",
+          "",
+          "$",
+          "(1.72",
+          ")",
+          "",
+          "$",
+          "0.04",
+          "",
+          "",
+          "$",
+          "(1.58",
+          ")"
+        ],
+        [
+          "Diluted",
+          "",
+          "$",
+          "0.10",
+          "",
+          "",
+          "$",
+          "(1.72",
+          ")",
+          "",
+          "$",
+          "0.04",
+          "",
+          "",
+          "$",
+          "(1.58",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Weighted average shares outstanding, basic (in thousands)",
+          "",
+          "",
+          "158117",
+          "",
+          "",
+          "",
+          "156780",
+          "",
+          "",
+          "",
+          "157730",
+          "",
+          "",
+          "",
+          "155986",
+          ""
+        ],
+        [
+          "Weighted average shares outstanding, diluted (in thousands)",
+          "",
+          "",
+          "159288",
+          "",
+          "",
+          "",
+          "156780",
+          "",
+          "",
+          "",
+          "158902",
+          "",
+          "",
+          "",
+          "155986",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other Operating Data:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Capital expenditures",
+          "",
+          "",
+          "76",
+          "",
+          "",
+          "",
+          "55",
+          "",
+          "",
+          "",
+          "152",
+          "",
+          "",
+          "",
+          "148",
+          ""
+        ],
+        [
+          "Depreciation, depletion and amortization expense",
+          "",
+          "",
+          "72",
+          "",
+          "",
+          "",
+          "68",
+          "",
+          "",
+          "",
+          "144",
+          "",
+          "",
+          "",
+          "139",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 820.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue of $820 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "• | Produced revenue of $820 million, a 6% increase compared to the prior quarter, or a 3% increase compared to the prior year"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "12.370000",
+    "return_10d_pct": "13.9855",
+    "return_20d_pct": "16.0873",
+    "return_30d_pct": "4.6079",
+    "return_60d_pct": "14.7939",
+    "return_90d_pct": "-2.5869"
+  },
+  "text_stats": {
+    "primary_text_len": 3399,
+    "exhibit_text_len": 29057,
+    "combined_text_len": 32458,
+    "semantic_text_len": 29155,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

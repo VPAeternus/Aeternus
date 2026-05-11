@@ -384,64 +384,11 @@ class TestAdjustmentFileFormat:
 
 
 # ---------------------------------------------------------------------------
-# TestSignalWeightIntegration
-# ---------------------------------------------------------------------------
-
-class TestSignalWeightIntegration:
-    """Tests for IC adjustments applied to signal weights via dealflow scoring."""
-
-    def test_positive_delta_increases_weight(self, tmp_path):
-        """Positive delta on price_momentum increases its weight."""
-        from tradingagents.dealflow.scoring import CORE_SCORE_WEIGHTS
-
-        # Create a mock ic_signal_weights.json with positive delta
-        ic_file = tmp_path / "ic_signal_weights.json"
-        _write_ic_file(ic_file, {"price_momentum": 5.0}, expired=False)
-
-        # Simulate applying the delta
-        original_weight = CORE_SCORE_WEIGHTS["price_momentum"]
-        adjusted_weight = max(0, min(40, original_weight + 5.0))
-
-        assert adjusted_weight > original_weight
-
-    def test_negative_delta_decreases_weight(self, tmp_path):
-        """Negative delta on price_momentum decreases its weight."""
-        from tradingagents.dealflow.scoring import CORE_SCORE_WEIGHTS
-
-        ic_file = tmp_path / "ic_signal_weights.json"
-        _write_ic_file(ic_file, {"price_momentum": -5.0}, expired=False)
-
-        original_weight = CORE_SCORE_WEIGHTS["price_momentum"]
-        adjusted_weight = max(0, min(40, original_weight - 5.0))
-
-        assert adjusted_weight < original_weight
-
-    def test_weight_clamped_0_40(self, tmp_path):
-        """Adjusted weights are clamped to [0, 40]."""
-        from tradingagents.dealflow.scoring import CORE_SCORE_WEIGHTS
-
-        # Test floor (clamping to 0)
-        ic_file = tmp_path / "ic_signal_weights.json"
-        _write_ic_file(ic_file, {"price_momentum": -999.0}, expired=False)
-
-        original_weight = CORE_SCORE_WEIGHTS["price_momentum"]
-        adjusted_weight = max(0, min(40, original_weight - 999.0))
-
-        assert adjusted_weight == 0
-
-        # Test ceiling (clamping to 40)
-        _write_ic_file(ic_file, {"price_momentum": 999.0}, expired=False)
-        adjusted_weight = max(0, min(40, original_weight + 999.0))
-
-        assert adjusted_weight == 40
-
-
-# ---------------------------------------------------------------------------
 # TestSectorOverrideIntegration
 # ---------------------------------------------------------------------------
 
 class TestSectorOverrideIntegration:
-    """Tests for sector override adjustments in dealflow scoring."""
+    """Tests for sector override adjustment math."""
 
     def test_positive_override_increases_score(self, tmp_path):
         """Positive sector override multiplies score upward."""

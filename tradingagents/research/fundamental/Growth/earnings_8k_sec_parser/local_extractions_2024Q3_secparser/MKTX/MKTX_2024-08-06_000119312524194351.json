@@ -1,0 +1,1327 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MKTX",
+    "cik": "1278021",
+    "event_date": "2024-08-06",
+    "event_accession": "0001193125-24-194351",
+    "primary_8k_doc": "d817291d8k.htm",
+    "exhibit_docs": [
+      "d817291dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MKTX_000119312524194351_d817291d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MKTX_000119312524194351_d817291dex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MKTX",
+    "cik": "1278021",
+    "entity_name": "MARKETAXESS HOLDINGS INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "203169000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "73628000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2015067000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-48142000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-32754000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "7527000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.362398",
+    "operating_cash_flow_to_revenue": "0.037048",
+    "assets_to_revenue": "9.918181",
+    "financing_cash_flow_to_revenue": "-0.236955",
+    "investing_cash_flow_to_revenue": "-0.161216"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $197.",
+      "revenues of $7.",
+      "revenue of $160.",
+      "revenue was driven principally by higher emerging markets, U.",
+      "revenue of $5.",
+      "revenue was $5."
+    ],
+    "guidance_evidence": [
+      "outlook on Tuesday, August 6, 2024 at 10:00 a.",
+      "outlook and prospects for the Company, product/protocol availability and ability to increase estimated market share, market conditions and industry growth, as well as statements about the Companys future financial and operating performance.",
+      "expected to occur late in the third quarter and will include initial elements of AI dealer select functionality."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, less expenditures for furniture, equipment and leasehold improvements and capitalized software development costs.",
+      "AI dealer select functionality.",
+      "aining under the Companys existing program for a current aggregate outstanding authorization of $250.",
+      "ainly due to product and protocol mix-shift, principally lower levels of U.",
+      "aily volume (ADV) to $13.",
+      "ainly due to the impact of price increases and net new contract revenue."
+    ],
+    "warning_or_risk_evidence": [
+      "decrease in U.",
+      "losses and unrealized losses on investments.",
+      "decline in variable transaction fees per million (FPM) to $148.",
+      "decrease in fixed-distribution fees was principally driven by the consolidation of two global dealers and migrations to variable fee plans, partially offset by the addition of new dealer fixed fee plans.",
+      "decrease in ETF market maker client activity on the platform.",
+      "decrease in FPM to $4."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d817291dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "MarketAxess Reports Second Quarter 2024 Financial Results Revenue Growth of 10% Driven by Growth in Total Credit ADV and Pragma Revenues Second Strongest Quarter for Total Credit ADV with Strong Growth Across Most Products Record Eurobonds ADV, Portfolio Trading Volume and Muni Bond Estimated Market Share Board Increases Share Repurchase Authorization to $250 Million"
+    },
+    {
+      "type": "TableElement",
+      "text": "NEW YORK | August 6, 2024 - MarketAxess Holdings Inc. (Nasdaq: MKTX), the operator of a leading electronic trading platform for fixed-income securities, today announced financial results for the second quarter ended June 30, 2024. 2Q24 select financial and operational highlights*  Total revenues of $197.7 million, up 10%, includes Pragma revenues of $7.9 million and an increase of approximately $0.3 million from the impact of foreign currency fluctuations.  Strong geographic and product/protocol diversification with 16% growth across emerging markets, Eurobonds and municipals commission revenue helping to offset a decrease in U.S. high-yield trading activity, driven by lower credit spread volatility.  Record portfolio trading volume of $55.0 billion.1  22% increase in services revenue (combined information, post-trade and technology services revenue) to $26.0 million, includes record information services revenue and an increase of approximately $2.9 million from Pragma revenues.  Total expenses of $116.3 million, up 12%, includes Pragma operating expenses of $7.8 million and an increase of approximately $0.2 million from the impact of foreign currency fluctuations.  Diluted earnings per share (EPS) of $1.72 on net income of $64.9 million, compared to EPS of $1.59 on net income of $59.9 million. The prior year quarter included a negative $0.04 per diluted share impact from foreign currency transaction losses and unrealized losses on investments.  Record 2,119 (+2%) active client firms, 1,626 (+1%) active U.S. credit client firms, record 1,076 (+2%) international active client firms and 1,167 (+4%) active client firms trading three or more products.  Record automation suite trade count (+37%) and record active client firms (+70%); automation suite trading volume up 21% and dealer algorithmic responses up 38%. Chris Concannon, CEO of MarketAxess, commented: In the second quarter, we continued to execute our strategy and delivered solid financial results and continued expense and capital discipline. Our strong free cash flow generation model gives us the flexibility to invest for growth and return capital to investors. We repurchased $50 million in shares year-to-date, and our Board approved a new share repurchase authorization of $200 million. The international roll-out of X-Pro and the launch of the next phase of our high-touch strategy is expected to occur late in the third quarter and will include initial elements of AI dealer select functionality. Our announcement yesterday to connect our liquidity pools with ICE Bonds to drive greater efficiency and liquidity in the Municipal and corporate bond markets is a great example of how we are leveraging connectivity to drive future growth. In summary, we made significant progress in executing our strategy in the second quarter, and we believe the strategic priorities we have established will drive increased market share and higher levels of revenue growth for shareholders in the future.  In August 2024, the Board of Directors authorized a new share repurchase program for up to $200.0 million of the Companys common stock. This program is in addition to the $50.0 million currently remaining under the Companys existing program for a current aggregate outstanding authorization of $250.0 million."
+    },
+    {
+      "type": "TextElement",
+      "text": "* All comparisons versus 2Q23 unless otherwise noted. Table 1: 2Q24 select financial results"
+    },
+    {
+      "type": "TableElement",
+      "text": "5 in millions, except per share data (unaudited) Revenues Operating Income Net Income Diluted EPS Net IncomeMargin (%) EBITDA4 EBITDAMargin (%)4 2Q24 $ 198 $ 81 $ 65 $ 1.72 32.9 % $ 99 50.0 % 2Q23 $ 180 $ 76 $ 60 $ 1.59 33.3 % $ 91 50.4 % % Change 10 % 7 % 8 % 8 % (40 ) bps 9 % (40 ) bps YTD 2024 $ 408 $ 174 $ 138 $ 3.64 33.7 % $ 208 51.0 % YTD 2023 $ 383 $ 171 $ 133 $ 3.55 34.9 % $ 201 52.5 % % Change 7 % 2 % 3 % 3 % (120 ) bps 3 % (150 ) bps"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 1A: 2Q24 trading volume (ADV)"
+    },
+    {
+      "type": "TableElement",
+      "text": "CREDIT RATES $ in millions (unaudited) US/UK TradingDays5 TotalADV TotalCredit High-Grade High-Yield EmergingMarkets Eurobonds MunicipalBonds TotalRates US Govt.Bonds Agcy./OtherGovt. Bonds 2Q24 63/61 $ 34,169 $ 13,743 $ 6,436 $ 1,337 $ 3,337 $ 2,103 $ 522 $ 20,426 $ 19,634 $ 792 2Q23 62/60 $ 27,828 $ 12,226 $ 5,697 $ 1,474 $ 2,714 $ 1,942 $ 389 $ 15,602 $ 15,163 $ 439 % Change 23 % 12 % 13 % (9 %) 23 % 8 % 34 % 31 % 29 % 80 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 1B: 2Q24 estimated market share"
+    },
+    {
+      "type": "TableElement",
+      "text": "CREDIT RATES (unaudited) High-Grade High-Yield High-Grade/High-YieldCombined Municipals1 US Govt.Bonds1 2Q24 18.7 % 13.5 % 17.6 % 7.4 % 2.3 % 2Q23 20.7 % 16.5 % 19.7 % 5.4 % 2.1 % Bps Change (200 ) bps (300 ) bps (210 ) bps +200 bps +20 bps"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q24 overview of results Commission revenue and trading volume Credit Credit Commission Revenue  Total credit commission revenue of $160.8 million (including $33.2 million in fixed-distribution fees) increased $6.8 million, or 4%, compared to $154.0 million (including $35.3 million in fixed-distribution fees) in the prior year. The increase in total credit commission revenue was driven principally by higher emerging markets, U.S. high-grade and Eurobonds commission revenue. Strong growth in these products was partially offset by lower U.S. high-yield commission revenue on lower credit spread volatility. The decline in variable transaction fees per million (FPM) to $148.16 from $157.42 in the prior year was mainly due to product and protocol mix-shift, principally lower levels of U.S. high-yield activity and increased portfolio trading. The decrease in fixed-distribution fees was principally driven by the consolidation of two global dealers and migrations to variable fee plans, partially offset by the addition of new dealer fixed fee plans."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Credit Trading Volumes  Strong growth in total credit average daily volume (ADV) to $13.7 billion, up 12%. Record $55.0 billion in total portfolio trading volume, up 143% compared to the prior year, and up 24% from 1Q24.1  34% Open Trading share2 of total credit trading volume, in line with the prior year. The Company delivered estimated price improvement3 via Open Trading of approximately $110 million in the quarter. U.S. Credit  U.S. high-grade ADV of $6.4 billion, up 13% on a 25% increase in estimated market ADV. Estimated market share was 18.7% (19.2% including single-dealer portfolio trades),6 down from 20.7% (20.8% including single-dealer portfolio trades).6  U.S. high-yield ADV of $1.3 billion, down 9%, with estimated market share of 13.5% (13.8% including single-dealer portfolio trades),6 down from 16.5% (16.6% including single-dealer portfolio trades).6 U.S. high-yield estimated market ADV increased 11%. We believe the decrease in U.S. high-yield estimated market share year-over-year was driven, in part, by lower levels of credit spread volatility and a greater focus on the new issue calendar by our long-only client segment.  Lower levels of credit spread volatility drove an estimated 37% decrease in ETF market maker client activity on the platform.  U.S. high-yield new issuance was $77.9 billion, up 44% from the prior year. Other credit  Emerging markets ADV of $3.3 billion, up 23%, with strong regional contribution across the LATAM, EMEA and APAC regions. The increase was driven by a 26% increase in hard currency ADV, and a 17% increase in local markets ADV.  Record $4.7 billion in emerging markets portfolio trading volume.  Record Eurobonds ADV of $2.1 billion, up 8%.  Municipal bond ADV of $522 million, up 34%, with estimated market ADV down 2%. Record estimated market share of 7.4%, up from 5.4% in the prior year.1 Strategic priority related protocols & workflow tools  A record 56% of our portfolio trading volume was executed on X-Pro.  Dealer RFQ ADV of $1.2 billion across all credit products increased 27%.  AxessIQ, the order and execution workflow solution designed for wealth management and private banking clients, achieved ADV of $135 million, up 22% from the prior year. Rates  Total rates commission revenue of $5.8 million increased $1.2 million, or 25%. A 31% increase in total rates ADV to $20.4 billion was partially offset by a 5% decrease in FPM to $4.45 due to mix, compared to $4.70 in the prior year."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 3"
+    },
+    {
+      "type": "TextElement",
+      "text": "Other  Total other commission revenue was $5.1 million, which consists of Pragma commission revenue. Services revenue Information services  Information services revenue of $12.5 million increased $0.9 million, or 8%, compared to the prior year. The increase in revenue was principally driven by net new data contract revenue. Post-trade services  Post-trade services revenue of $10.4 million increased $1.0 million, or 10%, compared to the prior year mainly due to the impact of price increases and net new contract revenue. Technology services  Total technology services revenue of $3.0 million, up from $0.2 million in the prior year. The current quarter includes $2.9 million of Pragma revenue. Expenses  Total expenses of $116.3 million, up 12%, includes Pragma operating expenses of $7.8 million and an increase of $0.2 million from the impact of foreign currency fluctuations. Non-operating  Other income (expense): Other income was $5.0 million, up from $3.2 million in the prior year. The current quarter included interest income of $6.4 million driven by higher interest rates, partially offset by a $1.0 million net foreign currency transaction loss. The prior year period included a $1.3 million net foreign currency transaction loss and a $0.8 million unrealized loss on U.S. Treasury investments, which had a negative $0.04 per diluted share impact in the quarter.  Tax rate: The effective tax rate was 24.8%, up from 24.2% in the prior year. Capital  The Company had $558.8 million in cash, cash equivalents, corporate bond investments and U.S. Treasury investments as of June 30, 2024. There were no outstanding borrowings under the Companys credit facility.  In August 2024, the Board of Directors authorized a new share repurchase program for up to $200.0 million of the Companys common stock.  Year-to-date through July 2024, a total of 242,890 shares were repurchased at a cost of $50.0 million, including 164,411 shares repurchased during the second quarter at a cost of $33.5 million. As of August 6, 2024, an aggregate of $250.0 million remained under the current authorizations by the Companys Board of Directors.  The Board declared a quarterly cash dividend of $0.74 per share, payable on September 4, 2024 to stockholders of record as of the close of business on August 21, 2024."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 4"
+    },
+    {
+      "type": "TextElement",
+      "text": "Other  Employee headcount was 864 as of June 30, 2024, down from 881 as of December 31, 2023, but up from 803 as of June 30, 2023. 1 See General Notes Regarding the Data Presented below. 2 Open Trading share of total credit trading volume is derived by taking total Open Trading volume across all credit products where Open Trading is offered and dividing by total credit trading volume across all credit products where Open Trading is offered. 3 Estimated price improvement consists of estimated liquidity taker price improvement (defined as the difference between the winning price and the best disclosed dealer cover price) and estimated liquidity provider price improvement (defined as the difference between the winning price and then current Composite+ bid or offer level, offer if the provider is buying, bid if provider is selling) at the time of the inquiry. 4 EBITDA and EBITDA margin are non-GAAP financial measures. Refer to Non-GAAP financial measures and other items for a discussion of these non-GAAP financial measures. 5 The number of U.S. trading days is based on the SIFMA holiday recommendation calendar and the number of U.K. trading days is based primarily on the U.K. bank holiday schedule. 6 The Company is highlighting the impact of single-dealer portfolio trading volume on U.S. high-grade and U.S. high-yield trading volume and estimated market share, but will continue to exclude single-dealer portfolio trading activity from each products aggregated trading volume and estimated market share and the total credit FPM calculation. Non-GAAP financial measures and other items To supplement the Companys unaudited financial statements presented in accordance with generally accepted accounting principles (GAAP), the Company uses certain non-GAAP measures of financial performance, including earnings before interest, taxes, depreciation and amortization (EBITDA), EBITDA margin and free cash flow. We define EBITDA margin as EBITDA divided by revenues. We define free cash flow as net cash provided by/(used in) operating activities excluding the net change in trading investments and net change in securities failed-to-deliver and securities failed-to-receive from broker-dealers, clearing organizations and customers, less expenditures for furniture, equipment and leasehold improvements and capitalized software development costs. The Company believes that these non-GAAP financial measures, when taken into consideration with the corresponding GAAP financial measures, provide additional information regarding the Companys operating results because they assist both investors and management in analyzing and evaluating the performance of our business. See the attached schedule for a reconciliation of GAAP net income to EBITDA, GAAP net income margin to EBITDA margin and GAAP net cash provided by/(used in) operating activities to free cash flow. Please refer to Tables 6 & 7 for a reconciliation of these non-GAAP financial measures to their most directly comparable GAAP measures. Webcast and conference call information Chris Concannon, Chief Executive Officer, Richard Schiffman, Global Head of Trading Solutions, and Ilene Fiszel Bieler, Chief Financial Officer will host a conference call to discuss the Companys financial results and outlook on Tuesday, August 6, 2024 at 10:00 a.m. ET. To access the conference call, please dial 646-307-1963 (U.S./International) and use the ID 1832176. The Company will also host a live audio Webcast of the conference call on the Investor Relations section of the Companys website at http://investor.marketaxess.com. The Webcast will be archived on http://investor.marketaxess.com for 90 days following the announcement. General Notes Regarding the Data Presented Reported MarketAxess volume in all product categories includes only fully electronic trading volume. MarketAxess trading volumes and the Financial Industry Regulatory Authority (FINRA) Trade Reporting and Compliance Engine (TRACE) reported volumes are available on the Companys website at investor.marketaxess.com/volume. Due to variances in how portfolio trading market participants utilized the portfolio trading TRACE flag, the Company previously used its own internal methodology for calculating portfolio trading as an estimated percentage of TRACE volume and the Companys estimated market share. The Company is reviewing recent improvements in the TRACE data, but it now believes that the portfolio trading TRACE flag more accurately reflects the true size of the portfolio trading market. As such, at this time, the Company is not presenting portfolio trading as an estimated percentage of TRACE volume or the Companys portfolio trading estimated market share for the second quarter of 2024."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 5"
+    },
+    {
+      "type": "TextElement",
+      "text": "In addition, for periods beginning with January 2024, the Company has made changes to the market volume data used to calculate estimated market share for Municipal and U.S. Government Bonds. For Municipal Bonds, the Company previously used estimates, derived from data issued by the Municipal Securities Rule Making Board (MSRB), including estimates for new issuance, commercial paper and variable-rate trading activity, and excluded these volumes from the estimated market volume data. While the Company still uses estimates, the new methodology for identifying and excluding these volumes from the market volume data is now based on MSRB flags to identify new issuance, commercial paper, and variable-rate volumes. For U.S. Government Bonds, the previous data source for estimated market volumes was the Federal Reserve Banks Reported Primary Dealer U.S. Treasury Bond Trading Volumes, which was reported on a one-week lag. The new source for U.S. Government Bond trading volumes is FINRAs U.S. Treasury TRACE data. The Company believes that the refined methodology used for Municipal Bonds, and the new data source for U.S. Government Bonds, provides more accurate measures of estimated market volumes and estimated market share. Prior comparable periods have been recast retrospectively for both Municipal and U.S. Government Bonds to conform to the updated presentation of the data. The new estimated market volume data is also available on the Companys website at investor.marketaxess.com/volume. Cautionary Note Regarding Forward-Looking Statements This press release may contain forward-looking statements, including statements about the outlook and prospects for the Company, product/protocol availability and ability to increase estimated market share, market conditions and industry growth, as well as statements about the Companys future financial and operating performance. These and other statements that relate to future results and events are based on MarketAxess current expectations. The Companys actual results in future periods may differ materially from those currently expected or desired because of a number of risks and uncertainties, including: global economic, political and market factors; the level of trading volume transacted on the MarketAxess platform; the rapidly evolving nature of the electronic financial services industry; the level and intensity of competition in the fixed-income electronic trading industry and the pricing pressures that may result; the variability of our growth rate; our ability to introduce new fee plans and our clients response; our ability to attract clients or adapt our technology and marketing strategy to new markets; risks related to our growing international operations; our dependence on our broker-dealer clients; the loss of any of our significant institutional investor clients; our exposure to risks resulting from non-performance by counterparties to transactions executed between our clients in which we act as an intermediary in matched principal trades; risks related to self-clearing; risks related to sanctions levied against states or individuals that could expose us to operational or regulatory risks; the effect of rapid market or technological changes on us and the users of our technology; our dependence on third-party suppliers for key products and services; our ability to successfully maintain the integrity of our trading platform and our response to system failures, capacity constraints and business interruptions; the occurrence of design defects, errors, failures or delays with our platforms, products or services; our vulnerability to malicious cyber-attacks and attempted cybersecurity breaches; our actual or perceived failure to comply with privacy and data protection laws; our ability to protect our intellectual property rights or technology and defend against intellectual property infringement or other claims; our ability to enter into strategic alliances and to acquire other businesses and successfully integrate them with our business; our dependence on our management team and our ability to attract and retain talent; limitations on our flexibility because we operate in a highly regulated industry; the increasing government regulation of us and our clients; risks related to the divergence of U.K. and European Union legal and regulatory requirements following the U.K.s exit from the European Union; our exposure to costs and penalties related to our extensive regulation; our risks of litigation and securities laws liability; adverse effects as a result of climate change or other ESG risks that could affect our reputation; our future capital needs and our ability to obtain capital when needed; limitations on our operating flexibility contained in our credit agreement; our exposure to financial institutions by holding cash in excess of federally insured limits; and other factors. The Company undertakes no obligation to update any forward-looking statements, whether as a result of new information, future events or otherwise. More information about these and other factors affecting MarketAxess business and prospects is contained in MarketAxess periodic filings with the Securities and Exchange Commission and can be accessed at www.marketaxess.com."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 6"
+    },
+    {
+      "type": "TextElement",
+      "text": "About MarketAxess MarketAxess (Nasdaq: MKTX) operates a leading electronic trading platform that delivers greater trading efficiency, a diversified pool of liquidity and significant cost savings to institutional investors and broker-dealers across the global fixed-income markets. Over 2,000 firms leverage MarketAxess patented technology to efficiently trade fixed-income securities. Our automated and algorithmic trading solutions, combined with our integrated and actionable data offerings, help our clients make faster, better-informed decisions on when and how to trade on our platform. MarketAxess award-winning Open Trading® marketplace is widely regarded as the preferred all-to-all trading solution in the global credit markets. Founded in 2000, MarketAxess connects a robust network of market participants through an advanced full trading lifecycle solution that includes automated trading solutions, intelligent data and index products and a range of post-trade services. Learn more at www.marketaxess.com and on X @MarketAxess."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "TableElement",
+      "text": "Contacts INVESTOR RELATIONS MEDIA RELATIONS Stephen Davidson MarketAxess Holdings Inc. +1 212 813 6313 sdavidson2@marketaxess.com Marisha Mistry MarketAxess Holdings Inc. +1 917 267 1232 mmistry@marketaxess.com"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 7"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 2: Consolidated Statements of Operations"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, June 30, In thousands, except per share data (unaudited) 2024 2023 %Change 2024 2023 %Change Revenues Commissions $ 171,679 $ 158,586 8 % $ 356,552 $ 340,577 5 % Information services 12,544 11,655 8 24,425 22,665 8 Post-trade services 10,400 9,415 10 21,130 19,395 9 Technology services 3,037 190 NM 5,871 378 NM Total revenues 197,660 179,846 10 407,978 383,015 7 Expenses Employee compensation and benefits 56,790 48,383 17 118,054 100,698 17 Depreciation and amortization 18,356 17,005 8 36,556 33,466 9 Technology and communications 17,771 15,235 17 34,822 30,234 15 Professional and consulting fees 7,669 8,023 (4 ) 14,064 15,150 (7 ) Occupancy 3,714 3,199 16 7,139 6,810 5 Marketing and advertising 3,010 3,308 (9 ) 4,843 6,303 (23 ) Clearing costs 4,122 4,182 (1 ) 9,033 8,727 4 General and administrative 4,889 4,784 2 9,628 10,544 (9 ) Total expenses 116,321 104,119 12 234,139 211,932 10 Operating income 81,339 75,727 7 173,839 171,083 2 Other income (expense) Interest income 6,401 5,312 21 12,374 9,561 29 Interest expense (621 ) (53 ) NM (937 ) (183 ) 412 Equity in earnings of unconsolidated affiliate 354 250 42 724 454 59 Other, net (1,136 ) (2,286 ) (50 ) (2,946 ) (3,770 ) (22 ) Total other income (expense) 4,998 3,223 55 9,215 6,062 52 Income before income taxes 86,337 78,950 9 183,054 177,145 3 Provision for income taxes 21,399 19,091 12 45,501 43,658 4 Net income $ 64,938 $ 59,859 8 $ 137,553 $ 133,487 3 Per Share Data: Net income per common share Basic $ 1.72 $ 1.60 $ 3.65 $ 3.56 Diluted $ 1.72 $ 1.59 $ 3.64 $ 3.55 Cash dividends declared per common share $ 0.74 $ 0.72 $ 1.48 $ 1.44 Weighted-average common shares: Basic 37,655 37,485 37,698 37,482 Diluted 37,689 37,588 37,740 37,617"
+    },
+    {
+      "type": "TextElement",
+      "text": "NM - not meaningful"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 8"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 3: Commission Revenue Detail"
+    },
+    {
+      "type": "TableElement",
+      "text": "In thousands, except fee per million data Three Months Ended June 30, Six Months Ended June 30, (unaudited) 2024 2023 % Change 2024 2023 % Change Variable transaction fees Credit $ 127,645 $ 118,710 8 % $ 269,149 $ 259,680 4 % Rates 5,719 4,547 26 10,885 10,805 1 Other 5,076  NM 9,925  NM Total variable transaction fees 138,440 123,257 12 289,959 270,485 7 Fixed distribution fees Credit 33,177 35,268 (6 ) 66,465 69,952 (5 ) Rates 62 61 2 128 140 (9 ) Total fixed distribution fees 33,239 35,329 (6 ) 66,593 70,092 (5 ) Total commission revenue $ 171,679 $ 158,586 8 $ 356,552 $ 340,577 5 Average variable transaction fee per million Credit $ 148.16 $ 157.42 (6 )% $ 151.25 $ 161.43 (6 )% Rates 4.45 4.70 (5 ) 4.61 4.35 6 Table 4: Trading Volume Detail* Three Months Ended June 30, In millions (unaudited) 2024 2023 % Change Volume ADV Volume ADV Volume ADV Credit High-grade $ 405,440 $ 6,436 $ 353,239 $ 5,697 15 % 13 % High-yield 84,248 1,337 91,390 1,474 (8 ) (9 ) Emerging markets 210,205 3,337 168,257 2,714 25 23 Eurobonds 128,266 2,103 116,495 1,942 10 8 Other credit 33,376 530 24,729 399 35 33 Total credit trading 861,535 13,743 754,110 12,226 14 12 Rates U.S. government bonds 1,236,917 19,634 940,127 15,163 32 29 Agency and other government bonds 48,506 792 26,721 439 82 80 Total rates trading 1,285,423 20,426 966,848 15,602 33 31 Total trading $ 2,146,958 $ 34,169 $ 1,720,958 $ 27,828 25 23 Number of U.S. Trading Days1 63 62 Number of U.K. Trading Days2 61 60 Six Months Ended June 30, In millions (unaudited) 2024 2023 % Change Volume ADV Volume ADV Volume ADV Credit High-grade $ 861,438 $ 6,947 $ 745,954 $ 6,016 15 % 15 % High-yield 169,627 1,368 214,263 1,728 (21 ) (21 ) Emerging markets 431,632 3,481 360,098 2,904 20 20 Eurobonds 257,115 2,074 234,861 1,894 9 10 Other credit 59,705 481 53,412 430 12 12 Total credit trading 1,779,517 14,351 1,608,588 12,972 11 11 Rates U.S. government bonds 2,282,713 18,409 2,431,419 19,608 (6 ) (6 ) Agency and other government bonds 80,132 646 53,782 434 49 49 Total rates trading 2,362,845 19,055 2,485,201 20,042 (5 ) (5 ) Total trading $ 4,142,362 $ 33,406 $ 4,093,789 $ 33,014 1 1 Number of U.S. Trading Days1 124 124 Number of U.K. Trading Days2 124 124"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 The number of U.S. trading days is based on the SIFMA holiday recommendation calendar. 2 The number of U.K. trading days is based on the U.K. Bank holiday schedule. * Consistent with FINRA TRACE reporting standards, both sides of trades are included in the Companys reported volumes when the Company executes trades on a matched principal basis between two counterparties. Consistent with industry standards, U.S. government bond trades are single-counted. NM - not meaningful"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 9"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 5: Consolidated Condensed Balance Sheet Data"
+    },
+    {
+      "type": "TableElement",
+      "text": "As of In thousands (unaudited) June 30,2024 December 31,2023 Assets Cash and cash equivalents $ 434,063 $ 451,280 Cash segregated under federal regulations 46,141 45,122 Investments, at fair value 135,908 134,861 Accounts receivable, net 92,350 89,839 Receivables from broker-dealers, clearing organizations and customers 577,992 687,936 Goodwill 236,706 236,706 Intangible assets, net of accumulated amortization 108,420 119,108 Furniture, equipment, leasehold improvements and capitalized software, net 108,802 102,671 Operating lease right-of-use assets 60,500 63,045 Prepaid expenses and other assets 85,831 84,499 Total assets $ 1,886,713 $ 2,015,067 Liabilities and stockholders equity Liabilities Accrued employee compensation $ 41,002 $ 60,124 Payables to broker-dealers, clearing organizations and customers 392,846 537,398 Securities sold, not yet purchased, at fair value 9,167  Income and other tax liabilities 2,058 7,892 Accounts payable, accrued expenses and other liabilities 36,338 37,013 Operating lease liabilities 76,081 79,677 Total liabilities 557,492 722,104 Stockholders equity Common stock 123 123 Additional paid-in capital 335,641 333,292 Treasury stock (302,455 ) (260,298 ) Retained earnings 1,325,139 1,244,216 Accumulated other comprehensive loss (29,227 ) (24,370 ) Total stockholders equity 1,329,221 1,292,963 Total liabilities and stockholders equity $ 1,886,713 $ 2,015,067"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 10"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 6: Reconciliation of Net Income to EBITDA and Net Income Margin to EBITDA Margin"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months EndedJune 30, Six Months EndedJune 30, In thousands (unaudited) 2024 2023 2024 2023 Net income $ 64,938 $ 59,859 $ 137,553 $ 133,487 Add back: Interest income (6,401 ) (5,312 ) (12,374 ) (9,561 ) Interest expense 621 53 937 183 Provision for income taxes 21,399 19,091 45,501 43,658 Depreciation and amortization 18,356 17,005 36,556 33,466 EBITDA $ 98,913 $ 90,696 $ 208,173 $ 201,233 Net income margin1 32.9 % 33.3 % 33.7 % 34.9 % Add back: Interest income (3.2 ) (3.0 ) (3.0 ) (2.5 ) Interest expense 0.3  0.2  Provision for income taxes 10.7 10.6 11.1 11.4 Depreciation and amortization 9.3 9.5 9.0 8.7 EBITDA margin2 50.0 % 50.4 % 51.0 % 52.5 % Table 7: Reconciliation of Net Cash Provided by Operating Activities to Free Cash Flow Three Months EndedJune 30, Six Months EndedJune 30, In thousands (unaudited) 2024 2023 2024 2023 Net cash (used in)/provided by operating activities $ 118,849 $ 105,394 $ 113,900 $ 112,921 Exclude: Net change in trading investments 100 (890 ) (155 ) (471 ) Exclude: Net change in fail-to-deliver/receive from broker-dealers, clearing organizations and customers (3,151 ) (46,010 ) 48,137 757 Less: Purchases of furniture, equipment and leasehold improvements (7,695 ) (1,055 ) (8,892 ) (1,272 ) Less: Capitalization of software development costs (10,496 ) (11,025 ) (24,459 ) (21,715 ) Free cash flow $ 97,607 $ 46,414 $ 128,531 $ 90,220"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Net income margin is derived by dividing net income by total revenues for the applicable period. 2 EBITDA margin is derived by dividing EBITDA by total revenues for the applicable period."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 11"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        4,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "NEW YORK | August 6, 2024 - MarketAxess Holdings Inc. (Nasdaq: MKTX), the operator of a leading electronic trading platform for fixed-income securities, today announced financial results for the second quarter ended June 30, 2024. 2Q24 select financial and operational highlights*  Total revenues of $197.7 million, up 10%, includes Pragma revenues of $7.9 million and an increase of approximately $0.3 million from the impact of foreign currency fluctuations.  Strong geographic and product/protocol diversification with 16% growth across emerging markets, Eurobonds and municipals commission revenue helping to offset a decrease in U.S. high-yield trading activity, driven by lower credit spread volatility.  Record portfolio trading volume of $55.0 billion.1  22% increase in services revenue (combined information, post-trade and technology services revenue) to $26.0 million, includes record information services revenue and an increase of approximately $2.9 million from Pragma revenues.  Total expenses of $116.3 million, up 12%, includes Pragma operating expenses of $7.8 million and an increase of approximately $0.2 million from the impact of foreign currency fluctuations.  Diluted earnings per share (EPS) of $1.72 on net income of $64.9 million, compared to EPS of $1.59 on net income of $59.9 million. The prior year quarter included a negative $0.04 per diluted share impact from foreign currency transaction losses and unrealized losses on investments.  Record 2,119 (+2%) active client firms, 1,626 (+1%) active U.S. credit client firms, record 1,076 (+2%) international active client firms and 1,167 (+4%) active client firms trading three or more products.  Record automation suite trade count (+37%) and record active client firms (+70%); automation suite trading volume up 21% and dealer algorithmic responses up 38%.",
+          "",
+          "Chris Concannon, CEO of MarketAxess, commented: In the second quarter, we continued to execute our strategy and delivered solid financial results and continued expense and capital discipline. Our strong free cash flow generation model gives us the flexibility to invest for growth and return capital to investors. We repurchased $50 million in shares year-to-date, and our Board approved a new share repurchase authorization of $200 million. The international roll-out of X-Pro and the launch of the next phase of our high-touch strategy is expected to occur late in the third quarter and will include initial elements of AI dealer select functionality. Our announcement yesterday to connect our liquidity pools with ICE Bonds to drive greater efficiency and liquidity in the Municipal and corporate bond markets is a great example of how we are leveraging connectivity to drive future growth. In summary, we made significant progress in executing our strategy in the second quarter, and we believe the strategic priorities we have established will drive increased market share and higher levels of revenue growth for shareholders in the future."
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          " In August 2024, the Board of Directors authorized a new share repurchase program for up to $200.0 million of the Companys common stock. This program is in addition to the $50.0 million currently remaining under the Companys existing program for a current aggregate outstanding authorization of $250.0 million.",
+          " In August 2024, the Board of Directors authorized a new share repurchase program for up to $200.0 million of the Companys common stock. This program is in addition to the $50.0 million currently remaining under the Companys existing program for a current aggregate outstanding authorization of $250.0 million.",
+          " In August 2024, the Board of Directors authorized a new share repurchase program for up to $200.0 million of the Companys common stock. This program is in addition to the $50.0 million currently remaining under the Companys existing program for a current aggregate outstanding authorization of $250.0 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "*",
+          "All comparisons versus 2Q23 unless otherwise noted."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        8,
+        29
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "5 in millions, except per share data (unaudited)",
+          "",
+          "Revenues",
+          "Revenues",
+          "",
+          "",
+          "Operating Income",
+          "Operating Income",
+          "",
+          "",
+          "Net Income",
+          "Net Income",
+          "",
+          "",
+          "Diluted EPS",
+          "Diluted EPS",
+          "",
+          "",
+          "Net Income Margin (%)",
+          "Net Income Margin (%)",
+          "",
+          "",
+          "EBITDA4",
+          "EBITDA4",
+          "",
+          "",
+          "EBITDA Margin (%)4",
+          "EBITDA Margin (%)4",
+          ""
+        ],
+        [
+          "2Q24",
+          "",
+          "$",
+          "198",
+          "",
+          "",
+          "$",
+          "81",
+          "",
+          "",
+          "$",
+          "65",
+          "",
+          "",
+          "$",
+          "1.72",
+          "",
+          "",
+          "",
+          "32.9",
+          "%",
+          "",
+          "$",
+          "99",
+          "",
+          "",
+          "",
+          "50.0",
+          "%"
+        ],
+        [
+          "2Q23",
+          "",
+          "$",
+          "180",
+          "",
+          "",
+          "$",
+          "76",
+          "",
+          "",
+          "$",
+          "60",
+          "",
+          "",
+          "$",
+          "1.59",
+          "",
+          "",
+          "",
+          "33.3",
+          "%",
+          "",
+          "$",
+          "91",
+          "",
+          "",
+          "",
+          "50.4",
+          "%"
+        ],
+        [
+          "% Change",
+          "",
+          "",
+          "10",
+          "%",
+          "",
+          "",
+          "7",
+          "%",
+          "",
+          "",
+          "8",
+          "%",
+          "",
+          "",
+          "8",
+          "%",
+          "",
+          "",
+          "(40",
+          ") bps",
+          "",
+          "",
+          "9",
+          "%",
+          "",
+          "",
+          "(40",
+          ") bps"
+        ],
+        [
+          "YTD 2024",
+          "",
+          "$",
+          "408",
+          "",
+          "",
+          "$",
+          "174",
+          "",
+          "",
+          "$",
+          "138",
+          "",
+          "",
+          "$",
+          "3.64",
+          "",
+          "",
+          "",
+          "33.7",
+          "%",
+          "",
+          "$",
+          "208",
+          "",
+          "",
+          "",
+          "51.0",
+          "%"
+        ],
+        [
+          "YTD 2023",
+          "",
+          "$",
+          "383",
+          "",
+          "",
+          "$",
+          "171",
+          "",
+          "",
+          "$",
+          "133",
+          "",
+          "",
+          "$",
+          "3.55",
+          "",
+          "",
+          "",
+          "34.9",
+          "%",
+          "",
+          "$",
+          "201",
+          "",
+          "",
+          "",
+          "52.5",
+          "%"
+        ],
+        [
+          "% Change",
+          "",
+          "",
+          "7",
+          "%",
+          "",
+          "",
+          "2",
+          "%",
+          "",
+          "",
+          "3",
+          "%",
+          "",
+          "",
+          "3",
+          "%",
+          "",
+          "",
+          "(120",
+          ") bps",
+          "",
+          "",
+          "3",
+          "%",
+          "",
+          "",
+          "(150",
+          ") bps"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        6,
+        45
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "",
+          "",
+          "RATES",
+          "RATES",
+          "RATES",
+          "RATES",
+          "RATES",
+          "RATES",
+          "RATES",
+          "RATES",
+          "RATES",
+          "RATES",
+          ""
+        ],
+        [
+          "$ in millions (unaudited)",
+          "",
+          "US/UK Trading Days5",
+          "US/UK Trading Days5",
+          "",
+          "",
+          "Total ADV",
+          "Total ADV",
+          "",
+          "",
+          "Total Credit",
+          "Total Credit",
+          "",
+          "",
+          "High-Grade",
+          "High-Grade",
+          "",
+          "",
+          "High-Yield",
+          "High-Yield",
+          "",
+          "",
+          "Emerging Markets",
+          "Emerging Markets",
+          "",
+          "",
+          "Eurobonds",
+          "Eurobonds",
+          "",
+          "",
+          "Municipal Bonds",
+          "Municipal Bonds",
+          "",
+          "",
+          "Total Rates",
+          "Total Rates",
+          "",
+          "",
+          "US Govt. Bonds",
+          "US Govt. Bonds",
+          "",
+          "",
+          "Agcy./Other Govt. Bonds",
+          "Agcy./Other Govt. Bonds",
+          ""
+        ],
+        [
+          "2Q24",
+          "",
+          "",
+          "63/61",
+          "",
+          "",
+          "$",
+          "34169",
+          "",
+          "",
+          "$",
+          "13743",
+          "",
+          "",
+          "$",
+          "6436",
+          "",
+          "",
+          "$",
+          "1337",
+          "",
+          "",
+          "$",
+          "3337",
+          "",
+          "",
+          "$",
+          "2103",
+          "",
+          "",
+          "$",
+          "522",
+          "",
+          "",
+          "$",
+          "20426",
+          "",
+          "",
+          "$",
+          "19634",
+          "",
+          "",
+          "$",
+          "792",
+          ""
+        ],
+        [
+          "2Q23",
+          "",
+          "",
+          "62/60",
+          "",
+          "",
+          "$",
+          "27828",
+          "",
+          "",
+          "$",
+          "12226",
+          "",
+          "",
+          "$",
+          "5697",
+          "",
+          "",
+          "$",
+          "1474",
+          "",
+          "",
+          "$",
+          "2714",
+          "",
+          "",
+          "$",
+          "1942",
+          "",
+          "",
+          "$",
+          "389",
+          "",
+          "",
+          "$",
+          "15602",
+          "",
+          "",
+          "$",
+          "15163",
+          "",
+          "",
+          "$",
+          "439",
+          ""
+        ],
+        [
+          "% Change",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "23",
+          "%",
+          "",
+          "",
+          "12",
+          "%",
+          "",
+          "",
+          "13",
+          "%",
+          "",
+          "",
+          "(9",
+          "%)",
+          "",
+          "",
+          "23",
+          "%",
+          "",
+          "",
+          "8",
+          "%",
+          "",
+          "",
+          "34",
+          "%",
+          "",
+          "",
+          "31",
+          "%",
+          "",
+          "",
+          "29",
+          "%",
+          "",
+          "",
+          "80",
+          "%"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        6,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "CREDIT",
+          "",
+          "",
+          "RATES",
+          "RATES",
+          ""
+        ],
+        [
+          "(unaudited)",
+          "",
+          "High-Grade",
+          "High-Grade",
+          "",
+          "",
+          "High-Yield",
+          "High-Yield",
+          "",
+          "",
+          "High-Grade/High-Yield Combined",
+          "High-Grade/High-Yield Combined",
+          "",
+          "",
+          "Municipals1",
+          "Municipals1",
+          "",
+          "",
+          "US Govt. Bonds1",
+          "US Govt. Bonds1",
+          ""
+        ],
+        [
+          "2Q24",
+          "",
+          "",
+          "18.7",
+          "%",
+          "",
+          "",
+          "13.5",
+          "%",
+          "",
+          "",
+          "17.6",
+          "%",
+          "",
+          "",
+          "7.4",
+          "%",
+          "",
+          "",
+          "2.3",
+          "%"
+        ],
+        [
+          "2Q23",
+          "",
+          "",
+          "20.7",
+          "%",
+          "",
+          "",
+          "16.5",
+          "%",
+          "",
+          "",
+          "19.7",
+          "%",
+          "",
+          "",
+          "5.4",
+          "%",
+          "",
+          "",
+          "2.1",
+          "%"
+        ],
+        [
+          "Bps Change",
+          "",
+          "",
+          "(200",
+          ") bps",
+          "",
+          "",
+          "(300",
+          ") bps",
+          "",
+          "",
+          "(210",
+          ") bps",
+          "",
+          "",
+          "+200",
+          "bps",
+          "",
+          "",
+          "+20",
+          "bps"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Total credit commission revenue of $160.8 million (including $33.2 million in fixed-distribution fees) increased $6.8 million, or 4%, compared to $154.0 million (including $35.3 million in fixed-distribution fees) in the prior year. The increase in total credit commission revenue was driven principally by higher emerging markets, U.S. high-grade and Eurobonds commission revenue. Strong growth in these products was partially offset by lower U.S. high-yield commission revenue on lower credit spread volatility. The decline in variable transaction fees per million (FPM) to $148.16 from $157.42 in the prior year was mainly due to product and protocol mix-shift, principally lower levels of U.S. high-yield activity and increased portfolio trading. The decrease in fixed-distribution fees was principally driven by the consolidation of two global dealers and migrations to variable fee plans, partially offset by the addition of new dealer fixed fee plans."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Strong growth in total credit average daily volume (ADV) to $13.7 billion, up 12%. Record $55.0 billion in total portfolio trading volume, up 143% compared to the prior year, and up 24% from 1Q24.1"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "34% Open Trading share2 of total credit trading volume, in line with the prior year. The Company delivered estimated price improvement3 via Open Trading of approximately $110 million in the quarter."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "U.S. high-grade ADV of $6.4 billion, up 13% on a 25% increase in estimated market ADV. Estimated market share was 18.7% (19.2% including single-dealer portfolio trades),6 down from 20.7% (20.8% including single-dealer portfolio trades).6"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "U.S. high-yield ADV of $1.3 billion, down 9%, with estimated market share of 13.5% (13.8% including single-dealer portfolio trades),6 down from 16.5% (16.6% including single-dealer portfolio trades).6 U.S. high-yield estimated market ADV increased 11%. We believe the decrease in U.S. high-yield estimated market share year-over-year was driven, in part, by lower levels of credit spread volatility and a greater focus on the new issue calendar by our long-only client segment."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Lower levels of credit spread volatility drove an estimated 37% decrease in ETF market maker client activity on the platform."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "U.S. high-yield new issuance was $77.9 billion, up 44% from the prior year."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 197.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenues of $197.7 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "NEW YORK | August 6, 2024 - MarketAxess Holdings Inc. (Nasdaq: MKTX), the operator of a leading electronic trading platform for fixed-income securities, today announced financial results for the second quarter ended June 30, 2024. 2Q24 select financial and operational highlights*  Total revenues of $197.7 million, up 10%, includes Pragma revenues of $7.9 million and an increase of approximately $0.3 million from the impact of foreign currency fluctuations.  Strong geographic and product/protocol diversification with 16% growth across emerging markets, Eurobonds and municipals commission revenue helping to offset a decrease in U.S. high-yield trading activity, driven by lower credit spread volatility.  Record portfolio trading volume of $55.0 billion.1  22% increase in services revenue (combined information, post-trade and technology services revenue) to $26.0 million, includes record information services revenue and an increase of approximately $2.9 million from Pragma revenues.  Total expenses of $116.3 million, up 12%, includes Pragma operating expenses of $7.8 million and an increase of approximately $0.2 million from the impact of foreign currency fluctuations.  Diluted earnings per share (EPS) of $1.72 on net income of $64.9 million, compared to EPS of $1.59 on net income of $59.9 million. The prior year quarter included a negative $0.04 per diluted share impact from foreign currency transaction losses and unrealized losses on investments.  Record 2,119 (+2%) active client firms, 1,626 (+1%) active U.S. credit client firms, record 1,076 (+2%) international active client firms and 1,167 (+4%) active client firms trading three or more products.  Record automation suite trade count (+37%) and record active client firms (+70%); automation suite trading volume up 21% and dealer algorithmic responses up 38%. |  | Chris Concannon, CEO of MarketAxess, commented: In the second quarter, we continued to execute our strategy and delivered solid financial results and continued expense and capital discipline. Our strong free cash flow generation model gives us the flexibility to invest for growth and return capital to investors. We repurchased $50 million in shares year-to-date, and our Board approved a new share repurchase authorization of $200 million. The international roll-out of X-Pro and the launch of the next phase of our high-touch strategy is expected to occur late in the third quarter and will include initial elements of AI dealer select functionality. Our announcement yesterday to connect our liquidity pools with ICE Bonds to drive greater efficiency and liquidity in the Municipal and corporate bond markets is a great example of how we are leveraging connectivity to drive future growth. In summary, we made significant progress in executing our strategy in the second quarter, and we believe the strategic priorities we have established will drive increased market share and higher levels of revenue growth for shareholders in the future."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "235.869995",
+    "return_10d_pct": "-0.2841",
+    "return_20d_pct": "-0.1145",
+    "return_30d_pct": "8.8947",
+    "return_60d_pct": "16.0639",
+    "return_90d_pct": "18.3491"
+  },
+  "text_stats": {
+    "primary_text_len": 5128,
+    "exhibit_text_len": 30077,
+    "combined_text_len": 35207,
+    "semantic_text_len": 29975,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

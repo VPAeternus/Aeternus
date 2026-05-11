@@ -1,0 +1,764 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TALO",
+    "cik": "1724965",
+    "event_date": "2024-08-08",
+    "event_accession": "0001193125-24-196168",
+    "primary_8k_doc": "d863025d8k.htm",
+    "exhibit_docs": [
+      "d863025dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TALO_000119312524196168_d863025d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TALO_000119312524196168_d863025dex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TALO",
+    "cik": "1724965",
+    "entity_name": "Talos Energy Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "322582000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "89860000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4816309000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "117116000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-106976000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "62857000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.278565",
+    "operating_cash_flow_to_revenue": "0.194856",
+    "assets_to_revenue": "14.930495",
+    "financing_cash_flow_to_revenue": "0.363058",
+    "investing_cash_flow_to_revenue": "-0.331624"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $549.",
+      "Net Income of $12.",
+      "Net Income per diluted share, and Adjusted Net Income* of $5.",
+      "Net Income per diluted share*.",
+      "epsol E&P USA Inc.",
+      "Net Income (Loss) $ 12,381 Net Income (Loss) per diluted share $ 0."
+    ],
+    "guidance_evidence": [
+      "guidance and reiterated its operational and financial guidance for the full year 2024.",
+      "guidance range.",
+      "guidance.",
+      "GUIDANCE UPDATES For the third quarter 2024, Talos expects average daily production of 92.",
+      "guidance and continues to expect average daily production of 89.",
+      "expected synergies to $35 million since March 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "demand and prices for oil and gas will continue at levels that allow for economic production of these products.",
+      "aintaining leverage at 1.",
+      "ain on track with our debt repayments while opportunistically buying back 3.",
+      "ai West #2 appraisal in 2024, followed by the Daenerys and Helms Deep prospects in 2025.",
+      "aised discovery.",
+      "ails and reconciliations of GAAP to non-GAAP financial measures."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and amortization of deferred financing costs and original issue discounts.",
+      "decline production from the facility.",
+      "Loss) $ 12,381 Net Income (Loss) per diluted share $ 0.",
+      "Loss)* $ 5,179 Adjusted Net Income (Loss) per diluted share* $ 0.",
+      "losses, projected costs, prospects, plans and objectives of management are forward-looking statements.",
+      "uncertainty regarding our future operating results and our future revenues and expenses; impact of new accounting pronouncements on earnings in future periods; and plans, objectives, expectations and intentions contained in this communication that are not historical."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d863025dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Talos Energy Announces Second Quarter 2024 Operational and Financial Results Houston, Texas, August 7, 2024  Talos Energy Inc. (Talos or the Company) (NYSE: TALO) today announced its operational and financial results for fiscal quarter ended June 30, 2024. Talos also provided third quarter 2024 production guidance and reiterated its operational and financial guidance for the full year 2024. Key Highlights  Production of 95.5 thousand barrels of oil equivalent per day (MBoe/d) (73% oil, 81% liquids), which is at the high end of Taloss second quarter 2024 guidance range.  Repurchased 3.8 million shares of common stock for approximately $43 million at an average price of $11.26 per share, and Taloss Board of Directors authorized an additional $150 million for Taloss existing common stock repurchase program.  Reduced debt by $100 million, maintaining leverage at 1.0x* and liquidity of $738.7 million at the end of the second quarter.  Purchased a 21.4% working interest (W.I.) in the Monument discovery located in the Walker Ridge area in the Gulf of Mexico.  Returned the Helix Producer I (HP-I) to service ahead of schedule.  Completed integration for QuarterNorth acquisition and increased expected synergies to $35 million since March 2024. Second Quarter Summary  Revenue of $549.2 million, driven by realized prices (excluding hedges) of $80.50 per barrel for oil, $22.33 per barrel for natural gas liquids (NGLs), and $2.59 per thousand cubic feet (Mcf) for natural gas.  Net Income of $12.4 million, or $0.07 Net Income per diluted share, and Adjusted Net Income* of $5.2 million, or $0.03 Adjusted Net Income per diluted share*.  Adjusted EBITDA* of $344.0 million.  Capital expenditures of $122.8 million, excluding plugging and abandonment and settled decommissioning obligations.  Net cash provided by operating activities of $289.4 million.  Adjusted Free Cash Flow* of $148.0 million. Talos President and Chief Executive Officer Tim Duncan stated, The second quarter 2024 marked our first full quarter following the closing of the QuarterNorth transaction, resulting in record levels of production, Adjusted EBITDA, and Adjusted Free Cash Flow. This achievement enabled us to remain on track with our debt repayments while opportunistically buying back 3.8 million shares, representing 2% of our market capitalization. Our teams hard work and commitment have put us ahead of schedule on our integration efforts, leveraging the advantages of our increased scale and diversity. In our capital drilling program, the Lobster waterflood project commenced water injection in the second quarter 2024, and we anticipate a positive impact on production rates by 2025. We are currently drilling at our non-operated Ewing Bank 953, with results expected later in the third quarter 2024. Additionally, we anticipate receiving the West Vela deepwater rig late in the third quarter 2024, which will begin drilling three consecutive high-impact subsalt wells, including the Katmai West #2 appraisal in 2024, followed by the Daenerys and Helms Deep prospects in 2025. Subsequent to the second quarter 2024, we executed an important transaction securing a 21.4% non-operated interest in the Monument deepwater discovery. The Monument discovery presents an attractive post-FID subsea tie-back opportunity with gross resource potential exceeding 150 MMBoe, including a potential drilling opportunity beyond the appraised discovery. We have built a meaningful acreage position within the prolific Wilcox play in the deepwater Gulf of Mexico, and Monument represents the first of several potential investments in this well-established geological trend. We are pleased to have added this project to our projected 2024 capital program. Footnotes: * See Supplemental Non-GAAP Information for details and reconciliations of GAAP to non-GAAP financial measures."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 1 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECENT DEVELOPMENTS AND OPERATIONS UPDATE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Shareholder Return Program: In June 2024, Talos opportunistically repurchased 3.8 million shares of common stock for approximately $43 million, representing an average price of $11.26 per share. In addition, in July 2024, Taloss Board of Directors authorized an additional $150 million for its existing common stock repurchase program. Monument Discovery: Recently, Talos agreed to acquire a 21.4% W.I. in Monument, a large Wilcox oil discovery located in Walker Ridge blocks 271, 272, 315, and 316, for a purchase price of $32 million as of the effective date. Monument will be developed as a subsea tie-back to the Shenandoah production facility in Walker Ridge. The Monument discovery is post-FID with appraised proved plus probable gross reserves of approximately 115 million barrels of oil equivalent. First production is expected between 20  30 MBoe/d gross by late 2026 under restricted flow due to facility rate-constraints. The proved and probable PV-10 of Monuments reserves is valued at approximately $265 million(1). There is an additional 25  35 MMBoe drilling location adjacent to the discovery that could extend the resource and Taloss pipeline of drill-ready opportunities. Talos expects a net investment of approximately $25 million in 2024 and approximately $160 million over 2025 and 2026, with no changes to its 2024 capital expenditures guidance. Talos strategically reallocated a portion of its 2024 capital investments for the Monument discovery, given the later-than-anticipated arrival of the West Vela rig. Other partners include Beacon as operator with 30.0% W.I., Navitas Petroleum 28.6% W.I., and Repsol E&P USA Inc. 20.0% W.I. QuarterNorth Integration Complete: Operational and organizational integration is complete for the QuarterNorth acquisition that closed in March 2024, and we increased expected synergies to $35 million. Talos expects to fully realize projected synergies from the combination by year-end 2024. Production Updates: Katmai: Talos expects to take possession of the Seadrill-owned drillship West Vela and commence drilling the Katmai West #2 well in the late third quarter 2024 to further appraise the field, potentially adding significant reserves. Talos projects achieving first production from the Katmai West #2 well in the second quarter 2025. Modifications to the facility, Tarantula, will increase capacity from 27 MBoe/d to 35 MBoe/d. The Katmai wells will be rate-constrained under the upgraded capacity allowing for extended flat-to-low decline production from the facility. Talos will hold 50% W.I. and Ridgewood Energy 50% in Katmai. Talos is the 100% owner and operator of the Tarantula facility. Sunspear Completion: Talos is in the final stages of securing a rig contract to complete the Sunspear discovery. The Sunspear well, successfully drilled in July 2023, is expected to commence first production during the second quarter 2025, with production flowing to the Prince platform. Partners are Talos 48.0% W.I., an entity managed by Ridgewood Energy Corporation 47.5% W.I., and Houston Energy 4.5% W.I. Lobster Waterflood: In the second quarter 2024, Talos completed the waterflood (down-hole water injection) well in the Lobster Field, which Talos successfully drilled in the first quarter of 2024. The well began injecting water into the BUL-1 sand at 7,000 barrels of water per day in May 2024. Production is expected to increase by over 2 MBoe/d gross in the next 12-18 months. Talos owns 67% W.I., and Chevron owns 33% W.I. Exploitation and Exploration Updates: Ewing Bank 953: Talos is currently drilling the Walter-operated amplitude-supported exploitation well in Ewing Bank 953. The Ewing Bank 953 well targets a Pliocene age reservoir at approximately 19,000 feet with an estimated gross resource potential of 15  25 million barrels of oil equivalent, with results expected by the end of the third quarter 2024. Talos holds 33.3% W.I., with Walter Oil & Gas holding 56.7% W.I. and Gordy Oil holding 10% W.I. Daenerys: Talos expects to utilize the West Vela drillship to drill the Daenerys exploration well subsequent to the Katmai West #2 well. The Daenerys well is a high-impact subsalt project that will evaluate the regionally prolific Middle and Lower Miocene section and carries an estimated gross resource potential between 100  300 MMBoe. The prospect is part of a broader farm-in transaction executed in 2023 with a combined approximately 23,000 gross acres in the Walker Ridge area. The well is expected to spud in the first quarter 2025 after drilling Katmai West #2. Talos holds a 27% W.I. Partners include Red Willow, Houston Energy, and Cathexis. Helms Deep: Talos expects to mobilize the West Vela drillship to Helms Deep after completing drilling operations at Daenerys. The West Vela is set to commence drilling at Helms Deep, an amplitude-supported, near-infrastructure subsalt Pliocene exploitation well, in the third quarter 2025. The Helms Deep well has a proposed depth of approximately 18,000 feet and an estimated gross resource potential between 17 - 27 MMBoe. Talos is targeting 50% W.I."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 2 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "HP-I Update: HP-I Resumed Production: In mid-June 2024, the HP-I vessel resumed production ahead of schedule following the completion of the planned regulatory required dry-dock maintenance. The dry-dock period was 52 days and resulted in an estimated deferred production of approximately 4.8 MBoe/d in the second quarter 2024. (1) Proved and probable reserves are estimated by Netherland, Sewell & Associates, Inc. (NSAI). PV-10 utilizes SEC pricing of $78.21 / BBL WTI and $2.64 per MCF per MMBTU."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 3 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECOND QUARTER 2024 RESULTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "Key Financial Highlights:"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ thousands, except per share and per Boe amounts) Three Months EndedJune 30, 2024 Total revenues $ 549,165 Net Income (Loss) $ 12,381 Net Income (Loss) per diluted share $ 0.07 Adjusted Net Income (Loss)* $ 5,179 Adjusted Net Income (Loss) per diluted share* $ 0.03 Adjusted EBITDA* $ 343,984 Adjusted EBITDA excluding hedges* $ 361,502 Capital Expenditures $ 122,812"
+    },
+    {
+      "type": "TextElement",
+      "text": "Production Production for the second quarter 2024 was 95.5 MBoe/d and was 73% oil and 81% liquids."
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months EndedJune 30, 2024 Oil (MBbl/d) 69.3 Natural Gas (MMcf/d) 110.8 NGL (MBbl/d) 7.7 Total average net daily (MBoe/d) 95.5"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 Production % Oil % Liquids % Operated Green Canyon Area 31.9 79 % 86 % 44 % Mississippi Canyon Area 50.0 75 % 83 % 77 % Shelf and Gulf Coast 13.5 49 % 59 % 61 % Total average net daily (MBoe/d) 95.5 73 % 81 % 64 %"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months EndedJune 30, 2024 Average realized prices (excluding hedges) Oil ($/Bbl) $ 80.50 Natural Gas ($/Mcf) $ 2.59 NGL ($/Bbl) $ 22.33 Average realized price ($/Boe) $ 63.22 Average NYMEX prices WTI ($/Bbl) $ 80.66 Henry Hub ($/MMBtu) $ 2.06"
+    },
+    {
+      "type": "TextElement",
+      "text": "Lease Operating & General and Administrative Expenses Total lease operating expenses for the second quarter 2024, inclusive of workover, maintenance and insurance costs, were $157.3 million, or $18.11 per Boe. Excluding workover expenses, total lease operating expenses were $148.4 million, or $17.09 per Boe. Lease operating expenses were $16.27 per Boe, adjusting for workover expenses and the impact of the HP-I during the second quarter 2024. General and Administrative expenses for the second quarter, adjusted to exclude one-time transaction-related costs and non-cash equity-based compensation, were $35.6 million, or $4.10 per Boe. Talos expects General and Administrative expenses to be significantly lower in the second half of 2024, due to the realization of projected synergies."
+    },
+    {
+      "type": "TableElement",
+      "text": "($ thousands, except per Boe amounts) Three Months EndedJune 30, 2024 Lease Operating Expenses $ 157,310 Lease Operating Expenses per Boe $ 18.11 Lease Operating Expenses excluding workover $ 148,410 Lease Operating Expenses excluding workover per Boe $ 17.09 Adjusted General & Administrative Expenses* $ 35,600 Adjusted General & Administrative Expenses per Boe* $ 4.10"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 4 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "Capital Expenditures Capital expenditures for the second quarter 2024, excluding plugging and abandonment and settled decommissioning obligations, totaled $122.8 million."
+    },
+    {
+      "type": "TableElement",
+      "text": "($ thousands) Three Months EndedJune 30, 2024 U.S. drilling & completions $ 71,265 Asset management(1) 36,726 Seismic and G&G, land, capitalized G&A and other 14,821 Total Capital Expenditures $ 122,812"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Asset management consists of capital expenditures for development-related activities primarily associated with recompletions and improvements to our facilities and infrastructure. Plugging & Abandonment Expenses Capital expenditures for plugging and abandonment and settled decommissioning obligations for the second quarter 2024 totaled $22.0 million. Three Months EndedJune 30, 2024 Plugging & Abandonment and Decommissioning Obligations Settled(1) $ 22,044 (1) Settlement of decommissioning obligations as a result of working interest partners or counterparties of divestiture transactions that were unable to perform the required abandonment obligations due to bankruptcy or insolvency. Liquidity and Leverage At June 30, 2024, Talos had approximately $738.7 million of liquidity, with $740.0 million undrawn on its credit facility and approximately $37.8 million in cash, less approximately $39.1 million in outstanding letters of credit. On June 30, 2024, Talos had $1,475.0 million in total debt. Net Debt* was $1,437.2 million. Net Debt to Pro Forma Last Twelve Months (LTM) Adjusted EBITDA* was 1.0x."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 5 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TitleElement",
+      "text": "OPERATIONAL & FINANCIAL GUIDANCE UPDATES"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the third quarter 2024, Talos expects average daily production of 92.0 - 97.0 MBoe/d (71% oil). Taloss reiterates its full year 2024 operational and financial guidance and continues to expect average daily production of 89.0 - 95.0 MBoe/d (71% oil). Talos expects to generate Free Cash Flow in the second half 2024 in excess of its Credit Facility balance, and is targeting a long-term leverage ratio below 1.0x. The following summarizes Taloss previously disclosed full-year 2024 operational and production guidance."
+    },
+    {
+      "type": "TableElement",
+      "text": "FY 2024 ($ Millions, unless highlighted): Low High Production Oil (MMBbl) 23.4 24.7 Natural Gas (Mcf) 40.0 44.2 NGL (MMBbl) 2.5 2.7 Total Production (MMBoe) 32.6 34.8 Avg Daily Production (MBoe/d) 89.0 95.0 Cash Expenses Cash Operating Expenses and Workovers(1)(2)(4)* $ 555 $ 585 G&A(2)(3)* $ 100 $ 110 Capex Capital Expenditures(5) $ 570 $ 600 P&A Expenditures P&A, Decommissioning $ 90 $ 100 Interest Interest Expense(6) $ 175 $ 185"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Includes Lease Operating Expenses and Maintenance. (2) Includes insurance costs. (3) Excludes non-cash equity-based compensation and transaction and other expenses. (4) Includes reimbursements under production handling agreements. (5) Excludes acquisitions. (6) Includes cash interest expense on debt and finance lease, surety charges and amortization of deferred financing costs and original issue discounts. * Due to the forward-looking nature a reconciliation of Cash Operating Expenses and G&A to the most directly comparable GAAP measure could not reconciled without unreasonable efforts."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 6 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TitleElement",
+      "text": "HEDGES"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table reflects contracted volumes and weighted average prices the Company will receive under the terms of its derivative contracts as of August 6, 2024. The table includes derivative instruments assumed as part of the QuarterNorth acquisition:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Instrument Type Avg. DailyVolume W.A. Swap W.A. Sub-Floor W.A. Floor W.A. Ceiling Crude  WTI (Bbls) (Per Bbl) (Per Bbl) (Per Bbl) (Per Bbl) July - September 2024 Fixed Swaps 39,696 $ 76.75    Collar 1,000   $ 70.00 $ 75.00 Long Puts 4,000   $ 70.00  Short Puts 1,000  $ 60.00   October - December 2024 Fixed Swaps 38,674 $ 76.07    Collar 1,000   $ 70.00 $ 75.00 Long Puts 4,000   $ 70.00  Short Puts 1,000  $ 60.00   January - March 2025 Fixed Swaps 32,000 $ 72.52    Collar 3,000   $ 65.00 $ 84.35 April - June 2025 Fixed Swaps 32,000 $ 73.80    July - September 2025 Fixed Swaps 14,000 $ 74.04    October - December 2025 Fixed Swaps 14,000 $ 73.93    Natural Gas  HH NYMEX (MMBtu) (Per MMBtu) (Per MMBtu) (Per MMBtu) (Per MMBtu) July - September 2024 Fixed Swaps 30,000 $ 2.82    Collar 10,000   $ 4.00 $ 6.90 Long Puts 13,660   $ 2.90  October - December 2024 Fixed Swaps 35,000 $ 2.85    Collar 10,000   $ 4.00 $ 6.90 Long Puts 13,660   $ 2.90  January - March 2025 Fixed Swaps 60,000 $ 3.68    April - June 2025 Fixed Swaps 55,000 $ 3.38    July - September 2025 Fixed Swaps 30,000 $ 3.58    October - December 2025 Fixed Swaps 30,000 $ 3.58   "
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONFERENCE CALL AND WEBCAST INFORMATION"
+    },
+    {
+      "type": "TextElement",
+      "text": "Talos will host a conference call, which will be broadcast live over the internet, on Thursday, August 8, 2024 at 10:00 AM Eastern Time (9:00 AM Central Time). Listeners can access the conference call through a webcast link on the Companys website at: https://www.talosenergy.com/investor-relations/events-calendar/default.aspx. Alternatively, the conference call can be accessed by dialing (800) 836-8184 (North American toll-free) or (646) 357-8785 (international). Please dial in approximately 15 minutes before the teleconference is scheduled to begin and ask to be joined into the Talos Energy call. A replay of the call will be available one hour after the conclusion of the conference until August 15, 2024 and can be accessed by dialing (888) 660-6345 and using access code 62299#. For more information, please refer to the Second Quarter 2024 Earnings Presentation available under Presentations and Filings on the Investor Relations section of Taloss website."
+    },
+    {
+      "type": "TitleElement",
+      "text": "ABOUT TALOS ENERGY"
+    },
+    {
+      "type": "TextElement",
+      "text": "Talos Energy (NYSE: TALO) is a technically driven, innovative, independent energy company focused on maximizing long-term value through its Upstream Exploration & Production business in the United States Gulf of Mexico and offshore Mexico. We leverage decades of technical and offshore operational expertise to acquire, explore, and produce assets in key geological trends while maintaining a focus on safe and efficient operations, environmental responsibility, and community impact. For more information, visit www.talosenergy.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "INVESTOR RELATIONS CONTACT"
+    },
+    {
+      "type": "TextElement",
+      "text": "Clay Jeansonne investor@talosenergy.com"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 7 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CAUTIONARY STATEMENT ABOUT FORWARD-LOOKING STATEMENT"
+    },
+    {
+      "type": "TextElement",
+      "text": "The information in this communication includes forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended (the Securities Act), and Section 21E of the Securities Exchange Act of 1934, as amended (the Exchange Act). All statements, other than statements of historical fact included in this communication regarding our strategy, future operations, financial position, estimated revenues and losses, projected costs, prospects, plans and objectives of management are forward-looking statements. When used in this communication, the words will, could, believe, anticipate, intend, estimate, expect, project, forecast, may, objective, plan and similar expressions are intended to identify forward-looking statements, although not all forward-looking statements contain such identifying words. Forward-looking statements are based on managements current expectations and assumptions about future events and are based on currently available information as to the outcome and timing of future events. These forward-looking statements are based on our current beliefs, based on currently available information, as to the outcome and timing of future events. Forward-looking statements may include statements about: business strategy; recoverable resources and reserves; drilling prospects, inventories, projects and programs; our ability to replace the reserves that we produce through drilling and property acquisitions; financial strategy, liquidity and capital required for our development program and other capital expenditures; realized oil and natural gas prices; risks related to future mergers and acquisitions and/or to realize the expected benefits of any such transaction timing and amount of future production of oil, natural gas and NGLs; our hedging strategy and results; future drilling plans; availability of pipeline connections on economic terms; competition, government regulations, including financial assurance requirements, and legislative and political developments; our ability to obtain permits and governmental approvals; pending legal, governmental or environmental matters; our marketing of oil, natural gas and NGLs; our integration of acquisitions, including the QuarterNorth acquisition, and the anticipated performance of the combined company; future leasehold or business acquisitions on desired terms; costs of developing properties; general economic conditions, including the impact of continued inflation and associated changes in monetary policy; political and economic conditions and events in foreign oil, natural gas and NGL producing countries and acts of terrorism or sabotage; credit markets; volatility in the political, legal and regulatory environments ahead of the upcoming domestic and foreign presidential elections; estimates of future income taxes; our estimates and forecasts of the timing, number, profitability and other results of wells we expect to drill and other exploration activities; our ongoing strategy with respect to our Zama asset; uncertainty regarding our future operating results and our future revenues and expenses; impact of new accounting pronouncements on earnings in future periods; and plans, objectives, expectations and intentions contained in this communication that are not historical. These forward-looking statements are subject to numerous risks and uncertainties, most of which are difficult to predict and many of which are beyond our control. These risks include, but are not limited to, commodity price volatility; global demand for oil and natural gas; the ability or willingness of OPEC and other state-controlled oil companies to set and maintain oil production levels and the impact of any such actions; the lack of a resolution to the war in Ukraine and increasing hostilities in the Middle East, and their impact on commodity markets; the impact of any pandemic, and governmental measures related thereto; lack of transportation and storage capacity as a result of oversupply, government and regulations; the effect of a possible U.S. government shutdown and resulting impact on economic conditions and delays in regulatory and permitting approvals; lack of availability of drilling and production equipment and services; adverse weather events, including tropical storms, hurricanes, winter storms and loop currents; cybersecurity threats; sustained inflation and the impact of central bank policy in response thereto; environmental risks; failure to find, acquire or gain access to other discoveries and prospects or to successfully develop and produce from our current discoveries and prospects; geologic risk; drilling and other operating risks; well control risk; regulatory changes, including the impact of financial assurance requirements; the uncertainty inherent in estimating reserves and in projecting future rates of production; cash flow and access to capital; the timing of development expenditures; potential adverse reactions or competitive responses to our acquisitions and other transactions; the possibility that the anticipated benefits of our acquisitions are not realized when expected or at all, including as a result of the impact of, or problems arising from, the integration of acquired assets and operations; and the other risks discussed in Risk Factors of our Annual Report on Form 10-K for the year ended December 31, 2023 and Part II, Item 1A. Risk Factors of our Quarterly Report on Form 10-Q for the quarter ended March 31, 2024, each filed with the SEC. Should one or more of the risks or uncertainties described herein occur, or should underlying assumptions prove incorrect, our actual results and plans could differ materially from those expressed in any forward-looking statements. All forward-looking statements, expressed or implied, included in this communication are expressly qualified in their entirety by this cautionary statement. This cautionary statement should also be considered in connection with any subsequent written or oral forward-looking statements that we or persons acting on our behalf may issue. Except as otherwise required by applicable law, we disclaim any duty to update any forward-looking statements, all of which are expressly qualified by the statements in this section, to reflect events or circumstances after the date of this communication."
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRODUCTION ESTIMATES"
+    },
+    {
+      "type": "TextElement",
+      "text": "Estimates for our future production volumes are based on assumptions of capital expenditure levels and the assumption that market demand and prices for oil and gas will continue at levels that allow for economic production of these products. The production, transportation, marketing and storage of oil and gas are subject to disruption due to transportation, processing and storage availability, mechanical failure, human error, adverse weather conditions such as hurricanes, global political and macroeconomic events and numerous other factors. Our estimates are based on certain other assumptions, such as well performance, which may vary significantly from those assumed. Therefore, we can give no assurance that our future production volumes will be as estimated."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 8 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RESERVE INFORMATION"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reserve engineering is a process of estimating underground accumulations of oil, natural gas and NGLs that cannot be measured in an exact way. The accuracy of any reserve estimate depends on the quality of available data, the interpretation of such data and price and cost assumptions made by reserve engineers. In addition, the results of drilling, testing and production activities may justify upward or downward revisions of estimates that were made previously. If significant, such revisions would change the schedule of any further production and development drilling. Accordingly, reserve estimates may differ significantly from the quantities of oil, natural gas and NGLs that are ultimately recovered. In addition, we use the terms gross unrisked recoverable resource potential, gross reserves, and reserve potential in this release, which are not measures of reserves prepared in accordance with SEC guidelines or permitted to be included in SEC filings. These resource estimates are inherently more uncertain than estimates of proved reserves or other reserves prepared in accordance with SEC guidelines."
+    },
+    {
+      "type": "TitleElement",
+      "text": "USE OF NON-GAAP FINANCIAL MEASURES"
+    },
+    {
+      "type": "TextElement",
+      "text": "This release includes the use of certain measures that have not been calculated in accordance with U.S. generally acceptable accounting principles (GAAP) such as, but not limited to, EBITDA, Adjusted EBITDA, LTM Adjusted EBITDA, Pro Forma LTM Adjusted EBITDA, Net Debt, Net Debt to LTM Adjusted EBITDA, Net Debt to Pro Forma LTM Adjusted EBITDA, Adjusted Free Cash Flow and Leverage, Adjusted EBITDA excluding hedges. Non-GAAP financial measures have limitations as analytical tools and should not be considered in isolation or as a substitute for analysis of our results as reported under GAAP. Reconciliations for non-GAAP measure to GAAP measures are included at the end of this release."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 9 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "Talos Energy Inc. Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 December 31, 2023 (Unaudited) ASSETS Current assets: Cash and cash equivalents $ 37,797 $ 33,637 Accounts receivable: Trade, net 243,826 178,977 Joint interest, net 156,287 79,337 Other, net 13,468 19,296 Assets from price risk management activities 16,412 36,152 Prepaid assets 79,870 64,387 Other current assets 18,123 10,389 Total current assets 565,783 422,175 Property and equipment: Proved properties 9,435,902 7,906,295 Unproved properties, not subject to amortization 653,143 268,315 Other property and equipment 34,824 34,027 Total property and equipment 10,123,869 8,208,637 Accumulated depreciation, depletion and amortization (4,643,062 ) (4,168,328 ) Total property and equipment, net 5,480,807 4,040,309 Other long-term assets: Restricted cash 104,368 102,362 Assets from price risk management activities 2,784 17,551 Equity method investments 109,688 146,049 Other well equipment 62,991 54,277 Notes receivable, net 17,041 16,207 Operating lease assets 12,429 11,418 Other assets 5,964 5,961 Total assets $ 6,361,855 $ 4,816,309 LIABILITIES AND STOCKHOLDERS EQUITY Current liabilities: Accounts payable $ 91,871 $ 84,193 Accrued liabilities 315,191 227,690 Accrued royalties 84,126 55,051 Current portion of long-term debt  33,060 Current portion of asset retirement obligations 78,765 77,581 Liabilities from price risk management activities 51,607 7,305 Accrued interest payable 48,970 42,300 Current portion of operating lease liabilities 3,928 2,666 Other current liabilities 37,181 48,769 Total current liabilities 711,639 578,615 Long-term liabilities: Long-term debt 1,435,899 992,614 Asset retirement obligations 1,080,082 819,645 Liabilities from price risk management activities 1,441 795 Operating lease liabilities 17,332 18,211 Other long-term liabilities 389,137 251,278 Total liabilities 3,635,530 2,661,158 Commitments and contingencies Stockholders equity: Preferred stock; $0.01 par value; 30,000,000 shares authorized and zero shares issued or outstanding as of June 30, 2024 and December 31, 2023, respectively   Common stock; $0.01 par value; 270,000,000 shares authorized; 187,339,187 and 127,480,361 shares issued as of June 30, 2024 and December 31, 2023, respectively 1,873 1,275 Additional paid-in capital 3,262,700 2,549,097 Accumulated deficit (447,775 ) (347,717 ) Treasury stock, at cost; 7,204,380 and 3,400,000 shares as of June 30, 2024 and December 31, 2023, respectively (90,473 ) (47,504 ) Total stockholders equity 2,726,325 2,155,151 Total liabilities and stockholders equity $ 6,361,855 $ 4,816,309"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 10 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "Talos Energy Inc. Consolidated Statements of Operations"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share amounts)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Revenues: Oil $ 507,408 $ 342,983 $ 900,629 $ 635,677 Natural gas 26,060 16,329 49,758 36,512 NGL 15,697 7,898 28,710 17,603 Total revenues 549,165 367,210 979,097 689,792 Operating expenses: Lease operating expense 157,310 101,165 292,488 182,527 Production taxes 476 607 1,020 1,213 Depreciation, depletion and amortization 259,091 169,794 474,755 317,117 Accretion expense 30,732 22,760 57,635 42,174 General and administrative expense 48,247 33,182 118,088 96,369 Other operating (income) expense (1,061 ) (723 ) (87,104 ) 2,115 Total operating expenses 494,795 326,785 856,882 641,515 Operating income (expense) 54,370 40,425 122,215 48,277 Interest expense (48,982 ) (45,632 ) (99,827 ) (83,213 ) Price risk management activities income (expense) 2,302 26,197 (84,760 ) 85,134 Equity method investment income (expense) (456 ) (2,012 ) (8,510 ) 5,431 Other income (expense) 4,164 1,591 (51,732 ) 8,257 Net income (loss) before income taxes 11,398 20,569 (122,614 ) 63,886 Income tax benefit (expense) 983 (6,892 ) 22,556 39,651 Net income (loss) $ 12,381 $ 13,677 $ (100,058 ) $ 103,537 Net income (loss) per common share: Basic $ 0.07 $ 0.11 $ (0.59 ) $ 0.90 Diluted $ 0.07 $ 0.11 $ (0.59 ) $ 0.89 Weighted average common shares outstanding: Basic 183,564 125,436 171,027 115,590 Diluted 183,692 125,667 171,027 116,363"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 11 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "Talos Energy Inc. Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, 2024 2023 Cash flows from operating activities: Net income (loss) $ (100,058 ) $ 103,537 Adjustments to reconcile net income (loss) to net cash provided by (used in) operating activities: Depreciation, depletion, amortization and accretion expense 532,390 359,291 Amortization of deferred financing costs and original issue discount 5,084 7,629 Equity-based compensation expense 5,544 8,687 Price risk management activities (income) expense 84,760 (85,134 ) Net cash received (paid) on settled derivative instruments (21,012 ) (4,161 ) Equity method investment (income) expense 8,510 (5,431 ) Loss (gain) on extinguishment of debt 60,256  Settlement of asset retirement obligations (50,128 ) (47,683 ) Loss (gain) on sale of assets (2,500 )  Loss (gain) on sale of business (86,940 )  Changes in operating assets and liabilities: Accounts receivable 3,076 35,127 Other current assets (5,150 ) (23,790 ) Accounts payable (43,608 ) (3,890 ) Other current liabilities 17,748 (22,975 ) Other non-current assets and liabilities, net (22,182 ) (44,124 ) Net cash provided by (used in) operating activities 385,790 277,083 Cash flows from investing activities: Exploration, development and other capital expenditures (269,170 ) (298,658 ) Cash acquired in excess of payments for acquisitions  17,617 Payments for acquisitions, net of cash acquired (916,045 )  Proceeds from (cash paid for) sale of property and equipment, net  (8,488 ) Contributions to equity method investees (19,627 ) (15,260 ) Investment in intangible assets  (7,796 ) Proceeds from sales of businesses 141,997  Net cash provided by (used in) investing activities (1,062,845 ) (312,585 ) Cash flows from financing activities: Issuance of common stock 387,717  Issuance of senior notes 1,250,000  Redemption of senior notes (897,116 ) (15,000 ) Proceeds from Bank Credit Facility 770,000 505,000 Repayment of Bank Credit Facility (745,000 ) (305,000 ) Deferred financing costs (27,386 ) (11,775 ) Other deferred payments (1,234 ) (462 ) Payments of finance lease (8,747 ) (8,026 ) Purchase of treasury stock (39,326 ) (47,504 ) Employee stock awards tax withholdings (5,687 ) (7,378 ) Net cash provided by (used in) financing activities 683,221 109,855 Net increase (decrease) in cash, cash equivalents and restricted cash 6,166 74,353 Cash, cash equivalents and restricted cash: Balance, beginning of period 135,999 44,145 Balance, end of period $ 142,165 $ 118,498 Supplemental non-cash transactions: Capital expenditures included in accounts payable and accrued liabilities $ 79,832 $ 113,319 Supplemental cash flow information: Interest paid, net of amounts capitalized $ 64,452 $ 63,492"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 12 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL NON-GAAP INFORMATION"
+    },
+    {
+      "type": "TextElement",
+      "text": "Certain financial information included in our financial results are not measures of financial performance recognized by accounting principles generally accepted in the United States, or GAAP. These non-GAAP financial measures may not be viewed as a substitute for results determined in accordance with GAAP and are not necessarily comparable to non-GAAP measures which may be reported by other companies. Reconciliation of General and Administrative Expenses to Adjusted General and Administrative Expenses We believe the presentation of Adjusted General and Administrative Expenses provides management and investors with (i) important supplemental indicators of the operational performance of our business, (ii) additional criteria for evaluating our performance relative to our peers and (iii) supplemental information to investors about certain material non-cash and/or other items that may not continue at the same level in the future. Adjusted General & Administrative Expenses has limitations as an analytical tool and should not be considered in isolation or as substitutes for analysis of our results as reported under GAAP or as alternatives to net income (loss), operating income (loss) or any other measure of financial performance presented in accordance with GAAP. We define these as the following: General and Administrative Expenses. General and Administrative Expenses generally consist of costs incurred for overhead, including payroll and benefits for our corporate staff, costs of maintaining our headquarters, costs of managing our production operations, bad debt expense, equity-based compensation expense, audit and other fees for professional services and legal compliance. A portion of these expenses are allocated based on the percentage of employees dedicated to each operating segment."
+    },
+    {
+      "type": "TableElement",
+      "text": "($ thousands) Three Months EndedJune 30, 2024 Reconciliation of General & Administrative Expenses to Adjusted General & Administrative Expenses: Total General and administrative expense $ 48,247 Transaction and other expenses(1) (9,857 ) Non-cash equity-based compensation expense (2,790 ) Adjusted General & Administrative Expenses $ 35,600"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Transaction expenses includes $9.3 million in costs related to the QuarterNorth acquisition, inclusive of $8.1 million in severance expense for the three months ended June 30, 2024. Reconciliation of Net Income (Loss) to EBITDA and Adjusted EBITDA EBITDA and Adjusted EBITDA provide management and investors with (i) additional information to evaluate, with certain adjustments, items required or permitted in calculating covenant compliance under our debt agreements, (ii) important supplemental indicators of the operational performance of our business, (iii) additional criteria for evaluating our performance relative to our peers and (iv) supplemental information to investors about certain material non-cash and/or other items that may not continue at the same level in the future. EBITDA and Adjusted EBITDA have limitations as analytical tools and should not be considered in isolation or as substitutes for analysis of our results as reported under GAAP or as alternatives to net income (loss), operating income (loss) or any other measure of financial performance presented in accordance with GAAP. We define these as the following: EBITDA. Net income (loss) plus interest expense; income tax expense (benefit); depreciation, depletion and amortization; and accretion expense. Adjusted EBITDA. EBITDA plus non-cash write-down of oil and natural gas properties, transaction and other (income) expenses, decommissioning obligations, derivative fair value (gain) loss, net cash receipts (payments) on settled derivatives, (gain) loss on debt extinguishment, non-cash write-down of other well equipment and non-cash equity-based compensation expense. Adjusted EBITDA excluding hedges. We have historically provided as a supplement torather than in lieu ofAdjusted EBITDA including hedges, provides useful information regarding our results of operations and profitability by illustrating the operating results of our oil and natural gas properties without the benefit or detriment, as applicable, of our financial oil and natural gas hedges. By excluding our oil and natural gas hedges, we are able to convey actual operating results using realized market prices during the period, thereby providing analysts and investors with additional information they can use to evaluate the impacts of our hedging strategies over time."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 13 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following tables present a reconciliation of the GAAP financial measure of Net Income (loss) to EBITDA, Adjusted EBITDA, Adjusted EBITDA excluding hedges for each of the periods indicated (in thousands):"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended ($ thousands) June 30,2024 March 31,2024(4) December 31,2023(4) September 30,2023(4) Reconciliation of Net Income (Loss) to Adjusted EBITDA: Net Income (loss) $ 12,381 $ (112,439 ) $ 85,898 $ (2,103 ) Interest expense 48,982 50,845 44,295 45,637 Income tax expense (benefit) (983 ) (21,573 ) (5,081 ) (15,865 ) Depreciation, depletion and amortization 259,091 215,664 183,058 163,359 Accretion expense 30,732 26,903 22,722 21,256 EBITDA 350,203 159,400 330,892 212,284 Transaction and other (income) expenses(1) 6,629 (49,157 ) 5,504 (64,321 ) Decommissioning obligations(2) 4,182 855 2,425 7,972 Derivative fair value (gain) loss(3) (2,302 ) 87,062 (94,596 ) 98,802 Net cash received (paid) on settled derivative instruments(3) (17,518 ) (3,494 ) 1,017 (6,313 ) Loss on extinguishment of debt  60,256   Non-cash equity-based compensation expense 2,790 2,754 3,873 393 Adjusted EBITDA 343,984 257,676 249,115 248,817 Add: Net cash (received) paid on settled derivative instruments(3) 17,518 3,494 (1,017 ) 6,313 Adjusted EBITDA excluding hedges $ 361,502 $ 261,170 $ 248,098 $ 255,130"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Transaction expenses includes $9.3 million in costs related to the QuarterNorth acquisition, inclusive of $8.1 million in severance expense for the three months ended June 30, 2024, $28.1 million in costs related to the QuarterNorth acquisition, inclusive of $14.2 million in severance expense and $9.8 million in costs related to the divestiture of TLCS, inclusive of $3.7 million in severance expense for the three months ended March 31, 2024, $0.9 million in costs related to the EnVen Energy Corporation (EnVen) Acquisition, inclusive of $0.5 million in severance expense for the three months ended December 31, 2023 and $1.5 million in costs related to the EnVen Acquisition, inclusive of $0.9 million in severance expense for the three months ended September 30, 2023. Other income (expense) includes restructuring expenses, cost saving initiatives and other miscellaneous income and expenses that we do not view as a meaningful indicator of our operating performance. For the three months ended March 31, 2024, the amount includes a gain of $86.9 million related to the divestiture of TLCS. For the three months ended September 30, 2023, the amount includes a $66.2 million gain on the divestiture of 49.9% equity interest in our subsidiary, Talos Energy Mexico 7, S. de R.L. de C.V. to Zamajal, S.A. de C.V., a wholly owned subsidiary of Grupo Carso. (2) Estimated decommissioning obligations were a result of working interest partners or counterparties of divestiture transactions that were unable to perform the required abandonment obligations due to bankruptcy or insolvency and are included in Other operating (income) expense on our consolidated statements of operations. (3) The adjustments for the derivative fair value (gain) loss and net cash receipts (payments) on settled derivative instruments have the effect of adjusting net income (loss) for changes in the fair value of derivative instruments, which are recognized at the end of each accounting period because we do not designate commodity derivative instruments as accounting hedges. This results in reflecting commodity derivative gains and losses within Adjusted EBITDA on an unrealized basis during the period the derivatives settled. (4) Reporting period includes Carbon Capture & Sequestration (CCS) business."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 14 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Adjusted EBITDA to Adjusted Free Cash Flow and Reconciliation of Net Cash Provided by Operating Activities to Adjusted Free Cash Flow Adjusted Free Cash Flow before changes in working capital provides management and investors with (i) important supplemental indicators of the operational performance of our business, (ii) additional criteria for evaluating our performance relative to our peers and (iii) supplemental information to investors about certain material non-cash and/or other items that may not continue at the same level in the future. Adjusted Free Cash Flow has limitations as an analytical tool and should not be considered in isolation or as substitutes for analysis of our results as reported under GAAP or as alternatives to net income (loss), operating income (loss) or any other measure of financial performance presented in accordance with GAAP. We define these as the following: Capital Expenditures and Plugging & Abandonment. Actual capital expenditures and plugging & abandonment recognized in the quarter, inclusive of accruals. Interest Expense. Actual interest expense per the income statement. Talos did not pay any cash income taxes in the period, therefore cash income taxes have no impact to the reported Adjusted Free Cash Flow before changes in working capital number."
+    },
+    {
+      "type": "TableElement",
+      "text": "($ thousands) Three Months EndedJune 30, 2024 Reconciliation of Adjusted EBITDA to Adjusted Free Cash Flow (before changes in working capital): Adjusted EBITDA $ 343,984 Capital expenditures (122,812 ) Plugging & abandonment (22,221 ) Decommissioning obligations settled 178 Investment in Mexico (2,108 ) Interest expense (48,982 ) Adjusted Free Cash Flow (before changes in working capital) 148,039"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ thousands) Three Months EndedJune 30, 2024 Reconciliation of Net Cash Provided by Operating Activities to Adjusted Free Cash Flow (before changes in working capital): Net cash provided by operating activities(1) $ 289,364 (Increase) decrease in operating assets and liabilities (25,969 ) Capital expenditures(2) (122,813 ) Decommissioning obligations settled 178 Investment in Mexico (2,108 ) Transaction and other (income) expenses(3) 9,129 Decommissioning obligations(4) 4,182 Amortization of deferred financing costs and original issue discount (2,486 ) Income tax benefit (983 ) Other adjustments (455 ) Adjusted Free Cash Flow (before changes in working capital) 148,039"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Includes settlement of asset retirement obligations. (2) Includes accruals and excludes acquisitions. (3) Transaction expenses includes $9.3 million in costs related to the QuarterNorth acquisition, inclusive of $8.1 million in severance expense for the three months ended June 30, 2024. Other income (expense) includes restructuring expenses, cost saving initiatives and other miscellaneous income and expenses that we do not view as a meaningful indicator of our operating performance. (4) Estimated decommissioning obligations were a result of working interest partners or counterparties of divestiture transactions that were unable to perform the required abandonment obligations due to bankruptcy or insolvency."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 15 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Income to Adjusted Net Income (Loss) and Adjusted Earnings per Share Adjusted Net Income (Loss) and Adjusted Earnings per Share are to provide management and investors with (i) important supplemental indicators of the operational performance of our business, (ii) additional criteria for evaluating our performance relative to our peers and (iii) supplemental information to investors about certain material non-cash and/or other items that may not continue at the same level in the future. Adjusted Net Income (Loss) and Adjusted Earnings per Share have limitations as analytical tools and should not be considered in isolation or as a substitute for analysis of our results as reported under GAAP or as an alternative to net income (loss), operating income (loss), earnings per share or any other measure of financial performance presented in accordance with GAAP. Adjusted Net Income (Loss). Net income (loss) plus accretion expense, transaction related costs, derivative fair value (gain) loss, net cash receipts (payments) on settled derivative instruments and non-cash equity-based compensation expense. Adjusted Earnings per Share. Adjusted Net Income (Loss) divided by the number of common shares."
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 ($ thousands, except per share amounts) Basic per Share Diluted per Share Reconciliation of Net Income (Loss) to Adjusted Net Income (Loss): Net Income (loss) $ 12,381 $ 0.07 $ 0.07 Transaction and other (income) expenses(1) 6,629 $ 0.04 $ 0.04 Decommissioning obligations(2) 4,182 $ 0.02 $ 0.02 Derivative fair value loss(3) (2,302 ) $ (0.01 ) $ (0.01 ) Net cash received on paid derivative instruments(3) (17,518 ) $ (0.10 ) $ (0.10 ) Non-cash income tax benefit (983 ) $ (0.01 ) $ (0.01 ) Loss on extinguishment of debt  $  $  Non-cash equity-based compensation expense 2,790 $ 0.02 $ 0.02 Adjusted Net Income (Loss)(4) $ 5,179 $ 0.03 $ 0.03 Weighted average common shares outstanding at June 30, 2024: Basic 183,564 Diluted 183,692"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Transaction expenses includes $9.3 million in costs related to the QuarterNorth acquisition, inclusive of $8.1 million in severance expense for the three months ended June 30, 2024. (2) Estimated decommissioning obligations were a result of working interest partners or counterparties of divestiture transactions that were unable to perform the required abandonment obligations due to bankruptcy or insolvency. (3) The adjustments for the derivative fair value (gain) loss and net cash receipts (payments) on settled derivative instruments have the effect of adjusting net income (loss) for changes in the fair value of derivative instruments, which are recognized at the end of each accounting period because we do not designate commodity derivative instruments as accounting hedges. This results in reflecting commodity derivative gains and losses within Adjusted Net Income (Loss) on an unrealized basis during the period the derivatives settled. (4) The per share impacts reflected in this table were calculated independently and may not sum to total adjusted basic and diluted EPS due to rounding."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 16 333 Clay St., Suite 3300, Houston, TX 77002"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Total Debt to Net Debt and Net Debt to LTM Adjusted EBITDA We believe the presentation of Net Debt, LTM Adjusted EBITDA, Net Debt to LTM Adjusted EBITDA and Net Debt to Pro Forma LTM Adjusted EBITDA is important to provide management and investors with additional important information to evaluate our business. These measures are widely used by investors and ratings agencies in the valuation, comparison, rating and investment recommendations of companies. Net Debt. Total Debt principal minus cash and cash equivalents. Net Debt to LTM Adjusted EBITDA. Net Debt divided by the LTM Adjusted EBITDA."
+    },
+    {
+      "type": "TableElement",
+      "text": "($ thousands) June 30, 2024 Reconciliation of Net Debt: 9.000% Second-Priority Senior Secured Notes  due February 2029 $ 625,000 9.375% Second-Priority Senior Secured Notes  due February 2031 625,000 Bank Credit Facility  matures March 2027 225,000 Total Debt 1,475,000 Less: Cash and cash equivalents (37,797 ) Net Debt $ 1,437,203 Calculation of LTM Adjusted EBITDA: Adjusted EBITDA for three months period ended September 30, 2023 $ 248,817 Adjusted EBITDA for three months period ended December 31, 2023 249,115 Adjusted EBITDA for three months period ended March 31, 2024 257,676 Adjusted EBITDA for three months period ended June 30, 2024 343,984 LTM Adjusted EBITDA $ 1,099,592 Acquired Assets Adjusted EBITDA: Adjusted EBITDA for three months period ended September 30, 2023 161,427 Adjusted EBITDA for three months period ended December 31, 2023 129,063 Adjusted EBITDA for period January 1, 2024 to March 4, 2024 99,490 LTM Adjusted EBITDA from Acquired Assets $ 389,980 Pro Forma LTM Adjusted EBITDA $ 1,489,572 Reconciliation of Net Debt to Pro Forma LTM Adjusted EBITDA: Net Debt / Pro Forma LTM Adjusted EBITDA(1) 1.0x"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Net Debt / Pro Forma LTM Adjusted EBITDA figure excludes the Finance Lease. Had the Finance Lease been included, Net Debt / Pro Forma LTM Adjusted EBITDA would have been 1.1x."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "TALOS ENERGY INC. 17 333 Clay St., Suite 3300, Houston, TX 77002"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Production of 95.5 thousand barrels of oil equivalent per day (MBoe/d) (73% oil, 81% liquids), which is at the high end of Taloss second quarter 2024 guidance range."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Repurchased 3.8 million shares of common stock for approximately $43 million at an average price of $11.26 per share, and Taloss Board of Directors authorized an additional $150 million for Taloss existing common stock repurchase program."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Reduced debt by $100 million, maintaining leverage at 1.0x* and liquidity of $738.7 million at the end of the second quarter."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Purchased a 21.4% working interest (W.I.) in the Monument discovery located in the Walker Ridge area in the Gulf of Mexico."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Returned the Helix Producer I (HP-I) to service ahead of schedule."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Completed integration for QuarterNorth acquisition and increased expected synergies to $35 million since March 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Revenue of $549.2 million, driven by realized prices (excluding hedges) of $80.50 per barrel for oil, $22.33 per barrel for natural gas liquids (NGLs), and $2.59 per thousand cubic feet (Mcf) for natural gas."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net Income of $12.4 million, or $0.07 Net Income per diluted share, and Adjusted Net Income* of $5.2 million, or $0.03 Adjusted Net Income per diluted share*."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Adjusted EBITDA* of $344.0 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Capital expenditures of $122.8 million, excluding plugging and abandonment and settled decommissioning obligations."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net cash provided by operating activities of $289.4 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Adjusted Free Cash Flow* of $148.0 million."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 549.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue of $549.2 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "12.020000",
+    "return_10d_pct": "-0.9983",
+    "return_20d_pct": "-0.6656",
+    "return_30d_pct": "-9.2346",
+    "return_60d_pct": "-9.5674",
+    "return_90d_pct": "-1.5807"
+  },
+  "text_stats": {
+    "primary_text_len": 4650,
+    "exhibit_text_len": 51612,
+    "combined_text_len": 56264,
+    "semantic_text_len": 51548,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

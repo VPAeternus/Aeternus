@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RM",
+    "cik": "1519401",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088606",
+    "primary_8k_doc": "rm-20240731.htm",
+    "exhibit_docs": [
+      "rm-ex99_1.htm",
+      "rm-ex99_2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RM_000095017024088606_rm-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RM_000095017024088606_rm-ex99_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RM_000095017024088606_rm-ex99_2.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RM",
+    "cik": "1519401",
+    "entity_name": "Regional Management Corp.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "135378000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "8689000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1794527000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-29962000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-20200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "52649000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.064183",
+    "operating_cash_flow_to_revenue": "0.388904",
+    "assets_to_revenue": "13.255677",
+    "financing_cash_flow_to_revenue": "-0.221321",
+    "investing_cash_flow_to_revenue": "-0.149212"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of 7%; revenue growth driven by 5% ending net receivables growth and 80 bps increase in total revenue yield - - 30+ day contractual delinquency rate of 6.",
+      "revenue increased $9.",
+      "Net income of $8.",
+      "earnings per share of $0.",
+      "net income in the second quarter, or $0.",
+      "EPS."
+    ],
+    "guidance_evidence": [
+      "outlooks or future plans, objectives, goals, projections, strategies, events, or performance, and underlying assumptions and other statements related thereto.",
+      "outlook,” and similar expressions may be used to identify these forward-looking statements.",
+      "outlook or future plans, objectives, goals, projections, strategies, events, or performance, and underlying assumptions and other statements related thereto.",
+      "Outlooks 14 Prior to discrete items, such as any tax impacts of equity compensation Key Metrics 2Q 24 Results 3Q 24 Outlook FY 24 Outlook ENR Growth $29.",
+      "anticipates,” “expects,” “intends,” “plans,” “projects,” “believes,” “estimates,” “outlook,” and similar expressions may be used to identify these forward-looking statements.",
+      "expected and becoming a larger portion of the portfolio Front book is 83% of the total portfolio, an increase from 78% as of March 31, 2024 Front book is 77% of the 30+ delinquent loan receivables Front and back book delinquencies are 6."
+    ],
+    "wave_or_demand_evidence": [
+      "customer accounts, originations, and revenue of 7%; revenue growth driven by 5% ending net receivables growth and 80 bps increase in total revenue yield - - 30+ day contractual delinquency rate of 6.",
+      "customers with 4 limited access to consumer credit from banks, thrifts, credit card companies, and other lenders.",
+      "Customer Accounts Up 7.",
+      "aid Robert W.",
+      "aintained a tight grip on G&A expense while still investing in our growth and strategic initiatives.",
+      "ained stable at 6."
+    ],
+    "warning_or_risk_evidence": [
+      "loss rate improved 40 basis points from the prior year, as the front book continues to perform in line with our expectations and makes up a larger portion of our total portfolio.",
+      "losses, it is an excellent trade given the stronger margins and bottom-line returns that the portfolios generate.",
+      "losses for the second quarter of 2024 was $53.",
+      "losses from higher average net receivables ($0.",
+      "losses as a percentage of average net finance receivables for the second quarter of 2024 were 12.",
+      "loss rate is inclusive of a 20 basis point impact from growth of the higher-rate, small loan portfolio."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 143,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "33.869999",
+    "return_10d_pct": "-10.5403",
+    "return_20d_pct": "-7.1450",
+    "return_30d_pct": "-3.8677",
+    "return_60d_pct": "-3.4249",
+    "return_90d_pct": "-14.4966"
+  },
+  "text_stats": {
+    "primary_text_len": 4117,
+    "exhibit_text_len": 47244,
+    "combined_text_len": 51363
+  }
+}

@@ -198,7 +198,6 @@ class TestCreateMomentumReviewer:
                 "price_momentum": 75,
                 "other_score": 50,
             },
-            "deal_flow_score": 78,
             "why_now": "Strong price acceleration",
         }
 
@@ -235,7 +234,6 @@ class TestCreateMomentumReviewer:
         state = _fake_state()
         state["dealflow_context"] = {
             "subscores": {"price_momentum": 75},
-            "deal_flow_score": 78,
         }
 
         result = node(state)
@@ -390,7 +388,6 @@ class TestCreateMomentumReviewer:
                 "price_momentum": 75,
                 "earnings_estimate": 60,
             },
-            "deal_flow_score": 78,
             "why_now": "Breakout from consolidation pattern",
         }
 

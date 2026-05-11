@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PANL",
+    "cik": "1606909",
+    "event_date": "2024-08-08",
+    "event_accession": "0001606909-24-000085",
+    "primary_8k_doc": "panl-20240808.htm",
+    "exhibit_docs": [
+      "q22024earningsdeck.htm",
+      "q22024earningspressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PANL_000160690924000085_panl-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PANL_000160690924000085_q22024earningsdeck.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PANL_000160690924000085_q22024earningspressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PANL",
+    "cik": "1606909",
+    "entity_name": "PANGAEA LOGISTICS SOLUTIONS LTD.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "113699075",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "3474267",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "705179968",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-19601075",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "8794492",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "11571650",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.030557",
+    "operating_cash_flow_to_revenue": "0.101774",
+    "assets_to_revenue": "6.202161",
+    "financing_cash_flow_to_revenue": "-0.172394",
+    "investing_cash_flow_to_revenue": "0.077349"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $131.",
+      "EPS $s per Share TCE Rate $s per Shipping Day Operating Cash Flow $s in Millions $ 15.",
+      "Net income 3,994 2,767 16,659 6,170 (Income) loss attributable to noncontrolling interests (311) 78 (1,302) 149 Net income attributable to Pangaea Logistics Solutions Ltd.",
+      "Net income attributable to Pangaea Logistics Solutions Ltd.",
+      "EPS Net income attributable to Pangaea Logistics Solutions Ltd.",
+      "net income attributable to Pangaea Logistics Solutions Ltd."
+    ],
+    "guidance_evidence": [
+      "Outlook (2H24) Medium Term Outlook (Full-Year 2025) Long-Term Outlook (2026 - 2027) • While the situation in the Panama Canal has improved ton-mile demand remains elevated because of the disruption in the Red Sea and the Russian invasion of Ukraine."
+    ],
+    "wave_or_demand_evidence": [
+      "demand across and solid base of premium long-term COAs, resulted in earned TCE rates exceeding the benchmark average Baltic Panamax and Supramax indices by 7%+ in 2Q24.",
+      "demand activity in artic trade routes has accelerated while prevailing market rates have been mixed.",
+      "demand remains elevated because of the disruption in the Red Sea and the Russian invasion of Ukraine.",
+      "demand period for our specialized ice-class fleet operating in the Canadian Arctic region, the stable market environment and our expanded fleet of owned vessels positions us for strong performance in the second half of the year.",
+      "demand for our key bulk trades.",
+      "orders show continued weakness."
+    ],
+    "warning_or_risk_evidence": [
+      "charges that are not incurred in the normal course of business.",
+      "impairment, loss on sale and leaseback of vessels, share-based compensation, other non-operating income and/or expense and other non-recurring items, if any.",
+      "impairment of vessel, unrealized gains and losses on derivative instruments, and certain non-recurring charges, divided by the weighted average number of shares of common stock.",
+      "charge, port and terminal operations, vessel chartering, voyage planning, and vessel technical management.",
+      "uncertainty and changes in circumstances.",
+      "uncertainties affecting the operation of Pangaea’s business."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 131.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "6.610000",
+    "return_10d_pct": "0.6051",
+    "return_20d_pct": "2.8744",
+    "return_30d_pct": "-6.3540",
+    "return_60d_pct": "3.7821",
+    "return_90d_pct": "0.4539"
+  },
+  "text_stats": {
+    "primary_text_len": 3600,
+    "exhibit_text_len": 39345,
+    "combined_text_len": 42947
+  }
+}

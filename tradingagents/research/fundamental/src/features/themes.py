@@ -218,7 +218,7 @@ def compute_theme_cohort_strength(rows: pd.DataFrame, as_of_date: str | date) ->
             "theme_id": theme_id,
             "theme_name": group["theme_name"].iloc[0],
             "number_of_candidates_in_theme": int(count),
-            "number_of_high_score_candidates_in_theme": int(high_score),
+            "number_of_high_scoring_candidates_in_theme": int(high_score),
             "average_entry_qoq_pct": round(float(avg_qoq), 4) if pd.notna(avg_qoq) else "",
             "share_with_LLM_best": round(float(llm_best) / count, 4) if count else 0,
             "theme_cohort_strength": strength,

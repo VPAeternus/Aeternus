@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SCHW",
+    "cik": "316709",
+    "event_date": "2024-07-16",
+    "event_accession": "0000316709-24-000056",
+    "primary_8k_doc": "schw-20240716.htm",
+    "exhibit_docs": [
+      "a2q24exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SCHW_000031670924000056_schw-20240716.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SCHW_000031670924000056_a2q24exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SCHW",
+    "cik": "316709",
+    "entity_name": "SCHWAB CHARLES CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5116000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1603000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "493178000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-10096000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "11029000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "9777000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.313331",
+    "operating_cash_flow_to_revenue": "1.911063",
+    "assets_to_revenue": "96.39914",
+    "financing_cash_flow_to_revenue": "-1.973417",
+    "investing_cash_flow_to_revenue": "2.155786"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased by 1% year-over-year led by sustained market strength • Net interest margin expanded to 2.",
+      "net income for the second quarter totaling $1.",
+      "net income and diluted common earnings per share equaled $1.",
+      "Net income (in millions) GAAP $ 1,332 $ 1,294 3% $ 2,694 $ 2,897 (7)% Adjusted (1) $ 1,465 $ 1,494 (2)% $ 2,934 $ 3,274 (10)% Diluted earnings per common share GAAP $ .",
+      "earnings per share are the same for each class.",
+      "Net Income Available to Common Stockholders 3 % (3) % $ 1,211 $ 1,251 $ 926 $ 1,017 $ 1,173 Earnings per common share (3) : Basic 3 % (4) % $ ."
+    ],
+    "guidance_evidence": [
+      "guidance for the consolidated company and for CSB, adjusted to reflect the inclusion of accumulated other comprehensive income (AOCI) in the ratio.",
+      "expected integration-related attrition, core net new assets grew 17% versus the prior year to $61."
+    ],
+    "wave_or_demand_evidence": [
+      "airman and CEO Walt Bettinger Modern Wealth Solutions +56% YTD Inflows to Managed Investing Solutions Versus 2023 “Client interest in our broad array of wealth solutions remained strong through June.",
+      "airman and CEO Walt Bettinger Diversified Operating Model 41.",
+      "ained equity market strength and organic asset gathering pushed total client assets to a record $9.",
+      "ained market strength • Net interest margin expanded to 2.",
+      "ails on non-GAAP financial measures and a reconciliation of such measures to GAAP reported results are included on pages 10–12 of this release.",
+      "ainst one another in terms of functionality, design, navigation, and usability."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary Tier 1 Leverage and adjusted Tier 1 Leverage (1) reaching 10.",
+      "Preliminary) June 30, 2024 CSC CSB Tier 1 Leverage Ratio (GAAP) 9.",
+      "uncertainties that could cause actual results to differ materially from the expressed expectations.",
+      "losses) 214.",
+      "decline) $ 289.",
+      "Losses) 331."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-17",
+    "entry_open": "66.260002",
+    "return_10d_pct": "-1.4488",
+    "return_20d_pct": "-5.2219",
+    "return_30d_pct": "-1.0715",
+    "return_60d_pct": "-3.8787",
+    "return_90d_pct": "8.6025"
+  },
+  "text_stats": {
+    "primary_text_len": 3499,
+    "exhibit_text_len": 39476,
+    "combined_text_len": 42977
+  }
+}

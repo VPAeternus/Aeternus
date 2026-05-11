@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HNI",
+    "cik": "48287",
+    "event_date": "2024-07-25",
+    "event_accession": "0000048287-24-000154",
+    "primary_8k_doc": "hni-20240725.htm",
+    "exhibit_docs": [
+      "hni-ex991q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HNI_000004828724000154_hni-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HNI_000004828724000154_hni-ex991q22024.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HNI",
+    "cik": "48287",
+    "entity_name": "HNI Corporation",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "479100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "1600000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "1928800000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "2100000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-20000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "17300000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.00334",
+    "operating_cash_flow_to_revenue": "0.036109",
+    "assets_to_revenue": "4.025882",
+    "financing_cash_flow_to_revenue": "0.004383",
+    "investing_cash_flow_to_revenue": "-0.041745"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales increased 10.",
+      "net sales decreased 3.",
+      "sales decreased 440 basis points compared to the prior-year quarter.",
+      "net sales increased 16.",
+      "net sales decreased 2.",
+      "net sales decreased 4."
+    ],
+    "guidance_evidence": [
+      "Outlook • Demand environment.",
+      "outlook represents a modest reduction from the outlook provided in the previous earnings release and primarily reflects timing in the contract space.",
+      "outlook commentary.",
+      "expected to return in both segments during the second half of 2024.",
+      "expected to deliver strong growth and reach an all-time high.",
+      "expected to increase at a low-single digit rate year-over-year."
+    ],
+    "wave_or_demand_evidence": [
+      "customer-first business model, and our proven ability to manage through all parts of the economic cycle are delivering excellent results,” stated Jeff Lorenger, Chairman, President, and Chief Executive Officer.",
+      "orders were approximately flat compared to the prior-year period on an organic basis.",
+      "Orders from small-to-medium sized customers outpaced orders from contract customers.",
+      "Orders in the Residential Building Products segment decreased four percent compared to the second quarter of 2023.",
+      "orders in the segment grew four percent year-over-year, which the Corporation believes is more indicative of demand conditions.",
+      "Demand environment."
+    ],
+    "warning_or_risk_evidence": [
+      "Impairment Charges % 0.",
+      "Impairment $2.",
+      "impairment charges of $2.",
+      "charges were incurred in the prior-year quarter mainly related to the exit of the Poppin business.",
+      "impairment charges 2.",
+      "charges associated with the acquisition of Kimball International."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 623.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "54.299999",
+    "return_10d_pct": "-6.9982",
+    "return_20d_pct": "-5.7274",
+    "return_30d_pct": "-1.6943",
+    "return_60d_pct": "-3.0203",
+    "return_90d_pct": "-3.1308"
+  },
+  "text_stats": {
+    "primary_text_len": 3004,
+    "exhibit_text_len": 33488,
+    "combined_text_len": 36494
+  }
+}

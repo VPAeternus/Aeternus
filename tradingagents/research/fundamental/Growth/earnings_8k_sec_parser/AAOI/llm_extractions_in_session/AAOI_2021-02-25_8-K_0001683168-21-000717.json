@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 52.3,
+    "revenue_yoy_pct": 7.3922,
+    "revenue_qoq_pct": -31.7232,
+    "gross_margin_pct": 21.6,
+    "non_gaap_gross_margin_pct": 27.5,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 49.0,
+    "revenue_low_millions": 47.0,
+    "revenue_high_millions": 51.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 24.25,
+    "guide_direction": "negative"
+  },
+  "qualitative": {
+    "demand_signal": "“We are pleased to have secured an additional 30 total design wins in 2020, on par with last year’s total.",
+    "wave_signal": "(NASDAQ: AAOI), a leading provider of fiber-optic access network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its fourth quarter and full year ended December 31, 2020.",
+    "margin_signal": "·GAAP gross margin was 21.",
+    "risk_signal": "While we expect some of the headwinds we are seeing in the datacenter market to persist through the first quarter, we believe we are well positioned to meet our customers’ needs as demand begins to recover and we remain focused on driving shareholder value.",
+    "customer_signal": "“We are pleased to have secured an additional 30 total design wins in 2020, on par with last year’s total."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $52.3 million, compared with $48.7 million in the fourth quarter of 2019 and $76.6 million in the third quarter of 2020. Non-GAAP revenue was $52.8 million."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $52.3 million, compared with $48.7 million in the fourth quarter of 2019 and $76.6 million in the third quarter of 2020. Non-GAAP revenue was $52.8 million."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $52.3 million, compared with $48.7 million in the fourth quarter of 2019 and $76.6 million in the third quarter of 2020. Non-GAAP revenue was $52.8 million."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 21.6%, compared with 23.3% in the fourth quarter of 2019 and 25.0% in the third quarter of 2020. Non-GAAP gross margin was 27.5%, compared with 27.6% in the fourth quarter of 2019 and 27.4% in the third quarter of 2020."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 21.6%, compared with 23.3% in the fourth quarter of 2019 and 25.0% in the third quarter of 2020. Non-GAAP gross margin was 27.5%, compared with 27.6% in the fourth quarter of 2019 and 27.4% in the third quarter of 2020."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $47 million to $51 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $47 million to $51 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $47 million to $51 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 23.5% to 25%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

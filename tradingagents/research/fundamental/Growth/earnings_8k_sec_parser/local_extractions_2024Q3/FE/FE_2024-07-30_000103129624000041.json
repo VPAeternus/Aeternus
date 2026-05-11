@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FE",
+    "cik": "1031296",
+    "event_date": "2024-07-30",
+    "event_accession": "0001031296-24-000041",
+    "primary_8k_doc": "fe-20240730.htm",
+    "exhibit_docs": [
+      "ex991-q22024pressrelease.htm",
+      "ex992-2q24_fehighlightsx.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FE_000103129624000041_fe-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FE_000103129624000041_ex991-q22024pressrelease.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FE_000103129624000041_ex992-2q24_fehighlightsx.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FE",
+    "cik": "1031296",
+    "entity_name": "FIRSTENERGY CORP.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3231000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "292000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "48767000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "828000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-716000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-112000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.090374",
+    "operating_cash_flow_to_revenue": "-0.034664",
+    "assets_to_revenue": "15.09347",
+    "financing_cash_flow_to_revenue": "0.256267",
+    "investing_cash_flow_to_revenue": "-0.221603"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $3.",
+      "revenue of $6.",
+      "earnings per share growth and full-year 2024 operating (non-GAAP) earnings guidance of $2.",
+      "GAAP Earnings Per Share (EPS) to Operating (Non-GAAP) EPS Reconciliation Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Earnings Attributable to FirstEnergy Corp.",
+      "EPS (GAAP) $0.",
+      "EPS (Non-GAAP) $0."
+    ],
+    "guidance_evidence": [
+      "guidance and a 19% increase compared to the second quarter of 2023 Affirms targeted 6-8% long-term annual operating earnings per share growth and full-year 2024 operating (non-GAAP) earnings guidance of $2.",
+      "guidance.",
+      "guidance range of $490 million to $547 million, or $0.",
+      "guidance range of $2.",
+      "guidance midpoint and supported by the company’s refreshed and extended $26 billion, five-year capital investment plan, Energize365.",
+      "guidance and long-term annual Operating EPS growth rate projections because these items, which could be significant, are difficult to predict and may be highly variable."
+    ],
+    "wave_or_demand_evidence": [
+      "customer experience and reliability.",
+      "customers, respectively.",
+      "customer demand were offset primarily by higher planned operating expenses in the second quarter of 2024.",
+      "customer demand.",
+      "customers and other interested parties to listen to a live webcast of its teleconference for financial analysts and view presentation slides at 10:00 a.",
+      "customers in Ohio, Pennsylvania, New Jersey, West Virginia, Maryland and New York."
+    ],
+    "warning_or_risk_evidence": [
+      "charges connected to anticipated resolution of certain HB-6 related matters, partially offset by the receipt of insurance proceeds associated with the shareholder derivative lawsuit.",
+      "charges 0.",
+      "charges — — 0.",
+      "charges incurred or benefits realized that management believes are not indicative of, or may obscure trends useful in evaluating the company’s ongoing core activities and results of operations or otherwise warrant separate classification.",
+      "charges incurred or benefits realized that management believes are not indicative of, or may obscure trends useful in evaluating the Company’s ongoing core activities and results of operations or otherwise warrant separate classification.",
+      "charges (0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3300,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "42.070000",
+    "return_10d_pct": "0.3090",
+    "return_20d_pct": "2.6622",
+    "return_30d_pct": "4.3974",
+    "return_60d_pct": "5.4195",
+    "return_90d_pct": "1.8065"
+  },
+  "text_stats": {
+    "primary_text_len": 14391,
+    "exhibit_text_len": 84266,
+    "combined_text_len": 98659
+  }
+}

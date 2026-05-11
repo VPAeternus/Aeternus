@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "OKTA",
+    "cik": "1660134",
+    "event_date": "2024-08-28",
+    "event_accession": "0001660134-24-000134",
+    "primary_8k_doc": "okta-20240828.htm",
+    "exhibit_docs": [
+      "okta-7312024_ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OKTA_000166013424000134_okta-20240828.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OKTA_000166013424000134_okta-7312024_ex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "OKTA",
+    "cik": "1660134",
+    "entity_name": "Okta, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "518000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "-119000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "8989000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-01-31",
+    "financing_cash_flow_value": "-326000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "59000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "129000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.22973",
+    "operating_cash_flow_to_revenue": "0.249035",
+    "assets_to_revenue": "17.353282",
+    "financing_cash_flow_to_revenue": "-0.629344",
+    "investing_cash_flow_to_revenue": "0.1139"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $646 million , an increase of 16% year-over-year.",
+      "revenue was $632 million, an increase of 17% year-over-year.",
+      "revenue of $648 million to $650 million, representing a growth rate of 11% year-over-year; • Current RPO of $1.",
+      "revenue of $2.",
+      "Non-GAAP Operating Income: Non-GAAP operating income was $148 million, or 23% of total revenue, compared to a non-GAAP operating income of $59 million, or 11% of total revenue, in the second quarter of fiscal 2024.",
+      "GAAP Net Income (Loss): GAAP net income was $29 million, compared to a GAAP net loss of $111 million in the second quarter of fiscal 2024."
+    ],
+    "guidance_evidence": [
+      "Outlook: All periods factor in a challenging macro environment, and continue to incorporate some conservatism as the Company monitors potential impacts related to the October 2023 security incident.",
+      "outlook.",
+      "outlook, business strategy and plans, market trends and market size, opportunities and positioning.",
+      "expected to be recognized over the next 12 months, was $1.",
+      "expects: • Total revenue of $648 million to $650 million, representing a growth rate of 11% year-over-year; • Current RPO of $1.",
+      "expects: • Total revenue of $2."
+    ],
+    "wave_or_demand_evidence": [
+      "Customer Identity Cloud,” said Todd McKinnon, Chief Executive Officer and co-founder of Okta.",
+      "customers with modern solutions to meet their evolving needs.",
+      "backlog, was $3.",
+      "backlog expected to be recognized over the next 12 months, was $1.",
+      "customer and workforce solutions empower businesses and developers to use the power of Identity to drive security, efficiencies, and success — all while protecting their users, employees, and partners.",
+      "aining performance obligations (cRPO) grew 13% year-over-year to $1."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments in connection with the closing of certain leased facilities, certain non-ordinary course legal settlements and related expenses, amortization of debt issuance costs and gain on early extinguishment of debt.",
+      "impairments in connection with the closing of certain leased facilities and certain non-ordinary course legal settlements and related expenses.",
+      "Loss: GAAP operating loss was $19 million , or (3)% of total revenue, compared to a GAAP operating loss of $162 million , or (29)% of total revenue, in the second quarter of fiscal 2024.",
+      "Loss): GAAP net income was $29 million, compared to a GAAP net loss of $111 million in the second quarter of fiscal 2024.",
+      "loss per share of $0.",
+      "challenging macro environment, and continue to incorporate some conservatism as the Company monitors potential impacts related to the October 2023 security incident."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 646,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-29",
+    "entry_open": "83.010002",
+    "return_10d_pct": "-14.1429",
+    "return_20d_pct": "-10.9866",
+    "return_30d_pct": "-10.4445",
+    "return_60d_pct": "-11.7576",
+    "return_90d_pct": "-7.9388"
+  },
+  "text_stats": {
+    "primary_text_len": 4251,
+    "exhibit_text_len": 26919,
+    "combined_text_len": 31172
+  }
+}

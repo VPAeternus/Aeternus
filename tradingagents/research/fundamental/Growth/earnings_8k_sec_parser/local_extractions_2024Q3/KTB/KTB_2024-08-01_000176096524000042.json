@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KTB",
+    "cik": "1760965",
+    "event_date": "2024-08-01",
+    "event_accession": "0001760965-24-000042",
+    "primary_8k_doc": "ktb-20240801.htm",
+    "exhibit_docs": [
+      "a2024q2ktberexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KTB_000176096524000042_ktb-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KTB_000176096524000042_a2024q2ktberexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KTB",
+    "cik": "1760965",
+    "entity_name": "KONTOOR BRANDS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "667123000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "66296000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "1643570000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "17016000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-11797000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "-12622000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.099376",
+    "operating_cash_flow_to_revenue": "-0.01892",
+    "assets_to_revenue": "2.463669",
+    "financing_cash_flow_to_revenue": "0.025507",
+    "investing_cash_flow_to_revenue": "-0.017683"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $607 million decreased 1 percent compared to prior year • Reported gross margin was 44.",
+      "Revenue was $607 million and decreased 1 percent compared to the prior year.",
+      "revenue was $496 million and decreased 1 percent compared to the prior year.",
+      "revenue was $111 million, a 6 percent decrease (5 percent decrease in constant currency) compared to the prior year.",
+      "revenue was $429 million, a 1 percent increase compared to the prior year.",
+      "revenue was flat, with 10 percent growth in direct-to-consumer offset by a 1 percent decline in wholesale."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK Second Quarter 2024 Highlights • Revenue of $607 million decreased 1 percent compared to prior year • Reported gross margin was 44.",
+      "Outlook • Revenue is expected to be in the range of $2.",
+      "outlook • Adjusted gross margin is now expected to approximate 44.",
+      "outlook • Adjusted EPS is now expected to approximate $4.",
+      "outlook • Cash from operations is now expected to exceed $350 million (exceed $335 million prior) GREENSBORO, N.",
+      "outlook, including the impact of additional demand creation investments that will support profitable growth for the balance of the year and beyond."
+    ],
+    "wave_or_demand_evidence": [
+      "demand creation investment in both the Wrangler ® and Lee ® brands compared to the prior outlook • Adjusted EPS is now expected to approximate $4.",
+      "demand creation investment compared to the prior outlook • Cash from operations is now expected to exceed $350 million (exceed $335 million prior) GREENSBORO, N.",
+      "demand creation investments that will support profitable growth for the balance of the year and beyond.",
+      "demand creation investment compared with the prior outlook.",
+      "demand creation, direct-to-consumer and international expansion.",
+      "demand creation investment, reflecting an increase of between 10 and 11 percent compared to adjusted operating income in the prior year, excluding the out-of-period duty expense in that period."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory decreased 22 percent compared to prior year • The Company repurchased $25 million of shares and made a $25 million voluntary term loan payment • The Company’s Board of Directors declared a regular quarterly cash dividend of $0.",
+      "charge in that period.",
+      "inventory management actions in the U.",
+      "inventory levels.",
+      "Inventory at the end of the second quarter was $488 million, down 22 percent compared to the prior year.",
+      "inventory management and macroeconomic pressures on consumer spending around the globe."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 607,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "68.459999",
+    "return_10d_pct": "2.0158",
+    "return_20d_pct": "4.1484",
+    "return_30d_pct": "7.1867",
+    "return_60d_pct": "18.9600",
+    "return_90d_pct": "25.0803"
+  },
+  "text_stats": {
+    "primary_text_len": 2991,
+    "exhibit_text_len": 42172,
+    "combined_text_len": 45165
+  }
+}

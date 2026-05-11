@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KLAC",
+    "cik": "319201",
+    "event_date": "2024-07-24",
+    "event_accession": "0000319201-24-000018",
+    "primary_8k_doc": "klac-20240724.htm",
+    "exhibit_docs": [
+      "exhibit991earningsrelease7.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KLAC_000031920124000018_klac-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KLAC_000031920124000018_exhibit991earningsrelease7.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KLAC",
+    "cik": "319201",
+    "entity_name": "KLA CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "8140919000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1025991000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-30",
+    "assets_value": "14072357000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "-2318968000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-408087000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "2710690000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.126029",
+    "operating_cash_flow_to_revenue": "0.332971",
+    "assets_to_revenue": "1.728596",
+    "financing_cash_flow_to_revenue": "-0.284853",
+    "investing_cash_flow_to_revenue": "-0.050128"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $2.",
+      "revenues of $2.",
+      "revenues of $9.",
+      "EPS attributable to KLA was $6.",
+      "GAAP net income attributable to KLA of $836.",
+      "earnings per share (“EPS”) attributable to KLA of $6."
+    ],
+    "guidance_evidence": [
+      "guidance range of $2.",
+      "guidance ranges; • Cash flow from operating activities for the quarter and fiscal year was $892.",
+      "guidance midpoints, demonstrating the enduring power and differentiation of the KLA portfolio,” said Rick Wallace, President and CEO, KLA Corporation.",
+      "outlook, on a conference call today beginning at 2:00 p.",
+      "Guidance The following details our guidance for the first quarter of fiscal 2025 ending in September: • Total revenues is expected to be in a range of $2.",
+      "guidance metrics, please see the company’s published Letter to Shareholders, Earnings Slide Presentation and Earnings Infographic on the KLA investor relations website."
+    ],
+    "wave_or_demand_evidence": [
+      "customers at the leading edge and are increasingly confident in our plan for steady improvement throughout the remainder of this calendar year and into 2025.",
+      "customers across the globe, our expert teams of physicists, engineers, data scientists and problem-solvers design solutions that move the world forward.",
+      "customer, in the third quarter of fiscal 2024.",
+      "power and differentiation of the KLA portfolio,” said Rick Wallace, President and CEO, KLA Corporation.",
+      "ainder of this calendar year and into 2025.",
+      "ailable at: www."
+    ],
+    "warning_or_risk_evidence": [
+      "charges a 0.",
+      "charges b 0.",
+      "charges a 1.",
+      "charges primarily include amortization of intangible assets, transaction costs associated with our acquisitions and dispositions, as well as intangible asset impairment charges.",
+      "charges in the twelve months ended June 30, 2023 include a gain on the sale of Orbograph, Ltd.",
+      "impairment charges as they are not indicative of ongoing operating results and therefore limit comparability."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2569,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 2750,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": 59.9,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "767.539978",
+    "return_10d_pct": "-8.3461",
+    "return_20d_pct": "3.4331",
+    "return_30d_pct": "4.0949",
+    "return_60d_pct": "-0.8169",
+    "return_90d_pct": "-13.4078"
+  },
+  "text_stats": {
+    "primary_text_len": 3435,
+    "exhibit_text_len": 24879,
+    "combined_text_len": 28316
+  }
+}

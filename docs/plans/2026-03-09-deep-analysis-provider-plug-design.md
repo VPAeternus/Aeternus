@@ -74,7 +74,7 @@ Preserve current behavior by default:
 
 ### Auditability
 
-Every analyze/analyze-batch run should persist:
+Every analyze/retired post-scout batch command run should persist:
 
 - analyst provider
 - post-analyst provider
@@ -85,7 +85,7 @@ Every analyze/analyze-batch run should persist:
 
 - No Gemini execution in v1
 - No live score-weight changes
-- No change to research queue selection logic
+- No change to fundamental review list selection logic
 
 ## Success Criteria
 

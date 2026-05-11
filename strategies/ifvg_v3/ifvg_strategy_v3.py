@@ -173,11 +173,14 @@ class EquilibriumStrategyV3:
                 # Limit short order resting at equilibrium
                 if curr['high'] >= self.impulse.equilibrium:
                     
-                    # Filter by SMA50 baseline bias
+                    # Entry is intraday, so use the prior completed bar for close-based regime filters.
                     allow_entry = True
-                    if self.sma50_filter == "BELOW" and curr['close'] >= curr['sma50']:
+                    prev = self.data.iloc[i - 1] if i > 0 else None
+                    if prev is None or pd.isna(prev['sma50']):
+                        allow_entry = self.sma50_filter == "ANY"
+                    elif self.sma50_filter == "BELOW" and prev['close'] >= prev['sma50']:
                         allow_entry = False
-                    elif self.sma50_filter == "ABOVE" and curr['close'] <= curr['sma50']:
+                    elif self.sma50_filter == "ABOVE" and prev['close'] <= prev['sma50']:
                         allow_entry = False
                         
                     # Filter by VIX Open Regime
@@ -208,6 +211,10 @@ class EquilibriumStrategyV3:
                             entry_price = self.impulse.equilibrium
                             
                         stop_loss = self.impulse.swing_high
+                        if entry_price >= stop_loss:
+                            self.impulse.state = "HUNTING"
+                            continue
+
                         take_profit = entry_price * (1.0 - self.target_pct)
                         
                         trade = Trade(
@@ -220,15 +227,17 @@ class EquilibriumStrategyV3:
                             take_profit=take_profit
                         )
                         
-                        # Handle same-bar stop or TP (Unlikely, but for completeness)
+                        # Daily bars do not reveal whether the low happened before or after
+                        # an intraday limit fill. For same-bar profit, require the close
+                        # to reach the target; otherwise target handling starts next bar.
                         closed_same_bar = False
                         if curr['high'] >= trade.stop_loss:
                             self._close_trade(trade, date, trade.stop_loss, "STOP_LOSS")
                             self.trades.append(trade)
                             self.current_equity += trade.pnl
                             closed_same_bar = True
-                        elif curr['low'] <= trade.take_profit:
-                            self._close_trade(trade, date, trade.take_profit, "TAKE_PROFIT")
+                        elif curr['close'] <= trade.take_profit:
+                            self._close_trade(trade, date, curr['close'], "TAKE_PROFIT_CLOSE")
                             self.trades.append(trade)
                             self.current_equity += trade.pnl
                             closed_same_bar = True

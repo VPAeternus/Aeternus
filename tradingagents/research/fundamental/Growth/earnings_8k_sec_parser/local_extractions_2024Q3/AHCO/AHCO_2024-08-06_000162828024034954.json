@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AHCO",
+    "cik": "1725255",
+    "event_date": "2024-08-06",
+    "event_accession": "0001628280-24-034954",
+    "primary_8k_doc": "ahco-20240806.htm",
+    "exhibit_docs": [
+      "ahco-20240806x8k_ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AHCO_000162828024034954_ahco-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AHCO_000162828024034954_ahco-20240806x8k_ex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AHCO",
+    "cik": "1725255",
+    "entity_name": "AdaptHealth Corp.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "744626000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "15707000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4508650000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "4448000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-89567000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "140248000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.021094",
+    "operating_cash_flow_to_revenue": "0.188347",
+    "assets_to_revenue": "6.054919",
+    "financing_cash_flow_to_revenue": "0.005973",
+    "investing_cash_flow_to_revenue": "-0.120285"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $806.",
+      "revenue of $3.",
+      "Net income attributable to AdaptHealth Corp.",
+      "net income of $14.",
+      "net income or any other performance measures derived in accordance with U.",
+      "Net income 20,531 15,041 19,422 31,716 Income attributable to noncontrolling interest 1,096 1,064 2,121 2,032 Net income attributable to AdaptHealth Corp."
+    ],
+    "guidance_evidence": [
+      "guidance for fiscal year 2024 by adjusting the midpoint for net revenue to account for the disposition of certain non-core assets, however, the Company is maintaining the midpoint for Adjusted EBITDA, and increasing the midpoint for free cash flow.",
+      "outlook,” and similar expressions that predict or indicate future events or trends or that are not statements of historical matters.",
+      "expected to close in the third quarter of 2024 .",
+      "forecasts of revenue and other financial and performance metrics and projections of market opportunity and expectations and the Company’s acquisition pipeline.",
+      "forecasts of future events and views as of the date of this press release.",
+      "anticipates that subsequent events and developments will cause the Company’s assessments to change."
+    ],
+    "wave_or_demand_evidence": [
+      "customers’ preferences, prospects and the competitive conditions prevailing in the healthcare sector.",
+      "ain non-core assets, and the transaction is expected to close in the third quarter of 2024 .",
+      "ain non-core assets, however, the Company is maintaining the midpoint for Adjusted EBITDA, and increasing the midpoint for free cash flow.",
+      "ailable for six months on the Company's website, www.",
+      "aily living, and thrive.",
+      "network of referral sources, including acute care hospitals, sleep labs, pulmonologists, skilled nursing facilities, and clinics."
+    ],
+    "warning_or_risk_evidence": [
+      "charged from acute care and other facilities, (iv) oxygen and related chronic therapy services in the home, and (v) other HME devices and supplies on behalf of chronically ill patients with wound care, urological, incontinence, ostomy and nutritional supply needs.",
+      "impairment, litigation settlement expense (gain), and certain other non-recurring items of expense or income.",
+      "impairment (c) 6,548 0.",
+      "impairment charge relating to an immaterial business disposal during 2024.",
+      "charges (of which $2.",
+      "impairments of operating lease right-of-use assets and $2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 806,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "8.820000",
+    "return_10d_pct": "20.5215",
+    "return_20d_pct": "22.6190",
+    "return_30d_pct": "25.8503",
+    "return_60d_pct": "15.4195",
+    "return_90d_pct": "4.0816"
+  },
+  "text_stats": {
+    "primary_text_len": 3621,
+    "exhibit_text_len": 22311,
+    "combined_text_len": 25934
+  }
+}

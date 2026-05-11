@@ -1,0 +1,822 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AVY",
+    "cik": "8818",
+    "event_date": "2024-07-23",
+    "event_accession": "0001193125-24-182566",
+    "primary_8k_doc": "d841269d8k.htm",
+    "exhibit_docs": [
+      "d841269dex991.htm",
+      "d841269dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVY_000119312524182566_d841269d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVY_000119312524182566_d841269dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVY_000119312524182566_d841269dex992.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AVY",
+    "cik": "8818",
+    "entity_name": "AVERY DENNISON CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2065000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "121200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "8209800000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "299800000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-116600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "1900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.058692",
+    "operating_cash_flow_to_revenue": "0.00092",
+    "assets_to_revenue": "3.97569",
+    "financing_cash_flow_to_revenue": "0.145182",
+    "investing_cash_flow_to_revenue": "-0.056465"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $2.",
+      "sales increased 5% to $1.",
+      "Sales were up 6% ex.",
+      "sales were up mid-to-high single-digits on an organic basis.",
+      "sales increased 12% to $689 million.",
+      "Sales were up 14% ex."
+    ],
+    "guidance_evidence": [
+      "guidance ¡ Revising Reported EPS guidance of $8.",
+      "guidance of $9.",
+      "outlook for adjusted earnings per share.",
+      "Guidance In its supplemental presentation materials, Second Quarter 2024 Financial Review and Analysis, the company provides a list of factors that it believes will contribute to its 2024 financial results.",
+      "guidance range for 2024 reported earnings per share from $8.",
+      "guidance range for 2024 for adjusted earnings per share from $9."
+    ],
+    "wave_or_demand_evidence": [
+      "customer experience.",
+      "customers through price increases, without a significant loss of volume; (v) foreign currency fluctuations; and (vi) the execution and integration of acquisitions.",
+      "customers through price increases, without a signiﬁcant loss of volume; (v) foreign currency ﬂuctuations; and (vi) the execution and integration of acquisitions.",
+      "aising Adjusted EPS guidance of $9.",
+      "ains, said Deon Stander, president and CEO.",
+      "aised our full-year outlook for adjusted earnings per share."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary, unaudited results for its second quarter ended June 29, 2024.",
+      "charges.",
+      "charges and other items, the company raised its guidance range for 2024 for adjusted earnings per share from $9.",
+      "Preliminary, unaudited (In millions, except % and per share amounts) 2Q 2Q % Sales Change vs.",
+      "PRELIMINARY CONDENSED CONSOLIDATED STATEMENTS OF INCOME (In millions, except per share amounts) (UNAUDITED) Three Months Ended Six Months Ended Jun.",
+      "PRELIMINARY CONDENSED CONSOLIDATED BALANCE SHEETS (In millions) (UNAUDITED) ASSETS Jun."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d841269dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "For Immediate Release"
+    },
+    {
+      "type": "TitleElement",
+      "text": "AVERY DENNISON ANNOUNCES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECOND QUARTER 2024 RESULTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "Highlights: ● 2Q24 Reported EPS of $2.18, up 76% ¡ 2Q24 Adjusted EPS (non-GAAP) of $2.42, up 26% ● 2Q24 Net sales of $2.2 billion, up 7% ¡ Sales change ex. currency (non-GAAP) up 8% ¡ Organic sales change (non-GAAP) up 7% ● FY24 EPS guidance ¡ Revising Reported EPS guidance of $8.75 to $8.95 (previously $8.60 to $9.10) ¡ Raising Adjusted EPS guidance of $9.30 to $9.50 (previously $9.00 to $9.50) MENTOR, Ohio, July 23, 2024  Avery Dennison Corporation (NYSE:AVY) today announced preliminary, unaudited results for its second quarter ended June 29, 2024. Non-GAAP financial measures referenced in this release are reconciled from GAAP in the attached financial schedules. Unless otherwise indicated, comparisons are to the same period in the prior year. We delivered a strong second quarter, with significant earnings growth, driven by higher volume and productivity gains, said Deon Stander, president and CEO. Both our Materials and Solutions Groups delivered strong top- and bottom-line growth. In Intelligent Labels, we are targeting to deliver another year of significant growth, as apparel volumes normalize and new categories adopt our solutions that help address key industry challenges. We have raised our full-year outlook for adjusted earnings per share. We continue to remain confident that the consistent execution of our strategies will enable us to meet our long-term goals for superior value creation for all our stakeholders, added Stander. Once again, I want to thank our entire team for their continued resilience, focus on excellence and commitment to addressing the unique challenges at hand."
+    },
+    {
+      "type": "TextElement",
+      "text": "Second Quarter 2024 Results by Segment Materials Group ● Reported sales increased 5% to $1.5 billion. Sales were up 6% ex. currency and on an organic basis. ¡ Label Materials sales were up mid-to-high single-digits on an organic basis. ∎ Volume/mix was up low double-digits, which was partially offset by deflation-related price reductions. ¡ Graphics and Reflectives were up low single-digits organically. ¡ Performance Tapes and Medical were down low single-digits organically. ● Reported operating margin was 14.4%. Adjusted EBITDA margin (non-GAAP) was 17.9%, up 220 basis points driven by higher volume/mix and benefits from productivity, partially offset by higher employee-related costs. Solutions Group ● Reported sales increased 12% to $689 million. Sales were up 14% ex. currency and 11% on an organic basis. ¡ Sales in high-value categories were up low double-digits ex. currency. ¡ Sales were up mid-to-high teens ex. currency in base solutions. ● Reported operating margin was 9.3%. Adjusted EBITDA margin was 16.8%, up 100 basis points, driven by higher volume and benefits from productivity, partially offset by higher employee-related costs and investments. ¡ Margin was up 70 basis points sequentially; the company expects margin to continue to improve in the second half of 2024. Other Balance Sheet and Capital Deployment During the first half of 2024, the company returned $177 million in cash to shareholders through a combination of dividends and share repurchases. The company repurchased 0.2 million shares at an aggregate cost of $41 million in the first half of the year. Net of dilution from long-term incentive awards, the companys share count was unchanged compared to the same time last year. On April 25, 2024, the company increased its quarterly dividend to $0.88 per share, representing an increase of approximately 9% over the previous dividend rate. The company continues to deploy capital in a disciplined manner, executing its long-term capital allocation strategy. The companys balance sheet remains strong. Net debt to adjusted EBITDA (non-GAAP) was 2.2x at the end of the second quarter."
+    },
+    {
+      "type": "TextElement",
+      "text": "Income Taxes The companys reported effective tax rate was 25.8% in the second quarter. The adjusted tax rate (non-GAAP) for the quarter was 26.0%. Cost Reduction Actions In the first half of the year, the company realized approximately $36 million in pre-tax savings from restructuring, net of transition costs, and incurred approximately $13 million in pre-tax restructuring charges. Guidance In its supplemental presentation materials, Second Quarter 2024 Financial Review and Analysis, the company provides a list of factors that it believes will contribute to its 2024 financial results. Based on the factors listed and other assumptions, the company has revised its guidance range for 2024 reported earnings per share from $8.60 to $9.10 to $8.75 to $8.95. Excluding an estimated $0.55 per share impact of restructuring charges and other items, the company raised its guidance range for 2024 for adjusted earnings per share from $9.00 to $9.50 to $9.30 to $9.50. For more details on the companys results, see the summary tables accompanying this news release, as well as the supplemental presentation materials, Second Quarter 2024 Financial Review and Analysis, posted on the companys website at www.investors.averydennison.com, and furnished to the SEC on Form 8-K. Throughout this release and the supplemental presentation materials, amounts on a per share basis reflect fully diluted shares outstanding. About Avery Dennison Avery Dennison Corporation (NYSE: AVY) is a global materials science and digital identification solutions company that provides a wide range of branding and information solutions that optimize labor and supply chain efficiency, reduce waste, advance sustainability, circularity and transparency, and better connect brands and consumers. Our products and solutions include labeling and functional materials, radio frequency identification (RFID) inlays and tags, software applications that connect the physical and digital, and a variety of products and solutions that enhance branded packaging and carry or display information that improves the customer experience. Serving an array of industries worldwide  including home and personal care, apparel, general retail, e-commerce, logistics, food and grocery, pharmaceuticals and automotive  we employ approximately 35,000 employees in more than 50 countries. Our reported sales in 2023 were $8.4 billion. Learn more at www.averydennison.com. # # #"
+    },
+    {
+      "type": "TextElement",
+      "text": "Safe Harbor Statement under the Private Securities Litigation Reform Act of 1995 Certain statements contained in this document are forward-looking statements intended to qualify for the safe harbor from liability established by the Private Securities Litigation Reform Act of 1995. These forward-looking statements, and financial or other business targets, are subject to certain risks and uncertainties. We believe that the most significant risk factors that could affect our financial performance in the near term include: (i) the impact on underlying demand for our products from global economic conditions, political uncertainty, and changes in environmental standards, regulations, and preferences; (ii) competitors actions, including pricing, expansion in key markets, and product offerings; (iii) the cost and availability of raw materials; (iv) the degree to which higher costs can be offset with productivity measures and/or passed on to customers through price increases, without a significant loss of volume; (v) foreign currency fluctuations; and (vi) the execution and integration of acquisitions. Actual results and trends may differ materially from historical or anticipated results depending on a variety of factors, including but not limited to, risks and uncertainties related to the following: ● International Operations  worldwide economic, social, political and market conditions; changes in political conditions, including those related to China, the Russia-Ukraine war, and the Israel-Hamas war and related hostilities in the Middle East; fluctuations in foreign currency exchange rates; and other risks associated with international operations, including in emerging markets ● Our Business  fluctuations in demand affecting sales to customers; fluctuations in the cost and availability of raw materials and energy; changes in our markets due to competitive conditions, technological developments, laws and regulations, tariffs and customer preferences; increasing environmental standards; the impact of competitive products and pricing; execution and integration of acquisitions; selling prices; customer and supplier concentrations or consolidations; financial condition of distributors; outsourced manufacturers; product and service quality; restructuring and other productivity actions; timely development and market acceptance of new products, including sustainable or sustainably-sourced products; investment in development activities and new production facilities; successful implementation of new manufacturing technologies and installation of manufacturing equipment; our ability to generate sustained productivity improvement; our ability to achieve and sustain targeted cost reductions; collection of receivables from customers; our sustainability and governance practices; and epidemics, pandemics or other outbreaks of illness ● Information Technology  disruptions in information technology systems, cyber attacks or other security breaches; and successful installation of new or upgraded information technology systems ● Income Taxes  fluctuations in tax rates; changes in tax laws and regulations, and uncertainties associated with interpretations of such laws and regulations; retention of tax incentives; outcome of tax audits; and the realization of deferred tax assets ● Human Capital  recruitment and retention of employees and collective labor arrangements ● Our Indebtedness  credit risks; our ability to obtain adequate financing arrangements and maintain access to capital; fluctuations in interest rates; volatility in financial markets; and compliance with our debt covenants ● Ownership of Our Stock  potential significant variability of our stock price and amounts of future dividends and share repurchases ● Legal and Regulatory Matters  protection and infringement of intellectual property; impact of legal and regulatory proceedings, including with respect to compliance and anti-corruption, environmental, health and safety, and trade compliance ● Other Financial Matters  fluctuations in pension costs and goodwill impairment For a more detailed discussion of these factors, see Risk Factors and Managements Discussion and Analysis of Financial Condition and Results of Operations in our 2023 Form 10-K, filed with the Securities and Exchange Commission on February 21, 2024, and subsequent quarterly reports on Form 10-Q. The forward-looking statements included in this document are made only as of the date of this document, and we undertake no obligation to update these statements to reflect subsequent events or circumstances, other than as may be required by law."
+    },
+    {
+      "type": "TextElement",
+      "text": "For more information and to listen to a live broadcast or an audio replay of the quarterly conference call with analysts, visit the Avery Dennison website at www.investors.averydennison.com. Contacts: John Eble Vice President, Finance and Investor Relations investorcom@averydennison.com Kristin Robinson Vice President, Global Communications kristin.robinson@averydennison.com"
+    },
+    {
+      "type": "TableElement",
+      "text": "Second Quarter Financial Summary - Preliminary, unaudited (In millions, except % and per share amounts) 2Q 2Q % Sales Change vs. PY 2024 2023 Reported Ex. Currency Organic Net sales, by segment: Materials Group $1,546.8 $1,476.0 4.8% 5.6% 5.6% Solutions Group 688.5 614.5 12.0% 13.7% 10.8% Total net sales $2,235.3 $2,090.5 6.9% 8.0% 7.1% As Reported (GAAP) Adjusted Non-GAAP 2Q 2Q % % of Sales 2Q 2Q % % of Sales 2024 2023 Change 2024 2023 2024 2023 Change 2024 2023 Operating income (loss)/operating margins before interest, other non-operating expense (income), and taxes, by segment: Materials Group $223.4 $193.8 14.4% 13.1% $244.5 $199.9 15.8% 13.5% Solutions Group 64.1 (7.2) 9.3% (1.2%) 69.8 55.0 10.1% 9.0% Corporate expense (25.7) (21.1) (25.5) (21.1) Total operating income/operating margins before interest, other non-operating expense (income), and taxes $261.8 $165.5 58% 11.7% 7.9% $288.8 $233.8 24% 12.9% 11.2% Interest expense $29.2 $31.9 $29.2 $31.9 Other non-operating expense (income), net ($5.8) ($6.6) ($5.3) ($6.6) Income before taxes $238.4 $140.2 70% 10.7% 6.7% $264.9 $208.5 27% 11.9% 10.0% Provision for income taxes $61.6 $39.8 $68.9 $53.1 Net income $176.8 $100.4 76% 7.9% 4.8% $196.0 $155.4 26% 8.8% 7.4% Net income per common share, assuming dilution $2.18 $1.24 76% $2.42 $1.92 26% Adjusted free cash flow $142.5 $134.9 YTD Adjusted free cash flow $200.6 $63.7 Adjusted EBITDA: Materials Group $277.3 $231.9 17.9% 15.7% Solutions Group $115.6 $97.0 16.8% 15.8% Corporate expense ($25.5) ($21.1) Total Adjusted EBITDA $367.4 $307.8 16.4% 14.7%"
+    },
+    {
+      "type": "TextElement",
+      "text": "See accompanying schedules A-4 to A-9 for reconciliations of non-GAAP financial measures from GAAP."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY CONDENSED CONSOLIDATED STATEMENTS OF INCOME"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(UNAUDITED) Three Months Ended Six Months Ended Jun. 29, 2024 Jul. 1, 2023 Jun. 29, 2024 Jul. 1, 2023 Net sales $ 2,235.3 $ 2,090.5 $ 4,386.6 $ 4,155.5 Cost of products sold 1,572.6 1,537.1 3,091.7 3,059.8 Gross profit 662.7 553.4 1,294.9 1,095.7 Marketing, general and administrative expense 373.9 319.6 739.1 654.0 Other expense (income), net 27.0 68.3 39.6 86.1 Interest expense 29.2 31.9 57.8 58.3 Other non-operating expense (income), net (5.8 ) (6.6 ) (14.4 ) (11.2 ) Income before taxes 238.4 140.2 472.8 308.5 Provision for income taxes 61.6 39.8 123.6 86.9 Net income $ 176.8 $ 100.4 $ 349.2 $ 221.6 Per share amounts: Net income per common share, assuming dilution $ 2.18 $ 1.24 $ 4.31 $ 2.73 Weighted average number of common shares outstanding, assuming dilution 81.0 81.0 81.0 81.2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY CONDENSED CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(UNAUDITED) ASSETS Jun. 29, 2024 Jul. 1, 2023 Current assets: Cash and cash equivalents $ 208.8 $ 217.1 Trade accounts receivable, net 1,528.6 1,415.2 Inventories 979.9 990.5 Other current assets 250.5 228.2 Total current assets 2,967.8 2,851.0 Property, plant and equipment, net 1,590.0 1,567.0 Goodwill and other intangibles resulting from business acquisitions, net 2,790.7 2,868.9 Deferred tax assets 113.0 119.7 Other assets 836.7 859.7 $ 8,298.2 $ 8,266.3 LIABILITIES AND SHAREHOLDERS EQUITY Current liabilities: Short-term borrowings and current portion of long-term debt and finance leases $ 1,172.3 $ 635.8 Accounts payable 1,313.4 1,234.8 Other current liabilities 814.5 738.1 Total current liabilities 3,300.2 2,608.7 Long-term debt and finance leases 2,046.5 2,909.7 Other long-term liabilities 664.4 732.7 Shareholders equity: Common stock 124.1 124.1 Capital in excess of par value 833.1 851.3 Retained earnings 4,922.2 4,526.9 Treasury stock at cost (3,154.6 ) (3,093.9 ) Accumulated other comprehensive loss (437.7 ) (393.2 ) Total shareholders equity 2,287.1 2,015.2 $ 8,298.2 $ 8,266.3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(UNAUDITED) Six Months Ended Jun. 29, 2024 Jul. 1, 2023 Operating Activities Net income $ 349.2 $ 221.6 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation 98.7 91.5 Amortization 57.2 54.8 Provision for credit losses and sales returns 28.2 18.9 Stock-based compensation 17.4 12.2 Deferred taxes and other non-cash taxes (3.8 ) (17.5 ) Other non-cash expense and loss (income and gain), net 46.6 17.0 Changes in assets and liabilities and other adjustments (276.0 ) (207.0 ) Net cash provided by operating activities 317.5 191.5 Investing Activities Purchases of property, plant and equipment (96.3 ) (115.9 ) Purchases of software and other deferred charges (12.9 ) (11.0 ) Purchases of Argentine Blue Chip Swap securities (34.2 ) --- Proceeds from sales of Argentine Blue Chip Swap securities 24.0 --- Proceeds from sales of property, plant and equipment 0.3 0.3 Proceeds from insurance and sales (purchases) of investments, net 2.2 (1.2 ) Payments for acquisitions, net of cash acquired, and venture investments (1.9 ) (194.1 ) Net cash used in investing activities (118.8 ) (321.9 ) Financing Activities Net increase (decrease) in borrowings with maturities of three months or less (2.2 ) 281.8 Additional long-term borrowings --- 394.9 Repayments of long-term debt and finance leases (3.5 ) (252.6 ) Dividends paid (136.2 ) (126.2 ) Share repurchases (40.7 ) (89.5 ) Net (tax withholding) proceeds related to stock-based compensation (18.4 ) (23.7 ) Other (1.1 ) (1.6 ) Net cash (used in) provided by financing activities (202.1 ) 183.1 Effect of foreign currency translation on cash balances (2.8 ) (2.8 ) Increase (decrease) in cash and cash equivalents (6.2 ) 49.9 Cash and cash equivalents, beginning of year 215.0 167.2 Cash and cash equivalents, end of period $ 208.8 $ 217.1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "TextElement",
+      "text": "A-4 Reconciliation of Non-GAAP Financial Measures from GAAP We report our financial results in conformity with accounting principles generally accepted in the United States of America, or GAAP, and also communicate with investors using certain non-GAAP financial measures. These non-GAAP financial measures are not in accordance with, nor are they a substitute for or superior to, the comparable GAAP financial measures. These non-GAAP financial measures are intended to supplement the presentation of our financial results prepared in accordance with GAAP. We use these non-GAAP financial measures internally to evaluate trends in our underlying performance, as well as to facilitate comparisons with the results of competitors for quarters and year-to-date periods, as applicable. Based on feedback from investors and financial analysts, we believe that the supplemental non-GAAP financial measures we provide are also useful to their assessments of our performance and operating trends, as well as liquidity. Reconciliations of our non-GAAP financial measures from the most directly comparable GAAP financial measures are provided in accordance with Regulations G and S-K. Our non-GAAP financial measures exclude the impact of certain events, activities or strategic decisions. The accounting effects of these events, activities or decisions, which are included in the GAAP financial measures, may make it more difficult to assess our underlying performance in a single period. By excluding the accounting effects, positive or negative, of certain items (e.g., restructuring charges, outcomes of certain legal matters and settlements, certain effects of strategic transactions and related costs, losses from debt extinguishments, gains or losses from curtailment or settlement of pension obligations, gains or losses on sales of certain assets, gains or losses on venture investments, currency adjustments due to highly inflationary economies, and other items), we believe that we are providing meaningful supplemental information that facilitates an understanding of our core operating results and liquidity measures. While some of the items we exclude from GAAP financial measures recur, they tend to be disparate in amount, frequency or timing. We use the non-GAAP financial measures described below in the accompanying news release. Sales change ex. currency refers to the increase or decrease in net sales, excluding the estimated impact of foreign currency translation, and, where applicable, an extra week in our fiscal year, the calendar shift resulting from an extra week in the prior fiscal year, currency adjustments for transitional reporting of highly inflationary economies, and the reclassification of sales between segments. The estimated impact of foreign currency translation is calculated on a constant currency basis, with prior-period results translated at current period average exchange rates to exclude the effect of foreign currency fluctuations. Organic sales change refers to sales change ex. currency, excluding the estimated impact of acquisitions and product line divestitures. We believe that sales change ex. currency and organic sales change assist investors in evaluating the sales change from the ongoing activities of our businesses and enhance their ability to evaluate our results from period to period. Adjusted operating income refers to net income adjusted for taxes; other expense (income), net; interest expense; other non-operating expense (income), net; and other items. Adjusted EBITDA refers to adjusted operating income before depreciation and amortization. Adjusted operating margin refers to adjusted operating income as a percentage of net sales. Adjusted EBITDA margin refers to adjusted EBITDA as a percentage of net sales. Adjusted tax rate refers to the projected full-year GAAP tax rate, adjusted to exclude certain unusual or infrequent events that are expected to significantly impact that rate, such as effects of certain discrete tax planning actions, impacts related to enactments of comprehensive tax law changes, and other items. Adjusted net income refers to income before taxes, tax-effected at the adjusted tax rate, and adjusted for tax-effected restructuring charges, and other items. Adjusted net income per common share, assuming dilution (adjusted EPS) refers to adjusted net income divided by the weighted average number of common shares outstanding, assuming dilution. We believe that adjusted operating margin, adjusted EBITDA margin, adjusted net income, and adjusted EPS assist investors in understanding our core operating trends and comparing our results with those of our competitors. Net debt to adjusted EBITDA ratio refers to total debt (including finance leases) less cash and cash equivalents, divided by adjusted EBITDA for the last twelve months. We believe that the net debt to adjusted EBITDA ratio assists investors in assessing our leverage position. Adjusted free cash flow refers to cash flow provided by operating activities, less payments for property, plant and equipment, software and other deferred charges, plus proceeds from company-owned life insurance policies, plus proceeds from sales of property, plant and equipment, plus (minus) net proceeds from insurance and sales (purchases) of investments, less net cash used for Argentine Blue Chip Swap securities. Where applicable, adjusted free cash flow is also adjusted for certain acquisition-related transaction costs. We believe that adjusted free cash flow assists investors by showing the amount of cash we have available for debt reductions, dividends, share repurchases, and acquisitions. -more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY RECONCILIATION OF NON-GAAP FINANCIAL MEASURES FROM GAAP"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except % and per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(UNAUDITED) Three Months Ended Six Months Ended Jun. 29, 2024 Jul. 1, 2023 Jun. 29, 2024 Jul. 1, 2023 Reconciliation of non-GAAP operating and EBITDA margins from GAAP: Net sales $ 2,235.3 $ 2,090.5 $ 4,386.6 $ 4,155.5 Income before taxes $ 238.4 $ 140.2 $ 472.8 $ 308.5 Income before taxes as a percentage of net sales 10.7 % 6.7 % 10.8 % 7.4% Adjustments: Interest expense $ 29.2 $ 31.9 $ 57.8 $ 58.3 Other non-operating expense (income), net (5.8 ) (6.6 ) (14.4 ) (11.2) Operating income before interest expense, other non-operating expense (income) and taxes $ 261.8 $ 165.5 $ 516.2 $ 355.6 Operating margins 11.7 % 7.9 % 11.8 % 8.6% As reported net income $ 176.8 $ 100.4 $ 349.2 $ 221.6 Adjustments: Restructuring charges, net of reversals: Severance and related costs, net of reversals 6.3 8.8 11.2 25.9 Asset impairment and lease cancellation charges 0.9 1.2 2.0 1.7 (Gain) loss on venture investments 15.0 --- 17.2 --- Losses from Argentine peso remeasurement and Blue Chip Swap transactions(1) 4.1 --- 15.4 --- Outcomes of legal matters and settlements, net 0.4 53.8 0.2 53.8 Transaction and related costs 0.3 4.0 0.3 4.2 (Gain) loss on sales of assets --- 0.5 --- 0.5 Interest expense 29.2 31.9 57.8 58.3 Other non-operating expense (income), net(2) (5.8 ) (6.6 ) (14.4 ) (11.2) Provision for income taxes 61.6 39.8 123.6 86.9 Adjusted operating income (non-GAAP) $ 288.8 $ 233.8 $ 562.5 $ 441.7 Adjusted operating margins (non-GAAP) 12.9 % 11.2 % 12.8 % 10.6% Depreciation and amortization $ 78.6 $ 74.0 $ 155.9 $ 146.3 Adjusted EBITDA (non-GAAP) $ 367.4 $ 307.8 $ 718.4 $ 588.0 Adjusted EBITDA margins (non-GAAP) 16.4 % 14.7 % 16.4 % 14.1% Reconciliation of non-GAAP net income from GAAP: As reported net income $ 176.8 $ 100.4 $ 349.2 $ 221.6 Adjustments: Restructuring charges and other items 27.0 68.3 46.3 86.1 Argentine interest income(1) (0.5 ) --- (4.1 ) --- Tax effect on restructuring charges and other items, and impact of adjusted tax rate (7.3 ) (13.3 ) (10.3 ) (13.7) Adjusted net income (non-GAAP) $ 196.0 $ 155.4 $ 381.1 $ 294.0"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) The total pretax net loss from the Argentine peso-related items was $3.6 and $11.3 for the three and six months ended June 29, 2024, respectively. (2) Other non-operating expense (income), net includes Argentine interest income of $.5 and $4.1 for the three and six months ended June 29, 2024, respectively."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-5"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(continued)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY RECONCILIATION OF NON-GAAP FINANCIAL MEASURES FROM GAAP"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except % and per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(UNAUDITED) Three Months Ended Six Months Ended Jun. 29, 2024 Jul. 1, 2023 Jun. 29, 2024 Jul. 1, 2023 Reconciliation of non-GAAP net income per common share from GAAP: As reported net income per common share, assuming dilution $ 2.18 $ 1.24 $ 4.31 $ 2.73 Adjustments per common share, net of tax: Restructuring charges and other items 0.33 0.84 0.57 1.06 Argentine interest income --- --- (0.05 ) --- Tax effect on restructuring charges and other items, and impact of adjusted tax rate (0.09 ) (0.16 ) (0.13 ) (0.17 ) Adjusted net income per common share, assuming dilution (non-GAAP) $ 2.42 $ 1.92 $ 4.70 $ 3.62 Weighted average number of common shares outstanding, assuming dilution 81.0 81.0 81.0 81.2 Our adjusted tax rate was 26% for the three and six months ended June 29, 2024 and 25.5% for the three and six months ended July 1, 2023, respectively. (UNAUDITED) Three Months Ended Six Months Ended Jun. 29, 2024 Jul. 1, 2023 Jun. 29, 2024 Jul. 1, 2023 Reconciliation of adjusted free cash flow: Net cash provided by operating activities(1) $ 197.7 $ 189.6 $ 317.5 $ 191.5 Purchases of property, plant and equipment (47.5 ) (51.4 ) (96.3 ) (115.9 ) Purchases of software and other deferred charges (6.0 ) (5.7 ) (12.9 ) (11.0 ) Purchases of Argentine Blue Chip Swap securities (14.0 ) --- (34.2 ) --- Proceeds from sales of Argentine Blue Chip Swap securities 10.0 --- 24.0 --- Proceeds from sales of property, plant and equipment 0.2 0.1 0.3 0.3 Proceeds from insurance and sales (purchases) of investments, net 2.1 2.3 2.2 (1.2 ) Adjusted free cash flow (non-GAAP) $ 142.5 $ 134.9 $ 200.6 $ 63.7"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Net cash provided by operating activities for the three and six months ended June 29, 2024 included payments associated with the settlement of a significant legal matter, net of taxes. The full-year 2024 cash payment, net of cash tax benefit, related to this settlement is estimated to be $56.6."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY SUPPLEMENTARY INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except %)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Second Quarter Ended NET SALES OPERATING INCOME (LOSS) OPERATING MARGINS 2024 2023 2024 2023 2024 2023 Materials Group $ 1,546.8 $ 1,476.0 $ 223.4 $ 193.8 14.4 % 13.1 % Solutions Group 688.5 614.5 64.1 (7.2 ) 9.3 % (1.2 %) Corporate Expense N/A N/A (25.7 ) (21.1 ) N/A N/A TOTAL FROM OPERATIONS $ 2,235.3 $ 2,090.5 $ 261.8 $ 165.5 11.7 % 7.9 %"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NON-GAAP SUPPLEMENTARY INFORMATION FROM GAAP"
+    },
+    {
+      "type": "TableElement",
+      "text": "Second Quarter Ended 2024 2023 2024 2023 Materials Group Operating income and margins, as reported $ 223.4 $ 193.8 14.4% 13.1% Adjustments: Restructuring charges, net of reversals: Severance and related costs, net of reversals 1.6 4.5 0.1% 0.3% Asset impairment charges --- 1.1 --- 0.1% (Gain) loss on venture investment 15.0 --- 1.0% --- Losses from Argentine peso remeasurement and Blue Chip Swap transactions 4.1 --- 0.3% --- Outcomes of legal matters and settlements, net 0.4 --- --- --- (Gain) loss on sales of assets --- 0.5 --- --- Adjusted operating income and margins (non-GAAP) $ 244.5 $ 199.9 15.8% 13.5% Depreciation and amortization 32.8 32.0 2.1% 2.2% Adjusted EBITDA and margins (non-GAAP) $ 277.3 $ 231.9 17.9% 15.7% Solutions Group Operating income (loss) and margins, as reported $ 64.1 $ (7.2 ) 9.3% (1.2%) Adjustments: Restructuring charges, net of reversals: Severance and related costs, net of reversals 4.5 4.3 0.7% 0.7% Asset impairment charges 0.9 0.1 0.1% --- Transaction and related costs 0.3 4.0 --- 0.7% Outcomes of legal matters and settlements, net --- 53.8 --- 8.8% Adjusted operating income and margins (non-GAAP) $ 69.8 $ 55.0 10.1% 9.0% Depreciation and amortization 45.8 42.0 6.7% 6.8% Adjusted EBITDA and margins (non-GAAP) $ 115.6 $ 97.0 16.8% 15.8%"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY SUPPLEMENTARY INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except %)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended NET SALES OPERATING INCOME (LOSS) OPERATING MARGINS 2024 2023 2024 2023 2024 2023 Materials Group $ 3,043.3 $ 2,936.5 $ 449.5 $ 354.3 14.8 % 12.1 % Solutions Group 1,343.3 1,219.0 120.2 44.3 8.9 % 3.6 % Corporate Expense N/A N/A (53.5 ) (43.0 ) N/A N/A TOTAL FROM OPERATIONS $ 4,386.6 $ 4,155.5 $ 516.2 $ 355.6 11.8 % 8.6 %"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NON-GAAP SUPPLEMENTARY INFORMATION FROM GAAP"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended 2024 2023 2024 2023 Materials Group Operating income and margins, as reported $ 449.5 $ 354.3 14.8% 12.1% Adjustments: Restructuring charges, net of reversals: Severance and related costs, net of reversals 4.0 18.8 0.1% 0.6% Asset impairment charges 0.1 1.1 --- 0.1% Losses from Argentine peso remeasurement and Blue Chip Swap transactions 15.4 --- 0.5% --- (Gain) loss on venture investment 15.0 --- 0.5% --- Outcomes of legal matters and settlements, net 1.0 --- --- --- (Gain) loss on sales of assets --- 0.5 --- --- Adjusted operating income and margins (non-GAAP) $ 485.0 $ 374.7 15.9% 12.8% Depreciation and amortization 65.6 64.7 2.2% 2.2% Adjusted EBITDA and margins (non-GAAP) $ 550.6 $ 439.4 18.1% 15.0% Solutions Group Operating income and margins, as reported $ 120.2 $ 44.3 8.9% 3.6% Adjustments: Restructuring charges, net of reversals: Severance and related costs, net of reversals 6.9 7.2 0.5% 0.6% Asset impairment and lease cancellation charges 1.9 0.6 0.2% 0.1% (Gain) loss on venture investment 2.2 --- 0.2% --- Outcomes of legal matters and settlements, net (0.8 ) 53.8 (0.1%) 4.4% Transaction and related costs 0.3 4.2 --- 0.3% Adjusted operating income and margins (non-GAAP) $ 130.7 $ 110.1 9.7% 9.0% Depreciation and amortization 90.3 81.6 6.8% 6.7% Adjusted EBITDA and margins (non-GAAP) $ 221.0 $ 191.7 16.5% 15.7%"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY SUPPLEMENTARY INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except ratios)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "TableElement",
+      "text": "QTD 3Q23 4Q23 1Q24 2Q24 Reconciliation of adjusted EBITDA from GAAP: As reported net income $ 138.3 $ 143.1 $ 172.4 $ 176.8 Adjustments(1) 54.1 40.7 19.3 27.0 Interest expense 31.0 29.7 28.6 29.2 Other non-operating expense (income), net (8.7) (10.9) (8.6) (5.8) Provision for income taxes 46.3 58.5 62.0 61.6 Depreciation and amortization 75.1 77.0 77.3 78.6 Adjusted EBITDA (non-GAAP) $ 336.1 $ 338.1 $ 351.0 $ 367.4 Total Debt $ 3,218.8 Less: Cash and cash equivalents 208.8 Net Debt $ 3,010.0 Net Debt to Adjusted EBITDA LTM* (non-GAAP) 2.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "*LTM = Last twelve months (3Q23 to 2Q24) (1) Includes Other expense (income), net and other items. Refer to schedule A-5."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "-more-"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "A-9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AVERY DENNISON CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRELIMINARY SUPPLEMENTARY INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(UNAUDITED)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Second Quarter 2024 Total Company MaterialsGroup Solutions Group Reconciliation of organic sales change from GAAP: Reported net sales change 6.9% 4.8% 12.0% Foreign currency translation 1.1% 0.8% 1.7% Sales change ex. currency (non-GAAP)(1) 8.0% 5.6% 13.7% Acquisitions (0.9%) --- (3.0%) Organic sales change (non-GAAP)(1) 7.1% 5.6% 10.8%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Totals may not sum due to rounding."
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended 2024 Total Company MaterialsGroup Solutions Group Reconciliation of organic sales change from GAAP: Reported net sales change 5.6% 3.6% 10.2% Foreign currency translation 0.5% 0.1% 1.6% Sales change ex. currency (non-GAAP)(1) 6.1% 3.8% 11.8% Acquisitions (1.0%) --- (3.5%) Organic sales change (non-GAAP)(1) 5.1% 3.8% 8.3%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Totals may not sum due to rounding."
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "d841269dex992.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.2 Second Quarter 2024 Financial Review and Analysis (preliminary, unaudited) July 23, 2024 Supplemental Presentation Materials Unless otherwise indicated, comparisons are to the same period in the prior year. July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Safe Harbor Statement Certain statements contained in this document are forward-looking statements intended to qualify for the safe harbor from liability established by the Private Securities Litigation Reform Act of 1995. These forward-looking statements, and ﬁnancial or other business targets, are subject to certain risks and uncertainties. We believe that the most signiﬁcant risk factors that could affect our ﬁnancial performance in the near term include: (i) the impact on underlying demand for our products from global economic conditions, political uncertainty, and changes in environmental standards, regulations, and preferences; (ii) competitors’ actions, including pricing, expansion in key markets, and product offerings; (iii) the cost and availability of raw materials; (iv) the degree to which higher costs can be offset with productivity measures and/or passed on to customers through price increases, without a signiﬁcant loss of volume; (v) foreign currency ﬂuctuations; and (vi) the execution and integration of acquisitions. Actual results and trends may differ materially from historical or anticipated results depending on a variety of factors, including but not limited to, risks and uncertainties related to the following: ● International Operations – worldwide economic, social, political and market conditions; changes in political conditions, including those related to China, the Russia-Ukraine war, and the Israel-Hamas war and related hostilities in the Middle East; ﬂuctuations in foreign currency exchange rates; and other risks associated with international operations, including in emerging markets ● Our Business – ﬂuctuations in demand affecting sales to customers; ﬂuctuations in the cost and availability of raw materials and energy; changes in our markets due to competitive conditions, technological developments, laws and regulations, tariffs and customer preferences; increasing environmental standards; the impact of competitive products and pricing; execution and integration of acquisitions; selling prices; customer and supplier concentrations or consolidations; ﬁnancial condition of distributors; outsourced manufacturers; product and service quality; restructuring and other productivity actions; timely development and market acceptance of new products, including sustainable or sustainably-sourced products; investment in development activities and new production facilities; successful implementation of new manufacturing technologies and installation of manufacturing equipment; our ability to generate sustained productivity improvement; our ability to achieve and sustain targeted cost reductions; collection of receivables from customers; our sustainability and governance practices; and epidemics, pandemics or other outbreaks of illness ● Information Technology – disruptions in information technology systems, cyber attacks or other security breaches; and successful installation of new or upgraded information technology systems ● Income Taxes – ﬂuctuations in tax rates; changes in tax laws and regulations, and uncertainties associated with interpretations of such laws and regulations; retention of tax incentives; outcome of tax audits; and the realization of deferred tax assets ● Human Capital – recruitment and retention of employees and collective labor arrangements ● Our Indebtedness – credit risks; our ability to obtain adequate ﬁnancing arrangements and maintain access to capital; ﬂuctuations in interest rates; volatility in ﬁnancial markets; and compliance with our debt covenants ● Ownership of Our Stock – potential signiﬁcant variability of our stock price and amounts of future dividends and share repurchases ● Legal and Regulatory Matters – protection and infringement of intellectual property; impact of legal and regulatory proceedings, including with respect to compliance and anti-corruption, environmental, health and safety, and trade compliance ● Other Financial Matters – ﬂuctuations in pension costs and goodwill impairment For a more detailed discussion of these factors, see “Risk Factors” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” in our 2023 Form 10-K, ﬁled with the Securities and Exchange Commission on February 21, 2024, and subsequent quarterly reports on Form 10-Q. The forward-looking statements included in this document are made only as of the date of this document, and we undertake no obligation to update these statements to reﬂect subsequent events or circumstances, other than as may be required by law. July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Use of Non-GAAP Financial Measures This presentation contains certain non-GAAP ﬁnancial measures as deﬁned by SEC rules. We report our ﬁnancial results in conformity with accounting principles generally accepted in the United States of America, or GAAP, and also communicate with investors using certain non-GAAP ﬁnancial measures. These non-GAAP ﬁnancial measures are not in accordance with, nor are they a substitute for or superior to, the comparable GAAP ﬁnancial measures. These non-GAAP ﬁnancial measures are intended to supplement the presentation of our ﬁnancial results prepared in accordance with GAAP. We use these non-GAAP ﬁnancial measures internally to evaluate trends in our underlying performance, as well as to facilitate comparisons with the results of competitors for quarters and year-to-date periods, as applicable. Based on feedback from investors and ﬁnancial analysts, we believe that the supplemental non-GAAP ﬁnancial measures we provide are also useful to their assessments of our performance and operating trends, as well as liquidity. In accordance with Regulations G and S-K, reconciliations of non-GAAP ﬁnancial measures from the most directly comparable GAAP ﬁnancial measures, including limitations associated with these non-GAAP ﬁnancial measures, are provided in the appendix to this document and/or the ﬁnancial schedules accompanying the earnings news release for the quarter (see Attachments A-4 through A-9 to news release dated July 23, 2024). Our non-GAAP ﬁnancial measures exclude the impact of certain events, activities or strategic decisions. The accounting effects of these events, activities or decisions, which are included in the GAAP ﬁnancial measures, may make it more difﬁcult to assess our underlying performance in a single period. By excluding the accounting effects, positive or negative, of certain items (e.g., restructuring charges, outcomes of certain legal matters and settlements, certain effects of strategic transactions and related costs, losses from debt extinguishments, gains or losses from curtailment or settlement of pension obligations, gains or losses on sales of certain assets, gains or losses on venture investments, currency adjustments due to highly inﬂationary economies, and other items), we believe that we are providing meaningful supplemental information that facilitates an understanding of our core operating results and liquidity measures. While some of the items we exclude from GAAP ﬁnancial measures recur, they tend to be disparate in amount, frequency or timing. We use the non-GAAP ﬁnancial measures described below in this presentation. • Sales change ex. currency refers to the increase or decrease in net sales, excluding the estimated impact of foreign currency translation, and, where applicable, an extra week in our ﬁscal year, the calendar shift resulting from an extra week in the prior ﬁscal year, currency adjustments for transitional reporting of highly inﬂationary economies, and the reclassiﬁcation of sales between segments. The estimated impact of foreign currency translation is calculated on a constant currency basis, with prior-period results translated at current period average exchange rates to exclude the effect of foreign currency ﬂuctuations. • Organic sales change refers to sales change ex. currency, excluding the estimated impact of acquisitions and product line divestitures. We believe that sales change ex. currency and organic sales change assist investors in evaluating the sales change from the ongoing activities of our businesses and enhance their ability to evaluate our results from period to period. We believe that the following measures assist investors in understanding our core operating trends and comparing our results with those of our competitors. • Adjusted operating income refers to net income adjusted for taxes; other expense (income), net; interest expense; other non-operating expense (income), net; and other items. • Adjusted EBITDA refers to adjusted operating income before depreciation and amortization. • Adjusted operating margin refers to adjusted operating income as a percentage of net sales. • Adjusted EBITDA margin refers to adjusted EBITDA as a percentage of net sales. • Adjusted tax rate refers to the projected full-year GAAP tax rate, adjusted to exclude certain unusual or infrequent events that are expected to signiﬁcantly impact that rate, such as effects of certain discrete tax planning actions, impacts related to enactments of comprehensive tax law changes, and other items. • Adjusted net income refers to income before taxes, tax-effected at the adjusted tax rate, and adjusted for tax-effected restructuring charges and other items. • Adjusted net income per common share, assuming dilution (adjusted EPS) refers to adjusted net income divided by the weighted average number of common shares outstanding, assuming dilution. • Net debt to adjusted EBITDA ratio refers to total debt (including ﬁnance leases) less cash and cash equivalents, divided by adjusted EBITDA for the last twelve months. We believe that the net debt to adjusted EBITDA ratio assists investors in assessing our leverage position. • Adjusted free cash ﬂow (adjusted FCF) refers to cash ﬂow provided by operating activities, less payments for property, plant and equipment, software and other deferred charges, plus proceeds from company-owned life insurance policies, plus proceeds from sales of property, plant and equipment, plus (minus) net proceeds from insurance and sales (purchases) of investments, less net cash used for Argentine Blue Chip Swap securities. Where applicable, adjusted free cash ﬂow is also adjusted for certain acquisition-related transaction costs. We believe that adjusted free cash ﬂow assists investors by showing the amount of cash we have available for debt reductions, dividends, share repurchases, and acquisitions. This document has been furnished (not ﬁled) on Form 8-K with the SEC and may be found on our website at www.investors.averydennison.com. July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 3"
+    },
+    {
+      "type": "TextElement",
+      "text": "Delivered another strong quarter; Q2 adj. EPS up 26%; raising FY guidance Materials Group delivered strong sales growth and signiﬁcant margin expansion ● Label Materials volume grew double-digits, as expected ● Margins expanded more than 2 points, driven by volume leverage and productivity Solutions Group delivered double-digit sales growth and expanded margins ● Apparel volume environment continued to improve sequentially, ahead of expectations Strong growth in Intelligent Labels as apparel volumes normalize and new categories adopt Continued to generate strong adj. free cash ﬂow Raising FY24 adj. EPS (non-GAAP) guidance to $9.30 to $9.50, up 15 cents at midpoint and 19% vs. PY ● Increasing FY organic sales growth outlook to 4.0% to 5.0% ● Increasing 2H operational outlook more than 5 cents, excluding currency translation headwind July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 4"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second quarter 2024 review Net sales of $2.2 bil. ● Sales change ex. currency (non-GAAP) up 8%; organic sales change (non-GAAP) up 7% Reported operating income of $262 mil. ● Adj. EBITDA (non-GAAP) of $367 mil., up 19% vs. PY and 5% sequentially ● Adj. EBITDA margin (non-GAAP) of 16.4%, up 170 bps Reported EPS of $2.18, up 76% ● Adj. EPS (non-GAAP) of $2.42, up 26% vs. PY and 6% sequentially YTD adj. FCF (non-GAAP) of $201 mil., up $137 mil. vs. PY Returned $177 mil. to shareholders in 1H through combination of dividends and share repurchases ● Raised dividend rate by 9% in April Maintained strong balance sheet; continuing to deploy capital in disciplined manner ● Net debt to adj. EBITDA (non-GAAP) ratio of 2.2 July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 5"
+    },
+    {
+      "type": "TextElement",
+      "text": "Intelligent Labels ‒ leveraging our market-leading position to accelerate new category adoptions with signiﬁcant growth opportunities ~$850M ● Industry-leading position 18% ○ Global scale, proprietary technology, Organic Sales CAGR innovation and go-to-market team ● Helping solve complex industry challenges ○ Optimize labor/supply chains, reduce waste, advance sustainability and help brands/consumers better connect ● YTD organic sales up mid-to-high teens Targeting 20%+ volume growth and mid-teens sales growth in 2024 July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 6"
+    },
+    {
+      "type": "TextElement",
+      "text": "Quarterly sales trend analysis 2Q23 3Q23 4Q23 1Q24 2Q24 Reported Sales Change (11%) (9%) 4% 4% 7% (1) Organic Sales Change (10%) (11%) 1% 3% 7% Acquisitions/Divestitures 1% 1% 1% 1% 1% (1)(2) Sales Change Ex. Currency (10%) (10%) 3% 4% 8% Currency Translation (1%) 1% 2% 0% (1%) (2) Reported Sales Change (11%) (9%) 4% 4% 7% (1) Non-GAAP (2) Totals may not sum due to rounding July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 7"
+    },
+    {
+      "type": "TextElement",
+      "text": "Quarterly sales trend analysis (cont.) Organic Sales Change 2Q23 3Q23 4Q23 1Q24 2Q24 Materials Group (12%) (16%) (4%) 2% 6% Solutions Group (7%) 1% 14% 6% 11% Total Company (10%) (11%) 1% 3% 7% Total Company (10%) (10%) 3% 4% 8% Sales Change Ex. Currency July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 8"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 sales and margin comparisons Q2 Sales Change Reported Ex. Currency Organic Materials Group 5% 6% 6% Solutions Group 12% 14% 11% Total Company 7% 8% 7% Reported Adj. EBITDA Margin (non-GAAP) Operating Margin 2Q24 2Q23 2Q24 2Q23 Materials Group 14.4% 13.1% 17.9% 15.7% Solutions Group 9.3% (1.2%) 16.8% 15.8% Total Company 11.7% 7.9% 16.4% 14.7% July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 9"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second Quarter 2024 Results AVY ‘23 Sales by Segment Materials Group Materials Group Reported sales increased 5% to $1.5 bil. 69% Solutions Group Sales up 6% ex. currency and organically ● Label Materials up mid-to-high single-digits on organic basis Materials Group ○ Volume/mix up low double-digits, partially offset by 2023 Sales by Product deﬂation-related price reductions High-Value Label Materials Categories Graphics & Reﬂectives ● Graphics and Reﬂectives up low single-digits organically 36% Performance Tapes & Medical ● Performance Tapes and Medical down low single-digits Other organically Materials Group Reported operating margin of 14.4% 2023 Sales by Geography U.S. & Canada ● Adj. EBITDA margin of 17.9%, up 220 bps driven by Emerging Western Europe higher volume/mix and beneﬁts from productivity, Markets E. Europe & MENA partially offset by higher employee-related costs 38% Asia Paciﬁc Latin America July 23, 2024 Q2 2024 ﬁnancial review and anal Q2 2024 ﬁnancial r ysis, preliminar ey and unaudit view and anal ed ysis , preliminary and unaudited 10 10 End Market Product Category"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second Quarter 2024 Results AVY ‘23 Sales by Segment Solutions Group Materials Group 31% Reported sales increased 12% to $689 mil. Solutions Group Sales up 14% ex. currency and 11% organically ● Solutions high-value categories up low double-digits ex. currency Solutions Group 2023 Sales by Product ● Solutions base categories up mid-to-high teens Base Solutions ex. currency High-Value Categories Intelligent Labels Reported operating margin of 9.3% 60% Vestcom Ext. Embellishments ● Adj. EBITDA margin of 16.8%, up 100 bps, driven by higher volume and beneﬁts from productivity, partially offset by higher employee-related costs and investments Solutions Group 2023 Sales by Geography ○ Margin up 70 bps sequentially; expect margin to U.S. & Canada continue to improve in 2H Europe Asia Paciﬁc Latin America July 23, 2024 Q2 2024 ﬁnancial review and anal Q2 2024 ﬁnancial r ysis, preliminar ey and unaudit view and anal ed ysis , preliminary and unaudited 11 11 Est. End Market Product Category"
+    },
+    {
+      "type": "TextElement",
+      "text": "2024 EPS Guidance Previous Updated Reported EPS $8.60 - $9.10 $8.75 - $8.95 Add Back: Est. restructuring costs and other items, ~$0.40 ~$0.55 including impact of venture investments Adjusted EPS $9.00 - $9.50 $9.30 - $9.50 Full-year 2024 contributing factors ● Reported sales growth of 4.5% to 5.5% (previously 3.5% to 5.5%), including ~0.5% beneﬁt from acquisitions ● Organic sales growth of 4.0% to 5.0% (previously 3.0% to 5.0%) ○ Strong volume growth, partially offset by deﬂation-related price reductions ● Incremental savings of $50+ mil. from restructuring actions, net (previously $45+ mil.) ● ~$10 mil. headwind from currency translation to operating income, assuming recent rates (previously ~$5 mil. headwind) ● Targeting ~100% adj. FCF conversion; ﬁxed and IT capital spend comparable to PY ● Adj. tax rate of ~26% July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 12"
+    },
+    {
+      "type": "TextElement",
+      "text": "July 23, 2024 Q2 2024 ﬁnancial review and analysis, preliminary and unaudited 13 © 2024 Avery Dennison Corporation. All rights reserved. Avery Dennison and all other Avery Dennison brands, product names and codes are trademarks of Avery Dennison Corporation. All other brands or product names are trademarks of ® their respective owners. Fortune 500 is a trademark of Time, Inc. Branding and other information on any samples depicted is ﬁctitious. Any resemblance to actual names is purely coincidental."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "",
+          "2Q24 Reported EPS of $2.18, up 76%"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "¡",
+          "",
+          "2Q24 Adjusted EPS (non-GAAP) of $2.42, up 26%"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "",
+          "2Q24 Net sales of $2.2 billion, up 7%"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "¡",
+          "",
+          "Sales change ex. currency (non-GAAP) up 8%"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "¡",
+          "",
+          "Organic sales change (non-GAAP) up 7%"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "",
+          "FY24 EPS guidance"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "¡",
+          "",
+          "Revising Reported EPS guidance of $8.75 to $8.95 (previously $8.60 to $9.10)"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "¡",
+          "",
+          "Raising Adjusted EPS guidance of $9.30 to $9.50 (previously $9.00 to $9.50)"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "",
+          "Reported sales increased 5% to $1.5 billion. Sales were up 6% ex. currency and on an organic basis."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "¡",
+          "",
+          "Label Materials sales were up mid-to-high single-digits on an organic basis."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "∎",
+          "",
+          "Volume/mix was up low double-digits, which was partially offset by deflation-related price reductions."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "¡",
+          "",
+          "Graphics and Reflectives were up low single-digits organically."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 2200.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net sales of $2.2 billion"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "219.520004",
+    "return_10d_pct": "-7.8581",
+    "return_20d_pct": "-4.7513",
+    "return_30d_pct": "-0.2141",
+    "return_60d_pct": "-1.7447",
+    "return_90d_pct": "-3.2480"
+  },
+  "text_stats": {
+    "primary_text_len": 9385,
+    "exhibit_text_len": 50835,
+    "combined_text_len": 60222,
+    "semantic_text_len": 50822,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

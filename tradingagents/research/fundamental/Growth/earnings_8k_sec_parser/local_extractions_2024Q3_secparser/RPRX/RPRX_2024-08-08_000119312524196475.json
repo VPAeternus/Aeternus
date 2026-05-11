@@ -1,0 +1,845 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RPRX",
+    "cik": "1802768",
+    "event_date": "2024-08-08",
+    "event_accession": "0001193125-24-196475",
+    "primary_8k_doc": "d857022d8k.htm",
+    "exhibit_docs": [
+      "d857022dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RPRX_000119312524196475_d857022d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RPRX_000119312524196475_d857022dex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RPRX",
+    "cik": "1802768",
+    "entity_name": "Royalty Pharma plc",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "683971000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "340755000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "16381851000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-210373000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-558526000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1033837000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.498201",
+    "operating_cash_flow_to_revenue": "1.511522",
+    "assets_to_revenue": "23.95109",
+    "financing_cash_flow_to_revenue": "-0.307576",
+    "investing_cash_flow_to_revenue": "-0.816593"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of frexalimab and milestones related to the achievement of certain commercial and regulatory events.",
+      "net sales of Voranigo up to $1 billion and a 12% royalty on annual U.",
+      "sales of many of the industrys leading therapies.",
+      "sales of products, net of contractual payments to the legacy non-controlling interests, that are attributed to Royalty Pharma.",
+      "sales of marketable securities, neither of which are central to our fundamental business strategy.",
+      "sales of products, net of contractual payments to the legacy non-controlling interests, that are attributed to Royalty Pharma (Royalty Receipts)."
+    ],
+    "guidance_evidence": [
+      "guidance: Portfolio Receipts expected to be $2,700 to $2,775 million NEW YORK, NY, August 8, 2024 - Royalty Pharma plc (Nasdaq: RPRX) today reported financial results for the second quarter of 2024 and raised full year 2024 guidance for Portfolio Receipts.",
+      "guidance for the quarter, and are delighted to raise our full year guidance said Pablo Legorreta, Royalty Pharmas founder and Chief Executive Officer.",
+      "outlook, we continued to repurchase our Class A ordinary shares as part of our balanced capital allocation strategy.",
+      "guidance for full year 2024 (excludes contribution from future transactions)  Royalty Pharma now expects 2024 Portfolio Receipts to be between $2,700 million and $2,775 million (previously between $2,600 million and $2,700 million).",
+      "guidance includes expected year/year growth in Royalty Receipts of 9% to 12% (previous guidance of 5% to 9% year/year growth).",
+      "guidance includes expected Royalty Receipts growth of 9% to 12% in 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "aised full year 2024 guidance for Portfolio Receipts.",
+      "aise our full year guidance said Pablo Legorreta, Royalty Pharmas founder and Chief Executive Officer.",
+      "ain highly confident in our ability to deliver attractive, compounding growth over the long-term.",
+      "aid for Voranigo (vorasidenib)  Acquired royalties on Serviers Voranigo, a first-in-class targeted therapy in IDH-mutant glioma.",
+      "aising financial guidance for full year 2024 (excludes contribution from future transactions)  Royalty Pharma now expects 2024 Portfolio Receipts to be between $2,700 million and $2,775 million (previously between $2,600 million and $2,700 million).",
+      "aid or received, net."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties and other variable circumstances, and other factors.",
+      "uncertainties may cause the statements to be inaccurate and readers are cautioned not to place undue reliance on such statements.",
+      "declines, any obligation to update any such statements or to publicly announce the results of any revisions to any such statements to reflect future events or developments, except as required by law."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d857022dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ROYALTY PHARMA REPORTS SECOND QUARTER 2024 RESULTS"
+    },
+    {
+      "type": "TextElement",
+      "text": " Portfolio Receipts growth of 12% to $608 million; Royalty Receipts growth of 11%  Net cash provided by operating activities of $658 million  Raising full year 2024 guidance: Portfolio Receipts expected to be $2,700 to $2,775 million NEW YORK, NY, August 8, 2024 - Royalty Pharma plc (Nasdaq: RPRX) today reported financial results for the second quarter of 2024 and raised full year 2024 guidance for Portfolio Receipts. We delivered double-digit growth in Portfolio Receipts in the second quarter of 2024, ahead of our guidance for the quarter, and are delighted to raise our full year guidance said Pablo Legorreta, Royalty Pharmas founder and Chief Executive Officer. Our performance in the first half of the year extends our track record of strong growth since our IPO. We also had a very active quarter for capital deployment, announcing over $2 billion of investments across six therapies as we expanded partnerships with Cytokinetics, PTC Therapeutics and Agios. In addition, reflecting our attractive fundamental outlook, we continued to repurchase our Class A ordinary shares as part of our balanced capital allocation strategy. Lastly, as we anticipated, 2024 is proving to be an event-rich year for our exciting development-stage pipeline with positive clinical updates on two key therapies in our portfolio. Looking ahead, we continue to have a robust deal pipeline and remain highly confident in our ability to deliver attractive, compounding growth over the long-term. Double-digit growth for Portfolio Receipts and Royalty Receipts in the second quarter of 2024  Royalty Receipts grew 11% to $605 million, driven by strong portfolio performance particularly from the cystic fibrosis franchise, Trelegy, Tremfya and incremental royalties on Evrysdi.  Portfolio Receipts increased 12% to $608 million, primarily driven by the same royalties noted above. Capital Deployment of approximately $2 billion in 2024, including cash to be paid for Voranigo (vorasidenib)  Acquired royalties on Serviers Voranigo, a first-in-class targeted therapy in IDH-mutant glioma.  Purchased incremental royalties on Roches Evrysdi for spinal muscular atrophy.  Provided Cytokinetics with diversified capital, adding incremental royalty on aficamten for hypertrophic cardiomyopathy. Positive clinical updates for the development-stage royalty portfolio  Johnson and Johnson announced positive Phase 3 results for seltorexant in major depressive disorder with insomnia symptoms and for Tremfya in Crohns disease, including demonstrating superiority versus Stelara. Raising financial guidance for full year 2024 (excludes contribution from future transactions)  Royalty Pharma now expects 2024 Portfolio Receipts to be between $2,700 million and $2,775 million (previously between $2,600 million and $2,700 million).  2024 Portfolio Receipts guidance includes expected year/year growth in Royalty Receipts of 9% to 12% (previous guidance of 5% to 9% year/year growth). Financial & Liquidity Summary"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, (unaudited) ($ and shares in millions) 2024 2023 Change Portfolio Receipts 608 545 12% Net cash provided by operating activities 658 608 8% Adjusted EBITDA (non-GAAP)* 560 498 13% Portfolio Cash Flow (non-GAAP)* 574 516 11% Weighted average Class A ordinary shares outstanding - diluted 597 606 (1)%"
+    },
+    {
+      "type": "TextElement",
+      "text": "* See Liquidity and Capital Resources section. Adjusted EBITDA and Portfolio Cash Flow are non-GAAP liquidity measures calculated in accordance with the credit agreement."
+    },
+    {
+      "type": "ImageElement",
+      "text": "1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Portfolio Receipts Highlights"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, (unaudited) ($ in millions) 2024 2023 Change Products: Marketers: Therapeutic Area: Cystic fibrosis franchise Vertex Rare disease 195 170 15% Tysabri Biogen Neuroscience 64 70 (8)% Imbruvica AbbVie, J&J Cancer 49 52 (5)% Trelegy GSK Respiratory 48 37 32% Xtandi Pfizer, Astellas Cancer 39 33 16% Promacta Novartis Hematology 30 32 (4)% Tremfya Johnson & Johnson Immunology 30 22 34% Evrysdi Roche Rare disease 25 13 91% Cabometyx/Cometriq Exelixis, Ipsen, Takeda Cancer 17 15 9% Trodelvy Gilead Cancer 10 8 37% Spinraza Biogen Rare disease 10 13 (23)% Erleada Johnson & Johnson Cancer 9 5 72% Orladeyo BioCryst Rare disease 9 7 30% Nurtec ODT/Zavzpret Pfizer Neuroscience 4 4 10% Other products(5) 66 65 2% Royalty Receipts 605 545 11% Milestones and other contractual receipts 3  n/a Portfolio Receipts 608 545 12%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Amounts shown in the table may not add due to rounding. Royalty Receipts was $605 million in the second quarter of 2024, an increase of 11% compared to $545 million in the second quarter of 2023, primarily driven by strong growth from the cystic fibrosis franchise, Trelegy, Tremfya and incremental royalties acquired on Evrysdi in October 2023. Portfolio Receipts was $608 million in the second quarter of 2024, an increase of 12% compared to $545 million in the second quarter of 2023, primarily driven by the same Royalty Receipts increases noted above. Liquidity and Capital Resources Royalty Pharmas liquidity and capital resources are summarized below: As of June 30, 2024, Royalty Pharma had cash and cash equivalents of $1.8 billion and total debt with principal value of $7.8 billion. In June 2024, Royalty Pharma issued $1.5 billion of senior unsecured notes (2024 Notes) with a weighted average coupon rate of 5.5%. Interest on the 2024 Notes is payable semi-annually in arrears on March 2 and September 2 of each year. The first interest payment date will be March 2, 2025. As of June 30, 2024, Royalty Pharma had total debt with a weighted-average duration of approximately 13 years and an attractive weighted-average cost of debt of 3.1%. During the second quarter of 2024, Royalty Pharma repurchased approximately three million Class A ordinary shares for $84 million. Year-to-date (through August 7, 2024), Royalty Pharma has repurchased approximately four million Class A ordinary shares for $115 million. The weighted-average number of diluted Class A ordinary shares outstanding for the second quarter of 2024 was 597 million as compared to 606 million for the second quarter of 2023."
+    },
+    {
+      "type": "ImageElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Liquidity Summary"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, (unaudited) ($ in millions) 2024 2023 Portfolio Receipts 608 545 Payments for operating and professional costs (48) (47) Adjusted EBITDA (non-GAAP) 560 498 Interest received, net 14 18 Portfolio Cash Flow (non-GAAP) 574 516"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Amounts may not add due to rounding."
+    },
+    {
+      "type": "TextElement",
+      "text": " Adjusted EBITDA (non-GAAP) was $560 million in the second quarter of 2024. Adjusted EBITDA is calculated as Portfolio Receipts minus payments for operating and professional costs.  Portfolio Cash Flow (non-GAAP) was $574 million in the second quarter of 2024. Portfolio Cash Flow is calculated as Adjusted EBITDA minus interest paid or received, net. This measure reflects the cash generated by Royalty Pharmas business that can be redeployed into value-enhancing royalty acquisitions, used to repay debt, returned to shareholders through dividends or share purchases, or utilized for other discretionary investments. Refer to Table 4 for Royalty Pharmas reconciliation of each non-GAAP measure to the most directly comparable GAAP financial measure, net cash provided by operating activities. Royalty Pharma announced new transactions of up to approximately $2.0 billion in the second quarter of 2024, which includes upfront payments and potential future milestones. Capital Deployment reflects cash payments during the period for new and previously announced transactions. Capital Deployment was $951 million in the second quarter of 2024, consisting primarily of the acquisition of royalties on frexalimab, the acquisition of additional royalties on Evrysdi, as well as the expanded strategic funding collaboration with Cytokinetics. Royalty Pharma will also pay Agios $905 million following the FDA approval of Voranigo (vorasidenib). The table below details Capital Deployment by category: Capital Deployment"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, ($ in millions) 2024 2023 2024 2023 Acquisitions of financial royalty assets (729) (60) (815) (662) Development-stage funding payments - ongoing (1) (1) (1) (1) Purchases of available for sale debt securities (150)  (150)  Milestone payments (50)  (50) (12) Investments in equity method investees (4) (3) (11) (7) Acquisitions of other financial assets (18)  (18)  Contributions from legacy non-controlling interests - R&D 0 0 0 0 Capital Deployment (951) (64) (1,044) (682)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Amounts may not add due to rounding."
+    },
+    {
+      "type": "ImageElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "Recent Transactions During 2024, Royalty Pharma announced new transactions of up to approximately $2.0 billion. Announced transactions amount reflects the entire amount of capital committed for new transactions during the year, including potential future milestones. Recent transactions include:  In June 2024, PTC Therapeutics exercised its option to sell approximately half of its royalty retained on Roches Evrysdi, an approved product for the treatment of spinal muscular atrophy, for approximately $242 million. This option arose from the Evrysdi royalty transaction with PTC that was announced in October 2023, in which Royalty Pharma acquired additional royalties on Evrysdi for $1 billion. PTC has an option to sell the remainder of its retained royalty on Evrysdi for up to approximately $250 million, less royalties received, until December 31, 2025.  In May 2024, Royalty Pharma announced a transaction to acquire a royalty interest in Voranigo (vorasidenib) from Agios Pharmaceuticals for an upfront payment of $905 million. The transaction was contingent upon FDA approval which was subsequently granted on August 6, 2024.  In May 2024, Royalty Pharma expanded its strategic funding collaboration with Cytokinetics, Incorporated (Cytokinetics) to provide up to $575 million, including $250 million in upfront payments, in exchange for royalties and fixed payments.  In May 2024, Royalty Pharma acquired royalties and milestones on frexalimab, which was owned by ImmuNext, Inc., for approximately $525 million, including estimated transaction costs. Royalty Pharma is entitled to receive royalties on annual worldwide net sales of frexalimab and milestones related to the achievement of certain commercial and regulatory events. Frexalimab, which is in development by Sanofi, is a second generation anti-CD40 ligand monoclonal antibody. Frexalimab is being evaluated in Phase 3 clinical studies for the treatment of multiple sclerosis and is in Phase 2 clinical studies for systemic lupus erythematosus and Type 1 Diabetes. The information in this section should be read together with Royalty Pharmas reports and documents filed with the SEC at www.sec.gov and the reader is also encouraged to review all other press releases and information available in the Investors section of Royalty Pharmas website at www.royaltypharma.com. Key Developments Relating to the Portfolio The key developments related to Royalty Pharmas royalty interests are discussed below based on disclosures from the marketers of the products."
+    },
+    {
+      "type": "ImageElement",
+      "text": "4"
+    },
+    {
+      "type": "TableElement",
+      "text": "Voranigo (vorasidenib) In August 2024, Servier announced the FDA approval of Voranigo, a first-in-class targeted therapy for patients with isocitrate dehydrogenase 1 and 2 (IDH1/2) mutant diffuse glioma. Following this approval, Royalty Pharma will pay $905 million upfront in exchange for a 15% royalty on annual U.S. net sales of Voranigo up to $1 billion and a 12% royalty on annual U.S. net sales greater than $1 billion. BCX10013 In August 2024, BioCryst announced that it plans to discontinue development of its oral Factor D inhibitor, BCX10013, as the level of clinical activity observed was less than other therapies on the market. Trodelvy In May 2024, Gilead announced that the confirmatory Phase 3 TROPiCS-04 study evaluating Trodelvy versus single-agent chemotherapy in patients with locally advanced or metastatic urothelial cancer did not meet the primary endpoint of overall survival. Gilead is continuing to analyze the data and will discuss the results and next steps with the FDA. In the United States, Trodelvy has an accelerated approval in this indication and continued approval may be contingent upon verification and description of clinical benefit in confirmatory trials, including the TROPiCS-04 study. Tremfya In May 2024, Johnson and Johnson announced the first Phase 3 results for Tremfya in adult patients with moderate to severely active Crohns disease, which demonstrated superiority versus placebo and Stelara. Data showed that both maintenance doses of Tremfya met the composite co-primary endpoints compared to placebo in each individual study. In results versus Stelara, both doses of Tremfya demonstrated statistically significant and clinically meaningful differences on all prespecified pooled endoscopic endpoints. In May 2024, Johnson and Johnson announced positive Phase 3 results for Tremfya in patients with moderate to severely active Crohns disease with inadequate response/intolerance to conventional therapies and/or biologics. Johnson and Johnson submitted a supplemental Biologics License Application to the FDA seeking approval of Tremfya for Crohns disease and an application to the European Medicines Agency for ulcerative colitis and Crohns disease. Cystic fibrosis franchise In May 2024, Vertex announced that it submitted a New Drug Application and Marketing Authorization Application for the new triple combination therapy to the FDA and the European Medicines Agency, respectively, for approval. This followed positive Phase 3 results for the new triple combination therapy in February 2024. In April 2024, Vertex announced that the European Commission had granted approval for the label expansion of Kalydeco for the treatment of infants down to one month of age with cystic fibrosis (CF) who have certain mutations in the CF transmembrane conductance regulator gene. Xtandi In April 2024, Astellas Pharma announced the European Commission approved a label extension for Xtandi as monotherapy or in combination with androgen deprivation therapy for the treatment of adult men with high-risk biochemical recurrent non-metastatic hormone-sensitive prostate cancer who are unsuitable for salvage-radiotherapy. Seltorexant In May 2024, Johnson and Johnson announced positive results from the pivotal Phase 3 MDD3001 clinical trial evaluating the efficacy and safety of seltorexant as an adjunctive treatment in patients with major depressive disorder (MDD) with insomnia symptoms. The study achieved all primary and secondary endpoints, with seltorexant demonstrating both a statistically significant and clinically meaningful improvement in depressive symptoms, and improved sleep disturbance outcomes, in patients who had a prior inadequate response to SSRI/SNRI antidepressants alone. Pelabresib In May 2024, Novartis announced that it met all tender offer conditions to acquire MorphoSys for 68 per share. The acquisition of MorphoSys by Novartis has been completed. TEV-749 In May 2024, Teva Pharmaceuticals announced positive efficacy results from its Phase 3 trial evaluating TEV-749, a once monthly subcutaneous long-acting injection of olanzapine, in adult patients with schizophrenia. Results demonstrated that TEV-749 met its primary endpoint as measured by a change in the Positive and Negative Syndrome Scale (PANSS) total score from baseline after eight weeks compared to placebo. Additionally, no cases of Post-injection Delirium/Sedation Syndrome (PDSS) had been reported by that date, after administration of approximately 80% of the minimum target injection number."
+    },
+    {
+      "type": "ImageElement",
+      "text": "5"
+    },
+    {
+      "type": "TextElement",
+      "text": "2024 Financial Outlook Royalty Pharma has provided guidance for full year 2024, excluding transactions and borrowings announced after the date of this release, as follows:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Provided August 8, 2024 Previous Portfolio Receipts $2,700 million to $2,775 million $2,600 million to $2,700 million Payments for operating and professional costs 8% to 9% of Portfolio Receipts 8% to 9% of Portfolio Receipts Interest paid $160 million $160 million"
+    },
+    {
+      "type": "TextElement",
+      "text": "The above Portfolio Receipts guidance includes expected Royalty Receipts growth of 9% to 12% in 2024. Royalty Pharmas full-year 2024 guidance reflects a negligible estimated foreign exchange impact to Portfolio Receipts, assuming current foreign exchange rates prevail for 2024. Total interest paid is based on the semi-annual interest payment schedule of Royalty Pharmas existing notes and is anticipated to be approximately $160 million in 2024. Interest paid is anticipated to be approximately $79 million in the third quarter of 2024 with a de minimis amount being recorded in the fourth quarter of 2024. The projection assumes no additional debt financing in 2024, including no drawdown on the revolving credit facility. In the second quarter of 2024, Royalty Pharma collected interest of $14 million on its cash and cash equivalents, which more than offset interest paid. In 2025, Royalty Pharma anticipates interest paid to be approximately $260 million, reflecting the aforementioned issuance of $1.5 billion of 2024 Notes. Royalty Pharma today provides this guidance based on its most up-to-date view of its prospects. This guidance assumes no major unforeseen adverse events and excludes the contributions from transactions announced subsequent to the date of this press release. Furthermore, Royalty Pharma may amend its guidance in the event it engages in new royalty transactions which have a material near-term financial impact on the company. Financial Results Call Royalty Pharma will host a conference call and simultaneous webcast to discuss its second quarter 2024 results today at 8:00 a.m., Eastern Time. Please visit the Investors page of the companys website at https://www.royaltypharma.com/investors/events to obtain conference call information and to view the live webcast. A replay of the conference call and webcast will be archived on the companys website for at least 30 days."
+    },
+    {
+      "type": "ImageElement",
+      "text": "6"
+    },
+    {
+      "type": "TextElement",
+      "text": "About Royalty Pharma plc Founded in 1996, Royalty Pharma is the largest buyer of biopharmaceutical royalties and a leading funder of innovation across the biopharmaceutical industry, collaborating with innovators from academic institutions, research hospitals and non-profits through small and mid-cap biotechnology companies to leading global pharmaceutical companies. Royalty Pharma has assembled a portfolio of royalties which entitles it to payments based directly on the top-line sales of many of the industrys leading therapies. Royalty Pharma funds innovation in the biopharmaceutical industry both directly and indirectlydirectly when it partners with companies to co-fund late-stage clinical trials and new product launches in exchange for future royalties, and indirectly when it acquires existing royalties from the original innovators. Royalty Pharmas current portfolio includes royalties on more than 35 commercial products, including Vertexs Trikafta, GSKs Trelegy, Roches Evrysdi, Johnson & Johnsons Tremfya, Biogens Tysabri and Spinraza, AbbVie and Johnson & Johnsons Imbruvica, Astellas and Pfizers Xtandi, Novartis Promacta, Pfizers Nurtec ODT and Gileads Trodelvy, and 16 development-stage product candidates. Forward-Looking Statements The information set forth herein does not purport to be complete or to contain all of the information you may desire. Statements contained herein are made as of the date of this document unless stated otherwise, and neither the delivery of this document at any time, nor any sale of securities, shall under any circumstances create an implication that the information contained herein is correct as of any time after such date or that information will be updated or revised to reflect information that subsequently becomes available or changes occurring after the date hereof. This document contains statements that constitute forward-looking statements as that term is defined in the United States Private Securities Litigation Reform Act of 1995, including statements that express the companys opinions, expectations, beliefs, plans, objectives, assumptions or projections regarding future events or future results, in contrast with statements that reflect historical facts. Examples include discussion of Royalty Pharmas strategies, financing plans, growth opportunities and market growth. In some cases, you can identify such forward-looking statements by terminology such as anticipate, intend, believe, estimate, plan, seek, project, expect, may, will, would, could or should, the negative of these terms or similar expressions. Forward-looking statements are based on managements current beliefs and assumptions and on information currently available to the company. However, these forward-looking statements are not a guarantee of Royalty Pharmas performance, and you should not place undue reliance on such statements. Forward-looking statements are subject to many risks, uncertainties and other variable circumstances, and other factors. Such risks and uncertainties may cause the statements to be inaccurate and readers are cautioned not to place undue reliance on such statements. Many of these risks are outside of the companys control and could cause its actual results to differ materially from those it thought would occur. The forward-looking statements included in this document are made only as of the date hereof. The company does not undertake, and specifically declines, any obligation to update any such statements or to publicly announce the results of any revisions to any such statements to reflect future events or developments, except as required by law. Certain information contained in this document relates to or is based on studies, publications, surveys and other data obtained from third-party sources and the companys own internal estimates and research. While the company believes these third-party sources to be reliable as of the date of this document, it has not independently verified, and makes no representation as to the adequacy, fairness, accuracy or completeness of, any information obtained from third-party sources. In addition, all of the market data included in this document involves a number of assumptions and limitations, and there can be no guarantee as to the accuracy or reliability of such assumptions. Finally, while the company believes its own internal research is reliable, such research has not been verified by any independent source."
+    },
+    {
+      "type": "ImageElement",
+      "text": "7"
+    },
+    {
+      "type": "TextElement",
+      "text": "For further information, please reference Royalty Pharmas reports and documents filed with the U.S. Securities and Exchange Commission (SEC) by visiting EDGAR on the SECs website at www.sec.gov. Portfolio Receipts Portfolio Receipts is a key performance metric that represents our ability to generate cash from our portfolio investments, the primary source of capital that we can deploy to make new portfolio investments. Portfolio Receipts is defined as the sum of Royalty Receipts and Milestones and other contractual receipts. Royalty Receipts includes variable payments based on sales of products, net of contractual payments to the legacy non-controlling interests, that are attributed to Royalty Pharma. Milestones and other contractual receipts include sales-based or regulatory milestone payments and other fixed contractual receipts, net of contractual payments to legacy non-controlling interests, that are attributed to Royalty Pharma. Portfolio Receipts does not include proceeds from equity securities or proceeds from purchases and sales of marketable securities, neither of which are central to our fundamental business strategy. Portfolio Receipts is calculated as the sum of the following line items from our GAAP statements of cash flows: Cash collections from financial royalty assets, Cash collections from intangible royalty assets, Other royalty cash collections, Proceeds from available for sale debt securities and Distributions from equity method investees less Distributions to legacy non-controlling interestsPortfolio Receipts, which represent contractual distributions of Royalty Receipts, milestones and other contractual receipts to RPSFT and the Legacy Investors Partnerships. Use of Non-GAAP Measures Adjusted EBITDA and Portfolio Cash Flow are non-GAAP liquidity measures that exclude the impact of certain items and therefore have not been calculated in accordance with GAAP. Management believes that Adjusted EBITDA and Portfolio Cash Flow are important non-GAAP measures used to analyze liquidity because they are key components of certain material covenants contained within Royalty Pharmas credit agreement. Royalty Pharma cautions readers that amounts presented in accordance with the definitions of Adjusted EBITDA and Portfolio Cash Flow may not be the same as similar measures used by other companies or analysts. These non-GAAP liquidity measures have limitations as analytical tools, and you should not consider them in isolation or as a substitute for the analysis of Royalty Pharmas results as reported under GAAP. The definitions of Adjusted EBITDA and Portfolio Cash Flow used by Royalty Pharma are the same as the definitions in the credit agreement. Noncompliance with the interest coverage ratio, leverage ratio and Portfolio Cash Flow ratio covenants under the credit agreement could result in lenders requiring the company to immediately repay all amounts borrowed. If Royalty Pharma cannot satisfy these covenants, it would be prohibited under the credit agreement from engaging in certain activities, such as incurring additional indebtedness, paying dividends, making certain payments, and acquiring and disposing of assets. Consequently, Adjusted EBITDA and Portfolio Cash Flow are critical to the assessment of Royalty Pharmas liquidity. Adjusted EBITDA and Portfolio Cash Flow are used by management as key liquidity measures in the evaluation of the companys ability to generate cash from operations. Management uses Adjusted EBITDA and Portfolio Cash Flow when considering available cash, including for decision-making purposes related to funding of acquisitions, debt repayments, dividends and other discretionary investments. Further, these non-GAAP liquidity measures help management, the audit committee and investors evaluate the companys ability to generate liquidity from operating activities."
+    },
+    {
+      "type": "ImageElement",
+      "text": "8"
+    },
+    {
+      "type": "TextElement",
+      "text": "The company has provided reconciliations of these non-GAAP liquidity measures to the most directly comparable GAAP financial measure, being net cash provided by operating activities in Table 4. Royalty Pharma Investor Relations and Communications +1 (212) 883-6772 ir@royaltypharma.com"
+    },
+    {
+      "type": "ImageElement",
+      "text": "9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Royalty Pharma plc"
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Statements of Operations (unaudited)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Table 1"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, ($ in millions) 2024 2023 Income and other revenues Income from financial royalty assets 513 501 Other royalty income and revenues 24 37 Total income and other revenues 537 538 Operating expenses Provision for changes in expected cash flows from financial royalty assets 212 241 Research and development funding expense 1 1 General and administrative expenses 55 48 Total operating expenses, net 268 289 Operating income 270 249 Other (income)/expense Equity in (earnings)/losses of equity method investees (2) 1 Interest expense 49 47 Other expenses/(income), net 28 (150) Total other expenses/(income), net 75 (102) Consolidated net income before tax 194 351 Income tax expense   Consolidated net income 194 351 Net income attributable to non-controlling interests 92 124 Net income attributable to Royalty Pharma plc 102 228"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Amounts may not add due to rounding."
+    },
+    {
+      "type": "ImageElement",
+      "text": "10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Royalty Pharma plc"
+    },
+    {
+      "type": "TextElement",
+      "text": "Selected Balance Sheet Data (unaudited)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Table 2"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in millions) As of June 30, 2024 As of December 31, 2023 Cash and cash equivalents 1,765 477 Total current and non-current financial royalty assets, net 14,640 14,827 Total assets 17,657 16,382 Long-term debt 7,602 6,135 Total liabilities 7,905 6,298 Total shareholders equity 9,752 10,084"
+    },
+    {
+      "type": "ImageElement",
+      "text": "11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Royalty Pharma plc"
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Statements of Cash Flows (unaudited)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Table 3"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, ($ in millions) 2024 2023 2024 2023 Cash flows from operating activities: Cash collections from financial royalty assets 669 595 1,414 1,746 Cash collections from intangible royalty assets 0 0 14 1 Other royalty cash collections 23 40 50 60 Distributions from equity method investees  2 13 19 Interest received 14 19 21 35 Development-stage funding paymentsongoing (1) (1) (1) (1) Payments for operating and professional costs (48) (47) (109) (134) Interest paid (1) (1) (80) (83) Net cash provided by operating activities 658 608 1,323 1,642 Cash flows from investing activities: Distributions from equity method investees 4  9 35 Investments in equity method investees (4) (3) (11) (7) Purchases of equity securities (50)  (50)  Proceeds from equity securities 99  99  Purchases of available for sale debt securities (150)  (150)  Proceeds from available for sale debt securities 3  4  Proceeds from sales and maturities of marketable securities    24 Acquisitions of financial royalty assets (729) (60) (815) (662) Acquisitions of other financial assets (18)  (18)  Milestone payments (50)  (50) (12) Other 2  2  Net cash used in investing activities (893) (63) (980) (622) Cash flows from financing activities: Distributions to legacy non-controlling interestsPortfolio Receipts (92) (92) (180) (184) Distributions to continuing non-controlling interests (31) (31) (63) (64) Dividends to shareholders (95) (91) (189) (179) Repurchases of Class A ordinary shares (80) (134) (80) (134) Contributions from legacy non-controlling interestsR&D 0 0 0 0 Contributions from non-controlling interestsother 1 1 2 4 Proceeds from issuance of long-term debt, net of discount 1,471  1,471  Debt issuance costs and other (9)  (9)  Other (9)  (9)  Net cash provided by/(used in) financing activities 1,157 (347) 945 (557) Net change in cash and cash equivalents 922 197 1,288 462 Cash and cash equivalents, beginning of period 843 1,976 477 1,711 Cash and cash equivalents, end of period 1,765 2,173 1,765 2,173"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Amounts may not add due to rounding."
+    },
+    {
+      "type": "ImageElement",
+      "text": "12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Royalty Pharma plc"
+    },
+    {
+      "type": "TextElement",
+      "text": "GAAP to Non-GAAP Reconciliation (unaudited)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Table 4"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, ($ in millions) 2024 2023 Net cash provided by operating activities (GAAP) 658 608 Adjustments: Proceeds from available for sale debt securities(6) 3  Distributions from equity method investees(6) 4  Interest received, net(6) (14) (18) Development-stage funding paymentsongoing 1 1 Distributions to legacy non-controlling interestsPortfolio Receipts(6) (92) (92) Adjusted EBITDA (non-GAAP) 560 498 Interest received, net(6) 14 18 Portfolio Cash Flow (non-GAAP) 574 516"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Amounts may not add due to rounding."
+    },
+    {
+      "type": "ImageElement",
+      "text": "13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Royalty Pharma plc"
+    },
+    {
+      "type": "TextElement",
+      "text": "Description of Approved Indications for Select Portfolio Therapies"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Table 5"
+    },
+    {
+      "type": "TableElement",
+      "text": "Cystic fibrosis franchise Cystic fibrosis Tysabri Relapsing forms of multiple sclerosis Imbruvica Hematological malignancies and chronic graft versus host disease Trelegy Chronic obstructive pulmonary disease and asthma Xtandi Prostate cancer Promacta Chronic immune thrombocytopenia purpura and aplastic anemia Tremfya Plaque psoriasis and active psoriatic arthritis Evrysdi Spinal muscular atrophy Cabometyx/Cometriq Kidney, liver and thyroid cancer Trodelvy Breast and bladder cancer Spinraza Spinal muscular atrophy Erleada Prostate cancer Orladeyo Hereditary angioedema Nurtec ODT/Zavzpret Acute and preventative treatment of migraine"
+    },
+    {
+      "type": "ImageElement",
+      "text": "14"
+    },
+    {
+      "type": "TextElement",
+      "text": "Notes (1) Portfolio Receipts is a key performance metric that represents our ability to generate cash from our portfolio investments, the primary source of capital that we can deploy to make new portfolio investments. Portfolio Receipts is defined as the sum of Royalty Receipts and milestones and other contractual receipts. Royalty Receipts includes variable payments based on sales of products, net of contractual payments to the legacy non-controlling interests, that are attributed to Royalty Pharma (Royalty Receipts). Milestones and other contractual receipts include sales-based or regulatory milestone payments and other fixed contractual receipts, net of contractual payments to the legacy non-controlling interests, that are attributed to Royalty Pharma. Portfolio Receipts does not include proceeds from equity securities or marketable securities, both of which are not central to our fundamental business strategy. Portfolio Receipts is calculated as the sum of the following line items from our GAAP statements of cash flows: Cash collections from financial royalty assets, Cash collections from intangible royalty assets, Other royalty cash collections, Proceeds from available for sale debt securities and Distributions from equity method investees less Distributions to legacy non-controlling interestsPortfolio Receipts, which represent contractual distributions of Royalty Receipts, milestones and other contractual receipts to RPSFT and the Legacy Investors Partnerships. (2) Adjusted EBITDA is defined under the credit agreement as Portfolio Receipts minus payments for operating and professional costs. Operating and professional costs reflect Payments for operating and professional costs from the GAAP statements of cash flows. See GAAP to Non-GAAP reconciliation in Table 4. (3) Portfolio Cash Flow is defined under the credit agreement as Adjusted EBITDA minus interest paid or received, net. See GAAP to Non-GAAP reconciliation in Table 4. Portfolio Cash Flow reflects the cash generated by Royalty Pharmas business that can be redeployed into value-enhancing royalty acquisitions, used to repay debt, returned to shareholders through dividends or share purchases or utilized for other discretionary investments. (4) Capital Deployment is calculated as the summation of the following line items from our GAAP statements of cash flows: Investments in equity method investees, Purchases of available for sale debt securities, Acquisitions of financial royalty assets, Acquisitions of other financial assets, Milestone payments, Development-stage funding paymentsongoing, Development-stage funding paymentsupfront and milestone less Contributions from legacy non-controlling interestsR&D. (5) Other products primarily include Royalty Receipts on the following products: Cimzia, Crysvita, Emgality, Farxiga/Onglyza, IDHIFA, Lexiscan, Nesina, Prevymis, Soliqua and distributions from the Legacy SLP Interest, which is presented as Distributions from equity method investees on the GAAP statements of cash flows. (6) The table below shows the line item for each adjustment and the direct location for such line item on the GAAP statements of cash flows."
+    },
+    {
+      "type": "TableElement",
+      "text": "Reconciling Adjustment Statements of Cash Flows Classification Interest received, net Operating activities (Interest paid less Interest received) Distributions from equity method investees Investing activities Proceeds from available for sale debt securities Investing activities Distributions to legacy non-controlling interests - Portfolio Receipts Financing activities"
+    },
+    {
+      "type": "ImageElement",
+      "text": "15"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Portfolio Receipts growth of 12% to $608 million; Royalty Receipts growth of 11%"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net cash provided by operating activities of $658 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Raising full year 2024 guidance: Portfolio Receipts expected to be $2,700 to $2,775 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Royalty Receipts grew 11% to $605 million, driven by strong portfolio performance particularly from the cystic fibrosis franchise, Trelegy, Tremfya and incremental royalties on Evrysdi."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Portfolio Receipts increased 12% to $608 million, primarily driven by the same royalties noted above."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Acquired royalties on Serviers Voranigo, a first-in-class targeted therapy in IDH-mutant glioma."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Purchased incremental royalties on Roches Evrysdi for spinal muscular atrophy."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Provided Cytokinetics with diversified capital, adding incremental royalty on aficamten for hypertrophic cardiomyopathy."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Johnson and Johnson announced positive Phase 3 results for seltorexant in major depressive disorder with insomnia symptoms and for Tremfya in Crohns disease, including demonstrating superiority versus Stelara."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Royalty Pharma now expects 2024 Portfolio Receipts to be between $2,700 million and $2,775 million (previously between $2,600 million and $2,700 million)."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "2024 Portfolio Receipts guidance includes expected year/year growth in Royalty Receipts of 9% to 12% (previous guidance of 5% to 9% year/year growth)."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        9,
+        16
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,"
+        ],
+        [
+          "",
+          "",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)"
+        ],
+        [
+          "($ and shares in millions)",
+          "",
+          "2024",
+          "2024",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "2023",
+          "2023",
+          "",
+          "Change",
+          "Change",
+          "Change",
+          "Change"
+        ],
+        [
+          "Portfolio Receipts",
+          "",
+          "",
+          "",
+          "608",
+          "",
+          "",
+          "",
+          "",
+          "545",
+          "",
+          "",
+          "",
+          "",
+          "12%",
+          ""
+        ],
+        [
+          "Net cash provided by operating activities",
+          "",
+          "",
+          "",
+          "658",
+          "",
+          "",
+          "",
+          "",
+          "608",
+          "",
+          "",
+          "",
+          "",
+          "8%",
+          ""
+        ],
+        [
+          "Adjusted EBITDA (non-GAAP)*",
+          "",
+          "",
+          "",
+          "560",
+          "",
+          "",
+          "",
+          "",
+          "498",
+          "",
+          "",
+          "",
+          "",
+          "13%",
+          ""
+        ],
+        [
+          "Portfolio Cash Flow (non-GAAP)*",
+          "",
+          "",
+          "",
+          "574",
+          "",
+          "",
+          "",
+          "",
+          "516",
+          "",
+          "",
+          "",
+          "",
+          "11%",
+          ""
+        ],
+        [
+          "Weighted average Class A ordinary shares outstanding - diluted",
+          "",
+          "",
+          "",
+          "597",
+          "",
+          "",
+          "",
+          "",
+          "606",
+          "",
+          "",
+          "",
+          "",
+          "(1)%",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 1000.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "net sales of Voranigo up to $1 billion"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "26.320000",
+    "return_10d_pct": "4.4453",
+    "return_20d_pct": "10.6763",
+    "return_30d_pct": "6.8009",
+    "return_60d_pct": "3.9514",
+    "return_90d_pct": "0.7599"
+  },
+  "text_stats": {
+    "primary_text_len": 3415,
+    "exhibit_text_len": 35196,
+    "combined_text_len": 38613,
+    "semantic_text_len": 35178,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

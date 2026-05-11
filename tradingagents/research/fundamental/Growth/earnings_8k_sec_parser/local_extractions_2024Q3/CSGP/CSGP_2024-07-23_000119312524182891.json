@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CSGP",
+    "cik": "1057352",
+    "event_date": "2024-07-23",
+    "event_accession": "0001193125-24-182891",
+    "primary_8k_doc": "d856482d8k.htm",
+    "exhibit_docs": [
+      "d856482dex991.htm",
+      "d856482dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CSGP_000119312524182891_d856482d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CSGP_000119312524182891_d856482dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CSGP_000119312524182891_d856482dex992.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CSGP",
+    "cik": "1057352",
+    "entity_name": "CoStar Group, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "584400000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "87100000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "8919700000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-15900000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-19600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "123200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.149042",
+    "operating_cash_flow_to_revenue": "0.210815",
+    "assets_to_revenue": "15.263005",
+    "financing_cash_flow_to_revenue": "-0.027207",
+    "investing_cash_flow_to_revenue": "-0.033539"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue Increased 12% Year-over-Year and Net New Bookings were $67 Million.",
+      "revenue of $606 million for the quarter ended June 30, 2023.",
+      "revenue of $678 million increased 12% year-over-year and our two businesses with billion dollar run rates delivered double-digit revenue growth.",
+      "revenues of acquired is treated as organic for future periods.",
+      "Net income was $19 million in the second quarter of 2024 and net income per diluted share was $0.",
+      "Net income 87 101 91 96 7 19 Net income per share - diluted 0."
+    ],
+    "guidance_evidence": [
+      "Outlook This quarters results demonstrate the strength of our core commercial business and the continued progress of our Homes.",
+      "guidance.",
+      "guidance to the most directly comparable GAAP measure, net income, can be found within the tables included in this release.",
+      "outlook at 5:00 PM ET on Tuesday, July 23, 2024.",
+      "Outlook Third Quarter Full Year $692 million to $697 million $2.",
+      "Outlook” combined with CoStar estimate Strong Double-Digit Growth with Two Brands Over $1 Billion in Revenue Run Rate 5 YEAR CAGR $2."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings were $67 Million.",
+      "bookings through June reached over $55 million, a significant milestone as it took Apartments.",
+      "bookings is calculated based on the annualized amount of change in the Companys sales bookings resulting from new subscription-based contracts, changes to existing subscription-based contracts and cancellations of subscription-based contracts for the period reported.",
+      "bookings is not comparable to, nor should it be substituted for, an analysis of the Companys revenues over time.",
+      "customer base amortization) 358.",
+      "Customer base amortization 10."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments incurred outside the Companys ordinary course of business.",
+      "impairment costs incurred outside the Companys ordinary course of business and loss on debt extinguishment, as well as amortization of acquired intangible assets and other related costs, and then subtracting an assumed provision for income taxes.",
+      "impairments    (0.",
+      "impairments (0.",
+      "charged Marketing Campaign BIGGEST Real Estate Campaign Ever Working on behalf of the industry to help agents sign more buyer and seller agreements, drive demand for their listings and close more transactions.",
+      "impairments incurred outside the Company’s ordinary course of business."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 67,
+    "quarter_revenue_yoy_pct": 12,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "75.360001",
+    "return_10d_pct": "-3.5297",
+    "return_20d_pct": "-2.9061",
+    "return_30d_pct": "2.1629",
+    "return_60d_pct": "2.6672",
+    "return_90d_pct": "2.0037"
+  },
+  "text_stats": {
+    "primary_text_len": 5081,
+    "exhibit_text_len": 52020,
+    "combined_text_len": 57103
+  }
+}

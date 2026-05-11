@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PTC",
+    "cik": "857005",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088530",
+    "primary_8k_doc": "ptc-20240731.htm",
+    "exhibit_docs": [
+      "ptc-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PTC_000095017024088530_ptc-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PTC_000095017024088530_ptc-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PTC",
+    "cik": "857005",
+    "entity_name": "PTC Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1008091000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "138539000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6288842000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "506998000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-859742000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "391869000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.137427",
+    "operating_cash_flow_to_revenue": "0.388724",
+    "assets_to_revenue": "6.238367",
+    "financing_cash_flow_to_revenue": "0.502929",
+    "investing_cash_flow_to_revenue": "-0.852842"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Earnings per share 1 $0.",
+      "Non-GAAP earnings per share 1 $0.",
+      "earnings per share are impacted under ASC 606.",
+      "GAAP EPS included a non-cash tax benefit of $14.",
+      "non-GAAP EPS included a non-cash tax benefit of $9.",
+      "Earnings per share $2."
+    ],
+    "guidance_evidence": [
+      "Guidance for FY’24 BOSTON, MA, July 31, 2024 - PTC (NASDAQ: PTC) today reported financial results for its third fiscal quarter ended June 30, 2024.",
+      "guidance issued in May 2024.",
+      "guidance due to timing.",
+      "outlook for the fourth quarter, we are updating our FY’24 constant currency ARR guidance range to 11 to 12 percent growth and maintaining our FY’24 free cash flow guidance.",
+      "guidance appropriately,” said Kristian Talvitie, CFO.",
+      "Guidance Q4’24 Guidance Constant currency ARR $2,200 - $2,240 $2,200 - $2,220 11% - 12% $2,200 - $2,220 Operating cash flow ~$745 ~$740 ~21% ~$88 Free cash flow ~$725 ~$725 ~23% ~$83 Revenue $2,270 - $2,340 $2,270 - $2,320 8% - 11% $598 - $648 Earnings per share $2."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "customer is executed before the start date, the contract will not count toward ARR until the customer right to receive the benefit of the products or services has commenced.",
+      "customer renewals or non-renewals.",
+      "customer on an annual basis.",
+      "customers annually for the current year of the contract.",
+      "customer with a one-year contract will typically be invoiced for the total value of the contract at the beginning of the contractual term, while a customer with a multi-year contract will be invoiced for each annual period at the beginning of each year of the contract."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment loss on an available for sale debt security ~$0.",
+      "impairment loss on an available-for-sale debt security.",
+      "charges included in general and administrative expenses; restructuring and other charges and credits, net; non-operating charges and credits shown in the reconciliation provided; and income tax adjustments.",
+      "charges, net (2) - - 2,000 5,147 Income tax adjustments (3) (19,538 ) (18,830 ) (48,162 ) (52,506 ) Non-GAAP net income $ 117,989 $ 117,653 $ 427,344 $ 373,423 GAAP diluted earnings per share $ 0.",
+      "charges 0.",
+      "charges, net (2) - - 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "173.830002",
+    "return_10d_pct": "-2.0940",
+    "return_20d_pct": "2.1400",
+    "return_30d_pct": "-0.1208",
+    "return_60d_pct": "3.9291",
+    "return_90d_pct": "7.4843"
+  },
+  "text_stats": {
+    "primary_text_len": 2814,
+    "exhibit_text_len": 26068,
+    "combined_text_len": 28884
+  }
+}

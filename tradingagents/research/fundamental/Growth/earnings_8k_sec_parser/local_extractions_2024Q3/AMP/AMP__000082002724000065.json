@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AMP",
+    "cik": "820027",
+    "event_date": "",
+    "event_accession": "0000820027-24-000065",
+    "primary_8k_doc": "amp-20240724.htm",
+    "exhibit_docs": [
+      "q22024er.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMP_000082002724000065_amp-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMP_000082002724000065_q22024er.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AMP",
+    "cik": "820027",
+    "entity_name": "AMERIPRISE FINANCIAL, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3845000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-06",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "417000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-06",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "175191000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-06",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "3162000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-06",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3146000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-06",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1056000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-06",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.108453",
+    "operating_cash_flow_to_revenue": "0.274642",
+    "assets_to_revenue": "45.563329",
+    "financing_cash_flow_to_revenue": "0.822367",
+    "investing_cash_flow_to_revenue": "-0.818205"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues increased 9 percent from organic growth, strong equity markets and higher spread revenues.",
+      "revenues increased 13 percent to $2.",
+      "sales increased 40 percent to $1.",
+      "EPS grew 17 percent to $8.",
+      "GAAP net income per diluted share was $8.",
+      "GAAP net income $ 829 $ 890 (7)% $ 1,819 $ 1,307 39% Adjusted operating earnings $ 882 $ 807 9% $ 1,760 $ 1,605 10% GAAP net income per diluted share $ 8."
+    ],
+    "guidance_evidence": [
+      "expected to drive future profitability.",
+      "expected to be approximately 21 percent for full year 2024.",
+      "expected full year 2024 operating effective tax rate; and 7 • statements of assumptions underlying such statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "airman and Chief Executive Officer “Ameriprise delivered another good quarter and a strong first half of the year.",
+      "powerful and differentiated financial foundation.",
+      "aintaining a strong excess capital position.",
+      "ailing 12-month basis.",
+      "ailable Capital for Capital Adequacy (see reconciliation on p."
+    ],
+    "warning_or_risk_evidence": [
+      "charges (1) — (25) — (0.",
+      "charges (1) — (35) — (0.",
+      "charges — 25 Market impact on non-traditional long-duration products 59 (126) Adjusted operating expenses $ 3,054 $ 2,804 Pretax income $ 1,051 $ 1,127 Pretax adjusted operating earnings $ 1,117 $ 1,022 Pretax income margin 24.",
+      "charges; income (loss) from discontinued operations; and net income (loss) from consolidated investment entities.",
+      "decreased 2 percent, with general and administrative expenses down 6 percent from a year ago, reflecting the ongoing benefits from the company’s initiatives to enhance operational efficiency and effectiveness.",
+      "loss) $ (119) $ (60) (98)% Long Term Care $ 12 $ 1 NM Fixed Annuities (8) (5) (60)% Closed Blocks pretax adjusted operating earnings / (loss) $ 4 $ (4) NM (1) Long Term Care and Fixed Annuities."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2600,
+    "quarter_revenue_yoy_pct": 13,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 2963,
+    "exhibit_text_len": 48696,
+    "combined_text_len": 51661
+  }
+}

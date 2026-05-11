@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ATMU",
+    "cik": "0001921963",
+    "event_date": "2024-08-02",
+    "event_accession": "0001921963-24-000096",
+    "primary_8k_doc": "atmu-20240802.htm",
+    "exhibit_docs": [
+      "atmu2024q28-kex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ATMU_000192196324000096_atmu-20240802.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ATMU_000192196324000096_atmu2024q28-kex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ATMU",
+    "cik": "0001921963",
+    "entity_name": "Atmus Filtration Technologies Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "418600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "52700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1088600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-36400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-6400000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "42800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.125896",
+    "operating_cash_flow_to_revenue": "0.102246",
+    "assets_to_revenue": "2.600573",
+    "financing_cash_flow_to_revenue": "-0.086957",
+    "investing_cash_flow_to_revenue": "-0.015289"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $433 million • GAAP net income of $56 million • Diluted earnings per share of $0.",
+      "net sales of $433 million, compared to $414 million in the second quarter of 2023, an increase of approximately 4.",
+      "sales was primarily driven by higher volumes and increases in pricing.",
+      "net sales was 30.",
+      "GAAP net income of $56 million • Diluted earnings per share of $0.",
+      "earnings per share of $0."
+    ],
+    "guidance_evidence": [
+      "Outlook The c ompany is updating guidance for year 2024 as follows: • Revenue to be in the range of $1,625 million to $1,675 million • Adjusted EBITDA margin to be in the range of 18.",
+      "outlook for our future business and financial performance, discussions of future operations, our strategy for growth and market position.",
+      "anticipates,” “expects,” “forecasts,” “intends,” “plans,” “believes,” “seeks,” “estimates,” “could,” “should,” “may” or words of similar meaning.",
+      "forecasted in such forward-looking 2 statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customers,” said Steph Disher, Chief Executive Officer of Atmus.",
+      "customers across truck, bus, agriculture, construction, mining, marine and power generation vehicle and equipment markets, along with providing comprehensive aftermarket support and solutions.",
+      "aid Steph Disher, Chief Executive Officer of Atmus.",
+      "power generation vehicle and equipment markets, along with providing comprehensive aftermarket support and solutions.",
+      "ain risks, uncertainties and assumptions, which are difficult to predict.",
+      "ainties materialize, our actual outcomes, results and financial condition may differ materially from what is expressed, implied or forecasted in such forward-looking 2 statements."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties and assumptions, which are difficult to predict.",
+      "uncertainties materialize, our actual outcomes, results and financial condition may differ materially from what is expressed, implied or forecasted in such forward-looking 2 statements.",
+      "losses before interest expense, income taxes, depreciation and amortization and “EBITDA margin” is defined as EBITDA as a percent of net sales.",
+      "loss (67.",
+      "decrease) increase in cash and cash equivalents (7."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 433,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "30.000000",
+    "return_10d_pct": "13.1333",
+    "return_20d_pct": "14.6333",
+    "return_30d_pct": "10.7333",
+    "return_60d_pct": "27.0667",
+    "return_90d_pct": "29.5667"
+  },
+  "text_stats": {
+    "primary_text_len": 3573,
+    "exhibit_text_len": 18786,
+    "combined_text_len": 22361
+  }
+}

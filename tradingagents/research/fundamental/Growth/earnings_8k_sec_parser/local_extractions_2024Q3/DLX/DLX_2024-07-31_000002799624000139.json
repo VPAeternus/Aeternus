@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DLX",
+    "cik": "27996",
+    "event_date": "2024-07-31",
+    "event_accession": "0000027996-24-000139",
+    "primary_8k_doc": "dlx-20240731.htm",
+    "exhibit_docs": [
+      "exhibit991073120248-k.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DLX_000002799624000139_dlx-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DLX_000002799624000139_exhibit991073120248-k.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DLX",
+    "cik": "27996",
+    "entity_name": "DELUXE CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "545365000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "2752000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3080622000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-122288000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-25484000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-6706000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.005046",
+    "operating_cash_flow_to_revenue": "-0.012296",
+    "assets_to_revenue": "5.648734",
+    "financing_cash_flow_to_revenue": "-0.224231",
+    "investing_cash_flow_to_revenue": "-0.046728"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue decreased 5.",
+      "revenue decreased 3.",
+      "Revenue of $2.",
+      "sales of businesses and long-lived assets, and certain legal-related expenses, a reconciliation of the outlook for these non-GAAP financial measures to the corresponding GAAP measures is not available without unreasonable effort.",
+      "Net income was $20.",
+      "EPS expanded 24."
+    ],
+    "guidance_evidence": [
+      "guidance for adjusted EBITDA, adjusted diluted EPS, and free cash flow.",
+      "Outlook The Company expects the following for full-year 2024, all figures are approximate and reflect the impact of business exits over the past 12 months: • Revenue of $2.",
+      "guidance outlined above is subject to, among other things, prevailing macroeconomic conditions, global unrest, labor supply issues, inflation, and the impact of divestitures.",
+      "outlook or predictions about future results or events are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+      "outlook guidance for 2024 to the directly comparable GAAP measures.",
+      "outlook excludes the payroll and human resources services business, which the company is currently in the process of exiting."
+    ],
+    "wave_or_demand_evidence": [
+      "customers have relied on our solutions and platforms at all stages of their lifecycle, from start-up to maturity.",
+      "customers’ most trusted business partner.",
+      "customer funds obligations (328.",
+      "customers convert to other service providers, and as such, the company is unable to predict the results for this business in 2024.",
+      "aid Barry McCarthy, President and CEO of Deluxe.",
+      "ained very strong while our demonstrated North Star progress expanded our earnings, positioning the enterprise well to deliver our full-year growth targets."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased 5.",
+      "decreased 3.",
+      "uncertainties that could cause actual results or events to vary from stated expectations, which variations could be material and adverse.",
+      "losses on sales of businesses and long-lived assets, and certain legal-related expenses, a reconciliation of the outlook for these non-GAAP financial measures to the corresponding GAAP measures is not available without unreasonable effort."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "23.309999",
+    "return_10d_pct": "-18.5328",
+    "return_20d_pct": "-15.9159",
+    "return_30d_pct": "-15.4011",
+    "return_60d_pct": "-16.3878",
+    "return_90d_pct": "-16.9455"
+  },
+  "text_stats": {
+    "primary_text_len": 3435,
+    "exhibit_text_len": 23744,
+    "combined_text_len": 27181
+  }
+}

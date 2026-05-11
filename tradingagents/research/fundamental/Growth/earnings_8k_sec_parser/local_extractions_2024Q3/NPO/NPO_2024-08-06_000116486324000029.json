@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NPO",
+    "cik": "1164863",
+    "event_date": "2024-08-06",
+    "event_accession": "0001164863-24-000029",
+    "primary_8k_doc": "npo-20240806.htm",
+    "exhibit_docs": [
+      "q22024npoearningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NPO_000116486324000029_npo-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NPO_000116486324000029_q22024npoearningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NPO",
+    "cik": "1164863",
+    "entity_name": "ENPRO INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1150600000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2019-11-05",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2018-09-30",
+    "net_income_value": "37400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2499500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-12000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-14800000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "58500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2022-08-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2021-06-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.032505",
+    "operating_cash_flow_to_revenue": "0.050843",
+    "assets_to_revenue": "2.172345",
+    "financing_cash_flow_to_revenue": "-0.010429",
+    "investing_cash_flow_to_revenue": "-0.012863"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $271.",
+      "Sales increased 4.",
+      "sales decreased 0.",
+      "Sales decreased 12.",
+      "earnings per share from continuing operations of $1.",
+      "earnings per share* from continuing operations up 13."
+    ],
+    "guidance_evidence": [
+      "Guidance Range for Full Year 2024 Second Quarter 2024 Highlights (All results reflect comparisons to prior-year period, from continuing operations, unless otherwise noted) ( * Non-GAAP measure.",
+      "guidance for adjusted EBITDA to the range of $260 to $270 million and adjusted diluted earnings per share guidance to the range of $7.",
+      "guidance to be approximately flat CHARLOTTE, NC, August 6, 2024 -- Enpro Inc.",
+      "Guidance Enpro now expects 2024 revenue to be approximately flat with 2023, versus prior guidance of low-to-mid single- digit growth .",
+      "Guidance Statements in this press release that express a belief, expectation or intention, including the 2024 guidance and other statements that are not historical fact, are forward-looking statements under the Private Securities Litigation Reform Act of 1995.",
+      "expects 2024 revenue to be approximately flat with 2023, versus prior guidance of low-to-mid single- digit growth ."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in commercial vehicle OEM and general industrial in Asia, more than offset the contribution from strategic pricing actions and strength in nuclear and aerospace markets.",
+      "demand in commercial vehicle OEM and general industrial in Asia was offset in part by strategic pricing actions, strength in nuclear and aerospace, and a slight improvement in sales in food and pharma.",
+      "demand and costs, and the impact of changes in foreign exchange rates, in each case subsequent to June 30, 2024.",
+      "ainder of the year, while we still expect sequential improvement in AST, we now expect the magnitude of recovery in semiconductor capital equipment spending to be more gradual,” said Eric Vaillancourt, President and Chief Executive Officer.",
+      "aillancourt added, “Once again, we have demonstrated the resiliency of Enpro’s differentiated portfolio and business model as we continue to invest in growth and operational improvement initiatives across the business.",
+      "airment charge taken last year."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker demand in commercial vehicle OEM and general industrial in Asia, more than offset the contribution from strategic pricing actions and strength in nuclear and aerospace markets.",
+      "impairment charge taken last year.",
+      "weaker demand in commercial vehicle OEM and general industrial in Asia was offset in part by strategic pricing actions, strength in nuclear and aerospace, and a slight improvement in sales in food and pharma.",
+      "impairment charges, non-controlling interest compensation, amortization of the fair value adjustment to acquisition date inventory, and depreciation and amortization.",
+      "impairment — 60.",
+      "inventory — — 1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 271.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "155.639999",
+    "return_10d_pct": "-0.7389",
+    "return_20d_pct": "1.3814",
+    "return_30d_pct": "-6.5343",
+    "return_60d_pct": "3.5338",
+    "return_90d_pct": "-4.4269"
+  },
+  "text_stats": {
+    "primary_text_len": 3331,
+    "exhibit_text_len": 35362,
+    "combined_text_len": 38695
+  }
+}

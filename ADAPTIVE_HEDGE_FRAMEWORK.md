@@ -1,150 +1,84 @@
 # Adaptive Hedge Framework
 
-**Last Updated:** January 30, 2026  
-**Status:** Active
+**Status:** Active  
+**Current default:** S7-only, 100% hedge target
 
----
+## Current production rule
 
-## Overview
+The hedge engine no longer applies a plain `SPY < SMA200` regime hedge by default.
 
-A systematic, mean-reversion based hedge framework that adjusts protection based on:
-1. **SPY Deviation from SMA20** - Mean reversion opportunity
-2. **VIX Sentiment** - Fear/greed indicator
-3. **Bear Market Triggers** - Negative beta activation
+Default policy:
 
----
+| Condition | Hedge target | Notes |
+|---|---:|---|
+| `SPY >= SMA200` | `0%` | Bull / no hedge |
+| `SPY < SMA200`, no S7 | `0%` | Plain bear-regime hedge disabled |
+| `SPY < SMA200`, S7a or S7b active | `100%` | Short hedge overlay |
 
-## 1. SPY Deviation Hedge (Mean Reversion)
+Execution model:
 
-| SPY Position | Hedge % | Beta | Rationale |
-|--------------|---------|------|-----------|
-| >5% above SMA20 | **50%** | +0.50 | Very extended - high mean reversion risk |
-| 3-5% above SMA20 | **25%** | +0.75 | Extended |
-| 2-3% above SMA20 | **12.5%** | +0.875 | Mildly extended |
-| 0-2% above SMA20 | **0%** | +1.00 | Normal range |
-| <0% (below SMA20) | **25%** | +0.75 | Below moving average |
+- Signal is known after close.
+- Hedge fill is modeled at the same close for backtests unless otherwise specified.
+- Hedge P&L begins on the next close-to-close return window.
 
-### Calculation
-```
-SPY Deviation = (SPY Price - SMA20) / SMA20 * 100
-```
+## S7 trigger source
 
----
+`cli.common._detect_s7_active()` checks latest `SPY` S7a/S7b state.
 
-## 2. VIX Sentiment Adjustment
+S7a / overnight:
 
-| VIX Level | Sentiment | Adjustment |
-|-----------|-----------|------------|
-| <12 | Extreme Complacency (Greed) | **+10%** |
-| 12-15 | Complacency | **+5%** |
-| 15-20 | Normal | **+0%** |
-| 20-25 | Fear | **+10%** |
-| >25 | High Fear | **+20%** |
+- shared weak-regime SMA stack: `close > SMA3`, `close < SMA20`, `close < SMA50`, `close < SMA200`
+- VIX in `[20,30)` or `[40,200)`
+- standalone research execution: short close → next open
 
-### Formula
-```
-Final Hedge = SPY Deviation Hedge + VIX Adjustment
-```
+S7b / RTH:
 
----
+- same weak-regime SMA stack
+- VIX in `[20,25)` or `[30,40)`
+- standalone research execution: short next open → next close
 
-## 3. Bear Market Triggers
+Live hedge use:
 
-### Bear Signal (75% Hedge)
-```
-IF SPY < SMA200:
-    Hedge = 75%
-    Beta = 0.25
-```
+- S7 is not a standalone production order stream.
+- S7 only determines whether the portfolio hedge target should be `100%`.
+- If S7 detection fails or data is unavailable, `_detect_s7_active()` returns `False`; default policy then holds `0%` hedge.
+- The default S7-only policy also disables the legacy crash-trigger escalation; use `bear_base` only for A/B comparison.
 
-### Negative Beta (Crash Signal)
-```
-IF SPY < SMA200 AND SMA200 is trending down:
-    Hedge = NEGATIVE BETA (-25% to -50%)
-    Action = Short exposure to profit from decline
+## Instrument selection
+
+The hedge order instrument is chosen by portfolio concentration:
+
+| Portfolio state | Hedge instrument |
+|---|---|
+| `tech_concentration_pct >= 50` | `QQQ` |
+| otherwise | `SPY` |
+
+## A/B policy
+
+Legacy policy remains available only for A/B testing:
+
+```bash
+AETERNUS_HEDGE_POLICY=bear_base aeternus hedge-evaluate --format table
 ```
 
----
+Legacy behavior:
 
-## 4. Complete Hedge Spectrum
+| Condition | Hedge target |
+|---|---:|
+| `SPY >= SMA200` | `0%` |
+| `SPY < SMA200` | `85%` |
+| `SPY < SMA200` + S7 | `150%` cap |
+| crash trigger | `150%` cap |
 
-| Hedge % | Beta | Scenario |
-|---------|------|----------|
-| 0% | +1.0 | Strong bull - normal range |
-| 12.5% | +0.875 | Mildly extended (2-3% above SMA20) |
-| 25% | +0.75 | Extended (3-5% above SMA20) or below SMA20 |
-| 50% | +0.50 | Very extended (>5% above SMA20) |
-| 75% | +0.25 | Early bear (SPY < SMA200) |
-| 100% | 0 | Confirmed bear |
-| >100% | **NEGATIVE** | Crash - short exposure |
+If A/B testing shows legacy policy is not useful, remove the legacy code path instead of leaving it as permanent dead code.
 
----
-
-## 5. Example Scenarios
-
-### Scenario A: Extended Bull + Complacent VIX
-```
-SPY: +4% above SMA20  → 25% hedge
-VIX: 14               → +5% adjustment
-Total Hedge:          → 30%
-```
-
-### Scenario B: Very Extended + Fear
-```
-SPY: +6% above SMA20  → 50% hedge
-VIX: 22               → +10% adjustment
-Total Hedge:          → 60%
-```
-
-### Scenario C: Normal + Normal VIX
-```
-SPY: +1% above SMA20  → 0% hedge
-VIX: 17               → 0% adjustment
-Total Hedge:          → 0%
-```
-
-### Scenario D: Bear Market
-```
-SPY: < SMA200         → 75% hedge
-SMA200 trending down  → NEGATIVE BETA (-25%)
-```
-
----
-
-## 6. Today's Calculation (Jan 30, 2026)
-
-| Factor | Value | Hedge |
-|--------|-------|-------|
-| SPY | $693.20 | |
-| SMA20 | $690.56 | |
-| Deviation | +0.4% | 0% (normal) |
-| VIX | 17.0 | 0% (normal) |
-| **Final** | | **0%** |
-
----
-
-## 7. File Locations
+## Key files
 
 | File | Purpose |
-|------|---------|
-| `Performance/generate_daily_report.py` | Python script with hedge logic |
-| `Performance/DAILY_REPORT_YYYY-MM-DD.md` | Daily generated report |
-| `ADAPTIVE_HEDGE_FRAMEWORK.md` | This document |
-
----
-
-## 8. Integration
-
-To generate daily report:
-```bash
-python Performance/generate_daily_report.py
-```
-
-The report includes:
-- Current market conditions (SPY, SMAs, VIX)
-- SPY deviation analysis
-- VIX sentiment adjustment
-- Bear market triggers
-- Final hedge recommendation
-- Hedge calculation breakdown
-- Hedge spectrum table
+|---|---|
+| `tradingagents/graph/hedging.py` | Hedge signal, decision, persistence |
+| `cli/common.py` | S7 detection, hedge cycle helpers |
+| `cli/commands/portfolio.py` | Adds hedge order intent to portfolio plan |
+| `cli/commands/execution.py` | Executes and syncs hedge state |
+| `tradingagents/phase_engine/phase_engine.py` | S7a/S7b rules |
+| `tests/test_hedging.py` | Hedge policy tests |

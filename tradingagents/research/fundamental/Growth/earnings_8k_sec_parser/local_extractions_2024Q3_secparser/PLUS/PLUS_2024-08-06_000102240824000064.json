@@ -1,0 +1,2373 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PLUS",
+    "cik": "1022408",
+    "event_date": "2024-08-06",
+    "event_accession": "0001022408-24-000064",
+    "primary_8k_doc": "8-k.htm",
+    "exhibit_docs": [
+      "ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLUS_000102240824000064_8-k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLUS_000102240824000064_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PLUS",
+    "cik": "1022408",
+    "entity_name": "ePlus inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1821019000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "105600000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1414826000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "47176000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-1259000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-20571000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.05799",
+    "operating_cash_flow_to_revenue": "-0.011296",
+    "assets_to_revenue": "0.776942",
+    "financing_cash_flow_to_revenue": "0.025906",
+    "investing_cash_flow_to_revenue": "-0.000691"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales decreased 5.",
+      "net sales decreased 5.",
+      "revenues increased 15.",
+      "net sales were down 5.",
+      "sales decreased 8.",
+      "net sales of cloud and networking products, offset by increases in net sales of collaboration and security products."
+    ],
+    "guidance_evidence": [
+      "guidance remains unchanged.",
+      "Guidance ePlus is maintaining fiscal year 2025 guidance for net sales growth over the prior fiscal year of between 3% and 6%, and an adjusted EBITDA range of $200.",
+      "Outlook “Looking ahead, as we add new products and services and benefit from recent acquisitions, ePlus continues to be positioned to achieve top-line growth.",
+      "outlook and objectives.",
+      "forecast."
+    ],
+    "wave_or_demand_evidence": [
+      "customers demand with today’s advanced technologies,\" said Mark Marron, president and CEO of ePlus.",
+      "customer interest in our AI Ignite program and discovery services.",
+      "customer mindshare in this fast moving technology solution.",
+      "customers, product mix, and the ratable trend as noted above.",
+      "demand for our products and services and our full year guidance remains unchanged.",
+      "customer mix, offset by a larger proportion of third-party maintenance and services sold in the current quarter which are recorded on a net basis."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory decreased 36.",
+      "decreased 5.",
+      "decreased 1.",
+      "decreased 19.",
+      "decline year over year is attributable to a more normalized supply chain, the absorption of prior purchases by our customers, product mix, and the ratable trend as noted above.",
+      "decreased 8."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRESS RELEASE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: ePlus inc. Document created using Broadridge PROfile 24.6.1.5240 Copyright 1995 - 2024 Broadridge PROfilePageNumberReset%Num%1%%%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ePlus Reports First Quarter Fiscal Year 2025 Financial Results"
+    },
+    {
+      "type": "TableElement",
+      "text": "First Quarter Fiscal Year 2025 • Net sales decreased 5.2% to $544.5 million from last year’s first quarter; technology business net sales decreased 5.3% to $535.5 million; services revenues increased 15.8% to $78.2 million. • Technology business gross billings decreased 1.0% to $833.7 million. • Consolidated gross profit decreased 5.5% to $134.5 million. • Consolidated gross margin was 24.7% as compared to last year’s 24.8%. • Net earnings decreased 19.2% to $27.3 million. • Adjusted EBITDA decreased 19.9% to $43.1 million. • Diluted net earnings per common share decreased 19.7% to $1.02 and non-GAAP diluted net earnings per common share decreased 19.9% to $1.13."
+    },
+    {
+      "type": "TextElement",
+      "text": "HERNDON, VA – August 6, 2024 – ePlus inc. (NASDAQ: PLUS), a leading provider of technology and financing solutions, today announced financial results for the three months ended June 30, 2024, the first quarter of its 2025 fiscal year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Management Comment"
+    },
+    {
+      "type": "TextElement",
+      "text": "“We continued to see strong growth in security and services overall with our managed services up 28%. For many years we have been building strong services and recurring revenue streams, in part to offset headwinds created by the increase in netted down revenues and ratable recognition of sales, both to build a more consistent financial model, but also to deliver the solutions that customers demand with today’s advanced technologies,\" said Mark Marron, president and CEO of ePlus. \"We are seeing strong customer interest in our AI Ignite program and discovery services. While these create nominal current revenue, they also are key to locking in future business opportunities and securing customer mindshare in this fast moving technology solution.Given a hard compare, with last year’s first quarter growth of 25% due to supply chain easing, our first quarter net sales were down 5.2% and gross billings were down 1%. Both the revenue and gross billings decline year over year is attributable to a more normalized supply chain, the absorption of prior purchases by our customers, product mix, and the ratable trend as noted above. We do not see any long-term diminished demand for our products and services and our full year guidance remains unchanged.”Mr. Marron continued, “We ended the quarter with a strong cash position of $350 million, providing ePlus the resources to invest in organic growth initiatives, continue our track record of strategic acquisitions, and increase shareholder returns through share repurchases.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "First Quarter Fiscal Year 2025 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the first quarter ended June 30, 2024, as compared to the first quarter ended June 30, 2023:Consolidated net sales decreased 5.2% to $544.5 million, from $574.2 million.Technology business net sales decreased 5.3% to $535.5 million, from $565.7 million driven by lower product sales. Technology business gross billings decreased 1.0% to $833.7 million from $842.0 million.Product sales decreased 8.2% to $457.3 million, from $498.2 million, due to decreases in net sales of cloud and networking products, offset by increases in net sales of collaboration and security products. Gross profit decreased 11.6% to $98.5 million, from $111.4 million last year, due to the reduction of product sales and a 90-bps decline in product margin to 21.5% from 22.4% last year, due to a shift in customer mix, offset by a larger proportion of third-party maintenance and services sold in the current quarter which are recorded on a net basis.Professional service revenues increased 4.8% from last year to $37.3 million from $35.6 million. Gross profit increased 5.0% and gross margins increased 10 bps to 41.5% from 41.4% last year.Managed service revenues increased 28.0% to $40.9 million due to ongoing demand in these offerings, including Enhanced Maintenance Support, Cloud, and Service Desk services. Gross profit increased 31.0% from last year due to the scaled growth in these services resulting in a 70-bps gross margin improvement.Financing business segment net sales increased 6.4% to $9.0 million, from $8.5 million due to increases in portfolio earnings. Gross profit in the financing business segment increased 20.8% to $7.7 million from $6.4 million last year.Consolidated gross profit decreased 5.5% to $134.5 million, from $142.3 million. Consolidated gross margin was 24.7%, down 10 bps from last year’s 24.8%, due to lower product margin in our technology business.Consolidated operating expenses were $99.0 million, up 3.2% from $95.9 million last year, primarily due to increases in salaries and benefits from additional headcount. Our headcount at the end of the quarter was 1,907, up 54 from a year ago, including 28 employees from PEAK Resources, Inc. (“PEAK”) which we acquired in January 2024.Consolidated operating income decreased 23.4% to $35.5 million. During the quarter ended June 30, 2024, we had other income of $2.1 million from interest income of $2.6 million offset by foreign currency transaction loss of $0.5 million. Earnings before tax decreased 19.3% to $37.5 million.Our effective tax rate remained at 27.2% year over year.Net earnings decreased 19.2% to $27.3 million from $33.8 million.Consolidated adjusted EBITDA decreased 19.9% to $43.1 million from $53.9 million.Diluted net earnings per common share was $1.02 for the first quarter ended June 30, 2024, compared with $1.27 for the first quarter ended June 30, 2023. Non-GAAP diluted net earnings per common share was $1.13 for the first quarter ended June 30, 2024, compared with $1.41 for the first quarter ended June 30, 2023."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Balance Sheet Highlights"
+    },
+    {
+      "type": "TextElement",
+      "text": "As of June 30, 2024, cash and cash equivalents were $349.9 million, up from $253.0 million as of March 31, 2024, primarily due to improvements in working capital, offset by repurchases of our common stock. Inventory decreased 36.2% to $89.1 million compared with $139.7 million as of March 31, 2024. Total stockholders’ equity was $921.9 million, compared with $901.8 million as of March 31, 2024. Total shares outstanding were 26.9 million and 27.0 million on June 30, 2024 and March 31, 2024, respectively."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fiscal Year Guidance"
+    },
+    {
+      "type": "TextElement",
+      "text": "ePlus is maintaining fiscal year 2025 guidance for net sales growth over the prior fiscal year of between 3% and 6%, and an adjusted EBITDA range of $200.0 million to $215.0 million. ePlus cannot predict with reasonable certainty and without unreasonable effort, the ultimate outcome of unusual gains and losses, the occurrence of matters creating GAAP tax impacts, fluctuations in interest expense or interest income and share-based compensation, and acquisition-related expenses. These items are uncertain, depend on various factors, and could be material to the ePlus’ results computed in accordance with GAAP. Accordingly, the ePlus is unable to provide a reconciliation of GAAP net earnings to adjusted EBITDA for the full year 2025 forecast."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Summary and Outlook"
+    },
+    {
+      "type": "TextElement",
+      "text": "“Looking ahead, as we add new products and services and benefit from recent acquisitions, ePlus continues to be positioned to achieve top-line growth. Our business is supported by deep customer and channel relationships. We have invested across the organization to strengthen our product and services offerings and to customize our solutions to meet the evolving needs of our customers. Our teams continue to execute well and operate efficiently with an unwavering commitment to superior customer service. These factors support our confidence in the underlying fundamentals of our business and our ability to deliver on our 2025 financial outlook and objectives. “Additionally, our strong financial position provides us with considerable capital allocation options to drive long-term shareholder value, including the ability to expand our product offerings, make larger accretive acquisitions, and continue to return capital to shareholders through share repurchases. This flexibility, together with ongoing investments in differentiated capabilities, should enable us to build on our competitive advantage and advance our market positioning,” concluded Mr. Marron."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Recent Corporate Developments/Recognitions"
+    },
+    {
+      "type": "TableElement",
+      "text": "• In the month of July: o Announced Storage-as-a-Service leveraging NetApp. o IGXGlobal, a subsidiary of ePlus, began offering Storage-as-a-Service powered by Pure Storage. • In the month of June: o Awarded the Lenovo U.S. Infrastructure Solutions Partner of the Year Award. o Announced the launch of Azure Recover. o Recognized as Juniper Networks 2023 Partner of the Year for Cloud Ready Data Center in both Worldwide and Americas Categories. • In the month of May: o Named Growth Partner of the Year by Varonis. o Earned a spot on CRN’s 2024 Solution Provider 500 List."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "ePlus will hold a conference call and webcast at 4:30 p.m. ET on August 6, 2024:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Date: August 6, 2024 Time: 4:30 p.m. ET Audio Webcast (Live & Replay https://events.q4inc.com/attendee/653117486 Live Call: (888) 596-4144 (toll-free/domestic) (646) 968-2525 (international) Archived Call: (800) 770-2030 (toll-free/domestic) (609) 800-9909 (international) Conference ID: 6593768# (live call and replay)"
+    },
+    {
+      "type": "TextElement",
+      "text": "A replay of the call will be available approximately two hours after the call through August 13, 2024. A transcript of the call will also be available on the ePlus Investor Relations website at https://www.eplus.com/investors."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About ePlus inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "ePlus has an unwavering and relentless focus on leveraging technology to create inspired and transformative business outcomes for its customers. Offering a robust portfolio of solutions, as well as a broad range of consultative and managed services across the technology spectrum, ePlus has proudly achieved more than 30 years of success, carrying customers forward through adversity, rapidly changing environments, and other obstacles. ePlus is a trusted advisor, bringing expertise, credentials, talent and a thorough understanding of innovative technologies, spanning security, cloud, data center, networking, collaboration and emerging solutions, to organizations across all industry segments. With complete lifecycle management services and flexible payment solutions, ePlus’ more than 1,900 associates are focused on cultivating positive customer experiences and are dedicated to their craft, harnessing new knowledge while applying decades of proven experience. ePlus is headquartered in Virginia, with locations in the United States, UK, Europe, and Asia‐Pacific. For more information, visit www.eplus.com, call 888-482-1122, or email info@eplus.com. Connect with ePlus on LinkedIn, X, Facebook, and Instagram. ePlus, Where Technology Means More®.ePlus® and ePlus products referenced herein are either registered trademarks or trademarks of ePlus inc. in the United States and/or other countries. The names of other companies and products mentioned herein may be the trademarks of their respective owners."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-looking statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "Statements in this press release that are not historical facts may be deemed to be \"forward-looking statements,\" including, among other things, statements regarding the future financial performance of ePlus. Actual and anticipated future results may vary materially due to certain risks and uncertainties, including, without limitation, exposure to fluctuation in foreign currency rates, interest rates, and inflation, including as a result of national and international political instability fostering uncertainty and volatility in the global economy, which may cause increases in our costs and our ability to increase prices to our customers, negative impacts to the arrangements that have pricing commitments over the term of the agreement, which may result in adverse changes in our gross profit; significant adverse changes in, reductions in, or loss of one or more of our larger volume customers or vendors; reliance on third-parties to perform some of our service obligations to our customers, and the reliance on a small number of key vendors in our supply chain with whom we do not have long-term supply agreements, guaranteed price agreements, or assurance of stock availability; our ability to remain secure during a cybersecurity attack or other IT outtage, including both disruptions in our or our vendors' or other third party’s Information Technology (\"IT\") systems and data and audio communication networks; our ability to secure our own and our customers' electronic and other confidential information, while maintaining compliance with evolving data privacy and regulatory laws and regulations; ongoing remote work trends, and the increase in cybersecurity attacks that have occurred while employees work remotely and our ability to adequately train our personnel to prevent a cyber event; the possibility of a reduction of vendor incentives provided to us; our dependence on key personnel and our ability to hire, train and retain qualified personnel by recruiting and retaining highly skilled, competent personnel, and vendor certifications; our ability to manage a diverse product set of solutions, including artificial intelligence (“AI”) products, in highly competitive markets with a number of key vendors; changes in the IT industry and/or rapid changes in product offerings, including the proliferation of the cloud, infrastructure as a service, software as a service, platform as a service and AI; supply chain issues, including a shortage of IT products, may increase our costs or cause a delay in fulfilling customer orders, or increase our need for working capital, or delay completing professional services, or purchasing IT products or services needed to support our internal infrastructure or operations, resulting in an adverse impact on our financial results; our inability to identify acquisition candidates, or perform sufficient due diligence prior to completing an acquisition, or failure to integrate a completed acquisition may affect our earnings; our ability to raise capital, maintain or increase as needed our lines of credit with vendors or floor planning facility, obtain debt for our financing transactions, or the effect of those changes on our common stock price; our ability to implement comprehensive plans for the integration of sales forces, cost containment, asset rationalization, systems integration, and other key strategies; and other risks or uncertainties detailed in our reports filed with the Securities and Exchange Commission. All information set forth in this press release is current as of the date of this release and ePlus undertakes no duty or obligation to update this information.Contact:Kleyton Parkhurst, SVPePlus inc.kparkhurst@eplus.com703-984-8150"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TableElement",
+      "text": "ePlus inc. AND SUBSIDIARIES UNAUDITED CONSOLIDATED BALANCE SHEETS (in thousands, except per share amounts) June 30, 2024 March 31, 2024 ASSETS Current assets: Cash and cash equivalents $349,909 $253,021 Accounts receivable—trade, net 577,019 644,616 Accounts receivable—other, net 54,987 46,884 Inventories 89,134 139,690 Financing receivables—net, current 109,119 102,600 Deferred costs 59,985 59,449 Other current assets 23,951 27,269 Total current assets 1,264,104 1,273,529 Financing receivables and operating leases—net 85,032 79,435 Deferred tax asset 5,620 5,620 Property, equipment and other assets 94,417 89,289 Goodwill 161,508 161,503 Other intangible assets—net 40,292 44,093 TOTAL ASSETS $1,650,973 $1,653,469 LIABILITIES AND STOCKHOLDERS' EQUITY LIABILITIES Current liabilities: Accounts payable $270,614 $315,676 Accounts payable—floor plan 119,511 105,104 Salaries and commissions payable 40,491 43,696 Deferred revenue 138,619 134,596 Non-recourse notes payable—current 29,898 23,288 Other current liabilities 29,103 34,630 Total current liabilities 628,236 656,990 Non-recourse notes payable—long-term 10,854 12,901 Other liabilities 89,955 81,799 TOTAL LIABILITIES 729,045 751,690 COMMITMENTS AND CONTINGENCIES STOCKHOLDERS' EQUITY Preferred stock, $0.01 per share par value; 2,000 shares authorized; none outstanding - - Common stock, $0.01 per share par value; 50,000 shares authorized; 26,940 outstanding at June 30, 2024 and 26,952 outstanding at March 31, 2024 276 274 Additional paid-in capital 184,733 180,058 Treasury stock, at cost, 609 shares at June 30, 2024 and 447 shares at March 31, 2024 (35,746) (23,811) Retained earnings 770,317 742,978 Accumulated other comprehensive income—foreign currency translation adjustment 2,348 2,280 Total Stockholders' Equity 921,928 901,779 TOTAL LIABILITIES AND STOCKHOLDERS' EQUITY $1,650,973 $1,653,469"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TableElement",
+      "text": "ePlus inc. AND SUBSIDIARIES UNAUDITED CONSOLIDATED STATEMENTS OF OPERATIONS (in thousands, except per share amounts) Three Months Ended June 30, 2024 2023 Net sales Product $466,349 $506,656 Services 78,189 67,519 Total 544,538 574,175 Cost of sales Product 360,157 388,904 Services 49,900 42,998 Total 410,057 431,902 Gross profit 134,481 142,273 Selling, general, and administrative 93,608 90,298 Depreciation and amortization 4,819 4,792 Interest and financing costs 585 851 Operating expenses 99,012 95,941 Operating income 35,469 46,332 Other income (expense), net 2,073 190 Earnings before taxes 37,542 46,522 Provision for income taxes 10,203 12,675 Net earnings $27,339 $33,847 Net earnings per common share—basic $1.03 $1.27 Net earnings per common share—diluted $1.02 $1.27 Weighted average common shares outstanding—basic 26,642 26,552 Weighted average common shares outstanding—diluted 26,801 26,648"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "TableElement",
+      "text": "Technology Business Three Months Ended June 30, 2024 2023 Change (in thousands) Net sales Product $457,312 $498,166 (8.2%) Professional services 37,279 35,556 4.8% Managed services 40,910 31,963 28.0% Total 535,501 565,685 (5.3%) Gross profit Product 98,505 111,391 (11.6%) Professional services 15,455 14,724 5.0% Managed services 12,834 9,797 31.0% Total 126,794 135,912 (6.7%) Selling, general, and administrative 90,084 87,100 3.4% Depreciation and amortization 4,819 4,764 1.2% Interest and financing costs - 550 (100.0%) Operating expenses 94,903 92,414 2.7% Operating income $31,891 $43,498 (26.7%) Gross billings $833,708 $841,970 (1.0%) Adjusted EBITDA $39,501 $50,949 (22.5%)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Technology Business Gross Billings by Type Three Months Ended June 30, 2024 2023 Change (in thousands) Networking $281,528 $276,645 1.8% Cloud 241,274 258,924 (6.8%) Security 151,883 147,343 3.1% Collaboration 32,976 22,161 48.8% Other 44,592 69,761 (36.1%) Product gross billings 752,253 774,834 (2.9%) Service gross billings 81,455 67,136 21.3% Total gross billings $833,708 $ 841,970 (1.0%) Technology Business Net Sales by Type Three Months Ended June 30, 2024 2023 Change (in thousands) Networking $234,740 $245,188 (4.3%) Cloud 137,231 172,044 (20.2%) Security 48,005 45,796 4.8% Collaboration 20,899 12,956 61.3% Other 16,437 22,182 (25.9%) Total product 457,312 498,166 (8.2%) Professional services 37,279 35,556 4.8% Managed services 40,910 31,963 28.0% Total net sales $535,501 $ 565,685 (5.3%)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "TableElement",
+      "text": "Technology Business Net Sales by Customer End Market Three Months Ended June 30, 2024 2023 Change (in thousands) Telecom, Media, & Entertainment $117,553 $ 141,335 (16.8%) Technology 109,106 73,403 48.6% SLED 92,096 109,405 (15.8%) Healthcare 75,280 86,656 (13.1%) ​Financial Services 49,725 65,690 (24.3%) All other 91,741 89,196 2.9% Total net sales $535,501 $ 565,685 (5.3%)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Financing Business Segment Three Months Ended June 30, 2024 2023 Change (in thousands) Portfolio earnings $4,161 $3,073 35.4% Transactional gains 1,293 1,279 1.1% Post-contract earnings 3,315 3,634 (8.8%) Other 268 504 (46.8%) Net sales 9,037 8,490 6.4% Gross profit 7,687 6,361 20.8% Selling, general, and administrative 3,524 3,198 10.2% Depreciation and amortization - 28 (100.0%) Interest and financing costs 585 301 94.4% Operating expenses 4,109 3,527 16.5% Operating income $3,578 $2,834 26.3% Adjusted EBITDA $3,642 $2,930 24.3%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ePlus inc. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NON-GAAP INFORMATION"
+    },
+    {
+      "type": "TextElement",
+      "text": "We included reconciliations below for the following non-GAAP financial measures: (i) Adjusted EBITDA, (ii) Adjusted EBITDA for business segments, (iii) non-GAAP Net Earnings and (iv) non-GAAP Net Earnings per Common Share - Diluted.We define Adjusted EBITDA as net earnings calculated in accordance with US GAAP, adjusted for the following: interest expense, depreciation and amortization, share-based compensation, acquisition and integration expenses, provision for income taxes, and other income (expense). Adjusted EBITDA presented for the technology business segments and the financing business segment is defined as operating income calculated in accordance with US GAAP, adjusted for interest expense, share-based compensation, acquisition and integration expenses, and depreciation and amortization. We consider the interest on notes payable from our financing business segment and depreciation expense presented within cost of sales, which includes depreciation on assets financed as operating leases, to be operating expenses. As such, they are not included in the amounts added back to net earnings in the Adjusted EBITDA calculation.Non-GAAP net earnings and non-GAAP net earnings per common share – diluted are based on net earnings calculated in accordance with GAAP, adjusted to exclude other income (expense), share based compensation, and acquisition related amortization expense, and the related tax effects.We use the above non-GAAP financial measures as supplemental measures of our performance to gain insight into our operating performance and performance trends. We believe that such non-GAAP financial measures provide management and investors a useful measure for period-to-period comparisons of our business and operating results by excluding items that management believes are not reflective of our underlying operating performance. Accordingly, we believe that such non-GAAP financial measures provide useful information to investors and others in understanding and evaluating our operating results.Our use of non-GAAP information as analytical tools has limitations, and you should not consider them in isolation or as substitutes for analysis of our financial results as reported under GAAP. In addition, other companies, including companies in our industry, might calculate adjusted EBITDA, non-GAAP net earnings and non-GAAP net earnings per common share or similarly titled measures differently, which may reduce their usefulness as comparative measures."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 2023 (in thousands) Consolidated Net earnings $27,339 $33,847 Provision for income taxes 10,203 12,675 Depreciation and amortization [1] 4,819 4,792 Share based compensation 2,855 2,205 Interest and financing costs - 550 Other expense, net [2] (2,073) (190) Adjusted EBITDA $43,143 $53,879"
+    },
+    {
+      "type": "TableElement",
+      "text": "Technology Business Segment Operating income $31,891 $43,498 Depreciation and amortization [1] 4,819 4,764 Share based compensation 2,791 2,137 Interest and financing costs - 550 Adjusted EBITDA $39,501 $50,949"
+    },
+    {
+      "type": "TableElement",
+      "text": "Financing Business Segment Operating income $3,578 $2,834 Depreciation and amortization [1] - 28 Share based compensation 64 68 Adjusted EBITDA $3,642 $2,930"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 2023 (in thousands) GAAP: Earnings before taxes $37,542 $46,522 Share based compensation 2,855 2,205 Acquisition related amortization expense [3] 3,750 3,469 Other (income) expense [2] (2,073) (190) Non-GAAP: Earnings before provision for income taxes 42,074 52,006 GAAP: Provision for income taxes 10,203 12,675 Share based compensation 799 607 Acquisition related amortization expense [3] 1,047 952 Other (income) expense, net [2] (580) (52) Tax benefit (expense) on restricted stock 308 137 Non-GAAP: Provision for income taxes 11,777 14,319 Non-GAAP: Net earnings $30,297 $37,687"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 2023 GAAP: Net earnings per common share – diluted $1.02 $1.27 Share based compensation 0.08 0.06 Acquisition related amortization expense [3] 0.10 0.09 Other (income) expense, net [2] (0.06) - Tax benefit (expense) on restricted stock (0.01) (0.01) Total non-GAAP adjustments – net of tax 0.11 0.14 Non-GAAP: Net earnings per common share – diluted $1.13 $1.41"
+    },
+    {
+      "type": "TableElement",
+      "text": "[1] Amount consists of depreciation and amortization for assets used internally. [2] Legal settlement, interest income and foreign currency transaction gains and losses. [3] Amount consists of amortization of intangible assets from acquired businesses."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        9,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "First Quarter Fiscal Year 2025",
+          "First Quarter Fiscal Year 2025"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "•",
+          "Net sales decreased 5.2% to $544.5 million from last year’s first quarter; technology business net sales decreased 5.3% to $535.5 million; services revenues increased 15.8% to $78.2 million."
+        ],
+        [
+          "•",
+          "Technology business gross billings decreased 1.0% to $833.7 million."
+        ],
+        [
+          "•",
+          "Consolidated gross profit decreased 5.5% to $134.5 million."
+        ],
+        [
+          "•",
+          "Consolidated gross margin was 24.7% as compared to last year’s 24.8%."
+        ],
+        [
+          "•",
+          "Net earnings decreased 19.2% to $27.3 million."
+        ],
+        [
+          "•",
+          "Adjusted EBITDA decreased 19.9% to $43.1 million."
+        ],
+        [
+          "•",
+          "Diluted net earnings per common share decreased 19.7% to $1.02 and non-GAAP diluted net earnings per common share decreased 19.9% to $1.13."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        10,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "•",
+          "In the month of July:",
+          "In the month of July:"
+        ],
+        [
+          "",
+          "o",
+          "Announced Storage-as-a-Service leveraging NetApp."
+        ],
+        [
+          "",
+          "o",
+          "IGXGlobal, a subsidiary of ePlus, began offering Storage-as-a-Service powered by Pure Storage."
+        ],
+        [
+          "•",
+          "In the month of June:",
+          "In the month of June:"
+        ],
+        [
+          "",
+          "o",
+          "Awarded the Lenovo U.S. Infrastructure Solutions Partner of the Year Award."
+        ],
+        [
+          "",
+          "o",
+          "Announced the launch of Azure Recover."
+        ],
+        [
+          "",
+          "o",
+          "Recognized as Juniper Networks 2023 Partner of the Year for Cloud Ready Data Center in both Worldwide and Americas Categories."
+        ],
+        [
+          "•",
+          "In the month of May:",
+          "In the month of May:"
+        ],
+        [
+          "",
+          "o",
+          "Named Growth Partner of the Year by Varonis."
+        ],
+        [
+          "",
+          "o",
+          "Earned a spot on CRN’s 2024 Solution Provider 500 List."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        11,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Date:",
+          "August 6, 2024"
+        ],
+        [
+          "Time:",
+          "4:30 p.m. ET"
+        ],
+        [
+          "Audio Webcast (Live & Replay",
+          "https://events.q4inc.com/attendee/653117486"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "Live Call:",
+          "(888) 596-4144 (toll-free/domestic)"
+        ],
+        [
+          "",
+          "(646) 968-2525 (international)"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "Archived Call:",
+          "(800) 770-2030 (toll-free/domestic)"
+        ],
+        [
+          "",
+          "(609) 800-9909 (international)"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "Conference ID:",
+          "6593768# (live call and replay)"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        52,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "ePlus inc. AND SUBSIDIARIES",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "UNAUDITED CONSOLIDATED BALANCE SHEETS",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(in thousands, except per share amounts)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "June 30, 2024",
+          "",
+          "March 31, 2024"
+        ],
+        [
+          "ASSETS",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current assets:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash and cash equivalents",
+          "",
+          "$349,909",
+          "",
+          "$253,021"
+        ],
+        [
+          "Accounts receivable—trade, net",
+          "",
+          "577019",
+          "",
+          "644616"
+        ],
+        [
+          "Accounts receivable—other, net",
+          "",
+          "54987",
+          "",
+          "46884"
+        ],
+        [
+          "Inventories",
+          "",
+          "89134",
+          "",
+          "139690"
+        ],
+        [
+          "Financing receivables—net, current",
+          "",
+          "109119",
+          "",
+          "102600"
+        ],
+        [
+          "Deferred costs",
+          "",
+          "59985",
+          "",
+          "59449"
+        ],
+        [
+          "Other current assets",
+          "",
+          "23951",
+          "",
+          "27269"
+        ],
+        [
+          "Total current assets",
+          "",
+          "1264104",
+          "",
+          "1273529"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Financing receivables and operating leases—net",
+          "",
+          "85032",
+          "",
+          "79435"
+        ],
+        [
+          "Deferred tax asset",
+          "",
+          "5620",
+          "",
+          "5620"
+        ],
+        [
+          "Property, equipment and other assets",
+          "",
+          "94417",
+          "",
+          "89289"
+        ],
+        [
+          "Goodwill",
+          "",
+          "161508",
+          "",
+          "161503"
+        ],
+        [
+          "Other intangible assets—net",
+          "",
+          "40292",
+          "",
+          "44093"
+        ],
+        [
+          "TOTAL ASSETS",
+          "",
+          "$1,650,973",
+          "",
+          "$1,653,469"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LIABILITIES AND STOCKHOLDERS' EQUITY",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LIABILITIES",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current liabilities:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Accounts payable",
+          "",
+          "$270,614",
+          "",
+          "$315,676"
+        ],
+        [
+          "Accounts payable—floor plan",
+          "",
+          "119511",
+          "",
+          "105104"
+        ],
+        [
+          "Salaries and commissions payable",
+          "",
+          "40491",
+          "",
+          "43696"
+        ],
+        [
+          "Deferred revenue",
+          "",
+          "138619",
+          "",
+          "134596"
+        ],
+        [
+          "Non-recourse notes payable—current",
+          "",
+          "29898",
+          "",
+          "23288"
+        ],
+        [
+          "Other current liabilities",
+          "",
+          "29103",
+          "",
+          "34630"
+        ],
+        [
+          "Total current liabilities",
+          "",
+          "628236",
+          "",
+          "656990"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-recourse notes payable—long-term",
+          "",
+          "10854",
+          "",
+          "12901"
+        ],
+        [
+          "Other liabilities",
+          "",
+          "89955",
+          "",
+          "81799"
+        ],
+        [
+          "TOTAL LIABILITIES",
+          "",
+          "729045",
+          "",
+          "751690"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        39,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "ePlus inc. AND SUBSIDIARIES",
+          "ePlus inc. AND SUBSIDIARIES",
+          "ePlus inc. AND SUBSIDIARIES",
+          "ePlus inc. AND SUBSIDIARIES",
+          "ePlus inc. AND SUBSIDIARIES",
+          "ePlus inc. AND SUBSIDIARIES"
+        ],
+        [
+          "UNAUDITED CONSOLIDATED STATEMENTS OF OPERATIONS",
+          "UNAUDITED CONSOLIDATED STATEMENTS OF OPERATIONS",
+          "UNAUDITED CONSOLIDATED STATEMENTS OF OPERATIONS",
+          "UNAUDITED CONSOLIDATED STATEMENTS OF OPERATIONS",
+          "UNAUDITED CONSOLIDATED STATEMENTS OF OPERATIONS",
+          "UNAUDITED CONSOLIDATED STATEMENTS OF OPERATIONS"
+        ],
+        [
+          "(in thousands, except per share amounts)",
+          "(in thousands, except per share amounts)",
+          "(in thousands, except per share amounts)",
+          "(in thousands, except per share amounts)",
+          "(in thousands, except per share amounts)",
+          "(in thousands, except per share amounts)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net sales",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Product",
+          "$466,349",
+          "",
+          "$506,656",
+          "",
+          ""
+        ],
+        [
+          "Services",
+          "78189",
+          "",
+          "67519",
+          "",
+          ""
+        ],
+        [
+          "Total",
+          "544538",
+          "",
+          "574175",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cost of sales",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Product",
+          "360157",
+          "",
+          "388904",
+          "",
+          ""
+        ],
+        [
+          "Services",
+          "49900",
+          "",
+          "42998",
+          "",
+          ""
+        ],
+        [
+          "Total",
+          "410057",
+          "",
+          "431902",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Gross profit",
+          "134481",
+          "",
+          "142273",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Selling, general, and administrative",
+          "93608",
+          "",
+          "90298",
+          "",
+          ""
+        ],
+        [
+          "Depreciation and amortization",
+          "4819",
+          "",
+          "4792",
+          "",
+          ""
+        ],
+        [
+          "Interest and financing costs",
+          "585",
+          "",
+          "851",
+          "",
+          ""
+        ],
+        [
+          "Operating expenses",
+          "99012",
+          "",
+          "95941",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating income",
+          "35469",
+          "",
+          "46332",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other income (expense), net",
+          "2073",
+          "",
+          "190",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Earnings before taxes",
+          "37542",
+          "",
+          "46522",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Provision for income taxes",
+          "10203",
+          "",
+          "12675",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net earnings",
+          "$27,339",
+          "",
+          "$33,847",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net earnings per common share—basic",
+          "$1.03",
+          "",
+          "$1.27",
+          "",
+          ""
+        ],
+        [
+          "Net earnings per common share—diluted",
+          "$1.02",
+          "",
+          "$1.27",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Weighted average common shares outstanding—basic",
+          "26642",
+          "",
+          "26552",
+          "",
+          ""
+        ],
+        [
+          "Weighted average common shares outstanding—diluted",
+          "26801",
+          "",
+          "26648",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        25,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "Technology Business",
+          "Technology Business",
+          "Technology Business",
+          "Technology Business",
+          "Technology Business",
+          "Technology Business",
+          "Technology Business",
+          "Technology Business"
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "Change",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in thousands)",
+          "(in thousands)",
+          "(in thousands)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net sales",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Product",
+          "$457,312",
+          "",
+          "$498,166",
+          "",
+          "(8.2%)",
+          "",
+          ""
+        ],
+        [
+          "Professional services",
+          "37279",
+          "",
+          "35556",
+          "",
+          "4.8%",
+          "",
+          ""
+        ],
+        [
+          "Managed services",
+          "40910",
+          "",
+          "31963",
+          "",
+          "28.0%",
+          "",
+          ""
+        ],
+        [
+          "Total",
+          "535501",
+          "",
+          "565685",
+          "",
+          "(5.3%)",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Gross profit",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Product",
+          "98505",
+          "",
+          "111391",
+          "",
+          "(11.6%)",
+          "",
+          ""
+        ],
+        [
+          "Professional services",
+          "15455",
+          "",
+          "14724",
+          "",
+          "5.0%",
+          "",
+          ""
+        ],
+        [
+          "Managed services",
+          "12834",
+          "",
+          "9797",
+          "",
+          "31.0%",
+          "",
+          ""
+        ],
+        [
+          "Total",
+          "126794",
+          "",
+          "135912",
+          "",
+          "(6.7%)",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Selling, general, and administrative",
+          "90084",
+          "",
+          "87100",
+          "",
+          "3.4%",
+          "",
+          ""
+        ],
+        [
+          "Depreciation and amortization",
+          "4819",
+          "",
+          "4764",
+          "",
+          "1.2%",
+          "",
+          ""
+        ],
+        [
+          "Interest and financing costs",
+          "-",
+          "",
+          "550",
+          "",
+          "(100.0%)",
+          "",
+          ""
+        ],
+        [
+          "Operating expenses",
+          "94903",
+          "",
+          "92414",
+          "",
+          "2.7%",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating income",
+          "$31,891",
+          "",
+          "$43,498",
+          "",
+          "(26.7%)",
+          "",
+          ""
+        ],
+        [
+          "Gross billings",
+          "$833,708",
+          "",
+          "$841,970",
+          "",
+          "(1.0%)",
+          "",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "$39,501",
+          "",
+          "$50,949",
+          "",
+          "(22.5%)",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        30,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "Technology Business Gross Billings by Type",
+          "Technology Business Gross Billings by Type",
+          "Technology Business Gross Billings by Type",
+          "Technology Business Gross Billings by Type",
+          "Technology Business Gross Billings by Type",
+          "Technology Business Gross Billings by Type",
+          "Technology Business Gross Billings by Type",
+          "Technology Business Gross Billings by Type"
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "Change",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in thousands)",
+          "(in thousands)",
+          "(in thousands)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Networking",
+          "$281,528",
+          "",
+          "$276,645",
+          "",
+          "1.8%",
+          "",
+          ""
+        ],
+        [
+          "Cloud",
+          "241274",
+          "",
+          "258924",
+          "",
+          "(6.8%)",
+          "",
+          ""
+        ],
+        [
+          "Security",
+          "151883",
+          "",
+          "147343",
+          "",
+          "3.1%",
+          "",
+          ""
+        ],
+        [
+          "Collaboration",
+          "32976",
+          "",
+          "22161",
+          "",
+          "48.8%",
+          "",
+          ""
+        ],
+        [
+          "Other",
+          "44592",
+          "",
+          "69761",
+          "",
+          "(36.1%)",
+          "",
+          ""
+        ],
+        [
+          "Product gross billings",
+          "752253",
+          "",
+          "774834",
+          "",
+          "(2.9%)",
+          "",
+          ""
+        ],
+        [
+          "Service gross billings",
+          "81455",
+          "",
+          "67136",
+          "",
+          "21.3%",
+          "",
+          ""
+        ],
+        [
+          "Total gross billings",
+          "$833,708",
+          "",
+          "$ 841,970",
+          "",
+          "(1.0%)",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Technology Business Net Sales by Type",
+          "Technology Business Net Sales by Type",
+          "Technology Business Net Sales by Type",
+          "Technology Business Net Sales by Type",
+          "Technology Business Net Sales by Type",
+          "Technology Business Net Sales by Type",
+          "Technology Business Net Sales by Type",
+          "Technology Business Net Sales by Type"
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "Change",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in thousands)",
+          "(in thousands)",
+          "(in thousands)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Networking",
+          "$234,740",
+          "",
+          "$245,188",
+          "",
+          "(4.3%)",
+          "",
+          ""
+        ],
+        [
+          "Cloud",
+          "137231",
+          "",
+          "172044",
+          "",
+          "(20.2%)",
+          "",
+          ""
+        ],
+        [
+          "Security",
+          "48005",
+          "",
+          "45796",
+          "",
+          "4.8%",
+          "",
+          ""
+        ],
+        [
+          "Collaboration",
+          "20899",
+          "",
+          "12956",
+          "",
+          "61.3%",
+          "",
+          ""
+        ],
+        [
+          "Other",
+          "16437",
+          "",
+          "22182",
+          "",
+          "(25.9%)",
+          "",
+          ""
+        ],
+        [
+          "Total product",
+          "457312",
+          "",
+          "498166",
+          "",
+          "(8.2%)",
+          "",
+          ""
+        ],
+        [
+          "Professional services",
+          "37279",
+          "",
+          "35556",
+          "",
+          "4.8%",
+          "",
+          ""
+        ],
+        [
+          "Managed services",
+          "40910",
+          "",
+          "31963",
+          "",
+          "28.0%",
+          "",
+          ""
+        ],
+        [
+          "Total net sales",
+          "$535,501",
+          "",
+          "$ 565,685",
+          "",
+          "(5.3%)",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        12,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "Technology Business Net Sales by Customer End Market",
+          "Technology Business Net Sales by Customer End Market",
+          "Technology Business Net Sales by Customer End Market",
+          "Technology Business Net Sales by Customer End Market",
+          "Technology Business Net Sales by Customer End Market",
+          "Technology Business Net Sales by Customer End Market",
+          "Technology Business Net Sales by Customer End Market",
+          "Technology Business Net Sales by Customer End Market"
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "Change",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in thousands)",
+          "(in thousands)",
+          "(in thousands)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Telecom, Media, & Entertainment",
+          "$117,553",
+          "",
+          "$ 141,335",
+          "",
+          "(16.8%)",
+          "",
+          ""
+        ],
+        [
+          "Technology",
+          "109106",
+          "",
+          "73403",
+          "",
+          "48.6%",
+          "",
+          ""
+        ],
+        [
+          "SLED",
+          "92096",
+          "",
+          "109405",
+          "",
+          "(15.8%)",
+          "",
+          ""
+        ],
+        [
+          "Healthcare",
+          "75280",
+          "",
+          "86656",
+          "",
+          "(13.1%)",
+          "",
+          ""
+        ],
+        [
+          "​Financial Services",
+          "49725",
+          "",
+          "65690",
+          "",
+          "(24.3%)",
+          "",
+          ""
+        ],
+        [
+          "All other",
+          "91741",
+          "",
+          "89196",
+          "",
+          "2.9%",
+          "",
+          ""
+        ],
+        [
+          "Total net sales",
+          "$535,501",
+          "",
+          "$ 565,685",
+          "",
+          "(5.3%)",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        20,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "Financing Business Segment",
+          "Financing Business Segment",
+          "Financing Business Segment",
+          "Financing Business Segment",
+          "Financing Business Segment",
+          "Financing Business Segment",
+          "Financing Business Segment",
+          "Financing Business Segment"
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "Change",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in thousands)",
+          "(in thousands)",
+          "(in thousands)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Portfolio earnings",
+          "$4,161",
+          "",
+          "$3,073",
+          "",
+          "35.4%",
+          "",
+          ""
+        ],
+        [
+          "Transactional gains",
+          "1293",
+          "",
+          "1279",
+          "",
+          "1.1%",
+          "",
+          ""
+        ],
+        [
+          "Post-contract earnings",
+          "3315",
+          "",
+          "3634",
+          "",
+          "(8.8%)",
+          "",
+          ""
+        ],
+        [
+          "Other",
+          "268",
+          "",
+          "504",
+          "",
+          "(46.8%)",
+          "",
+          ""
+        ],
+        [
+          "Net sales",
+          "9037",
+          "",
+          "8490",
+          "",
+          "6.4%",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Gross profit",
+          "7687",
+          "",
+          "6361",
+          "",
+          "20.8%",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Selling, general, and administrative",
+          "3524",
+          "",
+          "3198",
+          "",
+          "10.2%",
+          "",
+          ""
+        ],
+        [
+          "Depreciation and amortization",
+          "-",
+          "",
+          "28",
+          "",
+          "(100.0%)",
+          "",
+          ""
+        ],
+        [
+          "Interest and financing costs",
+          "585",
+          "",
+          "301",
+          "",
+          "94.4%",
+          "",
+          ""
+        ],
+        [
+          "Operating expenses",
+          "4109",
+          "",
+          "3527",
+          "",
+          "16.5%",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating income",
+          "$3,578",
+          "",
+          "$2,834",
+          "",
+          "26.3%",
+          "",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "$3,642",
+          "",
+          "$2,930",
+          "",
+          "24.3%",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        14,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "",
+          "2023",
+          ""
+        ],
+        [
+          "",
+          "(in thousands)",
+          "(in thousands)",
+          "(in thousands)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Consolidated",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net earnings",
+          "$27,339",
+          "",
+          "$33,847",
+          ""
+        ],
+        [
+          "Provision for income taxes",
+          "10203",
+          "",
+          "12675",
+          ""
+        ],
+        [
+          "Depreciation and amortization [1]",
+          "4819",
+          "",
+          "4792",
+          ""
+        ],
+        [
+          "Share based compensation",
+          "2855",
+          "",
+          "2205",
+          ""
+        ],
+        [
+          "Interest and financing costs",
+          "-",
+          "",
+          "550",
+          ""
+        ],
+        [
+          "Other expense, net [2]",
+          "(2,073)",
+          "",
+          "(190)",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "$43,143",
+          "",
+          "$53,879",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        7,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "Technology Business Segment",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating income",
+          "$31,891",
+          "",
+          "$43,498",
+          ""
+        ],
+        [
+          "Depreciation and amortization [1]",
+          "4819",
+          "",
+          "4764",
+          ""
+        ],
+        [
+          "Share based compensation",
+          "2791",
+          "",
+          "2137",
+          ""
+        ],
+        [
+          "Interest and financing costs",
+          "-",
+          "",
+          "550",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "$39,501",
+          "",
+          "$50,949",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        6,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "Financing Business Segment",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating income",
+          "$3,578",
+          "",
+          "$2,834",
+          ""
+        ],
+        [
+          "Depreciation and amortization [1]",
+          "-",
+          "",
+          "28",
+          ""
+        ],
+        [
+          "Share based compensation",
+          "64",
+          "",
+          "68",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "$3,642",
+          "",
+          "$2,930",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 200.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 200.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "net sales growth over the prior fiscal year of between 3% and 6%, and an adjusted EBITDA range of $200.0 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "• | Net sales decreased 5.2% to $544.5 million from last year’s first quarter; technology business net sales decreased 5.3% to $535.5 million; services revenues increased 15.8% to $78.2 million."
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "Guidance ePlus is maintaining fiscal year 2025 guidance for net sales growth over the prior fiscal year of between 3% and 6%, and an adjusted EBITDA range of $200.0 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 1,
+    "earnings_torque": 0,
+    "segment_wave_torque": 2,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 0.0,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "83.260002",
+    "return_10d_pct": "10.7735",
+    "return_20d_pct": "13.2356",
+    "return_30d_pct": "5.9092",
+    "return_60d_pct": "16.8148",
+    "return_90d_pct": "7.8549"
+  },
+  "text_stats": {
+    "primary_text_len": 3524,
+    "exhibit_text_len": 24441,
+    "combined_text_len": 27967,
+    "semantic_text_len": 24544,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

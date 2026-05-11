@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HBANL",
+    "cik": "49196",
+    "event_date": "2024-07-19",
+    "event_accession": "0000049196-24-000070",
+    "primary_8k_doc": "hban-20240719.htm",
+    "exhibit_docs": [
+      "hban20240630_8kex991.htm",
+      "hban20240630_8kex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HBANL_000004919624000070_hban-20240719.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HBANL_000004919624000070_hban20240630_8kex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HBANL_000004919624000070_hban20240630_8kex992.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HBANL",
+    "cik": "49196",
+    "entity_name": "Huntington Bancshares Incorporated",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "377000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "602000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "189368000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "5834000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-2299000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "130000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "1.596817",
+    "operating_cash_flow_to_revenue": "0.344828",
+    "assets_to_revenue": "502.302387",
+    "financing_cash_flow_to_revenue": "15.474801",
+    "investing_cash_flow_to_revenue": "-6.098143"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased by $8 million, or 5%, reflecting higher debit card transaction revenue and higher commercial treasury management revenue.",
+      "revenue increased by $7 million, or 8%, reflecting higher fixed annuity commissions as well as higher assets under management.",
+      "revenue increased by $8 million , or 5% , reflecting higher debit card transaction revenue and higher commercial treasury management revenue.",
+      "EPS) for the quarter were $0.",
+      "net income for the 2024 second quarter of $474 million, or $0.",
+      "Net income attributable to Huntington $ 474 $ 419 $ 243 $ 547 $ 559 Diluted earnings per common share 0."
+    ],
+    "guidance_evidence": [
+      "outlook is supported by both our existing and new teams across the company and is expected to drive higher revenues over the second half of the year, with continued momentum into 2025 and beyond.",
+      "expected to drive higher revenues over the second half of the year, with continued momentum into 2025 and beyond.",
+      "forecast those results.",
+      "expected market conditions."
+    ],
+    "wave_or_demand_evidence": [
+      "Demand deposits - noninterest-bearing $ 29.",
+      "Demand deposits - interest-bearing 39.",
+      "demand deposits 68.",
+      "Customer deposit and loan fees increased $7 million, or 9%, primarily due to higher deposit fees.",
+      "Customer deposit and loan fees increased $6 million, or 8%, due to higher deposit service charges and loan fees .",
+      "demand deposits, money market deposits, savings and other domestic deposits, and core certificates of deposit."
+    ],
+    "warning_or_risk_evidence": [
+      "charge-offs of 0.",
+      "charges and loan fees .",
+      "charge-offs 90 92 94 73 49 Net charge-offs / Average total loans and leases 0.",
+      "charge-offs (NCOs) increased $41 million year-over-year and decreased $2 million quarter-over-quarter to $90 million.",
+      "charge-offs.",
+      "charge-offs were 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-22",
+    "entry_open": "25.040001",
+    "return_10d_pct": "-1.3978",
+    "return_20d_pct": "-0.3195",
+    "return_30d_pct": "1.6374",
+    "return_60d_pct": "4.6725",
+    "return_90d_pct": "3.4744"
+  },
+  "text_stats": {
+    "primary_text_len": 10281,
+    "exhibit_text_len": 88106,
+    "combined_text_len": 98389
+  }
+}

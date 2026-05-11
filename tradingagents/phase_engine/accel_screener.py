@@ -2,7 +2,7 @@
 Momentum acceleration screener — deal flow modifier.
 
 Computes second-derivative of SMA slope to classify momentum phase.
-Used to tag deal flow candidates before they enter the research queue.
+Used only as post-fundamental context; scout handoff tickers are not scored here.
 
 From backtest of Druckenmiller second-derivative momentum across 15 stocks (1999-2026):
   accel_up | sma50 | lb20  → 87% directional agreement, avg -51 bps over 20 days → CAUTION (exhaustion)

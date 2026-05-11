@@ -7,7 +7,7 @@ Lazy-loaded reference for package locations, file paths, and subsystem details. 
 - **`tradingagents/graph/`** — LangGraph orchestration. Central class: `TradingAgentsGraph`. Key files: `aeternus_scoring.py` (5-pillar scorer), `coherence_engine.py` (cross-pillar meta-analysis), `regime_weights.py` (regime-adaptive weight tables), `paper_execution.py` (order lifecycle), `hedging.py`, `kerberos_overlay.py`, `track_record.py`, `audit.py`, `market_regime.py`, `options_math.py`.
 - **`tradingagents/agents/`** — Agent definitions by role: `analysts/` (4 analysts + 4 deep-thinking reviewers), `researchers/`, `trader/`, `risk_mgmt/`, `managers/`, `utils/` (states, tools, memory, computation engines).
 - **`tradingagents/dataflows/`** — Data vendor abstraction. `interface.py` defines the contract; implementations for yfinance, Alpha Vantage, xAI, Google, local.
-- **`tradingagents/dealflow/`** — Signal sourcing pipeline. `pipeline.py` orchestrates 7+ connectors in `sources/`. Supporting: ranking, scoring, universe, scheduler, readiness.
+- **`tradingagents/dealflow/`** — Scout sourcing pipeline. `pipeline.py` orchestrates connectors in `sources/` and writes the unscored ticker handoff for fundamental intake. Supporting: universe, scheduler, readiness.
 - **`tradingagents/capital_allocator/`** — Portfolio construction with gates, liability engine, regime override, SQLite repository.
 - **`tradingagents/evidence/`** — Validation: walkforward, regime slicing, ablation, telemetry.
 - **`tradingagents/broker_adapters/`** — Broker abstraction (base + mock; Alpaca in `paper_execution.py`).

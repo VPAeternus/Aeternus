@@ -1,0 +1,727 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GBX",
+    "cik": "923120",
+    "event_date": "2024-07-08",
+    "event_accession": "0001193125-24-175952",
+    "primary_8k_doc": "d862272d8k.htm",
+    "exhibit_docs": [
+      "d862272dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GBX_000119312524175952_d862272d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GBX_000119312524175952_d862272dex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GBX",
+    "cik": "923120",
+    "entity_name": "GREENBRIER COMPANIES INC",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1888500000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-05",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-02-28",
+    "net_income_value": "16400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-05",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-02-28",
+    "assets_value": "3978400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-05",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-08-31",
+    "financing_cash_flow_value": "23700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-05",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-02-28",
+    "investing_cash_flow_value": "-105200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-05",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-02-28",
+    "operating_cash_flow_value": "-96400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-05",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-02-28",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.008684",
+    "operating_cash_flow_to_revenue": "-0.051046",
+    "assets_to_revenue": "2.106645",
+    "financing_cash_flow_to_revenue": "0.01255",
+    "investing_cash_flow_to_revenue": "-0.055706"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $820 million.",
+      "Revenue of $3.",
+      "sales of assets 67.",
+      "EPS of $1.",
+      "Gross margin of 15% Lake Oswego, Oregon, July 8, 2024  The Greenbrier Companies, Inc.",
+      "gross margin in the mid-teens for a third consecutive quarter drove strong EPS performance."
+    ],
+    "guidance_evidence": [
+      "outlook is optimistic as we expect revenues to grow based on the pace of our delivery schedule.",
+      "Outlook Based on current trends and production schedules, Greenbrier is updating guidance for fiscal 2024:  Deliveries of 23,500  24,000 units, including approximately 1,400 units in Brazil  Revenue of $3.",
+      "expected to be approximately $75 million Financial Summary Q3 FY24 Q2 FY24 Sequential Comparison  Main Drivers Revenue $ 820."
+    ],
+    "wave_or_demand_evidence": [
+      "orders of 6,300 units valued at $830 million Gross margin of 15% Lake Oswego, Oregon, July 8, 2024  The Greenbrier Companies, Inc.",
+      "orders for 6,300 units valued at $830 million and delivered 5,400 units, resulting in new railcar backlog of 29,400 units with an estimated value of $3.",
+      "backlog and a steadily growing recurring revenue stream from the leasing business provide a strong foundation for the future.",
+      "backlog, believe, continue, drive, estimate, expect, grow, momentum, ongoing, optimistic, position, recurring, schedule, stable, strategy, strong, sustainable, target, and similar expressions to identify forward-looking statements.",
+      "backlog and other orders, leasing performance, leasing strategy, financing, cash flow, tax treatment, and other information regarding future performance and strategies and appear throughout this press release.",
+      "backlog of railcar units and other orders not included in backlog are not necessarily indicative of future results of operations."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment, disposal, and exit costs  16.",
+      "impairment, disposal, and exit costs  40.",
+      "impairment, disposal, and exit costs, net 24.",
+      "Decrease (increase) in assets: Accounts receivable, net 43.",
+      "decrease) in liabilities: Accounts payable and accrued liabilities (94.",
+      "Decrease in cash, cash equivalents and restricted cash (10."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d862272dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "One Centerpointe Drive, Suite 200, Lake Oswego, Oregon 97035 503-684-7000 www.gbrx.com"
+    },
+    {
+      "type": "TextElement",
+      "text": "For release: July 8, 2024 8:30 a.m. EDT Contact: Justin Roberts, Investor Relations Jack Isselmann, Media Relations Ph: 503-684-7000 Greenbrier Reports Third Quarter Results Diluted EPS of $1.06 grows to highest level in over 4.5 years New railcar orders of 6,300 units valued at $830 million Gross margin of 15% Lake Oswego, Oregon, July 8, 2024  The Greenbrier Companies, Inc. (NYSE: GBX) (Greenbrier), a leading international supplier of equipment and services to global freight transportation markets, today reported financial results for its third fiscal quarter ended May 31, 2024. Third Quarter Highlights  Grew lease fleet by 600 units to 15,200 units with lease fleet utilization of nearly 99%.  Generated Operating cash flow of $84 million.  Diverse new railcar orders for 6,300 units valued at $830 million and delivered 5,400 units, resulting in new railcar backlog of 29,400 units with an estimated value of $3.7 billion.  Net earnings attributable to Greenbrier for the quarter were $34 million, or $1.06 per diluted share, on revenue of $820 million.  EBITDA for the quarter of $104 million, reached its highest level in over 4.5 years, equaling 13% of revenue.  Board declared a quarterly dividend of $0.30 per share, payable on August 13, 2024 to shareholders of record as of July 23, 2024, representing Greenbriers 41st consecutive quarterly dividend. Greenbrier continued positive momentum in the third quarter of fiscal 2024, said Lorie L. Tekorius, CEO and President. Consolidated gross margin in the mid-teens for a third consecutive quarter drove strong EPS performance. Results reflect our continued focus on efficiencies gained over the last several quarters and execution by the team that extends across the full reach of Greenbriers business. Our outlook is optimistic as we expect revenues to grow based on the pace of our delivery schedule. Greenbriers leading market position, robust new railcar backlog and a steadily growing recurring revenue stream from the leasing business provide a strong foundation for the future. We continue to create long-term shareholder value across varying market conditions."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TextElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 2 Business Update & Outlook Based on current trends and production schedules, Greenbrier is updating guidance for fiscal 2024:  Deliveries of 23,500  24,000 units, including approximately 1,400 units in Brazil  Revenue of $3.5  $3.6 billion  Consolidated gross margin percentage increased to the mid-teens  Capital expenditures of approximately $150 million in Manufacturing and $15 million in Maintenance Services  Gross leasing investment of approximately $340 million in Leasing & Management Services, which includes 2024 capital expenditures and transfers of railcars into the lease fleet that were manufactured and subsequently held on the balance sheet in 2023  Proceeds from equipment sales are expected to be approximately $75 million Financial Summary"
+    },
+    {
+      "type": "TableElement",
+      "text": "Q3 FY24 Q2 FY24 Sequential Comparison  Main Drivers Revenue $ 820.2M $ 862.7M Primarily timing of new railcar deliveries Gross margin $ 123.8M $ 122.2M Improved operating performance in Manufacturing and Maintenance Services and increased syndication activity Gross margin % 15.1 % 14.2 % Selling and administrative expense $ 59.3M $ 63.6M Lower employee-related costs including performance-based compensation expense EBITDA(1) $ 104.0M $ 95.0M Sustained strong operating performance as described above Net earnings attributable to noncontrolling interest $ 6.7M $ 0.2M Partners share of consolidated JVs operating results Net earnings attributable to Greenbrier $ 33.9M $ 33.4M Diluted EPS $ 1.06 $ 1.03"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) See reconciliation at conclusion of Supplemental Information."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TextElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 3 Segment Summary"
+    },
+    {
+      "type": "TableElement",
+      "text": "Q3 FY24 Q2 FY24 Sequential Comparison  Main Drivers Manufacturing Revenue $ 685.1M $ 735.8M Timing of new railcar deliveries Gross margin % 10.9 % 10.8 % Continued focus on execution Earnings from operations $ 54.2M $ 58.8M Primarily attributable to timing of revenue and deliveries Operating margin % (1) 7.9 % 8.0 % Deliveries (2) 5,000 5,300 Maintenance Services Revenue $ 69.9M $ 75.2M Lower hours and bill rates in repair locations Gross margin % 11.7 % 8.0 % Earnings from operations $ 5.9M $ 4.6M Favorable product mix in wheels and performance in parts Operating margin % (1) 8.4 % 6.1 % Leasing & Management Services Revenue $ 65.2M $ 51.7M Increased syndication activity including externally sourced activity (railcars purchased from third parties with the intent to syndicate) Gross margin % 62.9 % 70.8 % Externally sourced syndication activity generates margin dollars but a lower margin % Earnings from operations $ 40.5M $ 33.2M Increased syndication activity and gains from equipment sales as part of ongoing fleet optimization Operating margin % (1) 62.1 % 64.2 % Lower gross margin % attributable to externally sourced railcar syndication activity Owned fleet (units) 15,200 14,600 Disciplined portfolio construction Fleet utilization 98.7 % 98.5 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) See supplemental segment information in Supplemental Information. (2) Excludes Brazil deliveries which are not consolidated into Manufacturing revenue and margins. Conference Call Greenbrier will host a teleconference to discuss its third quarter 2024 results. In conjunction with this news release, Greenbrier has posted a supplemental earnings presentation to our website. Teleconference details are as follows:  July 8, 2024  8:00 a.m. Pacific Daylight Time  Phone: 1-888-317-6003 (Toll Free), 1-412-317-6061 (International), Entry Number 4941482  Real-time Audio Access: (Newsroom at http://www.gbrx.com)  Please access the site 10-15 minutes prior to the start time. About Greenbrier Greenbrier, headquartered in Lake Oswego, Oregon, is a leading international supplier of equipment and services to global freight transportation markets. Through its wholly-owned subsidiaries and joint ventures, Greenbrier designs, builds and markets freight railcars in North America, Europe and Brazil. We are a leading provider of freight railcar wheel services, parts, maintenance and retrofitting services in North America through our maintenance services business unit. Greenbrier owns a lease fleet of approximately 15,200 railcars that originate primarily from Greenbriers manufacturing operations. Greenbrier offers railcar management, regulatory compliance services and leasing services to railroads and other railcar owners in North America. Learn more about Greenbrier at www.gbrx.com."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 4 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "May 31,2024 February 29,2024 November 30,2023 August 31,2023 May 31,2023 Assets Cash and cash equivalents $ 271.6 $ 252.0 $ 307.3 $ 281.7 $ 321.4 Restricted cash 20.2 20.0 14.0 21.0 20.1 Accounts receivable, net 488.5 519.1 458.7 529.9 533.6 Income tax receivable 20.0 20.9 10.5 42.2 29.8 Inventories 812.4 827.0 883.6 823.6 888.0 Leased railcars for syndication 155.3 134.4 159.8 187.4 119.4 Equipment on operating leases, net 1,226.9 1,160.5 1,095.8 1,000.0 941.0 Property, plant and equipment, net 648.3 636.1 618.1 619.2 600.4 Investment in unconsolidated affiliates 90.3 90.0 89.4 88.7 86.4 Intangibles and other assets, net 254.3 255.6 248.9 255.8 253.3 Goodwill 128.0 128.0 128.6 128.9 128.3 $ 4,115.8 $ 4,043.6 $ 4,014.7 $ 3,978.4 $ 3,921.7 Liabilities and Equity Revolving notes $ 348.4 $ 300.8 $ 279.4 $ 297.1 $ 280.0 Accounts payable and accrued liabilities 652.9 649.3 640.9 743.5 741.6 Deferred income taxes 82.9 79.7 85.2 114.1 88.3 Deferred revenue 74.0 81.5 42.2 46.2 56.6 Notes payable, net 1,413.9 1,421.8 1,479.4 1,311.7 1,320.3 Contingently redeemable noncontrolling interest 56.3 56.0 56.5 55.6 54.1 Total equity  Greenbrier 1,329.1 1,299.9 1,274.0 1,254.6 1,232.7 Noncontrolling interest 158.3 154.6 157.1 155.6 148.1 Total equity 1,487.4 1,454.5 1,431.1 1,410.2 1,380.8 $ 4,115.8 $ 4,043.6 $ 4,014.7 $ 3,978.4 $ 3,921.7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 5 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED STATEMENTS OF INCOME"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except number of shares which are reflected in thousands and per share amounts, unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months EndedMay 31, Nine Months EndedMay 31, 2024 2023 2024 2023 Revenue Manufacturing $ 685.1 $ 870.2 $ 2,096.8 $ 2,485.3 Maintenance Services 69.9 122.9 228.9 306.4 Leasing & Management Services 65.2 45.0 166.0 134.9 820.2 1,038.1 2,491.7 2,926.6 Cost of revenue Manufacturing 610.5 786.5 1,867.6 2,292.2 Maintenance Services 61.7 109.8 202.5 279.0 Leasing & Management Services 24.2 13.7 54.3 41.0 696.4 910.0 2,124.4 2,612.2 Margin 123.8 128.1 367.3 314.4 Selling and administrative expense 59.3 63.3 179.2 175.7 Net gain on disposition of equipment (7.8 ) (2.3 ) (12.6 ) (15.2 ) Asset impairment, disposal, and exit costs  16.4  40.6 Earnings from operations 72.3 50.7 200.7 113.3 Other costs Interest and foreign exchange 24.7 22.8 72.5 64.0 Earnings before income tax and earnings from unconsolidated affiliates 47.6 27.9 128.2 49.3 Income tax expense (10.7 ) (3.6 ) (30.0 ) (11.7 ) Earnings before earnings from unconsolidated affiliates 36.9 24.3 98.2 37.6 Earnings from unconsolidated affiliates 3.7 2.4 9.2 8.6 Net earnings 40.6 26.7 107.4 46.2 Net earnings attributable to noncontrolling interest (6.7 ) (5.4 ) (8.9 ) (8.5 ) Net earnings attributable to Greenbrier $ 33.9 $ 21.3 $ 98.5 $ 37.7 Basic earnings per common share: $ 1.09 $ 0.67 $ 3.17 $ 1.17 Diluted earnings per common share: $ 1.06 $ 0.64 $ 3.05 $ 1.13 Weighted average common shares: Basic 31,131 31,757 31,091 32,346 Diluted 32,021 33,571 32,456 33,344 Dividends per common share $ 0.30 $ 0.27 $ 0.90 $ 0.81"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 6 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Nine Months EndedMay 31, 2024 2023 Cash flows from operating activities Net earnings $ 107.4 $ 46.2 Adjustments to reconcile net earnings to net cash provided by operating activities: Deferred income taxes (33.1 ) (18.4 ) Depreciation and amortization 82.3 79.8 Net gain on disposition of equipment (12.6 ) (15.2 ) Stock based compensation expense 12.2 8.8 Asset impairment, disposal, and exit costs  40.6 Noncontrolling interest adjustments 1.7 2.8 Other 3.1 2.8 Decrease (increase) in assets: Accounts receivable, net 43.3 (16.1 ) Income tax receivable 22.2 10.0 Inventories 6.4 (80.7 ) Leased railcars for syndication (29.8 ) (57.3 ) Other assets 2.4 (42.9 ) Increase (decrease) in liabilities: Accounts payable and accrued liabilities (94.2 ) 8.3 Deferred revenue 27.1 32.5 Net cash provided by operating activities 138.4 1.2 Cash flows from investing activities Proceeds from sales of assets 67.9 76.3 Capital expenditures (324.7 ) (253.9 ) Investments in and advances to / repayments from unconsolidated affiliates  (3.5 ) Cash distribution from unconsolidated affiliates and other 2.5 6.3 Net cash used in investing activities (254.3 ) (174.8 ) Cash flows from financing activities Net change in revolving notes with maturities of 90 days or less 19.0 (11.5 ) Proceeds from revolving notes with maturities longer than 90 days 176.9 220.0 Repayments of revolving notes with maturities longer than 90 days (145.8 ) (230.0 ) Proceeds from issuance of notes payable 180.5 75.0 Repayments of notes payable (78.9 ) (27.1 ) Debt issuance costs (2.8 ) (0.2 ) Repurchase of stock (1.3 ) (48.0 ) Dividends (29.1 ) (26.7 ) Cash distribution to joint venture partner (7.2 ) (8.4 ) Tax payments for net share settlement of restricted stock (5.2 ) (2.3 ) Net cash provided by (used in) financing activities 106.1 (59.2 ) Effect of exchange rate changes (1.1 ) 15.2 Decrease in cash, cash equivalents and restricted cash (10.9 ) (217.6 ) Cash and cash equivalents and restricted cash Beginning of period 302.7 559.1 End of period $ 291.8 $ 341.5 Balance Sheet Reconciliation: Cash and cash equivalents $ 271.6 $ 321.4 Restricted cash 20.2 20.1 Total cash and cash equivalents and restricted cash $ 291.8 $ 341.5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 7 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL LEASING INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except owned fleet, unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Greenbriers leasing strategy provides an additional go to market element to Greenbriers Commercial strategy of direct sales, partnerships with operating leasing companies, and origination of leases for syndication partners as well as providing a platform for further growth at scale. Investing in leasing assets also provides a recurring stream of revenue and tax-advantaged cash flows, however in the short-term it reduces Greenbriers Manufacturing revenue and margin as a result of deferring revenue recognition. During the April 2023 Investor Day, Greenbrier provided a long-term target to more than double recurring revenue from leasing and management fees by investing up to $300 million net annually for the next five years. Recurring revenue is defined as Leasing & Management Services revenue excluding the impact of syndication transactions. Key information for the Leasing & Management Services segment:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Greenbrier Lease Fleet (Units)(1) May 31, 2024 February 29, 2024 Beginning balance 14,600 14,100 Railcars added 2,700 2,400 Railcars sold / scrapped (2,100 ) (1,900 ) Ending balance 15,200 14,600 May 31,2024 February 29,2024 Equipment on operating lease(2) $ 1,226.9 $ 1,160.5 Non-recourse warehouse $ 146.0 $ 89.2 ABS non-recourse notes 475.4 479.4 Non-recourse term loan 323.5 326.6 Total Leasing non-recourse debt $ 944.9 $ 895.2 Fleet leverage %(3)(4) 77 % 77 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Owned fleet includes Leased railcars for syndication (2) Equipment on operating lease assets not securing Leasing non-recourse term loan support the $600 million U.S. revolver (3) Total Leasing non-recourse debt / Equipment on operating lease (4) Fleet assets are leveraged at Fair Market Value based on independent appraisals while they are shown at net book value on Greenbriers Consolidated Balance Sheet"
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 8 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except per share amounts, unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating Results by Quarter for Fiscal 2024 are as follows:"
+    },
+    {
+      "type": "TableElement",
+      "text": "First Second Third Total Revenue Manufacturing $ 675.9 $ 735.8 $ 685.1 $ 2,096.8 Maintenance Services 83.8 75.2 69.9 228.9 Leasing & Management Services 49.1 51.7 65.2 166.0 808.8 862.7 820.2 2,491.7 Cost of revenue Manufacturing 600.9 656.2 610.5 1,867.6 Maintenance Services 71.6 69.2 61.7 202.5 Leasing & Management Services 15.0 15.1 24.2 54.3 687.5 740.5 696.4 2,124.4 Margin 121.3 122.2 123.8 367.3 Selling and administrative expense 56.3 63.6 59.3 179.2 Net loss (gain) on disposition of equipment 0.1 (4.9 ) (7.8 ) (12.6 ) Earnings from operations 64.9 63.5 72.3 200.7 Other costs Interest and foreign exchange 23.2 24.6 24.7 72.5 Earnings before income tax and earnings from unconsolidated affiliates 41.7 38.9 47.6 128.2 Income tax expense (10.0 ) (9.3 ) (10.7 ) (30.0 ) Earnings before earnings from unconsolidated affiliates 31.7 29.6 36.9 98.2 Earnings from unconsolidated affiliates 1.5 4.0 3.7 9.2 Net earnings 33.2 33.6 40.6 107.4 Net earnings attributable to noncontrolling interest (2.0 ) (0.2 ) (6.7 ) (8.9 ) Net earnings attributable to Greenbrier $ 31.2 $ 33.4 $ 33.9 $ 98.5 Basic earnings per common share (1) $ 1.00 $ 1.08 $ 1.09 $ 3.17 Diluted earnings per common share (1) $ 0.96 $ 1.03 $ 1.06 $ 3.05 Dividends per common share $ 0.30 $ 0.30 $ 0.30 $ 0.90"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Quarterly amounts may not total to the year-to-date amount as each period is calculated discretely."
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 9 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except per share amounts, unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating Results by Quarter for Fiscal 2023 are as follows:"
+    },
+    {
+      "type": "TableElement",
+      "text": "First Second Third Fourth Total Revenue Manufacturing $ 646.5 $ 968.6 $ 870.2 $ 872.4 $ 3,357.7 Maintenance Services 85.5 98.0 122.9 100.0 406.4 Leasing & Management Services 34.5 55.4 45.0 45.0 179.9 766.5 1,122.0 1,038.1 1,017.4 3,944.0 Cost of revenue Manufacturing 604.5 901.2 786.5 791.2 3,083.4 Maintenance Services 79.6 89.6 109.8 85.0 364.0 Leasing & Management Services 12.9 14.4 13.7 14.5 55.5 697.0 1,005.2 910.0 890.7 3,502.9 Margin 69.5 116.8 128.1 126.7 441.1 Selling and administrative expense 53.4 59.0 63.3 59.6 235.3 Net gain on disposition of equipment (3.3 ) (9.6 ) (2.3 ) (2.1 ) (17.3 ) Asset impairment, disposal, and exit costs, net 24.2  16.4 6.1 46.7 Earnings (loss) from operations (4.8 ) 67.4 50.7 63.1 176.4 Other costs Interest and foreign exchange 19.6 21.6 22.8 21.4 85.4 Earnings (loss) before income tax and earnings from unconsolidated affiliates (24.4 ) 45.8 27.9 41.7 91.0 Income tax (expense) benefit 3.8 (11.9 ) (3.6 ) (12.9 ) (24.6 ) Earnings (loss) before earnings from unconsolidated affiliates (20.6 ) 33.9 24.3 28.8 66.4 Earnings from unconsolidated affiliates 3.3 2.9 2.4 0.6 9.2 Net earnings (loss) (17.3 ) 36.8 26.7 29.4 75.6 Net (earnings) loss attributable to noncontrolling interest 0.6 (3.7 ) (5.4 ) (4.6 ) (13.1 ) Net earnings (loss) attributable to Greenbrier $ (16.7 ) $ 33.1 $ 21.3 $ 24.8 $ 62.5 Basic earnings (loss) per common share (1) $ (0.51 ) $ 1.01 $ 0.67 $ 0.80 $ 1.95 Diluted earnings (loss) per common share (1) $ (0.51 ) $ 0.97 $ 0.64 $ 0.77 $ 1.89 Dividends per common share $ 0.27 $ 0.27 $ 0.27 $ 0.30 $ 1.11"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Quarterly amounts may not total to the year-to-date amount as each period is calculated discretely."
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 10 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Segment Information"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended May 31, 2024: Revenue Earnings (loss) from operations External Intersegment Total External Intersegment Total Manufacturing $ 685.1 $ 70.8 $ 755.9 $ 54.2 $ 11.9 $ 66.1 Maintenance Services 69.9 16.9 86.8 5.9  5.9 Leasing & Management Services 65.2 0.2 65.4 40.5  40.5 Eliminations  (87.9 ) (87.9 )  (11.9 ) (11.9 ) Corporate    (28.3 )  (28.3 ) $ 820.2 $  $ 820.2 $ 72.3 $  $ 72.3"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended February 29, 2024: Revenue Earnings (loss) from operations External Intersegment Total External Intersegment Total Manufacturing $ 735.8 $ 61.5 $ 797.3 $ 58.8 $ 3.7 $ 62.5 Maintenance Services 75.2 9.1 84.3 4.6  4.6 Leasing & Management Services 51.7 0.3 52.0 33.2 0.1 33.3 Eliminations  (70.9 ) (70.9 )  (3.8 ) (3.8 ) Corporate    (33.1 )  (33.1 ) $ 862.7 $  $ 862.7 $ 63.5 $  $ 63.5"
+    },
+    {
+      "type": "TableElement",
+      "text": "Total assets May 31, 2024 February 29, 2024 Manufacturing $ 1,812.5 $ 1,814.5 Maintenance Services 286.7 309.5 Leasing & Management Services 1,669.1 1,592.2 Unallocated, including cash 347.5 327.4 $ 4,115.8 $ 4,043.6"
+    },
+    {
+      "type": "TitleElement",
+      "text": "BACKLOG AND DELIVERY INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended May 31,2024 Backlog Activity (units) (1) Beginning backlog 29,200 Orders received 6,300 Production held on the Balance Sheet (2,400 ) Production sold to third parties (3,700 ) Ending backlog 29,400 Delivery Information (units) (1) Direct sales 3,700 Sale of Leased railcars for syndication 1,700 Total deliveries 5,400"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Includes Greenbrier-Maxion, our Brazilian railcar manufacturer, which is accounted for under the equity method"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TableElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 11 THE GREENBRIER COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net earnings to EBITDA"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended May 31, 2024 February 29, 2024 Net earnings $ 40.6 $ 33.6 Interest and foreign exchange 24.7 24.6 Income tax expense 10.7 9.3 Depreciation and amortization 28.0 27.5 EBITDA $ 104.0 $ 95.0 Debt Summary May 31,2024 February 29,2024 Total Leasing non-recourse debt $ 944.9 $ 895.2 Total other debt 835.0 846.0 1,779.9 1,741.2 Debt discount and issuance costs (17.6 ) (18.6 ) Total consolidated debt $ 1,762.3 $ 1,722.6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "- More -"
+    },
+    {
+      "type": "TextElement",
+      "text": "Greenbrier Reports Third Quarter Results (Cont.) Page 12 Forward-Looking Statements This press release may contain forward-looking statements, including statements that are not purely statements of historical fact. Greenbrier uses words, and variations of words, such as approximately, are backlog, believe, continue, drive, estimate, expect, grow, momentum, ongoing, optimistic, position, recurring, schedule, stable, strategy, strong, sustainable, target, and similar expressions to identify forward-looking statements. These forward-looking statements include, without limitation, statements about backlog and other orders, leasing performance, leasing strategy, financing, cash flow, tax treatment, and other information regarding future performance and strategies and appear throughout this press release. These forward-looking statements are not guarantees of future performance and are subject to certain risks and uncertainties that could cause actual results to differ materially from the results contemplated by the forward-looking statements. Factors that might cause such a difference include, but are not limited to, the following: an economic downturn and economic uncertainty; inflation (including rising energy prices, interest rates, wages and other escalators) and policy reactions thereto (including actions by central banks); disruptions in the supply of materials and components used in the production of our products; and the war in Ukraine and related events. Our backlog of railcar units and other orders not included in backlog are not necessarily indicative of future results of operations. Certain orders in backlog are subject to customary documentation which may not occur. More information on potential factors that could cause our results to differ from our forward-looking statements is included in the Companys filings with the SEC, including in the Risk Factors and Managements Discussion and Analysis of Financial Condition and Results of Operations sections of the Companys most recently filed periodic report on Form 10-K and subsequent Quarterly Reports on Form 10-Q. Except as otherwise required by law, the Company assumes no obligation to update any forward-looking statements or information, which speak as of their respective dates. Readers are cautioned not to place undue reliance on these forward-looking statements, which reflect managements opinions only as of the date hereof. Financial Metric Definitions EBITDA is not a financial measure under generally accepted accounting principles (GAAP). This metric is a performance measurement tool used by rail supply companies and Greenbrier. You should not consider this metric in isolation or as a substitute for other financial statement data determined in accordance with GAAP. In addition, because this metric is not a measure of financial performance under GAAP and is susceptible to varying calculations, the measure presented may differ from and may not be comparable to similarly titled measures used by other companies. We define EBITDA as Net earnings before Interest and foreign exchange, Income tax expense, Depreciation and amortization. We believe the presentation of EBITDA provides useful information as it excludes the impact of financing, foreign exchange, income taxes and the accounting effects of capital spending. These items may vary for different companies for reasons unrelated to the overall operating performance of a companys core business. We believe this assists in comparing our performance across reporting periods."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "###"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        3,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "One Centerpointe Drive, Suite 200, Lake Oswego, Oregon 97035 503-684-7000",
+          "",
+          "www.gbrx.com"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        4,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "For release: July 8, 2024 8:30 a.m. EDT",
+          "",
+          "Contact:",
+          "",
+          "Justin Roberts, Investor Relations"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "Jack Isselmann, Media Relations"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "Ph: 503-684-7000"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Grew lease fleet by 600 units to 15,200 units with lease fleet utilization of nearly 99%."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Generated Operating cash flow of $84 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Diverse new railcar orders for 6,300 units valued at $830 million and delivered 5,400 units, resulting in new railcar backlog of 29,400 units with an estimated value of $3.7 billion."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net earnings attributable to Greenbrier for the quarter were $34 million, or $1.06 per diluted share, on revenue of $820 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "EBITDA for the quarter of $104 million, reached its highest level in over 4.5 years, equaling 13% of revenue."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Board declared a quarterly dividend of $0.30 per share, payable on August 13, 2024 to shareholders of record as of July 23, 2024, representing Greenbriers 41st consecutive quarterly dividend."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "Greenbrier Reports Third Quarter Results (Cont.)",
+          "",
+          "Page 2"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Deliveries of 23,500  24,000 units, including approximately 1,400 units in Brazil"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Revenue of $3.5  $3.6 billion"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Consolidated gross margin percentage increased to the mid-teens"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 820.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 75.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue of $820 million"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "sales are expected to be approximately $75 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": -2,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": -90.8537,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-09",
+    "entry_open": "44.060001",
+    "return_10d_pct": "7.3536",
+    "return_20d_pct": "14.4122",
+    "return_30d_pct": "3.3591",
+    "return_60d_pct": "3.1548",
+    "return_90d_pct": "12.1879"
+  },
+  "text_stats": {
+    "primary_text_len": 3522,
+    "exhibit_text_len": 23810,
+    "combined_text_len": 27334,
+    "semantic_text_len": 23766,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "REZI",
+    "cik": "1740332",
+    "event_date": "2024-08-08",
+    "event_accession": "0001740332-24-000051",
+    "primary_8k_doc": "rezi-20240807.htm",
+    "exhibit_docs": [
+      "rezi-20240629prexhibit99.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/REZI_000174033224000051_rezi-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/REZI_000174033224000051_rezi-20240629prexhibit99.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "REZI",
+    "cik": "1740332",
+    "entity_name": "Resideo Technologies, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1549000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "57000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "6645000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-9000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-26000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "-4000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.036798",
+    "operating_cash_flow_to_revenue": "-0.002582",
+    "assets_to_revenue": "4.289864",
+    "financing_cash_flow_to_revenue": "-0.00581",
+    "investing_cash_flow_to_revenue": "-0.016785"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $1.",
+      "revenue of $630 million, decreased 7% compared to the second quarter 2023 • Gross margin of 41.",
+      "revenue of $630 million in the second quarter 2024, down 7% compared to second quarter 2023 and do wn 2% excluding the impact of the Genesis divestiture.",
+      "revenue of $959 million, increased 4% compared to the second quarter 2023 • Gross margin of 19.",
+      "revenue of $959 million increased $34 million compared to second quarter 2023, driven by the inclusion of $45 million of Snap One revenue following the transaction close on June 15, 2024.",
+      "net income of $30 million; Adjusted EBITDA of $175 million, above the high end of outlook range Products and Solutions second quarter gross margin of 41."
+    ],
+    "guidance_evidence": [
+      "outlook range Products and Solutions second quarter gross margin of 41.",
+      "Outlook The following table summarizes the Company’s current third quarter 2024 and full year 2024 outlook."
+    ],
+    "wave_or_demand_evidence": [
+      "customer activity as the quarter progressed.",
+      "orders improved compared to second quarter 2023, reflecting normalized channel inventories with key distributor customers and strength in new construction.",
+      "ained by higher interest rates and low housing turnover.",
+      "ain “non-GAAP financial measures” as defined under the Securities Exchange Act of 1934.",
+      "ain delivered strong year-over-year sales growth, driven by continued expansion in the residential new construction channel.",
+      "Air product revenue stabilized and orders improved compared to second quarter 2023, reflecting normalized channel inventories with key distributor customers and strength in new construction."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory benefits year-over-year, as supplier price increases have reduced in pace and scale in 2024.",
+      "impairment charges, extinguishment costs, loss on sale of assets, Tax Matters Agreement gain, foreign exchange transaction loss (income), and litigation settlements.",
+      "decreased 7% compared to the second quarter 2023 • Gross margin of 41.",
+      "declines in Video Surveillance and Residential Audio Visual.",
+      "decreased 13% from $71 million in second quarter 2023.",
+      "declined to $77 million in second quarter 2024 from $79 million in second quarter 2023."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1590,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "18.830000",
+    "return_10d_pct": "0.9028",
+    "return_20d_pct": "5.7355",
+    "return_30d_pct": "-4.3548",
+    "return_60d_pct": "5.5762",
+    "return_90d_pct": "15.5072"
+  },
+  "text_stats": {
+    "primary_text_len": 6761,
+    "exhibit_text_len": 25234,
+    "combined_text_len": 31997
+  }
+}

@@ -52,11 +52,11 @@ The frontend can render these phases in order:
     {"stage": "event_cards", "status": "FOUND"},
     {"stage": "universe_filter", "status": "MISS"},
     {"stage": "collect", "status": "FOUND"},
-    {"stage": "shortlist", "status": "MISS"},
-    {"stage": "deep_selection", "status": "MISS"}
+    {"stage": "candidate_list", "status": "MISS"},
+    {"stage": "fundamental_intake", "status": "MISS"}
   ],
   "evidence_found": ["event_cards", "collect"],
-  "evidence_missing": ["scouts", "universe_filter", "shortlist", "deep_selection"],
+  "evidence_missing": ["scouts", "universe_filter", "candidate_list", "fundamental_intake"],
   "recommended_changes": [
     "Expand discovery triggers for target entities and relevant catalysts."
   ],

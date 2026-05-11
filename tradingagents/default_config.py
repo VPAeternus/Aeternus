@@ -71,26 +71,16 @@ DEFAULT_CONFIG = {
     },
     # Tool-level configuration (takes precedence over category-level)
     "tool_vendors": {},
-    # Deal flow settings
-    "dealflow_top_k": 30,
-    "dealflow_deep_k": 12,
-    "dealflow_deep_reserve_quota": int(os.getenv("DEALFLOW_DEEP_RESERVE_QUOTA", "4")),
+    # Deal flow scout settings. Scout tickers are counted and handed to fundamental;
+    # no pre-fundamental score or selection artifact is produced.
     "dealflow_trigger_vix_jump_pct": 15.0,
     "dealflow_trigger_spy_move_pct": 1.5,
-    "dealflow_min_signal_families": 3,
     "dealflow_sec_user_agent": os.getenv(
         "SEC_API_USER_AGENT",
         "AeternusAgentsAG/1.0 (research@aeternus.ai)",
     ),
     # Legacy smart_money connector retired; 13F sourcing now uses the PIT-tested
     # thirteenf_watchlist scout. Congress trades require separate backtest before use.
-    "dealflow_social_max_symbol_calls": int(
-        os.getenv("DEALFLOW_SOCIAL_MAX_SYMBOL_CALLS", "35")
-    ),
-    "dealflow_social_mention_bonus_cap": float(
-        os.getenv("DEALFLOW_SOCIAL_MENTION_BONUS_CAP", "10.0")
-    ),
-    "dealflow_core_score_weight_overrides": {},  # e.g., {"social_momentum": 12.0}
     "dealflow_social_lookback_days": int(
         os.getenv("DEALFLOW_SOCIAL_LOOKBACK_DAYS", "7")
     ),
@@ -343,8 +333,8 @@ DEFAULT_CONFIG = {
         "OPERATOR_GATEWAY_DEALFLOW_BASE_DIR",
         "eval_results/deal_flow",
     ),
-    "operator_gateway_research_queue_path": os.getenv(
-        "OPERATOR_GATEWAY_RESEARCH_QUEUE_PATH",
+    "operator_gateway_scout_handoff_path": os.getenv(
+        "OPERATOR_GATEWAY_SCOUT_HANDOFF_PATH",
         "",
     ),
     "operator_gateway_heartbeat_ttl_seconds": float(

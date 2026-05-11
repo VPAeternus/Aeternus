@@ -1,0 +1,556 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "APO",
+    "cik": "0001858681",
+    "event_date": "2024-08-01",
+    "event_accession": "0001858681-24-000090",
+    "primary_8k_doc": "apo-20240801.htm",
+    "exhibit_docs": [
+      "agmearningsrelease2q2024.htm",
+      "erex9912q2024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/APO_000185868124000090_apo-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/APO_000185868124000090_agmearningsrelease2q2024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/APO_000185868124000090_erex9912q2024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "APO",
+    "cik": "0001858681",
+    "entity_name": "APOLLO GLOBAL MANAGEMENT, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5301000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1010000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "313488000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "11523000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-5640000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1071000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.19053",
+    "operating_cash_flow_to_revenue": "0.202037",
+    "assets_to_revenue": "59.137521",
+    "financing_cash_flow_to_revenue": "2.173741",
+    "investing_cash_flow_to_revenue": "-1.06395"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Income Attributable to Apollo Global Management, Inc.",
+      "Net Income (\"ANI\") $1,009 $1.",
+      "GAAP Net Income Attributable to Apollo Global Management, Inc.",
+      "Net Income, which represents the sum of FRE, SRE, and PII, less HoldCo interest and other financing costs and taxes, totaled $1.",
+      "Net Income Shares Outstanding.",
+      "Net income (loss) 750 1,765 1,177 2,288 2,942 Net (income) loss attributable to non-controlling interests (151) (338) (324) (679) (662) Net income (loss) attributable to Apollo Global Management, Inc."
+    ],
+    "guidance_evidence": [
+      "expected average annual return of 11% would have resulted in $154 million and $210 million of additional alternative net investment income, respectively 1.",
+      "expected long-term average annual return will be achieved.",
+      "expected to be settled in the form of equity-based awards.",
+      "expected to be infrequent or not indicative of the ongoing operations of the segment.",
+      "expected to be infrequent or not indicative of the ongoing operations of the business."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for retirement savings products Flow Reinsurance: Second quarter activity reflected client repositioning in the U.",
+      "ains non-GAAP financial information and defined terms which are described on pages 30 to 34.",
+      "ained herein is reconciled to GAAP financial information on pages 26 to 29.",
+      "ails agmearningsrelease2q2024008.",
+      "ailable capital attributable to ADIP.",
+      "ainder of its net asset value attributable to Athene ($11 billion)."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, and excludes general partner obligations to return previously distributed performance fees.",
+      "charge (unplanned)10 (759) (1,486) Core outflows (8,627) (15,375) Strategic reinsurance transactions — — Outflows attributable to Athene $(8,627) $(15,375) Annualized rate11 Maturity-driven, contractual-based outflows6 (8.",
+      "charge (planned)9 (2.",
+      "charge (unplanned)10 (1.",
+      "charges includes equity-based compensation expense and associated taxes related to the previously announced special fully vested equity grants to certain senior leaders.",
+      "charges include contingent consideration, equity-based compensation charges and the amortization of intangible assets and certain other charges associated with acquisitions, and restructuring charges."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "agmearningsrelease2q2024.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc agmearningsrelease2q2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Apollo Global Management, Inc. Second Quarter 2024 Earnings"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q'24 Per Share YTD'24 Per Share GAAP Financial Measures ($ in millions, except per share amounts) Net Income Attributable to Apollo Global Management, Inc. Common Stockholders $828 $1.36 $2,231 $3.67 Segment and Non-GAAP Financial Measures ($ in millions, except per share amounts) Fee Related Earnings (“FRE”) $516 $0.84 $978 $1.59 Spread Related Earnings (“SRE”) $710 $1.15 $1,527 $2.47 Fee and Spread Related Earnings $1,226 $1.99 $2,505 $4.06 Principal Investing Income (“PII”) $33 $0.05 $54 $0.08 Adjusted Net Income (\"ANI\") $1,009 $1.64 $2,073 $3.36 Assets Under Management ($ in billions) Total Assets Under Management (“AUM”) $696 Fee-Generating AUM (“FGAUM”) $522 2Q'24 LTM 2Q'24 Business Drivers ($ in billions) Inflows $39 $144 Gross Capital Deployment $70 $208 Debt Origination $52 $146 Second Quarter 2024 Financial Highlights • GAAP Net Income Attributable to Apollo Global Management, Inc. Common Stockholders was $828 million for the quarter ended June 30, 2024, or $1.36 per share • Apollo's primary non-GAAP earnings metric, Adjusted Net Income, which represents the sum of FRE, SRE, and PII, less HoldCo interest and other financing costs and taxes, totaled $1.0 billion, or $1.64 per share, for the second quarter This presentation contains non-GAAP financial information and defined terms which are described on pages 30 to 34. The non-GAAP financial information contained herein is reconciled to GAAP financial information on pages 26 to 29. Per share calculations are based on end of period Adjusted Net Income Shares Outstanding. YTD'24 per share amounts represent the sum of the last two quarters. See page 21 for the share reconciliation. “NM” as used throughout this presentation indicates data has not been presented as it was deemed not meaningful, unless the context otherwise provides. 1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "(In millions, except per share amounts) 2Q'23 1Q'24 2Q'24 YTD'23 YTD'24 Revenues Asset Management Management fees $452 $438 $462 $866 $900 Advisory and transaction fees, net 170 169 267 325 436 Investment income (loss) 138 402 278 590 680 Incentive fees 26 26 47 41 73 Retirement Services Premiums 9,041 101 673 9,137 774 Product charges 207 238 251 405 489 Net investment income 2,948 3,576 3,804 5,560 7,380 Investment related gains (losses) 366 1,677 (134) 1,431 1,543 Revenues of consolidated variable interest entities 347 411 366 628 777 Other revenues 7 2 4 20 6 Total Revenues 13,702 7,040 6,018 19,003 13,058 Expenses Asset Management Compensation and benefits (516) (667) (604) (1,186) (1,271) Interest expense (31) (51) (53) (62) (104) General, administrative and other (226) (240) (319) (423) (559) Retirement Services Interest sensitive contract benefits (2,012) (2,884) (1,824) (3,301) (4,708) Future policy and other policy benefits (9,512) (543) (1,095) (9,978) (1,638) Market risk benefits remeasurement gains (losses) 71 154 16 (275) 170 Amortization of deferred acquisition costs, deferred sales inducements and value of business acquired (153) (207) (227) (291) (434) Policy and other operating expenses (452) (453) (478) (889) (931) Total Expenses (12,831) (4,891) (4,584) (16,405) (9,475) Other Income (Loss) – Asset Management Net gains (losses) from investment activities 20 39 (21) 18 18 Net gains (losses) from investment activities of consolidated variable interest entities 12 25 1 46 26 Other income (loss), net 48 (26) 24 80 (2) Total Other Income (Loss) 80 38 4 144 42 Income (loss) before income tax (provision) benefit 951 2,187 1,438 2,742 3,625 Income tax (provision) benefit (201) (422) (261) (454) (683) Net income (loss) 750 1,765 1,177 2,288 2,942 Net (income) loss attributable to non-controlling interests (151) (338) (324) (679) (662) Net income (loss) attributable to Apollo Global Management, Inc. 599 1,427 853 1,609 2,280 Preferred stock dividends — (24) (25) — (49) Net income (loss) attributable to Apollo Global Management, Inc. Common Stockholders $599 $1,403 $828 $1,609 $2,231 Earnings (Loss) per share Net income (loss) attributable to Common Stockholders - Basic $1.00 $2.31 $1.36 $2.67 $3.67 Net income (loss) attributable to Common Stockholders - Diluted $1.00 $2.28 $1.35 $2.67 $3.64 Weighted average shares outstanding – Basic 579 588 587 582 588 Weighted average shares outstanding – Diluted 579 605 590 582 605 GAAP Income Statement (Unaudited) 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Delivered solid second quarter results across Asset Management and Retirement Services • Record FRE of $516 million driven by record quarterly fee related revenues • SRE of $710 million driven by strong organic growth trends • Combined, FRE and SRE totaled $1.2 billion in the second quarter, showcasing the strength of the combined business model • Total AUM of $696 billion benefited from inflows of $39 billion in the second quarter and $144 billion over the last twelve months, driving a 13% increase year-over-year Continued execution on three strategic growth pillars • Origination: Record quarterly debt origination volume of $52 billion driven by strong contributions from traditional, platform, and high-grade corporate solutions origination activity • Global Wealth: Record quarter of fundraising activity from individual investors as inflows into Apollo's diversified suite of wealth-focused products continues to scale due to strong investment performance and expanding distribution reach by channel and geography • Capital Solutions: Record quarterly fee revenue benefited from record debt origination activity in the quarter Second Quarter 2024 Business Highlights ✓ ✓ 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "($ in millions, except per share amounts) 2Q'23 1Q'24 2Q'24 YTD'23 YTD'24 Management fees $620 $652 $672 $1,197 $1,324 Capital solutions fees and other, net 138 141 208 276 349 Fee-related performance fees 35 46 52 62 98 Fee-related compensation (212) (220) (240) (423) (460) Non-compensation expenses (139) (157) (176) (273) (333) Fee Related Earnings $442 $462 $516 $839 $978 Net investment spread 1,045 1,022 945 1,966 1,967 Other operating expenses (117) (114) (116) (241) (230) Interest and other financing costs (129) (91) (119) (238) (210) Spread Related Earnings $799 $817 $710 $1,487 $1,527 Fee and Spread Related Earnings $1,241 $1,279 $1,226 $2,326 $2,505 Principal Investing Income $20 $21 $33 $28 $54 Segment Income $1,261 $1,300 $1,259 $2,354 $2,559 HoldCo interest and other financing costs1 (20) (15) (15) (41) (30) Taxes and related payables (231) (221) (235) (458) (456) Adjusted Net Income $1,010 $1,064 $1,009 $1,855 $2,073 ANI per share $1.70 $1.72 $1.64 $3.12 $3.36 1. Represents interest and other financing costs related to Apollo Global Management, Inc. not attributable to any specific segment. Total Segment Earnings 4"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "($ in millions, except per share amounts) 2Q'23 1Q'24 2Q'24 YTD'23 YTD'24 Management fees $620 $652 $672 $1,197 $1,324 Capital solutions fees and other, net 138 141 208 276 349 Fee-related performance fees 35 46 52 62 98 Fee-related compensation (212) (220) (240) (423) (460) Non-compensation expenses (139) (157) (176) (273) (333) Fee Related Earnings $442 $462 $516 $839 $978 Net investment spread 1,045 1,022 945 1,966 1,967 Other operating expenses (117) (114) (116) (241) (230) Interest and other financing costs (129) (91) (119) (238) (210) Notable items — — — (25) — Spread Related Earnings, Excluding Notable Items $799 $817 $710 $1,462 $1,527 Fee and Spread Related Earnings, Excluding Notable Items $1,241 $1,279 $1,226 $2,301 $2,505 Principal Investing Income $20 $21 $33 $28 $54 Segment Income, Excluding Notable Items $1,261 $1,300 $1,259 $2,329 $2,559 HoldCo interest and other financing costs (20) (15) (15) (41) (30) Taxes and related payables (231) (221) (235) (453) (456) Adjusted Net Income, Excluding Notable Items $1,010 $1,064 $1,009 $1,835 $2,073 ANI per share, Excluding Notable Items $1.70 $1.72 $1.64 $3.08 $3.36 Total Segment Earnings, Excluding Notable Items 5 Note: Notable Items include unusual variability such as actuarial experience, assumption updates and other insurance adjustments."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Segment Details"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Management fees increased 8% year-over-year driven by robust growth in Yield strategies reflecting increasing contributions from third-party clients and Athene, as well as solid levels of capital deployment • Capital solutions fees reached a new quarterly record reflecting growth across the broader debt origination ecosystem, including a record quarter of high-grade corporate solutions activity • Fee-related performance fees increased almost 50% year-over-year due to a growing contribution from Apollo's diversified suite of wealth-focused products • Higher fee-related expenses quarter-over-quarter reflect previously communicated fund merger-related costs within non-compensation expenses, as well as higher fee-related compensation stemming from strong growth in fee related revenues ($ in millions, except per share amounts) 2Q'23 1Q'24 2Q'24 % Change vs. 2Q'23 YTD'23 YTD'24 % Change vs. YTD'23 Management Fees Yield $392 $440 $460 17.3% $771 $900 16.7% Hybrid 62 61 63 1.6% 119 124 4.2% Equity1 166 151 149 (10.2)% 307 300 (2.3)% Total management fees 620 652 672 8.4% 1,197 1,324 10.6% Capital solutions fees and other, net 138 141 208 50.7% 276 349 26.4% Fee-related performance fees 35 46 52 48.6% 62 98 58.1% Fee Related Revenues $793 $839 $932 17.5% $1,535 $1,771 15.4% Fee-related compensation (212) (220) (240) 13.2% (423) (460) 8.7% Non-compensation expenses2 (139) (157) (176) 26.6% (273) (333) 22.0% Fee Related Earnings $442 $462 $516 16.7% $839 $978 16.6% FRE per share $0.74 $0.75 $0.84 13.5% $1.41 $1.59 12.8% FRE Margin 55.7% 55.1% 55.3% 54.6% 55.2% FRE Compensation Ratio 26.7% 26.2% 25.8% 27.6% 26.0% Asset Management Segment 1. Equity management fees include Fund X catch-up management fees of $18 million and $21 million, respectively, for 2Q'23 and YTD'23. 2. Non-compensation expenses include placement fees of $7 million and $15 million, respectively, for 2Q'24 and YTD'24. 2Q'24 non-compensation expenses include $15 million of costs related to the previously announced merger of two closed-end funds with MidCap Financial Investment Corporation, a publicly traded business development company we manage. 7"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Total AUM ($bn) Fee-Generating AUM ($bn) $515 $617 $696 $376 $450 $521 $56 $62 $70 $83 $105 $105 Yield Hybrid Equity 2Q'22 2Q'23 2Q'24 $381 $462 $522 $314 $383 $440 $25 $28 $30 $42 $51 $52 Yield Hybrid Equity 2Q'22 2Q'23 2Q'24 Perpetual Capital AUM ($bn) $307 $351 $409 $225 $258 $304 $44 $51 $50 $38 $43 $55 Athene Athora Other 2Q'22 2Q'23 2Q'24 8 Asset Management: Assets Under Management Note: AUM totals may not add due to rounding. 1. Perpetual Capital AUM derived from Athene includes assets, unfunded commitments, and available capital attributable to ADIP. 2. Other primarily includes MidCap Financial ($13 billion), Apollo Commercial Real Estate Finance, Inc. ($9 billion), Apollo Debt Solutions BDC ($11 billion), Apollo Diversified Real Estate Fund/Apollo Diversified Credit Fund ($7 billion), MidCap Financial Investment Corporation ($3 billion), Apollo Senior Floating Rate Fund/Apollo Tactical Income Fund ($1 billion), and other AUM related to a publicly traded business development company ($2 billion), among others. Other also includes third-party capital within Apollo Aligned Alternatives ($6 billion), with the remainder of its net asset value attributable to Athene ($11 billion). AUM related to Apollo Debt Solutions, MidCap Financial Investment Corporation and the publicly traded business development company is as of March 31, 2024. 21 • Total AUM increased $79 billion, or 13%, year-over-year primarily driven by $72 billion of inflows from Asset Management and $72 billion of gross inflows from Retirement Services, as well as mark-to-market appreciation, partially offset by $61 billion of outflows primarily driven by normal course activity at Athene and $29 billion of realization activity • Fee-Generating AUM increased $60 billion, or 13%, year-over-year primarily driven by robust net organic growth at Athene, fundraising across a variety of Asset Management strategies, mark-to-market appreciation, and strong levels of capital deployment • Nearly 60% of Apollo’s total AUM is comprised of perpetual capital, which is highly scalable and does not rely on cyclical drawdown fundraising dynamics"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "$33 $32 $40 $39 $20 $10 $20 $22 $13 $20 $20 $17$2 Asset Management Retirement Services 3Q'23 4Q'23 1Q'24 2Q'24 $57 $131 $75 $128 $157 $144 $32 $31 $38 $71 $55 $72 $6 $37 $18 $28 $37 $48 $63 $70 $7 $72 Asset Management Retirement Services 2019 2020 2021 2022 2023 LTM 2Q'24 ($ in billions) Asset Management: Inflows inorganic inorganic Note: Totals may not add due to rounding. Inflows from Retirement Services includes organic and inorganic inflows from Athene, as detailed on page 12, as well as inorganic inflows from Athora. 9 • Robust total gross inflows of $39 billion during the second quarter and $144 billion over the last twelve months • Inflows from Asset Management of $22 billion in the second quarter were primarily driven by $20 billion of third-party fundraising activity, mostly in Yield and Hybrid strategies, including ADIP, Opportunistic Credit (Accord), Asset-Backed Finance, Multi-Credit (Total Return), and Infrastructure Equity, in addition to strong levels of fundraising across several wealth-focused products • Strong organic inflows from Retirement Services of $17 billion in the second quarter, driven by strong retail annuity sales and funding agreement issuance"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Spread Related Earnings increased 3% year-over-year on a year-to-date basis primarily driven by lower operating expenses and financing costs • Spread Related Earnings, Excluding Notable Items included a 5.7% and 7.4% annualized return in the second quarter and year-to-date, respectively, from Athene's alternative investment portfolio; considering management's long-term expected average annual return of 11% would have resulted in $154 million and $210 million of additional alternative net investment income, respectively 1. Refers to the amount that as-reported alternative net investment income is below (above) management's long-term expectation of an 11% average annual return. Our long-term expectation is based on historical experience and provides investors with supplemental information for period-to-period comparability as well as a basis for developing expectations of future performance. There is no assurance that management's expected long-term average annual return will be achieved. Actual results may differ materially. ($ in millions, except per share amounts) 2Q'23 1Q'24 2Q'24 % Change vs. 2Q'23 YTD'23 YTD'24 % Change vs. YTD'23 Fixed income and other net investment income $2,207 $2,454 $2,633 19.3% $4,164 $5,087 22.2% Alternative net investment income 259 266 168 (35.1)% 444 434 (2.3)% Strategic capital management fees 16 25 24 50.0% 30 49 63.3% Cost of funds (1,437) (1,723) (1,880) 30.8% (2,672) (3,603) 34.8% Net Investment Spread 1,045 1,022 945 (9.6)% 1,966 1,967 0.1% Other operating expenses (117) (114) (116) (0.9)% (241) (230) (4.6)% Interest and other financing costs (129) (91) (119) (7.8)% (238) (210) (11.8)% Spread Related Earnings $799 $817 $710 (11.1)% $1,487 $1,527 2.7% SRE per share $1.34 $1.32 $1.15 (14.2)% $2.49 $2.47 (0.8)% Notable items — — — NM (25) — NM Spread Related Earnings, Excluding Notable Items $799 $817 $710 (11.1)% $1,462 $1,527 4.4% SRE per share, Excluding Notable Items $1.34 $1.32 $1.15 (14.2)% $2.45 $2.47 0.8% Net Spread 1.52% 1.47% 1.24% (28)bps 1.45% 1.35% (10)bps Net Spread, Excluding Notable Items 1.52% 1.47% 1.24% (28)bps 1.42% 1.35% (7)bps Alternative net investment income delta to long-term expectation1 $75 $56 $154 $223 $210 Alternative net return delta to long-term expectation 2.47% 1.90% 5.27% 3.67% 3.58% Impact to Net Spread 0.14% 0.10% 0.27% 0.22% 0.19% Retirement Services Segment 10"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "(% of average net invested assets) 2Q'23 1Q'24 2Q'24 % Change vs. 2Q'23 YTD'23 YTD'24 % Change vs. YTD'23 Fixed income and other net investment income 4.46% 4.66% 4.82% 36bps 4.30% 4.75% 45bps Alternative net investment income 8.53% 9.10% 5.73% NM 7.33% 7.42% 9bps Net Investment Earnings 4.69% 4.89% 4.87% 18bps 4.48% 4.89% 41bps Strategic capital management fees 0.03% 0.04% 0.04% 1bp 0.03% 0.04% 1bp Cost of funds (2.73)% (3.10)% (3.27)% 54bps (2.60)% (3.19)% 59bps Net Investment Spread 1.99% 1.83% 1.64% (35)bps 1.91% 1.74% (17)bps Other operating expenses (0.22)% (0.21)% (0.20)% (2)bps (0.24)% (0.21)% (3)bps Interest and other financing costs (0.25)% (0.15)% (0.20)% (5)bps (0.22)% (0.18)% (4)bps Net Spread 1.52% 1.47% 1.24% (28)bps 1.45% 1.35% (10)bps Notable items —% —% —% NM (0.03)% —% NM Net Spread, Excluding Notable Items 1.52% 1.47% 1.24% (28)bps 1.42% 1.35% (7)bps Net investment earnings, excluding notable items 4.69% 4.89% 4.87% 18bps 4.48% 4.89% 41bps Cost of funds, excluding notable items (2.73)% (3.10)% (3.27)% 54bps (2.63)% (3.19)% 56bps Net investment spread, excluding notable items 1.99% 1.83% 1.64% (35)bps 1.88% 1.74% (14)bps Alternative net return delta to long-term expectation 2.47% 1.90% 5.27% 3.67% 3.58% Impact to Net Spread 0.14% 0.10% 0.27% 0.22% 0.19% ($ in millions) Average net invested assets1 210,209 222,391 230,156 9.5% 205,623 225,913 9.9% Average net invested assets - fixed income1 198,063 210,688 218,446 10.3% 193,499 214,220 10.7% Average net invested assets - alternatives1 12,146 11,703 11,710 (3.6)% 12,124 11,693 (3.6)% Retirement Services: Return on Asset View 1. Second vintage of strategic third-party sidecar began supporting Athene's organic growth on July 1, 2023, with Athene Life Re Ltd. (\"ALRe\") selling 50% of the economic interests in ACRA 2 to ADIP II. Effective December 31, 2023, ADIP II’s ownership of economic interests in ACRA 2 increased to 60%, with ALRe owning the remaining 40% of economic interests. 11"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Fixed income investment yield: increased 16 basis points quarter-over-quarter primarily driven by strong on-the-margin asset deployment, partially offset by the prepayment of certain higher yielding assets and back-end weighted deployment timing within the quarter • Alternatives return: relatively strong returns in platform origination investments and a diversified mix of Apollo funds principally comprising AAA (Apollo Aligned Alternatives, +9% annualized in 2Q) were partially offset by relative weakness in retirement services investments (-4% annualized in 2Q) • Cost of funds: increased 17 basis points quarter-over-quarter due to: ◦ Cost of funds (excluding hedging): increased 12 basis points quarter- over-quarter driven by writing new business in a higher interest rate environment, the maturity of a large cohort of funding agreements that were issued in a lower rate environment, and higher costs of in-force renewals ◦ Floating rate hedge actions: reflects the cost of hedging a portion of Athene's net floating rate position1, as the cost of funds on liabilities that were swapped from fixed to floating were higher than they otherwise would have been • Interest and other financing costs: increased 5 basis points quarter-over-quarter primarily reflecting the full quarter impact of first quarter debt issuance, which will support profitable organic growth in future periods1Q'24 2Q'24 Retirement Services Net Spread Bridge (QoQ) Retirement Services: Drivers of Net Spread 12 Retirement Services Net Spread Bridge Detail 1. Floating rate assets at notional were approximately $45 billion, or approximately 20% of Athene's net invested assets as of June 30, 2024. Floating rate liabilities at notional were approximately $30 billion, or approximately 13% of Athene's net invested assets, as of June 30, 2024. The net floating rate portfolio was $15 billion, or 7% of Athene's net invested assets as of June 30, 2024. 1.47% 0.16% (0.17)% (0.12)% (0.05)% (0.05)% 1.24% Higher cost of funds (ex hedging) Higher fixed income investment yield Sequentially lower alts portfolio return Interest and other financing costs Cost of floating rate hedging actions"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Retail: Strong annuity sales activity underwritten to attractive returns amid continued secular demand for retirement savings products Flow Reinsurance: Second quarter activity reflected client repositioning in the U.S. while pipeline of new Asia Pacific relationships remains robust Pension Group Annuities: Closed one transaction during the quarter despite heightened competitive dynamics Funding Agreements1: Strong quarterly inflows driven by FHLB activity and USD FABN issuance $827 $790 $704 $1,148 $1,255 $1,421 $1,255 $2,509 $2,469 $3,108 $3,148 FRE SRE 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 LTM 2Q'24 $3 $9 $13 $28 $48 $63 $37 3 5 7 8 21 35 194 2 6 6 11 3 3 6 11 10 8 10 7 14 2014 2016 2018 2020 2022 2023 YTD'24 1. Comprised of funding agreements issued under funding agreement backed notes (“FABN”) program, secured and other funding agreements, funding agreements issued to the Federal Home Loan Bank (“FHLB”) and long term repurchase agreements. 2. For periods prior to 2022, SRE represents Athene’s historically reported adjusted operating income available to common stockholders excluding the change in fair value of Apollo Operating Group Units, equity based compensation related to Athene’s long-term incentive plan, and operating income tax. Retirement Services: Strong Growth Profile Athene Gross Organic Inflows Spread Related Earnings2 ~20x ($ in billions) >95% correlation between SRE and FRE 13 ($ in millions) 2Q'24 Highlights:"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024015.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Realized performance fees of $175 million in the second quarter remained relatively light as monetization activity from sizeable flagship private equity funds (Fund VIII & IX) continues to be prudently managed until a more accommodative market backdrop emerges • Realized principal investing compensation of $211 million year-to-date translates to a compensation ratio of 72%, which is within the range of management's long-term expectations ($ in millions, except per share amounts) 2Q'23 1Q'24 2Q'24 % Change vs. 2Q'23 YTD'23 YTD'24 % Change vs. YTD'23 Realized performance fees $177 $94 $175 (1.1)% $341 $269 (21.1)% Realized investment income 2 14 11 450.0% 30 25 (16.7)% Realized principal investing compensation (145) (73) (138) (4.8)% (315) (211) (33.0)% Other operating expenses (14) (14) (15) 7.1% (28) (29) 3.6% Principal Investing Income $20 $21 $33 65.0% $28 $54 92.9% PII per share $0.03 $0.03 $0.05 66.7% $0.04 $0.08 100.0% PII Compensation Ratio 81.2% 67.6% 74.2% 85.1% 71.8% Principal Investing Segment 14"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024016.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Performance Fee-Eligible AUM of $213 billion increased 12% year-over-year primarily due to third-party Asset Management fundraising • Performance Fee-Generating AUM of $140 billion increased 15% year-over-year due to positive investment performance across Equity, Hybrid and Yield strategies • Dry Powder was $68 billion as of quarter-end, including a record $55 billion of Dry Powder with future management fee potential, of which approximately 80% is in Yield and Hybrid $83 $52 $78 Yield Hybrid Equity Performance Fee-Eligible AUM ($bn) Performance Fee-Generating AUM ($bn) Dry Powder ($bn) $65 $31 $44 Yield Hybrid Equity $24 $17 $27 Yield Hybrid Equity $68bn$140bn$213bn Note: AUM and Dry Powder totals may not add due to rounding. Dry Powder includes capital available for investment included within performance fee-eligible AUM as well as capital available for investment which does not earn any performance fees. Performance Fee AUM and Dry Powder 15"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024017.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Investment Performance Highlights Net Accrued Performance Fee Receivable2 (QoQ) Appreciation / gross returns 2Q'24 YTD'24 Yield Corporate Credit1 2.5% 5.5% Structured Credit 2.1% 6.1% Direct Origination 3.8% 7.8% Hybrid Hybrid Value 4.8% 8.9% Credit Strategies and Accord 2.7% 6.1% Equity Flagship Private Equity 1.6% 4.5% European Principal Finance (1.6)% (1.4)% $2.53 +$0.20 $(0.16) $2.57 Net unrealized performance fees/other3 1Q'24 Net realized performance fees 1. CLOs are included within corporate credit. The 2Q'24 and YTD'24 gross returns for CLOs were 2.5% and 4.5%, respectively. CLO returns are calculated based on gross return on assets and exclude performance related to Redding Ridge. 2. Net Accrued Performance Fee Receivable represents the sum of performance allocations and incentive fees receivable, less profit sharing payable as reported on the consolidated statements of financial condition, and includes certain eliminations related to investments in consolidated funds and VIEs and other adjustments. 3. Net unrealized performance fees/other includes (i) unrealized performance fees, net of unrealized profit sharing expense and (ii) certain transaction related charges, and excludes general partner obligations to return previously distributed performance fees. 2Q'24 $1,560 $129 $(101) $1,588 ($ in millions, except per share amounts) Investment Performance Highlights and Net Accrued Performance Fees 16"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024018.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "HoldCo & Asset Management Summary Balance Sheet Highlights1 Financial Strength Ratings ($ in millions, except per share amounts) 1Q'24 2Q'24 Cash and cash equivalents $2,466 $2,853 Investments, net 2,583 2,625 Net accrued performance fees receivable2 1,560 1,588 Net clawback payable3 (85) (93) Debt (3,856) (4,082) Net Balance Sheet Value $2,668 $2,891 Net Balance Sheet Value per share $4.32 $4.69 Net Balance Sheet Value / AUM 0.40% 0.42% Adjusted Net Income Shares Outstanding 617 617 A2 / A / A Apollo Asset Management rated by Moody's, S&P, Fitch A1 / A+ / A+ / A+ Athene4 rated by Moody's, S&P, Fitch, AM Best 1. Amounts presented are for Apollo Global Management, Inc. and consolidated subsidiaries, and excludes Athene and consolidated VIEs. 2. Net accrued performance fees receivable excludes profit sharing expected to be settled in the form of equity-based awards. 3. Net clawback payable includes general partner obligations to return previously distributed performance fees offset by clawbacks from certain employees and former employees for the potential return of profit sharing distributions. 4. For Athene, represents financial strength ratings of Athene's primary insurance subsidiaries. Capital Strength 17 A2 / A / A Apollo Global Management rated by Moody's, S&P, Fitch • Deployed $75 million for opportunistic share repurchases in the second quarter, while continuing to execute additional repurchases to offset dilution from share issuances under equity incentive plans • Returned a total of $1.1 billion of capital to stockholders over the last twelve months through a combination of quarterly base dividends and opportunistic share repurchases, while allocating $150 million of capital to strategically invest in future growth of the business"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024019.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Details"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024020.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "($ in millions) Yield4 Hybrid Equity Total Beginning Balance $500,604 $63,661 $106,739 $671,004 Inflows 31,420 6,645 933 38,998 Outflows2,3 (12,746) (250) (1,387) (14,383) Net Flows 18,674 6,395 (454) 24,615 Realizations (1,282) (844) (2,182) (4,308) Market Activity 3,318 1,003 621 4,942 Ending Balance $521,314 $70,215 $104,724 $696,253 Three Months Ended June 30, 2024 ($ in millions) Yield4 Hybrid Equity Total Beginning Balance $449,843 $62,410 $104,852 $617,105 Inflows 123,424 11,846 8,786 144,056 Outflows2,3 (55,391) (1,742) (4,138) (61,271) Net Flows 68,033 10,104 4,648 82,785 Realizations (14,838) (6,206) (8,393) (29,437) Market Activity 18,276 3,907 3,617 25,800 Ending Balance $521,314 $70,215 $104,724 $696,253 Twelve Months Ended June 30, 2024 ($ in millions) Yield4 Hybrid Equity Total Beginning Balance $424,522 $28,594 $52,981 $506,097 Inflows 28,436 1,690 965 31,091 Outflows2,3 (14,928) (283) (1,165) (16,376) Net Flows 13,508 1,407 (200) 14,715 Realizations (1,051) (371) (347) (1,769) Market Activity 2,925 186 9 3,120 Ending Balance $439,904 $29,816 $52,443 $522,163 Three Months Ended June 30, 2024 ($ in millions) Yield4 Hybrid Equity Total Beginning Balance $382,663 $28,416 $50,704 $461,783 Inflows 105,959 4,667 6,294 116,920 Outflows2,3 (62,133) (2,663) (2,966) (67,762) Net Flows 43,826 2,004 3,328 49,158 Realizations (3,902) (1,498) (1,583) (6,983) Market Activity 17,317 894 (6) 18,205 Ending Balance $439,904 $29,816 $52,443 $522,163 Twelve Months Ended June 30, 2024 Fee-Generating AUM Rollforward1 Total AUM Rollforward1 1. Inflows at the individual strategy level represent subscriptions, commitments, and other increases in available capital, such as acquisitions or leverage, net of inter-strategy transfers. Outflows represent redemptions and other decreases in available capital. Realizations represent fund distributions of realized proceeds. Market activity represents gains (losses), the impact of foreign exchange rate fluctuations and other income. 2. LTM 2Q'24 outflow activity for Total AUM and FGAUM included $7 billion resulting from the previously announced conclusion of the Atlas SP-Credit Suisse investment management agreement. Management fees were not impacted due to offsetting changes resulting from a fee basis adjustment under the existing agreement between Apollo and Atlas. 3. Included in the 2Q'24 outflows for Total AUM and FGAUM are $1.9 billion and $1.9 billion of redemptions, respectively. Included in the LTM 2Q'24 outflows for Total AUM and FGAUM are $6.8 billion and $6.1 billion of redemptions, respectively. 4. As of 2Q'24, Yield AUM includes $29.7 billion of CLOs, $4.6 billion of which Apollo earns fees based on gross assets and $25.1 billion of which relates to Redding Ridge, from which Apollo earns fees based on net asset value. AUM Rollforward 19"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024021.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Held final close for the second vintage of strategic ADIP sidecar during the second quarter with $6 billion of total commitments, nearly twice the size of ADIP I • Third-party capital enables Athene to grow in a highly capital efficient manner and supported 35% of Athene's gross new business volume in the second quarter • Outflows increased sequentially, in-line with previously published forecast, reflecting sizeable funding agreement maturities ($ in millions) 2Q'24 YTD'24 Flows by Channel Retail $8,938 $18,601 Flow reinsurance 1,210 3,600 Funding agreements2 5,970 14,011 Pension group annuities 577 577 Gross organic inflows 16,695 36,789 Gross inorganic inflows3 — — Total gross inflows 16,695 36,789 Gross outflows4 (10,140) (18,175) Net flows $6,555 $18,614 Flows attributable to Athene vs. Third Parties Inflows attributable to Athene $10,840 $25,431 Inflows attributable to ADIP 4,824 9,261 Inflows ceded to third-party reinsurers5 1,031 2,097 Total gross inflows 16,695 36,789 Outflows attributable to Athene (8,627) (15,375) Outflows attributable to ADIP (1,513) (2,800) Total gross outflows4 $(10,140) $(18,175) ($ in millions) 2Q'24 Invested Assets Gross invested assets $302,215 Invested assets attributable to ADIP (69,258) Net invested assets1 $232,957 20 Note: Footnotes 3-11 can be found in the endnotes on page 35. 1. Net invested assets are a component of Apollo’s total AUM reported under the Asset Management segment and should not be viewed as additive to total AUM disclosed previously. Refer to the reconciliations of GAAP to Non-GAAP measures on pages 26 to 29 for additional reconciliation to the Company's presentation of non-GAAP measures. 2. Funding agreements are comprised of funding agreements issued under Athene's FABN program, secured and other funding agreements, funding agreements issued to the FHLB and long term repurchase agreements. ($ in millions) 2Q'24 YTD'24 Outflows attributable to Athene by type Maturity-driven, contractual-based outflows6 $(4,799) $(7,617) Policyholder-driven outflows7 (3,828) (7,758) Income oriented withdrawals (planned)8 (1,558) (3,249) From policies out-of-surrender-charge (planned)9 (1,511) (3,023) From policies in-surrender-charge (unplanned)10 (759) (1,486) Core outflows (8,627) (15,375) Strategic reinsurance transactions — — Outflows attributable to Athene $(8,627) $(15,375) Annualized rate11 Maturity-driven, contractual-based outflows6 (8.3)% (6.7)% Policyholder-driven outflows7 (6.7)% (6.9)% Income oriented withdrawals (planned)8 (2.7)% (2.9)% From policies out-of-surrender-charge (planned)9 (2.7)% (2.7)% From policies in-surrender-charge (unplanned)10 (1.3)% (1.3)% Core outflows (15.0)% (13.6)% Strategic reinsurance transactions —% —% Outflows attributable to Athene (15.0)% (13.6)% Retirement Services Flows & Invested Assets"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024022.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Share Reconciliation 2Q'23 3Q'23 4Q'23 1Q'24 2Q'24 Total GAAP Common Stock Outstanding 566,809,153 567,565,120 567,762,932 569,003,922 569,535,344 Non-GAAP Adjustments: Mandatory Convertible Preferred Stock1 — 15,999,683 15,564,983 14,524,381 14,528,625 Vested RSUs 12,771,092 12,502,457 22,072,379 18,438,577 18,421,647 Unvested RSUs Eligible for Dividend Equivalents 15,790,288 15,681,753 12,603,041 15,075,269 14,387,351 Adjusted Net Income Shares Outstanding 595,370,533 611,749,013 618,003,335 617,042,149 616,872,967 1. Reflects the number of shares of underlying common stock assumed to be issuable upon conversion of the Mandatory Convertible Preferred Stock during each period. 2. Since January 1, 2022, the Company in its discretion has elected to repurchase 1.0 million shares of common stock for $64.7 million, to prevent dilution that would have resulted from the issuance of shares granted in connection with certain profit sharing arrangements. These repurchases are separate from the repurchase plan described in footnote 4 and accordingly are not reflected in the above share repurchase activity table. 3. Average cost reflects total capital used for share repurchases in a given period divided by the number of shares purchased. 4. Pursuant to a share repurchase program that was publicly announced on January 3, 2022, as amended on February 21, 2023, the Company was authorized to repurchase (i) up to an aggregate of $1.0 billion of shares of its common stock in order to opportunistically reduce its share count and (ii) up to an aggregate of $1.5 billion of shares of its common stock in order to offset the dilutive impact of share issuances under its equity incentive plans. On February 8, 2024, the AGM board of directors terminated the Company’s prior share repurchase program and approved a new share repurchase program, pursuant to which, the Company is authorized to repurchase up to $3.0 billion of shares of its common stock. The share repurchase program may be used to repurchase outstanding shares of common stock as well as to reduce shares that otherwise would have been issued to participants under the Company’s equity incentive plans in order to satisfy associated tax obligations. Share Activity 2Q'23 3Q'23 4Q'23 1Q'24 2Q'24 Shares Issued to Employees 398,577 482,310 270,830 3,399,930 374,057 Shares Repurchased2 # of Shares 1,393,735 259,245 797,809 4,629,336 975,174 Average Cost3 $65.92 $86.11 $87.23 $110.68 $113.24 Capital Utilized $91.9 million $22.3 million $69.6 million $512.4 million $110.4 million Share Repurchase Plan Authorization Remaining4 $1.02 billion $993.4 million $923.8 million $2.49 billion $2.38 billion Sharecount Reconciliation 21"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024023.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliations and Disclosures"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024024.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "(in millions, except IRR) Vintage Year Total AUM Committed Capital Total Invested Capital Realized Value Remaining Cost Unrealized Value Total Value Gross IRR Net IRR Equity: Fund X 2023 $ 19,909 $ 19,877 $ 3,522 $ 1,058 $ 3,165 $ 3,703 $ 4,761 NM4 NM4 Fund IX 2018 33,052 24,729 20,853 12,269 15,018 25,366 37,635 29 % 20 % Fund VIII 2013 8,276 18,377 16,541 22,906 4,720 5,214 28,120 14 10 Fund VII 2008 — 14,677 16,461 34,294 — — 34,294 33 25 Fund VI 2006 364 10,136 12,457 21,136 405 — 21,136 12 9 Fund V 2001 — 3,742 5,192 12,724 — — 12,724 61 44 Fund I, II, III, IV & MIA1 Various 10 7,320 8,753 17,400 — — 17,400 39 26 Traditional Private Equity Funds2 $ 61,611 $ 98,858 $ 83,779 $ 121,787 $ 23,308 $ 34,283 $ 156,070 39 24 EPF IV 2023 3,112 3,007 799 243 601 765 1,008 21 13 EPF III 2017 3,332 4,445 4,926 4,058 1,996 2,276 6,334 11 6 Total Equity $ 68,055 $ 106,310 $ 89,504 $ 126,088 $ 25,905 $ 37,324 $ 163,412 Hybrid: ADIP II 2024 $ 6,556 $ 6,016 $ 2,347 $ — $ 2,347 $ 2,531 $ 2,531 NM4 NM4 ADIP I 2020 5,171 3,254 2,620 1,157 2,597 3,306 4,463 24 % 20 % AIOF III3 N/A 1,299 1,304 153 — 153 162 162 NM4 NM4 AIOF II 2021 2,645 2,542 1,890 652 1,452 1,727 2,379 16 10 AIOF I 2018 403 897 803 1,062 171 224 1,286 23 17 HVF II 2022 4,952 4,592 3,019 166 2,983 3,457 3,623 12 9 HVF I 2019 3,479 3,238 3,697 4,075 1,159 1,597 5,672 23 18 Accord VI5 2024 1,859 1,701 184 50 181 167 217 NM4 NM4 Accord V5 2022 533 1,922 2,030 1,973 129 139 2,112 11 8 Accord I, II, III, III B & IV5 Various — 6,070 4,765 5,137 — — 5,137 22 17 Accord+ 2021 3,199 2,370 5,969 4,092 2,327 2,442 6,534 15 12 Total Hybrid $ 30,096 $ 33,906 $ 27,477 $ 18,364 $ 13,499 $ 15,752 $ 34,116 Investment Record as of June 30, 2024 23 1. The general partners and managers of Funds I, II and MIA, as well as the general partner of Fund III, were excluded assets in connection with the reorganization of the Company that occurred in 2007. As a result, Apollo did not receive the economics associated with these entities. The investment performance of these funds, combined with Fund IV, is presented to illustrate fund performance associated with Apollo’s investment professionals. 2. Total IRR is calculated based on total cash flows for all funds presented. 3. Vintage Year is not yet applicable as the fund has not had its final closing. 4. Data has not been presented as the fund’s effective date is less than 24 months prior to the period indicated and such information was deemed not meaningful. 5. Accord funds have investment periods shorter than 24 months, therefore Gross and Net IRR are presented after 12 months of investing."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024025.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "($ in millions, except share amounts) 4Q'23 2Q'24 Assets Asset Management Cash and cash equivalents $2,748 $2,854 Restricted cash and cash equivalents 2 2 Investments 5,502 5,697 Assets of consolidated variable interest entities Cash and cash equivalents 62 473 Investments 1,640 1,708 Other assets 177 307 Due from related parties 449 479 Goodwill 264 264 Other assets 2,331 2,440 Retirement Services Cash and cash equivalents 13,020 13,004 Restricted cash and cash equivalents 1,761 1,093 Investments 213,099 237,318 Investments in related parties 25,842 27,726 Assets of consolidated variable interest entities Cash and cash equivalents 98 557 Investments 20,232 22,093 Other assets 110 143 Reinsurance recoverable 4,154 6,188 Deferred acquisition costs, deferred sales inducements and value of business acquired 5,979 6,699 Goodwill 4,065 4,064 Other assets 11,953 13,395 Total Assets $313,488 $346,504 GAAP Balance Sheet (Unaudited) 24"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024026.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "($ in millions, except share amounts) 4Q'23 2Q'24 Liabilities Asset Management Accounts payable, accrued expenses, and other liabilities $3,338 $3,638 Due to related parties 870 754 Debt 3,883 4,082 Liabilities of consolidated variable interest entities Other liabilities 1,145 1,728 Retirement Services Interest sensitive contract liabilities 204,670 228,389 Future policy benefits 53,287 50,799 Market risk benefits 3,751 3,727 Debt 4,209 5,733 Payables for collateral on derivatives and securities to repurchase 7,536 9,876 Other liabilities 4,456 7,847 Liabilities of consolidated variable interest entities Other liabilities 1,098 1,517 Total Liabilities 288,243 318,090 Redeemable non-controlling interests Redeemable non-controlling interests 12 14 Equity Mandatory Convertible Preferred Stock 1,398 1,398 Common Stock, $0.00001 par value, 90,000,000,000 shares authorized, 569,535,344 and 567,762,932 shares issued and outstanding as of June 30, 2024 and December 31, 2023, respectively — — Additional paid in capital 15,249 15,319 Retained earnings (accumulated deficit) 2,972 4,376 Accumulated other comprehensive income (loss) (5,575) (5,820) Total Apollo Global Management, Inc. Stockholders' Equity 14,044 15,273 Non-controlling interests 11,189 13,127 Total Equity 25,233 28,400 Total Liabilities, Redeemable non-controlling interests and Equity $313,488 $346,504 GAAP Balance Sheet (Unaudited) - cont'd 25"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024027.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "($ in millions) 2Q'23 3Q'23 4Q'23 1Q'24 2Q'24 YTD'23 YTD'24 GAAP Net income (loss) attributable to Apollo Global Management, Inc. Common Stockholders $599 $660 $2,732 $1,403 $828 $1,609 $2,231 Preferred dividends — 22 24 24 25 — 49 Net income (loss) attributable to non-controlling interests 151 (42) 825 338 324 679 662 GAAP Net income (loss) $750 $640 $3,581 $1,765 $1,177 $2,288 $2,942 Income tax provision (benefit) 201 243 (1,620) 422 261 454 683 GAAP Income (loss) before Income tax provision (benefit) $951 $883 $1,961 $2,187 $1,438 $2,742 $3,625 Asset Management Adjustments: Equity-based profit sharing expense and other1 57 62 53 94 45 124 139 Equity-based compensation 58 57 69 74 84 110 158 Special equity-based compensation and other charges2 — — 438 — — — — Transaction-related charges3 (4) 25 14 55 22 (7) 77 Merger-related transaction and integration costs4 5 5 10 8 7 12 15 (Gains) losses from changes in tax receivable agreement liability — — 13 — 1 — 1 Net (income) loss attributable to non-controlling interests in consolidated entities (192) 28 (869) (377) (323) (715) (700) Unrealized performance fees 86 (91) 117 (268) (86) (153) (354) Unrealized profit sharing expense 1 55 (12) 159 35 136 194 HoldCo interest and other financing costs 20 36 11 15 15 41 30 Unrealized principal investment (income) loss (29) (27) (22) (11) 1 (39) (10) Unrealized net (gains) losses from investment activities and other 8 30 (24) (28) 57 20 29 Retirement Services Adjustments: Investment (gains) losses, net of offsets 563 663 (999) 22 124 166 146 Non-operating change in insurance liabilities and related derivatives5 (304) (431) 418 (673) (203) (169) (876) Integration, restructuring and other non-operating expenses 28 41 32 30 31 57 61 Equity-based compensation expense 13 13 46 13 11 29 24 Segment Income $1,261 $1,349 $1,256 $1,300 $1,259 $2,354 $2,559 HoldCo interest and other financing costs (20) (36) (11) (15) (15) (41) (30) Taxes and related payables (231) (268) (63) (221) (235) (458) (456) Adjusted Net Income $1,010 $1,045 $1,182 $1,064 $1,009 $1,855 $2,073 Notable items — (90) — — — (25) — Tax impact of notable items — 19 — — — 5 — Adjusted Net Income, Excluding Notable Items $1,010 $974 $1,182 $1,064 $1,009 $1,835 $2,073 1. Equity-based profit sharing expense and other includes certain profit sharing arrangements in which a portion of performance fees distributed to the general partner are required to be used by employees of Apollo to purchase restricted shares of common stock or is delivered in the form of RSUs, which are granted under the Equity Plan. Equity-based profit sharing expense and other also includes performance grants which are tied to the Company’s receipt of performance fees, within prescribed periods, sufficient to cover the associated equity-based compensation expense. 2. Special equity-based compensation and other charges includes equity-based compensation expense and associated taxes related to the previously announced special fully vested equity grants to certain senior leaders. 3. Transaction-related charges include contingent consideration, equity-based compensation charges and the amortization of intangible assets and certain other charges associated with acquisitions, and restructuring charges. 4. Merger-related transaction and integration costs includes advisory services, technology integration, equity-based compensation charges and other costs associated with the Company’s merger with Athene. 5. Includes change in fair values of derivatives and embedded derivatives, non-operating change in funding agreements, change in fair value of market risk benefits, and non-operating change in liability for future policy benefits. Reconciliation of GAAP to Non-GAAP Financial Measures 26"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024028.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Year ended December 31, ($ in millions) 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 GAAP Net income (loss) attributable to Apollo Global Management, Inc. Common Stockholders $168 $134 $403 $616 $(42) $807 $120 $1,802 $(1,961) $5,001 Preferred dividends — — — 14 32 37 37 37 — 46 Net income (loss) attributable to non-controlling interests 562 216 567 814 29 693 310 2,428 (1,546) 1,462 GAAP Net income (loss) $730 $350 $970 $1,444 $19 $1,537 $467 $4,267 $(3,507) $6,509 Income tax provision (benefit) 147 27 91 326 86 (129) 86 594 (739) (923) GAAP Income (loss) before Income tax provision (benefit) $877 $377 $1,061 $1,770 $105 $1,408 $553 $4,861 $(4,246) $5,586 Asset Management Adjustments: Equity-based profit sharing expense and other1 — 1 3 7 91 96 129 146 276 239 Equity-based compensation 105 62 63 65 68 71 68 80 185 236 Special equity-based compensation and other charges2 — — — — — — — — — 438 Preferred dividends — — — (14) (32) (37) (37) (37) — — Transaction-related charges3 34 39 55 17 (6) 49 39 35 (42) 32 Merger-related transaction and integration costs4 — — — — — — — 67 70 27 Charges associated with corporate conversion — — — — — 22 4 — — — (Gains) losses from changes in tax receivable agreement liability (32) — (3) (200) (35) 50 (12) (10) 26 13 Net (income) loss attributable to non-controlling interests in consolidated entities (157) (21) (6) (9) (32) (31) (118) (418) 1,499 (1,556) Unrealized performance fees 1,348 358 (511) (689) 783 (435) (35) (1,465) (2) (127) Unrealized profit sharing expense (517) (137) 180 226 (275) 208 33 649 20 179 One-time equity-based compensation charges5 — — — — — — — 949 — — HoldCo interest and other financing costs 19 27 39 59 69 98 154 170 122 88 Unrealized principal investment (income) loss 22 13 (65) (95) 62 (88) (62) (222) 176 (88) Unrealized net (gains) losses from investment activities and other (260) (79) (139) (95) 193 (135) 421 (2,431) (144) 26 Retirement Services Adjustments: Investment (gains) losses, net of offsets — — — — — — — — 7,467 (170) Non-operating change in insurance liabilities and related derivatives6 — — — — — — — — (1,433) (182) Integration, restructuring and other non-operating expenses — — — — — — — — 133 130 Equity-based compensation expense — — — — — — — — 56 88 Segment Income $1,439 $640 $677 $1,042 $991 $1,276 $1,137 $2,374 $4,163 $4,959 HoldCo interest and other financing costs (19) (27) (39) (59) (69) (98) (154) (170) (122) (88) Taxes and related payables (74) (10) (10) (26) (44) (62) (90) (172) (795) (789) Adjusted Net Income $1,346 $603 $628 $957 $878 $1,116 $893 $2,032 $3,246 $4,082 Notable items — — — — — — — — 3 (115) Tax impact of notable items — — — — — — — — (1) 24 Adjusted Net Income, Excluding Notable Items $— $— $— $— $— $— $— $— $3,248 $3,991 Reconciliation of GAAP to Non-GAAP Financial Measures - cont'd 27 1. Equity-based profit sharing expense and other includes certain profit sharing arrangements in which a portion of performance fees distributed to the general partner are required to be used by employees of Apollo to purchase restricted shares of common stock or is delivered in the form of RSUs, which are granted under the Equity Plan. Equity-based profit sharing expense and other also includes performance grants which are tied to the Company’s receipt of performance fees, within prescribed periods, sufficient to cover the associated equity-based compensation expense. 2. Special equity-based compensation and other charges includes equity-based compensation expense and associated taxes related to the previously announced special fully vested equity grants to certain senior leaders. 3. Transaction-related charges include contingent consideration, equity-based compensation charges and the amortization of intangible assets and certain other charges associated with acquisitions, and restructuring charges. 4. Merger-related transaction and integration costs includes advisory services, technology integration, equity-based compensation charges and other costs associated with the Company’s merger with Athene. 5. Includes one-time equity-based compensation expense and associated taxes related to the Company’s compensation structure reset. 6. Includes change in fair values of derivatives and embedded derivatives, non-operating change in funding agreements, change in fair value of market risk benefits, and non-operating change in liability for future policy benefits."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024029.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of GAAP to Non-GAAP Financial Measures - cont'd 28 ($ in millions) 1Q'24 2Q'24 Investments, at fair value $ 1,469 $ 1,436 Equity method investments 1,116 1,152 Other1 (2) 37 Investments, net $ 2,583 $ 2,625 ($ in millions) 1Q'24 2Q'24 Performance allocations $ 3,014 $ 3,109 Incentive fees receivable2 24 44 Profit sharing payable2 (1,703) (1,802) Other1 225 237 Net Accrued Performance Fee Receivable $ 1,560 $ 1,588 ($ in millions) 1Q'24 2Q'24 Investments, at fair value $ 1,469 $ 1,436 Equity method investments 1,116 1,152 Performance allocations 3,014 3,109 Total GAAP Investments – Asset Management $ 5,599 $ 5,697 1. Other primarily includes adjustments related to consolidated funds and VIEs. Other also includes amounts related to certain profit sharing arrangements between investments, net and net accrued performance fee receivable. 2. Incentive fees receivable and Profit sharing payable are included within Due from related parties and Accounts payable, accrued expenses, and other liabilities, respectively, on the GAAP balance sheet. ($ in millions) 2Q'24 Total investments, including related parties $ 265,044 Derivative assets (7,488) Cash and cash equivalents (including restricted cash) 14,097 Accrued investment income 2,507 Net receivable (payable) for collateral on derivatives (4,258) Reinsurance impacts (2,132) VIE assets, liabilities and non-controlling interests 15,339 Unrealized (gains) losses 18,869 Ceded policy loans (170) Net investment receivables (payables) (252) Allowance for credit losses 682 Other investments (23) Total adjustments to arrive at gross invested assets 37,171 Gross invested assets $ 302,215 ACRA non-controlling interests (69,258) Net invested assets $ 232,957"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024030.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Year ended December 31, ($ in millions) 2014 2015 2016 2017 2018 2019 2020 2021 Net income available to Athene Holding Ltd. common stockholders $ 471 $ 579 $ 773 $ 1,358 $ 1,053 $ 2,136 $ 1,446 $ 3,718 Preferred stock dividends — — — — — 36 95 141 Net income (loss) attributable to non-controlling interest 15 16 — — — 13 380 (59) Net income $ 486 $ 595 $ 773 $ 1,358 $ 1,053 $ 2,185 $ 1,921 $ 3,800 Income tax expense (benefit) 53 — (61) 106 122 117 285 386 Income before income tax $ 539 $ 595 $ 712 $ 1,464 $ 1,175 $ 2,302 $ 2,206 $ 4,186 Investment gains (losses), net of offsets 152 (56) 47 199 (274) 994 733 1,024 Non-operating change in insurance liabilities and related derivatives, net of offsets1 (28) (30) 67 230 242 (65) (235) 692 Integration, restructuring and other non-operating expenses (279) (58) (22) (68) (22) (70) (10) (124) Stock compensation expense (148) (67) (84) (45) (26) (27) (25) (38) Preferred stock dividends — — — — — 36 95 141 Non-controlling interests - pre-tax income (loss) 15 16 — — — 13 393 (18) Less: Total adjustments to income before income tax (288) (195) 8 316 (80) 881 951 1,677 Spread related earnings $ 827 $ 790 $ 704 $ 1,148 $ 1,255 $ 1,421 $ 1,255 $ 2,509 Reconciliation of GAAP to Non-GAAP Financial Measures - cont'd 29 1. Includes change in fair values of derivatives and embedded derivatives, net of offsets."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024031.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• “Segment Income”, or “SI”, is the key performance measure used by management in evaluating the performance of the asset management, retirement services, and principal investing segments. Management uses Segment Income to make key operating decisions such as the following: ▪ decisions related to the allocation of resources such as staffing decisions including hiring and locations for deployment of the new hires; ▪ decisions related to capital deployment such as providing capital to facilitate growth for the business and/or to facilitate expansion into new businesses; ▪ decisions related to expenses, such as determining annual discretionary bonuses and equity-based compensation awards to its employees. With respect to compensation, management seeks to align the interests of certain professionals and selected other individuals with those of the investors in the funds and those of Apollo’s stockholders by providing such individuals a profit sharing interest in the performance fees earned in relation to the funds. To achieve that objective, a certain amount of compensation is based on Apollo’s performance and growth for the year; and ▪ decisions related to the amount of earnings available for dividends to Common Stockholders and holders of RSUs that participate in dividends. Segment Income is the sum of (i) Fee Related Earnings, (ii) Spread Related Earnings, and (iii) Principal Investing Income. Segment Income excludes the effects of the consolidation of any of the related funds and SPACs, HoldCo interest and other financing costs not attributable to any specific segment, Taxes and Related Payables, transaction-related charges and any acquisitions. Transaction-related charges includes equity-based compensation charges, the amortization of intangible assets, contingent consideration, and certain other charges associated with acquisitions, and restructuring charges. In addition, Segment Income excludes non-cash revenue and expense related to equity awards granted by unconsolidated related parties to employees of the Company, compensation and administrative related expense reimbursements, as well as the assets, liabilities and operating results of the funds and VIEs that are included in the consolidated financial statements. • “Fee Related Earnings”, or “FRE”, is a component of Segment Income that is used to assess the performance of the Asset Management segment. FRE is the sum of (i) management fees, (ii) capital solutions and other related fees, (iii) fee-related performance fees from indefinite term vehicles, that are measured and received on a recurring basis and not dependent on realization events of the underlying investments, excluding performance fees from Athene and performance fees from origination platforms dependent on capital appreciation, and (iv) other income, net, less (a) fee-related compensation, excluding equity-based compensation, (b) non-compensation expenses incurred in the normal course of business, (c) placement fees and (d) non-controlling interests in the management companies of certain funds the Company manages. • “Spread Related Earnings”, or “SRE” is a component of Segment Income that is used to assess the performance of the Retirement Services segment, excluding certain market volatility, which consists of investment gains (losses), net of offsets and non-operating change in insurance liabilities and related derivatives, and certain expenses related to integration, restructuring, equity-based compensation, and other expenses. For the Retirement Services segment, SRE equals the sum of (i) the net investment earnings on Athene’s net invested assets and (ii) management fees received on business managed for others, less (x) cost of funds, (y) operating expenses excluding equity- based compensation and (z) financing costs, including interest expense and preferred dividends, if any, paid to Athene preferred stockholders. • “Principal Investing Income”, or “PII” is a component of Segment Income that is used to assess the performance of the Principal Investing segment. For the Principal Investing segment, PII is the sum of (i) realized performance fees, including certain realizations received in the form of equity, (ii) realized investment income, less (x) realized principal investing compensation expense, excluding expense related to equity-based compensation, and (y) certain corporate compensation and non-compensation expenses. • “Adjusted Net Income” or “ANI” represents Segment Income less HoldCo interest and other financing costs and estimated income taxes. Adjusted Net Income is calculated and presented on the basis of methodologies other than in accordance with generally accepted accounting principles in the United States of America (“non-GAAP”). Income taxes on FRE and PII represents the total current corporate, local, and non-U.S. taxes as well as the current payable under Apollo’s tax receivable agreement. Income taxes on FRE and PII excludes the impacts of deferred taxes and the remeasurement of the tax receivable agreement, which arise from changes in estimated future tax rates. For purposes of calculating the Adjusted Net Income tax rate, Segment Income is reduced by HoldCo interest and financing costs. Certain assumptions and methodologies that impact the implied FRE and PII income tax provision are similar to those used under U.S. GAAP. Specifically, certain deductions considered in the income tax provision under U.S. GAAP relating to transaction related charges, equity-based compensation, and tax deductible interest expense are taken into account for the implied tax provision. Income Taxes on SRE represent the total current and deferred tax expense or benefit on income before taxes adjusted to eliminate the impact of the tax expense or benefit associated with the non-operating adjustments. Management believes the methodologies used to compute income taxes on FRE, SRE, and PII are meaningful to each segment and increases comparability of income taxes between periods. • “Spread Related Earnings, Excluding Notable Items” represents SRE with an adjustment to exclude notable items. Notable items include unusual variability such as actuarial experience, assumption updates and other insurance adjustments. We use this measure to assess the long-term performance of the Retirement Services segment against projected earnings, by excluding items that are expected to be infrequent or not indicative of the ongoing operations of the segment. We view this non-GAAP measure as an additional measure that provides insight to management and investors on the historical, period-to-period comparability of the Company’s key non-GAAP operating measures. Definitions 30"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024032.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• \"Adjusted Net Income, Excluding Notable Items\" represents ANI with an adjustment related to our Retirement Services segment to exclude notable items. Notable items include unusual variability such as actuarial experience, assumption updates and other insurance adjustments. We use this measure to assess the long-term performance of the business against projected earnings, by excluding items that are expected to be infrequent or not indicative of the ongoing operations of the business. We view this non-GAAP measure as an additional measure that provides insight to management and investors on the historical, period-to-period comparability of the Company’s key non- GAAP operating measures. • “Assets Under Management”, or “AUM”, refers to the assets of the funds, partnerships and accounts to which Apollo provides investment management, advisory, or certain other investment-related services, including, without limitation, capital that such funds, partnerships and accounts have the right to call from investors pursuant to capital commitments. AUM equals the sum of: 1. the net asset value (“NAV”), plus used or available leverage and/or capital commitments, or gross assets plus capital commitments, of the yield and certain hybrid funds, partnerships and accounts for which we provide investment management or advisory services, other than certain collateralized loan obligations (“CLOs”), collateralized debt obligations (“CDOs”), and certain perpetual capital vehicles, which have a fee-generating basis other than the mark-to-market value of the underlying assets; for certain perpetual capital vehicles in yield, gross asset value plus available financing capacity; 2. the fair value of the investments of equity and certain hybrid funds, partnerships and accounts Apollo manages or advises, plus the capital that such funds, partnerships and accounts are entitled to call from investors pursuant to capital commitments, plus portfolio level financings; 3. the gross asset value associated with the reinsurance investments of the portfolio company assets Apollo manages or advises; and 4. the fair value of any other assets that Apollo manages or advises for the funds, partnerships and accounts to which Apollo provides investment management, advisory, or certain other investment-related services, plus unused credit facilities, including capital commitments to such funds, partnerships and accounts for investments that may require pre-qualification or other conditions before investment plus any other capital commitments to such funds, partnerships and accounts available for investment that are not otherwise included in the clauses above. Apollo’s AUM measure includes Assets Under Management for which Apollo charges either nominal or zero fees. Apollo’s AUM measure also includes assets for which Apollo does not have investment discretion, including certain assets for which Apollo earns only investment-related service fees, rather than management or advisory fees. Apollo’s definition of AUM is not based on any definition of Assets Under Management contained in its governing documents or in any Apollo Fund management agreements. Apollo considers multiple factors for determining what should be included in its definition of AUM. Such factors include but are not limited to (1) Apollo’s ability to influence the investment decisions for existing and available assets; (2) Apollo’s ability to generate income from the underlying assets in its funds; and (3) the AUM measures that Apollo uses internally or believes are used by other investment managers. Given the differences in the investment strategies and structures among other alternative investment managers, Apollo’s calculation of AUM may differ from the calculations employed by other investment managers and, as a result, this measure may not be directly comparable to similar measures presented by other investment managers. Apollo’s calculation also differs from the manner in which its affiliates registered with the SEC report “Regulatory Assets Under Management” on Form ADV and Form PF in various ways. Apollo uses AUM, Gross capital deployed and Dry powder as performance measurements of its investment activities, as well as to monitor fund size in relation to professional resource and infrastructure needs. • “Fee-Generating AUM” or “FGAUM” consists of assets of the funds, partnerships and accounts to which we provide investment management, advisory, or certain other investment-related services and on which we earn management fees, monitoring fees or other investment-related fees pursuant to management or other fee agreements on a basis that varies among the Apollo funds, partnerships and accounts. Management fees are normally based on “net asset value,” “gross assets,” “adjusted par asset value,” “adjusted cost of all unrealized portfolio investments,” “capital commitments,” “adjusted assets,” “stockholders’ equity,” “invested capital” or “capital contributions,” each as defined in the applicable management agreement. Monitoring fees, also referred to as advisory fees, with respect to the structured portfolio company investments of the funds, partnerships and accounts we manage or advise, are generally based on the total value of such structured portfolio company investments, which normally includes leverage, less any portion of such total value that is already considered in Fee-Generating AUM. Definitions - cont'd 31"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024033.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• “Performance Fee-Eligible AUM” or “PFEAUM” refers to the AUM that may eventually produce performance fees. All funds for which we are entitled to receive a performance fee allocation or incentive fee are included in Performance Fee-Eligible AUM, which consists of the following: • “Performance Fee-Generating AUM”, which refers to invested capital of the funds, partnerships and accounts we manage, advise, or to which we provide certain other investment-related services, that is currently above its hurdle rate or preferred return, and profit of such funds, partnerships and accounts is being allocated to, or earned by, the general partner in accordance with the applicable limited partnership agreements or other governing agreements; • “AUM Not Currently Generating Performance Fees”, which refers to invested capital of the funds, partnerships and accounts we manage, advise, or to which we provide certain other investment-related services that is currently below its hurdle rate or preferred return; and • “Uninvested Performance Fee-Eligible AUM”, which refers to capital of the funds, partnerships and accounts we manage, advise, or to which we provide certain other investment-related services that is available for investment or reinvestment subject to the provisions of applicable limited partnership agreements or other governing agreements, which capital is not currently part of the NAV or fair value of investments that may eventually produce performance fees allocable to, or earned by, the general partner. • “ACRA” refers to Athene Co-Invest Reinsurance Affiliate Holding Ltd, together with its subsidiaries, and Athene Co-Invest Reinsurance Affiliate Holding 2 Ltd, together with its subsidiaries (\"ACRA 2\"). • “ADIP” refers to Apollo/Athene Dedicated Investment Program (\"ADIP I\") and Apollo/Athene Dedicated Investment Program II (\"ADIP II\"), funds managed by Apollo including third-party capital that, through ACRA, invest alongside Athene in certain investments. • \"Adjusted Net Income Shares Outstanding\" or \"ANI Shares Outstanding\" consists of total shares of Common Stock outstanding, RSUs that participate in dividends, and shares of Common Stock assumed to be issuable upon the conversion of the shares of Mandatory Convertible Preferred Stock. • “Appreciation (depreciation)” of flagship private equity, hybrid value and European principal finance funds refers to gain (loss) and income for the periods presented on a total return basis before giving effect to fees and expenses. The performance percentage is determined by dividing (a) the change in the fair value of investments over the period presented, minus the change in invested capital over the period presented, plus the realized value for the period presented, by (b) the beginning unrealized value for the period presented plus the change in invested capital for the period presented. Returns over multiple periods are calculated by geometrically linking each period’s return over time. • “Athene” refers to Athene Holding Ltd. (together with its subsidiaries, “Athene”), a subsidiary of the Company and a leading retirement services company that issues, reinsures and acquires retirement savings products designed for the increasing number of individuals and institutions seeking to fund retirement needs, and to which Apollo, through its consolidated subsidiary Apollo Insurance Solutions Group LP (“ISG”), provides asset management and advisory services. • “Athora” refers to a strategic platform that acquires or reinsures blocks of insurance business in the German and broader European life insurance market (collectively, the “Athora Accounts”). • “Capital solutions fees and other, net” primarily includes transaction fees earned by Apollo Capital Solutions (\"ACS\") related to underwriting, structuring, arrangement and placement of debt and equity securities, and syndication for funds managed by Apollo, portfolio companies of funds managed by Apollo, and third parties. Capital solutions fees and other, net also includes advisory fees for the ongoing monitoring of portfolio operations and directors' fees. These fees also include certain offsetting amounts including reductions in management fees related to a percentage of these fees recognized (\"management fee offset\") and other additional revenue sharing arrangements. • “Cost of Funds” includes liability costs related to cost of crediting on both deferred annuities and institutional products as well as other liability costs, but does not include the proportionate share of the ACRA cost of funds associated with the non-controlling interests. While we believe cost of funds is a meaningful financial metric and enhances the understanding of the underlying profitability drivers of our retirement services business, it should not be used as a substitute for total benefits and expenses presented under U.S. GAAP. • “Debt Origination” represents (i) capital that has been invested in new debt or debt like investments by Apollo's yield and hybrid strategies (whether purchased by Apollo funds and accounts, or syndicated to third parties) where Apollo or one of Apollo's platforms has sourced, negotiated, or significantly affected the commercial terms of the investment; (ii) new capital pools formed by debt issuances, including CLOs; and (iii) net purchases of certain assets by the funds and accounts we manage that we consider to be private, illiquid, and hard to access assets and which the funds and accounts otherwise may not be able to meaningfully access. Debt origination generally excludes any issuance of debt or debt-like investments by the portfolio companies of the funds we manage. • “Dry Powder” represents the amount of capital available for investment or reinvestment subject to the provisions of the applicable limited partnership agreements or other governing agreements of the funds, partnerships and accounts we manage. Dry powder excludes uncalled commitments which can only be called for fund fees and expenses and commitments from perpetual capital vehicles. • “FRE Compensation Ratio” is calculated as fee-related compensation divided by fee-related revenues (which includes management fees, capital solutions fees and other, net, and fee-related performance fees). • “FRE Margin” is calculated as Fee Related Earnings divided by fee-related revenues (which includes management fees, capital solutions fees and other, net, and fee-related performance fees). 32 Definitions - cont'd"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024034.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• “Gross Capital Deployment” represents the gross capital that has been invested by the funds and accounts we manage during the relevant period, but excludes certain investment activities primarily related to hedging and cash management functions at the firm. Gross Capital Deployment is not reduced or netted down by sales or refinancings, and takes into account leverage used by the funds and accounts we manage in gaining exposure to the various investments that they have made. • \"Gross IRR\" of accord series and the European principal finance funds represents the annualized return of a fund based on the actual timing of all cumulative fund cash flows before management fees, performance fees allocated to the general partner and certain other expenses. Calculations may include certain investors that do not pay fees. The terminal value is the net asset value as of the reporting date. Non-U.S. dollar denominated (“USD”) fund cash flows and residual values are converted to USD using the spot rate as of the reporting date. In addition, gross IRRs at the fund level will differ from those at the individual investor level as a result of, among other factors, timing of investor-level inflows and outflows. Gross IRR does not represent the return to any fund investor. • \"Gross IRR\" of a traditional private equity or hybrid value fund represents the cumulative investment-related cash flows (i) for a given investment for the fund or funds which made such investment, and (ii) for a given fund, in the relevant fund itself (and not any one investor in the fund), in each case, on the basis of the actual timing of investment inflows and outflows (for unrealized investments assuming disposition on June 30, 2024 or other date specified) aggregated on a gross basis quarterly, and the return is annualized and compounded before management fees, performance fees and certain other expenses (including interest incurred by the fund itself) and measures the returns on the fund’s investments as a whole without regard to whether all of the returns would, if distributed, be payable to the fund’s investors. In addition, gross IRRs at the fund level will differ from those at the individual investor level as a result of, among other factors, timing of investor-level inflows and outflows. Gross IRR does not represent the return to any fund investor. • \"Gross IRR\" of infrastructure funds represents the cumulative investment-related cash flows in the fund itself (and not any one investor in the fund), on the basis of the actual timing of cash inflows and outflows (for unrealized investments assuming disposition on June 30, 2024 or other date specified) starting on the date that each investment closes, and the return is annualized and compounded before management fees, performance fees, and certain other expenses (including interest incurred by the fund itself) and measures the returns on the fund’s investments as a whole without regard to whether all of the returns would, if distributed, be payable to the fund’s investors. Non- USD fund cash flows and residual values are converted to USD using the spot rate as of the reporting date. In addition, gross IRRs at the fund level will differ from those at the individual investor level as a result of, among other factors, timing of investor-level inflows and outflows. Gross IRR does not represent the return to any fund investor. • “Gross Return” of a yield fund and Credit Strategies and Accord is the monthly or quarterly time-weighted return that is equal to the percentage change in the value of a fund’s portfolio, adjusted for all contributions and withdrawals (cash flows) before the effects of management fees, incentive fees allocated to the general partner, or other fees and expenses. Returns for these categories are calculated for all funds and accounts in the respective strategies excluding assets for Athene, Athora and certain other entities where Apollo manages or may manage a significant portion of the total company assets. Returns of CLOs represent the gross returns on assets. Returns over multiple periods are calculated by geometrically linking each period’s return over time. • “HoldCo” refers to Apollo Global Management, Inc. • “Inflows” within the Asset Management segment represents (i) at the individual strategy level, subscriptions, commitments, and other increases in available capital, such as acquisitions or leverage, net of inter-strategy transfers, and (ii) on an aggregate basis, the sum of inflows across the yield, hybrid and equity strategies. • “Mandatory Convertible Preferred Stock” refers to the 6.75% Series A Mandatory Convertible Preferred Stock of AGM. • \"MidCap Financial\" refers to MidCap FinCo Designated Activity Company. • “Net Invested Assets” represent the investments that directly back Athene's net reserve liabilities as well as surplus assets. Net invested assets is used in the computation of net investment earned rate, which is used to analyze the profitability of Athene’s investment portfolio. Net invested assets include (a) total investments on the statements of financial condition, with AFS securities, trading securities and mortgage loans at cost or amortized cost, excluding derivatives, (b) cash and cash equivalents and restricted cash, (c) investments in related parties, (d) accrued investment income, (e) VIE assets, liabilities and non-controlling interest adjustments, (f) net investment payables and receivables, (g) policy loans ceded (which offset the direct policy loans in total investments) and (h) an adjustment for the allowance for credit losses. Net invested assets exclude the derivative collateral offsetting the related cash positions. Athene includes the underlying investments supporting its assumed funds withheld and modco agreements and excludes the underlying investments related to ceded reinsurance transactions in its net invested assets calculation in order to match the assets with the income received. Athene believes the adjustments for reinsurance provide a view of the assets for which it has economic exposure. Net invested assets include Athene’s proportionate share of ACRA investments, based on its economic ownership, but do not include the proportionate share of investments associated with the non-controlling interests. Net invested assets are averaged over the number of quarters in the relevant period to compute a net investment earned rate for such period. While Athene believes net invested assets is a meaningful financial metric and enhances the understanding of the underlying drivers of its investment portfolio, it should not be used as a substitute for total investments, including related parties, presented under U.S. GAAP. • “Net Investment Earned Rate” is computed as the income from Athene's net invested assets divided by the average net invested assets for the relevant period, presented on an annualized basis for interim periods. • “Net Investment Spread” measures Athene's investment performance plus its strategic capital management fees, less its total cost of funds. Net investment earned rate is a key measure of Athene's investment performance while cost of funds is a key measure of the cost of its policyholder benefits and liabilities. 33 Definitions - cont'd"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024035.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• \"Net IRR\" of accord series and the European principal finance funds represents the annualized return of a fund after management fees, performance fees allocated to the general partner and certain other expenses, calculated on investors that pay such fees. The terminal value is the net asset value as of the reporting date. Non-USD fund cash flows and residual values are converted to USD using the spot rate as of the reporting date. In addition, net IRR at the fund level will differ from that at the individual investor level as a result of, among other factors, timing of investor-level inflows and outflows. Net IRR does not represent the return to any fund investor. • \"Net IRR\" of a traditional private equity or the hybrid value funds represents the gross IRR applicable to a fund, including returns for related parties which may not pay fees or performance fees, net of management fees, certain expenses (including interest incurred or earned by the fund itself) and realized performance fees all offset to the extent of interest income, and measures returns at the fund level on amounts that, if distributed, would be paid to investors of the fund. The timing of cash flows applicable to investments, management fees and certain expenses, may be adjusted for the usage of a fund’s subscription facility. To the extent that a fund exceeds all requirements detailed within the applicable fund agreement, the estimated unrealized value is adjusted such that a percentage of up to 20.0% of the unrealized gain is allocated to the general partner of such fund, thereby reducing the balance attributable to fund investors. In addition, net IRR at the fund level will differ from that at the individual investor level as a result of, among other factors, timing of investor-level inflows and outflows. Net IRR does not represent the return to any fund investor. • \"Net IRR\" of infrastructure funds represents the cumulative cash flows in a fund (and not any one investor in the fund), on the basis of the actual timing of cash inflows received from and outflows paid to investors of the fund (assuming the ending net asset value as of June 30, 2024 or other date specified is paid to investors), excluding certain non-fee and non-performance fee bearing parties, and the return is annualized and compounded after management fees, performance fees, and certain other expenses (including interest incurred by the fund itself) and measures the returns to investors of the fund as a whole. Non-USD fund cash flows and residual values are converted to USD using the spot rate as of the reporting date. In addition, net IRR at the fund level will differ from that at the individual investor level as a result of, among other factors, timing of investor-level inflows and outflows. Net IRR does not represent the return to any fund investor. • “Other operating expenses” within the Principal Investing segment represents expenses incurred in the normal course of business and includes allocations of non-compensation expenses related to managing the business. • “Other operating expenses” within the Retirement Services segment represents expenses incurred in the normal course of business inclusive of compensation and non-compensation expenses, but does not include the proportionate share of the ACRA operating expenses associated with the non-controlling interests. • “Perpetual capital” refers to assets under management of certain vehicles with an indefinite duration, which assets may only be withdrawn under certain conditions or subject to certain limitations, including satisfying required hold periods or percentage limits on the amounts that may be redeemed over a particular period. The investment management, advisory or other service agreements with our perpetual capital vehicles may be terminated under certain circumstances. • “PII Compensation Ratio” is calculated as Principal investing compensation divided by the sum of realized performance fees and realized investment income. • “Principal investing compensation” within the Principal Investing segment represents realized performance compensation, distributions related to investment income and dividends, and includes allocations of certain compensation expenses related to managing the business. • “Realized Value” refers to all cash investment proceeds received by the relevant Apollo fund, including interest and dividends, but does not give effect to management fees, expenses, incentive compensation or performance fees to be paid by such Apollo fund. • “Redding Ridge” refers to Redding Ridge Asset Management, LLC and its subsidiaries, which is a standalone, self-managed asset management business established in connection with risk retention rules that manages CLOs and retains the required risk retention interests. • “Remaining Cost” represents the initial investment of the fund in a portfolio investment, reduced for any return of capital distributed to date on such portfolio investment. • “Total Invested Capital” refers to the aggregate cash invested by the relevant Apollo fund and includes capitalized costs relating to investment activities, if any, but does not give effect to cash pending investment or available for reserves and excludes amounts, if any, invested on a financed basis with leverage facilities. • “Total Value” represents the sum of the total Realized Value and Unrealized Value of investments. • “Unrealized Value” refers to the fair value consistent with valuations determined in accordance with GAAP, for investments not yet realized and may include payments in kind, accrued interest and dividends receivable, if any, and before the effect of certain taxes. In addition, amounts include committed and funded amounts for certain investments. • “Vintage Year” refers to the year in which a fund’s final capital raise occurred, or, for certain funds, the year of a fund’s effective date or the year in which a fund’s investment period commences pursuant to its governing agreements. Definitions - cont'd 34"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024036.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Retirement Services Flows & Invested Assets (page 20) 3. Gross inorganic inflows represent acquisitions and block reinsurance transactions. 4. Gross outflows include full and partial policyholder withdrawals on deferred annuities, death benefits, pension group annuity benefit payments, payments on payout annuities, funding agreement repurchases and maturities and block reinsurance outflows. 5. During the first quarter of 2024, Athene entered into a modco reinsurance agreement with Catalina Re Archdale Life Insurance Company Ltd., a subsidiary of Catalina Holdings (Bermuda) Ltd., to cede a quota share of its retail deferred annuity business issued on or after January 1, 2024. 6. Represents outflows from funding agreements, pension group annuities, and multi-year guarantee fixed annuities (MYGA), all of which occur based on defined maturities or substantially lapse upon reaching their contractual term. Amounts may vary on a quarterly basis, based on the timing of original issuance. 7. Represents outflows from fixed indexed annuities and other applicable products, which have varying degrees of predictability due to policyholder actions. 8. Represents partial annuity withdrawals to meet retirement income needs within contractual annual limits. 9. Represents outflows from policies that no longer have an active surrender charge in force. 10. Represents outflows from policies with an active surrender charge in force. 11. The outflow rate is calculated as outflows attributable to Athene divided by Athene average net invested assets for the respective period, on an annualized basis. Endnotes 35"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "agmearningsrelease2q2024037.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Forward-Looking Statements In this presentation, references to “Apollo,” “we,” “us,” “our” and the “Company” refer collectively to Apollo Global Management, Inc. and its subsidiaries, or as the context may otherwise require. This presentation may contain forward-looking statements that are within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended. These statements include, but are not limited to, discussions related to Apollo’s expectations regarding the performance of its business, its liquidity and capital resources and other non-historical statements. These forward-looking statements are based on management’s beliefs, as well as assumptions made by, and information currently available to, management. When used in this presentation, the words “believe,” “anticipate,” “estimate,” “expect,” “intend” and similar expressions are intended to identify forward-looking statements. Although management believes that the expectations reflected in these forward-looking statements are reasonable, it can give no assurance that these expectations will prove to have been correct. These statements are subject to certain risks, uncertainties and assumptions, including risks relating to inflation, interest rate fluctuations and market conditions generally, the impact of energy market dislocation, our ability to manage our growth, our ability to operate in highly competitive environments, the performance of the funds we manage, our ability to raise new funds, the variability of our revenues, earnings and cash flow, the accuracy of management’s assumptions and estimates, our dependence on certain key personnel, our use of leverage to finance our businesses and investments by the funds we manage, Athene’s ability to maintain or improve financial strength ratings, the impact of Athene’s reinsurers failing to meet their assumed obligations, Athene’s ability to manage its business in a highly regulated industry, changes in our regulatory environment and tax status, and litigation risks, among others. Apollo believes these factors include but are not limited to those described under the section entitled “Risk Factors” in our annual report on Form 10-K filed with the Securities and Exchange Commission (the “SEC”) on February 27, 2024, and the quarterly report on Form 10-Q filed with the SEC on May 7, 2024, as such factors may be updated from time to time in our periodic filings with the SEC, which are accessible on the SEC’s website at www.sec.gov. These factors should not be construed as exhaustive and should be read in conjunction with the other cautionary statements that are included in this presentation and in other filings with the SEC. Apollo undertakes no obligation to publicly update any forward-looking statements, whether as a result of new information, future developments or otherwise, except as required by applicable law. This presentation does not constitute an offer of any Apollo fund. 36"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "erex9912q2024.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Apollo Reports Second Quarter 2024 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "New York, August 1, 2024 — Apollo Global Management, Inc. (NYSE: APO) (together with its consolidated subsidiaries, “Apollo”) today reported results for the second quarter ended June 30, 2024.Marc Rowan, Chief Executive Officer at Apollo said, “We generated record fee related earnings in the second quarter behind particularly strong momentum in Asset Management. The business produced record levels of quarterly debt origination, gross capital deployment, and third-party fundraising excluding flagship private equity. In Retirement Services, Athene’s compelling profitability is attracting significant amounts of third-party capital to support continued growth following the highly successful fundraise for ADIP II – the largest equity sidecar in the industry.”Apollo issued a full detailed presentation of its second quarter ended June 30, 2024 results, which can be viewed on Apollo’s Investor Relations website at ir.apollo.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Dividend"
+    },
+    {
+      "type": "TextElement",
+      "text": "Apollo Global Management, Inc. has declared a cash dividend of $0.4625 per share of its Common Stock for the second quarter ended June 30, 2024. This dividend will be paid on August 30, 2024 to holders of record at the close of business on August 16, 2024. Apollo Global Management, Inc. has also declared and set aside for payment a cash dividend of $0.8438 per share of its Mandatory Convertible Preferred Stock, which will be paid on October 31, 2024 to holders of record at the close of business on October 15, 2024.The declaration and payment of dividends on the Common Stock and the Mandatory Convertible Preferred Stock are at the sole discretion of Apollo Global Management, Inc.’s board of directors. Apollo cannot assure its stockholders that they will receive any dividends in the future."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "Apollo will host a public audio webcast on Thursday, August 1, 2024 at 8:30 a.m. Eastern Time. During the webcast, members of Apollo’s senior management team will review Apollo’s financial results for the second quarter ended June 30, 2024. The webcast may be accessed at ir.apollo.com. For those unable to listen to the live broadcast, there will be a replay of the webcast available at the same link one hour after the event. Apollo distributes its earnings releases via its website and email distribution lists. Those interested in receiving firm updates by email can sign up for them at ir.apollo.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Apollo"
+    },
+    {
+      "type": "TextElement",
+      "text": "Apollo is a high-growth, global alternative asset manager. In our asset management business, we seek to provide our clients excess return at every point along the risk-reward spectrum from investment grade to private equity with a focus on three investing strategies: yield, hybrid, and equity. For more than three decades, our investing expertise across our fully integrated platform has served the financial return needs of our clients and provided businesses with innovative capital solutions for growth. Through Athene, our retirement services business, we specialize in helping clients achieve financial security by providing a suite of retirement savings products and acting as a solutions provider to institutions. Our patient, creative, and knowledgeable approach to investing aligns our clients, businesses we invest in, our employees, and the communities we impact, to expand opportunity and achieve positive outcomes. As of June 30, 2024, Apollo had approximately $696 billion of assets under management. To learn more, please visit www.apollo.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "In this press release, references to “Apollo,” “we,” “us,” “our” and the “Company” refer collectively to Apollo Global Management, Inc. and its subsidiaries, or as the context may otherwise require. This press release may contain forward-looking statements that are within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended. These statements include, but are not limited to, discussions related to Apollo’s expectations regarding the performance of its business, its liquidity and capital resources and other non-historical statements. These forward-looking statements are based on management’s beliefs, as well as assumptions made by, and information currently available to, management. When used in this press release, the words “believe,” “anticipate,” “estimate,” “expect,” “intend” and similar expressions are intended to identify forward-looking statements. Although management believes that the expectations reflected in these forward-looking statements are reasonable, it can give no assurance that these expectations will prove to have been correct. These statements are subject to certain risks, uncertainties and assumptions, including risks relating to inflation, interest rate fluctuations and market conditions generally, the impact of energy market dislocation, our ability to manage our growth, our ability to operate in highly competitive environments, the performance of the funds we manage, our ability to raise new funds, the variability of our revenues, earnings and cash flow, the accuracy of management’s assumptions and estimates, our dependence on certain key personnel, our use of leverage to finance our businesses and investments by the funds we manage, Athene’s ability to maintain or improve financial strength ratings, the impact of Athene’s reinsurers failing to meet their assumed obligations, Athene’s ability to manage its business in a highly regulated industry, changes in our regulatory environment and tax status, and litigation risks, among others. We believe these factors include but are not limited to those described under the section entitled “Risk Factors” in our annual report on Form 10-K filed with the Securities and Exchange Commission (the “SEC”) on February 27, 2024, and the quarterly report on Form 10-Q filed with the SEC on May 7, 2024, as such factors may be updated from time to time in our periodic filings with the SEC, which are accessible on the SEC’s website at www.sec.gov. These factors should not be construed as exhaustive and should be read in conjunction with the other cautionary statements that are included in this press release and in our other filings with the SEC. We undertake no obligation to publicly update any forward-looking statements, whether as a result of new information, future developments or otherwise, except as required by applicable law. This press release does not constitute an offer of any Apollo fund."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Investor and Media Relations Contacts"
+    },
+    {
+      "type": "TextElement",
+      "text": "For investors please contact:Noah GunnGlobal Head of Investor RelationsApollo Global Management, Inc.212-822-0540ir@apollo.comFor media inquiries please contact:Joanna RoseGlobal Head of Corporate CommunicationsApollo Global Management, Inc.212-822-0491communications@apollo.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "2"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 710.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenues • SRE of $710 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "110.110001",
+    "return_10d_pct": "-6.4299",
+    "return_20d_pct": "-1.4894",
+    "return_30d_pct": "1.0989",
+    "return_60d_pct": "19.8892",
+    "return_90d_pct": "30.1063"
+  },
+  "text_stats": {
+    "primary_text_len": 4127,
+    "exhibit_text_len": 94843,
+    "combined_text_len": 98972,
+    "semantic_text_len": 96094,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FIS",
+    "cik": "1136893",
+    "event_date": "2024-08-06",
+    "event_accession": "0001136893-24-000111",
+    "primary_8k_doc": "fis-20240806.htm",
+    "exhibit_docs": [
+      "q22024ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FIS_000113689324000111_fis-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FIS_000113689324000111_q22024ex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FIS",
+    "cik": "1136893",
+    "entity_name": "Fidelity National Information Services, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2397000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "140000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "55105000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-2538000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-02-26",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2021-12-31",
+    "investing_cash_flow_value": "-1771000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-02-26",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2021-12-31",
+    "operating_cash_flow_value": "4810000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-02-26",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2021-12-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.058406",
+    "operating_cash_flow_to_revenue": "2.006675",
+    "assets_to_revenue": "22.989153",
+    "financing_cash_flow_to_revenue": "-1.058824",
+    "investing_cash_flow_to_revenue": "-0.73884"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue increased 3% on a GAAP basis and 4% on an adjusted basis to $2.",
+      "revenue increased 3% as compared to the prior-year period to approximately $2.",
+      "revenue increased 4% as compared to the prior-year period primarily driven by 4% adjusted recurring revenue growth.",
+      "revenue increased 3% on a GAAP basis and 3% on an adjusted basis as compared to the prior-year period to $1.",
+      "revenue increased by 7% on a GAAP basis and 7% on an adjusted basis as compared to the prior-year period to $722 million reflecting adjusted recurring revenue growth of 7%.",
+      "revenue decreased by 33% as compared to the prior-year period to $57 million."
+    ],
+    "guidance_evidence": [
+      "Outlook • Second quarter GAAP Diluted Earnings Per Share of $0.",
+      "outlook, increases low-end of adjusted EBITDA outlook and raises adjusted EPS outlook JACKSONVILLE, Fla.",
+      "outlook,” said FIS CEO and President Stephanie Ferris.",
+      "outlook and committed to delivering double-digit total return to our shareholders.",
+      "outlook and, for the full-year, is raising its outlook for revenue, increasing the low-end of its adjusted EBITDA outlook and raising its outlook for adjusted EPS by approximately 3% as compared to the prior outlook to $5.",
+      "outlook reflects 11 months of EMI contribution for the full-year."
+    ],
+    "wave_or_demand_evidence": [
+      "customers by harnessing where reliability meets innovation in financial technology.",
+      "customer relationships, contract value, technology assets, trademarks and trade names.",
+      "aises Full-Year Outlook • Second quarter GAAP Diluted Earnings Per Share of $0.",
+      "aises full-year revenue outlook, increases low-end of adjusted EBITDA outlook and raises adjusted EPS outlook JACKSONVILLE, Fla.",
+      "ain raising our full-year outlook,” said FIS CEO and President Stephanie Ferris.",
+      "aid out at Investor Day to unlock financial technology to the world across the money lifecycle."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments (3) — 6,840 — 6,840 Indirect Worldpay business support costs (4) — (41) (14) (83) Adjusted EBITDA from discontinued operations $ 2 $ 606 $ 187 $ 1,066 Adjusted EBITDA $ 1,000 $ 1,551 $ 2,161 $ 2,910 See Notes to Exhibit G.",
+      "impairments (3) 0.",
+      "impairments (3) — 11.",
+      "impairments primarily related to the termination of certain internally developed software projects.",
+      "impairment of goodwill related to the Merchant Solutions reporting unit in its earnings from discontinued operations.",
+      "loss) in the \"Equity method investment earnings (loss), net of tax\" (\"EMI\") line of the income statement."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2500,
+    "quarter_revenue_yoy_pct": 3,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "77.769997",
+    "return_10d_pct": "1.7873",
+    "return_20d_pct": "4.8348",
+    "return_30d_pct": "4.6162",
+    "return_60d_pct": "8.3966",
+    "return_90d_pct": "11.3154"
+  },
+  "text_stats": {
+    "primary_text_len": 5127,
+    "exhibit_text_len": 52902,
+    "combined_text_len": 58031
+  }
+}

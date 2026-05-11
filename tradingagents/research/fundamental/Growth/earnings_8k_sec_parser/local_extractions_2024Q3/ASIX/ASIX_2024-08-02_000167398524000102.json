@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ASIX",
+    "cik": "1673985",
+    "event_date": "2024-08-02",
+    "event_accession": "0001673985-24-000102",
+    "primary_8k_doc": "asix-20240802.htm",
+    "exhibit_docs": [
+      "exhibit99q22024prearningsa.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ASIX_000167398524000102_asix-20240802.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ASIX_000167398524000102_exhibit99q22024prearningsa.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ASIX",
+    "cik": "1673985",
+    "entity_name": "AdvanSix Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1297393000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2022-02-18",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2019-12-31",
+    "net_income_value": "34954000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1496020000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-5128000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-25606000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1575000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.026942",
+    "operating_cash_flow_to_revenue": "0.001214",
+    "assets_to_revenue": "1.153097",
+    "financing_cash_flow_to_revenue": "-0.003953",
+    "investing_cash_flow_to_revenue": "-0.019737"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $453 million, up 6% versus prior year Earnings Per Share of $1.",
+      "Sales of $453 million in the quarter increased approximately 6% versus the prior year.",
+      "sales of nylon and ammonium sulfate due to favorable North American supply and demand conditions.",
+      "Earnings Per Share of $1.",
+      "Net Income of $38.",
+      "Earnings Per Share) 2Q 2024 2Q 2023 Sales $453,479 $427,940 Net Income 38,927 32,728 Diluted Earnings Per Share $1."
+    ],
+    "guidance_evidence": [
+      "outlook Parsippany, N.",
+      "outlook including a constructive global acetone supply and demand environment and modestly improving North American nylon industry spreads.",
+      "outlook,” \"project,\" \"strategy,\" \"intend,\" \"plan,\" \"target,\" \"goal,\" \"may,\" \"will,\" \"should\" and \"believe\" and other variations or similar terminology and expressions.",
+      "expected and we delivered our second highest quarter of granular ammonium sulfate production ever.",
+      "projects including our SUSTAIN (Sustainable U.",
+      "expects, projects, believes or anticipates will or may occur in the future are forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "demand conditions.",
+      "demand • Continue to expect Capital Expenditures of $140 million to $150 million in 2024, reflecting increased spend to address critical enterprise risk mitigation and growth projects including our SUSTAIN (Sustainable U.",
+      "demand environment and modestly improving North American nylon industry spreads.",
+      "customers in a wide variety of end markets and applications that touch people’s lives.",
+      "customers across building 3 and construction, fertilizers, agrochemicals, plastics, solvents, packaging, paints, coatings, adhesives, electronics and other end markets.",
+      "customer experiences and differentiated products in the industries of nylon solutions, plant nutrients, and chemical intermediates."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties include, but are not limited to: general economic and financial conditions in the U.",
+      "uncertainty regarding qualification for tax treatment of our spin-off; fluctuations in our stock price; and changes in laws or regulations applicable to our business.",
+      "loss (4,179) (4,144) Total stockholders' equity 746,597 739,237 Total liabilities and stockholders' equity $ 1,477,950 $ 1,496,020 5 AdvanSix Inc.",
+      "loss of approximately $1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 453,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "25.879999",
+    "return_10d_pct": "12.4420",
+    "return_20d_pct": "16.1128",
+    "return_30d_pct": "6.7233",
+    "return_60d_pct": "23.6476",
+    "return_90d_pct": "15.1082"
+  },
+  "text_stats": {
+    "primary_text_len": 3322,
+    "exhibit_text_len": 22145,
+    "combined_text_len": 25469
+  }
+}

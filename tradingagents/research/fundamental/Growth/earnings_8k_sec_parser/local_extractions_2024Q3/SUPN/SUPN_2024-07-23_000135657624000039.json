@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SUPN",
+    "cik": "1356576",
+    "event_date": "2024-07-23",
+    "event_accession": "0001356576-24-000039",
+    "primary_8k_doc": "supn-20240723.htm",
+    "exhibit_docs": [
+      "ex99107-23x2024.htm",
+      "ex99108-06x2024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SUPN_000135657624000039_supn-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SUPN_000135657624000039_ex99107-23x2024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SUPN_000135657624000039_ex99108-06x2024.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SUPN",
+    "cik": "1356576",
+    "entity_name": "SUPERNUS PHARMACEUTICALS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "153764000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "16948000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1277673000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "80174000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "239780000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "49126000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.110221",
+    "operating_cash_flow_to_revenue": "0.31949",
+    "assets_to_revenue": "8.309312",
+    "financing_cash_flow_to_revenue": "0.521409",
+    "investing_cash_flow_to_revenue": "1.559403"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "epsy, migraine, ADHD, hypomobility in Parkinson’s disease (PD), cervical dystonia, chronic sialorrhea, dyskinesia in PD patients receiving levodopa-based therapy, and drug-induced extrapyramidal reactions in adult patients.",
+      "epsy, depression, and other CNS disorders."
+    ],
+    "guidance_evidence": [
+      "expects to report financial and business results for the second quarter of 2024 after the market closes on Tuesday, August 6, 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "orders.",
+      "ailable on the Company's Investor Relations website at www.",
+      "ailable on the Company’s website for 60 days following the live call.",
+      "aine, ADHD, hypomobility in Parkinson’s disease (PD), cervical dystonia, chronic sialorrhea, dyskinesia in PD patients receiving levodopa-based therapy, and drug-induced extrapyramidal reactions in adult patients.",
+      "ail: peter."
+    ],
+    "warning_or_risk_evidence": []
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "29.760000",
+    "return_10d_pct": "-6.1828",
+    "return_20d_pct": "13.0712",
+    "return_30d_pct": "17.5067",
+    "return_60d_pct": "5.5780",
+    "return_90d_pct": "13.2728"
+  },
+  "text_stats": {
+    "primary_text_len": 3207,
+    "exhibit_text_len": 2500,
+    "combined_text_len": 5709
+  }
+}

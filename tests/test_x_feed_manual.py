@@ -1,4 +1,4 @@
-"""Tests for manual X Feed Scout — 15-pass sector sweep."""
+"""Tests for manual X Feed Scout — 16-pass sector sweep."""
 
 import json
 import os
@@ -42,14 +42,67 @@ FENCED_JSON = "```json\n" + VALID_JSON + "\n```"
 # Tests
 # ---------------------------------------------------------------------------
 
-def test_generate_prompts_returns_15():
+def test_generate_prompts_returns_16():
     from tradingagents.dealflow.sources.x_feed_manual import generate_prompts
     prompts = generate_prompts()
-    assert len(prompts) == 15
+    assert len(prompts) == 16
     for pnum, label, text in prompts:
-        assert 1 <= pnum <= 15
+        assert 1 <= pnum <= 16
         assert len(label) > 0
         assert len(text) > 50  # non-trivial prompt
+
+
+def test_pass16_blindspot_prompt_includes_existing_context(tmp_path, monkeypatch):
+    from tradingagents.dealflow.sources import x_feed_manual as mod
+
+    merged_path = tmp_path / "merged.json"
+    merged_path.write_text(json.dumps({
+        "MP": {"ticker": "MP", "co_mentions": ["USAR"], "theme_links": ["critical_minerals_supply_chain"]},
+        "LITE": {"ticker": "LITE", "co_mentions": ["AAOI"], "theme_links": ["ai_data_center_infrastructure"]},
+    }))
+    monkeypatch.setattr(mod, "_merged_path", lambda d: str(merged_path))
+
+    prompts = mod.generate_prompts("2026-05-11")
+    pass_16 = [p for p in prompts if p[0] == 16]
+
+    assert len(pass_16) == 1
+    _, label, text = pass_16[0]
+    assert label == "Blindspot & Unmapped Ticker Audit"
+    assert "already_seen_status" in text
+    assert "ticker_disambiguation" in text
+    assert "US-listed common stocks and ADRs" in text
+    assert "MP" in text
+    assert "AAOI" in text
+
+
+def test_parse_pass16_preserves_blindspot_metadata():
+    from tradingagents.dealflow.sources.x_feed_manual import parse_pass
+
+    raw = json.dumps({"trending": [{
+        "ticker": "NOK",
+        "buzz_rank": 1,
+        "sentiment": "BULLISH",
+        "velocity": "ACCELERATING",
+        "catalyst": "@acct cites US-listed ADR attention around private wireless/AI networking",
+        "sector": "Technology",
+        "accounts_cited": ["@acct"],
+        "theme_links": ["networking_reacceleration"],
+        "why_this_is_new": "ADR angle was missed by US-only sector sweep wording",
+        "already_seen_status": "not_seen",
+        "why_15_passes_missed_it": "Likely skipped because it is an ADR and telecom/networking cross-classification",
+        "best_existing_pass": 1,
+        "ticker_disambiguation": "Nokia Oyj ADR, NYSE:NOK",
+        "target_seeded": True,
+    }]})
+
+    row = parse_pass(raw, 16)[0]
+
+    assert row["source_pass_type"] == "blindspot"
+    assert row["already_seen_status"] == "not_seen"
+    assert row["why_15_passes_missed_it"].startswith("Likely skipped")
+    assert row["best_existing_pass"] == 1
+    assert row["ticker_disambiguation"] == "Nokia Oyj ADR, NYSE:NOK"
+    assert row["target_seeded"] is True
 
 
 def test_parse_pass_valid_json():
@@ -210,7 +263,7 @@ def test_get_readiness_requires_finalized_manifest(tmp_path, monkeypatch):
 
     raw_dir = tmp_path / "raw"
     raw_dir.mkdir()
-    for pass_num in range(1, 16):
+    for pass_num in range(1, 17):
         (raw_dir / f"pass_{pass_num:02d}.json").write_text("{}")
     merged_path = tmp_path / "merged.json"
     graph_path = tmp_path / "theme_emergence_graph.json"

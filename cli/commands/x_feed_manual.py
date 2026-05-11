@@ -1,4 +1,4 @@
-"""CLI command: x-feed — manual 15-pass X sector sweep."""
+"""CLI command: x-feed — manual 16-pass X sector sweep."""
 from cli.common import *  # noqa: F401,F403
 
 import json as _json
@@ -9,19 +9,19 @@ from tradingagents.dealflow.sources.x_feed_browser_runner import run_browser_pas
 
 @app.command("x-feed")
 def x_feed(
-    generate: bool = typer.Option(False, "--generate", help="Print all 15 Grok prompts"),
+    generate: bool = typer.Option(False, "--generate", help="Print all 16 Grok prompts"),
     ingest: bool = typer.Option(False, "--ingest", help="Ingest Grok JSON from stdin or --file"),
     status: bool = typer.Option(False, "--status", help="Show manual X-feed readiness for the date"),
     run_browser: bool = typer.Option(False, "--run-browser", help="Run passes in Grok automatically via browser control"),
     file: str = typer.Option("", "--file", help="Path to JSON file (alternative to stdin)"),
     date: str = typer.Option("", "--date", help="Date override (YYYY-MM-DD, defaults to today)"),
-    pass_num: int = typer.Option(0, "--pass", help="Pass number (1-15), required for --ingest"),
+    pass_num: int = typer.Option(0, "--pass", help="Pass number (1-16), required for --ingest"),
     start_pass: int = typer.Option(1, "--start-pass", help="First pass to run for --run-browser"),
-    end_pass: int = typer.Option(15, "--end-pass", help="Last pass to run for --run-browser"),
+    end_pass: int = typer.Option(16, "--end-pass", help="Last pass to run for --run-browser"),
     profile: str = typer.Option("Default", "--profile", help="Chrome profile to use for --run-browser"),
     dry_run: bool = typer.Option(False, "--dry-run", help="Parse and validate without writing"),
 ):
-    """Manual X Feed Scout — 15-pass sector sweep with full archival."""
+    """Manual X Feed Scout — 16-pass sector sweep with full archival."""
     import datetime as _dt
 
     as_of_date = date.strip() or _dt.date.today().strftime("%Y-%m-%d")
@@ -35,7 +35,7 @@ def x_feed(
         raise typer.Exit(1)
 
     if generate:
-        _do_generate()
+        _do_generate(as_of_date)
     elif ingest:
         from tradingagents.dealflow.sources.x_feed_manual import PASS_CONFIGS as _PC
         if pass_num < 1 or pass_num > len(_PC):
@@ -48,11 +48,11 @@ def x_feed(
         _do_status(as_of_date)
 
 
-def _do_generate():
+def _do_generate(as_of_date: str):
     """Print all prompts with numbered headers."""
     from tradingagents.dealflow.sources.x_feed_manual import generate_prompts
 
-    prompts = generate_prompts()
+    prompts = generate_prompts(as_of_date)
     for pnum, label, prompt in prompts:
         console.rule(f"[bold]Pass {pnum}: {label}[/bold]")
         console.print(prompt)

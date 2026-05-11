@@ -27,7 +27,7 @@ Date: 2026-03-09
 
 - add `--analyst-provider`
 - add `--post-analyst-provider`
-- wire through `analyze` and `analyze-batch`
+- wire through `analyze` and `retired post-scout batch command`
 - persist stack metadata into batch summaries
 
 ## Task 5: Verification

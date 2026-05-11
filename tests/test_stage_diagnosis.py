@@ -31,7 +31,7 @@ def test_compute_stage_diagnosis_prefers_performance_review_summary(tmp_path):
         filename="hindsight.json",
         stages=[
             {
-                "stage_id": "shortlist_cut",
+                "stage_id": "scout_handoff",
                 "kept_count": 2,
                 "dropped_count": 3,
                 "edge_5d": 0.01,
@@ -49,7 +49,7 @@ def test_compute_stage_diagnosis_prefers_performance_review_summary(tmp_path):
         filename="performance_review.json",
         stages=[
             {
-                "stage_id": "shortlist_cut",
+                "stage_id": "scout_handoff",
                 "kept_count": 2,
                 "dropped_count": 3,
                 "edge_5d": 0.015,
@@ -65,7 +65,7 @@ def test_compute_stage_diagnosis_prefers_performance_review_summary(tmp_path):
     result = compute_stage_diagnosis(base_dir=root, last=5)
 
     assert result["cycles"][0]["artifact"] == "performance_review.json"
-    assert result["stages"][0]["stage_id"] == "shortlist_cut"
+    assert result["stages"][0]["stage_id"] == "scout_handoff"
     assert result["stages"][0]["avg_edge_20d"] == 0.045
     assert result["stages"][0]["avg_edge_3m"] == 0.12
 

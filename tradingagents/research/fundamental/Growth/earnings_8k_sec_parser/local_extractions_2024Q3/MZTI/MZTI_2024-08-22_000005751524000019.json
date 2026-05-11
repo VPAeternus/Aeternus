@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MZTI",
+    "cik": "57515",
+    "event_date": "2024-08-22",
+    "event_accession": "0000057515-24-000019",
+    "primary_8k_doc": "lanc-20240822.htm",
+    "exhibit_docs": [
+      "a4q24earn6-30x24.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MZTI_000005751524000019_lanc-20240822.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MZTI_000005751524000019_a4q24earn6-30x24.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MZTI",
+    "cik": "57515",
+    "entity_name": "MARZETTI CO",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1367866000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "37592000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-30",
+    "assets_value": "1112994000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "-82652000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-78921000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "184151000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.027482",
+    "operating_cash_flow_to_revenue": "0.134626",
+    "assets_to_revenue": "0.813672",
+    "financing_cash_flow_to_revenue": "-0.060424",
+    "investing_cash_flow_to_revenue": "-0.057696"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales were essentially flat at $218.",
+      "net sales increased 1.",
+      "net sales decreased 0.",
+      "net sales were essentially unchanged at $218.",
+      "net sales increased 2.",
+      "operating income increased $30."
+    ],
+    "guidance_evidence": [
+      "Outlook Mr.",
+      "expected future developments; and other factors we believe to be appropriate."
+    ],
+    "wave_or_demand_evidence": [
+      "demand from several of our national chain restaurant account customers.",
+      "customers in our mix of national chain restaurant accounts, while external factors, including U.",
+      "demand.",
+      "demand for our products, which may result from changes in consumer behavior or loss of brand reputation or customer goodwill; • the impact of customer store brands on our branded retail volumes; MORE.",
+      "ail segment net sales declined 0.",
+      "airment charges reduced this year’s fourth quarter operating income by $2."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges reduced this year’s fourth quarter operating income by $2.",
+      "impairment charges reduced last year’s fourth quarter operating income by $25.",
+      "impairment charges reduced this year’s fourth quarter net income by $0.",
+      "impairment charges reduced last year’s fourth quarter net income by $0.",
+      "impairment charges of $2.",
+      "charges going forward."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 218.6,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-23",
+    "entry_open": "173.410004",
+    "return_10d_pct": "-1.5109",
+    "return_20d_pct": "2.4335",
+    "return_30d_pct": "3.7945",
+    "return_60d_pct": "1.2629",
+    "return_90d_pct": "4.9420"
+  },
+  "text_stats": {
+    "primary_text_len": 3088,
+    "exhibit_text_len": 15205,
+    "combined_text_len": 18295
+  }
+}

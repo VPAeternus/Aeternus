@@ -41,8 +41,8 @@ _REQUIRED_STAGES = [
     "event_cards",
     "universe_filter",
     "collect",
-    "shortlist",
-    "deep_selection",
+    "scout_handoff",
+    "fundamental_intake",
 ]
 
 

@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ARLP",
+    "cik": "1086600",
+    "event_date": "2024-07-29",
+    "event_accession": "0001558370-24-010256",
+    "primary_8k_doc": "arlp-20240724x8k.htm",
+    "exhibit_docs": [
+      "arlp-20240724xex99d1.htm",
+      "arlp-20240724xex99d2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARLP_000155837024010256_arlp-20240724x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARLP_000155837024010256_arlp-20240724xex99d1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARLP_000155837024010256_arlp-20240724xex99d2.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ARLP",
+    "cik": "1086600",
+    "entity_name": "ALLIANCE RESOURCE PARTNERS LP",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "662922000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "191185000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2787749000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-99313000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-147148000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "221688000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.288397",
+    "operating_cash_flow_to_revenue": "0.33441",
+    "assets_to_revenue": "4.205244",
+    "financing_cash_flow_to_revenue": "-0.149811",
+    "investing_cash_flow_to_revenue": "-0.221969"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $593.",
+      "revenues decreased 4.",
+      "net income of $100.",
+      "net income\" refer to \"net income attributable to ARLP.",
+      "Net income for the 2024 Quarter was $100.",
+      "net income and EBITDA by 36."
+    ],
+    "guidance_evidence": [
+      "Guidance ​ 2024 Quarter Highlights ​ ● Second quarter 2024 total revenue of $593.",
+      "Outlook \"For the first half of 2024, utility coal burn has been essentially flat with 2023,\" commented Mr.",
+      "guidance for our coal operations.",
+      "guidance for the year.",
+      "guidance across all three commodity streams within our Oil & Gas Royalties segment.",
+      "guidance for the full year ended December 31, 2024 (the \"2024 Full Year\"): ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ 2024 Full Year Guidance ​ ​ ​ ​ ​ ​ Coal Operations ​ ​ ​ ​ ​ Volumes (Million Short Tons) ​ ​ ​ ​ ​ Illinois Basin Sales Tons ​ ​ ​ ​ 24."
+    ],
+    "wave_or_demand_evidence": [
+      "demand, partially offset by increased export sales volumes from our Gibson South operation.",
+      "demand has been strong across many parts of the country driven by recent record-breaking temperatures and accelerating coal-based power generation.",
+      "demand is holding up, U.",
+      "demand.",
+      "demand will exceed supply by close to 20 million tons in the second half of 2024.",
+      "demand for many years to come, including the increasing power requirements stemming from AI, data centers, and the onshoring of U."
+    ],
+    "warning_or_risk_evidence": [
+      "delays, partially offset by increased coal sales price realizations, which rose 3.",
+      "delaying barge deliveries.",
+      "delays, combined with lower export sales, lifted our inventories higher by 0.",
+      "inventory of 2.",
+      "inventory drawdown is constructive for the U.",
+      "decreased 7."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 593.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-30",
+    "entry_open": "24.500000",
+    "return_10d_pct": "-6.9388",
+    "return_20d_pct": "-2.6531",
+    "return_30d_pct": "-2.3673",
+    "return_60d_pct": "2.0408",
+    "return_90d_pct": "4.0816"
+  },
+  "text_stats": {
+    "primary_text_len": 6258,
+    "exhibit_text_len": 54696,
+    "combined_text_len": 60956
+  }
+}

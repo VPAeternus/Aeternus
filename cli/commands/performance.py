@@ -584,19 +584,21 @@ def performance_review(
     benchmark_ticker: str = typer.Option("QQQ", "--benchmark", "-b", help="Benchmark ticker"),
     format: str = typer.Option("table", "--format", help="Output format: table or json"),
 ):
-    """Funnel report card — measures whether each pipeline filter cut added alpha."""
+    """Retired pre-fundamental report card."""
     from tradingagents.dealflow.performance_tracker import compute_performance_review
-    from tradingagents.dealflow.scoring import CORE_SCORE_WEIGHTS
 
     result = compute_performance_review(source_date, benchmark=benchmark_ticker)
+
+    if format == "json":
+        print(json_lib.dumps(result, indent=2))
+        return
 
     if result.get("error"):
         console.print(f"[red]Error: {result['error']}[/red]")
         return
 
-    if format == "json":
-        print(json_lib.dumps(result, indent=2))
-        return
+    console.print("[yellow]Pre-fundamental performance review is retired.[/yellow]")
+    return
 
     bm_5d = result.get("benchmark_return_5d")
     bm_label = f"vs {benchmark_ticker} {bm_5d:+.1%}" if bm_5d is not None else ""
@@ -635,7 +637,6 @@ def performance_review(
     console.print(stage_table)
     _render_hypothesis_stage_summary(result.get("hypothesis_stage_summary", {}))
     _render_discovery_delta_cohort_scorecards(result.get("discovery_delta_cohorts", {}))
-    _render_evidence_integrity_cohort_scorecards(result.get("evidence_integrity_cohorts", {}))
 
     # Signal family IC table
     fic = result.get("signal_family_ic", [])

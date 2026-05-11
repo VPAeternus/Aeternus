@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AJG",
+    "cik": "354190",
+    "event_date": "2024-07-25",
+    "event_accession": "0001193125-24-184856",
+    "primary_8k_doc": "d841953d8k.htm",
+    "exhibit_docs": [
+      "d841953dex991.htm",
+      "d841953dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AJG_000119312524184856_d841953d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AJG_000119312524184856_d841953dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AJG_000119312524184856_d841953dex992.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AJG",
+    "cik": "354190",
+    "entity_name": "ARTHUR J. GALLAGHER & CO.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2706100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "486500000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "45094400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "958100000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-256600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "428500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.179779",
+    "operating_cash_flow_to_revenue": "0.158346",
+    "assets_to_revenue": "16.663981",
+    "financing_cash_flow_to_revenue": "0.354052",
+    "investing_cash_flow_to_revenue": "-0.094823"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of books of business and other divestiture transactions, such as the disposal of a business through sale or closure.",
+      "earnings per share, as adjusted (adjusted EPS), adjusted revenue, adjusted compensation and operating expenses, adjusted compensation expense ratio, adjusted operating expense ratio and organic revenue.",
+      "EPS is Adjusted Net Earnings divided by diluted weighted average shares outstanding.",
+      "earnings per share $ 1."
+    ],
+    "guidance_evidence": [
+      "outlook for Gallagher.",
+      "projects.",
+      "anticipates, believes, contemplates, see, should, could, will, estimates, expects, intends, plans and variations thereof and similar expressions, are intended to identify forward-looking statements.",
+      "expected to occur on an ongoing basis in the future once Gallagher fully assimilates the applicable acquisition.",
+      "expected to continue in the current year and beyond, as well as eliminating the impact of the items that have a high degree of variability."
+    ],
+    "wave_or_demand_evidence": [
+      "demand with ample capacity.",
+      "customer business activity.",
+      "ain both GAAP and non-GAAP measures.",
+      "ains) on divestitures (2.",
+      "ains) on divestitures (0.",
+      "ailed reconciliation of the 2024 and 2023 provision (benefit) for income taxes is shown on pages 14 and 15."
+    ],
+    "warning_or_risk_evidence": [
+      "charges (24.",
+      "charges (3.",
+      "charges 27.",
+      "charges (0.",
+      "charges 1.",
+      "charges, which primarily include severance costs (either accrued or paid) related to employee terminations and other costs associated with redundant workforce."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 500,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "269.130005",
+    "return_10d_pct": "3.4147",
+    "return_20d_pct": "5.6738",
+    "return_30d_pct": "6.5582",
+    "return_60d_pct": "3.7900",
+    "return_90d_pct": "6.8443"
+  },
+  "text_stats": {
+    "primary_text_len": 4658,
+    "exhibit_text_len": 54605,
+    "combined_text_len": 59265
+  }
+}

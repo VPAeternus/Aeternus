@@ -251,7 +251,7 @@ aeternus rating-history <UUID>
 
 #### Deal Flow Operations
 
-Generate and inspect the automated shortlist queue:
+Generate the automated scout ticker handoff:
 
 Daily technical scout preflight:
 
@@ -266,39 +266,29 @@ python -m cli.main technical-universe-refresh --as-of-date 2026-05-05 --format t
 # Sync OHLCV and recompute KAMA/FVG technical signals
 python -m cli.main technical-signal-sync --format table
 
-# Run deal-flow shortlist + queue (default profile is low-cost daily)
-aeternus source --date 2026-02-06 --trigger manual --top-k 30 --format table
+# Run deal-flow scouts and write final_dealflow_tickers.json
+aeternus source --date 2026-02-06 --trigger manual --profile daily --format table
 
 # Explicit low-cost profile (fast daily mode)
-aeternus source --date 2026-02-06 --trigger daily --top-k 30 --profile daily --format table
+aeternus source --date 2026-02-06 --trigger daily --profile daily --format table
 
 # Explicit max-recall profile (higher coverage / higher cost)
-aeternus source --date 2026-02-06 --trigger manual --top-k 30 --profile max-recall --format table
+aeternus source --date 2026-02-06 --trigger manual --profile max-recall --format table
 
-# Inspect latest queue
-aeternus queue --format table
+# Run fundamental framework from scout handoff
+aeternus fundamental --date 2026-02-06
 
 # Run orchestrator policy (daily/event/manual)
 aeternus orchestrate --mode auto --profile daily --format table
 
-# Full end-to-end automation in one command:
-# orchestrate -> analyze-batch -> portfolio-plan -> execute-paper -> execution-sync
+# Workflow stops at scout handoff; scoring starts in the fundamental framework
 aeternus workflow-run --mode auto --profile daily --execution-mode alpaca-paper --format table
 
 # Repeated workflow automation wrapper (scheduled-style loop)
 aeternus workflow-loop --mode auto --profile daily --cycles 3 --interval-seconds 900 --execution-mode alpaca-paper --format table
 
-# Deep selected names + quick analyze non-selected names (default dual-pass)
-aeternus analyze-batch --queue-date 2026-02-06 --format table
-
-# Selected-only deep analysis (legacy behavior)
-aeternus analyze-batch --queue-date 2026-02-06 --selected-only --format table
-
-# Optional guardrail: cap runtime per symbol to avoid batch hangs
-aeternus analyze-batch --queue-date 2026-02-06 --per-item-timeout-seconds 180 --format table
-
-# Build deterministic portfolio plan from latest batch summary
-aeternus portfolio-plan --queue-date 2026-02-06 --capital-usd 100000 --max-positions 8 --execution-mode alpaca-paper --format table
+# Build deterministic portfolio plan from a post-fundamental summary
+aeternus portfolio-plan --summary-path eval_results/fundamental/2026-02-06/analysis_summary.json --capital-usd 100000 --max-positions 8 --execution-mode alpaca-paper --format table
 # Hedge overlay is enabled by default; use --skip-hedges to disable for a run.
 
 # Execute paper orders with deterministic pre-trade risk checks
@@ -347,6 +337,8 @@ aeternus execution-sync --broker alpaca --mode alpaca-paper --once --manage-open
 aeternus execution-readiness --broker alpaca --mode alpaca-paper --format table
 
 # Run one deterministic hedge evaluation cycle
+# Default hedge policy is S7-only: 100% hedge only when SPY S7a/b is active.
+# A/B legacy mode: AETERNUS_HEDGE_POLICY=bear_base aeternus hedge-evaluate --format table
 aeternus hedge-evaluate --format table
 
 # Inspect persisted hedge state + recent hedge actions
@@ -422,15 +414,12 @@ aeternus watchlist import --file ./watchlist.json
 Equivalent module-style commands (same behavior, useful in local venv):
 
 ```bash
-./.venv/bin/python -m cli.main source --date 2026-02-06 --trigger manual --top-k 30 --profile daily --format table
-./.venv/bin/python -m cli.main queue --format table
+./.venv/bin/python -m cli.main source --date 2026-02-06 --trigger manual --profile daily --format table
+./.venv/bin/python -m cli.main fundamental --date 2026-02-06
 ./.venv/bin/python -m cli.main workflow-run --mode auto --profile daily --execution-mode alpaca-paper --format table
 ./.venv/bin/python -m cli.main workflow-loop --mode auto --profile daily --cycles 3 --interval-seconds 900 --execution-mode alpaca-paper --format table
-./.venv/bin/python -m cli.main analyze-batch --queue-date 2026-02-06 --format table
-./.venv/bin/python -m cli.main analyze-batch --queue-date 2026-02-06 --selected-only --format table
-./.venv/bin/python -m cli.main analyze-batch --queue-date 2026-02-06 --per-item-timeout-seconds 180 --format table
-./.venv/bin/python -m cli.main portfolio-plan --queue-date 2026-02-06 --capital-usd 100000 --max-positions 8 --execution-mode alpaca-paper --format table
-./.venv/bin/python -m cli.main portfolio-plan --queue-date 2026-02-06 --skip-hedges --format table
+./.venv/bin/python -m cli.main portfolio-plan --summary-path eval_results/fundamental/2026-02-06/analysis_summary.json --capital-usd 100000 --max-positions 8 --execution-mode alpaca-paper --format table
+./.venv/bin/python -m cli.main portfolio-plan --summary-path eval_results/fundamental/2026-02-06/analysis_summary.json --skip-hedges --format table
 ./.venv/bin/python -m cli.main execute-paper --format table
 ./.venv/bin/python -m cli.main execute-paper --allow-hedge-shorts --max-hedge-notional-pct 1.5 --format table
 ./.venv/bin/python -m cli.main execute-paper --execution-mode alpaca-paper --format table
@@ -491,13 +480,13 @@ aeternus momentum-scan --tickers AAPL MSFT NVDA
 Portfolio plans include phase overlay (short) and momentum overlay (long) intents by default:
 ```bash
 # Build plan with both overlays (default)
-aeternus portfolio-plan --queue-date 2026-02-06 --capital-usd 100000
+aeternus portfolio-plan --summary-path eval_results/fundamental/2026-02-06/analysis_summary.json --capital-usd 100000
 
 # Disable phase overlay
-aeternus portfolio-plan --queue-date 2026-02-06 --skip-phase-overlay
+aeternus portfolio-plan --summary-path eval_results/fundamental/2026-02-06/analysis_summary.json --skip-phase-overlay
 
 # Disable momentum overlay
-aeternus portfolio-plan --queue-date 2026-02-06 --skip-momentum-overlay
+aeternus portfolio-plan --summary-path eval_results/fundamental/2026-02-06/analysis_summary.json --skip-momentum-overlay
 ```
 
 #### Full Analysis Command

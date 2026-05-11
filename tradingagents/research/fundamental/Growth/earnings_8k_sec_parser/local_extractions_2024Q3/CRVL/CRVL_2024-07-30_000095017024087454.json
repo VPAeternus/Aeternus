@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CRVL",
+    "cik": "874866",
+    "event_date": "2024-07-30",
+    "event_accession": "0000950170-24-087454",
+    "primary_8k_doc": "crvl-20240730.htm",
+    "exhibit_docs": [
+      "crvl-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRVL_000095017024087454_crvl-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRVL_000095017024087454_crvl-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CRVL",
+    "cik": "874866",
+    "entity_name": "CORVEL CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "646230000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-24",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "66410000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-24",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "393923000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-24",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-79615000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-24",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-29819000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-24",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "67222000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-24",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.102765",
+    "operating_cash_flow_to_revenue": "0.104022",
+    "assets_to_revenue": "0.609571",
+    "financing_cash_flow_to_revenue": "-0.123199",
+    "investing_cash_flow_to_revenue": "-0.046143"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue increased 11% to $212 million, compared to first quarter of fiscal year 2024.",
+      "Earnings per share for the quarter were $1.",
+      "gross margin, compared to first quarter of fiscal year 2024 gross profit of $41.",
+      "earnings per share increased 10% to $1.",
+      "earnings per share of $1.",
+      "Net income $ 21,577,000 $ 19,805,000 Earnings Per Share: Basic $ 1."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "customers and patients.",
+      "aims system, CareMC.",
+      "aim staff and injured workers and yields a level of efficiency that is unique in the industry.",
+      "Artificial intelligence is also being used in the review of clinical bills to identify anomalies and document activities.",
+      "AI allows the users to focus on reviewing procedures and achieving optimal cost containment.",
+      "AI in partnership with the CorVel team will provide improved outcomes for partners, enhanced experience for workers with injuries, and increased job satisfaction for team members."
+    ],
+    "warning_or_risk_evidence": []
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 212,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "107.153336",
+    "return_10d_pct": "-6.6851",
+    "return_20d_pct": "-2.9522",
+    "return_30d_pct": "-0.2271",
+    "return_60d_pct": "1.6892",
+    "return_90d_pct": "-4.3520"
+  },
+  "text_stats": {
+    "primary_text_len": 3573,
+    "exhibit_text_len": 5713,
+    "combined_text_len": 9288
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "QRVO",
+    "cik": "1604778",
+    "event_date": "2024-07-30",
+    "event_accession": "0001604778-24-000056",
+    "primary_8k_doc": "rfmd-20240730.htm",
+    "exhibit_docs": [
+      "earningsrelease20240629.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/QRVO_000160477824000056_rfmd-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/QRVO_000160477824000056_earningsrelease20240629.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "QRVO",
+    "cik": "1604778",
+    "entity_name": "Qorvo, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4645714000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-20",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-02",
+    "net_income_value": "1033353000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-20",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-02",
+    "assets_value": "6691903000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-20",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "-875510000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-20",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-02",
+    "investing_cash_flow_value": "-595956000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-20",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-02",
+    "operating_cash_flow_value": "1049243000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-20",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.222431",
+    "operating_cash_flow_to_revenue": "0.225852",
+    "assets_to_revenue": "1.440447",
+    "financing_cash_flow_to_revenue": "-0.188455",
+    "investing_cash_flow_to_revenue": "-0.128281"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of approximately $1.",
+      "gross margin was 37.",
+      "operating income was $4.",
+      "earnings per share was $0.",
+      "gross margin was 40.",
+      "operating income was $98."
+    ],
+    "guidance_evidence": [
+      "guidance by $37 million • Transitioned Beijing and Dezhou operations to Luxshare and integrated Anokiwave into Qorvo On a GAAP basis, revenue for Qorvo’s fiscal 2025 first quarter was $887 million, gross margin was 37.",
+      "Outlook Grant Brown, chief financial officer of Qorvo, said, \"Qorvo exceeded the mid-point of June quarterly guidance for revenue, gross margin and EPS.",
+      "outlook for the September 2024 quarter is: • Quarterly revenue of approximately $1.",
+      "forecast\", \"predict,\" \"potential,\" \"continue\" and similar words, although some forward-looking statements are expressed differently."
+    ],
+    "wave_or_demand_evidence": [
+      "customer relationships, as items arising from pre-acquisition activities, determined at the time of an acquisition, rather than ongoing costs of operating Qorvo’s business.",
+      "customers’ most complex technical challenges.",
+      "customers or third parties; provisions in our governing documents and Delaware law may discourage takeovers and business combinations that our stockholders might consider to be in their best interests; and volatility in the price of our common stock.",
+      "power solutions, today announced financial results for the Company’s fiscal 2025 first quarter ended June 29, 2024.",
+      "aid, \"During the June quarter, we fully integrated Anokiwave into Qorvo, adding silicon beam-forming ICs and IF-RF conversion products.",
+      "aid, \"Qorvo exceeded the mid-point of June quarterly guidance for revenue, gross margin and EPS."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, acquisition and integration-related costs, adjustments related to a terminated capacity reservation agreement, gain or loss on assets, other expense or income, gain or loss on investments, and an adjustment of income taxes.",
+      "charges, acquisition and integration-related costs, adjustments related to a terminated capacity reservation agreement, gain or loss on assets, other expense or income, and other miscellaneous corporate overhead expenses.",
+      "charges, adjustments related to a terminated capacity reservation agreement, and acquisition and integration-related costs.",
+      "impairment, amortization of the cost of purchased intangible assets is a static expense, which is not typically affected by operations during any particular period.",
+      "charges, adjustments related to a terminated capacity reservation agreement, (gain) loss on assets and certain other expense (income).",
+      "charges, adjustments related to a terminated capacity reservation agreement, (gain) loss on assets, certain other expense (income), gain or loss on investments, and also reflect an adjustment of income taxes."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 37,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "121.500000",
+    "return_10d_pct": "-11.7037",
+    "return_20d_pct": "-8.4527",
+    "return_30d_pct": "-4.6173",
+    "return_60d_pct": "-14.9794",
+    "return_90d_pct": "-17.3004"
+  },
+  "text_stats": {
+    "primary_text_len": 2804,
+    "exhibit_text_len": 31223,
+    "combined_text_len": 34029
+  }
+}

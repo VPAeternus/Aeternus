@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MLKN",
+    "cik": "66382",
+    "event_date": "2024-09-19",
+    "event_accession": "0000066382-24-000073",
+    "primary_8k_doc": "mlkn-20240919.htm",
+    "exhibit_docs": [
+      "mlkn8k_08312024ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MLKN_000006638224000073_mlkn-20240919.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MLKN_000006638224000073_mlkn8k_08312024ex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MLKN",
+    "cik": "66382",
+    "entity_name": "MillerKnoll, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3130400000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-04",
+    "net_income_value": "25800000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-03",
+    "assets_value": "4274800000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-03",
+    "financing_cash_flow_value": "-22100000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-04",
+    "investing_cash_flow_value": "-53200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-04",
+    "operating_cash_flow_value": "70400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-04",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.008242",
+    "operating_cash_flow_to_revenue": "0.022489",
+    "assets_to_revenue": "1.365576",
+    "financing_cash_flow_to_revenue": "-0.00706",
+    "investing_cash_flow_to_revenue": "-0.016995"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $454.",
+      "sales totaled $193.",
+      "Gross margin in the Global Retail segment improved by 160 basis points due to continued benefits from operational improvements.",
+      "Gross margin % 39.",
+      "earnings per share - diluted (1) $ (0.",
+      "earnings per share - diluted* (1) $ 0."
+    ],
+    "guidance_evidence": [
+      "Outlook We are maintaining our full year adjusted earnings guidance of $2.",
+      "guidance takes into consideration a shift in the holiday/cyber promotional period for our retail business.",
+      "Guidance - Upcoming Quarter Company Guidance Q2 FY2025 Net sales $950 million to $990 million Gross margin % 38.",
+      "projects in the Americas and Asia.",
+      "expected macro-economic improvements in the back half of this fiscal year.",
+      "expected between $0."
+    ],
+    "wave_or_demand_evidence": [
+      "Orders in the first quarter were up 2.",
+      "backlog of $758.",
+      "Demand is improving and our Contract business is seeing the return of larger projects in the Americas and Asia.",
+      "Customers are also requesting shipment dates on new orders further into the future, on average, compared to previous years.",
+      "demand trends accelerate.",
+      "Orders in the quarter of $935."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, amortization of Knoll purchased intangibles, restructuring expenses, and Knoll pension plan termination charges.",
+      "charges, restructuring expenses, Knoll pension plan termination charges and the related tax effect of these adjustments.",
+      "charges.",
+      "charges, integration charges, amortization of Knoll purchased intangibles, and Knoll pension plan termination charges.",
+      "charges associated with business restructuring actions, integration charges, impairment expenses, non-cash stock-based compensation, future synergies, and other items as described in our lending agreements.",
+      "impairment charges associated with lease and operations facility consolidation activity, and expenses related to synergy realization efforts and reorganization initiatives."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 861.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-20",
+    "entry_open": "24.250000",
+    "return_10d_pct": "2.1031",
+    "return_20d_pct": "-2.6392",
+    "return_30d_pct": "1.4021",
+    "return_60d_pct": "-3.1753",
+    "return_90d_pct": "-5.1546"
+  },
+  "text_stats": {
+    "primary_text_len": 3215,
+    "exhibit_text_len": 30714,
+    "combined_text_len": 33931
+  }
+}

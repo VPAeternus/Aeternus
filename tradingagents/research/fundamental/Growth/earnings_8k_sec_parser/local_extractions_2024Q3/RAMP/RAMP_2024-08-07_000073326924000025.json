@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RAMP",
+    "cik": "733269",
+    "event_date": "2024-08-07",
+    "event_accession": "0000733269-24-000025",
+    "primary_8k_doc": "ramp-20240807.htm",
+    "exhibit_docs": [
+      "a2025q1ex991earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RAMP_000073326924000025_ramp-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RAMP_000073326924000025_a2025q1ex991earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RAMP",
+    "cik": "733269",
+    "entity_name": "LIVERAMP HOLDINGS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "528657000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-22",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "-33833000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-22",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1172703000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-22",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-66981000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-22",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "7578000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-22",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-33369000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2023-08-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2022-06-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.063998",
+    "operating_cash_flow_to_revenue": "-0.06312",
+    "assets_to_revenue": "2.218268",
+    "financing_cash_flow_to_revenue": "-0.1267",
+    "investing_cash_flow_to_revenue": "0.014334"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $176 million, up 14%.",
+      "revenue was $135 million, up 11%.",
+      "revenue was $41 million, up 28%.",
+      "Operating Income Guidance SAN FRANCISCO, Calif.",
+      "GAAP gross margin was stable at 71%.",
+      "Non-GAAP gross margin expanded by 1 percentage point to 74%."
+    ],
+    "guidance_evidence": [
+      "Guidance SAN FRANCISCO, Calif.",
+      "Outlook LiveRamp’s non-GAAP operating income guidance excludes the impact of non-cash stock compensation, purchased intangible asset amortization, and restructuring and related charges.",
+      "expected to be recognized over the next 12 months, was $398 million, up 13% compared to the prior year period.",
+      "forecasts and statements of expectation.",
+      "forecasting future periods.",
+      "projects are discrete in nature; 2) excluded expenses consist only of third-party consulting fees that we would not incur otherwise; and 3) we do not exclude employee related expenses or other costs associated with the ongoing operations of our business."
+    ],
+    "wave_or_demand_evidence": [
+      "customer loyalty, data quality, regulatory compliance, and more (additional information).",
+      "demand (additional information).",
+      "customers whose annualized subscription revenue exceeds $1 million, compared to 96 in the prior year period.",
+      "customers, compared to 915 in the prior year period.",
+      "customer view with clarity and context while protecting brand and consumer trust.",
+      "customer engagement and loyalty, activate new partnerships, and maximize the value of their first-party data while staying on the forefront of rapidly evolving compliance and privacy requirements."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory using our RampID.",
+      "charges.",
+      "delays in service from data center or cloud hosting vendors we rely upon; and our dependence on the continued availability of third-party data hosting and transmission services.",
+      "charges (gains, losses, and other) 206 116 Transformation costs (general and administrative) — 1,875 Total excluded items 32,037 18,573 Income from continuing operations before excluded items $ 26,789 $ 20,843 (1) This presentation includes non-GAAP measures.",
+      "charges (gains, losses, and other) 206 116 Transformation costs (general and administrative) — 1,875 Other adjustments 28,191 15,283 Adjusted EBITDA $ 27,497 $ 21,592 (1) This presentation includes non-GAAP measures.",
+      "charges (gains, losses, and other) 116 6,574 2,502 2,516 11,708 206 Transformation costs (general and administrative) 1,875 — — — 1,875 — Total excluded items 18,573 23,526 21,180 30,393 93,672 32,037 P 17 LIVERAMP HOLDINGS, INC."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 176,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 398,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "24.610001",
+    "return_10d_pct": "0.1625",
+    "return_20d_pct": "1.1784",
+    "return_30d_pct": "-1.3003",
+    "return_60d_pct": "-3.6164",
+    "return_90d_pct": "6.9484"
+  },
+  "text_stats": {
+    "primary_text_len": 3805,
+    "exhibit_text_len": 39989,
+    "combined_text_len": 43796
+  }
+}

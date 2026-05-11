@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CNTY",
+    "cik": "911147",
+    "event_date": "2024-08-08",
+    "event_accession": "0000911147-24-000053",
+    "primary_8k_doc": "cnty-20240807x8k.htm",
+    "exhibit_docs": [
+      "cnty-20240807xex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CNTY_000091114724000053_cnty-20240807x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CNTY_000091114724000053_cnty-20240807xex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CNTY",
+    "cik": "911147",
+    "entity_name": "CENTURY CASINOS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "108508000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-1243000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1359662000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-337000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-10791000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "12280000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.011455",
+    "operating_cash_flow_to_revenue": "0.113171",
+    "assets_to_revenue": "12.530523",
+    "financing_cash_flow_to_revenue": "-0.003106",
+    "investing_cash_flow_to_revenue": "-0.099449"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $146.",
+      "Net Income (Loss) Margin (28%) (1%) (20%) (1%) ﻿ Adjusted EBITDAR Margin 19% 21% 17% 23% ﻿ (1) Not meaningful.",
+      "net income (loss) attributable to Century Casinos, Inc."
+    ],
+    "guidance_evidence": [
+      "Outlook ﻿ Colorado Springs, Colorado – August 8, 2024 – Century Casinos, Inc.",
+      "projects and are projecting total capital expenditures to be approximately $12.",
+      "expects to open the casino in October 2024.",
+      "projects in various stages of development."
+    ],
+    "wave_or_demand_evidence": [
+      "aintain Positive Outlook ﻿ Colorado Springs, Colorado – August 8, 2024 – Century Casinos, Inc.",
+      "aitzmann and Peter Hoetzinger, Co-Chief Executive Officers of Century Casinos remarked.",
+      "ainder of 2024 and $12.",
+      "aitzmann and Hoetzinger concluded.",
+      "ains (losses) on foreign currency transactions and other , income tax (benefit) expense , and non-controlling interests.",
+      "ain deferred tax assets will not be realized and therefore recorded the valuation allowance."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, asset impairment costs, loss (gain) on disposition of fixed assets, discontinued operations, (gain) loss on foreign currency transactions, cost recovery income and other, gain on business combination and certain other one-time transactions.",
+      "Challenging First Half of the Year b ut Maintain Positive Outlook ﻿ Colorado Springs, Colorado – August 8, 2024 – Century Casinos, Inc.",
+      "decrease of (23%).",
+      "loss attributable to Century Casinos, Inc.",
+      "loss per share was ($1.",
+      "decrease of (6%)."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 146.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "2.330000",
+    "return_10d_pct": "-0.8584",
+    "return_20d_pct": "5.1502",
+    "return_30d_pct": "3.0043",
+    "return_60d_pct": "14.5923",
+    "return_90d_pct": "76.8240"
+  },
+  "text_stats": {
+    "primary_text_len": 4331,
+    "exhibit_text_len": 27788,
+    "combined_text_len": 32121
+  }
+}

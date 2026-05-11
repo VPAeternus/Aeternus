@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GRMN",
+    "cik": "1121788",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088226",
+    "primary_8k_doc": "grmn-20240731.htm",
+    "exhibit_docs": [
+      "grmn-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GRMN_000095017024088226_grmn-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GRMN_000095017024088226_grmn-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GRMN",
+    "cik": "1121788",
+    "entity_name": "GARMIN LTD",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1147424000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "202327000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "8603569000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "-192289000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-7899000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "279210000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.176332",
+    "operating_cash_flow_to_revenue": "0.243336",
+    "assets_to_revenue": "7.49816",
+    "financing_cash_flow_to_revenue": "-0.167583",
+    "investing_cash_flow_to_revenue": "-0.006884"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $1.",
+      "revenue of approximately $5.",
+      "Operating income of $342 million, a 20% increase compared to the prior year quarter • GAAP EPS of $1.",
+      "EPS (1) of $1.",
+      "Gross margin % 57.",
+      "Operating income % 22."
+    ],
+    "guidance_evidence": [
+      "guidance Schaffhausen, Switzerland / July 31, 2024 / PR Newswire – Garmin ® Ltd.",
+      "guidance.",
+      "Guidance: Based on our performance in the first half of 2024, we are adjusting our full year guidance.",
+      "guidance provided above do not consider the potential future net effect of foreign currency exchange gains and losses, certain discrete tax items and any other impacts that may be identified as pro forma adjustments in calculating the non-GAAP measures described above.",
+      "anticipates the scheduling of the remaining quarterly dividend installments as follows: Dividend Date Record Date $s per share December 27, 2024 December 13, 2024 $0.",
+      "anticipates,” “would,” “may,” “expects,” “estimates,” “plans,” “intends,” “projects,” and other words or phrases with similar meanings."
+    ],
+    "wave_or_demand_evidence": [
+      "aises full year guidance Schaffhausen, Switzerland / July 31, 2024 / PR Newswire – Garmin ® Ltd.",
+      "aise our full year revenue and EPS guidance.",
+      "ain controllers.",
+      "ainment solutions.",
+      "aid a quarterly dividend of approximately $144 million and repurchased $10 million of the Company’s shares within the quarter, leaving approximately $290 million remaining as of June 29, 2024 in the share repurchase program authorized through December 2026.",
+      "aining quarterly dividend installments as follows: Dividend Date Record Date $s per share December 27, 2024 December 13, 2024 $0."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased 2% in the second quarter primarily due to declines in adventure watches.",
+      "declines in aftermarket product categories.",
+      "loss decreased to $12 million.",
+      "uncertainties affecting Garmin, including, but not limited to, the risk factors that are described in the Annual Report on Form 10-K for the year ended December 30, 2023 filed by Garmin with the Securities and Exchange Commission (Commission file number 001-41118).",
+      "loss) (137,994 ) (65,614 ) Total stockholders’ equity 7,004,982 7,012,060 Total liabilities and stockholders’ equity $ 8,883,322 $ 8,603,569 Garmin Ltd.",
+      "loss) 65,036 214,999 120,460 118,285 (37,443 ) 481,337 Garmin Ltd."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1510,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "171.929993",
+    "return_10d_pct": "-1.9601",
+    "return_20d_pct": "3.7981",
+    "return_30d_pct": "4.7519",
+    "return_60d_pct": "2.3847",
+    "return_90d_pct": "19.1880"
+  },
+  "text_stats": {
+    "primary_text_len": 3593,
+    "exhibit_text_len": 23138,
+    "combined_text_len": 26733
+  }
+}

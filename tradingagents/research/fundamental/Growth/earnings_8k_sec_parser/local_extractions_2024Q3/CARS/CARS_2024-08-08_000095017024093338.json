@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CARS",
+    "cik": "1683606",
+    "event_date": "2024-08-08",
+    "event_accession": "0000950170-24-093338",
+    "primary_8k_doc": "cars-20240808.htm",
+    "exhibit_docs": [
+      "cars-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CARS_000095017024093338_cars-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CARS_000095017024093338_cars-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CARS",
+    "cik": "1683606",
+    "entity_name": "Cars.com Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "167068000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "11479000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1172449000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-35647000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-5371000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "28141000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.068709",
+    "operating_cash_flow_to_revenue": "0.16844",
+    "assets_to_revenue": "7.017795",
+    "financing_cash_flow_to_revenue": "-0.213368",
+    "investing_cash_flow_to_revenue": "-0.032149"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $178.",
+      "Net income of $11.",
+      "Net income of $94.",
+      "net income of $26.",
+      "net income of $22.",
+      "Net income for the second quarter was $11."
+    ],
+    "guidance_evidence": [
+      "Outlook and Updates Revenue Outlook CHICAGO, August 8, 2024 -- Cars.",
+      "outlook, our business is strong and our platform advantage is clear.",
+      "Outlook Third quarter revenue is expected to be between $178.",
+      "guidance and continuing investments in support of product-led growth.",
+      "outlook to a range of 4.",
+      "outlook of 28."
+    ],
+    "wave_or_demand_evidence": [
+      "customer base,” said Alex Vetter, Chief Executive Officer of Cars Commerce.",
+      "demand for media and advertising solutions to reach consumers as vehicle production recovers and on-the-lot inventory levels build.",
+      "customers raised their spending during the second quarter.",
+      "customers acquired through the D2C Media acquisition.",
+      "Customers totaled 19,390, growing quarter-over-quarter from 19,381 as of March 31, 2024.",
+      "demand for marketing and advertising solutions to raise consumer awareness amid growing vehicle inventory levels and new model launches."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels build.",
+      "inventory levels and new model launches.",
+      "delayed subscription revenues and product launches following the industry-wide CDK cyber incident.",
+      "impairments of goodwill, intangible assets and other long-lived assets.",
+      "impairments of goodwill, intangible assets, long-lived assets, severance, transformation and other exit costs and transaction-related items.",
+      "losses, and (8) certain other items, such as transaction-related items, severance, transformation and other exit costs and write-off and impairments of goodwill, intangible assets and other long-lived assets."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 178.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 178,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "16.340000",
+    "return_10d_pct": "9.2411",
+    "return_20d_pct": "9.1799",
+    "return_30d_pct": "6.0588",
+    "return_60d_pct": "-3.5496",
+    "return_90d_pct": "9.2411"
+  },
+  "text_stats": {
+    "primary_text_len": 3327,
+    "exhibit_text_len": 29736,
+    "combined_text_len": 33065
+  }
+}

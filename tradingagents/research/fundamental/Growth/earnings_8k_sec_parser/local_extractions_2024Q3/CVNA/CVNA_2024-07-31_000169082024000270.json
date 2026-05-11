@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CVNA",
+    "cik": "1690820",
+    "event_date": "2024-07-31",
+    "event_accession": "0001690820-24-000270",
+    "primary_8k_doc": "cvna-20240731.htm",
+    "exhibit_docs": [
+      "ex99_1q22024.htm",
+      "ex99_2q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CVNA_000169082024000270_cvna-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CVNA_000169082024000270_ex99_1q22024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CVNA_000169082024000270_ex99_2q22024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CVNA",
+    "cik": "1690820",
+    "entity_name": "CARVANA CO.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2606000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-160000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7071000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "151000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-19000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-66000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.061397",
+    "operating_cash_flow_to_revenue": "-0.025326",
+    "assets_to_revenue": "2.713354",
+    "financing_cash_flow_to_revenue": "0.057943",
+    "investing_cash_flow_to_revenue": "-0.007291"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue totaled $3.",
+      "Revenue was $3.",
+      "revenue of $3.",
+      "net income margin of 1.",
+      "net income and $355 million of Adjusted EBITDA.",
+      "Net income (loss) margin was 1."
+    ],
+    "guidance_evidence": [
+      "Outlook Our results in Q1 and Q2 position us well for a strong Q3 and Q4.",
+      "Outlook, we expect to grow retail units sequentially in Q3.",
+      "outlook,\" \"plan,\" \"potential,\" \"project,\" \"projection,\" \"seek,\" \"can,\" \"could,\" \"may,\" \"should,\" \"would,\" \"will,\" the negatives thereof and other words and terms of similar meaning.",
+      "Outlook Looking forward, Carvana expects the following as long as the environment remains stable: • A sequential increase in retail units in Q3 compared to Q2, and • Adjusted EBITDA of $1.",
+      "projects that each had a $100 unit economic improvement goal.",
+      "projects exceeded our expectations, others are still underway, but in aggregate, the scale of our ambition and the intensity of our execution drove incredibly rapid progress."
+    ],
+    "wave_or_demand_evidence": [
+      "customers first, we have taken ambitious swings, we have taken the time to build fundamental solutions to problems, and we have never accepted “good enough” or the status quo.",
+      "customer-centric, highly differentiated offering.",
+      "customer demand we experienced in Q1 continued into Q2.",
+      "customer experiences.",
+      "demand, we still remain below our target available website inventory levels.",
+      "demand and build selection for our customers."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels.",
+      "inventory turn times, and revenues from additional services.",
+      "inventory by 12% sequentially and 55% year-over-year.",
+      "inventory in a fraction of a second and streamlines underwriting and contracting in a simple, digital format.",
+      "Inventory Selection and Other Benefits of Scale.",
+      "Inventory Selection and Other Benefits of Scale As we grow, our inventory expands, we add inventory pools in more locations, and our logistics network density increases."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3410,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "147.339996",
+    "return_10d_pct": "-9.4068",
+    "return_20d_pct": "6.4002",
+    "return_30d_pct": "-1.9139",
+    "return_60d_pct": "18.1689",
+    "return_90d_pct": "40.7018"
+  },
+  "text_stats": {
+    "primary_text_len": 3676,
+    "exhibit_text_len": 63588,
+    "combined_text_len": 67266
+  }
+}

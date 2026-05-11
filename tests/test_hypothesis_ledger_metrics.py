@@ -56,7 +56,7 @@ def test_enrich_ledger_rows_populates_horizon_fields(tmp_path: Path):
         run_id="2026-03-06-123000-manual",
         source_date="2026-03-06",
         lane="shared",
-        stage_id="shortlist_cut",
+        stage_id="scout_handoff",
         rule_snapshot={"top_k": 2},
         kept_symbols=["AAPL", "NVDA"],
         dropped_symbols=["MU", "TSLA"],

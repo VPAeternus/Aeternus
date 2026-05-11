@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "APAM",
+    "cik": "1517302",
+    "event_date": "2024-07-23",
+    "event_accession": "0001517302-24-000052",
+    "primary_8k_doc": "apam-20240723.htm",
+    "exhibit_docs": [
+      "artisan2q24earningsrelease.htm",
+      "artisan2q24pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/APAM_000151730224000052_apam-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/APAM_000151730224000052_artisan2q24earningsrelease.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/APAM_000151730224000052_artisan2q24pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "APAM",
+    "cik": "1517302",
+    "entity_name": "Artisan Partners Asset Management Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "234509000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "50753000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1405858000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-54849000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-36203000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "120936000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.216422",
+    "operating_cash_flow_to_revenue": "0.515699",
+    "assets_to_revenue": "5.9949",
+    "financing_cash_flow_to_revenue": "-0.233889",
+    "investing_cash_flow_to_revenue": "-0.154378"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $270.",
+      "Revenues of $535.",
+      "Operating income 86.",
+      "Net income attributable to Artisan Partners Asset Management Inc.",
+      "earnings per share 0.",
+      "operating income $ 87."
+    ],
+    "guidance_evidence": [
+      "expected net income offset in the calculation of adjusted operating income, adjusted net income, and adjusted EBITDA."
+    ],
+    "wave_or_demand_evidence": [
+      "demand from sophisticated clients, and market inefficiencies that allow talented investors to generate alpha.",
+      "aid, \"Since our founding in 1994, we have focused on areas where we see a combination of investment talent, attractive absolute returns, long-term demand from sophisticated clients, and market inefficiencies that allow talented investors to generate alpha.",
+      "ained.",
+      "ained patient, knowing that it takes time to develop the track records necessary for long-term business success.",
+      "ained strategies have provided the diversification and low correlation benefits sought by clients.",
+      "ainable Emerging Markets strategy, and in early July we onboarded an approximately $860 million account for our Emerging Markets Debt Opportunities strategy."
+    ],
+    "warning_or_risk_evidence": [
+      "restrictions may have a material impact on portfolio construction and those accounts managed in a currency other than U.",
+      "declined to $158.",
+      "decrease of $1.",
+      "decreased $2.",
+      "losses) are comprised of net investment gains (losses) of consolidated and nonconsolidated investment products, including investments held to economically hedge compensation plans (collectively referred to as \"investments in sponsored products\").",
+      "loss) of consolidated investment products 3."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 270.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "42.520000",
+    "return_10d_pct": "-9.6896",
+    "return_20d_pct": "-6.4205",
+    "return_30d_pct": "-1.0583",
+    "return_60d_pct": "0.8702",
+    "return_90d_pct": "3.7629"
+  },
+  "text_stats": {
+    "primary_text_len": 3729,
+    "exhibit_text_len": 52498,
+    "combined_text_len": 56229
+  }
+}

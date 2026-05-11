@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MSI",
+    "cik": "68505",
+    "event_date": "2024-08-01",
+    "event_accession": "0000068505-24-000022",
+    "primary_8k_doc": "msi-20240801.htm",
+    "exhibit_docs": [
+      "msiq22024pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MSI_000006850524000022_msi-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MSI_000006850524000022_msiq22024pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MSI",
+    "cik": "68505",
+    "entity_name": "Motorola Solutions, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2171000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "278000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "13336000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-263000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-53000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "-8000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.128052",
+    "operating_cash_flow_to_revenue": "-0.003685",
+    "assets_to_revenue": "6.142791",
+    "financing_cash_flow_to_revenue": "-0.121142",
+    "investing_cash_flow_to_revenue": "-0.024413"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $2.",
+      "Sales were $2.",
+      "sales of investments and businesses, net — % — % Other, net (11.",
+      "sales of investments (Gain) or loss on sales of investments and businesses, net — — — (0.",
+      "GAAP earnings per share (\"EPS\") of $2.",
+      "Non-GAAP EPS 2 of $3."
+    ],
+    "guidance_evidence": [
+      "outlook following strong Q2 results • Sales of $2.",
+      "OUTLOOK • Third quarter 2024 - The company expects revenue growth between 7% and 8% compared to the third quarter of 2023.",
+      "guidance of approximately 7%, and non-GAAP EPS of between $13.",
+      "guidance of between $12.",
+      "outlook assumes a fully diluted share count of approximately 171 million shares and a non-GAAP effective tax rate of approximately 23.",
+      "guidance for the various reconciling items as certain items that impact these measures have not occurred, are out of the company’s control, or cannot be reasonably predicted."
+    ],
+    "wave_or_demand_evidence": [
+      "backlog and business momentum entering the second half of the year position us well for continued growth.",
+      "Backlog - The company ended the quarter with backlog of $14.",
+      "backlog was up from the year-ago quarter.",
+      "backlog was down $482 million, or 10%, driven primarily by strong LMR shipments.",
+      "backlog was up $164 million, or 2%, driven by strong demand in all three technologies, partially offset by the revenue recognition for the U.",
+      "customer • $17M P25 device order for a U."
+    ],
+    "warning_or_risk_evidence": [
+      "Charge Control\") and the exit from the Emergency Services Network (\"ESN\") contract.",
+      "Charge Control and the exit from ESN.",
+      "Charge Control.",
+      "charges, partially offset by higher employee incentive costs and higher cash taxes.",
+      "Charge Control, and will continue to be unless the United Kingdom Court of Appeal were to reverse the CAT's judgment and overturn the Airwave Charge Control.",
+      "Charge Control rates."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2600,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "399.519989",
+    "return_10d_pct": "3.3140",
+    "return_20d_pct": "6.2425",
+    "return_30d_pct": "10.2248",
+    "return_60d_pct": "12.4049",
+    "return_90d_pct": "12.4725"
+  },
+  "text_stats": {
+    "primary_text_len": 3486,
+    "exhibit_text_len": 45855,
+    "combined_text_len": 49343
+  }
+}

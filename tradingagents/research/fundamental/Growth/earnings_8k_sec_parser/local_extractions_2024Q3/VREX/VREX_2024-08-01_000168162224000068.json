@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "VREX",
+    "cik": "1681622",
+    "event_date": "2024-08-01",
+    "event_accession": "0001681622-24-000068",
+    "primary_8k_doc": "vrex-20240801.htm",
+    "exhibit_docs": [
+      "exhibit991-q324earningsrel.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VREX_000168162224000068_vrex-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VREX_000168162224000068_exhibit991-q324earningsrel.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "VREX",
+    "cik": "1681622",
+    "entity_name": "VAREX IMAGING CORPORATION",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "433800000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "7200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1249600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-29",
+    "financing_cash_flow_value": "-900000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-7500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "23600000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.016598",
+    "operating_cash_flow_to_revenue": "0.054403",
+    "assets_to_revenue": "2.88059",
+    "financing_cash_flow_to_revenue": "-0.002075",
+    "investing_cash_flow_to_revenue": "-0.017289"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $209 million was down 10% year-over-year.",
+      "revenue of $149 million was down 15% year-over-year.",
+      "revenue of $60 million was up 6% year-over-year.",
+      "GAAP gross margin 32% | Non-GAAP gross margin* 32% • GAAP operating margin 4% | Non-GAAP operating margin* 7% • GAAP net earnings $0.",
+      "Non-GAAP gross margin was 32% in the quarter compared to 34% in the third quarter of fiscal year 2023 and non-GAAP EPS decreased to $0.",
+      "GAAP net income (loss) per diluted share."
+    ],
+    "guidance_evidence": [
+      "Outlook Due to challenging market conditions, our guidance for the fourth quarter of fiscal year 2024 is as follows: • Revenues are expected to be between $190 million and $210 million • Non-GAAP net earnings per diluted share is expected to be between $0.",
+      "Guidance for the company's net earnings per diluted share is provided on a non-GAAP basis only.",
+      "guidance, supply chain and logistics challenges; cost increases and expense management; changes in U.",
+      "guidance measures to the corresponding GAAP measures on a forward-looking basis due to the potential significant variability and limited visibility of the excluded items discussed.",
+      "guidance for accounting for income taxes in interim periods, or any other non-operational tax adjustments.",
+      "expected, driven primarily by continued strength in our cargo inspection business, which drove a 6% year-over-year increase in our Industrial segment."
+    ],
+    "wave_or_demand_evidence": [
+      "ain of these reconciling items being uncertain, out of our control, and the amount and timing of these items being unable to be reasonably predicted.",
+      "ain Time.",
+      "ailable by dialing 877-524-8416 from anywhere in the U.",
+      "ailable from today through August 16th at 877-660-6853 from anywhere in the U.",
+      "ains “forward-looking” statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+      "ain and logistics challenges; cost increases and expense management; changes in U."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary and are subject to change to reflect any necessary adjustments or changes in accounting estimates that are identified prior to the time Varex files its Form 10-Q.",
+      "charges 0.",
+      "charges (includes restructuring impact to cost of revenues) 0.",
+      "charges to cost of revenues : We may incur charges to cost of revenues as a result of acquisitions.",
+      "charges allows the users of our financial statements to better understand the historic and current cost of our products, our gross margin, and also facilitates comparisons to peer companies.",
+      "charges : We incur restructuring charges that result from events, which arise from unforeseen circumstances and/or often occur outside of the ordinary course of our on-going business."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 209,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 190,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "13.070000",
+    "return_10d_pct": "-17.5210",
+    "return_20d_pct": "-11.5532",
+    "return_30d_pct": "-9.3343",
+    "return_60d_pct": "-9.2578",
+    "return_90d_pct": "0.4591"
+  },
+  "text_stats": {
+    "primary_text_len": 3586,
+    "exhibit_text_len": 19958,
+    "combined_text_len": 23546
+  }
+}

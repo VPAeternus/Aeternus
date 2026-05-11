@@ -12,8 +12,8 @@ from typing import Any, Dict, List, Optional
 
 
 class SignalType(str, Enum):
-    QUEUE_ITEM_ADDED = "QUEUE_ITEM_ADDED"       # DealFlowScout -> ResearchAgent
-    ANALYSIS_COMPLETE = "ANALYSIS_COMPLETE"     # ResearchAgent -> PortfolioMonitor
+    SCOUT_HANDOFF_READY = "SCOUT_HANDOFF_READY" # DealFlowScout -> fundamental intake
+    ANALYSIS_COMPLETE = "ANALYSIS_COMPLETE"     # Fundamental analysis -> downstream consumers
     RISK_FLAG = "RISK_FLAG"                     # RiskSentinel -> all agents
     SIGNAL_FLIP = "SIGNAL_FLIP"                 # PortfolioMonitor -> DocumentationAgent
     POSITION_EXITED = "POSITION_EXITED"         # ExecutionAgent -> DocumentationAgent

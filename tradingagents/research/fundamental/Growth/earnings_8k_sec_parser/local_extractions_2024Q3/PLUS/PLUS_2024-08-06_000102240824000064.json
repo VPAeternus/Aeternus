@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PLUS",
+    "cik": "1022408",
+    "event_date": "2024-08-06",
+    "event_accession": "0001022408-24-000064",
+    "primary_8k_doc": "8-k.htm",
+    "exhibit_docs": [
+      "ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLUS_000102240824000064_8-k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLUS_000102240824000064_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PLUS",
+    "cik": "1022408",
+    "entity_name": "ePlus inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1821019000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "105600000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1414826000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "47176000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-1259000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-20571000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.05799",
+    "operating_cash_flow_to_revenue": "-0.011296",
+    "assets_to_revenue": "0.776942",
+    "financing_cash_flow_to_revenue": "0.025906",
+    "investing_cash_flow_to_revenue": "-0.000691"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales decreased 5.",
+      "net sales decreased 5.",
+      "revenues increased 15.",
+      "net sales were down 5.",
+      "sales decreased 8.",
+      "net sales of cloud and networking products, offset by increases in net sales of collaboration and security products."
+    ],
+    "guidance_evidence": [
+      "guidance remains unchanged.",
+      "Guidance ePlus is maintaining fiscal year 2025 guidance for net sales growth over the prior fiscal year of between 3% and 6%, and an adjusted EBITDA range of $200.",
+      "Outlook “Looking ahead, as we add new products and services and benefit from recent acquisitions, ePlus continues to be positioned to achieve top-line growth.",
+      "outlook and objectives.",
+      "forecast."
+    ],
+    "wave_or_demand_evidence": [
+      "customers demand with today’s advanced technologies,\" said Mark Marron, president and CEO of ePlus.",
+      "customer interest in our AI Ignite program and discovery services.",
+      "customer mindshare in this fast moving technology solution.",
+      "customers, product mix, and the ratable trend as noted above.",
+      "demand for our products and services and our full year guidance remains unchanged.",
+      "customer mix, offset by a larger proportion of third-party maintenance and services sold in the current quarter which are recorded on a net basis."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory decreased 36.",
+      "decreased 5.",
+      "decreased 1.",
+      "decreased 19.",
+      "decline year over year is attributable to a more normalized supply chain, the absorption of prior purchases by our customers, product mix, and the ratable trend as noted above.",
+      "decreased 8."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "83.260002",
+    "return_10d_pct": "10.7735",
+    "return_20d_pct": "13.2356",
+    "return_30d_pct": "5.9092",
+    "return_60d_pct": "16.8148",
+    "return_90d_pct": "7.8549"
+  },
+  "text_stats": {
+    "primary_text_len": 3524,
+    "exhibit_text_len": 24441,
+    "combined_text_len": 27967
+  }
+}

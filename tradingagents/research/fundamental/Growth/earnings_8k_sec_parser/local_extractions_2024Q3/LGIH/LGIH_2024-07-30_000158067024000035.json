@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LGIH",
+    "cik": "1580670",
+    "event_date": "2024-07-30",
+    "event_accession": "0001580670-24-000035",
+    "primary_8k_doc": "lgih-20240730.htm",
+    "exhibit_docs": [
+      "ex991earningsrelease63024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LGIH_000158067024000035_lgih-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LGIH_000158067024000035_ex991earningsrelease63024.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LGIH",
+    "cik": "1580670",
+    "entity_name": "LGI HOMES, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "487357000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "26962000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3407851000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-61777000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-4855000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "77600000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.055323",
+    "operating_cash_flow_to_revenue": "0.159226",
+    "assets_to_revenue": "6.992515",
+    "financing_cash_flow_to_revenue": "-0.126759",
+    "investing_cash_flow_to_revenue": "-0.009962"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $602.",
+      "revenues of 25.",
+      "revenues of 27.",
+      "revenues of $993.",
+      "revenues of 24.",
+      "revenues of 26."
+    ],
+    "guidance_evidence": [
+      "Guidance THE WOODLANDS, Texas, July 30, 2024 (GLOBE NEWSWIRE) - LGI Homes, Inc.",
+      "guidance,” said Eric Lipar, Chairman and Chief Executive Officer of LGI Homes.",
+      "guidance.",
+      "guidance range to between 23.",
+      "Outlook Subject to the caveats in the Forward-Looking Statements section of this press release and the assumptions noted below, the Company is providing the following updates to its guidance for the full year 2024.",
+      "outlook assumes that governmental regulations relating to land development and home construction are similar to those currently in place."
+    ],
+    "wave_or_demand_evidence": [
+      "backlog of 1,393 homes valued at $553.",
+      "backlog, and view on the inventory available to close this year, we are adjusting our guidance.",
+      "customer service, LGI Homes was named to Newsweek’s list of the World’s Most Trustworthy Companies.",
+      "orders, cancellation rate and ending backlog homes and value were as follows (dollars in thousands, unaudited): Backlog Data Six Months Ended June 30, 2024 (4) 2023 (5) Net orders (1) 3,541 4,156 Cancellation rate (2) 19.",
+      "backlog – homes (3) 1,393 1,638 Ending backlog – value (3) $ 553,604 $ 601,275 (1) Net orders are new (gross) orders for the purchase of homes during the period, less cancellations of existing purchase contracts during the period.",
+      "orders for the purchase of homes during the period."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory available to close this year, we are adjusting our guidance.",
+      "charged to cost of sales 10,632 9,138 17,233 15,895 Purchase accounting adjustments (1) 1,174 2,708 1,977 4,744 Adjusted gross margin $ 162,690 $ 153,783 $ 261,495 $ 261,392 Gross margin % (2) 25.",
+      "inventory sold after the acquisition dates.",
+      "preliminary financing criteria but have not yet closed and wholesale contracts with varying terms.",
+      "uncertainties and assumptions and you should not place undue reliance on these forward-looking statements or projections."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 602.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "119.050003",
+    "return_10d_pct": "-17.0769",
+    "return_20d_pct": "-13.6413",
+    "return_30d_pct": "-9.3826",
+    "return_60d_pct": "-0.4452",
+    "return_90d_pct": "-14.0613"
+  },
+  "text_stats": {
+    "primary_text_len": 3802,
+    "exhibit_text_len": 18592,
+    "combined_text_len": 22396
+  }
+}

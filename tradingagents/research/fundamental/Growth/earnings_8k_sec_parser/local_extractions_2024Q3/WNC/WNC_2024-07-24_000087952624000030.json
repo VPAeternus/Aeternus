@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WNC",
+    "cik": "879526",
+    "event_date": "2024-07-24",
+    "event_accession": "0000879526-24-000030",
+    "primary_8k_doc": "wnc-20240724.htm",
+    "exhibit_docs": [
+      "wnc-20240630xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WNC_000087952624000030_wnc-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WNC_000087952624000030_wnc-20240630xex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WNC",
+    "cik": "879526",
+    "entity_name": "WABASH NATIONAL CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "620952000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "51213000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1362814000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-28061000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-31423000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "69484000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.082475",
+    "operating_cash_flow_to_revenue": "0.111899",
+    "assets_to_revenue": "2.194717",
+    "financing_cash_flow_to_revenue": "-0.04519",
+    "investing_cash_flow_to_revenue": "-0.050605"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $551 million; within prior quarterly outlook range ▪ Operating income of $44 million with operating margin of 7.",
+      "net sales of $498.",
+      "Operating income of $44 million with operating margin of 7.",
+      "earnings per share of $0.",
+      "EPS outlook ranges reduced to $2.",
+      "Operating income amounted to $43."
+    ],
+    "guidance_evidence": [
+      "outlook range ▪ Operating income of $44 million with operating margin of 7.",
+      "outlook range ▪ Total backlog of $1.",
+      "outlook ranges reduced to $2.",
+      "outlook range,\" said Brent Yeagy, president and chief executive officer.",
+      "outlook midpoint of $1.",
+      "outlook to a range of approximately $2."
+    ],
+    "wave_or_demand_evidence": [
+      "backlog of $1.",
+      "backlog stood at approximately $1.",
+      "backlog has sequentially declined during the second quarter in each of the last five years, the reduction in 2024 was slightly more than prior years due to continued freight market weakness.",
+      "Backlog expected to be shipped within the following 12-months amounted to approximately $1.",
+      "demand environment has incrementally weakened during the first half of 2024, our team has executed well, as shown by second quarter EPS generation that exceeded our prior outlook range,\" said Brent Yeagy, president and chief executive officer.",
+      "customers' capital expenditure plans, we feel it's appropriate to reduce our full year guidance,\" explained Yeagy."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment and other, net, and other non-operating income and expense (including any loss on debt extinguishment charges).",
+      "charges, gains or income that are included in the determination of operating income under U.",
+      "charges, gains or income that are included in the determination of operating income (loss) under U.",
+      "Impairment and other, net (4) 2 — — Other, net — — (14) — Adjusted segment EBITDA $ 69,007 $ 125,187 $ 12,602 $ 13,490 Adjusted segment EBITDA margin 13.",
+      "Impairment and other, net (4) 2 — — Other, net 14 — (13) — Adjusted segment EBITDA $ 124,594 $ 220,931 $ 23,669 $ 23,195 Adjusted segment EBITDA margin 12.",
+      "decrease compared to the same quarter of the previous year."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 551,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "20.389999",
+    "return_10d_pct": "-5.5910",
+    "return_20d_pct": "-5.2477",
+    "return_30d_pct": "-4.0706",
+    "return_60d_pct": "-4.9534",
+    "return_90d_pct": "-16.3315"
+  },
+  "text_stats": {
+    "primary_text_len": 3127,
+    "exhibit_text_len": 30387,
+    "combined_text_len": 33516
+  }
+}

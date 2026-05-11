@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BARK",
+    "cik": "1819574",
+    "event_date": "2024-08-07",
+    "event_accession": "0001819574-24-000037",
+    "primary_8k_doc": "bark-20240807.htm",
+    "exhibit_docs": [
+      "exhibit991-q1fy25pressrele.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BARK_000181957424000037_bark-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BARK_000181957424000037_exhibit991-q1fy25pressrele.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BARK",
+    "cik": "1819574",
+    "entity_name": "BARK, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "507406000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-03",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "-68299000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-03",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "400420000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-03",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "355458000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-03",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-21172000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-03",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-172338000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-03",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.134604",
+    "operating_cash_flow_to_revenue": "-0.339645",
+    "assets_to_revenue": "0.789151",
+    "financing_cash_flow_to_revenue": "0.70054",
+    "investing_cash_flow_to_revenue": "-0.041726"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $116.",
+      "Revenue was $116.",
+      "revenue was $107.",
+      "revenue was $9.",
+      "revenue of $490 million to $500 million, reflecting year-over-year growth of flat to 2.",
+      "revenue of $123."
+    ],
+    "guidance_evidence": [
+      "guidance range.",
+      "guidance range and a $5.",
+      "guidance range of $113.",
+      "guidance range of $(4.",
+      "Outlook Based on current market conditions as of August 7, 2024, BARK is providing guidance for revenue and Adjusted EBITDA, which is a Non-GAAP financial measure, as follows.",
+      "guidance of: • Total revenue of $490 million to $500 million, reflecting year-over-year growth of flat to 2."
+    ],
+    "wave_or_demand_evidence": [
+      "Orders (in thousands) 3,442 3,560 Average Order Value $ 30.",
+      "orders in the most recent period, largely related to carrying fewer Barkbox and Super Chewer subscriptions into the quarter, compared to the same period last year.",
+      "customer acquisition for the third consecutive quarter.",
+      "customers; BARK’s ability to successfully expand its product lines and channel distribution; competition; the uncertain effects of global or macroeconomic events or challenges.",
+      "Orders We define Total Orders as the total number of Direct to Consumer orders shipped in a given period.",
+      "orders across all of our product categories, regardless of whether they are purchased on a subscription, auto-ship, or one-off basis."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory balance as of June 30, 2024 was $80.",
+      "charges for similar offerings, and also reflects historical pricing practices.",
+      "charges related to reduction in force payment, (5) litigation expenses, (6) warehouse restructuring costs, (7) non-cash impairment of previously capitalized software, (8) technology modernization costs, and (9) other items (as defined below).",
+      "charges related to reduction in force payment, (9) litigation expenses, (10) warehouse restructuring costs, (11) non-cash impairment of previously capitalized software, (12) technology modernization costs, and (13) other items (as defined below).",
+      "Impairment of assets 799 — Technology Modernization (3) 707 — Other items (4) 820 171 Adjusted net loss $ (3,985) $ (9,539) Net loss margin (8.",
+      "Impairment of assets 799 — Technology Modernization (3) 707 — Other items (4) 820 171 Adjusted EBITDA $ (1,796) $ (7,429) Net loss margin (8."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 116.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "27.200001",
+    "return_10d_pct": "23.5294",
+    "return_20d_pct": "27.9412",
+    "return_30d_pct": "23.5294",
+    "return_60d_pct": "19.1176",
+    "return_90d_pct": "11.0294"
+  },
+  "text_stats": {
+    "primary_text_len": 3552,
+    "exhibit_text_len": 25465,
+    "combined_text_len": 29019
+  }
+}

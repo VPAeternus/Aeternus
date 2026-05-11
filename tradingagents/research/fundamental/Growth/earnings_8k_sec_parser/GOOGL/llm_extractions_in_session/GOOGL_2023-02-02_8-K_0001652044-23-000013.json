@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter and fiscal year ended December 31, 2022",
+    "period_end_date": "December 31, 2022"
+  },
+  "reported_results": {
+    "revenue_millions": 76048.0,
+    "revenue_yoy_pct": 1.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "There’s also great momentum in Cloud, YouTube subscriptions, and our Pixel devices.",
+    "wave_signal": "1Alphabet Announces Fourth Quarter and Fiscal Year 2022 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "ver year32 %1 %41 %10 %Change in constant currency revenues year over year(1)33 %7 %39 %14 %Operating income$21,885 $18,160 $78,714 $74,842 Operating margin29 %24 %31 %26 %Other income (expense), net $2,517 $(1,013)$12,020 $(3,514)Net income$20,642 $13,624 $76,033 $59,972 Diluted EPS$1.",
+    "risk_signal": "As a result we expect to incur exit costs relating to office space reductions of approximately $0.",
+    "customer_signal": "•Google Cloud includes infrastructure and platform services, collaboration tools, and other services for enterprise customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 75325 | | | | | $ | 76048 | | | | | $ | 257637 | | | | | $ | 282836 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 75325 | | | | | $ | 76048 | | | | | $ | 257637 | | | | | $ | 282836 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

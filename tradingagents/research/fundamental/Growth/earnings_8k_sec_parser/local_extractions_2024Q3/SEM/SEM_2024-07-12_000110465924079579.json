@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SEM",
+    "cik": "1320414",
+    "event_date": "2024-07-12",
+    "event_accession": "0001104659-24-079579",
+    "primary_8k_doc": "tm2419380d1_8k.htm",
+    "exhibit_docs": [
+      "tm2419380d1_ex99-1.htm",
+      "tm2420448d2_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SEM_000110465924079579_tm2419380d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SEM_000110465924079579_tm2419380d1_ex99-1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SEM_000110465924079579_tm2420448d2_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SEM",
+    "cik": "1320414",
+    "entity_name": "SELECT MEDICAL HOLDINGS CORPORATION",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1664980000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "70805000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7699736000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "3419000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-69062000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "51440000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.042526",
+    "operating_cash_flow_to_revenue": "0.030895",
+    "assets_to_revenue": "4.624522",
+    "financing_cash_flow_to_revenue": "0.002053",
+    "investing_cash_flow_to_revenue": "-0.041479"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "operating income — 151 Income from Operations $ 83,944 $ 82,108 (1) These amounts are subject to change upon completion of Select Medical’s financial statement closing procedures."
+    ],
+    "guidance_evidence": [
+      "outlook, on Friday, August 2, 2024, at 9:00am ET.",
+      "expected to occur after market close on Thursday, August 1, 2024.",
+      "expects Concentra’s net operating revenue for its second quarter of 2024 to be approximately $477.",
+      "expects Concentra’s income from operations for the second quarter of 2024 to be approximately $83."
+    ],
+    "wave_or_demand_evidence": [
+      "ain Financial Results of its Wholly-Owned Subsidiary Concentra Group Holdings Parent, Inc.",
+      "ain financial results of its wholly-owned subsidiary, Concentra Group Holdings Parent, Inc.",
+      "ain key statistics are presented in table II of this release for the second quarters ended June 30, 2024 and 2023.",
+      "ailable information and these estimates are subject to change upon completion of Select Medical’s financial statement closing procedures.",
+      "ain subject to the completion of management’s final review and our other closing procedures, or subsequent events, as well as the completion of the review of our financial statements.",
+      "ailable shortly after the call through the same link."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary results set out below, which may differ from actual results.",
+      "delaying our operations; · Our ability to adequately protect and enforce our intellectual property and other proprietary rights; · Adverse economic conditions in the U.",
+      "preliminary prospectus filed on June 14, 2024, with the Securities and Exchange Commission (the “SEC”), relating to Concentra’s Registration Statement on Form S-1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 477.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-15",
+    "entry_open": "19.973061",
+    "return_10d_pct": "4.0464",
+    "return_20d_pct": "-12.1662",
+    "return_30d_pct": "-13.6768",
+    "return_60d_pct": "-4.9636",
+    "return_90d_pct": "-8.5514"
+  },
+  "text_stats": {
+    "primary_text_len": 3633,
+    "exhibit_text_len": 10446,
+    "combined_text_len": 14081
+  }
+}

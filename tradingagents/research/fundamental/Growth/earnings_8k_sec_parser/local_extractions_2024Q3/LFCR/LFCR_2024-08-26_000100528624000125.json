@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LFCR",
+    "cik": "1005286",
+    "event_date": "2024-08-26",
+    "event_accession": "0001005286-24-000125",
+    "primary_8k_doc": "lndc-20240826.htm",
+    "exhibit_docs": [
+      "lfcrq4fy24earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LFCR_000100528624000125_lndc-20240826.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LFCR_000100528624000125_lfcrq4fy24earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LFCR",
+    "cik": "1005286",
+    "entity_name": "LIFECORE BIOMEDICAL, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "115781000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2019-08-01",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2017-08-27",
+    "net_income_value": "-12410000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-03-20",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2020-08-30",
+    "assets_value": "503043000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-03-20",
+    "assets_form": "10-K",
+    "assets_period_end": "2020-08-30",
+    "financing_cash_flow_value": "-17024000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-03-20",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2020-08-30",
+    "investing_cash_flow_value": "27000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-03-20",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2020-08-30",
+    "operating_cash_flow_value": "17226000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-03-20",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2020-08-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.107185",
+    "operating_cash_flow_to_revenue": "0.148781",
+    "assets_to_revenue": "4.34478",
+    "financing_cash_flow_to_revenue": "-0.147036",
+    "investing_cash_flow_to_revenue": "0.000233"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $128.",
+      "Revenue of $37.",
+      "Revenue of $128.",
+      "revenue increased $6.",
+      "revenue was primarily due to the higher demand in the current year from existing customers.",
+      "revenues was primarily due to an increase in development services, a new commercial launch in the second quarter of fiscal 2024 and the positive impact of revised contract negotiations on legacy products."
+    ],
+    "guidance_evidence": [
+      "Outlook The Company is providing guidance on a consolidated basis for full year fiscal 2025.",
+      "expects its new 5-head isolator filler to be GMP-ready in September.",
+      "expected to be GMP-ready in September 2024.",
+      "projects.",
+      "Expected to be in the range of $126.",
+      "Expected to be in the range of $19 million to $21 million."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "customers to promote expanded capacity and field site visits along with opportunities directed toward utilization of isolator capabilities with virtual to large pharma as well as closing development services programs.",
+      "demand in the current year from existing customers.",
+      "demand from existing customers, price increases from amended commercial agreements at the beginning of the calendar year and a modest increase in development services projects.",
+      "customer pricing on amended commercial agreements and an increase due to adjustments to write down inventories to their net realizable value in the prior year comparable period.",
+      "customer relationships usage are forward-looking statements."
+    ],
+    "warning_or_risk_evidence": [
+      "loss from continuing operations of $7.",
+      "loss on debt extinguishment in the prior year period.",
+      "decrease in the fair value of the debt derivative liability, as compared to a net loss from continuing operations of $64.",
+      "loss from continuing operations $ (7,085) $ (36,998) $ 29,913 80.",
+      "loss from continuing operations was $7.",
+      "loss from continuing operations of $37."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 128.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-27",
+    "entry_open": "5.790000",
+    "return_10d_pct": "-17.6166",
+    "return_20d_pct": "-12.0898",
+    "return_30d_pct": "-18.4801",
+    "return_60d_pct": "-2.9361",
+    "return_90d_pct": "28.8428"
+  },
+  "text_stats": {
+    "primary_text_len": 3537,
+    "exhibit_text_len": 29057,
+    "combined_text_len": 32596
+  }
+}

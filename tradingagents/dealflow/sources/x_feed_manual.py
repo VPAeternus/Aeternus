@@ -1,4 +1,4 @@
-"""Manual X Feed Scout — 15-pass sector sweep with full archival.
+"""Manual X Feed Scout — 16-pass sector sweep with full archival.
 
 User pastes Grok output per sector → parse → velocity_z → merge → AKG.
 Zero API calls. All raw pastes archived verbatim for backtesting.
@@ -42,6 +42,7 @@ PASS_CONFIGS: List[Dict[str, str]] = [
     {"pass": 13, "label": "Contrarian & Silent Movers", "type": "contrarian"},
     {"pass": 14, "label": "Unusual Options Activity", "type": "options_flow"},
     {"pass": 15, "label": "Market GEX / Dealer Gamma", "type": "gex_regime"},
+    {"pass": 16, "label": "Blindspot & Unmapped Ticker Audit", "type": "blindspot"},
 ]
 
 PASS_NUMBERS: Tuple[int, ...] = tuple(int(cfg["pass"]) for cfg in PASS_CONFIGS)
@@ -309,6 +310,98 @@ Field rules:
 - data_freshness: YYYY-MM-DD of the data being reported"""
 
 
+_BLINDSPOT_AUDIT_SEEDS = ("NOK", "AAOI", "PENG", "P", "MP", "SKYX")
+
+_BLINDSPOT_PROMPT_TEMPLATE = """\
+You are a financial markets analyst scanning X (Twitter) right now.
+
+TASK: Find US-listed common stocks and ADRs with unusual stock-specific X attention in the last 24 hours that the prior 15-pass manual X-feed sweep likely missed.
+
+This is a BLINDSPOT AUDIT, not a normal sector list. Look especially for:
+- ADRs or foreign issuers with US-listed tickers that sector prompts may skip
+- Single-letter or ambiguous tickers such as P
+- Small/microcap names that do not fit cleanly into one sector label
+- Cross-classified companies where posts use product language instead of GICS sector language
+- Second-order suppliers, component vendors, contract manufacturers, or infrastructure beneficiaries
+- Tickers present only as co-mentions in earlier passes but now deserving their own entry
+
+KNOWN CONTEXT FROM PASSES 1-15:
+{CAPTURED_CONTEXT}
+
+WATCHLIST AUDIT SEEDS:
+{AUDIT_SEEDS}
+
+Seed rule: audit seeds are allowed, but label them target_seeded=true. Do not force them into output unless you find real recent X evidence. Also search organically beyond the seed list.
+
+WHAT COUNTS:
+- Specific US-listed stock or ADR with 3+ distinct X accounts or a credible high-signal account discussing it in the last 24 hours
+- Evidence that explains why earlier prompts missed it
+- Ticker disambiguation for ambiguous symbols, ADRs, or one-letter tickers
+- A source account or post for every entry
+
+WHAT DOES NOT COUNT:
+- Tickers already captured directly in passes 1-15 unless the blindspot is a materially different thesis
+- Generic watchlist names with no fresh X posts
+- Crypto, indices, ETFs, forex, OTC-only names unless explicitly noted as not eligible
+- Pure price movement without a post-level catalyst
+- Fabricated source attribution
+
+Return up to 30 tickers ranked by blindspot importance. Return JSON only — no prose before or after:
+
+{"trending": [{"ticker": "NOK", "buzz_rank": 1, "sentiment": "BULLISH", "velocity": "ACCELERATING", "catalyst": "@account: specific source-backed reason this was missed", "sector": "Technology", "accounts_cited": ["@account"], "theme_links": ["private_wireless", "networking_reacceleration"], "co_mentions": ["ERIC", "CSCO"], "why_this_is_new": "new today vs prior chatter", "order_type": "second_order", "already_seen_status": "not_seen", "why_15_passes_missed_it": "ADR plus telecom/networking cross-classification likely fell between Technology and Communication Services prompts", "best_existing_pass": 1, "new_theme_if_needed": "private_wireless_ai_edge", "ticker_disambiguation": "Nokia Oyj ADR, NYSE:NOK", "target_seeded": true, "should_add_to_prompt_map": false}, ...]}
+
+Field rules:
+- buzz_rank: integer, 1 = strongest blindspot
+- sentiment: VERY_BULLISH | BULLISH | NEUTRAL | BEARISH | VERY_BEARISH
+- velocity: ACCELERATING | STEADY | FADING
+- catalyst: MUST start with @account or "NO_SOURCE_FOUND". One specific sentence; no generic prose.
+- sector: best GICS sector label, even if the reason it was missed is cross-sector ambiguity
+- accounts_cited: X accounts explicitly cited; empty only if NO_SOURCE_FOUND
+- theme_links: snake_case themes connected to this ticker
+- co_mentions: related US equity tickers mentioned in the same thesis
+- why_this_is_new: one sentence explaining novelty/acceleration today
+- order_type: first_order | second_order | hedge | unknown
+- already_seen_status: not_seen | already_captured | co_mentioned_only | theme_seen
+- why_15_passes_missed_it: specific prompt-map blindspot, not generic "missed by prior prompts"
+- best_existing_pass: integer 1-15 for where it should have been caught, or 0 if no existing pass fits
+- new_theme_if_needed: snake_case theme name only if current theme map lacks the right bucket
+- ticker_disambiguation: company/security identity, exchange if useful, and ADR/common-stock note when relevant
+- target_seeded: true if found because of the audit seed list, otherwise false
+- should_add_to_prompt_map: true only if this reveals a recurring structural prompt gap"""
+
+
+def _blindspot_context(as_of_date: str = "") -> str:
+    merged = load_merged(as_of_date) if as_of_date else {}
+    captured = sorted(str(symbol).upper().strip() for symbol in merged.keys() if str(symbol).strip())
+    co_mentions = sorted({
+        symbol
+        for row in merged.values()
+        for symbol in _normalize_symbol_list(row.get("co_mentions", []))
+        if symbol not in captured
+    })
+    themes = sorted({
+        _theme_key(theme)
+        for row in merged.values()
+        for theme in _normalize_string_list(row.get("theme_links", []) or row.get("raw_theme_links", []))
+        if _theme_key(theme)
+    })
+    payload = {
+        "captured_count": len(captured),
+        "captured_tickers": captured[:150],
+        "co_mentions_not_directly_captured": co_mentions[:150],
+        "theme_links_seen": themes[:100],
+    }
+    return json.dumps(payload, separators=(",", ":"))
+
+
+def _blindspot_prompt(as_of_date: str = "") -> str:
+    return (
+        _BLINDSPOT_PROMPT_TEMPLATE
+        .replace("{CAPTURED_CONTEXT}", _blindspot_context(as_of_date))
+        .replace("{AUDIT_SEEDS}", ", ".join(_BLINDSPOT_AUDIT_SEEDS))
+    )
+
+
 def generate_prompts(as_of_date: str = "") -> List[Tuple[int, str, str]]:
     """Return (pass_num, label, prompt_text) for all passes."""
     result = []
@@ -324,6 +417,8 @@ def generate_prompts(as_of_date: str = "") -> List[Tuple[int, str, str]]:
             prompt = _OPTIONS_FLOW_PROMPT
         elif ptype == "gex_regime":
             prompt = _GEX_REGIME_PROMPT
+        elif ptype == "blindspot":
+            prompt = _blindspot_prompt(as_of_date)
         else:
             prompt = _SECTOR_PROMPT_TEMPLATE.format(SECTOR=label)
         result.append((pnum, label, prompt))
@@ -377,8 +472,23 @@ def parse_pass(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
         theme_links, catalyst_tags = _normalize_themes(raw_theme_links, catalyst)
         co_mentions = [s for s in _normalize_symbol_list(item.get("co_mentions")) if s != ticker]
         no_source = "NO_SOURCE_FOUND" in catalyst.upper() or not accounts_cited
+        extra_fields: Dict[str, Any] = {}
+        if pass_type == "blindspot":
+            try:
+                best_existing_pass = int(item.get("best_existing_pass", 0) or 0)
+            except (TypeError, ValueError):
+                best_existing_pass = 0
+            extra_fields = {
+                "already_seen_status": str(item.get("already_seen_status", "unknown") or "unknown")[:40],
+                "why_15_passes_missed_it": str(item.get("why_15_passes_missed_it", ""))[:240],
+                "best_existing_pass": best_existing_pass,
+                "new_theme_if_needed": _theme_key(str(item.get("new_theme_if_needed", "") or ""))[:80],
+                "ticker_disambiguation": str(item.get("ticker_disambiguation", ""))[:160],
+                "target_seeded": bool(item.get("target_seeded", False)),
+                "should_add_to_prompt_map": bool(item.get("should_add_to_prompt_map", False)),
+            }
 
-        entries.append({
+        row = {
             "ticker": ticker,
             "buzz_rank": buzz_rank,
             "mentions_estimate": buzz_rank,
@@ -398,7 +508,9 @@ def parse_pass(raw_text: str, pass_num: int) -> List[Dict[str, Any]]:
             "order_type": str(item.get("order_type", "unknown") or "unknown")[:30],
             "source_quality": "unverified" if no_source else "cited",
             "no_source_found": bool(no_source),
-        })
+        }
+        row.update(extra_fields)
+        entries.append(row)
 
     return entries
 
@@ -853,8 +965,8 @@ def build_theme_emergence_graph(as_of_date: str, merged: Dict[str, Dict[str, Any
         "filtered_one_ticker_themes": sorted(filtered_one_ticker_themes),
         "edges": account_edges + [e for e in theme_edges if e.get("to") in theme_rows] + co_mention_edges,
         "prompt_design_recommendation": {
-            "keep_pass_count": 15,
-            "reason": "Broad sector recall is useful; graph merge removes destructive overlap. Future compression can combine low-yield passes after yield telemetry.",
+            "keep_pass_count": 16,
+            "reason": "Broad sector recall plus a final blindspot audit improves edge-case ticker capture; graph merge removes destructive overlap. Future compression can combine low-yield passes after yield telemetry.",
         },
     }
 

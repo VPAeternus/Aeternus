@@ -2,9 +2,9 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Add a read-only Step 5 artifact that measures research execution quality, portfolio conversion, and later forward returns from `analyze-batch`.
+**Goal:** Add a read-only Step 5 artifact that measures research execution quality, portfolio conversion, and later forward returns from `retired post-scout batch command`.
 
-**Architecture:** Build one pure report helper driven by the existing batch summary plus an optional same-date portfolio plan, persist it from `analyze-batch`, and keep all execution behavior unchanged.
+**Architecture:** Build one pure report helper driven by the existing batch summary plus an optional same-date portfolio plan, persist it from `retired post-scout batch command`, and keep all execution behavior unchanged.
 
 **Tech Stack:** Python 3, pytest, existing deal-flow and paper-execution artifacts
 
@@ -35,7 +35,7 @@ Implement a pure `build_research_conversion_integrity_report(...)`.
 
 Run: `python3 -m pytest tests/test_research_conversion_integrity.py -v`
 
-### Task 2: Persist artifact from analyze-batch
+### Task 2: Persist artifact from retired post-scout batch command
 
 **Files:**
 - Modify: `cli/commands/scoring.py`
@@ -53,7 +53,7 @@ Run: `python3 -m pytest tests/test_cli_dealflow.py -k 'research_conversion_integ
 
 **Step 3: Write minimal implementation**
 
-After `analyze-batch` builds `summary`, build the report and persist it.
+After `retired post-scout batch command` builds `summary`, build the report and persist it.
 
 **Step 4: Run test to verify it passes**
 

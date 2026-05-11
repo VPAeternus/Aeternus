@@ -13,7 +13,7 @@ Define a non-interfering `v1` contract for:
 - `AKG Writeback Candidates`
 - scout-quality measurement surfaces
 
-The design goal is to add a daily scenario layer on top of the existing deal-flow pipeline without changing live discovery, universe construction, collection, shortlist, or portfolio behavior.
+The design goal is to add a daily scenario layer on top of the existing deal-flow pipeline without changing live discovery, universe construction, collection, candidate_list, or portfolio behavior.
 
 ## Decision Summary
 
@@ -69,8 +69,8 @@ The new layer must not:
 - alter universe membership
 - alter collector inputs
 - alter scoring
-- alter shortlist construction
-- alter deep-selection behavior
+- alter candidate_list construction
+- alter fundamental-intake behavior
 - alter portfolio planning
 - mutate AKG directly
 - trigger external APIs
@@ -609,7 +609,7 @@ So `v1` should only run it:
 2. `coverage_precheck.json`
 3. AKG
 4. current filtered universe
-5. current holdings / shortlist / queue
+5. current holdings / candidate_list / queue
 6. cached macro
 7. cached SEC / filing artifacts
 8. cached X-feed artifacts
@@ -702,8 +702,8 @@ Not required in the first code slice, but part of the same design:
 
 - detection count by scout family
 - universe inclusion rate
-- shortlist conversion rate
-- deep-selection conversion rate
+- candidate_list conversion rate
+- fundamental-intake conversion rate
 - realized `5d/20d` edge by scout family
 - Event Card contribution by source bundle
 - coverage-complete rate by source bundle

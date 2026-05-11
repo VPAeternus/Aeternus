@@ -1,0 +1,55 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the first quarter ended March 31, 2025",
+    "period_end_date": "March 31, 2025"
+  },
+  "reported_results": {
+    "revenue_millions": 326.021,
+    "revenue_yoy_pct": 38.5566,
+    "revenue_qoq_pct": -43.0425,
+    "gross_margin_pct": 28.7,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "4, we delivered excellent results in the first quarter of 2025, thanks to the strong execution across the entire company, and the trust our customers place in us.",
+    "wave_signal": "KR Sridhar, Founder, Chairman, and CEO of Bloom Energy said, “Building on our success in 2024, we delivered excellent results in the first quarter of 2025, thanks to the strong execution across the entire company, and the trust our customers place in us.",
+    "margin_signal": "•Gross margin of 27.",
+    "risk_signal": "•Operating loss of $19.",
+    "customer_signal": "4, we delivered excellent results in the first quarter of 2025, thanks to the strong execution across the entire company, and the trust our customers place in us."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | $ | 326021 | | $ | 572393 | | $ | 235298 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | $ | 326021 | | $ | 572393 | | $ | 235298 |"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | $ | 326021 | | $ | 572393 | | $ | 235298 |"
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "Gross Margin Gross Margin Gross Margin 28.7% 28.7% 28.7% 39.3% 39.3% 39.3% 17.5% 17.5% 17.5%"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

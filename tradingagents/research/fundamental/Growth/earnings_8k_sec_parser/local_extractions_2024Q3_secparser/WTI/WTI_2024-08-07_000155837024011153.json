@@ -1,0 +1,830 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WTI",
+    "cik": "1288403",
+    "event_date": "2024-08-07",
+    "event_accession": "0001558370-24-011153",
+    "primary_8k_doc": "wti-20240806x8k.htm",
+    "exhibit_docs": [
+      "wti-20240806xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTI_000155837024011153_wti-20240806x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTI_000155837024011153_wti-20240806xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WTI",
+    "cik": "1288403",
+    "entity_name": "W&T Offshore, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "131725000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "26005000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1114005000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-294089000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13314000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "23435000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.197419",
+    "operating_cash_flow_to_revenue": "0.177909",
+    "assets_to_revenue": "8.457051",
+    "financing_cash_flow_to_revenue": "-2.232598",
+    "investing_cash_flow_to_revenue": "-0.101074"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $140.",
+      "revenue was approximately 13% higher than $126.",
+      "net income, as an indication of operating performance or cash flows from operating activities or as a measure of liquidity.",
+      "Free Cash Flow, Net Debt and PV-10, which are described and reconciled to the most comparable GAAP financial measures below in the accompanying tables under “Non-GAAP Information.",
+      "Free Cash Flow of $18.",
+      "Free Cash Flow;●Reported net loss of $15."
+    ],
+    "guidance_evidence": [
+      "guidance; ●Incurred lease operating expenses (“LOE”) of $74.",
+      "guidance range;●Generated net cash from operating activities of $37.",
+      "guidance range, LOE was below the bottom end of our guidance range and more importantly, we increased our cash on hand by 30% while decreasing net debt by 9% compared to March 1 ​​​ 31, 2024.",
+      "guidance and virtually flat compared with 35.",
+      "guidance range.",
+      "Guidance The guidance for the third quarter and full year 2024 in the table below represents the Company’s current expectations."
+    ],
+    "wave_or_demand_evidence": [
+      "aintain a low leverage profile with Net Debt to trailing twelve months (“TTM”) Adjusted EBITDA of 1.",
+      "aid third consecutive quarterly dividend of $0.",
+      "AI”), and a present value of those SEC proved reserves discounted at 10% (“PV-10”) of $1.",
+      "air and Chief Executive Officer, commented, “We remain committed to executing our strategic vision focused on free cash flow generation, maintaining solid production and maximizing margins while increasing proved reserves and PV-10.",
+      "AI shows a meaningful increase in reserves and PV-10 value, which demonstrates the resiliency and strength of our asset base.",
+      "ainder of 2024 and into 2025."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss, Adjusted EBITDA, Free Cash Flow, Net Debt and PV-10, which are described and reconciled to the most comparable GAAP financial measures below in the accompanying tables under “Non-GAAP Information.",
+      "loss of $15.",
+      "Loss totaled $8.",
+      "loss on outstanding derivative contracts, non-ARO plugging and abandonment (“P&A”) costs and related tax effect;●Posted Adjusted EBITDA of $45.",
+      "decrease of 9%, at June 30, 2024 compared to the first quarter of 2024;●Continued to maintain a low leverage profile with Net Debt to trailing twelve months (“TTM”) Adjusted EBITDA of 1.",
+      "decreases were partially offset by increased production from wells acquired in both January 2024 and September 2023."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "wti-20240806xex99d1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Enhanced HTML document created with Toppan Merrill Bridge 10.6.125.0Created on: 8/6/2024 09:58:54 PM (UTC)HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\""
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "ImageElement",
+      "text": "​​​​​​​PRESS RELEASE​​FOR IMMEDIATE RELEASE ​​​​​​​​​​​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "W&T Offshore Announces Second Quarter 2024 Results and"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Declares Dividend for Third Quarter of 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "HOUSTON, August 6, 2024 – W&T Offshore, Inc. (NYSE: WTI) (“W&T” or the “Company”) today reported operational and financial results for the second quarter of 2024 and declared a third quarter 2024 dividend of $0.01 per share. This press release includes non-GAAP financial measures, including Adjusted Net Loss, Adjusted EBITDA, Free Cash Flow, Net Debt and PV-10, which are described and reconciled to the most comparable GAAP financial measures below in the accompanying tables under “Non-GAAP Information.” Key highlights for the second quarter of 2024 and through the date of this press release include:●Produced 34.9 thousand barrels of oil equivalent per day (“MBoe/d”) (55% liquids) at the midpoint of the Company’s second quarter guidance; ●Incurred lease operating expenses (“LOE”) of $74.0 million, which was below the bottom end of the Company’s second quarter guidance range;●Generated net cash from operating activities of $37.4 million and Free Cash Flow of $18.7 million in the second quarter of 2024, marking the 26th consecutive quarter of positive Free Cash Flow;●Reported net loss of $15.4 million, or $(0.10) per diluted share; oAdjusted Net Loss totaled $8.0 million, or $(0.05) per share, which excludes non-recurring costs, the net unrealized loss on outstanding derivative contracts, non-ARO plugging and abandonment (“P&A”) costs and related tax effect;●Posted Adjusted EBITDA of $45.9 million;●Reported cash and cash equivalents of $123.4 million, an increase of 30%, and Net Debt of $268.5 million, a decrease of 9%, at June 30, 2024 compared to the first quarter of 2024;●Continued to maintain a low leverage profile with Net Debt to trailing twelve months (“TTM”) Adjusted EBITDA of 1.4x;●Paid third consecutive quarterly dividend of $0.01 per common share in May 2024; oDeclared third quarter of 2024 dividend of $0.01 per share, which will be payable on August 27, 2024 to stockholders of record on August 20, 2024; and●Reported mid-year SEC proved reserves of 141.9 million barrels of oil equivalent (“MMBoe”), using SEC prices and based on a reserve report prepared by Netherland, Sewell and Associates, Inc. (“NSAI”), and a present value of those SEC proved reserves discounted at 10% (“PV-10”) of $1.4 billion, an increase of 15% and 28%, respectively, compared to year-end 2023.Tracy W. Krohn, W&T’s Board Chair and Chief Executive Officer, commented, “We remain committed to executing our strategic vision focused on free cash flow generation, maintaining solid production and maximizing margins while increasing proved reserves and PV-10. This commitment enabled W&T to deliver another quarter of solid results where production was at the midpoint of our guidance range, LOE was below the bottom end of our guidance range and more importantly, we increased our cash on hand by 30% while decreasing net debt by 9% compared to March"
+    },
+    {
+      "type": "TextElement",
+      "text": "1"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TextElement",
+      "text": "31, 2024. We generated strong Adjusted EBITDA of $45.9 million during the second quarter and our focus on quality free cash flow generation resulted in W&T reporting $18.7 million in Free Cash Flow, the 26th consecutive quarter of positive Free Cash Flow. We continue to make progress integrating our 2024 acquired assets into W&T, and we now have four of the six fields online, but we still have more work to do that should help to increase production from the new fields.”“Our 2024 mid-year reserve report generated by NSAI shows a meaningful increase in reserves and PV-10 value, which demonstrates the resiliency and strength of our asset base. Our improved balance sheet enables us to continue to grow both organically and through targeted, complementary acquisitions in the Gulf of Mexico that allow us to leverage our scale and expertise in the basin. We are well positioned to capture and enhance value, while returning capital to our shareholders through the quarterly dividend program. Our proven and successful strategy and operational excellence should help us to continue to produce strong results both operationally and financially for the remainder of 2024 and into 2025.” Production, Prices and Revenue: Production for the second quarter of 2024 was 34.9 MBoe/d, at the midpoint of the Company’s second quarter guidance and virtually flat compared with 35.1 MBoe/d for the first quarter of 2024 and 37.0 MBoe/d for the corresponding period in 2023. Second quarter 2024 production was comprised of 15.2 thousand barrels per day (“MBbl/d”) of oil (44%), 3.7 MBbl/d of natural gas liquids (“NGLs”) (11%), and 96.4 million cubic feet per day (“MMcf/d”) of natural gas (45%). Production in the second quarter of 2024 was negatively impacted by the Company’s primary Mobile Bay processing plant getting shut-in by the third-party operator to perform a turnaround. This forced W&T to re-route Mobile Bay volumes to a separate third-party processing plant that did not have the same capacity, leading to curtailed production and sales. These decreases were partially offset by increased production from wells acquired in both January 2024 and September 2023. The primary processing plant was back online in June 2024 and is now processing the Company’s Mobile Bay volumes at its existing capacity. Regarding W&T’s acquisition of assets in January 2024: ●Successfully negotiated a new beneficial agreement with the MO916 gas processor and returned the field to production on May 27th at rates consistent with expectations;●With the return of MO916 to production, four of the six fields acquired are now on production; and●For the two remaining shut-in fields, engineering design studies are in progress as W&T continues to work parallel paths on each to expedite their return to production, either through existing third-party sales routes or alternative Company-owned sales routes.W&T’s average realized price per Boe before realized derivative settlements was $44.40 per Boe in the second quarter of 2024, an increase of 4% from $42.55 per Boe in the first quarter of 2024 and an increase of 21% from $36.76 per Boe in the second quarter of 2023. Second quarter 2024 oil, NGL and natural gas prices before realized derivative settlements were $80.29 per barrel, $24.43 per barrel, and $2.50 per Mcf, respectively. Revenues for the second quarter of 2024 were $142.8 million, which was approximately 1% higher than first quarter of 2024 revenue of $140.8 million due to modestly higher realized prices partially offset by lower production volumes. Second quarter 2024 revenue was approximately 13% higher than $126.2 million of revenue in the second quarter of 2023 due to higher average realized prices, partially offset by moderately lower natural gas and NGL production volumes.Lease Operating Expense: LOE, which includes base lease operating expenses, insurance premiums, workovers and facilities maintenance expenses, was $74.0 million in the second quarter of 2024, which was below the bottom end of the previously provided guidance range. LOE came in lower than expected as the Company continued to realize synergies from asset acquisitions in late 2023 and early 2024. LOE for the second quarter of 2024 was approximately 4% higher compared to $70.8 million in the first quarter of 2024 and up approximately 12% from $66.0 million for the corresponding period in 2023 primarily due to higher base lease operating expenses related to the asset acquisitions in late 2023 and early 2024. On a component basis for the second quarter of 2024, base LOE and insurance premiums were $57.0 million, workovers were $2.4 million, and facilities maintenance and other expenses were $14.6 million. On a unit of production basis, LOE was $23.29 per Boe in the second quarter of 2024. This compares to $22.14 per Boe for the first quarter of 2024 and $19.60 per Boe for the second quarter of 2023. Gathering, Transportation Costs and Production Taxes: Gathering, transportation costs and production taxes totaled $8.6 million ($2.70 per Boe) in the second quarter of 2024, compared to $7.5 million ($2.36 per Boe) in the first quarter of 2024 and $6.8 million ($2.02 per Boe) in the second quarter of 2023. Gathering, transportation costs"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2​"
+    },
+    {
+      "type": "TextElement",
+      "text": "​​​and production taxes increased primarily due to higher processing fees for W&T’s Mobile Bay production that had to be re-routed to a different processing plant. Depreciation, Depletion and Amortization (“DD&A”): DD&A was $11.55 per Boe in the second quarter of 2024. This compares to $10.61 per Boe and $8.37 per Boe for the first quarter of 2024 and the second quarter of 2023, respectively. Asset Retirement Obligations Accretion: Asset retirement obligations accretion was $2.64 per Boe in the second quarter of 2024. This compares to $2.49 per Boe and $2.29 per Boe for the first quarter of 2024 and the second quarter of 2023, respectively. General & Administrative Expenses (“G&A”): G&A was $21.4 million for the second quarter of 2024, which increased from $20.5 million in the first quarter of 2024, and from $17.4 million in the second quarter of 2023 primarily due to non-recurring professional and legal services. On a unit of production basis, G&A was $6.72 per Boe in the second quarter of 2024 compared to $6.41 per Boe in the first quarter of 2024 and $5.16 per Boe in the corresponding period of 2023. G&A in the second quarter of 2024 included $1.4 million of non-cash compensation expense compared with $3.0 million in the first quarter of 2024 and $2.1 million in the second quarter of 2023.Derivative Loss (Gain), net: In the second quarter of 2024, W&T recorded a net loss of $2.4 million related to commodity derivative contracts comprised of a $2.7 million unrealized loss related to the decrease in fair value of open contracts and $0.3 million of realized gains. W&T recognized a net gain of $4.9 million in the first quarter of 2024 and a net gain of $0.8 million in the second quarter of 2023 related to commodity derivative activities.A summary of the Company’s outstanding derivative positions is provided in the investor presentation posted on W&T’s website.Interest Expense: Net interest expense in the second quarter of 2024 was $10.2 million compared to $10.1 million in the first quarter of 2024 and $10.3 million in the second quarter of 2023. Other Expense: During 2021 and 2022, as a result of the declaration of bankruptcy by a third party that is the indirect successor in title to certain offshore interests that were previously divested by the Company, W&T recorded a contingent loss accrual related to anticipated non-ARO plugging and abandonment costs. During the second quarter of 2024, the Company reassessed its existing obligations and recorded an additional $1.7 million.Income Tax (Benefit) Expense: W&T recognized an income tax benefit of $4.6 million in the second quarter of 2024. This compares to the recognition of income tax expense of $1.0 million and $3.0 million for the quarters ended March 31, 2024 and June 30, 2023, respectively.Balance Sheet and Liquidity: As of June 30, 2024, W&T had available liquidity of $173.4 million comprised of $123.4 million in unrestricted cash and cash equivalents and $50.0 million of borrowing availability under W&T’s first priority secured revolving facility provided by Calculus Lending LLC. As of June 30, 2024, the Company had total debt of $391.9 million and Net Debt of $268.5 million. Of W&T’s total debt of $391.9 million, only $280.2 million is recourse to W&T. The remaining $111.7 million is held at W&T’s wholly owned subsidiary, Aquasition Energy LLC, and is non-recourse to W&T. As of June 30, 2024, Net Debt to TTM Adjusted EBITDA was 1.4x. Capital Expenditures: Capital expenditures on an accrual basis (excluding acquisitions) in the second quarter of 2024 were $8.8 million, and asset retirement settlement costs totaled $8.2 million. For the first six months ended June 30, 2024, capital expenditures on an accrual basis (excluding acquisitions) totaled $11.9 million and asset retirements costs were $12.0 million. Investments related to acquisitions in the six months ended June 30, 2024 totaled $80.6 million, which included $77.3 million for the Cox acquisition and $3.3 million of final purchase price adjustments related to W&T’s acquisition of properties in September 2023.OPERATIONS UPDATEWell Recompletions and WorkoversDuring the second quarter of 2024, the Company performed three workovers and two recompletions that positively impacted production for the quarter. W&T plans to continue performing these low cost, short payout operations that impact both production and revenue.3​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Cash Dividend Policy"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company paid its second quarter 2024 dividend of $0.01 per share on May 31, 2024 to stockholders of record on May 24, 2024.The Board of Directors declared a third quarter 2024 dividend of $0.01 per share which is to be paid on August 27, 2024 to stockholders of record on August 20, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Mid-Year 2024 Proved Reserves"
+    },
+    {
+      "type": "TextElement",
+      "text": "As calculated by NSAI, W&T’s independent reserve engineering consultants, proved reserves using SEC pricing methodology totaled 141.9 MMBoe at June 30, 2024, compared with 123.0 MMBoe at year-end 2023. The increase in proved reserves was primarily driven by acquisition additions of 21.8 MMBoe and positive revisions of 3.5 MMBoe, partially offset by 6.3 MMBoe of production in the first half of 2024. The mid-year proved reserves, which were 54% proved developed producing, 29% proved developed non-producing, and 17% proved undeveloped, were 47% liquids (38% oil and 9% NGLs) and 53% natural gas. W&T operates approximately 94% of its mid-year 2024 proved reserves.The pre-tax PV-10 of the mid-year 2024 proved reserves using SEC pricing was $1.4 billion (before consideration of expenditures for asset retirement obligations), an increase of 28% compared with the PV-10 of $1.1 billion at year-end 2023 using SEC pricing. The increase was primarily driven by the six additional fields acquired in January 2024. Mid-year 2024 SEC proved reserves and PV-10 were based on an average 12-month oil and natural gas prices of $79.45 per barrel and $2.32 per MMBtu, respectively. Prices used to determine proved reserves and PV-10 for year-end 2023 were $78.21 per barrel of oil and $2.64 per MMBtu of natural gas."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Third Quarter and Full Year 2024 Production and Expense Guidance"
+    },
+    {
+      "type": "TextElement",
+      "text": "The guidance for the third quarter and full year 2024 in the table below represents the Company’s current expectations. Please refer to the section entitled “Forward-Looking and Cautionary Statements” below for risk factors that could impact guidance. Third quarter and full year 2024 guidance reflects the impact of third-party pipeline issues due to the Cox bankruptcy. W&T plans to spend more on LOE in the third quarter of 2024 to undertake some of the projects deferred earlier in the year. However, full year estimated LOE was reduced to a range of $280 million to $315 million, or about 5% at the mid-point, to take into account W&T’s ability to lower costs and the benefit of synergies from recent acquisitions."
+    },
+    {
+      "type": "TableElement",
+      "text": "ProductionThird Quarter 2024Full Year 2024Oil (MBbl)1,175-1,3255,000-5,500NGLs (MBbl)250-3001,150-1,350Natural gas (MMcf)8,500-9,50034,500-38,500Total equivalents (MBoe)2,842-3,20811,900-13,267Average daily equivalents (MBoe/d)30.9-34.932.5-36.2ExpensesThird Quarter 2024Full Year 2024Lease operating expense ($MM)77.0-85.0280.0-315.0Gathering, transportation & production taxes ($MM)7.5-8.531.0-34.0General & administrative – cash ($MM)16.0-17.566.0-74.0General & administrative – non-cash ($MM)3.7-4.111.5-13.5DD&A ($ per Boe)​13.00-14.00"
+    },
+    {
+      "type": "TextElement",
+      "text": "W&T expects substantially all taxes in 2024 to be deferred. Conference Call Information: W&T will hold a conference call to discuss its financial and operational results on Wednesday, August 7, 2024 at 9:00 a.m. Central Time (10:00 a.m. Eastern Time). Interested parties may dial 1-844-739-3797. International parties may dial 1-412-317-5713. Participants should request to connect to the “W&T"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4​"
+    },
+    {
+      "type": "TextElement",
+      "text": "​​​Offshore Conference Call.” This call will also be webcast and available on W&T’s website at www.wtoffshore.com under “Investors.” An audio replay will be available on the Company’s website following the call.About W&T OffshoreW&T Offshore, Inc. is an independent oil and natural gas producer with operations offshore in the Gulf of Mexico and has grown through acquisitions, exploration and development. As of June 30, 2024, the Company had working interests in 63 fields in federal and state waters (which include 55 fields in federal waters and eight in state waters). The Company has under lease approximately 678,100 gross acres (520.400 net acres) spanning across the outer continental shelf off the coasts of Louisiana, Texas, Mississippi and Alabama, with approximately 519,000 gross acres on the conventional shelf, approximately 153,500 gross acres in the deepwater and 5,600 gross acres in Alabama state waters. A majority of the Company’s daily production is derived from wells it operates. For more information on W&T, please visit the Company’s website at www.wtoffshore.com.Forward-Looking and Cautionary StatementsThis press release contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended. All statements other than statements of historical facts included in this release regarding the Company’s financial position, operating and financial performance, business strategy, plans and objectives of management for future operations, projected costs, industry conditions, potential acquisitions, the impact of and integration of acquired assets, and indebtedness are forward-looking statements. When used in this release, forward-looking statements are generally accompanied by terms or phrases such as “estimate,” “project,” “predict,” “believe,” “expect,” “continue,” “anticipate,” “target,” “could,” “plan,” “intend,” “seek,” “goal,” “will,” “should,” “may” or other words and similar expressions that convey the uncertainty of future events or outcomes, although not all forward-looking statements contain such identifying words. Items contemplating or making assumptions about actual or potential future production and sales, prices, market size, and trends or operating results also constitute such forward-looking statements.These forward-looking statements are based on the Company’s current expectations and assumptions about future events and speak only as of the date of this release. While management considers these expectations and assumptions to be reasonable, they are inherently subject to significant business, economic, competitive, regulatory and other risks, contingencies and uncertainties, most of which are difficult to predict and many of which are beyond the Company’s control. Accordingly, you are cautioned not to place undue reliance on these forward-looking statements, as results actually achieved may differ materially from expected results described in these statements. The Company does not undertake, and specifically disclaims, any obligation to update any forward-looking statements to reflect events or circumstances occurring after the date of such statements, unless required by law.Forward-looking statements are subject to risks and uncertainties that could cause actual results to differ materially including, among other things, the regulatory environment, including availability or timing of, and conditions imposed on, obtaining and/or maintaining permits and approvals, including those necessary for drilling and/or development projects; the impact of current, pending and/or future laws and regulations, and of legislative and regulatory changes and other government activities, including those related to permitting, drilling, completion, well stimulation, operation, maintenance or abandonment of wells or facilities, managing energy, water, land, greenhouse gases or other emissions, protection of health, safety and the environment, or transportation, marketing and sale of the Company’s products; inflation levels; global economic trends, geopolitical risks and general economic and industry conditions, such as the global supply chain disruptions and the government interventions into the financial markets and economy in response to inflation levels and world health events; volatility of oil, NGL and natural gas prices; the global energy future, including the factors and trends that are expected to shape it, such as concerns about climate change and other air quality issues, the transition to a low-emission economy and the expected role of different energy sources; supply of and demand for oil, natural gas and NGLs, including due to the actions of foreign producers, importantly including OPEC and other major oil producing companies (“OPEC+”) and change in OPEC+’s production levels; disruptions to, capacity constraints in, or other limitations on the pipeline systems that deliver the Company’s oil and natural gas and other processing and transportation considerations; inability to generate sufficient cash flow from operations or to obtain adequate financing to fund capital expenditures, meet the Company’s working capital requirements or fund planned investments; price fluctuations and availability of natural gas and electricity; the Company’s ability to use derivative instruments to manage commodity price risk; the Company’s ability to meet the Company’s planned drilling schedule, including due to the Company’s ability to obtain permits on a timely basis or at all, and to successfully drill wells that produce oil and natural gas in commercially viable quantities; uncertainties associated with estimating proved reserves and related future cash flows; the Company’s ability to replace the Company’s reserves through exploration and development activities; drilling and production results, lower–than–expected production, reserves or 5​​​​resources from development projects or higher–than–expected decline rates; the Company’s ability to obtain timely and available drilling and completion equipment and crew availability and access to necessary resources for drilling, completing and operating wells; changes in tax laws; effects of competition; uncertainties and liabilities associated with acquired and divested assets; the Company’s ability to make acquisitions and successfully integrate any acquired businesses; asset impairments from commodity price declines; large or multiple customer defaults on contractual obligations, including defaults resulting from actual or potential insolvencies; geographical concentration of the Company’s operations; the creditworthiness and performance of the Company’s counterparties with respect to its hedges; impact of derivatives legislation affecting the Company’s ability to hedge; failure of risk management and ineffectiveness of internal controls; catastrophic events, including tropical storms, hurricanes, earthquakes, pandemics and other world health events; environmental risks and liabilities under U.S. federal, state, tribal and local laws and regulations (including remedial actions); potential liability resulting from pending or future litigation; the Company’s ability to recruit and/or retain key members of the Company’s senior management and key technical employees; information technology failures or cyberattacks; and governmental actions and political conditions, as well as the actions by other third parties that are beyond the Company’s control, and other factors discussed in W&T Offshore’s most recent Annual Report on Form 10-K and subsequent Quarterly Reports on Form 10-Q found at www.sec.gov or at the Company’s website at www.wtoffshore.com under the Investor Relations section.6​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​W&T OFFSHORE, INC.Condensed Consolidated Statements of Operations(In thousands, except per share data)(Unaudited)​​​​​​​​​​​​​​​​​​Three Months Ended ​Six Months Ended​​June 30, ​March 31, ​June 30, ​June 30, ​ 2024 2024 2023​2024 2023Revenues: ​ ​ ​ ​​ ​ Oil​$ 110,965​$ 107,015​$ 89,982​$ 217,980​$ 186,982NGLs​ 8,160​ 7,469​ 10,385​ 15,629​ 18,180Natural gas​ 21,910​ 21,616​ 23,438​ 43,526​ 48,242Other​ 1,722​ 4,687​ 2,376​ 6,409​ 4,502Total revenues​ 142,757​ 140,787​ 126,181​ 283,544​ 257,906​​​​​​​​​​​​​​​​Operating expenses:​ ​ ​ ​ ​ Lease operating expenses​ 73,987​ 70,830​ 66,021​ 144,817​ 131,207Gathering, transportation and production taxes​ 8,578​ 7,540​ 6,802​ 16,118​ 12,938Depreciation, depletion, and amortization​ 36,674​ 33,937​ 28,177​ 70,611​ 50,801Asset retirement obligations accretion​​ 8,400​​ 7,969​​ 7,717​​ 16,369​​ 15,227General and administrative expenses​ 21,354​ 20,515​ 17,393​ 41,869​ 37,312Total operating expenses​ 148,993​ 140,791​ 126,110​ 289,784​ 247,485​​​​​​​​​​​​​​​​Operating (loss) income​ (6,236)​ (4)​ 71​ (6,240)​ 10,421​​​​​​​​​​​​​​​​Interest expense, net ​ 10,164​ 10,072​ 10,323​ 20,236​ 25,036Derivative loss (gain), net​ 2,374​ (4,877)​ (829)​ (2,503)​ (40,069)Other expense (income), net​ 1,250​ 5,230​ (311)​ 6,480​ (78)(Loss) income before income taxes​ (20,024)​ (10,429)​ (9,112)​ (30,453)​ 25,532Income tax (benefit) expense​ (4,636)​ 1,045​ 2,997​ (3,591)​ 11,636Net (loss) income ​$ (15,388)​$ (11,474)​$ (12,109)​$ (26,862)​$ 13,896​​​​​​​​​​​​​​​​Net (loss) income per share:​​​​​​​​​​​​​​​Basic​$ (0.10)​$ (0.08)​$ (0.08)​$ (0.18)​$ 0.09Diluted​​ (0.10)​​ (0.08)​​ (0.08)​​ (0.18)​​ 0.09​​​​​​​​​​​​​​​​Weighted average common shares outstanding​ ​​​​​​​​​​​​​Basic​​ 146,943​ 146,857​ 146,452​ 146,900​ 146,435Diluted​​ 146,943​​ 146,857​​ 146,452​​ 146,900​​ 149,045"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​W&T OFFSHORE, INC.Condensed Operating Data(Unaudited)​​​​​​​​​​​​​​​​​​Three Months Ended ​Six Months Ended​​June 30, ​March 31, ​June 30, ​June 30, ​​2024​2024 2023​2024 2023Net sales volumes:​​ ​​ ​ ​​ ​ Oil (MBbls)​​ 1,382​​ 1,400 ​ 1,254​​ 2,782 ​ 2,604NGLs (MBbls)​​ 334​​ 343 ​ 443 ​ 677 ​ 738Natural gas (MMcf)​​ 8,769​​ 8,733 ​ 10,023 ​ 17,502 ​ 17,699Total oil and natural gas (MBoe) (1)​​ 3,177​​ 3,199 ​ 3,368 ​ 6,376 ​ 6,292​​​​​​​​​​​​​​​​Average daily equivalent sales (MBoe/d)​​ 34.9​​ 35.1 ​ 37.0 ​ 35.0 ​ 34.8​​​​​​​​​​​​​​​​Average realized sales prices (before the impact of derivative settlements):​​ ​​ ​ ​​ ​ Oil ($/Bbl)​$ 80.29​$ 76.44​$ 71.76​$ 78.35​$ 71.81NGLs ($/Bbl)​ 24.43​ 21.78​ 23.44​ 23.09​ 24.63Natural gas ($/Mcf)​ 2.50​ 2.48​ 2.34​ 2.49​ 2.73Barrel of oil equivalent ($/Boe)​ 44.40​ 42.55​ 36.76​ 43.47​ 40.27​​​​​​​​​​​​​​​​Average operating expenses per Boe ($/Boe):​ ​ ​ ​ ​​ Lease operating expenses​$ 23.29​$ 22.14​$ 19.60​$ 22.71​$ 20.85Gathering, transportation and production taxes​ 2.70​ 2.36​ 2.02​ 2.53​ 2.06Depreciation, depletion, and amortization​ 11.55​ 10.61​ 8.37​ 11.07​ 8.07Asset retirement obligations accretion​​ 2.64​​ 2.49​​ 2.29​​ 2.57​​ 2.42General and administrative expenses​ 6.72​ 6.41​ 5.16​ 6.57​ 5.93"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)MBoe is determined using the ratio of six Mcf of natural gas to one Bbl of crude oil, condensate or NGLs (totals may not compute due to rounding). The conversion ratio does not assume price equivalency and the price on an equivalent basis for oil, NGLs and natural gas may differ significantly. The realized prices presented above are volume-weighted for production in the respective period."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​W&T OFFSHORE, INC. Consolidated Balance Sheets(In thousands)​(Unaudited)​​​​​​​​​​ June 30, ​December 31, ​​2024​2023 Assets ​ ​ ​Current assets: ​ ​ ​Cash and cash equivalents​$ 123,375​$ 173,338​Restricted cash​​ 4,417​​ 4,417​Receivables:​ ​​ ​​Oil and natural gas sales​ 71,547​ 52,080​Joint interest, net​ 20,478​ 15,480​Other​​ 2,223​​ 2,218​Prepaid expenses and other assets​ 25,890​ 17,447​Total current assets​ 247,930​ 264,980​​​​​​​​​Oil and natural gas properties and other, net​ 802,401​ 749,056​Restricted deposits for asset retirement obligations​ 22,479​ 22,272​Deferred income taxes​ 42,365​ 38,774​Other assets​ 33,396​ 38,923​Total assets​$ 1,148,571​$ 1,114,005​​​​​​​​​Liabilities and Shareholders’ Equity ​ ​ ​Current liabilities:​ ​ ​Accounts payable​$ 89,129​$ 78,857​Accrued liabilities ​ 29,004​ 31,978​Undistributed oil and natural gas proceeds​ 63,150​ 42,134​Advances from joint interest partners​ 2,565​ 2,962​Current portion of asset retirement obligation​ 35,627​ 31,553​Current portion of long-term debt, net ​​ 14,925​​ 29,368​Total current liabilities​ 234,400​ 216,852​​​​​​​​​Asset retirement obligations ​ 498,848​ 467,262​Long-term debt, net ​​ 376,979​​ 361,236​Other liabilities​ 16,668​ 19,420​Commitments and contingencies ​ 16,671​ 18,043​​​ ​​ ​​Shareholders’ equity:​ ​​ ​​Preferred stock​​ —​​ —​Common stock​​ 2​​ 1​Additional paid-in capital​​ 589,678​​ 586,014​Retained deficit​​ (560,508)​​ (530,656)​Treasury stock​​ (24,167)​​ (24,167)​Total shareholders’ equity​​ 5,005​​ 31,192​Total liabilities and shareholders’ equity​$ 1,148,571​$ 1,114,005​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​W&T OFFSHORE, INC.Condensed Consolidated Statements of Cash Flows(In thousands) (Unaudited)​ ​​​ ​​​​​​​​​​​​​​Three Months Ended ​Six Month Ended​​June 30, ​March 31, ​June 30, ​June 30, ​ 2024 2024 2023​2024 2023Operating activities:​​​​​​​​​​​​​​ Net (loss) income​$ (15,388)​$ (11,474)​$ (12,109)​$ (26,862)​$ 13,896Adjustments to reconcile net (loss) income to net cash provided by operating activities:​ ​​ ​​ ​​ ​​ ​Depreciation, depletion, amortization and accretion ​ 45,074​ 41,906​ 35,894​ 86,980​ 66,028Share-based compensation ​ 1,386​ 3,032​ 2,087​ 4,418​ 4,009Amortization and write off of debt issuance costs​ 1,044​ 1,292​ 1,114​ 2,336​ 4,363Derivative loss (gain), net​ 2,374​ (4,877)​ (829)​ (2,503)​ (40,069)Derivative cash settlements, net​ 2,358​ 2,599​ 901​ 4,957​ (4,427)Deferred income (benefit) taxes​ (4,324)​ 733​ 7,184​ (3,591)​ 11,580Changes in operating assets and liabilities: ​ ​​ ​​ ​​ ​​ ​Accounts receivable​ (7,108)​ (17,362)​ 7,424​ (24,470)​ 24,929Prepaid expenses and other current assets​​ (6,177)​​ 433​​ (4,497)​​ (5,744)​​ 26,992Accounts payable, accrued liabilities and other​ 26,416​ (852)​ (7,773)​ 25,564​ (45,828)Asset retirement obligation settlements​ (8,209)​ (3,788)​ (3,199)​ (11,997)​ (11,841)Net cash provided by operating activities ​ 37,446​ 11,642​ 26,197​ 49,088​ 49,632​​​​​​​​​​​​​​​​Investing activities:​ ​ ​ ​ ​ Investment in oil and natural gas properties and equipment​ (6,576)​ (7,080)​ (12,179)​ (13,656)​ (25,337)Acquisition of property interests​ (120)​ (80,515)​ —​ (80,635)​ —Purchase of corporate aircraft​​ —​​ —​​ (8,983)​​ —​​ (8,983)Purchases of furniture, fixtures and other​​ (73)​​ (24)​​ (62)​​ (97)​​ (218)Net cash used in investing activities ​ (6,769)​ (87,619)​ (21,224)​ (94,388)​ (34,538)​​​​​​​​​​​​​​​​Financing activities:​ ​ ​ ​ ​ Proceeds from issuance of long-term debt​​ —​​ —​​​​​ —​​ 275,000Repayments of long-term debt​​ (275)​​ (275)​​ (9,812)​​ (550)​​ (571,824)Debt issuance costs​​ (93)​​ (312)​​ (898)​​ (405)​​ (7,252)Payment of dividends​​ (1,485)​​ (1,469)​​ —​​ (2,954)​​ —Other​ (271)​ (483)​ (25)​ (754)​ (748)Net cash used in financing activities ​ (2,124)​ (2,539)​ (10,735)​ (4,663)​ (304,824)Change in cash, cash equivalents and restricted cash​ 28,553​ (78,516)​ (5,762)​ (49,963)​ (289,730)Cash, cash equivalents and restricted cash, beginning of period ​ 99,239​ 177,755​ 181,806​ 177,755​ 465,774Cash, cash equivalents and restricted cash, end of period ​$ 127,792​$ 99,239​$ 176,044​$ 127,792​$ 176,044"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "W&T OFFSHORE, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "Certain financial information included in W&T’s financial results are not measures of financial performance recognized by accounting principles generally accepted in the United States, or GAAP. These non-GAAP financial measures are “Net Debt,” “Adjusted Net Loss,” “Adjusted EBITDA,” “Free Cash Flow” and PV-10 or are derivable from a combination of these measures. Management uses these non-GAAP financial measures in its analysis of performance. These disclosures may not be viewed as a substitute for results determined in accordance with GAAP and are not necessarily comparable to non-GAAP performance measures which may be reported by other companies. Prior period amounts have been conformed to the methodology and presentation of the current period. We calculate Net Debt as total debt (current and long-term portions), less cash and cash equivalents. Management uses Net Debt to evaluate the Company’s financial position, including its ability to service its debt obligations."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Net (Loss) Income to Adjusted Net Loss"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjusted Net Loss adjusts for certain items that the Company believes affect comparability of operating results, including items that are generally non-recurring in nature or whose timing and/or amount cannot be reasonably estimated. These items include unrealized commodity derivative gain, net, allowance for credit losses, write-off of debt issuance costs, non-recurring legal and IT-related costs, non-ARO plugging and abandonment costs, and other which are then tax effected using the Federal Statutory Rate."
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​​​Three Months Ended ​Six Months Ended​​June 30, ​March 31, ​June 30,​​June 30,​ 2024 2024 2023 2024 2023​​​(in thousands)​​​(Unaudited)Net (loss) income​$ (15,388)​$ (11,474)​$ (12,109)​​$ (26,862)​$ 13,896Unrealized commodity derivative loss (gain), net​ 2,738​ (1,122)​​ (1,129)​​ 1,616​ (40,599)Allowance for credit losses​ 346​ 84​ 3​​ 430​ 3Write-off debt issuance costs​​ —​​ —​​ —​​​ —​​ 2,330Non-recurring legal and IT-related costs​​ 4,202​​ 758​​ 1,078​​ 4,960​ 1,863Non-ARO P&A costs​​ 1,709​​ 5,352​​ —​​​ 7,061​​ 6Other​ 304​ (214)​ (294)​​​ 90​​ 84Tax effect of selected items (1)​​ (1,953)​​ (1,020)​​ 72​​​ (2,973)​​ 7,626Adjusted net loss​$ (8,042)​$ (7,636)​$ (12,379)​​$ (15,678)​$ (14,791)​​​​​​​​​​​​​​​​​Adjusted net loss per common share:​​​​​​​​​​​​​​​​Basic​$ (0.05)​$ (0.05)​$ (0.08)​​$ (0.11)​$ (0.10)Diluted​$ (0.05)​$ (0.05)​$ (0.08)​​$ (0.11)​$ (0.10)​​​​​​​​​​​​​​​​​Weighted average shares outstanding:​​​​​​​​​​​​​​​​Basic​​ 146,943​​ 146,857​​ 146,452​​​ 146,900​​ 146,435Diluted​​ 146,943​​ 146,857​​ 146,452​​​ 146,900​​ 146,435"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Selected items were tax effected with the Federal Statutory Rate of 21% for each respective period."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "W&T OFFSHORE, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Information"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted EBITDA/ Free Cash Flow Reconciliations"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company also presents non-GAAP financial measures of Adjusted EBITDA and Free Cash Flow. The Company defines Adjusted EBITDA as net (loss) income plus net interest expense, income tax (benefit) expense, depreciation, depletion and amortization, ARO accretion, excluding the unrealized commodity derivative loss (gain), allowance for credit losses, non-cash incentive compensation, non-recurring legal and IT-related costs, non-ARO plugging and abandonment costs, and other. Company management believes this presentation is relevant and useful because it helps investors understand W&T’s operating performance and makes it easier to compare its results with those of other companies that have different financing, capital and tax structures. Adjusted EBITDA should not be considered in isolation from or as a substitute for net income, as an indication of operating performance or cash flows from operating activities or as a measure of liquidity. Adjusted EBITDA, as W&T calculates it, may not be comparable to Adjusted EBITDA measures reported by other companies. In addition, Adjusted EBITDA does not represent funds available for discretionary use. The Company defines Free Cash Flow as Adjusted EBITDA (defined above), less capital expenditures, plugging and abandonment costs and net interest expense (all on an accrual basis). For this purpose, the Company’s definition of capital expenditures includes costs incurred related to oil and natural gas properties (such as drilling and infrastructure costs and the lease maintenance costs) and equipment but excludes acquisition costs of oil and gas properties from third parties that are not included in the Company’s capital expenditures guidance provided to investors. Company management believes that Free Cash Flow is an important financial performance measure for use in evaluating the performance and efficiency of its current operating activities after the impact of accrued capital expenditures, plugging and abandonment costs and net interest expense and without being impacted by items such as changes associated with working capital, which can vary substantially from one period to another. There is no commonly accepted definition of Free Cash Flow within the industry. Accordingly, Free Cash Flow, as defined and calculated by the Company, may not be comparable to Free Cash Flow or other similarly named non-GAAP measures reported by other companies. While the Company includes net interest expense in the calculation of Free Cash Flow, other mandatory debt service requirements of future payments of principal at maturity (if such debt is not refinanced) are excluded from the calculation of Free Cash Flow. These and other non-discretionary expenditures that are not deducted from Free Cash Flow would reduce cash available for other uses. The following table presents a reconciliation of the Company’s net (loss) income, a GAAP measure, to Adjusted EBITDA and Free Cash Flow, as such terms are defined by the Company:"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​​Three Months Ended ​Six Months Ended​​June 30, ​​March 31, ​June 30,​June 30,​ 2024 ​2024 2023 2024 2023​​(in thousands)​​(Unaudited)Net (loss) income​$ (15,388)​$ (11,474)​$ (12,109)​$ (26,862)​$ 13,896Interest expense, net​ 10,164​ 10,072​ 10,323​ 20,236​ 25,036Income tax (benefit) expense​ (4,636)​ 1,045​ 2,997​ (3,591)​ 11,636Depreciation, depletion and amortization​ 36,674​ 33,937​ 28,177​ 70,611​ 50,801Asset retirement obligations accretion​​ 8,400​​ 7,969​​ 7,717​​ 16,369​​ 15,227Unrealized commodity derivative loss (gain), net​ 2,738​ (1,122)​ (1,129)​ 1,616​ (40,599)Allowance for credit losses​ 346​ 84​ 3​ 430​ 3Non-cash incentive compensation​​ 1,386​​ 3,032​​ 2,087​​ 4,418​​ 4,009Non-recurring legal and IT-related costs​​ 4,202​​ 758​​ 1,078​​ 4,960​​ 1,863Non-ARO P&A costs​​ 1,709​​ 5,352​​ —​​ 7,061​​ 6Other​ 304​ (214)​ (312)​ 90​ 66Adjusted EBITDA​$ 45,899​$ 49,439​$ 38,832​$ 95,338​$ 81,944​​​​​​​​​​​​​​​​Capital expenditures, accrual basis (1)​$ (8,781)​$ (3,156)​$ (15,632)​$ (11,937)​$ (22,999)Asset retirement obligation settlements​​ (8,209)​ (3,788)​ (3,199)​ (11,997)​ (11,841)Interest expense, net​​ (10,164)​ (10,072)​ (10,323)​ (20,236)​ (25,036)Free Cash Flow​$ 18,745​$ 32,423​$ 9,678​$ 51,168​$ 22,068"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) A reconciliation of the adjustment used to calculate Free Cash Flow to the Condensed Consolidated Financial Statements is included below:"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​Capital expenditures, accrual basis reconciliation​​​​​​​​​​​​​​​Investment in oil and natural gas properties and equipment​$ (6,576)​$ (7,080)​$ (12,179)​$ (13,656)​$ (25,337)Less: changes in operating assets and liabilities associated with investing activities​​ 2,205​​ (3,924)​​ 3,453​​ (1,719)​​ (2,338)Capital expenditures, accrual basis​$ (8,781)​$ (3,156)​$ (15,632)​$ (11,937)​$ (22,999)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table presents a reconciliation of cash flow from operating activities, a GAAP measure, to Free Cash Flow, as defined by the Company:"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​​Three Months Ended ​Six Months​​June 30, ​March 31,​June 30, ​June 30, ​ 2024 2024 2023 2024 2023​​(in thousands)​​(Unaudited)Net cash provided by operating activities​$ 37,446​$ 11,642​$ 26,197​$ 49,088​$ 49,632Allowance for credit losses​ 346​ 84​ 3​ 430​ 3Amortization of debt items and other items​ (1,044)​ (1,292)​ (1,114)​ (2,336)​ (4,363)Non-recurring legal and IT-related costs​​ 4,202​​ 758​​ 1,078​​ 4,960​​ 1,863Current tax (benefit) expense (1)​ (312)​ 312​ (4,187)​ —​ 56Change in derivatives (payable) receivable (1)​ (1,994)​ 1,156​ (1,201)​ (838)​ 3,897Non-ARO P&A costs​​ 1,709​​ 5,352​​ —​​ 7,061​​ 6Changes in operating assets and liabilities, excluding asset retirement obligation settlements​ (13,131)​ 17,781​ 4,846​ 4,650​ (6,093)Capital expenditures, accrual basis ​ (8,781)​ (3,156)​ (15,632)​ (11,937)​ (22,999)Other​ 304​ (214)​ (312)​ 90​ 66Free Cash Flow​$ 18,745​$ 32,423​$ 9,678​$ 51,168​$ 22,068"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) A reconciliation of the adjustments used to calculate Free Cash Flow to the Condensed Consolidated Financial Statements is included below:"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​Current tax (benefit) expense:​​​​​​​​​​​​​​​Income tax (benefit) expense $ (4,636) $ 1,045 $ 2,997 $ (3,591)​$ 11,636Less: Deferred income (benefit) taxes​ (4,324)​ 733​ 7,184​ (3,591)​ 11,580Current tax (benefit) expense​$ (312)​$ 312​$ (4,187)​$ —​$ 56​​​​​​​​​​​​​​​​Changes in derivatives receivable (payable)​ ​ ​ ​​​​​​Derivatives receivable (payable), end of period​$ (567)​$ 1,427​$ (677)​$ (567)​$ (677)Derivatives (receivable) payable, beginning of period​ (1,427)​ (271)​ (524)​ (271)​ 4,574Change in derivatives (payable) receivable ​$ (1,994)​$ 1,156​$ (1,201)​$ (838)​$ 3,897"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of PV-10 to Standardized Measure"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company also discloses PV-10, which is not a financial measure defined under GAAP. The standardized measure of discounted future net cash flows is the most directly comparable GAAP financial measure for proved reserves calculated using SEC pricing. Company management believes that the non-GAAP financial measure of PV-10 is relevant and useful for evaluating the relative monetary significance of oil and natural gas properties. PV-10 is also used internally when assessing the potential return on investment related to oil and natural gas properties and in evaluating acquisition opportunities. Company management believes that the use of PV-10 is valuable because there are many unique factors that can impact an individual company when estimating the amount of future income taxes to be paid. Additionally, Company management believes that the presentation of PV-10 provides useful information to investors because it is widely used by professional analysts and sophisticated investors in evaluating oil and natural gas companies. PV-10 is not a measure of financial or operating performance under GAAP, nor is it intended to represent the current market value of the Company’s estimated oil and natural gas reserves. PV-10 should not be considered in isolation or as substitutes for the standardized measure of discounted future net cash flows as defined under GAAP. Investors should not assume that PV-10 of the Company’s proved oil and natural gas reserves represents a current market value of the Company’s estimated oil and natural gas reserves. With respect to PV-10 calculated as of an interim date (i.e., other than year-end), it is not practical for the Company to reconcile the PV-10 of its SEC pricing proved reserves as of June 30, 2024 because GAAP does not provide for disclosure of standardized measure on an interim basis."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "13​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "CONTACT:Al PetrieSameer Parasnis​Investor Relations CoordinatorExecutive VP and CFO​investorrelations@wtoffshore.comsparasnis@wtoffshore.com​713-297-8024713-513-8654"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "14​"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        7,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          ""
+        ],
+        [
+          "",
+          "",
+          "​PRESS RELEASE​",
+          "​PRESS RELEASE​",
+          ""
+        ],
+        [
+          "​FOR IMMEDIATE RELEASE",
+          "​FOR IMMEDIATE RELEASE",
+          "​​",
+          "​​",
+          "​​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          ""
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Produced 34.9 thousand barrels of oil equivalent per day (“MBoe/d”) (55% liquids) at the midpoint of the Company’s second quarter guidance;"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Incurred lease operating expenses (“LOE”) of $74.0 million, which was below the bottom end of the Company’s second quarter guidance range;"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Generated net cash from operating activities of $37.4 million and Free Cash Flow of $18.7 million in the second quarter of 2024, marking the 26th consecutive quarter of positive Free Cash Flow;"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Reported net loss of $15.4 million, or $(0.10) per diluted share;"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Adjusted Net Loss totaled $8.0 million, or $(0.05) per share, which excludes non-recurring costs, the net unrealized loss on outstanding derivative contracts, non-ARO plugging and abandonment (“P&A”) costs and related tax effect;"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Posted Adjusted EBITDA of $45.9 million;"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Reported cash and cash equivalents of $123.4 million, an increase of 30%, and Net Debt of $268.5 million, a decrease of 9%, at June 30, 2024 compared to the first quarter of 2024;"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Continued to maintain a low leverage profile with Net Debt to trailing twelve months (“TTM”) Adjusted EBITDA of 1.4x;"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Paid third consecutive quarterly dividend of $0.01 per common share in May 2024;"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Declared third quarter of 2024 dividend of $0.01 per share, which will be payable on August 27, 2024 to stockholders of record on August 20, 2024; and"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Reported mid-year SEC proved reserves of 141.9 million barrels of oil equivalent (“MMBoe”), using SEC prices and based on a reserve report prepared by Netherland, Sewell and Associates, Inc. (“NSAI”), and a present value of those SEC proved reserves discounted at 10% (“PV-10”) of $1.4 billion, an increase of 15% and 28%, respectively, compared to year-end 2023."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 142.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenues for the second quarter of 2024 were $142.8 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "2.230000",
+    "return_10d_pct": "2.6906",
+    "return_20d_pct": "1.7937",
+    "return_30d_pct": "-8.9686",
+    "return_60d_pct": "25.1121",
+    "return_90d_pct": "8.5202"
+  },
+  "text_stats": {
+    "primary_text_len": 3565,
+    "exhibit_text_len": 45231,
+    "combined_text_len": 48798,
+    "semantic_text_len": 43517,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

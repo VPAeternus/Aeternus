@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WOOF",
+    "cik": "1826470",
+    "event_date": "2024-09-10",
+    "event_accession": "0000950170-24-105135",
+    "primary_8k_doc": "woof-20240910.htm",
+    "exhibit_docs": [
+      "woof-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WOOF_000095017024105135_woof-20240910.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WOOF_000095017024105135_woof-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WOOF",
+    "cik": "1826470",
+    "entity_name": "Petco Health and Wellness Company, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1555908000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-05",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-29",
+    "net_income_value": "-1892000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-05",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-29",
+    "assets_value": "5363152000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-05",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-02-03",
+    "financing_cash_flow_value": "-37082000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-05",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-29",
+    "investing_cash_flow_value": "-62775000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-05",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-29",
+    "operating_cash_flow_value": "37651000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-05",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.001216",
+    "operating_cash_flow_to_revenue": "0.024199",
+    "assets_to_revenue": "3.44696",
+    "financing_cash_flow_to_revenue": "-0.023833",
+    "investing_cash_flow_to_revenue": "-0.040346"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $1.",
+      "sales increased 0.",
+      "sales of divestitures, and other integration-related costs that would not have otherwise been incurred as part of the company’s operations.",
+      "Net Income 1 was $(5.",
+      "Net Income, Adjusted Earnings Per Share (“Adjusted EPS”), and Free Cash Flow are non-GAAP financial measures.",
+      "EPS, in addition to reaffirming full year interest expense and capital expenditure expectations."
+    ],
+    "guidance_evidence": [
+      "Outlook The company is providing Q3 guidance for revenue, Adjusted EBITDA, and Adjusted EPS, in addition to reaffirming full year interest expense and capital expenditure expectations.",
+      "Guidance Net Revenue ~ $1.",
+      "Guidance, YoY Net interest expense ~$145 million Capital Expenditures ~$140 million *Assumptions in the guidance include that economic conditions, currency rates and the tax and regulatory landscape remain generally consistent.",
+      "guidance anticipates a 26 percent tax rate, and 272 million weighted average diluted share count.",
+      "outlook because it is not possible to do so without unreasonable efforts due to the uncertainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant.",
+      "outlook for the comparable GAAP measures."
+    ],
+    "wave_or_demand_evidence": [
+      "ail fundamentals and accelerate the path to improved profitability,\" said Joel Anderson, Petco’s Chief Executive Officer .",
+      "ained profitability, and create value for shareholders.",
+      "ain generally consistent.",
+      "ainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant.",
+      "aining and a growing network of on-site veterinary hospitals and mobile veterinary clinics.",
+      "ained in this earnings release is, or should be relied upon as, a promise or representation or warranty as to any future matter, including any matter in respect of the operations or business or financial condition of Petco."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment — — — — Asset impairments and write offs 3,561 0.",
+      "decreased 0.",
+      "loss of $24.",
+      "loss of $14.",
+      "loss in the second quarter of 2024 was $24.",
+      "uncertainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1520,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-11",
+    "entry_open": "2.980000",
+    "return_10d_pct": "48.3221",
+    "return_20d_pct": "50.0000",
+    "return_30d_pct": "72.4832",
+    "return_60d_pct": "51.6779",
+    "return_90d_pct": "52.8523"
+  },
+  "text_stats": {
+    "primary_text_len": 3980,
+    "exhibit_text_len": 25217,
+    "combined_text_len": 29199
+  }
+}

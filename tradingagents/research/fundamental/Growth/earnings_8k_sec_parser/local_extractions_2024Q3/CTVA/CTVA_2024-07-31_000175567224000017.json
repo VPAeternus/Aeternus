@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CTVA",
+    "cik": "1755672",
+    "event_date": "2024-07-31",
+    "event_accession": "0001755672-24-000017",
+    "primary_8k_doc": "cortevaq22024enrschedules.htm",
+    "exhibit_docs": [
+      "final_2qx2024xearningsxn.htm",
+      "pressrelease-exhibit993.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTVA_000175567224000017_cortevaq22024enrschedules.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTVA_000175567224000017_final_2qx2024xearningsxn.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTVA_000175567224000017_pressrelease-exhibit993.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CTVA",
+    "cik": "1755672",
+    "entity_name": "Corteva, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4884000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "595000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "45500000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "3274000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1511000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-3311000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.121826",
+    "operating_cash_flow_to_revenue": "-0.677928",
+    "assets_to_revenue": "9.316134",
+    "financing_cash_flow_to_revenue": "0.670352",
+    "investing_cash_flow_to_revenue": "-0.309378"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales decreased 2% in the same period.",
+      "sales increased 4%.",
+      "net sales increased 1% versus the same period last year.",
+      "sales increased 2%.",
+      "net sales were $4.",
+      "net sales were $7."
+    ],
+    "guidance_evidence": [
+      "guidance lowered to reflect market dynamics • Share buyback program and dividend increase demonstrate strong balance sheet and cash flow INDIANAPOLIS, Ind.",
+      "guidance3 and expects net sales in the range of $17.",
+      "Guidance On-farm demand for inputs remain steady and farmers continue to prioritize top-tier seed technology.",
+      "outlook tomorrow, August 1, 2024, at 10:00 a.",
+      "outlook,” or other words of similar meaning.",
+      "guidance and expertise and many contributions."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for new products and spinosyns, partially offset by residual destocking and unfavorable weather in EMEA2.",
+      "demand for top technology offerings and operational execution globally, with global corn and soybean prices up 6% and 4%, respectively.",
+      "demand for inputs remain steady and farmers continue to prioritize top-tier seed technology.",
+      "customer engagement and operational execution to profitably deliver solutions for the world’s most pressing agriculture challenges.",
+      "customers.",
+      "customers – to help propel this company into its next phase,” said Johnson."
+    ],
+    "warning_or_risk_evidence": [
+      "delayed season in EMEA2 into second quarter.",
+      "delayed season in EMEA2 into the second quarter.",
+      "charge associated with the recognition of upfront payments made to Monsanto in connection with the Company’s non-exclusive license in the United States and Canada for Monsanto’s Genuity® Roundup Ready 2 Yield® and Roundup Ready 2 Xtend® herbicide tolerance traits.",
+      "charges during 2024 for these activities.",
+      "declined 3% versus prior year as Crop Protection declines more than offset Seed gains.",
+      "decreased 2% in the same period."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 17200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "53.959999",
+    "return_10d_pct": "-5.0778",
+    "return_20d_pct": "0.5930",
+    "return_30d_pct": "2.9837",
+    "return_60d_pct": "8.9511",
+    "return_90d_pct": "14.1030"
+  },
+  "text_stats": {
+    "primary_text_len": 30777,
+    "exhibit_text_len": 29414,
+    "combined_text_len": 60193
+  }
+}

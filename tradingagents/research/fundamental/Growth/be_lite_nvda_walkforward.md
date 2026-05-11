@@ -1,4 +1,4 @@
-# BE vs LITE vs NVDA Fundamental
+# BE vs LITE vs NVDA Walkforward
 
 ## Scope
 - Universe: `BE`, `LITE`, `NVDA`

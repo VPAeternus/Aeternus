@@ -1,20 +1,17 @@
 import pandas as pd
 import json
 import concurrent.futures
-import yfinance as yf
 from ifvg_strategy_v3 import EquilibriumStrategyV3
-import watchlist_manager
 import data_cache
 
 class V3PortfolioExecutor:
     """
     Unified Portfolio Executor for the V3 Equilibrium Displacement Model.
-    Executes the strategy across an array of tickers and aggregates the 
-    global mathematical performance into a single report.
+    Executes the strategy across an array of tickers and aggregates performance.
     """
     def __init__(self, tickers=None, start_date="2000-01-01", target_pct=0.05, 
                  sma50_filter="BELOW", sma10_exit="CLOSE", vix_filter=True, refresh_data=True):
-        self.tickers = tickers if tickers else watchlist_manager.get_tickers()
+        self.tickers = tickers if tickers else []
         self.start_date = start_date
         self.target_pct = target_pct
         self.sma50_filter = sma50_filter
@@ -27,7 +24,6 @@ class V3PortfolioExecutor:
         self.ticker_results = []
         self.live_signals = []
         self.strategy_runs = {}
-        self.enriched_data = watchlist_manager.get_enriched_tickers()
         
     def _process_ticker(self, ticker, preloaded_vix):
         try:
@@ -56,7 +52,7 @@ class V3PortfolioExecutor:
         print("-" * 50)
         
         if len(self.tickers) == 0:
-            print("[!] No tickers provided. Add tickers using watchlist_manager.py")
+            print("[!] No tickers provided.")
             return
             
         preloaded_vix = None
@@ -87,8 +83,6 @@ class V3PortfolioExecutor:
                     
                     # Metric calculation for individual ticker
                     trades_count = len(bot.trades)
-                    edata = self.enriched_data.get(ticker, {"etfs":"", "sector":"Unknown", "market_cap":0})
-                    
                     if trades_count > 0:
                         df = pd.DataFrame([t.__dict__ for t in bot.trades])
                         winners = df[df['pnl'] > 0]
@@ -102,9 +96,6 @@ class V3PortfolioExecutor:
                         
                         self.ticker_results.append({
                             "Ticker": ticker,
-                            "ETFs": edata.get("etfs", ""),
-                            "Sector": edata.get("sector", "Unknown"),
-                            "Market Cap": edata.get("market_cap", 0),
                             "Trades": trades_count,
                             "Win Rate": f"{win_rate:.1f}%",
                             "Total PnL": f"${pnl:.2f}",
@@ -113,9 +104,6 @@ class V3PortfolioExecutor:
                     else:
                         self.ticker_results.append({
                             "Ticker": ticker,
-                            "ETFs": edata.get("etfs", ""),
-                            "Sector": edata.get("sector", "Unknown"),
-                            "Market Cap": edata.get("market_cap", 0),
                             "Trades": 0,
                             "Win Rate": "0.0%",
                             "Total PnL": "$0.00",
@@ -180,7 +168,7 @@ class V3PortfolioExecutor:
                 "Date": last_date
             })
 
-    def generate_report(self):
+    def write_outputs(self):
         print("\n=== INDIVIDUAL TICKER PERFORMANCE ===")
         res_df = pd.DataFrame(self.ticker_results)
         print(res_df.to_string(index=False))
@@ -228,7 +216,6 @@ class V3PortfolioExecutor:
             print("\n[+] Exported live_signals.json")
 
 if __name__ == "__main__":
-    # Test the unified executor using the SQLite watchlist
-    executor = V3PortfolioExecutor(tickers=None, vix_filter=False)
+    executor = V3PortfolioExecutor(tickers=["QQQ"], vix_filter=False)
     executor.run_portfolio()
-    executor.generate_report()
+    executor.write_outputs()

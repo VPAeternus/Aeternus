@@ -65,10 +65,7 @@ CRYPTO_BETA_SYMBOLS = {
 }
 
 
-ResearchPlaybook = Literal[
-    "MOMENTUM_BREAKOUT",
-    "HYBRID_COMPOUNDER",
-]
+ResearchPlaybook = Literal["SCOUT_HANDOFF"]
 
 
 def infer_trend_tags(
@@ -158,28 +155,5 @@ def is_structural_growth_theme(tags: List[str]) -> bool:
     return "theme-structural-growth" in tag_set
 
 
-def select_research_playbook(
-    lane: str,
-    momentum_score: float,
-) -> ResearchPlaybook:
-    if lane == "MOMENTUM" and momentum_score >= 70.0:
-        return "MOMENTUM_BREAKOUT"
-    return "HYBRID_COMPOUNDER"
-
-
-def why_now_text(
-    lane: str,
-    momentum_score: float,
-    asymmetry_score: float,
-    trend_tags: List[str],
-) -> str:
-    if lane == "MOMENTUM":
-        return (
-            f"Momentum lane triggered (score {momentum_score:.1f}) with asymmetric upside "
-            f"(asymmetry {asymmetry_score:.1f}) and trend tags: {', '.join(trend_tags[:3])}."
-        )
-
-    return (
-        f"Core lane selected with balanced profile; "
-        f"momentum {momentum_score:.1f}, trend tags: {', '.join(trend_tags[:3])}."
-    )
+def select_research_playbook() -> ResearchPlaybook:
+    return "SCOUT_HANDOFF"

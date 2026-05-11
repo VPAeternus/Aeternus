@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HLMN",
+    "cik": "1822492",
+    "event_date": "2024-08-06",
+    "event_accession": "0001822492-24-000138",
+    "primary_8k_doc": "hlmn-20240801.htm",
+    "exhibit_docs": [
+      "ex991hillmanq22024earnings.htm",
+      "ex993pressreleaseannouncin.htm",
+      "hillmanq22024earningscal.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLMN_000182249224000138_hlmn-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLMN_000182249224000138_ex991hillmanq22024earnings.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLMN_000182249224000138_ex993pressreleaseannouncin.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLMN_000182249224000138_hillmanq22024earningscal.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HLMN",
+    "cik": "1822492",
+    "entity_name": "Hillman Solutions Corp.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "349707000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "-9132000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "2331101000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "-8759000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-18524000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "31507000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.026113",
+    "operating_cash_flow_to_revenue": "0.090095",
+    "assets_to_revenue": "6.665869",
+    "financing_cash_flow_to_revenue": "-0.025047",
+    "investing_cash_flow_to_revenue": "-0.05297"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales decreased (0.",
+      "Net sales were $729.",
+      "sales were impacted by prevailing market conditions, we continued to roll out new business wins and improve our financial position by strengthening our balance sheet.",
+      "Net sales were comparable at $729.",
+      "Net income totaled $12.",
+      "EPS 1 was $0."
+    ],
+    "guidance_evidence": [
+      "Guidance - Updated Based on year-to-date performance and improved visibility on the remainder of the year, management is updating its full year 2024 guidance originally provided on February 22, 2024 with Hillman's fourth quarter 2023 results.",
+      "Guidance Full year 2024 Guidance Net Sales $1.",
+      "guidance to better align with the current market landscape.",
+      "guidance, underscoring our confidence in our ability to drive profitability through operations and margin management.",
+      "guidance remains unchanged, reflecting the net impact of our top and bottom line expectations.",
+      "guidance having worked side-by-side with him since joining Hillman five years ago."
+    ],
+    "wave_or_demand_evidence": [
+      "customers during the quarter with exceptional fill rates of 95%, which ensures that our products are in stock and on the shelves of our retail partners.",
+      "customers, associates and stakeholders.",
+      "customer service to over 46,000 locations.",
+      "customer experience to home improvement centers, mass merchants, national and regional hardware stores, pet supply stores, and OEM & industrial customers.",
+      "customers with unparalleled service, brought innovative products and creative solutions to market, and has grown to be a trusted partner for hardware stores and home improvement centers across North America,” stated Jon Michael Adinolfi.",
+      "customers and as the next CEO, I look forward to continuing to build on Hillman’s legacy of service and growth as we seek to find new ways to serve and deepen our partnerships with them."
+    ],
+    "warning_or_risk_evidence": [
+      "charges that were non-deductible.",
+      "charges and costs.",
+      "decreased (0.",
+      "loss of $(4.",
+      "decreased to $705.",
+      "uncertainties that could cause the actual results to differ materially from the expected results."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 729.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "9.920000",
+    "return_10d_pct": "-5.4435",
+    "return_20d_pct": "-3.6290",
+    "return_30d_pct": "-4.2339",
+    "return_60d_pct": "0.3024",
+    "return_90d_pct": "11.7944"
+  },
+  "text_stats": {
+    "primary_text_len": 10061,
+    "exhibit_text_len": 54629,
+    "combined_text_len": 64692
+  }
+}

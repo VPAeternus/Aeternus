@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter and fiscal year ended December 31, 2024",
+    "period_end_date": "December 31, 2024"
+  },
+  "reported_results": {
+    "revenue_millions": 96469.0,
+    "revenue_yoy_pct": 12.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "5 billion reflecting robust momentum across the business.",
+    "wave_signal": "1Alphabet Announces Fourth Quarter and Fiscal Year 2024 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "•Total operating income increased 31% and operating margin expanded by 5% percentage points to 32%.",
+    "risk_signal": "The costs associated with the Gemini app team continue to be reported within our Google Services segment.",
+    "customer_signal": "Our AI-powered Google Cloud portfolio is seeing stronger customer demand, and YouTube continues to be the leader in streaming watchtime and podcasts."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 86310 | | | | | $ | 96469 | | | | | $ | 307394 | | | | | $ | 350018 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 86310 | | | | | $ | 96469 | | | | | $ | 307394 | | | | | $ | 350018 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

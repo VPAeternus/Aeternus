@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HAE",
+    "cik": "313143",
+    "event_date": "2024-08-08",
+    "event_accession": "0000313143-24-000053",
+    "primary_8k_doc": "hae-20240808.htm",
+    "exhibit_docs": [
+      "ex991-fy25q1junearningsrel.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HAE_000031314324000053_hae-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HAE_000031314324000053_ex991-fy25q1junearningsrel.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HAE",
+    "cik": "313143",
+    "entity_name": "HAEMONETICS CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "993196000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-20",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-02",
+    "net_income_value": "43375000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-20",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-02",
+    "assets_value": "1934825000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-20",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "-15749000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-20",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-02",
+    "investing_cash_flow_value": "-86345000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-20",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-02",
+    "operating_cash_flow_value": "172263000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-20",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.043672",
+    "operating_cash_flow_to_revenue": "0.173443",
+    "assets_to_revenue": "1.94808",
+    "financing_cash_flow_to_revenue": "-0.015857",
+    "investing_cash_flow_to_revenue": "-0.086937"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $336.",
+      "revenue were 40.",
+      "revenue were 34.",
+      "revenue was primarily driven by costs associated with the operations of recent acquisitions and increased headcount.",
+      "sales of property, plant and equipment, certain tax settlements and unusual or infrequent and material litigation-related charges.",
+      "sales of property, plant and equipment — 14,134 (14,134) — (3,432) (10,702) (0."
+    ],
+    "guidance_evidence": [
+      "guidance, adjusted earnings per diluted share guidance and free cash flow guidance as follows: Adjusted operating margin 23% - 24% Adjusted earnings per diluted share $4.",
+      "forecast future results."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, to help them improve patient care and reduce the cost of healthcare.",
+      "ainable and profitable growth as we execute against our long-range plan.",
+      "air value inventory step-up related to the Attune Medical acquisition and restructuring costs related to portfolio rationalization initiatives, partially offset by volume and mix .",
+      "ains realized on the sale of a manufacturing facility.",
+      "aining proceeds available for working capital and other general purposes.",
+      "ain non-cash items, increased inventory balances and a payment in connection with a previously disclosed legal settlement, with free cash outflow partially offset by the sale of property, plant and equipment."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory step-up related to the Attune Medical acquisition and restructuring costs related to portfolio rationalization initiatives, partially offset by volume and mix .",
+      "inventory balances and a payment in connection with a previously disclosed legal settlement, with free cash outflow partially offset by the sale of property, plant and equipment.",
+      "charges.",
+      "charges or gains, such as restructuring costs, impairment charges and capital expenditures, is inherently uncertain and difficult to predict and is unavailable without unreasonable effor ts.",
+      "inventory step-up 5,239 — 5,239 — 1,286 3,953 0.",
+      "charges — (755) 755 — 183 572 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 336,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "77.330002",
+    "return_10d_pct": "-3.2070",
+    "return_20d_pct": "-2.5217",
+    "return_30d_pct": "-5.9485",
+    "return_60d_pct": "-0.8406",
+    "return_90d_pct": "11.8971"
+  },
+  "text_stats": {
+    "primary_text_len": 3404,
+    "exhibit_text_len": 22793,
+    "combined_text_len": 26199
+  }
+}

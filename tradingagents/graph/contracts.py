@@ -30,7 +30,7 @@ class HedgeSignal(TypedDict):
     bear_trigger_active: bool
     crash_trigger_active: bool
     target_hedge_pct_pre_hysteresis: float
-    mode: Literal["BULL", "BEAR", "BEAR_S7_BOOST", "CRASH"]
+    mode: Literal["BULL", "S7_STANDBY", "S7_HEDGE", "BEAR", "BEAR_S7_BOOST", "CRASH"]
     market_regime: str
     risk_metrics: dict
 
@@ -58,7 +58,7 @@ class HedgeOrder(TypedDict):
     delta_notional_usd: float
     previous_hedge_pct: float
     target_hedge_pct: float
-    mode: Literal["BULL", "BEAR", "BEAR_S7_BOOST", "CRASH"]
+    mode: Literal["BULL", "S7_STANDBY", "S7_HEDGE", "BEAR", "BEAR_S7_BOOST", "CRASH"]
     reason: str
 
 

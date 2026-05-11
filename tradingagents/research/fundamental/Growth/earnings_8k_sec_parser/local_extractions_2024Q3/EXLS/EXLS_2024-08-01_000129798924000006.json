@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EXLS",
+    "cik": "1297989",
+    "event_date": "2024-08-01",
+    "event_accession": "0001297989-24-000006",
+    "primary_8k_doc": "exls-20240801.htm",
+    "exhibit_docs": [
+      "exlq224pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EXLS_000129798924000006_exls-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EXLS_000129798924000006_exlq224pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EXLS",
+    "cik": "1297989",
+    "entity_name": "EXLSERVICE HOLDINGS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "400643000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "51331000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1441972000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-91304000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "43341000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "16025000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.128122",
+    "operating_cash_flow_to_revenue": "0.039998",
+    "assets_to_revenue": "3.599144",
+    "financing_cash_flow_to_revenue": "-0.227894",
+    "investing_cash_flow_to_revenue": "0.108179"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $448.",
+      "Revenue increased by 2.",
+      "Revenue of $1.",
+      "EPS (GAAP) of $0.",
+      "EPS (Non-GAAP) (1) (2) of $0.",
+      "EPS growth of 11%."
+    ],
+    "guidance_evidence": [
+      "guidance range for revenue.",
+      "guidance of $1.",
+      "Guidance Based on current visibility, and a U.",
+      "guidance for the full year 2024: • Revenue of $1.",
+      "guidance with respect to adjusted diluted earnings per share.",
+      "expected to add $7 million to $9 million in revenue for the remainder of 2024 and be neutral to adjusted diluted EPS."
+    ],
+    "wave_or_demand_evidence": [
+      "airman and chief executive officer, said, “We are pleased with our second quarter results.",
+      "AI-led strategy enabled us to accelerate our growth rates across both our data analytics and digital operations and solutions businesses during the quarter as we continue our momentum heading into the second half of 2024.",
+      "aid, “Based on our current visibility for the remainder of the year and the ITI Data acquisition, we are raising the full-year guidance range for revenue.",
+      "ails.",
+      "ain-trained, enterprise-wide data and AI applications for insurance, healthcare, banking, retail and other industries.",
+      "ainder of 2024 and be neutral to adjusted diluted EPS."
+    ],
+    "warning_or_risk_evidence": [
+      "charges for depreciation that may not be indicative of the Company’s ability to generate cash flow.",
+      "uncertainties and factors relating to EXL's operations and business environment, all of which are difficult to predict and many of which are beyond EXL’s control.",
+      "uncertainties and assumptions.",
+      "uncertainties come up from time to time, and it is impossible to predict these events or how they may affect EXL.",
+      "loss) from equity-method investment (9) 66 (37) 132 Net income attributable to ExlService Holdings, Inc.",
+      "losses, other acquisition-related expenses or benefits and effect of any non-recurring tax adjustments."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 448.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "31.950001",
+    "return_10d_pct": "7.1987",
+    "return_20d_pct": "11.7058",
+    "return_30d_pct": "12.4257",
+    "return_60d_pct": "19.2488",
+    "return_90d_pct": "30.4225"
+  },
+  "text_stats": {
+    "primary_text_len": 3468,
+    "exhibit_text_len": 21447,
+    "combined_text_len": 24917
+  }
+}

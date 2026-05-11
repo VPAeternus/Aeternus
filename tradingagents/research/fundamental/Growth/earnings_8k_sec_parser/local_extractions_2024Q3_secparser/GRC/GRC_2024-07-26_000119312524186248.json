@@ -1,0 +1,889 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GRC",
+    "cik": "42682",
+    "event_date": "2024-07-26",
+    "event_accession": "0001193125-24-186248",
+    "primary_8k_doc": "d819816d8k.htm",
+    "exhibit_docs": [
+      "d819816dex99.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GRC_000119312524186248_d819816d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GRC_000119312524186248_d819816dex99.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GRC",
+    "cik": "42682",
+    "entity_name": "THE GORMAN-RUPP COMPANY",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "406150000",
+    "revenue_fact_name": "SalesRevenueNet",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-02-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2015-12-31",
+    "net_income_value": "6520000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-29",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "890358000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-29",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-7004000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-29",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-6024000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-29",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "18622000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-29",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.016053",
+    "operating_cash_flow_to_revenue": "0.04585",
+    "assets_to_revenue": "2.19219",
+    "financing_cash_flow_to_revenue": "-0.017245",
+    "investing_cash_flow_to_revenue": "-0.014832"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $169.",
+      "net sales of $171.",
+      "sales was due to a decrease in volume partially offset by the impact of pricing increases taken in the first quarter of 2024.",
+      "Sales increased $6.",
+      "Net sales of $328.",
+      "net sales of $331."
+    ],
+    "guidance_evidence": [
+      "expected to reduce interest expense by over $7.",
+      "projects related to increased infrastructure investment, $2.",
+      "expected to reduce interest expense, and also extended and staggered the Companys debt maturities.",
+      "projects related to increased infrastructure investment, $1.",
+      "expected to result in significant interest savings going forward.",
+      "expected year-end inflation index and, as such, are subject to adjustment each quarter."
+    ],
+    "wave_or_demand_evidence": [
+      "orders of $162.",
+      "backlog returning to more normal levels.",
+      "backlog and lead times to normal levels, which resulted in higher second quarter 2023 sales and a tougher year-over-year comparison for the second quarter of 2024.",
+      "orders for the second quarter of 2024 were up 11.",
+      "backlog and lead times to normal levels, which resulted in higher sales for the first six months of 2023 and a tougher year-over-year comparison for the first six months of 2024.",
+      "orders for the first six months of 2024 were up 6."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory costing method can cause results to vary substantially from company to company depending upon whether they elect to utilize LIFO2 and depending upon which method they may elect.",
+      "Inventory Method The majority of the Companys inventories are valued on the last-in, first-out (LIFO) method and stated at the lower of cost or market.",
+      "inventory levels on-hand at current replacement cost and a LIFO reserve.",
+      "decreased 0.",
+      "decrease of 0.",
+      "decrease in sales was due to a decrease in volume partially offset by the impact of pricing increases taken in the first quarter of 2024."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d819816dex99.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GORMAN-RUPP REPORTS SECOND QUARTER 2024 FINANCIAL RESULTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "Mansfield, Ohio  July 26, 2024  The Gorman-Rupp Company (NYSE: GRC) reports financial results for the second quarter ended June 30, 2024. Second Quarter 2024 Highlights  Net sales of $169.5 million decreased 0.9%, or $1.5 million, compared to the second quarter of 2023  Second quarter net income was $8.3 million, or $0.32 per share, compared to a net income of $10.5 million, or $0.40 per share, for the second quarter of 2023  Adjusted earnings per share1 for the second quarters of 2024 and 2023 were $0.54 and $0.41, respectively  Incoming orders of $162.5 million were up $8.4 million, or 5.5%, compared to the second quarter of 2023  Refinanced debt expected to reduce interest expense by over $7.0 million annually  Record Adjusted EBITDA1 of $35.4 million for the second quarter of 2024 increased $1.7 million, or 4.9%, from $33.7 million for the same period in 2023 Net sales for the second quarter of 2024 were $169.5 million compared to net sales of $171.0 million for the second quarter of 2023, a decrease of 0.9% or $1.5 million. The decrease in sales was due to a decrease in volume partially offset by the impact of pricing increases taken in the first quarter of 2024. Sales increased $6.7 million in the municipal market due to domestic flood control and wastewater projects related to increased infrastructure investment, $2.2 million in the OEM market, $0.6 million in the repair market, and $0.3 million in the petroleum market. These increases were offset by a sales decrease of $8.0 million in the fire suppression market primarily resulting from backlog returning to more normal levels. Fire suppression sales in the second quarter of 2023 were up significantly compared to the same period in 2022 as the Company was working to return backlog and lead times to normal levels, which resulted in higher second quarter 2023 sales and a tougher year-over-year comparison for the second quarter of 2024. Fire suppression incoming orders for the second quarter of 2024 were up 11.2% when compared to the second quarter of 2023. Sales for the second quarter of 2024 also decreased $1.6 million in the agriculture market primarily driven by a significant decline in farm income, $1.2 million in the industrial market, and $0.5 million in the construction market. Gross profit was $54.1 million for the second quarter of 2024, resulting in gross margin of 31.9%, compared to gross profit of $51.7 million and gross margin of 30.2% for the same period in 2023. The 170 basis point increase in gross margin included a 280 basis point improvement in cost of material, which consisted of a reduction in LIFO2 expense of 70 basis points, and a 210 basis point improvement from the realization of selling price increases. These improvements were partially offset by a 110 basis point increase in labor and overhead expenses as a percent of sales. Selling, general and administrative (SG&A) expenses were $24.9 million and 14.7% of net sales for the second quarter of 2024 compared to $24.2 million and 14.1% of net sales for the same period in 2023. SG&A expenses for the second quarter of 2024 included $1.3 million of refinancing transaction costs and a $1.1 million gain on the sale of a fixed asset. Amortization expense was $3.1 million for the second quarter of 2024 compared to $3.2 million for the same period in 2023. Operating income was $26.0 million for the second quarter of 2024, resulting in an operating margin of 15.4%, compared to operating income of $24.3 million and operating margin of 14.2% for the same period in 2023. Operating margin in the second quarter of 2024 increased 120 basis points compared to the same period in 2023 primarily due to improved cost of material, partially offset by increased labor, overhead, and SG&A expenses. Interest expense was $9.0 million for the second quarter of 2024 compared to $10.5 million for the same period in 2023. The decrease in interest expense was due to a series of previously announced refinancing transactions the Company completed on May 31, 2024. The refinancing is expected to reduce interest expense, and also extended and staggered the Companys debt maturities. The Company upsized, amended, and extended the existing Senior Term Loan Facility from $350.0 million to $370.0 million, amended and extended the existing $100.0 million revolving Credit Facility, and issued $30.0 million in new 6.40% Senior Secured Notes. The proceeds from these transactions, as well as $10.0 million of cash on hand, were used to retire the Companys $90.0 million unsecured Subordinated Credit Facility."
+    },
+    {
+      "type": "TextElement",
+      "text": "Other income (expense), net was $6.3 million of expense for the second quarter of 2024 compared to $0.5 million of expense for the same period in 2023. Other expense for the second quarter of 2024 included a $4.4 million write-off of unamortized previously deferred debt financing fees and a $1.8 million prepayment fee related to the early retirement of the unsecured Subordinated Credit Facility. Net income was $8.3 million, or $0.32 per share, for the second quarter of 2024 compared to net income of $10.5 million, or $0.40 per share, in the second quarter of 2023. Adjusted earnings per share1 for the second quarter of 2024 were $0.54 per share compared to $0.41 per share for the second quarter of 2023. Adjusted EBITDA1 was $35.4 million and 20.8% of sales for the second quarter of 2024 compared to $33.7 million and 19.7% of sales for the second quarter of 2023. Year to date 2024 Highlights  Net sales of $328.8 million decreased 0.8%, or $2.7 million, compared to 2023  Net income was $16.2 million, or $0.62 per share, compared to net income of $17.0 million, or $0.65 per share, in 2023  Adjusted earnings per share1 for 2024 and 2023 were $0.84 and $0.68, respectively  Gross margin improved 190 basis points  Adjusted EBITDA1 of $63.6 million for 2024 increased $1.5 million, or 2.4%, from $62.1 million in 2023 Net sales for the first six months of 2024 were $328.8 million compared to net sales of $331.5 million for the first six months of 2023, a decrease of 0.8% or $2.7 million. The decrease in sales was due to a decrease in volume partially offset by the impact of pricing increases taken in the first quarter of 2024. Sales increased $9.4 million in the municipal market due to domestic flood control and wastewater projects related to increased infrastructure investment, $1.4 million in the OEM market, $0.7 million in the petroleum market, $0.7 million in the repair market, and $0.1 million in the construction market. Offsetting these increases was a decrease of $11.8 million in the fire suppression market primarily resulting from backlog returning to more normal levels. Fire suppression sales for the first six months of 2023 were up significantly compared to the same period in 2022 as the Company was working to return backlog and lead times to normal levels, which resulted in higher sales for the first six months of 2023 and a tougher year-over-year comparison for the first six months of 2024. Fire suppression incoming orders for the first six months of 2024 were up 6.4% when compared to the first six months of 2023. Sales for the first six months of 2024 also decreased $2.3 million in the agriculture market primarily driven by significant declines in farm income, and $0.9 million in the industrial market. Gross profit was $102.5 million for the first six months of 2024, resulting in gross margin of 31.2%, compared to gross profit of $97.2 million and gross margin of 29.3% for the same period in 2023. The 190 basis point increase in gross margin included a 260 basis point improvement in cost of material, which consisted of a reduction in LIFO2 expense of 70 basis points, a favorable impact of 30 basis points related to the amortization of acquired Fill-Rite customer backlog which occurred in 2023 and did not reoccur in 2024, and a 160 basis point improvement from the realization of selling price increases. These improvements were partially offset by a 70 basis point increase in labor and overhead expenses as a percent of sales. Selling, general and administrative (SG&A) expenses were $49.8 million and 15.2% of net sales for the first six months of 2024 compared to $47.4 million and 14.3% of net sales for the same period in 2023. SG&A expenses for the first six months of 2024 included $1.3 million of refinancing transaction costs and a $1.1 million gain on the sale of a fixed asset. Amortization expense was $6.2 million for the first six months of 2024 compared to $6.4 million for the same period in 2023. Operating income was $46.5 million for the first six months of 2024, resulting in an operating margin of 14.1%, compared to operating income of $43.4 million and operating margin of 13.1% for the same period in 2023. Operating margin in the first six months of 2024 increased 100 basis points compared to the same period in 2023 primarily due to improved cost of material, partially offset by increased labor, overhead, and SG&A expenses. Interest expense was $19.1 million for the first six months of 2024 compared to $20.7 million for the same period in 2023. The decrease in interest expense was due to a series of debt refinancing transactions the Company completed on May 31, 2024."
+    },
+    {
+      "type": "TextElement",
+      "text": "Other income (expense), net was $6.6 million of expense for the first six months of 2024 compared to $1.0 million of expense for the same period in 2023. Other expense for the first six months of 2024 included a $4.4 million write-off of unamortized previously deferred debt financing fees and a $1.8 million prepayment fee related to the early retirement of the unsecured Subordinated Credit Facility. Net income was $16.2 million, or $0.62 per share, for the first six months of 2024 compared to net income of $17.0 million, or $0.65 per share, for the first six months of 2023. Adjusted earnings per share1 for the first six months of 2024 were $0.84 per share compared to $0.68 per share for the first six months of 2023. Adjusted EBITDA1 was $63.6 million and 19.4% of net sales for the first six months of 2024 compared to $62.1 million and 18.7% of net sales for the first six months of 2023. The Companys backlog of orders was $224.4 million at June 30, 2024 compared to $249.8 million at June 30, 2023 and $218.1 million at December 31, 2023. Incoming orders for the first six months of 2024 were $341.4 million, or an increase of 6.3% compared to the same period in 2023. Net cash provided by operating activities for the first six months of 2024 was $33.4 million compared to $37.9 million for the same period in 2023 with the decrease driven by working capital needs. Capital expenditures for the first six months of 2024 were $7.1 million and consisted primarily of machinery and equipment. Capital expenditures for the full-year 2024 are presently planned to be approximately $20.0 million. Total debt, net of cash, decreased $17.5 million during the first six months of 2024. Scott A. King, President and CEO commented, Incoming orders have continued at a solid pace and on a year-to-date basis are up over 6% compared to the first half of last year, resulting in an increase in backlog since the end of 2023. In addition, our pricing strategies contributed to improved gross margin and increased adjusted earnings. We are focused on top line growth through backlog reduction in the second half of the year, as well as delivering strong gross margin and earnings. We are also pleased that our previously announced refinancing is expected to result in significant interest savings going forward. About The Gorman-Rupp Company Founded in 1933, The Gorman-Rupp Company is a leading designer, manufacturer and international marketer of pumps and pump systems for use in diverse water, wastewater, construction, dewatering, industrial, petroleum, original equipment, agriculture, fire suppression, heating, ventilating and air conditioning (HVAC), military and other liquid-handling applications. (1) Non-GAAP Information This release includes certain non-GAAP financial data and measures such as adjusted earnings, adjusted earnings per share, and adjusted earnings before interest, taxes, depreciation and amortization (Adjusted EBITDA). Adjusted earnings is earnings excluding amortization of customer backlog, write-off of unamortized previously deferred debt financing fees, and refinancing costs. Adjusted earnings per share is earnings per share excluding amortization of customer backlog per share, write-off of unamortized previously deferred debt financing fees per share, and refinancing costs per share. Adjusted earnings before interest, taxes, depreciation and amortization is net income (loss) excluding interest, taxes, depreciation and amortization, adjusted to exclude amortization of customer backlog, write-off of unamortized previously deferred debt financing fees, refinancing costs, and non-cash LIFO2 expense. Management utilizes these adjusted financial data and measures to assess comparative operations against those of prior periods without the distortion of non-comparable factors. The inclusion of these adjusted measures should not be construed as an indication that the Companys future results will be unaffected by unusual or infrequent items or that the items for which the Company has made adjustments are unusual or infrequent or will not recur. Further, the impact of the LIFO2 inventory costing method can cause results to vary substantially from company to company depending upon whether they elect to utilize LIFO2 and depending upon which method they may elect. The Gorman-Rupp Company believes that these non-GAAP financial data and measures also will be useful to investors in assessing the strength of the Companys underlying operations and liquidity from period to period. These non-GAAP financial measures are not intended to replace GAAP financial measures, and they are not necessarily standardized or comparable to similarly titled measures used by other companies. Provided later in this release is a reconciliation of adjusted earnings, adjusted earnings per share, and adjusted EBITDA to their respective corresponding GAAP financial measures, which includes descriptions of actual adjustments made in the current period and the corresponding prior period. (2) LIFO Inventory Method The majority of the Companys inventories are valued on the last-in, first-out (LIFO) method and stated at the lower of cost or market. Current cost approximates replacement cost, or market, and LIFO cost is determined at the end of each fiscal year based on inventory levels on-hand at current replacement cost and a LIFO reserve. The Company uses the simplified LIFO method, under which the LIFO reserve is determined utilizing the inflation factor specified in the Producer Price Index for Machinery and Equipment  Pumps, Compressors and Equipment, as published by the U.S. Bureau of Labor Statistics. Interim LIFO calculations are based on managements estimate of the expected year-end inflation index and, as such, are subject to adjustment each quarter. When inflation increases, the LIFO reserve and non-cash expense increase. Forward-Looking Statements In connection with the safe harbor provisions of the Private Securities Litigation Reform Act of 1995, The Gorman-Rupp Company provides the following cautionary statement: This news release contains various forward-looking statements based on assumptions concerning The Gorman-Rupp Companys operations, future results and prospects. These forward-looking statements are based on current expectations about important economic, political, and technological factors, among others, and are subject to risks and uncertainties, which could cause the actual results or events to differ materially from those set forth in or implied by the forward-looking statements and related assumptions. Such uncertainties include, but are not limited to, our estimates of future earnings and cash flows, general economic conditions and supply chain conditions and any related impact on costs and availability of materials, integration of the Fill-Rite business in a timely and cost effective manner, retention of supplier and customer relationships and key employees, the ability to achieve synergies and cost savings in the amounts and within the time frames currently anticipated and the ability to service and repay indebtedness incurred in connection with the transaction. Other factors include, but are not limited to: company specific risk factors including (1) loss of key personnel; (2) intellectual property security; (3) acquisition performance and integration; (4) the Companys indebtedness and how it may impact the Companys financial condition and the way it operates its business; (5) general risks associated with acquisitions; (6) the anticipated benefits from the Fill-Rite transaction may not be realized; (7) impairment in the value of intangible assets, including goodwill; (8) defined benefit pension plan settlement expense; (9) risk of reserve and expense increases resulting from the LIFO2 inventory method; and (10) family ownership of common equity; and general risk factors including (11) continuation of the current and projected future business environment; (12) highly competitive markets; (13) availability and costs of raw materials and labor; (14) cybersecurity threats; (15) compliance with, and costs related to, a variety of import and export laws and regulations; (16) environmental compliance costs and liabilities; (17) exposure to fluctuations in foreign currency exchange rates; (18) conditions in foreign countries in which The Gorman-Rupp Company conducts business; (19) changes in our tax rates and exposure to additional income tax liabilities; and (20) risks described from time to time in our reports filed with the Securities and Exchange Commission. Except to the extent required by law, we do not undertake and specifically decline any obligation to review or update any forward-looking statements or to publicly announce the results of any revisions to any of such statements to reflect future events or developments or otherwise. Brigette A. Burnell Corporate Secretary The Gorman-Rupp Company Telephone (419) 755-1246 NYSE: GRC For additional information, contact James C. Kerr, Chief Financial Officer, Telephone (419) 755-1548."
+    },
+    {
+      "type": "TextElement",
+      "text": "The Gorman-Rupp Company Condensed Consolidated Statements of Income (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(thousands of dollars, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Net sales $ 169,513 $ 171,024 $ 328,781 $ 331,490 Cost of products sold 115,434 119,366 226,308 234,309 Gross profit 54,079 51,658 102,473 97,181 Selling, general and administrative expenses 24,930 24,193 49,818 47,430 Amortization expense 3,100 3,182 6,178 6,373 Operating income 26,049 24,283 46,477 43,378 Interest expense (9,048 ) (10,485 ) (19,120 ) (20,672 ) Other income (expense), net (6,331 ) (536 ) (6,603 ) (969 ) Income before income taxes 10,670 13,262 20,754 21,737 Provision for income taxes 2,335 2,785 4,535 4,740 Net income $ 8,335 $ 10,477 $ 16,219 $ 16,997 Earnings per share $ 0.32 $ 0.40 $ 0.62 $ 0.65"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Gorman-Rupp Company Condensed Consolidated Balance Sheets (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(thousands of dollars, except share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, December 31, 2024 2023 Assets Cash and cash equivalents $ 34,245 $ 30,518 Accounts receivable, net 96,952 89,625 Inventories, net 101,698 104,156 Prepaid and other 13,526 11,812 Total current assets 246,421 236,111 Property, plant and equipment, net 133,827 134,872 Other assets 22,521 24,841 Goodwill and other intangible assets, net 488,291 494,534 Total assets $ 891,060 $ 890,358 Liabilities and shareholders equity Accounts payable $ 29,082 $ 23,277 Current portion of long-term debt 18,500 21,875 Accrued liabilities and expenses 53,186 55,524 Total current liabilities 100,768 100,676 Pension benefits 11,337 11,500 Postretirement benefits 22,840 22,786 Long-term debt, net of current portion 376,880 382,579 Other long-term liabilities 20,676 23,358 Total liabilities 532,501 540,899 Shareholders equity 358,559 349,459 Total liabilities and shareholders equity $ 891,060 $ 890,358 Shares outstanding 26,227,540 26,193,998"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Gorman-Rupp Company Condensed Consolidated Statements of Cash Flows (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(thousands of dollars, except share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, 2024 2023 Cash flows from operating activities: Net income $ 16,219 $ 16,997 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 14,089 14,158 LIFO expense 2,127 4,440 Pension expense 1,326 1,617 Stock based compensation 1,955 1,606 Contributions to pension plans (595 )  Amortization of debt issuance fees 5,814 1,481 Gain on sale of property, plant, and equipment (1,058 )  Other 200 30 Changes in operating assets and liabilities: Accounts receivable, net (7,693 ) (8,645 ) Inventories, net (426 ) (8,959 ) Accounts payable 5,990 4,435 Commissions payable 241 142 Deferred revenue and customer deposits (1,704 ) 2,365 Income taxes 5 2,374 Accrued expenses and other (3,812 ) 2,235 Benefit obligations 719 3,580 Net cash provided by operating activities 33,397 37,856 Cash flows from investing activities: Capital additions (7,131 ) (13,270 ) Proceeds from sale of property, plant, and equipment 2,116  Other 53 367 Net cash used for investing activities (4,962 ) (12,903 ) Cash flows from financing activities: Cash dividends (9,433 ) (9,148 ) Treasury share repurchases (267 ) (1,029 ) Proceeds from bank borrowings 400,000 5,000 Payments to banks for borrowings (413,750 ) (13,750 ) Debt issuance fees (746 )  Other (34 ) (534 ) Net cash used for financing activities (24,230 ) (19,461 ) Effect of exchange rate changes on cash (478 ) (102 ) Net increase in cash and cash equivalents 3,727 5,390 Cash and cash equivalents: Beginning of period 30,518 6,783 End of period $ 34,245 $ 12,173"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Gorman-Rupp Company Non-GAAP Financial Information"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(thousands of dollars, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Adjusted earnings: Reported net income  GAAP basis $ 8,335 $ 10,477 $ 16,219 $ 16,997 Amortization of acquired customer backlog  344  857 Write-off of unamortized previously deferred debt financing fees 3,506  3,506  Refinancing costs 2,413  2,413  Non-GAAP adjusted earnings $ 14,254 $ 10,821 $ 22,138 $ 17,854 Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Adjusted earnings per share: Reported earnings per share  GAAP basis $ 0.32 $ 0.40 $ 0.62 $ 0.65 Amortization of acquired customer backlog  0.01  0.03 Write-off of unamortized previously deferred debt financing fees 0.13  0.13  Refinancing costs 0.09  0.09  Non-GAAP adjusted earnings per share $ 0.54 $ 0.41 $ 0.84 $ 0.68 Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Adjusted earnings before interest, taxes, depreciation and amortization: Reported net income  GAAP basis $ 8,335 $ 10,477 $ 16,219 $ 16,997 Interest expense 9,048 10,485 19,120 20,672 Provision for income taxes 2,335 2,785 4,535 4,740 Depreciation and amortization expense 7,024 7,114 14,089 14,158 Non-GAAP earnings before interest, taxes, depreciation and amortization 26,742 30,861 53,963 56,567 Amortization of acquired customer backlog  434  1,085 Write-off of unamortized previously deferred debt financing fees 4,438  4,438  Refinancing costs 3,055  3,055  Non-cash LIFO expense 1,134 2,409 2,127 4,440 Non-GAAP adjusted earnings before interest, taxes, depreciation and amortization $ 35,369 $ 33,704 $ 63,583 $ 62,092"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net sales of $169.5 million decreased 0.9%, or $1.5 million, compared to the second quarter of 2023"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Second quarter net income was $8.3 million, or $0.32 per share, compared to a net income of $10.5 million, or $0.40 per share, for the second quarter of 2023"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Adjusted earnings per share1 for the second quarters of 2024 and 2023 were $0.54 and $0.41, respectively"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Incoming orders of $162.5 million were up $8.4 million, or 5.5%, compared to the second quarter of 2023"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Refinanced debt expected to reduce interest expense by over $7.0 million annually"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Record Adjusted EBITDA1 of $35.4 million for the second quarter of 2024 increased $1.7 million, or 4.9%, from $33.7 million for the same period in 2023"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net sales of $328.8 million decreased 0.8%, or $2.7 million, compared to 2023"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net income was $16.2 million, or $0.62 per share, compared to net income of $17.0 million, or $0.65 per share, in 2023"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Adjusted earnings per share1 for 2024 and 2023 were $0.84 and $0.68, respectively"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Gross margin improved 190 basis points"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Adjusted EBITDA1 of $63.6 million for 2024 increased $1.5 million, or 2.4%, from $62.1 million in 2023"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        20,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Net sales",
+          "",
+          "$",
+          "169513",
+          "",
+          "",
+          "$",
+          "171024",
+          "",
+          "",
+          "$",
+          "328781",
+          "",
+          "",
+          "$",
+          "331490",
+          ""
+        ],
+        [
+          "Cost of products sold",
+          "",
+          "",
+          "115434",
+          "",
+          "",
+          "",
+          "119366",
+          "",
+          "",
+          "",
+          "226308",
+          "",
+          "",
+          "",
+          "234309",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Gross profit",
+          "",
+          "",
+          "54079",
+          "",
+          "",
+          "",
+          "51658",
+          "",
+          "",
+          "",
+          "102473",
+          "",
+          "",
+          "",
+          "97181",
+          ""
+        ],
+        [
+          "Selling, general and administrative expenses",
+          "",
+          "",
+          "24930",
+          "",
+          "",
+          "",
+          "24193",
+          "",
+          "",
+          "",
+          "49818",
+          "",
+          "",
+          "",
+          "47430",
+          ""
+        ],
+        [
+          "Amortization expense",
+          "",
+          "",
+          "3100",
+          "",
+          "",
+          "",
+          "3182",
+          "",
+          "",
+          "",
+          "6178",
+          "",
+          "",
+          "",
+          "6373",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating income",
+          "",
+          "",
+          "26049",
+          "",
+          "",
+          "",
+          "24283",
+          "",
+          "",
+          "",
+          "46477",
+          "",
+          "",
+          "",
+          "43378",
+          ""
+        ],
+        [
+          "Interest expense",
+          "",
+          "",
+          "(9,048",
+          ")",
+          "",
+          "",
+          "(10,485",
+          ")",
+          "",
+          "",
+          "(19,120",
+          ")",
+          "",
+          "",
+          "(20,672",
+          ")"
+        ],
+        [
+          "Other income (expense), net",
+          "",
+          "",
+          "(6,331",
+          ")",
+          "",
+          "",
+          "(536",
+          ")",
+          "",
+          "",
+          "(6,603",
+          ")",
+          "",
+          "",
+          "(969",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Income before income taxes",
+          "",
+          "",
+          "10670",
+          "",
+          "",
+          "",
+          "13262",
+          "",
+          "",
+          "",
+          "20754",
+          "",
+          "",
+          "",
+          "21737",
+          ""
+        ],
+        [
+          "Provision for income taxes",
+          "",
+          "",
+          "2335",
+          "",
+          "",
+          "",
+          "2785",
+          "",
+          "",
+          "",
+          "4535",
+          "",
+          "",
+          "",
+          "4740",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net income",
+          "",
+          "$",
+          "8335",
+          "",
+          "",
+          "$",
+          "10477",
+          "",
+          "",
+          "$",
+          "16219",
+          "",
+          "",
+          "$",
+          "16997",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Earnings per share",
+          "",
+          "$",
+          "0.32",
+          "",
+          "",
+          "$",
+          "0.40",
+          "",
+          "",
+          "$",
+          "0.62",
+          "",
+          "",
+          "$",
+          "0.65",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 169.5,
+    "quarter_revenue_yoy_pct": -0.8835,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net sales of $169.5 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Net sales |  | $ | 169513 |  | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -1,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-29",
+    "entry_open": "41.580002",
+    "return_10d_pct": "-10.1251",
+    "return_20d_pct": "-6.4454",
+    "return_30d_pct": "-7.0226",
+    "return_60d_pct": "-7.1429",
+    "return_90d_pct": "-9.8124"
+  },
+  "text_stats": {
+    "primary_text_len": 2874,
+    "exhibit_text_len": 23758,
+    "combined_text_len": 26634,
+    "semantic_text_len": 23744,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

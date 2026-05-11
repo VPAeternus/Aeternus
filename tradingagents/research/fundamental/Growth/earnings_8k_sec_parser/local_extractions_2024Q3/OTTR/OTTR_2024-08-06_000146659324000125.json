@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "OTTR",
+    "cik": "1466593",
+    "event_date": "2024-08-06",
+    "event_accession": "0001466593-24-000125",
+    "primary_8k_doc": "ottr-20240805.htm",
+    "exhibit_docs": [
+      "q22024earningsreleaseex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OTTR_000146659324000125_ottr-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OTTR_000146659324000125_q22024earningsreleaseex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "OTTR",
+    "cik": "1466593",
+    "entity_name": "OTTER TAIL CORPORATION",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "340291000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "62481000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3242568000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "29910000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-100379000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "55553000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.18361",
+    "operating_cash_flow_to_revenue": "0.163251",
+    "assets_to_revenue": "9.528809",
+    "financing_cash_flow_to_revenue": "0.087895",
+    "investing_cash_flow_to_revenue": "-0.29498"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues decreased $0.",
+      "Revenues decreased $5.",
+      "revenues were partially offset by increased steel prices, resulting in a 5% increase in material costs, which are passed through to customers.",
+      "sales of horticulture products as customers and distributors continued to reduce inventory levels from the high levels previously established due to supply chain challenges.",
+      "Revenues increased $11.",
+      "earnings per share increased 6% to $2."
+    ],
+    "guidance_evidence": [
+      "Guidance and Increases Consolidated 2024 Annual Earnings Guidance FERGUS FALLS, Minnesota - Otter Tail Corporation (Nasdaq: OTTR) today announced financial results for the quarter ended June 30, 2024.",
+      "guidance increased 8% to $6.",
+      "guidance to a range of $6.",
+      "OUTLOOK We are increasing our 2024 diluted earnings per share range to $6.",
+      "guidance, to be approximately 31% from our Electric segment and 69% from our Manufacturing and Plastics segments, net of corporate costs.",
+      "guidance compared with actual earnings for 2023 are as follows: 2024 EPS Guidance 2024 EPS Guidance 2023 EPS by Segment May 6, 2024 August 5, 2024 Low High Low High Electric $ 2."
+    ],
+    "wave_or_demand_evidence": [
+      "customer sales volume growth and improved end market demand, partially offset by lower sales prices.",
+      "demand related headwinds and anticipate conditions to soften further in the second half of 2024.",
+      "customer sales volume growth and distributor and end market demand.",
+      "customers.",
+      "customers and distributors continued to reduce inventory levels from the high levels previously established due to supply chain challenges.",
+      "demand has recovered from last year, sales prices have continued to decline."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels from the high levels previously established due to supply chain challenges.",
+      "inventory, as well as favorable product mix compared to the same period last year.",
+      "inventory management strategies amid uncertain market conditions.",
+      "decreased 6 percent from the same time last year due to the impact of unfavorable weather.",
+      "headwinds and anticipate conditions to soften further in the second half of 2024.",
+      "decline but at a slower rate than what we originally anticipated."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 0.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "91.220001",
+    "return_10d_pct": "-3.1572",
+    "return_20d_pct": "-4.8235",
+    "return_30d_pct": "-14.9857",
+    "return_60d_pct": "-16.7617",
+    "return_90d_pct": "-10.6007"
+  },
+  "text_stats": {
+    "primary_text_len": 3199,
+    "exhibit_text_len": 21819,
+    "combined_text_len": 25020
+  }
+}

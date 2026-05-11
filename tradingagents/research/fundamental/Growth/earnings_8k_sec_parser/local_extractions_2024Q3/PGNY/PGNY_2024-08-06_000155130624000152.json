@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PGNY",
+    "cik": "1551306",
+    "event_date": "2024-08-06",
+    "event_accession": "0001551306-24-000152",
+    "primary_8k_doc": "pgny-20240806.htm",
+    "exhibit_docs": [
+      "exhibit991q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PGNY_000155130624000152_pgny-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PGNY_000155130624000152_exhibit991q22024.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PGNY",
+    "cik": "1551306",
+    "entity_name": "Progyny, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "500621000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-02-29",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2021-12-31",
+    "net_income_value": "17678000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "756620000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-1846000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "16127000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "20961000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.035312",
+    "operating_cash_flow_to_revenue": "0.04187",
+    "assets_to_revenue": "1.511363",
+    "financing_cash_flow_to_revenue": "-0.003687",
+    "investing_cash_flow_to_revenue": "0.032214"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue was $304.",
+      "revenue was $193.",
+      "revenue was $110.",
+      "Gross Margin 22.",
+      "Net Income $16,485 $14,991 Net Income per Diluted Share 1 $0.",
+      "earnings per share, and Adjusted EBITDA to net income, the most directly comparable financial measures stated in accordance with GAAP for each of the periods presented."
+    ],
+    "guidance_evidence": [
+      "guidance for the full year ending December 31, 2024 and the three-month period ending September 30, 2024: • Full Year 2024 Outlook: o Revenue is now projected to be $1.",
+      "Outlook: o Revenue is projected to be $290.",
+      "outlook.",
+      "outlook as of the date hereof.",
+      "Guidance Range* 0.",
+      "forecasting purposes."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for treatment remains both healthy and within the range of our long-established patterns,” said Pete Anevski, Chief Executive Officer of Progyny.",
+      "ains both healthy and within the range of our long-established patterns,” said Pete Anevski, Chief Executive Officer of Progyny.",
+      "ains healthy and well-positioned overall, as evidenced by the significant progress we continue to make in all of the areas that are most impactful to building the long-term value of the business.",
+      "ains high and our pipeline is healthy.",
+      "aid Mark Livingston, Progyny’s Chief Financial Officer.",
+      "ain favorable working capital items to the prior year period, as well as higher cash payments for income taxes in the second quarter of 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "decrease of $109.",
+      "uncertainties and other important factors that may cause our actual results, performance or achievements to be materially different from any future results, performance or achievements expressed or implied by the forward-looking statements."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 304.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 290,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "21.000000",
+    "return_10d_pct": "0.8571",
+    "return_20d_pct": "2.8095",
+    "return_30d_pct": "10.4286",
+    "return_60d_pct": "-23.3810",
+    "return_90d_pct": "-24.8095"
+  },
+  "text_stats": {
+    "primary_text_len": 3331,
+    "exhibit_text_len": 33274,
+    "combined_text_len": 36607
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NXT",
+    "cik": "0001852131",
+    "event_date": "2024-08-01",
+    "event_accession": "0001852131-24-000010",
+    "primary_8k_doc": "nxt-20240731.htm",
+    "exhibit_docs": [
+      "ex991_q125.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NXT_000185213124000010_nxt-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NXT_000185213124000010_ex991_q125.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NXT",
+    "cik": "0001852131",
+    "entity_name": "Nextpower Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1457592000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-28",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "0",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-28",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1419680000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-28",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-8656000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-28",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-5750000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-28",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-147113000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-28",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.0",
+    "operating_cash_flow_to_revenue": "-0.100929",
+    "assets_to_revenue": "0.97399",
+    "financing_cash_flow_to_revenue": "-0.005939",
+    "investing_cash_flow_to_revenue": "-0.003945"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $121.",
+      "GAAP Gross Margin 33.",
+      "GAAP Net Income $125 $223 $64 GAAP Net Income Margin 17.",
+      "EPS $0.",
+      "Gross Margin 33.",
+      "Net Income $139 $142 $71 Adjusted Diluted EPS $0."
+    ],
+    "guidance_evidence": [
+      "Outlook Adds Solar Foundation Offerings with Ojjo and Solar Pile International Acquisitions August 1, 2024 FREMONT, Calif.",
+      "Outlook Nextracker reaffirmed its full-year fiscal year 2025 outlook: FY25 Outlook Revenue $2.",
+      "outlook for fiscal 2025 and other periods.",
+      "projects around the world.",
+      "expected benefits of the Ojjo and Solar Pile International acquisitions, our domestic content capabilities, and Nextracker’s outlook for fiscal 2025 and other periods.",
+      "forecasts and strategic plans, for calculating return on investment, and for benchmarking performance externally against competitors."
+    ],
+    "wave_or_demand_evidence": [
+      "demand dynamics continued for solar trackers in both the U.",
+      "customers, and the public about the company, its offerings, and other issues.",
+      "aics in July 2024 • Expanded JM Steel’s Pittsburgh facility with Nextracker-dedicated manufacturing in April 2024 • Opened a second Nevada factory by Unimacts with Nextracker-dedicated manufacturing in June 2024 • Acquired Ojjo, Inc.",
+      "aid Dan Shugar, founder and CEO of Nextracker .",
+      "aid Chuck Boynton, CFO of Nextracker .",
+      "ailable on investors."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and gains, including adjusted earnings before interest, taxes, depreciation, and amortization (“Adjusted EBITDA”), adjusted gross profit, adjusted operating income, adjusted net income, adjusted diluted earnings per share, and adjusted free cash flow.",
+      "charges, stock-based compensation expense and intangible amortization, other discrete events as applicable and the related tax effects.",
+      "charges for the estimated fair value of unvested restricted share unit and stock option awards granted to employees and assumed in business acquisitions.",
+      "charges provides for more accurate comparisons of its operating results to peer companies due to the varying available valuation methodologies, subjective assumptions, and the variety of award types.",
+      "charges that can be impacted by, among other things, the timing and magnitude of acquisitions.",
+      "charges when evaluating its ongoing performance and forecasting its earnings trends, and therefore excludes such charges when presenting non-GAAP financial measures."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2800,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "43.400002",
+    "return_10d_pct": "-10.1843",
+    "return_20d_pct": "-9.1244",
+    "return_30d_pct": "-14.2166",
+    "return_60d_pct": "-12.3733",
+    "return_90d_pct": "-8.2489"
+  },
+  "text_stats": {
+    "primary_text_len": 3455,
+    "exhibit_text_len": 20092,
+    "combined_text_len": 23549
+  }
+}

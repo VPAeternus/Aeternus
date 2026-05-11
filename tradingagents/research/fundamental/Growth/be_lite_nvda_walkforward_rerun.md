@@ -1,4 +1,4 @@
-# BE / LITE / NVDA fundamental — apples-to-apples rerun
+# BE / LITE / NVDA walkforward — apples-to-apples rerun
 
 This rerun supersedes the earlier LITE reads that were based on degraded packet coverage.
 
@@ -78,7 +78,7 @@ Why that still does not flip Venture Mode:
   - margin pressure / underutilized capacity
   - export restriction and China-related friction
 - the filing delta is real, but still not strong enough to beat BE's stronger `Expansion Bridge` path
-- So repaired LITE becomes a **credible Torque Bottleneck wave beneficiary**, but not the best overall venture winner in this fundamental window.
+- So repaired LITE becomes a **credible Torque Bottleneck wave beneficiary**, but not the best overall venture winner in this walkforward window.
 
 ### Late 2025 to February 2026 (`2025-11-05`, `2026-02-04`)
 - The repaired `10-Q` packets remain low-information compared with the richer LITE `10-K`.

@@ -1,0 +1,1104 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ANGO",
+    "cik": "1275187",
+    "event_date": "2024-07-16",
+    "event_accession": "0001140361-24-033242",
+    "primary_8k_doc": "ef20032488_8k.htm",
+    "exhibit_docs": [
+      "ef20032488_ex99-1.htm",
+      "ef20032488_ex99-2.htm",
+      "ef20032494_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ANGO_000114036124033242_ef20032488_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ANGO_000114036124033242_ef20032488_ex99-1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ANGO_000114036124033242_ef20032488_ex99-2.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ANGO_000114036124033242_ef20032494_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ANGO",
+    "cik": "1275187",
+    "entity_name": "AngioDynamics, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "247678000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-02-28",
+    "net_income_value": "-13004000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-08-31",
+    "assets_value": "532637000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-05-31",
+    "financing_cash_flow_value": "25420000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-02-28",
+    "investing_cash_flow_value": "-8218000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-02-28",
+    "operating_cash_flow_value": "-15876000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-02-28",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.052504",
+    "operating_cash_flow_to_revenue": "-0.064099",
+    "assets_to_revenue": "2.150522",
+    "financing_cash_flow_to_revenue": "0.102633",
+    "investing_cash_flow_to_revenue": "-0.03318"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of the respective products prior to their divestiture or discontinuance.",
+      "net sales were $29.",
+      "sales of $5.",
+      "sales of $1.",
+      "net sales were $41.",
+      "net sales were $10."
+    ],
+    "guidance_evidence": [
+      "Guidance For fiscal year 2025, the Company expects: • Net sales to be in the range of $282 to $288 million, representing growth of between 4.",
+      "Guidance 12 Metric Guidance Full Year Net Sales $282 - $288 million Med Tech Net Sales 10 – 12% YoY growth Med Device Net Sales 1 – 3% YoY growth Gross Margin 52 - 53% Adjusted EBITDA ($2.",
+      "expects: • Net sales to be in the range of $282 to $288 million, representing growth of between 4.",
+      "expected to grow in the range of 10% to 12% • Med Device net sales are expected to grow in the range of 1% to 3% • Gross margin to be approximately 52% to 53% • Adjusted EBITDA loss of $2.",
+      "expected to result in an approximate $15 million annualized reduction in expenses by fiscal year 2027.",
+      "expects,\" \"reaffirms,\" \"intends,\" \"anticipates,\" \"plans,\" \"believes,\" \"seeks,\" \"estimates,\" “projects”, \"optimistic,\" or variations of such words and similar expressions, are forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "airment and $19.",
+      "aight quarter of double-digit increases in our Med Tech business as Auryon and NanoKnife, delivered strong revenue growth,” commented Jim Clemmer, President and Chief Executive Officer of AngioDynamics, Inc.",
+      "ained manufacturing overhead costs associated with the discontinuation of certain Medical Device products.",
+      "airment charge of $159.",
+      "airment charges totaling $6.",
+      "aid all amounts outstanding under its then existing credit agreement, and currently has no long-term debt."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment and $19.",
+      "impairment charge of $159.",
+      "charge of $19.",
+      "impairment charges totaling $6.",
+      "impairment — 0.",
+      "impairments and write-offs, certain litigation, and other items."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ef20032488_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: Broadridge Finacial Solutions inc. Document created using Broadridge PROfile 24.6.1.5240 Copyright 1995 - 2024 Broadridge"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRESS RELEASE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Investor Contact:AngioDynamics, Inc.Stephen Trowbridge, Executive Vice President & CFO(518) 795-1408"
+    },
+    {
+      "type": "TitleElement",
+      "text": "AngioDynamics Reports Fiscal Year 2024 Fourth Quarter and Full-Year Financial Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "LATHAM, N.Y.--(BUSINESS WIRE)--Jul. 16, 2024-- AngioDynamics, Inc. (NASDAQ: ANGO), a leading and transformative medical technology company focused on restoring healthy blood flow in the body’s vascular system, expanding cancer treatment options, and improving quality of life for patients, today announced financial results for the fourth quarter and fiscal year 2024, which ended May 31, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fiscal Year 2024 Fourth Quarter Highlights"
+    },
+    {
+      "type": "TableElement",
+      "text": "Quarter Ended May 31, 2024 Pro Forma* YoY Growth Pro Forma* Net Sales $71.1 million 1.9% Med Tech Net Sales $29.3 million 11.3% Med Device Net Sales $41.8 million (3.8)%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• GAAP Gross margin of 54.3%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• GAAP loss per share of $(0.33)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Adjusted loss per share of $(0.05)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• FDA 510(k) clearance and CE Mark approval for AlphaVac F18 System for the treatment of Pulmonary Embolism (PE)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Subsequent to the end of the fiscal quarter, announced share repurchase program for up to $15.0 million of its outstanding common shares"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fiscal Year 2024 Highlights"
+    },
+    {
+      "type": "TableElement",
+      "text": "Year Ended May 31, 2024 Pro Forma* YoY Growth Pro Forma* Net Sales $270.7 million 5.3% Med Tech Net Sales $106.0 million 10.1% Med Device Net Sales $164.8 million 2.4%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• GAAP Gross margin of 50.9%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Pro Forma gross margin of 53.8%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• GAAP** loss per share of $(4.59)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Adjusted loss per share of $(0.45)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Reached settlement agreement with Becton, Dickinson and C.R. Bard, ending decade-long intellectual property litigation"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Initiated transition of manufacturing operations to a fully outsourced model to drive efficiencies and cost savings"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Optimized Med Device business, including the divestiture of its Dialysis and BioSentry businesses, as well as the PICC and Midline product portfolios, and discontinued the sale of its RadioFrequency products and Syntrax support catheter products"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• In conjunction with divestitures, repaid all amounts outstanding under its $50 million Credit Agreement"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "*”Pro forma” results exclude the Dialysis and BioSentry businesses divested in June 2023 and the PICC and Midline product portfolios divested in February 2024, as well as the discontinued Radiofrequency and Syntrax products. “As Reported” results include sales of the respective products prior to their divestiture or discontinuance."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "**GAAP Loss per share includes a $159.5 million goodwill impairment and $19.3 million related to the previously announced settlement of IP litigation."
+    },
+    {
+      "type": "TextElement",
+      "text": "“We capped off a transformative 2024 with a solid fourth quarter, largely driven by a second straight quarter of double-digit increases in our Med Tech business as Auryon and NanoKnife, delivered strong revenue growth,” commented Jim Clemmer, President and Chief Executive Officer of AngioDynamics, Inc. “Within our Mechanical Thrombectomy segment, we achieved key milestones by receiving both FDA 510(k) clearance and CE Marking for AlphaVac in the treatment of pulmonary embolism. These indications open up multiple large, fast-growing markets, and helped to drive a more than 68% sequential increase in AlphaVac revenue during the fourth quarter.” Mr. Clemmer continued, “Over the last three years, AngioDynamics has undergone a significant transformation to position ourselves for long-term success. We now have an optimized, stable, cash-generating Med Device business, which, in combination with the strength of our balance sheet, allows us to aggressively pursue large, fast-growing global market opportunities with our highly innovative Med Tech portfolio to drive accelerated, profitable growth moving forward.” “We view 2025 as an inflection point in the trajectory of our business. We expect to continue to deliver strong revenue growth within our Med Tech business as we execute on key commercial initiatives, including multiple significant international expansion opportunities and the broader launch of AlphaVac for PE. The increased scale of our Med Tech business, in combination with the optimization of our Med Device business, will allow us to begin to see increasing leverage as we exit the year. Operationally, we will continue to work through the transition of our manufacturing model to reduce overhead costs and improve margins in 2026 and beyond.”"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fourth Quarter 2024 Financial Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "Unless otherwise noted, all financial results below are presented on a pro forma basis excluding the Dialysis and BioSentry businesses divested in June 2023, the PICC, Midline, and tip location product portfolios divested in February 2024, and the RadioFrequency and Syntrax support catheter products discontinued in February 2024. Net sales for the fourth quarter of fiscal year 2024 were $71.1 million, an increase of 1.9% compared to the prior-year quarter. Foreign currency translation did not have a significant impact on the Company's net sales in the quarter. Med Tech net sales were $29.3 million, an 11.3% increase from $26.4 million in the prior-year period. Med Tech includes the Auryon peripheral atherectomy platform, the thrombus management platform and the NanoKnife irreversible electroporation platform. Growth was driven by Auryon sales during the quarter of $13.0 million, which increased 12.0%, NanoKnife disposable sales of $5.4 million, representing an increase of 18.0% compared to the fourth quarter of fiscal 2023, and AlphaVac sales of $1.9 million, an increase of 6.8% over the prior year. Med Device net sales were $41.8 million, a decrease of 3.8% compared to $43.4 million in the prior-year period. U.S. net sales in the fourth quarter of fiscal 2024 were $60.8 million, an increase of 4.3% from $58.3 million a year ago. International net sales were $10.3 million, a decrease of 9.9%, compared to $11.5 million a year ago. Gross margin for the fourth quarter of fiscal 2024 was 54.3%, which was flat compared to the fourth quarter of fiscal 2023, but up 320 basis points sequentially from 51.1% in the third quarter. Gross margin for the Med Tech business was 64.1%, a decrease of 70 basis points from the fourth quarter of fiscal 2023 due to product mix and increased hardware depreciation. Gross margin for the Med Device business was 47.4%, a decrease of 60 basis points compared to the fourth quarter of fiscal 2023 primarily due to retained manufacturing overhead costs associated with the discontinuation of certain Medical Device products. The Company recorded a GAAP net loss of $13.4 million, or a loss per share of $0.33, in the fourth quarter of fiscal 2024. Excluding the items show in the non-GAAP reconciliation table below, adjusted net loss for the fourth quarter of fiscal 2024 was $2.2 million, or a loss per share of $0.05. This compares to an adjusted net loss during the fiscal fourth quarter of 2023 of $4.3 million, or a loss per share of $0.11. Adjusted EBITDA in the fourth quarter of fiscal 2024, excluding the items shown in the reconciliation table below, was $1.5 million, compared to $1.3 million in the fourth quarter of fiscal 2023. In the fourth quarter of fiscal 2024, the Company generated $5.0 million in operating cash, which was inclusive of a $3 million payment to Bard associated with the Company’s patent litigation settlement. Full-Year 2024 Financial Results Unless otherwise noted, all financial results below are presented on a pro forma basis excluding the Dialysis and BioSentry businesses divested in June 2023, the PICC and Midline product portfolios divested in February 2024, and the RadioFrequency and Syntrax support catheter products discontinued in February 2024. Net sales were $270.7 million, an increase of 5.3%, compared to $257.2 million for the prior year period. Med Tech net sales were $106.0 million, a 10.1% increase from the prior year period. Med Device net sales were $164.8 million, an increase of 2.4% from the prior year period. Gross margin declined by 110 basis points to 53.8% from 54.9% a year ago due to product and geographic mix, as well as retained manufacturing overhead costs associated with the discontinuation of certain Medical Device products. The Company's GAAP net loss was $184.3 million, or a loss per share of $4.59, compared to a net loss of $52.4 million, or a loss per share of $1.33, a year ago. This includes a goodwill impairment charge of $159.5 million, settlement charge of $19.3 million and asset impairment charges totaling $6.8 million related to the transition to outsourced manufacturing and discontinuation of Syntrax. Excluding the items shown in the non-GAAP reconciliation table below, adjusted net loss was $18.2 million, with adjusted loss per share of $0.45, compared to adjusted net loss of $21.8 million, or adjusted loss per share of $0.55, a year ago. Adjusted EBITDA, excluding the items shown in the reconciliation table below, was a loss of $3.2 million, compared to a loss of $3.0 million for the prior year. At May 31, 2024, the Company had $76.1 million in cash and cash equivalents compared to $44.6 million, which included $50 million of debt, at May 31, 2023. During the first fiscal quarter of 2024, the Company repaid all amounts outstanding under its then existing credit agreement, and currently has no long-term debt. Pro Forma 2024 Performance In addition to actual results, the tables accompanying this press release reflect pro forma results, which exclude the Dialysis and BioSentry businesses divested in June 2023, the PICC, Midline, and tip location product portfolios divested in February 2024, and the RadioFrequency and Syntrax support catheter products discontinued in February 2024."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fiscal Year 2025 Financial Guidance"
+    },
+    {
+      "type": "TextElement",
+      "text": "For fiscal year 2025, the Company expects:"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Net sales to be in the range of $282 to $288 million, representing growth of between 4.2% – 6.4% over fiscal 2024 pro forma revenue of $270.7 million"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Med Tech net sales are expected to grow in the range of 10% to 12%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Med Device net sales are expected to grow in the range of 1% to 3%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Gross margin to be approximately 52% to 53%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Adjusted EBITDA loss of $2.5 million to $0, compared to a pro forma adjusted EBITDA loss of $3.2 million in fiscal 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Adjusted loss per share in the range of $0.38 to $0.42, compared to pro forma adjusted loss per share of $0.45 in fiscal 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "Share Repurchase Program Today, the Company announced that the Board of Directors has approved a stock repurchase program authorizing the Company’s management team to purchase up to $15.0 million of its outstanding common shares. The timing and amount of any share repurchases under the authorization will be determined by management at its discretion and based on market conditions and other considerations. Q4 and Full Year 2024 Key Takeaways AlphaVac F18 System Pulmonary Embolism (PE) Indication Expansions In April of fiscal 2024, the Company announced that the Food and Drug Administration has cleared the AlphaVac F18 System for the treatment of pulmonary embolism (PE), a condition affecting around 900,0001,2 people in the United States annually and the third leading cause of cardiovascular mortality in the nation. The expanded FDA indication allows for the utilization of the AlphaVac F18 System in the non-surgical removal of thrombi or emboli from the venous vasculature, reducing thrombus burden and improving right ventricular function in patients with PE. In May of fiscal 2024, the Company received CE Mark approval of the AlphaVac F18 System for PE. The CE Mark allows AngioDynamics to provide innovative solutions to more healthcare professionals treating patients diagnosed with PE in the European Union (EU), where an estimated 435,0003 PE events occur each year in the six largest EU countries. Compared to the United States, the prevalence of PE is higher for patients admitted to the emergency department in Europe, and European patients also had higher acuity and worse outcomes4. For risk information, visit https://bit.ly/Angio-risk-info Settlement Agreement with BD and Bard In April of fiscal 2024, the Company reached a settlement agreement with Becton, Dickinson and Company (BD) and C. R. Bard, Inc. (Bard), putting an end to a decade-long intellectual property litigation. With this resolution, the Company can now fully dedicate its resources to delivering innovative medical technology solutions and improving patient outcomes. Initiated Transition of Manufacturing Operations to Fully Outsourced Model In January of fiscal 2024, the Company announced that it is committed to shifting its manufacturing operations from a company-owned facility in upstate New York to a fully outsourced model over the next two years. This shift is expected to result in an approximate $15 million annualized reduction in expenses by fiscal year 2027. Optimization of Med Device Business In fiscal year 2024, the Company optimized its Med Device business through the divestiture and discontinuation of a number of non-core assets."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Sale of Dialysis Product Portfolio and BioSentry Product"
+    },
+    {
+      "type": "TextElement",
+      "text": "In June of fiscal 2024, the Company completed the sale of its Dialysis product portfolio and BioSentry Tract Sealant System Biopsy product to Merit Medical Systems, Inc. for $100 million in cash."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Sale of PICC and Midline Product Portfolios"
+    },
+    {
+      "type": "TextElement",
+      "text": "In February of fiscal 2024, the Company completed the sale of its PICC and Midline product portfolios to Spectrum Vascular, for up to $45 million in cash.At the same time, the Company discontinued the sale of its RadioFrequency products, as well as its Syntrax support catheter products to further streamline its product portfolio."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Repaid $50 Million Credit Agreement, Eliminating All Long-Term Debt"
+    },
+    {
+      "type": "TextElement",
+      "text": "In June of fiscal 2024 and, in conjunction with receipt of proceeds from the sale of its Dialysis product portfolio and BioSentry product, the Company repaid all amounts outstanding under its then existing $50.0 million Credit Agreement, fully eliminating all long-term debt from its balance sheet. Conference Call The Company's management will host a conference call today at 8:00 a.m. ET to discuss its fourth quarter and fiscal year 2024 results. To participate in the conference call, dial 1-877-407-0784 (domestic) or +1- 201-689-8560 (international) and refer to the passcode 13747424. This conference call will also be webcast and can be accessed from the “Investors” section of the AngioDynamics website at www.angiodynamics.com. The webcast replay of the call will be available at the same site approximately one hour after the end of the call. A recording of the call will also be available from 12:00 p.m. ET on Tuesday, July 16, 2024, until 11:59 p.m. ET on Tuesday, July 23, 2024. To hear this recording, dial 1-844-512-2921 (domestic) or +1-412-317-6671 (international) and enter the passcode 13747424. Use of Non-GAAP Measures Management uses non-GAAP measures to establish operational goals and believes that non-GAAP measures may assist investors in analyzing the underlying trends in AngioDynamics' business over time. Investors should consider these non-GAAP measures in addition to, not as a substitute for or as superior to, financial reporting measures prepared in accordance with GAAP. In this news release, AngioDynamics has reported pro forma results, adjusted EBITDA, adjusted net income and adjusted earnings per share. Management uses these measures in its internal analysis and review of operational performance. Management believes that these measures provide investors with useful information in comparing AngioDynamics' performance over different periods. By using these non-GAAP measures, management believes that investors get a better picture of the performance of AngioDynamics' underlying business. Management encourages investors to review AngioDynamics' financial results prepared in accordance with GAAP to understand AngioDynamics' performance taking into account all relevant factors, including those that may only occur from time to time but have a material impact on AngioDynamics' financial results. Please see the tables that follow for a reconciliation of non-GAAP measures to measures prepared in accordance with GAAP. About AngioDynamics, Inc. AngioDynamics is a leading and transformative medical technology company focused on restoring healthy blood flow in the body’s vascular system, expanding cancer treatment options and improving quality of life for patients. The Company’s innovative technologies and devices are chosen by talented physicians in fast-growing healthcare markets to treat unmet patient needs. For more information, visit www.angiodynamics.com. Safe Harbor This release contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. All statements regarding AngioDynamics' expected future financial position, results of operations, cash flows, business strategy, budgets, projected costs, capital expenditures, products, competitive positions, growth opportunities, plans and objectives of management for future operations, as well as statements that include the words such as \"expects,\" \"reaffirms,\" \"intends,\" \"anticipates,\" \"plans,\" \"believes,\" \"seeks,\" \"estimates,\" “projects”, \"optimistic,\" or variations of such words and similar expressions, are forward-looking statements. These forward-looking statements are not guarantees of future performance and are subject to risks and uncertainties. Investors are cautioned that actual events or results may differ materially from AngioDynamics' expectations, expressed or implied. Factors that may affect the actual results achieved by AngioDynamics include, without limitation, the scale and scope of the COVID-19 global pandemic, the ability of AngioDynamics to develop its existing and new products, technological advances and patents attained by competitors, infringement of AngioDynamics' technology or assertions that AngioDynamics' technology infringes the technology of third parties, the ability of AngioDynamics to effectively compete against competitors that have substantially greater resources, future actions by the FDA or other regulatory agencies, domestic and foreign health care reforms and government regulations, results of pending or future clinical trials, overall economic conditions (including inflation, labor shortages and supply chain challenges including the cost and availability of raw materials), the results of on-going litigation, challenges with respect to third-party distributors or joint venture partners or collaborators, the results of sales efforts, the effects of product recalls and product liability claims, changes in key personnel, the ability of AngioDynamics to execute on strategic initiatives, the effects of economic, credit and capital market conditions, general market conditions, market acceptance, foreign currency exchange rate fluctuations, the effects on pricing from group purchasing organizations and competition, the ability of AngioDynamics to obtain regulatory clearances or approval of its products, or to integrate acquired businesses, as well as the risk factors listed from time to time in AngioDynamics' SEC filings, including but not limited to its Annual Report on Form 10-K for the year ended May 31, 2023. AngioDynamics does not assume any obligation to publicly update or revise any forward-looking statements for any reason. In the United States, the NanoKnife System has received a 510(k) clearance by the Food and Drug Administration for use in the surgical ablation of soft tissue and is similarly approved for commercialization in Canada, the European Union and Australia. The NanoKnife System has not been cleared for the treatment or therapy of a specific disease or condition."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED INCOME STATEMENTS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Three Months Ended Actual (1) Pro Forma Adjustments (2) Pro Forma As Reported (1) Pro Forma Adjustments (2) Pro Forma May 31, 2024 May 31, 2024 May 31, 2024 May 31, 2023 May 31, 2023 May 31, 2023 (unaudited) (unaudited) Net sales $ 70,980 142 $ 71,122 $ 91,074 (21,305 ) $ 69,769 Cost of sales (exclusive of intangible amortization) 32,465 56 32,521 44,715 (12,836 ) 31,879 Gross profit 38,515 86 38,601 46,359 (8,469 ) 37,890 % of net sales 54.3 % 54.3 % 50.9 % 54.3 % Operating expenses Research and development 6,724 (1 ) 6,723 7,860 (224 ) 7,636 Sales and marketing 24,581 (17 ) 24,564 26,293 (1,804 ) 24,489 General and administrative 10,441 (7 ) 10,434 10,228 51 10,279 Amortization of intangibles 2,574 — 2,574 4,406 (1,448 ) 2,958 Goodwill impairment — — — 14,549 — 14,549 Change in fair value of contingent consideration 229 — 229 236 — 236 Acquisition, restructuring and other items, net 8,415 (3 ) 8,412 3,624 (368 ) 3,256 Total operating expenses 52,964 (28 ) 52,936 67,196 (3,793 ) 63,403 Operating loss (14,449 ) 114 (14,335 ) (20,837 ) (4,676 ) (25,513 ) Interest income (expense), net 567 — 567 (901 ) — (901 ) Other expense, net (259 ) — (259 ) (127 ) — (127 ) Total other income (expense), net 308 — 308 (1,028 ) — (1,028 ) Loss before income tax expense (benefit) (14,141 ) 114 (14,027 ) (21,865 ) (4,676 ) (26,541 ) Income tax benefit (692 ) — (692 ) (398 ) — (398 ) Net loss $ (13,449 ) $ 114 $ (13,335 ) $ (21,467 ) $ (4,676 ) $ (26,143 ) Loss per share Basic $ (0.33 ) $ (0.33 ) $ (0.54 ) $ (0.66 ) Diluted $ (0.33 ) $ (0.33 ) $ (0.54 ) $ (0.66 ) Weighted average shares outstanding Basic 40,427 40,427 39,608 39,608 Diluted 40,427 40,427 39,608 39,608"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Reflects the Company's US GAAP consolidated financial statements before pro forma adjustments related to the sale of the Dialysis and BioSentry Businesses, the sale of the PICCs and Midlines Businesses and the discontinuation of the RadioFrequency Ablation and Syntrax products (\"the Businesses\") for the three months ended May 31, 2024 and May 31, 2023. (2) Reflects the elimination of revenues and expenses representing the operating results from the sales and discontinuation of the Businesses."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED INCOME STATEMENTS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Twelve months ended Twelve months ended Actual (1) Pro Forma Adjustments (2) Pro Forma As Reported (1) Pro Forma Adjustments (2) Pro Forma May 31, 2024 May 31, 2024 May 31, 2024 May 31, 2023 May 31, 2023 May 31, 2023 (unaudited) (unaudited) Net sales $ 303,914 (33,193 ) $ 270,721 $ 338,752 (81,565 ) $ 257,187 Cost of sales (exclusive of intangible amortization) 149,216 (24,064 ) 125,152 164,506 (48,540 ) 115,966 Gross profit 154,698 (9,129 ) 145,569 174,246 (33,025 ) 141,221 % of net sales 50.9 % 53.8 % 51.4 % 54.9 % Operating expenses Research and development 31,512 (648 ) 30,864 29,883 (615 ) 29,268 Sales and marketing 102,818 (4,730 ) 98,088 104,249 (6,109 ) 98,140 General and administrative 41,164 (60 ) 41,104 40,003 (1,190 ) 38,813 Amortization of intangibles 13,048 (2,571 ) 10,477 18,790 (5,790 ) 13,000 Goodwill impairment 159,476 — 159,476 14,549 — 14,549 Change in fair value of contingent consideration 432 — 432 2,320 — 2,320 Acquisition, restructuring and other items, net 53,182 (6,397 ) 46,785 15,633 (385 ) 15,248 Total operating expenses 401,632 (14,406 ) 387,226 225,427 (14,089 ) 211,338 Gain on sale of assets 54,499 (54,499 ) — — — — Operating loss (192,435 ) (49,222 ) (241,657 ) (51,181 ) (18,936 ) (70,117 ) Interest income (expense), net 1,614 — 1,614 (2,702 ) — (2,702 ) Other expense, net (817 ) — (817 ) (554 ) — (554 ) Total other income (expense), net 797 — 797 (3,256 ) — (3,256 ) Loss before income tax expense (benefit) (191,638 ) (49,222 ) (240,860 ) (54,437 ) (18,936 ) (73,373 ) Income tax benefit (7,289 ) — (7,289 ) (1,995 ) — (1,995 ) Net loss $ (184,349 ) $ (49,222 ) $ (233,571 ) $ (52,442 ) $ (18,936 ) $ (71,378 ) Loss per share Basic $ (4.59 ) $ (5.81 ) $ (1.33 ) $ (1.81 ) Diluted $ (4.59 ) $ (5.81 ) $ (1.33 ) $ (1.81 ) Weighted average shares outstanding Basic 40,181 40,181 39,480 39,480 Diluted 40,181 40,181 39,480 39,480"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Reflects the Company's US GAAP consolidated financial statements before pro forma adjustments related to the sale of the Dialysis and BioSentry Businesses, the sale of the PICCs and Midlines Businesses and the discontinuation of the RadioFrequency Ablation and Syntrax products (\"the Businesses\") for the twelve months ended May 31, 2024 and May 31, 2023.(2) Reflects the elimination of revenues and expenses representing the operating results from the sales and discontinuation of the Businesses."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP TO NON-GAAP RECONCILIATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Net Loss to non-GAAP Adjusted Net Income (Loss):"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Twelve Months Ended May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 (unaudited) (unaudited) Net loss $ (13,449 ) $ (21,467 ) $ (184,349 ) $ (52,442 ) Amortization of intangibles 2,574 4,406 13,048 18,790 Goodwill impairment — 14,549 159,476 14,549 Change in fair value of contingent consideration 229 236 432 2,320 Acquisition, restructuring and other items, net (1) 8,415 3,624 53,182 15,633 Gain on sale of assets — — (54,499 ) — Tax effect of non-GAAP items (2) (20 ) (617 ) (2,689 ) (1,272 ) Adjusted net income (loss) $ (2,251 ) $ 731 $ (15,399 ) $ (2,422 )"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Diluted Loss Per Share to non-GAAP Adjusted Diluted Earnings (Loss) Per Share:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Twelve Months Ended May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 (unaudited) (unaudited) Diluted loss per share $ (0.33 ) $ (0.54 ) $ (4.59 ) $ (1.33 ) Amortization of intangibles 0.06 0.11 0.32 0.48 Goodwill impairment — 0.37 3.98 0.37 Change in fair value of contingent consideration 0.01 0.01 0.01 0.06 Acquisition, restructuring and other items, net (1) 0.20 0.09 1.33 0.39 Gain on sale of assets — — (1.36 ) — Tax effect of non-GAAP items (2) — (0.02 ) (0.07 ) (0.03 ) Adjusted diluted earnings (loss) per share $ (0.06 ) $ 0.02 $ (0.38 ) $ (0.06 ) Adjusted diluted sharecount (3) 40,427 39,916 40,181 39,480"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Includes costs related to merger and acquisition activities, restructuring, and unusual items, including asset impairments and write-offs, certain litigation, and other items.(2) Adjustment to reflect the income tax provision on a non-GAAP basis has been calculated assuming no valuation allowance on the Company's U.S. deferred tax assets and an effective tax rate of 23% for the periods ended May 31, 2024 and May 31, 2023.(3) Diluted shares may differ for non-GAAP measures as compared to GAAP due to a GAAP loss."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP TO NON-GAAP RECONCILIATION (Continued)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Net Loss to Adjusted EBITDA:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Twelve Months Ended May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 (unaudited) (unaudited) Net loss $ (13,449 ) $ (21,467 ) $ (184,349 ) $ (52,442 ) Income tax benefit (692 ) (398 ) (7,289 ) (1,995 ) Interest expense, net (567 ) 901 (1,614 ) 2,702 Depreciation and amortization 6,817 7,506 27,712 30,681 Goodwill impairment — 14,549 159,476 14,549 Change in fair value of contingent consideration 229 236 432 2,320 Stock based compensation 1,896 2,981 10,529 11,158 Gain on sale of assets — — (54,499 ) — Acquisition, restructuring and other items, net (1) 7,148 3,624 50,780 15,633 Adjusted EBITDA $ 1,382 $ 7,932 $ 1,178 $ 22,606 Per diluted share: Adjusted EBITDA $ 0.03 $ 0.20 $ 0.03 $ 0.57"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Includes costs related to merger and acquisition activities, restructuring, and unusual items, including asset impairments and write-offs, certain litigation, and other items."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP TO NON-GAAP RECONCILIATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Pro Forma Net Loss to Pro Forma Adjusted Net Loss:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Pro Forma Pro Forma Three Months Ended Twelve Months Ended May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 (unaudited) (unaudited) Pro forma net loss $ (13,335 ) $ (26,143 ) $ (233,571 ) $ (71,378 ) Amortization of intangibles 2,574 2,958 10,477 13,000 Goodwill impairment — 14,549 159,476 14,549 Change in fair value of contingent consideration 229 236 432 2,320 Acquisition, restructuring and other items, net (1) 8,412 3,256 46,785 15,248 Tax effect of non-GAAP items (2) (45 ) 877 (1,840 ) 4,504 Adjusted pro forma net loss $ (2,165 ) $ (4,267 ) $ (18,241 ) $ (21,757 )"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Pro Forma Diluted Loss Per Share to Pro Forma Adjusted Diluted Loss Per Share:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Pro Forma Pro Forma Three Months Ended Twelve Months Ended May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 (unaudited) (unaudited) Pro forma diluted loss per share $ (0.33 ) $ (0.66 ) $ (5.81 ) $ (1.81 ) Amortization of intangibles 0.06 0.07 0.26 0.33 Goodwill impairment — 0.37 3.97 0.38 Change in fair value of contingent consideration 0.01 0.01 0.01 0.06 Acquisition, restructuring and other items, net (1) 0.21 0.08 1.17 0.38 Tax effect of non-GAAP items (2) — 0.02 (0.05 ) 0.11 Adjusted pro forma diluted loss per share $ (0.05 ) $ (0.11 ) $ (0.45 ) $ (0.55 ) Adjusted diluted sharecount (3) 40,427 39,608 40,181 39,480"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Includes costs related to merger and acquisition activities, restructuring, and unusual items, including asset impairments and write-offs, certain litigation, and other items(2) Adjustment to reflect the income tax provision on a non-GAAP basis has been calculated assuming no valuation allowance on the Company's U.S. deferred tax assets and an effective tax rate of 23% for the periods ended May 31, 2024 and May 31, 2023.(3) Diluted shares may differ for non-GAAP measures as compared to GAAP due to a GAAP loss."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP TO NON-GAAP RECONCILIATION (Continued)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Pro Forma Net Loss to Pro Forma Adjusted EBITDA:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Pro Forma Pro Forma Three Months Ended Twelve Months Ended May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 (unaudited) (unaudited) Pro forma net loss $ (13,335 ) $ (26,143 ) $ (233,571 ) $ (71,378 ) Income tax benefit (692 ) (398 ) (7,289 ) (1,995 ) Interest income (expense), net (567 ) 901 (1,614 ) 2,702 Depreciation and amortization 6,817 6,008 25,051 24,688 Goodwill impairment — 14,549 159,476 14,549 Change in fair value of contingent consideration 229 236 432 2,320 Stock based compensation 1,895 2,910 9,898 10,864 Acquisition, restructuring and other items, net (1) 7,145 3,256 44,382 15,248 Pro forma adjusted EBITDA $ 1,492 $ 1,319 $ (3,235 ) $ (3,002 ) Per diluted share: Adjusted EBITDA $ 0.04 $ 0.03 $ (0.08 ) $ (0.08 )"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Includes costs related to merger and acquisition activities, restructuring, and unusual items, including asset impairments and write-offs, certain litigation, and other items."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "14"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ACQUISITION, RESTRUCTURING, AND OTHER ITEMS, NET DETAIL"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Twelve Months Ended (in thousands) May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 Legal (1) $ 4,489 $ 3,099 $ 34,942 $ 9,998 Mergers and acquisitions (2) — 368 399 368 Transition service agreement (3) (437 ) — (1,092 ) — Plant Closure (4) 3,366 — 9,481 — Manufacturing Relocation (5) — 29 587 1,091 Intangible and other asset impairment (6) — — 6,260 — Israeli Innovation Authority prepayment (7) — — — 3,544 Other (8) 997 128 2,605 632 Total $ 8,415 $ 3,624 $ 53,182 $ 15,633"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Legal expenses related to litigation that is outside the normal course of business. In the third quarter of fiscal year 2024 a $19.3 million settlement expense was recorded as a result of the Settlement Agreement that was entered into between the Company and BD.(2) Mergers and acquisitions expenses related to investment banking, legal and due diligence.(3) Transition services agreement that were entered into with Merit and Spectrum.(4) Plant closure expense, related to the restructuring of our manufacturing footprint which was announced on January 5, 2024.(5) Expenses to relocate manufacturing lines out of Queensbury, NY.(6) An impairment of $3.4 million on intangible and fixed assets and an inventory write-off of $2.9 million was taken in the third quarter of fiscal year 2024 relating to the abandonment of the Syntrax and RF product lines.(7) In the first quarter of fiscal year 2023, a $3.5 million payment was made to the Israeli Innovation Authority to fully satisfy the obligation related to grant funds that were provided to Eximo for development of the Auryon laser prior to the acquisition in the second quarter of fiscal year 2020.(8) Included in the $2.6 million in other for the year ended May 31, 2024 is $0.9 million of deferred financing fees that were written-off in conjunction with the sale of the Dialysis and BioSentry businesses and concurrent extinguishment of the debt."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "15"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "NET SALES BY PRODUCT CATEGORY AND BY GEOGRAPHY"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Three Months Ended Actual (1) Pro Forma Adj. (2) Pro Forma As Reported (1) Pro Forma Adj. (2) Pro Forma Actual Pro Forma May 31, 2024 May 31, 2024 May 31, 2024 May 31, 2023 May 31, 2023 May 31, 2023 % Growth Currency Impact Constant Currency Growth % Growth Currency Impact Constant Currency Growth (unaudited) (unaudited) Net Sales Med Tech $ 29,335 $ — $ 29,335 $ 26,494 $ (148 ) $ 26,346 10.7 % 11.3 % Med Device 41,645 142 41,787 64,580 (21,157 ) 43,423 (35.5 )% (3.8 )% $ 70,980 $ 142 $ 71,122 $ 91,074 $ (21,305 ) $ 69,769 (22.1 )% 0.0 % (22.1 )% 1.9 % 0.0 % 1.9 % Net Sales United States $ 60,743 $ 61 $ 60,804 $ 74,439 $ (16,121 ) $ 58,318 (18.4 )% 4.3 % International 10,237 81 10,318 16,635 (5,184 ) 11,451 (38.5 )% 0.0 % (38.5 )% (9.9 )% $ 70,980 $ 142 $ 71,122 $ 91,074 $ (21,305 ) $ 69,769 (22.1 )% 0.0 % (22.1 )% 1.9 % 0.0 % 1.9 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Reflects the Company's US GAAP consolidated financial statements before pro forma adjustments related to the sale of the Dialysis and BioSentry Businesses, the sale of the PICCs and Midlines Businesses and the discontinuation of the RadioFrequency Ablation and Syntrax products (\"the Businesses\") for the three months ended May 31, 2024 and May 31 2023.(2) Reflects the elimination of revenues and expenses representing the operating results from the sales and discontinuation of the Businesses."
+    },
+    {
+      "type": "TitleElement",
+      "text": "GROSS PROFIT BY PRODUCT CATEGORY"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Three Months Ended Actual (1) Pro Forma Adj. (2) Pro Forma As Reported (1) Pro Forma Adj. (2) Pro Forma Actual Pro Forma May 31, 2024 May 31, 2024 May 31, 2024 May 31, 2023 May 31, 2023 May 31, 2023 % Change % Change (unaudited) (unaudited) Med Tech $ 18,798 $ 6 $ 18,804 $ 17,150 $ (82 ) $ 17,068 9.6 % 10.2 % Gross profit % of sales 64.1 % 64.1 % 64.7 % 64.8 % Med Device $ 19,717 $ 80 $ 19,797 $ 29,209 $ (8,387 ) $ 20,822 (32.5 )% (4.9 )% Gross profit % of sales 47.3 % 47.4 % 45.2 % 48.0 % Total $ 38,515 $ 86 $ 38,601 $ 46,359 $ (8,469 ) $ 37,890 (16.9 )% 1.9 % Gross profit % of sales 54.3 % 54.3 % 50.9 % 54.3 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Reflects the Company's US GAAP consolidated financial statements before pro forma adjustments related to the sale of the Dialysis and BioSentry Businesses, the sale of the PICCs and Midlines Businesses and the discontinuation of the RadioFrequency Ablation and Syntrax products (\"the Businesses\") for the three months ended May 31, 2024 and May 31, 2023.(2) Reflects the elimination of revenues and expenses representing the operating results from the sales and discontinuation of the Businesses."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "16"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "NET SALES BY PRODUCT CATEGORY AND BY GEOGRAPHY"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Twelve Months Ended Twelve Months Ended Actual (1) Pro Forma Adj. (2) Pro Forma As Reported (1) Pro Forma Adj. (2) Pro Forma Actual Pro Forma May 31, 2024 May 31, 2024 May 31, 2024 May 31, 2023 May 31, 2023 May 31, 2023 % Growth Currency Impact Constant Currency Growth % Growth Currency Impact Constant Currency Growth (unaudited) (unaudited) Net Sales Med Tech $ 106,403 $ (443 ) $ 105,960 $ 96,687 $ (450 ) $ 96,237 10.0 % 10.1 % Med Device 197,511 (32,750 ) 164,761 242,065 (81,115 ) 160,950 (18.4 )% 2.4 % $ 303,914 $ (33,193 ) $ 270,721 $ 338,752 $ (81,565 ) $ 257,187 (10.3 )% 0.0 % (10.3 )% 5.3 % 0.0 % 5.3 % Net Sales United States $ 251,486 $ (23,037 ) $ 228,449 $ 282,713 $ (62,617 ) $ 220,096 (11.0 )% 3.8 % International 52,428 (10,156 ) 42,272 56,039 (18,948 ) 37,091 (6.4 )% 0.0 % (6.4 )% 14.0 % $ 303,914 $ (33,193 ) $ 270,721 $ 338,752 $ (81,565 ) $ 257,187 (10.3 )% 0.0 % (10.3 )% 5.3 % 0.0 % 5.3 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Reflects the Company's US GAAP consolidated financial statements before pro forma adjustments related to the sale of the Dialysis and BioSentry Businesses, the sale of the PICCs and Midlines Businesses and the discontinuation of the RadioFrequency Ablation and Syntrax products (\"the Businesses\") for the twelve months ended May 31, 2024 and May 31 2023.(2) Reflects the elimination of revenues and expenses representing the operating results from the sales and discontinuation of the Businesses."
+    },
+    {
+      "type": "TitleElement",
+      "text": "GROSS PROFIT BY PRODUCT CATEGORY"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Twelve Months Ended Twelve Months Ended Actual (1) Pro Forma Adj. (2) Pro Forma As Reported (1) Pro Forma Adj. (2) Pro Forma Actual Pro Forma May 31, 2024 May 31, 2024 May 31, 2024 May 31, 2023 May 31, 2023 May 31, 2023 % Change % Change (unaudited) (unaudited) Med Tech $ 67,198 $ (167 ) $ 67,031 $ 61,966 $ (234 ) $ 61,732 8.4 % 8.6 % Gross profit % of sales 63.2 % 63.3 % 64.1 % 64.1 % Med Device $ 87,500 $ (8,962 ) $ 78,538 $ 112,280 $ (32,791 ) $ 79,489 (22.1 )% (1.2 )% Gross profit % of sales 44.3 % 47.7 % 46.4 % 49.4 % Total $ 154,698 $ (9,129 ) $ 145,569 $ 174,246 $ (33,025 ) $ 141,221 (11.2 )% 3.1 % Gross profit % of sales 50.9 % 53.8 % 51.4 % 54.9 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Reflects the Company's US GAAP consolidated financial statements before pro forma adjustments related to the sale of the Dialysis and BioSentry Businesses, the sale of the PICCs and Midlines Businesses and the discontinuation of the RadioFrequency Ablation and Syntrax products (\"the Businesses\") for the twelve months ended May 31, 2024 and May 31, 2023.(2) Reflects the elimination of revenues and expenses representing the operating results from the sales and discontinuation of the Businesses."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "17"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "May 31, 2024 May 31, 2023 (unaudited) (audited) Assets Current assets: Cash and cash equivalents $ 76,056 $ 44,620 Accounts receivable, net 43,610 52,826 Inventories 60,616 55,325 Prepaid expenses and other 12,971 4,617 Current assets held for sale — 6,154 Total current assets 193,253 163,542 Property, plant and equipment, net 35,666 44,384 Other assets 11,369 10,676 Intangible assets, net 77,383 111,144 Goodwill — 159,238 Non-current assets held for sale — 43,653 Total assets $ 317,671 $ 532,637 Liabilities and stockholders' equity Current liabilities: Accounts payable $ 37,751 $ 40,445 Accrued liabilities 41,098 26,617 Current portion of contingent consideration 4,728 14,761 Other current liabilities 7,578 2,002 Total current liabilities 91,155 83,825 Long-term debt, net of current portion — 49,818 Deferred income taxes 4,852 12,813 Contingent consideration, net of current portion — 4,535 Other long-term liabilities 16,078 3,350 Total liabilities 112,085 154,341 Stockholders' equity 205,586 378,296 Total Liabilities and Stockholders' Equity $ 317,671 $ 532,637"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "18"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ANGIODYNAMICS, INC. AND SUBSIDIARIES CONSOLIDATED STATEMENTS OF CASH FLOWS (in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Twelve Months Ended May 31, 2024 May 31, 2023 May 31, 2024 May 31, 2023 (unaudited) (unaudited) (audited) Cash flows from operating activities: Net loss $ (13,449 ) $ (21,467 ) $ (184,349 ) $ (52,442 ) Adjustments to reconcile net loss to net cash provided by (used in) operating activities: Depreciation and amortization 6,817 7,557 27,712 30,873 Non-cash lease expense 490 601 1,931 2,484 Goodwill impairment — 14,549 159,476 14,549 Stock based compensation 1,896 2,981 10,529 11,158 Gain on disposition — — (54,499 ) — Transaction costs for disposition — — (5,084 ) — Change in fair value of contingent consideration 229 236 432 2,320 Deferred income tax provision (825 ) (558 ) (7,968 ) (2,311 ) Change in accounts receivable allowances 319 135 1,326 695 Asset impairments and disposals 24 147 7,108 291 Write-off of other assets — — 869 — Other (223 ) (197 ) (62 ) (513 ) Changes in operating assets and liabilities, net of acquisitions: Accounts receivable 5,549 (2,058 ) 7,894 (1,299 ) Inventories (2,585 ) 4,056 (9,410 ) (8,198 ) Prepaid expenses and other (4,028 ) 724 (11,594 ) 332 Accounts payable, accrued and other liabilities 10,787 9,248 27,531 2,139 Net cash provided by (used in) operating activities 5,001 15,954 (28,158 ) 78 Cash flows from investing activities: Additions to property, plant and equipment (566 ) (1,056 ) (2,518 ) (3,812 ) Additions to placement and evaluation units (1,770 ) (472 ) (5,015 ) (5,394 ) Proceeds from sale of assets — — 134,500 — Acquisition of intangibles — — (3,250 ) (540 ) Net cash (used in) provided by investing activities (2,336 ) (1,528 ) 123,717 (9,746 ) Cash flows from financing activities: Proceeds from issuance of long-term debt — — — 70,000 Repayment of long-term debt — — (50,000 ) (45,000 ) Deferred financing costs on long-term debt — — — (751 ) Payment of acquisition related contingent consideration (5,000 ) — (15,000 ) — Proceeds from exercise of stock options and employee stock purchase plan — — 752 1,171 Net cash (used in) provided by financing activities (5,000 ) — (64,248 ) 25,420 Effect of exchange rate changes on cash and cash equivalents (60 ) 83 125 43 Increase (decrease) in cash and cash equivalents (2,395 ) 14,509 31,436 15,795 Cash and cash equivalents at beginning of period 78,451 30,111 44,620 28,825 Cash and cash equivalents at end of period $ 76,056 $ 44,620 $ 76,056 $ 44,620"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "19"
+    },
+    {
+      "type": "TextElement",
+      "text": "PROfilePageNumberReset%Num%20%%%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "1. Learn About Pulmonary Embolism. Lung.org. http://www.lung.org/lung-health-diseases/lung-disease-lookup/pulmonary-embolism/learn-about-pulmonary-embolism. Published 2023."
+    },
+    {
+      "type": "TitleElement",
+      "text": "2. Giri J, Sista AK, Weinberg I, et al. Interventional Therapies for Acute Pulmonary Embolism: Current Status and Principles for The Development Of Novel Evidence: A Scientific Statement From The American Heart Association. Circulation 2019;140(20)e774-e801."
+    },
+    {
+      "type": "TitleElement",
+      "text": "3. Willich SN, Chuang LH, van Hout B, Gumbs P, Jimenez D, Kroep S, Bauersachs R, Monreal M, Agnelli G, Cohen A. Pulmonary embolism in Europe - Burden of illness in relationship to healthcare resource utilization and return to work. Thromb Res. 2018 Oct;170:181-191."
+    },
+    {
+      "type": "TitleElement",
+      "text": "4. Germini F., Zarabi S., Eventov M., Turcotte M., Li M., de Wit K. Pulmonary embolism prevalence among emergency department cohorts: A systematic review and meta‐analysis by country of study. Journal of Thrombosis and Haemostasis. 2022 Dec; 19(1):173-185"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "20"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "ef20032488_ex99-2.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: Broadridge Finacial Solutions inc. Document created using Broadridge PROfile 24.6.1.5240 Copyright 1995 - 2024 Broadridge"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "AngioDynamics Fourth Quarter and Full Year Earnings Presentation July 16, 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements 2 Notice Regarding Forward-Looking Statements This presentation contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. All statements regarding AngioDynamics’ expected future financial position, results of operations, cash flows, business strategy, budgets, projected costs, capital expenditures, products, competitive positions, growth opportunities, plans and objectives of management for future operations, as well as statements that include the words such as “expects,” “reaffirms,” “intends,” “anticipates,” “plans,” “projects,” “believes,” “seeks,” “estimates,” “optimistic,” or variations of such words and similar expressions, are forward-looking statements. These forward-looking statements are not guarantees of future performance and are subject to risks and uncertainties. Investors are cautioned that actual events or results may differ materially from AngioDynamics’ expectations, expressed or implied. Factors that may affect the actual results achieved by AngioDynamics include, without limitation, the scale and scope of the COVID-19 global pandemic, the ability of AngioDynamics to develop its existing and new products, technological advances and patents attained by competitors, infringement of AngioDynamics’ technology or assertions that AngioDynamics’ technology infringes the technology of third parties, the ability of AngioDynamics to effectively compete against competitors that have substantially greater resources, future actions by the FDA or other regulatory agencies, domestic and foreign health care reforms and government regulations, results of pending or future clinical trials, overall economic conditions (including inflation, labor shortages and supply chain challenges including the cost and availability of raw materials), the results of on-going litigation, challenges with respect to third-party distributors or joint venture partners or collaborators, the results of sales efforts, the effects of product recalls and product liability claims, changes in key personnel, the ability of AngioDynamics to execute on strategic initiatives, the effects of economic, credit and capital market conditions, general market conditions, market acceptance, foreign currency exchange rate fluctuations, the effects on pricing from group purchasing organizations and competition, the ability of AngioDynamics to obtain regulatory clearances or approval of its products, or to integrate acquired businesses, as well as the risk factors listed from time to time in AngioDynamics’ SEC filings, including but not limited to its Annual Report on Form 10-K for the year ended May 31, 2023. AngioDynamics does not assume any obligation to publicly update or revise any forward-looking statements for any reason. In the United States, the NanoKnife System has received a 510(k) clearance by the Food and Drug Administration for use in the surgical ablation of soft tissue, and is similarly approved for commercialization in Canada, the European Union and Australia. The NanoKnife System has not been cleared for the treatment or therapy of a specific disease or condition. Notice Regarding Non-GAAP Financial Measures Management uses non-GAAP measures to establish operational goals and believes that non-GAAP measures may assist investors in analyzing the underlying trends in AngioDynamics’ business over time. Investors should consider these non-GAAP measures in addition to, not as a substitute for or as superior to, financial reporting measures prepared in accordance with GAAP. In this presentation, AngioDynamics has reported pro forma results, adjusted EBITDA (income before interest, taxes, depreciation and amortization and stock-based compensation); adjusted net income and adjusted earnings per share. Management uses these measures in its internal analysis and review of operational performance. Management believes that these measures provide investors with useful information in comparing AngioDynamics’ performance over different periods. By using these non-GAAP measures, management believes that investors get a better picture of the performance of AngioDynamics’ underlying business. Management encourages investors to review AngioDynamics’ financial results prepared in accordance with GAAP to understand AngioDynamics’ performance taking into account all relevant factors, including those that may only occur from time to time but have a material impact on AngioDynamics’ financial results. Please see the tables that follow for a reconciliation of non-GAAP measures to measures prepared in accordance with GAAP."
+    },
+    {
+      "type": "TitleElement",
+      "text": "FY Q4 and Full Year 2024 Key Takeaways 3 COMMERCIAL EXECUTION +5.3% YoY Pro Forma FY 2024 revenue growth Second consecutive quarter of double-digit YoY Med Tech growth 68% sequential increase in AlphaVac sales in Q4 2024 ACHIEVED KEY CLINICAL & REGULATORY MILESTONES Received FDA 510(k) & CE Mark for AlphaVac in Pulmonary Embolism (PE) OPTIMIZED BUSINESS TO SUPPORT LONG-TERM GROWTH STRATEGY Sold and discontinued multiple non-core Med Device businesses Eliminated $50 million of long-term debt and bolstered balance sheet Settled patent litigation suit with C.R. Bard INITIATED SHIFT TO OUTSOURCED MANUFACTURING Process expected to generate $15 million in annual cost savings by FY 2027 Commercial and operational execution in combination with the benefits of our strategic transformation positions AngioDynamics to drive accelerated, profitable growth moving forward"
+    },
+    {
+      "type": "TitleElement",
+      "text": "4 (3.8)% Pro Forma Growth +11.3% Pro Forma Growth Segment Revenue Contribution Segment Gross Margin 47.4% 64.1% Med Device Med Tech Q4 FY 2024 Financial Snapshot"
+    },
+    {
+      "type": "TitleElement",
+      "text": "5 2.4% Pro Forma Growth +10.1% Pro Forma Growth Segment Revenue Contribution Segment Gross Margin 47.7% 63.3% Med Device Med Tech FY 2024 Financial Snapshot"
+    },
+    {
+      "type": "TitleElement",
+      "text": "3 Year Strategic Transformation 6 Pursue Larger, Faster Growing Markets Significantly expanded applicability of Med Tech portfolio through R&D, M&A, and clinical / regulatory initiatives Drive Portfolio Transformation Exited and/or divested non-core Med Device businesses to focus resources on growth opportunities Improve Financial Profile and Capital Structure Through strategic business development efforts, litigation settlement, and initiation of outsourced manufacturing model, the Company has overhauled its balance sheet and future margin profile Zero Debt (from $50M)1 $76.1M in cash 1 $15M in Annualized Cost Savings by FY 2027 +233% 1. At May 31, 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Med Tech - Auryon 7 Cumulative sales of over $130M since launch in Sept 2020 Launched Auryon XL Radial Catheter in FY24 CE Mark approval expected in Q1 FY25 Period Sales YoY Growth Q4 2024 $13.0M 12% FY 2024 $47.1M 16%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Med Tech - Thrombus Management 8 AlphaVac Completed APEX-AV IDE study in Pulmonary Embolism (PE) in Q3 FY24 Received FDA 510(k) & CE Mark for PE in Q4 FY24 Delivered sequential growth of 68% in Q4 FY24 over Q3 FY24 Q4 2024 Sales YoY Growth AngioVac $5.9M (4%) AlphaVac $1.9M 7% Total $7.8M (2%) FY 2024 Sales YoY Growth AngioVac $23.1M (6%) AlphaVac $6.7M (6%) Total $29.8M (6%)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Med Tech - NanoKnife 9 Completed enrollment of PRESERVE trial in July of 2023, designed to prove that NanoKnife is a safe and effective treatment for men diagnosed with intermediate risk prostate cancer Currently conducting 12-month patient follow up Expect to receive an expanded indication for use in the treatment of prostate tissue by the end of calendar 2024 Q4 2024 Sales YoY Growth Disposables $5.4M 18% Capital $2.0M 248% Total $7.4M 43% FY 2024 Sales YoY Growth Disposables $18.0M 16% Capital $6.5M 100% Total $24.5M 30%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Med Device 10 Q4 2024 Sales YoY Growth Core Peripheral $19.8M 2% Venous / EVLT $6.4M (11%) Ports $9.4M 0% Solero Microwave $4.6M (14%) Alatus and Isoloc Balloons $1.1M (6%) Habib $0.5M (55%) Total $41.8M (3.8)% Sold Dialysis and BioSentry businesses in June 2023 Sold PICC and Midline product portfolios in February 2024 Discontinued RadioFrequency products in February 2024 Net proceeds from divestitures of over $145 million Proceeds used to retire all $50 million of outstanding debt and bolster balance sheet FY 2024 Sales YoY Growth Core Peripheral $76.4M 3% Venous / EVLT $26.6M 4% Ports $36.3M 7% Solero Microwave $19.1M (2%) Alatus and Isoloc Balloons $4.4M (3%) Habib $2.0M (33%) Total $164.8M 2.4%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Key Operational Milestones 11 C.R. Bard Patent Litigation Settlement In April of 2024, the Company reached a settlement agreement with Becton, Dickinson and Company (BD) and C. R. Bard, Inc. (Bard), putting an end to a decade-long intellectual property litigation. With this resolution, the Company can now fully dedicate its resources to delivering innovative medical technology solutions and improving patient outcomes. Initiated Outsourced Manufacturing Transition Process In January 2024, the Company announced its intention to shift manufacturing operations from a company-owned facility in upstate New York to a fully outsourced model over the next two years As a result of the shift, the Company expects to realize an approximate $15 million annualized cost savings by fiscal year 2027"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fiscal Year 2025 Guidance 12 Metric Guidance Full Year Net Sales $282 - $288 million Med Tech Net Sales 10 – 12% YoY growth Med Device Net Sales 1 – 3% YoY growth Gross Margin 52 - 53% Adjusted EBITDA ($2.5) - $0 million Adjusted EPS ($0.38) – ($0.42)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "13 Auryon Pursuing international expansion following our CE Mark Increased penetration in the hospital setting in the U.S. AlphaVac Full commercial launch of PE indication in U.S. and CE Marked countries Launch new products to refine and enhance usability NanoKnife Expect FDA approval for prostate by end of calendar year 2024 Commercial launch for prostate following approval Pursuing a specific prostate CPT code to add clarity to the reimbursement pathway Fiscal Year 2025 Catalysts Announced a share repurchase program for up to $15 million of its outstanding common shares."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Appendix 14"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP to Non-GAAP Pro Forma Results for the Consolidated Income Statements 15 (in thousands, except per share data) (in thousands, except per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP to Non-GAAP Adjusted Net Loss and EPS 16 Reconciliation of Net Loss to Adjusted EBITDA (in thousands, except per share data) (in thousands, except per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Non-GAAP Pro Forma Net Loss to Adjusted Pro Forma Net Loss and EPS 17 Reconciliation of Non-GAAP Pro Forma Net Loss to Adjusted Pro Forma EBITDA (in thousands, except per share data) (in thousands, except per share data)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "18 Detail of “Acquisition, Restructuring and Other Items, net”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "19 Reconciliation of GAAP to Non-GAAP Pro Forma Results for Sales and Gross Margin by Product Category (in thousands) (in thousands)"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        6,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "Quarter Ended",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "May 31, 2024",
+          "Pro Forma* YoY Growth"
+        ],
+        [
+          "Pro Forma* Net Sales",
+          "$71.1 million",
+          "1.9%"
+        ],
+        [
+          "Med Tech Net Sales",
+          "$29.3 million",
+          "11.3%"
+        ],
+        [
+          "Med Device Net Sales",
+          "$41.8 million",
+          "(3.8)%"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "GAAP Gross margin of 54.3%"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "GAAP loss per share of $(0.33)"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted loss per share of $(0.05)"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "FDA 510(k) clearance and CE Mark approval for AlphaVac F18 System for the treatment of Pulmonary Embolism (PE)"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Subsequent to the end of the fiscal quarter, announced share repurchase program for up to $15.0 million of its outstanding common shares"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        6,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "Year Ended",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "May 31, 2024",
+          "Pro Forma* YoY Growth"
+        ],
+        [
+          "Pro Forma* Net Sales",
+          "$270.7 million",
+          "5.3%"
+        ],
+        [
+          "Med Tech Net Sales",
+          "$106.0 million",
+          "10.1%"
+        ],
+        [
+          "Med Device Net Sales",
+          "$164.8 million",
+          "2.4%"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "GAAP Gross margin of 50.9%"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Pro Forma gross margin of 53.8%"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "GAAP** loss per share of $(4.59)"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted loss per share of $(0.45)"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Reached settlement agreement with Becton, Dickinson and C.R. Bard, ending decade-long intellectual property litigation"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 71.1,
+    "quarter_revenue_yoy_pct": 3642.1053,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 2.5,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net Sales $71.1 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Pro Forma* Net Sales | $71.1 million | 1.9%"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "net sales are expected to grow in the range of 10% to 12% • Med Device net sales are expected to grow in the range of 1% to 3% • Gross margin to be approximately 52% to 53% • Adjusted EBITDA loss of $2.5 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -1,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": -2,
+    "earnings_torque": 2,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": -96.4838,
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-17",
+    "entry_open": "7.590000",
+    "return_10d_pct": "0.9223",
+    "return_20d_pct": "1.5810",
+    "return_30d_pct": "0.2635",
+    "return_60d_pct": "-1.0540",
+    "return_90d_pct": "-16.6008"
+  },
+  "text_stats": {
+    "primary_text_len": 6666,
+    "exhibit_text_len": 53681,
+    "combined_text_len": 60349,
+    "semantic_text_len": 53952,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

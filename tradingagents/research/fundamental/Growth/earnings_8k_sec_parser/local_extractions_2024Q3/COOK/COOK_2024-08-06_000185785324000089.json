@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "COOK",
+    "cik": "1857853",
+    "event_date": "2024-08-06",
+    "event_accession": "0001857853-24-000089",
+    "primary_8k_doc": "tra-20240806.htm",
+    "exhibit_docs": [
+      "q2-24earningspressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COOK_000185785324000089_tra-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COOK_000185785324000089_q2-24earningspressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "COOK",
+    "cik": "1857853",
+    "entity_name": "TRAEGER, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "153161000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-10930000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "860759000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-478000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "245000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-23590000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.071363",
+    "operating_cash_flow_to_revenue": "-0.154021",
+    "assets_to_revenue": "5.619962",
+    "financing_cash_flow_to_revenue": "-0.003121",
+    "investing_cash_flow_to_revenue": "0.0016"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues decreased 1.",
+      "revenues increased 2.",
+      "revenue decreased by 1.",
+      "sales of MEATER smart thermometers.",
+      "revenues increased 31.",
+      "Gross margin of 42."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK FOR FULL YEAR 2024 SALT LAKE CITY, Ut.",
+      "guidance \"Our second quarter results reflect our strong efforts over the last two years to drive increased efficiencies in our business and demonstrate our team's ability to execute in a dynamic environment,\" said Jeremy Andrus, CEO of Traeger.",
+      "outlook for the year and continue to be extremely positive about Traeger's long-term opportunity.",
+      "Guidance For Full Year Fiscal 2024 Based on year to date performance and its outlook for the rest of the year, the Company is updating its total revenue, gross margin and Adjusted EBITDA guidance for Fiscal 2024.",
+      "expected to be betw een $590 million and $605 million • Gross Margin is expected to be between 40.",
+      "forecasting purposes."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for our grills exceeded expectations, driving growth in grill revenues and leaving channel inventories in a healthy position as we head into the second half of the year.",
+      "aid Jeremy Andrus, CEO of Traeger.",
+      "ain delivered outstanding gross margin expansion during the quarter which contributed t o a significant increase in Adjusted EBITDA versus the prior year.",
+      "ails A conference call to discuss the Company's second quarter results is scheduled for Tuesday, August 6, 2024, at 4:30 p.",
+      "ailable shortly after the conclusion of the call.",
+      "ailable approximately two hours after the conclusion of the call on the Company's website at https://investors."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory at the end of the second quarter was $91.",
+      "decreased 1.",
+      "loss decreased 91.",
+      "decreased by 1.",
+      "decreases in average selling price.",
+      "decrease in avera ge selling price was primarily due to mix shift to lower priced grills, strategic pricing action on select grills, and higher mix of direct import sales."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 28.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 590,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": 40.5,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "120.000000",
+    "return_10d_pct": "39.1667",
+    "return_20d_pct": "55.0000",
+    "return_30d_pct": "41.2500",
+    "return_60d_pct": "41.6667",
+    "return_90d_pct": "37.0833"
+  },
+  "text_stats": {
+    "primary_text_len": 3284,
+    "exhibit_text_len": 21915,
+    "combined_text_len": 25201
+  }
+}

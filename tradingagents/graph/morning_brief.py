@@ -215,36 +215,35 @@ def build_morning_brief(
 
     # ─── DEAL FLOW SECTION ──────────────────────────────────────────────────
 
-    latest_queue_date = ""
+    latest_handoff_date = ""
     top_signals: List[Dict[str, Any]] = []
 
     try:
-        # Find latest research queue file
         deal_flow_dir = Path(deal_flow_path)
         if deal_flow_dir.exists():
-            queue_files = sorted(deal_flow_dir.glob("*/research_queue.json"), reverse=True)
-            if queue_files:
-                latest_queue_path = queue_files[0]
-                latest_queue_date = latest_queue_path.parent.name
+            handoff_files = sorted(deal_flow_dir.glob("*/final_dealflow_tickers.json"), reverse=True)
+            if handoff_files:
+                latest_handoff_path = handoff_files[0]
+                latest_handoff_date = latest_handoff_path.parent.name
 
-                queue_data = _load_json(str(latest_queue_path), {})
-                if isinstance(queue_data, dict):
-                    items = queue_data.get("items", [])
-                    for item in items[:5]:
-                        if isinstance(item, dict):
-                            top_signals.append(
-                                {
-                                    "symbol": item.get("symbol", "?"),
-                                    "score": round(float(item.get("deal_flow_score", 0) or 0), 1),
-                                    "family": item.get("lane", "UNKNOWN"),
-                                    "direction": "BUY",  # Implied from queue presence
-                                }
-                            )
+                handoff_data = _load_json(str(latest_handoff_path), {})
+                if isinstance(handoff_data, dict):
+                    metadata = handoff_data.get("metadata_by_ticker", {})
+                    for symbol in list(handoff_data.get("tickers", []) or [])[:5]:
+                        meta = metadata.get(symbol, {}) if isinstance(metadata, dict) else {}
+                        top_signals.append(
+                            {
+                                "symbol": symbol,
+                                "score": None,
+                                "family": ",".join(list(meta.get("scouts", []) or [])[:2]) or "scout",
+                                "direction": "UNSCORED",
+                            }
+                        )
     except Exception:
         pass  # Graceful fallback
 
     brief["deal_flow"] = {
-        "latest_queue_date": latest_queue_date,
+        "latest_handoff_date": latest_handoff_date,
         "top_signals": top_signals,
     }
 

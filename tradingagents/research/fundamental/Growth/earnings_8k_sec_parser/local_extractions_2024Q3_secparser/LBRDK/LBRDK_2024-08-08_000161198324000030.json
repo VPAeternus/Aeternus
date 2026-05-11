@@ -1,0 +1,1099 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LBRDK",
+    "cik": "1611983",
+    "event_date": "2024-08-08",
+    "event_accession": "0001611983-24-000030",
+    "primary_8k_doc": "lbrda-20240808x8k.htm",
+    "exhibit_docs": [
+      "lbrda-20240808xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LBRDK_000161198324000030_lbrda-20240808x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LBRDK_000161198324000030_lbrda-20240808xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LBRDK",
+    "cik": "1611983",
+    "entity_name": "LIBERTY BROADBAND CORPORATION",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "246000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "69000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "15641000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-235000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-12000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "41000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.280488",
+    "operating_cash_flow_to_revenue": "0.166667",
+    "assets_to_revenue": "63.581301",
+    "financing_cash_flow_to_revenue": "-0.955285",
+    "investing_cash_flow_to_revenue": "-0.04878"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was flat in the second quarter.",
+      "revenue was flat as growth in data was offset by declines in wireless revenue.",
+      "revenue increased 1% driven by growth in data, partially offset by declines in wireless and other revenue.",
+      "operating income and Adjusted OIBDA(4) decreased 7% to $86 million Share RepurchasesThere were no repurchases of Liberty Broadband’s common stock (Nasdaq: LBRDA, LBRDK) from May 1, 2024 through July 31, 2024.",
+      "Operating income​$ 32​$ 30​​ (6)%Operating income margin (%)​​13.",
+      "operating income, as determined under GAAP."
+    ],
+    "guidance_evidence": [
+      "expected to be approximately $200 million related to additional high-returning investments in middle and last mile connectivity, with continued network expansion in GCI’s most important markets in rural Alaska including the Bethel and AU-Aleutians fiber projects."
+    ],
+    "wave_or_demand_evidence": [
+      "customers as well as increased selling, general and administrative expense due to increases in labor-related costs and professional service fees.",
+      "air value of Charter investment was $13.",
+      "aining repurchase authorization for Liberty Broadband as of August 1, 2024 is approximately $1.",
+      "aintain Liberty Broadband’s percentage equity interest at 26%(2) on a fully diluted basis.",
+      "air Value of Public Holdings in Charter(a)​$ 13,385​$ 13,730​​​​​​​​​Debt:​​​​​​​Senior Notes(b) $ 600 $ 600​Senior Credit Facility​​ 334​​ 443​Tower Obligations and Other(c)​​ 90​​ 88​Total GCI Holdings Debt $ 1,024 $ 1,131​GCI Leverage(d)​​2.",
+      "air value of the investment in Charter as of March 31, 2024 and June 30, 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges.",
+      "decreased 7% to $86 million Share RepurchasesThere were no repurchases of Liberty Broadband’s common stock (Nasdaq: LBRDA, LBRDK) from May 1, 2024 through July 31, 2024.",
+      "decreased $35 million in the second quarter as net debt repayment at Liberty Broadband more than offset proceeds from Charter share sales.",
+      "decreased $23 million in the second quarter as cash from operations and net debt borrowings were more than offset by capital expenditures (net of grant proceeds) and a $150 million dividend ​ ​ 2 to Liberty Broadband during the period.",
+      "decreased $43 million in the second quarter as Liberty Broadband repaid $150 million of borrowings under the Charter margin loan, partially offset by additional borrowing under GCI’s senior credit facility.",
+      "declines in wireless revenue."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "lbrda-20240808xex99d1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Enhanced HTML document created with Toppan Merrill Bridge 10.6.125.0Created on: 8/8/2024 05:25:29 PM (UTC)HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\""
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "LIBERTY BROADBAND REPORTSSECOND QUARTER 2024 FINANCIAL RESULTS"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Englewood, Colorado, August 8, 2024 – Liberty Broadband Corporation (“Liberty Broadband”) (Nasdaq: LBRDA, LBRDK, LBRDP) today reported second quarter 2024 results. Headlines include(1):●Fair value of Charter investment was $13.7 billion as of June 30th ●Issued $860 million aggregate principal amount of 3.125% exchangeable senior debentures due 2054 on July 2nd oUsed net proceeds to repay $540 million under Charter margin loan and repurchase $300 million principal amount of 3.125% exchangeable senior debentures due 2053●From May 1, 2024 through July 31, 2024, Liberty Broadband received $74 million of proceeds from sale of 270 thousand Charter shares to CharteroMaintained fully diluted equity interest in Charter of 26%(2)●In the second quarter, GCI(3) revenue was flat at $246 million, generated $30 million in operating income and Adjusted OIBDA(4) decreased 7% to $86 million Share RepurchasesThere were no repurchases of Liberty Broadband’s common stock (Nasdaq: LBRDA, LBRDK) from May 1, 2024 through July 31, 2024. The total remaining repurchase authorization for Liberty Broadband as of August 1, 2024 is approximately $1.7 billion.Charter OwnershipUnder the terms of Liberty Broadband and Charter’s stockholder agreement, Liberty Broadband has sold and will continue to sell to Charter a number of shares of Charter Class A common stock as is necessary to maintain Liberty Broadband’s percentage equity interest at 26%(2) on a fully diluted basis. Such sales are executed by Liberty Broadband monthly based on Charter’s repurchase activity in the month prior."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "1​"
+    },
+    {
+      "type": "TextElement",
+      "text": "From May 1, 2024 through July 31, 2024, Liberty Broadband sold 270 thousand shares of Charter Class A common stock to Charter for total proceeds of $74 million.Balance SheetThe following presentation is provided to separately identify cash and liquid investments, debt and public holdings of Liberty Broadband as of March 31, 2024 and June 30, 2024."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​(amounts in millions) 3/31/2024 6/30/2024 Cash and Cash Equivalents:​​​​​​​GCI Holdings $ 70 $ 47​Corporate and Other​​ 38​​ 26​Total Liberty Broadband Consolidated Cash $ 108 $ 73​​​​​​​​​Fair Value of Public Holdings in Charter(a)​$ 13,385​$ 13,730​​​​​​​​​Debt:​​​​​​​Senior Notes(b) $ 600 $ 600​Senior Credit Facility​​ 334​​ 443​Tower Obligations and Other(c)​​ 90​​ 88​Total GCI Holdings Debt $ 1,024 $ 1,131​GCI Leverage(d)​​2.8x​​3.2x ​​​​​​​​​Charter Margin Loan​$ 1,480​$ 1,330​3.125% Exchangeable Senior Debentures due 2053(e)​​ 1,265​​ 1,265​Total Corporate Level Debt $ 2,745 $ 2,595​​​​​​​​​Total Liberty Broadband Debt $ 3,769 $ 3,726​Fair market value adjustment and deferred loan costs ​ (45)​​ (33)​Tower obligations and finance leases (excluded from GAAP Debt) ​ (85)​​ (84)​Total Liberty Broadband Debt (GAAP)​$ 3,639​$ 3,609​​ ​​​​​​Other Financial Obligations:​​​​​​​Preferred Stock(f)​​ 180​​ 180​"
+    },
+    {
+      "type": "TextElement",
+      "text": "a)Represents fair value of the investment in Charter as of March 31, 2024 and June 30, 2024. b)Principal amount of Senior Notes.c)Includes the Wells Fargo Note Payable and current and long-term obligations under tower obligations and finance leases.d)As defined in GCI's credit agreement.e)Principal amount of Exchangeable Senior Debentures exclusive of fair market value adjustments. f)Liquidation value of preferred stock. Preferred stock has a 7% coupon, $25 per share liquidation preference plus accrued and unpaid dividends and 1/3 vote per share. The redemption date is the first business day following March 8, 2039. The preferred stock is considered a liability for GAAP purposes.Liberty Broadband cash decreased $35 million in the second quarter as net debt repayment at Liberty Broadband more than offset proceeds from Charter share sales. GCI cash decreased $23 million in the second quarter as cash from operations and net debt borrowings were more than offset by capital expenditures (net of grant proceeds) and a $150 million dividend"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "to Liberty Broadband during the period. These proceeds were used to pay down the Charter margin loan and were therefore net debt neutral to Liberty Broadband.​Liberty Broadband debt decreased $43 million in the second quarter as Liberty Broadband repaid $150 million of borrowings under the Charter margin loan, partially offset by additional borrowing under GCI’s senior credit facility. As of June 30, 2024, GCI’s credit facility has undrawn capacity of $347 million (net of letters of credit), and GCI’s leverage as defined in its credit agreement is 3.2x. On June 26, 2024, the Charter margin loan was amended to extend the maturity to June 30, 2027, among other modifications.​On July 2, 2024, Liberty Broadband closed a private offering of $860 million aggregate principal amount of 3.125% exchangeable senior debentures due 2054 and used net proceeds to repay $540 million of borrowings under the Charter margin loan, leaving $1.15 billion of available capacity under the Charter margin loan, and also repurchased $300 million in aggregate principal amount of 3.125% exchangeable senior debentures due 2053.​3"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "GCI Operating and Financial Results"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​2Q23​​2Q24​​% Change​(amounts in millions, except operating metrics)​​​​​​​​​​GCI Consolidated Financial Metrics​​​​​​​​​​Revenue​​​​​​​​​​Consumer​$ 117​$ 117​​ —%Business​​ 128​​ 129​​ 1%Total revenue​$ 245​$ 246​​ —%​​​​​​​​​​​Operating income​$ 32​$ 30​​ (6)%Operating income margin (%)​​13.1%​​12.2%​​ (90)bps​​​​​​​​​​​Adjusted OIBDA(a)​$ 92​$ 86​​ (7)%Adjusted OIBDA margin(a) (%)​​37.6%​​35.0%​​ (260)bps​​​​​​​​​​​GCI Consumer​​​​​​​​​​Financial Metrics​​​​​​​​​​Revenue​​​​​​​​​​Data​$ 59​$ 60​​ 2%Wireless​​ 48​​ 47​​ (2)%Other​​ 10​​ 10​​ —%Total revenue​$ 117​$ 117​​ —%Operating Metrics​​​​​​​​​​Data:​​​​​​​​​​Cable modem subscribers(b)​​ 159,600​​ 158,000​​ (1)%Wireless:​​​​​​​​​​Lines in service(c)​​ 201,100​​ 201,900​​ —%​​​​​​​​​​​GCI Business​​​​​​​​​​Financial Metrics​​​​​​​​​​Revenue​​​​​​​​​​Data​$ 106​$ 109​​ 3%Wireless​​ 13​​ 12​​ (8)%Other​​ 9​​ 8​​ (11)%Total revenue​$ 128​$ 129​​ 1%"
+    },
+    {
+      "type": "TextElement",
+      "text": "a)See reconciling schedule 1.b)A cable modem subscriber is defined by the purchase of cable modem service regardless of the level of service purchased. If one entity purchases multiple cable modem service access points, each access point is counted as a subscriber. Data cable modem subscribers as of June 30, 2024 include 900 subscribers that were reclassified from GCI Business to GCI Consumer subscribers in the first quarter of 2024 and are not new additions.c)A wireless line in service is defined as a wireless device with a monthly fee for services. Wireless lines in service as of June 30, 2024 include 1,800 lines that were reclassified from GCI Business to GCI Consumer lines in the first quarter of 2024 and are not new additions.Unless otherwise noted, the following discussion compares financial information for the three months ended June 30, 2024 to the same period in 2023.GCI revenue was flat in the second quarter. Consumer revenue was flat as growth in data was offset by declines in wireless revenue. Business revenue increased 1% driven by growth in data, partially offset by declines in wireless and other revenue."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating income and Adjusted OIBDA decreased $2 million and $6 million, respectively, in the second quarter due to higher operating costs primarily driven by increased distribution costs to healthcare customers as well as increased selling, general and administrative expense due to increases in labor-related costs and professional service fees. These were partially offset by lower depreciation expense as certain assets became fully depreciated during 2023. In the second quarter, GCI spent $58 million, net, on capital expenditures. Capital expenditure spending was related primarily to improvements to the wireless and data networks in rural Alaska. GCI's net capital expenditures for the full year 2024 are expected to be approximately $200 million related to additional high-returning investments in middle and last mile connectivity, with continued network expansion in GCI’s most important markets in rural Alaska including the Bethel and AU-Aleutians fiber projects."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOOTNOTES"
+    },
+    {
+      "type": "TextElement",
+      "text": "1)Liberty Broadband will discuss these highlights and other matters on Liberty Broadband's earnings conference call that will begin at 11:15 a.m. (E.T.) on August 8, 2024. For information regarding how to access the call, please see “Important Notice” later in this document.2)Calculated pursuant to the stockholder agreement between Liberty Broadband and Charter Communications, Inc. (\"Charter\"). 3)Liberty Broadband’s principal operating asset is GCI Holdings, LLC (“GCI” or “GCI Holdings”), Alaska's largest communications provider. Liberty Broadband also holds an interest in Charter. 4)For a definition of Adjusted OIBDA and Adjusted OIBDA margin and applicable reconciliations, see the accompanying schedules."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "NOTES"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "LIBERTY BROADBAND FINANCIAL METRICS"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​(amounts in millions) 2Q23 2Q24 Revenue​​​​​​​GCI Holdings​$ 245​$ 246​Corporate and other​​ —​​ —​Total Liberty Broadband Revenue​$ 245 $ 246 ​​​​​​​​Operating Income ​​​​​​​GCI Holdings​$ 32​$ 30​Corporate and other​​ (9)​​ (9)​Total Liberty Broadband Operating Income $ 23 $ 21 ​​​​​​​​Adjusted OIBDA​​​​​​​GCI Holdings​$ 92​$ 86​Corporate and other​​ (5)​​ (6)​Total Liberty Broadband Adjusted OIBDA $ 87 $ 80"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Important Notice: Liberty Broadband (Nasdaq: LBRDA, LBRDK, LBRDP) will discuss Liberty Broadband’s earnings release on a conference call which will begin at 11:15 a.m. (E.T.) on August 8, 2024. The call can be accessed by dialing (877) 407-3944 or (412) 902-0038, passcode 13742821, at least 10 minutes prior to the start time. The call will also be broadcast live across the Internet and archived on our website. To access the webcast go to https://www.libertybroadband.com/investors/news-events/ir-calendar. Links to this press release and replays of the call will also be available on Liberty Broadband’s website."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "This press release includes certain forward-looking statements under the Private Securities Litigation Reform Act of 1995, including statements about business strategies, market potential, future financial prospects, capital expenditures, matters relating to Liberty Broadband’s equity interest in Charter and Charter’s buyback of common stock, Liberty Broadband’s participation in Charter’s buyback of common stock, the continuation of our stock repurchase program and other matters that are not historical facts. These forward-looking statements involve many risks and uncertainties that could cause actual results to differ materially from those expressed or implied by such statements, including, without limitation, possible changes in market acceptance of new products or services, competitive issues, regulatory matters affecting our businesses, continued access to capital on terms acceptable to Liberty Broadband, changes in law and government regulations, the availability of investment opportunities, general market conditions (including as a result of inflationary pressures) and market conditions conducive to stock repurchases. These forward-looking statements speak only as of the date of this press release, and Liberty Broadband expressly disclaims any obligation or undertaking to disseminate any updates or revisions to any forward-looking statement contained herein to reflect any change in Liberty Broadband's expectations with regard thereto or any change in events, conditions or circumstances on which any such statement is based. Please refer to the publicly filed documents of Liberty Broadband, including the most recent Forms 10-K and 10-Q, for additional information about Liberty Broadband and about the risks and uncertainties related to Liberty Broadband which may affect the statements made in this press release."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TextElement",
+      "text": "Contact: Shane Kleinstein (720) 875-5432"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "NON-GAAP FINANCIAL MEASURES"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "To provide investors with additional information regarding our financial results, this press release includes a presentation of Adjusted OIBDA, which is a non-GAAP financial measure, for Liberty Broadband (and certain of its subsidiaries) and GCI Holdings together with a reconciliation to that entity or such businesses’ operating income, as determined under GAAP. Liberty Broadband defines Adjusted OIBDA as operating income (loss) plus depreciation and amortization, stock-based compensation, transaction costs, separately reported litigation settlements, restructuring and impairment charges. Further, this press release includes Adjusted OIBDA margin which is also a non-GAAP financial measure. Liberty Broadband defines Adjusted OIBDA margin as Adjusted OIBDA divided by revenue.Liberty Broadband believes Adjusted OIBDA is an important indicator of the operational strength and performance of its businesses by identifying those items that are not directly a reflection of each business' performance or indicative of ongoing business trends. In addition, this measure allows management to view operating results and perform analytical comparisons and benchmarking between businesses and identify strategies to improve performance. Because Adjusted OIBDA is used as a measure of operating performance, Liberty Broadband views operating income as the most directly comparable GAAP measure. Adjusted OIBDA is not meant to replace or supersede operating income or any other GAAP measure, but rather to supplement such GAAP measures in order to present investors with the same information that Liberty Broadband’s management considers in assessing the results of operations and performance of its assets. Please see the tables below for applicable reconciliations."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SCHEDULE 1"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table provides a reconciliation of GCI’s operating income to its Adjusted OIBDA for the three months ended June 30, 2023 and June 30, 2024."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GCI HOLDINGS ADJUSTED OIBDA RECONCILIATION"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​(amounts in millions) 2Q23 2Q24 GCI Holdings Operating Income ​$ 32​$ 30​Depreciation and amortization​​ 56​​ 52​Stock-based compensation​​ 4​​ 4​GCI Holdings Adjusted OIBDA​$ 92​$ 86​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SCHEDULE 2"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table provides a reconciliation of operating income (loss) calculated in accordance with GAAP to Adjusted OIBDA for Liberty Broadband for the three months ended June 30, 2023 and June 30, 2024."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "LIBERTY BROADBAND ADJUSTED OIBDA RECONCILIATION"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​(amounts in millions) 2Q23 2Q24Liberty Broadband Operating Income​$ 23​$ 21Depreciation and amortization​​ 56​​ 52Stock-based compensation​​ 8​​ 7Liberty Broadband Adjusted OIBDA​$87 ​$ 80GCI Holdings​$ 92​$ 86Corporate and other​ (5)​ (6)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "TitleElement",
+      "text": "LIBERTY BROADBAND CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEET INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​ June 30, December 31,​​ 2024 2023​​​amounts in millions,​​​except share amounts​Assets ​​​​​Current assets: ​ ​Cash and cash equivalents​$ 73 158​Trade and other receivables, net of allowance for credit losses of $5 and $5, respectively​ 176 178​Prepaid and other current assets​ 60 94​Total current assets​ 309 430​Investment in Charter, accounted for using the equity method ​ 12,535 12,116​Property and equipment, net​ 1,109 1,053​Intangible assets not subject to amortization​ ​ ​​Goodwill​ 755 755​Cable certificates​ 550 550​Other​ 41 40​Intangible assets subject to amortization, net​ 436 461​Other assets, net​ 224 236​Total assets​$ 15,959 15,641​​​​​​​​Liabilities and Equity ​ ​Current liabilities: ​ ​Accounts payable and accrued liabilities​$ 101 86​Deferred revenue​ 30 30​Current portion of debt​ 3 3​Other current liabilities​ 50 59​Total current liabilities​ 184 178​Long-term debt, net, including $1,211 and $1,255 measured at fair value, respectively​ 3,606 3,733​Obligations under tower obligations and finance leases, excluding current portion​ 81 83​Long-term deferred revenue​ 76 65​Deferred income tax liabilities​ 2,311 2,216​Preferred stock ​ 201 202​Other liabilities​ 139 141​Total liabilities​ 6,598 6,618​Equity​ ​Series A common stock, $.01 par value. Authorized 500,000,000 shares; issued and outstanding 18,236,186 and 18,233,573 at June 30, 2024 and December 31, 2023, respectively​ — —​Series B common stock, $.01 par value. Authorized 18,750,000 shares; issued and outstanding 2,022,532 and 2,025,232 at June 30, 2024 and December 31, 2023, respectively​ — —​Series C common stock, $.01 par value. Authorized 500,000,000 shares; issued and outstanding 122,589,251 and 123,704,814 at June 30, 2024 and December 31, 2023, respectively​ 1 1​Additional paid-in capital​ 3,023 3,107​Accumulated other comprehensive earnings (loss), net of taxes​ 40 52​Retained earnings​ 6,279 5,843​Total stockholders' equity​ 9,343 9,003​Non-controlling interests​ 18 20​Total equity​ 9,361 9,023​Commitments and contingencies​ ​Total liabilities and equity​$ 15,959 15,641​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "TitleElement",
+      "text": "LIBERTY BROADBAND CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENT OF OPERATIONS INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​Three months ended ​​​June 30,​​ 2024 2023​​​amounts in millions,​​​except per share amounts​Revenue​$ 246 245​Operating costs and expenses:​ ​ ​Operating expense (exclusive of depreciation and amortization shown separately below)​ 62 59​Selling, general and administrative, including stock-based compensation​ 111 107​Depreciation and amortization​ 52 56​​​ 225 222​Operating income (loss)​ 21 23​Other income (expense):​ ​Interest expense (including amortization of deferred loan fees)​ (52) (52)​Share of earnings (losses) of affiliate​ 297 318​Gain (loss) on dilution of investment in affiliate​​ (4)​ (5)​Realized and unrealized gains (losses) on financial instruments, net​ (17) 40​Other, net​ 8 2​Earnings (loss) before income taxes​ 253 326​Income tax benefit (expense)​ (58) (74)​Net earnings (loss)​ 195 252​Less net earnings (loss) attributable to the non-controlling interests​ — —​Net earnings (loss) attributable to Liberty Broadband shareholders​$ 195 252​Basic net earnings (loss) attributable to Series A, Series B and Series C Liberty Broadband shareholders per common share​$ 1.36 1.73​Diluted net earnings (loss) attributable to Series A, Series B and Series C Liberty Broadband shareholders per common share​$ 1.36 1.71​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "TitleElement",
+      "text": "LIBERTY BROADBAND CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENT OF CASH FLOWS INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​Six months ended​​​June 30,​​ 2024 2023​​​amounts in millions​Cash flows from operating activities: ​ ​Net earnings (loss)​$ 436 321​Adjustments to reconcile net earnings (loss) to net cash from operating activities:​ ​Depreciation and amortization​ 102 114​Stock-based compensation​ 14 16​Share of (earnings) losses of affiliate, net​ (577) (566)​(Gain) loss on dilution of investment in affiliate​​ 32​ 32​Realized and unrealized (gains) losses on financial instruments, net​ (59) 74​Deferred income tax expense (benefit)​ 101 95​Other, net​ (2)​ (2)​Change in operating assets and liabilities:​ ​Current and other assets​ 57 (40)​Payables and other liabilities​ (25) (99)​Net cash provided by (used in) operating activities​ 79 (55)​Cash flows from investing activities:​ ​Capital expenditures​ (123) (97)​Grant proceeds received for capital expenditures​​ 19​ 2​Cash received for Charter shares repurchased by Charter​ 116 42​Cash released from escrow related to dispositions​​ —​ 23​Purchases of investments​​ —​ (53)​Other investing activities, net​ (16) 2​Net cash provided by (used in) investing activities​ (4) (81)​Cash flows from financing activities:​ ​Borrowings of debt​​ 266​ 1,451​Repayments of debt, tower obligations and finance leases​ (348) (1,545)​Repurchases of Liberty Broadband common stock​ (89) (40)​Indemnification payment to Qurate Retail​​ —​ (25)​Other financing activities, net​ (1) (2)​Net cash provided by (used in) financing activities​ (172) (161)​Net increase (decrease) in cash, cash equivalents and restricted cash​ (97) (297)​Cash, cash equivalents and restricted cash, beginning of period​ 176 400​Cash, cash equivalents and restricted cash, end of period​$ 79 103​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Fair value of Charter investment was $13.7 billion as of June 30th"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Issued $860 million aggregate principal amount of 3.125% exchangeable senior debentures due 2054 on July 2nd"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Used net proceeds to repay $540 million under Charter margin loan and repurchase $300 million principal amount of 3.125% exchangeable senior debentures due 2053"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "From May 1, 2024 through July 31, 2024, Liberty Broadband received $74 million of proceeds from sale of 270 thousand Charter shares to Charter"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Maintained fully diluted equity interest in Charter of 26%(2)"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "In the second quarter, GCI(3) revenue was flat at $246 million, generated $30 million in operating income and Adjusted OIBDA(4) decreased 7% to $86 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        27,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "(amounts in millions)",
+          "",
+          "3/31/2024",
+          "3/31/2024",
+          "",
+          "6/30/2024",
+          "6/30/2024",
+          ""
+        ],
+        [
+          "Cash and Cash Equivalents:",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "GCI Holdings",
+          "",
+          "$",
+          "70",
+          "",
+          "$",
+          "47",
+          "​"
+        ],
+        [
+          "Corporate and Other",
+          "​",
+          "​",
+          "38",
+          "​",
+          "​",
+          "26",
+          "​"
+        ],
+        [
+          "Total Liberty Broadband Consolidated Cash",
+          "",
+          "$",
+          "108",
+          "",
+          "$",
+          "73",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Fair Value of Public Holdings in Charter(a)",
+          "​",
+          "$",
+          "13385",
+          "​",
+          "$",
+          "13730",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Debt:",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Senior Notes(b)",
+          "",
+          "$",
+          "600",
+          "",
+          "$",
+          "600",
+          "​"
+        ],
+        [
+          "Senior Credit Facility",
+          "​",
+          "​",
+          "334",
+          "​",
+          "​",
+          "443",
+          "​"
+        ],
+        [
+          "Tower Obligations and Other(c)",
+          "​",
+          "​",
+          "90",
+          "​",
+          "​",
+          "88",
+          "​"
+        ],
+        [
+          "Total GCI Holdings Debt",
+          "",
+          "$",
+          "1024",
+          "",
+          "$",
+          "1131",
+          "​"
+        ],
+        [
+          "GCI Leverage(d)",
+          "​",
+          "​",
+          "2.8x",
+          "​",
+          "​",
+          "3.2x",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Charter Margin Loan",
+          "​",
+          "$",
+          "1480",
+          "​",
+          "$",
+          "1330",
+          "​"
+        ],
+        [
+          "3.125% Exchangeable Senior Debentures due 2053(e)",
+          "​",
+          "​",
+          "1265",
+          "​",
+          "​",
+          "1265",
+          "​"
+        ],
+        [
+          "Total Corporate Level Debt",
+          "",
+          "$",
+          "2745",
+          "",
+          "$",
+          "2595",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Total Liberty Broadband Debt",
+          "",
+          "$",
+          "3769",
+          "",
+          "$",
+          "3726",
+          "​"
+        ],
+        [
+          "Fair market value adjustment and deferred loan costs",
+          "",
+          "​",
+          "(45)",
+          "​",
+          "​",
+          "(33)",
+          "​"
+        ],
+        [
+          "Tower obligations and finance leases (excluded from GAAP Debt)",
+          "",
+          "​",
+          "(85)",
+          "​",
+          "​",
+          "(84)",
+          "​"
+        ],
+        [
+          "Total Liberty Broadband Debt (GAAP)",
+          "​",
+          "$",
+          "3639",
+          "​",
+          "$",
+          "3609",
+          "​"
+        ],
+        [
+          "​",
+          "",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Other Financial Obligations:",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Preferred Stock(f)",
+          "​",
+          "​",
+          "180",
+          "​",
+          "​",
+          "180",
+          "​"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "a)",
+          "Represents fair value of the investment in Charter as of March 31, 2024 and June 30, 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "b)",
+          "Principal amount of Senior Notes."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "c)",
+          "Includes the Wells Fargo Note Payable and current and long-term obligations under tower obligations and finance leases."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "d)",
+          "As defined in GCI's credit agreement."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "e)",
+          "Principal amount of Exchangeable Senior Debentures exclusive of fair market value adjustments."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 246.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue was flat at $246 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " | ● | In the second quarter, GCI(3) revenue was flat at $246 million, generated $30 million in operating income and Adjusted OIBDA(4) decreased 7% to $86 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "60.683521",
+    "return_10d_pct": "-3.0705",
+    "return_20d_pct": "-2.6385",
+    "return_30d_pct": "-7.7457",
+    "return_60d_pct": "20.8764",
+    "return_90d_pct": "49.6374"
+  },
+  "text_stats": {
+    "primary_text_len": 3802,
+    "exhibit_text_len": 21172,
+    "combined_text_len": 24976,
+    "semantic_text_len": 20319,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

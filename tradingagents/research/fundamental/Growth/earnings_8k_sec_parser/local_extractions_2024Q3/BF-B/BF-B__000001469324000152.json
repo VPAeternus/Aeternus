@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BF-B",
+    "cik": "14693",
+    "event_date": "",
+    "event_accession": "0000014693-24-000152",
+    "primary_8k_doc": "bfb-20240829.htm",
+    "exhibit_docs": [
+      "fy25_q1xerjuly.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BF-B_000001469324000152_bfb-20240829.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BF-B_000001469324000152_fy25_q1xerjuly.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BF-B",
+    "cik": "14693",
+    "entity_name": "Brown-Forman Corporation",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3933000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-14",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "838000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-14",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "7777000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-14",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "-1038000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-14",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "-127000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-14",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "936000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-14",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.213069",
+    "operating_cash_flow_to_revenue": "0.237986",
+    "assets_to_revenue": "1.977371",
+    "financing_cash_flow_to_revenue": "-0.263921",
+    "investing_cash_flow_to_revenue": "-0.032291"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of Jack Daniel’s RTD/RTP portfolio declined 13% (-2% organic) led by lower volumes due to the impact of the Jack Daniel’s Country Cocktails business model change (JDCC) 2 .",
+      "net sales of Developed International 3 markets declined 9% (-6% organic).",
+      "sales of Brown-Forman-produced Jack Daniel’s Country Cocktails products for the first quarter of fiscal 2024 and fiscal 2025.",
+      "net sales of branded products to these markets.",
+      "net sales of branded products to global duty-free customers, other travel retail customers, and the U.",
+      "net sales of used barrels, contract bottling services, and non-branded bulk whiskey, regardless of customer location."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK August 29, 2024, LOUISVILLE, KY — Brown-Forman Corporation (NYSE: BFA, BFB) reported financial results for its first quarter of fiscal 2025, ended July 31, 2024, with net sales decreasing 8% 1 to $1.",
+      "guidance, including organic top and bottom line growth and continued reported gross margin expansion.",
+      "Outlook We anticipate a return to growth for organic net sales and organic operating income in fiscal 2025 driven by gains in international markets and the benefit of normalizing inventory trends.",
+      "outlook is tempered by our belief that global macroeconomic and geopolitical uncertainties will continue to create a challenging operating environment.",
+      "guidance for the corresponding GAAP change, as the GAAP measure will include items that are difficult to quantify or predict with reasonable certainty, such as foreign exchange, which could have a significant impact to our GAAP income statement measures.",
+      "forecast; and (e) communicate our financial performance to the Board of Directors, stockholders, and investment community."
+    ],
+    "wave_or_demand_evidence": [
+      "customers’ demand for our products.",
+      "customers, other travel retail customers, and the U.",
+      "customer location.",
+      "customers.",
+      "customers or (b) where Brown-Forman is not the distributor, shipments from distributor customers to retailers and wholesalers.",
+      "demand than our shipments to distributor customers do."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory replenishment and the execution of our pricing strategy.",
+      "inventory levels.",
+      "inventory range as continued high inflation and interest rates are negatively impacting the consumer and the trade.",
+      "inventory replenishment, net sales in Emerging 3 markets declined 16% (-5% organic).",
+      "inventory levels, and the impact of the transition services agreements (TSAs) for the divestitures of Finlandia and Sonoma-Cutrer.",
+      "inventory levels, the impact of the TSAs for the divestitures of Finlandia and Sonoma-Cutrer, and the negative effect of foreign exchange."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1000,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 4098,
+    "exhibit_text_len": 38921,
+    "combined_text_len": 43021
+  }
+}

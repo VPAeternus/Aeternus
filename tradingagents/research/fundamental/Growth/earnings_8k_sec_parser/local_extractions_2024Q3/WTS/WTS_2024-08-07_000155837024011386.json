@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WTS",
+    "cik": "795403",
+    "event_date": "2024-08-07",
+    "event_accession": "0001558370-24-011386",
+    "primary_8k_doc": "R2.htm",
+    "exhibit_docs": [
+      "wts-20240807xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTS_000155837024011386_R2.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTS_000155837024011386_wts-20240807xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WTS",
+    "cik": "795403",
+    "entity_name": "WATTS WATER TECHNOLOGIES INC",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "471700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-26",
+    "net_income_value": "64700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-26",
+    "assets_value": "2309400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-26",
+    "financing_cash_flow_value": "-29000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-26",
+    "investing_cash_flow_value": "-5100000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-26",
+    "operating_cash_flow_value": "33400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-26",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.137163",
+    "operating_cash_flow_to_revenue": "0.070808",
+    "assets_to_revenue": "4.895908",
+    "financing_cash_flow_to_revenue": "-0.06148",
+    "investing_cash_flow_to_revenue": "-0.010812"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $597 million increased 12%; organic sales were flat ​ ◾ Reported operating margin of 18.",
+      "Sales of $597 million increased 12% on a reported basis, which included sales from acquisitions, and were flat organically.",
+      "Sales of $448 million increased 22% on a reported basis and 5% on an organic basis due to price realization and growth in core valve products and our heating and hot water products, which was partly attributed to project timing.",
+      "Sales of $114 million decreased 16% on a reported basis and 15% on an organic basis.",
+      "Sales of $35 million increased 16% on a reported basis and 18% on an organic basis.",
+      "Sales increased due to growth in all major countries in the segment, which was partly due to project timing."
+    ],
+    "guidance_evidence": [
+      "outlook ​ Note changes in performance are relative to second quarter 2023 ​ North Andover, Mass.",
+      "Outlook The Company is maintaining its previous full year outlook.",
+      "Outlook ​ Approximately Net Sales ​ ​ Reported net sales growth ​ 7% to 12% Forecasted impact of acquisition / FX ​ (11)% Organic sales growth ​ (4)% to 1% ​ ​ ​ Operating Margin ​ ​ Operating margin ​ 16.",
+      "expected throughout 2024 due to normal seasonality.",
+      "expected to be between 17.",
+      "Forecasted impact of acquisition / FX ​ (11)% Organic sales growth ​ (4)% to 1% ​ ​ ​ Operating Margin ​ ​ Operating margin ​ 16."
+    ],
+    "wave_or_demand_evidence": [
+      "customers worldwide.",
+      "ail: investorrelations@wattswater.",
+      "aintaining full-year 2024 outlook ​ Note changes in performance are relative to second quarter 2023 ​ North Andover, Mass.",
+      "air and replacement activity, and our proven ability to take proactive and decisive actions will continue to enable us to successfully navigate softening economic conditions.",
+      "ain on the sale of a building, partially offset by incremental acquisition-related charges.",
+      "ain on the sale of a building."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and a non-recurring gain on the sale of a building, partially offset by incremental acquisition-related charges.",
+      "charges which more than offset a non-recurring gain on the sale of a building.",
+      "charges.",
+      "impairment of long-lived asset ​ ​ (4.",
+      "decreased sales by approximately $2 million.",
+      "decreased 10 basis points on a reported basis and 70 basis points on an adjusted basis."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 597,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "191.750000",
+    "return_10d_pct": "-2.4720",
+    "return_20d_pct": "0.9022",
+    "return_30d_pct": "-0.4224",
+    "return_60d_pct": "6.5554",
+    "return_90d_pct": "10.6493"
+  },
+  "text_stats": {
+    "primary_text_len": 2396,
+    "exhibit_text_len": 28437,
+    "combined_text_len": 30835
+  }
+}

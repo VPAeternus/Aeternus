@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EOG",
+    "cik": "821189",
+    "event_date": "",
+    "event_accession": "0000821189-24-000030",
+    "primary_8k_doc": "eog-20240801.htm",
+    "exhibit_docs": [
+      "exh99-1080124.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EOG_000082118924000030_eog-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EOG_000082118924000030_exh99-1080124.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EOG",
+    "cik": "821189",
+    "entity_name": "EOG RESOURCES, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "6044000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "2023000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "43857000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-2642000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1567000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "3255000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.334712",
+    "operating_cash_flow_to_revenue": "0.538551",
+    "assets_to_revenue": "7.256287",
+    "financing_cash_flow_to_revenue": "-0.437128",
+    "investing_cash_flow_to_revenue": "-0.259265"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of certain oil and gas properties or (iii) the result of certain other events or decisions (e.",
+      "Net Income 2,023 1,553 2,030 1,988 7,594 1,789 1,690 3,479 Dividends Declared per Common Share 1.",
+      "Net Income Per Share Basic 3.",
+      "Net Income.",
+      "Net Income (Loss), Cash Flow from Operations Before Changes in Working Capital, Free Cash Flow, Net Debt and related statistics.",
+      "Net Income (Loss), Long-Term Debt (including Current Portion of Long-Term Debt), Net Cash Provided by Operating Activities and other financial results calculated in accordance with GAAP."
+    ],
+    "guidance_evidence": [
+      "Guidance” section of the “Investors” page of the EOG website at www.",
+      "Guidance\" section of the \"Investors\" page of the EOG website) 21.",
+      "Guidance\" section of the \"Investors\" page of the EOG website) 22."
+    ],
+    "wave_or_demand_evidence": [
+      "ain certain financial measures that are not prepared or presented in accordance with GAAP.",
+      "ain statistics (for example, return on capital employed and return on equity) used to evaluate EOG’s performance.",
+      "ain assumptions regarding future commodity prices and operating costs) and EOG's direct net costs incurred in drilling or acquiring such well(s).",
+      "airment charges related to certain of EOG's assets (which are generally (i) attributable to declines in commodity prices, (ii) related to sales of certain oil and gas properties or (iii) the result of certain other events or decisions (e.",
+      "ain other adjustments to exclude non-recurring and certain other items as further described below.",
+      "ain other adjustments to exclude non-recurring and certain other items."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges related to certain of EOG's assets (which are generally (i) attributable to declines in commodity prices, (ii) related to sales of certain oil and gas properties or (iii) the result of certain other events or decisions (e.",
+      "Impairments 35 (2) 33 0.",
+      "Impairments 2 — 2 — Adjustments to Net Income (206) 43 (163) (0.",
+      "Impairments 19 (4) 15 0.",
+      "Impairments 23 (2) 21 0.",
+      "impairments and marketing costs, taxes other than income, other income (expense), interest expense and the impact of changes in the effective income tax rate."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 4114,
+    "exhibit_text_len": 29639,
+    "combined_text_len": 33755
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MSCI",
+    "cik": "1408198",
+    "event_date": "2024-07-23",
+    "event_accession": "0001408198-24-000129",
+    "primary_8k_doc": "msci-20240723.htm",
+    "exhibit_docs": [
+      "earningsrelease-20240630xf.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MSCI_000140819824000129_msci-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MSCI_000140819824000129_earningsrelease-20240630xf.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MSCI",
+    "cik": "1408198",
+    "entity_name": "MSCI INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "592218000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-23",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "238728000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-23",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5518219000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-23",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-158293000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-23",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-21762000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-23",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "264141000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-23",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.403108",
+    "operating_cash_flow_to_revenue": "0.44602",
+    "assets_to_revenue": "9.317885",
+    "financing_cash_flow_to_revenue": "-0.267288",
+    "investing_cash_flow_to_revenue": "-0.036747"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $707.",
+      "revenues were $707.",
+      "revenues were $397.",
+      "revenues was primarily driven by growth from market-cap weighted indexes.",
+      "revenues were $166.",
+      "revenues was driven by one-time sales related to both Multi-Asset Class and Equity products as well as a number of implementations which were completed in the quarter."
+    ],
+    "guidance_evidence": [
+      "Guidance MSCI’s guidance for the year ending December 31, 2024 (“Full-Year 2024”) is based on assumptions about a number of factors, in particular related to macroeconomic factors and the capital markets.",
+      "guidance.",
+      "forecast future results.",
+      "forecasting the timing or amount of various items that have not yet occurred and are out of the Company's control or cannot be reasonably predicted."
+    ],
+    "wave_or_demand_evidence": [
+      "customer agreements entered into during the period and are not a component of Run Rate.",
+      "customer agreements, additions to existing agreements or increases in price that occurred during the period and are additions to Run Rate.",
+      "aid to shareholders in second quarter 2024; Cash dividend of $1.",
+      "aid Henry A.",
+      "airman and CEO of MSCI.",
+      "ainability partnership with Moody’s and our launch of the MSCI Private Capital Indexes, can help us accelerate this strategy,” Fernandez added."
+    ],
+    "warning_or_risk_evidence": [
+      "decrease in non-recurring revenues.",
+      "uncertainties and other factors that may cause our actual results, levels of activity, performance or achievements to be materially different from any future results, levels of activity, performance or achievements expressed or implied by these statements.",
+      "uncertainties and other factors that are, in some cases, beyond MSCI’s control and that could materially affect actual results, levels of activity, performance or achievements.",
+      "uncertainties materialize, or if MSCI’s underlying assumptions prove to be incorrect, actual results may vary significantly from what MSCI projected.",
+      "uncertainties and assumptions relating to MSCI’s operations, results of operations, growth strategy and liquidity.",
+      "decrease our Run Rate and ultimately our future operating revenues over time."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 707.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "544.869995",
+    "return_10d_pct": "-5.0361",
+    "return_20d_pct": "0.2900",
+    "return_30d_pct": "4.8305",
+    "return_60d_pct": "2.8062",
+    "return_90d_pct": "10.8668"
+  },
+  "text_stats": {
+    "primary_text_len": 3900,
+    "exhibit_text_len": 58562,
+    "combined_text_len": 62464
+  }
+}

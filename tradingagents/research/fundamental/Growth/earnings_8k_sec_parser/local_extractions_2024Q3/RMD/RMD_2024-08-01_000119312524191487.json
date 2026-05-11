@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RMD",
+    "cik": "943819",
+    "event_date": "2024-08-01",
+    "event_accession": "0001193125-24-191487",
+    "primary_8k_doc": "d805836d8k.htm",
+    "exhibit_docs": [
+      "d805836dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RMD_000119312524191487_d805836d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RMD_000119312524191487_d805836dex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RMD",
+    "cik": "943819",
+    "entity_name": "ResMed Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3100936000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "210478000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-30",
+    "assets_value": "6751708000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "611465000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1113322000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "455863000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.067876",
+    "operating_cash_flow_to_revenue": "0.147008",
+    "assets_to_revenue": "2.177313",
+    "financing_cash_flow_to_revenue": "0.197187",
+    "investing_cash_flow_to_revenue": "-0.359028"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue increased by 9% to $1.",
+      "Revenue increased by 11% to $4.",
+      "revenue increased by 10 percent, reflecting continued organic growth in our SaaS portfolio.",
+      "Gross margin improved 350 bps to 58.",
+      "non-GAAP gross margin improved 330 bps to 59.",
+      "earnings per share of $1."
+    ],
+    "guidance_evidence": [
+      "outlook, and the expected impact of macroeconomic conditions of our business  are subject to risks and uncertainties, which could cause actual results to materially differ from those projected or implied in the forward-looking statements.",
+      "expected impact of macroeconomic conditions of our business  are subject to risks and uncertainties, which could cause actual results to materially differ from those projected or implied in the forward-looking statements.",
+      "forecasting, and evaluating the results of operations in the current period and in comparing it to past periods."
+    ],
+    "wave_or_demand_evidence": [
+      "customer demand for our best-in-class products and software solutions is incredibly strong, driving solid growth across our devices, masks, and software businesses.",
+      "orders.",
+      "demand generation, and accelerate growth for our businesses.",
+      "demand for our sleep devices and masks portfolio, as well as strong growth across our Software as a Service business.",
+      "ailable at 4:30 p.",
+      "aid Mick Farrell, Chairman & CEO of ResMed."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties, which could cause actual results to materially differ from those projected or implied in the forward-looking statements.",
+      "uncertainties are discussed in ResMeds periodic reports on file with the U."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "210.000000",
+    "return_10d_pct": "2.2143",
+    "return_20d_pct": "6.3857",
+    "return_30d_pct": "16.6190",
+    "return_60d_pct": "13.6905",
+    "return_90d_pct": "15.4619"
+  },
+  "text_stats": {
+    "primary_text_len": 4038,
+    "exhibit_text_len": 24742,
+    "combined_text_len": 28782
+  }
+}

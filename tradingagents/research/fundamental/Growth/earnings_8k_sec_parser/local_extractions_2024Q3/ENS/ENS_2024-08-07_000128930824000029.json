@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ENS",
+    "cik": "1289308",
+    "event_date": "2024-08-07",
+    "event_accession": "0001289308-24-000029",
+    "primary_8k_doc": "ens-20240807.htm",
+    "exhibit_docs": [
+      "ex991_earningsx1qfy25.htm",
+      "ex992_dividendx1qfy25.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENS_000128930824000029_ens-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENS_000128930824000029_ex991_earningsx1qfy25.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENS_000128930824000029_ex992_dividendx1qfy25.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ENS",
+    "cik": "1289308",
+    "entity_name": "EnerSys",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "186052000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2020-06-01",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2018-03-31",
+    "net_income_value": "143911000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-22",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "3616674000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-22",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "98434000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-22",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-69233000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-22",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-65585000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-22",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.773499",
+    "operating_cash_flow_to_revenue": "-0.352509",
+    "assets_to_revenue": "19.439049",
+    "financing_cash_flow_to_revenue": "0.529067",
+    "investing_cash_flow_to_revenue": "-0.372116"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $908.",
+      "EPS of $1.",
+      "EPS (1) of $1.",
+      "EPS at the mid-point and revenue slightly below the low end of our guidance range.",
+      "EPS as planned by holding price and taking disciplined cost reduction actions while investing in exciting future growth opportunities.",
+      "EPS (GAAP) $ 1."
+    ],
+    "guidance_evidence": [
+      "guidance range.",
+      "outlook and excited about our position as a leading enabler of the global energy transition with significant growth opportunities ahead.",
+      "guidance of $860 million to $900 million.",
+      "guidance of $1.",
+      "Outlook In the second quarter of fiscal 2025, EnerSys expects: • Net sales in the range of $880M to $920M • Adjusted diluted earnings per share in the range of $2.",
+      "guidance of $3,675M to $3,825M • Adjusted diluted earnings per share in the range of $8."
+    ],
+    "wave_or_demand_evidence": [
+      "demand signals in Energy Systems with backlog increasing for the first time in eight quarters • Achieved GM of 28.",
+      "demand.",
+      "customer demand in logistics and warehousing, and continued strength in our maintenance-free offerings.",
+      "customer.",
+      "demand indicators and positive momentum across our business, with sequential growth as we progress through the fiscal year.",
+      "demand charge reduction, utility back-up power, and dynamic fast charging for electric vehicles."
+    ],
+    "warning_or_risk_evidence": [
+      "Charge & Storage (FC&S) system, which will soon be delivered to our launch customer.",
+      "impairment of goodwill and indefinite-lived intangibles and other assets, acquisition activities and those charges and credits that are not directly related to operating unit performance.",
+      "charges such as restructuring and exit activities, impairment of goodwill and indefinite-lived intangibles and other assets, acquisition activities and other charges and credits as discussed under Reconciliations of GAAP to Non-GAAP Financial Measures.",
+      "charge reduction, utility back-up power, and dynamic fast charging for electric vehicles.",
+      "inventory de-stocking is complete and the deferred spending that is occurring is unsustainable to maintain network resiliency, resulting in pent-up demand that will materialize later this year.",
+      "chargers, power equipment, battery accessories and outdoor equipment enclosure solutions to customers worldwide."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 852.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "93.379997",
+    "return_10d_pct": "2.8057",
+    "return_20d_pct": "5.5579",
+    "return_30d_pct": "2.4738",
+    "return_60d_pct": "7.9889",
+    "return_90d_pct": "9.1240"
+  },
+  "text_stats": {
+    "primary_text_len": 3352,
+    "exhibit_text_len": 42532,
+    "combined_text_len": 45886
+  }
+}

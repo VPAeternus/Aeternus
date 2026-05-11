@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SWBI",
+    "cik": "1092796",
+    "event_date": "2024-09-05",
+    "event_accession": "0001193125-24-214184",
+    "primary_8k_doc": "d889907d8k.htm",
+    "exhibit_docs": [
+      "d889907dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SWBI_000119312524214184_d889907d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SWBI_000119312524214184_d889907dex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SWBI",
+    "cik": "1092796",
+    "entity_name": "Smith & Wesson Brands, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "864126000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-20",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "194494000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-20",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "541294000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-20",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "-105987000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-20",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "-24116000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-20",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "137814000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-20",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.225076",
+    "operating_cash_flow_to_revenue": "0.159484",
+    "assets_to_revenue": "0.626406",
+    "financing_cash_flow_to_revenue": "-0.122652",
+    "investing_cash_flow_to_revenue": "-0.027908"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Sales of $88.",
+      "Net sales were $88.",
+      "Gross Margin of 27.",
+      "Non-GAAP Gross Margin of 28.",
+      "Gross margin was 27.",
+      "net income of $3."
+    ],
+    "guidance_evidence": [
+      "expected, but we started to see an increase in orders in August."
+    ],
+    "wave_or_demand_evidence": [
+      "demand has already begun to rebound as we enter the busy fall season.",
+      "demand season now upon us, we expect to more than offset these temporary headwinds during the balance of the fiscal year, and continue to expect top- and bottom-line growth for the full year.",
+      "Demand during the summer was slower than we expected, but we started to see an increase in orders in August.",
+      "demand for our products; the state of the U.",
+      "orders from our backlog; and other risks detailed from time to time in our reports filed with the Securities and Exchange Commission, including our Annual Report on Form 10-K for the fiscal year ended April 30, 2024.",
+      "ailed reconciliation, see the schedules that follow in this release."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss of $0.",
+      "decrease of $25.",
+      "loss was $2.",
+      "loss was $1.",
+      "headwinds during the balance of the fiscal year, and continue to expect top- and bottom-line growth for the full year.",
+      "uncertainties, and other factors that could cause actual results to differ materially from those reflected by such forward-looking statements."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 88.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-06",
+    "entry_open": "13.400000",
+    "return_10d_pct": "-1.1940",
+    "return_20d_pct": "-3.2090",
+    "return_30d_pct": "-3.0597",
+    "return_60d_pct": "4.6269",
+    "return_90d_pct": "1.7164"
+  },
+  "text_stats": {
+    "primary_text_len": 3615,
+    "exhibit_text_len": 17091,
+    "combined_text_len": 20708
+  }
+}

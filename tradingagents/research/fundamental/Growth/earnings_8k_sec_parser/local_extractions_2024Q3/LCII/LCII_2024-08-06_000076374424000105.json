@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LCII",
+    "cik": "763744",
+    "event_date": "2024-08-06",
+    "event_accession": "0000763744-24-000105",
+    "primary_8k_doc": "lcii-20240806.htm",
+    "exhibit_docs": [
+      "lcii-earningsrelease2q24qu.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LCII_000076374424000105_lcii-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LCII_000076374424000105_lcii-earningsrelease2q24qu.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LCII",
+    "cik": "763744",
+    "entity_name": "LCI INDUSTRIES",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "973310000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "7259000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2959319000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-76824000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-21449000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "74676000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.007458",
+    "operating_cash_flow_to_revenue": "0.076724",
+    "assets_to_revenue": "3.040469",
+    "financing_cash_flow_to_revenue": "-0.078931",
+    "investing_cash_flow_to_revenue": "-0.022037"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $1.",
+      "net sales of $1.",
+      "net sales were approximately $311 million, up 6% from July 2023, primarily due to an approximate 15% increase in North American RV production, partially offset by an approximate 16% decline in marine sales compared to July 2023.",
+      "Net income of $61 million, or $2.",
+      "Net income in the second quarter of 2024 was $61.",
+      "net income, is provided in the \"Supplementary Information - Reconciliation of Non-GAAP Measures\" section below."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "demand improves.",
+      "customer service, safety, quality, culture and leadership, and innovation, we are delivering profitable growth while solidifying our leading position across the recreation space,” commented Ryan Smith, LCI Industries' Group President - North America.",
+      "customers via the Internet.",
+      "ail: LCII@lci1.",
+      "ailability at March 31, 2024 Elkhart, Indiana - August 6, 2024 - LCI Industries (NYSE: LCII) which, through its wholly-owned subsidiary, Lippert Components, Inc.",
+      "ain Adjacent OEM businesses while achieving over 300 basis points of operating profit margin expansion compared to the second quarter of 2023,” commented Jason Lippert, LCI Industries’ President and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory reduction of $142 million from the second quarter of 2023 • Quarterly dividend of $1.",
+      "inventory levels, inflation, and rising interest rates impacting retail consumers.",
+      "inventory reductions to improve cash generation and optimize working capital in the second quarter.",
+      "inventory balance was $687.",
+      "Inventory turns, based on last twelve months 3.",
+      "restrictions."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1100,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "113.379997",
+    "return_10d_pct": "0.2558",
+    "return_20d_pct": "5.3713",
+    "return_30d_pct": "-1.5082",
+    "return_60d_pct": "3.1046",
+    "return_90d_pct": "1.5876"
+  },
+  "text_stats": {
+    "primary_text_len": 3521,
+    "exhibit_text_len": 23959,
+    "combined_text_len": 27482
+  }
+}

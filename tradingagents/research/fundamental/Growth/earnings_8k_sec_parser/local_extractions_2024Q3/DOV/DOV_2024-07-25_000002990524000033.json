@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DOV",
+    "cik": "29905",
+    "event_date": "2024-07-25",
+    "event_accession": "0000029905-24-000033",
+    "primary_8k_doc": "dov-20240725.htm",
+    "exhibit_docs": [
+      "a202425078-kexhibit991pr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DOV_000002990524000033_dov-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DOV_000002990524000033_a202425078-kexhibit991pr.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DOV",
+    "cik": "29905",
+    "entity_name": "DOVER Corp",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2079023000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "228574000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "11348513000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-306565000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-43556000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "241284000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.109943",
+    "operating_cash_flow_to_revenue": "0.116056",
+    "assets_to_revenue": "5.45858",
+    "financing_cash_flow_to_revenue": "-0.147456",
+    "investing_cash_flow_to_revenue": "-0.02095"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $2.",
+      "revenue of $4.",
+      "revenue of over $8 billion.",
+      "EPS 2.",
+      "EPS of $2.",
+      "EPS of $6."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "guidance through a combination of organic growth, operational execution, and productive capital deployment.",
+      "GUIDANCE: In 2024, Dover expects to generate GAAP EPS in the range of $10.",
+      "guidance includes the Environmental Solutions Group business unit.",
+      "GUIDANCE RECONCILIATIONS (NON-GAAP) (unaudited)(in thousands, except per share data*) Non-GAAP Reconciliations Revenue Growth Factors 2024 Q2 Q2 YTD Organic Engineered Products 20.",
+      "Guidance Reconciliation Range 2024 Guidance for Earnings per Share (GAAP) $10."
+    ],
+    "wave_or_demand_evidence": [
+      "orders received.",
+      "demand is healthy and is supported by our sustained order rates.",
+      "customers to redefine what's possible.",
+      "bookings $ 2,217,636 $ 2,178,099 $ 4,395,735 $ 2,116,120 $ 1,894,670 $ 4,010,790 $ 2,000,153 $ 1,971,925 $ 7,982,868 2024 Q2 Q2 YTD BOOKINGS GROWTH FACTORS Organic Engineered Products 29.",
+      "Bookings represent total orders received from customers in the current reporting period and exclude de-bookings related to orders received in prior periods, if any.",
+      "bookings represent bookings excluding the impact of foreign currency exchange rates and the impact of acquisitions and dispositions."
+    ],
+    "warning_or_risk_evidence": [
+      "charges.",
+      "impairment charges for our Climate & Sustainability Technologies segment.",
+      "charges are significantly impacted by the timing, size, number and nature of the acquisitions the Company consummates.",
+      "uncertainties, assumptions and other factors, some of which are beyond the Company's control.",
+      "loss on disposition due to the sale of De-Sta-Co in the Engineered Products segment.",
+      "loss on disposition, tax-impact 2 114,973 (144) 114,829 — — — — — — Adjusted net earnings $ 272,606 $ 327,096 $ 599,702 $ 272,717 $ 287,905 $ 560,622 $ 330,878 $ 345,075 $ 1,236,575 Adjusted diluted net earnings per share: Diluted net earnings per share $ 4."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "185.429993",
+    "return_10d_pct": "-6.8435",
+    "return_20d_pct": "-3.4838",
+    "return_30d_pct": "-1.1001",
+    "return_60d_pct": "3.8829",
+    "return_90d_pct": "-0.3505"
+  },
+  "text_stats": {
+    "primary_text_len": 3882,
+    "exhibit_text_len": 31665,
+    "combined_text_len": 35549
+  }
+}

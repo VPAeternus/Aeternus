@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EBF",
+    "cik": "33002",
+    "event_date": "2024-09-23",
+    "event_accession": "0000950170-24-108690",
+    "primary_8k_doc": "ebf-20240920.htm",
+    "exhibit_docs": [
+      "ebf-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EBF_000095017024108690_ebf-20240920.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EBF_000095017024108690_ebf-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EBF",
+    "cik": "33002",
+    "entity_name": "ENNIS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "111294000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-05-31",
+    "net_income_value": "11635000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-05-31",
+    "assets_value": "399190000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-02-29",
+    "financing_cash_flow_value": "-6459000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-05-31",
+    "investing_cash_flow_value": "-7129000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-05-31",
+    "operating_cash_flow_value": "21726000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-05-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.104543",
+    "operating_cash_flow_to_revenue": "0.195213",
+    "assets_to_revenue": "3.586806",
+    "financing_cash_flow_to_revenue": "-0.058035",
+    "investing_cash_flow_to_revenue": "-0.064056"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues were $99.",
+      "sales decreased from the same quarter last year, the Company’s EBITDA margin improved slightly to 18.",
+      "earnings per share, each of which is a non-GAAP financial measure.",
+      "Earnings per share Basic $ 0.",
+      "free cash flow, the Company still has the necessary cash resources for its operations, capital investments and the continued funding of its ongoing acquisitions program."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "demand and caused greater competition on price.",
+      "demand like we are currently experiencing, we carefully monitor and manage our costs in order to maintain our strong profit margins.",
+      "customer base.",
+      "airman, Chief Executive Officer and President, commented by stating, “Our results for the quarter met our expectations as larger macroeconomic conditions have softened demand and caused greater competition on price.",
+      "aintain our strong profit margins.",
+      "airman, Chief Executive Officer and President, commented by stating, “The Board’s approval of a special dividend of $2."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary,” “expect,” “believe,” “intend” and similar expressions identify forward-looking statements.",
+      "decrease of $7.",
+      "decrease of $16.",
+      "decreased from the same quarter last year, the Company’s EBITDA margin improved slightly to 18.",
+      "uncertainties and other factors that could cause the actual results, performance or achievements of the Company to be materially different from any future results, performance or achievement expressed or implied by such forward-looking statements.",
+      "uncertainties related to the completion and integration of acquisitions, and the limited number of available suppliers and variability in the prices of paper and other raw materials."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 99,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-24",
+    "entry_open": "24.760000",
+    "return_10d_pct": "-1.8175",
+    "return_20d_pct": "-16.8821",
+    "return_30d_pct": "-16.1955",
+    "return_60d_pct": "-14.5800",
+    "return_90d_pct": "-15.8724"
+  },
+  "text_stats": {
+    "primary_text_len": 5247,
+    "exhibit_text_len": 11964,
+    "combined_text_len": 17213
+  }
+}

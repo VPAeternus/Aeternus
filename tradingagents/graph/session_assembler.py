@@ -231,55 +231,6 @@ def _compute_momentum_sub(metrics: Dict[str, Any]) -> Dict[str, int]:
 
 
 # ---------------------------------------------------------------------------
-# Deep-selection gate — enforces dealflow_deep_k / lane quotas
-# ---------------------------------------------------------------------------
-
-def get_deep_selected_tickers(queue_date: str) -> list:
-    """Return ONLY tickers marked ``selected_for_deep=True`` in the research queue.
-
-    This is the hard gate that prevents session-analysis from exceeding the
-    configured ``dealflow_deep_k`` / lane-quota limits.  The pipeline already
-    sets ``selected_for_deep`` on each queue item during
-    ``DealFlowPipeline._build_research_queue``.  This function simply reads
-    that flag and returns the filtered list.
-
-    Returns a list of dicts, each with at minimum ``symbol``, ``sector``,
-    ``lane``, and the full queue-item dict under ``queue_context``.
-    """
-    rq_path = Path("eval_results") / "deal_flow" / queue_date / "research_queue.json"
-    if not rq_path.exists():
-        raise FileNotFoundError(f"Research queue not found: {rq_path}")
-
-    rq = json.loads(rq_path.read_text())
-    items = rq.get("items", [])
-
-    selected = []
-    for item in items:
-        if not item.get("selected_for_deep"):
-            continue
-        selected.append({
-            "symbol": item["symbol"],
-            "sector": item.get("sector", ""),
-            "asset_class": item.get("asset_class", "Equity"),
-            "lane": item.get("lane", "CORE"),
-            "queue_context": item,
-        })
-
-    total = len(items)
-    deep = len(selected)
-    skipped = total - deep
-    if skipped > 0:
-        import sys
-        print(
-            f"[deep-selection gate] {deep}/{total} tickers pass "
-            f"selected_for_deep (skipped {skipped})",
-            file=sys.stderr,
-        )
-
-    return selected
-
-
-# ---------------------------------------------------------------------------
 # Function 1: gather_computation_data
 # ---------------------------------------------------------------------------
 
@@ -616,7 +567,7 @@ def write_analysis_report(
     computation_data: dict,
     sonnet_outputs: dict,
     score_dict: dict,
-    queue_context: Optional[dict] = None,
+    source_context: Optional[dict] = None,
 ) -> str:
     """Write results/{TICKER}/{DATE}/analysis_report.json in downstream format."""
     report = {
@@ -633,7 +584,7 @@ def write_analysis_report(
         "macro_metrics": computation_data.get("macro_metrics", {}),
         "momentum_metrics": computation_data.get("momentum_metrics", {}),
         "aeternus_score": score_dict,
-        "dealflow_context": queue_context or {},
+        "source_context": source_context or {},
         "messages": [],
     }
     path = Path("results") / ticker / date
@@ -649,81 +600,3 @@ def write_analysis_report(
 
     return str(path / "analysis_report.json")
 
-
-# ---------------------------------------------------------------------------
-# Function 4: write_batch_summary
-# ---------------------------------------------------------------------------
-
-def write_batch_summary(queue_date: str, items: list) -> str:
-    """Write batch_analyze_summary and batch_analyze_latest in exact downstream format.
-
-    Normalises items so ``build_portfolio_plan`` in paper_execution.py can
-    consume them directly (needs ``symbol``, ``status``, ``recommendation``,
-    ``analysis_report_path``).
-    """
-    base = Path("eval_results/deal_flow") / queue_date
-    base.mkdir(parents=True, exist_ok=True)
-
-    # Load research queue for per-ticker metadata (lane, playbook, queue_id)
-    rq_items: Dict[str, dict] = {}
-    rq_path = base / "research_queue.json"
-    run_id = ""
-    if rq_path.exists():
-        try:
-            rq = json.loads(rq_path.read_text())
-            run_id = str(rq.get("run_id", ""))
-            for rqi in rq.get("items", rq.get("queue", [])):
-                sym = str(rqi.get("symbol", rqi.get("ticker", ""))).upper()
-                if sym:
-                    rq_items[sym] = rqi
-        except Exception:
-            pass
-
-    normalised: list = []
-    for item in items:
-        ticker = str(item.get("symbol", item.get("ticker", ""))).upper()
-        if not ticker:
-            continue
-        # Derive recommendation from final_trade_decision or rating
-        ftd = str(item.get("final_trade_decision", "")).upper()
-        if ftd.startswith("BUY"):
-            recommendation = "BUY"
-        elif ftd.startswith("SELL"):
-            recommendation = "SELL"
-        else:
-            recommendation = "HOLD"
-        rqi = rq_items.get(ticker, {})
-        normalised.append({
-            "queue_id": str(item.get("queue_id", rqi.get("queue_id", ""))),
-            "symbol": ticker,
-            "ticker": ticker,
-            "status": str(item.get("status", "SUCCESS")),
-            "recommendation": recommendation,
-            "aeternus_score": item.get("aeternus_score", 0),
-            "confidence": item.get("confidence", 0),
-            "rating": item.get("rating", ""),
-            "final_trade_decision": item.get("final_trade_decision", ""),
-            "analysis_report_path": item.get(
-                "analysis_report_path",
-                f"results/{ticker}/{queue_date}/analysis_report.json",
-            ),
-            "lane": str(item.get("lane", rqi.get("lane", "CORE"))).upper(),
-            "research_playbook": str(
-                item.get("research_playbook", rqi.get("research_playbook", "N/A"))
-            ),
-            "dominant_signal_family": str(
-                item.get("dominant_signal_family", "session_analysis")
-            ),
-        })
-
-    summary = {
-        "queue_date": queue_date,
-        "date": queue_date,
-        "run_id": run_id,
-        "analyzed_count": len(normalised),
-        "items": normalised,
-    }
-
-    (base / "batch_analyze_summary.json").write_text(json.dumps(summary, indent=2, default=str))
-    (base / "batch_analyze_latest.json").write_text(json.dumps(summary, indent=2, default=str))
-    return str(base / "batch_analyze_latest.json")

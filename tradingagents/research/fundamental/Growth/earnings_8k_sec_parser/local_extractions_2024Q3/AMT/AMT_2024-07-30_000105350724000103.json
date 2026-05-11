@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AMT",
+    "cik": "1053507",
+    "event_date": "2024-07-30",
+    "event_accession": "0001053507-24-000103",
+    "primary_8k_doc": "amt-20240730.htm",
+    "exhibit_docs": [
+      "pressreleaseq22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMT_000105350724000103_amt-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMT_000105350724000103_pressreleaseq22024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AMT",
+    "cik": "1053507",
+    "entity_name": "AMERICAN TOWER CORP /MA/",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2767200000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "315000000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "66817700000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-1012600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-276800000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1070500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.113833",
+    "operating_cash_flow_to_revenue": "0.386853",
+    "assets_to_revenue": "24.146321",
+    "financing_cash_flow_to_revenue": "-0.365929",
+    "investing_cash_flow_to_revenue": "-0.100029"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 4.",
+      "sales of the VIL Shares and the VIL OCDs, which are recorded in Other income (expense) in the consolidated statements of operations in the current period.",
+      "revenue of $5,225 million to $5,285 million, international property revenue of $4,965 million to $5,065 million and Data Centers segment property revenue of $910 million to $930 million, reflecting midpoint growth rates of 0.",
+      "sales of short-term investments and other non-current assets (1) 251.",
+      "Net income increased 96.",
+      "Net income attributable to AMT common stockholders increased 89."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "OUTLOOK The following full year 2024 estimates are based on a number of assumptions that management believes to be reasonable and reflect the Company’s expectations as of July 30, 2024.",
+      "outlook is based on the following average foreign currency exchange rates to 1.",
+      "outlook assumes a full year contribution from the India business, including updated revenue reserve assumptions reflecting the positive collection trends realized year to date, and improved expectations for the remainder of the year.",
+      "outlook had assumed a revenue reserve of $20 million for the full year.",
+      "outlook reflects India contributions of $1,270 million, $500 million and $410 million for property revenue, Adjusted EBITDA and Unlevered AFFO attributable to AMT common stockholders, respectively."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for our portfolio of communications assets.",
+      "customers, and sustained growth with higher quality of earnings for our shareholders over the long-term.",
+      "customer in India, Vodafone Idea Limited (“VIL,” and the optionally convertible debentures, the “VIL OCDs”) into 1,440 million shares of equity of VIL (the “VIL Shares”).",
+      "demand for, and operating performance of, its real estate portfolio.",
+      "customer settlements, fiber solutions revenue and data centers revenue.",
+      "demand for its real estate portfolio."
+    ],
+    "warning_or_risk_evidence": [
+      "Delayed Draw Term Loan”).",
+      "Delayed Draw Term Loan.",
+      "impairment, depreciation, amortization and accretion and stock-based compensation expense.",
+      "impairment charges, real estate related depreciation, amortization and accretion including adjustments and distributions for unconsolidated affiliates and noncontrolling interests.",
+      "charges described above, particularly depreciation expenses, given the high initial, up-front capital intensity of the Company’s operating model.",
+      "charges."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 67,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "221.500000",
+    "return_10d_pct": "1.8239",
+    "return_20d_pct": "-0.5056",
+    "return_30d_pct": "1.1558",
+    "return_60d_pct": "4.9932",
+    "return_90d_pct": "-3.8781"
+  },
+  "text_stats": {
+    "primary_text_len": 5298,
+    "exhibit_text_len": 57511,
+    "combined_text_len": 62811
+  }
+}

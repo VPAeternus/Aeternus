@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AXON",
+    "cik": "1069183",
+    "event_date": "2024-08-06",
+    "event_accession": "0001069183-24-000047",
+    "primary_8k_doc": "axon-20240806x8k.htm",
+    "exhibit_docs": [
+      "axon-20240806xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AXON_000106918324000047_axon-20240806x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AXON_000106918324000047_axon-20240806xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AXON",
+    "cik": "1069183",
+    "entity_name": "Axon Enterprise, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "343043000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "45139000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3436845000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "37990000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-72674000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-56323000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.131584",
+    "operating_cash_flow_to_revenue": "-0.164186",
+    "assets_to_revenue": "10.0187",
+    "financing_cash_flow_to_revenue": "0.110744",
+    "investing_cash_flow_to_revenue": "-0.211851"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was driven by digital evidence management licenses, primarily tied to our body and in-car cameras.",
+      "revenue of $504 million grew 34.",
+      "revenue of $7.",
+      "revenue of $2.",
+      "Net income of $41 million supports non-GAAP net income of $93 million and Adjusted EBITDA of $123 million ● Raises full year revenue outlook to a range of $2.",
+      "net income margin of 8."
+    ],
+    "guidance_evidence": [
+      "outlook to a range of $2.",
+      "outlook for the remainder of the year.",
+      "outlook.",
+      "guidance for the full year 2024 contemplates approximately 29.",
+      "outlook below.",
+      "Outlook ​ The following forward-looking statements reflect Axon’s expectations as of August 6, 2024, and are subject to risks and uncertainties."
+    ],
+    "wave_or_demand_evidence": [
+      "customer verticals, bolstered by our market-leading innovation, which we believe positions us for durable, profitable growth over the long term.",
+      "customers, with net revenue retention of 122%.",
+      "demand for Axon Body 4, which is now our fastest adopted body camera product and has surpassed 200,000 units in the field.",
+      "customer verticals.",
+      "customer base, and more than 20% of the potential users within this cohort are now on one of our OSP offerings (1) .",
+      "demand from our new and emerging customer verticals, including international, U."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment loss recognized in Q2 2023.",
+      "inventory reserve charges associated with legacy products in the second quarter of 2024.",
+      "delayed deployments, budget appropriation or other contract cancellation clauses.",
+      "impairment of our investments, including our strategic investments; our ability to attract and retain key personnel; litigation or inquiries and related time and costs; and counter-party risks relating to cash balances held in excess of federally insured limits.",
+      "declined 170 basis points year over year driven by increased stock-based compensation expense and amortization of acquired intangibles in our cost of goods sold (COGS).",
+      "decreased from $40 million year over year due to increased stock-based compensation expenses."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 504,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "330.000000",
+    "return_10d_pct": "13.0515",
+    "return_20d_pct": "10.1303",
+    "return_30d_pct": "7.4606",
+    "return_60d_pct": "27.5242",
+    "return_90d_pct": "33.6636"
+  },
+  "text_stats": {
+    "primary_text_len": 3477,
+    "exhibit_text_len": 61891,
+    "combined_text_len": 65370
+  }
+}

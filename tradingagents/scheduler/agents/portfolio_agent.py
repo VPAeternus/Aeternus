@@ -1,7 +1,7 @@
 """PortfolioAgent -- autonomous portfolio construction agent.
 
-Wakes when ResearchAgent publishes ANALYSIS_COMPLETE.
-Runs `aeternus portfolio-plan` to build a trading plan from analyzed queue.
+Wakes when a post-fundamental analysis run publishes ANALYSIS_COMPLETE.
+Runs `aeternus portfolio-plan` from the provided analysis summary.
 Publishes PLAN_READY when done.
 """
 from __future__ import annotations
@@ -40,16 +40,29 @@ class PortfolioAgent(BaseAutonomousAgent):
                 summary="no analysis signals — idle cycle",
             )
 
-        # Use trade_date from most recent signal
         trade_date = dt.date.today().isoformat()
+        summary_path = ""
         for sig in signals:
             if sig.payload.get("trade_date"):
                 trade_date = sig.payload["trade_date"]
+            if sig.payload.get("summary_path"):
+                summary_path = str(sig.payload["summary_path"])
                 break
+
+        if not summary_path:
+            completed = dt.datetime.utcnow().isoformat()
+            return AgentRunResult(
+                agent_name=self.name,
+                success=False,
+                started_at=started,
+                completed_at=completed,
+                summary="analysis complete signal missing summary_path",
+                error="summary_path required",
+            )
 
         cmd = [
             sys.executable, "-m", "cli.main", "portfolio-plan",
-            "--queue-date", trade_date,
+            "--summary-path", summary_path,
             "--capital-usd", str(self.capital_usd),
             "--max-positions", str(self.max_positions),
             "--min-score", str(self.min_score),

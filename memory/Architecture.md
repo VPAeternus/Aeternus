@@ -19,8 +19,8 @@ Deal Flow -> Research -> Portfolio Construction -> Execution
 ## Team Responsibilities
 
 1. **Deal Flow Team**
-   - sources candidates across social/news/macro/smart-money
-   - emits ranked shortlist and research queue
+   - sources tickers across scout channels
+   - emits scout ticker totals and final ticker handoff
 2. **Research Team**
    - performs thesis generation and validation
    - emits recommendation artifacts with score/confidence
@@ -49,10 +49,10 @@ Deal Flow -> Research -> Portfolio Construction -> Execution
 
 1. Deal Flow contracts:
    - `DealFlowSignal`
-   - `DealFlowCandidate`
-   - `DealFlowShortlist`
-   - `ResearchQueueItem`
-   - `ResearchQueue`
+   - `LegacyCandidateType`
+   - `LegacyCandidate ListType`
+   - `LegacyQueueItemType`
+   - `LegacyQueueType`
 2. Hedging contracts:
    - `PortfolioRiskSnapshot`
    - `MarketRegimeSnapshot`

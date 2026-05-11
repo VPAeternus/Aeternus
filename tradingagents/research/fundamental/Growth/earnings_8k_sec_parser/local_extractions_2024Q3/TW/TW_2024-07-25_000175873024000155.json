@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TW",
+    "cik": "1758730",
+    "event_date": "2024-07-25",
+    "event_accession": "0001758730-24-000155",
+    "primary_8k_doc": "tw-20240725.htm",
+    "exhibit_docs": [
+      "tw-2024xq2xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TW_000175873024000155_tw-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TW_000175873024000155_tw-2024xq2xex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TW",
+    "cik": "1758730",
+    "entity_name": "Tradeweb Markets Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "329249000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "87856000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7059538000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-80456000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-16714000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "70840000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.266838",
+    "operating_cash_flow_to_revenue": "0.215156",
+    "assets_to_revenue": "21.441335",
+    "financing_cash_flow_to_revenue": "-0.244362",
+    "investing_cash_flow_to_revenue": "-0.050764"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $217.",
+      "Revenues of $111.",
+      "Revenues of $22.",
+      "Revenues of $18.",
+      "Revenues of $29.",
+      "Revenues of $6."
+    ],
+    "guidance_evidence": [
+      "Guidance* • Adjusted Expenses: $830 - 860 million • Acquisition and Refinitiv Transaction related depreciation and amortization expense: $158 million • Assumed non-GAAP tax rate: ~ 24.",
+      "guidance has been revised to reflect higher expenses and expenditures in light of strong business momentum, the anticipated closing of ICD during the third quarter of 2024 and recently announced management changes.",
+      "guidance is unchanged from the prior quarter guidance.",
+      "guidance are not provided due to the inherent difficulty in quantifying certain amounts due to a variety of factors including the unpredictability in the movement of foreign currency rates.",
+      "guidance assumes an average 2024 Sterling/US$ foreign exchange rate of 1.",
+      "Guidance amounts for cash capital expenditures and capitalized software development excludes amounts paid at closing for acquisitions."
+    ],
+    "wave_or_demand_evidence": [
+      "aily volume (“ADV”) for the quarter, an increase of 48.",
+      "ain infrastructure provider Alphaledger, reflecting our continued efforts to strategically place bets on technology that helps to advance our business.",
+      "ained primary issuance across Europe and the UK.",
+      "ained muted as market volatility remained low.",
+      "ail.",
+      "ain infrastructure for fixed income assets, to jointly develop innovative products leveraging Alphaledger's blockchain technology."
+    ],
+    "warning_or_risk_evidence": [
+      "loss recognized on foreign currency forward contracts and foreign exchange gain or loss from the revaluation of cash denominated in a different currency than the entity’s functional currency.",
+      "loss, net — 456 — 115 Adjusted Net Income before income taxes 222,281 163,906 446,181 334,813 Adjusted income taxes (7) (55,570) (40,157) (111,545) (82,029) Adjusted Net Income $ 166,711 $ 123,749 $ 334,636 $ 252,784 Adjusted Diluted EPS (8) $ 0.",
+      "losses) (4) 78 964 2,362 (1,834) Adjusted Expenses $ 203,639 $ 161,816 $ 407,820 $ 332,649 (1) Represents incremental direct costs associated with the acquisition and integration of completed and potential mergers and acquisitions.",
+      "uncertainties, many of which are beyond our control.",
+      "uncertainties, you are cautioned not to place undue reliance on such forward-looking statements."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 217.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "105.480003",
+    "return_10d_pct": "1.3557",
+    "return_20d_pct": "8.8642",
+    "return_30d_pct": "11.1016",
+    "return_60d_pct": "15.5859",
+    "return_90d_pct": "26.3083"
+  },
+  "text_stats": {
+    "primary_text_len": 3819,
+    "exhibit_text_len": 44405,
+    "combined_text_len": 48226
+  }
+}

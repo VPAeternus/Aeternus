@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "YELP",
+    "cik": "1345016",
+    "event_date": "2024-08-08",
+    "event_accession": "0001345016-24-000049",
+    "primary_8k_doc": "yelp-20240808.htm",
+    "exhibit_docs": [
+      "yelpq2-24ex991pressrelease.htm",
+      "yelpq22024ex992lettertos.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/YELP_000134501624000049_yelp-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/YELP_000134501624000049_yelpq2-24ex991pressrelease.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/YELP_000134501624000049_yelpq22024ex992lettertos.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "YELP",
+    "cik": "1345016",
+    "entity_name": "YELP INC",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "312438000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-1178000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1014723000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-54706000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-37280000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "74244000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.00377",
+    "operating_cash_flow_to_revenue": "0.237628",
+    "assets_to_revenue": "3.247758",
+    "financing_cash_flow_to_revenue": "-0.175094",
+    "investing_cash_flow_to_revenue": "-0.11932"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased by 6% year over year to a record $357 million, $2 million above the high end of our outlook range.",
+      "revenue was approximately flat year over year, as several enterprise clients in our RR&O categories paused or reduced spend due to continued challenges in their operating environment.",
+      "revenue was approximately flat year over year, reflecting continued softness in RR&O categories.",
+      "revenue was also flat year over year, maintaining its annual run rate of approximately $45 million in the second quarter.",
+      "revenue decreased by one percentage point year over year to 12% in the second quarter and we remain focused on reducing it to below 8% by the end of 2025.",
+      "revenue was $357 million in the second quarter of 2024, a 6% increase from the second quarter of 2023."
+    ],
+    "guidance_evidence": [
+      "outlook adjusted to $1.",
+      "outlook for the third quarter and full year 2024.",
+      "outlook for GAAP Net income (loss) due to the uncertainty and potential variability of Other income, net and Provision for (benefit from) income taxes, which are reconciling items between Adjusted EBITDA and GAAP Net income (loss).",
+      "outlook to the corresponding GAAP measure is not available without unreasonable effort.",
+      "outlook range, driven primarily by growth in advertising revenue as we executed against our strategic initiatives.",
+      "outlook range."
+    ],
+    "wave_or_demand_evidence": [
+      "customer acquisition in our Self-serve channel in the second quarter.",
+      "customer retention, we provided advertisers with more flexibility to adjust their spend as well as recommendations on how to best optimize their budgets.",
+      "customers.",
+      "customers interested in moving services, Request-a-Quote has become an important part of our lead generation strategy.",
+      "customers across multiple locations and managing these relationships in real time.",
+      "orders compared to the prior-year period."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges and fees related to shareholder activism, and other items that we deem not to be indicative of our ongoing operating performance.",
+      "impairment charge of approximately $4 million in the third quarter related to right-of-use assets and leasehold improvements associated with the underlying operating lease.",
+      "charge, but do not expect it to impact adjusted EBITDA.",
+      "loss) due to the uncertainty and potential variability of Other income, net and Provision for (benefit from) income taxes, which are reconciling items between Adjusted EBITDA and GAAP Net income (loss).",
+      "loss).",
+      "uncertainties."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 357,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "34.630001",
+    "return_10d_pct": "-1.0107",
+    "return_20d_pct": "0.8085",
+    "return_30d_pct": "-3.3497",
+    "return_60d_pct": "-1.0107",
+    "return_90d_pct": "5.0245"
+  },
+  "text_stats": {
+    "primary_text_len": 3452,
+    "exhibit_text_len": 60456,
+    "combined_text_len": 63910
+  }
+}

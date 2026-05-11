@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "XRX",
+    "cik": "1770450",
+    "event_date": "2024-07-25",
+    "event_accession": "0001770450-24-000035",
+    "primary_8k_doc": "xrx-20240725.htm",
+    "exhibit_docs": [
+      "ex991xrx630248-ker.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XRX_000177045024000035_xrx-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XRX_000177045024000035_ex991xrx630248-ker.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "XRX",
+    "cik": "1770450",
+    "entity_name": "XEROX HOLDINGS CORPORATION",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1715000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "71000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "10008000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-505000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-17000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "78000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.041399",
+    "operating_cash_flow_to_revenue": "0.045481",
+    "assets_to_revenue": "5.835569",
+    "financing_cash_flow_to_revenue": "-0.294461",
+    "investing_cash_flow_to_revenue": "-0.009913"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $1.",
+      "sales of paper, financing income and Reinvention actions.",
+      "sales of $356 million in the second quarter 2024 declined 15.",
+      "revenue of $1.",
+      "revenue decreased mid-single digits.",
+      "Revenue of $6."
+    ],
+    "guidance_evidence": [
+      "outlook, reiterates three-year adjusted operating income improvement target Financial Summary Q2 2024 • Revenue of $1.",
+      "guidance to a range of -5% to -6% in constant currency to reflect incremental strategic actions, adjusted operating income guidance to at least 6.",
+      "guidance to at least $550 million.",
+      "Guidance Update • Revenue: from a decline of 3% to 5% to a decline of 5% to 6% in constant currency 1 • Adjusted 1 Operating Margin: from at least 7.",
+      "guidance was lowered to reflect additional reductions in non-strategic revenue, including those associated with incremental Reinvention actions.",
+      "guidance was lowered primarily to reflect the reduction in revenue guidance, as well as higher-than-expected freight and product costs."
+    ],
+    "wave_or_demand_evidence": [
+      "orders, enhanced sales operations and new product initiatives are expected to drive a return to revenue growth in the second half of the year,” said Steve Bandrowczak, chief executive officer at Xerox.",
+      "demand and growth in Digital and IT Services in the second half of the year.",
+      "backlog reduction and 350 basis points from a reduction in certain non-strategic revenue, including lower sales of paper, financing income and Reinvention actions.",
+      "backlog 2 reduction and geographic simplification drove an approximate 14-percentage point year-over-year decline.",
+      "backlog 2 fluctuations in the current and prior year.",
+      "demand for our products and services in the second half of the year."
+    ],
+    "warning_or_risk_evidence": [
+      "charge of $92 million ($132 million pre-tax), or $0.",
+      "inventory impact related to the exit of certain Production Print manufacturing operations, included in Cost of services, maintenance and rentals.",
+      "charge of $132 million related to the donation of our Palo Alto Research Center (PARC), in the prior year period.",
+      "impairment charges as well as costs associated with our transformation programs beyond those normally included in restructuring and asset impairment charges.",
+      "impairment includes costs incurred for those assets sold, abandoned or made obsolete as a result of our restructuring actions, exiting from a business or other strategic business changes.",
+      "charges are expected to yield future benefits and savings with respect to our operational performance."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1580,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "10.880000",
+    "return_10d_pct": "-10.7537",
+    "return_20d_pct": "-7.3529",
+    "return_30d_pct": "1.0110",
+    "return_60d_pct": "-5.8824",
+    "return_90d_pct": "-7.6287"
+  },
+  "text_stats": {
+    "primary_text_len": 5546,
+    "exhibit_text_len": 46098,
+    "combined_text_len": 51646
+  }
+}

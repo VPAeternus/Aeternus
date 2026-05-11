@@ -1,0 +1,1670 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FUBO",
+    "cik": "1484769",
+    "event_date": "2024-08-06",
+    "event_accession": "0001493152-24-030365",
+    "primary_8k_doc": "form8-k.htm",
+    "exhibit_docs": [
+      "ex99-1.htm",
+      "ex99-2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FUBO_000149315224030365_form8-k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FUBO_000149315224030365_ex99-1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FUBO_000149315224030365_ex99-2.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FUBO",
+    "cik": "1484769",
+    "entity_name": "FUBOTV INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "324374000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-83613000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1232640000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "103687000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3918000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-78189000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.257767",
+    "operating_cash_flow_to_revenue": "-0.241046",
+    "assets_to_revenue": "3.800058",
+    "financing_cash_flow_to_revenue": "0.319653",
+    "investing_cash_flow_to_revenue": "-0.012079"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $26.",
+      "net income of $106 thousand from discontinued operations.",
+      "earnings per share (EPS) loss of $0.",
+      "EPS loss of $0.",
+      "EPS loss in 2Q24 was $0.",
+      "EPS excludes the impact of stock-based compensation, amortization of intangibles, gain on extinguishment of debt and amortization of debt premium (discount), net, and certain litigation expenses."
+    ],
+    "guidance_evidence": [
+      "Guidance2 Guidance (NA) 3Q24 FY24 Revenue ($ in millions) $360.",
+      "Guidance (ROW) 3Q24 FY24 Revenue ($ in millions) $8.",
+      "guidance and other statements in this letter with respect to Fubo’s financial condition and our anticipated financial performance in future periods do not reflect any potential impact of the launch to our business.",
+      "GuidanceGiven the many unknowns related to the potential launch of Venu, including the outcome of our antitrust lawsuit and the Department of Justice’s reported investigation, our guidance does not reflect any potential impact of the launch to our business.",
+      "guidance projects 1,725,000 to 1,745,000 subscribers, representing 7% year-over-year growth at the midpoint.",
+      "guidance projects $1,570 million to $1,590 million, representing 18% year-over-year growth at the midpoint."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "ain focused on delighting our users with a seamless product that aggregates a portfolio of sports and entertainment programming at compelling price points.",
+      "Network, Newsmax, the American Economic Liberties Project, Sports Fans Coalition, the Open Markets Institute and the Electronic Frontier Foundation.",
+      "air pricing and innovative products, achievable only in a competitive streaming market.",
+      "ail.",
+      "ain on extinguishment of debt and amortization of debt premium (discount), net, and certain litigation expenses."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss of $28.",
+      "Loss for 2Q24 was $25.",
+      "Loss from continuing operations was $25.",
+      "Loss $-54.",
+      "Loss from continuing operations in 2Q24 was $25.",
+      "loss of $0."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex99-1.htm"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "August 6, 2024Fellow Shareholders:We delivered excellent results in 2Q24. Compared to 2Q23, we grew North America revenue by 26% and subscribers by 24%, exceeding our forecasts. Globally, we successfully achieved meaningful top-line growth alongside continued progress towards our profitability goals and improvements in cash usage, with a year-over-year improvement in Net Loss of $28.4 million1, Adjusted EBITDA of $19.6 million, Net cash used in operating activities of $39.2 million and Free Cash Flow of $40.5 million. These results attest to our ongoing focus on operational excellence and efficiency. This furthermore represents the sixth consecutive quarter of year-over-year improvement in our global profitability metrics, and the corresponding incremental margin demonstrates the operating leverage in our business as we scale.We remain focused on delighting our users with a seamless product that aggregates a portfolio of sports and entertainment programming at compelling price points. During the quarter we continued to make strategic investments in product and technology, which we see as key focus areas enhancing the user experience, increasing monetization and making great progress on our path to profitability.In our last shareholder letter, we described our antitrust lawsuit, which we filed in response to anticompetitive practices by Disney, Fox, and Warner Brothers Discovery harming Fubo, industry competition, and consumers.We firmly believe in the lawsuit’s merits and appreciate public support from DIRECTV, Dish Network, Newsmax, the American Economic Liberties Project, Sports Fans Coalition, the Open Markets Institute and the Electronic Frontier Foundation.Fubo continues to fight for consumer choice, fair pricing and innovative products, achievable only in a competitive streaming market. Field: Rule-Page Field: /Rule-Page 1 Our consolidated Net Loss for 2Q24 was $25.7 million, which includes net income of $106 thousand from discontinued operations. Net Loss from continuing operations was $25.8 million. Field: Page; Sequence: 1; Options: NewSection; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Note: Except as otherwise indicated, financial information presented and discussed in this letter reflects Fubo’s results on a continuing operations basis, which excludes our former wagering reportable segment. See “Basis of Presentation – Continuing Operations” below for further detail."
+    },
+    {
+      "type": "TableElement",
+      "text": "Summary Financials ($ in millions) Global 2Q23 3Q23 4Q23 1Q24 2Q24 Revenue $312.7 $320.9 $410.2 $402.3 $391.0 Year-over-Year % +40.8% +42.6% +28.5% +24.0% +25.0% Total Operating Expenses $365.2 $404.2 $482.3 $465.7 $426.6 Year-over-Year % +16.5% +23.0% +16.7% +14.7% +16.8% Net Loss $-54.2 $-84.4 $-71.0 $-56.3 $-25.8 Year-over-Year (Abs.) +$40.8 +$21.4 +$24.9 +$27.0 +$28.4 Adjusted EBITDA $-30.5 $-61.4 $-50.1 $-38.8 $-11.0 Year-over-Year (Abs.) +$39.6 +$21.6 +$25.3 +$20.1 +$19.6 Free Cash Flow $-75.8 $-32.4 $-5.9 $-71.3 $-35.3 Year-over-Year (Abs.) +$8.7 +$37.3 +$14.7 +$9.7 +$40.5"
+    },
+    {
+      "type": "TableElement",
+      "text": "North America (NA) 2Q23 3Q23 4Q23 1Q24 2Q24 Subscribers (thousands) 1,167 1,477 1,618 1,511 1,450 Year-over-Year % +23.3% +20.0% +11.9% +17.6% +24.2% Revenue ($ in millions) $304.6 $312.5 $401.8 $394.0 $382.7 Year-over-Year % +40.9% +42.6% +28.7% +24.5% +25.6% ARPU $81.62 $83.51 $86.65 $84.54 $85.69"
+    },
+    {
+      "type": "TableElement",
+      "text": "Rest of World (ROW) 2Q23 3Q23 4Q23 1Q24 2Q24 Subscribers (thousands) 394 411 406 397 399 Year-over-Year % +13.6% +14.9% -3.2% +4.9% +1.3% Revenue ($ in millions) $8.2 $8.4 $8.4 $8.4 $8.3 Year-over-Year % +39.6% +45.1% +17.5% +7.2% +1.8% ARPU $6.91 $6.98 $6.81 $7.00 $7.02"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 2; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "3Q and FY Guidance2"
+    },
+    {
+      "type": "TableElement",
+      "text": "Guidance (NA) 3Q24 FY24 Revenue ($ in millions) $360.0-$370.0 $1,570.0-$1,590.0 Subscribers (thousands) 1,605-1,625 1,725-1,745"
+    },
+    {
+      "type": "TableElement",
+      "text": "Guidance (ROW) 3Q24 FY24 Revenue ($ in millions) $8.0-$9.0 $33.0-$35.0 Subscribers (thousands) 397-402 395-405"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q24 Financial ResultsNet Loss from continuing operations in 2Q24 was $25.8 million, leading to an earnings per share (EPS) loss of $0.08. This compares favorably to a Net Loss from continuing operations of $54.2 million, or an EPS loss of $0.19, in 2Q23. Adjusted EPS loss in 2Q24 was $0.04, compared to an adjusted EPS loss of $0.12 in 2Q23. Adjusted EPS excludes the impact of stock-based compensation, amortization of intangibles, gain on extinguishment of debt and amortization of debt premium (discount), net, and certain litigation expenses.In 2Q24 Adjusted EBITDA was -$11.0 million, a $19.6 million improvement when compared to 2Q23. This reduction was a result of our continued focus on efficient growth and cost control."
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Rule-Page Field: /Rule-Page 2 Given the many unknowns related to the potential launch of Venu Sports (“Venu”), the proposed sports streaming joint venture between the Walt Disney Company, Fox Corporation, and Warner Bros. Discovery, including the outcome of our antitrust lawsuit and the Department of Justice’s reported investigation, our guidance and other statements in this letter with respect to Fubo’s financial condition and our anticipated financial performance in future periods do not reflect any potential impact of the launch to our business. See also “Risks Related to Venu Sports” below."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 3; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Cash Flow and Capital StructureNet cash used in operating activities in 2Q24 was -$31.9 million, a $39.2 million improvement compared to 2Q23, and Free Cash Flow in 2Q24 was -$35.3 million, an improvement of $40.5 million compared to 2Q23. This improvement, as with our improvement in Adjusted EBITDA, was a result of operating leverage and various efficiencies throughout the business.During 2Q24 we took steps to bolster our balance sheet and optimize our capital structure. We raised $36.9 million in net proceeds through our At-The-Market (ATM) program. In addition, we repurchased $46.9 million face value of our 2026 convertible notes at prices significantly below par value3. Since the fourth quarter of 2023, we have reduced our level of debt outstanding by $80.2 million while also eliminating the potential dilution associated with the repurchased convertible notes. Having done so evidences our continued commitment to judiciously reducing our leverage as well as improving the quality of our balance sheet. Indeed, we ended the quarter with $161.3 million in cash, cash equivalents and restricted cash on hand. Following the debt repurchase transactions described above, we now have no debt maturing in 2024 or 2025, $144.8 million maturing in 2026 and $177.5 million maturing in 2029.We ended the quarter with 329,336,621 shares of common stock issued and outstanding.Product and TechnologyAs we have discussed previously, the North American roll-out of our global Unified Platform allows us to rapidly iterate and introduce new product features to improve engagement and drive retention. For example, in 2Q24 we extended the reach of our AI-driven playlists offering, producing game summaries and highlights for select sports, allowing users to easily catch up on missed events. We continue to refine our recommendation engine and algorithms to personalize each user’s individual experience. Furthermore, we continually update the look, feel and polish of our applications on connected devices and Smart TVs to provide an increasingly intuitive user experience.In addition, we continued to improve ARPU and Adjusted EBITDA in 2Q24 by focusing on monetization, including additional upsell pathways designed to allow users to seamlessly add additional content or features. Field: Rule-Page Field: /Rule-Page 3 Note that of the $46.9 million face value that was repurchased, $27.1 million settled in 2Q24 and $19.9 million settled in 3Q24."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 4; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Finally, we announced in May the launch of the Fubo Free Tier, initially available only to former subscribers and non-converting free trial users. Our initial goal is to keep these users engaged with quality content between their primary sports seasons, allowing them to easily re-activate their subscription. Early results are encouraging, and we expect this initiative to result in improved retention and reactivation rates over time.Fubo Free is the foundational layer of our Super Aggregation strategy, which aims to offer users premium content at different price points, all within the Fubo ecosystem. Our vision is to offer consumers a seamless way to access all of the content they love without requiring users to sign into different apps and stream from multiple interfaces.North America AdvertisingFubo delivered North America ad revenue of $26.0 million, an increase of 14% year-over-year. This is a result of our ongoing efforts to increase visibility within agency holding companies through improved go-to-market strategies.We launched our Upfront season with sponsorship opportunities leveraging our proprietary technology (The Marquee) and innovative new ad units (interactive, pause and enhanced banner ads). Fubo’s appeal to advertisers is a result of our highly engaged, affluent sports-focused audience that compares favorably with the traditional pay TV audience. We believe Fubo viewers hit the sweet spot for brands - they are younger than the traditional pay TV audience, yet older than the typical SVOD streaming demo and with more buying power. With Fubo, brands have the ability to engage with our viewers as they move through personal milestones, capitalizing on major life events."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 5; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Brands are also able to engage with consumers on Fubo that they can’t access through traditional linear TV. A recent study from iSpot.TV showed that 62% of ad impressions served on Fubo reach incremental households that are unreachable on linear TV (July 2023 - March 2024).In summary, Fubo offers brands access to a crucial audience that can’t be matched by linear TV or streaming services.North America Content In the second quarter we extended our strong local sports coverage as the vMVPD with the leading baseball portfolio by adding YES Network and MASN at the beginning of baseball season. In addition, we ensured continuity of carriage of local San Diego Padres, Arizona Diamondbacks and Colorado Rockies games through a direct relationship with Major League Baseball.We continue to superserve all sports fans with an expanding portfolio of content - from the major sports leagues to niche favorites. During the quarter, and just in time for the International Cricket Council (ICC) Men’s T20 World Cup, we closed a multiyear partnership with Willow by Cricbuzz.The increasing popularity of MMA and soccer, including the UEFA Euro Championship, further contributed to the growth of our owned-and-operated network, Fubo Sports, which was the number one FAST channel on our platform in June for both revenue and hours watched, and through the entire quarter Fubo Sports grew viewership 81% year-over-year and revenue 12% year-over-year.In addition, we boast strong coverage of women’s sports, including approximately 3,500 games annually from leagues like WNBA, PWHL, NCAA, NWSL, WTA, and LPGA. In the first two months of 2024 WNBA season viewership on Fubo grew fourfold (vs. first two months of the 2023 season), with overall viewership already up by 30% compared to viewership on Fubo for the entire 2023 WNBA season. In addition, in the quarter, women’s sports viewership hours increased by 146% and first views increased by 700% vs the same period last year. This indicates that users are seeking out Fubo for this programming and that it is a meaningful driver of engagement.North America Growth and DistributionWe continue to pursue partnerships that expand Fubo’s reach and attract high-quality subscribers to the platform. During the quarter, we expanded distribution of our product by launching our app on Comcast entertainment platforms, including millions of Xfinity internet households. The Fubo app is now available on Flex and Xumo Stream Box as well as on Xumo TVs, currently sold at retail locations across the U.S. We also collaborated with Optimum to allow Optimum subscribers to seamlessly sign up for Fubo, leaning into our local sports offering.GuidanceGiven the many unknowns related to the potential launch of Venu, including the outcome of our antitrust lawsuit and the Department of Justice’s reported investigation, our guidance does not reflect any potential impact of the launch to our business. See “Risks related to Venu Sports” below."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 6; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "North AmericaOur FY 2024 subscriber guidance projects 1,725,000 to 1,745,000 subscribers, representing 7% year-over-year growth at the midpoint.Our FY 2024 revenue guidance projects $1,570 million to $1,590 million, representing 18% year-over-year growth at the midpoint.Our 3Q 2024 subscriber guidance projects 1,605,000 to 1,625,000 subscribers, representing 9% year-over-year growth at the midpoint. Our 3Q 2024 revenue guidance projects $360 million to $370 million, representing 17% year-over-year growth at the midpoint.Rest of WorldOur FY 2024 subscriber guidance projects 395,000 to 405,000 subscribers, representing a 2% year-over-year decline at the midpoint.Our FY 2024 revenue guidance projects $33 to $35 million, representing 4% year-over-year growth at the midpoint.Our 3Q 2024 subscriber guidance projects 397,000 to 402,000 subscribers, representing a 3% year-over-year decline at the midpoint. Our 3Q 2024 revenue guidance projects $8 to $9 million, representing 1% year-over-year growth at the midpoint.ConclusionWe continue to make marked progress in scaling our strong core business while also achieving our broader strategic goals. We are balancing our profitability targets and growth while also advancing our technology capabilities, features and content. We’re confident that we can continue this success while also advocating for a fairer playing field in the media industry, benefiting Fubo, our competitors and, most importantly, our customers.We look forward to sharing updates on our progress as we continue on our path to profitability.Sincerely, David Gandler, co-founder and CEO Edgar Bronfman Jr., executive chairman Risks Related to Venu SportsGiven the many unknowns related to the potential launch of Venu, including the outcome of our antitrust lawsuit and the Department of Justice’s reported investigation, our guidance and other statements in this letter with respect to Fubo’s financial condition and our anticipated financial performance in future periods do not reflect any potential impact of the launch to our business. Risks related to Venu and our related litigation are described in our filings with the Securities and Exchange Commission (the “SEC”), including our Quarterly Report on Form 10-Q for the quarterly period ended March 31, 2024, our Quarterly Report on Form 10-Q for the quarterly period ended June 30, 2024 to be filed with the SEC, and our other periodic filings."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 7; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q24 Earnings Live Conference CallFubo CEO, David Gandler, and CFO, John Janedis, will host a live conference call today at 8:30 a.m. ET to deliver brief remarks followed by Q&A. The live webcast will be available on the Events & Presentations page of Fubo’s investor relations website. An archived replay will be available on Fubo’s website following the call. Participants should join the call 10 minutes prior to ensure that they are connected prior to the event.More InformationWe encourage you to read our full set of financial statements and SEC filings, and to sign up for email alerts, on the investor relations section of our website at ir.fubo.tv.Additional information is available at www.sec.gov under FuboTV Inc.’s filings, as well as https://ir.fubo.tv.Fubo intends to use its website as a disclosure channel and investors are encouraged to refer to it, as well as press releases and SEC filings. The company encourages reading the full set of financial statements and related disclosures in its Annual Report on Form 10-K for the year ended December 31, 2023 that has been filed with the SEC.About FuboWith a global mission to aggregate the best in TV, including premium sports, news and entertainment content, through a single app, FuboTV Inc. (d/b/a Fubo) (NYSE: FUBO) aims to transcend the industry’s current TV model. The company operates Fubo in the U.S., Canada and Spain and Molotov in France.In the U.S., Fubo is a sports-first cable TV replacement product that aggregates more than 400 live sports, news and entertainment networks and is the only live TV streaming platform with every Nielsen-rated sports channel (source: Nielsen Total Viewers, 2023). Leveraging Fubo’s proprietary data and technology platform optimized for live TV and sports viewership, subscribers can engage with the content they are watching through an intuitive and personalized streaming experience. Fubo has continuously pushed the boundaries of live TV streaming. It was the first virtual MVPD to launch 4K streaming and MultiView, which it did years ahead of its peers, as well as Instant Headlines, a first-of-its-kind AI feature that generates contextual news topics as they are reported live on air.Learn more at https://fubo.tv"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 8; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Forward-Looking StatementsThis letter contains forward-looking statements of FuboTV Inc. (“Fubo”) that involve substantial risks and uncertainties. All statements contained in this letter that do not relate to matters of historical fact are forward-looking statements within the meaning of The Private Securities Litigation Reform Act of 1995, including statements regarding our business strategy and plans, including programming and content partnerships, expectations regarding innovation, growth and profitability, macroeconomic, industry, advertising and consumer trends, anticompetitive practices among our competitors and our response plan, including our antitrust lawsuit against the Walt Disney Company, Fox Corporation and Warner Brothers Discovery, planned product offerings, including technology advancements, our liquidity and anticipated cash requirements, our financial condition and our anticipated financial performance, including quarterly and annual guidance, expectations regarding profitability and our cash flow and Adjusted EBITDA targets. The words “could,” “will,” “plan,” “intend,” “anticipate,” “approximate,” “expect,” “potential,” “believe” or the negative of these terms or other similar expressions are intended to identify forward-looking statements, although not all forward-looking statements contain these identifying words. Actual results or events could differ materially from the plans, intentions and expectations disclosed in the forward-looking statements that Fubo makes due to a number of important factors, including but not limited to the following: our ability to achieve or maintain profitability; risks related to our access to capital and fundraising prospects to fund our financial operations and support our planned business growth; our revenue and gross profit are subject to seasonality; our operating results may fluctuate; our ability to effectively manage our growth; the long-term nature of our content commitments; our ability to renew our long-term content contracts on sufficiently favorable terms; our ability to attract and retain subscribers; obligations imposed on us through our agreements with certain distribution partners; we may not be able to license streaming content or other rights on acceptable terms; the restrictions imposed by content providers on our distribution and marketing of our products and services; our reliance on third party platforms to operate certain aspects of our business; risks related to the difficulty in measuring key metrics related to our business; risks related to preparing and forecasting our financial results; risks related to the highly competitive nature of our industry; risks related to the potential launch of the joint venture by Walt Disney Company, Fox Corporation and Warner Brothers Discovery; risks related to our technology, as well as cybersecurity and data privacy-related risks; risks related to ongoing or future legal proceedings; and other risks, including the effects of industry, market, economic, political or regulatory conditions, future exchange and interest rates, and changes in tax and other laws, regulations, rates and policies. Further risks that could cause actual results to differ materially from those matters expressed in or implied by such forward-looking statements are discussed in our Quarterly Report on Form 10-Q for the quarterly period ended March 31, 2024 filed with the Securities and Exchange Commission (“SEC”), our Quarterly Report on Form 10-Q for the quarterly period ended June 30, 2024 to be filed with the SEC, and our other periodic filings with the SEC. We encourage you to read such risks in detail. The forward-looking statements in this letter represent Fubo’s views as of the date of this letter. Fubo anticipates that subsequent events and developments will cause its views to change. However, while it may elect to update these forward-looking statements at some point in the future, it specifically disclaims any obligation to do so. You should, therefore, not rely on these forward-looking statements as representing Fubo’s views as of any date subsequent to the date of this letter."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(FuboTV Inc. Financial Statements begin on the following pages)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 9; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Statements of Operations and Comprehensive Loss"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except share and per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "For the Three Months Ended June 30, 2024 2023 Unaudited Unaudited Revenues Subscription $362,936 $288,994 Advertising 26,285 23,070 Other 1,744 671 Total revenues 390,965 312,735 Operating expenses Subscriber related expenses 326,499 270,953 Broadcasting and transmission 15,173 18,327 Sales and marketing 35,883 33,819 Technology and development 19,349 17,778 General and administrative 20,217 15,460 Depreciation and amortization 9,519 8,913 Total operating expenses 426,640 365,250 Operating loss (35,675) (52,515) Other income (expense) Interest expense (5,563) (3,442) Interest income 1,659 2,985 Amortization of debt premium (discount), net 268 (645) Gain on extinguishment of debt 12,124 - Other income (expense) 1,453 (713) Total other income (expense) 9,941 (1,815) Loss from continuing operations before income taxes (25,734) (54,330) Income tax (provision) benefit (99) 121 Net loss from continuing operations (25,833) (54,209) Discontinued operations Net income (loss) from discontinued operations before income taxes 106 4,259 Net income (loss) from discontinued operations 106 4,259 Net loss (25,727) (49,950) Less: Net loss attributable to non-controlling interest 455 10 Net loss attributable to common shareholders $(25,272) $(49,940) Other comprehensive loss Foreign currency translation adjustment (2,367) (137) Comprehensive loss attributable to common shareholders $(27,639) $(50,077) Net loss per share attributable to common shareholders Basic and diluted loss per share from continuing operations $(0.08) $(0.19) Basic and diluted income (loss) per share from discontinued operations $0.00 $0.02 Basic and diluted net loss per share $(0.08) $(0.17) Weighted average shares outstanding: Basic and diluted 311,253,856 291,720,400 Stock-based compensation was allocated as follows: Subscriber related expenses 79 57 Sales and marketing 4,670 5,990 Technology and development 2,631 2,980 General and administrative 2,928 4,029 Total stock-based compensation 10,308 13,056"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 10; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, December 31, 2024 2023 Unaudited Audited ASSETS Cash and cash equivalents $155,189 $245,278 Accounts receivable, net 71,843 80,299 Prepaid sports rights 35,228 39,911 Prepaid and other current assets 18,232 20,804 Assets of discontinued operations 459 462 Total current assets 280,951 386,754 Property and equipment, net 5,788 4,835 Restricted cash 6,139 6,142 Intangible assets, net 147,053 158,448 Goodwill 618,955 622,818 Right-of-use assets 33,861 35,825 Other non-current assets 16,101 17,818 Total assets $1,108,848 $1,232,640 LIABILITIES AND SHAREHOLDERS’ EQUITY Current liabilities Accounts payable $37,940 $74,311 Accrued expenses and other current liabilities 308,157 320,041 Notes payable 6,664 6,323 Deferred revenue 86,340 90,203 Long-term borrowings - current portion 1,286 1,612 Current portion of lease liabilities 5,452 5,247 Liabilities of discontinued operations 19,125 19,608 Total current liabilities 464,964 517,345 Convertible notes, net 352,738 391,748 Lease liabilities 35,243 38,087 Other long-term liabilities 1,672 1,635 Total liabilities 854,617 948,815 Shareholders’ equity: Common stock par value $0.0001: 1,000,000,000 and 800,000,000 shares authorized at June 30, 2024 and December 31, 2023, respectively; 329,336,621 and 299,215,160 shares issued and outstanding at June 30, 2024 and December 31, 2023, respectively 33 30 Additional paid-in capital 2,194,966 2,136,870 Accumulated deficit (1,926,824) (1,845,542) Non-controlling interest (12,780) (11,751) Accumulated other comprehensive (loss) income (1,164) 4,218 Total shareholders’ equity $254,231 $283,825 TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY $1,108,848 $1,232,640"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 11; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "For the Six Months Ended June 30, 2024 2023 Unaudited Unaudited Cash flows from operating activities Net loss $(82,311) $(133,574) Less: Net income (loss) from discontinued operations, net of tax (149) 4,003 Net loss from continuing operations (82,162) (137,577) Adjustments to reconcile net loss to net cash used in operating activities: Depreciation and amortization 18,780 17,755 Stock-based compensation 23,285 26,744 Amortization of debt (premium) discount, net (521) 1,268 Gain on extinguishment of debt (21,761) - Deferred income tax provision (benefit) 212 (235) Amortization of right-of-use assets 1,964 1,359 Other adjustments 341 319 Changes in operating assets and liabilities of business Accounts receivable, net 8,383 (4,828) Prepaid expenses and other assets 3,736 (5,169) Prepaid sports rights 4,862 1,127 Accounts payable (37,133) (20,716) Accrued expenses and other liabilities (12,518) (22,845) Deferred revenue (3,812) (4,659) Lease liabilities (2,576) (610) Net cash used in operating activities - continuing operations (98,920) (148,067) Net cash used in operating activities - discontinued operations (629) (1,232) Net cash used in operating activities (99,549) (149,299) Cash flows from investing activities Purchases of property and equipment (316) (267) Capitalization of internal use software (6,830) (8,404) Purchase of intangible assets (540) - Net cash used in investing activities (7,686) (8,671) Cash flows from financing activities Proceeds from sale of common stock, net of fees 36,860 116,903 Redemption of non-controlling interest - (2,147) Vested restricted stock unit settled for cash (181) (125) Payments for financing costs (4,657) - Repurchase of convertible notes (14,657) - Proceeds from exercise of stock options 3 95 Repayments of notes payable and long-term borrowings (225) (326) Net cash provided by financing activities 17,143 114,400 Net decrease in cash, cash equivalents and restricted cash (90,092) (43,570) Cash, cash equivalents and restricted cash at beginning of period 251,420 343,226 Cash, cash equivalents and restricted cash at end of period $161,328 $299,656 Supplemental disclosure of cash flows information: Interest paid 5,094 6,579 Income tax paid 120 6 Non cash financing and investing activities: Accrued expenses - At-the-market offering 37 9 Accounts payable - financing costs 25 - Accounts payable - purchase of property and equipment 1,374 -"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 12; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Basis of Presentation – Continuing OperationsIn connection with the dissolution of Fubo Gaming, Inc. and termination of Fubo Sportsbook, the assets and liabilities and the operations of our former wagering reportable segment are presented as discontinued operations in our consolidated financial statements. With respect to our continuing operations, we operate as a single reportable segment. Financial information presented in this letter reflects Fubo’s results on a continuing operations basis, which excludes our former wagering reportable segment.Key Performance Metrics and Non-GAAP MeasuresPaid SubscribersWe believe the number of paid subscribers is a relevant measure to gauge the size of our user base. Paid subscribers (“subscribers”) are total subscribers that have completed registration with Fubo, have activated a payment method (only reflects one paying user per plan), from which Fubo has collected payment in the month ending the relevant period. Users who are on a free (trial) period are not included in this metric.Average Revenue per User (ARPU)We believe ARPU provides useful information for investors to gauge the revenue generated per subscriber on a monthly basis. ARPU, with respect to a given period, is defined as total Subscription revenue and Advertising revenue recognized in such period, divided by the average daily paid subscribers in such period, divided by the number of months in such period. Advertising revenue, like Subscription revenue, is primarily driven by the number of subscribers to our platform and per-subscriber viewership such as the type of, and duration of, content watched on platform. We believe ARPU is an important metric for both management and investors to evaluate the Company’s core operating performance and measure our subscriber monetization, as well as evaluate unit economics, payback on subscriber acquisition cost and lifetime value per subscriber. In addition, we believe that presenting a geographic breakdown for North America ARPU and ROW ARPU allows for a more meaningful assessment of the business because of the significant differences in both Subscription revenue and Advertising revenue generated on a per subscriber basis in North America when compared to ROW due to our current subscription pricing models and advertising monetization in the two geographic regions.Adjusted EBITDAAdjusted EBITDA is a non-GAAP measure defined as Net Loss from Continuing Operations, adjusted for depreciation and amortization, stock-based compensation, certain litigation expenses, income tax provision (benefit), other (income) expenses, and one-time non-cash expenses. Certain litigation expenses consists of legal expenses and related fees for specific proceedings that we have determined arise outside the ordinary course of business and do not consider representative of our underlying operating performance, based on the several considerations which we assess regularly, including: (1) the frequency of similar cases that have been brought to date, or are expected to be brought in the future; (2) matter-specific facts and circumstances, such as the unique nature or complexity of the case and/or remedy(ies) sought, including the size of any monetary damages sought; (3) the counterparty involved; and (4) the extent to which management considers these amounts for purposes of operating decision-making and in assessing operating performance."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 13; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjusted EBITDA MarginAdjusted EBITDA Margin is a non-GAAP measure defined as Adjusted EBITDA divided by Revenue.Adjusted Net LossAdjusted Net Loss is a non-GAAP measure defined as Net Loss Attributable to Common Shareholders, adjusting for discontinued operations, stock-based compensation, change in fair value of warrants, amortization of debt premium (discount), amortization of intangible assets and other non-cash items, and certain litigation expenses (as described further above, see “–Adjusted EBITDA”).Adjusted EPS (Earnings per Share)Adjusted EPS is a non-GAAP measure defined as Adjusted Net Loss divided by weighted average shares outstanding.Free Cash FlowFree Cash Flow is a non-GAAP measure defined as net cash used in operating activities - continuing operations, reduced by capital expenditures (consisting of purchases of property and equipment), purchases of intangible assets and capitalization of internal use software. We believe Free Cash Flow is an important liquidity measure of the cash that is available for operational expenses, investments in our business, strategic acquisitions, and for certain other activities such as repaying debt obligations and stock repurchases. Free Cash Flow is a key financial indicator used by management. Free Cash Flow is useful to investors as a liquidity measure because it measures our ability to generate or use cash. The use of Free Cash Flow as an analytical tool has limitations due to the fact that it does not represent the residual cash flow available for discretionary expenditures. Because of these limitations, Free Cash Flow should be considered along with other operating and financial performance measures presented in accordance with GAAP.Gross Profit and Gross Margin (GAAP) Gross Profit is defined as Revenue less Subscriber related expenses and Broadcasting and transmission. Gross Margin is defined as Gross Profit divided by Revenue. We believe these measures are useful because they represent key profitability metrics for our business and are used by management to evaluate the performance of our business, including measuring the cost to deliver our product to subscribers against revenue.Subscriber Acquisition CostSubscriber Acquisition Cost (SAC) reflects total GAAP sales and marketing expenses less headcount related to sales and marketing spend for a given period divided by Gross Paid Subscriber Additions for the same period."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 14; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "14"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Key Performance Metrics and Non-GAAP Financial MeasuresCertain measures used in this letter, including Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Loss, Adjusted EPS and Free Cash Flow, are non-GAAP financial measures. We believe these are useful financial measures for investors as they are supplemental measures used by management in evaluating our core operating performance. Our non-GAAP financial measures have limitations as analytical tools and you should not consider them in isolation or as a substitute for an analysis of our results under GAAP. There are a number of limitations related to the use of these non-GAAP financial measures versus their nearest GAAP equivalents. First, these non-GAAP financial measures are not a substitute for GAAP financial measures. Second, these non-GAAP financial measures may not provide information directly comparable to measures provided by other companies in our industry, as those other companies may calculate their non-GAAP financial measures differently.The following tables include reconciliations of the non-GAAP financial measures used in this letter to their most directly comparable GAAP financial measures. The tables also include reconciliations of GAAP Subscription revenue and GAAP Advertising revenue to North America ARPU and ROW ARPU, respectively, each of which is a key performance metric."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 15; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "15"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of GAAP Subscription and Advertising Revenue to North America ARPU"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except average subscribers and average per user amounts)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 March 31, 2024 December 31, 2023 September 30, 2023 June 30, 2023 Subscription Revenue (GAAP) $362,936 $373,714 $370,087 $289,623 $288,994 Advertising Revenue (GAAP) 26,285 27,469 38,987 30,592 23,070 Subtract: ROW Subscription Revenue (8,049) (8,143) (8,042) (8,108) (7,906) ROW Advertising Revenue (257) (244) (382) (285) (250) Total 380,915 392,796 400,650 311,822 303,908 Divide: Average Subscribers (North America) 1,481,751 1,548,782 1,541,290 1,244,579 1,241,218 Months in Period 3 3 3 3 3 North America Monthly Average Revenue per User (NA ARPU) $85.69 $84.54 $86.65 $83.51 $81.62"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 16; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "16"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of GAAP Subscription and Advertising Revenue to ROW ARPU"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except average subscribers and average per user amounts)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 March 31, 2024 December 31, 2023 September 30, 2023 June 30, 2023 Subscription Revenue (GAAP) $362,936 $373,714 $370,087 $289,623 $288,994 Advertising Revenue (GAAP) 26,285 27,469 38,987 30,592 23,070 Subtract: North America Subscription Revenue (354,887) (365,571) (362,045) (281,515) (281,088) North America Advertising Revenue (26,028) (27,225) (38,605) (30,307) (22,820) Total 8,306 8,387 8,424 8,393 8,156 Divide: Average Subscribers (ROW) 394,471 399,528 412,565 400,806 393,601 Months in Period 3 3 3 3 3 ROW Monthly Average Revenue per User (ROW ARPU) $7.02 $7.00 $6.81 $6.98 $6.91"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 17; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "17"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Loss from Continuing Operations to Non-GAAP Adjusted EBITDA"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 March 31, 2024 December 31, 2023 September 30, 2023 June 30, 2023 Reconciliation of Net Loss from Continuing Operations to Adjusted EBITDA Net loss from continuing operations $(25,833) $(56,329) $(71,042) $(84,485) $(54,209) Depreciation and amortization 9,519 9,261 9,638 9,103 8,913 Stock-based compensation 10,308 12,977 11,764 12,707 13,056 Certain litigation expenses(1) 4,856 2,257 555 76 - Other income (expense) (9,941) (7,097) (654) 1,448 1,815 Income tax (provision) benefit 99 113 (397) (247) (121) Adjusted EBITDA (10,992) (38,818) (50,136) (61,398) (30,546) Adjusted EBITDA (10,992) (38,818) (50,136) (61,398) (30,546) Divide: Revenue 390,965 402,347 410,181 320,935 312,735 Adjusted EBITDA Margin -2.8% -9.6% -12.2% -19.1% -9.8%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)Certain litigation expenses consist of legal expenses and related fees for specific proceedings that we have determined arise outside the ordinary course of business and do not consider representative of our underlying operating performance. For the periods presented, the adjustment included expenses attributable to antitrust and data privacy litigation. Note that in calculating Adjusted EBITDA, previously Fubo did not include adjustments for Certain litigation expenses. For comparative purposes, prior quarter figures have been recast to reflect this adjustment."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 18; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "18"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Cash Used in Operating Activities - Continuing Operations to Free Cash Flow"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 March 31, 2024 December 31, 2023 September 30, 2023 June 30, 2023 Net cash used in operating activities - continuing operations $(31,874) $(67,046) $(57) $(24,921) $(71,028) Subtract: Purchases of property and equipment (208) (108) (696) (108) (165) Capitalization of internal use software (3,221) (3,609) (4,407) (4,471) (4,588) Purchase of intangible assets - (540) (693) (2,899) - Free Cash Flow (35,303) (71,303) (5,853) (32,399) (75,781)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 19; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "19"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Loss Attributable to Common Shareholders to Non-GAAP Adjusted Net Loss and Adjusted EPS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 June 30, 2023 Net loss attributable to common shareholders $(25,272) $(49,940) Subtract: Net income from discontinued operations, net of tax 106 4,259 Net loss from continuing operations attributable to common shareholders (25,378) (54,199) Net loss from continuing operations attributable to common shareholders (25,378) (54,199) Stock-based compensation 10,308 13,056 Amortization of debt (premium) discount, net (268) 645 Amortization of intangibles 9,179 8,497 Gain on extinguishment of debt (12,124) - Certain litigation expenses 4,856 - Adjusted net loss from continuing operations (13,427) (32,001) Weighted average shares outstanding: Basic and diluted 311,253,856 291,720,400 Adjusted EPS from continuing operations $(0.04) $(0.12)"
+    },
+    {
+      "type": "TextElement",
+      "text": "(2)Certain litigation expenses consist of legal expenses and related fees for specific proceedings that we have determined arise outside the ordinary course of business and do not consider representative of our underlying operating performance. For the periods presented, the adjustment included expenses attributable to antitrust and data privacy litigation. Note that in calculating Adjusted EPS, previously Fubo did not include adjustments for Certain litigation expenses. For comparative purposes, prior quarter figures have been recast to reflect this adjustment."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 20; Value: 1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "20"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "TextElement",
+      "text": "ContactsInvestor Contacts:Ameet Padte, Fuboameet@fubo.tvJCIR for Fuboir@fubo.tvMedia Contacts:Jennifer L. Press, Fubojpress@fubo.tvBianca Illion, Fubobillion@fubo.tv Field: Page; Sequence: 21; Options: Last"
+    },
+    {
+      "type": "ImageElement",
+      "text": "21"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex99-2.htm"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FUBO CLOSED Q2 2024 WITH 26% YEAR-OVER-YEAR REVENUE GROWTH, 24% YEAR-OVER-YEAR SUBSCRIBER GROWTH AND EXCEEDED GUIDANCE IN NORTH AMERICA; GLOBAL BUSINESS ACHIEVED 6TH CONSECUTIVE QUARTER OF YEAR-OVER-YEAR IMPROVEMENT IN PROFITABILITY METRICS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "COMPANY RAISES FULL YEAR 2024 GUIDANCE IN NORTH AMERICA"
+    },
+    {
+      "type": "TextElement",
+      "text": "NEW YORK – AUGUST 6, 2024 – FuboTV Inc. (d/b/a/ Fubo) (NYSE: FUBO), the leading sports-first live TV streaming platform, today announced its financial results for the second quarter ended June 30, 2024. The second quarter marked Fubo’s sixth consecutive quarter of year-over-year (YoY) improvement in its global profitability metrics.In North America, the Company exceeded guidance, ending the second quarter with double digit YoY growth, delivering $382.7 million in total revenue, up 26% YoY, and 1.45 million paid subscribers, up 24% YoY. Average revenue per user (ARPU) expanded 5% YoY to $85.69. The quarter was also highlighted by a 14% increase in ad sales revenue YoY as the result of efforts to increase visibility within agency holding companies continued during the start of the 2024 Upfront season.In the Rest of World (ROW), the Company delivered 399,000 paid subscribers, up 1% YoY, and $8.3 million total revenue, up 2% YoY, during the quarter. ARPU reached $7.02, up 2% YoY. ROW includes the results of Molotov, the French live TV streaming service acquired by Fubo in December 2021.Fubo states its key metrics on a YoY basis given the seasonality of sports content. Field: Page; Sequence: 1 Net Loss from continuing operations in the second quarter was $25.8 million, leading to an earnings per share (EPS) loss of $0.08. This compares favorably to a Net Loss from continuing operations of $54.2 million, or an EPS loss of $0.19 in the second quarter of 2023. Adjusted EPS in the second quarter was $0.04, compared to an adjusted EPS loss of $0.12 in the second quarter of 2023. Adjusted EPS excludes the impact of stock-based compensation, amortization of intangibles, gain on extinguishment of debt and amortization of debt premium (discount), net, and certain litigation expenses.Notably, the Company achieved YoY improvements in Net Loss of $28.4 million, Adjusted EBITDA (AEBITDA) of $19.6 million, Net cash used in operating activities of $39.2 million and Free Cash Flow of $40.5 million. These improvements were the result of operating leverage and efficiencies throughout the business.Fubo took steps during the second quarter to bolster its balance sheet and optimize its capital structure. The Company raised $36.9 million in net proceeds through its At-The-Market (ATM) program. In addition, Fubo repurchased $46.9 million face value of its 2026 convertible notes at prices significantly below par value. Since the fourth quarter of 2023, the Company has reduced its level of debt outstanding by $80.2 million while also eliminating the potential dilution associated with the repurchased convertible notes. This evidences Fubo’s continued commitment to judiciously reducing its leverage as well as improving the quality of its balance sheet. Fubo ended the quarter with $161.3 million in cash, cash equivalents and restricted cash on hand. Following the debt repurchase transactions described above, Fubo now has no debt maturing in 2024 or 2025, $144.8 million maturing in 2026 and $177.5 million maturing in 2029.GuidanceNorth AmericaThird Quarter 2024: Fubo is projecting 1,605,000 to 1,625,000 paid subscribers, representing 9% YoY growth at the midpoint, and $360 to $370 million total revenue, representing 17% YoY growth at the midpoint.Full Year 2024: Fubo is increasing previously announced guidance, now projecting 1,725,000 to 1,745,000 paid subscribers, representing 7% YoY growth at the midpoint, and $1.570 to $1.590 billion total revenue, representing 18% YoY growth at the midpoint.Our guidance excludes the potential impact of our ongoing antitrust litigation, including the launch of Venu Sports (See “Risks related to Venu Sports” below)."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ROW"
+    },
+    {
+      "type": "TextElement",
+      "text": "Third Quarter 2024: Fubo is projecting 397,000 to 402,000 paid subscribers, representing 3% YoY decline at the midpoint, and $8 to $9 million total revenue, representing 1% YoY growth at the midpoint. Field: Page; Sequence: 2 Full Year 2024: Fubo is projecting 395,000 to 405,000 paid subscribers, representing 2% YoY decline at the midpoint, and $33 to $35 million total revenue, representing 4% YoY growth at the midpoint.Complete second quarter 2024 results are detailed in Fubo’s shareholder letter available on the company’s IR site.“Fubo delivered excellent results in the second quarter of 2024, despite the Warner Bros. Discovery content drop, achieving our sixth consecutive quarter of year-over-year improvement in our global profitability metrics,” said David Gandler, co-founder and CEO, Fubo. “In North America, we exceeded guidance, growing North America revenue by 26% and subscribers by 24% year-over-year. We’re confident we can continue this success as we remain focused on delighting our users with more flexible bundle options as part of our Super Aggregation strategy, delivered to them through a single, frictionless app. We also continue to advocate for a fairer playing field in the media industry, benefiting Fubo, our competitors and, most importantly, the American consumer.”“Fubo continues to make marked progress in scaling our strong core business while achieving our broader strategic goals,” said Edgar Bronfman Jr., executive chairman, Fubo. “We’re carefully balancing our 2025 profitability target while strategically and cost-effectively investing in subscriber growth, cutting-edge technology, new product features and engaging content. We have raised our full year 2024 guidance in North America, which reflects our continued confidence in our sports entertainment streaming business.”Risks Related to Venu SportsGiven the many unknowns related to the potential launch of Venu Sports (“Venu”), the proposed sports streaming joint venture between the Walt Disney Company, Fox Corporation, and Warner Bros. Discovery, including the outcome of our antitrust lawsuit and the Department of Justice’s reported investigation, our guidance and other statements in this letter with respect to Fubo’s financial condition and our anticipated financial performance in future periods do not reflect any potential impact of the launch to our business. Risks related to Venu and the related litigation are described in our filings with the Securities and Exchange Commission, including our Quarterly Report on Form 10-Q for the quarterly period ended March 31, 2024, our Quarterly Report on Form 10-Q for the quarterly period ended June 30, 2024 to be filed with the SEC, and our other periodic filings.Live WebcastCEO, Gandler and CFO, John Janedis will host a live conference call today at 8:30 a.m. ET to deliver brief remarks followed by Q&A. The live webcast will be available on the Events & Presentations page of Fubo’s investor relations website. An archived replay will be available on Fubo’s website following the call. Participants should join the call 10 minutes in advance to ensure that they are connected prior to the event. Field: Page; Sequence: 3 About FuboWith a global mission to aggregate the best in TV, including premium sports, news and entertainment content, through a single app, FuboTV Inc. (d/b/a Fubo) (NYSE: FUBO) aims to transcend the industry’s current TV model. The company operates Fubo in the U.S., Canada and Spain and Molotov in France.In the U.S., Fubo is a sports-first cable TV replacement product that aggregates more than 400 live sports, news and entertainment networks and is the only live TV streaming platform with every Nielsen-rated sports channel (source: Nielsen Total Viewers, 2023). Leveraging Fubo’s proprietary data and technology platform optimized for live TV and sports viewership, subscribers can engage with the content they are watching through an intuitive and personalized streaming experience. Fubo has continuously pushed the boundaries of live TV streaming. It was the first virtual MVPD to launch 4K streaming and MultiView, which it did years ahead of its peers, as well as Instant Headlines, a first-of-its-kind AI feature that generates contextual news topics as they are reported live on air.Learn more at https://fubo.tvBasis of Presentation – Continuing OperationsIn connection with the dissolution of Fubo Gaming, Inc. and termination of Fubo Sportsbook, the assets and liabilities and the operations of our former wagering reportable segment are presented as discontinued operations in our consolidated financial statements. With respect to our continuing operations, we operate as a single reportable segment. Financial information presented in this release reflects Fubo’s results on a continuing operations basis, which excludes our former wagering reportable segment.Key Performance Metrics and Non-GAAP MeasuresPaid SubscribersWe believe the number of paid subscribers is a relevant measure to gauge the size of our user base. Paid subscribers (“subscribers”) are total subscribers that have completed registration with Fubo, have activated a payment method (only reflects one paying user per plan), from which Fubo has collected payment in the month ending the relevant period. Users who are on a free (trial) period are not included in this metric. Field: Page; Sequence: 4 Average Revenue per User (ARPU)We believe ARPU provides useful information for investors to gauge the revenue generated per subscriber on a monthly basis. ARPU, with respect to a given period, is defined as total Subscription revenue and Advertising revenue recognized in such period, divided by the average daily paid subscribers in such period, divided by the number of months in such period. Advertising revenue, like Subscription revenue, is primarily driven by the number of subscribers to our platform and per-subscriber viewership such as the type of, and duration of, content watched on platform. We believe ARPU is an important metric for both management and investors to evaluate the Company’s core operating performance and measure our subscriber monetization, as well as evaluate unit economics, payback on subscriber acquisition cost and lifetime value per subscriber. In addition, we believe that presenting a geographic breakdown for North America ARPU and ROW ARPU allows for a more meaningful assessment of the business because of the significant differences in both Subscription revenue and Advertising revenue generated on a per subscriber basis in North America when compared to ROW due to our current subscription pricing models and advertising monetization in the two geographic regions.Adjusted EBITDAAdjusted EBITDA is a non-GAAP measure defined as Net Loss from Continuing Operations, adjusted for depreciation and amortization, stock-based compensation, certain litigation expenses, income tax provision (benefit), other (income) expenses, and one-time non-cash expenses. Certain litigation expenses consists of legal expenses and related fees for specific proceedings that we have determined arise outside of the ordinary course of business and do not consider representative of our underlying operating performance, based on the several considerations which we assess regularly, including: (1) the frequency of similar cases that have been brought to date, or are expected to be brought in the future; (2) matter-specific facts and circumstances, such as the unique nature or complexity of the case and/or remedy(ies) sought, including the size of any monetary damages sought; (3) the counterparty involved; and (4) the extent to which management considers these amounts for purposes of operating decision-making and in assessing operating performance..Adjusted EBITDA MarginAdjusted EBITDA Margin is a non-GAAP measure defined as Adjusted EBITDA divided by Revenue.Adjusted EPS (Earnings per Share)Adjusted EPS is a non-GAAP measure defined as Adjusted Net Loss divided by weighted average shares outstanding.Adjusted Net LossAdjusted Net Loss is a non-GAAP measure defined as Net Loss Attributable to Common Shareholders, adjusting for discontinued operations, stock-based compensation, change in fair value of warrants, amortization of debt premium (discount), amortization of intangible assets and other non-cash items, and certain litigation expenses (as described further above, see “Adjusted EBITDA”).Gross Profit and Gross Margin (GAAP)Gross Profit is defined as Revenue less Subscriber related expenses and Broadcasting and transmission. Gross Margin is defined as Gross Profit divided by Revenue. We believe these measures are useful because they represent key profitability metrics for our business and are used by management to evaluate the performance of our business, including measuring the cost to deliver our product to subscribers against revenue. Field: Page; Sequence: 5 Free Cash FlowFree Cash Flow is a non-GAAP measure defined as net cash used in operating activities - continuing operations, reduced by capital expenditures (consisting of purchases of property and equipment), purchases of intangible assets and capitalization of internal use software. We believe Free Cash Flow is an important liquidity measure of the cash that is available for operational expenses, investments in our business, strategic acquisitions, and for certain other activities such as repaying debt obligations and stock repurchases. Free Cash Flow is a key financial indicator used by management. Free Cash Flow is useful to investors as a liquidity measure because it measures our ability to generate or use cash. The use of Free Cash Flow as an analytical tool has limitations due to the fact that it does not represent the residual cash flow available for discretionary expenditures. Because of these limitations, Free Cash Flow should be considered along with other operating and financial performance measures presented in accordance with GAAP.Reconciliation of Key Performance Metrics and Non-GAAP Financial MeasuresCertain measures used in this release, including Adjusted EBITDA, Adjusted EPS and Free Cash Flow, are non-GAAP financial measures. We believe these are useful financial measures for investors as they are supplemental measures used by management in evaluating our core operating performance. Our non-GAAP financial measures have limitations as analytical tools and you should not consider them in isolation or as a substitute for an analysis of our results under GAAP. There are a number of limitations related to the use of these non-GAAP financial measures versus their nearest GAAP equivalents. First, these non-GAAP financial measures are not a substitute for GAAP financial measures. Second, these non-GAAP financial measures may not provide information directly comparable to measures provided by other companies in our industry, as those other companies may calculate their non-GAAP financial measures differently.The following tables include reconciliations of the non-GAAP financial measures used in this press release to their most directly comparable GAAP financial measures. The tables also include reconciliations of GAAP Subscription revenue and GAAP Advertising revenue to North America ARPU and ROW ARPU, respectively, each of which is a key performance metric. Field: Page; Sequence: 6 Reconciliation of GAAP Subscription and Advertising Revenue to North America ARPU"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except average subscribers and average per user amounts)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 June 30, 2023 Subscription Revenue (GAAP) $362,936 $288,994 Advertising Revenue (GAAP) 26,285 23,070 Subtract: ROW Subscription Revenue (8,049) (7,906) ROW Advertising Revenue (257) (250) Total 380,915 303,908 Divide: Average Subscribers (North America) 1,481,751 1,241,218 Months in Period 3 3 North America Monthly Average Revenue per User (NA ARPU) $85.69 $81.62"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Loss from Continuing Operations to Non-GAAP Adjusted EBITDA"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 June 30, 2023 Reconciliation of Net Loss from Continuing Operations to Adjusted EBITDA Net loss from continuing operations $(25,833) $(54,209) Depreciation and amortization 9,519 8,913 Stock-based compensation 10,308 13,056 Certain litigation expenses 4,856 - Other income (expense) (9,941) 1,815 Income tax (provision) benefit 99 (121) Adjusted EBITDA (10,992) (30,546) Adjusted EBITDA (10,992) (30,546) Divide: Revenue 390,965 312,735 Adjusted EBITDA Margin -2.8% -9.8%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 7 Reconciliation of Net Cash Used in Operating Activities - Continuing Operations to Free Cash Flow"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 June 30, 2023 Net cash used in operating activities - continuing operations $(31,874) $(71,028) Subtract: Purchases of property and equipment (208) (165) Capitalization of internal use software (3,221) (4,588) Free Cash Flow (35,303) (75,781)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "fuboTV Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Loss Attributable to Common Shareholders to Non-GAAP Adjusted Net Loss and Adjusted EPS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Year-over-Year Comparison"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 June 30, 2023 Net loss attributable to common shareholders $(25,272) $(49,940) Subtract: Net income from discontinued operations, net of tax 106 4,259 Net loss from continuing operations attributable to common shareholders (25,378) (54,199) Net loss from continuing operations attributable to common shareholders (25,378) (54,199) Stock-based compensation 10,308 13,056 Amortization of debt (premium) discount, net (268) 645 Amortization of intangibles 9,179 8,497 Gain on extinguishment of debt (12,124) - Certain litigation expenses 4,856 - Adjusted net loss from continuing operations (13,427) (32,001) Weighted average shares outstanding: Basic and diluted 311,253,856 291,720,400 Adjusted EPS from continuing operations $(0.04) $(0.12)"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Certain litigation expenses consist of legal expenses and related fees for specific proceedings that we have determined arise outside the ordinary course of business and do not consider representative of our underlying operating performance. For the periods presented, the adjustment included expenses attributable to antitrust and data privacy litigation.. Field: Page; Sequence: 8 Cautionary Note Regarding Forward-Looking StatementsThis press release contains forward-looking statements of FuboTV Inc. (“Fubo”) that involve substantial risks and uncertainties. All statements contained in this press release that do not relate to matters of historical fact are forward-looking statements within the meaning of The Private Securities Litigation Reform Act of 1995, including statements regarding our business strategy and plans, anticompetitive practices among our competitors and our response plan, including our antitrust lawsuit against the Walt Disney Company, Fox Corporation and Warner Brothers Discovery, our liquidity and anticipated cash requirements, our financial condition, and our anticipated financial performance, including quarterly and annual guidance, expectations regarding profitability and our cash flow and Adjusted EBITDA targets. The words “could,” “will,” “plan,” “intend,” “anticipate,” “approximate,” “expect,” “potential,” “believe” or the negative of these terms or other similar expressions are intended to identify forward-looking statements, although not all forward-looking statements contain these identifying words. Actual results or events could differ materially from the plans, intentions and expectations disclosed in the forward-looking statements that Fubo makes due to a number of important factors, including but not limited to the following: our ability to achieve or maintain profitability; risks related to our access to capital and fundraising prospects to fund our financial operations and support our planned business growth; our revenue and gross profit are subject to seasonality; our operating results may fluctuate; our ability to effectively manage our growth; the long-term nature of our content commitments; our ability to renew our long-term content contracts on sufficiently favorable terms; our ability to attract and retain subscribers; obligations imposed on us through our agreements with certain distribution partners; we may not be able to license streaming content or other rights on acceptable terms; the restrictions imposed by content providers on our distribution and marketing of our products and services; our reliance on third party platforms to operate certain aspects of our business; risks related to the difficulty in measuring key metrics related to our business; risks related to preparing and forecasting our financial results; risks related to the highly competitive nature of our industry; risks related to the potential launch of the joint venture by Walt Disney Company, Fox Corporation and Warner Brothers Discovery; risks related to our technology, as well as cybersecurity and data privacy-related risks; risks related to ongoing or future legal proceedings; and other risks, including the effects of industry, market, economic, political or regulatory conditions, future exchange and interest rates, and changes in tax and other laws, regulations, rates and policies. Further risks that could cause actual results to differ materially from those matters expressed in or implied by such forward-looking statements are discussed in our Quarterly Report on Form 10-Q for the quarterly period ended March 31, 2024 filed with the Securities and Exchange Commission (“SEC”), our Quarterly Report on Form 10-Q for the quarterly period ended June 30, 2024 to be filed with the SEC, and our other periodic filings with the SEC. We encourage you to read such risks in detail. The forward-looking statements in this press release represent Fubo’s views as of the date of this press release. Fubo anticipates that subsequent events and developments will cause its views to change. However, while it may elect to update these forward-looking statements at some point in the future, it specifically disclaims any obligation to do so. You should, therefore, not rely on these forward-looking statements as representing Fubo’s views as of any date subsequent to the date of this press release.Investor ContactsAmeet Padte, Fuboameet@fubo.tvJCIR for Fuboir@fubo.tvMedia ContactsJennifer L. Press, Fubojpress@fubo.tvBianca Illion, Fubobillion@fubo.tv Field: Page; Sequence: 10; Options: Last"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        1
+      ],
+      "columns": [
+        "0"
+      ],
+      "rows": [
+        [
+          "1"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        11,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "Summary Financials ($ in millions) Global",
+          "",
+          "",
+          "2Q23",
+          "",
+          "",
+          "",
+          "3Q23",
+          "",
+          "",
+          "",
+          "4Q23",
+          "",
+          "",
+          "",
+          "1Q24",
+          "",
+          "",
+          "",
+          "2Q24",
+          ""
+        ],
+        [
+          "Revenue",
+          "",
+          "$",
+          "312.7",
+          "",
+          "",
+          "$",
+          "320.9",
+          "",
+          "",
+          "$",
+          "410.2",
+          "",
+          "",
+          "$",
+          "402.3",
+          "",
+          "",
+          "$",
+          "391.0",
+          ""
+        ],
+        [
+          "Year-over-Year %",
+          "",
+          "",
+          "+40.8",
+          "%",
+          "",
+          "",
+          "+42.6",
+          "%",
+          "",
+          "",
+          "+28.5",
+          "%",
+          "",
+          "",
+          "+24.0",
+          "%",
+          "",
+          "",
+          "+25.0",
+          "%"
+        ],
+        [
+          "Total Operating Expenses",
+          "",
+          "$",
+          "365.2",
+          "",
+          "",
+          "$",
+          "404.2",
+          "",
+          "",
+          "$",
+          "482.3",
+          "",
+          "",
+          "$",
+          "465.7",
+          "",
+          "",
+          "$",
+          "426.6",
+          ""
+        ],
+        [
+          "Year-over-Year %",
+          "",
+          "",
+          "+16.5",
+          "%",
+          "",
+          "",
+          "+23.0",
+          "%",
+          "",
+          "",
+          "+16.7",
+          "%",
+          "",
+          "",
+          "+14.7",
+          "%",
+          "",
+          "",
+          "+16.8",
+          "%"
+        ],
+        [
+          "Net Loss",
+          "",
+          "$",
+          "-54.2",
+          "",
+          "",
+          "$",
+          "-84.4",
+          "",
+          "",
+          "$",
+          "-71.0",
+          "",
+          "",
+          "$",
+          "-56.3",
+          "",
+          "",
+          "$",
+          "-25.8",
+          ""
+        ],
+        [
+          "Year-over-Year (Abs.)",
+          "",
+          "",
+          "+$40.8",
+          "",
+          "",
+          "",
+          "+$21.4",
+          "",
+          "",
+          "",
+          "+$24.9",
+          "",
+          "",
+          "",
+          "+$27.0",
+          "",
+          "",
+          "",
+          "+$28.4",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "-30.5",
+          "",
+          "",
+          "$",
+          "-61.4",
+          "",
+          "",
+          "$",
+          "-50.1",
+          "",
+          "",
+          "$",
+          "-38.8",
+          "",
+          "",
+          "$",
+          "-11.0",
+          ""
+        ],
+        [
+          "Year-over-Year (Abs.)",
+          "",
+          "",
+          "+$39.6",
+          "",
+          "",
+          "",
+          "+$21.6",
+          "",
+          "",
+          "",
+          "+$25.3",
+          "",
+          "",
+          "",
+          "+$20.1",
+          "",
+          "",
+          "",
+          "+$19.6",
+          ""
+        ],
+        [
+          "Free Cash Flow",
+          "",
+          "$",
+          "-75.8",
+          "",
+          "",
+          "$",
+          "-32.4",
+          "",
+          "",
+          "$",
+          "-5.9",
+          "",
+          "",
+          "$",
+          "-71.3",
+          "",
+          "",
+          "$",
+          "-35.3",
+          ""
+        ],
+        [
+          "Year-over-Year (Abs.)",
+          "",
+          "",
+          "+$8.7",
+          "",
+          "",
+          "",
+          "+$37.3",
+          "",
+          "",
+          "",
+          "+$14.7",
+          "",
+          "",
+          "",
+          "+$9.7",
+          "",
+          "",
+          "",
+          "+$40.5",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        6,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "North America (NA)",
+          "",
+          "",
+          "2Q23",
+          "",
+          "",
+          "",
+          "3Q23",
+          "",
+          "",
+          "",
+          "4Q23",
+          "",
+          "",
+          "",
+          "1Q24",
+          "",
+          "",
+          "",
+          "2Q24",
+          ""
+        ],
+        [
+          "Subscribers (thousands)",
+          "",
+          "",
+          "1167",
+          "",
+          "",
+          "",
+          "1477",
+          "",
+          "",
+          "",
+          "1618",
+          "",
+          "",
+          "",
+          "1511",
+          "",
+          "",
+          "",
+          "1450",
+          ""
+        ],
+        [
+          "Year-over-Year %",
+          "",
+          "",
+          "+23.3",
+          "%",
+          "",
+          "",
+          "+20.0",
+          "%",
+          "",
+          "",
+          "+11.9",
+          "%",
+          "",
+          "",
+          "+17.6",
+          "%",
+          "",
+          "",
+          "+24.2",
+          "%"
+        ],
+        [
+          "Revenue ($ in millions)",
+          "",
+          "$",
+          "304.6",
+          "",
+          "",
+          "$",
+          "312.5",
+          "",
+          "",
+          "$",
+          "401.8",
+          "",
+          "",
+          "$",
+          "394.0",
+          "",
+          "",
+          "$",
+          "382.7",
+          ""
+        ],
+        [
+          "Year-over-Year %",
+          "",
+          "",
+          "+40.9",
+          "%",
+          "",
+          "",
+          "+42.6",
+          "%",
+          "",
+          "",
+          "+28.7",
+          "%",
+          "",
+          "",
+          "+24.5",
+          "%",
+          "",
+          "",
+          "+25.6",
+          "%"
+        ],
+        [
+          "ARPU",
+          "",
+          "$",
+          "81.62",
+          "",
+          "",
+          "$",
+          "83.51",
+          "",
+          "",
+          "$",
+          "86.65",
+          "",
+          "",
+          "$",
+          "84.54",
+          "",
+          "",
+          "$",
+          "85.69",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        6,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "Rest of World (ROW)",
+          "",
+          "",
+          "2Q23",
+          "",
+          "",
+          "",
+          "3Q23",
+          "",
+          "",
+          "",
+          "4Q23",
+          "",
+          "",
+          "",
+          "1Q24",
+          "",
+          "",
+          "",
+          "2Q24",
+          ""
+        ],
+        [
+          "Subscribers (thousands)",
+          "",
+          "",
+          "394",
+          "",
+          "",
+          "",
+          "411",
+          "",
+          "",
+          "",
+          "406",
+          "",
+          "",
+          "",
+          "397",
+          "",
+          "",
+          "",
+          "399",
+          ""
+        ],
+        [
+          "Year-over-Year %",
+          "",
+          "",
+          "+13.6",
+          "%",
+          "",
+          "",
+          "+14.9",
+          "%",
+          "",
+          "",
+          "-3.2",
+          "%",
+          "",
+          "",
+          "+4.9",
+          "%",
+          "",
+          "",
+          "+1.3",
+          "%"
+        ],
+        [
+          "Revenue ($ in millions)",
+          "",
+          "$",
+          "8.2",
+          "",
+          "",
+          "$",
+          "8.4",
+          "",
+          "",
+          "$",
+          "8.4",
+          "",
+          "",
+          "$",
+          "8.4",
+          "",
+          "",
+          "$",
+          "8.3",
+          ""
+        ],
+        [
+          "Year-over-Year %",
+          "",
+          "",
+          "+39.6",
+          "%",
+          "",
+          "",
+          "+45.1",
+          "%",
+          "",
+          "",
+          "+17.5",
+          "%",
+          "",
+          "",
+          "+7.2",
+          "%",
+          "",
+          "",
+          "+1.8",
+          "%"
+        ],
+        [
+          "ARPU",
+          "",
+          "$",
+          "6.91",
+          "",
+          "",
+          "$",
+          "6.98",
+          "",
+          "",
+          "$",
+          "6.81",
+          "",
+          "",
+          "$",
+          "7.00",
+          "",
+          "",
+          "$",
+          "7.02",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        1
+      ],
+      "columns": [
+        "0"
+      ],
+      "rows": [
+        [
+          "2"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        3,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "Guidance (NA)",
+          "",
+          "3Q24",
+          "3Q24",
+          "",
+          "",
+          "FY24",
+          "FY24",
+          ""
+        ],
+        [
+          "Revenue ($ in millions)",
+          "",
+          "$",
+          "360.0-$370.0",
+          "",
+          "",
+          "$",
+          "1,570.0-$1,590.0",
+          ""
+        ],
+        [
+          "Subscribers (thousands)",
+          "",
+          "",
+          "1,605-1,625",
+          "",
+          "",
+          "",
+          "1,725-1,745",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        3,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "Guidance (ROW)",
+          "",
+          "3Q24",
+          "3Q24",
+          "",
+          "",
+          "FY24",
+          "FY24",
+          ""
+        ],
+        [
+          "Revenue ($ in millions)",
+          "",
+          "$",
+          "8.0-$9.0",
+          "",
+          "",
+          "$",
+          "33.0-$35.0",
+          ""
+        ],
+        [
+          "Subscribers (thousands)",
+          "",
+          "",
+          "397-402",
+          "",
+          "",
+          "",
+          "395-405",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        1
+      ],
+      "columns": [
+        "0"
+      ],
+      "rows": [
+        [
+          "3"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        1
+      ],
+      "columns": [
+        "0"
+      ],
+      "rows": [
+        [
+          "4"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        1
+      ],
+      "columns": [
+        "0"
+      ],
+      "rows": [
+        [
+          "5"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        1
+      ],
+      "columns": [
+        "0"
+      ],
+      "rows": [
+        [
+          "6"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "David Gandler, co-founder and CEO",
+          "Edgar Bronfman Jr., executive chairman"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 26.0,
+    "quarter_revenue_yoy_pct": -2.5553,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 1570.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue of $26.0 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Revenue |  | $ | 312.7 |  | "
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "revenue guidance projects $1,570 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 2,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 3,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 5938.4615,
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "16.080000",
+    "return_10d_pct": "34.3284",
+    "return_20d_pct": "34.3284",
+    "return_30d_pct": "23.1343",
+    "return_60d_pct": "6.7164",
+    "return_90d_pct": "4.4776"
+  },
+  "text_stats": {
+    "primary_text_len": 3596,
+    "exhibit_text_len": 62865,
+    "combined_text_len": 66463,
+    "semantic_text_len": 63898,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GIS",
+    "cik": "40704",
+    "event_date": "2024-09-18",
+    "event_accession": "0001193125-24-221059",
+    "primary_8k_doc": "d805015d8k.htm",
+    "exhibit_docs": [
+      "d805015dex99.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GIS_000119312524221059_d805015d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GIS_000119312524221059_d805015dex99.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GIS",
+    "cik": "40704",
+    "entity_name": "GENERAL MILLS INC",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2134300000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-26",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-05-29",
+    "net_income_value": "2707300000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-26",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-05-29",
+    "assets_value": "31451700000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-26",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-05-28",
+    "financing_cash_flow_value": "-2503200000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-26",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-05-29",
+    "investing_cash_flow_value": "-1690700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-26",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-05-29",
+    "operating_cash_flow_value": "3316100000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-26",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-05-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "1.268472",
+    "operating_cash_flow_to_revenue": "1.553718",
+    "assets_to_revenue": "14.736307",
+    "financing_cash_flow_to_revenue": "-1.172844",
+    "investing_cash_flow_to_revenue": "-0.792157"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $4.",
+      "Net sales decreased 1 percent to $4.",
+      "net sales were also down 1 percent, driven by unfavorable organic net price realization and mix.",
+      "net sales were also down 2 percent.",
+      "Net sales were down mid-single digits for the U.",
+      "net sales were flat for U."
+    ],
+    "guidance_evidence": [
+      "outlook ¹ Please see Note 7 to the Consolidated Financial Statements below for reconciliation of this and other non-GAAP measures used in this release.",
+      "outlook for fiscal 2025.",
+      "outlook after the transactions are closed.",
+      "Outlook, and statements made by Mr.",
+      "expected progress on that goal in the first quarter along multiple fronts, with more work still ahead, said General Mills Chairman and Chief Executive Officer Jeff Harmening.",
+      "expected improvement in Q1, we are reaffirming our full-year outlook for fiscal 2025."
+    ],
+    "wave_or_demand_evidence": [
+      "customer relationship asset of $14 million.",
+      "aid General Mills Chairman and Chief Executive Officer Jeff Harmening.",
+      "ainable, profitable growth and top-tier shareholder returns over the long term.",
+      "ail Segment First-quarter net sales for General Mills North America Retail segment were down 2 percent to $3.",
+      "ain costs, and higher volume, partially offset by unfavorable net price realization and mix, input cost inflation, and a double-digit increase in media investment.",
+      "ain costs and HMM cost savings, partially offset by input cost inflation."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment, and other exit costs 2.",
+      "impairment, and other exit costs 0.",
+      "preliminary assessment of the fair value of the acquired assets and liabilities of the business and we are continuing our review of these items during the measurement period.",
+      "impairment charges and project-related costs are recorded in our Consolidated Statement of Earnings as follows: Quarter Ended In Millions Aug.",
+      "impairment, and other exit costs $ 2.",
+      "charges $ 2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4800,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-19",
+    "entry_open": "74.620003",
+    "return_10d_pct": "-1.0319",
+    "return_20d_pct": "-3.4173",
+    "return_30d_pct": "-7.8397",
+    "return_60d_pct": "-15.7330",
+    "return_90d_pct": "-14.3527"
+  },
+  "text_stats": {
+    "primary_text_len": 4166,
+    "exhibit_text_len": 42099,
+    "combined_text_len": 46267
+  }
+}

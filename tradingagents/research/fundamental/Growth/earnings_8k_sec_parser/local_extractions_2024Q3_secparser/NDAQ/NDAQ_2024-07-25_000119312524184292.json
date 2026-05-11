@@ -1,0 +1,941 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NDAQ",
+    "cik": "1120193",
+    "event_date": "2024-07-25",
+    "event_accession": "0001193125-24-184292",
+    "primary_8k_doc": "d779391d8k.htm",
+    "exhibit_docs": [
+      "d779391dex991.htm",
+      "d779391dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NDAQ_000119312524184292_d779391d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NDAQ_000119312524184292_d779391dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NDAQ_000119312524184292_d779391dex992.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NDAQ",
+    "cik": "1120193",
+    "entity_name": "Nasdaq, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1533000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "302000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "32294000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-613000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-133000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "565000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.196999",
+    "operating_cash_flow_to_revenue": "0.368558",
+    "assets_to_revenue": "21.065884",
+    "financing_cash_flow_to_revenue": "-0.39987",
+    "investing_cash_flow_to_revenue": "-0.086758"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $420 million increased 79% over the second quarter of 2023, up 16% on a pro forma basis.",
+      "revenues of $167 million increased 29%, with $53 billion of net inflows over the trailing twelve months and $17 billion in the second quarter.",
+      "revenues were $1.",
+      "revenues were $901 million in the second quarter of 2024, an increase of $228 million, up 34% versus the prior year period, or 13% growth on a pro forma basis, reflecting strong growth from Index and Financial Technology.",
+      "revenues were $250 million in the second quarter of 2024, an increase of $8 million, or 3%, versus the prior year period.",
+      "earnings per share decreased 30% in the second quarter of 2024."
+    ],
+    "guidance_evidence": [
+      "GUIDANCE UPDATE6  The company is updating its 2024 non-GAAP operating expense guidance to a range of $2,145 million to $2,185 million, and maintaining its 2024 non-GAAP tax rate guidance to be in the range of 24.",
+      "forecast and the active contracts at the end of a reporting period used in calculating ARR may or may not be extended or renewed by our customers."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, 96 upsells, and 4 cross-sells.",
+      "customer momentum and continued progress in its enterprise strategy.",
+      "bookings.",
+      "bookings in the quarter were cloud-based.",
+      "customer during the current period.",
+      "customers."
+    ],
+    "warning_or_risk_evidence": [
+      "charges or reversals outside of the normal course of business.",
+      "charges and gains that are described in the reconciliation table of U.",
+      "charges principally related to employee-related costs, contract terminations, real estate impairments and other related costs.",
+      "charges principally related to employee-related costs, consulting, asset impairments and contract terminations over a two-year period.",
+      "charges in our consolidated statements of income.",
+      "charges associated with this program for purposes of calculating non-GAAP measures as they are not reflective of ongoing operating performance or comparisons in Nasdaqs performance between periods."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d779391dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1 Nasdaq Reports Second Quarter 2024 Results; Strong Performance Across All Divisions with Double-Digit Solutions Growth NEW YORK, July 25, 2024 - Nasdaq, Inc. (Nasdaq: NDAQ) today reported financial results for the second quarter of 2024.  Second quarter 2024 net revenues1 were $1.2 billion, an increase of 25% over the second quarter of 2023, up 10% on a pro forma2 basis. This included Solutions3 revenues increasing 34%, or 13% on a pro forma basis.  Annualized Recurring Revenue (ARR)4 of $2.7 billion increased 29% over the second quarter of 2023, up 7% on a pro forma basis.  Financial Technology revenues of $420 million increased 79% over the second quarter of 2023, up 16% on a pro forma basis.  Index revenues of $167 million increased 29%, with $53 billion of net inflows over the trailing twelve months and $17 billion in the second quarter.  GAAP diluted earnings per share decreased 30% in the second quarter of 2024. Non-GAAP5 diluted earnings per share decreased 3% in the second quarter of 2024, but increased 7% organically.  In the second quarter of 2024, the company returned $138 million to shareholders through dividends and $58 million through share repurchases of common stock. The company also repaid a net $174 million of commercial paper in the second quarter of 2024. Second Quarter 2024 Highlights"
+    },
+    {
+      "type": "TableElement",
+      "text": "(US$ millions, except per share) 2Q24 Change %(YoY) Organic Change %(YoY) Pro Forma Change%(YoY)* Solutions Revenues $ 901 34 % 9 % 13 % Market Services Net Revenues $ 250 3 % 3 % 3 % Net Revenues** $ 1,159 25 % 7 % 10 % GAAP Operating income $ 423 11 % Non-GAAP Operating income $ 620 28 % 7 % 14 % ARR $ 2,668 29 % 6 % 7 % GAAP Diluted EPS $ 0.38 (30 )% Non-GAAP Diluted EPS $ 0.69 (3 )% 7 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "TextElement",
+      "text": "* Pro forma results are presented assuming AxiomSL and Calypso were included in the prior year quarterly results. Pro forma growth excludes the impacts of foreign currency except for AxiomSL and Calypso, which are not yet calculated on an organic basis. ** Net revenues includes $8 million of Other Revenues, which primarily reflect revenues associated with the European power trading and clearing business. Adena Friedman, Chair and CEO said, Nasdaqs strong financial and operational results were underpinned by broad-based growth across our three divisions and another quarter of double-digit Solutions growth. We continued the momentum in our Financial Technology division as financial institutions remain focused on resilience, risk management, and infrastructure modernization. We are also pleased with our progress across our strategic priorities. We are delivering on our integration targets ahead of schedule, we have exciting AI-driven innovation within our products, and we are starting to see results in cross-sells through our One Nasdaq strategy. Sarah Youngwood, Executive Vice President and CFO said, Nasdaq delivered a quarter of strong top-line growth and positive operating leverage. We successfully executed on our first deleveraging goal and achieved our year-end 2024 actioned synergy target six months in advance. Looking ahead, we are well-positioned to deliver durable organic growth and profitability, and make progress on our capital allocation priorities."
+    },
+    {
+      "type": "TitleElement",
+      "text": "FINANCIAL REVIEW"
+    },
+    {
+      "type": "TextElement",
+      "text": " Second quarter 2024 net revenues were $1.2 billion, an increase of $234 million, reflecting 25% growth versus the prior year period, or 10% growth on a pro forma basis. Revenue growth includes a $168 million benefit related to the acquisition of Adenza, partially offset by a $2 million decrease from the impact of changes in FX rates.  Solutions revenues were $901 million in the second quarter of 2024, an increase of $228 million, up 34% versus the prior year period, or 13% growth on a pro forma basis, reflecting strong growth from Index and Financial Technology.  ARR grew 29% year over year, or 7% on a pro forma basis, in the second quarter with 13% pro forma ARR growth for Financial Technology and 1% ARR growth for Capital Access Platforms.  Market Services net revenues were $250 million in the second quarter of 2024, an increase of $8 million, or 3%, versus the prior year period. The increase was primarily driven by a $7 million increase in U.S. cash equities and a $2 million increase in European cash equities, partially offset by a $4 million decline in U.S. tape plan revenue.  Second quarter 2024 GAAP operating expenses were $736 million, an increase of $193 million, or 36%, versus the prior year period. The increase for the second quarter of 2024 is primarily due to the acquisition of Adenza, which resulted in an additional $85 million in amortization expense of acquired intangible assets, $67 million of other AxiomSL and Calypso operating expenses, and $37 million of increased restructuring charges associated with the program we initiated to optimize our efficiencies as a"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "combined organization and integrating the Adenza acquisition, as well as organic growth driven by increased investments in technology and our people to drive innovation and long-term growth. These increases were partially offset by a $41 million decrease in merger and strategic initiatives expense and the benefit of synergies.  Second quarter 2024 non-GAAP operating expenses were $539 million, an increase of $98 million, reflecting 22% growth versus the prior year period, or 7% growth on a pro forma basis. The increase for the second quarter of 2024 is primarily due to the inclusion of $67 million of AxiomSL and Calypso operating expenses. The pro forma increase reflects growth driven by increased investments in technology and our people to drive innovation and long-term growth, partially offset by the benefit of synergies.  Second quarter 2024 cash flow from operations was $460 million, enabling the company to continue to make meaningful progress on its deleveraging plan. In the second quarter of 2024, the company returned $138 million to shareholders through dividends and $58 million through repurchases of our common stock. The company also repaid a net $174 million of commercial paper in the second quarter of 2024. As of June 30, 2024, there was $1.8 billion remaining under the board authorized share repurchase program."
+    },
+    {
+      "type": "TitleElement",
+      "text": "2024 EXPENSE AND TAX GUIDANCE UPDATE6"
+    },
+    {
+      "type": "TextElement",
+      "text": " The company is updating its 2024 non-GAAP operating expense guidance to a range of $2,145 million to $2,185 million, and maintaining its 2024 non-GAAP tax rate guidance to be in the range of 24.5% to 26.5%."
+    },
+    {
+      "type": "TitleElement",
+      "text": "STRATEGIC AND BUSINESS UPDATES"
+    },
+    {
+      "type": "TextElement",
+      "text": " Financial Technology delivered strong revenue growth in the second quarter. Performance in the division reflected the value of its mission-critical solutions and clients moving towards more strategic, long-term partnerships across the most critical areas of risk and compliance. Financial Technology pro forma ARR growth was 13% in the second quarter, while achieving 67 new customers, 96 upsells, and 4 cross-sells. Highlights in the second quarter include:  Financial Crime Management Technology ARR growth of 25% reflects sustained SMB customer momentum and continued progress in its enterprise strategy. Financial Crime Management Technology signed 53 new SMB clients while building its Tier 1 and Tier 2 pipeline with growth in proofs-of-concept (POCs) across this client segment. Financial Crime Management Technology also signed a new Tier 1 bank in July 2024.  AxiomSL and Calypso achieved 14% combined pro forma ARR growth with strong cloud bookings. AxiomSL and Calypso delivered a combined 58 upsells and 6 new clients, indicative of the strength of client relationships and value of the offerings. 68% of new bookings in the quarter were cloud-based. Combined gross revenue retention7 was 96% and net revenue retention8 was 111%. Excluding the impact of a significant bankruptcy first noted in the fourth quarter of 2023, pro forma ARR growth was 15%, gross revenue retention was 98% and net revenue retention was 112%."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": " Market Technology delivered 9% ARR growth, reflecting ongoing execution within the market modernization megatrend. Market Technology grew subscription revenue 9%, inline with ARR growth, with 9 upsells and 2 new clients, including a new partnership with the Indonesia Stock Exchange (IDX) to upgrade its market infrastructure. IDX will upgrade its core trading platform to Nasdaqs most advanced matching engine and committed to extend its use of Nasdaqs market surveillance solution.  Index delivered another quarter of exceptional performance and advanced its growth strategy across product innovation, globalization, and institutional client expansion. Index had $53 billion in net inflows over the trailing 12 months, with $17 billion in the second quarter. Nasdaqs Index business achieved another record in Index ETP AUM, averaging $531 billion during the second quarter and reaching $569 billion at quarter-end. Index derivatives trading volumes increased 25% year-over-year, also contributing to revenue growth in the quarter. Nasdaq partnered in the launch of 18 new products in the quarter, including 3 insurance annuity vehicles targeting institutional clients, and half of these product launches were outside the United States.  Nasdaq extended its listings leadership in the U.S. in the second quarter of 2024. As IPO activity improved in the second quarter, Nasdaq had a 72% win rate of eligible operating companies, reflecting 31 U.S. operating company IPOs that raised more than $3 billion in proceeds. This achievement marks the 42nd consecutive quarter of Nasdaqs leadership in the number of U.S. operating company listings.  Nasdaq executed the highest ever one-day notional Closing Cross volume in June. During the annual Russell U.S. indexes reconstitution, Nasdaq successfully facilitated approximately 2.9 billion shares traded in 0.878 seconds across Nasdaq-listed securities, representing a record $95.3 billion dollars in market value.  Nasdaqs performance was further enhanced by continued progress against its 2024 strategic priorities  Integrate, Innovate, Accelerate  positioning the company to capitalize on opportunities for sustainable, scalable, and resilient growth.  Integrate - Nasdaq actioned over 70% of its net expense synergy goal and achieved its 4.0x deleveraging target ahead of schedule.  Innovate - Consistent with GenAI capabilities recently released in Verafin and BoardVantage, Nasdaq launched an AI-enabled pension meeting minutes summarization tool within eVestment while expanding the pipeline of AI features scheduled for introduction in upcoming quarters.  Accelerate - Nasdaq completed 11 cross-sells since the close of the Adenza transaction, including 4 during the second quarter. 1 Represents revenues less transaction-based expenses. 2 Pro forma results are presented assuming AxiomSL and Calypso were included in the prior year quarterly results. These results are not calculated in a manner consistent with the pro forma requirements in Article 11 of Regulation"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TextElement",
+      "text": "S-X. Pro forma growth excludes the impacts of foreign currency except for AxiomSL and Calypso, which are not yet calculated on an organic basis. 3 Constitutes revenues from our Capital Access Platforms and Financial Technology segments. 4 Annualized Recurring Revenue (ARR) for a given period is the current annualized value derived from subscription contracts with a defined contract value. This excludes contracts that are not recurring, are one-time in nature or where the contract value fluctuates based on defined metrics. ARR is currently one of our key performance metrics to assess the health and trajectory of our recurring business. ARR does not have any standardized definition and is therefore unlikely to be comparable to similarly titled measures presented by other companies. ARR should be viewed independently of revenue and deferred revenue and is not intended to be combined with or to replace either of those items. For AxiomSL and Calypso recurring revenue contracts, the amount included in ARR is consistent with the amount that we invoice the customer during the current period. Additionally, for AxiomSL and Calypso recurring revenue contracts that include annual values that increase over time, we include in ARR only the annualized value of components of the contract that are considered active as of the date of the ARR calculation. We do not include the future committed increases in the contract value as of the date of the ARR calculation. ARR is not a forecast and the active contracts at the end of a reporting period used in calculating ARR may or may not be extended or renewed by our customers. 5 Refer to our reconciliations of U.S. GAAP to non-GAAP net income, diluted earnings per share, operating income, operating expenses and organic impacts included in the attached schedules. 6 U.S. GAAP operating expense and tax rate guidance are not provided due to the inherent difficulty in quantifying certain amounts due to a variety of factors including the unpredictability in the movement in foreign currency rates, as well as future charges or reversals outside of the normal course of business. 7 Gross Retention: As used herein for AxiomSL and Calypso, ARR in the current period over ARR in the prior year period for existing customers excluding price increases and upsells and excluding new customers. 8 Net Retention: As used herein for AxiomSL and Calypso, ARR in the current period over ARR in the prior year period for existing customers including price increases and upsells and excluding new customers."
+    },
+    {
+      "type": "TitleElement",
+      "text": "ABOUT NASDAQ"
+    },
+    {
+      "type": "TextElement",
+      "text": "Nasdaq (Nasdaq: NDAQ) is a global technology company serving corporate clients, investment managers, banks, brokers, and exchange operators as they navigate and interact with the global capital markets and the broader financial system. We aspire to deliver world-leading platforms that improve the liquidity, transparency, and integrity of the global economy. Our diverse offering of data, analytics, software, exchange capabilities, and client-centric services enables clients to optimize and execute their business vision with confidence. To learn more about the company, technology solutions and career opportunities, visit us on LinkedIn, on X @Nasdaq, or at www.nasdaq.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "NON-GAAP INFORMATION"
+    },
+    {
+      "type": "TextElement",
+      "text": "In addition to disclosing results determined in accordance with U.S. GAAP, Nasdaq also discloses certain non-GAAP results of operations, including, but not limited to, non-GAAP net income attributable to Nasdaq, non-GAAP diluted earnings per share, non-GAAP operating income, and non-GAAP operating expenses, that include certain adjustments or exclude certain charges and gains that are described in the reconciliation table of U.S. GAAP to non-GAAP information provided at the end of this release. Management uses this non-GAAP information internally, along with U.S. GAAP information, in evaluating our performance and in making financial and operational decisions. We believe our presentation of these measures provides investors with greater transparency and supplemental data relating to our financial condition and results of operations. In addition, we believe the presentation of these measures is useful to investors for period-to-period comparisons of results as the items described below in the reconciliation tables do not reflect ongoing operating performance."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TextElement",
+      "text": "These measures are not in accordance with, or an alternative to, U.S. GAAP, and may be different from non-GAAP measures used by other companies. In addition, other companies, including companies in our industry, may calculate such measures differently, which reduces their usefulness as a comparative measure. Investors should not rely on any single financial measure when evaluating our business. This information should be considered as supplemental in nature and is not meant as a substitute for our operating results in accordance with U.S. GAAP. We recommend investors review the U.S. GAAP financial measures included in this earnings release. When viewed in conjunction with our U.S. GAAP results and the accompanying reconciliations, we believe these non-GAAP measures provide greater transparency and a more complete understanding of factors affecting our business than U.S. GAAP measures alone. We understand that analysts and investors regularly rely on non-GAAP financial measures, such as those noted above, to assess operating performance. We use these measures because they highlight trends more clearly in our business that may not otherwise be apparent when relying solely on U.S. GAAP financial measures, since these measures eliminate from our results specific financial items that have less bearing on our ongoing operating performance. Organic revenue and expense growth, organic change and organic impact are non-GAAP measures that reflect adjustments for: (i) the impact of period-over-period changes in foreign currency exchange rates, and (ii) the revenues, expenses and operating income associated with acquisitions and divestitures for the twelve month period following the date of the acquisition or divestiture. Reconciliations of these measures are described within the body of this release or in the reconciliation tables at the end of this release. Foreign exchange impact: In countries with currencies other than the U.S. dollar, revenues and expenses are translated using monthly average exchange rates. Certain discussions in this release isolate the impact of year-over-year foreign currency fluctuations to better measure the comparability of operating results between periods. Operating results excluding the impact of foreign currency fluctuations are calculated by translating the current periods results by the prior periods exchange rates. Restructuring programs: In the fourth quarter of 2023, following the closing of the Adenza acquisition, our management approved, committed to and initiated a restructuring program, Adenza Restructuring to optimize our efficiencies as a combined organization. In connection with this program, we expect to incur pre-tax charges principally related to employee-related costs, contract terminations, real estate impairments and other related costs. We expect to achieve benefits primarily in the form of expense and revenue synergies. In October 2022, following our September announcement to realign our segments and leadership, we initiated a divisional alignment program with a focus on realizing the full potential of this structure. In connection with the program, we expect to incur pre-tax charges principally related to employee-related costs, consulting, asset impairments and contract terminations over a two-year period. We expect to achieve benefits in the form of both increased customer engagement and operating efficiencies. Costs related to the Adenza restructuring and the divisional alignment programs will be recorded as restructuring charges in our consolidated statements of income. We will exclude charges associated with this program for purposes of calculating non-GAAP measures as they are not reflective of ongoing operating performance or comparisons in Nasdaqs performance between periods. 6 CAUTIONARY NOTE REGARDING FORWARD-LOOKING STATEMENTS Information set forth in this communication contains forward-looking statements that involve a number of risks and uncertainties. Nasdaq cautions readers that any forward-looking information is not a guarantee of future performance and that actual results could differ materially from those contained in the forward-looking information. Such forward-looking statements include, but are not limited to (i) projections relating to our future financial results, total shareholder returns, growth, dividend program, trading volumes, products and services, ability to transition to new business models or implement our new corporate structure, taxes and achievement of synergy targets, (ii) statements about the closing or implementation dates and benefits of certain acquisitions, divestitures and other strategic, restructuring, technology, environmental, de-leveraging and capital allocation initiatives, (iii) statements about our integrations of our recent acquisitions, (iv) statements relating to any litigation or regulatory or government investigation or action to which we are or could become a party, and (v) other statements that are not historical facts. Forward-looking statements involve a number of risks, uncertainties or other factors beyond Nasdaqs control. These factors include, but are not limited to, Nasdaqs ability to implement its strategic initiatives, economic, political and market conditions and fluctuations, geopolitical instability, government and industry regulation, interest rate risk, U.S. and global competition. Further information on these and other factors are detailed in Nasdaqs filings with the U.S. Securities and Exchange Commission, including its annual reports on Form 10-K and quarterly reports on Form 10-Q, which are available on Nasdaqs investor relations website at http://ir.nasdaq.com and the SECs website at www.sec.gov. Nasdaq undertakes no obligation to publicly update any forward-looking statement, whether as a result of new information, future events or otherwise. WEBSITE DISCLOSURE Nasdaq intends to use its website, ir.nasdaq.com, as a means for disclosing material non-public information and for complying with SEC Regulation FD and other disclosure obligations. Media Relations Contacts Nick Jannuzzi +1.973.760.1741 Nicholas.Jannuzzi@Nasdaq.com David Lurie +1.914.538.0533 David.Lurie@Nasdaq.com Investor Relations Contact Ato Garrett +1.212.401.8737 Ato.Garrett@Nasdaq.com NDAQF 7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Statements of Income"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions, except per share amounts)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30,2024 June 30,2023 June 30,2024 June 30,2023 Revenues: Capital Access Platforms $ 481 $ 438 $ 960 $ 852 Financial Technology 420 235 813 463 Market Services 883 750 1,678 1,631 Other Revenues 8 10 18 20 Total revenues 1,792 1,433 3,469 2,966 Transaction-based expenses: Transaction rebates (483 ) (444 ) (965 ) (931 ) Brokerage, clearance and exchange fees (150 ) (64 ) (227 ) (197 ) Revenues less transaction-based expenses 1,159 925 2,277 1,838 Operating Expenses: Compensation and benefits 328 261 669 517 Professional and contract services 39 30 72 61 Technology and communication infrastructure 69 56 135 110 Occupancy 27 32 56 71 General, administrative and other 30 22 58 35 Marketing and advertising 12 9 23 19 Depreciation and amortization 153 65 308 134 Regulatory 18 9 28 17 Merger and strategic initiatives 4 45 13 47 Restructuring charges 56 14 82 33 Total operating expenses 736 543 1,444 1,044 Operating income 423 382 833 794 Interest income 6 8 12 15 Interest expense (102 ) (36 ) (211 ) (73 ) Other income (loss) 12 (6 ) 13 (7 ) Net income (loss) from unconsolidated investees 2 (11 ) 6 3 Income before income taxes 341 337 653 732 Income tax provision 119 70 198 165 Net income 222 267 455 567 Net loss attributable to noncontrolling interests   1 1 Net income attributable to Nasdaq $ 222 $ 267 $ 456 $ 568 Per share information: Basic earnings per share $ 0.39 $ 0.54 $ 0.79 $ 1.16 Diluted earnings per share $ 0.38 $ 0.54 $ 0.79 $ 1.15 Cash dividends declared per common share $ 0.24 $ 0.22 $ 0.46 $ 0.42 Weighted-average common shares outstanding for earnings per share: Basic 576.4 490.8 575.9 490.4 Diluted 579.0 493.6 578.9 494.2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Revenue Detail"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, June 30, June 30, June 30, 2024 2023 2024 2023 CAPITAL ACCESS PLATFORMS Data and Listing Services revenues $ 187 $ 187 $ 372 $ 371 Index revenues 167 129 336 239 Workflow and Insights revenues 127 122 252 242 Total Capital Access Platforms revenues 481 438 960 852 FINANCIAL TECHNOLOGY Financial Crime Management Technology revenues 67 54 131 106 Regulatory Technology revenues 95 35 186 67 Capital Markets Technology revenues 258 146 496 290 Total Financial Technology revenues 420 235 813 463 MARKET SERVICES Market Services revenues 883 750 1,678 1,631 Transaction-based expenses: Transaction rebates (483 ) (444 ) (965 ) (931 ) Brokerage, clearance and exchange fees (150 ) (64 ) (227 ) (197 ) Total Market Services revenues, net 250 242 486 503 OTHER REVENUES 8 10 18 20 REVENUES LESS TRANSACTION-BASED EXPENSES $ 1,159 $ 925 $ 2,277 $ 1,838"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30,2024 December 31,2023 (unaudited) Assets Current assets: Cash and cash equivalents $ 416 $ 453 Restricted cash and cash equivalents 24 20 Default funds and margin deposits 5,546 7,275 Financial investments 174 188 Receivables, net 960 929 Other current assets 189 231 Total current assets 7,309 9,096 Property and equipment, net 556 576 Goodwill 13,984 14,112 Intangible assets, net 7,171 7,443 Operating lease assets 400 402 Other non-current assets 790 665 Total assets $ 30,210 $ 32,294 Liabilities Current liabilities: Accounts payable and accrued expenses $ 301 $ 332 Section 31 fees payable to SEC 213 84 Accrued personnel costs 213 303 Deferred revenue 736 594 Other current liabilities 234 146 Default funds and margin deposits 5,546 7,275 Short-term debt 548 291 Total current liabilities 7,791 9,025 Long-term debt 9,249 10,163 Deferred tax liabilities, net 1,632 1,642 Operating lease liabilities 409 417 Other non-current liabilities 221 220 Total liabilities 19,302 21,467 Commitments and contingencies Equity Nasdaq stockholders equity: Common stock 6 6 Additional paid-in capital 5,528 5,496 Common stock in treasury, at cost (641 ) (587 ) Accumulated other comprehensive loss (2,011 ) (1,924 ) Retained earnings 8,016 7,825 Total Nasdaq stockholders equity 10,898 10,816 Noncontrolling interests 10 11 Total equity 10,908 10,827 Total liabilities and equity $ 30,210 $ 32,294"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of U.S. GAAP to Non-GAAP Net Income Attributable to Nasdaq and Diluted Earnings Per Share"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions, except per share amounts)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30,2024 June 30,2023 June 30,2024 June 30,2023 U.S. GAAP net income attributable to Nasdaq $ 222 $ 267 $ 456 $ 568 Non-GAAP adjustments: Amortization expense of acquired intangible assets (1) 122 37 244 75 Merger and strategic initiatives expense (2) 4 45 13 47 Restructuring charges (3) 56 14 82 33 Lease asset impairments (4)  5  23 Net (income) loss from unconsolidated investees (5) (2 ) 11 (6 ) (3 ) Legal and regulatory matters (6) 13  16 (11 ) Pension settlement charge (7)   23  Other (income) loss (8) (10 ) 8 (9 ) 9 Total non-GAAP adjustments 183 120 363 173 Non-GAAP adjustment to the income tax provision (9) (41 ) (37 ) (88 ) (52 ) Tax on intra-group transfer of intellectual property assets (10) 33  33  Total non-GAAP adjustments, net of tax 175 83 308 121 Non-GAAP net income attributable to Nasdaq $ 397 $ 350 $ 764 $ 689 U.S. GAAP diluted earnings per share $ 0.38 $ 0.54 $ 0.79 $ 1.15 Total adjustments from non-GAAP net income above 0.31 0.17 0.53 0.24 Non-GAAP diluted earnings per share $ 0.69 $ 0.71 $ 1.32 $ 1.39 Weighted-average diluted common shares outstanding for earnings per share: 579.0 493.6 578.9 494.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) We amortize intangible assets acquired in connection with various acquisitions. Intangible asset amortization expense can vary from period to period due to episodic acquisitions completed, rather than from our ongoing business operations. (2) We have pursued various strategic initiatives and completed acquisitions and divestitures in recent years which have resulted in expenses which would not have otherwise been incurred. These expenses generally include integration costs, as well as legal, due diligence and other third party transaction costs. The frequency and amount of such expenses vary significantly based on the size, timing and complexity of the transaction. For the three and six months ended June 30, 2024, and for the three months ended June 30, 2023, these costs primarily relate to the Adenza acquisition. For the three and six months ended June 30, 2024, these costs were partially offset by a termination payment recognized in the second quarter of 2024 relating to the proposed divestiture of our Nordic power trading and clearing business. (3) In the fourth quarter of 2023, following the closing of the Adenza acquisition, our management approved, committed to and initiated a restructuring program, Adenza Restructuring to optimize our efficiencies as a combined organization. In connection with this program, we expect to incur pre-tax charges principally related to employee-related costs, contract terminations, real estate impairments and other related costs. We expect to achieve benefits primarily in the form of expense and revenue synergies. In October 2022, following our September announcement to realign our segments and leadership, we initiated a divisional alignment program with a focus on realizing the full potential of this structure. In connection with the program, we expect to incur pre-tax charges principally related to employee-related costs, consulting, asset impairments and contract terminations over a two-year period. (4) During the first quarter of 2023, we initiated a review of our real estate and facility capacity requirements due to our new and evolving work models. As a result, for the three and six months ended June 30, 2023, we recorded impairment charges related to our operating lease assets and leasehold improvements associated with vacating certain leased office space, which are recorded in occupancy expense and depreciation and amortization expense in our Condensed Consolidated Statements of Income. (5) We exclude our share of the earnings and losses of our equity method investments. This provides a more meaningful analysis of Nasdaqs ongoing operating performance or comparisons in Nasdaqs performance between periods. (6) For the three and six months ended June 30, 2024, these items primarily included the settlement of a Swedish Financial Supervisory Authority, or SFSA, fine and accruals related to certain legal matters. For the six months ended June 30, 2023, these items primarily included insurance recoveries related to legal matters. The fine is recorded in regulatory expense and the accruals and insurance recoveries are recorded in professional and contract services and general, administrative and other expense in the Condensed Consolidated Statements of Income. (7) For the six months ended June 30, 2024, we recorded a pre-tax loss as a result of settling our U.S. pension plan. The plan was terminated and partially settled in 2023, with final settlement occurring during the first quarter of 2024. The pre-tax loss is recorded in compensation and benefits in the Condensed Consolidated Statements of Income. (8) For the three and six months ended June 30, 2024, other items primarily include net gains from strategic investments entered into through our corporate venture program, which are included in other income (loss) in our Condensed Consolidated Statements of Income. (9) The non-GAAP adjustment to the income tax provision primarily includes the tax impact of each non-GAAP adjustment. (10) For the three and six months ended June 30, 2024, the completion of an intra-group transfer of intellectual property assets to U.S. headquarters, resulted in a net tax expense of $33 million."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of U.S. GAAP to Non-GAAP Operating Income and Operating Margin"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, June 30, June 30, June 30, 2024 2023 2024 2023 U.S. GAAP operating income $ 423 $ 382 $ 833 $ 794 Non-GAAP adjustments: Amortization expense of acquired intangible assets (1) 122 37 244 75 Merger and strategic initiatives expense (2) 4 45 13 47 Restructuring charges (3) 56 14 82 33 Lease asset impairments (4)  5  23 Legal and regulatory matters (5) 13  16 (11 ) Pension settlement charge (6)   23  Other loss 2 1 2 1 Total non-GAAP adjustments 197 102 380 168 Non-GAAP operating income $ 620 $ 484 $ 1,213 $ 962 Revenues less transaction-based expenses $ 1,159 $ 925 $ 2,277 $ 1,838 U.S. GAAP operating margin (7) 36 % 41 % 37 % 43 % Non-GAAP operating margin (8) 53 % 52 % 53 % 52 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) We amortize intangible assets acquired in connection with various acquisitions. Intangible asset amortization expense can vary from period to period due to episodic acquisitions completed, rather than from our ongoing business operations. (2) We have pursued various strategic initiatives and completed acquisitions and divestitures in recent years which have resulted in expenses which would not have otherwise been incurred. These expenses generally include integration costs, as well as legal, due diligence and other third party transaction costs. The frequency and amount of such expenses vary significantly based on the size, timing and complexity of the transaction. For the three and six months ended June 30, 2024, and for the three months ended June 30, 2023, these costs primarily relate to the Adenza acquisition. For the three and six months ended June 30, 2024, these costs were partially offset by a termination payment recognized in the second quarter of 2024 relating to the proposed divestiture of our Nordic power trading and clearing business. (3) In the fourth quarter of 2023, following the closing of the Adenza acquisition, our management approved, committed to and initiated a restructuring program, Adenza Restructuring to optimize our efficiencies as a combined organization. In connection with this program, we expect to incur pre-tax charges principally related to employee-related costs, contract terminations, real estate impairments and other related costs. We expect to achieve benefits primarily in the form of expense and revenue synergies. In October 2022, following our September announcement to realign our segments and leadership, we initiated a divisional alignment program with a focus on realizing the full potential of this structure. In connection with the program, we expect to incur pre-tax charges principally related to employee-related costs, consulting, asset impairments and contract terminations over a two-year period. (4) During the first quarter of 2023, we initiated a review of our real estate and facility capacity requirements due to our new and evolving work models. As a result, for the three and six months ended June 30, 2023, we recorded impairment charges related to our operating lease assets and leasehold improvements associated with vacating certain leased office space, which are recorded in occupancy expense and depreciation and amortization expense in our Condensed Consolidated Statements of Income. (5) For the three and six months ended June 30, 2024, these items primarily included the settlement of a SFSA fine and accruals related to certain legal matters. For the six months ended June 30, 2023, these items primarily included insurance recoveries related to legal matters. The fine is recorded in regulatory expense and the accruals and insurance recoveries are recorded in professional and contract services and general, administrative and other expense in the Condensed Consolidated Statements of Income. (6) For the six months ended June 30, 2024, we recorded a pre-tax loss as a result of settling our U.S. pension plan. The plan was terminated and partially settled in 2023, with final settlement occurring during the first quarter of 2024. The pre-tax loss is recorded in compensation and benefits in the Condensed Consolidated Statements of Income. (7) U.S. GAAP operating margin equals U.S. GAAP operating income divided by revenues less transaction-based expenses. (8) Non-GAAP operating margin equals non-GAAP operating income divided by revenues less transaction-based expenses."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of U.S. GAAP to Non-GAAP Operating Expenses"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30,2024 June 30,2023 June 30,2024 June 30,2023 U.S. GAAP operating expenses $ 736 $ 543 $ 1,444 $ 1,044 Non-GAAP adjustments: Amortization expense of acquired intangible assets (1) (122 ) (37 ) (244 ) (75 ) Merger and strategic initiatives expense (2) (4 ) (45 ) (13 ) (47 ) Restructuring charges (3) (56 ) (14 ) (82 ) (33 ) Lease asset impairments (4)  (5 )  (23 ) Legal and regulatory matters (5) (13 )  (16 ) 11 Pension settlement charge (6)   (23 )  Other (loss) (2 ) (1 ) (2 ) (1 ) Total non-GAAP adjustments (197 ) (102 ) (380 ) (168 ) Non-GAAP operating expenses $ 539 $ 441 $ 1,064 $ 876"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) We amortize intangible assets acquired in connection with various acquisitions. Intangible asset amortization expense can vary from period to period due to episodic acquisitions completed, rather than from our ongoing business operations. (2) We have pursued various strategic initiatives and completed acquisitions and divestitures in recent years which have resulted in expenses which would not have otherwise been incurred. These expenses generally include integration costs, as well as legal, due diligence and other third party transaction costs. The frequency and amount of such expenses vary significantly based on the size, timing and complexity of the transaction. For the three and six months ended June 30, 2024, and for the three months ended June 30, 2023, these costs primarily relate to the Adenza acquisition. For the three and six months ended June 30, 2024, these costs were partially offset by a termination payment recognized in the second quarter of 2024 relating to the proposed divestiture of our Nordic power trading and clearing business. (3) In the fourth quarter of 2023, following the closing of the Adenza acquisition, our management approved, committed to and initiated a restructuring program, Adenza Restructuring to optimize our efficiencies as a combined organization. In connection with this program, we expect to incur pre-tax charges principally related to employee-related costs, contract terminations, real estate impairments and other related costs. We expect to achieve benefits primarily in the form of expense and revenue synergies. In October 2022, following our September announcement to realign our segments and leadership, we initiated a divisional alignment program with a focus on realizing the full potential of this structure. In connection with the program, we expect to incur pre-tax charges principally related to employee-related costs, consulting, asset impairments and contract terminations over a two-year period. (4) During the first quarter of 2023, we initiated a review of our real estate and facility capacity requirements due to our new and evolving work models. As a result, for the three and six months ended June 30, 2023, we recorded impairment charges related to our operating lease assets and leasehold improvements associated with vacating certain leased office space, which are recorded in occupancy expense and depreciation and amortization expense in our Condensed Consolidated Statements of Income. (5) For the three and six months ended June 30, 2024, these items primarily included the settlement of a SFSA fine and accruals related to certain legal matters. For the six months ended June 30, 2023, these items primarily included insurance recoveries related to legal matters. The fine is recorded in regulatory expense and the accruals and insurance recoveries are recorded in professional and contract services and general, administrative and other expense in the Condensed Consolidated Statements of Income. (6) For the six months ended June 30, 2024, we recorded a pre-tax loss as a result of settling our U.S. pension plan. The plan was terminated and partially settled in 2023, with final settlement occurring during the first quarter of 2024. The pre-tax loss is recorded in compensation and benefits in the Condensed Consolidated Statements of Income."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Pro Forma Impacts for U.S. GAAP to Pro Forma Revenues less transaction-based expenses, Non-GAAP Operating Expenses, Non-GAAP Operating Income, and Non-GAAP Operating Margin"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended As Reported Adenza (1) Pro Forma June 30, June 30, June 30, June 30, Total Variance FX & Other (2) Pro Forma Impacts 2024 2023 2023 2023 $ % $ $ % CAPITAL ACCESS PLATFORMS $ 481 $ 438 $  $ 438 $ 43 10 % $ (1 ) $ 44 10 % FINANCIAL TECHNOLOGY Financial Crime Management Technology revenues 67 54  54 13 24 %  13 24 % Regulatory Technology revenues 95 35 47 82 13 16 %  13 16 % Capital Markets Technology revenues 258 146 82 228 30 13 % (1 ) 31 14 % Total Financial Technology revenues 420 235 129 364 56 15 % (1 ) 57 16 % SOLUTIONS REVENUES (3) 901 673 129 802 99 12 % (2 ) 101 13 % MARKET SERVICES REVENUES, NET 250 242  242 8 3 %  8 3 % OTHER REVENUES 8 10  10 (2 ) (20 )% (1 ) (1 ) (10 )% REVENUES LESS TRANSACTION-BASED EXPENSES 1,159 925 129 1,054 105 10 % (3 ) 108 10 % Non-GAAP operating expenses 539 441 66 507 32 6 % (2 ) 34 7 % Non-GAAP operating income $ 620 $ 484 $ 63 $ 547 $ 73 13 % $ (1 ) $ 74 14 % Non-GAAP operating margin 53 % 52 % 49 % 52 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) The Adenza results above are presented on a non-GAAP basis and have been adjusted for certain items. We believe presenting these measures excluding these items provides investors with greater transparency as they do not represent ongoing operations. These adjustments include intangible amortization of $39 million and other transaction and restructuring related costs of $6 million for the second quarter of 2023. (2) Primarily reflects the impacts from changes in FX rates. (3) Represents Capital Access Platforms and Financial Technology segments."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Organic Impacts for U.S. GAAP Revenues less transaction-based expenses, Non-GAAP Operating Expenses, Non-GAAP Operating Income, and Non-GAAP Diluted Earnings Per Share"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in millions)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, June 30, Total Variance Organic Impact Other Impacts (1) 2024 2023 $ % $ % $ % CAPITAL ACCESS PLATFORMS Data and Listing Services revenues $ 187 $ 187 $   % $ 1 1 % $ (1 ) (1 )% Index revenues 167 129 38 29 % 38 29 %   % Workflow and Insights revenues 127 122 5 4 % 5 4 %   % Total Capital Access Platforms revenues 481 438 43 10 % 44 10 % (1 ) (0 )% FINANCIAL TECHNOLOGY Financial Crime Management Technology revenues 67 54 13 24 % 13 24 %   % Regulatory Technology revenues 95 35 60 171 % 2 6 % 58 166 % Capital Markets Technology revenues 258 146 112 77 % 3 2 % 109 75 % Total Financial Technology revenues 420 235 185 79 % 18 8 % 167 71 % SOLUTIONS REVENUES (2) 901 673 228 34 % 62 9 % 166 25 % MARKET SERVICES REVENUES, NET 250 242 8 3 % 8 3 %   % OTHER REVENUES 8 10 (2 ) (20 )% (1 ) (10 )% (1 ) (10 )% REVENUES LESS TRANSACTION-BASED EXPENSES $ 1,159 $ 925 $ 234 25 % $ 69 7 % $ 165 18 % Non-GAAP Operating Expenses $ 539 $ 441 $ 98 22 % $ 33 7 % $ 65 15 % Non-GAAP Operating Income $ 620 $ 484 $ 136 28 % $ 36 7 % $ 100 21 % Non-GAAP diluted earnings per share $ 0.69 $ 0.71 $ (0.02 ) (3 )% $ 0.05 7 % $ (0.07 ) (10 )%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Note: The sum of the percentage changes may not tie to the percentage change in total variance due to rounding. (1) Primarily includes the impacts of the Adenza acquisition and changes in FX rates. (2) Represents Capital Access Platforms and Financial Technology segments."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Nasdaq, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Quarterly Key Drivers Detail"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30,2024 June 30,2023 June 30,2024 June 30,2023 Capital Access Platforms Annualized recurring revenues (in millions) (1) $ 1,226 $ 1,216 $ 1,226 $ 1,216 Initial public offerings The Nasdaq Stock Market (2) 39 23 66 63 Exchanges that comprise Nasdaq Nordic and Nasdaq Baltic 5 1 6 3 Total new listings The Nasdaq Stock Market (2) 84 62 163 143 Exchanges that comprise Nasdaq Nordic and Nasdaq Baltic (3) 10 6 12 13 Number of listed companies The Nasdaq Stock Market (4) 4,004 4,106 4,004 4,106 Exchanges that comprise Nasdaq Nordic and Nasdaq Baltic (5) 1,198 1,249 1,198 1,249 Index Number of licensed exchange traded products (ETPs) 372 386 372 386 Period end ETP assets under management (AUM) tracking Nasdaq indexes (in billions) $ 569 $ 418 $ 569 $ 418 Quarterly average ETP AUM tracking Nasdaq indexes (in billions) $ 531 $ 381 TTM (6) net inflows ETP AUM tracking Nasdaq indexes (in billions) $ 53 $ 25 $ 53 $ 25 TTM (6) net appreciation ETP AUM tracking Nasdaq indexes (in billions) $ 115 $ 73 $ 115 $ 73 Financial Technology Annualized recurring revenues (in millions) (1) Financial Crime Management Technology $ 258 $ 207 $ 258 $ 207 Regulatory Technology 338 132 338 132 Capital Markets Technology 846 512 846 512 Total Financial Technology $ 1,442 $ 851 $ 1,442 $ 851 Market Services Equity Derivative Trading and Clearing U.S. equity options Total industry average daily volume (in millions) 42.1 39.2 42.7 40.8 Nasdaq PHLX matched market share 9.9 % 11.5 % 10.1 % 11.3 % The Nasdaq Options Market matched market share 5.5 % 6.4 % 5.4 % 6.8 % Nasdaq BX Options matched market share 2.3 % 3.0 % 2.3 % 3.1 % Nasdaq ISE Options matched market share 6.9 % 6.0 % 6.6 % 5.8 % Nasdaq GEMX Options matched market share 2.6 % 2.2 % 2.6 % 2.1 % Nasdaq MRX Options matched market share 2.1 % 1.6 % 2.3 % 1.6 % Total matched market share executed on Nasdaqs exchanges 29.3 % 30.7 % 29.3 % 30.7 % Nasdaq Nordic and Nasdaq Baltic options and futures Total average daily volume of options and futures contracts (7) 251,677 307,754 246,527 326,687 Cash Equity Trading Total U.S.-listed securities Total industry average daily share volume (in billions) 11.8 10.8 11.8 11.3 Matched share volume (in billions) 119.3 113.7 236.0 235.5 The Nasdaq Stock Market matched market share 15.6 % 16.3 % 15.7 % 16.1 % Nasdaq BX matched market share 0.3 % 0.4 % 0.3 % 0.3 % Nasdaq PSX matched market share 0.2 % 0.4 % 0.2 % 0.4 % Total matched market share executed on Nasdaqs exchanges 16.1 % 17.1 % 16.2 % 16.8 % Market share reported to the FINRA/Nasdaq Trade Reporting Facility 42.9 % 34.2 % 42.2 % 32.9 % Total market share (8) 59.0 % 51.3 % 58.4 % 49.7 % Nasdaq Nordic and Nasdaq Baltic securities Average daily number of equity trades executed on Nasdaqs exchanges 663,897 687,158 665,183 739,480 Total average daily value of shares traded (in billions) $ 4.7 $ 4.7 $ 4.7 $ 5.0 Total market share executed on Nasdaqs exchanges 73.5 % 71.4 % 72.6 % 70.1 % Fixed Income and Commodities Trading and Clearing Fixed Income Total average daily volume of Nasdaq Nordic and Nasdaq Baltic fixed income contracts 103,040 110,498 97,421 100,730"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Annualized Recurring Revenue (ARR) for a given period is the current annualized value derived from subscription contracts with a defined contract value. This excludes contracts that are not recurring, are one-time in nature, or where the contract value fluctuates based on defined metrics. ARR is currently one of our key performance metrics to assess the health and trajectory of our recurring business. ARR does not have any standardized definition and is therefore unlikely to be comparable to similarly titled measures presented by other companies. ARR should be viewed independently of revenue and deferred revenue and is not intended to be combined with or to replace either of those items. For AxiomSL and Calypso recurring revenue contracts, the amount included in ARR is consistent with the amount that we invoice the customer during the current period. Additionally, for AxiomSL and Calypso recurring revenue contracts that include annual values that increase over time, we include in ARR only the annualized value of components of the contract that are considered active as of the date of the ARR calculation. We do not include the future committed increases in the contract value as of the date of the ARR calculation. ARR is not a forecast and the active contracts at the end of a reporting period used in calculating ARR may or may not be extended or renewed by our customers. (2) New listings include IPOs, issuers that switched from other listing venues, closed-end funds and separately listed ETPs. For the three months ended June 30, 2024 and 2023, IPOs included 8 and 5 SPACs, respectively. For the six months ended June 30, 2024 and 2023, IPOs included 13 and 15 SPACs, respectively. (3) New listings include IPOs and represent companies listed on the Nasdaq Nordic and Nasdaq Baltic exchanges and companies on the alternative markets of Nasdaq First North. (4) Number of total listings on The Nasdaq Stock Market for the six months ended June 30, 2024 and June 30, 2023 included 645 and 547 ETPs, respectively. (5) Represents companies listed on the Nasdaq Nordic and Nasdaq Baltic exchanges and companies on the alternative markets of Nasdaq First North. (6) Trailing 12-months. (7) Includes Finnish option contracts traded on Eurex for which Nasdaq and Eurex had a revenue sharing arrangement, which ended in the fourth quarter of 2023. (8) Includes transactions executed on The Nasdaq Stock Markets, Nasdaq BXs and Nasdaq PSXs systems plus trades reported through the Financial Industry Regulatory Authority/Nasdaq Trade Reporting Facility."
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "d779391dex992.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.2"
+    },
+    {
+      "type": "ImageElement",
+      "text": "NEWS RELEASE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Nasdaq Announces Quarterly Dividend of $0.24 Per Share NEW YORK, July 25, 2024  The Board of Directors of Nasdaq, Inc. (Nasdaq: NDAQ) has declared a regular quarterly dividend of $0.24 per share on the companys outstanding common stock. The dividend is payable on September 27, 2024 to shareholders of record at the close of business on September 13, 2024. Future declarations of quarterly dividends and the establishment of future record and payment dates are subject to approval by the Board of Directors. About Nasdaq Nasdaq (Nasdaq: NDAQ) is a leading global technology company serving corporate clients, investment managers, banks, brokers, and exchange operators as they navigate and interact with the global capital markets and the broader financial system. We aspire to deliver world-leading platforms that improve the liquidity, transparency, and integrity of the global economy. Our diverse offering of data, analytics, software, exchange capabilities, and client-centric services enables clients to optimize and execute their business vision with confidence. To learn more about the company, technology solutions, and career opportunities, visit us on LinkedIn, on X @Nasdaq, or at www.nasdaq.com. Cautionary Note Regarding Forward-Looking Statements Information set forth in this communication contains forward-looking statements that involve a number of risks and uncertainties. Nasdaq cautions readers that any forward-looking information is not a guarantee of future performance and that actual results could differ materially from those contained in the forward-looking information. Such forward-looking statements include, but are not limited to, information regarding our dividend program and future payment obligations. Forward-looking statements involve a number of risks, uncertainties or other factors beyond Nasdaqs control. These factors include, but are not limited to, Nasdaqs ability to implement its strategic initiatives, economic, political and market conditions and fluctuations, government and industry regulation, interest rate risk, U.S. and global competition, and other factors detailed in Nasdaqs filings with the U.S. Securities and Exchange Commission, including its annual reports on Form 10-K and quarterly reports on Form 10-Q which are available on Nasdaqs investor relations website at http://ir.nasdaq.com and the SECs website at www.sec.gov. Nasdaq undertakes no obligation to publicly update any forward-looking statement, whether as a result of new information, future events or otherwise. Media Relations Contacts: Nick Jannuzzi +1.973.760.1741 Nicholas.Jannuzzi@Nasdaq.com Nick Eghtessad +1.929.996.8894 Nick.Eghtessad@Nasdaq.com Investor Relations Contact: Ato Garrett +1.212.401.8737 Ato.Garrett@Nasdaq.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "-NDAQF-"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Second quarter 2024 net revenues1 were $1.2 billion, an increase of 25% over the second quarter of 2023, up 10% on a pro forma2 basis. This included Solutions3 revenues increasing 34%, or 13% on a pro forma basis."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Annualized Recurring Revenue (ARR)4 of $2.7 billion increased 29% over the second quarter of 2023, up 7% on a pro forma basis."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Financial Technology revenues of $420 million increased 79% over the second quarter of 2023, up 16% on a pro forma basis."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Index revenues of $167 million increased 29%, with $53 billion of net inflows over the trailing twelve months and $17 billion in the second quarter."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "GAAP diluted earnings per share decreased 30% in the second quarter of 2024. Non-GAAP5 diluted earnings per share decreased 3% in the second quarter of 2024, but increased 7% organically."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "In the second quarter of 2024, the company returned $138 million to shareholders through dividends and $58 million through share repurchases of common stock. The company also repaid a net $174 million of commercial paper in the second quarter of 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        10,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(US$ millions, except per share)",
+          "",
+          "2Q24",
+          "2Q24",
+          "",
+          "",
+          "Change % (YoY)",
+          "Change % (YoY)",
+          "",
+          "",
+          "Organic Change % (YoY)",
+          "Organic Change % (YoY)",
+          "",
+          "",
+          "Pro Forma Change % (YoY)*",
+          "Pro Forma Change % (YoY)*",
+          ""
+        ],
+        [
+          "Solutions Revenues",
+          "",
+          "$",
+          "901",
+          "",
+          "",
+          "",
+          "34",
+          "%",
+          "",
+          "",
+          "9",
+          "%",
+          "",
+          "",
+          "13",
+          "%"
+        ],
+        [
+          "Market Services Net Revenues",
+          "",
+          "$",
+          "250",
+          "",
+          "",
+          "",
+          "3",
+          "%",
+          "",
+          "",
+          "3",
+          "%",
+          "",
+          "",
+          "3",
+          "%"
+        ],
+        [
+          "Net Revenues**",
+          "",
+          "$",
+          "1159",
+          "",
+          "",
+          "",
+          "25",
+          "%",
+          "",
+          "",
+          "7",
+          "%",
+          "",
+          "",
+          "10",
+          "%"
+        ],
+        [
+          "GAAP Operating income",
+          "",
+          "$",
+          "423",
+          "",
+          "",
+          "",
+          "11",
+          "%",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Operating income",
+          "",
+          "$",
+          "620",
+          "",
+          "",
+          "",
+          "28",
+          "%",
+          "",
+          "",
+          "7",
+          "%",
+          "",
+          "",
+          "14",
+          "%"
+        ],
+        [
+          "ARR",
+          "",
+          "$",
+          "2668",
+          "",
+          "",
+          "",
+          "29",
+          "%",
+          "",
+          "",
+          "6",
+          "%",
+          "",
+          "",
+          "7",
+          "%"
+        ],
+        [
+          "GAAP Diluted EPS",
+          "",
+          "$",
+          "0.38",
+          "",
+          "",
+          "",
+          "(30",
+          ")%",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Diluted EPS",
+          "",
+          "$",
+          "0.69",
+          "",
+          "",
+          "",
+          "(3",
+          ")%",
+          "",
+          "",
+          "7",
+          "%",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "*",
+          "Pro forma results are presented assuming AxiomSL and Calypso were included in the prior year quarterly results. Pro forma growth excludes the impacts of foreign currency except for AxiomSL and Calypso, which are not yet calculated on an organic basis."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "**",
+          "Net revenues includes $8 million of Other Revenues, which primarily reflect revenues associated with the European power trading and clearing business."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Second quarter 2024 net revenues were $1.2 billion, an increase of $234 million, reflecting 25% growth versus the prior year period, or 10% growth on a pro forma basis. Revenue growth includes a $168 million benefit related to the acquisition of Adenza, partially offset by a $2 million decrease from the impact of changes in FX rates."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Solutions revenues were $901 million in the second quarter of 2024, an increase of $228 million, up 34% versus the prior year period, or 13% growth on a pro forma basis, reflecting strong growth from Index and Financial Technology."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "ARR grew 29% year over year, or 7% on a pro forma basis, in the second quarter with 13% pro forma ARR growth for Financial Technology and 1% ARR growth for Capital Access Platforms."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 1200.0,
+    "quarter_revenue_yoy_pct": 2550.0,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenues1 were $1.2 billion"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Solutions Revenues |  | $ | 901 |  | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 2,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 0,
+    "earnings_torque": 2,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "67.599998",
+    "return_10d_pct": "-4.7337",
+    "return_20d_pct": "3.2249",
+    "return_30d_pct": "4.4231",
+    "return_60d_pct": "8.9793",
+    "return_90d_pct": "11.3018"
+  },
+  "text_stats": {
+    "primary_text_len": 4726,
+    "exhibit_text_len": 52050,
+    "combined_text_len": 56778,
+    "semantic_text_len": 52008,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

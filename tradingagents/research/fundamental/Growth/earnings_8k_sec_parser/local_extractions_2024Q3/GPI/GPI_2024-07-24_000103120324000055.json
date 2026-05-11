@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GPI",
+    "cik": "1031203",
+    "event_date": "2024-07-24",
+    "event_accession": "0001031203-24-000055",
+    "primary_8k_doc": "gpi-20240724.htm",
+    "exhibit_docs": [
+      "a2024q2exhibit991.htm",
+      "d869242dex991.htm",
+      "d869242dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GPI_000103120324000055_gpi-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GPI_000103120324000055_a2024q2exhibit991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GPI_000103120324000055_d869242dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GPI_000103120324000055_d869242dex992.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GPI",
+    "cik": "1031203",
+    "entity_name": "Group 1 Automotive, Inc",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4130000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "158400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7774100000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-67000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-104600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "143400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.038354",
+    "operating_cash_flow_to_revenue": "0.034722",
+    "assets_to_revenue": "1.882349",
+    "financing_cash_flow_to_revenue": "-0.016223",
+    "investing_cash_flow_to_revenue": "-0.025327"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $4.",
+      "revenues of $2.",
+      "revenues of approximately $1.",
+      "revenues of recently completed acquisitions or dispositions and other benefits of such currently anticipated or recently completed acquisitions or dispositions.",
+      "net income from continuing operations was $137.",
+      "net income from continuing operations (a non-GAAP measure) was $133."
+    ],
+    "guidance_evidence": [
+      "expected to generate $105.",
+      "expected annual revenues of approximately $1.",
+      "expects,\" \"anticipates,\" \"intends,\" \"plans,\" \"believes,\" \"seeks,\" \"should,\" \"foresee,\" \"may\" or \"will\" and similar expressions.",
+      "expected future trends."
+    ],
+    "wave_or_demand_evidence": [
+      "customers efficiently and effectively.",
+      "customer relationships, sales, financing, service, inventory and back-office operations.",
+      "ailer with 206 dealerships located in the U.",
+      "aid Daryl Kenningham, Group 1’s President and Chief Executive Officer.",
+      "ains focused on the acquisition of Inchcape’s U.",
+      "ail automotive business planned for Q3 2024, and we look forward to the successful completion of the transaction which will further strengthen our U."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory and back-office operations.",
+      "restrictions.",
+      "impairment charges, out-of-period adjustments, legal matters, gains and losses on dealership franchise or real estate transactions, and catastrophic events, such as hailstorms, hurricanes, snow-storm, and employment compensation costs associated with the CDK outage.",
+      "impairments — 1.",
+      "impairments — 2.",
+      "INVENTORY (1) : Consolidated New vehicle inventory 56 37 27 Used vehicle inventory 34 35 35 U."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4700,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "323.869995",
+    "return_10d_pct": "4.5111",
+    "return_20d_pct": "4.8909",
+    "return_30d_pct": "14.0118",
+    "return_60d_pct": "18.2450",
+    "return_90d_pct": "7.7222"
+  },
+  "text_stats": {
+    "primary_text_len": 3571,
+    "exhibit_text_len": 68609,
+    "combined_text_len": 72182
+  }
+}

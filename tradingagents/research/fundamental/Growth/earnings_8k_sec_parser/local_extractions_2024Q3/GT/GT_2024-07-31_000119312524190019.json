@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GT",
+    "cik": "42582",
+    "event_date": "2024-07-31",
+    "event_accession": "0001193125-24-190019",
+    "primary_8k_doc": "d874126d8k.htm",
+    "exhibit_docs": [
+      "d874126dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GT_000119312524190019_d874126d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GT_000119312524190019_d874126dex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GT",
+    "cik": "42582",
+    "entity_name": "The Goodyear Tire & Rubber Company",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4941000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-101000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "21582000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "1075000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-456000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-775000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.020441",
+    "operating_cash_flow_to_revenue": "-0.156851",
+    "assets_to_revenue": "4.367942",
+    "financing_cash_flow_to_revenue": "0.217567",
+    "investing_cash_flow_to_revenue": "-0.092289"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were $4.",
+      "sales of $2.",
+      "sales of $1.",
+      "sales increased 1.",
+      "net income of $54 million (19 cents per share) Segment operating income of $339 million, up $215 million compared to the second quarter of 2023 Americas segment operating income of $241 million, SOI margin of 8.",
+      "operating income of $63 million, SOI margin of 10."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "aid Chief Executive Officer and President Mark Stewart.",
+      "aim recoveries, net of related expenses, and $50 million from the 2023 negative impact of the Tupelo storm.",
+      "ain significant items on the 2024 and 2023 periods.",
+      "aim recoveries, primarily related to the 2023 Tupelo storm.",
+      "ain on insurance recoveries and the Goodyear Forward plan.",
+      "aim recoveries, net of related expenses, resulting from a fire that impacted its Debica, Poland factory."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker underlying trends in the industry.",
+      "charges of $19 million.",
+      "charges of $72 million and a $51 million benefit from asset and other sales.",
+      "charges of $41 million, and a benefit of $86 million from asset and other sales.",
+      "charges of $104 million and a $52 million benefit from asset and other sales.",
+      "loss of $208 million (73 cents per share loss) a year ago."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4600,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "11.170000",
+    "return_10d_pct": "-30.3491",
+    "return_20d_pct": "-22.2919",
+    "return_30d_pct": "-24.6195",
+    "return_60d_pct": "-20.7699",
+    "return_90d_pct": "-26.9472"
+  },
+  "text_stats": {
+    "primary_text_len": 2793,
+    "exhibit_text_len": 25227,
+    "combined_text_len": 28022
+  }
+}

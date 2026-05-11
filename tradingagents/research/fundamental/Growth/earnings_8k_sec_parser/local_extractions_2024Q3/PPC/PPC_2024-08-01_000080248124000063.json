@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PPC",
+    "cik": "802481",
+    "event_date": "2024-08-01",
+    "event_accession": "0000802481-24-000063",
+    "primary_8k_doc": "ppc-20240731.htm",
+    "exhibit_docs": [
+      "a2024_q2ppcex991earningsre.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PPC_000080248124000063_ppc-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PPC_000080248124000063_a2024_q2ppcex991earningsre.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PPC",
+    "cik": "802481",
+    "entity_name": "PILGRIM’S PRIDE CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4165628000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-26",
+    "net_income_value": "5187000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-26",
+    "assets_value": "9810361000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "26881000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-26",
+    "investing_cash_flow_value": "-117471000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-26",
+    "operating_cash_flow_value": "-161704000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-26",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.001245",
+    "operating_cash_flow_to_revenue": "-0.038819",
+    "assets_to_revenue": "2.355074",
+    "financing_cash_flow_to_revenue": "0.006453",
+    "investing_cash_flow_to_revenue": "-0.0282"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Sales of $4.",
+      "Net sales of Just Bare ® grew double digits and ahead of the category; and our new and innovative offerings under the Pilgrim’s ® brand has secured incremental distribution.",
+      "Operating Income of $440.",
+      "GAAP operating income margin of 9.",
+      "GAAP Net Income of $326.",
+      "GAAP EPS of $1."
+    ],
+    "guidance_evidence": [
+      "anticipates,” “believes,” “estimates,” “expects,” “intends,” “may,” “plans,” “projects,” “should,” “targets,” “will” and the negative thereof and similar words and expressions are intended to identify forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "Customers with differentiated offerings, and Big Bird improved from better commodity fundamentals and progress in operational excellence.",
+      "Customers improved and operational excellence remained on track.",
+      "demand fundamentals, growth with Key Customers, and continued momentum of brands across Fresh and Prepared offerings.",
+      "Customers to support future growth.",
+      "Customers, elevating our performance as market fundamentals became increasingly attractive,” said Fabio Sandri, President and Chief Executive Officer.",
+      "Customers through differentiated and customized offerings; and Prepared Foods increased its marketplace presence through innovation of branded, value-added items across retail and food service."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment, contract termination, and others, as part of multiple ongoing restructuring initiatives throughout our Europe reportable segment.",
+      "charges on net income attributable to Pilgrim’s Pride Corporation per common diluted share.",
+      "losses (gains), (2) costs related to litigation settlements, (3) restructuring activities losses, (4) property insurance recoveries for property damage losses, and (5) net income attributable to noncontrolling interests.",
+      "losses resulting from these remeasurements were previously recognized in the line item Foreign currency transaction losses (gains) in the 8 Condensed Consolidated Statements of Income.",
+      "losses on outstanding balances are now recognized in accumulated other comprehensive income.",
+      "losses are included in the line item Foreign currency transaction losses (gains) in the Condensed Consolidated Statements of Income."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 440.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "42.290001",
+    "return_10d_pct": "3.9489",
+    "return_20d_pct": "3.9726",
+    "return_30d_pct": "8.3235",
+    "return_60d_pct": "13.7858",
+    "return_90d_pct": "14.5424"
+  },
+  "text_stats": {
+    "primary_text_len": 3099,
+    "exhibit_text_len": 38847,
+    "combined_text_len": 41948
+  }
+}

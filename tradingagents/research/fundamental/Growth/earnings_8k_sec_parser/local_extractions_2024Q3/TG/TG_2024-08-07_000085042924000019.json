@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TG",
+    "cik": "850429",
+    "event_date": "2024-08-07",
+    "event_accession": "0000850429-24-000019",
+    "primary_8k_doc": "tg-20240807.htm",
+    "exhibit_docs": [
+      "tg-20240630xearningsreleasea.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TG_000085042924000019_tg-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TG_000085042924000019_tg-20240630xearningsreleasea.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TG",
+    "cik": "850429",
+    "entity_name": "TREDEGAR CORP",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "468372000",
+    "revenue_fact_name": "SalesRevenueGoodsNet",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-08-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2017-06-30",
+    "net_income_value": "-1009000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "446461000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "13581000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-8763000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-9108000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.002154",
+    "operating_cash_flow_to_revenue": "-0.019446",
+    "assets_to_revenue": "0.953219",
+    "financing_cash_flow_to_revenue": "0.028996",
+    "investing_cash_flow_to_revenue": "-0.018709"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $705 million.",
+      "net income (loss) was $8.",
+      "Net income (loss) from ongoing operations, which excludes special items, was $10.",
+      "net income (loss), a financial measure calculated in accordance with U.",
+      "net income (loss) from ongoing operations, a non-GAAP financial measure, for the three and six months ended June 30, 2024 and 2023, is provided in Note (a) to the Financial Tables in this press release.",
+      "Net income (loss) $ 8,792 $ (18,922) $ 12,080 $ (19,934) Earnings (loss) per share: Basic $ 0."
+    ],
+    "guidance_evidence": [
+      "outlook for the consumer electronics market, EBITDA from ongoing operations performance is expected to moderate in the third quarter of 2024 as customer inventories and the Company's sales volume stabilize.",
+      "outlook on new product development opportunities, the Company performed a Step 1 goodwill impairment analysis, as of June 30, 2023 and September 30, 2023, of the Surface Protection component of PE Films.",
+      "expected by the end of the third quarter of 2024, should provide an additional opportunity for Bonnell Aluminum to regain market share.",
+      "projects and $5 million for capital expenditures required to support continuity of operations.",
+      "expected to moderate in the third quarter of 2024 as customer inventories and the Company's sales volume stabilize.",
+      "projects and $1 million for capital expenditures required to support continuity of current operations."
+    ],
+    "wave_or_demand_evidence": [
+      "orders at the end of the second quarter of 2024 were approximately 14 million pounds (versus 20 million pounds in the second quarter of 2023 and 15 million pounds at the end of the first quarter of 2024).",
+      "orders increased 17% in the second quarter of 2024 versus the second quarter of 2023 and were relatively flat versus the first quarter of 2024.",
+      "orders and sales volume have increased since the apparent bottom.",
+      "orders from the favorable preliminary determinations of duties on imports that were made in March and May by U.",
+      "orders, which remain low compared to pre-pandemic levels, increased 17% in the second quarter of 2024 versus the second quarter of 2023 and were relatively flat compared to the first quarter of 2024.",
+      "orders for the Company's aluminum extruded products have generally tracked the ISM ® Manufacturing PMI ® ."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary determinations of duties on imports that were made in March and May by U.",
+      "preliminary determination found that subject import volumes were significant and increasing, and that with regard to pricing, subject imports predominantly undersold the domestic product by volume in each year of the period of investigation.",
+      "preliminary determinations of duties are starting to have the desired behavioral impact of shifting related customer purchases back to U.",
+      "charge of $1.",
+      "charge of $0.",
+      "inventory, owned real properties and owned machinery and equipment."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 0.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "5.380000",
+    "return_10d_pct": "8.7361",
+    "return_20d_pct": "11.8959",
+    "return_30d_pct": "12.0818",
+    "return_60d_pct": "32.7137",
+    "return_90d_pct": "69.8885"
+  },
+  "text_stats": {
+    "primary_text_len": 3426,
+    "exhibit_text_len": 59010,
+    "combined_text_len": 62438
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CL",
+    "cik": "21665",
+    "event_date": "2024-07-26",
+    "event_accession": "0000021665-24-000029",
+    "primary_8k_doc": "cl-20240726.htm",
+    "exhibit_docs": [
+      "q22024pressreleasetables.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CL_000002166524000029_cl-20240726.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CL_000002166524000029_q22024pressreleasetables.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CL",
+    "cik": "21665",
+    "entity_name": "COLGATE-PALMOLIVE COMPANY",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4770000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "372000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "16393000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-375000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-264000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "735000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.077987",
+    "operating_cash_flow_to_revenue": "0.154088",
+    "assets_to_revenue": "3.436688",
+    "financing_cash_flow_to_revenue": "-0.078616",
+    "investing_cash_flow_to_revenue": "-0.055346"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales increased 4.",
+      "sales of our products, relative to all product sales in the category in the countries in which the Company competes and purchases data (excluding Venezuela from all periods).",
+      "sales of non-core product lines and assets.",
+      "GAAP EPS increased 48% to $0.",
+      "EPS* increased 18% to $0.",
+      "EPS (diluted) $0."
+    ],
+    "guidance_evidence": [
+      "guidance for full year 2024 Second Quarter Total Company Results (GAAP) ($ in millions except per share amounts) 2024 2023 Change Net Sales $5,058 $4,822 +4.",
+      "Guidance Based on current spot rates: • The Company still expects net sales growth of 2% to 5% including a mid-single-digit negative impact from foreign exchange.",
+      "guidance to 6% to 8% (versus 5% to 7% previously).",
+      "guidance to 8% to 11% (versus mid to high-single-digit previously).",
+      "expects net sales growth of 2% to 5% including a mid-single-digit negative impact from foreign exchange.",
+      "expects gross profit margin expansion, increased advertising investment and double-digit earnings per share growth."
+    ],
+    "wave_or_demand_evidence": [
+      "airman, President and Chief Executive Officer, commented on the Base Business second quarter results, “We are very pleased to have delivered another quarter of strong top and bottom line results.",
+      "aising its organic sales growth guidance to 6% to 8% (versus 5% to 7% previously).",
+      "aine, EltaMD, Filorga, Irish Spring, Lady Speed Stick, PCA SKIN, Protex, Sanex, Softsoap, Speed Stick, Ajax, Axion, Fabuloso, Murphy, Soupline and Suavitel, as well as Hill’s Science Diet and Hill’s Prescription Diet.",
+      "ailability of up-to-date information.",
+      "ailable for certain retail channels, such as eCommerce and certain club retailers and discounters.",
+      "ailable, which typically reflects a lag time of one or two months."
+    ],
+    "warning_or_risk_evidence": [
+      "charges related to an ERISA litigation matter, a foreign tax matter, the 2022 Global Productivity Initiative and product recall costs.",
+      "charges, charges for certain litigation and tax matters, acquisition-related costs, gains and losses from certain divestitures and certain other unusual, non-recurring items.",
+      "charges and gains and losses on sales of non-core product lines and assets.",
+      "charges resulting from the 2022 Global Productivity Initiative of $27 and $18, respectively.",
+      "charges resulting from the 2022 Global Productivity Initiative of $63.",
+      "charges resulting from the 2022 Global Productivity Initiative of $23."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-29",
+    "entry_open": "100.800003",
+    "return_10d_pct": "1.8948",
+    "return_20d_pct": "1.0417",
+    "return_30d_pct": "4.9504",
+    "return_60d_pct": "2.8373",
+    "return_90d_pct": "-5.0198"
+  },
+  "text_stats": {
+    "primary_text_len": 4125,
+    "exhibit_text_len": 32092,
+    "combined_text_len": 36219
+  }
+}

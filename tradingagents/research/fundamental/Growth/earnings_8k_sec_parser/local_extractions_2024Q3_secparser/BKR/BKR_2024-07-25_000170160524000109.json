@@ -1,0 +1,2452 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BKR",
+    "cik": "1701605",
+    "event_date": "2024-07-25",
+    "event_accession": "0001701605-24-000109",
+    "primary_8k_doc": "bkr-20240725.htm",
+    "exhibit_docs": [
+      "earningsreleaseex991063020.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKR_000170160524000109_bkr-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKR_000170160524000109_earningsreleaseex991063020.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BKR",
+    "cik": "1701605",
+    "entity_name": "Baker Hughes Co",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5716000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "576000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "36945000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-250000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-229000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "461000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.10077",
+    "operating_cash_flow_to_revenue": "0.080651",
+    "assets_to_revenue": "6.463436",
+    "financing_cash_flow_to_revenue": "-0.043737",
+    "investing_cash_flow_to_revenue": "-0.040063"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $7.",
+      "revenue of $4,011 million for the second quarter was up 6% sequentially, and up 3% year-over-year.",
+      "revenue was $1,023 million, up 3% sequentially.",
+      "revenue was $2,988 million, an increase of 7% sequentially, driven by volume growth in the Middle East/Asia and Europe/CIS/Sub-Saharan Africa regions.",
+      "revenue of $3,128 million for the quarter increased $691 million, or 28% year-over-year.",
+      "Net income attributable to the Company of $579 million."
+    ],
+    "guidance_evidence": [
+      "guidance by 5% and are confident in our ability to drive margins structurally higher over the coming years,\" said Lorenzo Simonelli, Baker Hughes Chairman and Chief Executive Officer.",
+      "outlook and the results reported in today's earnings announcement.",
+      "outlook and business plans; the business plans of our customers; oil and natural gas market conditions; cost and availability of resources; economic, legal and regulatory conditions, and other matters are only our forecasts regarding these matters.",
+      "expected to support Jubarte incremental field development and increase oil production while reducing operating costs.",
+      "expected to drive optimization and efficiencies.",
+      "expected to enhance gas operations and power CO2 capture to reduce the carbon intensity at the customer's LNG facility."
+    ],
+    "wave_or_demand_evidence": [
+      "Orders of $7.",
+      "orders.",
+      "orders during the quarter that included a large SONATRACH award for gas-boosting in Algeria's Hassi R'Mel gas field.",
+      "bookings in the Company's history and again underscores the breadth and versatility of our IET portfolio.",
+      "orders, also a record for the Company.",
+      "customers in other regions."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment— — (15)— %100 %Restructuring, impairment & other(14)(7)(102)(95 %)87 %Operating income833 653 514 28 %62 %Adjusted operating income*847 660 631 28 %34 %Depreciation & amortization283 283 276 — %3 %Adjusted EBITDA*$1,130 $943 $907 20 %25 % * Non-GAAP measure.",
+      "impairment— — 15 Total operating income adjustments14 7 117 Adjusted operating income (non-GAAP)$847 $660 $631 Table 1a reconciles operating income, which is the directly comparable financial result determined in accordance with GAAP, to adjusted operating income.",
+      "loss on changes in fair value for certain equity investments.",
+      "uncertainties that could cause actual results to differ materially from our forward-looking statements.",
+      "declines in credit availability may have on worldwide economic growth and demand for hydrocarbons; foreign currency exchange fluctuations and changes in the capital markets in locations where we operate; and the impact of government disruptions and sanctions."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "earningsreleaseex991063020.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Baker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second-quarter highlights"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•Orders of $7.5 billion, including $3.5 billion of IET orders."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•RPO of $33.5 billion, including record IET RPO of $30.2 billion."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•Revenue of $7.1 billion, up 13% year-over-year."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•Net income attributable to the Company of $579 million."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•GAAP diluted EPS of $0.58 and adjusted diluted EPS* of $0.57."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•Adjusted EBITDA* of $1,130 million, up 25% year-over-year."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•Cash flows from operating activities of $348 million and free cash flow* of $106 million."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•Returns to shareholders of $375 million, including $166 million of share repurchases."
+    },
+    {
+      "type": "TextElement",
+      "text": "HOUSTON & LONDON (July 25, 2024) – Baker Hughes Company (Nasdaq: BKR) (\"Baker Hughes\" or the \"Company\") announced results today for the second quarter of 2024.\"Our strong second-quarter results further demonstrate that we are on the right path in executing our strategy. We continue to strengthen our operating performance, which is driving meaningful margin expansion across both segments. Following our first-half outperformance, we are raising the midpoint of our full-year guidance by 5% and are confident in our ability to drive margins structurally higher over the coming years,\" said Lorenzo Simonelli, Baker Hughes Chairman and Chief Executive Officer.\"Order momentum continues, highlighted by $3.5 billion of IET orders during the quarter that included a large SONATRACH award for gas-boosting in Algeria's Hassi R'Mel gas field. This marks the highest quarterly non-LNG equipment bookings in the Company's history and again underscores the breadth and versatility of our IET portfolio. New energy continues to gain momentum as we booked $445 million of orders, also a record for the Company.\"\"Across both segments, we delivered outstanding second-quarter results, leading to a 25% year-over-year increase in total company adjusted EBITDA and 46% growth in adjusted EPS. Total company adjusted EBITDA margins increased almost 150 basis points year-over-year to 15.8%. This is a testament to the enhanced operational rigor that is being exercised across our IET and OFSE segments.\"\"We continued the positive trend of returning meaningful cash to shareholders. In the quarter, we paid dividends of $209 million and repurchased $166 million of shares, remaining on course to return 60% - 80% of free cash flow to our shareholders.\"\"Our exceptional second-quarter results are a credit to the hard work and dedication of the employees at Baker Hughes; I recognize this and express my sincere thanks to all of you,\" concluded Simonelli."
+    },
+    {
+      "type": "TitleElement",
+      "text": "* Non-GAAP measure. See reconciliations in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\""
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months EndedVariance(in millions except per share amounts)June 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearOrders$7,526 $6,542 $7,474 15 %1 %Revenue7,139 6,418 6,315 11 %13 %Net income attributable to Baker Hughes579 455 410 27 %41 %Adjusted net income attributable to Baker Hughes*568 429 395 32 %44 %Operating income833 653 514 28 %62 %Adjusted operating income*847 660 631 28 %34 %Adjusted EBITDA*1,130 943 907 20 %25 %Diluted earnings per share (EPS)0.58 0.45 0.40 28 %43 %Adjusted diluted EPS*0.57 0.43 0.39 33 %46 %Cash flow from operating activities348 784 858 (56 %)(59 %)Free cash flow*106 502 623 (79 %)(83 %)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "* Non-GAAP measure. See reconciliations in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\" EBITDA margin is defined as EBITDA divided by revenue."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "\"F\" is used in most instances when variance is above 100%. Additionally, \"U\" is used when variance is below (100)%."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "Certain columns and rows in our tables and financial statements may not sum up due to the use of rounded numbers."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Quarter Highlights"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Oilfield Services & Equipment (\"OFSE\") business segment continued to strengthen its relationship with Petrobras, receiving multiple significant contracts for integrated and mature assets solutions. Baker Hughes was awarded a major multi-year contract for workover and plug and abandonment services in pre-salt and post-salt fields offshore Brazil, as well as remedial tools, completion fluids and production chemicals. Separately, Petrobras awarded Baker Hughes a contract for seabed centrifugal pumping systems for the Jubarte field, which is expected to support Jubarte incremental field development and increase oil production while reducing operating costs.OFSE's mature assets solutions continued to see growth with customers in other regions. The State Oil Company of Azerbaijan Republic signed a joint cooperation agreement with Baker Hughes to employ more than 150 electrical submersible pumps and the automated field production solution, Leucipa™, in the nation's oilfields, which is expected to drive optimization and efficiencies.Industrial & Energy Technology (\"IET\") continued its leadership in gas technology. In Algeria, Baker Hughes was awarded a major Gas Technology Equipment (\"GTE\") contract for SONATRACH’s Hassi R’ Mel gas field, as part of a consortium with Tecnimont (MAIRE). For the project, Baker Hughes will provide the turbomachinery equipment for three gas-boosting stations.GTE also secured two major offshore topside contracts to provide power generation systems for two innovative all-electric Floating Production Storage and Offloading units, which will be installed offshore in Latin America. These awards further build on IET's positive momentum in this specific market segment in recent years.During the quarter, Baker Hughes signed a 10-year services frame agreement with Woodside Energy to support LNG operations in Australia. Gas Technology Services (\"GTS\") also extended a service agreement with a major North American LNG customer and was awarded a 25-year service agreement to support a customer's offshore operations in Latin America."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "In Asia Pacific, Baker Hughes secured a major GTE and Climate Technology Solutions (\"CTS\") contract to supply electric-driven compression and power generation technology to a global energy operator, which is expected to enhance gas operations and power CO2 capture to reduce the carbon intensity at the customer's LNG facility.Baker Hughes also continues to build on its strategic global collaboration with Air Products announced in 2021. It received multiple orders for advanced hydrogen, syngas and CO2 solutions in Air Products' projects across the globe. Orders secured for the quarter also included CO2 and hydrogen compressors, as well as pumps for one of Air Products' projects in North America. In Germany, CTS also secured an order to provide Gasunie Deutschland with three ICL zero-emissions integrated compressors, providing increased compression capacity to handle the large volumes of gas entering the network from new LNG import terminals.IET saw increased customer traction with its digital portfolio, securing a multimillion-dollar Global Frame Agreement to provide bp with an enterprise subscription for Cordant™ Asset Health, which is expected to enable the customer to deliver reliable, efficient condition monitoring and support its digital optimization strategy. The agreement covers all of bp's upstream and downstream installed base."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Revenue and Operating Income by Reporting Segment"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)Three Months EndedVarianceJune 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearOilfield Services & Equipment$4,011 $3,783 $3,877 6 %3 %Industrial & Energy Technology 3,128 2,634 2,438 19 %28 %Total segment revenue7,139 6,418 6,315 11 %13 %Oilfield Services & Equipment493 422 417 17 %18 %Industrial & Energy Technology442 330 311 34 %42 %Total segment operating income935 752 728 24 %28 %Corporate(88)(92)(97)4 %9 %Inventory impairment— — (15)— %100 %Restructuring, impairment & other(14)(7)(102)(95 %)87 %Operating income833 653 514 28 %62 %Adjusted operating income*847 660 631 28 %34 %Depreciation & amortization283 283 276 — %3 %Adjusted EBITDA*$1,130 $943 $907 20 %25 %"
+    },
+    {
+      "type": "TitleElement",
+      "text": "* Non-GAAP measure. See reconciliations in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\""
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "\"F\" is used when variance is above 100%. Additionally, \"U\" is used when variance is below (100)%."
+    },
+    {
+      "type": "TextElement",
+      "text": "Revenue for the quarter was $7,139 million, an increase of 11% sequentially and an increase of 13% year-over-year. The increase in revenue year-over-year was driven by higher volume in both IET and OFSE.The Company's total book-to-bill ratio in the quarter was 1.1; the IET book-to-bill ratio in the quarter was also 1.1.Operating income as determined in accordance with Generally Accepted Accounting Principles (\"GAAP\"), for the second quarter of 2024 was $833 million. Operating income increased $180 million sequentially and increased $319 million year-over-year. Total segment operating income was $935 million for the second quarter of 2024, up 24% sequentially and up 28% year-over-year."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjusted operating income (a non-GAAP financial measure) for the second quarter of 2024 was $847 million, which excludes adjustments totaling $14 million before tax. A list of the adjusting items and associated reconciliation from GAAP has been provided in Table 1a in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\" Adjusted operating income for the second quarter of 2024 was up 28% sequentially and up 34% year-over-year.Depreciation and amortization for the second quarter of 2024 was $283 million.Adjusted EBITDA (a non-GAAP financial measure) for the second quarter of 2024 was $1,130 million, which excludes adjustments totaling $14 million before tax. See Table 1b in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\" Adjusted EBITDA for the second quarter was up 20% sequentially and up 25% year-over-year.The sequential increase in adjusted operating income and adjusted EBITDA was driven by higher volume and pricing, partially offset by negative mix in IET and OFSE. The year-over-year increase in adjusted operating income and adjusted EBITDA was driven by higher volume and pricing in both segments and structural cost-out initiatives, partially offset by cost inflation and negative mix in both segments.Corporate costs were $88 million in the second quarter of 2024, down 4% sequentially and down 9% year-over-year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Other Financial Items"
+    },
+    {
+      "type": "TextElement",
+      "text": "Remaining Performance Obligations (\"RPO\") in the second quarter ended at $33.5 billion, an increase of $0.8 billion from the first quarter of 2024. OFSE RPO was $3.3 billion, down 1% sequentially, while IET RPO was $30.2 billion, up 3% sequentially. Within IET RPO, GTE RPO was $11.8 billion and GTS RPO was $14.8 billion.Income tax expense in the second quarter of 2024 was $243 million.Other non-operating income in the second quarter of 2024 was $38 million. Included in other non-operating income were net mark-to-market gains in fair value for certain equity investments of $19 million.GAAP diluted earnings per share was $0.58. Adjusted diluted earnings per share (a non-GAAP financial measure) was $0.57. Excluded from adjusted diluted earnings per share were all items listed in Table 1c in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\"Cash flow from operating activities was $348 million for the second quarter of 2024. Free cash flow (a non-GAAP financial measure) for the quarter was $106 million. A reconciliation from GAAP has been provided in Table 1d in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\"Capital expenditures, net of proceeds from disposal of assets, were $242 million for the second quarter of 2024. Capital expenditures, net of proceeds from disposal of assets, were $167 million for OFSE, and $65 million for IET."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Results by Reporting Segment"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "The following segment discussions and variance explanations are intended to reflect management's view of the relevant comparisons of financial results on a sequential or year-over-year basis, depending on the business dynamics of the reporting segments."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Oilfield Services & Equipment"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)Three Months EndedVarianceSegment resultsJune 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearOrders$4,068 $3,624 $4,192 12 %(3 %)Revenue$4,011 $3,783 $3,877 6 %3 %Operating income$493 $422 $417 17 %18 %Operating income margin12.3 %11.1 %10.8 %1.2pts1.5ptsDepreciation & amortization$223 $222 $219 — %2 %EBITDA*$716 $644 $636 11 %13 %EBITDA margin*17.8 %17.0 %16.4 %0.8pts1.4pts"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)Three Months EndedVarianceRevenue by Product LineJune 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearWell Construction$1,090 $1,061 $1,076 3 %1 %Completions, Intervention & Measurements1,118 1,006 1,090 11 %2 %Production Solutions958 945 959 1 %— %Subsea & Surface Pressure Systems845 771 752 10 %12 %Total Revenue$4,011 $3,783 $3,877 6 %3 %"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)Three Months EndedVarianceRevenue by Geographic RegionJune 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearNorth America$1,023 $990 $1,042 3 %(2 %)Latin America663 637 698 4 %(5 %)Europe/CIS/Sub-Saharan Africa827 750 672 10 %23 %Middle East/Asia1,498 1,405 1,465 7 %2 %Total Revenue$4,011 $3,783 $3,877 6 %3 %North America$1,023 $990 $1,042 3 %(2 %)International2,988 2,793 2,835 7 %5 %"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "* Non-GAAP measure. See reconciliations in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\" EBITDA margin is defined as EBITDA divided by revenue."
+    },
+    {
+      "type": "TextElement",
+      "text": "OFSE orders of $4,068 million for the second quarter increased by $444 million sequentially. Subsea and Surface Pressure Systems orders were $888 million, up 40% sequentially, and down 17% year-over-year.OFSE revenue of $4,011 million for the second quarter was up 6% sequentially, and up 3% year-over-year."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "North America revenue was $1,023 million, up 3% sequentially. International revenue was $2,988 million, an increase of 7% sequentially, driven by volume growth in the Middle East/Asia and Europe/CIS/Sub-Saharan Africa regions.Segment operating income for the second quarter was $493 million, an increase of $71 million, or 17%, sequentially. Segment EBITDA for the second quarter was $716 million, an increase of $72 million, or 11% sequentially. The sequential increase in segment operating income and EBITDA was primarily driven by volume and price."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Industrial & Energy Technology"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)Three Months EndedVarianceSegment resultsJune 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearOrders$3,458 $2,918 $3,282 19 %5 %Revenue$3,128 $2,634 $2,438 19 %28 %Operating income$442 $330 $311 34 %42 %Operating income margin14.1 %12.5 %12.8 %1.6pts1.3ptsDepreciation & amortization$55 $56 $52 (3 %)5 %EBITDA*$497 $386 $363 29 %37 %EBITDA margin*15.9 %14.7 %14.9 %1.2pts1pts"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)Three Months EndedVarianceOrders by Product LineJune 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearGas Technology Equipment$1,493 $1,230 $1,547 21 %(4 %)Gas Technology Services769 692 776 11 %(1 %)Total Gas Technology2,261 1,922 2,324 18 %(3 %)Industrial Products524 546 550 (4 %)(5 %)Industrial Solutions281 257 255 9 %10 %Controls (1)— — — — %— %Total Industrial Technology805 803 806 — %— %Climate Technology Solutions392 193 152 FFTotal Orders$3,458 $2,918 $3,282 19 %5 %"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)Three Months EndedVarianceRevenue by Product LineJune 30, 2024March 31, 2024June 30, 2023SequentialYear-over-yearGas Technology Equipment$1,539 $1,210 $968 27 %59 %Gas Technology Services691 614 658 13 %5 %Total Gas Technology2,230 1,824 1,626 22 %37 %Industrial Products509 462 506 10 %1 %Industrial Solutions262 265 242 (1 %)8 %Controls (1)— — 1 — %UTotal Industrial Technology770 727 749 6 %3 %Climate Technology Solutions128 83 62 54 %FTotal Revenue$3,128 $2,634 $2,438 19 %28 %"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "* Non-GAAP measure. See reconciliations in the section titled \"Reconciliation of GAAP to non-GAAP Financial Measures.\" EBITDA margin is defined as EBITDA divided by revenue."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "\"F\" is used when variance is above 100%. Additionally, \"U\" is used when variance is below (100)%."
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)The sale of our controls business was completed in April 2023.IET orders of $3,458 million for the second quarter increased by $177 million, or 5% year-over-year. The increase was driven primarily by Climate Technology Solutions orders which were up $240 million year-over-year."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "IET revenue of $3,128 million for the quarter increased $691 million, or 28% year-over-year. The increase was driven primarily by GTE, up $571 million or 59% year-over-year.Segment operating income for the quarter was $442 million, up 42% year-over-year. Segment EBITDA for the quarter was $497 million, up $133 million, or 37% year-over-year. The year-over-year increase in segment operating income and EBITDA was primarily driven by higher volume, pricing and productivity, partially offset by unfavorable mix as a result of higher GTE growth and cost inflation."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP to non-GAAP Financial Measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "Management provides non-GAAP financial measures because it believes such measures are widely accepted financial indicators used by investors and analysts to analyze and compare companies on the basis of operating performance (including adjusted operating income; EBITDA; EBITDA margin; adjusted EBITDA; adjusted net income attributable to Baker Hughes; and adjusted diluted earnings per share) and liquidity (free cash flow) and that these measures may be used by investors to make informed investment decisions. Management believes that the exclusion of certain identified items from several key operating performance measures enables us to evaluate our operations more effectively, to identify underlying trends in the business, and to establish operational goals for certain management compensation purposes. Management also believes that free cash flow is an important supplemental measure of our cash performance but should not be considered as a measure of residual cash flow available for discretionary purposes, or as an alternative to cash flow from operating activities presented in accordance with GAAP."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Table 1a. Reconciliation of GAAP and Adjusted Operating Income"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended(in millions)June 30, 2024March 31, 2024June 30, 2023Operating income (GAAP)$833 $653 $514 Restructuring, impairment & other14 7 102 Inventory impairment— — 15 Total operating income adjustments14 7 117 Adjusted operating income (non-GAAP)$847 $660 $631"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 1a reconciles operating income, which is the directly comparable financial result determined in accordance with GAAP, to adjusted operating income. Adjusted operating income excludes the impact of certain identified items."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Table 1b. Reconciliation of Net Income Attributable to Baker Hughes to EBITDA and Adjusted EBITDA"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended(in millions)June 30, 2024March 31, 2024June 30, 2023Net income attributable to Baker Hughes (GAAP)$579 $455 $410 Net income attributable to noncontrolling interests2 8 4 Provision for income taxes243 178 200 Interest expense, net47 41 58 Other non-operating income, net(38)(29)(158)Operating income (GAAP)833 653 514 Depreciation & amortization283 283 276 EBITDA (non-GAAP)1,116 936 790 Total operating income adjustments (1)14 7 117 Adjusted EBITDA (non-GAAP)$1,130 $943 $907"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)See Table 1a for the identified adjustments to operating income.Table 1b reconciles net income attributable to Baker Hughes, which is the directly comparable financial result determined in accordance with GAAP, to EBITDA (a non-GAAP financial measure). Adjusted EBITDA excludes the impact of certain identified items."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Table 1c. Reconciliation of Net Income Attributable to Baker Hughes to Adjusted Net Income Attributable to Baker Hughes"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended(in millions, except per share amounts)June 30, 2024March 31, 2024June 30, 2023Net income attributable to Baker Hughes (GAAP)$579 $455 $410 Total operating income adjustments (1)14 7 117 Other adjustments (non-operating) (2)(19)(27)(156)Tax adjustments (3)(6)(6)24 Total adjustments, net of income tax(11)(26)(15)Less: adjustments attributable to noncontrolling interests— — — Adjustments attributable to Baker Hughes(11)(26)(15)Adjusted net income attributable to Baker Hughes (non-GAAP)$568 $429 $395 Denominator:Weighted-average shares of Class A common stock outstanding diluted1,001 1,004 1,015 Adjusted earnings per share - diluted (non-GAAP)$0.57 $0.43 $0.39"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)See Table 1a for the identified adjustments to operating income.(2)All periods primarily reflect the net gain or loss on changes in fair value for certain equity investments.(3)All periods reflect the tax associated with the other operating and non-operating adjustments.Table 1c reconciles net income attributable to Baker Hughes, which is the directly comparable financial result determined in accordance with GAAP, to adjusted net income attributable to Baker Hughes (a non-GAAP financial measure). Adjusted net income attributable to Baker Hughes excludes the impact of certain identified items."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Table 1d. Reconciliation of Net Cash Flows From Operating Activities to Free Cash Flow"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended(in millions)June 30, 2024March 31, 2024June 30, 2023Net cash flows from operating activities (GAAP)$348 $784 $858 Add: cash used for capital expenditures, net of proceeds from disposal of assets(242)(282)(235)Free cash flow (non-GAAP)$106 $502 $623"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 1d reconciles net cash flows from operating activities, which is the directly comparable financial result determined in accordance with GAAP, to free cash flow. Free cash flow is defined as net cash flows from operating activities less expenditures for capital assets plus proceeds from disposal of assets."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Financial Tables (GAAP)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Income (Loss)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30,Six Months Ended June 30,(In millions, except per share amounts)2024202320242023Revenue$7,139 $6,315 $13,557 $12,030 Costs and expenses:Cost of revenue5,649 5,004 10,789 9,569 Selling, general and administrative643 695 1,261 1,351 Restructuring, impairment and other14 102 21 158 Total costs and expenses6,306 5,801 12,071 11,078 Operating income833 514 1,486 952 Other non-operating income, net38 158 67 544 Interest expense, net(47)(58)(88)(122)Income before income taxes 824 614 1,465 1,374 Provision for income taxes(243)(200)(421)(379)Net income581 414 1,044 995 Less: Net income attributable to noncontrolling interests2 4 10 10 Net income attributable to Baker Hughes Company$579 $410 $1,034 $985 Per share amounts:Basic income per Class A common stock$0.58 $0.41 $1.04 $0.98 Diluted income per Class A common stock$0.58 $0.40 $1.03 $0.97 Weighted average shares:Class A basic996 1,010 997 1,010 Class A diluted1,001 1,015 1,002 1,016 Cash dividend per Class A common stock$0.21 $0.19 $0.42 $0.38"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Financial Position"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In millions)June 30, 2024December 31, 2023ASSETSCurrent Assets:Cash and cash equivalents$2,284 $2,646 Current receivables, net7,051 7,075 Inventories, net5,126 5,094 All other current assets1,469 1,486 Total current assets15,930 16,301 Property, plant and equipment, less accumulated depreciation4,951 4,893 Goodwill6,105 6,137 Other intangible assets, net4,019 4,093 Contract and other deferred assets1,868 1,756 All other assets3,783 3,765 Total assets$36,656 $36,945 LIABILITIES AND EQUITYCurrent Liabilities:Accounts payable$4,649 $4,471 Short-term and current portion of long-term debt34 148 Progress collections and deferred income5,506 5,542 All other current liabilities2,397 2,830 Total current liabilities12,586 12,991 Long-term debt5,861 5,872 Liabilities for pensions and other postretirement benefits984 978 All other liabilities1,504 1,585 Equity15,721 15,519 Total liabilities and equity$36,656 $36,945 Outstanding Baker Hughes Company shares:Class A common stock993 998"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three MonthsEndedJune 30,Six Months EndedJune 30,(In millions)202420242023Cash flows from operating activities:Net income$581 $1,044 $995 Adjustments to reconcile net income to net cash flows from operating activities:Depreciation and amortization283 566 545 Stock-based compensation cost50 101 98 Gain on equity securities(19)(71)(540)Provision for deferred income taxes57 33 110 Other asset impairments— — 33 Working capital(245)(36)176 Other operating items, net(359)(505)(97)Net cash flows from operating activities348 1,132 1,320 Cash flows from investing activities:Expenditures for capital assets(292)(625)(587)Proceeds from disposal of assets50 101 87 Proceeds from business dispositions— — 293 Net cash paid for acquisitions— — (282)Other investing items, net(19)(6)75 Net cash flows used in investing activities(261)(530)(414)Cash flows from financing activities:Repayment of long-term debt(117)(125)— Dividends paid(209)(419)(384)Repurchase of Class A common stock(166)(324)(99)Other financing items, net(10)(61)(67)Net cash flows used in financing activities(502)(929)(550)Effect of currency exchange rate changes on cash and cash equivalents(18)(35)(39)Increase (decrease) in cash and cash equivalents(433)(362)317 Cash and cash equivalents, beginning of period2,717 2,646 2,488 Cash and cash equivalents, end of period$2,284 $2,284 $2,805 Supplemental cash flows disclosures:Income taxes paid, net of refunds$228 $336 $323 Interest paid$102 $150 $157"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "13"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Supplemental Financial Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental financial information can be found on the Company's website at: investors.bakerhughes.com in the Financial Information section under Quarterly Results."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call and Webcast"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company has scheduled an investor conference call to discuss management's outlook and the results reported in today's earnings announcement. The call will begin at 9:30 a.m. Eastern time, 8:30 a.m. Central time on Friday, July 26, 2024, the content of which is not part of this earnings release. The conference call will be broadcast live via a webcast and can be accessed by visiting the Events and Presentations page on the Company's website at: investors.bakerhughes.com. An archived version of the webcast will be available on the website for one month following the webcast."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "This news release (and oral statements made regarding the subjects of this release) may contain forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended, (each a \"forward-looking statement\"). Forward-looking statements concern future circumstances and results and other statements that are not historical facts and are sometimes identified by the words \"may,\" \"will,\" \"should,\" \"potential,\" \"intend,\" \"expect,\" \"would,\" \"seek,\" \"anticipate,\" \"estimate,\" \"overestimate,\" \"underestimate,\" \"believe,\" \"could,\" \"project,\" \"predict,\" \"continue,\" \"target\", \"goal\" or other similar words or expressions. There are many risks and uncertainties that could cause actual results to differ materially from our forward-looking statements. These forward-looking statements are also affected by the risk factors described in the Company's annual report on Form 10-K for the annual period ended December 31, 2023 and those set forth from time to time in other filings with the Securities and Exchange Commission (\"SEC\"). The documents are available through the Company's website at: www.investors.bakerhughes.com or through the SEC's Electronic Data Gathering and Analysis Retrieval system at: www.sec.gov. We undertake no obligation to publicly update or revise any forward-looking statement, except as required by law. Readers are cautioned not to place undue reliance on any of these forward-looking statements.Our expectations regarding our business outlook and business plans; the business plans of our customers; oil and natural gas market conditions; cost and availability of resources; economic, legal and regulatory conditions, and other matters are only our forecasts regarding these matters.These forward-looking statements, including forecasts, may be substantially different from actual results, which are affected by many risks, along with the following risk factors and the timing of any of these risk factors:•Economic and political conditions - the impact of worldwide economic conditions and rising inflation; the effect that declines in credit availability may have on worldwide economic growth and demand for hydrocarbons; foreign currency exchange fluctuations and changes in the capital markets in locations where we operate; and the impact of government disruptions and sanctions.•Orders and RPO - our ability to execute on orders and RPO in accordance with agreed specifications, terms and conditions and convert those orders and RPO to revenue and cash.•Oil and gas market conditions - the level of petroleum industry exploration, development and production expenditures; the price of, volatility in pricing of, and the demand for crude oil and natural gas; drilling activity; drilling permits for and regulation of the shelf and the deepwater drilling; excess productive capacity; crude and product inventories; liquefied natural gas supply and demand; seasonal and other adverse weather conditions that affect the demand for energy; severe weather conditions, such as tornadoes and hurricanes, that affect exploration and production activities; Organization of Petroleum Exporting Countries (\"OPEC\") policy and the adherence by OPEC nations to their OPEC production quotas."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "14"
+    },
+    {
+      "type": "TableElement",
+      "text": "Baker Hughes Company News ReleaseBaker Hughes Company Announces Second-Quarter 2024 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Terrorism and geopolitical risks - war, military action, terrorist activities or extended periods of international conflict, particularly involving any petroleum-producing or consuming regions, including Russia and Ukraine; and the recent conflict in the Middle East; labor disruptions, civil unrest or security conditions where we operate; potentially burdensome taxation, expropriation of assets by governmental action; cybersecurity risks and cyber incidents or attacks; epidemic outbreaks."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Baker Hughes:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Baker Hughes (Nasdaq: BKR) is an energy technology company that provides solutions for energy and industrial customers worldwide. Built on a century of experience and conducting business in over 120 countries, our innovative technologies and services are taking energy forward - making it safer, cleaner and more efficient for people and the planet. Visit us at bakerhughes.com"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "TitleElement",
+      "text": "For more information, please contact:"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Investor Relations"
+    },
+    {
+      "type": "TextElement",
+      "text": "Chase Mulvehill+1 346-297-2561investor.relations@bakerhughes.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Media Relations"
+    },
+    {
+      "type": "TextElement",
+      "text": "Thomas Millas+1 346-415-0320thomas.millas@bakerhughes.com"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "15"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        2,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        3,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        14,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "",
+          "",
+          "",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance"
+        ],
+        [
+          "(in millions except per share amounts)",
+          "(in millions except per share amounts)",
+          "(in millions except per share amounts)",
+          "June 30, 2024",
+          "June 30, 2024",
+          "June 30, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "June 30, 2023",
+          "June 30, 2023",
+          "June 30, 2023",
+          "",
+          "",
+          "",
+          "Sequential",
+          "Sequential",
+          "Sequential",
+          "Year-over-year",
+          "Year-over-year",
+          "Year-over-year"
+        ],
+        [
+          "Orders",
+          "Orders",
+          "Orders",
+          "$",
+          "7526",
+          "",
+          "$",
+          "6542",
+          "",
+          "$",
+          "7474",
+          "",
+          "",
+          "",
+          "",
+          "15",
+          "15",
+          "%",
+          "1",
+          "1",
+          "%"
+        ],
+        [
+          "Revenue",
+          "Revenue",
+          "Revenue",
+          "7139",
+          "7139",
+          "",
+          "6418",
+          "6418",
+          "",
+          "6315",
+          "6315",
+          "",
+          "",
+          "",
+          "",
+          "11",
+          "11",
+          "%",
+          "13",
+          "13",
+          "%"
+        ],
+        [
+          "Net income attributable to Baker Hughes",
+          "Net income attributable to Baker Hughes",
+          "Net income attributable to Baker Hughes",
+          "579",
+          "579",
+          "",
+          "455",
+          "455",
+          "",
+          "410",
+          "410",
+          "",
+          "",
+          "",
+          "",
+          "27",
+          "27",
+          "%",
+          "41",
+          "41",
+          "%"
+        ],
+        [
+          "Adjusted net income attributable to Baker Hughes*",
+          "Adjusted net income attributable to Baker Hughes*",
+          "Adjusted net income attributable to Baker Hughes*",
+          "568",
+          "568",
+          "",
+          "429",
+          "429",
+          "",
+          "395",
+          "395",
+          "",
+          "",
+          "",
+          "",
+          "32",
+          "32",
+          "%",
+          "44",
+          "44",
+          "%"
+        ],
+        [
+          "Operating income",
+          "Operating income",
+          "Operating income",
+          "833",
+          "833",
+          "",
+          "653",
+          "653",
+          "",
+          "514",
+          "514",
+          "",
+          "",
+          "",
+          "",
+          "28",
+          "28",
+          "%",
+          "62",
+          "62",
+          "%"
+        ],
+        [
+          "Adjusted operating income*",
+          "Adjusted operating income*",
+          "Adjusted operating income*",
+          "847",
+          "847",
+          "",
+          "660",
+          "660",
+          "",
+          "631",
+          "631",
+          "",
+          "",
+          "",
+          "",
+          "28",
+          "28",
+          "%",
+          "34",
+          "34",
+          "%"
+        ],
+        [
+          "Adjusted EBITDA*",
+          "Adjusted EBITDA*",
+          "Adjusted EBITDA*",
+          "1130",
+          "1130",
+          "",
+          "943",
+          "943",
+          "",
+          "907",
+          "907",
+          "",
+          "",
+          "",
+          "",
+          "20",
+          "20",
+          "%",
+          "25",
+          "25",
+          "%"
+        ],
+        [
+          "Diluted earnings per share (EPS)",
+          "Diluted earnings per share (EPS)",
+          "Diluted earnings per share (EPS)",
+          "0.58",
+          "0.58",
+          "",
+          "0.45",
+          "0.45",
+          "",
+          "0.40",
+          "0.40",
+          "",
+          "",
+          "",
+          "",
+          "28",
+          "28",
+          "%",
+          "43",
+          "43",
+          "%"
+        ],
+        [
+          "Adjusted diluted EPS*",
+          "Adjusted diluted EPS*",
+          "Adjusted diluted EPS*",
+          "0.57",
+          "0.57",
+          "",
+          "0.43",
+          "0.43",
+          "",
+          "0.39",
+          "0.39",
+          "",
+          "",
+          "",
+          "",
+          "33",
+          "33",
+          "%",
+          "46",
+          "46",
+          "%"
+        ],
+        [
+          "Cash flow from operating activities",
+          "Cash flow from operating activities",
+          "Cash flow from operating activities",
+          "348",
+          "348",
+          "",
+          "784",
+          "784",
+          "",
+          "858",
+          "858",
+          "",
+          "",
+          "",
+          "",
+          "(56",
+          "(56",
+          "%)",
+          "(59",
+          "(59",
+          "%)"
+        ],
+        [
+          "Free cash flow*",
+          "Free cash flow*",
+          "Free cash flow*",
+          "106",
+          "106",
+          "",
+          "502",
+          "502",
+          "",
+          "623",
+          "623",
+          "",
+          "",
+          "",
+          "",
+          "(79",
+          "(79",
+          "%)",
+          "(83",
+          "(83",
+          "%)"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        3,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        17,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "",
+          "",
+          "",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance"
+        ],
+        [
+          "",
+          "",
+          "",
+          "June 30, 2024",
+          "June 30, 2024",
+          "June 30, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "June 30, 2023",
+          "June 30, 2023",
+          "June 30, 2023",
+          "",
+          "",
+          "",
+          "Sequential",
+          "Sequential",
+          "Sequential",
+          "Year-over-year",
+          "Year-over-year",
+          "Year-over-year"
+        ],
+        [
+          "Oilfield Services & Equipment",
+          "Oilfield Services & Equipment",
+          "Oilfield Services & Equipment",
+          "$",
+          "4011",
+          "",
+          "$",
+          "3783",
+          "",
+          "$",
+          "3877",
+          "",
+          "",
+          "",
+          "",
+          "6",
+          "6",
+          "%",
+          "3",
+          "3",
+          "%"
+        ],
+        [
+          "Industrial & Energy Technology",
+          "Industrial & Energy Technology",
+          "Industrial & Energy Technology",
+          "3128",
+          "3128",
+          "",
+          "2634",
+          "2634",
+          "",
+          "2438",
+          "2438",
+          "",
+          "",
+          "",
+          "",
+          "19",
+          "19",
+          "%",
+          "28",
+          "28",
+          "%"
+        ],
+        [
+          "Total segment revenue",
+          "Total segment revenue",
+          "Total segment revenue",
+          "7139",
+          "7139",
+          "",
+          "6418",
+          "6418",
+          "",
+          "6315",
+          "6315",
+          "",
+          "",
+          "",
+          "",
+          "11",
+          "11",
+          "%",
+          "13",
+          "13",
+          "%"
+        ],
+        [
+          "Oilfield Services & Equipment",
+          "Oilfield Services & Equipment",
+          "Oilfield Services & Equipment",
+          "493",
+          "493",
+          "",
+          "422",
+          "422",
+          "",
+          "417",
+          "417",
+          "",
+          "",
+          "",
+          "",
+          "17",
+          "17",
+          "%",
+          "18",
+          "18",
+          "%"
+        ],
+        [
+          "Industrial & Energy Technology",
+          "Industrial & Energy Technology",
+          "Industrial & Energy Technology",
+          "442",
+          "442",
+          "",
+          "330",
+          "330",
+          "",
+          "311",
+          "311",
+          "",
+          "",
+          "",
+          "",
+          "34",
+          "34",
+          "%",
+          "42",
+          "42",
+          "%"
+        ],
+        [
+          "Total segment operating income",
+          "Total segment operating income",
+          "Total segment operating income",
+          "935",
+          "935",
+          "",
+          "752",
+          "752",
+          "",
+          "728",
+          "728",
+          "",
+          "",
+          "",
+          "",
+          "24",
+          "24",
+          "%",
+          "28",
+          "28",
+          "%"
+        ],
+        [
+          "Corporate",
+          "Corporate",
+          "Corporate",
+          "(88)",
+          "(88)",
+          "",
+          "(92)",
+          "(92)",
+          "",
+          "(97)",
+          "(97)",
+          "",
+          "",
+          "",
+          "",
+          "4",
+          "4",
+          "%",
+          "9",
+          "9",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Inventory impairment",
+          "Inventory impairment",
+          "Inventory impairment",
+          "—",
+          "—",
+          "",
+          "—",
+          "—",
+          "",
+          "(15)",
+          "(15)",
+          "",
+          "",
+          "",
+          "",
+          "—",
+          "—",
+          "%",
+          "100",
+          "100",
+          "%"
+        ],
+        [
+          "Restructuring, impairment & other",
+          "Restructuring, impairment & other",
+          "Restructuring, impairment & other",
+          "(14)",
+          "(14)",
+          "",
+          "(7)",
+          "(7)",
+          "",
+          "(102)",
+          "(102)",
+          "",
+          "",
+          "",
+          "",
+          "(95",
+          "(95",
+          "%)",
+          "87",
+          "87",
+          "%"
+        ],
+        [
+          "Operating income",
+          "Operating income",
+          "Operating income",
+          "833",
+          "833",
+          "",
+          "653",
+          "653",
+          "",
+          "514",
+          "514",
+          "",
+          "",
+          "",
+          "",
+          "28",
+          "28",
+          "%",
+          "62",
+          "62",
+          "%"
+        ],
+        [
+          "Adjusted operating income*",
+          "Adjusted operating income*",
+          "Adjusted operating income*",
+          "847",
+          "847",
+          "",
+          "660",
+          "660",
+          "",
+          "631",
+          "631",
+          "",
+          "",
+          "",
+          "",
+          "28",
+          "28",
+          "%",
+          "34",
+          "34",
+          "%"
+        ],
+        [
+          "Depreciation & amortization",
+          "Depreciation & amortization",
+          "Depreciation & amortization",
+          "283",
+          "283",
+          "",
+          "283",
+          "283",
+          "",
+          "276",
+          "276",
+          "",
+          "",
+          "",
+          "",
+          "—",
+          "—",
+          "%",
+          "3",
+          "3",
+          "%"
+        ],
+        [
+          "Adjusted EBITDA*",
+          "Adjusted EBITDA*",
+          "Adjusted EBITDA*",
+          "$",
+          "1130",
+          "",
+          "$",
+          "943",
+          "",
+          "$",
+          "907",
+          "",
+          "",
+          "",
+          "",
+          "20",
+          "20",
+          "%",
+          "25",
+          "25",
+          "%"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        3,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        3,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        10,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "",
+          "",
+          "",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance"
+        ],
+        [
+          "Segment results",
+          "Segment results",
+          "Segment results",
+          "June 30, 2024",
+          "June 30, 2024",
+          "June 30, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "June 30, 2023",
+          "June 30, 2023",
+          "June 30, 2023",
+          "",
+          "",
+          "",
+          "Sequential",
+          "Sequential",
+          "Sequential",
+          "Year-over-year",
+          "Year-over-year",
+          "Year-over-year"
+        ],
+        [
+          "Orders",
+          "Orders",
+          "Orders",
+          "$",
+          "4068",
+          "",
+          "$",
+          "3624",
+          "",
+          "$",
+          "4192",
+          "",
+          "",
+          "",
+          "",
+          "12",
+          "12",
+          "%",
+          "(3",
+          "(3",
+          "%)"
+        ],
+        [
+          "Revenue",
+          "Revenue",
+          "Revenue",
+          "$",
+          "4011",
+          "",
+          "$",
+          "3783",
+          "",
+          "$",
+          "3877",
+          "",
+          "",
+          "",
+          "",
+          "6",
+          "6",
+          "%",
+          "3",
+          "3",
+          "%"
+        ],
+        [
+          "Operating income",
+          "Operating income",
+          "Operating income",
+          "$",
+          "493",
+          "",
+          "$",
+          "422",
+          "",
+          "$",
+          "417",
+          "",
+          "",
+          "",
+          "",
+          "17",
+          "17",
+          "%",
+          "18",
+          "18",
+          "%"
+        ],
+        [
+          "Operating income margin",
+          "Operating income margin",
+          "Operating income margin",
+          "12.3",
+          "12.3",
+          "%",
+          "11.1",
+          "11.1",
+          "%",
+          "10.8",
+          "10.8",
+          "%",
+          "",
+          "",
+          "",
+          "1.2pts",
+          "1.2pts",
+          "1.2pts",
+          "1.5pts",
+          "1.5pts",
+          "1.5pts"
+        ],
+        [
+          "Depreciation & amortization",
+          "Depreciation & amortization",
+          "Depreciation & amortization",
+          "$",
+          "223",
+          "",
+          "$",
+          "222",
+          "",
+          "$",
+          "219",
+          "",
+          "",
+          "",
+          "",
+          "—",
+          "—",
+          "%",
+          "2",
+          "2",
+          "%"
+        ],
+        [
+          "EBITDA*",
+          "EBITDA*",
+          "EBITDA*",
+          "$",
+          "716",
+          "",
+          "$",
+          "644",
+          "",
+          "$",
+          "636",
+          "",
+          "",
+          "",
+          "",
+          "11",
+          "11",
+          "%",
+          "13",
+          "13",
+          "%"
+        ],
+        [
+          "EBITDA margin*",
+          "EBITDA margin*",
+          "EBITDA margin*",
+          "17.8",
+          "17.8",
+          "%",
+          "17.0",
+          "17.0",
+          "%",
+          "16.4",
+          "16.4",
+          "%",
+          "",
+          "",
+          "",
+          "0.8pts",
+          "0.8pts",
+          "0.8pts",
+          "1.4pts",
+          "1.4pts",
+          "1.4pts"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        8,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "",
+          "",
+          "",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance"
+        ],
+        [
+          "Revenue by Product Line",
+          "Revenue by Product Line",
+          "Revenue by Product Line",
+          "June 30, 2024",
+          "June 30, 2024",
+          "June 30, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "June 30, 2023",
+          "June 30, 2023",
+          "June 30, 2023",
+          "",
+          "",
+          "",
+          "Sequential",
+          "Sequential",
+          "Sequential",
+          "Year-over-year",
+          "Year-over-year",
+          "Year-over-year"
+        ],
+        [
+          "Well Construction",
+          "Well Construction",
+          "Well Construction",
+          "$",
+          "1090",
+          "",
+          "$",
+          "1061",
+          "",
+          "$",
+          "1076",
+          "",
+          "",
+          "",
+          "",
+          "3",
+          "3",
+          "%",
+          "1",
+          "1",
+          "%"
+        ],
+        [
+          "Completions, Intervention & Measurements",
+          "Completions, Intervention & Measurements",
+          "Completions, Intervention & Measurements",
+          "1118",
+          "1118",
+          "",
+          "1006",
+          "1006",
+          "",
+          "1090",
+          "1090",
+          "",
+          "",
+          "",
+          "",
+          "11",
+          "11",
+          "%",
+          "2",
+          "2",
+          "%"
+        ],
+        [
+          "Production Solutions",
+          "Production Solutions",
+          "Production Solutions",
+          "958",
+          "958",
+          "",
+          "945",
+          "945",
+          "",
+          "959",
+          "959",
+          "",
+          "",
+          "",
+          "",
+          "1",
+          "1",
+          "%",
+          "—",
+          "—",
+          "%"
+        ],
+        [
+          "Subsea & Surface Pressure Systems",
+          "Subsea & Surface Pressure Systems",
+          "Subsea & Surface Pressure Systems",
+          "845",
+          "845",
+          "",
+          "771",
+          "771",
+          "",
+          "752",
+          "752",
+          "",
+          "",
+          "",
+          "",
+          "10",
+          "10",
+          "%",
+          "12",
+          "12",
+          "%"
+        ],
+        [
+          "Total Revenue",
+          "Total Revenue",
+          "Total Revenue",
+          "$",
+          "4011",
+          "",
+          "$",
+          "3783",
+          "",
+          "$",
+          "3877",
+          "",
+          "",
+          "",
+          "",
+          "6",
+          "6",
+          "%",
+          "3",
+          "3",
+          "%"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        11,
+        21
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "",
+          "",
+          "",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance",
+          "Variance"
+        ],
+        [
+          "Revenue by Geographic Region",
+          "Revenue by Geographic Region",
+          "Revenue by Geographic Region",
+          "June 30, 2024",
+          "June 30, 2024",
+          "June 30, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "March 31, 2024",
+          "June 30, 2023",
+          "June 30, 2023",
+          "June 30, 2023",
+          "",
+          "",
+          "",
+          "Sequential",
+          "Sequential",
+          "Sequential",
+          "Year-over-year",
+          "Year-over-year",
+          "Year-over-year"
+        ],
+        [
+          "North America",
+          "North America",
+          "North America",
+          "$",
+          "1023",
+          "",
+          "$",
+          "990",
+          "",
+          "$",
+          "1042",
+          "",
+          "",
+          "",
+          "",
+          "3",
+          "3",
+          "%",
+          "(2",
+          "(2",
+          "%)"
+        ],
+        [
+          "Latin America",
+          "Latin America",
+          "Latin America",
+          "663",
+          "663",
+          "",
+          "637",
+          "637",
+          "",
+          "698",
+          "698",
+          "",
+          "",
+          "",
+          "",
+          "4",
+          "4",
+          "%",
+          "(5",
+          "(5",
+          "%)"
+        ],
+        [
+          "Europe/CIS/Sub-Saharan Africa",
+          "Europe/CIS/Sub-Saharan Africa",
+          "Europe/CIS/Sub-Saharan Africa",
+          "827",
+          "827",
+          "",
+          "750",
+          "750",
+          "",
+          "672",
+          "672",
+          "",
+          "",
+          "",
+          "",
+          "10",
+          "10",
+          "%",
+          "23",
+          "23",
+          "%"
+        ],
+        [
+          "Middle East/Asia",
+          "Middle East/Asia",
+          "Middle East/Asia",
+          "1498",
+          "1498",
+          "",
+          "1405",
+          "1405",
+          "",
+          "1465",
+          "1465",
+          "",
+          "",
+          "",
+          "",
+          "7",
+          "7",
+          "%",
+          "2",
+          "2",
+          "%"
+        ],
+        [
+          "Total Revenue",
+          "Total Revenue",
+          "Total Revenue",
+          "$",
+          "4011",
+          "",
+          "$",
+          "3783",
+          "",
+          "$",
+          "3877",
+          "",
+          "",
+          "",
+          "",
+          "6",
+          "6",
+          "%",
+          "3",
+          "3",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "North America",
+          "North America",
+          "North America",
+          "$",
+          "1023",
+          "",
+          "$",
+          "990",
+          "",
+          "$",
+          "1042",
+          "",
+          "",
+          "",
+          "",
+          "3",
+          "3",
+          "%",
+          "(2",
+          "(2",
+          "%)"
+        ],
+        [
+          "International",
+          "International",
+          "International",
+          "2988",
+          "2988",
+          "",
+          "2793",
+          "2793",
+          "",
+          "2835",
+          "2835",
+          "",
+          "",
+          "",
+          "",
+          "7",
+          "7",
+          "%",
+          "5",
+          "5",
+          "%"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        3,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        3,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "Baker Hughes Company News Release",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "Baker Hughes Company Announces Second-Quarter 2024 Results",
+          "",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 7100.0,
+    "quarter_revenue_yoy_pct": 0.0,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue of $7.1 billion"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Revenue | Revenue | Revenue | 7139 | 7139 | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 0,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "36.320000",
+    "return_10d_pct": "-4.9835",
+    "return_20d_pct": "-3.4141",
+    "return_30d_pct": "-2.4504",
+    "return_60d_pct": "0.0551",
+    "return_90d_pct": "1.2665"
+  },
+  "text_stats": {
+    "primary_text_len": 5405,
+    "exhibit_text_len": 32490,
+    "combined_text_len": 37897,
+    "semantic_text_len": 31842,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

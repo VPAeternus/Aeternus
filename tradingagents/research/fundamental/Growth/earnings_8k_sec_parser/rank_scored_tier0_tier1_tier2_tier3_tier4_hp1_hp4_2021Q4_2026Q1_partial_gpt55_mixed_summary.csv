@@ -1,0 +1,31 @@
+metric,bucket,value
+rows,,22304
+hard_reject_count,,152
+missing_critical_llm_fields,,0
+rank_score_label,A+,59
+rank_score_label,A,332
+rank_score_label,B,517
+rank_score_label,C,995
+rank_score_label,D,1041
+rank_score_label,Avoid / stale / low priority,13940
+rank_score_label,Stop / review,5420
+entry_score_0_100_bucket,Highest-priority entry research,211
+hp_adjusted_entry_score_bucket,Highest-priority entry research,211
+entry_score_0_100_bucket,High-priority entry research,582
+hp_adjusted_entry_score_bucket,High-priority entry research,582
+entry_score_0_100_bucket,"Good candidate, needs downstream confirmation",893
+hp_adjusted_entry_score_bucket,"Good candidate, needs downstream confirmation",893
+entry_score_0_100_bucket,Watchlist / secondary research,1571
+hp_adjusted_entry_score_bucket,Watchlist / secondary research,1571
+entry_score_0_100_bucket,Low priority unless theme override exists,19047
+hp_adjusted_entry_score_bucket,Low priority unless theme override exists,19047
+monitoring_status,pre_checkpoint,1
+monitoring_status,active_ok,16521
+monitoring_status,early_stress,66
+monitoring_status,midpoint_stress,296
+monitoring_status,kill_review,5420
+positive_monitoring,repricing_started,1499
+positive_monitoring,repricing_confirmed,1000
+positive_repricing_status,none,20471
+positive_repricing_status,repricing_started,833
+positive_repricing_status,repricing_confirmed,1000

@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LITE",
+    "cik": "1633978",
+    "event_date": "2024-08-14",
+    "event_accession": "0001628280-24-037191",
+    "primary_8k_doc": "lite-20240814.htm",
+    "exhibit_docs": [
+      "lite_ex991xq4fy24.htm",
+      "lite_ex991xq4fy248-ka.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LITE_000162828024037191_lite-20240814.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LITE_000162828024037191_lite_ex991xq4fy24.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LITE_000162828024037191_lite_ex991xq4fy248-ka.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LITE",
+    "cik": "1633978",
+    "entity_name": "Lumentum Holdings Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1396200000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "-400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-10-01",
+    "assets_value": "4632100000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-07-01",
+    "financing_cash_flow_value": "-68500000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-803100000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "130600000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.000286",
+    "operating_cash_flow_to_revenue": "0.09354",
+    "assets_to_revenue": "3.317648",
+    "financing_cash_flow_to_revenue": "-0.049062",
+    "investing_cash_flow_to_revenue": "-0.575204"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $308.",
+      "revenue of $1.",
+      "sales offices worldwide.",
+      "net income per share of $0.",
+      "net income per share of $1.",
+      "EPS in the fourth quarter."
+    ],
+    "guidance_evidence": [
+      "guidance midpoints for both revenue and EPS in the fourth quarter.",
+      "Outlook Lumentum expects the following for the fiscal first quarter of 2025: • Net revenue in the range of $315 million to $335 million • Non-GAAP operating margin of 0% - 3.",
+      "outlook, as they cannot be provided without unreasonable effort.",
+      "guidance with respect to future net revenue, non-GAAP diluted earnings per share, and non-GAAP operating margins, and related assumptions.",
+      "expects the following for the fiscal first quarter of 2025: • Net revenue in the range of $315 million to $335 million • Non-GAAP operating margin of 0% - 3.",
+      "expected benefits, and (l) our failure to accurately identify liabilities and risks in Cloud Light’s business."
+    ],
+    "wave_or_demand_evidence": [
+      "orders for datacom chips used in data center applications and saw emerging positive trends in the broader traditional networking market,” said Alan Lowe, President and CEO.",
+      "customer base, which will lead to accelerated growth in calendar year 2025.",
+      "customer demand, offset by various miscellaneou s gains.",
+      "customers.",
+      "customer demand and $3.",
+      "data center applications and saw emerging positive trends in the broader traditional networking market,” said Alan Lowe, President and CEO."
+    ],
+    "warning_or_risk_evidence": [
+      "charges 36.",
+      "charges related to non-recurring activities.",
+      "inventory fair value adjustments — 4.",
+      "charges, net (2) 6.",
+      "charges, net 0.",
+      "charges, net (2) (3."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 308.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-15",
+    "entry_open": "51.250000",
+    "return_10d_pct": "10.0683",
+    "return_20d_pct": "8.1561",
+    "return_30d_pct": "10.4195",
+    "return_60d_pct": "35.0829",
+    "return_90d_pct": "71.8244"
+  },
+  "text_stats": {
+    "primary_text_len": 3813,
+    "exhibit_text_len": 26411,
+    "combined_text_len": 30226
+  }
+}

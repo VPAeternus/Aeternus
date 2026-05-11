@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FLXS",
+    "cik": "37472",
+    "event_date": "2024-08-19",
+    "event_accession": "0000950170-24-098621",
+    "primary_8k_doc": "flxs-20240819.htm",
+    "exhibit_docs": [
+      "flxs-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FLXS_000095017024098621_flxs-20240819.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FLXS_000095017024098621_flxs-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FLXS",
+    "cik": "37472",
+    "entity_name": "FLEXSTEEL INDUSTRIES, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "287873000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "289000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-30",
+    "assets_value": "290550000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "-26640000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3597000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "30462000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.001004",
+    "operating_cash_flow_to_revenue": "0.105817",
+    "assets_to_revenue": "1.009299",
+    "financing_cash_flow_to_revenue": "-0.092541",
+    "investing_cash_flow_to_revenue": "-0.012495"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales increased 4.",
+      "Net sales were $110.",
+      "net sales of $105.",
+      "sales of home furnishings products sold through retail stores of $6.",
+      "Sales of products sold through e-commerce channels decreased by ($1.",
+      "Operating Income Dubuque, Iowa – August 19, 2024 – Flexsteel Industries, Inc."
+    ],
+    "guidance_evidence": [
+      "Outlook First Quarter Fiscal 2025 Fiscal Year 2025 Sales $100 - 105 million $420 - 436 million Sales Growth (vs."
+    ],
+    "wave_or_demand_evidence": [
+      "orders of $108.",
+      "customer experience and marketing.",
+      "customers and shareholders in both the near and long-term.",
+      "demand.",
+      "customers, participation in multi-employer pension plans, disruptions or security breaches to business information systems, the impact of any future pandemic, and general economic conditions.",
+      "aid Derek Schmidt, President & Chief Executive Officer of Flexsteel Industries, Inc."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory and equipment to other facilities and a loss on sale of equipment as part of the Company’s previously announced closure of our Dublin, GA manufacturing facility.",
+      "challenging conditions for our industry, we are executing well and delivered 4.",
+      "declines in both sales and profits, Flexsteel is financially strong, growing sales, improving profitability, generating cash, and aggressively investing for the future.",
+      "headwinds will likely remain during our fiscal year 2025, our team is hyper-focused on continuing our sales growth and profit improvement momentum despite these challenges.",
+      "decreased by ($1.",
+      "loss on sale of equipment as part of the Company’s previously announced closure of our Dublin, GA manufacturing facility."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 108.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-20",
+    "entry_open": "39.730000",
+    "return_10d_pct": "4.1530",
+    "return_20d_pct": "-1.5354",
+    "return_30d_pct": "14.4727",
+    "return_60d_pct": "7.2238",
+    "return_90d_pct": "42.6881"
+  },
+  "text_stats": {
+    "primary_text_len": 3682,
+    "exhibit_text_len": 19335,
+    "combined_text_len": 23019
+  }
+}

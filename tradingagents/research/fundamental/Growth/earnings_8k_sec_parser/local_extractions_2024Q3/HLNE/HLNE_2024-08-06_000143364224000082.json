@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HLNE",
+    "cik": "1433642",
+    "event_date": "2024-08-06",
+    "event_accession": "0001433642-24-000082",
+    "primary_8k_doc": "hlne-20240806.htm",
+    "exhibit_docs": [
+      "combinedexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLNE_000143364224000082_hlne-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLNE_000143364224000082_combinedexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HLNE",
+    "cik": "1433642",
+    "entity_name": "Hamilton Lane Inc",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "367919000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "145986000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1140543000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-113216000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-70487000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "169523000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.396788",
+    "operating_cash_flow_to_revenue": "0.460762",
+    "assets_to_revenue": "3.099984",
+    "financing_cash_flow_to_revenue": "-0.30772",
+    "investing_cash_flow_to_revenue": "-0.191583"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Earnings per share – GAAP EPS of $1.",
+      "GAAP net income for the quarter.",
+      "GAAP net income $59.",
+      "GAAP EPS $1.",
+      "net income1 $81.",
+      "Non-GAAP EPS1 $1."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "aid on October 4, 2024.",
+      "ailed presentation of its first quarter fiscal 2025 results, which can be accessed on the Company’s Shareholders website at https://shareholders.",
+      "ains focused on executing and delivering consistent results for our clients and this has resulted in strong growth across the entirety of our business.",
+      "ailable approximately two hours after the live broadcast for a period of one year and can be accessed in the same manner as the live webcast at the Shareholders page of Hamilton Lane’s website.",
+      "ain of our funds; our ability to manage, identify and anticipate risks we face; our ability to manage the effects of events outside of our control; and our ability to receive distributions from Hamilton Lane Advisors, L.",
+      "ailed in Part I, Item 1A of our Annual Report on Form 10-K for the fiscal year ended March 31, 2024 and in our subsequent reports filed from time to time with the Securities and Exchange Commission."
+    ],
+    "warning_or_risk_evidence": [
+      "charged an asset-based fee, which includes the majority of our discretionary AUM accounts but also includes certain non-discretionary AUA accounts.",
+      "loss and (f) certain other significant items that we believe are not indicative of our core performance."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 140,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "135.410004",
+    "return_10d_pct": "7.1930",
+    "return_20d_pct": "13.4333",
+    "return_30d_pct": "7.6287",
+    "return_60d_pct": "27.0364",
+    "return_90d_pct": "33.1069"
+  },
+  "text_stats": {
+    "primary_text_len": 3450,
+    "exhibit_text_len": 37013,
+    "combined_text_len": 40465
+  }
+}

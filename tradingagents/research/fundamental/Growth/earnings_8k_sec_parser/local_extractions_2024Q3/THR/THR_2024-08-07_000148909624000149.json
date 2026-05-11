@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "THR",
+    "cik": "1489096",
+    "event_date": "2024-08-07",
+    "event_accession": "0001489096-24-000149",
+    "primary_8k_doc": "thr-20240807.htm",
+    "exhibit_docs": [
+      "pressreleaseq1fy25.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/THR_000148909624000149_thr-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/THR_000148909624000149_pressreleaseq1fy25.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "THR",
+    "cik": "1489096",
+    "entity_name": "THERMON GROUP HOLDINGS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "355674000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-29",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "20092000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-29",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "649629000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-29",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-22658000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-29",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-4531000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-29",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "28754000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-29",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.05649",
+    "operating_cash_flow_to_revenue": "0.080844",
+    "assets_to_revenue": "1.826473",
+    "financing_cash_flow_to_revenue": "-0.063704",
+    "investing_cash_flow_to_revenue": "-0.012739"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $115.",
+      "revenue of $13.",
+      "sales of rental equipment and proceeds from sales of land and buildings.",
+      "Sales of rental equipment 19 12 Free cash flow (non-GAAP) $ 8,755 $ (1,921) 11 Thermon Group Holdings, Inc.",
+      "sales were previously reported as a single figure and are now presented as Over Time - Small Projects and Over Time - Large Projects.",
+      "Gross Margin of 43."
+    ],
+    "guidance_evidence": [
+      "guidance.",
+      "OUTLOOK The following forward-looking guidance reflects management’s current expectations and beliefs as of August 7, 2024, and is subject to change.",
+      "Guidance Total Revenue $494.",
+      "projects and more cyclical end markets.",
+      "projects remains uneven over the near-term, we expect improved momentum in the second half of the fiscal year.",
+      "Projects 17."
+    ],
+    "wave_or_demand_evidence": [
+      "orders of $127.",
+      "customers have driven them to prioritize maintenance and repair spending, which benefits our OPEX revenue owing to our large installed customer base and should enable us to continue to deliver stable operating results through the cycle.",
+      "customer spending on large projects remains uneven over the near-term, we expect improved momentum in the second half of the fiscal year.",
+      "Customer spending priorities have shifted to maintenance and repair needs in recent quarters owing to the delays in spending on large capital projects.",
+      "customer relationships and deep installed base to more effectively serve its clients' evolving needs.",
+      "customer performance, enhanced productivity, labor efficiency, and supply chain improvements."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments and other charges , amortization of intangible assets, ERP implementation related costs and the tax expense/(benefit) for impact of foreign rate increases (see table, \"Reconciliation of Net Income to Adjusted Net Income and Adjusted EPS\").",
+      "delays in spending on large capital projects.",
+      "Inventory less Accounts Payable.",
+      "charges/(income), ERP Implementation related cost, costs associated with impairments and other charges, acquisition costs, amortization of intangible assets, tax expense for impact of foreign rate increases, and any tax effect of such adjustments.",
+      "charges), ERP Implementation related cost, and costs associated with impairments and other charges.",
+      "charges/(income) 1 2,252 581 Transaction-related costs 2 239 77 ERP implementation-related costs 156 — Adjusted EBITDA (non-GAAP) $ 23,153 $ 22,090 Adjusted EBITDA % 20."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 115.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "29.379999",
+    "return_10d_pct": "1.5997",
+    "return_20d_pct": "2.9272",
+    "return_30d_pct": "-5.9224",
+    "return_60d_pct": "-2.8591",
+    "return_90d_pct": "0.2042"
+  },
+  "text_stats": {
+    "primary_text_len": 4270,
+    "exhibit_text_len": 30951,
+    "combined_text_len": 35223
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PCAR",
+    "cik": "75362",
+    "event_date": "2024-07-23",
+    "event_accession": "0000950170-24-085443",
+    "primary_8k_doc": "pcar-20240723.htm",
+    "exhibit_docs": [
+      "pcar-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PCAR_000095017024085443_pcar-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PCAR_000095017024085443_pcar-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PCAR",
+    "cik": "75362",
+    "entity_name": "PACCAR Inc",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "8473300000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "733900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "40823400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-690800000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-292700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "684800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.086613",
+    "operating_cash_flow_to_revenue": "0.080819",
+    "assets_to_revenue": "4.817887",
+    "financing_cash_flow_to_revenue": "-0.081527",
+    "investing_cash_flow_to_revenue": "-0.034544"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $8.",
+      "revenues of $8.",
+      "revenues of $1.",
+      "revenues of $17.",
+      "revenues were $3.",
+      "revenues of $509."
+    ],
+    "guidance_evidence": [
+      "expected to start production in 2027."
+    ],
+    "wave_or_demand_evidence": [
+      "customer uptime.",
+      "customers.",
+      "customers’ operating expenses.",
+      "customers by delivering the right part in the right place at the right time,” said Laura Bloch, PACCAR vice president and PACCAR Parts general manager.",
+      "customers in the largest truck market in Europe.",
+      "customers in all phases of the business cycle."
+    ],
+    "warning_or_risk_evidence": [
+      "charge related to civil litigation in Europe.",
+      "charge, the company earned adjusted net income (non-GAAP) 1 of $2.",
+      "inventory, and a growing number of PACCAR trucks with PACCAR powertrains in operation.",
+      "charge related to civil litigation in Europe (EC-related claims) in the first quarter 2023.",
+      "inventory and payables (293.",
+      "charge for EC-related claims."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 8770,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "96.110001",
+    "return_10d_pct": "-4.3492",
+    "return_20d_pct": "-3.5688",
+    "return_30d_pct": "0.3642",
+    "return_60d_pct": "2.7885",
+    "return_90d_pct": "9.0313"
+  },
+  "text_stats": {
+    "primary_text_len": 3362,
+    "exhibit_text_len": 16685,
+    "combined_text_len": 20049
+  }
+}

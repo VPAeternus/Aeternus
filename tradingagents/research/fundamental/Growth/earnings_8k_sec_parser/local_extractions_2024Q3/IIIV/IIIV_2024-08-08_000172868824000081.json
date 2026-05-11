@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "IIIV",
+    "cik": "1728688",
+    "event_date": "2024-08-08",
+    "event_accession": "0001728688-24-000081",
+    "primary_8k_doc": "iiiv-20240808.htm",
+    "exhibit_docs": [
+      "i3verticalsq3fy2024earning.htm",
+      "supplementalpresentation.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IIIV_000172868824000081_iiiv-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IIIV_000172868824000081_i3verticalsq3fy2024earning.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IIIV_000172868824000081_supplementalpresentation.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "IIIV",
+    "cik": "1728688",
+    "entity_name": "i3 Verticals, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "179901000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-204000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "883026000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "83814000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-111130000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "25884000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.001134",
+    "operating_cash_flow_to_revenue": "0.143879",
+    "assets_to_revenue": "4.9084",
+    "financing_cash_flow_to_revenue": "0.46589",
+    "investing_cash_flow_to_revenue": "-0.617729"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was 23%, compared to 25% in the prior year's third quarter.",
+      "earnings per share from continuing operations 2 , which gives pro forma effect to the Company's tax rate, was $0.",
+      "earnings per share from continuing operations 2 for the nine months ended June 30, 2024, was $0.",
+      "earnings per share from continuing operations both exclude discontinued operations but include the consolidated cash interest expense.",
+      "earnings per share (1) (non-GAAP) $ 1.",
+      "earnings per share from continuing operations guidance to the closest corresponding GAAP measure on a forward-looking basis is not available without unreasonable efforts."
+    ],
+    "guidance_evidence": [
+      "Outlook for Continuing Operations for Fiscal Year 2024 and Fiscal Year 2025 The Company's practice is to provide annual guidance, excluding the impact of acquisitions, dispositions and transaction-related costs.",
+      "outlook for continuing operations for the fiscal year ending September 30, 2024, and for the fiscal year ending September 30, 2025.",
+      "guidance previously provided in the Company's earnings release issued on May 10, 2024.",
+      "guidance to the closest corresponding GAAP measure on a forward-looking basis is not available without unreasonable efforts.",
+      "outlook for continuing operations and statements of a general economic or industry specific nature.",
+      "guidance, plans, objectives, future performance and business."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "customers in strategic vertical markets.",
+      "customer portfolios, acquired referral agreements and related asset acquisitions.",
+      "customers over time, the right to access our software, generally hosted in a cloud environment.",
+      "customers and charge the utility a fee per bill electronically presented.",
+      "customers in operating the systems and to periodically update the software."
+    ],
+    "warning_or_risk_evidence": [
+      "restrictions under the Company’s credit agreement, the Company does not anticipate making any repurchases under this authorization until the closing of the transactions under the Purchase Agreement.",
+      "charge a per-transaction fee.",
+      "charge fees per filing, or when we stand-ready to process and bill utility customers and charge the utility a fee per bill electronically presented.",
+      "decrease of 2% over the prior year's third quarter.",
+      "loss from continuing operations was $13.",
+      "loss from continuing operations of $10."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 56,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "22.860001",
+    "return_10d_pct": "-6.5179",
+    "return_20d_pct": "-2.4934",
+    "return_30d_pct": "-7.0429",
+    "return_60d_pct": "0.7437",
+    "return_90d_pct": "10.3237"
+  },
+  "text_stats": {
+    "primary_text_len": 5770,
+    "exhibit_text_len": 61906,
+    "combined_text_len": 67678
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ADI",
+    "cik": "6281",
+    "event_date": "2024-08-21",
+    "event_accession": "0000006281-24-000158",
+    "primary_8k_doc": "adi-20240821.htm",
+    "exhibit_docs": [
+      "adi3q24exhibit991earnings.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ADI_000000628124000158_adi-20240821.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ADI_000000628124000158_adi3q24exhibit991earnings.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ADI",
+    "cik": "6281",
+    "entity_name": "Analog Devices, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "6512560000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-22",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-29",
+    "net_income_value": "1939130000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-22",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-29",
+    "assets_value": "48794478000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-22",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-10-28",
+    "financing_cash_flow_value": "-2320272000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-22",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-29",
+    "investing_cash_flow_value": "-460577000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-22",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-29",
+    "operating_cash_flow_value": "2487886000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-22",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.297752",
+    "operating_cash_flow_to_revenue": "0.382014",
+    "assets_to_revenue": "7.492365",
+    "financing_cash_flow_to_revenue": "-0.356276",
+    "investing_cash_flow_to_revenue": "-0.070721"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $2.",
+      "revenue of $2.",
+      "revenue of more than $12 billion in FY23 and approximately 26,000 people globally working alongside 125,000 global customers, ADI ensures today’s innovators stay Ahead of What’s Possible.",
+      "earnings per share near the high end of our outlook,” said Vincent Roche, CEO and Chair.",
+      "Gross margin $ 1,311 $ 1,962 (33) % Gross margin percentage 56.",
+      "Operating income $ 491 $ 929 (47) % Operating margin 21."
+    ],
+    "guidance_evidence": [
+      "outlook with sequential growth in Industrial, Consumer, and Communications • Operating cash flow of $4.",
+      "outlook,” said Vincent Roche, CEO and Chair.",
+      "Outlook for the Fourth Quarter of Fiscal Year 2024 For the fourth quarter of fiscal 2024, we are forecasting revenue of $2.",
+      "outlook, we expect reported operating margin of approximately 22.",
+      "outlook is based on current expectations and actual results may differ materially as a result of, among other things, the important factors discussed at the end of this release.",
+      "outlook set forth in prior ADI news releases, and ADI disclaims any obligation to update these forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customer-centric ethos will continue to form the foundation for our success and help drive long-term shareholder value.",
+      "customer inventory levels and order momentum, across most of our markets, position us to grow again sequentially in our fourth quarter, increasing our confidence that we are past the trough of this cycle.",
+      "customer relationships.",
+      "customers, ADI ensures today’s innovators stay Ahead of What’s Possible.",
+      "customers, including those that may incorporate, or be based upon, software or artificial intelligence technology; future dividends and share repurchases; and other future events.",
+      "customer information, the “ship to” customer information and the end customer product or application into which our product will be incorporated."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels and order momentum, across most of our markets, position us to grow again sequentially in our fourth quarter, increasing our confidence that we are past the trough of this cycle.",
+      "charges, net 3 , which are described further below.",
+      "charges, net 3 , and tax related items 4 , which are described further below.",
+      "inventory, property, plant and equipment and amortization of acquisition related intangibles, which include acquired intangibles such as purchased technology and customer relationships.",
+      "charges, net (12,282) (23,539) (34,399) (46,675) Adjusted operating expenses $ 618,756 $ 752,027 $ 1,895,906 $ 2,217,990 Adjusted operating expenses percentage 26.",
+      "charges, net 12,282 23,539 34,399 46,675 Adjusted operating income $ 951,779 $ 1,470,145 $ 2,848,130 $ 4,799,895 Adjusted operating margin 41."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2310,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-22",
+    "entry_open": "225.679993",
+    "return_10d_pct": "-3.0884",
+    "return_20d_pct": "-0.2703",
+    "return_30d_pct": "0.1462",
+    "return_60d_pct": "-0.0044",
+    "return_90d_pct": "-6.5004"
+  },
+  "text_stats": {
+    "primary_text_len": 4121,
+    "exhibit_text_len": 26284,
+    "combined_text_len": 30407
+  }
+}

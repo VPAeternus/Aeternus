@@ -258,7 +258,7 @@ def _build_risk(
 
 
 def _build_signals(deal_flow_dir: str) -> Dict[str, Any]:
-    """Load top deal flow queue signals from the most recent queue date."""
+    """Load latest scout ticker handoff for dashboard visibility."""
     top_queue: List[Dict[str, Any]] = []
     causal_candidates = 0
 
@@ -278,23 +278,17 @@ def _build_signals(deal_flow_dir: str) -> Dict[str, Any]:
 
         latest_dir = date_dirs[0]
 
-        # Load research_queue.json
-        queue_path = latest_dir / "research_queue.json"
-        if queue_path.exists():
-            queue_data = _load_json(str(queue_path), {})
-            items = queue_data.get("items", []) if isinstance(queue_data, dict) else []
-            # Sort by deal_flow_score desc, take top 5
-            items_sorted = sorted(
-                [i for i in items if isinstance(i, dict)],
-                key=lambda i: float(i.get("deal_flow_score", 0) or 0),
-                reverse=True,
-            )
-            for item in items_sorted[:5]:
+        handoff_path = latest_dir / "final_dealflow_tickers.json"
+        if handoff_path.exists():
+            handoff = _load_json(str(handoff_path), {})
+            metadata = handoff.get("metadata_by_ticker", {}) if isinstance(handoff, dict) else {}
+            for symbol in list(handoff.get("tickers", []) or [])[:5]:
+                meta = metadata.get(symbol, {}) if isinstance(metadata, dict) else {}
                 top_queue.append({
-                    "symbol": item.get("symbol", ""),
-                    "score": round(float(item.get("deal_flow_score", 0) or 0), 1),
-                    "direction": item.get("direction", item.get("expected_direction", "LONG")),
-                    "family": item.get("lane", item.get("sector", "N/A")),
+                    "symbol": symbol,
+                    "score": None,
+                    "direction": "UNSCORED",
+                    "family": ",".join(list(meta.get("scouts", []) or [])[:2]) or "scout",
                 })
 
         # Causal candidates from cashtag_events or causal_candidates file

@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PEG",
+    "cik": "788784",
+    "event_date": "2024-07-30",
+    "event_accession": "0001193125-24-188316",
+    "primary_8k_doc": "d818369d8k.htm",
+    "exhibit_docs": [
+      "d818369dex99.htm",
+      "d818369dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PEG_000119312524188316_d818369d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PEG_000119312524188316_d818369dex99.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PEG_000119312524188316_d818369dex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PEG",
+    "cik": "788784",
+    "entity_name": "Public Service Enterprise Group Incorporated",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3755000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1287000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "50741000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-380000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-714000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1837000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.342743",
+    "operating_cash_flow_to_revenue": "0.489214",
+    "assets_to_revenue": "13.512916",
+    "financing_cash_flow_to_revenue": "-0.101198",
+    "investing_cash_flow_to_revenue": "-0.190146"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were flat - Gas sales increased by ~1% Financial • PSE&G invested ~$0.",
+      "NET INCOME $0.",
+      "Earnings Per Share ($ millions, except per share amounts) 2Q 2024 2Q 2023 2Q 2024 2Q 2023 Net Income $ 434 $ 591 $ 0.",
+      "Net Income in the determination of non-GAAP Operating Earnings.",
+      "Net Income $ 302 $ 336 Net Income Per Share (EPS) $ 0.",
+      "EPS $ 0."
+    ],
+    "guidance_evidence": [
+      "Guidance (NEWARK, N.",
+      "guidance range of $3.",
+      "outlook of 5% to 7% through 2028, which does not reflect growth opportunities at our nuclear fleet.",
+      "guidance, and other matters with the financial community at 11:00 a.",
+      "guidance, PSEG is unable to reconcile this non-GAAP items.",
+      "Outlook Reaffirmed • PSEG full-year 2024 non-GAAP Operating Earnings guidance $3."
+    ],
+    "wave_or_demand_evidence": [
+      "customer bills.",
+      "customer affordability this winter.",
+      "customers across our service area compared with 2023 activity, which along with increased electric vehicle charging, is expected to drive load growth and system investment needs in the future.",
+      "customer usage patterns; • third-party credit risk relating to our sale of nuclear generation output and purchase of results to differ materially from those anticipated.",
+      "aid Ralph LaRossa, PSEGs chair, president and CEO.",
+      "ains on track to conclude both our distribution base rate case and the Clean Energy Future-Energy Efficiency II filing later this year."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in receipt of, or an inability to receive, necessary licenses and permits and siting approvals; and  changes in tax laws and regulations.",
+      "charge to ~$0.",
+      "charge was reduced twice in 2023 from $0.",
+      "losses) associated with the Nuclear Decommissioning Trust (NDT), Mark-to-Market (MTM) accounting and other material infrequent items.",
+      "losses), for future periods due to market volatility.",
+      "uncertain, depend on various factors, and may have a material impact on our future GAAP results."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 900,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "80.500000",
+    "return_10d_pct": "0.0124",
+    "return_20d_pct": "-0.1863",
+    "return_30d_pct": "0.3106",
+    "return_60d_pct": "10.8199",
+    "return_90d_pct": "9.5155"
+  },
+  "text_stats": {
+    "primary_text_len": 5717,
+    "exhibit_text_len": 52781,
+    "combined_text_len": 58500
+  }
+}

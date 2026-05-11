@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "IEP",
+    "cik": "813762",
+    "event_date": "2024-08-07",
+    "event_accession": "0001104659-24-086548",
+    "primary_8k_doc": "tm2421079d1_8k.htm",
+    "exhibit_docs": [
+      "tm2421079d1_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IEP_000110465924086548_tm2421079d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IEP_000110465924086548_tm2421079d1_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "IEP",
+    "cik": "813762",
+    "entity_name": "ICAHN ENTERPRISES L.P.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2673000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-270000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "20858000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "1000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-63000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "265000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.10101",
+    "operating_cash_flow_to_revenue": "0.09914",
+    "assets_to_revenue": "7.803217",
+    "financing_cash_flow_to_revenue": "0.000374",
+    "investing_cash_flow_to_revenue": "-0.023569"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $2.",
+      "revenues were $4.",
+      "revenues were $5.",
+      "net income or any other performance measures derived in accordance with U.",
+      "cash flow from operating activities as a measure of our liquidity."
+    ],
+    "guidance_evidence": [
+      "expects,\" \"anticipates,\" \"intends,\" \"plans,\" \"believes,\" \"seeks,\" \"estimates,\" \"will\" or words of similar meaning and include, but are not limited to, statements about the expected future business and financial performance of Icahn Enterprises and its subsidiaries.",
+      "forecasting and analyzing future periods."
+    ],
+    "wave_or_demand_evidence": [
+      "aid on or about September 25, 2024, to depositary unitholders of record at the close of business on August 19, 2024.",
+      "ain certain \"forward-looking statements\" within the meaning of the Private Securities Litigation Reform Act of 1995, many of which are beyond our ability to control or predict.",
+      "ainties detailed from time to time in our filings with the Securities and Exchange Commission including out Annual Report on Form 10-K and our quarterly reports on Form 10-Q under the caption “Risk Factors”.",
+      "ain non-GAAP financial measures in evaluating its performance.",
+      "ain effects of impairment, restructuring costs, transformation costs, certain pension plan expenses, gains/losses on disposition of assets, gains/losses on extinguishment of debt and certain other non-operational charges.",
+      "ained in debt agreements and other agreements to which these subsidiaries currently may be subject or into which they may enter into in the future."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment, restructuring costs, transformation costs, certain pension plan expenses, gains/losses on disposition of assets, gains/losses on extinguishment of debt and certain other non-operational charges.",
+      "impairment, restructuring costs, certain pension plan expenses, gains/losses on disposition of assets, gains/losses on extinguishment of debt and certain other non-operational charges.",
+      "charges allows investors to evaluate our performance from period to period, as well as our peers, without the effects of certain items that may vary depending on accounting methods and the book value of assets.",
+      "charges, the assets being depreciated or amortized often will have to be replaced in the future, and EBITDA and Adjusted EBITDA do not reflect any cash requirements for such replacements.",
+      "charges resulting from matters we consider not to be indicative of our ongoing operations.",
+      "loss of $155 million, compared to $14 million for the prior year quarter · Indicative Net Asset Value was approximately $4 billion as of June 30, 2024, a decrease of $969 million compared to March 31, 2024 · IEP declares second quarter distribution of $1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "16.139999",
+    "return_10d_pct": "0.2478",
+    "return_20d_pct": "-17.5341",
+    "return_30d_pct": "-35.0682",
+    "return_60d_pct": "-13.1970",
+    "return_90d_pct": "-18.2156"
+  },
+  "text_stats": {
+    "primary_text_len": 3215,
+    "exhibit_text_len": 21038,
+    "combined_text_len": 24255
+  }
+}

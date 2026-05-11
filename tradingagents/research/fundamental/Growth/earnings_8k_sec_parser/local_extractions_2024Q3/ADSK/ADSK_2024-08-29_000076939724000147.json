@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ADSK",
+    "cik": "769397",
+    "event_date": "2024-08-29",
+    "event_accession": "0000769397-24-000147",
+    "primary_8k_doc": "adsk-20240829.htm",
+    "exhibit_docs": [
+      "q225pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ADSK_000076939724000147_adsk-20240829.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ADSK_000076939724000147_q225pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ADSK",
+    "cik": "769397",
+    "entity_name": "AUTODESK, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4386000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-10",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-01-31",
+    "net_income_value": "497000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-10",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-01-31",
+    "assets_value": "9438000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-10",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-01-31",
+    "financing_cash_flow_value": "-169000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-10",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-01-31",
+    "investing_cash_flow_value": "-1595000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-10",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-01-31",
+    "operating_cash_flow_value": "1531000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-10",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-01-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.113315",
+    "operating_cash_flow_to_revenue": "0.349065",
+    "assets_to_revenue": "2.151847",
+    "financing_cash_flow_to_revenue": "-0.038532",
+    "investing_cash_flow_to_revenue": "-0.363657"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 12 percent to $1.",
+      "revenue was $1.",
+      "revenue increased 5 percent as reported and on a constant currency basis.",
+      "revenue was $162 million, an increase of 25 percent as reported and on a constant currency basis.",
+      "revenue increased 12 percent as reported and on a constant currency basis.",
+      "revenue increased 6 percent as reported and on a constant currency basis."
+    ],
+    "guidance_evidence": [
+      "guidance ranges.",
+      "Outlook The following are forward-looking statements based on current expectations and assumptions, and involve risks and uncertainties, some of which are set forth below under \"Safe Harbor Statement.",
+      "outlook for the third quarter and full-year fiscal 2025 considers the current economic environment and foreign exchange currency rate environment.",
+      "Guidance Metrics Q3 FY25 (ending October 31, 2024) Revenue (in millions) $1,555 - $1,570 EPS GAAP $1.",
+      "Guidance Metrics FY25 (ending January 31, 2025) Billings (in millions) $5,880 - $5,980 Up 13% - 15% Revenue (in millions) (1) $6,080 - $6,130 Up approx.",
+      "guidance range would be approximately 1 percentage point higher."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, and by the proven durability of our business,” said Andrew Anagnost, Autodesk president and CEO.",
+      "customers with token-based access to a broad pool of Autodesk products over a defined contract term.",
+      "customers with a cost effective and predictable budgetary option to obtain the productivity benefits of our new releases and enhancements when and if released during the term of their contracts.",
+      "customers are eligible to receive unspecified upgrades when and if available, and technical support.",
+      "customers that existed one year ago (“base customers”).",
+      "customers by the total corresponding quarter Recurring Revenue from one year ago."
+    ],
+    "warning_or_risk_evidence": [
+      "charges.",
+      "charges that may not be indicative of our core business operating results.",
+      "charges are excluded from the non-GAAP financial measures.",
+      "impairments and other charges — 7 — 7 Non-GAAP income from operations $ 560 $ 489 $ 1,050 $ 893 GAAP diluted net income per share $ 1.",
+      "impairments and other charges — 0.",
+      "lossary of Terms later in this document."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1500,
+    "quarter_revenue_yoy_pct": 12,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-30",
+    "entry_open": "270.000000",
+    "return_10d_pct": "-5.3074",
+    "return_20d_pct": "-0.0889",
+    "return_30d_pct": "2.0296",
+    "return_60d_pct": "7.2815",
+    "return_90d_pct": "8.1111"
+  },
+  "text_stats": {
+    "primary_text_len": 15985,
+    "exhibit_text_len": 32166,
+    "combined_text_len": 48153
+  }
+}

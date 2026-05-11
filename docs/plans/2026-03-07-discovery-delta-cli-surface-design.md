@@ -73,5 +73,5 @@ This keeps the CLI read-only and avoids forcing it to reopen artifacts from disk
 The feature is successful if:
 
 - `dealflow discover` shows the top Delta names after a run
-- `dealflow source` shows the same Delta surface during full shortlist generation
+- `dealflow source` shows the same Delta surface during full candidate_list generation
 - nothing changes in ranking, universe size, or Step 1 selection semantics

@@ -105,16 +105,16 @@ def _build_research_prompt(
     ticker: str,
     analysis_date: str,
     computation_data: Dict[str, Any],
-    queue_context: Optional[Dict[str, Any]],
+    source_context: Optional[Dict[str, Any]],
 ) -> str:
-    context = queue_context or {}
+    context = source_context or {}
     packet = json.dumps(computation_data, indent=2, default=str)
-    queue_json = json.dumps(context, indent=2, default=str)
+    source_json = json.dumps(context, indent=2, default=str)
     return (
         f"Ticker: {str(ticker).upper().strip()}\n"
         f"Analysis date: {str(analysis_date).strip()}\n\n"
-        "Queue context:\n"
-        f"{queue_json}\n\n"
+        "Source context:\n"
+        f"{source_json}\n\n"
         "Computation packet:\n"
         f"{packet}\n\n"
         "Return the required JSON object now."
@@ -154,7 +154,7 @@ def _run_research_completion(
     ticker: str,
     analysis_date: str,
     computation_data: Dict[str, Any],
-    queue_context: Optional[Dict[str, Any]],
+    source_context: Optional[Dict[str, Any]],
     config: Dict[str, Any],
 ) -> Dict[str, Any]:
     model = _build_model(provider, config)
@@ -162,7 +162,7 @@ def _run_research_completion(
         ticker=ticker,
         analysis_date=analysis_date,
         computation_data=computation_data,
-        queue_context=queue_context,
+        source_context=source_context,
     )
     result = model.invoke(
         [
@@ -250,7 +250,7 @@ def run_session_research(
     ticker: str,
     analysis_date: str,
     provider: str = "claude",
-    queue_context: Optional[Dict[str, Any]] = None,
+    source_context: Optional[Dict[str, Any]] = None,
     config: Optional[Dict[str, Any]] = None,
 ) -> str:
     provider_name = str(provider or "").strip().lower()
@@ -261,7 +261,7 @@ def run_session_research(
     if isinstance(config, dict):
         runtime_config.update(config)
 
-    context = dict(queue_context or {})
+    context = dict(source_context or {})
     computation_data = gather_computation_data(
         ticker=str(ticker).upper().strip(),
         date=str(analysis_date).strip(),
@@ -275,7 +275,7 @@ def run_session_research(
         ticker=str(ticker).upper().strip(),
         analysis_date=str(analysis_date).strip(),
         computation_data=computation_data,
-        queue_context=context,
+        source_context=context,
         config=runtime_config,
     )
     normalized_outputs = _normalize_outputs(outputs, base_score)
@@ -291,5 +291,5 @@ def run_session_research(
         computation_data=computation_data,
         sonnet_outputs=normalized_outputs,
         score_dict=score_dict,
-        queue_context=context,
+        source_context=context,
     )

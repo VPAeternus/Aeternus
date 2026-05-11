@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ACIW",
+    "cik": "935036",
+    "event_date": "2024-08-01",
+    "event_accession": "0000935036-24-000032",
+    "primary_8k_doc": "aciw-20240801.htm",
+    "exhibit_docs": [
+      "aciw-20240801_ex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ACIW_000093503624000032_aciw-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ACIW_000093503624000032_aciw-20240801_ex992.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ACIW",
+    "cik": "935036",
+    "entity_name": "ACI WORLDWIDE, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "289676000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-32308000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3444739000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-20326000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-8739000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "40068000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.111532",
+    "operating_cash_flow_to_revenue": "0.13832",
+    "assets_to_revenue": "11.891696",
+    "financing_cash_flow_to_revenue": "-0.070168",
+    "investing_cash_flow_to_revenue": "-0.030168"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net income (loss) $ 30.",
+      "EPS Impact of Non-cash and Significant Transaction-related Items (millions) Three Months Ended June 30, 2024 2023 EPS Impact $ in Millions (Net of Tax) EPS Impact $ in Millions (Net of Tax) GAAP net income (loss) $ 0.",
+      "EPS adjusted for non-cash and significant transaction- related items $ 0.",
+      "EPS Impact $ in Millions (Net of Tax) EPS Impact $ in Millions (Net of Tax) GAAP net income (loss) $ 0.",
+      "net income (loss) plus income tax expense (benefit), net interest income (expense), net other income (expense), depreciation, amortization, and non-cash compensation, as well as significant transaction related expenses.",
+      "net income (loss)."
+    ],
+    "guidance_evidence": [
+      "Guidance Range 2023 Actual Low High Revenue 1,453 1,557 1,591 Adjusted EBITDA 395 423 438 $'s in millions aciw-20240801_ex992006.",
+      "guidance.",
+      "expected to be between $400 million and $410 million • Q3 2024 adjusted EBITDA to be between $110 million and $120 million 2024 Guidance Range 2023 Actual Low High Revenue 1,453 1,557 1,591 Adjusted EBITDA 395 423 438 $'s in millions aciw-20240801_ex992006.",
+      "expected to be generated from new accounts, new applications, and add-on sales bookings contracts signed in the period.",
+      "expects,” “anticipates,” “intends,” and words and phrases of similar impact."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings (millions)1 2024 2023 2024 2023 Annual recurring revenue (ARR) bookings $ 13.",
+      "bookings 80.",
+      "bookings contracts signed in the period.",
+      "ains forward-looking statements based on current expectations that involve a number of risks and uncertainties.",
+      "aintenance fees 48.",
+      "datacenter migration — 1."
+    ],
+    "warning_or_risk_evidence": [
+      "restrictions and other financial covenants in our debt agreements, our existing levels of debt, events outside of our control including natural disasters, wars, and outbreaks of disease, and revenues or revenue mix.",
+      "uncertainties.",
+      "loss) $ 30.",
+      "loss) $ 0.",
+      "loss) plus income tax expense (benefit), net interest income (expense), net other income (expense), depreciation, amortization, and non-cash compensation, as well as significant transaction related expenses.",
+      "loss)."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "aciw-20240801_ex992.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc aciw-20240801_ex992"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 Earnings Presentation August 1, 2024 Exhibit 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "This presentation contains forward-looking statements based on current expectations that involve a number of risks and uncertainties. Private Securities Litigation Reform Act of 1995 Safe Harbor for Forward-Looking Statements 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "3 ACI Delivers Mission-Critical Payment Solutions ACI Worldwide is a global leader in mission-critical, real-time payments software."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 Highlights 4 Consolidated Results Segment Results Balance Sheet*"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Increasing Financial Guidance Range 5 • Q3 2024 revenue expected to be between $400 million and $410 million • Q3 2024 adjusted EBITDA to be between $110 million and $120 million 2024 Guidance Range 2023 Actual Low High Revenue 1,453 1,557 1,591 Adjusted EBITDA 395 423 438 $'s in millions"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Financial Data 6 Three Months Ended June 30, Six Months Ended June 30, Recurring Revenue (millions) 2024 2023 2024 2023 SaaS and PaaS fees $ 235.4 $ 209.7 $ 451.1 $ 414.6 Maintenance fees 48.7 51.4 96.5 101.5 Recurring Revenue $ 284.1 $ 261.1 $ 547.6 $ 516.1 Three Months Ended June 30, TTM Ended June 30, New Bookings (millions)1 2024 2023 2024 2023 Annual recurring revenue (ARR) bookings $ 13.1 $ 12.7 $ 68.8 $ 90.7 License and services bookings 80.7 55.5 268.5 206.5 1 Amounts for the TTM ended June 30, 2023 are adjusted for the divestiture of Corporate Online Banking in September 2022"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Financial Data 7 Three Months Ended June 30, Six Months Ended June 30, Adjusted EBITDA (millions) 2024 2023 2024 2023 Net income (loss) $ 30.9 $ (6.7) $ 23.1 $ (39.0) Plus: Income tax expense (benefit) 9.4 (3.3) 9.7 (14.1) Net interest expense 14.5 16.4 29.5 31.8 Net other (income) expense (1.1) 4.1 0.9 7.5 Depreciation expense 3.6 7.0 7.2 13.1 Amortization expense 24.0 24.5 48.0 49.9 Non-cash stock-based compensation expense 10.7 5.4 18.8 10.7 Adjusted EBITDA before significant transaction-related expenses $ 92.0 $ 47.4 $ 137.2 $ 59.9 Significant transaction-related expenses: Cost reduction strategies 0.4 7.6 3.0 15.9 European datacenter migration — 1.2 — 2.2 Other 0.4 1.2 0.7 4.3 Adjusted EBITDA $ 92.8 $ 57.4 $ 140.9 $ 82.3 Revenue, net of interchange Revenue $ 373.5 $ 323.3 $ 689.5 $ 613.0 Interchange 124.2 106.1 236.6 212.3 Revenue, net of interchange $ 249.3 $ 217.2 $ 452.9 $ 400.7 Net Adjusted EBITDA Margin 37 % 26 % 31 % 21 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Financial Data 8 Three Months Ended June 30, Six Months Ended June 30, Segment Information (millions) 2024 2023 2024 2023 Revenue Banks $ 143.7 $ 117.5 $ 249.1 $ 205.5 Merchants 38.0 36.5 73.7 71.3 Billers 191.8 169.3 366.7 336.2 Total Revenue $ 373.5 $ 323.3 $ 689.5 $ 613.0 Recurring Revenue Banks $ 56.7 $ 57.4 $ 111.5 $ 113.0 Merchants 35.6 34.4 69.4 66.9 Billers 191.8 169.3 366.7 336.2 Total $ 284.1 $ 261.1 $ 547.6 $ 516.1 Segment Adjusted EBITDA Banks $ 79.2 $ 51.6 $ 120.9 $ 76.3 Merchants $ 15.4 $ 9.9 $ 26.0 $ 16.5 Billers $ 37.4 $ 31.2 $ 68.2 $ 60.9"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Financial Data 9 EPS Impact of Non-cash and Significant Transaction-related Items (millions) Three Months Ended June 30, 2024 2023 EPS Impact $ in Millions (Net of Tax) EPS Impact $ in Millions (Net of Tax) GAAP net income (loss) $ 0.29 $ 30.9 $ (0.06) $ (6.7) Adjusted for: Significant transaction-related expenses 0.01 0.7 0.07 7.7 Amortization of acquisition-related intangibles 0.06 6.3 0.06 6.4 Amortization of acquisition-related software 0.03 3.3 0.04 3.8 Non-cash stock-based compensation 0.08 8.1 0.04 4.1 Total adjustments 0.18 18.4 0.21 22.0 Diluted EPS adjusted for non-cash and significant transaction- related items $ 0.47 $ 49.3 $ 0.15 $ 15.3 Six Months Ended June 30, 2024 2023 EPS Impact $ in Millions (Net of Tax) EPS Impact $ in Millions (Net of Tax) GAAP net income (loss) $ 0.22 $ 23.1 $ (0.36) $ (39.0) Adjusted for: Significant transaction-related expenses 0.03 2.9 0.16 17.1 Amortization of acquisition-related intangibles 0.12 12.7 0.12 12.8 Amortization of acquisition-related software 0.06 6.7 0.08 8.2 Non-cash stock-based compensation 0.13 14.3 0.07 8.1 Total adjustments 0.34 36.6 0.43 46.2 Diluted EPS adjusted for non-cash and significant transaction- related items $ 0.56 $ 59.7 $ 0.07 $ 7.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "To supplement our financial results presented on a GAAP basis, we use the non-GAAP measures indicated in the tables, which exclude significant transaction related expenses, as well as other significant non-cash expenses such as depreciation, amortization, and non-cash compensation, that we believe are helpful in understanding our past financial performance and our future results. The presentation of these non-GAAP financial measures should be considered in addition to our GAAP results and are not intended to be considered in isolation or as a substitute for the financial information prepared and presented in accordance with GAAP. Management generally compensates for limitations in the use of non-GAAP financial measures by relying on comparable GAAP financial measures and providing investors with a reconciliation of non-GAAP financial measures only in addition to and in conjunction with results presented in accordance with GAAP. We believe that these non-GAAP financial measures reflect an additional way to view aspects of our operations that, when viewed with our GAAP results, provide a more complete understanding of factors and trends affecting our business. Certain non-GAAP measures include: • Adjusted EBITDA: net income (loss) plus income tax expense (benefit), net interest income (expense), net other income (expense), depreciation, amortization, and non-cash compensation, as well as significant transaction related expenses. Adjusted EBITDA should be considered in addition to, rather than as a substitute for, net income (loss). • Net Adjusted EBITDA Margin: Adjusted EBITDA divided by revenue net of pass-through interchange revenue. Net Adjusted EBITDA Margin should be considered in addition to, rather than as a substitute for, net income (loss). • Diluted EPS adjusted for non-cash and significant transaction related items: diluted EPS plus tax effected significant transaction related items, amortization of acquired intangibles and software, and non-cash stock-based compensation. Diluted EPS adjusted for non-cash and significant transaction related items should be considered in addition to, rather than as a substitute for, diluted EPS. • Recurring Revenue: revenue from software as a service and platform service fees and maintenance fees. Recurring revenue should be considered in addition to, rather than as a substitute for, total revenue. • ARR: New annual recurring revenue expected to be generated from new accounts, new applications, and add-on sales bookings contracts signed in the period. Non-GAAP Financial Measures 10"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Forward Looking Statements 11 This presentation contains forward-looking statements based on current expectations that involve a number of risks and uncertainties. Generally, forward- looking statements do not relate strictly to historical or current facts and may include words or phrases such as “believes,” “will,” “expects,” “anticipates,” “intends,” and words and phrases of similar impact. The forward-looking statements are made pursuant to safe harbor provisions of the Private Securities Litigation Reform Act of 1995. Forward-looking statements in this press release include, but are not limited to, statements regarding Q3 2024 and full year 2024 revenue and adjusted EBITDA financial guidance. All of the foregoing forward-looking statements are expressly qualified by the risk factors discussed in our filings with the Securities and Exchange Commission. Such factors include, but are not limited to, increased competition, business interruptions or failure of our information technology and communication systems, security breaches or viruses, our ability to attract and retain senior management personnel and skilled technical employees, future acquisitions, strategic partnerships and investments, divestitures and other restructuring activities, implementation and success of our strategy, impact if we convert some or all on- premise licenses from fixed-term to subscription model, anti-takeover provisions, exposure to credit or operating risks arising from certain payment funding methods, customer reluctance to switch to a new vendor, our ability to adequately defend our intellectual property, litigation, consent orders and other compliance agreements, our offshore software development activities, risks from operating internationally, including fluctuations in currency exchange rates, events in eastern Europe and the Middle East, adverse changes in the global economy, compliance of our products with applicable legislation, governmental regulations and industry standards, the complexity of our products and services and the risk that they may contain hidden defects, complex regulations applicable to our payments business, our compliance with privacy and cybersecurity regulations, exposure to unknown tax liabilities, changes in tax laws and regulations, consolidations and failures in the financial services industry, volatility in our stock price, demand for our products, failure to obtain renewals of customer contracts or to obtain such renewals on favorable terms, delay or cancellation of customer projects or inaccurate project completion estimates, impairment of our goodwill or intangible assets, the accuracy of management’s backlog estimates, the cyclical nature of our revenue and earnings and the accuracy of forecasts due to the concentration of revenue-generating activity during the final weeks of each quarter, restrictions and other financial covenants in our debt agreements, our existing levels of debt, events outside of our control including natural disasters, wars, and outbreaks of disease, and revenues or revenue mix. For a detailed discussion of these risk factors, parties that are relying on the forward-looking statements should review our filings with the Securities and Exchange Commission, including our most recently filed Annual Report on Form 10-K and our Quarterly Reports on Form 10-Q."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "aciw-20240801_ex992012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "12"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 400.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 400.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue expected to be between $400 million"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "revenue expected to be between $400 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 1,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 0.0,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "44.599998",
+    "return_10d_pct": "2.3094",
+    "return_20d_pct": "7.8027",
+    "return_30d_pct": "9.7534",
+    "return_60d_pct": "13.1390",
+    "return_90d_pct": "10.3139"
+  },
+  "text_stats": {
+    "primary_text_len": 3790,
+    "exhibit_text_len": 10150,
+    "combined_text_len": 13942,
+    "semantic_text_len": 10508,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the first quarter ended March 31, 2024",
+    "period_end_date": "March 31, 2024"
+  },
+  "reported_results": {
+    "revenue_millions": 235.298,
+    "revenue_yoy_pct": -14.4965,
+    "revenue_qoq_pct": -34.0749,
+    "gross_margin_pct": 17.5,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "“We are seeing strong market interest, increasing momentum, and robust commercial activity across diverse end markets” said KR Sridhar, Founder, Chairman and CEO of Bloom Energy.",
+    "wave_signal": "“We are seeing strong market interest, increasing momentum, and robust commercial activity across diverse end markets” said KR Sridhar, Founder, Chairman and CEO of Bloom Energy.",
+    "margin_signal": "•Gross margin of 16.",
+    "risk_signal": "•Operating loss of $49.",
+    "customer_signal": "Our customer wins on islanded-power mode without need for grid interconnection demonstrates an ideal solution for customers seeking time-to-power advantages."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | 235298 | 235298 | | 356917 | 356917 | | 275191 | 275191 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | 235298 | 235298 | | 356917 | 356917 | | 275191 | 275191 |"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | 235298 | 235298 | | 356917 | 356917 | | 275191 | 275191 |"
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "Gross Margin Gross Margin Gross Margin 17.5% 17.5% 17.5% 27.4% 27.4% 27.4% 21.2% 21.2% 21.2%"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

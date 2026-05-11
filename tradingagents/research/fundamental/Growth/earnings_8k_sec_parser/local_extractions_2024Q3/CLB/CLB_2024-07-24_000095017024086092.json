@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CLB",
+    "cik": "0001958086",
+    "event_date": "2024-07-24",
+    "event_accession": "0000950170-24-086092",
+    "primary_8k_doc": "clb-20240724.htm",
+    "exhibit_docs": [
+      "clb-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CLB_000095017024086092_clb-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CLB_000095017024086092_clb-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CLB",
+    "cik": "0001958086",
+    "entity_name": "CORE LABORATORIES INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "128356000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "2373000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "593617000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "6064000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-2038000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-3169000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.018488",
+    "operating_cash_flow_to_revenue": "-0.024689",
+    "assets_to_revenue": "4.62477",
+    "financing_cash_flow_to_revenue": "0.047244",
+    "investing_cash_flow_to_revenue": "-0.015878"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "REVENUE OF $130.",
+      "revenue of $130,600,000.",
+      "revenue was up slightly sequentially, but our team delivered nice improvements in operating income, operating margins, incremental margins, free cash flow and earnings per share for the Company.",
+      "revenue was down slightly sequentially, mostly related to lower international product sales, which offset the strong growth in the U.",
+      "revenue of $44,300,000, down slightly sequentially and flat year-over-year.",
+      "OPERATING INCOME OF $16."
+    ],
+    "guidance_evidence": [
+      "Outlook and Guidance Core Lab maintains its constructive outlook on international upstream projects for 2024 and anticipates sustainable client activity growth in the years ahead to support rising crude-oil demand and energy security concerns.",
+      "guidance is based on projections for underlying operations and excludes gains and losses in foreign exchange.",
+      "guidance also assumes an effective tax rate of 20%.",
+      "projects originating outside the U.",
+      "projects across the globe, posted second quarter 2024 revenue of $44,300,000, down slightly sequentially and flat year-over-year.",
+      "expected operational issues occurred during the frac pack placement."
+    ],
+    "wave_or_demand_evidence": [
+      "Demand for our Reservoir Description services continued to grow across our international laboratory network despite continuing headwinds from on-going geopolitical conflicts.",
+      "demand for reservoir rock and fluid analysis across the Company’s global operations.",
+      "demand for completion diagnostic services, as well as improved penetration of completion products in the U.",
+      "demand and energy security concerns.",
+      "demand of between one and two million barrels per day for both 2024 and 2025.",
+      "demand is in addition to the natural decline of production from existing fields."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory.",
+      "headwinds from on-going geopolitical conflicts.",
+      "declined from 1.",
+      "decline of production from existing fields.",
+      "uncertainties.",
+      "declines in U."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 130.6,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "22.020000",
+    "return_10d_pct": "-5.0863",
+    "return_20d_pct": "-12.5341",
+    "return_30d_pct": "-15.8946",
+    "return_60d_pct": "-12.8974",
+    "return_90d_pct": "-22.4342"
+  },
+  "text_stats": {
+    "primary_text_len": 3505,
+    "exhibit_text_len": 28915,
+    "combined_text_len": 32422
+  }
+}

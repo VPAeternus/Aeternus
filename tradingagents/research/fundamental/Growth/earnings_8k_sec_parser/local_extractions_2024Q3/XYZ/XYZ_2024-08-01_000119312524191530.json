@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "XYZ",
+    "cik": "1512673",
+    "event_date": "2024-08-01",
+    "event_accession": "0001193125-24-191530",
+    "primary_8k_doc": "d750402d8k.htm",
+    "exhibit_docs": [
+      "d750402dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XYZ_000119312524191530_d750402d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XYZ_000119312524191530_d750402dex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "XYZ",
+    "cik": "1512673",
+    "entity_name": "BLOCK, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4990131000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "98316000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "34069893000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-9083000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "623924000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "294401000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.019702",
+    "operating_cash_flow_to_revenue": "0.058997",
+    "assets_to_revenue": "6.827455",
+    "financing_cash_flow_to_revenue": "-0.00182",
+    "investing_cash_flow_to_revenue": "0.125032"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $6.",
+      "revenue was $3.",
+      "revenue was $1.",
+      "sales of consumer receivables; and sales, principal payments, and forgiveness of PPP loans.",
+      "Operating Income margins expanding significantly year over year for both Square and Cash App .",
+      "eps required to onboard onto Square from more than 30 to only 4."
+    ],
+    "guidance_evidence": [
+      "guidance in the second quarter of 2024.",
+      "Guidance Q3 2024 OUTLOOK Q3 2024 Gross Profit $2.",
+      "OUTLOOK Current 2024 Previous 2024 Gross Profit $8.",
+      "outlook to reflect outperformance in the second quarter and our improved expectations for the remainder of the year.",
+      "guidance for the full year equates to a Rule of 35, an increase compared to our prior guidance of Rule of 32 and an improvement compared to the prior year.",
+      "outlook does not assume any additional macroeconomic deterioration, which could impact results."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, including larger sellers.",
+      "customer acquisition channel.",
+      "orders migration is nearly complete, unlocking a range of important features, and sellers will start to see our single point of sale app before the end of the year.",
+      "orders migration platform work is on track to be completed by the end of the summer, and we are beginning to see these efforts pay off: We launched Square Kiosk in the U.",
+      "orders platform, to enable our food and beverage sellers to offer self-serve kiosks for their customers.",
+      "orders platform enables pre-authorization capabilities, which is a critical unlock for products such as Bar Tabs, which we are currently testing with select customers."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory management and unit cost analysis, can save our sellers time and help them understand their businesses better.",
+      "delayed by one week.",
+      "charges; goodwill impairment; amortization of customer and other acquired intangible assets; and acquisition-related share-based acceleration costs.",
+      "charges associated with holdback liabilities; and legal, accounting, and due diligence costs.",
+      "impairment charges, restructuring share-based compensation expense, and certain litigation and regulatory charges.",
+      "impairment, as applicable."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 6160,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "58.450001",
+    "return_10d_pct": "4.5167",
+    "return_20d_pct": "9.2216",
+    "return_30d_pct": "9.7861",
+    "return_60d_pct": "12.8144",
+    "return_90d_pct": "23.7297"
+  },
+  "text_stats": {
+    "primary_text_len": 5458,
+    "exhibit_text_len": 78480,
+    "combined_text_len": 83940
+  }
+}

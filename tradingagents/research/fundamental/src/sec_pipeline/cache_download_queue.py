@@ -17,7 +17,7 @@ DEFAULT_ROOT = Path('/Users/aeternusholdings/Documents/Aeternus')
 ROOT = DEFAULT_ROOT
 OUT = ROOT / 'eval_results/fundamental/2026-05-07_full'
 QUEUE_PATH = OUT / 'sec_fetch_queue_resumable.json'
-ELIGIBLE_PATH = OUT / 'final_dealflow_research_queue_sec_eligible.json'
+ELIGIBLE_PATH = OUT / 'final_dealflow_tickers_sec_eligible.json'
 PROGRESS_PATH = OUT / 'sec_download_progress.json'
 DOWNLOAD_MANIFEST_PATH = OUT / 'sec_download_manifest_2021Q4_2026Q1.json'
 LIVE = Path('/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/live_sec')
@@ -41,7 +41,7 @@ def configure(*, out: Path | str | None = None, live: Path | str | None = None) 
     if live is not None:
         LIVE = Path(live)
     QUEUE_PATH = OUT / 'sec_fetch_queue_resumable.json'
-    ELIGIBLE_PATH = OUT / 'final_dealflow_research_queue_sec_eligible.json'
+    ELIGIBLE_PATH = OUT / 'final_dealflow_tickers_sec_eligible.json'
     PROGRESS_PATH = OUT / 'sec_download_progress.json'
     DOWNLOAD_MANIFEST_PATH = OUT / 'sec_download_manifest_2021Q4_2026Q1.json'
 

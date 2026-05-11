@@ -3,7 +3,7 @@
 Checks each open position for:
 1. Thesis stress (pillar scores vs entry claims)
 2. Score decay below V3 hurdle
-3. Opportunity cost vs pipeline candidates
+3. Opportunity cost vs researched candidates
 
 Returns per-position recommendations: HOLD, WATCH, EXIT, or ROTATE.
 """
@@ -26,7 +26,7 @@ def review_positions(
     Args:
         positions: Open positions dict keyed by symbol (from positions.json).
         akg: AeternusKnowledgeGraph instance (for thesis stress + latest scores).
-        pipeline_candidates: Top pipeline candidates (for opportunity cost check).
+        pipeline_candidates: Top researched candidates (for opportunity cost check).
         v3_hurdle: Minimum score for portfolio inclusion (default 62).
 
     Returns:
@@ -35,13 +35,18 @@ def review_positions(
     results = []
     now = dt.datetime.now(dt.timezone.utc)
 
-    # Build best-candidate score for opportunity cost comparison
+    # Build best-candidate score for opportunity cost comparison.
     best_candidate_score = 0.0
     best_candidate_symbol = None
     held_symbols = set(positions.keys())
     for cand in pipeline_candidates or []:
         sym = cand.get("symbol") or cand.get("ticker", "")
-        score = float(cand.get("momentum_score") or cand.get("core_score") or 0)
+        score = float(
+            cand.get("aeternus_score")
+            or cand.get("investment_decision_score")
+            or cand.get("score")
+            or 0
+        )
         if sym not in held_symbols and score > best_candidate_score:
             best_candidate_score = score
             best_candidate_symbol = sym

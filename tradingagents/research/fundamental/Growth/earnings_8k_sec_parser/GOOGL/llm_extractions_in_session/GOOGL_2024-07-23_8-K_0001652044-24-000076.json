@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended June 30, 2024",
+    "period_end_date": "June 30, 2024"
+  },
+  "reported_results": {
+    "revenue_millions": 84742.0,
+    "revenue_yoy_pct": 14.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "Sundar Pichai, CEO, said: “Our strong performance this quarter highlights ongoing strength in Search and momentum in Cloud.",
+    "wave_signal": "1Alphabet Announces Second Quarter 2024 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "84,742 Change in revenues year over year7 %14 %Change in constant currency revenues year over year(1)9 %15 %Operating income$21,838 $27,425 Operating margin29 %32 %Other income (expense), net $65 $126 Net income$18,368 $23,619 Diluted EPS$1.",
+    "risk_signal": "$1,172 Other Bets(813)$(1,134)Alphabet-level activities(1)(1,198)$(2,287)Total income from operations$21,838 $27,425 (1)In addition to the costs included in Alphabet-level activities, hedging gains (losses) related to revenue were $3 million and $102 million for the three months ended June 30, 2023 and 2024, respectively.",
+    "customer_signal": "•Google Cloud includes infrastructure and platform services, collaboration tools, and other services for enterprise customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 74604 | | | | | $ | 84742 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 74604 | | | | | $ | 84742 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

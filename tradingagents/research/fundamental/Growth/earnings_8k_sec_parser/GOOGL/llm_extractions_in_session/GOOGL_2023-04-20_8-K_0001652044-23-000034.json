@@ -1,0 +1,40 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the first quarter of 2023, and those risks and uncertainties included under the captions “Risk Factors” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” in our Annual Report on Form 10-K for the year ended December 31, 2022",
+    "period_end_date": "December 31, 2022"
+  },
+  "reported_results": {
+    "revenue_millions": null,
+    "revenue_yoy_pct": null,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "",
+    "wave_signal": "essment of the useful lives of our servers and network equipment, resulting in a change in the estimated useful life of our servers and certain network equipment to six years.",
+    "margin_signal": "",
+    "risk_signal": "We also announced actions to optimize our global office space and our expectation that we would incur exit costs relating to office space reductions of approximately $0.",
+    "customer_signal": ""
+  },
+  "evidence": [],
+  "missing_fields": [
+    "reported_results.revenue_millions",
+    "reported_results.revenue_yoy_pct",
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

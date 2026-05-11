@@ -155,53 +155,8 @@ def _load_recent_events(root: Path, as_of: dt.date, lookback_days: int) -> List[
 
 
 def _load_symbol_edge_map(root: Path, as_of: dt.date, lookback_days: int) -> Dict[str, float]:
-    floor = as_of - dt.timedelta(days=max(0, lookback_days))
-    edge_rows: Dict[str, List[float]] = defaultdict(list)
-    if not root.exists():
-        return {}
-
-    for date_dir in sorted(root.iterdir()):
-        if not date_dir.is_dir():
-            continue
-        day = _parse_date(date_dir.name)
-        if day is None or day < floor or day > as_of:
-            continue
-        path = date_dir / "batch_analyze_latest.json"
-        if not path.exists():
-            continue
-        try:
-            payload = json.loads(path.read_text())
-        except Exception:
-            continue
-        if not isinstance(payload, dict):
-            continue
-        for item in payload.get("items", []):
-            if not isinstance(item, dict):
-                continue
-            symbol = str(item.get("symbol", "")).upper().strip()
-            if not symbol:
-                continue
-            hz = item.get("realized_horizons", {})
-            if not isinstance(hz, dict):
-                continue
-            block20 = hz.get("20d") if isinstance(hz.get("20d"), dict) else None
-            block5 = hz.get("5d") if isinstance(hz.get("5d"), dict) else None
-            block = None
-            if block20 and str(block20.get("status")) == "READY":
-                block = block20
-            elif block5 and str(block5.get("status")) == "READY":
-                block = block5
-            if not block:
-                continue
-            edge = block.get("strategy_edge_vs_benchmark_pct")
-            if isinstance(edge, (int, float)):
-                edge_rows[symbol].append(float(edge))
-
-    out: Dict[str, float] = {}
-    for symbol, vals in edge_rows.items():
-        if vals:
-            out[symbol] = round(sum(vals) / float(len(vals)), 4)
-    return out
+    del root, as_of, lookback_days
+    return {}
 
 
 def _parse_handles(raw: Any) -> List[str]:
@@ -240,4 +195,3 @@ def _parse_date(raw: Any) -> Optional[dt.date]:
 
 def _clamp(value: float, low: float, high: float) -> float:
     return max(low, min(high, value))
-

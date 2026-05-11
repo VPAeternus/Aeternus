@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HELE",
+    "cik": "916789",
+    "event_date": "2024-07-09",
+    "event_accession": "0000916789-24-000029",
+    "primary_8k_doc": "hele-20240709.htm",
+    "exhibit_docs": [
+      "fy25_q1xex-991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HELE_000091678924000029_hele-20240709.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HELE_000091678924000029_fy25_q1xex-991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HELE",
+    "cik": "916789",
+    "entity_name": "HELEN OF TROY LIMITED",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2223355000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-02-28",
+    "net_income_value": "223764000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-02-28",
+    "assets_value": "2913715000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-02-28",
+    "financing_cash_flow_value": "286352000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-02-28",
+    "investing_cash_flow_value": "-438914000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-02-28",
+    "operating_cash_flow_value": "140823000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-02-28",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.100642",
+    "operating_cash_flow_to_revenue": "0.063338",
+    "assets_to_revenue": "1.310504",
+    "financing_cash_flow_to_revenue": "0.128793",
+    "investing_cash_flow_to_revenue": "-0.197411"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $416.",
+      "revenue decreased $57.",
+      "sales of fans in Beauty & Wellness.",
+      "revenue decreased $18.",
+      "revenue decreased $39.",
+      "net sales of approximately 7% to 4% in the second quarter of fiscal 2025 and a decline of 2."
+    ],
+    "guidance_evidence": [
+      "Outlook: Lowers Consolidated Net Sales to $1.",
+      "outlook.",
+      "outlook, which delays the delivery of the long-term financial algorithm in our strategic plan.",
+      "Outlook The Company now expects consolidated net sales revenue in the range of $1.",
+      "outlook continues to reflect the Company's view of lingering inflation and further consumer spending softness, especially in certain discretionary categories.",
+      "outlook now reflects the following expectations by segment: • Home & Outdoor net sales decline of 3."
+    ],
+    "wave_or_demand_evidence": [
+      "orders from retail customers and the impact of the shipping disruption at the Company's Tennessee distribution facility due to automation startup issues affecting some of the segment's small retail customer and direct-to-consumer orders.",
+      "customer mix within Home & Outdoor and higher sales dilution from trade discounts, allowances and promotional programs in Beauty & Wellness.",
+      "customer mix within Home & Outdoor, and the impact of unfavorable operating leverage due to the decrease in net sales.",
+      "customer and direct-to-consumer orders.",
+      "customer and product mix.",
+      "orders from retail customers due to a softer 2023/2024 illness season, higher sales dilution from trade discounts, allowances and promotional programs, and a decrease in water filtration primarily driven by the expiration of an out-license relationship."
+    ],
+    "warning_or_risk_evidence": [
+      "delays the delivery of the long-term financial algorithm in our strategic plan.",
+      "inventory obsolescence expense year-over-year, and lower commodity and product costs driven by Project Pegasus initiatives.",
+      "charge of $4.",
+      "charges of $5.",
+      "charge of $6.",
+      "charges, amortization of intangible assets, and non-cash share-based compensation, as applicable: • Adjusted operating income decreased $23."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 416.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-10",
+    "entry_open": "63.939999",
+    "return_10d_pct": "-10.7757",
+    "return_20d_pct": "-2.6118",
+    "return_30d_pct": "-16.6719",
+    "return_60d_pct": "-13.9349",
+    "return_90d_pct": "-2.4554"
+  },
+  "text_stats": {
+    "primary_text_len": 11146,
+    "exhibit_text_len": 44644,
+    "combined_text_len": 55792
+  }
+}

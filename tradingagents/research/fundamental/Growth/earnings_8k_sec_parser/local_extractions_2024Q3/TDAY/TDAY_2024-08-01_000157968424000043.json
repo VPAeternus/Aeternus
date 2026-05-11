@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TDAY",
+    "cik": "1579684",
+    "event_date": "2024-08-01",
+    "event_accession": "0001579684-24-000043",
+    "primary_8k_doc": "gci-20240801.htm",
+    "exhibit_docs": [
+      "gciq22024ex991earningsrele.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TDAY_000157968424000043_gci-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TDAY_000157968424000043_gciq22024ex991earningsrele.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TDAY",
+    "cik": "1579684",
+    "entity_name": "USA TODAY CO., INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "668917000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "10344000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2181247000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-38640000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "20704000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "6718000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.015464",
+    "operating_cash_flow_to_revenue": "0.010043",
+    "assets_to_revenue": "3.260863",
+    "financing_cash_flow_to_revenue": "-0.057765",
+    "investing_cash_flow_to_revenue": "0.030952"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $278.",
+      "revenues of $46.",
+      "revenues of $639.",
+      "Net income attributable to Gannett of $13.",
+      "Net income attributable to Gannett (3) of $29.",
+      "Net income (loss) attributable to Gannett, Free cash flow, Same store revenues, and Free cash flow CAGR are non-GAAP measures."
+    ],
+    "guidance_evidence": [
+      "Outlook NEW YORK, NY — August 1, 2024 — Gannett Co.",
+      "outlook,\" said Michael Reed, Gannett Chairman and Chief Executive Officer.",
+      "Outlook (6) The Company reiterates its full year 2024 outlook and its outlook over the course of 2025 and 2026.",
+      "outlook\", \"guidance\", \"estimate(s)\", \"project(s)\", \"focus\", and similar expressions are intended to identify such forward-looking statements.",
+      "Outlook Our 2024 business outlook and our 2025-2026 business outlook included in this release include certain non-GAAP financial performance and liquidity measures, including Same store revenues, Adjusted EBITDA, Free cash flow, and Free cash flow CAGR.",
+      "outlook is meaningful to share with investors and an indication of what management believes is an important measure of growth."
+    ],
+    "wave_or_demand_evidence": [
+      "customer count (1) of 14.",
+      "customer count within the period.",
+      "customers utilizing our proprietary digital marketing services platform that are sold by either our direct or local market teams.",
+      "customer count are KPIs that offer useful information in understanding consumer behavior, trends in our business, and our overall operating results.",
+      "customer count 14.",
+      "ain on track and expect to hit the revenue growth inflection point as we exit 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charge of approximately $46.",
+      "impairments, (10) Goodwill and intangible impairments, (11) Gains or losses on the sale or disposal of assets, (12) Share-based compensation, (13) Other non-operating (income) expense, net, and (14) Non-recurring items.",
+      "impairments, (6) Goodwill and intangibles impairments, (7) Gains or losses on the sale or disposal of assets, (8) Other items, including (Gain) loss on sale of investments, and (9) the tax impact of the above items.",
+      "charges related to asset impairments, which may significantly affect our financial results.",
+      "impairments — 1,177 Loss on sale or disposal of assets, net 236 146 Other items 7 (18) Subtotal 34,101 (3,856) Tax impact of above items (4,972) (2,122) Adjusted net income (loss) attributable to Gannett (non-GAAP basis) $ 29,129 $ (5,978) GANNETT CO.",
+      "decreased 4."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 278.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 45,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "4.340000",
+    "return_10d_pct": "-2.9954",
+    "return_20d_pct": "10.8295",
+    "return_30d_pct": "14.9769",
+    "return_60d_pct": "26.7281",
+    "return_90d_pct": "8.0645"
+  },
+  "text_stats": {
+    "primary_text_len": 4297,
+    "exhibit_text_len": 34370,
+    "combined_text_len": 38669
+  }
+}

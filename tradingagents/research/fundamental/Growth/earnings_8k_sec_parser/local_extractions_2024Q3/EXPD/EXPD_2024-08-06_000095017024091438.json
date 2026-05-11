@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EXPD",
+    "cik": "746515",
+    "event_date": "2024-08-06",
+    "event_accession": "0000950170-24-091438",
+    "primary_8k_doc": "expd-20240806.htm",
+    "exhibit_docs": [
+      "expd-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EXPD_000095017024091438_expd-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EXPD_000095017024091438_expd-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EXPD",
+    "cik": "746515",
+    "entity_name": "EXPEDITORS INTERNATIONAL OF WASHINGTON, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2592589000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "226011000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5332577000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-226566000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-9551000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "546412000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.087176",
+    "operating_cash_flow_to_revenue": "0.210759",
+    "assets_to_revenue": "2.056854",
+    "financing_cash_flow_to_revenue": "-0.08739",
+    "investing_cash_flow_to_revenue": "-0.003684"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues increased 9% to $2.",
+      "EPS OF $1.",
+      "EPS 1 ) decreased 5% to $1.",
+      "Operating Income decreased 10% to $224 million • Revenues increased 9% to $2.",
+      "operating income as a percentage of revenue less directly related cost of transportation and other expenses), with compensation being our largest and most variable operating expense.",
+      "Operating income $ 223,919 $ 248,497 (10)% $ 438,695 $ 524,466 (16)% Net earnings attributable to shareholders $ 175,469 $ 196,800 (11)% $ 344,621 $ 422,811 (18)% Diluted earnings attributable to shareholders per share $ 1."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "demand, and ocean routing has been significantly disrupted by geopolitical events in the Red Sea, causing less frequent services due to blank sailings, longer transit times as well as port congestion.",
+      "demand, keeping costs in check while we work to bring efficiency back in line with historical expectations.",
+      "demand from North Asia outweighed increased carrier capacity to accommodate this growth in demand.",
+      "demand, capacity, and pricing, not to mention unpredictable events with the potential to impact global shipping for days, weeks, or even longer.",
+      "customer-focused dedication of our workforce, particularly during these unpredictable times.",
+      "demand in the air market; and cautious shipper demand and variable rate stability."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased 5% to $1.",
+      "decreased 11% to $175 million • Operating Income decreased 10% to $224 million • Revenues increased 9% to $2.",
+      "decreased 3% \"We continued to adapt well to another erratic quarter for our industry, which has been impacted by the rapid changes and imbalances in buy versus sell rates, particularly on exports out of Asia,” said Jeffrey S.",
+      "challenging.",
+      "uncertainty with regard to demand, capacity, and pricing, not to mention unpredictable events with the potential to impact global shipping for days, weeks, or even longer.",
+      "uncertainties."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2400,
+    "quarter_revenue_yoy_pct": 9,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "116.989998",
+    "return_10d_pct": "3.6841",
+    "return_20d_pct": "4.5389",
+    "return_30d_pct": "3.4276",
+    "return_60d_pct": "2.4618",
+    "return_90d_pct": "4.2995"
+  },
+  "text_stats": {
+    "primary_text_len": 3669,
+    "exhibit_text_len": 20012,
+    "combined_text_len": 23683
+  }
+}

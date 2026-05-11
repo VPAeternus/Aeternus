@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "OPLN",
+    "cik": "1395942",
+    "event_date": "2024-08-07",
+    "event_accession": "0001395942-24-000058",
+    "primary_8k_doc": "kar-20240807.htm",
+    "exhibit_docs": [
+      "earningsslidesq22024-fin.htm",
+      "exhibit991-q22024earningsr.htm",
+      "exhibit992-q22024ersupplem.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OPLN_000139594224000058_kar-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OPLN_000139594224000058_earningsslidesq22024-fin.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OPLN_000139594224000058_exhibit991-q22024earningsr.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OPLN_000139594224000058_exhibit992-q22024ersupplem.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "OPLN",
+    "cik": "1395942",
+    "entity_name": "OPENLANE, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "420600000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "12700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5147900000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "88900000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2021-11-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2020-09-30",
+    "investing_cash_flow_value": "263600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2021-11-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2020-09-30",
+    "operating_cash_flow_value": "431900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2021-11-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2020-09-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.030195",
+    "operating_cash_flow_to_revenue": "1.026866",
+    "assets_to_revenue": "12.23942",
+    "financing_cash_flow_to_revenue": "0.211365",
+    "investing_cash_flow_to_revenue": "0.626724"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $432 million, marketplace segment grew volumes by 7% and increased Gross Merchandise Value to nearly $7 billion.",
+      "revenue of $431.",
+      "revenue of $416.",
+      "revenue of $848.",
+      "revenue of $837.",
+      "revenue of $1."
+    ],
+    "guidance_evidence": [
+      "guidance) may be forward-looking statements.",
+      "outlook,\" “target” and similar expressions identify forward-looking statements.",
+      "Guidance As a result of Canada’s abrupt implementation of a retroactive Digital Services Tax (DST), which was enacted on June 28, 2024 retroactive to January 1, 2022, the company has updated its 2024 annual guidance.",
+      "Guidance Income from continuing operations ( in millions ) $65 - $80 Adjusted EBITDA ( in millions ) $285 - $305 Income from continuing operations per share - diluted * $0.",
+      "guidance included below.",
+      "outlook,\" “target,” “positioned,” “predict,” “initiative,\" \"goal,\" \"opportunity\" and similar expressions identify forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customer relationships, software, tradenames and non-compete agreements are not representative of ongoing capital expenditures but have a continuing effect on our reported results.",
+      "customers around the globe.",
+      "Customer relationships, net of accumulated amortization 126.",
+      "customer relationships, software, tradenames and noncompete agreements are not representative of ongoing capital expenditures, but have a continuing effect on our reported results.",
+      "customer contract that resulted in the customer's second quarter of 2024 revenue being recorded on a net commission basis instead of a gross basis, as it was recorded in the second quarter of 2023.",
+      "customer contract (see discussion in \"Service revenue\" above)."
+    ],
+    "warning_or_risk_evidence": [
+      "charge related to an investment in an early-stage automotive company.",
+      "charges, as seen in the following reconciliation.",
+      "impairment 250.",
+      "impairment - 250.",
+      "impairments in the second quarter of 2023, respectively, resulted in the U.",
+      "impairments."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 432,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "16.219999",
+    "return_10d_pct": "6.3502",
+    "return_20d_pct": "5.9186",
+    "return_30d_pct": "0.5549",
+    "return_60d_pct": "-3.0210",
+    "return_90d_pct": "7.7682"
+  },
+  "text_stats": {
+    "primary_text_len": 4259,
+    "exhibit_text_len": 80824,
+    "combined_text_len": 85085
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CGNX",
+    "cik": "851205",
+    "event_date": "2024-07-31",
+    "event_accession": "0000851205-24-000069",
+    "primary_8k_doc": "cgnx-20240731.htm",
+    "exhibit_docs": [
+      "exhibit991-q22024earningsr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CGNX_000085120524000069_cgnx-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CGNX_000085120524000069_exhibit991-q22024earningsr.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CGNX",
+    "cik": "851205",
+    "entity_name": "Cognex Corporation",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "201124000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-02",
+    "net_income_value": "25615000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-02",
+    "assets_value": "2017812000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-39324000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-02",
+    "investing_cash_flow_value": "-5788000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-02",
+    "operating_cash_flow_value": "27553000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.127359",
+    "operating_cash_flow_to_revenue": "0.136995",
+    "assets_to_revenue": "10.032676",
+    "financing_cash_flow_to_revenue": "-0.195521",
+    "investing_cash_flow_to_revenue": "-0.028778"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was driven primarily by continued softness across our factory automation business, partially offset by growth in our Logistics and Semiconductor businesses.",
+      "revenue increased by 14% from Q1-24, or 15% excluding a 1% negative impact of FX, primarily due to the seasonality of Consumer Electronics revenue.",
+      "gross margin in line with expectations and operating expenses favorable to our guidance,\" said Robert J.",
+      "Operating Income $38 $65 (41%) $14 +171% % of Revenue 16.",
+      "Net Income per Diluted Share $0.",
+      "EPS (Diluted)* $0."
+    ],
+    "guidance_evidence": [
+      "guidance,\" said Robert J.",
+      "guidance.",
+      "Outlook – Q3 2024 • Cognex expects revenue to be between $225 million and $240 million.",
+      "expects revenue to be between $225 million and $240 million.",
+      "expected to be slightly below 70%, a sequential decrease from Q2-24 driven by the additional month of Moritex financials and negative mix.",
+      "expected to be between 16% and 19%."
+    ],
+    "wave_or_demand_evidence": [
+      "Customer initiative, as well as on key financial priorities including cost management and capital efficiency.",
+      "Customer initiative, partly offset by lower headcount excluding Moritex and Emerging Customers, as well as disciplined cost management.",
+      "Customer initiative .",
+      "Customers initiative and higher incentive compensation.",
+      "customer relationships, completed technologies, and trademarks that originated from prior acquisitions.",
+      "customers worldwide."
+    ],
+    "warning_or_risk_evidence": [
+      "charges in cost of revenue in the quarter, primarily related to the Moritex acquisition.",
+      "charges in operating expenses in the quarter, primarily related to the Moritex acquisition.",
+      "charges, acquisition and integration charges, and amortization of acquisition-related intangible assets, all of which are subject to limitations in predictability of timing, ultimate outcome and numerous conditions outside of Cognex’s control.",
+      "charges, acquisition and integration costs and other one-time discrete events, such as loss or recovery related to a fire.",
+      "charges, acquisition and integration costs and other one-time discrete events, such as loss or recovery related to a fire or a foreign currency (gain) loss on a forward contract to hedge the Moritex purchase price.",
+      "inventory and other losses incurred as a result of the fire."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 225,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "46.000000",
+    "return_10d_pct": "-16.3043",
+    "return_20d_pct": "-13.0217",
+    "return_30d_pct": "-16.8261",
+    "return_60d_pct": "-11.9565",
+    "return_90d_pct": "-12.0435"
+  },
+  "text_stats": {
+    "primary_text_len": 3694,
+    "exhibit_text_len": 26620,
+    "combined_text_len": 30316
+  }
+}

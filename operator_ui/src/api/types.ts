@@ -33,14 +33,13 @@ export interface SnapshotEnvelope {
 export interface CandidateDTO {
   symbol: string;
   lane: string;
-  score: number;
-  confidence: number;
+  score: number | null;
+  confidence: number | null;
   thesis_summary: string;
   risk_flags: string[];
   quality_tier: string;
   snapshot_id: string;
   queue_id: string;
-  selected_for_deep: boolean;
   research_playbook: string;
 }
 
@@ -48,7 +47,7 @@ export interface DealflowSummaryDTO {
   run_id: string;
   date: string;
   total_candidates: number;
-  selected_for_deep: number;
+  handoff_count: number;
   lane_counts: Record<string, number>;
   top_symbols: string[];
 }

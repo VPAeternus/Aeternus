@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PLTK",
+    "cik": "1828016",
+    "event_date": "2024-08-07",
+    "event_accession": "0001828016-24-000027",
+    "primary_8k_doc": "pltk-20240807.htm",
+    "exhibit_docs": [
+      "a2024q2ex991-earningsrelea.htm",
+      "pltkq22024earningspresen.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLTK_000182801624000027_pltk-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLTK_000182801624000027_a2024q2ex991-earningsrelea.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLTK_000182801624000027_pltkq22024earningspresen.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PLTK",
+    "cik": "1828016",
+    "entity_name": "PLAYTIKA HOLDING CORP.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "656200000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "84100000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3175000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-6100000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-15400000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "20500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.128162",
+    "operating_cash_flow_to_revenue": "0.03124",
+    "assets_to_revenue": "4.838464",
+    "financing_cash_flow_to_revenue": "-0.009296",
+    "investing_cash_flow_to_revenue": "-0.023468"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $627.",
+      "Revenue of $173.",
+      "Revenue Increased 1.",
+      "revenue of $173.",
+      "revenue decreased (4.",
+      "revenue decreased (2."
+    ],
+    "guidance_evidence": [
+      "Outlook For the full year 2024 the company expects revenue to be toward the bottom end of the previously provided range of $2.",
+      "expects revenue to be toward the bottom end of the previously provided range of $2.",
+      "expected items.",
+      "expected.",
+      "expected to continue to improve with Free Cash Flow generation No near-term debt maturities Net LTM leverage of approximately 1."
+    ],
+    "wave_or_demand_evidence": [
+      "aimed at revitalizing our portfolio,” said Robert Antokol, Chief Executive Officer.",
+      "aid Craig Abrahams, President and Chief Financial Officer.",
+      "ained growth and profitability and we remain committed to delivering long-term value to our players and shareholders, our focus on execution remains unwavering.",
+      "aily Paying Users of 298K decreased (3.",
+      "ailable through the website one hour following the call and will be archived for one year.",
+      "aily Payer Conversion 3."
+    ],
+    "warning_or_risk_evidence": [
+      "Impairment charge — 9.",
+      "impairment charges, (vi) stock-based compensation, (vii) contingent consideration, (viii) acquisition and related expenses, and (ix) certain other items.",
+      "impairment of intangible assets, (vi) stock-based compensation, (vii) contingent consideration, (viii) acquisition and related expenses, and (ix) certain other items.",
+      "Impairment of intangible assets 9.",
+      "decreased (3.",
+      "decreased (11."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 627,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "6.880000",
+    "return_10d_pct": "3.7791",
+    "return_20d_pct": "10.3198",
+    "return_30d_pct": "6.1047",
+    "return_60d_pct": "10.7558",
+    "return_90d_pct": "19.3314"
+  },
+  "text_stats": {
+    "primary_text_len": 3361,
+    "exhibit_text_len": 32876,
+    "combined_text_len": 36239
+  }
+}

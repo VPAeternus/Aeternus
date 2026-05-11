@@ -4,7 +4,7 @@
 
 **Goal:** Build an opt-in shadow Top-15 refill variant that demotes validated core deterioration patterns, refills with next ex-ante eligible ranked candidates, and reports full Top-15 shadow results without changing current Top-15 v3.
 
-**Architecture:** Keep official `high_conviction_top15_v3_exception_sleeve` untouched. Extend shared selection utilities with label-active RM/HP counting and named deterioration flags, then add a shadow selector/backtest path that builds `10` refilled core names plus `up to 5` exception names while blocking demoted/refill-ineligible deterioration tickers from exception re-entry. Return labels are attached only after selection is frozen for diagnostics.
+**Architecture:** Keep official `high_conviction_top15_v3_exception_sleeve` untouched. Extend shared selection utilities with label-active RM/HP counting and named deterioration flags, then add a shadow selector/backtest path that builds `10` refilled core names plus `up to 5` exception names while blocking demoted/refill-ineligible deterioration tickers from exception re-entry. Refill diagnostics stay outcome-field-free: no `return_*`, winner/loser, target, current-return, or delta fields.
 
 **Tech Stack:** Python 3.14, stdlib csv/json, Typer, pytest, existing Aeternus fundamental selector/backtest modules.
 
@@ -506,9 +506,6 @@ CORE_DETERIORATION_REFILL_FIELDS = [
     "core_deterioration_downgrade_flag",
     "core_deterioration_strict_override_required",
     "core_deterioration_reason_codes",
-    "demoted_return_90d_pct",
-    "replacement_return_90d_pct",
-    "replacement_delta_90d_pct",
 ]
 
 
@@ -958,9 +955,6 @@ def _replacement_diagnostic(mode: str, demoted: Mapping[str, Any], replacement: 
         "core_deterioration_downgrade_flag": flags.get("core_deterioration_downgrade_flag", 0),
         "core_deterioration_strict_override_required": flags.get("core_deterioration_strict_override_required", 0),
         "core_deterioration_reason_codes": flags.get("core_deterioration_reason_codes", ""),
-        "demoted_return_90d_pct": "",
-        "replacement_return_90d_pct": "",
-        "replacement_delta_90d_pct": "",
     }
 
 
@@ -1263,7 +1257,8 @@ def test_core_deterioration_refill_shadow_outputs_full_top15_and_replacement_dia
     assert "NEXT" in {r["ticker"] for r in strict_rows}
     assert any(r["selected_sleeve"] == "right_tail_exception" for r in strict_rows)
     assert any(r["demoted_ticker"] == "BAD" and r["replacement_ticker"] == "NEXT" for r in replacements)
-    assert any(r["replacement_delta_90d_pct"] == "70.000000" for r in replacements)
+    forbidden = {"demoted_return_90d_pct", "replacement_return_90d_pct", "replacement_delta_90d_pct"}
+    assert forbidden.isdisjoint(replacements[0])
     strict_summary = next(r for r in summary if r["variant"] == "top15_v4_core_deterioration_refill_strict")
     assert strict_summary["core_count"] == "10"
     assert int(strict_summary["total_picks"]) >= 10
@@ -1353,14 +1348,10 @@ def _core_refill_flag_row(row: Mapping[str, Any], rank: int) -> dict[str, Any]:
     return out
 
 
-def _build_refill_replacement_row(variant: str, quarter: str, mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any] | None, by_ticker: Mapping[str, Mapping[str, Any]]) -> dict[str, Any]:
+def _build_refill_replacement_row(variant: str, quarter: str, mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any] | None) -> dict[str, Any]:
     flags = core_deterioration_flags(demoted)
     demoted_ticker = str(demoted.get("ticker", "")).upper()
     replacement_ticker = str((replacement or {}).get("ticker", "")).upper()
-    demoted_ret = by_ticker.get(demoted_ticker, {}).get("return_90d_pct", "")
-    replacement_ret = by_ticker.get(replacement_ticker, {}).get("return_90d_pct", "") if replacement_ticker else ""
-    d = _to_float(demoted_ret)
-    r = _to_float(replacement_ret)
     return {
         "variant": variant,
         "quarter": quarter,
@@ -1384,9 +1375,6 @@ def _build_refill_replacement_row(variant: str, quarter: str, mode: str, demoted
         "core_deterioration_downgrade_flag": flags.get("core_deterioration_downgrade_flag", 0),
         "core_deterioration_strict_override_required": flags.get("core_deterioration_strict_override_required", 0),
         "core_deterioration_reason_codes": flags.get("core_deterioration_reason_codes", ""),
-        "demoted_return_90d_pct": demoted_ret,
-        "replacement_return_90d_pct": replacement_ret,
-        "replacement_delta_90d_pct": f"{(r - d):.6f}" if d is not None and r is not None else "",
     }
 
 
@@ -1444,7 +1432,7 @@ def _build_core_deterioration_refill_shadow(
 
     for idx, demoted in enumerate(demoted_raw):
         replacement = replacements_raw[idx] if idx < len(replacements_raw) else None
-        replacement_rows.append(_build_refill_replacement_row(variant, quarter, mode, demoted, replacement, by_ticker))
+        replacement_rows.append(_build_refill_replacement_row(variant, quarter, mode, demoted, replacement))
 
     cfg = RightTailExceptionConfig(enabled=True, core_n=10, exception_slots=5)
     exceptions, _warnings = _select_exception_sleeve(selected_core, safe_rows, cfg, blocked_tickers=blocked_tickers)
@@ -1630,7 +1618,7 @@ Add report section:
 
 This is a shadow-only research variant, not the official Top-15 list. It preserves Top-15 capacity by combining refilled core rows with the exception sleeve, and it blocks demoted/refill-ineligible deterioration tickers from exception auto-selection.
 
-Use `core_deterioration_refill_shadow_replacements.csv` to compare demoted core names against next eligible ex-ante replacements. Return labels and replacement deltas are diagnostic only and are attached after selection is frozen.
+Use `core_deterioration_refill_shadow_replacements.csv` to compare demoted core names against next eligible ex-ante replacements. This diagnostics file is outcome-field-free: no return labels, winner/loser labels, target/current-return fields, or replacement deltas.
 ```
 
 - [ ] **Step 4: Run test**
@@ -1861,7 +1849,7 @@ for path in [
 PY
 ```
 
-Expected: strict/downgrade variants appear; replacement rows include `demoted_ticker`, `replacement_ticker`, `demoted_rm_count`, `demoted_hp_count`, `demoted_market_repricing_score`, `replacement_delta_90d_pct`.
+Expected: strict/downgrade variants appear; replacement rows include `demoted_ticker`, `replacement_ticker`, `demoted_rm_count`, `demoted_hp_count`, `demoted_market_repricing_score`, and no return/delta fields.
 
 - [ ] **Step 5: Commit artifacts**
 
@@ -2017,7 +2005,7 @@ Expected: push succeeds.
 - `top15_selected_rows_unchanged_from_prior_hash = true`.
 - Shadow selected/replacement/summary CSVs exist.
 - Shadow selected file includes core and exception sleeves.
-- Replacement table contains RM/HP counts and post-freeze return deltas.
+- Replacement table contains RM/HP counts and no return/delta fields.
 - Daily CLI writes shadow outputs without changing official Top-15.
 
 ## Rollback Plan

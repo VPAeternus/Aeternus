@@ -81,7 +81,7 @@ python3 -m pytest tests/test_learning_loop.py -q
 
 **Files:**
 - Create: `tradingagents/dealflow/ic_weight_writeback.py`
-- Modify: `tradingagents/dealflow/scoring.py`
+- Modify: `legacy pre-fundamental scorer`
 - Test: `tests/test_ic_weight_writeback.py`
 
 **Step 1: Write the failing test**
@@ -160,7 +160,7 @@ python3 -m pytest tests/test_ensemble_weights.py -q
 
 Add tests that:
 - a cycle writes `source_attribution.json`
-- each ticker row captures discovery sources, collector families, shortlist/deep flags
+- each ticker row captures discovery sources, collector families, candidate_list/deep flags
 - hindsight can summarize source-level edge from the artifact
 
 **Step 2: Run test to verify it fails**

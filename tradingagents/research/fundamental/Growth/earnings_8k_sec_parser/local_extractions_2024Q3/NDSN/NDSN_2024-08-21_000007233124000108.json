@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NDSN",
+    "cik": "72331",
+    "event_date": "2024-08-21",
+    "event_accession": "0000072331-24-000108",
+    "primary_8k_doc": "ndsn-20240821.htm",
+    "exhibit_docs": [
+      "ndsn-q320248kxex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NDSN_000007233124000108_ndsn-20240821.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NDSN_000007233124000108_ndsn-q320248kxex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NDSN",
+    "cik": "72331",
+    "entity_name": "NORDSON CORPORATION",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1260642000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "104261000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-01-31",
+    "assets_value": "5251770000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-10-31",
+    "financing_cash_flow_value": "64822000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "-393153000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "287905000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.082705",
+    "operating_cash_flow_to_revenue": "0.22838",
+    "assets_to_revenue": "4.165949",
+    "financing_cash_flow_to_revenue": "0.05142",
+    "investing_cash_flow_to_revenue": "-0.311867"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales were $662 million, an increase of 2% year-over-year and in-line with mid-point of guidance • Earnings per diluted share were $2.",
+      "Sales were $662 million, compared to the prior year’s third quarter sales of $649 million.",
+      "sales of $371 million increased 10% from the prior year, inclusive of a favorable acquisition impact of 7%, an organic sales increase of 4% and unfavorable currency translation of 1%.",
+      "sales of $167 million decreased 2% compared to the prior year third quarter.",
+      "sales of $124 million decreased 11% compared to the prior year third quarter, driven by lower organic sales and unfavorable currency translation of 1%.",
+      "Net income was $117 million, or $2."
+    ],
+    "guidance_evidence": [
+      "Guidance Third Quarter Highlights: • Sales were $662 million, an increase of 2% year-over-year and in-line with mid-point of guidance • Earnings per diluted share were $2.",
+      "guidance, inclusive of the slightly dilutive fourth quarter Atrion acquisition impact WESTLAKE, Ohio--(BUSINESS WIRE)--August 21, 2024--Nordson Corporation (Nasdaq: NDSN) today reported results for the fiscal third quarter ended July 31, 2024.",
+      "Outlook The Company is entering the fourth quarter of fiscal 2024 with approximately $650 million in backlog, which continues to normalize and remain concentrated in systems businesses.",
+      "guidance range to $2,665 million - $2,705 million, inclusive of revenue from the Atrion acquisition in the fiscal fourth quarter.",
+      "outlook, Nagarajan continued, “Throughout 2024, we have remained focused on delivering high quality operating performance in a dynamic environment.",
+      "outlook during its previously announced webcast on Thursday, August 22, 2024 at 8:30 a."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in electronics and medical product lines, partially offset by growth in packaging, nonwovens, and optical sensors product lines.",
+      "customer while managing profitability well against headwinds in select businesses.",
+      "demand in interventional solutions and fluid components product lines.",
+      "backlog, which continues to normalize and remain concentrated in systems businesses.",
+      "customers through a wide variety of critical applications.",
+      "optical sensors product lines."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory charges associated with acquisitions.",
+      "inventory charges associated with acquisitions, plus depreciation and amortization.",
+      "decrease of 1% and unfavorable currency translation of 1%.",
+      "decrease was driven by lower demand in electronics and medical product lines, partially offset by growth in packaging, nonwovens, and optical sensors product lines.",
+      "decrease from the prior year adjusted net income of $147 million.",
+      "decrease from the prior year adjusted earnings per diluted share of $2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 662,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-22",
+    "entry_open": "253.919998",
+    "return_10d_pct": "-1.4729",
+    "return_20d_pct": "-2.3590",
+    "return_30d_pct": "0.5789",
+    "return_60d_pct": "-0.2245",
+    "return_90d_pct": "-0.5356"
+  },
+  "text_stats": {
+    "primary_text_len": 3550,
+    "exhibit_text_len": 19087,
+    "combined_text_len": 22639
+  }
+}

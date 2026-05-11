@@ -203,12 +203,22 @@ def _recompute_pre_llm_derived(df: pd.DataFrame) -> pd.DataFrame:
     out["extended_candidate_universe"] = (tier0 | hp_prod).map(lambda value: "Extended candidate universe" if value else "")
     out["extended_research_universe"] = (tier0 | hp_research).map(lambda value: "Extended research universe" if value else "")
 
-    out["entry_qoq_pct"] = out["entry_qoq_pct"].map(lambda value: "" if pd.isna(value) else round(float(value), 2))
+    def _fmt_float(value, digits: int = 2):
+        numeric = pd.to_numeric(value, errors="coerce")
+        return "" if pd.isna(numeric) else round(float(numeric), digits)
+
+    out["entry_qoq_pct"] = out["entry_qoq_pct"].map(lambda value: _fmt_float(value, 2))
     if "prior_entry_open" in out.columns:
-        out["prior_entry_open"] = out["prior_entry_open"].map(lambda value: "" if pd.isna(value) else round(float(value), 6))
+        out["prior_entry_open"] = out["prior_entry_open"].map(lambda value: _fmt_float(value, 6))
     if "prior_entry_qoq_pct" in out.columns:
-        out["prior_entry_qoq_pct"] = out["prior_entry_qoq_pct"].map(lambda value: "" if pd.isna(value) else round(float(value), 2))
-    out["score_change"] = out["score_change"].map(lambda value: "" if pd.isna(value) else int(value) if float(value).is_integer() else round(float(value), 2))
+        out["prior_entry_qoq_pct"] = out["prior_entry_qoq_pct"].map(lambda value: _fmt_float(value, 2))
+    out["score_change"] = out["score_change"].map(
+        lambda value: ""
+        if pd.isna(pd.to_numeric(value, errors="coerce"))
+        else int(float(value))
+        if float(value).is_integer()
+        else round(float(value), 2)
+    )
     out = out.drop(columns=["quarter_sort", "prior_entry_open", "prior_pre_llm_fundamental_score"], errors="ignore")
     return out
 
@@ -414,7 +424,7 @@ def _write_report(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Add one or more tickers to the live fundamental universe")
+    parser = argparse.ArgumentParser(description="Add one or more tickers to the live walkforward universe")
     parser.add_argument("--tickers", required=True, help="Comma-separated tickers")
     parser.add_argument("--start-quarter", default="2021Q4")
     parser.add_argument("--end-quarter", default="latest")

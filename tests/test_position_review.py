@@ -152,15 +152,14 @@ class TestReviewPositions:
         assert "down" in results[0]["reason"]
 
     def test_review_rotate_opportunity(self):
-        """Better candidate in pipeline -> ROTATE."""
+        """Better researched candidate -> ROTATE."""
         from tradingagents.graph.position_review import review_positions
 
         positions = {"SOFI": _make_position("SOFI", entry_score=70)}
         akg = _StubAKG()
         akg._nodes["SOFI"] = {"last_aeternus_score": 68}
 
-        # Pipeline candidate 20+ points higher
-        candidates = [{"symbol": "NVDA", "momentum_score": 92}]
+        candidates = [{"symbol": "NVDA", "aeternus_score": 92}]
 
         results = review_positions(positions, akg=akg, pipeline_candidates=candidates)
         assert results[0]["recommendation"] == "ROTATE"
@@ -216,108 +215,3 @@ class TestMorningBriefHealth:
         assert "total_held" in brief["position_health"]
         assert "actions" in brief["position_health"]
         assert "alerts" in brief["position_health"]
-
-
-# ---------------------------------------------------------------------------
-# Task: _inject_held_positions
-# ---------------------------------------------------------------------------
-
-class TestInjectHeldPositions:
-
-    def _make_pipe_with_positions(self, tmp_path, positions_dict):
-        """Helper: write positions.json and return (pipe, pos_file)."""
-        import json
-        from tradingagents.dealflow.pipeline import DealFlowPipeline
-
-        pos_file = tmp_path / "positions.json"
-        pos_file.write_text(json.dumps({"open_positions": positions_dict}))
-
-        pipe = DealFlowPipeline.__new__(DealFlowPipeline)
-        pipe.config = {}
-        return pipe, pos_file
-
-    def _run_inject(self, pipe, pos_file, items, selected_ids, run_id="run1"):
-        """Helper: call _inject_held_positions with patched Path."""
-        from unittest.mock import patch
-        real_path = __import__("pathlib").Path
-
-        with patch("tradingagents.dealflow.pipeline.Path") as MockPath:
-            MockPath.side_effect = lambda p: pos_file if "positions.json" in str(p) else real_path(p)
-            return pipe._inject_held_positions(items=items, selected_ids=selected_ids, run_id=run_id)
-
-    def test_held_positions_injected_into_selected(self, tmp_path):
-        """Held equity positions are added to selected_ids."""
-        pipe, pos_file = self._make_pipe_with_positions(tmp_path, {
-            "AAPL": {"symbol": "AAPL", "net_quantity": 10},
-            "MSFT": {"symbol": "MSFT", "net_quantity": 5},
-        })
-
-        items = [
-            {"queue_id": "run1:AAPL", "symbol": "AAPL", "asset_class": "Equity",
-             "triage_score": 40.0, "lane": "CORE", "selected_for_deep": False},
-        ]
-
-        result_items, result_ids = self._run_inject(pipe, pos_file, items, [])
-
-        symbols_selected = {
-            item["symbol"] for item in result_items if item["queue_id"] in set(result_ids)
-        }
-        assert "AAPL" in symbols_selected
-        assert "MSFT" in symbols_selected
-
-    def test_etf_positions_skipped(self, tmp_path):
-        """ETFs like QQQ are not injected into deep analysis."""
-        pipe, pos_file = self._make_pipe_with_positions(tmp_path, {
-            "QQQ": {"symbol": "QQQ", "net_quantity": 20},
-            "TQQQ": {"symbol": "TQQQ", "net_quantity": 10},
-            "AAPL": {"symbol": "AAPL", "net_quantity": 5},
-        })
-
-        items = [
-            {"queue_id": "run1:QQQ", "symbol": "QQQ", "asset_class": "ETF",
-             "triage_score": 30.0, "lane": "CORE", "selected_for_deep": False},
-        ]
-
-        result_items, result_ids = self._run_inject(pipe, pos_file, items, [])
-
-        symbols_selected = {
-            item["symbol"] for item in result_items if item["queue_id"] in set(result_ids)
-        }
-        assert "QQQ" not in symbols_selected
-        assert "TQQQ" not in symbols_selected
-        assert "AAPL" in symbols_selected
-
-    def test_deep_k_grows_with_injected_count(self, tmp_path):
-        """deep_k in research queue should grow by number of portfolio injections."""
-        import json
-        from unittest.mock import patch
-        from tradingagents.dealflow.pipeline import DealFlowPipeline
-
-        pos_file = tmp_path / "positions.json"
-        pos_file.write_text(json.dumps({"open_positions": {
-            "TSM": {"symbol": "TSM", "net_quantity": 10},
-            "BMY": {"symbol": "BMY", "net_quantity": 50},
-        }}))
-
-        # Directly test the adaptive deep_k logic from _build_research_queue:
-        # pre_inject_count=0, after inject=2 → deep_k grows by 2
-        pre = 0
-        selected_after = ["run1:TSM", "run1:BMY"]
-        growth = len(selected_after) - pre
-        assert growth == 2  # Two new slots added, not stolen from discovery
-
-    def test_no_positions_file_returns_unchanged(self):
-        """When positions.json doesn't exist, items/selected pass through."""
-        from tradingagents.dealflow.pipeline import DealFlowPipeline
-
-        pipe = DealFlowPipeline.__new__(DealFlowPipeline)
-        pipe.config = {}
-
-        items = [{"queue_id": "r:X", "symbol": "X"}]
-        selected = ["r:X"]
-
-        result_items, result_ids = pipe._inject_held_positions(
-            items=items, selected_ids=selected, run_id="r",
-        )
-        assert result_items == items
-        assert result_ids == selected

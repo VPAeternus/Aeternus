@@ -288,7 +288,7 @@ def _format_html_brief(brief: dict) -> str:
             <!-- Deal Flow Section -->
             <div class="section">
                 <h2>Top Deal Flow Signals</h2>
-                <p style="color: #a0a0b0; margin-bottom: 15px;">Latest Queue: {deal_flow.get('latest_queue_date', 'N/A')}</p>
+                <p style="color: #a0a0b0; margin-bottom: 15px;">Latest Scout Handoff: {deal_flow.get('latest_handoff_date', 'N/A')}</p>
                 <table>
                     <thead>
                         <tr>

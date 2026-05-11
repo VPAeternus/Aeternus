@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KIM",
+    "cik": "879101",
+    "event_date": "2024-08-01",
+    "event_accession": "0000950170-24-088936",
+    "primary_8k_doc": "kim-20240801.htm",
+    "exhibit_docs": [
+      "kim-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KIM_000095017024088936_kim-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KIM_000095017024088936_kim-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KIM",
+    "cik": "879101",
+    "entity_name": "KIMCO     REALTY CORP",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "442892000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "289763000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "18274022000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-209444000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "43559000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "345233000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.654252",
+    "operating_cash_flow_to_revenue": "0.779497",
+    "assets_to_revenue": "41.260673",
+    "financing_cash_flow_to_revenue": "-0.472901",
+    "investing_cash_flow_to_revenue": "0.098351"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of properties, net of impairments in 2024.",
+      "sales of certain real estate assets, depreciation and amortization related to real estate, profit participations from other investments, and other items considered incidental to the company’s business.",
+      "sales was $7.",
+      "sales of marketable securities and derivatives, where applicable.",
+      "net income available to the company’s common shareholders per diluted share was $0.",
+      "Operating Income* (NOI) over the same period a year ago."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "Outlook The company has raised its 2024 outlook for Net income and FFO per diluted share as follows: Current * Previous* Net income: $0.",
+      "outlook for Net income and FFO in the following table (Pro-rata share; dollars in millions): ii 500 North Broadway, Suite 201 | Jericho, NY 11753 | ( 833) 800-4343 kimcorealty.",
+      "Guidance Assumptions Q2 YTD Current Previous Total acquisitions & structured investments combined: • Cap rate (blended) $244 • 10.",
+      "forecast” or similar expressions."
+    ],
+    "wave_or_demand_evidence": [
+      "air, grocery-anchored shopping centers and mixed-use properties in the United States, today reported results for the second quarter ended June 30, 2024.",
+      "ailable to the company’s common shareholders per diluted share was $0.",
+      "air, grocery-anchored portfolio and further validates our investment thesis for the RPT acquisition,” said Conor Flynn, CEO of Kimco.",
+      "aising our full year outlook.",
+      "ain committed to increasing shareholder value.",
+      "ailable to the company’s common shareholders (“Net income”) for the second quarter of 2024 was $111."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments in 2024.",
+      "charges.",
+      "impairments, depreciation on properties, gains/(losses) on sales of marketable securities and derivatives, where applicable.",
+      "charges of $25.",
+      "Impairment charges (including real estate joint ventures) 0.",
+      "losses as well as gains and losses from the sales of certain real estate assets, depreciation and amortization related to real estate, profit participations from other investments, and other items considered incidental to the company’s business."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 57.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "22.080000",
+    "return_10d_pct": "-1.4946",
+    "return_20d_pct": "3.3514",
+    "return_30d_pct": "5.2083",
+    "return_60d_pct": "4.5290",
+    "return_90d_pct": "7.4275"
+  },
+  "text_stats": {
+    "primary_text_len": 4936,
+    "exhibit_text_len": 28149,
+    "combined_text_len": 33087
+  }
+}

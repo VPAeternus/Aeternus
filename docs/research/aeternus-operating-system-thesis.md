@@ -52,7 +52,7 @@ This is obligation work, not edge.
 
 The wedge is:
 
-**idea -> evidence -> shortlist -> deep research -> allocation -> execution -> learning**
+**idea -> evidence -> candidate_list -> deep research -> allocation -> execution -> learning**
 
 in one measured loop.
 
@@ -71,8 +71,8 @@ Steps 1 through 5 are now instrumented:
 
 - Step 1: discovery / universe recall
 - Step 2: evidence integrity
-- Step 3: shortlist integrity
-- Step 4: deep-selection integrity
+- Step 3: candidate_list integrity
+- Step 4: fundamental-intake integrity
 - Step 5: research conversion integrity
 
 That means the system can now learn where future winners are being lost and where attention is being wasted.

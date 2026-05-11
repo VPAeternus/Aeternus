@@ -1,0 +1,841 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NUS",
+    "cik": "1021561",
+    "event_date": "2024-08-08",
+    "event_accession": "0001140361-24-036406",
+    "primary_8k_doc": "ef20033803_8k.htm",
+    "exhibit_docs": [
+      "ef20033803_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NUS_000114036124036406_ef20033803_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NUS_000114036124036406_ef20033803_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NUS",
+    "cik": "1021561",
+    "entity_name": "NU SKIN ENTERPRISES, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "481462000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "11376000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1806463000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "1380000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-14696000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-22077000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.023628",
+    "operating_cash_flow_to_revenue": "-0.045854",
+    "assets_to_revenue": "3.752037",
+    "financing_cash_flow_to_revenue": "0.002866",
+    "investing_cash_flow_to_revenue": "-0.030524"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $430 to $465 million and earnings per share of $0.",
+      "Earnings Per Share (EPS) $(2.",
+      "earnings per share slightly exceeded our projections due to heightened operational discipline, excluding our restructuring and impairment charges.",
+      "Gross Margin 70.",
+      "EPS $(2.",
+      "EPS $0."
+    ],
+    "guidance_evidence": [
+      "guidance.",
+      "Outlook Q3 2024 Revenue $430 to $465 million; (14)% to (7)% • Approximately (4) to (3)% FX impact Q3 2024 EPS $0.",
+      "guidance range.",
+      "guidance assumes continued sequential improvement with projected revenue of $430 to $465 million and earnings per share of $0.",
+      "outlook,” “guidance,” “improve,” “will,” “would,” “could,” “may,” “might,” the negative of these words and other similar words."
+    ],
+    "wave_or_demand_evidence": [
+      "customers seek to find us.",
+      "Customers” are persons who have purchased directly from the Company during the three months ended as of the date indicated.",
+      "Customer numbers include members of our sales force who made such a purchase, including Paid Affiliates and those who qualify as Sales Leaders, but they do not include consumers who purchase directly from members of our sales force.",
+      "airment charges, compared to $0.",
+      "aid Ryan Napierski, Nu Skin president and CEO.",
+      "airment charges."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, compared to $0.",
+      "impairment charges.",
+      "impairment charges compared to 8.",
+      "impairment charges compared to 27.",
+      "impairment charges compared to $0.",
+      "inventory levels and paid down debt to strengthen our balance sheet."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ef20033803_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRESS RELEASE DATED AUGUST 8, 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: Broadridge Document created using Broadridge PROfile 24.6.2.5244 Copyright 1995 - 2024 Broadridge"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "PROVO, Utah — Aug. 8, 2024 — Nu Skin Enterprises Inc. (NYSE: NUS) today announced second quarter results in line with top-line guidance."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Executive Summary"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q2 2024 vs. Prior-year Quarter"
+    },
+    {
+      "type": "TableElement",
+      "text": "Revenue $439.1 million; (12.2)% • (4.2)% FX impact or $(21.0) million • Rhyz revenue $67.8 million; 32.3% Earnings Per Share (EPS) $(2.38) or $0.21 excluding restructuring and impairment charges, compared to $0.54 Customers 893,514; (14)% Paid Affiliates 155,486; (17)% or (9)% excluding an adjustment to eligibility requirements Sales Leaders 38,592; (16)%"
+    },
+    {
+      "type": "TextElement",
+      "text": "“We are pleased with our progress as we perform to plan on our transformational efforts, and we are on track as evidenced by our second quarter results,” said Ryan Napierski, Nu Skin president and CEO. “Our revenue was in-line with our expectations despite a 4 percent FX headwind, while adjusted earnings per share slightly exceeded our projections due to heightened operational discipline, excluding our restructuring and impairment charges. As our core Nu Skin business continues to navigate the macro-economic environment, we were encouraged by sequential gains in several of our markets including the U.S. and most of Southeast Asia/Pacific. Additionally, our Rhyz business grew 32 percent versus the prior-year quarter led by strong performances in our Mavely affiliate platform and manufacturing companies.“We are intensifying our transformation efforts to become a leading integrated beauty, wellness and lifestyle ecosystem by building synergistic value between our Nu Skin core and Rhyz. In late July, we held our first Western market, in-person affiliate event in over five years with a similar event for Eastern markets coming in September. At the event, we were able to drive energy and alignment among our leaders as we previewed our MYND360 cognitive health division and promoted new activation efforts to grow our salesforce. We also announced plans for a Nu Skin/Mavely app, with Mavely’s more than 1,200 brands and 70,000 everyday influencers, for our Nu Skin affiliates, anticipated for second-half introduction in the U.S.“We are enhancing our developing market strategy including a revised business model, targeted product offering and streamlined operating infrastructure beginning with Latin America and parts of Southeast Asia in the second half. In addition, we are intensifying our plans to enter India with a proprietary business model that will be a catalyst for expansion into other emerging markets. We are also exploring integrated brand building initiatives, including digital marketing and third-party marketplaces, as we strive to be wherever our customers seek to find us.”"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q2 2024 Year-over-year Operating Results"
+    },
+    {
+      "type": "TableElement",
+      "text": "Revenue $439.1 million compared to $500.3 million • (4.2)% FX impact or $(21.0) million • Rhyz revenue $67.8 million; +32.3% Gross Margin 70.0% compared to 72.9% • Nu Skin business was 76.1% compared to 77.2% Selling Expenses 37.7% compared to 37.0% • Nu Skin business was 42.2% compared to 40.2% G&A Expenses 26.9% compared to 27.4% Operating Margin (28.6)% or 5.4% excluding restructuring and impairment charges compared to 8.5% Interest Expense $6.7 million compared to $5.8 million Other Income/(Expense) $0.6 million compared to $0.4 million Income Tax Rate 10.2% or 41.4% excluding restructuring and impairment charges compared to 27.5% EPS $(2.38) or $0.21 excluding restructuring and impairment charges compared to $0.54"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Stockholder Value"
+    },
+    {
+      "type": "TableElement",
+      "text": "Dividend Payments $3.0 million Stock Repurchases $0.0 million • $162.4 million remaining in authorization"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q3 and Full-year 2024 Outlook"
+    },
+    {
+      "type": "TableElement",
+      "text": "Q3 2024 Revenue $430 to $465 million; (14)% to (7)% • Approximately (4) to (3)% FX impact Q3 2024 EPS $0.08 to $0.18 or $0.15 to $0.25 non-GAAP 2024 Revenue $1.73 to $1.81 billion; (12)% to (8)% • Approximately (4) to (3)% FX impact 2024 EPS $(2.01) to $(1.81) or $0.75 to $0.95 non-GAAP"
+    },
+    {
+      "type": "TextElement",
+      "text": "“As we continue to refine our operating model during our transformation, we remain diligent in pursuing cost saving initiatives going forward, including additional product portfolio optimization along with expense management,” said James D. Thomas, chief financial officer. “We remain on track with our cost efficiency program as reflected by our reductions in G&A expense, helping to protect profitability despite revenue pressures. During the quarter, we generated $51.2 million in cash from operations, reduced inventory levels and paid down debt to strengthen our balance sheet. We also performed an impairment analysis and recorded a $141 million non-cash charge for impairment of goodwill and other intangibles as a result of the decline in stock price and current market conditions. “Given that we have performed in-line with expectations for the first half of the year while also considering the increasing FX headwind, we believe it prudent to narrow our annual revenue guidance range. We are now projecting 2024 revenue in the $1.73 to $1.81 billion range, with earnings of $(2.01) to $(1.81) or $0.75 to $0.95 excluding restructuring and impairment charges. Our Q3 guidance assumes continued sequential improvement with projected revenue of $430 to $465 million and earnings per share of $0.08 to $0.18 or $0.15 to $0.25 excluding restructuring and impairment charges.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Nu Skin Enterprises management team will host a conference call with the investment community today at 5 p.m. (ET). Those wishing to access the webcast, as well as the financial information presented during the call, can visit the Investor Relations page on the company's website at ir.nuskin.com. A replay of the webcast will be available on the same page through Aug. 22, 2024."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Nu Skin Enterprises Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "The Nu Skin Enterprises Inc. (NYSE: NUS) family of companies includes Nu Skin and Rhyz Inc. Nu Skin is an integrated beauty and wellness company, powered by a dynamic affiliate opportunity platform, which operates in nearly 50 markets worldwide. Backed by 40 years of scientific research, the company’s products help people look, feel and live their best with brands including Nu Skin® personal care, Pharmanex® nutrition and ageLOC® anti-aging, which includes an award-winning line of beauty device systems. Formed in 2018, Rhyz is a synergistic ecosystem of consumer, technology and manufacturing companies focused on innovation within the beauty, wellness and lifestyle categories."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "Important Information Regarding Forward-Looking Statements: This press release contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended, that represent the company’s current expectations and beliefs. All statements other than statements of historical fact are “forward-looking statements” for purposes of federal and state securities laws and include, but are not limited to, statements of management’s expectations regarding the macro environment and the company’s performance, growth and growth opportunities, strategies, sales force, shareholder value, product previews and launches, product portfolio optimization, transformation, evolution, operational and financial initiatives, digital tools and initiatives, new market expansion, and plans for developing and emerging markets; projections regarding revenue, expenses, margins, tax rates, earnings per share, foreign currency fluctuations, future dividends, uses of cash, financial position and other financial items; statements of belief; and statements of assumptions underlying any of the foregoing. In some cases, you can identify these statements by forward-looking words such as “believe,” “expect,” “anticipate,” “become,” “”plan,” accelerate,” “project,” “continue,” “outlook,” “guidance,” “improve,” “will,” “would,” “could,” “may,” “might,” the negative of these words and other similar words."
+    },
+    {
+      "type": "TitleElement",
+      "text": "The forward-looking statements and related assumptions involve risks and uncertainties that could cause actual results and outcomes to differ materially from any forward-looking statements or views expressed herein. These risks and uncertainties include, but are not limited to, the following:"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• any failure of current or planned initiatives or products to generate interest among the company’s sales force and customers and generate sponsoring and selling activities on a sustained basis;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• risk that direct selling laws and regulations in any of the company’s markets, including the United States and Mainland China, may be modified, interpreted or enforced in a manner that results in negative changes to the company’s business model or negatively impacts its revenue, sales force or business, including through the interruption of sales activities, loss of licenses, increased scrutiny of sales force actions, imposition of fines, or any other adverse actions or events;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• economic conditions and events globally;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• competitive pressures in the company’s markets;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• risk that epidemics, including COVID-19 and related disruptions, or other crises could negatively impact our business;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• adverse publicity related to the company’s business, products, industry or any legal actions or complaints by the company’s sales force or others;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• political, legal, tax and regulatory uncertainties, including trade policies, associated with operating in Mainland China and other international markets;"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 5"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• uncertainty regarding meeting restrictions and other government scrutiny in Mainland China, as well as negative media and consumer sentiment in Mainland China on our business operations and results;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• risk of foreign-currency fluctuations and the currency translation impact on the company’s business associated with these fluctuations;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• uncertainties regarding the future financial performance of the businesses the company has acquired;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• risks related to accurately predicting, delivering or maintaining sufficient quantities of products to support planned initiatives or launch strategies, and increased risk of inventory write-offs if the company over-forecasts demand for a product or changes its planned initiatives or launch strategies;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• regulatory risks associated with the company’s products, which could require the company to modify its claims or inhibit its ability to import or continue selling a product in a market if the product is determined to be a medical device or if the company is unable to register the product in a timely manner under applicable regulatory requirements; and"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "• the company’s future tax-planning initiatives, any prospective or retrospective increases in duties or tariffs on the company’s products imported into the company’s markets outside of the United States, and any adverse results of tax audits or unfavorable changes to tax laws in the company’s various markets."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "The company’s financial performance and the forward-looking statements contained herein are further qualified by a detailed discussion of associated risks set forth in the documents filed by the company with the Securities and Exchange Commission. The forward-looking statements set forth the company’s beliefs as of the date that such information was first provided, and the company assumes no duty to update the forward-looking statements contained in this release to reflect any change except as required by law."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "Non-GAAP Financial Measures: Constant-currency revenue change is a non-GAAP financial measure that removes the impact of fluctuations in foreign-currency exchange rates, thereby facilitating period-to-period comparisons of the company’s performance. It is calculated by translating the current period’s revenue at the same average exchange rates in effect during the applicable prior-year period and then comparing that amount to the prior-year period’s revenue. The company believes that constant-currency revenue change is useful to investors, lenders and analysts because such information enables them to gauge the impact of foreign-currency fluctuations on the company’s revenue from period to period."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "Earnings per share, operating margin and income tax rate, each excluding restructuring and impairment charges, also are non-GAAP financial measures. Restructuring and impairment charges are not part of the ongoing operations of our underlying business. The company believes that these non-GAAP financial measures are useful to investors, lenders and analysts because removing the impact of these charges facilitates period-to-period comparisons of the company’s performance. Please see the reconciliations of these items to our earnings per share, operating margin and income tax rate calculated under GAAP, below."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 6"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table sets forth revenue for the three-month periods ended June 30, 2024, and 2023 for each of our reportable segments (U.S. dollars in thousands):"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Constant- Currency 2024 2023 Change Change Nu Skin Americas $ 84,935 $ 107,641 (21.1 )% (15.1 )% Mainland China 64,710 88,362 (26.8 )% (24.5 )% Southeast Asia/Pacific 60,341 63,764 (5.4 )% (0.5 )% Japan 42,587 50,862 (16.3 )% (4.9 )% South Korea 44,119 53,686 (17.8 )% (14.3 )% Europe & Africa 40,714 46,968 (13.3 )% (12.3 )% Hong Kong/Taiwan 33,846 37,108 (8.8 )% (5.5 )% Nu Skin other (4 ) 597 (100.7 )% (100.8 )% Total Nu Skin 371,248 448,988 (17.3 )% (12.6 )% Rhyz Investments Manufacturing 51,473 45,551 13.0 % 13.0 % Rhyz other 16,360 5,718 186.1 % 186.1 % Total Rhyz Investments 67,833 51,269 32.3 % 32.3 % Total $ 439,081 $ 500,257 (12.2 )% (8.0 )%"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table sets forth revenue for the six-month periods ended June 30, 2024, and 2023 for each of our reportable segments (U.S. dollars in thousands):"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, Constant- Currency 2024 2023 Change Change Nu Skin Americas $ 159,966 $ 208,798 (23.4 )% (17.5 )% Mainland China 125,777 156,338 (19.5 )% (16.5 )% Southeast Asia/Pacific 120,406 131,574 (8.5 )% (4.4 )% Japan 86,823 103,468 (16.1 )% (5.3 )% South Korea 85,082 124,010 (31.4 )% (28.5 )% Europe & Africa 82,987 94,412 (12.1 )% (12.1 )% Hong Kong/Taiwan 64,312 71,656 (10.2 )% (7.6 )% Nu Skin other 668 482 38.6 % 38.6 % Total Nu Skin 726,021 890,738 (18.5 )% (14.1 )% Rhyz Investments Manufacturing 101,775 81,318 25.2 % 25.2 % Rhyz other 28,591 9,663 195.9 % 195.9 % Total Rhyz Investments 130,366 90,981 43.3 % 43.3 % Total $ 856,387 $ 981,719 (12.8 )% (8.8 )%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 7"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table provides information concerning the number of Customers, Paid Affiliates and Sales Leaders in our core Nu Skin business for the three-month periods ended June 30, 2024, and 2023:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 2023 Change Customers Americas 226,626 263,138 (14 )% Mainland China 179,021 214,907 (17 )% Southeast Asia/Pacific 88,662 106,283 (17 )% Japan 109,357 112,484 (3 )% South Korea 99,358 112,019 (11 )% Europe & Africa 143,336 177,472 (19 )% Hong Kong/Taiwan 47,154 54,815 (14 )% Total Customers 893,514 1,041,118 (14 )%"
+    },
+    {
+      "type": "TableElement",
+      "text": "Paid Affiliates Americas 29,531 36,048 (18 )% Mainland China 24,404 28,825 (15 )% Southeast Asia/Pacific(1) 29,701 32,769 (9 )% Japan(1) 21,575 36,765 (41 )% South Korea 22,116 23,012 (4 )% Europe & Africa 17,402 19,906 (13 )% Hong Kong/Taiwan 10,757 10,327 4 % Total Paid Affiliates 155,486 187,652 (17 )%"
+    },
+    {
+      "type": "TableElement",
+      "text": "Sales Leaders Americas 6,070 7,872 (23 )% Mainland China 10,266 13,777 (25 )% Southeast Asia/Pacific 5,601 5,814 (4 )% Japan 6,116 5,853 4 % South Korea 4,689 5,784 (19 )% Europe & Africa 3,432 4,105 (16 )% Hong Kong/Taiwan 2,418 2,602 (7 )% Total Sales Leaders 38,592 45,807 (16 )%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) The June 30, 2024, number is affected by a change in eligibility requirements for receiving certain rewards within our compensation structure. We plan to implement these changes in additional segments over the next several quarters. ● “Customers” are persons who have purchased directly from the Company during the three months ended as of the date indicated. Our Customer numbers include members of our sales force who made such a purchase, including Paid Affiliates and those who qualify as Sales Leaders, but they do not include consumers who purchase directly from members of our sales force. ● “Paid Affiliates” are any Brand Affiliates, as well as members of our sales force in Mainland China, who earned sales compensation during the three-month period. In all of our markets besides Mainland China, we refer to members of our independent sales force as “Brand Affiliates” because their primary role is to promote our brand and products through their personal social networks. ● “Sales Leaders” are the three-month average of our monthly Brand Affiliates, as well as sales employees and independent marketers in Mainland China, who achieved certain qualification requirements as of the end of each month of the quarter."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "NU SKIN ENTERPRISES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statements of Income (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(U.S. dollars in thousands, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Revenue $ 439,081 $ 500,257 $ 856,387 $ 981,719 Cost of sales 131,904 135,542 255,146 269,130 Gross profit 307,177 364,715 601,241 712,589 Operating expenses: Selling expenses 165,463 185,165 319,005 373,289 General and administrative expenses 117,921 137,044 242,487 270,943 Restructuring and impairment expenses 149,350 — 156,484 9,787 Total operating expenses 432,734 322,209 717,976 654,019 Operating income (loss) (125,557 ) 42,506 (116,735 ) 58,570 Interest expense 6,720 5,769 14,045 10,657 Other expense, net 629 376 233 3,788 Income (loss) before provision for income taxes (131,648 ) 37,113 (130,547 ) 51,701 Provision (benefit) for income taxes (13,390 ) 10,221 (11,756 ) 13,433 Net income (loss) $ (118,258 ) $ 26,892 $ (118,791 ) $ 38,268 Net income (loss) per share: Basic $ (2.38 ) $ 0.54 $ (2.39 ) $ 0.77 Diluted $ (2.38 ) $ 0.54 $ (2.39 ) $ 0.76 Weighted-average common shares outstanding (000s): Basic 49,688 49,931 49,613 49,789 Diluted 49,688 50,161 49,613 50,098"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "NU SKIN ENTERPRISES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Balance Sheets (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(U.S. dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 December 31, 2023 ASSETS Current assets: Cash and cash equivalents $ 224,250 $ 256,057 Current investments 8,671 11,759 Accounts receivable, net 71,554 72,879 Inventories, net 243,994 279,978 Prepaid expenses and other 105,937 81,198 Total current assets 654,406 701,871 Property and equipment, net 411,918 432,965 Operating lease right-of-use assets 88,071 90,107 Goodwill 99,885 230,768 Other intangible assets, net 88,464 105,309 Other assets 243,228 245,443 Total assets $ 1,585,972 $ 1,806,463 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities: Accounts payable $ 36,305 $ 43,505 Accrued expenses 242,288 260,366 Current portion of long-term debt 30,000 25,000 Total current liabilities 308,593 328,871 Operating lease liabilities 70,318 70,943 Long-term debt 428,327 478,040 Other liabilities 92,570 106,641 Total liabilities 899,808 984,495 Commitments and contingencies Stockholders’ equity: Class A common stock – 500 million shares authorized, $0.001 par value, 90.6 million shares issued 91 91 Additional paid-in capital 621,440 621,853 Treasury stock, at cost – 40.9 million and 41.1 million shares (1,564,090 ) (1,570,440 ) Accumulated other comprehensive loss (116,995 ) (100,006 ) Retained earnings 1,745,718 1,870,470 Total stockholders' equity 686,164 821,968 Total liabilities and stockholders’ equity $ 1,585,972 $ 1,806,463"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "NU SKIN ENTERPRISES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Operating Margin Excluding Impact of Restructuring and Impairment to GAAP Operating Margin"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except for per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, Six months ended June 30, 2024 2023 2024 2023 Operating Income $ (125,557 ) $ 42,506 $ (116,735 ) $ 58,570 Impact of restructuring and impairment: Restructuring and impairment 149,350 - 156,484 9,787 Adjusted operating income $ 23,793 $ 42,506 $ 39,749 $ 68,357 Operating margin (28.6 )% 8.5 % (13.6 )% 6.0 % Operating margin, excluding restructuring impact 5.4 % 8.5 % 4.6 % 7.0 % Revenue $ 439,081 $ 500,257 $ 856,387 $ 981,719"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "NU SKIN ENTERPRISES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Effective Tax Rate Excluding Impact of Restructuring and Impairment to GAAP Effective Tax Rate"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except for per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, Six months ended June 30, 2024 2023 2024 2023 Provision (benefit) for income taxes $ (13,390 ) $ 10,221 $ (11,756 ) $ 13,433 Impact of restructuring and impairment on provision for income taxes 20,715 - 23,071 2,593 Provision for income taxes, excluding impact of restructuring and impairment $ 7,325 $ 10,221 $ 11,315 $ 16,026 Income before provision for income taxes (131,648 ) 37,113 (130,547 ) 51,701 Impact of restructuring and impairment expense: Restructuring and impairment 149,350 - 156,484 9,787 Income before provision for income taxes, excluding impact of restructuring and impairment $ 17,702 $ 37,113 $ 25,937 $ 61,488 Effective tax rate 10.2 % 27.5 % 9.0 % 26.0 % Effective tax rate, excluding restructuring and impairment impact 41.4 % 27.5 % 43.6 % 26.1 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results page 11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "NU SKIN ENTERPRISES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Earnings Per Share Excluding Impact of Restructuring and Impairment to GAAP Earnings Per Share"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except for per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, Six months ended June 30, 2024 2023 2024 2023 Net income $ (118,258 ) $ 26,892 $ (118,791 ) $ 38,268 Impact of restructuring and impairment expense: Restructuring and impairment 149,350 - 156,484 9,787 Tax impact (20,715 ) - (23,071 ) (2,593 ) Adjusted net income $ 10,377 $ 26,892 $ 14,622 $ 45,462 Diluted earnings per share $ (2.38 ) $ 0.54 $ (2.39 ) $ 0.76 Diluted earnings per share, excluding restructuring impact $ 0.21 $ 0.54 $ 0.29 $ 0.91 Weighted-average common shares outstanding (000) 49,688 50,161 49,613 50,098"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "NU SKIN ENTERPRISES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Earnings Per Share Excluding Impact of Restructuring and Impairment to GAAP Earnings Per Share"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended September 30, 2024 Year ended December 31, 2024 Low end High end Low end High end Earnings Per Share $ 0.08 $ 0.18 $ (2.01 ) $ (1.81 ) Impact of restructuring and impairment expense: Restructuring and impairment 0.10 0.10 3.25 3.25 Tax impact (0.03 ) (0.03 ) (0.50 ) (0.50 ) Adjusted EPS $ 0.15 $ 0.25 $ 0.75 $ 0.95"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONTACTS:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Media: media@nuskin.com, (801) 345-6397Investors: investorrelations@nuskin.com, (801) 345-3577"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        5,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "Revenue",
+          "",
+          "",
+          "$439.1 million; (12.2)% • (4.2)% FX impact or $(21.0) million • Rhyz revenue $67.8 million; 32.3%"
+        ],
+        [
+          "Earnings Per Share (EPS)",
+          "",
+          "",
+          "$(2.38) or $0.21 excluding restructuring and impairment charges, compared to $0.54"
+        ],
+        [
+          "Customers",
+          "",
+          "",
+          "893,514; (14)%"
+        ],
+        [
+          "Paid Affiliates",
+          "",
+          "",
+          "155,486; (17)% or (9)% excluding an adjustment to eligibility requirements"
+        ],
+        [
+          "Sales Leaders",
+          "",
+          "",
+          "38,592; (16)%"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results",
+          "page 2"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        9,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "Revenue",
+          "",
+          "",
+          "$439.1 million compared to $500.3 million • (4.2)% FX impact or $(21.0) million • Rhyz revenue $67.8 million; +32.3%"
+        ],
+        [
+          "Gross Margin",
+          "",
+          "",
+          "70.0% compared to 72.9% • Nu Skin business was 76.1% compared to 77.2%"
+        ],
+        [
+          "Selling Expenses",
+          "",
+          "",
+          "37.7% compared to 37.0% • Nu Skin business was 42.2% compared to 40.2%"
+        ],
+        [
+          "G&A Expenses",
+          "",
+          "",
+          "26.9% compared to 27.4%"
+        ],
+        [
+          "Operating Margin",
+          "",
+          "",
+          "(28.6)% or 5.4% excluding restructuring and impairment charges compared to 8.5%"
+        ],
+        [
+          "Interest Expense",
+          "",
+          "",
+          "$6.7 million compared to $5.8 million"
+        ],
+        [
+          "Other Income/(Expense)",
+          "",
+          "",
+          "$0.6 million compared to $0.4 million"
+        ],
+        [
+          "Income Tax Rate",
+          "",
+          "",
+          "10.2% or 41.4% excluding restructuring and impairment charges compared to 27.5%"
+        ],
+        [
+          "EPS",
+          "",
+          "",
+          "$(2.38) or $0.21 excluding restructuring and impairment charges compared to $0.54"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        2,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "Dividend Payments",
+          "",
+          "",
+          "$3.0 million"
+        ],
+        [
+          "Stock Repurchases",
+          "",
+          "",
+          "$0.0 million • $162.4 million remaining in authorization"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results",
+          "page 3"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        4,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "Q3 2024 Revenue",
+          "",
+          "",
+          "$430 to $465 million; (14)% to (7)% • Approximately (4) to (3)% FX impact"
+        ],
+        [
+          "Q3 2024 EPS",
+          "",
+          "",
+          "$0.08 to $0.18 or $0.15 to $0.25 non-GAAP"
+        ],
+        [
+          "2024 Revenue",
+          "",
+          "",
+          "$1.73 to $1.81 billion; (12)% to (8)% • Approximately (4) to (3)% FX impact"
+        ],
+        [
+          "2024 EPS",
+          "",
+          "",
+          "$(2.01) to $(1.81) or $0.75 to $0.95 non-GAAP"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Nu Skin Enterprises Reports Second Quarter 2024 Financial Results",
+          "page 4"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "any failure of current or planned initiatives or products to generate interest among the company’s sales force and customers and generate sponsoring and selling activities on a sustained basis;"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "risk that direct selling laws and regulations in any of the company’s markets, including the United States and Mainland China, may be modified, interpreted or enforced in a manner that results in negative changes to the company’s business model or negatively impacts its revenue, sales force or business, including through the interruption of sales activities, loss of licenses, increased scrutiny of sales force actions, imposition of fines, or any other adverse actions or events;"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "economic conditions and events globally;"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "competitive pressures in the company’s markets;"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "risk that epidemics, including COVID-19 and related disruptions, or other crises could negatively impact our business;"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 439.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 465.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue $439.1 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Revenue |  |  | $439.1 million; (12.2)% • (4.2)% FX impact or $(21.0) million • Rhyz revenue $67.8 million; 32.3%"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "Outlook Q3 2024 Revenue $430 to $465 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 1,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": 5.8984,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "10.710000",
+    "return_10d_pct": "-8.9636",
+    "return_20d_pct": "-13.2586",
+    "return_30d_pct": "-31.8394",
+    "return_60d_pct": "-39.7759",
+    "return_90d_pct": "-39.7759"
+  },
+  "text_stats": {
+    "primary_text_len": 3364,
+    "exhibit_text_len": 23137,
+    "combined_text_len": 26503,
+    "semantic_text_len": 23240,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

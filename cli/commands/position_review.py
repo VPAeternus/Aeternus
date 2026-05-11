@@ -48,17 +48,8 @@ def position_review(
     except Exception:
         pass
 
-    # Load latest pipeline candidates for opportunity cost
+    # Scout-only dealflow no longer provides scored opportunity-cost candidates.
     pipeline_candidates = []
-    try:
-        deal_flow_dir = Path("eval_results/deal_flow")
-        if deal_flow_dir.exists():
-            queue_files = sorted(deal_flow_dir.glob("*/research_queue.json"), reverse=True)
-            if queue_files:
-                queue_data = _load_json(str(queue_files[0]), {})
-                pipeline_candidates = queue_data.get("items", []) if isinstance(queue_data, dict) else []
-    except Exception:
-        pass
 
     # Filter to single ticker if specified
     if ticker:

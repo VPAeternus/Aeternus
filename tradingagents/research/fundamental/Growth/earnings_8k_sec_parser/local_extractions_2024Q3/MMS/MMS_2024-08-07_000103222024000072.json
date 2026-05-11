@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MMS",
+    "cik": "1032220",
+    "event_date": "2024-08-07",
+    "event_accession": "0001032220-24-000072",
+    "primary_8k_doc": "mms-20240807.htm",
+    "exhibit_docs": [
+      "mms-2024x06x30x8kxex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MMS_000103222024000072_mms-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MMS_000103222024000072_mms-2024x06x30x8kxex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MMS",
+    "cik": "1032220",
+    "entity_name": "Maximus, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2456098000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "39995000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-12-31",
+    "assets_value": "3985797000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-171671000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-24627000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "175037000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.016284",
+    "operating_cash_flow_to_revenue": "0.071266",
+    "assets_to_revenue": "1.622817",
+    "financing_cash_flow_to_revenue": "-0.069896",
+    "investing_cash_flow_to_revenue": "-0.010027"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue increased 10.",
+      "earnings per share were $1.",
+      "operating income guidance is increasing by $30 million, adjusted diluted earnings per share by $0.",
+      "operating income is now expected to range between $570 million and $590 million, representing an increase of $30 million from the midpoint of prior guidance.",
+      "operating income excludes an estimated $90 million of expense for amortization of intangible assets and $1 million of divestiture-related charges.",
+      "earnings per share is now expected to range between $6."
+    ],
+    "guidance_evidence": [
+      "guidance (Tysons, Va.",
+      "Guidance is increasing again for fiscal year 2024.",
+      "guidance is increasing by $30 million, adjusted diluted earnings per share by $0.",
+      "outlook for the segment, which remains slightly above breakeven.",
+      "Guidance Maximus is further raising fiscal year 2024 guidance following its third quarter results.",
+      "guidance."
+    ],
+    "wave_or_demand_evidence": [
+      "demand across both domestic segments led to higher-than-anticipated earnings this quarter.",
+      "demand for services, particularly in clinical services, and a temporarily favorable mix of lower cost-plus revenue and higher performance-based revenue.",
+      "demand, or acceptance of our products are forward-looking statements that involve risks and uncertainties.",
+      "ailwinds persist and drive third consecutive raise to FY24 guidance (Tysons, Va.",
+      "ain for fiscal year 2024.",
+      "ailwinds that have persisted across this year, where we accomplished high quality and efficient delivery, at scale,\" said Bruce Caswell, President and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "charges.",
+      "charges, adjusted EBITDA, and other non-GAAP measures.",
+      "charges (2) — NM — NM 1,018 NM 883 NM Other (3) 906 NM 23,995 NM 6,712 NM 24,242 NM Selling, general, and administrative expenses $ 167,033 12.",
+      "charges (2) — NM — NM (1,018) NM (883) NM Other (3) (906) NM (23,995) NM (6,712) NM (24,242) NM Operating income $ 141,739 10.",
+      "charges include $0.",
+      "charges include expenses incurred as part of our acquisitions, as well as potential acquisitions that have not been or may not be completed."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 100,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "90.709999",
+    "return_10d_pct": "-1.7418",
+    "return_20d_pct": "1.8851",
+    "return_30d_pct": "-4.7514",
+    "return_60d_pct": "-0.0992",
+    "return_90d_pct": "-1.3008"
+  },
+  "text_stats": {
+    "primary_text_len": 3137,
+    "exhibit_text_len": 21256,
+    "combined_text_len": 24395
+  }
+}

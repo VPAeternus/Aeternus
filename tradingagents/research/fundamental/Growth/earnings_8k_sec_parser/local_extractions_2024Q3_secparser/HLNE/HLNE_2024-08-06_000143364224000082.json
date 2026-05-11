@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HLNE",
+    "cik": "1433642",
+    "event_date": "2024-08-06",
+    "event_accession": "0001433642-24-000082",
+    "primary_8k_doc": "hlne-20240806.htm",
+    "exhibit_docs": [
+      "combinedexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLNE_000143364224000082_hlne-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLNE_000143364224000082_combinedexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HLNE",
+    "cik": "1433642",
+    "entity_name": "Hamilton Lane Inc",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "367919000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "145986000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1140543000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-113216000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-70487000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "169523000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.396788",
+    "operating_cash_flow_to_revenue": "0.460762",
+    "assets_to_revenue": "3.099984",
+    "financing_cash_flow_to_revenue": "-0.30772",
+    "investing_cash_flow_to_revenue": "-0.191583"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Earnings per share – GAAP EPS of $1.",
+      "GAAP net income for the quarter.",
+      "GAAP net income $59.",
+      "GAAP EPS $1.",
+      "net income1 $81.",
+      "Non-GAAP EPS1 $1."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "aid on October 4, 2024.",
+      "ailed presentation of its first quarter fiscal 2025 results, which can be accessed on the Company’s Shareholders website at https://shareholders.",
+      "ains focused on executing and delivering consistent results for our clients and this has resulted in strong growth across the entirety of our business.",
+      "ailable approximately two hours after the live broadcast for a period of one year and can be accessed in the same manner as the live webcast at the Shareholders page of Hamilton Lane’s website.",
+      "ain of our funds; our ability to manage, identify and anticipate risks we face; our ability to manage the effects of events outside of our control; and our ability to receive distributions from Hamilton Lane Advisors, L.",
+      "ailed in Part I, Item 1A of our Annual Report on Form 10-K for the fiscal year ended March 31, 2024 and in our subsequent reports filed from time to time with the Securities and Exchange Commission."
+    ],
+    "warning_or_risk_evidence": [
+      "charged an asset-based fee, which includes the majority of our discretionary AUM accounts but also includes certain non-discretionary AUA accounts.",
+      "loss and (f) certain other significant items that we believe are not indicative of our core performance."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "combinedexhibit991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Combinedexhibit991"
+    },
+    {
+      "type": "TitleElement",
+      "text": "HAMILTON LANE INCORPORATED REPORTS FIRST QUARTER FISCAL 2025 RESULTS, WITH MANAGEMENT & ADVISORY FEES GROWING BY 33% AND ASSETS UNDER MANAGEMENT GROWING BY 11% YEAR-OVER-YEAR"
+    },
+    {
+      "type": "TextElement",
+      "text": "CONSHOHOCKEN, PENN. – August 6, 2024 – Leading private markets asset management firm Hamilton Lane Incorporated (Nasdaq: HLNE) today reported its results for the first fiscal quarter ended June 30, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "FIRST QUARTER FISCAL 2025 HIGHLIGHTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Assets under management – Total assets under management of $129.7 billion grew 11% year-over-year. Fee-earning assets under management increased 13% to $67.7 billion over the same period.•Revenue – Management and advisory fees of $140.0 million for the quarter represent growth of 33% versus the prior year period.•Carried Interest – Unrealized carried interest balance of approximately $1.2 billion was up 12% versus the prior year period.•Earnings per share – GAAP EPS of $1.47 on $59.0 million of GAAP net income for the quarter.•Dividend – Declared a quarterly dividend of $0.49 per share of Class A common stock to record holders at the close of business on September 16, 2024 that will be paid on October 4, 2024. The target full-year dividend of $1.96 represents a 10% increase from the prior fiscal year dividend.Hamilton Lane issued a full detailed presentation of its first quarter fiscal 2025 results, which can be accessed on the Company’s Shareholders website at https://shareholders.hamiltonlane.com/.Hamilton Lane Co-CEO Erik Hirsch commented: “After a successful fiscal 2024, we have opened up fiscal 2025 with a strong quarter. Our team remains focused on executing and delivering consistent results for our clients and this has resulted in strong growth across the entirety of our business.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "Hamilton Lane will discuss first quarter fiscal 2025 results in a webcast and conference call today, Tuesday, August 6, 2024, at 11:00 a.m. Eastern Time. For access to the live event via the webcast, visit Hamilton Lane's Shareholders website (https://shareholders.hamiltonlane.com/) at least 15 minutes prior to the start of the call. This feature will be in listen-only mode.A replay of the webcast will be available approximately two hours after the live broadcast for a period of one year and can be accessed in the same manner as the live webcast at the Shareholders page of Hamilton Lane’s website."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Hamilton Lane"
+    },
+    {
+      "type": "TextElement",
+      "text": "Hamilton Lane (Nasdaq: HLNE) is one of the largest private markets investment firms globally, providing innovative solutions to institutional and private wealth investors around the world. Dedicated exclusively to private markets investing for more than 30 years, the firm currently employs approximately 700 professionals operating in offices throughout North America, Europe, Asia Pacific and the Middle East. Hamilton Lane has $940.1 billion in assets under management and supervision, composed of $129.7 billion in discretionary assets and $810.4 billion in non-discretionary assets, as of June 30, 2024. Hamilton Lane specializes in building flexible investment programs that provide clients access to the full spectrum of private markets strategies, sectors and geographies. For more information, please visit www.hamiltonlane.com or follow Hamilton Lane on LinkedIn: https://www.linkedin.com/company/hamilton-lane/."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "Some of the statements in this release may constitute “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, Section 21E of the Securities Exchange Act of 1934 and the Private Securities Litigation Reform Act of 1995. Words such as “will,” “expect,” “believe,” “estimate,” “continue,” “anticipate,” “intend,” “plan” and similar expressions are intended to identify these forward-looking statements. Forward-looking statements discuss management’s current expectations and projections relating to our financial position, results of operations, plans, objectives, future performance and business. All forward-looking statements are subject to known and unknown risks, uncertainties and other important factors that may cause actual results to be materially different, including risks relating to: our ability to manage growth, fund performance, competition in our industry, changes in our regulatory environment and tax status; market conditions generally; our ability to access suitable investment opportunities for our clients; our ability to maintain our fee structure; our ability to attract and retain key employees; our ability to manage our obligations under our debt agreements; defaults by clients and third-party investors on their obligations to fund commitments; our exposure and that of our clients and investors to the credit risks of financial institutions at which we and they hold accounts; our ability to comply with investment guidelines set by our clients; our ability to successfully integrate acquired businesses with ours; our ability to manage risks associated with introducing new types of investment structures, products or services or entering into strategic partnerships; our ability to manage redemption or repurchase rights in certain of our funds; our ability to manage, identify and anticipate risks we face; our ability to manage the effects of events outside of our control; and our ability to receive distributions from Hamilton Lane Advisors, L.L.C. to fund our payment of dividends, taxes and other expenses.The foregoing list of factors is not exhaustive. For more information regarding these risks and uncertainties as well as additional risks we face, you should refer to the “Risk Factors” detailed in Part I, Item 1A of our Annual Report on Form 10-K for the fiscal year ended March 31, 2024 and in our subsequent reports filed from time to time with the Securities and Exchange Commission. The forward-looking statements included in this release are made only as of the date hereof. We undertake no obligation to update or revise any forward-looking statement as a result of new information or future events, except as otherwise required by law."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Shareholder Contact"
+    },
+    {
+      "type": "TextElement",
+      "text": "John Oh"
+    },
+    {
+      "type": "TitleElement",
+      "text": "joh@hamiltonlane.com"
+    },
+    {
+      "type": "TextElement",
+      "text": "+1 610 617 6026"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Media Contact"
+    },
+    {
+      "type": "TextElement",
+      "text": "Kate McGann"
+    },
+    {
+      "type": "TitleElement",
+      "text": "kmcgann@hamiltonlane.com"
+    },
+    {
+      "type": "TextElement",
+      "text": "+1 240 888 4078"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Fiscal Year 2025 First Quarter Results August 6, 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Hamilton Lane | Global Leader in the Private Markets Griff Norville Head of Technology Solutions Today's Speakers Erik Hirsch Co-CEO Jeff Armbrister Chief Financial Officer John Oh Head of Shareholder Relations"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "3Hamilton Lane | Global Leader in the Private Markets Business Performance Financial Results Dividend • Assets under management and fee-earning assets under management were $130 billion and $68 billion, respectively, as of June 30, 2024, increases of 11% and 13%, respectively, compared to June 30, 2023 • Management and advisory fees increased 33% compared to the three months ended June 30, 2023 USD in millions except per share amounts Q1 FY25 vs. Q1 FY24 vs. Q4 FY24 Management and advisory fees $140.0 33 % 13 % GAAP net income $59.0 90 % 22 % GAAP EPS $1.47 81 % 17 % Adjusted net income1 $81.4 60 % 9 % Non-GAAP EPS1 $1.51 61 % 9 % Fee Related Earnings1 $60.1 33 % 7 % Adjusted EBITDA1 $96.2 58 % 6 % • Declared a quarterly dividend of $0.49 per share of Class A common stock to record holders at the close of business on September 16, 2024 1Adjusted net income, non-GAAP earnings per share, Fee Related Earnings and Adjusted EBITDA are non-GAAP financial measures. For the reconciliations of our non-GAAP financial measures to the most directly comparable GAAP financial measures and for the reasons we believe the non-GAAP measures provide useful information, see pages 20 and 21 of this presentation. Period Highlights"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "4Hamilton Lane | Global Leader in the Private Markets Total Assets Under Management/Advisement ($B) Total AUA Total AUM 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 6/30/24 $0 $200 $400 $600 $800 $1,000 Y-o-Y Growth AUM: 11 % AUA: 16 % $940B AUM & AUA 1 CAGR: 18% $6 $7 $11 $13 $16 $19 $22 $24 $30 $32 $35 $40 $50 $59 $66 $76 $98 $108 $36 $51 $77 $79 $95 $81 $129 $147 $147 $189 $205 $292 $374 $410 $422 $581 $753 $724 $810 $130 Growing Asset Footprint & Influence 1Data as of calendar year end 12/31 unless otherwise noted. Numbers may not tie due to rounding. $783 $120"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "5Hamilton Lane | Global Leader in the Private Markets Y-o-Y Drivers of Growth Total Fee-Earning Assets Under Management ($B) $25 $26 $31 $35 $38 $36 $38 $14 $16 $18 $23 $28 $24 $29 Customized Separate Accounts Specialized Funds Mar-20 Mar-21 Mar-22 Mar-23 Mar-24 Jun-23 Jun-24 $0 $10 $20 $30 $40 $50 $60 $70 $80 Fee-Earning AUM growth continues and annual fee rates are stable CAGR: 14% 1) 0.58% excluding $3.9 million in retroactive fees 2) 0.61% excluding $20.7 million in retroactive fees Numbers may not tie due to rounding Total Management Fee Revenues as a % of Average FEAUM Customized Separate Accounts: • New client wins • Client re-ups Specialized Funds: • Closed 6th secondary fund • Fundraising 9th credit-oriented fund, 6th direct equity fund, 2nd infrastructure fund, and evergreen funds .60% $42 $60 $57 $39 $49 $68 Fee-Earning AUM Driving Revenues .56% .59% .63% .61%1 .74%2 $66"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "6Hamilton Lane | Global Leader in the Private Markets Customized Separate Accounts Specialized Funds Advisory Services Diverse mix of existing and prospective clients seeking to further or establish relationships with Hamilton Lane • $2.4 billion year-over-year increase in FEAUM • +80% of our gross contributions during the last 12 months came from existing clients AUM AUM & AUA Drivers AUA Select funds in market: • Direct equity fund • Credit-oriented fund • Infrastructure fund • Evergreen funds • $5.7 billion year-over-year increase in FEAUM • Closings during Q1 FY25: ◦ Secondary fund: $1,187M ◦ Direct equity fund: $523M Typically larger clients with wide-ranging mandates which include technology-driven reporting, monitoring and analytics services and consulting services; opportunity set continues to be robust • $109.8 billion year-over-year increase in AUA"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Financial Highlights"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "8Hamilton Lane | Global Leader in the Private Markets U S D in M ill io ns $125 $197 Q1 FY24 Q1 FY25 U S D in M ill io ns $20 $57 Q1 FY24 Q1 FY25 U S D in M ill io ns $105 $140 Q1 FY24 Q1 FY25 Management and Advisory Fees Incentive Fees Total Revenues YTD YTD Y-o-Y Change: 33% YTD Y-o-Y Change: 57% Y-o-Y Change: 189% • Recurring management and advisory fees represented an average of over 80% of total revenues over the past five fiscal years • Y-o-Y increase of 33% • $20.7 million in retroactive fees from our latest secondary fund in the quarter • Incentive fees derived from a highly diversified pool of assets and funds • Unrealized carried interest of $1.2 billion as of June 30, 2024 diversified across 3,000+ assets and over 100 funds • Timing of realizations unpredictable • Total revenues increased by 57%, driven by both incentive fees and management and advisory fees U S D in M ill io ns $218 $452 FY19 FY24 Long-Term Growth U S D in M ill io ns $34 $102 FY19 FY24 Long-Term Growth CAGR: 16% U S D in M ill io ns $252 $554 FY19 FY24 Long-Term Growth CAGR: 17% CAGR: 24% Consolidated Revenue Strong growth across management and advisory fees"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "9Hamilton Lane | Global Leader in the Private Markets Period Ending V eh ic le s U S D in M illions Unrealized Carried Interest $1,102 $1,101 $1,238 90 96 106 Unrealized Carried Interest Vehicles in Unrealized Carry Position Jun-22 Jun-23 Jun-24 0 20 40 60 80 100 120 $0 $250 $500 $750 $1,000 $1,250 $1,500 Unrealized Carry by Age < 5 years 46% 5-8 years 28% 8-12 years 22% > 12 years 4% Unrealized Carried Interest"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "10Hamilton Lane | Global Leader in the Private Markets U S D in M ill io ns $34 $141 FY19 FY24 Net Income Attributable to HLI Adjusted EBITDA1 Fee Related Earnings1 U S D in M ill io ns $61 $96 Q1 FY24 Q1 FY25 U S D in M ill io ns $31 $59 Q1 FY24 Q1 FY25 U S D in M ill io ns $118 $273 FY19 FY24 U S D in M ill io ns $45 $60 Q1 FY24 Q1 FY25 U S D in M ill io ns $90 $193 FY19 FY24 Y-o-Y Change: 90% 1Adjusted EBITDA and Fee Related Earnings are non-GAAP financial measures. For the reconciliations of our non-GAAP financial measures to the most directly comparable GAAP financial measures and for the reasons we believe the non-GAAP measures provide useful information, see pages 20 and 21 of this presentation. Y-o-Y Change: 58% Y-o-Y Change: 33% CAGR: 17% CAGR: 18% Consolidated Earnings Stable long-term growth YTD YTD YTD Long-Term Growth Long-Term Growth Long-Term Growth • $59M in net income attributable to HLI for the quarter • Y-o-Y increase of 58% driven by increase in revenue • Y-o-Y growth of 33% • Long-term double digit growth in Fee Related Earnings CAGR: 32%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "11Hamilton Lane | Global Leader in the Private Markets U S D in M ill io ns Investments $208 $374 $514 $588 $632 $649 Mar-20 Mar-21 Mar-22 Mar-23 Mar-24 Jun-24 $0 $100 $200 $300 $400 $500 $600 $700 • For June 30, 2024, the total investment balance consisted primarily of: ◦ ~$411M in investments in our funds ◦ ~$238M in technology related and other investments • Modest leverage • $196M of debt as of June 30, 2024 U S D in M ill io ns Leverage $198 $196 $196 Jun-23 Mar-24 Jun-24 $0 $50 $100 $150 $200 $250 Other Key Items Strong balance sheet with investments in our own products and a modest amount of leverage..."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Appendix"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "13Hamilton Lane | Global Leader in the Private Markets Condensed Consolidated Statements of Income (Unaudited) Three Months Ended (Dollars in thousands except share and per share amounts) June 30, 2023 March 31, 2024 June 30, 2024 YoY % Change QoQ % Change Management and advisory fees $105,407 $123,704 $139,962 33 % 13 % Incentive fees 19,630 52,961 56,769 189 % 7 % Total revenues 125,037 176,665 196,731 57 % 11 % Compensation and benefits 44,103 64,266 78,435 78 % 22 % General, administrative and other 25,761 28,495 28,373 10 % 0 % Consolidated variable interest entities related: General, administrative and other 234 17 312 33 % 1,735 % Total expenses 70,098 92,778 107,120 53 % 15 % Equity in income of investees 11,866 14,822 7,389 (38) % (50) % Interest expense (2,890) (2,788) (2,947) 2 % 6 % Interest income 937 1,891 765 (18) % (60) % Non-operating gain (loss) 232 (1,526) 9,814 4,130 % N/A Consolidated variable interest entities related: Equity in income of investees 132 938 928 603 % (1) % Unrealized gain 794 — 1,197 51 % N/A Interest expense (6) — — N/A N/A Interest income 1,740 — 17 (99) % N/A Total other income (expense) 12,805 13,337 17,163 34 % 29 % Income before income taxes 67,744 97,224 106,774 58 % 10 % Income tax expense 16,400 20,399 19,687 20 % (3) % Net income 51,344 76,825 87,087 70 % 13 % Less: Income attributable to non-controlling interests in general partnerships 1 363 346 34,500 % (5) % Less: Income attributable to non-controlling interests in Hamilton Lane Advisors, L.L.C. 19,133 28,102 27,645 44 % (2) % Less: Income attributable to non-controlling interests in consolidated funds 1,212 — 132 (89) % N/A Net income attributable to Hamilton Lane Incorporated $30,998 $48,360 $58,964 90 % 22 % Basic earnings per share of Class A common stock $0.82 $1.26 $1.49 82 % 18 % Diluted earnings per share of Class A Common stock $0.81 $1.26 $1.47 81 % 17 % Weighted-average shares of Class A common stock outstanding - basic 37,707,809 38,273,558 39,695,677 Weighted-average shares of Class A common stock outstanding - diluted 53,855,751 38,418,650 54,049,746 Net income attributable to Hamilton Lane Incorporated / total revenues 25 % 27 % 30 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "14Hamilton Lane | Global Leader in the Private Markets 1 Adjusted EBITDA and Non-GAAP earnings per share are non-GAAP financial measures. For the reconciliations of our non-GAAP financial measures to the most directly comparable GAAP financial measures, see page 20. 2 Incentive fee related compensation includes incentive fee compensation expense and bonus related to carried interest that is classified as base compensation. 3 Represents corporate income taxes at our estimated statutory tax rate of 23.4% and 23.6% for the three month periods ended June 30, 2024 and 2023, respectively, applied to adjusted pre-tax net income. The 23.4% is based on a federal tax statutory rate of 21.0% and a combined state income tax rate net of federal benefits of 2.4%. The 23.6% is based on a federal tax statutory rate of 21.0% and a combined state income tax rate net of federal benefits of 2.6%. Three Months Ended (Dollars in thousands except share and per share amounts) June 30, 2023 March 31, 2024 June 30, 2024 YoY % Change QoQ % Change Adjusted EBITDA1 Management and advisory fees $105,407 $123,704 $139,962 33 % 13 % Revenue related to consolidated funds 147 — — (100) % N/A Total expenses 70,098 92,778 107,120 53 % 15 % Less: N/A N/A Incentive fee related compensation2 (9,324) (25,157) (26,965) 189 % 7 % Consolidated VIE related general, administrative and other expenses (233) — (312) 34 % N/A Non-operating income related compensation (59) — — N/A N/A Management fee related expenses 60,482 67,621 79,843 32 % 18 % Fee Related Earnings $45,072 $56,083 $60,119 33 % 7 % Fee Related Earnings Margin 43 % 45 % 43 % Incentive fees 19,630 52,961 56,769 189 % 7 % Incentive fees attributable to non-controlling interests — — — N/A N/A Incentive fee related compensation2 (9,324) (25,157) (26,965) 189 % 7 % Non-operating income related compensation (59) — — N/A N/A Interest income 937 1,891 765 (18) % (60) % Equity-based compensation 2,846 2,906 3,223 13 % 11 % Depreciation and amortization 1,873 2,411 2,313 23 % (4) % Adjusted EBITDA $60,975 $91,095 $96,224 58 % 6 % Adjusted EBITDA Margin 49 % 52 % 49 % Non-GAAP earnings per share1 Net income attributable to Hamilton Lane Incorporated $30,998 $48,360 $58,964 90 % 22 % Income attributable to non-controlling interests in Hamilton Lane Advisors, L.L.C. 19,133 28,102 27,645 44 % (2) % Income tax expense 16,400 20,399 19,687 20 % (3) % Adjusted pre-tax net income 66,531 96,861 106,296 60 % 10 % Adjusted income taxes3 (15,701) (22,306) (24,873) 58 % 12 % Adjusted net income $50,830 $74,555 $81,423 60 % 9 % Adjusted shares outstanding 53,855,751 53,994,746 54,049,746 Non-GAAP earnings per share $0.94 $1.38 $1.51 61 % 9 % Non-GAAP Financial Measures"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen015.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "15Hamilton Lane | Global Leader in the Private Markets Three Months Ended (Dollars in thousands) June 30, 2023 March 31, 2024 June 30, 2024 YoY % Change QoQ % Change Management and advisory fees Specialized funds $57,716 $76,039 $89,792 56 % 18 % Customized separate accounts 31,719 32,124 33,453 5 % 4 % Advisory 6,293 5,838 5,911 (6) % 1 % Reporting, monitoring, data and analytics 5,557 6,413 6,994 26 % 9 % Distribution management 1,213 1,075 498 (59) % (54) % Fund reimbursement revenue 2,909 2,215 3,314 14 % 50 % Total management and advisory fees $105,407 $123,704 $139,962 33 % 13 % Reporting and other: 8% Customized separate accounts: 24% Specialized funds: 64% Advisory: 4% Three Months Ended June 30, 2024 Management and Advisory Fees"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen016.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "16Hamilton Lane | Global Leader in the Private Markets Three Months Ended (Dollars in thousands) June 30, 2023 March 31, 2024 June 30, 2024 YoY % Change QoQ % Change Incentive fees Direct equity funds $2,331 $3,943 $3,947 69 % 0 % Secondary funds 8,077 29,419 9,881 22 % (66) % Direct credit funds 4,767 3,147 11,049 132 % 251 % Evergreen funds 1,215 5,530 5,544 356 % 0 % Other specialized funds 1,996 4,745 21,633 984 % 356 % Customized separate accounts 1,244 6,177 4,715 279 % (24) % Incentive fees $19,630 $52,961 $56,769 189 % 7 % As of June 30, 2023 March 31, 2024 June 30, 2024 YoY % Change QoQ % Change Allocated carried interest Secondary Fund II $320 $42 $24 (93) % (43) % Secondary Fund III 29,212 450 284 (99) % (37) % Secondary Fund IV 122,416 112,008 104,665 (15) % (7) % Secondary Fund V 145,126 162,124 152,530 5 % (6) % Secondary Fund VI 13,439 35,841 40,404 201 % 13 % Co-investment Fund II 16,363 20,041 22,541 38 % 12 % Co-investment Fund III 50,810 42,443 38,312 (25) % (10) % Co-investment Fund IV 127,496 150,097 150,979 18 % 1 % Equity Opportunities Fund V 20,624 35,832 45,595 121 % 27 % Evergreen Funds 115,135 153,709 168,910 47 % 10 % Other specialized Funds 116,776 133,127 117,156 0 % (12) % Customized separate accounts 342,874 375,774 396,205 16 % 5 % Total allocated carried interest $1,100,591 $1,221,488 $1,237,605 12 % 1 % Incentive Fees"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen017.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "17Hamilton Lane | Global Leader in the Private Markets (Dollars in millions) June 30, 2023 March 31, 2024 June 30, 2024 YoY % Change QoQ % Change Assets under management / advisement Assets under management $117,064 $124,406 $129,724 11 % 4 % Assets under advisement 700,651 796,173 810,414 16 % 2 % Total assets under management /advisement $817,715 $920,579 $940,138 15 % 2 % Fee-earning assets under management Customized separate accounts Balance, beginning of period $34,684 $36,924 $37,574 8 % 2 % Contributions 1,792 2,896 1,647 (8) % (43) % Distributions (636) (2,478) (969) 52 % (61) % Foreign exchange, market value and other 10 232 (29) (390) % (113) % Balance, end of period $35,850 $37,574 $38,223 7 % 2 % Specialized funds Balance, beginning of period $22,662 $26,175 $28,175 24 % 8 % Contributions 1,258 2,053 2,609 107 % 27 % Distributions (172) (261) (1,323) 669 % 407 % Foreign exchange, market value and other 67 208 26 (61) % (88) % Balance, end of period $23,815 $28,175 $29,487 24 % 5 % Total Balance, beginning of period $57,346 $63,099 $65,749 15 % 4 % Contributions 3,050 4,949 4,256 40 % (14) % Distributions (808) (2,739) (2,292) 184 % (16) % Foreign exchange, market value and other 77 440 (3) (104) % (101) % Balance, end of period $59,665 $65,749 $67,710 13 % 3 % Assets Under Management"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen018.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "18Hamilton Lane | Global Leader in the Private Markets (Dollars in thousands) March 31, 2024 June 30, 2024 Assets Cash and cash equivalents $114,634 $151,663 Restricted cash 4,985 4,799 Fees receivable 108,291 141,099 Prepaid expenses 11,073 7,494 Due from related parties 8,150 14,199 Furniture, fixtures and equipment, net 33,013 32,632 Lease right-of-use assets, net 62,425 62,453 Investments 603,697 620,667 Deferred income taxes 261,887 259,301 Other assets 34,435 34,136 Assets of consolidated variable interest entities: Cash and cash equivalents — 14,614 Investments 28,575 28,804 Other assets 35 52 Total assets $1,271,200 $1,371,913 Liabilities and equity Accounts payable $4,505 $4,683 Accrued compensation and benefits 35,979 68,236 Accrued members' distributions 23,815 21,638 Accrued dividend 17,628 19,451 Debt 196,159 195,565 Payable to related parties pursuant to tax receivable agreement 201,422 200,346 Lease liabilities 79,033 78,916 Other liabilities (includes $13,071 and $13,871 at fair value) 36,700 37,734 Liabilities of consolidated variable interest entities: Other liabilities 1 8,514 Total liabilities 595,242 635,083 Total equity 675,958 736,830 Total liabilities and equity $1,271,200 $1,371,913 Condensed Consolidated Balance Sheets (Unaudited)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen019.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "19Hamilton Lane | Global Leader in the Private Markets Three Months Ended June 30, (Dollars in thousands) 2023 2024 Operating activities Net income $51,344 $87,087 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 1,873 2,313 Change in deferred income taxes 4,654 2,586 Change in payable to related parties pursuant to tax receivable agreement (883) (1,076) Equity-based compensation 2,846 3,223 Equity in income of investees (11,866) (7,389) Net realized loss on sale of investments 288 — Fair value adjustment of other investments (757) (8,739) Proceeds received from Partnerships 6,060 6,062 Non-cash lease expense 2,062 2,088 Other 36 198 Changes in operating assets and liabilities 5,691 (5,077) Consolidated variable interest entities related (3,375) (1,533) Net cash provided by operating activities $57,973 $79,743 Investing activities Purchase of furniture, fixtures and equipment $(3,385) $(1,506) Purchase of investments (1,177) (5,001) Proceeds from sale of investments 1,343 — Proceeds from sale of intangible assets 876 — Distributions received from Partnerships 1,676 9,231 Contributions to Partnerships (22,686) (10,410) Consolidated variable interest entities related (16,369) 9,818 Net cash (used in) provided by investing activities $(39,722) $2,132 Financing activities Repayments of debt $(625) $(625) Draw-down on revolver 10,000 — Repayment of revolver (25,000) — Repurchase of Class A shares for employee tax withholding (108) (527) Proceeds received from issuance of shares under Employee Share Purchase Plan 551 649 Dividends paid (15,049) (17,628) Members' distributions paid (18,423) (16,787) Consolidated variable interest entities related 43,820 4,500 Net cash used in financing activities $(4,834) $(30,418) Increase in cash and cash equivalents, restricted cash, and cash and cash equivalents held at consolidated variable interest entities 13,417 51,457 Cash and cash equivalents, restricted cash, and cash and cash equivalents held at consolidated variable interest entities at beginning of the period 116,552 119,619 Cash and cash equivalents, restricted cash, and cash and cash equivalents held at consolidated variable interest entities at end of the period $129,969 $171,076 Condensed Consolidated Statements of Cash Flows (Unaudited)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen020.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "20Hamilton Lane | Global Leader in the Private Markets Reconciliation from Net Income Year Ended March 31, Three Months Ended (Dollars in thousands except share and per share amounts) 2019 2024 June 30, 2023 March 31, 2024 June 30, 2024 Net income attributable to Hamilton Lane Incorporated $33,573 $140,858 $30,998 $48,360 $58,964 Income attributable to non-controlling interests in general partnerships 564 534 1 363 346 Income attributable to non-controlling interests in Hamilton Lane Advisors, L.L.C. 64,860 80,835 19,133 28,102 27,645 Income attributable to non-controlling interests in consolidated funds — 4,980 1,212 — 132 Incentive fees (34,406) (101,906) (19,630) (52,961) (56,769) Incentive fee related compensation1 14,983 48,406 9,324 25,157 26,965 Consolidated VIE related general, administrative and other expenses — 566 233 — 312 Revenue related to consolidated funds — 394 147 — — Non-operating income related compensation — 59 59 — — Interest income (255) (10,008) (2,677) (1,891) (782) Interest expense 3,039 11,175 2,896 2,788 2,947 Income tax expense 30,560 54,454 16,400 20,399 19,687 Equity in (income) of investees (7,202) (36,491) (11,998) (15,760) (8,317) Contingent compensation related to acquisition 5,100 — — — — Non-operating (gain) loss (20,915) (519) (1,026) 1,526 (11,011) Fee Related Earnings $89,901 $193,337 $45,072 $56,083 $60,119 Depreciation and amortization 2,500 8,186 1,873 2,411 2,313 Equity-based compensation 6,382 12,133 2,846 2,906 3,223 Incentive fees 34,406 101,906 19,630 52,961 56,769 Incentive fees attributable to non-controlling interests (725) — — — — Incentive fee related compensation1 (14,983) (48,406) (9,324) (25,157) (26,965) Non-operating income related compensation — (59) (59) — — Interest income 255 5,427 937 1,891 765 Adjusted EBITDA $117,736 $272,524 $60,975 $91,095 $96,224 Non-GAAP earnings per share reconciliation Net income attributable to Hamilton Lane Incorporated $30,998 $48,360 $58,964 Income attributable to non-controlling interests in Hamilton Lane Advisors, L.L.C. 19,133 28,102 27,645 Income tax expense 16,400 20,399 19,687 Adjusted pre-tax net income 66,531 96,861 106,296 Adjusted income taxes2 (15,701) (22,306) (24,873) Adjusted net income $50,830 $74,555 $81,423 Adjusted shares outstanding 53,855,751 53,994,746 54,049,746 Non-GAAP earnings per share $0.94 $1.38 $1.51 1 Incentive fee related compensation includes incentive fee compensation expense and bonus related to carried interest that is classified as base compensation. 2 Represents corporate income taxes at our estimated statutory tax rate of 23.4% and 23.6% for the three month periods ended June 30, 2024 and 2023, respectively, applied to adjusted pre-tax net income. The 23.4% is based on a federal tax statutory rate of 21.0% and a combined state income tax rate net of federal benefits of 2.4%. The 23.6% is based on a federal tax statutory rate of 21.0% and a combined state income tax rate net of federal benefits of 2.6%. Non-GAAP Reconciliation"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen021.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "21Hamilton Lane | Global Leader in the Private Markets Adjusted EBITDA is an internal measure of profitability. We believe Adjusted EBITDA is useful to investors because it enables them to better evaluate the performance of our core business across reporting periods. Adjusted EBITDA represents net income excluding (a) interest expense on our outstanding debt, (b) income tax expense, (c) depreciation and amortization expense, (d) equity-based compensation expense, (e) non-operating (gain) loss and (f) certain other significant items that we believe are not indicative of our core performance. Fee Related Earnings (\"FRE\") is used to highlight earnings from recurring management fees. FRE represents net income excluding (a) incentive fees and related compensation, (b) interest income and expense, (c) income tax expense, (d) equity in income of investees, (e) non-operating (gain) loss and (f) certain other significant items that we believe are not indicative of our core performance. We believe FRE is useful to investors because it provides additional insight into the operating profitability of our business. FRE is presented before income taxes. Non-GAAP earnings per share measures our per-share earnings excluding certain significant items that we believe are not indicative of our core performance and assuming all Class B and Class C units in HLA were exchanged for Class A common stock in HLI. Non-GAAP earnings per share is calculated as adjusted net income divided by adjusted shares outstanding. Adjusted net income is income before taxes fully taxed at our estimated statutory tax rate and excludes any impact of changes in carrying amount of our redeemable non-controlling interest. Adjusted shares outstanding for the three months ended June 30, 2023 and 2024 and March 31, 2024 are equal to weighted-average shares of Class A common stock outstanding - diluted. We believe adjusted net income and non-GAAP earnings per share are useful to investors because they enable them to better evaluate total and per-share operating performance across reporting periods. Our assets under management (\"AUM\"), as presented in these materials, comprise the assets associated with our customized separate accounts and specialized funds. AUM does not include the assets associated with our distribution management services. We classify assets as AUM if we have full discretion over the investment decisions in an account. We calculate our AUM as the sum of: (1) the net asset value of our clients' and funds' underlying investments; (2) the unfunded commitments to our clients' and funds' underlying investments; and (3) the amounts authorized for us to invest on behalf of our clients and fund investors but not committed to an underlying investment. Management fee revenue is based on a variety of factors and is not linearly correlated with AUM. However, we believe AUM is a useful metric for assessing the relative size and scope of our asset management business. Our assets under advisement (\"AUA\") comprise assets from clients for which we do not have full discretion to make investments in their account. We generally earn revenue on a fixed fee basis on our AUA client accounts for services including asset allocation, strategic planning, development of investment policies and guidelines, screening and recommending investments, monitoring and reporting on investments and investment manager review and due diligence. Advisory fees vary by client based on the amount of annual commitments, services provided and other factors. Since we earn annual fixed fees from the majority of our AUA clients, the growth in AUA from existing accounts does not have a material impact on our revenues. However, we view AUA growth as a meaningful benefit in terms of the amount of data we are able to collect and the degree of influence we have with fund managers. Fee-earning assets under management (Fee-earning \"AUM\" or \"FEAUM\") is a metric we use to measure the assets from which we earn management fees. Our fee-earning AUM comprise assets in our customized separate accounts and specialized funds from which we derive management fees that are generally derived from applying a certain percentage to the appropriate fee base. We classify customized separate account revenue as management fees if the client is charged an asset-based fee, which includes the majority of our discretionary AUM accounts but also includes certain non-discretionary AUA accounts. Our fee-earning AUM is equal to the amount of capital commitments, net invested capital and net asset value of our customized separate accounts and specialized funds depending on the fee terms. The vast majority of our customized separate accounts and specialized funds earn fees based on commitments or net invested capital, which are not affected by market appreciation or depreciation. Therefore, revenues and fee-earning AUM are not significantly affected by changes in market value. Our calculations of fee-earning AUM may differ from the calculations of other asset managers, and as a result, this measure may not be comparable to similar measures presented by other asset managers. Our definition of fee-earning AUM is not based on any definition that is set forth in the agreements governing the customized separate accounts or specialized funds that we manage. Hamilton Lane Incorporated (or \"HLI\"), a Delaware corporation, was formed for the purpose of completing an initial public offering (\"IPO\") and related transactions in order to carry on the business of Hamilton Lane Advisors, L.L.C. (\"HLA\") as a publicly-traded entity. As of the closing of our IPO on March 6, 2017, HLI became the sole managing member of HLA. Terms"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "hlnefq1-25earningspresen022.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "22Hamilton Lane | Global Leader in the Private Markets Some of the statements in this presentation may constitute \"forward-looking statements\" within the meaning of Section 27A of the Securities Act of 1933, Section 21E of the Securities Exchange Act of 1934 and the Private Securities Litigation Reform Act of 1995. Words such as \"will\", \"expect\", \"believe\", \"estimate\", \"continue\", \"anticipate\", \"intend\", \"plan\", and similar expressions are intended to identify these forward-looking statements. Forward-looking statements discuss management's current expectations and projections relating to our financial position, results of operations, plans, objectives, future performance and business. All forward-looking statements are subject to known and unknown risks, uncertainties and other important factors that may cause actual results to be materially different, including risks relating to: our ability to manage growth, fund performance, competition in our industry, changes in our regulatory environment and tax status; market conditions generally; our ability to access suitable investment opportunities for our clients; our ability to maintain our fee structure; our ability to attract and retain key employees; our ability to manage our obligations under our debt agreements; defaults by clients and third-party investors on their obligations to fund commitments; our exposure and that of our clients and investors to the credit risks of financial institutions at which we and they hold accounts; our ability to comply with investment guidelines set by our clients; our ability to successfully integrate acquired businesses with ours; our ability to manage risks associated with introducing new types of investment structures, products or services or entering into strategic partnerships; our ability to manage redemption or repurchase rights in certain of our funds; our ability to manage, identify and anticipate risks we face; our ability to manage the effects of events outside of our control; and our ability to receive distributions from Hamilton Lane Advisors, L.L.C. to fund our payment of dividends, taxes and other expenses. The foregoing list of factors is not exhaustive. For more information regarding these risks and uncertainties as well as additional risks we face, you should refer to the \"Risk Factors\" detailed in Part I, Item 1A of our Annual Report on Form 10-K for the fiscal year ended March 31, 2024 and in our subsequent reports filed from time to time with the Securities and Exchange Commission. The forward-looking statements included in this presentation are made only as of the date presented. We undertake no obligation to update or revise any forward-looking statement as a result of new information or future events, except as otherwise required by law. Values appearing in this presentation that are whole numbers are rounded approximations. As of August 6, 2024 Disclosures"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 140.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue – Management and advisory fees of $140.0 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "135.410004",
+    "return_10d_pct": "7.1930",
+    "return_20d_pct": "13.4333",
+    "return_30d_pct": "7.6287",
+    "return_60d_pct": "27.0364",
+    "return_90d_pct": "33.1069"
+  },
+  "text_stats": {
+    "primary_text_len": 3450,
+    "exhibit_text_len": 37013,
+    "combined_text_len": 40465,
+    "semantic_text_len": 37749,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

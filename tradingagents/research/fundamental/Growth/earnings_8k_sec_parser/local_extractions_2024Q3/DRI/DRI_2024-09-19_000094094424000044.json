@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DRI",
+    "cik": "940944",
+    "event_date": "2024-09-19",
+    "event_accession": "0000940944-24-000044",
+    "primary_8k_doc": "dri-20240919.htm",
+    "exhibit_docs": [
+      "exhibit991-q1fy25.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DRI_000094094424000044_dri-20240919.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DRI_000094094424000044_exhibit991-q1fy25.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DRI",
+    "cik": "940944",
+    "entity_name": "DARDEN RESTAURANTS, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "7718800000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-02-26",
+    "net_income_value": "666800000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-02-26",
+    "assets_value": "10241500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-05-28",
+    "financing_cash_flow_value": "-862700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-02-26",
+    "investing_cash_flow_value": "-409500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-02-26",
+    "operating_cash_flow_value": "",
+    "operating_cash_flow_fact_name": "",
+    "operating_cash_flow_unit": "",
+    "operating_cash_flow_filed": "",
+    "operating_cash_flow_form": "",
+    "operating_cash_flow_period_end": "",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "False",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "operating_cash_flow",
+    "net_income_margin": "0.086386",
+    "operating_cash_flow_to_revenue": "",
+    "assets_to_revenue": "1.326825",
+    "financing_cash_flow_to_revenue": "-0.111766",
+    "investing_cash_flow_to_revenue": "-0.053052"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales increased 1.",
+      "earnings per share from continuing operations were $1.",
+      "earnings per share from continuing operations of $9.",
+      "earnings per share from continuing operations.",
+      "Earnings Per Share Earnings Before Income Tax Income Tax Expense Net Earnings Diluted Net Earnings Per Share Reported Earnings from Continuing Operations $ 232.",
+      "Operating income 269."
+    ],
+    "guidance_evidence": [
+      "Outlook ORLANDO, Fla.",
+      "Outlook The Company reiterated all aspects of its full year financial outlook for fiscal 2025, culminating in diluted net earnings per share from continuing operations of $9.",
+      "guidance for fiscal 2025.",
+      "expected,” said Darden CFO Raj Vennam.",
+      "expected earnings performance and all other statements that are not historical facts, including without limitation statements concerning our future economic performance, are made under the Safe Harbor provisions of the Private Securities Litigation Reform Act of 1995."
+    ],
+    "wave_or_demand_evidence": [
+      "ails “We operate in a very dynamic, competitive industry and we have proven we can successfully navigate challenging environments due to our strategy,” said Darden President & CEO Rick Cardenas.",
+      "aining under the current $1 billion repurchase authorization.",
+      "aid Darden CFO Raj Vennam.",
+      "ainder of the fiscal year, we are reiterating our guidance for fiscal 2025.",
+      "ailable shortly after the call.",
+      "ainties that could cause actual results to materially differ from those anticipated in the statements."
+    ],
+    "warning_or_risk_evidence": [
+      "Impairments and disposal of assets, net 1.",
+      "decrease of (1.",
+      "challenging environments due to our strategy,” said Darden President & CEO Rick Cardenas.",
+      "uncertainties that could cause actual results to materially differ from those anticipated in the statements.",
+      "uncertainties are described in Darden's Form 10-K, Form 10-Q and Form 8-K reports.",
+      "uncertainties discussed from time to time in reports filed by Darden with the Securities and Exchange Commission."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-20",
+    "entry_open": "172.669998",
+    "return_10d_pct": "-4.9458",
+    "return_20d_pct": "-9.6948",
+    "return_30d_pct": "-4.9980",
+    "return_60d_pct": "-6.8454",
+    "return_90d_pct": "6.2373"
+  },
+  "text_stats": {
+    "primary_text_len": 3734,
+    "exhibit_text_len": 14841,
+    "combined_text_len": 18577
+  }
+}

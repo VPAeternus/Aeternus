@@ -139,7 +139,7 @@ Interpretation:
 
 ---
 
-## Exact lessons from the BE vs NVDA fundamental
+## Exact lessons from the BE vs NVDA walkforward
 
 ### Venture Mode lesson
 Ask:
@@ -169,8 +169,8 @@ If yes, allow confirmation-stage flip.
   - `Growth/growth_scored_example_step4.md`
 - Worked example — October confirmation:
   - `Growth/growth_scored_example_step6.md`
-- Fundamental log:
-  - `Growth/nvda_be_fundamental.md`
+- Walkforward log:
+  - `Growth/nvda_be_walkforward.md`
 
 ---
 

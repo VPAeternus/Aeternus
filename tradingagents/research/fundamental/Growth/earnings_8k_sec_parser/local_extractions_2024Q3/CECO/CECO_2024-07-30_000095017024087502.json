@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CECO",
+    "cik": "3197",
+    "event_date": "2024-07-30",
+    "event_accession": "0000950170-24-087502",
+    "primary_8k_doc": "ceco-20240730.htm",
+    "exhibit_docs": [
+      "ceco-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CECO_000095017024087502_ceco-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CECO_000095017024087502_ceco-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CECO",
+    "cik": "3197",
+    "entity_name": "CECO ENVIRONMENTAL CORP.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "750000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "EUR",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2024-03-31",
+    "net_income_value": "1978000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "600291000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "34359000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-26655000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-12021000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.002637",
+    "operating_cash_flow_to_revenue": "-0.016028",
+    "assets_to_revenue": "0.800388",
+    "financing_cash_flow_to_revenue": "0.045812",
+    "investing_cash_flow_to_revenue": "-0.03554"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $137.",
+      "sales of approximately $13 million with mid-teen EBITDA margins.",
+      "revenues of between $590 to $610 million and adjusted EBITDA of between $67 to $70 million.",
+      "Gross Margins and EBITDA Closes Strategic Industrial Air Acquisition Raises Full Year Outlook DALLAS (July 30, 2024) -- CECO Environmental Corp.",
+      "Gross margins of 35.",
+      "Net income of $4."
+    ],
+    "guidance_evidence": [
+      "Outlook DALLAS (July 30, 2024) -- CECO Environmental Corp.",
+      "Guidance The Company today announced it has completed the acquisition of EnviroCare International (ECI), based in Northern California.",
+      "guidance to reflect revenue between $600 and $620 million, up approximately 12 percent at the midpoint of the range, and adjusted EBITDA between $68 to $72 million, up approximately 21 percent year over year, at the midpoint of the range.",
+      "guidance compares to the previous outlook for revenues of between $590 to $610 million and adjusted EBITDA of between $67 to $70 million.",
+      "outlook for free cash flow of 50% to 70% of adjusted EBITDA.",
+      "guidance since introducing our full year 2024 outlook in November of 2023."
+    ],
+    "wave_or_demand_evidence": [
+      "Orders of $140.",
+      "Backlog of $390.",
+      "backlog remains near record levels and our year-to-date book-to-bill remains positive despite continued delays in larger projects and bookings in various energy and industrial markets.",
+      "backlog and record pipeline of almost $4 billion reflect the capabilities and diversity we continue to strategically add to drive sustainable long-term results.",
+      "bookings and sales have been somewhat hampered by delays in certain projects and customer programs, we have generated significantly more operating cash flow and stronger income conversion on our sales growth so far this year versus previous half years.",
+      "backlog and record sales pipeline, along with our ongoing process improvements, puts us in a great position as we enter the second half of the year,” added Gleason."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in larger projects and bookings in various energy and industrial markets.",
+      "delays in certain projects and customer programs, we have generated significantly more operating cash flow and stronger income conversion on our sales growth so far this year versus previous half years.",
+      "loss (16,476 ) (16,274 ) Total CECO shareholders' equity 235,039 232,643 Noncontrolling interest 4,773 4,848 Total shareholders' equity 239,812 237,491 Total liabilities and shareholders' equity $ 598,133 $ 600,291 CECO ENVIRONMENTAL CORP.",
+      "uncertainties that may cause actual results to differ materially from any future results, performance or achievements expressed or implied by such statements.",
+      "uncertainties, among others, that could cause actual results to differ materially are discussed under “Part I – Item 1A.",
+      "uncertainties materialize, or should the assumptions prove incorrect, actual results may vary in material aspects from those currently anticipated."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 137.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "29.510000",
+    "return_10d_pct": "-5.9980",
+    "return_20d_pct": "-7.7940",
+    "return_30d_pct": "-1.8977",
+    "return_60d_pct": "-4.4392",
+    "return_90d_pct": "-23.5513"
+  },
+  "text_stats": {
+    "primary_text_len": 3215,
+    "exhibit_text_len": 24350,
+    "combined_text_len": 27567
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sample_id": {
+            "type": "string"
+          },
+          "quarter": {
+            "type": "string"
+          },
+          "ticker": {
+            "type": "string"
+          },
+          "event_date": {
+            "type": "string"
+          },
+          "causal_change": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "proof_alignment": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "durability": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "operating_leverage_quality": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "negative_revision_risk": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "story_vs_numbers_gap_penalty": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "narrative_delta_score": {
+            "type": "integer",
+            "minimum": -5,
+            "maximum": 10
+          },
+          "narrative_delta_bucket": {
+            "type": "string",
+            "enum": [
+              "inflecting",
+              "constructive",
+              "neutral",
+              "deteriorating",
+              "unscorable"
+            ]
+          },
+          "score_addition": {
+            "type": "integer",
+            "minimum": -3,
+            "maximum": 3
+          },
+          "detected_driver_category": {
+            "type": "string"
+          },
+          "detected_driver_name": {
+            "type": "string"
+          },
+          "evidence_positive": {
+            "type": "string"
+          },
+          "evidence_risk": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "blocking_issues": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sample_id",
+          "quarter",
+          "ticker",
+          "event_date",
+          "causal_change",
+          "proof_alignment",
+          "durability",
+          "operating_leverage_quality",
+          "negative_revision_risk",
+          "story_vs_numbers_gap_penalty",
+          "narrative_delta_score",
+          "narrative_delta_bucket",
+          "score_addition",
+          "detected_driver_category",
+          "detected_driver_name",
+          "evidence_positive",
+          "evidence_risk",
+          "confidence",
+          "blocking_issues"
+        ]
+      }
+    }
+  },
+  "required": [
+    "results"
+  ]
+}

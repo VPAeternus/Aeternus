@@ -10,8 +10,8 @@ def _manual_gap_fill_requests(missing_stages: Iterable[str]) -> List[str]:
         requests.append("manual_event_specific_x_feed_pass")
     if "universe_filter" in missing or "collect" in missing:
         requests.append("manual_universe_context_confirm")
-    if "shortlist" in missing or "deep_selection" in missing:
-        requests.append("manual_selection_threshold_review")
+    if "scout_handoff" in missing or "fundamental_intake" in missing:
+        requests.append("manual_handoff_contract_review")
     if not requests and missing:
         requests.append("manual_context_upload")
     return requests
@@ -27,10 +27,10 @@ def _recommended_changes(first_miss_stage: str | None, query_type: str) -> List[
         return ["Revisit universe filter inclusion thresholds and source overlap gates."]
     if stage == "collect":
         return ["Review collector coverage and scoring thresholds for sparse-but-moving names."]
-    if stage == "shortlist":
-        return ["Tune shortlist cut logic to reduce false negatives on high-momentum candidates."]
-    if stage == "deep_selection":
-        return ["Adjust deep-selection criteria to preserve high-conviction opportunities."]
+    if stage == "scout_handoff":
+        return ["Review scout handoff generation and ticker preservation."]
+    if stage == "fundamental_intake":
+        return ["Confirm the fundamental framework consumed the scout handoff."]
     if str(query_type).strip().lower() == "forward_scenario":
         return ["Add focused scenario evidence before acting on forward-impact conclusions."]
     return []
@@ -88,4 +88,3 @@ def build_investigation_response(*, investigation_result: Dict[str, Any]) -> Dic
         "manual_gap_fill_requests": manual_gap_fill,
         "confidence": confidence,
     }
-

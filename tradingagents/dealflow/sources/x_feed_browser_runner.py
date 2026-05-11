@@ -489,7 +489,7 @@ def run_browser_passes(
     as_of_date: str,
     *,
     start_pass: int = 1,
-    end_pass: int = 15,
+    end_pass: int = 16,
     profile: str = "Default",
     dry_run: bool = False,
     session: Any | None = None,
@@ -504,8 +504,11 @@ def run_browser_passes(
     if int(start_pass) > int(end_pass):
         raise ValueError("start_pass must be <= end_pass")
 
-    prompts = list(prompt_provider(as_of_date))
-    prompt_map = {int(pass_num): (label, prompt) for pass_num, label, prompt in prompts}
+    def _prompt_map() -> Dict[int, Tuple[str, str]]:
+        prompts = list(prompt_provider(as_of_date))
+        return {int(pass_num): (label, prompt) for pass_num, label, prompt in prompts}
+
+    prompt_map = _prompt_map()
     available_passes = sorted(prompt_map.keys())
     if not available_passes:
         raise RuntimeError("No X-feed prompts available")
@@ -523,6 +526,7 @@ def run_browser_passes(
     completed_passes: List[int] = []
 
     for pass_num in range(int(start_pass), int(end_pass) + 1):
+        prompt_map = _prompt_map()
         if pass_num not in prompt_map:
             raise ValueError(f"Pass {pass_num} is not defined")
         _, prompt = prompt_map[pass_num]

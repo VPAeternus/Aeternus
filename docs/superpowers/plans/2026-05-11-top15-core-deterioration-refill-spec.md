@@ -11,9 +11,9 @@ Current `core_deterioration_review_queue.csv` flags suspicious Top-15 core names
 3. Shadow selector demotes flagged core rows from core buy-underwriting and refills freed core slots with next ex-ante eligible ranked candidates.
 4. Shadow output must remain Top-15 capacity: `10` refilled core + `up to 5` exception rows. It must not become a larger buy list.
 5. Demoted core rows and refill-ineligible deterioration rows must not re-enter the exception sleeve automatically in the same shadow run.
-6. Emit diagnostics showing demoted ticker, replacement ticker, named flags, RM/HP counts, ex-ante ranks/scores, and return-label deltas only after selection is frozen.
-7. Do not use forward-looking labels (`return_*`, winner/loser labels, targets, current returns, final ranks, monitoring scores) during selection, refill, or routing.
-8. Daily/live mode remains separate, opt-in, and shadow-only.
+6. Emit diagnostics showing demoted ticker, replacement ticker, named flags, RM/HP counts, and ex-ante ranks/scores only. Diagnostics must not expose `return_*`, winner/loser, target, current-return, or delta fields.
+7. Do not use forward-looking labels (`return_*`, winner/loser labels, targets, current returns, final ranks, monitoring scores) during selection, refill, routing, or diagnostics.
+8. Daily/live mode remains separate, opt-in, shadow-only, and outcome-field-free.
 9. Historical backtest must preserve `selected_names_by_quarter_top15.csv` contents/hash unless intentionally adding separate shadow files.
 10. Rank 7/8 is diagnostic metadata only. It must not be required for strict/downgrade demotion.
 

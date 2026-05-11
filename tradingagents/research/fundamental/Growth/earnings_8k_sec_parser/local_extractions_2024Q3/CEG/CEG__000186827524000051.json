@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CEG",
+    "cik": "0001868275",
+    "event_date": "",
+    "event_accession": "0001868275-24-000051",
+    "primary_8k_doc": "ceg-20240806.htm",
+    "exhibit_docs": [
+      "ceg-20240806991.htm",
+      "ceg-20240806992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CEG_000186827524000051_ceg-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CEG_000186827524000051_ceg-20240806991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CEG_000186827524000051_ceg-20240806992.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CEG",
+    "cik": "0001868275",
+    "entity_name": "CONSTELLATION ENERGY CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "7565000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "96000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "50758000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "523000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "219000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-934000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.01269",
+    "operating_cash_flow_to_revenue": "-0.123463",
+    "assets_to_revenue": "6.709584",
+    "financing_cash_flow_to_revenue": "0.069134",
+    "investing_cash_flow_to_revenue": "0.028949"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $47.",
+      "revenues of $35.",
+      "sales of certain businesses, which are included in gross margin 31 Contact Information InvestorRelations@constellation.",
+      "GAAP Net Income of $2.",
+      "GAAP Net Income for the second quarter of 2024 increased to $2.",
+      "GAAP Net Income (Loss) to Adjusted (non-GAAP) Operating Earnings, refer to the GAAP/Adjusted (non-GAAP) Operating Earnings Reconciliation section below."
+    ],
+    "guidance_evidence": [
+      "guidance range to $7.",
+      "guidance to $7.",
+      "guidance of $7.",
+      "guidance, we are unable to reconcile this non-GAAP financial measure to GAAP Net Income given the inherent uncertainty required in projecting gains and losses associated with the various fair value adjustments required by GAAP.",
+      "guidance is based on expected average diluted common shares outstanding of 315 million Raising Full-Year Adjusted Operating Earnings* Guidance Range to $7.",
+      "Guidance Revised Guidance $8."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, communities, employees and shareholders.",
+      "customers across the continental United States, including three fourths of Fortune 100 companies.",
+      "customers reach their sustainability goals, setting our own ambitious goal of achieving 100% carbon-free generation by 2040, and by investing in promising emerging technologies to eliminate carbon emissions across all sectors of the economy.",
+      "customers“ - PSEG Q2 Earnings Call “We now have a total of over 17 gigawatts of interconnection requests in Pennsylvania, and new requests continue to come in each month.",
+      "customers (4) Decline in cleared volumes year-over-year is related to ELCC calculation.",
+      "aising full-year 2024 Adjusted (non-GAAP) Operating Earnings guidance range to $7."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in design, planning, permitting and related regulatory hurdles, that would otherwise have potential to chill data center development in Maryland, as is the case with traditional grid connection.",
+      "Impairment $5,125$5,525Adjusted O&M* Note: Items may not sum due to rounding.",
+      "Loss) to Adjusted (non-GAAP) Operating Earnings, refer to the GAAP/Adjusted (non-GAAP) Operating Earnings Reconciliation section below.",
+      "losses related to NDT funds were 66.",
+      "Loss): (In millions, except per share data) Three Months Ended June 30, 2024 Earnings Per Share (1) GAAP Net Income (Loss) Attributable to Common Shareholders $ 814 $ 2.",
+      "Loss on Fair Value Adjustments (net of taxes of $136) (405) (1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 7099,
+    "exhibit_text_len": 64567,
+    "combined_text_len": 71668
+  }
+}

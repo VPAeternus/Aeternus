@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DIOD",
+    "cik": "29002",
+    "event_date": "2024-08-08",
+    "event_accession": "0000950170-24-094168",
+    "primary_8k_doc": "diod-20240808.htm",
+    "exhibit_docs": [
+      "diod-ex99_1.htm",
+      "diod-ex99_2.htm",
+      "diod-ex99_3.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DIOD_000095017024094168_diod-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DIOD_000095017024094168_diod-ex99_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DIOD_000095017024094168_diod-ex99_2.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DIOD_000095017024094168_diod-ex99_3.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DIOD",
+    "cik": "29002",
+    "entity_name": "DIODES INCORPORATED",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "467241000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "71150000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2285561000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-70318000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-48131000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "99811000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.152277",
+    "operating_cash_flow_to_revenue": "0.213618",
+    "assets_to_revenue": "4.891611",
+    "financing_cash_flow_to_revenue": "-0.150496",
+    "investing_cash_flow_to_revenue": "-0.103011"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue was $319.",
+      "Revenue increased 5.",
+      "GAAP net income was $8.",
+      "net income was $15.",
+      "GAAP EPS was $0.",
+      "Non-GAAP EPS was $0."
+    ],
+    "guidance_evidence": [
+      "Outlook Gary Yu further commented, “For the third quarter of 2024, we expect revenue to be approximately $346 million, plus or minus 3 percent, representing an 8.",
+      "guidance Global Point of Sales (POS) increased over 7% sequentially Guiding 3Q’24 revenue to grow 8.",
+      "expected to be 34.",
+      "expected to be approximately 27.",
+      "expected to be 18."
+    ],
+    "wave_or_demand_evidence": [
+      "demand began to recover from the low point in the first quarter, especially in the computing market in Asia.",
+      "Demand improvement during the quarter was most prominent in our computing end market, where Diodes is increasingly participating in the growth of AI servers.",
+      "demand.",
+      "demand strengthens, we remain focused on driving further operational improvements to deliver increased earnings and cash flow.",
+      "customers’ needs.",
+      "customer service, enable us to be a premier provider for high-volume, high-growth markets."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels with a sequential decrease in channel inventory weeks.",
+      "inventory adjustments.",
+      "charge, $3.",
+      "charges, $3.",
+      "charge 7,244 Non-cash mark-to-market investment value adjustments (3,480 ) Non-GAAP net income $ 15,420 Non-GAAP diluted earnings per share $ 0.",
+      "preliminary and unaudited, as they are subject to the Company finalizing its closing procedures and completion of the quarterly review by its independent registered public accounting firm."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 319.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": 34,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "65.209999",
+    "return_10d_pct": "3.1897",
+    "return_20d_pct": "6.7781",
+    "return_30d_pct": "-6.7628",
+    "return_60d_pct": "-2.3616",
+    "return_90d_pct": "-3.7264"
+  },
+  "text_stats": {
+    "primary_text_len": 6722,
+    "exhibit_text_len": 55962,
+    "combined_text_len": 62686
+  }
+}

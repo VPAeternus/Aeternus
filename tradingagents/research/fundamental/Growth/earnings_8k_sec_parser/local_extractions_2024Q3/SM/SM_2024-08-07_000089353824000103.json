@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SM",
+    "cik": "893538",
+    "event_date": "2024-08-07",
+    "event_accession": "0000893538-24-000103",
+    "primary_8k_doc": "sm-20240807.htm",
+    "exhibit_docs": [
+      "exhibit99108072024er.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SM_000089353824000103_sm-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SM_000089353824000103_exhibit99108072024er.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SM",
+    "cik": "893538",
+    "entity_name": "SM Energy Company",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "573505000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "198552000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6379985000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-58358000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-240405000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "331634000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.346208",
+    "operating_cash_flow_to_revenue": "0.578258",
+    "assets_to_revenue": "11.12455",
+    "financing_cash_flow_to_revenue": "-0.101757",
+    "investing_cash_flow_to_revenue": "-0.419186"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net income was $210.",
+      "net income (1) was $1.",
+      "NET INCOME, NET INCOME PER SHARE AND NET CASH PROVIDED BY OPERATING ACTIVITIES Second quarter 2024 net income was $210.",
+      "net income of $149.",
+      "net income were higher production volumes and realized prices per Boe combined with lower LOE and transportation costs per Boe.",
+      "EPS."
+    ],
+    "guidance_evidence": [
+      "guidance, and announced that the Company has exercised its option to acquire assets located adjacent to its recently announced XCL Acquisition.",
+      "guidance.",
+      "GUIDANCE The Company is unable to provide a reconciliation of forward-looking non-GAAP capital expenditures because components of the calculation are inherently unpredictable, such as changes to, and timing of, capital accruals.",
+      "GUIDANCE FULL YEAR 2024: Presented before consideration of Uinta Basin Acquisitions.",
+      "guidance for net production is unchanged at 57-60 MMBoe, or 156-164 MBoe/d.",
+      "guidance for capital expenditures (net of the change in capital accruals), (1) excluding acquisitions, is unchanged at $1."
+    ],
+    "wave_or_demand_evidence": [
+      "ain full year and third quarter 2024 guidance, and announced that the Company has exercised its option to acquire assets located adjacent to its recently announced XCL Acquisition.",
+      "ain additional assets adjacent to the XCL Resources, LLC asset acquisition in the core of the Uinta Basin for approximately $70.",
+      "ain this quarter tops off a great first half of 2024.",
+      "ain of $1.",
+      "ail, please see the Financial Highlights section below and the accompanying slide deck.",
+      "ailed schedule of these and additional derivative positions are provided in the 2Q24 accompanying slide deck."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary estimated net proved reserves and an estimated 390 net drilling locations (normalized to 10,000 feet).",
+      "preliminary results from two Woodford-Barnett test wells in the Sweetie Peck area look very strong.",
+      "inventory runway.",
+      "Preliminary assumptions for consolidation of Uinta Basin assets for the fourth quarter only.",
+      "impairment expense, non-cash stock-based compensation expense, derivative gains and losses net of settlements, gains and losses on divestitures, gains and losses on extinguishment of debt, and certain other items.",
+      "impairments, net (gain) loss on divestiture activity, gains and losses on extinguishment of debt, and accruals for non-recurring matters."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "44.250000",
+    "return_10d_pct": "2.6667",
+    "return_20d_pct": "4.1130",
+    "return_30d_pct": "-10.5989",
+    "return_60d_pct": "3.5706",
+    "return_90d_pct": "-0.4294"
+  },
+  "text_stats": {
+    "primary_text_len": 4383,
+    "exhibit_text_len": 44256,
+    "combined_text_len": 48641
+  }
+}

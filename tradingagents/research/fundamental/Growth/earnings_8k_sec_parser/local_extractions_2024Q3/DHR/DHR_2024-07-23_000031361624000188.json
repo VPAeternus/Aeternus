@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DHR",
+    "cik": "313616",
+    "event_date": "2024-07-23",
+    "event_accession": "0000313616-24-000188",
+    "primary_8k_doc": "dhr-20240723.htm",
+    "exhibit_docs": [
+      "dhr-20240723xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DHR_000031361624000188_dhr-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DHR_000031361624000188_dhr-20240723xex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DHR",
+    "cik": "313616",
+    "entity_name": "DANAHER CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5949000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-23",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1450000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-23",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "84488000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-23",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-262000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-23",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-304000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-23",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1947000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-23",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.243738",
+    "operating_cash_flow_to_revenue": "0.327282",
+    "assets_to_revenue": "14.202051",
+    "financing_cash_flow_to_revenue": "-0.044041",
+    "investing_cash_flow_to_revenue": "-0.051101"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues decreased 3.",
+      "revenue decreased 3.",
+      "sales of property, plant & equipment (capital disposals) from continuing operations (GAAP) 1 2 Free cash flow from continuing operations (non-GAAP) $ 1,131 $ 1,319 ~ (14.",
+      "sales of plant, property and equipment from continuing operations (“capital disposals”).",
+      "EPS in the three-month period.",
+      "EPS and the related MCPS dividends of $21 million were included in the calculation of net earnings for diluted EPS."
+    ],
+    "guidance_evidence": [
+      "Outlook The Company provides forecasted sales only on a non-GAAP core revenue basis because of the difficulty in estimating the other components of GAAP revenue, such as currency translation, acquisitions and divested product lines.",
+      "guidance for the third quarter and full year 2024 during its quarterly investor conference call today starting at 8:00 a.",
+      "expected revenue, earnings and cash flow.",
+      "forecasted sales only on a non-GAAP core revenue basis because of the difficulty in estimating the other components of GAAP revenue, such as currency translation, acquisitions and divested product lines.",
+      "anticipates that non-GAAP core revenue will be down low-single digits year-over-year.",
+      "Forecasted Core Sales Decline % Change Three-Month Period Ending September 27, 2024 vs."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to solve many of the most important health challenges impacting patients around the world.",
+      "ainer M.",
+      "air, President and Chief Executive Officer, stated, “Our team executed well during the second quarter, delivering better-than-expected revenue, earnings and cash flow.",
+      "ained positive momentum in our bioprocessing business and with strong performance at Cepheid, which we believe gained market share in molecular testing again this quarter.",
+      "air continued, “There’s a bright future ahead for Danaher.",
+      "ailable in the same section of Danaher’s website shortly after the conclusion of the presentation and will remain available until the next quarterly earnings call."
+    ],
+    "warning_or_risk_evidence": [
+      "Impairments D — 0.",
+      "inventory related to the acquisition of Abcam plc for the six-month period ended June 28, 2024 ($25 million pretax as reported in this line item, $19 million after-tax).",
+      "Impairment charges related to technology and other assets in the Biotechnology segment recorded in the three and six-month periods ended June 30, 2023 ($42 million pretax as reported in this line item, $32 million after-tax).",
+      "charges are significantly impacted by the timing, size, number and nature of the acquisitions we consummate.",
+      "decreased 3.",
+      "losses on investments B 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "261.880005",
+    "return_10d_pct": "2.8410",
+    "return_20d_pct": "2.6081",
+    "return_30d_pct": "2.9021",
+    "return_60d_pct": "4.3035",
+    "return_90d_pct": "-0.2291"
+  },
+  "text_stats": {
+    "primary_text_len": 4557,
+    "exhibit_text_len": 25943,
+    "combined_text_len": 30502
+  }
+}

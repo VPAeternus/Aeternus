@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MIR",
+    "cik": "1809987",
+    "event_date": "2024-08-01",
+    "event_accession": "0001628280-24-034165",
+    "primary_8k_doc": "mir-20240801.htm",
+    "exhibit_docs": [
+      "a2024-0630exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MIR_000162828024034165_mir-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MIR_000162828024034165_a2024-0630exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MIR",
+    "cik": "1809987",
+    "entity_name": "Mirion Technologies, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "182100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-41900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2718500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "24600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-7500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-2700000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.230093",
+    "operating_cash_flow_to_revenue": "-0.014827",
+    "assets_to_revenue": "14.928611",
+    "financing_cash_flow_to_revenue": "0.135091",
+    "investing_cash_flow_to_revenue": "-0.041186"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "earnings per share for the quarter was $0.",
+      "EPS guidance of $0.",
+      "EPS of $0.",
+      "EPS and adjusted free cash flow are not available without unreasonable effort.",
+      "EPS is defined as adjusted net income divided by weighted average common shares outstanding — basic and diluted.",
+      "Earnings per Share (In millions, except per share values) Three Months Ended June 30, 2024 2023 Net loss attributable to Mirion Technologies, Inc."
+    ],
+    "guidance_evidence": [
+      "Guidance • Revenues for the second quarter increased 5.",
+      "guidance to $195 million to $205 million and reiterated its revenue growth guidance of 5% to 7% and adjusted EPS guidance of $0.",
+      "Outlook “Looking ahead to the back half of 2024, we have reiterated our revenue growth and adjusted free cash flow expectations,” continued Mr.",
+      "guidance for organic revenue growth excludes the impact of foreign exchange rates as well as mergers, acquisitions and divestitures.",
+      "guidance assumptions include the following: • Depreciation of approximately $34 million for the year • Net interest expense of approximately $53 million (approximately $52 million of cash interest) Exhibit 99.",
+      "guidance contains forward-looking statements and actual results may differ materially as a result of known and unknown uncertainties and risks, including those set forth below under the heading “Forward-Looking Statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, and the public about the company, its offerings, and other issues.",
+      "aised its full year adjusted EBITDA guidance to $195 million to $205 million and reiterated its revenue growth guidance of 5% to 7% and adjusted EPS guidance of $0.",
+      "ain encouraged by the trends supporting growth in cancer care and nuclear power and I believe that the business is well-positioned for the second half of the year and beyond.",
+      "ains forward-looking statements and actual results may differ materially as a result of known and unknown uncertainties and risks, including those set forth below under the heading “Forward-Looking Statements.",
+      "ailable without unreasonable effort.",
+      "ailable at https://ir."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in the government budget process, a U.",
+      "Inventory obsolescence write down 1.",
+      "loss was $12.",
+      "loss of $28.",
+      "loss) from operations margin was 1.",
+      "loss per share for the second quarter was $0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 195,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "10.340000",
+    "return_10d_pct": "-0.7737",
+    "return_20d_pct": "4.3520",
+    "return_30d_pct": "-2.8046",
+    "return_60d_pct": "5.8027",
+    "return_90d_pct": "43.1335"
+  },
+  "text_stats": {
+    "primary_text_len": 3450,
+    "exhibit_text_len": 27504,
+    "combined_text_len": 30956
+  }
+}

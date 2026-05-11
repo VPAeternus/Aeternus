@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NOVT",
+    "cik": "1076930",
+    "event_date": "2024-08-06",
+    "event_accession": "0000950170-24-091213",
+    "primary_8k_doc": "novt-20240806.htm",
+    "exhibit_docs": [
+      "novt-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NOVT_000095017024091213_novt-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NOVT_000095017024091213_novt-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NOVT",
+    "cik": "1076930",
+    "entity_name": "NOVANTA INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "219126000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "18265000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1226056000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-25066000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3620000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "10245000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.083354",
+    "operating_cash_flow_to_revenue": "0.046754",
+    "assets_to_revenue": "5.59521",
+    "financing_cash_flow_to_revenue": "-0.114391",
+    "investing_cash_flow_to_revenue": "-0.01652"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $236 million • Second Quarter 2024 GAAP Net Income of $13.",
+      "revenue of $235.",
+      "revenue of $20.",
+      "revenue of approximately $975 million, representing reported revenue growth of greater than 10%.",
+      "revenue of approximately $241 million to $244 million.",
+      "revenue of the corresponding period in the prior year."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "guidance assumes no significant changes in foreign exchange rates.",
+      "guidance on a non-GAAP basis and does not provide earnings guidance on a GAAP basis, with the exception of GAAP revenue guidance.",
+      "expects GAAP revenue of approximately $975 million, representing reported revenue growth of greater than 10%.",
+      "expects Adjusted Gross Profit Margin to be approximately 46.",
+      "expects Adjusted EBITDA to be in the range of $215 million to $222 million and Adjusted Diluted EPS to be in the range of $3."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, launch innovative new products, and deliver on our financial commitments.",
+      "customers and in weakened markets; being subject to U.",
+      "customers' demanding applications.",
+      "customer success.",
+      "aid Matthijs Glastra, Chair and Chief Executive Officer of Novanta.",
+      "ain particularly weak, Novanta’s new products continue to accelerate in adoption, our medical device end-markets remain strong, and robotics and automation markets are seeing strength in the second half,” said Matthijs Glastra."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges and related asset write-offs; and other charges reflected in the Company’s reconciliation of historical non-GAAP financial measures, the amounts of which, based on past experience, could be material.",
+      "charges that have a material effect on the Company’s reported results and, therefore, should not be relied upon as the sole financial measures to evaluate the Company’s financial results.",
+      "Inventory related charges associated with a product line closure — 473 Adjusted Gross Profit (Non-GAAP) $ 31,071 $ 37,568 Adjusted Gross Profit Margin (Non-GAAP) 48.",
+      "Inventory related charges associated with a product line closure 2,493 — Adjusted Gross Profit (Non-GAAP) $ 44,818 $ 35,327 Adjusted Gross Profit Margin (Non-GAAP) 42.",
+      "Inventory related charges associated with a product line closure 2,493 473 Adjusted Gross Profit (Non-GAAP) $ 109,867 $ 107,642 Adjusted Gross Profit Margin (Non-GAAP) 46.",
+      "Inventory related charges associated with a product line closure 2,493 1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 236,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "174.360001",
+    "return_10d_pct": "3.9000",
+    "return_20d_pct": "4.3875",
+    "return_30d_pct": "-3.4182",
+    "return_60d_pct": "0.3441",
+    "return_90d_pct": "-5.5575"
+  },
+  "text_stats": {
+    "primary_text_len": 3206,
+    "exhibit_text_len": 34244,
+    "combined_text_len": 37452
+  }
+}

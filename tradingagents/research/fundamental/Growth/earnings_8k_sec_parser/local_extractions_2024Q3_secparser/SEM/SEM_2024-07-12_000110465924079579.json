@@ -1,0 +1,498 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SEM",
+    "cik": "1320414",
+    "event_date": "2024-07-12",
+    "event_accession": "0001104659-24-079579",
+    "primary_8k_doc": "tm2419380d1_8k.htm",
+    "exhibit_docs": [
+      "tm2419380d1_ex99-1.htm",
+      "tm2420448d2_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SEM_000110465924079579_tm2419380d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SEM_000110465924079579_tm2419380d1_ex99-1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SEM_000110465924079579_tm2420448d2_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SEM",
+    "cik": "1320414",
+    "entity_name": "SELECT MEDICAL HOLDINGS CORPORATION",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1664980000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "70805000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7699736000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "3419000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-69062000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "51440000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.042526",
+    "operating_cash_flow_to_revenue": "0.030895",
+    "assets_to_revenue": "4.624522",
+    "financing_cash_flow_to_revenue": "0.002053",
+    "investing_cash_flow_to_revenue": "-0.041479"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "operating income — 151 Income from Operations $83,944 $82,108 Field: Rule-Page Field: /Rule-Page (1) These amounts are subject to change upon completion of Select Medical’s financial statement closing procedures."
+    ],
+    "guidance_evidence": [
+      "outlook, on Friday, August 2, 2024, at 9:00am ET.",
+      "expected to occur after market close on Thursday, August 1, 2024.",
+      "expects Concentra’s net operating revenue for its second quarter of 2024 to be approximately $477.",
+      "expects Concentra’s income from operations for the second quarter of 2024 to be approximately $83."
+    ],
+    "wave_or_demand_evidence": [
+      "ain Financial Results of its Wholly-Owned Subsidiary Concentra Group Holdings Parent, Inc.",
+      "ain financial results of its wholly-owned subsidiary, Concentra Group Holdings Parent, Inc.",
+      "ain key statistics are presented in table II of this release for the second quarters ended June 30, 2024 and 2023.",
+      "ailable information and these estimates are subject to change upon completion of Select Medical’s financial statement closing procedures.",
+      "ain subject to the completion of management’s final review and our other closing procedures, or subsequent events, as well as the completion of the review of our financial statements.",
+      "ailable shortly after the call through the same link."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary results set out below, which may differ from actual results.",
+      "delaying our operations; ·Our ability to adequately protect and enforce our intellectual property and other proprietary rights; ·Adverse economic conditions in the U.",
+      "preliminary prospectus filed on June 14, 2024, with the Securities and Exchange Commission (the “SEC”), relating to Concentra’s Registration Statement on Form S-1."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "tm2419380d1_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "FOR IMMEDIATE RELEASE 4714 Gettysburg Road Mechanicsburg, PA 17055 NYSE Symbol: SEM"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Select Medical Holdings Corporation Announces Estimate of Certain Financial Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "of its Wholly-Owned Subsidiary Concentra Group Holdings Parent, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "for the Second Quarter Ended June 30, 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "MECHANICSBURG, PENNSYLVANIA — July 12, 2024 — Select Medical Holdings Corporation (“Select Medical,” “we,” “us,” or “our”) (NYSE: SEM) today announced an estimate of certain financial results of its wholly-owned subsidiary, Concentra Group Holdings Parent, Inc. (“Concentra”), for the second quarter ended June 30, 2024 in advance of the announcement of Select Medical’s actual results, which is expected to occur after market close on Thursday, August 1, 2024.Select Medical expects Concentra’s net operating revenue for its second quarter of 2024 to be approximately $477.9 million. Select Medical expects Concentra’s income from operations for the second quarter of 2024 to be approximately $83.9 million. A summary of Concentra’ estimated financial results is presented in table I of this release. Each item presented in table I is an estimation of the expectations (dollars in millions) for the second quarter of 2024. Certain key statistics are presented in table II of this release for the second quarters ended June 30, 2024 and 2023.The expectations regarding Concentra’s financial results for the second quarter of 2024 are management estimates based on currently available information and these estimates are subject to change upon completion of Select Medical’s financial statement closing procedures. Our actual results remain subject to the completion of management’s final review and our other closing procedures, or subsequent events, as well as the completion of the review of our financial statements. Accordingly, investors should not place undue reliance on our preliminary results set out below, which may differ from actual results.As previously announced, Select Medical will host a conference call regarding its second quarter results, as well as its business outlook, on Friday, August 2, 2024, at 9:00am ET. The conference call will be a live webcast and can be accessed at Select Medical Holdings Corporation’s website at www.selectmedicalholdings.com. A replay of the webcast will be available shortly after the call through the same link. For listeners wishing to dial-in via telephone, or participate in the question and answer session, you may pre-register for the call at Select Medical Earnings Call Registration to obtain your dial-in number and unique passcode for the call. Field: Page; Sequence: 1; Options: NewSection Company OverviewSelect Medical is one of the largest operators of critical illness recovery hospitals, rehabilitation hospitals, outpatient rehabilitation clinics, and occupational health centers in the United States based on number of facilities. Select Medical's reportable segments include the critical illness recovery hospital segment, the rehabilitation hospital segment, the outpatient rehabilitation segment, and the Concentra segment. As of June 30, 2024, Select Medical operated 107 critical illness recovery hospitals in 29 states, 33 rehabilitation hospitals in 13 states, 1,925 outpatient rehabilitation clinics in 39 states and the District of Columbia, and 547 occupational health centers in 41 states. At June 30, 2024, Select Medical had operations in 46 states and the District of Columbia. Information about Select Medical is available at www.selectmedical.com.Forward-Looking StatementsCertain statements contained herein that are not descriptions of historical facts are \"forward-looking\" statements (as such term is defined in the Private Securities Litigation Reform Act of 1995). Forward-looking statements use words such as “expect,” “estimate,” “anticipate,” “outlook,” “intend,” “plan,” “confident,” “believe,” “will,” “should,” “would” “potential,” “positioning,” “proposed,” “planned,” “objective,” “likely,” “could,” “may,” and words of similar meaning, as well as other words or expressions referencing future events, conditions or circumstances. Statements regarding our estimated financial results are examples of forward-looking statements. Because such statements include risks and uncertainties, actual results may differ materially from those expressed or implied by such forward-looking statements due to factors including the following: ·The effect of closing procedures and final review with respect to our estimated preliminary results; ·The frequency of work-related injuries and illnesses; ·The adverse changes to our relationships with employer customers, third-party payors, workers’ compensation provider networks or employer services networks; ·Changes to regulations, new interpretations of existing regulations, or violations of regulations; ·Cost containment initiatives or state fee schedule changes undertaken by state workers’ compensation boards or commissions and other third-party payors; ·Our ability to realize reimbursement increases at rates sufficient to keep pace with the inflation of our costs; ·Labor shortages, increased employee turnover or costs, and union activity could significantly increase our operating costs; ·Our ability to compete effectively with other occupational health centers, onsite health clinics at employer worksites, and healthcare providers; ·A security breach of our, or our third-party vendors’, information technology systems which may cause a violation of HIPAA and subject us to potential legal and reputational harm; ·Negative publicity which can result in increased governmental and regulatory scrutiny and possibly adverse regulatory changes; ·Significant legal actions could subject us to substantial uninsured liabilities; ·Litigation and other legal and regulatory proceedings in the course of our business that could adversely affect our business and financial statements; ·Insurance coverage may not be sufficient to cover losses we may incur; ·Acquisitions may use significant resources, may be unsuccessful, and could expose us to unforeseen liabilities; ·Our exposure to additional risk due to our reliance on third parties in many aspects of our business; Field: Page; Sequence: 2 ·Compliance with applicable laws regarding the corporate practice of medicine and therapy and fee- splitting; ·Our facilities are subject to extensive federal and state laws and regulations relating to the privacy of individually identifiable information; ·Compliance with applicable data interoperability and information blocking rule; ·Facility licensure requirements in some states are costly and time-consuming, limiting or delaying our operations; ·Our ability to adequately protect and enforce our intellectual property and other proprietary rights; ·Adverse economic conditions in the U.S. or globally; ·Any negative impact on the global economy and capital markets resulting from other geopolitical tensions; ·The impact of impairment of our goodwill and other intangible assets; ·Our ability to maintain satisfactory credit ratings; ·Failure to complete or achieve some or all the expected benefits of the potential separation of Concentra; ·The negative impact of public threats such as a global pandemic or widespread outbreak of an infectious disease similar to the COVID-19 pandemic; ·The loss of key members of our management team; ·Our ability to attract and retain talented, highly skilled employees and a diverse workforce, and on the succession of our senior management; ·Climate change, or legal, regulatory or market measures to address climate change; ·Increasing scrutiny and rapidly evolving expectations from stakeholders regarding ESG matters ·Changes in tax laws or exposures to additional tax liabilities; and ·Other factors discussed under the heading \"Risk Factors\" in Concentra’s preliminary prospectus filed on June 14, 2024, with the Securities and Exchange Commission (the “SEC”), relating to Concentra’s Registration Statement on Form S-1.Except as required by applicable law, including the securities laws of the United States and the rules and regulations of the SEC, we are under no obligation to publicly update or revise any forward-looking statements, whether as a result of any new information, future events, or otherwise. You should not place undue reliance on our forward-looking statements. Although we believe that the expectations reflected in forward-looking statements are reasonable, we cannot guarantee future results or performance.Investor inquiries:Joel T. VeitSenior Vice President and Treasurer717-972-1100ir@selectmedical.comSOURCE: Select Medical Holdings Corporation Field: Page; Sequence: 3 I. Summary Financial Results(1)For the Three Months Ended June 30, 2024 and 2023"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "*****"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Unaudited Three months ended June 30, 2024 2023 (in millions) (estimated) (actual) Revenue $477,915 $467,079 Cost and expenses: Cost of services, exclusive of depreciation and amortization 339,273 329,836 General and administrative, exclusive of depreciation and amortization 36,828 37,003 Depreciation and amortization 17,870 18,283 Total costs and expenses 393,971 385,122 Other operating income — 151 Income from Operations $83,944 $82,108"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Rule-Page Field: /Rule-Page (1) These amounts are subject to change upon completion of Select Medical’s financial statement closing procedures. Field: Page; Sequence: 4 II. Key StatisticsFor the Three Months Ended June 30, 2024 and 2023"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "2024 2023 Number of occupational health centers – start of period 547 539 Number of occupational health centers acquired — 1 Number of occupational health centers de novos 1 — Number of occupational health centers closed/sold (1) — Number of occupational health centers – end of period 547 540 Number of onsite health clinics operated – end of period 154 141 Number of patient visits(2) Workers’ Compensation 1,455,254 1,429,035 Employer Services 1,702,399 1,781,012 Consumer Health 56,602 57,847 Total 3,214,255 3,267,894 Visits per day volume Workers’ Compensation 22,738 22,329 Employer Services 26,600 27,828 Consumer Health 884 904 Total 50,223 51,061 Revenue per visit(2) Workers’ Compensation $198.18 $194.92 Employer Services 90.05 86.00 Consumer Health 135.49 134.88 Total $139.81 $134.50"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Rule-Page Field: /Rule-Page (2) Represents operating statistics for the Occupational Health Centers only. Revenue per visit for the three months ended June 30, 2024 is calculated using estimated net operating revenue. Field: Page; Sequence: 5; Options: Last"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        3,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "FOR IMMEDIATE RELEASE",
+          "4714 Gettysburg Road Mechanicsburg, PA 17055 NYSE Symbol: SEM"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "The effect of closing procedures and final review with respect to our estimated preliminary results;"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "The frequency of work-related injuries and illnesses;"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "The adverse changes to our relationships with employer customers, third-party payors, workers’ compensation provider networks or employer services networks;"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Changes to regulations, new interpretations of existing regulations, or violations of regulations;"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Cost containment initiatives or state fee schedule changes undertaken by state workers’ compensation boards or commissions and other third-party payors;"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Our ability to realize reimbursement increases at rates sufficient to keep pace with the inflation of our costs;"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Labor shortages, increased employee turnover or costs, and union activity could significantly increase our operating costs;"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Our ability to compete effectively with other occupational health centers, onsite health clinics at employer worksites, and healthcare providers;"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "A security breach of our, or our third-party vendors’, information technology systems which may cause a violation of HIPAA and subject us to potential legal and reputational harm;"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Negative publicity which can result in increased governmental and regulatory scrutiny and possibly adverse regulatory changes;"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Significant legal actions could subject us to substantial uninsured liabilities;"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 477.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 477.9,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue for its second quarter of 2024 to be approximately $477.9 million"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "expects Concentra’s net operating revenue for its second quarter of 2024 to be approximately $477.9 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 1,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 2,
+    "guidance_vs_current_pct": 0.0,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-15",
+    "entry_open": "19.973061",
+    "return_10d_pct": "4.0464",
+    "return_20d_pct": "-12.1662",
+    "return_30d_pct": "-13.6768",
+    "return_60d_pct": "-4.9636",
+    "return_90d_pct": "-8.5514"
+  },
+  "text_stats": {
+    "primary_text_len": 3633,
+    "exhibit_text_len": 10446,
+    "combined_text_len": 14081,
+    "semantic_text_len": 10681,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

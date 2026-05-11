@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "UVV",
+    "cik": "102037",
+    "event_date": "2024-08-07",
+    "event_accession": "0000102037-24-000030",
+    "primary_8k_doc": "xbrl-20240806.htm",
+    "exhibit_docs": [
+      "uvv-ex991x20240807xpressre.htm",
+      "uvv-ex992x20240807xdividend.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UVV_000010203724000030_xbrl-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UVV_000010203724000030_uvv-ex991x20240807xpressre.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UVV_000010203724000030_uvv-ex992x20240807xdividend.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "UVV",
+    "cik": "102037",
+    "entity_name": "UNIVERSAL CORP /VA/",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2091150000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-29",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "86577000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-29",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "2586345000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-29",
+    "assets_form": "10-K",
+    "assets_period_end": "2022-03-31",
+    "financing_cash_flow_value": "-16760000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-29",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-142661000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-29",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "44882000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-29",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.041402",
+    "operating_cash_flow_to_revenue": "0.021463",
+    "assets_to_revenue": "1.236805",
+    "financing_cash_flow_to_revenue": "-0.008015",
+    "investing_cash_flow_to_revenue": "-0.068221"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $597.",
+      "revenues increased by $79.",
+      "sales of new ingredients products.",
+      "revenues of $85.",
+      "sales of new products as well as some increases in sales of core products, notably fruit juices.",
+      "operating income was $17."
+    ],
+    "guidance_evidence": [
+      "guidance and support to promote increased production.",
+      "expected, our debt level remained elevated at June 30, 2024.",
+      "expected.",
+      "expected for other quarters or a full fiscal year."
+    ],
+    "wave_or_demand_evidence": [
+      "demand from our tobacco customers.",
+      "demand will continue to support solid results for the segment for fiscal year 2025.",
+      "customer demand.",
+      "demand for our core products, drove the 15% increase in sales revenue for the segment as compared to the same quarter last fiscal year.",
+      "customers.",
+      "customers, we anticipate working capital to unwind during fiscal year 2025."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels at June 30, 2024, remained low at about 13%, and we believe that global leaf tobacco remains in an undersupply position.",
+      "inventory write-downs also increased results for the segment in the first quarter of fiscal year 2025, compared to the same period last fiscal year.",
+      "impairment costs during fiscal years 2025 and 2026 as a result of the consolidation of operations.",
+      "charges or credits.",
+      "loss) per share $ 0.",
+      "loss) $ 2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 597.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "49.799999",
+    "return_10d_pct": "6.9679",
+    "return_20d_pct": "9.3374",
+    "return_30d_pct": "3.6145",
+    "return_60d_pct": "4.3574",
+    "return_90d_pct": "7.7309"
+  },
+  "text_stats": {
+    "primary_text_len": 7740,
+    "exhibit_text_len": 31585,
+    "combined_text_len": 39327
+  }
+}

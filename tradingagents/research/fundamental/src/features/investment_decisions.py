@@ -2,14 +2,14 @@ from __future__ import annotations
 
 
 TRANSITIONS = {
-    "new_signal": {"research_queue", "llm_pending"},
-    "llm_pending": {"research_queue", "watchlist", "manually_rejected"},
-    "research_queue": {"approved_buy", "starter_position", "watchlist", "manually_rejected"},
+    "new_signal": {"fundamental_review", "llm_pending"},
+    "llm_pending": {"fundamental_review", "watchlist", "manually_rejected"},
+    "fundamental_review": {"approved_buy", "starter_position", "watchlist", "manually_rejected"},
     "approved_buy": {"active_position"},
     "starter_position": {"active_position", "early_stress", "midpoint_stress", "kill_review", "exited"},
     "watchlist": {"active_watchlist"},
     "active_position": {"early_stress", "midpoint_stress", "kill_review", "exited", "refreshed_by_new_quarter"},
-    "active_watchlist": {"research_queue", "kill_review", "expired"},
+    "active_watchlist": {"fundamental_review", "kill_review", "expired"},
     "kill_review": {"exited", "manually_rejected", "refreshed_by_new_quarter"},
 }
 

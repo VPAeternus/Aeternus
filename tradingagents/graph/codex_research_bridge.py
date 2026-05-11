@@ -11,7 +11,7 @@ import tempfile
 from typing import Any, Iterable
 
 
-ANALYST_NAMES: tuple[str, ...] = ("market", "social", "news", "fundamentals")
+ANALYST_NAMES: tuple[str, ...] = ("market", "news", "fundamentals")
 SUPPORTED_ANALYST_PROVIDERS: tuple[str, ...] = ("gpt", "claude", "grok_manual")
 ANALYST_PROVIDER_MAX_WORKERS: dict[str, int] = {
     "gpt": len(ANALYST_NAMES),
@@ -123,7 +123,7 @@ Answer whether the fundamentals are strengthening, stable, or deteriorating, and
 
 Rules:
 - Avoid textbook ratio dumping.
-- State the real debate: what bulls believe, what bears believe, and which side has stronger evidence.
+- State the real discussion: what optimists believe, what skeptics believe, and which side has stronger evidence.
 - If valuation depends on heroic assumptions, say so directly.
 - Separate business quality from stock attractiveness.
 """,

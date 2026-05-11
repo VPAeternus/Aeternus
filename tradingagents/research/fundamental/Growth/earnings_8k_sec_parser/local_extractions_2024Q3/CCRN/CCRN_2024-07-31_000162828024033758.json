@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CCRN",
+    "cik": "1141103",
+    "event_date": "2024-07-31",
+    "event_accession": "0001628280-24-033758",
+    "primary_8k_doc": "ccrn-20240731.htm",
+    "exhibit_docs": [
+      "ccrn20240630prexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CCRN_000162828024033758_ccrn-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CCRN_000162828024033758_ccrn20240630prexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CCRN",
+    "cik": "1141103",
+    "entity_name": "Cross Country Healthcare, Inc",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "622707000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "29436000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "679317000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-46681000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3496000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "46865000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.047271",
+    "operating_cash_flow_to_revenue": "0.07526",
+    "assets_to_revenue": "1.09091",
+    "financing_cash_flow_to_revenue": "-0.074965",
+    "investing_cash_flow_to_revenue": "-0.005614"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $339.",
+      "revenue was $718.",
+      "Revenue was $291.",
+      "Revenue was $48.",
+      "EPS $ (0.",
+      "EPS* $ 0."
+    ],
+    "guidance_evidence": [
+      "Outlook for Third Quarter 2024 The guidance below applies to management’s expectations for the third quarter of 2024.",
+      "guidance to the comparable GAAP measure, as permitted by Item 10(e)(1)(i)(B) of Regulation S-K, because the impact and timing of these potential charges or gains is inherently uncertain and difficult to predict and is unavailable without unreasonable efforts.",
+      "expects, ” “ anticipates, ” “ intends, ” “ plans, ” “ believes, ” “ estimates, ” “ suggests, ” “ appears, ” “ seeks, ” “ will, ” “ could, ” and variations of such words and similar expressions are intended to identify forward-looking statements.",
+      "projects (initiatives)."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for our services and cautiously optimistic that we are nearing an inflection point in our ability to grow the number of professionals on assignment,” said John A.",
+      "customer for the three and six months ending June 30, 2024.",
+      "customer bankruptcy loss, impairment charges, gain or loss on derivative, loss on early extinguishment of debt, gain or loss on sale of business, system conversion costs, and nonrecurring income tax adjustments.",
+      "aid John A.",
+      "aining for share repurchase.",
+      "ailability under the ABL was $166."
+    ],
+    "warning_or_risk_evidence": [
+      "charges or gains that may be recorded during the fiscal year, including among other things, the potential impact of any future divestitures, mergers, acquisitions, or other business combinations, changes in debt structure, or future significant share repurchases.",
+      "charges or gains is inherently uncertain and difficult to predict and is unavailable without unreasonable efforts.",
+      "Impairment charges e — 0.",
+      "Impairment charges e 718 533 (35) % Other costs 3 46 93 % (Loss) income from operations $ (16,285) $ 78,986 (121) % Other costs include acquisition and integration-related costs.",
+      "charges, gain or loss on derivative, loss on early extinguishment of debt, gain or loss on disposal of fixed assets, gain or loss on lease termination, gain or loss on sale of business, other expense (income), net, equity compensation, and system conversion costs.",
+      "charges as presented on the consolidated statements of operations, losses pertaining to matters outside the normal course of operations, and $19."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 82.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "17.320000",
+    "return_10d_pct": "-17.3787",
+    "return_20d_pct": "-18.8222",
+    "return_30d_pct": "-15.5312",
+    "return_60d_pct": "-22.4018",
+    "return_90d_pct": "-32.4480"
+  },
+  "text_stats": {
+    "primary_text_len": 3581,
+    "exhibit_text_len": 29915,
+    "combined_text_len": 33498
+  }
+}

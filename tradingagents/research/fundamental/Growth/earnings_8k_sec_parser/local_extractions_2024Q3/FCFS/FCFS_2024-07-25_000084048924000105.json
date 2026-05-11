@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FCFS",
+    "cik": "840489",
+    "event_date": "2024-07-25",
+    "event_accession": "0000840489-24-000105",
+    "primary_8k_doc": "fcfs-20240725.htm",
+    "exhibit_docs": [
+      "fcfs07252024exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FCFS_000084048924000105_fcfs-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FCFS_000084048924000105_fcfs07252024exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FCFS",
+    "cik": "840489",
+    "entity_name": "FIRSTCASH HOLDINGS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "762739000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-29",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "47388000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-29",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3869297000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-29",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-115984000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-29",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13239000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-29",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "110594000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-29",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.062129",
+    "operating_cash_flow_to_revenue": "0.144996",
+    "assets_to_revenue": "5.072898",
+    "financing_cash_flow_to_revenue": "-0.152063",
+    "investing_cash_flow_to_revenue": "-0.017357"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues totaled $831 million in the second quarter, an increase of 11% compared to the prior-year quarter, while net revenues (gross profit) increased 12% over the same period.",
+      "revenues totaled $1.",
+      "revenues increased 13% over the same period.",
+      "revenue increased 12% for both the quarter and year-to-date periods compared to the respective prior-year periods.",
+      "sales increased 17% in the second quarter of 2024 compared to the prior-year quarter.",
+      "sales increased 7% compared to the prior-year quarter, which was a meaningful sequential improvement from the 4% increase in the first quarter of 2024 as compared to the prior-year quarter."
+    ],
+    "guidance_evidence": [
+      "Outlook The Company’s outlook for 2024 continues to be highly positive, with expected year-over-year growth in consolidated revenue and earnings driven by the continued growth in earning asset balances coupled with recent store additions.",
+      "outlook contemplates the recently announced bankruptcy filing of Conn’s Home Plus and assumes minimal originations going forward from this merchant relationship.",
+      "outlook for the remainder of 2024, “Our second quarter and year-to-date operating results were outstanding and the outlook for the remainder of 2024 is highly positive.",
+      "outlook and prospects of FirstCash Holdings, Inc.",
+      "outlook for 2024.",
+      "guidance, expectations, outlook and future plans."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for pawn loans.",
+      "demand continues to be extremely strong as evidenced by outstanding second quarter results in our U.",
+      "demand in the second quarter combined with strong retail sales and margins.",
+      "customer base in the consolidated location.",
+      "ail pawn stores and a leading provider of retail point-of-sale (“POS”) payment solutions through American First Finance (“AFF”), today announced operating results for the three and six month periods ended June 30, 2024.",
+      "aid in August 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory turnover was 2.",
+      "inventory turnover.",
+      "inventory turnover was 4.",
+      "inventory turnover, while inventories aged greater than one year at June 30, 2024 remained extremely low at 1%.",
+      "charge-off (“NCO”) rate for combined leased merchandise and finance receivable products was 5.",
+      "charge-offs remain within the range of forecasted expectations."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 831,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "112.800003",
+    "return_10d_pct": "-3.8918",
+    "return_20d_pct": "5.3280",
+    "return_30d_pct": "4.7518",
+    "return_60d_pct": "2.0745",
+    "return_90d_pct": "-9.3440"
+  },
+  "text_stats": {
+    "primary_text_len": 3784,
+    "exhibit_text_len": 67168,
+    "combined_text_len": 70954
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NTCT",
+    "cik": "1078075",
+    "event_date": "2024-07-25",
+    "event_accession": "0001628280-24-032902",
+    "primary_8k_doc": "ntct-20240725.htm",
+    "exhibit_docs": [
+      "q1fy25pressreleasedoc.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NTCT_000162828024032902_ntct-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NTCT_000162828024032902_q1fy25pressreleasedoc.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NTCT",
+    "cik": "1078075",
+    "entity_name": "NETSCOUT SYSTEMS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "855575000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-16",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "35874000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-16",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "2820560000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-16",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-54165000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-16",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-68353000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-16",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "296013000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-16",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.04193",
+    "operating_cash_flow_to_revenue": "0.345981",
+    "assets_to_revenue": "3.296684",
+    "financing_cash_flow_to_revenue": "-0.063308",
+    "investing_cash_flow_to_revenue": "-0.079891"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net income for the first quarter of fiscal year 2025 was $20.",
+      "non-GAAP net income per share remains unchanged from previous guidance.",
+      "GAAP net income per share range of $0.",
+      "Non-GAAP net income per share (diluted) expectations remain in the range of $2.",
+      "non-GAAP net income, non-GAAP diluted net income per share, and non-GAAP earnings before interest and other expense, income taxes, depreciation, and amortization (Non-GAAP EBITDA) from operations.",
+      "Non-GAAP net income includes the foregoing adjustments related to non-GAAP income from operations, and also removes change in fair value of derivative instruments, net of related income tax effects."
+    ],
+    "guidance_evidence": [
+      "outlook as we continue to position NETSCOUT to win in the market.",
+      "Outlook The Company’s GAAP net loss per share for fiscal year 2025 has been updated to reflect a non-cash goodwill impairment and a restructuring charge related to the Company’s Voluntary Separation Program (VSP).",
+      "outlook for revenue and non-GAAP net income per share remains unchanged from previous guidance.",
+      "outlook for fiscal year 2025 is as follows: ▪ Revenue (GAAP and non-GAAP) expectations remain in the range of $800 million to $830 million.",
+      "outlook is included in the financial tables below.",
+      "guidance provided above, and anticipated partial-year net benefits for fiscal year 2025 are included in both GAAP and non-GAAP expectations."
+    ],
+    "wave_or_demand_evidence": [
+      "customer needs given the expanding cyber threat landscape and continuing to focus on prudently managing costs.",
+      "orders’ platform to help customers address the performance, availability, and security challenges of the complex digital world.",
+      "customers more than 15 terabits per second (Tbps) of dedicated attack capacity.",
+      "orders to help organizations comply with privacy and data sovereignty regulations at provincial and national levels.",
+      "customers.",
+      "customer experience."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charge of $427.",
+      "charge 1 of $16.",
+      "impairment and restructuring charges mentioned above, versus a net loss (GAAP) of $4.",
+      "impairment and a restructuring charge related to the Company’s Voluntary Separation Program (VSP).",
+      "impairment and restructuring charges taken in the first quarter of fiscal year 2025, as well as restructuring charges anticipated for the second quarter of fiscal year 2025.",
+      "charge of $16."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 174.6,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "20.510000",
+    "return_10d_pct": "-12.1404",
+    "return_20d_pct": "-4.4369",
+    "return_30d_pct": "3.1204",
+    "return_60d_pct": "5.1682",
+    "return_90d_pct": "-0.2438"
+  },
+  "text_stats": {
+    "primary_text_len": 3472,
+    "exhibit_text_len": 25931,
+    "combined_text_len": 29405
+  }
+}

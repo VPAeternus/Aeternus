@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FDP",
+    "cik": "1047340",
+    "event_date": "2024-08-01",
+    "event_accession": "0001047340-24-000200",
+    "primary_8k_doc": "fdp-20240801.htm",
+    "exhibit_docs": [
+      "august12024-earningspr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FDP_000104734024000200_fdp-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FDP_000104734024000200_august12024-earningspr.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FDP",
+    "cik": "1047340",
+    "entity_name": "FRESH DEL MONTE PRODUCE INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1128500000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "39000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3184100000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-29",
+    "financing_cash_flow_value": "-75900000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "79600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "15500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.034559",
+    "operating_cash_flow_to_revenue": "0.013735",
+    "assets_to_revenue": "2.821533",
+    "financing_cash_flow_to_revenue": "-0.067257",
+    "investing_cash_flow_to_revenue": "0.070536"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales was primarily due to lower banana net sales, driven by lower sales volume and lower per unit selling prices for bananas.",
+      "net sales was primarily a result of higher per unit selling prices of avocados and higher sales volume and higher per unit selling prices of non-tropical fruit.",
+      "net sales of vegetables and fresh-cut fruit due to lower sales volume.",
+      "net sales was primarily due to the sale of the Company’s plastic products business in the second quarter of 2023.",
+      "sales of property, plant and equipment 21.",
+      "sales of land assets in South and Central America."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "forecasting, and in certain cases as a basis for incentive compensation.",
+      "expects”, “anticipates”, “may” or similar expressions with respect to various matters."
+    ],
+    "wave_or_demand_evidence": [
+      "customer trust, investor trust, and employee trust.",
+      "aid Fresh Del Monte Chairman and CEO Mohammad Abu-Ghazaleh.",
+      "ainfall, in production areas in Central America and the Philippines, as well as the negative impact of fluctuations in exchange rates partially offset by lower ocean freight costs and higher per unit selling prices in the fresh and value-added products segment.",
+      "ain on the sale of assets in the prior-year period.",
+      "airment and other charges in the prior-year period compared with a credit for insurance proceeds in the current year.",
+      "ain on asset sale of a European warehouse and $2."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, primarily due to $0.",
+      "charges during the second quarter of 2023.",
+      "charges, Adjusted gross profit (1) for the second quarter of 2024 was $114.",
+      "impairment and other charges in the prior-year period compared with a credit for insurance proceeds in the current year.",
+      "charges mentioned above, a $3.",
+      "impairment and other charges related to impairments of grape vines in South America due to low productivity, idle land in Central America, and expenses incurred in connection with a cybersecurity incident in the first quarter of 2023."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1139.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "25.910000",
+    "return_10d_pct": "3.2034",
+    "return_20d_pct": "8.1436",
+    "return_30d_pct": "14.4346",
+    "return_60d_pct": "14.7819",
+    "return_90d_pct": "23.9290"
+  },
+  "text_stats": {
+    "primary_text_len": 3445,
+    "exhibit_text_len": 33705,
+    "combined_text_len": 37152
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FFIV",
+    "cik": "1048695",
+    "event_date": "2024-07-29",
+    "event_accession": "0001048695-24-000104",
+    "primary_8k_doc": "ffiv-20240729.htm",
+    "exhibit_docs": [
+      "ex991-q324earningsreleasef.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FFIV_000104869524000104_ffiv-20240729.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FFIV_000104869524000104_ex991-q324earningsreleasef.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FFIV",
+    "cik": "1048695",
+    "entity_name": "F5, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1403553000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-06",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "153838000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-06",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5248333000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-06",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-377369000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-06",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "52370000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-06",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "298554000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-06",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.109606",
+    "operating_cash_flow_to_revenue": "0.212713",
+    "assets_to_revenue": "3.739319",
+    "financing_cash_flow_to_revenue": "-0.268867",
+    "investing_cash_flow_to_revenue": "0.037312"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of ~$2.",
+      "revenue totaled $695 million, compared with $703 million in the third quarter of fiscal year 2023.",
+      "revenue of $179 million grew 3% from the year-ago period.",
+      "revenue of $130 million represented a decline of 16% from the prior year.",
+      "revenue of $387 million grew 3% from the year-ago period.",
+      "revenues of its products, services operations, and certain costs of those operations, such as cost of revenues, research and development, sales and marketing and general and administrative expenses."
+    ],
+    "guidance_evidence": [
+      "Guidance Range; Expects Fiscal Year 2024 Revenue of ~$2.",
+      "Outlook SEATTLE, WA - July 29, 2024 - F5, Inc.",
+      "guidance range fueled by software growth and continued growth of our global services offerings,” said François Locoh-Donou, F5’s President and CEO.",
+      "guidance.",
+      "Outlook For the fourth quarter of fiscal year 2024, F5 expects to deliver revenue in the range of $720 million to $740 million, with non-GAAP earnings in the range of $3.",
+      "guidance measures to corresponding U."
+    ],
+    "wave_or_demand_evidence": [
+      "customers as they begin to ready their IT infrastructure to leverage AI at scale.",
+      "demand, we now expect fiscal year 2024 revenue toward the top end of our prior expectations, at approximately $2.",
+      "demand, the Company's future financial performance including revenue, earnings growth, future customer demand, and the performance and benefits of the Company's products.",
+      "customers.",
+      "aises Earnings Growth Outlook SEATTLE, WA - July 29, 2024 - F5, Inc.",
+      "aid François Locoh-Donou, F5’s President and CEO."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and write-downs, restructuring charges, facility exit costs, or other non-recurring charges that may occur in the period.",
+      "charges, net of taxes, restructuring charges, and certain non-recurring tax expenses and benefits, which is a non-GAAP financial measure under Section 101 of Regulation G under the Securities Exchange Act of 1934, as amended.",
+      "impairment of purchased intangible assets.",
+      "impairment charges.",
+      "charges accurately reflect the performance of the Company’s ongoing operations; therefore, they are not considered by management in making operating decisions.",
+      "impairment charges, and other related recurring costs in connection with the exit of its leased facilities."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2800,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-30",
+    "entry_open": "199.639999",
+    "return_10d_pct": "-3.8269",
+    "return_20d_pct": "-1.6380",
+    "return_30d_pct": "1.2523",
+    "return_60d_pct": "10.2985",
+    "return_90d_pct": "9.3769"
+  },
+  "text_stats": {
+    "primary_text_len": 3132,
+    "exhibit_text_len": 24394,
+    "combined_text_len": 27528
+  }
+}

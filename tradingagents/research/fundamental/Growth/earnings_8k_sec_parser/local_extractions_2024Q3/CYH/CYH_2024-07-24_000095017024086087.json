@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CYH",
+    "cik": "1108109",
+    "event_date": "2024-07-24",
+    "event_accession": "0000950170-24-086087",
+    "primary_8k_doc": "cyh-20240724.htm",
+    "exhibit_docs": [
+      "cyh-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CYH_000095017024086087_cyh-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CYH_000095017024086087_cyh-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CYH",
+    "cik": "1108109",
+    "entity_name": "COMMUNITY HEALTH SYSTEMS, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3108000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-51000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "14455000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "40000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-19000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "5000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.016409",
+    "operating_cash_flow_to_revenue": "0.001609",
+    "assets_to_revenue": "4.650901",
+    "financing_cash_flow_to_revenue": "0.01287",
+    "investing_cash_flow_to_revenue": "-0.006113"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues totaled $3.",
+      "revenues increased 4.",
+      "revenues increased 5.",
+      "Net income (loss) (f) 26 2 20 (18 ) Net loss attributable to Community Health Systems, Inc.",
+      "Net income (f) 26 0.",
+      "Net income attributable to noncontrolling interests 39 1."
+    ],
+    "guidance_evidence": [
+      "guidance.",
+      "guidance is based on the Company’s historical operating performance, current trends and other assumptions the Company believes are reasonable at this time as more specifically discussed below.",
+      "guidance provided on February 20, 2024, and are based on the Company’s historical operating performance, current trends and other assumptions that the Company believes are reasonable at this time.",
+      "guidance should be considered in conjunction with the assumptions included herein.",
+      "guidance to analysts and investors: 2024 Projection Range Net operating revenues (in millions) $ 12,500 to $ 12,700 Adjusted EBITDA (in millions) $ 1,520 to $ 1,600 Net loss per share - diluted $ (0.",
+      "guidance: • Expressed as a percentage of net operating revenues, depreciation and amortization of approximately 4."
+    ],
+    "wave_or_demand_evidence": [
+      "aining outstanding Senior Secured Notes due 2026 and to fund repurchases of other outstanding notes.",
+      "aid, “Our team has delivered another solid quarter that includes same-store, year-over-year improvements in operating results, supported by strong volume growth and expense management.",
+      "ain non-operating items, including a gain from early extinguishment of debt, as further discussed below, and period-over-period changes in impairment and (gain) loss on the sale of businesses, as well as a lower provision for income taxes.",
+      "aining 8.",
+      "ain from early extinguishment of debt of approximately $26 million during the three months ended June 30, 2024.",
+      "aims accrual recorded during the fourth quarter of 2022 with respect to claims incurred in prior years related to divested locations and the gain on sale by HealthTrust Purchasing Group, L."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment and (gain) loss on the sale of businesses, as well as a lower provision for income taxes.",
+      "Impairment and (gain) loss on sale of businesses, net (f) 10 0.",
+      "Impairment and (gain) loss on sale of businesses, net (f) 27 0.",
+      "Impairment and (gain) loss on sale of businesses, net 0.",
+      "charges - 0.",
+      "impairment expense of $10 million and income of $13 million for the three months ended June 30, 2024 and 2023, respectively, and a net non-cash impairment expense of $27 million and income of $35 million for the six months ended June 30, 2024 and 2023, respectively."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3140,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "4.200000",
+    "return_10d_pct": "14.7619",
+    "return_20d_pct": "18.0952",
+    "return_30d_pct": "28.5714",
+    "return_60d_pct": "40.7143",
+    "return_90d_pct": "32.1429"
+  },
+  "text_stats": {
+    "primary_text_len": 4217,
+    "exhibit_text_len": 49286,
+    "combined_text_len": 53505
+  }
+}

@@ -36,7 +36,7 @@ It should not alter:
 - Step 1 quotas
 - tier assignment
 - downstream scoring
-- shortlist ranking
+- candidate_list ranking
 
 ## Architecture
 

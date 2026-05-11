@@ -1,0 +1,411 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RICK",
+    "cik": "935419",
+    "event_date": "2024-07-11",
+    "event_accession": "0001628280-24-031665",
+    "primary_8k_doc": "rick-20240711.htm",
+    "exhibit_docs": [
+      "rick-x3q24salesnewsrelease.htm",
+      "ex991_pressrelease8-8x2024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RICK_000162828024031665_rick-20240711.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RICK_000162828024031665_rick-x3q24salesnewsrelease.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RICK_000162828024031665_ex991_pressrelease8-8x2024.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RICK",
+    "cik": "935419",
+    "entity_name": "RCI HOSPITALITY HOLDINGS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "141485000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "17970000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "610884000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "3196000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-48076000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "31684000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.12701",
+    "operating_cash_flow_to_revenue": "0.223939",
+    "assets_to_revenue": "4.317659",
+    "financing_cash_flow_to_revenue": "0.022589",
+    "investing_cash_flow_to_revenue": "-0.339796"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $62.",
+      "sales increased 5.",
+      "sales of $13.",
+      "sales increased 2."
+    ],
+    "guidance_evidence": [
+      "expected by August 8, 2024.",
+      "expected to affect operations.",
+      "projects as fast and efficiently as possible, and buy back shares."
+    ],
+    "wave_or_demand_evidence": [
+      "ailable under the company’s share repurchase program by $25.",
+      "aiting for electricity to be restored.",
+      "aired, but not expected to affect operations.",
+      "ainment or restaurant businesses, competition and dependence on key personnel.",
+      "ailed discussion of such factors and certain risks and uncertainties, see RCI's annual report on Form 10-K for the year ended September 30, 2023, as well as its other filings with the U."
+    ],
+    "warning_or_risk_evidence": [
+      "declined 8.",
+      "decline in SSS, partially offset by three locations not in SSS: Bombshells in San Antonio and Stafford in Texas and Cherry Creek Food Hall & Brewery in Greenwood Village (CO) with its Bombshells Kitchen.",
+      "uncertainties, see RCI's annual report on Form 10-K for the year ended September 30, 2023, as well as its other filings with the U."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "rick-x3q24salesnewsrelease.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RCI Reports 3Q24 Club & Restaurant Sales & Other Updates"
+    },
+    {
+      "type": "TextElement",
+      "text": "HOUSTON—July 11, 2024—RCI Hospitality Holdings, Inc. (Nasdaq: RICK) reported club and restaurant sales for the fiscal third quarter ended June 30, 2024. Sales do not include non-core operations and are subject to final closing. Full 3Q24 financial results are expected by August 8, 2024. The company also announced a new share buyback authorization, the withdrawal of its Colorado casino license applications, and a post-Hurricane Beryl update.Nightclubs: Total sales of $62.4 million increased 0.7% compared to the year-ago quarter. The increase primarily reflected 1.7% same-store sales growth and two new and reformatted clubs, partially offset by the temporary closing of three clubs being reformatted to liquor from BYOB. Compared to 2Q24, total Nightclubs sales increased 5.9%.Bombshells: Total sales of $13.1 million declined 8.9% compared to the year-ago quarter. This reflected a 16.2% decline in SSS, partially offset by three locations not in SSS: Bombshells in San Antonio and Stafford in Texas and Cherry Creek Food Hall & Brewery in Greenwood Village (CO) with its Bombshells Kitchen. Compared to 2Q24, total Bombshells sales increased 2.7%.Buyback Authorization: RCI’s Board of Directors has authorized increasing the amount available under the company’s share repurchase program by $25.0 million.Casino Withdrawal: Applications to operate casinos were formally withdrawn from the Colorado Division of Gaming. Plans are moving ahead in Central City to open Rick’s Cabaret & Steakhouse without gambling and to sell other properties no longer needed.Beryl Update: After Hurricane Beryl made landfall in the greater Houston area, four Bombshells opened Monday, a fifth on Tuesday, and a club on Wednesday. The other two clubs and four Bombshells in the area are waiting for electricity to be restored. A couple of properties had minor damage that is being repaired, but not expected to affect operations.Eric Langan, President & CEO of RCI, commented: “As we said on our last conference call, we are going ‘back to basics,’ focusing on the core tenets of our capital allocation strategy, to concentrate on our core businesses, generate higher sales, cut costs, optimize underperforming locations, finish projects as fast and efficiently as possible, and buy back shares.”“To that end, we’re pleased to report our first quarterly increase in Nightclubs same-store sales since 2Q23 and the initial success of our current club reformatting program. We’re also pleased to see Bombshells total sales increase sequentially. This reflects changes initiated mid-February. Clubs and restaurants also benefited from a strong pro sports playoff line-up, partially offset by temporary closures due to severe weather in Texas and South Florida.”“To date in FY24, we have opened two new locations—Bombshells Stafford (TX) in November 2023 and PT’s Centerfold in Lubbock (TX) in March 2024. We expanded a location in June 2024, creating ‘two clubs in one,’ adding a Chicas Locas BYOB club in unused space in the same building as the Chicas Locas Dallas (TX) liquor club. We also reformatted three Texas clubs from BYOB to liquor, reopening them as Baby Dolls Abilene in April 2024 and Dallas Showclub and Chicas Locas Harlingen in June 2024. We continue to work on opening five more locations: Rick’s Cabaret & Steakhouse in Central City (CO); Bombshells Denver (CO), Lubbock (TX) and Rowlett (TX); and Baby Dolls West Fort Worth (TX).”1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Club & Restaurant Sales ($ in Millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "3Q24Total SalesTotal Sales vs. 3Q23Same-Store Sales vs. 3Q23Nightclubs$62.4+0.7%+1.7%Bombshells$13.1-8.9%-16.2%Combined$75.5-1.1%-1.5%"
+    },
+    {
+      "type": "TableElement",
+      "text": "9M24Total SalesTotal Sales vs. 9M23Same-Store Sales vs. 9M23Nightclubs$181.9+4.3%-3.6%Bombshells$38.6-8.0%-19.0%Combined$220.6+1.9%-6.5%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Notes"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Revenues from non-core operations, such as third-party rents, and revenues from RCI’s Other segment, are not included in Nightclubs and Bombshells sales above.•All references to “RCI Hospitality Holdings, Inc.,” “company,” “we,” “our,” and similar terms refer to RCI and/or its subsidiaries, unless the context indicates otherwise."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About RCI Hospitality Holdings, Inc. (Nasdaq: RICK) (X: @RCIHHinc)"
+    },
+    {
+      "type": "TextElement",
+      "text": "With more than 60 locations, RCI Hospitality Holdings, Inc., through its subsidiaries, is the country’s leading company in adult nightclubs and sports bars-restaurants. See all of our brands at www.rcihospitality.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "This press release may contain forward-looking statements that involve a number of risks and uncertainties that could cause the company's actual results to differ materially from those indicated, including, but not limited to, the risks and uncertainties associated with (i) operating and managing an adult entertainment or restaurant business, (ii) the business climates in cities where it operates, (iii) the success or lack thereof in launching and building the company's businesses, (iv) cyber security, (v) conditions relevant to real estate transactions, (vi) the impact of the COVID-19 pandemic, and (vii) numerous other factors such as laws governing the operation of adult entertainment or restaurant businesses, competition and dependence on key personnel. For more detailed discussion of such factors and certain risks and uncertainties, see RCI's annual report on Form 10-K for the year ended September 30, 2023, as well as its other filings with the U.S. Securities and Exchange Commission. The company has no obligation to update or revise the forward-looking statements to reflect the occurrence of future events or circumstances."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Media & Investor Contacts"
+    },
+    {
+      "type": "TextElement",
+      "text": "Gary Fishman and Steven Anreder at 212-532-3232 or gary.fishman@anreder.com and steven.anreder@anreder.com2"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        5,
+        12
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3Q24",
+          "3Q24",
+          "3Q24",
+          "Total Sales",
+          "Total Sales",
+          "Total Sales",
+          "Total Sales vs. 3Q23",
+          "Total Sales vs. 3Q23",
+          "Total Sales vs. 3Q23",
+          "Same-Store Sales vs. 3Q23",
+          "Same-Store Sales vs. 3Q23",
+          "Same-Store Sales vs. 3Q23"
+        ],
+        [
+          "Nightclubs",
+          "Nightclubs",
+          "Nightclubs",
+          "$62.4",
+          "$62.4",
+          "$62.4",
+          "+0.7%",
+          "+0.7%",
+          "+0.7%",
+          "+1.7%",
+          "+1.7%",
+          "+1.7%"
+        ],
+        [
+          "Bombshells",
+          "Bombshells",
+          "Bombshells",
+          "$13.1",
+          "$13.1",
+          "$13.1",
+          "-8.9%",
+          "-8.9%",
+          "-8.9%",
+          "-16.2%",
+          "-16.2%",
+          "-16.2%"
+        ],
+        [
+          "Combined",
+          "Combined",
+          "Combined",
+          "$75.5",
+          "$75.5",
+          "$75.5",
+          "-1.1%",
+          "-1.1%",
+          "-1.1%",
+          "-1.5%",
+          "-1.5%",
+          "-1.5%"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        5,
+        12
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "9M24",
+          "9M24",
+          "9M24",
+          "Total Sales",
+          "Total Sales",
+          "Total Sales",
+          "Total Sales vs. 9M23",
+          "Total Sales vs. 9M23",
+          "Total Sales vs. 9M23",
+          "Same-Store Sales vs. 9M23",
+          "Same-Store Sales vs. 9M23",
+          "Same-Store Sales vs. 9M23"
+        ],
+        [
+          "Nightclubs",
+          "Nightclubs",
+          "Nightclubs",
+          "$181.9",
+          "$181.9",
+          "$181.9",
+          "+4.3%",
+          "+4.3%",
+          "+4.3%",
+          "-3.6%",
+          "-3.6%",
+          "-3.6%"
+        ],
+        [
+          "Bombshells",
+          "Bombshells",
+          "Bombshells",
+          "$38.6",
+          "$38.6",
+          "$38.6",
+          "-8.0%",
+          "-8.0%",
+          "-8.0%",
+          "-19.0%",
+          "-19.0%",
+          "-19.0%"
+        ],
+        [
+          "Combined",
+          "Combined",
+          "Combined",
+          "$220.6",
+          "$220.6",
+          "$220.6",
+          "+1.9%",
+          "+1.9%",
+          "+1.9%",
+          "-6.5%",
+          "-6.5%",
+          "-6.5%"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 62.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "sales of $62.4 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-12",
+    "entry_open": "44.000000",
+    "return_10d_pct": "8.1136",
+    "return_20d_pct": "7.0455",
+    "return_30d_pct": "1.7045",
+    "return_60d_pct": "-5.8864",
+    "return_90d_pct": "-5.0909"
+  },
+  "text_stats": {
+    "primary_text_len": 3172,
+    "exhibit_text_len": 5837,
+    "combined_text_len": 9011,
+    "semantic_text_len": 5844,
+    "table_count": 2,
+    "semantic_parse_status": "sec_parser"
+  }
+}

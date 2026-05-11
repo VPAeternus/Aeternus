@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "ticker": "LITE",
+    "company": "Lumentum Holdings Inc.",
+    "form": "8-K",
+    "items": "1.01,2.02,8.01,9.01",
+    "accession": "0001104659-21-005024",
+    "sec_filing_date": "2021-01-19",
+    "sec_acceptance_datetime_utc": "2021-01-19T13:34:58.000Z",
+    "sec_report_date_event_date": "2021-01-18",
+    "primary_document": "tm213409d1_8k.htm",
+    "ex99_1_document": "tm213409d1_ex99-1.htm",
+    "sec_filing_url": "https://www.sec.gov/Archives/edgar/data/1633978/000110465921005024/tm213409d1_8k.htm",
+    "ex99_1_url": "https://www.sec.gov/Archives/edgar/data/1633978/000110465921005024/tm213409d1_ex99-1.htm",
+    "periodic_filing_form": "10-Q",
+    "periodic_filing_date": "2021-02-02"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of approximately $478.",
+      "sales offices worldwide.",
+      "net income per share in the range of $0.",
+      "net income per share in the range of $1.",
+      "operating income, net income and net income per share on a non-GAAP basis.",
+      "Net income (loss) on GAAP basis $76."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "demand from Huawei, (xiii) certain expenses related to the COVID-19 outbreak, and (xiv) non-cash income tax impacts.",
+      "demand for our products; (g) changes in customer demand; (h) our ability to attract and retain new customers, particularly in the 3D sensing market; and (i) the risk that Lumentum’s financing or operating strategies will not be successful.",
+      "ain and subject to revision in connection with the Company's financial closing procedures and finalization of the Company’s financial statements for its fiscal second quarter of 2021.",
+      "ails on this call will be provided in a separate news release to be issued later this week.",
+      "ailable on the Lumentum website at http://investor.",
+      "ailable at http://www."
+    ],
+    "warning_or_risk_evidence": [
+      "PRELIMINARY FISCAL SECOND QUARTER 2021 FINANCIAL RESULTS San Jose, Calif.",
+      "preliminary results for its fiscal second quarter of 2021 ended December 26, 2020.",
+      "Preliminary Results for the Fiscal Second Quarter 2021• Net revenue of approximately $478.",
+      "preliminary unaudited information and management's estimates, and are inherently uncertain and subject to revision in connection with the Company's financial closing procedures and finalization of the Company’s financial statements for its fiscal second quarter of 2021.",
+      "preliminary unaudited financial results.",
+      "impairment charges, (xi) transferring product lines to Thailand, (xii) excess and obsolete inventory charges driven by the decline in demand from Huawei, (xiii) certain expenses related to the COVID-19 outbreak, and (xiv) non-cash income tax impacts."
+    ]
+  },
+  "financial_extracts": {
+    "quarter_revenue_millions": 478.8,
+    "quarter_revenue_yoy_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_gross_margin_pct": null
+  },
+  "earnings_score": {
+    "earnings_score": -2,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 3,
+    "guidance_vs_current_pct": ""
+  },
+  "returns": {
+    "tradable_date": "2021-01-20",
+    "entry_open": "97.129997",
+    "return_10d_pct": "-1.5546",
+    "return_20d_pct": "-10.3573",
+    "return_30d_pct": "-5.5493",
+    "return_60d_pct": "-11.9633",
+    "return_90d_pct": "-5.3125"
+  },
+  "semantic_stats": {
+    "semantic_char_count": 13406,
+    "semantic_element_count": 16,
+    "semantic_element_type_counts": {
+      "ImageElement": 1,
+      "SupplementaryText": 2,
+      "TableElement": 1,
+      "TextElement": 6,
+      "TitleElement": 6
+    }
+  },
+  "quality": {
+    "quality_flags": [
+      "missing_guidance_evidence"
+    ],
+    "quality_ok": false
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "VAL",
+    "cik": "314808",
+    "event_date": "2024-07-31",
+    "event_accession": "0000314808-24-000121",
+    "primary_8k_doc": "val-20240731.htm",
+    "exhibit_docs": [
+      "a06302024ex991pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VAL_000031480824000121_val-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VAL_000031480824000121_a06302024ex991pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "VAL",
+    "cik": "314808",
+    "entity_name": "Valaris Limited",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "430100000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "46700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4322200000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "0",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-56200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "151700000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.108579",
+    "operating_cash_flow_to_revenue": "0.352709",
+    "assets_to_revenue": "10.049291",
+    "financing_cash_flow_to_revenue": "0.0",
+    "investing_cash_flow_to_revenue": "-0.130667"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues increased to $610 million from $525 million in the first quarter 2024.",
+      "revenues increased to $384 million from $324 million in the first quarter 2024.",
+      "revenues increased to $370 million from $310 million in the first quarter.",
+      "revenues increased to $186 million from $152 million in the first quarter 2024.",
+      "Revenues decreased to $40 million from $48 million in the first quarter 2024 primarily due to lower revenues earned from bareboat charter agreements with ARO and lower reimbursable revenues.",
+      "Net income increased to $151 million from $26 million in the first quarter 2024."
+    ],
+    "guidance_evidence": [
+      "guidance primarily due to strong operating performance resulting in higher revenue efficiency, certain contracts extending longer than previously anticipated and the timing of certain costs that are now expected to be recognized in subsequent quarters.",
+      "projects that are expected to commence in 2025 and 2026.",
+      "projects and capital upgrades.",
+      "expected to be recognized in subsequent quarters.",
+      "projects and unplanned downtime during the second quarter, partially offset by incremental operating days for VALARIS 108, which started its contract late in the first quarter.",
+      "projects for which the drilling rig is contracted."
+    ],
+    "wave_or_demand_evidence": [
+      "backlog.",
+      "customer demand for projects that are expected to commence in 2025 and 2026.",
+      "backlog; and • Increased total contract backlog to more than $4.",
+      "backlog growth and a 42% increase from twelve months ago.",
+      "customer satisfaction, with a focus on technology and innovation.",
+      "BACKLOG (1) Floaters Drillships $ 2,508."
+    ],
+    "warning_or_risk_evidence": [
+      "restrictions that may limit our liquidity and flexibility, including in any return of capital plans; cybersecurity risks and threats; and changes in foreign currency exchange rates.",
+      "decreased to $439 million from $445 million in the first quarter 2024.",
+      "decreased to $407 million from $414 million in the first quarter primarily due to lower reactivation expense related to VALARIS DS-7 as well as lower repair and personnel costs for the jackup fleet.",
+      "decrease in foreign currency gains.",
+      "decreased to $410 million as of June 30, 2024, from $509 million as of March 31, 2024.",
+      "decrease was primarily due to capital expenditures, partially offset by positive operating cash flow."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 610,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "81.889999",
+    "return_10d_pct": "-20.1001",
+    "return_20d_pct": "-26.1937",
+    "return_30d_pct": "-29.8571",
+    "return_60d_pct": "-31.9209",
+    "return_90d_pct": "-40.4201"
+  },
+  "text_stats": {
+    "primary_text_len": 3763,
+    "exhibit_text_len": 50623,
+    "combined_text_len": 54388
+  }
+}

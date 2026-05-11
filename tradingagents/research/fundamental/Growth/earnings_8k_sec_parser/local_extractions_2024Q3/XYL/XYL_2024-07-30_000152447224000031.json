@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "XYL",
+    "cik": "1524472",
+    "event_date": "2024-07-30",
+    "event_accession": "0001524472-24-000031",
+    "primary_8k_doc": "xyl-20240730.htm",
+    "exhibit_docs": [
+      "xyl07302024ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XYL_000152447224000031_xyl-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XYL_000152447224000031_xyl07302024ex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "XYL",
+    "cik": "1524472",
+    "entity_name": "XYLEM INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1448000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "99000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "16112000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-63000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-37000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-19000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.06837",
+    "operating_cash_flow_to_revenue": "-0.013122",
+    "assets_to_revenue": "11.127072",
+    "financing_cash_flow_to_revenue": "-0.043508",
+    "investing_cash_flow_to_revenue": "-0.025552"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $2.",
+      "revenue was $2.",
+      "revenue of $8.",
+      "Earnings per share of $0.",
+      "EPS guidance to $4.",
+      "earnings per share were up 78 percent on a reported basis and 11 percent on an adjusted basis, exceeding Xylem’s previous guidance."
+    ],
+    "guidance_evidence": [
+      "Guidance • Revenue of $2.",
+      "guidance to $8.",
+      "guidance to $4.",
+      "guidance.",
+      "Outlook Xylem now expects full-year 2024 revenue of $8.",
+      "guidance of 15 to 16 percent on a reported basis and 4 to 6 percent on an organic basis."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and communities to build a more water-secure world, today reported second-quarter results.",
+      "demand, and second-quarter earnings per share were up 78 percent on a reported basis and 11 percent on an adjusted basis, exceeding Xylem’s previous guidance.",
+      "Orders grew 12 percent on a reported basis and declined 1 percent organically.",
+      "demand, combined with the team’s disciplined operational execution, delivered significant margin expansion in the quarter.",
+      "demand in our largest markets remains resilient despite likely macro variability in the second half.",
+      "demand from intensifying water challenges."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, and tax-related special items.",
+      "charges, restructuring and realignment costs, gain or loss from sale of businesses and special charges.",
+      "charges and tax-related special items, as applicable.",
+      "impairment charges and significant deferred tax items.",
+      "charges” defined as non-recurring costs incurred by the Company, such as those related to acquisitions and integrations, divestitures and non-cash impairment charges.",
+      "Charges 16 13 29 Loss/(Gain) from sale of business 5 (1) 4 Adjusted EBITDA 391 452 843 Revenue 2,033 2,169 4,202 Adjusted EBITDA Margin 19."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "134.880005",
+    "return_10d_pct": "-5.4715",
+    "return_20d_pct": "-0.5412",
+    "return_30d_pct": "1.9647",
+    "return_60d_pct": "0.1112",
+    "return_90d_pct": "-3.6996"
+  },
+  "text_stats": {
+    "primary_text_len": 2982,
+    "exhibit_text_len": 25678,
+    "combined_text_len": 28662
+  }
+}

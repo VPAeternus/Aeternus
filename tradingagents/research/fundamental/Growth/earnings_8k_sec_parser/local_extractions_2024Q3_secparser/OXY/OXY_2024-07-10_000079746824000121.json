@@ -1,0 +1,465 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "OXY",
+    "cik": "797468",
+    "event_date": "2024-07-10",
+    "event_accession": "0000797468-24-000121",
+    "primary_8k_doc": "oxy-20240710.htm",
+    "exhibit_docs": [
+      "oxyex99163024preearningsre.htm",
+      "oxyex99106-30x24earningsre.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OXY_000079746824000121_oxy-20240710.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OXY_000079746824000121_oxyex99163024preearningsre.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OXY_000079746824000121_oxyex99106-30x24earningsre.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "OXY",
+    "cik": "797468",
+    "entity_name": "OCCIDENTAL PETROLEUM CORP /DE/",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "7225000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1263000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "74008000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-1080000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1598000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "2870000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.17481",
+    "operating_cash_flow_to_revenue": "0.397232",
+    "assets_to_revenue": "10.243322",
+    "financing_cash_flow_to_revenue": "-0.149481",
+    "investing_cash_flow_to_revenue": "-0.221176"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [
+      "forecasts.",
+      "projects; Occidental's ability to successfully complete, or any material delay of, field developments, expansion projects, capital expenditures, efficiency projects, acquisitions or divestitures, including the acquisition of CrownRock, L."
+    ],
+    "wave_or_demand_evidence": [
+      "ain forward-looking statements within the meaning of the “safe harbor” provisions of the Private Securities Litigation Reform Act of 1995, including but not limited to statements about Occidental’s expectations, beliefs, plans or forecasts.",
+      "ain and hire key personnel; supply, transportation, and labor constraints; reorganization or restructuring of Occidental’s operations; changes in state, federal or international tax rates; and actions by third parties that are beyond Occidental's control.",
+      "supply, transportation, and labor constraints; reorganization or restructuring of Occidental’s operations; changes in state, federal or international tax rates; and actions by third parties that are beyond Occidental's control."
+    ],
+    "warning_or_risk_evidence": [
+      "charges required to fully reflect changes in industry conditions, is preliminary and is subject to finalization of Occidental's financial reporting process for the second quarter of 2024.",
+      "delay of, field developments, expansion projects, capital expenditures, efficiency projects, acquisitions or divestitures, including the acquisition of CrownRock, L."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "oxyex99163024preearningsre.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "ImageElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second Quarter 2024 Earnings Considerations"
+    },
+    {
+      "type": "TextElement",
+      "text": "Occidental Petroleum Corporation (\"Occidental\") is providing the following summary of earnings considerations that management believes will impact results for the second quarter of 2024. The summary is intended only to provide information regarding current estimates of these factors. It is not comprehensive of all results for and changes that have occurred in the second quarter of 2024 and is not an estimate of the second quarter of 2024 earnings for Occidental. Further, this summary may not account for all adjustments and charges required to fully reflect changes in industry conditions, is preliminary and is subject to finalization of Occidental's financial reporting process for the second quarter of 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Average Diluted Shares Outstanding"
+    },
+    {
+      "type": "TextElement",
+      "text": "Average diluted shares outstanding for the second quarter of 2024 were 958.9 million shares."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Realizations"
+    },
+    {
+      "type": "TextElement",
+      "text": "The following table presents information about Occidental's average realized prices and index prices:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024Average Realized PricesOil ($/Bbl)United States$79.79International$80.40Total Worldwide$79.89NGL ($/Bbl)United States$20.19International$28.11Total Worldwide$21.23Natural Gas ($/Mcf)United States$0.54International$1.91Total Worldwide$0.92Average Index PricesWTI oil ($/Bbl)$80.56Brent oil ($/Bbl)$84.95NYMEX gas ($/Mcf)$1.99Average Realized Prices as Percentage of Average Index PricesWorldwide oil as a percentage of average WTI99 %Worldwide oil as a percentage of average Brent94 %Worldwide NGL as a percentage of average WTI26 %Domestic natural gas as a percentage of average NYMEX27 %"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Second Quarter 2024 Earnings Considerations (\"Earnings Considerations\") contain forward-looking statements within the meaning of the “safe harbor” provisions of the Private Securities Litigation Reform Act of 1995, including but not limited to statements about Occidental’s expectations, beliefs, plans or forecasts. All statements other than statements of historical fact are “forward-looking statements” for purposes of federal and state securities laws, including, but not limited to: any projections of earnings, revenue or other financial items or future financial position or sources of financing; any statements of the plans, strategies and objectives of management for future operations or business strategy; any statements regarding future economic conditions or performance; any statements of belief; and any statements of assumptions underlying any of the foregoing. Words such as “estimate,” “will,” “may,” “intend,” “believe,” “subject to,” “expect,” “could” or similar expressions that convey the prospective nature of events or outcomes are generally indicative of forward-looking statements. You should not place undue reliance on these forward-looking statements, which speak only as of the date of the Earnings Considerations unless an earlier date is specified. Unless legally required, Occidental does not undertake any obligation to update, modify or withdraw any forward-looking statements as a result of new information, future events or otherwise.Actual outcomes or results, including the impact of the aforementioned factors for second quarter 2024, may differ from anticipated results or estimates, sometimes materially. Factors that could cause results to differ from those projected or assumed in any forward-looking statement include, but are not limited to: general economic conditions, including slowdowns and recessions, domestically or internationally; Occidental’s indebtedness and other payment obligations, including the need to generate sufficient cash flows to fund operations; Occidental’s ability to successfully monetize select assets and repay or refinance debt and the impact of changes in Occidental’s credit ratings or future increases in interest rates; assumptions about energy markets; global and local commodity and commodity-futures pricing fluctuations and volatility; supply and demand considerations for, and the prices of, Occidental’s products and services; actions by the Organization of the Petroleum Exporting Countries (OPEC) and non-OPEC oil producing countries; the scope and duration of global or regional health pandemics or epidemics and actions taken by government authorities and other third parties in connection therewith; results from operations and competitive conditions; future impairments of Occidental's proved and unproved oil and gas properties or equity investments, or write-downs of productive assets, causing charges to earnings; unexpected changes in costs; inflation, its impact on markets and economic activity and related monetary policy actions by governments in response to inflation; availability of capital resources, levels of capital expenditures and contractual obligations; the regulatory approval environment, including Occidental's ability to timely obtain or maintain permits or other government approvals, including those necessary for drilling and/or development projects; Occidental's ability to successfully complete, or any material delay of, field developments, expansion projects, capital expenditures, efficiency projects, acquisitions or divestitures, including the acquisition of CrownRock, L.P.; risks associated with acquisitions, mergers and joint ventures, such as difficulties integrating businesses, uncertainty associated with financial projections, projected synergies, restructuring, increased costs and adverse tax consequences; uncertainties and liabilities associated with acquired and divested properties and businesses; uncertainties about the estimated quantities of oil, natural gas liquid (NGL) and natural gas reserves; lower-than-expected production from development projects or acquisitions; Occidental’s ability to realize the anticipated benefits from prior or future streamlining actions to reduce fixed costs, simplify or improve processes and improve Occidental’s competitiveness; exploration, drilling and other operational risks; disruptions to, capacity constraints in, or other limitations on the pipeline systems that deliver Occidental’s oil and natural gas and other processing and transportation considerations; volatility in the securities, capital or credit markets, including capital market disruptions and instability of financial institutions; government actions, war (including the Russia-Ukraine war and conflicts in the Middle East) and political conditions and events; health, safety and environmental (HSE) risks, costs and liability under existing or future federal, regional, state, provincial, tribal, local and international HSE laws, regulations, and litigation (including related to climate change or remedial actions or assessments); legislative or regulatory changes, including changes relating to hydraulic fracturing or other oil and natural gas operations, retroactive royalty or production tax regimes and deep-water and onshore drilling and permitting regulations; Occidental's ability to recognize intended benefits from its business strategies and initiatives, such as Occidental's low-carbon ventures businesses or announced greenhouse gas emissions reduction targets or net-zero goals; potential liability resulting from pending or future litigation, government investigations and other proceedings; disruption or interruption of production or manufacturing or facility damage due to accidents, chemical releases, labor unrest, weather, power outages, natural disasters, cyber-attacks, terrorist acts or insurgent activity; the creditworthiness and performance of Occidental's counterparties, including financial institutions, operating partners and other parties; failure of risk management; Occidental’s ability to retain and hire key personnel; supply, transportation, and labor constraints; reorganization or restructuring of Occidental’s operations; changes in state, federal or international tax rates; and actions by third parties that are beyond Occidental's control.Additional information concerning these and other factors that may cause Occidental's results of operations and financial position to differ from expectations can be found in Occidental’s other filings with the U.S. Securities and Exchange Commission, including Occidental’s 2023 Annual Report on Form 10-K, Quarterly Reports on Form 10-Q and Current Reports on Form 8-K."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        2,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Exhibit 99.1",
+          "Exhibit 99.1",
+          "Exhibit 99.1"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        27,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Three months ended June 30, 2024",
+          "Three months ended June 30, 2024",
+          "Three months ended June 30, 2024"
+        ],
+        [
+          "Average Realized Prices",
+          "Average Realized Prices",
+          "Average Realized Prices",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Oil ($/Bbl)",
+          "Oil ($/Bbl)",
+          "Oil ($/Bbl)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "United States",
+          "United States",
+          "United States",
+          "$",
+          "79.79",
+          "79.79"
+        ],
+        [
+          "International",
+          "International",
+          "International",
+          "$",
+          "80.40",
+          "80.40"
+        ],
+        [
+          "Total Worldwide",
+          "Total Worldwide",
+          "Total Worldwide",
+          "$",
+          "79.89",
+          "79.89"
+        ],
+        [
+          "NGL ($/Bbl)",
+          "NGL ($/Bbl)",
+          "NGL ($/Bbl)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "United States",
+          "United States",
+          "United States",
+          "$",
+          "20.19",
+          "20.19"
+        ],
+        [
+          "International",
+          "International",
+          "International",
+          "$",
+          "28.11",
+          "28.11"
+        ],
+        [
+          "Total Worldwide",
+          "Total Worldwide",
+          "Total Worldwide",
+          "$",
+          "21.23",
+          "21.23"
+        ],
+        [
+          "Natural Gas ($/Mcf)",
+          "Natural Gas ($/Mcf)",
+          "Natural Gas ($/Mcf)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "United States",
+          "United States",
+          "United States",
+          "$",
+          "0.54",
+          "0.54"
+        ],
+        [
+          "International",
+          "International",
+          "International",
+          "$",
+          "1.91",
+          "1.91"
+        ],
+        [
+          "Total Worldwide",
+          "Total Worldwide",
+          "Total Worldwide",
+          "$",
+          "0.92",
+          "0.92"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Average Index Prices",
+          "Average Index Prices",
+          "Average Index Prices",
+          "",
+          "",
+          ""
+        ],
+        [
+          "WTI oil ($/Bbl)",
+          "WTI oil ($/Bbl)",
+          "WTI oil ($/Bbl)",
+          "$",
+          "80.56",
+          "80.56"
+        ],
+        [
+          "Brent oil ($/Bbl)",
+          "Brent oil ($/Bbl)",
+          "Brent oil ($/Bbl)",
+          "$",
+          "84.95",
+          "84.95"
+        ],
+        [
+          "NYMEX gas ($/Mcf)",
+          "NYMEX gas ($/Mcf)",
+          "NYMEX gas ($/Mcf)",
+          "$",
+          "1.99",
+          "1.99"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Average Realized Prices as Percentage of Average Index Prices",
+          "Average Realized Prices as Percentage of Average Index Prices",
+          "Average Realized Prices as Percentage of Average Index Prices",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Worldwide oil as a percentage of average WTI",
+          "Worldwide oil as a percentage of average WTI",
+          "Worldwide oil as a percentage of average WTI",
+          "99",
+          "99",
+          "%"
+        ],
+        [
+          "Worldwide oil as a percentage of average Brent",
+          "Worldwide oil as a percentage of average Brent",
+          "Worldwide oil as a percentage of average Brent",
+          "94",
+          "94",
+          "%"
+        ],
+        [
+          "Worldwide NGL as a percentage of average WTI",
+          "Worldwide NGL as a percentage of average WTI",
+          "Worldwide NGL as a percentage of average WTI",
+          "26",
+          "26",
+          "%"
+        ],
+        [
+          "Domestic natural gas as a percentage of average NYMEX",
+          "Domestic natural gas as a percentage of average NYMEX",
+          "Domestic natural gas as a percentage of average NYMEX",
+          "27",
+          "27",
+          "%"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 7225.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-11",
+    "entry_open": "61.169998",
+    "return_10d_pct": "0.0654",
+    "return_20d_pct": "-0.5722",
+    "return_30d_pct": "-3.5802",
+    "return_60d_pct": "-14.6967",
+    "return_90d_pct": "-11.8849"
+  },
+  "text_stats": {
+    "primary_text_len": 3672,
+    "exhibit_text_len": 8490,
+    "combined_text_len": 12164,
+    "semantic_text_len": 8490,
+    "table_count": 2,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "XRAY",
+    "cik": "818479",
+    "event_date": "2024-07-31",
+    "event_accession": "0000818479-24-000070",
+    "primary_8k_doc": "xray-20240729.htm",
+    "exhibit_docs": [
+      "dentsply8kq22024ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XRAY_000081847924000070_xray-20240729.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XRAY_000081847924000070_dentsply8kq22024ex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "XRAY",
+    "cik": "818479",
+    "entity_name": "DENTSPLY SIRONA Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "978000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-19000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7370000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "17000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-37000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-21000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.019427",
+    "operating_cash_flow_to_revenue": "-0.021472",
+    "assets_to_revenue": "7.535787",
+    "financing_cash_flow_to_revenue": "0.017382",
+    "investing_cash_flow_to_revenue": "-0.037832"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $984 million decreased (4.",
+      "sales decreased (2.",
+      "net sales of $984 million decreased (4.",
+      "GAAP gross margin of 51.",
+      "EPS of $0.",
+      "EPS of $1."
+    ],
+    "guidance_evidence": [
+      "outlook: organic sales down (1%) to flat (previously flat to up 1.",
+      "outlook to reflect lower expected sales and adjusted EPS,” said Simon Campion, President and Chief Executive Officer.",
+      "Outlook Based on the Company's results during the first half of 2024 and its latest view of the macroeconomic environment, foreign exchange, and market dynamics, the Company is revising its 2024 outlook.",
+      "outlook includes expected net sales in the range of $3.",
+      "outlook assumptions are included in the second quarter 2024 earnings presentation posted on the Investors section of the Dentsply Sirona website at https://investor.",
+      "expects to repurchase $100 million of its common stock in Q3 2024 • Second phase of transformation includes an expected reduction in annualized operating expenses of $80 to $100 million over approximately 12 to 18 months Charlotte, N."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in our Connected Technology Solutions segment due to continued macroeconomic and competitive pressures.",
+      "aid Simon Campion, President and Chief Executive Officer.",
+      "ain items.",
+      "aid $33 million in dividends and executed share repurchases of $150 million, resulting in a total of $212 million returned to shareholders through dividends and share repurchases in the first six months of 2024.",
+      "airment charges, certain tax adjustments, and other significant items, is not available without unreasonable effort and cannot be reasonably estimated.",
+      "aid in cash in 2024 and 2025."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, transformation related costs, impairment charges, certain tax adjustments, and other significant items, is not available without unreasonable effort and cannot be reasonably estimated.",
+      "charges or credits are not currently determinable but may be significant.",
+      "charges, which will be expensed and paid in cash in 2024 and 2025.",
+      "charges and other costs.",
+      "charges may recur but are subject to significant fluctuations from period to period due to the varying levels of restructuring activity, and as such may not be indicative of past and future performance of the Company.",
+      "charges related to legal settlements, executive separation costs, write-offs of inventory as a result of product rationalization, and changes in accounting principles recorded within the period."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 984,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "27.260000",
+    "return_10d_pct": "-12.1057",
+    "return_20d_pct": "-9.7946",
+    "return_30d_pct": "-8.2905",
+    "return_60d_pct": "-0.7337",
+    "return_90d_pct": "-14.1233"
+  },
+  "text_stats": {
+    "primary_text_len": 10761,
+    "exhibit_text_len": 27329,
+    "combined_text_len": 38092
+  }
+}

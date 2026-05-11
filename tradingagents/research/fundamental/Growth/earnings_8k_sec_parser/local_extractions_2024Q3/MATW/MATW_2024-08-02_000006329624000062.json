@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MATW",
+    "cik": "63296",
+    "event_date": "2024-08-02",
+    "event_accession": "0000063296-24-000062",
+    "primary_8k_doc": "matw-20240801.htm",
+    "exhibit_docs": [
+      "ex991_3q2024earningspr.htm",
+      "ex99232024earningstelec.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MATW_000006329624000062_matw-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MATW_000006329624000062_ex991_3q2024earningspr.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MATW_000006329624000062_ex99232024earningstelec.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MATW",
+    "cik": "63296",
+    "entity_name": "MATTHEWS INTERNATIONAL CORP",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1671030000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2023-11-17",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2021-09-30",
+    "net_income_value": "12830000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1887381000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-44899000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-31203000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "44711000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.007678",
+    "operating_cash_flow_to_revenue": "0.026757",
+    "assets_to_revenue": "1.129472",
+    "financing_cash_flow_to_revenue": "-0.026869",
+    "investing_cash_flow_to_revenue": "-0.018673"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of mausoleums.",
+      "GAAP EPS of $0.",
+      "EPS of $0.",
+      "Net income attributable to Matthews $ 1.",
+      "earnings per share $ 0.",
+      "net income $ 17."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "outlook,” “may,” “will,” “could” or the negative of these terms, other comparable terminology and variations thereof.",
+      "OUTLOOK FOR FISCAL 2024 5 FINANCIAL OVERVIEW © 2024 Matthews International Corporation.",
+      "expected to be generally in line with last year despite lower projected deaths, and the SGK Brand Solutions segment is expected to finish fiscal 2024 relatively consistent as well.",
+      "projects,” “anticipates,” “estimates,” “plans,” “seeks,” “forecasts,” “predicts,” “objective,” “targets,” “potential,” “outlook,” “may,” “will,” “could” or the negative of these terms, other comparable terminology and variations thereof.",
+      "forecast, make operating and strategic decisions, and evaluate historical performance, and (iii) otherwise provides supplemental information that may be useful to investors in evaluating the Company’s results."
+    ],
+    "wave_or_demand_evidence": [
+      "customer delays • Company announces cost reduction initiatives • Webcast: Friday, August 2, 2024, 9:00 a.",
+      "customer delays of shipments and related installations for our energy storage business unfavorably impacted the segment’s sales compared to a year ago.",
+      "orders.",
+      "customers that help families move from grief to remembrance.",
+      "customers, or supply chains, the impact of global conflicts, such as the current war between Russia and Ukraine, the outcome of the Company's dispute with Tesla, Inc.",
+      "storage sales impacted by customer delays • Company announces cost reduction initiatives • Webcast: Friday, August 2, 2024, 9:00 a."
+    ],
+    "warning_or_risk_evidence": [
+      "delays • Company announces cost reduction initiatives • Webcast: Friday, August 2, 2024, 9:00 a.",
+      "delays of shipments and related installations for our energy storage business unfavorably impacted the segment’s sales compared to a year ago.",
+      "charges (which includes non-recurring charges related to certain commercial and operational initiatives and exit activities), stock-based compensation and the non-service portion of pension and postretirement expense.",
+      "charges (2) 6,715 0.",
+      "charges.",
+      "charges and income taxes, and the effects of certain acquisition and divestiture and ERP integration costs, and items that do not reflect the ordinary earnings of the Company’s operations."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 427.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "24.879999",
+    "return_10d_pct": "3.6576",
+    "return_20d_pct": "3.2958",
+    "return_30d_pct": "-2.6125",
+    "return_60d_pct": "-11.8971",
+    "return_90d_pct": "-7.4759"
+  },
+  "text_stats": {
+    "primary_text_len": 4199,
+    "exhibit_text_len": 57368,
+    "combined_text_len": 61569
+  }
+}

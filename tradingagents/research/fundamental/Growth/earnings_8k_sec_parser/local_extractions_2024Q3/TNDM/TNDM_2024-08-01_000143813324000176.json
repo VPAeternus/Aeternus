@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TNDM",
+    "cik": "1438133",
+    "event_date": "2024-08-01",
+    "event_accession": "0001438133-24-000176",
+    "primary_8k_doc": "tndm-20240801.htm",
+    "exhibit_docs": [
+      "exhibit991-earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TNDM_000143813324000176_tndm-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TNDM_000143813324000176_exhibit991-earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TNDM",
+    "cik": "1438133",
+    "entity_name": "Tandem Diabetes Care, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "169383000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-123873000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "952658000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-541000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-26329000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-18326000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.731319",
+    "operating_cash_flow_to_revenue": "-0.108193",
+    "assets_to_revenue": "5.624283",
+    "financing_cash_flow_to_revenue": "-0.003194",
+    "investing_cash_flow_to_revenue": "-0.155441"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales increased 13 percent to $221.",
+      "GAAP gross margin was 51 percent compared to 52 percent.",
+      "Non-GAAP gross margin (1) was 51 percent compared to 52 percent.",
+      "Non-GAAP gross margin is estimated to be approximately 51 percent for the full year and the third quarter.",
+      "GAAP gross margin and GAAP operating margin are calculated using GAAP sales.",
+      "non-GAAP gross margin, non-GAAP operating margin, and adjusted EBITDA margin are calculated using non-GAAP sales."
+    ],
+    "guidance_evidence": [
+      "Guidance San Diego, August 1, 2024 - Tandem Diabetes Care, Inc.",
+      "guidance for the year ending December 31, 2024.",
+      "Guidance The Company’s non-GAAP guidance for the fiscal year ending December 31, 2024 is set forth below.",
+      "guidance as follows: • Non-GAAP sales are estimated to be approximately $885 million to $892 million for the full year and $222 million to $225 million in the third quarter."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for our latest technology offerings, namely Tandem Mobi, which drove our expansion of the insulin pump market,” said John Sheridan, president and chief executive officer.",
+      "customers choice as we work to bring the benefits of our technology to more people living with diabetes worldwide.",
+      "customers to provide a pathway to ownership of Tandem Mobi, for a fee when available.",
+      "customer base,” said Leigh Vosseller, executive vice president and chief financial officer.",
+      "customer elects to participate in Tandem Choice, the Company will recognize the existing deferral, incremental fees received and the associated costs of providing the new insulin pump at the time of fulfillment.",
+      "Customer eligibility was automatic and no election was necessary to participate in Tandem Choice at the time of a t:slim X2 purchase."
+    ],
+    "warning_or_risk_evidence": [
+      "charges included in cost of goods sold and operating expenses are estimated to be approximately $120 million.",
+      "charges representing the value of acquired in-process research and development assets with no alternative future use and acquisition related expenses recorded in connection with the acquisitions of AMF Medical SA in 2023.",
+      "decreased 6 percent to nearly 10,000 pumps.",
+      "loss: GAAP operating loss was $30.",
+      "loss (1) was $30.",
+      "loss: GAAP net loss was $30."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 221.9,
+    "quarter_revenue_yoy_pct": 13,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "41.250000",
+    "return_10d_pct": "-4.5576",
+    "return_20d_pct": "3.0061",
+    "return_30d_pct": "1.2606",
+    "return_60d_pct": "-0.4364",
+    "return_90d_pct": "-23.9515"
+  },
+  "text_stats": {
+    "primary_text_len": 3576,
+    "exhibit_text_len": 20336,
+    "combined_text_len": 23914
+  }
+}

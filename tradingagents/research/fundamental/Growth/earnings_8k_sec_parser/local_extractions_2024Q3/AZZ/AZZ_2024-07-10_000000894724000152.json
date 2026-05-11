@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AZZ",
+    "cik": "8947",
+    "event_date": "2024-07-10",
+    "event_accession": "0000008947-24-000152",
+    "primary_8k_doc": "azz-20240710.htm",
+    "exhibit_docs": [
+      "exhibit991q1fy25earningsre.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AZZ_000000894724000152_azz-20240710.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AZZ_000000894724000152_exhibit991q1fy25earningsre.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AZZ",
+    "cik": "8947",
+    "entity_name": "AZZ Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "525598000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-22",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-02-28",
+    "net_income_value": "84022000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-22",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-02-28",
+    "assets_value": "2221479000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-22",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-02-28",
+    "financing_cash_flow_value": "1245096000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2023-10-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2022-08-31",
+    "investing_cash_flow_value": "-7466000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2022-07-11",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2021-05-31",
+    "operating_cash_flow_value": "11060000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2022-07-11",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2021-05-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.15986",
+    "operating_cash_flow_to_revenue": "0.021043",
+    "assets_to_revenue": "4.226574",
+    "financing_cash_flow_to_revenue": "2.368913",
+    "investing_cash_flow_to_revenue": "-0.014205"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $176.",
+      "sales of $236.",
+      "sales of $413 million and adjusted EPS of $1.",
+      "Sales of $176.",
+      "Sales of $236.",
+      "Net Income of $39."
+    ],
+    "guidance_evidence": [
+      "Outlook - Fiscal Year 2025 Guidance Reiterating previously communicated guidance issued April 8, 2024.",
+      "Guidance (1) Sales $1.",
+      "Guidance Assumptions: a.",
+      "guidance includes the addback of amortization related to the Company’s intangible assets.",
+      "outlook,\" \"forecasts,\" \"targets,\" \"anticipates,\" \"believes,\" \"estimates,\" \"predicts,\" \"potential,\" \"continue,\" or the negative of these terms or other comparable terminology.",
+      "projects and are pleased to see the rebound in many end markets."
+    ],
+    "wave_or_demand_evidence": [
+      "customer demand for our manufactured solutions, including demand by the construction markets, the industrial markets, and the metal coatings markets.",
+      "ailwinds that exist for non-building construction relating to infrastructure and renewables projects, reshoring of manufacturing, and continued migration to more environmentally friendly pre-painted steel and aluminum.",
+      "ailing twelve months EBITDA.",
+      "aid down debt of $25 million and returned cash to common shareholders through cash dividend payments totaling $4.",
+      "ails AZZ Inc.",
+      "ailable on the Company’s Investor Relations page at http://www."
+    ],
+    "warning_or_risk_evidence": [
+      "loss to common shareholders of $36.",
+      "loss of $1.",
+      "uncertain, and investors must recognize that actual results may differ from those expressed or implied in the forward-looking statements.",
+      "uncertainties including, but not limited to, changes in customer demand for our manufactured solutions, including demand by the construction markets, the industrial markets, and the metal coatings markets.",
+      "loss) available to common shareholders $ (36,796) $ 24,922 Basic earnings (loss) per common share $ (1.",
+      "loss) per common share $ (1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 413.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-11",
+    "entry_open": "72.730003",
+    "return_10d_pct": "15.3169",
+    "return_20d_pct": "9.9409",
+    "return_30d_pct": "1.5537",
+    "return_60d_pct": "1.8562",
+    "return_90d_pct": "12.1545"
+  },
+  "text_stats": {
+    "primary_text_len": 3453,
+    "exhibit_text_len": 20819,
+    "combined_text_len": 24274
+  }
+}

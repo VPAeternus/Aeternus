@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CRDO",
+    "cik": "0001807794",
+    "event_date": "2024-09-04",
+    "event_accession": "0001628280-24-039309",
+    "primary_8k_doc": "crdo-20240904.htm",
+    "exhibit_docs": [
+      "credoq12025ex-991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRDO_000162828024039309_crdo-20240904.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRDO_000162828024039309_credoq12025ex-991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CRDO",
+    "cik": "0001807794",
+    "entity_name": "Credo Technology Group Holding Ltd",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "106477000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-24",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "-22176000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-24",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "397289000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-24",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-29",
+    "financing_cash_flow_value": "204181000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-24",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "-17580000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-24",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "-30832000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-24",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.20827",
+    "operating_cash_flow_to_revenue": "-0.289565",
+    "assets_to_revenue": "3.731219",
+    "financing_cash_flow_to_revenue": "1.917607",
+    "investing_cash_flow_to_revenue": "-0.165106"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $59.",
+      "revenue of $59.",
+      "revenues of $57.",
+      "GAAP gross margin of 62.",
+      "non-GAAP gross margin of 62.",
+      "non-GAAP net income of $7."
+    ],
+    "guidance_evidence": [
+      "Outlook • Revenue is expected to be between $65.",
+      "outlook; future financial results; expectations regarding the markets and industries in which Credo conducts business; and assumptions underlying any of the foregoing.",
+      "outlook,” “forecast,” “targets” and similar expressions, or their negatives, may identify such forward-looking statements.",
+      "Outlook for Three Months Ended November 2, 2024 Low High GAAP gross margin 61.",
+      "expected growth.",
+      "expected to be between $65."
+    ],
+    "wave_or_demand_evidence": [
+      "customers’ AI infrastructure deployments remain the catalyst for our recent and expected growth.",
+      "AI infrastructure deployments remain the catalyst for our recent and expected growth.",
+      "power and cost-efficient, high-speed connectivity solutions.",
+      "ail, including dial-in details and a unique conference call code for entry.",
+      "ailable on Credo’s Investor Relations website at http://investors.",
+      "ailable via the web at http://investors."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment and related charges (if applicable), and the related tax effect adjustment to the provision for income taxes.",
+      "loss of $(9.",
+      "loss per share of $(0.",
+      "loss), non-GAAP operating income (loss) margin, non-GAAP net income (loss) and non-GAAP diluted net income (loss) per share.",
+      "loss) per share is calculated using basic weighted average shares outstanding when there is a GAAP net loss, and calculated using diluted weighted average shares outstanding when there is a GAAP net income.",
+      "loss) per share is calculated using basic weighted average shares outstanding when there is a non-GAAP net loss, and calculated using non-GAAP diluted weighted average shares outstanding when there is a non-GAAP net income."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 59.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 65,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": 61.3,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-05",
+    "entry_open": "27.330000",
+    "return_10d_pct": "1.5734",
+    "return_20d_pct": "9.1109",
+    "return_30d_pct": "19.0633",
+    "return_60d_pct": "46.6154",
+    "return_90d_pct": "152.5064"
+  },
+  "text_stats": {
+    "primary_text_len": 3611,
+    "exhibit_text_len": 15057,
+    "combined_text_len": 18670
+  }
+}

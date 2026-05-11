@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EYE",
+    "cik": "1710155",
+    "event_date": "2024-08-07",
+    "event_accession": "0001710155-24-000050",
+    "primary_8k_doc": "eye-20240807.htm",
+    "exhibit_docs": [
+      "ex991-q22024earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EYE_000171015524000050_eye-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EYE_000171015524000050_ex991-q22024earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EYE",
+    "cik": "1710155",
+    "entity_name": "National Vision Holdings, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "520797000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "18270000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "2172511000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "-28662000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-27615000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "74064000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.035081",
+    "operating_cash_flow_to_revenue": "0.142213",
+    "assets_to_revenue": "4.171512",
+    "financing_cash_flow_to_revenue": "-0.055035",
+    "investing_cash_flow_to_revenue": "-0.053024"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $53.",
+      "revenue increased 4.",
+      "revenue increased 7.",
+      "revenue increased 110 basis points to 42.",
+      "revenue increased 6.",
+      "revenue increased 70 basis points to 41."
+    ],
+    "guidance_evidence": [
+      "outlook (1) During the first quarter of 2024, the Company completed the termination of its Walmart partnership and discontinued the prior Legacy segment.",
+      "guidance accordingly.",
+      "outlook remains uncertain with dynamic market conditions and the outlook shown below assumes no material deterioration to the Company’s current business operations as a result of such factors or as a result of the termination of the Walmart partnership.",
+      "outlook below is on a continuing operations basis.",
+      "Outlook (as of May 8, 2024) Prior Continuing Operations Fiscal 2024 Outlook* (as of May 8, 2024) Updated Continuing Operations Fiscal 2024 Outlook** (As of August 7, 2024) New Stores 65 - 70 65-70 Adjusted Comparable Store Sales Growth 1 2.",
+      "outlook and exclusion of actual discontinued operations for the six months ended June 29, 2024 which included $132M in revenue and $0."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "customer transactions and higher average ticket.",
+      "customer transactions.",
+      "customers’ eye care needs.",
+      "Customer Relationship Management (\"CRM\") implementation expenses and certain other expenses.",
+      "aid Reade Fahs, National Vision’s CEO."
+    ],
+    "warning_or_risk_evidence": [
+      "charges related to debt discounts and deferred financing costs.",
+      "impairment, litigation settlement, secondary offering expenses, management realignment expenses, long-term incentive plan expenses, Enterprise Resource Planning (“ERP”) and Customer Relationship Management (\"CRM\") implementation expenses and certain other expenses.",
+      "impairment, litigation settlement, secondary offering expenses, management realignment expenses, long-term incentive plan expenses, ERP and CRM implementation expenses and certain other expenses.",
+      "impairment (b) 0.",
+      "impairment (b) — — — 0.",
+      "charges related to stock-based compensation programs, which vary from period to period depending on the timing of awards and performance vesting conditions."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 451.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "10.730000",
+    "return_10d_pct": "0.5592",
+    "return_20d_pct": "-1.9571",
+    "return_30d_pct": "-9.6925",
+    "return_60d_pct": "-3.8211",
+    "return_90d_pct": "10.8108"
+  },
+  "text_stats": {
+    "primary_text_len": 3896,
+    "exhibit_text_len": 52408,
+    "combined_text_len": 56306
+  }
+}

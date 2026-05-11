@@ -42,3 +42,15 @@ def test_x_feed_run_browser_routes_requested_pass_range():
     assert "Browser run complete" in result.stdout
     assert "Completed passes: 2, 3" in result.stdout
     run_mock.assert_called_once()
+
+
+def test_x_feed_generate_passes_date_to_prompt_builder():
+    with patch(
+        "tradingagents.dealflow.sources.x_feed_manual.generate_prompts",
+        return_value=[(16, "Blindspot & Unmapped Ticker Audit", "prompt-16")],
+    ) as prompt_mock:
+        result = runner.invoke(app, ["x-feed", "--generate", "--date", "2026-05-11"])
+
+    assert result.exit_code == 0
+    assert "Pass 16: Blindspot & Unmapped Ticker Audit" in result.stdout
+    prompt_mock.assert_called_once_with("2026-05-11")

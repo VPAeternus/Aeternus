@@ -21,7 +21,7 @@ importlib.import_module("cli.commands.performance")   # track-record, performanc
 importlib.import_module("cli.commands.dealflow")      # watchlist, source, orchestrate, queue, workflow-*, evidence-*, x-discovery, step1-readiness
 importlib.import_module("cli.commands.portfolio")     # portfolio-plan
 importlib.import_module("cli.commands.execution")     # execute-paper, panic-liquidate, reconciliation-loop, pull-broker-*, positions-drift, reconcile-execution, execution-sync, manage-exits, execution-readiness, manage-open-orders, sync-positions-from-broker, paper-positions, live-positions, close-paper
-importlib.import_module("cli.commands.scoring")       # score, analyze, analyze-batch
+importlib.import_module("cli.commands.scoring")       # score, analyze
 importlib.import_module("cli.commands.technical")     # phase-scan, phase-backtest, phase-status, momentum-scan
 importlib.import_module("cli.commands.scheduler")     # scheduler-start, scheduler-status, scheduler-stop, scheduler-trigger
 importlib.import_module("cli.commands.commodity_shock")  # commodity-scan

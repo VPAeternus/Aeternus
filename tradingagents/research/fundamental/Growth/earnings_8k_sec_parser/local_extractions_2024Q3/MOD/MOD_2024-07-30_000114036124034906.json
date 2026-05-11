@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MOD",
+    "cik": "67347",
+    "event_date": "2024-07-30",
+    "event_accession": "0001140361-24-034906",
+    "primary_8k_doc": "ef20033260_8k.htm",
+    "exhibit_docs": [
+      "ef20033260_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MOD_000114036124034906_ef20033260_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MOD_000114036124034906_ef20033260_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MOD",
+    "cik": "67347",
+    "entity_name": "Modine Manufacturing Company",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2050100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-22",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "85200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-22",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1565900000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-22",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "39200000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-22",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-51000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-22",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "11500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-22",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.041559",
+    "operating_cash_flow_to_revenue": "0.005609",
+    "assets_to_revenue": "0.763816",
+    "financing_cash_flow_to_revenue": "0.019121",
+    "investing_cash_flow_to_revenue": "-0.024877"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $661.",
+      "sales increased 4 percent • Operating income of $74.",
+      "Net sales increased 6 percent to $661.",
+      "sales increased 4 percent compared with the prior year.",
+      "sales were $357.",
+      "sales increased 10 percent."
+    ],
+    "guidance_evidence": [
+      "outlook Racine, WI – July 30, 2024 – Modine (NYSE: MOD), a diversified global leader in thermal management technology and solutions, today reported financial results for the quarter ended June 30, 2024.",
+      "Outlook: • Net sales growth between 6 percent to 11 percent • Adjusted EBITDA of $375 million to $395 million, an increase of 19 percent to 26 percent over the prior year • Adjusted earnings per share of $3.",
+      "Outlook “Given our outperformance this quarter, we are increasing our revenue and earnings outlooks for fiscal 2025,” added Brinker.",
+      "outlook, Modine provides its updated outlook for fiscal 2025: Fiscal 2025 Current Outlook Net Sales +6 percent to 11 percent Adjusted EBITDA $375 to $395 million Adjusted EPS $3.",
+      "guidance includes adjusted EBITDA and adjusted earnings per share, as defined above, which are non-GAAP financial measures.",
+      "guidance includes the Company’s estimates for interest expense of approximately $28 to $30 million, a provision for income taxes of approximately $69 to $74 million, and depreciation and amortization expense of approximately $78 to $82 million."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, partially offset by higher sales to commercial vehicle customers.",
+      "customer deposits associated with sales contracts with long inventory lead times and higher payments for incentive compensation as compared to the prior year.",
+      "customers need, where they need them.",
+      "demand for our products and the markets we serve from regulatory and/or policy changes that have been or may be implemented in the U.",
+      "backlog intangible assets, which the Company will adjust for to calculate adjusted earnings per share, estimates of these expenses and gains for the remainder of fiscal 2025 are not available due to the low visibility and unpredictability of these items.",
+      "backlog intangible asset, which will be substantially amortized by the end of fiscal 2025."
+    ],
+    "warning_or_risk_evidence": [
+      "charges totaling $2.",
+      "charges.",
+      "charges, and depreciation and amortization expense, was $100.",
+      "inventory lead times and higher payments for incentive compensation as compared to the prior year.",
+      "charges during the quarter ended June 30, 2024 totaled $10.",
+      "impairment charges and certain other items."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 661.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "103.000000",
+    "return_10d_pct": "-1.8738",
+    "return_20d_pct": "4.9709",
+    "return_30d_pct": "18.0097",
+    "return_60d_pct": "28.9223",
+    "return_90d_pct": "26.5146"
+  },
+  "text_stats": {
+    "primary_text_len": 3868,
+    "exhibit_text_len": 26391,
+    "combined_text_len": 30261
+  }
+}

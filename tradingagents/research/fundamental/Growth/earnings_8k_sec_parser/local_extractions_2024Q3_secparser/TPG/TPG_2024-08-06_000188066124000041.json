@@ -1,0 +1,683 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TPG",
+    "cik": "0001880661",
+    "event_date": "2024-08-06",
+    "event_accession": "0001880661-24-000041",
+    "primary_8k_doc": "tpg-20240806.htm",
+    "exhibit_docs": [
+      "tpg2q24earningsreleasefi.htm",
+      "tpg2q24pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TPG_000188066124000041_tpg-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TPG_000188066124000041_tpg2q24earningsreleasefi.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TPG_000188066124000041_tpg2q24pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TPG",
+    "cik": "0001880661",
+    "entity_name": "TPG Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "643145000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "25055000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "9369672000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-210331000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-896000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "35800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.038957",
+    "operating_cash_flow_to_revenue": "0.055664",
+    "assets_to_revenue": "14.568522",
+    "financing_cash_flow_to_revenue": "-0.327035",
+    "investing_cash_flow_to_revenue": "-0.001393"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net income of $40 million ▪ Net loss attributable to TPG Inc.",
+      "net income of $27 million in 2Q’23 GAAP Statements of Operations (Unaudited) Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition.",
+      "net income divided by total revenue, was 6.",
+      "Net income attributable to other non-controlling interests 32,755 13,691 67,337 44,203 Net (loss) income attributable to TPG Inc.",
+      "Net income (loss) per share data: Net income (loss) available to Class A common stock per share Basic $ 0.",
+      "net income attributable to TPG following the Reorganization; however, the TPG general partner entities continue to be consolidated by us."
+    ],
+    "guidance_evidence": [
+      "anticipates,” “intends,” “plans,” “seeks,” “believes,” “estimates,” “expects” and similar references to future periods, or by the inclusion of forecasts or projections.",
+      "expected growth, future capital expenditures, fund performance, dividends and dividend policy, and debt service obligations.",
+      "expected range of total deployment, factoring in leverage where applicable, multiplied by the fee rate that we anticipate would be earned on such capital.",
+      "expected to be recognized over the next 2.",
+      "expected to be received on a recurring basis and (ii) not dependent on realization events from the underlying investments.",
+      "expected to receive."
+    ],
+    "wave_or_demand_evidence": [
+      "ailed presentation of its second quarter ended June 30, 2024 results, which can be viewed through the Investor Relations section of TPG’s website at shareholders.",
+      "aid Jon Winkelried, Chief Executive Officer.",
+      "power as a result of both organic and inorganic activity.",
+      "ailable and can be accessed through the Investor Relations section of TPG's website at shareholders.",
+      "ailable on the Events page in the Investor Relations section of TPG's website.",
+      "ain “forward-looking” statements."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary and unaudited; totals may not sum due to rounding.",
+      "restrictions on disposition.",
+      "charges.",
+      "charged at a higher rate as capital is invested or for certain funds as management fee rates increase during the life of a fund (FAUM Subject to Step- Up).",
+      "loss attributable to TPG Inc.",
+      "loss per share of Class A common stock of $0."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "tpg2q24earningsreleasefi.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc tpg2q24earningsreleasefi"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG Reports Second Quarter 2024 Financial Results Quarter Ended June 30, 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 2 ▪ Total assets under management of $229 billion as of June 30, 2024, an increase of 65% compared to $139 billion as of June 30, 2023 ▪ GAAP net loss attributable to TPG Inc. of $14 million for the second quarter ended June 30, 2024, with basic net loss per share of Class A common stock of $0.15 ▪ Fee-Related Earnings of $201 million for the second quarter ended June 30, 2024, an increase of 60% year-over-year, resulting in a Fee- Related Earnings margin of 44% ▪ After-tax Distributable Earnings of $207 million (or $0.49 per share of Class A common stock) for the second quarter ended June 30, 2024 ▪ Dividend of $0.42 per share of Class A common stock for the second quarter ended June 30, 2024 San Francisco and Fort Worth, Texas – August 6, 2024 – TPG Inc. (NASDAQ: TPG), a leading global alternative asset management firm, reported its unaudited second quarter 2024 results. TPG issued a full detailed presentation of its second quarter ended June 30, 2024 results, which can be viewed through the Investor Relations section of TPG’s website at shareholders.tpg.com. “Our strong second quarter results reflect the accelerating momentum in our business as we continue to successfully scale and diversify,” said Jon Winkelried, Chief Executive Officer. “We finished the quarter with $229 billion of AUM across more than 30 differentiated investment strategies in private equity, credit, and real estate. Over the past year, we drove a step-function change in our growth profile and earnings power as a result of both organic and inorganic activity. Our firm is capitalizing on our expanded breadth to deliver strong investment performance for our clients and build long term value for our investors.” Dividend TPG has declared a quarterly dividend of $0.42 per share of Class A common stock to holders of record at the close of business on August 16, 2024, payable on August 30, 2024. Conference Call TPG will host a conference call and live webcast at 11:00 am ET. It may be accessed by dialing (800) 245-3047 (US toll-free) or (203) 518-9765 (international), using the conference ID TPGQ224. The number should be dialed at least ten minutes prior to the start of the call. A simultaneous webcast will also be available and can be accessed through the Investor Relations section of TPG's website at shareholders.tpg.com. A webcast replay will be made available on the Events page in the Investor Relations section of TPG's website. Shareholders Media Gary Stein Luke Barrett 212-601-4750 415-743-1550 shareholders@tpg.com media@tpg.com TPG Reports Second Quarter 2024 Results"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 3 TPG Reports Second Quarter 2024 Results About TPG TPG is a leading global alternative asset management firm, founded in San Francisco in 1992, with $229 billion of assets under management and investment and operational teams around the world. TPG invests across a broadly diversified set of strategies, including private equity, impact, credit, real estate, and market solutions, and our unique strategy is driven by collaboration, innovation, and inclusion. Our teams combine deep product and sector experience with broad capabilities and expertise to develop differentiated insights and add value for our fund investors, portfolio companies, management teams, and communities. Forward Looking Statements; No Offers; Non-GAAP Information This document may contain “forward-looking” statements. Forward-looking statements can be identified by words such as “anticipates,” “intends,” “plans,” “seeks,” “believes,” “estimates,” “expects” and similar references to future periods, or by the inclusion of forecasts or projections. Examples of forward-looking statements include, but are not limited to, statements we make regarding the outlook for our future business and financial performance, estimated operational metrics, business strategy and plans and objectives of management for future operations, including, among other things, statements regarding expected growth, future capital expenditures, fund performance, dividends and dividend policy, and debt service obligations. Forward-looking statements are based on our current expectations and assumptions regarding our business, the economy and other future conditions. Because forward-looking statements relate to the future, by their nature, they are subject to inherent uncertainties, risks and changes in circumstances that are difficult to predict. As a result, our actual results may differ materially from those contemplated by any forward-looking statements. Important factors that could cause actual results to differ materially from those in the forward-looking statements include the inability to recognize the anticipated benefits of the acquisition of Angelo Gordon; unexpected costs related to the integration of the Angelo Gordon business and operations; our ability to manage growth and execute our business plan; and regional, national or global political, economic, business, competitive, market and regulatory conditions, among various other risks discussed in the Company’s SEC filings. For the reasons described above, we caution you against relying on any forward-looking statements, which should be read in conjunction with the other cautionary statements included elsewhere in this document and risk factors discussed from time to time in the Company’s filings with the SEC, which can be found at the SEC’s website at http://www.sec.gov. Any forward-looking statement in this document speaks only as of the date of this document. Factors or events that could cause our actual results to differ may emerge from time to time, and it is not possible for us to predict all of them. We undertake no obligation to update or revise any forward-looking statement after the date of this document, whether as a result of new information, future developments or otherwise, except as may be required by law. No recipient should, therefore, rely on these forward-looking statements as representing the views of the Company or its management as of any date subsequent to the date of the document. This document does not constitute an offer of any TPG Fund. Throughout this document, all current period amounts are preliminary and unaudited; totals may not sum due to rounding. See the Reconciliations and Disclosures Section of this document for reconciliations of Non-GAAP to the most comparable GAAP measures."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second Quarter 2024 Results"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 5 ▪ Net loss of $58 million for 2Q’24 compared to 2Q’23 net income of $40 million ▪ Net loss attributable to TPG Inc. of $14 million for 2Q’24 compared to net income of $27 million in 2Q’23 GAAP Statements of Operations (Unaudited) Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. 1. Operating profit margin, defined as net income divided by total revenue, was 6.6% for 2Q’23 and (7.7%) for 2Q’24. ($ in thousands, except share and per share amounts) 2Q’23 2Q’24 2Q’23 YTD 2Q’24 YTD Revenues Fees and other $ 327,103 $ 522,800 $ 638,574 $ 1,035,095 Capital allocation-based income 276,171 221,394 607,845 533,170 Total revenues 603,274 744,194 1,246,419 1,568,265 Expenses Compensation and benefits: Cash-based compensation and benefits 115,667 191,486 236,118 397,822 Equity-based compensation 155,166 227,542 312,459 455,450 Performance allocation compensation 172,077 133,753 393,418 330,187 Total compensation and benefits 442,910 552,781 941,995 1,183,459 General, administrative and other 104,544 170,184 209,417 321,816 Depreciation and amortization 8,304 32,079 16,526 65,044 Interest expense 8,518 21,502 15,936 42,624 Expenses of consolidated Public SPACs 453 — 972 — Total expenses 564,729 776,546 1,184,846 1,612,943 Investment income (loss) Net (losses) gains from investment activities 846 (16,652) 15,662 (21,850) Interest, dividends and other 9,983 13,816 17,954 26,720 Investment and other income of consolidated Public SPACs 3,801 — 5,763 — Total investment (loss) income 14,630 (2,836) 39,379 4,870 (Loss) income before income taxes 53,175 (35,188) 100,952 (39,808) Income tax expense 13,164 22,390 25,267 26,776 Net (loss) income(1) 40,011 (57,578) 75,685 (66,584) Net income attributable to redeemable equity in Public SPACs 5,367 — 6,896 — Net loss attributable to non-controlling interests in TPG Operating Group (25,306) (57,292) (50,798) (112,329) Net income attributable to other non-controlling interests 32,755 13,691 67,337 44,203 Net (loss) income attributable to TPG Inc. $ 27,195 $ (13,977) $ 52,250 $ 1,542 Net income (loss) per share data: Net income (loss) available to Class A common stock per share Basic $ 0.32 $ (0.15) $ 0.59 $ (0.08) Diluted $ 0.02 $ (0.19) $ 0.01 $ (0.29) Weighted-average shares of Class A common stock outstanding Basic 80,540,569 101,690,961 80,022,820 95,402,371 Diluted 309,193,210 364,765,098 309,167,174 364,558,007"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 6 Operating Metrics ($B) Non-GAAP Financial Measures ($M) Second Quarter and Year to Date Highlights 2Q’23 2Q’24 2Q’23 YTD 2Q’24 YTD Fee-Related Revenues (\"FRR\") $286 $459 $551 $910 Fee-Related Earnings (“FRE”) 125 201 225 384 Realized Performance Allocations, Net 7 26 12 58 After-Tax Distributable Earnings (“After-tax DE”) 96 207 184 387 2Q’23 4Q’23 1Q’24 2Q’24 Assets Under Management (“AUM”) $138.6 $221.6 $223.6 $229.0 Fee Earning Assets Under Management (“FAUM”) 78.6 136.8 137.0 137.0 Net Accrued Performance 0.8 0.9 0.9 0.9 Available Capital 40.6 51.3 51.2 53.2 2Q’23 2Q’24 2Q’23 YTD 2Q’24 YTD Capital Raised $1.5 $6.3 $3.5 $11.0 Capital Invested 2.8 7.6 5.1 14.1 Realizations 0.9 5.4 3.1 10.2 ▪ 2Q’24 FRR of $459 million increased 61% versus 2Q’23, with 2Q’24 FRE of $201 million and 2Q’24 After- tax DE of $207 million ▪ Total AUM of $229 billion, up 65% in the last twelve months; Fee earning AUM of $137 billion, up 74% during the same period Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. See the Reconciliations and Disclosures Section of this presentation for a full reconciliation of Non-GAAP to the most comparable GAAP measures and adjustment descriptions."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 7 Non-GAAP Financial Measures ▪ FRE increased 60% from $125 million in 2Q’23 to $201 million in 2Q’24; FRE margin stayed consistent in 2Q’24 compared to 2Q’23 at 44% ▪ After-tax DE of $207 million in 2Q’24, an increase from $96 million in 2Q’23, primarily driven by FRE and realized investment income and other, net Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. See the Reconciliations and Disclosures Section of this presentation for a full reconciliation of Non-GAAP to the most comparable GAAP measures and adjustment descriptions. 1. Realized investment income and other, net includes activity considered non-core to our Fee-Related Earnings operations, including expenses related to the Acquisition of $5 million, $13 million, and $40 million for 2Q’24, 2Q’24 YTD, and 2Q’24 LTM, respectively. ($ in thousands) 2Q’23 2Q’24 2Q’23 YTD 2Q’24 YTD 2Q’24 LTM Fee-Related Revenues Management fees $ 256,612 $ 413,275 $ 504,610 $ 815,959 $ 1,490,070 Fee-related performance revenues — 4,485 — 8,360 10,002 Transaction, monitoring and other fees, net 16,864 34,146 21,536 68,301 154,478 Other income 12,256 7,090 25,039 17,584 41,723 Fee-Related Revenues 285,733 458,996 551,186 910,204 1,696,273 Fee-Related Expenses Cash-based compensation and benefits, net 95,888 164,746 196,043 346,429 602,656 Fee-related performance compensation — 2,242 — 4,180 5,581 Operating expenses, net 64,415 90,744 130,429 175,960 322,783 Fee-Related Expenses 160,303 257,732 326,472 526,569 931,020 Fee-Related Earnings 125,430 201,264 224,714 383,635 765,253 Realized performance allocations, net 6,630 25,979 11,655 57,531 119,903 Realized investment income and other, net(1) (22,762) 5,910 (27,937) (3,405) (22,709) Depreciation expense (1,213) (4,722) (2,344) (10,337) (14,582) Interest expense, net 816 (7,672) (217) (17,659) (16,041) Distributable Earnings 108,901 220,759 205,871 409,765 831,824 Income taxes (12,662) (14,120) (21,790) (22,501) (43,334) After-Tax Distributable Earnings $ 96,240 $ 206,639 $ 184,082 $ 387,264 $ 788,490"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 8 $125 $201 2Q’23 2Q’24 $225 $384 2Q’23 YTD 2Q’24 YTD $505 $816 $218 $276 $74 $79 $98 $96 $151 $104 $79 $70 $35 $39 2Q’23 YTD 2Q’24 YTD $257 $413 $112 $141 $37 $40 $52 $48 $77 $53 $37 $35 $18 $21 2Q’23 2Q’24 ▪ 2Q’24 FRR increased 61% over 2Q’23, primarily driven by TPG AG, an increase in capital markets fees, and catch-up management fees ▪ Fee-related expenses in 2Q’24 increased 61% over 2Q’23, primarily due to the addition of TPG AG ▪ FRE margin stayed consistent in 2Q’24 compared to 2Q’23 at 44%; 2Q’24 LTM FRE margin of 45% Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. See the Reconciliations and Disclosures Section of this presentation for reconciliations of Non-GAAP to the most comparable GAAP measures and adjustment descriptions. 1. Catch-up management fees totaled $12 million and $25 million for 2Q’23 and 2Q’24, respectively. Fee-Related Earnings Management Fees by Platform(1) ($M) ($M) +61% Capital Growth Impact TPG AG Credit +62% TPG AG Real Estate Real Estate Market Solutions Fee-Related Earnings"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 9 $96 $207 2Q’23 2Q’24 $184 $387 2Q’23 YTD 2Q’24 YTD Distributable Earnings ▪ After-tax DE increased from $96 million in 2Q’23 to $207 million for 2Q’24, primarily due to an increase in Fee-Related Earnings and realized investment income and other, net After-Tax DE ($M) Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. See the Reconciliations and Disclosures Section of this presentation for reconciliations of Non-GAAP to the most comparable GAAP measures and adjustment descriptions. Distributable Earnings Mix FRE All Other Sources of Pre-tax DE 96% 4% 91% 9% 1Q’24 2Q’24"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 10 Capital $18 Growth $3 Impact $16 TPG AG Credit $15 TPG AG Real Estate $4 Real Estate $1 2Q’24 YTD Realized Performance Allocations, Net Growth $3 Impact $4 TPG AG Credit $14 TPG AG Real Estate $4 Real Estate $1 ▪ Realized performance allocations, net were $26 million in 2Q’24, primarily driven by MMDL IV in TPG AG Credit, Rise Climate in the Impact platform, Growth Capital Partners I in TPG AG Real Estate, and TTAD I in the Growth platform ▪ Realized performance allocations, net for 2Q’24 YTD were $58 million, primarily driven by Rise Climate in the Impact platform, TPG VIII and Asia VII in the Capital platform, MMDL IV in TPG AG Credit, Growth Capital Partners I in TPG AG Real Estate, and TTAD I in the Growth platform Realized Performance Allocations, Net 2Q’24 Realized Performance Allocations, Net ($M) ($M) Total $58 Total $26 Capital Growth Impact TPG AG Credit TPG AG Real Estate Real Estate Market Solutions Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 11 $419 $212 $103 $79 $86 $13 $17 Net Accrued Performance Net Accrued Performance by Fund Vintage ($M) 1Q’24 2Q’24 2018 & Prior $424 $444 2019 272 262 2020 114 103 2021 63 68 2022 42 51 2023 — 1 Total $915 $929 2Q’24 Net Accrued Performance Total $929 ($M) $915 +$40 ($26) $929 1Q’24 Value Creation & Other Realized Gains 2Q’24 2Q’24 Net Accrued Performance Walk ($M) Investment Appreciation / (Depreciation) Platform 2Q’24 2Q’24 YTD Capital 1.7% 3.2% Growth 1.9% 5.1% Impact 2.7% 4.5% TPG AG TPG AG Credit 2.7% 6.2% TPG AG Real Estate 0.2% 0.6% Real Estate 0.9% 4.5% Market Solutions(1) 0.0% 4.3% Loan Level Return CLOs 2Q’24 2Q’24 YTD U.S. CLOs 1.7% 4.1% European CLOs 2.1% 4.0% 1. Due to the nature of their strategy, Appreciation / (Depreciation) in the Market Solutions platform above includes information for certain funds as of March 31, 2024. Accordingly, those funds’ performance information does not reflect any fund activity for the quarter ended June 30, 2024 and therefore does not cover the same period presented for other funds. Any activity occurring during the quarter ended June 30, 2024 will be reflected in the performance information presented in future reporting. Capital Growth Impact TPG AG Credit TPG AG Real Estate Real Estate Market Solutions"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 12 GAAP Balance Sheet (Unaudited) ▪ Cash increased to $1.1 billion at the end of 2Q’24 primarily resulting from the net proceeds of our Senior and Subordinated notes offerings after repaying the outstanding borrowings under our Senior Unsecured Revolving Credit Facility and Senior Unsecured Term Loan; the Senior and Subordinated notes offerings drove total debt obligations to $1.2 billion ▪ Investments increased $0.2 billion from $6.7 billion in 4Q’23 to $6.9 billion in 2Q’24 1. Includes TPG Inc. Class A and B common stock as well as additional paid-in-capital and retained earnings. ($ in thousands) 4Q’23 2Q’24 Assets Cash and cash equivalents $ 665,188 $ 1,121,009 Investments 6,724,112 6,938,373 Other assets 894,785 981,397 Intangible assets and goodwill 1,085,587 1,030,479 Total assets 9,369,672 10,071,258 Liabilities and equity Liabilities Debt obligations 945,052 1,229,379 Accrued performance allocation compensation 4,096,052 4,172,369 Other liabilities 967,434 1,363,294 Total liabilities 6,008,538 6,765,042 Equity TPG Inc.(1) 579,157 714,225 Other non-controlling interests 2,781,977 2,591,991 Total equity 3,361,134 3,306,216 Total liabilities and equity $ 9,369,672 $ 10,071,258"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 13 Non-GAAP Balance Sheet ▪ Cash and cash equivalents of $330 million at the end of 2Q’24 ▪ At the end of 2Q’24, our net debt(1) was $920 million and our undrawn Senior Unsecured Revolving Credit Facility capacity was $1.2 billion ▪ Our borrowings include Senior and Subordinated notes with a principal amount of $1.0 billion and securitized notes with a principal amount of $250 million (which are backed by $596 million in pledged assets as of 2Q’24) See the Reconciliations and Disclosures Section of this presentation for reconciliations of Non-GAAP to the most comparable GAAP measures and adjustment descriptions. 1. Net debt comprised of $1.3 billion in debt principal less $330 million of cash and cash equivalents. ($ in thousands) 4Q’23 2Q’24 Book Assets Cash and cash equivalents $ 105,480 $ 329,776 Net accrued performance 891,455 929,215 Investments in funds 877,802 926,129 Intangible assets and goodwill 1,007,899 959,897 Other assets 679,638 787,109 Total Book Assets 3,562,274 3,932,126 Book Liabilities Accounts payable, accrued expenses and other 296,147 459,830 Debt obligations 945,052 1,229,379 Total Book Liabilities 1,241,199 1,689,209 Net Book Value $ 2,321,075 $ 2,242,917"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating Metrics"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi015.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 15 $79 $137 $36 $38 $11 $12 $13 $14 $41 $14 $12 $12 $6 $6 2Q’23 2Q’24 $139 $229 $69 $72 $24 $27 $18 $19 $67 $18 $19 $17 $9 $8 2Q’23 2Q’24 Assets Under Management and Fee Earning AUM ▪ 2Q’24 AUM rose 65% over 2Q’23 to $229.0 billion, primarily driven by the acquisition of TPG AG in 4Q’23 ▪ Over the last twelve months capital raised totaled $23.2 billion, including $2.5 billion in TPG IX within the Capital platform and $2.1 billion in MMDL V within TPG AG Credit; realizations totaled $17.4 billion over the same period ▪ 2Q’24 FAUM increased 74% over 2Q’23 to $137.0 billion, primarily due to the addition of TPG AG Assets Under Management Fee Earning AUM ($B) ($B) +65% +74% Capital Growth Impact TPG AG Credit TPG AG Real Estate Real Estate Market Solutions Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi016.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 16 26% 35% 28% 2% 8% —% 20% 66% 6% 8% 21% 68% 2% 9% FAUM by Remaining Duration Assets Under Management and Fee Earning AUM Duration AUM by Duration at Inception For the grouping of years on duration, 0-4 Years represents a term equal to 4 years or less; 5-9 Years represents a term greater than 4 and less than or equal to 9; 10+ Years represents a term greater than 9. 1. Defined as the number of years between fund activation and contractual fund winddown, prior to any extensions, as of June 30, 2024. 2. Defined as the number of years between June 30, 2024 and contractual fund winddown, prior to any available extensions. ▪ At the end of 2Q’24, approximately 71% of our AUM and 70% of our FAUM was in perpetual or long-dated funds with a duration(1) of 10 or more years (prior to any available extensions) ▪ At the end of 2Q’24, approximately 66% of our FAUM had a remaining lifespan(2) of 5 or more years, with 30% in vehicles that have 10 or more years remaining (including those considered perpetual) Total $229B Total $137B FAUM by Duration at Inception Total $137B ~70% ~66%~71% 0-4 Years 5-9 Years 10+ Years Perpetual Capital Subject to Periodic Redemption <1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi017.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 17 Capital $1.3 TPG AG Credit $5.0 TPG AG Real Estate $2.7 Capital $3.1 Growth $2.4 Impact $0.1 TPG AG Credit $7.1 TPG AG Real Estate $0.8 Real Estate $2.5 Market Solutions $0.4 ▪ AUM Subject to Fee Earning Growth totaled $25.4 billion at the end of 2Q’24 and includes AUM Not Yet Earning Fees (capital commitments that generate new management fees once deployed) and FAUM Subject to Step-Up (capital commitments that generate a higher rate of management fees as deployed or over time) ▪ At the end of 2Q’24, our AUM Subject to Fee Earning Growth represents 19% of FAUM and the potential fee- related revenue opportunity associated with both AUM Not Yet Earning Fees and FAUM Subject to Step-Up is estimated at approximately $146 million annually(1) AUM Not Yet Earning Fees FAUM Subject to Step-Up ($B) ($B) Total $16 Total $9 AUM Subject to Fee Earning Growth 1. Represents the sum of the gross revenue opportunity for each fund with AUM Subject to Fee Earning Growth. For AUM Not Yet Earnings Fees, this is calculated as the incremental amount of uncalled capital that would be called to achieve an expected range of total deployment, factoring in leverage where applicable, multiplied by the fee rate that we anticipate would be earned on such capital. For FAUM Subject to Step Up, this is calculated as the increase to management fees from either (i) certain funds whose fee rates increase as capital is deployed or (ii) certain funds where fee rates increase for certain investors over the life of the fund. Capital Growth Impact TPG AG Credit TPG AG Real Estate Real Estate Market Solutions"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi018.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 18 Capital $57.1 Growth $23.2 Impact $16.3 TPG AG Credit $44.0 TPG AG Real Estate $8.2 Real Estate $3.7 Market Solutions $5.9 Capital $57.3 Growth $23.6 Impact $17.2 TPG AG Credit $57.7 TPG AG Real Estate $18.3 Real Estate $17.0 Market Solutions $6.9 ▪ Performance Eligible AUM refers to AUM that is currently producing, or may eventually produce, performance revenues, and totaled $198.0 billion, or 86% of total AUM, at the end of 2Q’24 ▪ Performance Generating AUM refers to AUM that is currently producing performance revenues, and totaled $158.3 billion, or 69% of total AUM, at the end of 2Q’24 Performance Eligible AUM Performance Generating AUM ($B) ($B) Total $198 Total $158 Performance Eligible and Generating AUM Capital Growth Impact TPG AG Credit TPG AG Real Estate Real Estate Market Solutions"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi019.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 19 AUM Rollforward Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. 1. Outflows represent redemptions and withdrawals. 2. Changes in Investment Value and Other consists of changes in fair value, capital invested, available capital, and net fund-level asset related leverage activity plus other investment activities. ▪ AUM increased 2% during 2Q’24 and $90.3 billion, or 65%, over the last twelve months ▪ The AUM change in 2Q’24 was primarily driven by capital raised of $6.3 billion and net increases in investment value and other of $5.1 billion, partially offset by realizations totaling $5.4 billion ▪ AUM growth for the last twelve months, outside the Acquisition, was primarily driven by $23.2 billion of capital raised, including $9.6 billion in the Capital platform and $7.3 billion in TPG AG Credit, partially offset by $17.4 billion of realizations Three Months Ended June 30, 2024 TPG Angelo Gordon ($ in millions) Capital Growth Impact Credit Real Estate Real Estate Market Solutions Total AUM Balance as of Beginning of Period $ 71,418 $ 27,316 $ 19,175 $ 61,316 $ 18,555 $ 17,567 $ 8,246 $ 223,593 Capital Raised 888 222 113 4,513 334 36 193 6,299 Realizations (1,308) (1,061) (280) (1,740) (576) (301) (97) (5,363) Outflows(1) — — — (109) — — (535) (644) Changes in Investment Value and Other(2) 760 193 342 3,506 (63) 20 331 5,089 AUM as of end of period $ 71,758 $ 26,670 $ 19,350 $ 67,486 $ 18,250 $ 17,322 $ 8,138 $ 228,974 Twelve Months Ended June 30, 2024 TPG Angelo Gordon ($ in millions) Capital Growth Impact Credit Real Estate Real Estate Market Solutions Total AUM Balance as of Beginning of Period $ 68,906 $ 24,179 $ 17,683 $ — $ — $ 18,959 $ 8,905 $ 138,632 Acquisition — — — 57,390 17,915 — — 75,305 Capital Raised 9,593 2,826 587 7,341 1,336 774 763 23,220 Realizations (7,871) (1,673) (1,015) (3,825) (1,372) (1,272) (398) (17,426) Outflows(1) — — — (309) — — (1,708) (2,017) Changes in Investment Value and Other(2) 1,129 1,338 2,095 6,890 370 (1,140) 577 11,259 AUM as of end of period $ 71,758 $ 26,670 $ 19,350 $ 67,486 $ 18,250 $ 17,322 $ 8,138 $ 228,974"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi020.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 20 FAUM Rollforward Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. 1. Fee Earning Capital Raised represents capital raised by our funds for which management fees calculated based on commitments or subscriptions were activated during the period. 2. Net Change in Investment Activity includes capital called during the period, net of return of capital distributions and changes in net asset value of hedge funds. It also includes adjustments related to funds with a fee structure based on the cost or value of investments. 3. Outflows represent redemptions and withdrawals. 4. Reduction in Fee Base represents decreases in the fee basis for funds where the investment or commitment fee period has expired, and the fee base has reduced from commitment base to actively invested capital. It also includes reductions for funds that are no longer fee paying. ▪ FAUM held steady in 2Q’24, with fee earning capital raised of $1.4 billion, offset by outflows of $0.6 billion and net change in investment activity totaling $0.6 billion ▪ In the last twelve months FAUM increased 74%; outside the Acquisition, this increase was primarily driven by fee earning capital raised of $10.0 billion, partially offset by outflows of $1.9 billion and reductions in fee bases of certain funds totaling $1.7 billion Three Months Ended June 30, 2024 TPG Angelo Gordon ($ in millions) Capital Growth Impact Credit Real Estate Real Estate Market Solutions Total FAUM Balance as of Beginning of Period $ 38,877 $ 12,214 $ 13,648 $ 40,930 $ 14,017 $ 11,539 $ 5,734 $ 136,959 Fee Earning Capital Raised(1) 334 210 — 310 334 — 188 1,376 Net Change in Investment Activity(2) (982) (60) (24) (40) 45 206 273 (583) Outflows(3) — — — (102) — — (518) (619) Reduction in Fee Base of Certain Funds(4) (30) — (38) — (78) — — (146) FAUM as of end of period $ 38,200 $ 12,364 $ 13,586 $ 41,099 $ 14,317 $ 11,744 $ 5,677 $ 136,987 Twelve Months Ended June 30, 2024 TPG Angelo Gordon ($ in millions) Capital Growth Impact Credit Real Estate Real Estate Market Solutions Total FAUM Balance as of Beginning of Period $ 36,090 $ 11,233 $ 13,283 $ — $ — $ 12,029 $ 5,985 $ 78,620 Acquisition — — — 38,319 13,305 — — 51,624 Fee Earning Capital Raised(1) 5,187 1,818 745 759 771 10 756 10,046 Net Change in Investment Activity(2) (3,048) 172 (28) 2,319 320 59 581 375 Outflows(3) — — — (298) — — (1,645) (1,943) Reduction in Fee Base of Certain Funds(4) (30) (858) (414) — (79) (354) — (1,735) FAUM as of end of period $ 38,200 $ 12,364 $ 13,586 $ 41,099 $ 14,317 $ 11,744 $ 5,677 $ 136,987"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi021.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 21 Other Operating Metrics Capital Raised 2Q’23 2Q’24 2Q’23 YTD 2Q’24 YTD Capital $ 622 $ 888 $ 1,645 $ 2,191 Growth 106 222 504 657 Impact 291 113 651 191 TPG AG TPG AG Credit — 4,513 — 6,647 TPG AG Real Estate — 334 — 966 Real Estate 204 36 255 36 Market Solutions 233 193 426 271 Total $ 1,456 $ 6,299 $ 3,481 $ 10,959 ▪ We have invested approximately $31.2 billion during the last twelve months with $53.2 billion of capital available for deployment at the end of 2Q’24 Available Capital 2Q’23 2Q’24 Capital $ 19,252 $ 17,078 Growth 4,406 4,605 Impact 6,443 4,602 TPG AG TPG AG Credit — 11,215 TPG AG Real Estate — 7,280 Real Estate 8,688 6,786 Market Solutions 1,825 1,671 Total $ 40,614 $ 53,237 Capital Invested 2Q’23 2Q’24 2Q’23 YTD 2Q’24 YTD Capital $ 1,448 $ 1,178 $ 1,789 $ 1,949 Growth 131 567 373 1,060 Impact 531 87 1,692 483 TPG AG TPG AG Credit — 4,459 — 7,577 TPG AG Real Estate — 585 — 1,103 Real Estate 276 608 639 1,672 Market Solutions 459 131 603 240 Total $ 2,845 $ 7,615 $ 5,096 $ 14,084 Realizations 2Q’23 2Q’24 2Q’23 YTD 2Q’24 YTD Capital $ 422 $ 1,308 $ 1,613 $ 3,213 Growth 145 1,061 378 1,301 Impact 148 280 205 919 TPG AG TPG AG Credit — 1,740 — 3,184 TPG AG Real Estate — 576 — 1,079 Real Estate 153 301 796 364 Market Solutions 55 97 66 188 Total $ 923 $ 5,363 $ 3,058 $ 10,248 (All tables in $M) Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi022.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Details"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi023.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 23 GAAP and Non-GAAP Performance Allocations 1. Includes certain TPG Operating Group Excluded entities whose performance allocations are not a component of net income attributable to TPG following the Reorganization; however, the TPG general partner entities continue to be consolidated by us. We transferred the rights to the performance allocations the TPG Operating Group historically would have received to RemainCo on December 31, 2021. As such, net income available to controlling interest holders will be zero for each of the TPG Operating Group Excluded entities beginning January 1, 2022. 2. Non-GAAP adjustments represent the exclusion of performance allocations that are not attributable to the TPG Operating Group Common Unit holders. Three Months Ended June 30, 2024 GAAP Less: GAAP GAAP Less: Non-GAAP Non-GAAP ($ in thousands) Total(1) Unrealized Realized Adjustments(2) Realized Capital $ 84,025 $ 84,025 $ — $ — $ — Growth 42,975 29,169 13,806 10,901 2,905 Impact 38,309 18,036 20,273 15,995 4,278 TPG AG TPG AG Credit 74,777 5,601 69,176 55,322 13,854 TPG AG Real Estate (14,067) (37,503) 23,436 19,395 4,041 Real Estate (15,789) (23,253) 7,464 6,563 901 Market Solutions (9,353) (9,353) — — — Total $ 200,877 $ 66,722 $ 134,155 $ 108,176 $ 25,979 Six Months Ended June 30, 2024 GAAP Less: GAAP GAAP Less: Non-GAAP Non-GAAP ($ in thousands) Total(1) Unrealized Realized Adjustments(2) Realized Capital $ 154,599 $ 67,695 $ 86,904 $ 68,631 $ 18,273 Growth 149,596 135,790 13,806 10,901 2,905 Impact 59,038 (16,279) 75,317 59,421 15,896 TPG AG TPG AG Credit 176,505 100,377 76,128 60,658 15,470 TPG AG Real Estate (35,968) (59,630) 23,662 19,576 4,086 Real Estate 11,103 (46,041) 57,144 56,243 901 Market Solutions (24,353) (24,353) — — — Total $ 490,520 $ 157,559 $ 332,961 $ 275,430 $ 57,531"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi024.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 24 GAAP and Non-GAAP Net Accrued Performance As of March 31, 2024 TPG Angelo Gordon ($ in millions) Capital Growth Impact Credit Real Estate Real Estate Market Solutions Total GAAP Total $ 2,667 $ 1,526 $ 508 $ 388 $ 488 $ 102 $ 76 $ 5,755 Less: Excluded Assets(1) 61 285 — — — 17 — 363 Less: Non-GAAP Adjustments(2) 2,201 1,040 408 312 395 68 53 4,477 Non-GAAP Total $ 405 $ 201 $ 100 $ 76 $ 93 $ 17 $ 23 $ 915 1. The TPG Operating Group Excluded entities’ performance allocations are not a component of net income attributable to TPG following the Reorganization; however, the TPG general partner entities continue to be consolidated by us. We transferred the rights to the performance allocations the TPG Operating Group historically would have received to RemainCo on December 31, 2021. As such, net income available to controlling interest holders will be zero for each of the TPG Operating Group Excluded entities beginning January 1, 2022. 2. Non-GAAP adjustments represent the exclusion of performance allocations that are not attributable to the TPG Operating Group Common Unit holders. As of June 30, 2024 TPG Angelo Gordon ($ in millions) Capital Growth Impact Credit Real Estate Real Estate Market Solutions Total GAAP Total $ 2,750 $ 1,556 $ 526 $ 395 $ 450 $ 79 $ 66 $ 5,822 Less: Excluded Assets(1) 59 266 — — — 14 — 339 Less: Non-GAAP Adjustments(2) 2,272 1,078 423 316 364 52 49 4,554 Non-GAAP Total $ 419 $ 212 $ 103 $ 79 $ 86 $ 13 $ 17 $ 929"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi025.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 25 Participating Shares Outstanding (shares) 3/31/2024 Net Change 6/30/2024 Net Change Estimated Record Date 8/16/2024(1) TPG Inc. Diluted Shares Outstanding Class A common stock outstanding 100,726,778 2,086,558 102,813,336 58,393 102,871,729 Common Units exchangeable into Class A common stock 263,952,639 (1,998,593) 261,954,046 — 261,954,046 Diluted Class A common stock outstanding 364,679,417 87,965 364,767,382 58,393 364,825,775 Restricted Stock Units Special Purpose Awards(2) 16,935,280 (196,381) 16,738,899 Ordinary Service Awards 7,114,727 252,877 7,367,604 Total participating shares outstanding(3) 388,729,424 144,461 388,873,885 1. For the purposes of calculating our per share metrics, estimated record date share count as of our earnings announcement is used given our dividend is based on our After-tax DE and all holders of Class A common stock at record date will be entitled to our dividend. 2. Includes 16,667 Restricted Stock Units that have vested, but have not yet been settled. 3. Excludes Executive Special Purpose Market Condition and Ordinary Performance Condition Awards, which are not considered participating as they either accrue dividends to be paid only upon vesting or do not participate in dividends."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi026.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 26 FRE, After-Tax DE, and Dividends Per Class A Common Stock ▪ FRE attributable to TPG Inc. of $0.55 per share for 2Q’24 and $1.05 per share for 2Q’24 YTD ▪ After-tax DE attributable to TPG Inc. of $0.49 per share for 2Q’24, and $0.98 per share for 2Q’24 YTD ▪ Declared dividend of $0.42 per share for 2Q’24 on August 6, 2024, with a record date of August 16, 2024 and payable date of August 30, 2024; dividends declared total $0.83 per share for 2Q’24 YTD ($ in thousands, except share and per share amounts) 1Q’24 2Q’24 After-tax Distributable Earnings attributable to TPG Inc. Class A common stockholders Pre-tax Distributable Earnings $ 189,006 $ 220,759 Less: subsidiary-level income taxes(3) (7,086) (3,399) Distributable Earnings before corporate income taxes 181,920 217,360 Percent to TPG Inc. 28% 28% TPG Inc. Distributable Earnings before corporate income taxes 50,279 61,290 Less: corporate income taxes attributable to TPG Inc.(3) (1,295) (10,721) TPG Inc. After-tax Distributable Earnings 48,984 50,569 Estimated Class A common stock outstanding at Record Date(2) 100,814,743 102,871,729 TPG Inc. After-tax Distributable Earnings per Class A common stock 0.49 0.49 Target dividend policy 85% 85% Dividend per Class A common stock $ 0.41 $ 0.42 Note: TPG Inc. effective DE corporate income tax rate 2.6% 17.5% 1. Fee-Related Earnings does not include income tax expense. 2. For the purposes of calculating our per share metrics, estimated record date share count as of our earnings announcement is used given our dividend is based on our After-tax DE and all holders of Class A common stock at record date will be entitled to our dividend. 3. Total income taxes consist of subsidiary-level income taxes at the TPG Operating Group level and corporate income taxes borne by TPG Inc. ($ in thousands) 1Q’24 2Q’24 Subsidiary-level income taxes $ 7,086 $ 3,399 Corporate income taxes 1,295 10,721 Total income taxes $ 8,381 $ 14,120 ($ in thousands, except share and per share amounts) 1Q’24 2Q’24 Fee-Related Earnings attributable to TPG Inc. Class A common stockholders Total Fee-Related Earnings(1) $ 182,371 $ 201,264 Percent to TPG Inc. 28% 28% TPG Inc. Fee-Related Earnings 50,404 56,751 Estimated Class A common stock outstanding at Record Date(2) 100,814,743 102,871,729 TPG Inc. Fee-Related Earnings per Class A common stock $ 0.50 $ 0.55"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi027.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 27 Equity-Based Compensation Summary ($ in millions, except for share and per share amounts, as of June 30, 2024) Category Units Outstanding Compensation Expense QTD Compensation Expense YTD Unrecognized Compensation Expense Remaining Recognition Period(1) Other Awards: Legacy Equity, IPO-Related and Acquisition Awards(2) N/A $ 162.7 $ 328.7 $ 1,894.8 1.0 - 4.5 years Restricted Stock Units: Special Purpose Awards(3) 16,738,899 33.5 67.8 401.5 3.7 years Ordinary Service Awards 7,367,604 21.4 42.3 219.5 2.7 years Total 24,106,503 217.6 438.8 2,515.8 Less: Non-employee portion of Awards(4) (179,182) (0.9) (1.8) Add: Market / Performance Condition Awards(5) 4,843,401 7.8 11.3 Add: Other(6) N/A 3.0 7.2 Total Statement of Operations Equity-based compensation $ 227.5 $ 455.5 1. Represents the weighted average remaining recognition period across outstanding Restricted Stock Unit grants. 2. Represents units granted in TPG Partner Holdings, RemainCo Partner Holdings, and other awards granted in conjunction with the IPO. Also includes unvested common units in TPG Operating Group granted in conjunction with the Acquisition. 3. Includes 16,667 Restricted Stock Units that have vested, but have not yet been settled. 4. Considered a General, Administrative and Other expense for GAAP purposes. 5. Market and Performance Condition Awards are not considered participating; these Awards either do not participate in dividends or accrue dividends only to be paid upon vesting. 6. Represents units granted in TPG RE Finance Trust, Inc. and AG Mortgage Investment Trust, Inc. ▪ Equity-based compensation related to TPG Inc. Ordinary Service Awards totaled $21 million in 2Q’24; the total unrecognized compensation expense related to these Awards amounted to $220 million at the end of 2Q’24, and is expected to be recognized over the next 2.7 years(1)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi028.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 28 Fund Performance Metrics These fund performance metrics do not include co-investment vehicles, SMAs or certain other legacy or discontinued funds. Additionally, these fund performances metrics exclude the firm’s CLOs and real estate investment trusts. Past performance is not indicative of future results. See notes on the following pages. ($ in millions, as of 6/30/24) Vintage Capital Capital Realized Unrealized Total Gross Gross Net Net Fund Year(1) Committed(2) Invested(3) Value(4) Value(5) Value(6) IRR(7) MoM(7) IRR(8) MoM(9) Platform: Capital Capital Funds Air Partners 1993 $ 64 $ 64 $ 697 $ — $ 697 81% 10.9x 73% 8.9x TPG I 1994 721 696 3,095 — 3,095 47% 4.4x 36% 3.5x TPG II 1997 2,500 2,554 5,010 — 5,010 13% 2.0x 10% 1.7x TPG III 1999 4,497 3,718 12,360 — 12,360 34% 3.3x 26% 2.6x TPG IV 2003 5,800 6,157 13,733 — 13,733 20% 2.2x 15% 1.9x TPG V 2006 15,372 15,564 22,071 1 22,072 6% 1.4x 5% 1.4x TPG VI 2008 18,873 19,220 33,356 206 33,562 14% 1.7x 10% 1.5x TPG VII 2015 10,495 10,215 20,183 4,547 24,730 26% 2.4x 20% 2.0x TPG VIII 2019 11,505 10,713 3,986 14,942 18,928 31% 1.7x 20% 1.5x TPG IX 2022 12,014 5,799 7 6,873 6,880 54% 1.3x 20% 1.1x Capital Funds 81,841 74,700 114,498 26,569 141,067 23% 1.9x 15% 1.6x Asia Funds Asia I 1994 96 78 71 — 71 (3%) 0.9x (10%) 0.7x Asia II 1998 392 764 1,669 — 1,669 17% 2.2x 14% 1.9x Asia III 2000 724 623 3,316 — 3,316 46% 5.3x 31% 3.8x Asia IV 2005 1,561 1,603 4,089 — 4,089 23% 2.6x 17% 2.1x Asia V 2007 3,841 3,257 5,436 134 5,570 10% 1.7x 6% 1.4x Asia VI 2012 3,270 3,285 3,543 3,301 6,844 14% 2.1x 10% 1.7x Asia VII 2017 4,630 4,526 3,096 4,438 7,534 17% 1.6x 10% 1.4x Asia VIII 2022 5,259 2,093 — 2,681 2,681 72% 1.3x 25% 1.1x Asia Funds 19,773 16,229 21,220 10,554 31,774 20% 2.0x 14% 1.6x Healthcare Funds THP I 2019 2,704 2,405 882 2,861 3,743 25% 1.5x 14% 1.3x THP II 2022 3,576 1,121 2 1,433 1,435 66% 1.3x 24% 1.1x Healthcare Funds 6,280 3,526 884 4,294 5,178 27% 1.5x 15% 1.3x Continuation Vehicles TPG AAF 2021 1,317 1,314 2,720 — 2,720 43% 2.1x 37% 1.9x TPG AION 2021 207 207 — 178 178 (5%) 0.9x (6%) 0.8x Continuation Vehicles $ 1,524 $ 1,521 $ 2,720 $ 178 $ 2,898 36% 1.9x 30% 1.7x"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi029.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 29 Fund Performance Metrics (Cont’d) These fund performance metrics do not include co-investment vehicles, SMAs or certain other legacy or discontinued funds. Additionally, these fund performances metrics exclude the firm’s CLOs and real estate investment trusts. Past performance is not indicative of future results. See notes on the following pages. ($ in millions, as of 6/30/24) Vintage Capital Capital Realized Unrealized Total Gross Gross Net Net Fund Year(1) Committed(2) Invested(3) Value(4) Value(5) Value(6) IRR(7) MoM(7) IRR(8) MoM(9) Platform: Growth Growth Funds STAR 2007 $ 1,264 $ 1,259 $ 1,865 $ 39 $ 1,904 13% 1.5x 6% 1.3x Growth II 2011 2,041 2,185 4,741 603 5,344 21% 2.6x 16% 2.0x Growth III 2015 3,128 3,377 4,780 2,259 7,039 25% 2.0x 17% 1.7x Growth IV 2017 3,739 3,622 2,296 4,888 7,184 21% 1.9x 15% 1.6x Gator 2019 726 686 661 618 1,279 29% 1.9x 23% 1.6x Growth V 2020 3,558 3,258 518 4,583 5,101 25% 1.6x 16% 1.3x Growth VI 2023 1,739 592 — 656 656 NM NM NM NM Growth Funds 16,195 14,979 14,861 13,646 28,507 20% 1.9x 14% 1.6x Tech Adjacencies Funds TTAD I 2018 1,574 1,497 1,178 1,470 2,648 23% 1.7x 17% 1.5x TTAD II 2021 3,198 2,173 78 2,593 2,671 18% 1.3x 12% 1.2x Tech Adjacencies Funds 4,772 3,670 1,256 4,063 5,319 21% 1.5x 16% 1.4x TDM 2017 1,326 576 — 1,053 1,053 16% 1.8x 12% 1.6x LSI 2023 367 98 — 104 104 NM NM NM NM Platform: Impact The Rise Funds Rise I 2017 2,106 2,005 1,320 2,481 3,801 19% 1.9x 12% 1.5x Rise II 2020 2,176 2,008 239 2,779 3,018 20% 1.5x 13% 1.3x Rise III 2022 2,700 1,201 12 1,559 1,571 63% 1.4x 21% 1.1x The Rise Funds 6,982 5,214 1,571 6,819 8,390 20% 1.6x 12% 1.4x TSI 2018 333 133 368 — 368 35% 2.8x 25% 2.1x Evercare 2019 621 442 32 400 432 (1%) 1.0x (5%) 0.8x Rise Climate 2021 7,268 4,655 928 5,508 6,436 39% 1.5x 20% 1.2x TPG NEXT(11) 2023 $ 510 $ 3 $ — $ 3 $ 3 NM NM NM NM"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi030.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 30 Fund Performance Metrics (Cont’d) These fund performance metrics do not include co-investment vehicles, SMAs or certain other legacy or discontinued funds. Additionally, these fund performances metrics exclude the firm’s CLOs and real estate investment trusts. Past performance is not indicative of future results. See notes on the following pages. ($ in millions, as of 6/30/24) Vintage Capital Capital Realized Unrealized Total Gross Gross Net Net Fund Year(1) Committed(2) Invested(3) Value(4) Value(5) Value(6) IRR(7) MoM(7) IRR(8) MoM(9) Platform: Real Estate TPG Real Estate Partners TREP II 2014 $ 2,065 $ 2,213 $ 3,537 $ 41 $ 3,578 28% 1.7x 18% 1.5x TREP III 2018 3,722 4,205 2,753 2,681 5,434 14% 1.4x 9% 1.2x TREP IV 2022 6,820 2,707 224 2,566 2,790 0% 1.0x (29%) 0.8x TPG Real Estate Partners 12,607 9,125 6,514 5,288 11,802 20% 1.4x 11% 1.2x TAC+ 2021 1,797 979 98 895 993 0% 1.0x (1%) 1.0x TRECO 2024 378 335 164 179 343 NM NM NM NM Platform: Market Solutions NewQuest Funds NewQuest I(11) 2011 390 291 767 — 767 48% 3.2x 37% 2.3x NewQuest II(11) 2013 310 342 666 90 756 25% 2.3x 19% 1.8x NewQuest III(11) 2016 541 543 424 410 834 11% 1.5x 8% 1.3x NewQuest IV(11) 2020 1,000 942 133 1,133 1,266 16% 1.3x 8% 1.2x NewQuest V(11) 2022 667 308 46 419 465 90% 1.7x 67% 1.5x NewQuest Funds 2,908 2,426 2,036 2,052 4,088 34% 1.8x 22% 1.5x TGS(11) 2022 819 273 — 374 374 NM 2.6x NM 2.4x Platform: TPG Angelo Gordon Credit Solutions Credit Solutions Credit Solutions I 2019 1,805 1,801 1,797 862 2,659 17% 1.5x 12% 1.4x Credit Solutions I Dislocation A 2020 909 602 795 — 795 34% 1.3x 27% 1.3x Credit Solutions I Dislocation B 2020 308 176 211 — 211 28% 1.2x 21% 1.2x Credit Solutions II 2021 3,134 2,559 568 2,462 3,030 15% 1.2x 11% 1.1x Credit Solutions II Dislocation A 2022 1,310 868 629 391 1,020 22% 1.2x 16% 1.1x Credit Solutions III 1,058 — — — — NM NM NM NM Credit Solutions 8,524 6,006 4,000 3,715 7,715 18% 1.3x 13% 1.2x Essential Housing Essential Housing I 2020 642 456 547 31 578 15% 1.3x 12% 1.2x Essential Housing II 2021 2,534 1,071 203 1,056 1,259 15% 1.2x 11% 1.1x Essential Housing III 2024 1,285 59 — 52 52 NM NM NM NM Essential Housing $ 4,461 $ 1,586 $ 750 $ 1,139 $ 1,889 15% 1.2x 12% 1.2x"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi031.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 31 Fund Performance Metrics (Cont’d) These fund performance metrics do not include co-investment vehicles, SMAs or certain other legacy or discontinued funds. Additionally, these fund performances metrics exclude the firm’s CLOs and real estate investment trusts. Past performance is not indicative of future results. See notes on the following pages. ($ in millions, as of 6/30/24) Vintage Capital Capital Realized Unrealized Total Gross Gross Net Net Fund Year(1) Committed(2) Invested(3) Value(4) Value(5) Value(6) IRR(7) MoM(7) IRR(8) MoM(9) Structured Credit & Specialty Finance ABC Fund 2021 $ 1,005 $ 864 $ 54 $ 966 $ 1,020 18% 1.2x 14% 1.1x Structured Credit & Specialty Finance 1,005 864 54 966 1,020 18% 1.2x 14% 1.1x Middle Market Direct Lending(12) MMDL I 2015 594 572 846 — 846 14% 1.6x 10% 1.4x MMDL II 2016 1,580 1,563 1,712 608 2,320 14% 1.7x 11% 1.5x MMDL III 2018 2,751 2,548 2,085 1,570 3,655 14% 1.6x 10% 1.4x MMDL IV 2020 2,671 2,586 632 2,731 3,363 16% 1.4x 12% 1.3x MMDL IV Annex 2021 797 767 119 790 909 15% 1.3x 11% 1.2x MMDL V 2022 3,924 874 72 925 997 18% 1.2x 13% 1.2x Middle Market Direct Lending 12,317 8,910 5,466 6,624 12,090 14% 1.5x 11% 1.4x U.S. Real Estate Realty Realty I 1994 30 30 65 — 65 27% 2.2x 20% 1.9x Realty II 1995 33 33 81 — 81 31% 2.4x 22% 2.2x Realty III 1997 61 94 120 — 120 5% 1.3x 3% 1.3x Realty IV 1999 255 332 492 — 492 11% 1.5x 8% 1.5x Realty V 2001 333 344 582 — 582 32% 1.7x 26% 1.6x Realty VI 2005 514 558 657 — 657 5% 1.2x 3% 1.1x Realty VII 2007 1,257 1,675 2,543 1 2,544 17% 1.7x 12% 1.5x Realty VIII 2011 1,265 2,135 2,766 163 2,929 16% 1.7x 11% 1.4x Realty IX 2015 1,329 1,978 2,219 264 2,483 8% 1.4x 5% 1.3x Realty Value X 2018 2,775 4,389 3,625 1,983 5,608 17% 1.4x 11% 1.3x Realty Value XI 2022 2,589 1,610 498 1,236 1,734 10% 1.1x (5%) 1.0x Realty 10,441 13,178 13,648 3,647 17,295 15% 1.5x 10% 1.3x Core Plus Realty Core Plus Realty I 2003 534 532 876 — 876 20% 1.6x 18% 1.5x Core Plus Realty II 2006 794 1,112 1,456 — 1,456 11% 1.4x 8% 1.3x Core Plus Realty III 2011 1,014 1,420 2,231 — 2,231 23% 1.8x 19% 1.6x Core Plus Realty IV 2015 1,308 2,006 1,991 330 2,321 5% 1.2x 3% 1.1x Core Plus Realty $ 3,650 $ 5,070 $ 6,554 $ 330 $ 6,884 15% 1.5x 11% 1.4x"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi032.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 32 Fund Performance Metrics (Cont’d) These fund performance metrics do not include co-investment vehicles, SMAs or certain other legacy or discontinued funds. Additionally, these fund performances metrics exclude the firm’s CLOs and real estate investment trusts. Past performance is not indicative of future results. See notes on the following pages. ($ in millions, as of 6/30/24) Vintage Capital Capital Realized Unrealized Total Gross Gross Net Net Fund Year(1) Committed(2) Invested(3) Value(4) Value(5) Value(6) IRR(7) MoM(7) IRR(8) MoM(9) Asia Real Estate Asia Realty Asia Realty I 2006 $ 526 $ 506 $ 645 $ — $ 645 6% 1.3x 3% 1.2x Asia Realty II 2010 616 602 1,071 — 1,071 24% 1.8x 16% 1.6x Asia Realty III 2015 847 858 973 266 1,239 14% 1.5x 9% 1.3x Asia Realty IV 2018 1,315 1,259 995 894 1,889 19% 1.5x 12% 1.3x Asia Realty V 2022 2,007 503 23 555 578 36% 1.1x 1% 1.0x Asia Realty 5,311 3,728 3,707 1,715 5,422 13% 1.5x 9% 1.3x Japan Value Japan Value(13) 2023 417 80 — 77 77 NM NM NM NM Japan Value 417 80 — 77 77 NM NM NM NM Europe Real Estate Europe Realty I 2014 570 1,187 1,710 15 1,725 24% 2.0x 17% 1.7x Europe Realty II 2017 843 1,686 1,575 695 2,270 10% 1.4x 8% 1.4x Europe Realty III(14) 2019 1,515 1,874 595 1,390 1,985 14% 1.3x 9% 1.2x Europe Realty IV(14) 2023 1,451 98 — 108 108 NM NM NM NM Europe Realty 4,379 4,845 3,880 2,208 6,088 16% 1.6x 11% 1.4x Net Lease Net Lease Realty I 2006 159 209 457 — 457 18% 2.4x 14% 2.2x Net Lease Realty II 2010 559 1,060 1,854 — 1,854 16% 2.4x 11% 2.0x Net Lease Realty III 2013 1,026 2,362 2,325 943 3,268 12% 1.9x 8% 1.6x Net Lease Realty IV 2019 997 1,900 1,218 913 2,131 10% 1.2x 6% 1.1x Net Lease Realty V 194 — — — — NM NM NM NM Net Lease $ 2,935 $ 5,531 $ 5,854 $ 1,856 $ 7,710 14% 1.8x 10% 1.5x"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi033.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 33 Significant Perpetual Funds These fund performance metrics do not include co-investment vehicles, SMAs or certain other legacy or discontinued funds. Additionally, these fund performances metrics exclude the firm’s CLOs and real estate investment trusts. Past performance is not indicative of future results. See notes on the following pages. ($ in millions, as of 6/30/24) Vintage AUM Total Fund Year(1) Return(10) Platform: Market Solutions TPEP Long/Short(15) 2013 $ 1,802 122% TPEP Long Only(16) 2013 1,209 39% Platform: TPG Angelo Gordon Credit Solutions Corporate Credit Opportunities(17) 1988 331 10% Structured Credit & Specialty Finance MVP Fund(18) 2009 6,346 12% Middle Market Direct Lending TCAP(19) 2022 2,545 9% MMDL Evergreen 2022 948 10% MMDL Offshore Evergreen 2024 142 NM Multi-Strategy Super Fund(18) 1993 $ 928 9%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi034.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 34 Fund Performance Metrics Notes “NM” signifies that the relevant data would not be meaningful. Performance metrics are generally deemed “NM” when, among other reasons, there has been limited time since initial investment. Performance metrics generally exclude amounts attributable to the fund’s general partner, its affiliated entities and “friends-of-the-firm” entities that generally pay no or reduced management fees and performance allocations. These metrics also represent an average of returns for all included investors and do not necessarily reflect the actual return of any particular investor. Amounts shown are in U.S. dollars. Unless otherwise noted, when an investment is made in another currency, (i) Capital Invested is calculated using the exchange rate at the time of the investment, (ii) Unrealized Value is calculated using the exchange rate at the period end and (iii) Realized Value reflects actual U.S. dollar proceeds to the fund. 1) Vintage Year represents the year in which the fund consummated its first investment (or, if earlier, received its first capital contributions from investors). For platforms other than TPG Angelo Gordon, for consistency with prior reporting, however, the Vintage Year classification of any fund that held its initial closing before 2018 represents the year of such fund’s initial closing. 2) Capital Committed represents the amount of inception to date commitments a particular fund has received. Certain of our newer vintage funds are actively fundraising and capital committed is subject to change. 3) Capital Invested represents cash outlays by the fund for its investments, whether funded through investor capital contributions or borrowing under the fund’s credit facility. For TPG AG Credit funds, Capital Invested represents inception-to-date investor contributed capital net of returned contributions, excluding borrowings under the fund’s credit facility. 4) Realized Value represents total cash received or earned by the fund in respect of such investment or investments through the period end, including all interest, dividends and other proceeds. For TPG AG Credit funds, Realized Value represents inception-to-date capital distributed by the fund, including any performance distributions net of recalled distributions, if any. 5) Unrealized Value, with respect to an investment in a publicly traded security, is based on the closing market price of the security as of the period end on the principal exchange on which the security trades, as adjusted by the general partner for any restrictions on disposition. Unrealized Value, with respect to an investment that is not a publicly traded security, represents the general partner’s estimate of the unrealized fair value of the fund’s investment. Unrealized Value, with respect to TPG AG Credit funds, represents the ending NAV for such fund, which is the period end ending capital balances of the investors and general partner. Valuations entail a degree of subjectivity, and therefore actual value may differ from such estimated value and these differences may be material and adverse. Except as otherwise noted, valuations are as of the period end. 6) Total Value is the sum of Realized Value and Unrealized Value of investments. 7) Gross IRR and Gross MoM represent investment level performance by the fund and incorporates the impact of fund level credit facilities, to the extent utilized by the fund. Gross IRR and Gross MoM are calculated by adjusting Net IRR and Net MoM to generally approximate investor performance metrics excluding management fees, fund expenses (other than interest expense and other fees arising from amounts borrowed under the fund’s credit facility to fund investments) and performance allocations. Gross IRR is the discount rate at which (i) the present value of all Capital Invested in an investment or investments is equal to (ii) the present value of all realized and unrealized returns from such investment or investments. Gross IRR and Gross MoM for TPG AG Credit funds are calculated at the fund level and do not consider the impact of credit facilities and exclude fund expenses. 8) Net IRR represents the compound annualized return rate (i.e., the implied discount rate) of a fund, which is calculated using investor cash flows in the fund, including cash received from capital called from investors, cash distributed to investors and the investors’ ending capital balances as of the period end. Net IRR is the discount rate at which (i) the present value of all capital contributed by investors to the fund (which excludes, for the avoidance of doubt, any amounts borrowed by the fund in lieu of calling capital) is equal to (ii) the present value of all cash distributed to investors and the investors’ ending capital balances. 9) Net MoM represents the multiple-of-money on contributions to the fund by investors. Net MoM is calculated as the sum of cash distributed to investors and the investors’ ending capital balances as of the period end, divided by the amount of capital contributed to the fund by investors (which amount excludes, for the avoidance of doubt, any amounts borrowed by the fund in lieu of calling capital). 10) Total Return represents net performance data for investors (excluding certain classes/series with special fee arrangements), net of all expenses including actual quarterly management fees payable by the fund and the accrual of carried interest to the general partner. 11) Unless otherwise specified, the fund performance information presented above for certain funds is, due to the nature of their strategy, as of March 31, 2024. 12) Each Middle Market Direct Lending fund is comprised of four vehicles: onshore levered, onshore unlevered, offshore levered and offshore unlevered. Capital Committed, Capital Invested, Realized Value, Unrealized Value and Total Value for each fund are presented on a consolidated basis across the four vehicles. Performance metrics are presented only for the onshore levered vehicle of each fund. The Net IRRs and Net MoMs for TPG AG Middle Market Direct Lending funds on a consolidated basis were: (i) for the onshore unlevered vehicles, 7% and 1.3x, (ii) for the offshore levered vehicles, 10% and 1.3x and (iii) for the offshore unlevered vehicles, 7% and 1.2x."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi035.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 35 Fund Performance Metrics Notes (Cont’d) 13) Japanese-Yen denominated fund. Commitments, Capital Invested and Realized Value are calculated using the exchange rate at the end of the quarter in which the relevant commitment was made or transaction occurred, as applicable. 14) Includes Euro denominated fund entity with Commitments, Capital Invested and Realized Value calculated using the exchange rate at the end of the quarter in which the relevant commitment was made or transaction occurred, as applicable. Performance metrics only reflects capital committed in U.S. dollars, which represents the majority of capital committed to each fund. Net IRR and Net MoM were: (i) for the euro-denominated vehicle of Europe Realty III, 8% and 1.2x and (ii) for the euro-denominated vehicle of Europe Realty IV, NM and NM. 15) These performance estimates represent the composite performance of TPG Public Equity Partners, LP and TPG Public Equity Partners Master Fund, L.P., adjusted as described below. The performance estimates are based on an investment in TPG Public Equity Partners, LP made on September 1, 2013, the date of TPEP’s inception, with the performance estimates for the period from January 1, 2016 to present being based on an investment in TPG Public Equity Partners Master Fund, L.P. made through TPG Public Equity Partners-A, L.P., the “onshore feeder.” As of June 30, 2024, TPEP Long/Short had estimated inception-to-date gross returns of 167% and net returns of 122%. Gross performance figures (i) are presented after any investment-related expenses, net interest, other expenses and the reinvestment of dividends; (ii) include any gains or losses from “new issue” securities; and (iii) are adjusted for illustration purposes to reflect the reduction of a hypothetical 1.5% annual management fee. 16) These performance estimates represent performance for TPEP Long Only and are based on an investment in TPEP Long Only made on May 1, 2019, the date of TPEP Long Only’s inception, through TPG Public Equity Partners Long Opportunities-A, L.P., the “onshore feeder.” As of June 30, 2024, TPEP Long Only had estimated inception-to-date gross returns of 40% and net returns of 39%. Gross performance figures are presented after any investment-related expenses, a 1% annual management fee, net interest, other expenses and the reinvestment of dividends, and include any gains or losses from “new issue” securities. 17) Total Return includes onshore investors participating directly through the master fund and investors through the offshore vehicle. Total Return for the offshore vehicle was 4%. 18) Total Returns for onshore funds only. Total Returns for the offshore vehicles were: (i) for the MVP Fund, 11% and (ii) for the Super Fund, 8%. 19) TCAP launched on January 1, 2023. Total Return includes AGTB Private BDC, which commenced operations on May 10, 2022 and merged with TCAP on January 1, 2023. Total Return is calculated as the change in NAV per share during the period, plus distributions per share (assuming dividends and distributions are reinvested) divided by the beginning NAV per share. Inception-to-date figures for Class I, Class D, and Class S shares use the initial offering price per share as the beginning NAV. Total Return presented is for Class I and is prior to the impact of any potential upfront placement fees. An investment in TCAP is subject to a maximum upfront placement fee of 1.5% for Class D and 3.5% for Class S, which would reduce the amount of capital available for investment, if applicable. There are no upfront placement fees for Class I shares. Total Return has been annualized for periods less than or greater than one year. On July 28, 2023, TCAP completed its merger with AGTB where TCAP paid cash consideration for each share of common stock of AGTB. TCAP will continue as the surviving company. At the completion of the merger, AGTB’s final Net IRR was 6.1%."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi036.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 36 GAAP Statements of Operations Expanded (Unaudited) ($ in thousands) 2Q’23 3Q’23 4Q’23 1Q’24 2Q’24 2Q’24 YTD 2Q’24 LTM Revenues Fees and other $ 327,103 $ 366,149 $ 529,903 $ 512,295 $ 522,800 $ 1,035,095 $ 1,931,147 Capital allocation-based income (loss) 276,171 (205,794) 453,234 311,776 221,394 533,170 780,610 Total revenues 603,274 160,355 983,137 824,071 744,194 1,568,265 2,711,757 Expenses Compensation and benefits: Cash-based compensation and benefits 115,667 123,160 188,099 206,336 191,486 397,822 709,081 Equity-based compensation 155,166 136,650 205,813 227,908 227,542 455,450 797,913 Performance allocation compensation 172,077 (120,770) 319,028 196,434 133,753 330,187 528,445 Total compensation and benefits 442,910 139,040 712,940 630,678 552,781 1,183,459 2,035,439 General, administrative and other 104,544 101,596 171,561 151,632 170,184 321,816 594,973 Depreciation and amortization 8,304 7,701 23,446 32,965 32,079 65,044 96,191 Interest expense 8,518 7,792 14,800 21,122 21,502 42,624 65,216 Expenses of consolidated Public SPACs 453 81 — — — — 81 Total expenses 564,729 256,210 922,747 836,397 776,546 1,612,943 2,791,900 Investment income (loss) Net gains (losses) from investment activities 846 (4,203) (4,895) (5,198) (16,652) (21,850) (30,948) Interest, dividends and other 9,983 10,994 13,674 12,904 13,816 26,720 51,388 Investment and other income of consolidated Public SPACs 3,801 2,596 — — — — 2,596 Total investment income (loss) 14,630 9,387 8,779 7,706 (2,836) 4,870 23,036 Income (loss) before income taxes 53,175 (86,468) 69,169 (4,620) (35,188) (39,808) (57,107) Income tax expense 13,164 8,244 26,757 4,386 22,390 26,776 61,777 Net income (loss) 40,011 (94,712) 42,412 (9,006) (57,578) (66,584) (118,884) Net income attributable to redeemable equity in Public SPACs 5,367 5,148 — — — — 5,148 Net income (loss) attributable to non-controlling interests in TPG Operating Group (25,306) (49,556) 7,943 (55,037) (57,292) (112,329) (153,942) Net income (loss) attributable to other non-controlling interests 32,755 (64,971) 21,296 30,512 13,691 44,203 528 Net income attributable to TPG Inc. $ 27,195 $ 14,667 $ 13,173 $ 15,519 $ (13,977) $ 1,542 $ 29,382 Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi037.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 37 Non-GAAP Financial Measures Expanded Includes activity from TPG AG starting November 1, 2023, the date of the Acquisition. See the Reconciliations and Disclosures Section of this presentation for reconciliations of Non-GAAP to the most comparable GAAP measures and adjustment descriptions. ($ in thousands) 2Q’23 3Q’23 4Q’23 1Q’24 2Q’24 2Q’24 YTD 2Q’24 LTM Fee-Related Revenues Management fees $ 256,612 $ 278,503 $ 395,608 $ 402,684 $ 413,275 $ 815,959 $ 1,490,070 Fee-related performance revenues — — 1,642 3,875 4,485 8,360 10,002 Transaction, monitoring and other fees, net 16,864 30,892 55,285 34,155 34,146 68,301 154,478 Other income 12,256 11,947 12,192 10,494 7,090 17,584 41,723 Fee-Related Revenues 285,733 321,342 464,727 451,208 458,996 910,204 1,696,273 Fee-Related Expenses Cash-based compensation and benefits, net 95,888 99,605 156,622 181,683 164,746 346,429 602,656 Fee-related performance compensation — — 1,401 1,938 2,242 4,180 5,581 Operating expenses, net 64,415 65,670 81,153 85,216 90,744 175,960 322,783 Fee-Related Expenses 160,303 165,275 239,176 268,837 257,732 526,569 931,020 Fee-Related Earnings 125,430 156,067 225,551 182,371 201,264 383,635 765,253 Realized performance allocations, net 6,630 43,376 18,996 31,552 25,979 57,531 119,903 Realized investment income and other, net (22,762) 5,672 (24,976) (9,315) 5,910 (3,405) (22,709) Depreciation expense (1,213) (1,235) (3,010) (5,615) (4,722) (10,337) (14,582) Interest expense, net 816 2,706 (1,088) (9,987) (7,672) (17,659) (16,041) Distributable Earnings 108,901 206,586 215,473 189,006 220,759 409,765 831,824 Income taxes (12,662) (11,007) (9,826) (8,381) (14,120) (22,501) (43,334) After-Tax Distributable Earnings $ 96,240 $ 195,579 $ 205,647 $ 180,625 $ 206,639 $ 387,264 $ 788,490"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi038.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliations and Disclosures"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi039.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 39 GAAP to Non-GAAP Financial Measures Reconciliation ($ in thousands) 2Q’23 3Q’23 4Q’23 1Q’24 2Q’24 2Q’24 YTD 2Q’24 LTM GAAP Revenue $ 603,274 $ 160,355 $ 983,137 $ 824,071 $ 744,194 $ 1,568,265 $ 2,711,757 Capital-allocation based income (276,171) 205,794 (453,234) (311,776) (221,394) (533,170) (780,610) Expense reimbursements (40,105) (44,050) (57,150) (45,667) (50,227) (95,894) (197,094) Investment income and other (1,265) (757) (8,026) (15,420) (13,577) (28,997) (37,780) Fee-Related Revenues $ 285,733 $ 321,342 $ 464,727 $ 451,208 $ 458,996 $ 910,204 $ 1,696,273 GAAP Expenses $ 564,729 $ 256,210 $ 922,747 $ 836,397 $ 776,546 $ 1,612,943 $ 2,791,900 Depreciation and amortization expense (8,304) (7,701) (23,446) (32,965) (32,079) (65,044) (96,191) Interest expense (8,518) (7,792) (14,800) (21,122) (21,502) (42,624) (65,216) Expenses related to consolidated TPG Funds and Public SPACs (453) (81) — — — — (81) Expense reimbursements (40,105) (44,050) (57,150) (45,667) (50,227) (95,894) (197,094) Performance allocation compensation (172,077) 120,770 (319,028) (196,434) (133,753) (330,187) (528,445) Equity-based compensation (155,166) (136,650) (205,813) (227,908) (227,542) (455,450) (797,913) Acquisition success fees — — (20,000) — — — (20,000) Non-core expenses and other (19,803) (15,431) (43,334) (43,464) (53,711) (97,175) (155,940) Fee-Related Expenses $ 160,303 $ 165,275 $ 239,176 $ 268,837 $ 257,732 $ 526,569 $ 931,020 ($ in thousands) 2Q’23 3Q’23 4Q’23 1Q’24 2Q’24 2Q’24 YTD 2Q’24 LTM Net (loss) income $ 40,011 $ (94,712) $ 42,412 $ (9,006) $ (57,578) $ (66,584) $ (118,884) Net income attributable to redeemable interests in Public SPACs (5,367) (5,148) — — — — (5,148) Net income attributable to other non-controlling interests (32,755) 64,971 (21,296) (30,512) (13,691) (44,203) (528) Amortization expense 3,538 2,913 16,979 23,998 24,004 48,002 67,894 Equity-based compensation 154,564 137,896 204,648 225,422 225,919 451,341 793,885 Unrealized performance allocations, net (50,927) 68,244 (63,092) (24,481) (13,417) (37,898) (32,746) Unrealized investment income (12,655) 27,120 (16,951) (20,227) (5,344) (25,571) (15,402) Unrealized loss on derivatives (59) (66) — — — — (66) Income taxes 797 (3,068) 17,311 (4,178) 8,585 4,407 18,650 Acquisition success fees — — 20,000 — — — 20,000 Non-recurring and other (907) (2,571) 5,636 19,609 38,161 57,770 60,835 After-tax Distributable Earnings 96,240 195,579 205,647 180,625 206,639 387,264 788,490 Income taxes 12,662 11,007 9,826 8,381 14,120 22,501 43,334 Distributable Earnings 108,901 206,586 215,473 189,006 220,759 409,765 831,824 Realized performance allocations, net (6,630) (43,376) (18,996) (31,552) (25,979) (57,531) (119,903) Realized investment income and other, net 22,762 (5,672) 24,976 9,315 (5,910) 3,405 22,709 Depreciation expense 1,213 1,235 3,010 5,615 4,722 10,337 14,582 Interest expense, net (816) (2,706) 1,088 9,987 7,672 17,659 16,041 Fee-Related Earnings $ 125,430 $ 156,067 $ 225,551 $ 182,371 $ 201,264 $ 383,635 $ 765,253"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi040.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 40 GAAP to Non-GAAP Balance Sheet Reconciliation ($ in thousands) 4Q’23 2Q’24 Total GAAP Assets $ 9,369,672 $ 10,071,258 Impact of other consolidated entities Cash and cash equivalents (559,708) (791,233) Due from affiliates (346,910) (294,669) Investments (4,954,855) (5,083,029) Intangible assets and goodwill (77,688) (70,582) Other assets (285,406) (228,630) Subtotal for other consolidated entities (6,224,567) (6,468,143) Reclassification adjustments Restricted cash (13,183) (13,184) Due from affiliates (72,067) (20,284) Investments (1,769,257) (1,855,344) Net accrued performance 891,455 929,215 Investments in funds 877,802 926,129 Other assets 502,419 362,479 Subtotal for reclassification adjustments 417,169 329,011 Total Book Assets $ 3,562,274 $ 3,932,126 ($ in thousands) 4Q’23 2Q’24 Total GAAP Liabilities $ 6,008,538 $ 6,765,042 Impact of other consolidated entities Accounts payable and accrued expenses (167,235) (380,512) Due to affiliates (137,479) (126,378) Accrued performance allocation compensation (4,096,052) (4,172,369) Other liabilities (377,727) (376,925) Subtotal for other consolidated entities (4,778,493) (5,056,184) Reclassification adjustments Accounts payable and accrued expenses 291,586 436,623 Due to affiliates (5,696) (218,463) Other liabilities (274,736) (237,809) Subtotal for reclassification adjustments 11,154 (19,649) Total Book Liabilities $ 1,241,199 $ 1,689,209"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi041.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 41 Additional Information Dividend Policy Our current intention is to pay holders of our Class A common stock and nonvoting Class A common stock a quarterly dividend representing at least 85% of TPG Inc.’s share of distributable earnings attributable to the TPG Operating Group, subject to adjustment as determined by our board of directors and, until the Sunset, our Executive Committee to be necessary or appropriate to provide for the conduct of our business, to make appropriate investments in our business and funds, to comply with applicable law, any of our debt instruments or other agreements, or to provide for future cash requirements such as tax-related payments and clawback obligations. Although we expect to pay at least 85% of our DE as a dividend, the percentage of our DE paid out as a dividend could fall below that target minimum. All of the foregoing is subject to the further qualification that the declaration and payment of any dividends are at the sole discretion of our board of directors and, until the Sunset, our Executive Committee and the board of directors and Executive Committee may change our dividend policy at any time, including, without limitation, to reduce such dividends or even to eliminate such dividends entirely. Any future determination as to the declaration and payment of dividends, if any, will be at the discretion of our board of directors and, until the Sunset, our Executive Committee after taking into account various factors, including our business, operating results and financial condition, current and anticipated cash needs, plans for expansion and any legal or contractual limitations on our ability to pay dividends. Certain of our existing credit facilities include, and any financing arrangement that we enter into in the future may include restrictive covenants that limit our ability to pay dividends. In addition, the TPG Operating Group is generally prohibited under Delaware law from making a distribution to a limited partner to the extent that, at the time of the distribution, after giving effect to the distribution, liabilities of the TPG Operating Group (with certain exceptions) exceed the fair value of its assets. Subsidiaries of the TPG Operating Group are generally subject to similar legal limitations on their ability to make distributions to the TPG Operating Group. Non-GAAP Financial Measures In this presentation, we disclose non-GAAP financial measures, including Distributable Earnings (“DE”), After-tax DE, Fee-Related Earnings (“FRE”), Fee-Related Earnings margin (“FRE Margin”), fee-related revenues (“FRR”), and fee-related expenses. These measures are not financial measures under GAAP and should not be considered as substitutes for net income, revenues or total expenses, and they may not be comparable to similarly titled measures reported by other companies. These measures should be considered in addition to GAAP measures. We use these measures to assess the core operating performance of our business, and further definitions can be found on the following pages."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi042.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 42 Definitions Acquisition refers to the Company’s acquisition of Angelo Gordon and certain of its affiliates (collectively, “Angelo Gordon” or “AG,” and after the Acquisition, “TPG Angelo Gordon” or “TPG AG”). After-tax Distributable Earnings (“After-tax DE”) is a non-GAAP performance measure of our distributable earnings after reflecting the impact of income taxes. We use it to assess how income tax expense affects amounts available to be distributed to our Class A common stock holders and Common Unit holders. After-tax DE differs from U.S. GAAP net income computed in accordance with U.S. GAAP in that it does not include the items described in the definition of DE herein; however, unlike DE, it does reflect the impact of income taxes. Income taxes, for purposes of determining After-tax DE, represent the total U.S. GAAP income tax expense adjusted to include only the current tax expense (benefit) calculated on U.S. GAAP net income before income tax and includes the current payable under our Tax Receivable Agreement. Further, the current tax expense (benefit) utilized when determining After-tax DE reflects the benefit of deductions available to the Company on certain expense items that are excluded from the underlying calculation of DE, such as equity-based compensation charges. We believe that including the amount currently payable under the Tax Receivable Agreement and utilizing the current income tax expense (benefit), as described above, when determining After-tax DE is meaningful as it increases comparability between periods and more accurately reflects earnings that are available for distribution to shareholders. Assets Under Management (“AUM”) represents the sum of: i) fair value of the investments and financial instruments held by our private equity, credit and real estate funds (including fund-level asset-related leverage), other than as described below, as well as related co-investment vehicles managed or advised by us, plus the capital that we are entitled to call from investors in those funds and vehicles, pursuant to the terms of their respective capital commitments, net of outstanding leverage associated with subscription-related credit facilities, and including capital commitments to funds that have yet to commence their investment periods; ii) the gross amount of assets (including leverage where applicable) for our real estate investment trusts and BDCs; iii) the net asset value of certain of our hedge funds; iv) the aggregate par amount of collateral assets, including principal cash, for our collateralized loan obligation vehicles; and v) IPO proceeds held in trust, excluding interest, as well as forward purchase agreements and proceeds associated with the private investment in public equity related to our Public SPACs upon the consummation of a business combination. Our definition of AUM is not based on any definition of AUM that may be set forth in the agreements governing the investment funds that we manage, or calculated pursuant to any regulatory definitions. AUM Not Yet Earning Fees represents the amount of capital commitments to TPG’s funds and co-investment vehicles that has not yet been invested or considered active, and as this capital is invested or activated, the fee-paying portion will be included in FAUM. AUM Subject to Fee Earning Growth represents capital commitments that when deployed have the ability to grow our fees through earning new management fees (AUM Not Yet Earning Fees) or when management fees can be charged at a higher rate as capital is invested or for certain funds as management fee rates increase during the life of a fund (FAUM Subject to Step- Up). Available capital is the aggregate amount of unfunded capital commitments and recallable distributions that partners have committed to our funds and co-investment vehicles to fund future investments, as well as IPO and forward purchase agreement proceeds associated with our Public SPACs, and private investment in public equity commitments by investors upon the consummation of a business combination associated with our Public SPACs. Available capital is reduced for investments completed using fund-level subscription-related credit facilities. We believe this measure is useful to investors as it provides additional insight into the amount of capital that is available to our investment funds and co-investment vehicles to make future investments. Capital invested is the aggregate amount of capital invested during a given period by our investment funds, co-investment vehicles, and CLOs, as well as SPACs in conjunction with the completion of a business combination and increases in gross assets of certain perpetual funds. It excludes certain hedge fund activity, but includes investments made using investment financing arrangements like credit facilities, as applicable. We believe this measure is useful to investors as it measures capital deployment across the firm."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi043.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 43 Definitions (Cont’d) Capital raised is the aggregate amount of subscriptions and capital raised by our investment funds and co-investment vehicles during a given period, as well as the senior and subordinated notes issued through our CLOs and equity raised through our perpetual vehicles. We believe this measure is useful to investors as it measures access to capital across TPG and our ability to grow our management fee base. Catch-up fees, also known as out of period management fees, represent fees paid in any given period that are related to a prior period, usually due to a new limited partner coming into a fund in a subsequent close. Distributable Earnings (“DE”) is used to assess performance and amounts potentially available for distributions to partners. DE is derived from and reconciled to, but not equivalent to, its most directly comparable U.S. GAAP measure of net income. DE differs from U.S. GAAP net income computed in accordance with U.S. GAAP in that it does not include (i) unrealized performance allocations and related compensation expense, (ii) unrealized investment income, (iii) equity-based compensation expense, (iv) net income (loss) attributable to non-controlling interests in consolidated entities, or (v) certain other items, such as contingent reserves. Excluded Assets refers to the assets and economic entitlements transferred to RemainCo listed in Schedule A to the master contribution agreement entered into in connection with the Reorganization (as defined herein), which primarily include (i) minority interests in certain sponsors unaffiliated with TPG, (ii) the right to certain performance allocations in TPG funds, (iii) certain co-invest interests and (iv) cash. FAUM Subject to Step-Up represents capital raised within certain funds where the management fee rate increases once capital is invested or as a fund reaches a certain point in its life where the fee rate for certain investors increases. FAUM Subject to Step-Up is included within FAUM. Fee-Related Earnings (“FRE”) is a supplemental performance measure and is used to evaluate our business and make resource deployment and other operational decisions. FRE differs from net income computed in accordance with U.S. GAAP in that it adjusts for the items included in the calculation of DE and also adjusts to exclude (i) realized performance allocations and related compensation expense, (ii) realized investment income from investments and financial instruments, (iii) net interest (interest expense less interest income), (iv) depreciation, (v) amortization, and (vi) certain non-core income and expenses. We use FRE to measure the ability of our business to cover compensation and operating expenses from fee revenues other than capital allocation-based income. The use of FRE without consideration of the related U.S. GAAP measures is not adequate due to the adjustments described herein. Fee-Related Earnings margin (“FRE margin”) is defined as Fee-Related Earnings divided by fee-related revenues. Fee-related expenses is a component of FRE. Fee-related expenses differs from expenses computed in accordance with U.S. GAAP in that it is net of certain reimbursement arrangements and does not include performance allocation compensation. Fee-related expenses is used in management’s review of the business. Fee-related revenues (“FRR”) is a component of FRE. Fee-related revenues is comprised of (i) management fees, (ii) fee-related performance revenues, (iii) transaction, monitoring and other fees, net, and (iv) other income. Fee-related performance revenues refers to incentive fees from perpetual capital vehicles that are: (i) measured and expected to be received on a recurring basis and (ii) not dependent on realization events from the underlying investments. Fee-related revenues differs from revenue computed in accordance with U.S. GAAP in that it excludes certain reimbursement expense arrangements. Fee earning AUM (“FAUM”) represents only the AUM from which we are entitled to receive management fees. FAUM is the sum of all the individual fee bases that are used to calculate our management fees and differs from AUM in the following respects: (i) assets and commitments from which we are not entitled to receive a management fee are excluded (e.g., assets and commitments with respect to which we are entitled to receive only performance allocations or are otherwise not currently entitled to receive a management fee) and (ii) certain assets, primarily in our credit and real estate funds, have different methodologies for calculating management fees that are not based on the fair value of the respective funds’ underlying investments. We believe this measure is useful to investors as it provides additional insight into the capital base upon which we earn management fees. Our definition of FAUM is not based on any definition of AUM or FAUM that is set forth in the agreements governing the investment funds and products that we manage. Investment Appreciation / (Depreciation) represents fund appreciation for our private equity and real estate funds and gross returns for our credit funds. IPO refers to our initial public offering of Class A common stock of TPG Inc. that was completed on January 18, 2022. Loan Level Return, with respect to our CLOs, represents gross returns which are presented on a total return basis for invested assets held, excluding any financing costs or operating fees incurred and using a time-weighted return methodology. Returns over multiple periods are calculated by geometrically linking each period’s return over time."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "tpg2q24earningsreleasefi044.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG | 44 Definitions (Cont’d) Net accrued performance represents both unrealized and undistributed performance allocations and fee-related performance revenues resulting from our general partner interests in investment funds that we manage. We believe this measure is useful to investors as it provides additional insight into the accrued performance to which the TPG Operating Group Common Unit holders are expected to receive. Non-GAAP Financial Measures represent financial measures that are calculated and presented on the basis of methodologies other than in accordance with generally accepted accounting principles in the United States of America. These non-GAAP financial measures should be considered in addition to and not as a substitute for, or superior to, financial measures presented in accordance with U.S. GAAP. We use these measures to assess the core operating performance of our business. Operating profit margin is defined as U.S. GAAP net income divided by U.S. GAAP total revenue. Performance Eligible AUM refers to the AUM that is currently, or may eventually, produce performance allocations or fee-related performance revenues. All funds for which we are entitled to receive a performance allocation, incentive fee or fee-related performance revenue are included in Performance Eligible AUM. Performance Generating AUM refers to the AUM of funds we manage that are currently above their respective hurdle rate or preferred return, and profit of such funds are being allocated to, or earned by, us in accordance with the applicable limited partnership agreements or other governing agreements. Realizations represent distributions sourced from proceeds from the disposition of investments and current income, in addition to investment proceeds from Public SPACs in conjunction with the completion of a business combination. RemainCo refers to, collectively, Tarrant Remain Co I, L.P., a Delaware limited partnership, Tarrant Remain Co II, L.P., a Delaware limited partnership, and Tarrant Remain Co III, L.P., a Delaware limited partnership, which owns the Excluded Assets, and Tarrant Remain Co GP, LLC, a Delaware limited liability company serving as their general partner. Reorganization refers to the corporate reorganization, which included a corporate conversion of TPG Partners, LLC to a Delaware corporation named TPG Inc., in conjunction with the IPO. Unless the context suggests otherwise, references in this report to “TPG”, “the Company”, “we”, “us” and “our” refer (i) prior to the completion of the Reorganization and IPO to TPG Group Holdings SBS, L.P. and its consolidated subsidiaries and (ii) from and after the completion of the Reorganization and IPO to TPG Inc. and its consolidated subsidiaries. Total participating shares outstanding refers to the sum of (i) shares (Class A voting, Class A non-voting and TPG Operating Group Common Units) and (ii) share-based payment awards with non-forfeitable rights to dividends that benefit from the distribution of profits from TPG Operating Group at the end of any given period. This does not include shares or restricted stock units (i) whose dividends accrue to be paid on vesting or (ii) which do not participate in dividends. TPG Operating Group refers (i) for periods prior to giving effect to the Reorganization, to the TPG Operating Group partnerships and their respective consolidated subsidiaries; (ii) for periods beginning after giving effect to the Reorganization through November 1, 2023, (A) to the TPG Operating Group partnerships and their respective consolidated subsidiaries and (B) not to RemainCo and (iii) for periods after November 1, 2023, to TPG Operating Group II, L.P., a Delaware limited partnership, and its respective consolidated subsidiaries, including TPG Operating Group I, L.P. and TPG Operating Group III, L.P."
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "tpg2q24pressrelease.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "TPG Reports Second Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Total assets under management of $229 billion as of June 30, 2024, an increase of 65% compared to"
+    },
+    {
+      "type": "TitleElement",
+      "text": "$139 billion as of June 30, 2023"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP net loss attributable to TPG Inc. of $14 million for the second quarter ended June 30, 2024, with basic net loss per share of Class A common stock of $0.15"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fee-Related Earnings of $201 million for the second quarter ended June 30, 2024, an increase of 60%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "year-over-year, resulting in a Fee-Related Earnings margin of 44%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "After-tax Distributable Earnings of $207 million (or $0.49 per share of Class A common stock) for the second quarter ended June 30, 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Dividend of $0.42 per share of Class A common stock for the second quarter ended June 30, 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "San Francisco and Fort Worth, Texas – August 6, 2024 – TPG Inc. (NASDAQ: TPG), a leading global alternative asset management firm, reported its unaudited second quarter 2024 results. TPG issued a full detailed presentation of its second quarter ended June 30, 2024 results, which can be viewed through the Investor Relations section of TPG’s website at shareholders.tpg.com.“Our strong second quarter results reflect the accelerating momentum in our business as we continue to successfully scale and diversify,” said Jon Winkelried, Chief Executive Officer. “We finished the quarter with $229 billion of AUM across more than 30 differentiated investment strategies in private equity, credit, and real estate. Over the past year, we drove a step-function change in our growth profile and earnings power as a result of both organic and inorganic activity. Our firm is capitalizing on our expanded breadth to deliver strong investment performance for our clients and build long term value for our investors.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Dividend"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG has declared a quarterly dividend of $0.42 per share of Class A common stock to holders of record at the close of business on August 16, 2024, payable on August 30, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG will host a conference call and live webcast today at 11:00 am ET. It may be accessed by dialing (800) 245-3047 (US toll-free) or (203) 518-9765 (international), using the conference ID TPGQ224. The number should be dialed at least ten minutes prior to the start of the call. A simultaneous webcast will also be available and can be accessed through the Investor Relations section of TPG’s website at shareholders.tpg.com. A webcast replay will be made available on the Events page in the Investor Relations section of TPG’s website."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About TPG"
+    },
+    {
+      "type": "TextElement",
+      "text": "TPG is a leading global alternative asset management firm, founded in San Francisco in 1992, with $229 billion of assets under management and investment and operational teams around the world. TPG invests across a broadly diversified set of strategies, including private equity, impact, credit, real estate, and market solutions, and our unique strategy is driven by collaboration, innovation, and inclusion. Our teams combine deep product and sector experience with broad capabilities and expertise to develop differentiated insights and add value for our fund investors, portfolio companies, management teams, and communities."
+    },
+    {
+      "type": "TableElement",
+      "text": "ShareholdersMediaGary SteinLuke Barrett212-601-4750415-743-1550shareholders@tpg.commedia@tpg.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward Looking Statements; No Offers"
+    },
+    {
+      "type": "TextElement",
+      "text": "This document may contain “forward-looking” statements. Forward-looking statements can be identified by words such as “anticipates,” “intends,” “plans,” “seeks,” “believes,” “estimates,” “expects” and similar references to future periods, or by the inclusion of forecasts or projections. Examples of forward-looking statements include, but are not limited to, statements we make regarding the outlook for our future business and financial performance, estimated operational metrics, business strategy and plans and objectives of management for future operations, including, among other things, statements regarding expected growth, future capital expenditures, fund performance, dividends and dividend policy, and debt service obligations.Forward-looking statements are based on our current expectations and assumptions regarding our business, the economy and other future conditions. Because forward-looking statements relate to the future, by their nature, they are subject to inherent uncertainties, risks and changes in circumstances that are difficult to predict. As a result, our actual results may differ materially from those contemplated by any forward-looking statements. Important factors that could cause actual results to differ materially from those in the forward-looking statements include the inability to recognize the anticipated benefits of the acquisition of Angelo Gordon; unexpected costs related to the integration of the Angelo Gordon business and operations; our ability to manage growth and execute our business plan; and regional, national or global political, economic, business, competitive, market and regulatory conditions, among various other risks discussed in the Company’s SEC filings.For the reasons described above, we caution you against relying on any forward-looking statements, which should be read in conjunction with the other cautionary statements included elsewhere in this document and risk factors discussed from time to time in the Company’s filings with the SEC, which can be found at the SEC’s website at http://www.sec.gov. Any forward-looking statement in this document speaks only as of the date of this document. Factors or events that could cause our actual results to differ may emerge from time to time, and it is not possible for us to predict all of them. We undertake no obligation to update or revise any forward-looking statement after the date of this document, whether as a result of new information, future developments or otherwise, except as may be required by law. No recipient should, therefore, rely on these forward-looking statements as representing the views of the Company or its management as of any date subsequent to the date of the document.This document does not constitute an offer of any TPG Fund."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        5,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Shareholders",
+          "Shareholders",
+          "Shareholders",
+          "Media",
+          "Media",
+          "Media"
+        ],
+        [
+          "Gary Stein",
+          "Gary Stein",
+          "Gary Stein",
+          "Luke Barrett",
+          "Luke Barrett",
+          "Luke Barrett"
+        ],
+        [
+          "212-601-4750",
+          "212-601-4750",
+          "212-601-4750",
+          "415-743-1550",
+          "415-743-1550",
+          "415-743-1550"
+        ],
+        [
+          "shareholders@tpg.com",
+          "shareholders@tpg.com",
+          "shareholders@tpg.com",
+          "media@tpg.com",
+          "media@tpg.com",
+          "media@tpg.com"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 146.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue opportunity associated with both AUM Not Yet Earning Fees and FAUM Subject to Step-Up is estimated at approximately $146 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "44.540001",
+    "return_10d_pct": "9.8563",
+    "return_20d_pct": "13.5384",
+    "return_30d_pct": "9.4297",
+    "return_60d_pct": "35.0696",
+    "return_90d_pct": "36.6861"
+  },
+  "text_stats": {
+    "primary_text_len": 3751,
+    "exhibit_text_len": 91455,
+    "combined_text_len": 95208,
+    "semantic_text_len": 92937,
+    "table_count": 1,
+    "semantic_parse_status": "sec_parser"
+  }
+}

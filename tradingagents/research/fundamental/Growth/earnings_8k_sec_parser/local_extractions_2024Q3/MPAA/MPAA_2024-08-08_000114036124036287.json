@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MPAA",
+    "cik": "918251",
+    "event_date": "2024-08-08",
+    "event_accession": "0001140361-24-036287",
+    "primary_8k_doc": "ef20033577_8k.htm",
+    "exhibit_docs": [
+      "ef20033577_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MPAA_000114036124036287_ef20033577_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MPAA_000114036124036287_ef20033577_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MPAA",
+    "cik": "918251",
+    "entity_name": "MOTORCAR PARTS OF AMERICA, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "650308000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-11",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "7361000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-11",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1028565000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-11",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "60215000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-11",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-7938000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-11",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-44862000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-11",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.011319",
+    "operating_cash_flow_to_revenue": "-0.068986",
+    "assets_to_revenue": "1.581658",
+    "financing_cash_flow_to_revenue": "0.092595",
+    "investing_cash_flow_to_revenue": "-0.012207"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales increased 6.",
+      "Gross margin increased modestly to 17.",
+      "Gross margin for the fiscal 2025 first quarter increased to 17.",
+      "Gross margin for the fiscal 2025 first quarter was impacted by $3.",
+      "gross margins, gross profit and cash flow in the quarters ahead, supported by ongoing strategic actions throughout the entire organization, such as the realignment of resources, as previously noted.",
+      "net income as a measure of financial performance."
+    ],
+    "guidance_evidence": [
+      "Outlook Remains on Track LOS ANGELES, CA – August 8, 2024 – Motorcar Parts of America, Inc.",
+      "outlook supported by a strong competitive industry position and ongoing strategic initiatives to enhance profitability.",
+      "outlook and the company’s ability to further leverage its leadership position within the non-discretionary aftermarket parts market.",
+      "outlook.",
+      "expected annualized cost savings of approximately $7 million, which includes salary, infrastructure and other related operating expenses."
+    ],
+    "wave_or_demand_evidence": [
+      "demand.",
+      "customers' shelves 394,000 0.",
+      "ains on Track LOS ANGELES, CA – August 8, 2024 – Motorcar Parts of America, Inc.",
+      "ailed in Exhibit 2 .",
+      "ails.",
+      "ain optimistic about our year-over-year outlook and the company’s ability to further leverage its leadership position within the non-discretionary aftermarket parts market."
+    ],
+    "warning_or_risk_evidence": [
+      "delayed due to the onset of the Covid-19 pandemic, with expected annualized cost savings of approximately $7 million, which includes salary, infrastructure and other related operating expenses.",
+      "chargers, and diagnostic testing equipment utilized in imported and domestic passenger vehicles, light trucks, and heavy-duty applications.",
+      "loss from lease liabilities and forward contracts.",
+      "loss compared with the prior year and a $1.",
+      "decreased by $644,000 to $20.",
+      "loss for the fiscal 2025 first quarter was $18."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "5.890000",
+    "return_10d_pct": "3.0560",
+    "return_20d_pct": "8.6587",
+    "return_30d_pct": "0.1698",
+    "return_60d_pct": "3.9049",
+    "return_90d_pct": "1.8676"
+  },
+  "text_stats": {
+    "primary_text_len": 3493,
+    "exhibit_text_len": 17217,
+    "combined_text_len": 20712
+  }
+}

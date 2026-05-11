@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "INTA",
+    "cik": "1565687",
+    "event_date": "2024-08-13",
+    "event_accession": "0000950170-24-096209",
+    "primary_8k_doc": "inta-20240813.htm",
+    "exhibit_docs": [
+      "inta-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/INTA_000095017024096209_inta-20240813.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/INTA_000095017024096209_inta-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "INTA",
+    "cik": "1565687",
+    "entity_name": "Intapp, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "256254000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-57955000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "628907000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "-10327000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-6430000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "16834000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.226162",
+    "operating_cash_flow_to_revenue": "0.065693",
+    "assets_to_revenue": "2.454233",
+    "financing_cash_flow_to_revenue": "-0.0403",
+    "investing_cash_flow_to_revenue": "-0.025092"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $85.",
+      "revenue of $114.",
+      "revenue was $85.",
+      "revenue was $114.",
+      "revenue was $316.",
+      "revenue was $430."
+    ],
+    "guidance_evidence": [
+      "outlook for the first quarter and fiscal year 2025.",
+      "Outlook Fiscal 2025 Outlook First Quarter Fiscal Year (in millions, except per share data) SaaS revenue $75.",
+      "guidance provided above constitutes forward-looking statements and actual results may differ materially.",
+      "outlook for the first quarter and fiscal year 2025, growth strategy, business plans and market position.",
+      "outlook” or the negative of these terms, and similar expressions intended to identify forward-looking statements.",
+      "Guidance for non-GAAP financial measures excludes stock-based compensation expense and amortization of intangible assets."
+    ],
+    "wave_or_demand_evidence": [
+      "CUSTOMER magazine and TMC; and the 2024 Drawdown Award for Investor Relations Technology.",
+      "Cloud annual recurring revenue (ARR) of $296.",
+      "AI-powered solutions for professionals at advisory, capital markets, and legal firms, announced financial results for its fourth quarter and fiscal year ended June 30, 2024.",
+      "AI to the work of their professionals,” said John Hall, CEO of Intapp.",
+      "AI solutions, expanding our client base across the globe, forging new partnerships, and growing our clients in the cloud.",
+      "Cloud ARR was $296."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment, change in fair value of contingent consideration, transaction costs, restructuring and other costs and the income tax effect of non-GAAP adjustments.",
+      "loss of $(12.",
+      "loss was $(0.",
+      "loss of $(11.",
+      "loss per share was $(0.",
+      "loss per share of $(0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 85,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-14",
+    "entry_open": "38.000000",
+    "return_10d_pct": "16.1842",
+    "return_20d_pct": "16.7895",
+    "return_30d_pct": "18.0000",
+    "return_60d_pct": "27.7895",
+    "return_90d_pct": "55.7105"
+  },
+  "text_stats": {
+    "primary_text_len": 3503,
+    "exhibit_text_len": 25405,
+    "combined_text_len": 28910
+  }
+}

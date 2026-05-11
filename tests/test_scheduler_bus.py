@@ -37,7 +37,7 @@ def _make_bus(tmp_path: Path) -> AgentBus:
     return AgentBus(db_path=tmp_path / "test_bus.db")
 
 
-def _make_signal(signal_type=SignalType.QUEUE_ITEM_ADDED, from_agent="Scout",
+def _make_signal(signal_type=SignalType.SCOUT_HANDOFF_READY, from_agent="Scout",
                  to_agent=None, payload=None) -> AgentSignal:
     return AgentSignal(
         signal_type=signal_type,
@@ -156,7 +156,7 @@ def test_no_double_consume(tmp_path):
 
 def test_consume_signal_type_filter(tmp_path):
     bus = _make_bus(tmp_path)
-    bus.publish(_make_signal(signal_type=SignalType.QUEUE_ITEM_ADDED, to_agent="AgentY"))
+    bus.publish(_make_signal(signal_type=SignalType.SCOUT_HANDOFF_READY, to_agent="AgentY"))
     bus.publish(_make_signal(signal_type=SignalType.RISK_FLAG, to_agent="AgentY"))
 
     # Only consume RISK_FLAG
@@ -164,10 +164,10 @@ def test_consume_signal_type_filter(tmp_path):
     assert len(results) == 1
     assert results[0].signal_type == SignalType.RISK_FLAG
 
-    # The QUEUE_ITEM_ADDED is still pending
+    # The scout handoff signal is still pending
     remaining = bus.consume("AgentY")
     assert len(remaining) == 1
-    assert remaining[0].signal_type == SignalType.QUEUE_ITEM_ADDED
+    assert remaining[0].signal_type == SignalType.SCOUT_HANDOFF_READY
 
 
 # ---------------------------------------------------------------------------

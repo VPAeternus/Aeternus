@@ -1,0 +1,1692 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GT",
+    "cik": "42582",
+    "event_date": "2024-07-31",
+    "event_accession": "0001193125-24-190019",
+    "primary_8k_doc": "d874126d8k.htm",
+    "exhibit_docs": [
+      "d874126dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GT_000119312524190019_d874126d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GT_000119312524190019_d874126dex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GT",
+    "cik": "42582",
+    "entity_name": "The Goodyear Tire & Rubber Company",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4941000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-101000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "21582000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "1075000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-456000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-775000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.020441",
+    "operating_cash_flow_to_revenue": "-0.156851",
+    "assets_to_revenue": "4.367942",
+    "financing_cash_flow_to_revenue": "0.217567",
+    "investing_cash_flow_to_revenue": "-0.092289"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were $4.",
+      "sales of $2.",
+      "sales of $1.",
+      "sales increased 1.",
+      "net income of $54 million (19 cents per share) Segment operating income of $339 million, up $215 million compared to the second quarter of 2023 Americas segment operating income of $241 million, SOI margin of 8.",
+      "operating income of $63 million, SOI margin of 10."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "aid Chief Executive Officer and President Mark Stewart.",
+      "aim recoveries, net of related expenses, and $50 million from the 2023 negative impact of the Tupelo storm.",
+      "ain significant items on the 2024 and 2023 periods.",
+      "aim recoveries, primarily related to the 2023 Tupelo storm.",
+      "ain on insurance recoveries and the Goodyear Forward plan.",
+      "aim recoveries, net of related expenses, resulting from a fire that impacted its Debica, Poland factory."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker underlying trends in the industry.",
+      "charges of $19 million.",
+      "charges of $72 million and a $51 million benefit from asset and other sales.",
+      "charges of $41 million, and a benefit of $86 million from asset and other sales.",
+      "charges of $104 million and a $52 million benefit from asset and other sales.",
+      "loss of $208 million (73 cents per share loss) a year ago."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d874126dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "NEWS RELEASE Second quarter Goodyear net income of $85 million (30 cents per share); adjusted net income of $54 million (19 cents per share) Segment operating income of $339 million, up $215 million compared to the second quarter of 2023 Americas segment operating income of $241 million, SOI margin of 8.9% Asia Pacific segment operating income of $63 million, SOI margin of 10.6% FOR IMMEDIATE RELEASE Goodyear Forward transformation initiatives delivered $90 million > GLOBAL HEADQUARTERS: 200 INNOVATION WAY, AKRON, OHIO 44316-0001 > MEDIA WEBSITE: WWW.GOODYEARNEWSROOM.COM AKRON, Ohio, July 31, 2024  The Goodyear Tire & Rubber Company reported second quarter 2024 results today and the company will host an investor call tomorrow morning at 8:00 a.m. eastern time led by Mark Stewart, Goodyears chief executive officer and president, and Christina Zamarro, the companys executive vice president and chief financial officer. The management team will share insights on second quarter performance and progress on the Goodyear Forward transformation plan. > MEDIA CONTACT: DOUG GRASSIAN 330.796.3855 DOUG_GRASSIAN@GOODYEAR.COM > ANALYST CONTACT: GREG SHANK 330.796.5008 GREG_SHANK@GOODYEAR.COM Additional earnings materials have been posted to Goodyears investor relations website at http://investor.goodyear.com. We demonstrated clear progress on our Goodyear Forward plan in the second quarter, achieving significant margin expansion and securing a definitive agreement to sell our Off-the-Road business, said Chief Executive Officer and President Mark Stewart. Our associates are dedicated to delivering Goodyear Forward, and their commitment is especially critical as we look to a second half affected by weaker underlying trends in the industry. I continue to be confident in our ability to deliver Goodyear Forward and 10% segment operating income margin by the end of next year. Goodyears second quarter 2024 sales were $4.6 billion with tire unit volumes totaling 40.1 million. Second quarter 2024 Goodyear net income was $85 million (30 cents per share) compared to a Goodyear net loss of $208 million (73 cents per share loss) a year ago. The year over year improvement was driven by increases in segment operating income. The second quarter of 2024 included several significant items including, on a pre-tax basis, a benefit of $96 million from asset and other sales, Goodyear Forward costs of $40 million and rationalization charges of $19 million. The second quarter of 2023 included pre-tax rationalization charges of $72 million and a $51 million benefit from asset and other sales. Goodyear Forward costs are comprised of advisory, legal and consulting fees and costs associated with planned asset sales. Second quarter 2024 adjusted net income was $54 million compared to an adjusted net loss of $97 million in the prior years quarter. Adjusted earnings per share was $0.19, compared to a loss of $0.34 in the prior years quarter. Per share amounts are diluted."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "1"
+    },
+    {
+      "type": "TextElement",
+      "text": "The company reported segment operating income of $339 million in the second quarter of 2024, up $215 million from a year ago. The increase in segment operating income reflects benefits of $99 million from price/mix versus raw materials, $90 million from the Goodyear Forward transformation plan, $63 million from insurance claim recoveries, net of related expenses, and $50 million from the 2023 negative impact of the Tupelo storm. These were partly offset by the impact of lower tire volume of $41 million and unfavorable fixed overhead absorption of $35 million. Year-to-Date Results Goodyears sales for the first six months of 2024 were $9.1 billion with tire unit volumes totaling 80.5 million. First half 2024 Goodyear net income was $28 million (10 cents per share) compared to a Goodyear net loss of $309 million ($1.08 per share loss) a year ago. The year over year improvement was driven by increases in segment operating income. The first half of 2024 also included several significant items including, on a pre-tax basis, Goodyear Forward costs of $67 million, rationalization charges of $41 million, and a benefit of $86 million from asset and other sales. The first half of 2023 included pre-tax rationalization charges of $104 million and a $52 million benefit from asset and other sales. First half 2024 adjusted net income was $83 million compared to an adjusted net loss of $179 million in the prior year. Adjusted earnings per share was $0.29, compared to a loss of $0.63 in the prior year. The company reported segment operating income of $586 million for the first six months of 2024, up $337 million from a year ago. The increase in segment operating income reflects benefits of $227 million from price/mix versus raw materials, $162 million from the Goodyear Forward transformation plan, $52 million from insurance claim recoveries, net of related expenses, and $50 million from the 2023 negative impact of the Tupelo storm. These were partially offset by lower tire volume of $69 million, a net headwind of $58 million from higher inflationary costs, and unfavorable fixed overhead absorption of $33 million. First half 2024 total cash flows from operating activities was a use of $518 million compared with a use of $434 million in the first half of 2023. Reconciliation of Non-GAAP Financial Measures See Non-GAAP Financial Measures and Financial Tables for further explanation and reconciliation tables for historical Total Segment Operating Income and Margin; Adjusted Net Income (Loss); and Adjusted Diluted Earnings per Share, reflecting the impact of certain significant items on the 2024 and 2023 periods."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Business Segment Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "AMERICAS"
+    },
+    {
+      "type": "TableElement",
+      "text": "Second Quarter Six Months (In millions) 2024 2023 2024 2023 Tire Units 19.6 20.8 38.6 41.3 Net Sales $ 2,697 $ 2,939 $ 5,285 $ 5,806 Segment Operating Income 241 103 420 182 Segment Operating Margin 8.9 % 3.5 % 7.9 % 3.1 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "Americas second quarter 2024 sales of $2.7 billion were down 8.2% driven by lower replacement volumes and unfavorable price/mix due to continuing weakness in commercial truck and contractual price adjustments. Tire unit volume decreased 5.9%. Replacement tire unit volume decreased 8.6% given industry member declines in the U.S., a transitory impact from distribution changes in Latin America, and flooding in Brazil earlier in the quarter. The U.S. industry non-members, generally representing low-cost imported product, grew significantly in the quarter. Original equipment unit volumes were up 6.7% compared to the second quarter of 2023. Second quarter 2024 segment operating income of $241 million increased $138 million from the prior years quarter. The increase was driven by benefits from the execution of Goodyear Forward initiatives, favorable net price/mix versus raw material costs, the 2023 negative impact of the Tupelo storm, and lower transportation costs. These benefits were partly offset by lower volume. Segment operating income also included $20 million of insurance claim recoveries, primarily related to the 2023 Tupelo storm."
+    },
+    {
+      "type": "TitleElement",
+      "text": "EMEA"
+    },
+    {
+      "type": "TableElement",
+      "text": "Second Quarter Six Months (In millions) 2024 2023 2024 2023 Tire Units 11.6 11.8 24.1 25.0 Net Sales $ 1,279 $ 1,341 $ 2,626 $ 2,833 Segment Operating Income (Loss) 35 (19 ) 43 (11 ) Segment Operating Margin 2.7 % (1.4 %) 1.6 % (0.4 %)"
+    },
+    {
+      "type": "TextElement",
+      "text": "EMEAs second quarter 2024 sales of $1.3 billion were down 4.6% primarily driven by the negative impact of changes in foreign currency exchange rates. Tire unit volume decreased 0.9%. Replacement tire unit volume decreased 1.4% due to lower volume in Eastern Europe, particularly in Turkey. Original equipment unit volumes were flat. Second quarter 2024 segment operating income of $35 million was up $54 million compared to the prior years quarter. Segment operating income benefitted from favorable net price/mix versus raw material costs, a net gain on insurance recoveries and the Goodyear Forward plan. These benefits were offset by unfavorable fixed overhead absorption and higher net inflationary costs. Segment operating income also included $43 million of insurance claim recoveries, net of related expenses, resulting from a fire that impacted its Debica, Poland factory."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ASIA PACIFIC"
+    },
+    {
+      "type": "TableElement",
+      "text": "Second Quarter Six Months (In millions) 2024 2023 2024 2023 Tire Units 8.9 8.2 17.8 16.3 Net Sales $ 594 $ 587 $ 1,196 $ 1,169 Segment Operating Income 63 40 123 78 Segment Operating Margin 10.6 % 6.8 % 10.3 % 6.7 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "Asia Pacifics second quarter 2024 sales increased 1.2% to $594 million, driven by higher original equipment volume. Tire unit volume increased 7.8%. Original equipment unit volume increased 32.2%, driven by EV fitments in China. Replacement tire unit volume decreased 8.9%, reflecting the impact of the Australia transformation and industry softness in China. Second quarter 2024 segment operating income of $63 million was up $23 million from prior year driven by higher volume, favorable net price/mix versus raw material costs, and benefits from the Goodyear Forward plan. These factors were partly offset by higher inflationary costs. Conference Call The Company will host an investor call on Thursday, August 1 at 8:00 a.m. EDT. Please visit Goodyears investor relations website: http://investor.goodyear.com, for additional earnings materials. Participating in the conference call will be Mark W. Stewart, chief executive officer and president, and Christina L. Zamarro, executive vice president and chief financial officer. The investor call can be accessed on the website or via telephone by calling either (800) 245-3047 or (203) 518-9765 before 7:55 a.m. and providing the conference ID Goodyear. A replay will be available by calling (800) 839-4088 or (402) 220-2986. The replay will also be available on the website. About Goodyear Goodyear is one of the worlds largest tire companies. It employs about 71,000 people and manufactures its products in 54 facilities in 21 countries around the world. Its two Innovation Centers in Akron, Ohio, and Colmar-Berg, Luxembourg, strive to develop state-of-the-art products and services that set the technology and performance standard for the industry. For more information about Goodyear and its products, go to www.goodyear.com/corporate."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "4"
+    },
+    {
+      "type": "TextElement",
+      "text": "Forward-Looking Statements Certain information contained in this news release constitutes forward-looking statements for purposes of the safe harbor provisions of The Private Securities Litigation Reform Act of 1995. There are a variety of factors, many of which are beyond our control, that affect our operations, performance, business strategy and results and could cause our actual results and experience to differ materially from the assumptions, expectations and objectives expressed in any forward-looking statements. These factors include, but are not limited to: our ability to implement successfully the Goodyear Forward plan and our other strategic initiatives, including the sale of our off-the-road tire business; risks relating to the ability to consummate the sale of our off-the-road tire business on a timely basis or at all, including failure to obtain the required regulatory approvals or to satisfy other conditions to closing; actions and initiatives taken by both current and potential competitors; increases in the prices paid for raw materials and energy; inflationary cost pressures; delays or disruptions in our supply chain or the provision of services to us; a prolonged economic downturn or period of economic uncertainty; deteriorating economic conditions or an inability to access capital markets; a labor strike, work stoppage, labor shortage or other similar event; financial difficulties, work stoppages, labor shortages or supply disruptions at our suppliers or customers; the adequacy of our capital expenditures; changes in tariffs, trade agreements or trade restrictions; foreign currency translation and transaction risks; our failure to comply with a material covenant in our debt obligations; potential adverse consequences of litigation involving the company; as well as the effects of more general factors such as changes in general market, economic or political conditions or in legislation, regulation or public policy. Additional factors are discussed in our filings with the Securities and Exchange Commission, including our annual report on Form 10-K, quarterly reports on Form 10-Q and current reports on Form 8-K. In addition, any forward-looking statements represent our estimates only as of today and should not be relied upon as representing our estimates as of any subsequent date. While we may elect to update forward-looking statements at some point in the future, we specifically disclaim any obligation to do so, even if our estimates change. Non-GAAP Financial Measures (unaudited) This news release presents non-GAAP financial measures, including Total Segment Operating Income and Margin, Adjusted Net Income (Loss), and Adjusted Diluted Earnings Per Share (EPS), which are important financial measures for the company but are not financial measures defined by U.S. GAAP, and should not be construed as alternatives to corresponding financial measures presented in accordance with U.S. GAAP. Total Segment Operating Income is the sum of the individual strategic business units (SBUs) Segment Operating Income as determined in accordance with U.S. GAAP. Total Segment Operating Margin is Total Segment Operating Income divided by Net Sales as determined in accordance with U.S. GAAP. Management believes that Total Segment Operating Income and Margin are useful because they represent the aggregate value of income created by the companys SBUs and exclude items not directly related to the SBUs for performance evaluation purposes. The most directly comparable U.S. GAAP financial measures to Total Segment Operating Income and Margin are Goodyear Net Income (Loss) and Return on Net Sales (which is calculated by dividing Goodyear Net Income (Loss) by Net Sales)."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "5"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjusted Net Income (Loss) is Goodyear Net Income (Loss) as determined in accordance with U.S. GAAP adjusted for certain significant items. Adjusted Diluted Earnings Per Share (EPS) is the companys Adjusted Net Income (Loss) divided by Weighted Average Shares Outstanding-Diluted as determined in accordance with U.S. GAAP. Management believes that Adjusted Net Income (Loss) and Adjusted Diluted Earnings Per Share (EPS) are useful because they represent how management reviews the operating results of the company excluding the impacts of rationalizations, asset write-offs, accelerated depreciation, asset sales and certain other significant items. It should be noted that other companies may calculate similarly-titled non-GAAP financial measures differently and, as a result, the measures presented herein may not be comparable to such similarly-titled measures reported by other companies. See the following tables for reconciliations of historical Total Segment Operating Income and Margin, Adjusted Net Income (Loss) and Adjusted Diluted Earnings Per Share to the most directly comparable U.S. GAAP financial measures."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "6"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Goodyear Tire & Rubber Company and Subsidiaries Financial Tables (Unaudited) Table 1: Consolidated Statement of Operations"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, June 30, (In millions, except per share amounts) 2024 2023 2024 2023 Net Sales $ 4,570 $ 4,867 $ 9,107 $ 9,808 Cost of Goods Sold 3,622 4,123 7,337 8,316 Selling, Administrative and General Expense 731 708 1,427 1,372 Rationalizations 19 72 41 104 Interest Expense 130 138 256 265 Other (Income) Expense (72 ) 36 (42 ) 61 Income (Loss) before Income Taxes 140 (210 ) 88 (310 ) United States and Foreign Tax Expense (Benefit) 60 (2 ) 66 (3 ) Net Income (Loss) 80 (208 ) 22 (307 ) Less: Minority Shareholders Net Income (Loss) (5 )  (6 ) 2 Goodyear Net Income (Loss) $ 85 $ (208 ) $ 28 $ (309 ) Goodyear Net Income (Loss)  Per Share of Common Stock Basic $ 0.30 $ (0.73 ) $ 0.10 $ (1.08 ) Weighted Average Shares Outstanding 287 285 286 285 Diluted $ 0.30 $ (0.73 ) $ 0.10 $ (1.08 ) Weighted Average Shares Outstanding 288 285 288 285"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "7"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 2: Consolidated Balance Sheets"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, December 31, (In millions, except share data) 2024 2023 Assets: Current Assets: Cash and Cash Equivalents $ 789 $ 902 Accounts Receivable, less Allowance  $87 ($102 in 2023) 3,043 2,731 Inventories: Raw Materials 850 785 Work in Process 213 206 Finished Products 2,985 2,707 4,048 3,698 Prepaid Expenses and Other Current Assets 324 319 Total Current Assets 8,204 7,650 Goodwill 779 781 Intangible Assets 947 969 Deferred Income Taxes 1,634 1,630 Other Assets 1,108 1,075 Operating Lease Right-of-Use Assets 978 985 Property, Plant and Equipment, less Accumulated Depreciation  $12,671 ($12,472 in 2023) 8,375 8,492 Total Assets $ 22,025 $ 21,582 Liabilities: Current Liabilities: Accounts Payable  Trade $ 4,181 $ 4,326 Compensation and Benefits 656 663 Other Current Liabilities 1,029 1,165 Notes Payable and Overdrafts 462 344 Operating Lease Liabilities due Within One Year 199 200 Long Term Debt and Finance Leases due Within One Year 1,182 449 Total Current Liabilities 7,709 7,147 Operating Lease Liabilities 827 825 Long Term Debt and Finance Leases 6,832 6,831 Compensation and Benefits 889 974 Deferred Income Taxes 101 83 Other Long Term Liabilities 812 885 Total Liabilities 17,170 16,745 Commitments and Contingent Liabilities Shareholders Equity: Goodyear Shareholders Equity: Common Stock, no par value: Authorized, 450 million shares, Outstanding shares  285 million in 2024 (284 million in 2023) 285 284 Capital Surplus 3,146 3,133 Retained Earnings 5,114 5,086 Accumulated Other Comprehensive Loss (3,842 ) (3,835 ) Goodyear Shareholders Equity 4,703 4,668 Minority Shareholders Equity  Nonredeemable 152 169 Total Shareholders Equity 4,855 4,837 Total Liabilities and Shareholders Equity $ 22,025 $ 21,582"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "8"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 3: Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, (In millions) 2024 2023 Cash Flows from Operating Activities: Net Income (Loss) $ 22 $ (307 ) Adjustments to Reconcile Net Income (Loss) to Cash Flows from Operating Activities: Depreciation and Amortization 546 506 Amortization and Write-Off of Debt Issuance Costs 7 7 Provision for Deferred Income Taxes (6 ) (108 ) Net Pension Curtailments and Settlements (5 ) 36 Net Rationalization Charges 41 104 Rationalization Payments (105 ) (50 ) Net (Gains) Losses on Asset Sales (94 ) (62 ) Gain on Insurance Recoveries for Damaged Property, Plant and Equipment (50 )  Operating Lease Expense 164 148 Operating Lease Payments (139 ) (139 ) Pension Contributions and Direct Payments (29 ) (38 ) Changes in Operating Assets and Liabilities, Net of Asset Acquisitions and Dispositions: Accounts Receivable (354 ) (375 ) Inventories (409 ) 229 Accounts Payable  Trade (25 ) (404 ) Compensation and Benefits 6  Other Current Liabilities (91 ) 104 Other Assets and Liabilities 3 (85 ) Total Cash Flows from Operating Activities (518 ) (434 ) Cash Flows from Investing Activities: Capital Expenditures (634 ) (536 ) Insurance Recoveries for Damaged Property, Plant and Equipment 37  Cash Proceeds from Sale and Leaseback Transaction 16 66 Asset Dispositions 108 3 Short Term Securities Acquired  (102 ) Short Term Securities Redeemed  2 Long Term Securities Redeemed 1  Notes Receivable (17 ) (65 ) Other Transactions 1 (13 ) Total Cash Flows from Investing Activities (488 ) (645 ) Cash Flows from Financing Activities: Short Term Debt and Overdrafts Incurred 595 583 Short Term Debt and Overdrafts Paid (464 ) (439 ) Long Term Debt Incurred 7,068 4,758 Long Term Debt Paid (6,280 ) (4,020 ) Common Stock Issued (3 ) (2 ) Transactions with Minority Interests in Subsidiaries (2 ) (2 ) Debt Related Costs and Other Transactions (18 ) (2 ) Total Cash Flows from Financing Activities 896 876 Effect of Exchange Rate Changes on Cash, Cash Equivalents and Restricted Cash (23 ) 4 Net Change in Cash, Cash Equivalents and Restricted Cash (133 ) (199 ) Cash, Cash Equivalents and Restricted Cash at Beginning of the Period 985 1,311 Cash, Cash Equivalents and Restricted Cash at End of the Period $ 852 $ 1,112"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "9"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 4: Reconciliation of Segment Operating Income & Margin"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, June 30, (In millions) 2024 2023 2024 2023 Total Segment Operating Income $ 339 $ 124 $ 586 $ 249 Less: Rationalizations 19 72 41 104 Interest Expense 130 138 256 265 Other (Income) Expense (72 ) 36 (42 ) 61 Asset Write-Offs, Accelerated Depreciation, and Accelerated Lease Costs, Net 43 11 94 13 Corporate Incentive Compensation Plans 15 21 36 41 Retained Expenses of Divested Operations 3 4 8 8 Other 61 52 105 67 Income (Loss) before Income Taxes $ 140 $ (210 ) $ 88 $ (310 ) United States and Foreign Tax Expense (Benefit) 60 (2 ) 66 (3 ) Less: Minority Shareholders Net Income (Loss) (5 )  (6 ) 2 Goodyear Net Income (Loss) $ 85 $ (208 ) $ 28 $ (309 ) Net Sales $ 4,570 $ 4,867 $ 9,107 $ 9,808 Return on Net Sales 1.9 % -4.3 % 0.3 % -3.2 % Total Segment Operating Margin 7.4 % 2.5 % 6.4 % 2.5 %"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "10"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 5: Reconciliation of Adjusted Net Income (Loss) and Adjusted Diluted Earnings Per Share Second Quarter 2024"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In millions, except per share amounts) AsReported Rationalizations,Asset Write-offs,AcceleratedDepreciation andLeases GoodyearForwardCosts South AfricaFlood Impact AmericasStormInsuranceRecoveries Debica FireImpact andInsuranceRecoveries Asset andOther Sales AsAdjusted Net Sales $ 4,570 $  $  $  $  $  $  $ 4,570 Cost of Goods Sold 3,622 (33 )  (3 ) 20 43  3,649 Gross Margin 948 33  3 (20 ) (43 )  921 SAG 731 (10 ) (40 )     681 Rationalizations 19 (19 )       Interest Expense 130       130 Other (Income) Expense (72 )      96 24 Pre-tax Income (Loss) 140 62 40 3 (20 ) (43 ) (96 ) 86 Taxes 60 5 10  (5 ) (9 ) (28 ) 33 Minority Interest (5 ) 8    (4 )  (1 ) Goodyear Net Income (Loss) $ 85 $ 49 $ 30 $ 3 $ (15 ) $ (30 ) $ (68 ) $ 54 EPS $ 0.30 $ 0.17 $ 0.10 $ 0.01 $ (0.06 ) $ (0.10 ) $ (0.23 ) $ 0.19"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second Quarter 2023"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In millions, except per share amounts) AsReported Rationalizations,Asset Write-offs,and AcceleratedDepreciation Tupelo StormImpact Asset andOther Sales PensionSettlementCharges EnvironmentalRemediationAdjustment Other LegalClaims Indirect TaxSettlementsand DiscreteTax Items AsAdjusted Net Sales $ 4,867 $  $ 77 $  $  $  $  $  $ 4,944 Cost of Goods Sold 4,123 (12 ) 13   5   4,129 Gross Margin 744 12 64   (5 )   815 SAG 708        708 Rationalizations 72 (72 )        Interest Expense 138        138 Other (Income) Expense 36   51 (36 )  (4 )  47 Pre-tax Income (Loss) (210 ) 84 64 (51 ) 36 (5 ) 4  (78 ) Taxes (2 ) 16 12 (14 ) 8 (1 ) 2 (2 ) 19 Minority Interest          Goodyear Net Income (Loss) $ (208 ) $ 68 $ 52 $ (37 ) $ 28 $ (4 ) $ 2 $ 2 $ (97 ) EPS $ (0.73 ) $ 0.24 $ 0.18 $ (0.13 ) $ 0.10 $ (0.02 ) $ 0.01 $ 0.01 $ (0.34 )"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(more)"
+    },
+    {
+      "type": "ImageElement",
+      "text": "11"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 5: Reconciliation of Adjusted Net Income (Loss) and Adjusted Diluted Earnings Per Share (continued) First Six Months 2024"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In millions, except per share amounts) AsReported Rationalizations,Asset Write-offs,AcceleratedDepreciation andLeases GoodyearForwardCosts South AfricaFlood Impact PensionSettlementCharges(Credits) Indirect TaxSettlementsand DiscreteTax Items AmericasStormInsuranceRecoveries Debica FireImpact andInsuranceRecoveries Asset andOther Sales AsAdjusted Net Sales $ 9,107 $  $  $  $  $  $  $  $  $ 9,107 Cost of Goods Sold 7,337 (76 )  (3 )  8 20 29  7,315 Gross Margin 1,770 76  3  (8 ) (20 ) (29 )  1,792 SAG 1,427 (18 ) (67 )       1,342 Rationalizations 41 (41 )         Interest Expense 256         256 Other (Income) Expense (42 )    5 2   86 51 Pre-tax Income (Loss) 88 135 67 3 (5 ) (10 ) (20 ) (29 ) (86 ) 143 Taxes 66 14 16  (1 ) (2 ) (5 ) (7 ) (26 ) 55 Minority Interest (6 ) 14      (3 )  5 Goodyear Net Income (Loss) $ 28 $ 107 $ 51 $ 3 $ (4 ) $ (8 ) $ (15 ) $ (19 ) $ (60 ) $ 83 EPS $ 0.10 $ 0.37 $ 0.18 $ 0.01 $ (0.01 ) $ (0.03 ) $ (0.06 ) $ (0.06 ) $ (0.21 ) $ 0.29"
+    },
+    {
+      "type": "TextElement",
+      "text": "First Six Months 2023"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In millions, except per share amounts) AsReported Rationalizations,Asset Write-offs,and AcceleratedDepreciation Tupelo StormImpact Asset andOther Sales PensionSettlementCharges ForeignCurrencyTranslationAdjustmentWrite-Off EnvironmentalRemediationAdjustment Indirect TaxSettlementsand DiscreteTax Items AsAdjusted Net Sales $ 9,808 $  $ 77 $  $  $  $  $  $ 9,885 Cost of Goods Sold 8,316 (23 ) 13    5  8,311 Gross Margin 1,492 23 64    (5 )  1,574 SAG 1,372 10       1,382 Rationalizations 104 (104 )        Interest Expense 265        265 Other (Income) Expense 61   52 (36 ) 5   82 Pre-tax Income (Loss) (310 ) 117 64 (52 ) 36 (5 ) (5 )  (155 ) Taxes (3 ) 23 12 (15 ) 8  (1 ) (3 ) 21 Minority Interest 2       1 3 Goodyear Net Income (Loss) $ (309 ) $ 94 $ 52 $ (37 ) $ 28 $ (5 ) $ (4 ) $ 2 $ (179 ) EPS $ (1.08 ) $ 0.33 $ 0.18 $ (0.13 ) $ 0.10 $ (0.02 ) $ (0.02 ) $ 0.01 $ (0.63 )"
+    },
+    {
+      "type": "ImageElement",
+      "text": "12"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        14,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "NEWS RELEASE Second quarter Goodyear net income of $85 million (30 cents per share); adjusted net income of $54 million (19 cents per share) Segment operating income of $339 million, up $215 million compared to the second quarter of 2023 Americas segment operating income of $241 million, SOI margin of 8.9%"
+        ],
+        [
+          "",
+          "",
+          "NEWS RELEASE Second quarter Goodyear net income of $85 million (30 cents per share); adjusted net income of $54 million (19 cents per share) Segment operating income of $339 million, up $215 million compared to the second quarter of 2023 Americas segment operating income of $241 million, SOI margin of 8.9%"
+        ],
+        [
+          "",
+          "",
+          "NEWS RELEASE Second quarter Goodyear net income of $85 million (30 cents per share); adjusted net income of $54 million (19 cents per share) Segment operating income of $339 million, up $215 million compared to the second quarter of 2023 Americas segment operating income of $241 million, SOI margin of 8.9%"
+        ],
+        [
+          "",
+          "",
+          "NEWS RELEASE Second quarter Goodyear net income of $85 million (30 cents per share); adjusted net income of $54 million (19 cents per share) Segment operating income of $339 million, up $215 million compared to the second quarter of 2023 Americas segment operating income of $241 million, SOI margin of 8.9%"
+        ],
+        [
+          "",
+          "",
+          "Asia Pacific segment operating income of $63 million, SOI margin of 10.6%"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "FOR IMMEDIATE RELEASE",
+          "",
+          "Goodyear Forward transformation initiatives delivered $90 million"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "> GLOBAL HEADQUARTERS: 200 INNOVATION WAY, AKRON, OHIO 44316-0001 > MEDIA WEBSITE: WWW.GOODYEARNEWSROOM.COM",
+          "",
+          "AKRON, Ohio, July 31, 2024  The Goodyear Tire & Rubber Company reported second quarter 2024 results today and the company will host an investor call tomorrow morning at 8:00 a.m. eastern time led by Mark Stewart, Goodyears chief executive officer and president, and Christina Zamarro, the companys executive vice president and chief financial officer. The management team will share insights on second quarter performance and progress on the Goodyear Forward transformation plan."
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "> MEDIA CONTACT: DOUG GRASSIAN 330.796.3855 DOUG_GRASSIAN@GOODYEAR.COM > ANALYST CONTACT: GREG SHANK 330.796.5008 GREG_SHANK@GOODYEAR.COM",
+          "",
+          "Additional earnings materials have been posted to Goodyears investor relations website at http://investor.goodyear.com. We demonstrated clear progress on our Goodyear Forward plan in the second quarter, achieving significant margin expansion and securing a definitive agreement to sell our Off-the-Road business, said Chief Executive Officer and President Mark Stewart. Our associates are dedicated to delivering Goodyear Forward, and their commitment is especially critical as we look to a second half affected by weaker underlying trends in the industry. I continue to be confident in our ability to deliver Goodyear Forward and 10% segment operating income margin by the end of next year. Goodyears second quarter 2024 sales were $4.6 billion with tire unit volumes totaling 40.1 million. Second quarter 2024 Goodyear net income was $85 million (30 cents per share) compared to a Goodyear net loss of $208 million (73 cents per share loss) a year ago. The year over year improvement was driven by increases in segment operating income. The second quarter of 2024 included several significant items including, on a pre-tax basis, a benefit of $96 million from asset and other sales, Goodyear Forward costs of $40 million and rationalization charges of $19 million. The second quarter of 2023 included pre-tax rationalization charges of $72 million and a $51 million benefit from asset and other sales. Goodyear Forward costs are comprised of advisory, legal and consulting fees and costs associated with planned asset sales."
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Second quarter 2024 adjusted net income was $54 million compared to an adjusted net loss of $97 million in the prior years quarter. Adjusted earnings per share was $0.19, compared to a loss of $0.34 in the prior years quarter. Per share amounts are diluted."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1.0",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2.0",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        7,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "",
+          "",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          ""
+        ],
+        [
+          "(In millions)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Tire Units",
+          "",
+          "",
+          "19.6",
+          "",
+          "",
+          "",
+          "20.8",
+          "",
+          "",
+          "",
+          "38.6",
+          "",
+          "",
+          "",
+          "41.3",
+          ""
+        ],
+        [
+          "Net Sales",
+          "",
+          "$",
+          "2697",
+          "",
+          "",
+          "$",
+          "2939",
+          "",
+          "",
+          "$",
+          "5285",
+          "",
+          "",
+          "$",
+          "5806",
+          ""
+        ],
+        [
+          "Segment Operating Income",
+          "",
+          "",
+          "241",
+          "",
+          "",
+          "",
+          "103",
+          "",
+          "",
+          "",
+          "420",
+          "",
+          "",
+          "",
+          "182",
+          ""
+        ],
+        [
+          "Segment Operating Margin",
+          "",
+          "",
+          "8.9",
+          "%",
+          "",
+          "",
+          "3.5",
+          "%",
+          "",
+          "",
+          "7.9",
+          "%",
+          "",
+          "",
+          "3.1",
+          "%"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        7,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "",
+          "",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          ""
+        ],
+        [
+          "(In millions)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Tire Units",
+          "",
+          "",
+          "11.6",
+          "",
+          "",
+          "",
+          "11.8",
+          "",
+          "",
+          "",
+          "24.1",
+          "",
+          "",
+          "",
+          "25.0",
+          ""
+        ],
+        [
+          "Net Sales",
+          "",
+          "$",
+          "1279",
+          "",
+          "",
+          "$",
+          "1341",
+          "",
+          "",
+          "$",
+          "2626",
+          "",
+          "",
+          "$",
+          "2833",
+          ""
+        ],
+        [
+          "Segment Operating Income (Loss)",
+          "",
+          "",
+          "35",
+          "",
+          "",
+          "",
+          "(19",
+          ")",
+          "",
+          "",
+          "43",
+          "",
+          "",
+          "",
+          "(11",
+          ")"
+        ],
+        [
+          "Segment Operating Margin",
+          "",
+          "",
+          "2.7",
+          "%",
+          "",
+          "",
+          "(1.4",
+          "%)",
+          "",
+          "",
+          "1.6",
+          "%",
+          "",
+          "",
+          "(0.4",
+          "%)"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3.0",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        7,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "",
+          "",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          "Six Months",
+          ""
+        ],
+        [
+          "(In millions)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Tire Units",
+          "",
+          "",
+          "8.9",
+          "",
+          "",
+          "",
+          "8.2",
+          "",
+          "",
+          "",
+          "17.8",
+          "",
+          "",
+          "",
+          "16.3",
+          ""
+        ],
+        [
+          "Net Sales",
+          "",
+          "$",
+          "594",
+          "",
+          "",
+          "$",
+          "587",
+          "",
+          "",
+          "$",
+          "1196",
+          "",
+          "",
+          "$",
+          "1169",
+          ""
+        ],
+        [
+          "Segment Operating Income",
+          "",
+          "",
+          "63",
+          "",
+          "",
+          "",
+          "40",
+          "",
+          "",
+          "",
+          "123",
+          "",
+          "",
+          "",
+          "78",
+          ""
+        ],
+        [
+          "Segment Operating Margin",
+          "",
+          "",
+          "10.6",
+          "%",
+          "",
+          "",
+          "6.8",
+          "%",
+          "",
+          "",
+          "10.3",
+          "%",
+          "",
+          "",
+          "6.7",
+          "%"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "4.0",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "5.0",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "6.0",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        26,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "",
+          "",
+          "Six Months Ended",
+          "Six Months Ended",
+          "Six Months Ended",
+          "Six Months Ended",
+          "Six Months Ended",
+          "Six Months Ended",
+          ""
+        ],
+        [
+          "",
+          "",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "",
+          "",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          ""
+        ],
+        [
+          "(In millions, except per share amounts)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Net Sales",
+          "",
+          "$",
+          "4570",
+          "",
+          "",
+          "$",
+          "4867",
+          "",
+          "",
+          "$",
+          "9107",
+          "",
+          "",
+          "$",
+          "9808",
+          ""
+        ],
+        [
+          "Cost of Goods Sold",
+          "",
+          "",
+          "3622",
+          "",
+          "",
+          "",
+          "4123",
+          "",
+          "",
+          "",
+          "7337",
+          "",
+          "",
+          "",
+          "8316",
+          ""
+        ],
+        [
+          "Selling, Administrative and General Expense",
+          "",
+          "",
+          "731",
+          "",
+          "",
+          "",
+          "708",
+          "",
+          "",
+          "",
+          "1427",
+          "",
+          "",
+          "",
+          "1372",
+          ""
+        ],
+        [
+          "Rationalizations",
+          "",
+          "",
+          "19",
+          "",
+          "",
+          "",
+          "72",
+          "",
+          "",
+          "",
+          "41",
+          "",
+          "",
+          "",
+          "104",
+          ""
+        ],
+        [
+          "Interest Expense",
+          "",
+          "",
+          "130",
+          "",
+          "",
+          "",
+          "138",
+          "",
+          "",
+          "",
+          "256",
+          "",
+          "",
+          "",
+          "265",
+          ""
+        ],
+        [
+          "Other (Income) Expense",
+          "",
+          "",
+          "(72",
+          ")",
+          "",
+          "",
+          "36",
+          "",
+          "",
+          "",
+          "(42",
+          ")",
+          "",
+          "",
+          "61",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Income (Loss) before Income Taxes",
+          "",
+          "",
+          "140",
+          "",
+          "",
+          "",
+          "(210",
+          ")",
+          "",
+          "",
+          "88",
+          "",
+          "",
+          "",
+          "(310",
+          ")"
+        ],
+        [
+          "United States and Foreign Tax Expense (Benefit)",
+          "",
+          "",
+          "60",
+          "",
+          "",
+          "",
+          "(2",
+          ")",
+          "",
+          "",
+          "66",
+          "",
+          "",
+          "",
+          "(3",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net Income (Loss)",
+          "",
+          "",
+          "80",
+          "",
+          "",
+          "",
+          "(208",
+          ")",
+          "",
+          "",
+          "22",
+          "",
+          "",
+          "",
+          "(307",
+          ")"
+        ],
+        [
+          "Less: Minority Shareholders Net Income (Loss)",
+          "",
+          "",
+          "(5",
+          ")",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(6",
+          ")",
+          "",
+          "",
+          "2",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Goodyear Net Income (Loss)",
+          "",
+          "$",
+          "85",
+          "",
+          "",
+          "$",
+          "(208",
+          ")",
+          "",
+          "$",
+          "28",
+          "",
+          "",
+          "$",
+          "(309",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Goodyear Net Income (Loss)  Per Share of Common Stock",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic",
+          "",
+          "$",
+          "0.30",
+          "",
+          "",
+          "$",
+          "(0.73",
+          ")",
+          "",
+          "$",
+          "0.10",
+          "",
+          "",
+          "$",
+          "(1.08",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Weighted Average Shares Outstanding",
+          "",
+          "",
+          "287",
+          "",
+          "",
+          "",
+          "285",
+          "",
+          "",
+          "",
+          "286",
+          "",
+          "",
+          "",
+          "285",
+          ""
+        ],
+        [
+          "Diluted",
+          "",
+          "$",
+          "0.30",
+          "",
+          "",
+          "$",
+          "(0.73",
+          ")",
+          "",
+          "$",
+          "0.10",
+          "",
+          "",
+          "$",
+          "(1.08",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Weighted Average Shares Outstanding",
+          "",
+          "",
+          "288",
+          "",
+          "",
+          "",
+          "285",
+          "",
+          "",
+          "",
+          "288",
+          "",
+          "",
+          "",
+          "285",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "7.0",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 4600.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "sales were $4.6 billion"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "> MEDIA CONTACT: DOUG GRASSIAN 330.796.3855 DOUG_GRASSIAN@GOODYEAR.COM > ANALYST CONTACT: GREG SHANK 330.796.5008 GREG_SHANK@GOODYEAR.COM |  | Additional earnings materials have been posted to Goodyears investor relations website at http://investor.goodyear.com. We demonstrated clear progress on our Goodyear Forward plan in the second quarter, achieving significant margin expansion and securing a definitive agreement to sell our Off-the-Road business, said Chief Executive Officer and President Mark Stewart. Our associates are dedicated to delivering Goodyear Forward, and their commitment is especially critical as we look to a second half affected by weaker underlying trends in the industry. I continue to be confident in our ability to deliver Goodyear Forward and 10% segment operating income margin by the end of next year. Goodyears second quarter 2024 sales were $4.6 billion with tire unit volumes totaling 40.1 million. Second quarter 2024 Goodyear net income was $85 million (30 cents per share) compared to a Goodyear net loss of $208 million (73 cents per share loss) a year ago. The year over year improvement was driven by increases in segment operating income. The second quarter of 2024 included several significant items including, on a pre-tax basis, a benefit of $96 million from asset and other sales, Goodyear Forward costs of $40 million and rationalization charges of $19 million. The second quarter of 2023 included pre-tax rationalization charges of $72 million and a $51 million benefit from asset and other sales. Goodyear Forward costs are comprised of advisory, legal and consulting fees and costs associated with planned asset sales."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "11.170000",
+    "return_10d_pct": "-30.3491",
+    "return_20d_pct": "-22.2919",
+    "return_30d_pct": "-24.6195",
+    "return_60d_pct": "-20.7699",
+    "return_90d_pct": "-26.9472"
+  },
+  "text_stats": {
+    "primary_text_len": 2793,
+    "exhibit_text_len": 25227,
+    "combined_text_len": 28022,
+    "semantic_text_len": 25153,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

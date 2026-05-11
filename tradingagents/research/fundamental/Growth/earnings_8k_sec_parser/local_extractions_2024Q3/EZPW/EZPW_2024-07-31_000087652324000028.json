@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EZPW",
+    "cik": "876523",
+    "event_date": "2024-07-31",
+    "event_accession": "0000876523-24-000028",
+    "primary_8k_doc": "ezpw-20240731.htm",
+    "exhibit_docs": [
+      "a2024-q3pressreleaseex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EZPW_000087652324000028_ezpw-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EZPW_000087652324000028_a2024-q3pressreleaseex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EZPW",
+    "cik": "876523",
+    "entity_name": "EZCORP, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "522750000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "16778000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-12-31",
+    "assets_value": "1420532000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "29976000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-40649000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "46827000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.032096",
+    "operating_cash_flow_to_revenue": "0.089578",
+    "assets_to_revenue": "2.717421",
+    "financing_cash_flow_to_revenue": "0.057343",
+    "investing_cash_flow_to_revenue": "-0.07776"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues increased 10% and gross profit increased 12%, while merchandise sales gross margin remains within our targeted range at 36%.",
+      "revenues increased 10%, and gross profit increased 12%, reflecting improved pawn service charge (PSC) revenues, merchandise sales and merchandise sales gross profit.",
+      "revenues were up 8% and gross profit was up 9%, reflecting increased PSC and higher merchandise sales.",
+      "sales increased 6%, and gross margin decreased to 38% from 39%.",
+      "revenues were up 15% (13% on constant currency basis), and gross profit increased 21% (19% on a constant currency basis), reflecting increased PSC, higher merchandise sales and improved merchandise sales gross profit.",
+      "gross margin remains within our targeted range at 36%."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK Lachie Given, Chief Executive Officer, stated, “Our team delivered another outstanding quarter for our shareholders, driven by strong customer demand and continued focus on operational execution at the store level.",
+      "expected with the growth in PLO.",
+      "expected performance.",
+      "expects, believes, projects, estimates or anticipates, will, should or may occur in the future, including future financial or operating results, are forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customer demand and continued focus on operational execution at the store level.",
+      "customer interest in short-term cash solutions and high-quality pre-owned goods, and the team’s focus on market-leading customer service drove excellent operational and financial results, increasing adjusted EBITDA by 15% with expanded margin.",
+      "customer experience to drive loyalty and engagement.",
+      "customer transactions during the quarter, illustrating the ongoing success of the program.",
+      "demand.",
+      "customers."
+    ],
+    "warning_or_risk_evidence": [
+      "charge (PSC) revenues, merchandise sales and merchandise sales gross profit.",
+      "inventory.",
+      "inventory increased 11%, as expected with the growth in PLO.",
+      "Inventory turnover decreased to 2.",
+      "inventory, strategic investments and acquisitions, and share repurchases, partially offset by cash from operating activities.",
+      "inventory increased 6%, as expected with the growth in PLO."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "10.580000",
+    "return_10d_pct": "8.5066",
+    "return_20d_pct": "10.5860",
+    "return_30d_pct": "12.5709",
+    "return_60d_pct": "5.9546",
+    "return_90d_pct": "10.1134"
+  },
+  "text_stats": {
+    "primary_text_len": 5655,
+    "exhibit_text_len": 29305,
+    "combined_text_len": 34962
+  }
+}

@@ -18,7 +18,7 @@ The current platform is a documentation-backed, CLI-driven investment intelligen
 ### Target-State
 
 A fully automated operating stack where:
-- Deal flow runs continuously across social/news/macro/smart-money connectors and emits ranked research queues.
+- Deal flow runs continuously across social/news/macro/smart-money connectors and emits ranked fundamental review lists.
 - Research recommendations flow into portfolio construction policies and then into execution adapters (paper first, live later).
 - Hedging runs independently as a risk overlay with explicit rebalance controls and attribution.
 - All critical transitions are auditable and attributable end-to-end.
@@ -64,8 +64,8 @@ flowchart TD
     CLI["cli/main.py"] --> DFS["dealflow/scheduler.py"]
     CLI --> DFP["dealflow/pipeline.py"]
     DFP --> DFSRC["dealflow/sources/*"]
-    DFP --> DFSC["dealflow/scoring.py"]
-    DFSC --> DFRK["dealflow/ranking.py"]
+    DFP --> DFSC["legacy pre-fundamental scorer"]
+    DFSC --> DFRK["legacy selector"]
     DFP --> DFART["eval_results/deal_flow/*"]
 
     CLI --> TG["graph/trading_graph.py"]
@@ -91,7 +91,7 @@ The same topology remains, but execution migrates from artifact-only intent to l
 
 ```mermaid
 flowchart TD
-    DF["Deal Flow Team"] -->|"proposes candidates"| RQ["Research Queue"]
+    DF["Deal Flow Team"] -->|"proposes candidates"| RQ["Fundamental Review List"]
     RQ -->|"analyzes"| RT["Research Team"]
     RT -->|"recommends"| PM["Portfolio Manager"]
     PM -->|"approves/rejects entry-exit"| EX["Execution Team"]
@@ -124,7 +124,7 @@ sequenceDiagram
     participant CLI as cli/main.py
     participant SCH as dealflow/scheduler.py
     participant DF as dealflow/pipeline.py
-    participant RQ as research_queue.json
+    participant RQ as legacy_queue_artifact.json
     participant G as graph/trading_graph.py
     participant SC as graph/aeternus_scoring.py
     participant TC as graph/thesis_check.py
@@ -134,7 +134,7 @@ sequenceDiagram
     U->>CLI: orchestrate --mode auto
     CLI->>SCH: run_once()
     SCH->>DF: run(as_of_date, trigger, top_k)
-    DF-->>CLI: shortlist + queue + signals
+    DF-->>CLI: candidate_list + queue + signals
     CLI->>AU: DEALFLOW_QUEUE_GENERATED
 
     U->>CLI: analyze --from-queue-id <id>
@@ -178,8 +178,8 @@ flowchart LR
     MA --> SC
     SM --> SC
 
-    SC --> RK["Ranking\nranking.py"]
-    RK --> P["Pipeline Outputs\nshortlist_top20.json\nresearch_queue.json\nmomentum_board.json"]
+    SC --> RK["Ranking\nlegacy selector"]
+    RK --> P["Pipeline Outputs\nlegacy_candidate_list_artifact.json\nlegacy_queue_artifact.json\nmomentum_board.json"]
 ```
 
 ### As-Is
@@ -189,13 +189,13 @@ Implemented components:
 - Pipeline orchestration: `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py`
 - Dynamic universe expansion: `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/universe.py`
 - Source modules: `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/sources/`
-- Scoring model + lane assignment: `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/scoring.py`
-- Ranking + diversification constraints: `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/ranking.py`
+- Scoring model + lane assignment: `/Users/aeternusholdings/Documents/AeternusAgentsAG/legacy pre-fundamental scorer`
+- Ranking + diversification constraints: `/Users/aeternusholdings/Documents/AeternusAgentsAG/legacy selector`
 
 Momentum and lane policy implemented:
-- `12 CORE / 8 MOMENTUM` shortlist split in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/ranking.py`
-- `4 CORE / 4 MOMENTUM` deep-selection split in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py`
-- weak-value/high-momentum candidates remain eligible; risk tagging includes `Valuation stretched` in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/scoring.py`
+- `12 CORE / 8 MOMENTUM` candidate_list split in `/Users/aeternusholdings/Documents/AeternusAgentsAG/legacy selector`
+- `4 CORE / 4 MOMENTUM` fundamental-intake split in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py`
+- weak-value/high-momentum candidates remain eligible; risk tagging includes `Valuation stretched` in `/Users/aeternusholdings/Documents/AeternusAgentsAG/legacy pre-fundamental scorer`
 
 X cost-control architecture implemented:
 - Mode: `HYBRID|DIRECT_ONLY|SCOUT_ONLY` in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/default_config.py`
@@ -265,7 +265,7 @@ Hedge events are emitted from `/Users/aeternusholdings/Documents/AeternusAgentsA
 ### As-Is
 
 Deal Flow contracts (implemented):
-- `UniverseRow`, `DealFlowSignal`, `CashtagEvent`, `DealFlowCandidate`, `DealFlowShortlist`, `ResearchQueueItem`, `ResearchQueue`, `EventTriggerResult` in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/contracts.py`.
+- `UniverseRow`, `DealFlowSignal`, `CashtagEvent`, `LegacyCandidateType`, `LegacyCandidate ListType`, `LegacyQueueItemType`, `LegacyQueueType`, `EventTriggerResult` in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/contracts.py`.
 
 Hedging contracts (implemented):
 - `PortfolioRiskSnapshot`, `MarketRegimeSnapshot`, `HedgeSignal`, `HedgeDecision`, `HedgeOrder` in `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/graph/contracts.py`.
@@ -276,18 +276,18 @@ Artifact schemas and producers:
 |---|---|---|
 | `eval_results/deal_flow/<date>/signals_raw.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | Scoring diagnostics/manual review |
 | `eval_results/deal_flow/<date>/cashtag_events.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | Momentum provenance review |
-| `eval_results/deal_flow/<date>/momentum_board.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | Momentum shortlist QA |
-| `eval_results/deal_flow/<date>/shortlist_top20.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | Queue generation + manual triage |
-| `eval_results/deal_flow/<date>/research_queue.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/cli/main.py --from-queue-id` |
+| `eval_results/deal_flow/<date>/momentum_board.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | Momentum candidate_list QA |
+| `eval_results/deal_flow/<date>/legacy_candidate_list_artifact.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | Queue generation + manual triage |
+| `eval_results/deal_flow/<date>/legacy_queue_artifact.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/dealflow/pipeline.py` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/cli/main.py --from-queue-id` |
 | `results/<ticker>/<date>/analysis_report.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/cli/main.py` | Post-run analytics + audit review |
 | `eval_results/hedge_state.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/graph/hedging.py` | Hedging cycle state continuity |
 | `eval_results/hedge_orders.json` | `/Users/aeternusholdings/Documents/AeternusAgentsAG/tradingagents/graph/hedging.py` | Hedge order audit trail |
 
 ```mermaid
 flowchart TD
-    A["signals_raw.json"] --> B["shortlist_top20.json"]
+    A["signals_raw.json"] --> B["legacy_candidate_list_artifact.json"]
     C["cashtag_events.json"] --> D["momentum_board.json"]
-    B --> E["research_queue.json"]
+    B --> E["legacy_queue_artifact.json"]
     E --> F["analyze --from-queue-id"]
     F --> G["analysis_report.json"]
     G --> H["audit_log.json"]

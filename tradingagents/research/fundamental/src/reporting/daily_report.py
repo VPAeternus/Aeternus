@@ -55,7 +55,7 @@ def _write_projected_csv(path: Path, rows: list[dict[str, Any]], columns: list[s
 
 def write_daily_reports(rows: list[dict[str, Any]], *, as_of: str, out_dir: Path = Path("outputs/daily")) -> list[Path]:
     stamp = as_of.replace("-", "")
-    new_candidates = [row for row in rows if clean(row.get("candidate_state")) in {"new_signal", "research_queue", "watchlist", "llm_pending"}]
+    new_candidates = [row for row in rows if clean(row.get("candidate_state")) in {"new_signal", "fundamental_review", "watchlist", "llm_pending"}]
     research = [row for row in new_candidates if _score(row, "entry_score_0_100") >= 70 and clean(row.get("monitoring_status")) != "kill_review"]
     active = [
         row
@@ -114,12 +114,12 @@ def write_daily_reports(rows: list[dict[str, Any]], *, as_of: str, out_dir: Path
     ]
     outputs = [
         write_csv(out_dir / f"{stamp}_new_candidates.csv", new_candidates),
-        write_csv(out_dir / f"{stamp}_new_entry_research_queue.csv", sorted(research, key=lambda r: _score(r, "entry_score_0_100"), reverse=True)),
+        write_csv(out_dir / f"{stamp}_new_entry_fundamental_review.csv", sorted(research, key=lambda r: _score(r, "entry_score_0_100"), reverse=True)),
         write_csv(out_dir / f"{stamp}_top_active_positions.csv", sorted(active, key=lambda r: _score(r, "active_monitoring_score_0_100"), reverse=True)),
         write_csv(out_dir / f"{stamp}_kill_review.csv", sorted(kill, key=lambda r: _score(r, "current_return_pct"))),
         write_csv(out_dir / f"{stamp}_score_changes.csv", sorted(score_changes, key=lambda r: _score(r, "applied_monitoring_delta"))),
         write_csv(out_dir / f"{stamp}_buy_decision_candidates.csv", sorted(buy_decision, key=lambda r: _score(r, "entry_score_0_100"), reverse=True)),
-        write_csv(out_dir / f"{stamp}_aging_high_score_candidates.csv", aging),
+        write_csv(out_dir / f"{stamp}_aging_high_scoring_candidates.csv", aging),
         _write_projected_csv(
             out_dir / f"{stamp}_repricing_momentum_candidates.csv",
             _project(sorted(repricing, key=lambda r: _score(r, "market_repricing_score"), reverse=True), REPRICING_COLUMNS),

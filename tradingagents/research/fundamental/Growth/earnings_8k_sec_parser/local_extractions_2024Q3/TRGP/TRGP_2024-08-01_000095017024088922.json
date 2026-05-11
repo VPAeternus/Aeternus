@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TRGP",
+    "cik": "1389170",
+    "event_date": "2024-08-01",
+    "event_accession": "0000950170-24-088922",
+    "primary_8k_doc": "trgp-20240801.htm",
+    "exhibit_docs": [
+      "trgp-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TRGP_000095017024088922_trgp-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TRGP_000095017024088922_trgp-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TRGP",
+    "cik": "1389170",
+    "entity_name": "TARGA RESOURCES CORP.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4520500000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "497000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "20671800000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-696200000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-480800000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1169800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.109944",
+    "operating_cash_flow_to_revenue": "0.258777",
+    "assets_to_revenue": "4.572901",
+    "financing_cash_flow_to_revenue": "-0.15401",
+    "investing_cash_flow_to_revenue": "-0.10636"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of commodities $ 2,991.",
+      "net income attributable to Targa Resources Corp.",
+      "Net income (loss) 358.",
+      "Net income (loss) attributable to noncontrolling interests 60.",
+      "Net income (loss) attributable to Targa Resources Corp.",
+      "Net income (loss) attributable to common shareholders $ 298."
+    ],
+    "guidance_evidence": [
+      "Outlook HOUSTON – August 1, 2024 - Targa Resources Corp.",
+      "Outlook Given the strength of volume growth across Targa’s integrated assets, the Company now expects to generate full year 2024 adjusted EBITDA of $3.",
+      "Projects Update During the second quarter, Targa commenced operations at its new 230 MMcf/d Roadrunner II plant in Permian Delaware and its new 120 MBbl/d Train 9 fractionator in Mont Belvieu, TX, on-time and on-budget.",
+      "expects to begin starting up operations on the reactivation of Gulf Coast Fractionators (“GCF”) in Mont Belvieu during the third quarter of 2024.",
+      "expected to begin operations in the first quarter of 2026 and the East Pembrook plant is expected to begin operations in the third quarter of 2026.",
+      "expected to be in service in the second half of 2026, pending the receipt of customary regulatory and other approvals."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, Targa announced the construction of a new 275 MMcf/d cryogenic natural gas processing plant in Permian Delaware (the “Bull Moose II plant”) and a new 275 MMcf/d cryogenic natural gas processing plant in Permian Midland (the “East Pembrook plant”).",
+      "customers at the Company’s Galena Park Marine Terminal that are destined for international markets.",
+      "demand for cleaner fuels and feedstocks.",
+      "aid on August 15, 2024 on all outstanding shares of common stock to holders of record as of the close of business on July 31, 2024.",
+      "aining under the Company’s $1.",
+      "aining under the existing share repurchase program."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory change.",
+      "loss due to debt extinguishment of $0.",
+      "loss) from operations 627.",
+      "loss) 2.",
+      "loss) from financing activities (0.",
+      "loss) 358."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 357.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "134.820007",
+    "return_10d_pct": "2.0546",
+    "return_20d_pct": "5.9561",
+    "return_30d_pct": "11.1704",
+    "return_60d_pct": "11.6897",
+    "return_90d_pct": "23.8392"
+  },
+  "text_stats": {
+    "primary_text_len": 5619,
+    "exhibit_text_len": 41807,
+    "combined_text_len": 47428
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AI",
+    "cik": "1577526",
+    "event_date": "2024-09-04",
+    "event_accession": "0001628280-24-039310",
+    "primary_8k_doc": "ai-20240904.htm",
+    "exhibit_docs": [
+      "ex991-fy25xq1earnings.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AI_000162828024039310_ai-20240904.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AI_000162828024039310_ex991-fy25xq1earnings.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AI",
+    "cik": "1577526",
+    "entity_name": "C3.AI, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "252759000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-18",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "-192065000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-18",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "1103028000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-18",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "5711000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-18",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "317015000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-18",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "-86462000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-18",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.759874",
+    "operating_cash_flow_to_revenue": "-0.342073",
+    "assets_to_revenue": "4.363951",
+    "financing_cash_flow_to_revenue": "0.022595",
+    "investing_cash_flow_to_revenue": "1.254218"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $10,581 for the three months ended July 31, 2023.",
+      "revenue of $5,804 for the three months ended July 31, 2023.",
+      "gross margin.",
+      "non-GAAP gross margin.",
+      "non-GAAP gross margin, non-GAAP loss from operations, and non-GAAP net loss per share.",
+      "non-GAAP gross margin, non-GAAP loss from operations, and non-GAAP net loss per share exclude the effect of stock-based compensation expense-related charges and employer payroll tax expense related to employee stock-based compensation."
+    ],
+    "guidance_evidence": [
+      "Outlook: The Company’s guidance includes GAAP and non-GAAP financial measures.",
+      "guidance for the second quarter of fiscal 2025 and full-year fiscal 2025: (in millions) Second Quarter Fiscal 2025 Guidance Full Year Fiscal 2025 Guidance Total revenue $88.",
+      "guidance measures to corresponding GAAP measures is not available on a forward-looking basis without unreasonable effort due to the uncertainty regarding, and the potential variability of, expenses that may be incurred in the future.",
+      "Forecasting, C3 AI Inventory Optimization, and C3 AI Production Schedule Optimization — working together to support and optimize daily decision making across multiple facilities.",
+      "forecasts and deviations.",
+      "expected benefits of our offerings (including the potential benefits of our C3 Generative AI offerings), and our business strategies, plans, and objectives for future operations."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for Enterprise AI driving our sixth consecutive quarter of accelerating revenue growth,” said Thomas M.",
+      "customer satisfaction in the industry.",
+      "bookings for Q1.",
+      "Customer Success C3 AI’s customer base continues to expand both within and across industries while maintaining exceptional levels of customer satisfaction by focusing on delivering measurable enterprise value.",
+      "Demand Forecasting, C3 AI Inventory Optimization, and C3 AI Production Schedule Optimization — working together to support and optimize daily decision making across multiple facilities.",
+      "customer service."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory Optimization, and C3 AI Production Schedule Optimization — working together to support and optimize daily decision making across multiple facilities.",
+      "inventory information for sales teams.",
+      "charges and employer payroll tax expense related to employee stock-based compensation.",
+      "challenging problems in the enterprise has led us to what we believe are the highest levels of customer satisfaction in the industry.",
+      "Loss per Share: GAAP net loss per share was $(0.",
+      "loss per share was $(0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 87.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-05",
+    "entry_open": "19.180000",
+    "return_10d_pct": "21.3764",
+    "return_20d_pct": "25.9645",
+    "return_30d_pct": "25.6517",
+    "return_60d_pct": "29.5099",
+    "return_90d_pct": "95.9854"
+  },
+  "text_stats": {
+    "primary_text_len": 3588,
+    "exhibit_text_len": 25564,
+    "combined_text_len": 29154
+  }
+}

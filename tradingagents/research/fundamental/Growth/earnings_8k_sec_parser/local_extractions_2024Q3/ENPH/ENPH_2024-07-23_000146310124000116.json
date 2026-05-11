@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ENPH",
+    "cik": "1463101",
+    "event_date": "2024-07-23",
+    "event_accession": "0001463101-24-000116",
+    "primary_8k_doc": "enph-20240723.htm",
+    "exhibit_docs": [
+      "a2024q2exx991pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENPH_000146310124000116_enph-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENPH_000146310124000116_a2024q2exx991pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ENPH",
+    "cik": "1463101",
+    "entity_name": "Enphase Energy, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "726016000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-23",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "146873000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-23",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3383012000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-23",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-71805000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-23",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-363530000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-23",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "246232000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-23",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.2023",
+    "operating_cash_flow_to_revenue": "0.339155",
+    "assets_to_revenue": "4.659693",
+    "financing_cash_flow_to_revenue": "-0.098903",
+    "investing_cash_flow_to_revenue": "-0.500719"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $303.",
+      "non-GAAP gross margin.",
+      "GAAP gross margin of 45.",
+      "non-GAAP gross margin of 47.",
+      "Non-GAAP gross margin of 41.",
+      "GAAP operating income of $1."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK For the third quarter of 2024, Enphase Energy estimates both GAAP and non-GAAP financial results as follows: • Revenue to be within a range of $370.",
+      "outlook today at 4:30 p.",
+      "outlook, including revenue, shipments of IQ Batteries by megawatt hours, gross margin with net IRA benefit and excluding net IRA benefit, estimated shipments of U.",
+      "projects in the United States.",
+      "projects.",
+      "expected to be within a range of 17."
+    ],
+    "wave_or_demand_evidence": [
+      "customers in Luxembourg.",
+      "customers with commercial fleet EVs in the United States.",
+      "ained flat when compared to the first quarter of 2024.",
+      "AI-based IQ ® Energy Management software to manage dynamic electricity rates in the Netherlands and Belgium that can maximize savings for homeowners.",
+      "ailable to residential and commercial installers in the United States, Canada, Brazil, Germany, Austria, and the Netherlands.",
+      "powerful EV charger to date, for customers with commercial fleet EVs in the United States."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory returned to normal levels as we exited the second quarter of 2024.",
+      "charger.",
+      "Charger, its most powerful EV charger to date, for customers with commercial fleet EVs in the United States.",
+      "impairment charges .",
+      "impairment charges due to the nature of the expenses being unusual and arising outside the ordinary course of continuing operations.",
+      "impairment charges 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 303.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "109.260002",
+    "return_10d_pct": "-5.3725",
+    "return_20d_pct": "2.9837",
+    "return_30d_pct": "12.5755",
+    "return_60d_pct": "7.0840",
+    "return_90d_pct": "-15.5867"
+  },
+  "text_stats": {
+    "primary_text_len": 4057,
+    "exhibit_text_len": 26974,
+    "combined_text_len": 31033
+  }
+}

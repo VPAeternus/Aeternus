@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DD",
+    "cik": "1666700",
+    "event_date": "2024-07-31",
+    "event_accession": "0001666700-24-000028",
+    "primary_8k_doc": "dd-20240731.htm",
+    "exhibit_docs": [
+      "exhibit991enrschedules-2q24.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DD_000166670024000028_dd-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DD_000166670024000028_exhibit991enrschedules-2q24.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DD",
+    "cik": "1666700",
+    "entity_name": "DUPONT DE NEMOURS, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3018000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "257000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "38552000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-213000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-229000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2023-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "209000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2023-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.085156",
+    "operating_cash_flow_to_revenue": "0.069251",
+    "assets_to_revenue": "12.774023",
+    "financing_cash_flow_to_revenue": "-0.070577",
+    "investing_cash_flow_to_revenue": "-0.075878"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Sales of $3.",
+      "Net sales increased 2% as a favorable portfolio impact of 4% reflecting the August 2023 Spectrum acquisition was partially offset by a currency headwind of 2%.",
+      "Net sales increased 15% as a favorable portfolio impact of 9% primarily reflecting the Spectrum acquisition and organic sales (2) growth of 8% was partially offset by a currency headwind of 2%.",
+      "Net sales decreased 7% due to a 6% organic sales (2) decline and a 1% currency headwind.",
+      "net sales of about $12.",
+      "GAAP EPS from continuing operations of $0."
+    ],
+    "guidance_evidence": [
+      "guidance for net sales, operating EBITDA and adjusted EPS WILMINGTON, Del.",
+      "Outlook Dollars in millions, unless noted 3Q’24E Full Year 2024E Net sales ~$3,200 $12,400 - $12,500 Operating EBITDA (2) ~$815 $3,060 - $3,110 Adjusted EPS (2) ~$1.",
+      "guidance for net sales, operating EBITDA and adjusted EPS.",
+      "guidance ranges, we now estimate net sales of about $12.",
+      "outlook beginning today at 8:00 a.",
+      "outlook,” “stabilization,” “confident,” “preliminary,” “initial,” and similar expressions and variations or negatives of these words."
+    ],
+    "wave_or_demand_evidence": [
+      "demand recovery, AI-driven technology ramps as well as higher volume for OLED materials led by new product launches.",
+      "demand improvement in construction markets compared to prior year.",
+      "customers advance their best ideas and deliver essential innovations in key markets including electronics, transportation, construction, water, healthcare and worker safety.",
+      "customers and cost savings.",
+      "demand and market conditions in the semiconductor industry and associated end markets, including from continuing or expanding trade disputes or restrictions, including on exports to China of U.",
+      "aises full year 2024 guidance for net sales, operating EBITDA and adjusted EPS WILMINGTON, Del."
+    ],
+    "warning_or_risk_evidence": [
+      "charge and lower interest income.",
+      "inventory destocking for Kalrez ® and biopharma markets.",
+      "inventory destocking for medical packaging products.",
+      "inventory destocking in China.",
+      "preliminary,” “initial,” and similar expressions and variations or negatives of these words.",
+      "restrictions, including on exports to China of U."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "35.175732",
+    "return_10d_pct": "-6.8276",
+    "return_20d_pct": "-4.4725",
+    "return_30d_pct": "-2.3195",
+    "return_60d_pct": "5.9950",
+    "return_90d_pct": "-0.9516"
+  },
+  "text_stats": {
+    "primary_text_len": 3659,
+    "exhibit_text_len": 45569,
+    "combined_text_len": 49230
+  }
+}

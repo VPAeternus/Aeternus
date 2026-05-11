@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ICE",
+    "cik": "1571949",
+    "event_date": "2024-08-01",
+    "event_accession": "0001104659-24-084630",
+    "primary_8k_doc": "tm2420391d1_8k.htm",
+    "exhibit_docs": [
+      "tm2420391d1_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ICE_000110465924084630_tm2420391d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ICE_000110465924084630_tm2420391d1_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ICE",
+    "cik": "1571949",
+    "entity_name": "INTERCONTINENTAL EXCHANGE, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2472000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "655000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "136084000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-42351000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "2045000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "653000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.264968",
+    "operating_cash_flow_to_revenue": "0.264159",
+    "assets_to_revenue": "55.050162",
+    "financing_cash_flow_to_revenue": "-17.132282",
+    "investing_cash_flow_to_revenue": "0.827265"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $2.",
+      "revenues were $2.",
+      "revenues of $1.",
+      "revenues of $565 million and mortgage technology revenues of $506 million.",
+      "revenues were $1.",
+      "revenues were $565 million."
+    ],
+    "guidance_evidence": [
+      "Guidance · ICE's full year 2024 GAAP operating expenses are expected to be in a range of $4.",
+      "expected to be in a range of $4.",
+      "expected to be in a range of $3.",
+      "expected to be in a range of $1.",
+      "expected to be in a range of $955 million to $965 million.",
+      "expected to be in the range of $200 million to $205 million."
+    ],
+    "wave_or_demand_evidence": [
+      "customers continue to access our networks to manage risk, consume our mission-critical data and drive workflow efficiencies across asset classes and through an array of macroeconomic environments.",
+      "customers and drive growth for our stockholders.",
+      "customers access mission-critical workflow tools that increase transparency and efficiency.",
+      "customers streamline processes and capitalize on opportunities.",
+      "customers to opportunity.",
+      "air & Chief Executive Officer , said , \"We are pleased to report our second quarter results that extend our track record of growth."
+    ],
+    "warning_or_risk_evidence": [
+      "charged to member organizations of our U.",
+      "loss for the second quarter was $32 million, and the operating margin was (6)%.",
+      "losses from unconsolidated investees.",
+      "loss (309 ) (294 ) Total Intercontinental Exchange, Inc.",
+      "uncertainties.",
+      "uncertainties, which could cause actual results to differ from those contained in the forward-looking statements, see ICE's Securities and Exchange Commission (SEC) filings, including, but not limited to, the risk factors in Intercontinental Exchange, Inc."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2300,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "150.000000",
+    "return_10d_pct": "2.5933",
+    "return_20d_pct": "5.7333",
+    "return_30d_pct": "7.6267",
+    "return_60d_pct": "7.4267",
+    "return_90d_pct": "3.9133"
+  },
+  "text_stats": {
+    "primary_text_len": 3718,
+    "exhibit_text_len": 22505,
+    "combined_text_len": 26225
+  }
+}

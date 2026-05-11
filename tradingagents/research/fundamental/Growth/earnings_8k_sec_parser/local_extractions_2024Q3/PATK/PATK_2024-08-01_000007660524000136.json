@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PATK",
+    "cik": "76605",
+    "event_date": "2024-08-01",
+    "event_accession": "0000076605-24-000136",
+    "primary_8k_doc": "patk-20240801.htm",
+    "exhibit_docs": [
+      "patkq2_24earningsdeck812.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PATK_000007660524000136_patk-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PATK_000007660524000136_patkq2_24earningsdeck812.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PATK",
+    "cik": "76605",
+    "entity_name": "PATRICK INDUSTRIES, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "900100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-02",
+    "net_income_value": "30173000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-02",
+    "assets_value": "2562448000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "32463000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-02",
+    "investing_cash_flow_value": "-23577000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-02",
+    "operating_cash_flow_value": "-950000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.033522",
+    "operating_cash_flow_to_revenue": "-0.001055",
+    "assets_to_revenue": "2.846848",
+    "financing_cash_flow_to_revenue": "0.036066",
+    "investing_cash_flow_to_revenue": "-0.026194"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales increased 10%, driven by higher RV, Housing and Powersports revenue, which more than offset lower revenue from our Marine end market Gross margin was 22.",
+      "earnings per share on a comparable basis exclude items that affect comparability.",
+      "Gross Margin 18.",
+      "EPS 1 $3.",
+      "GROSS MARGIN $1,017$921 Q2 2023 Q2 2024 22.",
+      "OPERATING INCOME & MARGIN 8."
+    ],
+    "guidance_evidence": [
+      "guidance,” “expects,” ”anticipates,” “intends,” “plans,” “believes,” “seeks” and similar expressions.",
+      "expects,” ”anticipates,” “intends,” “plans,” “believes,” “seeks” and similar expressions."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, operations, team members and suppliers.",
+      "demand Strategic capital allocation preserves our tactical advantage while driving efficiencies • Paid down $82 million in debt during the quarter, resulting in a net leverage ratio of 2.",
+      "demand and dealer restocking.",
+      "demand for affordable housing remains strong.",
+      "ains statements that are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+      "ainties that could cause actual results to differ materially from either historical or anticipated results depending on a variety of factors."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels in the dealer channel.",
+      "inventory Technological advancements in construction are improving the quality and efficiency of manufactured homes Market Sector Trends 10 Financial Performance 11 Q2 2024 NET SALES & GROSS MARGIN $1,017$921 Q2 2023 Q2 2024 22.",
+      "Inventory Impact in Q2’24: (~21,200) units Estimated Dealer Inventory Impact in Q2’24: (~29,100) units (Units in thousands) Balance Sheet and Liquidity 13 COVENANTS AND RATIOS1 DEBT STRUCTURE AND MATURITIES NET LEVERAGE1 ($ in millions) LIQUIDITY ($ in millions) • $150.",
+      "Charge Coverage Ratio – 3.",
+      "inventory step-up - - Transaction costs 0.",
+      "inventory step-up, net of tax 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "79.580002",
+    "return_10d_pct": "0.2346",
+    "return_20d_pct": "6.7689",
+    "return_30d_pct": "5.6798",
+    "return_60d_pct": "20.9014",
+    "return_90d_pct": "5.5374"
+  },
+  "text_stats": {
+    "primary_text_len": 4306,
+    "exhibit_text_len": 17591,
+    "combined_text_len": 21899
+  }
+}

@@ -1,4 +1,4 @@
-# NVDA vs BE Fundamental
+# NVDA vs BE Walkforward
 
 ## Scope
 - Start: `NVDA 2025-02-26 10-K 0001045810-25-000023`
@@ -9,7 +9,7 @@
 ## Step 1 — 2025-02-26
 ### Active filing set
 - NVDA — `2025-02-26` — `10-K` — `0001045810-25-000023`
-- BE — no filing yet in the fundamental window until `2025-04-30`
+- BE — no filing yet in the walkforward window until `2025-04-30`
 
 ### Analyst card — NVDA
 - Company: `NVDA`
@@ -107,7 +107,7 @@ Scale: `0-5` each. Net growth score = Demand + Conversion + Scale + Delta + Pena
 - Why NVDA over BE:
   - NVDA shows explicit prepaid capacity agreements, non-cancellable orders, supplier expansion, and direct management behavior consistent with live constrained demand.
   - BE shows possibility and narrative optionality, but not comparably strong proof of conversion, commitment, or continuation.
-  - So on a filing-only fundamental basis, NVDA remains the cleaner buy for this step.
+  - So on a filing-only walkforward basis, NVDA remains the cleaner buy for this step.
 
 ## Step 3 — compare NVDA 2025-05-28 vs BE 2025-04-30
 ### Active filing set
@@ -163,7 +163,7 @@ Scale: `0-5` each. Net growth score = Demand + Conversion + Scale + Delta + Pena
 - Why NVDA over BE:
   - NVDA now has both hard commitment behavior and explicit continuation-stage proof: next-platform shipment cadence, prepaid capacity, and ecosystem dependency visibility.
   - BE still reads as earlier-stage optionality with financing and sales-cycle friction, not a cleaner live operating engine.
-  - On this quarter's fundamental comparison, NVDA is the clearly superior filing.
+  - On this quarter's walkforward comparison, NVDA is the clearly superior filing.
 
 ## Step 4 — compare NVDA 2025-05-28 vs BE 2025-07-31
 ### Active filing set
@@ -287,7 +287,7 @@ Scale: `0-5` each. Net growth score = Demand + Conversion + Scale + Delta + Pena
 - Company: `BE`
 - Filing date: `2025-10-28`
 - Form: `10-Q`
-- Core read: this is the first BE filing in the fundamental where the growth-first case looks strong enough to challenge the mature winner. The filing still has financing and bookings friction, but it adds more concrete ingredients for a real data-center power scaling path.
+- Core read: this is the first BE filing in the walkforward where the growth-first case looks strong enough to challenge the mature winner. The filing still has financing and bookings friction, but it adds more concrete ingredients for a real data-center power scaling path.
 - What matters:
   - BE explicitly frames success around the AI data center market and the rate of AI adoption.
   - BE now references strategic partnerships with `SK ecoplant` and `Brookfield Asset Management`, which matters because financing and deployment partners are central to scaling this kind of infrastructure business.

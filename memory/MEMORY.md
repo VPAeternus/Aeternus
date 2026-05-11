@@ -74,36 +74,36 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 | **Thesis Validation** | **Analyze-Only Daily Comparator** | LLM comparator answers whether daily data changes the current thesis (`thesis_check.py`) |
 | **Confidence Model** | **Deterministic Weighted Factors (1-5)** | Data quality + thesis clarity + catalyst proximity + historical accuracy |
 | **Hedging Engine** | **Beta+VaR + Adaptive Regime Overlay** | Deterministic SPY/VIX regime overlay with crash gating and audit logging (`hedging.py`, `market_regime.py`) |
-| **Deal Flow Intake** | **Top-20 Ranked Research Queue** | Deterministic multi-family sourcing pipeline (`dealflow/`) feeds research shortlist before deep analysis |
+| **Deal Flow Intake** | **Top-20 Ranked Fundamental Review List** | Deterministic multi-family sourcing pipeline (`dealflow/`) feeds research candidate_list before deep analysis |
 | **Smart-Money Source of Truth** | **SEC 13F + Congress Composite** | Live connector combines SEC holdings and Congress trade disclosures into `smart_money` family with graceful fallback statuses |
 | **Direct Social Feed** | **X API + Influencer Quality** | Direct X connector weights sentiment by author-quality metrics; token-gated and non-fatal on missing credentials |
 | **Opportunity Capture** | **Dual-Lane Selection (Core + Momentum)** | Top-20 selection split (`12 CORE / 8 MOMENTUM`) ensures high-upside trend names are not filtered out by weak valuation overlays |
-| **Momentum Calibration** | **Theme-aware lane promotion floor** | Scoring now combines strict/price/theme momentum gates and deterministic lane rebalance to avoid `MOMENTUM=0` shortlists under sparse social coverage |
+| **Momentum Calibration** | **Theme-aware lane promotion floor** | Scoring now combines strict/price/theme momentum gates and deterministic lane rebalance to avoid `MOMENTUM=0` candidate_lists under sparse social coverage |
 | **Momentum Intelligence** | **Post-First Cashtag Stream** | HYBRID cashtag ingestion (xAI scout + direct X budgeted enrichment) drives `cashtag_momentum` and dynamic universe expansion |
-| **Manual X Feed Governance** | **15-pass readiness-gated workflow preflight** | Manual X/social ingestion is now explicitly treated as a 15-pass operator workflow (`x-feed`). `workflow-run --mode manual` blocks with `BLOCKED_MANUAL_X_FEED` until all passes are archived and merged X-feed data exists, preventing fallback into unintended automatic social/news ingestion during manual-mode runs. |
+| **Manual X Feed Governance** | **16-pass readiness-gated workflow preflight** | Manual X/social ingestion is now explicitly treated as a 16-pass operator workflow (`x-feed`) after adding the blindspot/unmapped-ticker audit pass. `workflow-run --mode manual` blocks with `BLOCKED_MANUAL_X_FEED` until all passes are archived and merged X-feed data exists, preventing fallback into unintended automatic social/news ingestion during manual-mode runs. |
 | **Deal Flow Cadence** | **Scheduler Policy (Daily + Event Cooldown)** | `DealFlowScheduler` runs pre-open daily and event-triggered refresh with cooldown + persisted state |
-| **Connector Observability** | **Per-Run Telemetry Artifact** | Deal Flow pipeline records connector latency/status/coverage into `connector_health.json` and exposes `connector_health_summary` in shortlist output |
-| **Score Explainability** | **Per-Family Contribution Report** | Pipeline publishes deterministic contribution decomposition (`core`, `momentum`, `asymmetry`) in `family_contributions.json` for each shortlist run |
-| **Batch Attribution** | **Lane + Playbook Outcome Breakdown** | `analyze-batch` emits recommendation/score attribution by lane (`CORE`/`MOMENTUM`) and playbook from per-symbol `analysis_report.json` |
-| **Realized Attribution** | **5d/20d horizon edge tracking** | `analyze-batch` now appends realized horizon metrics (return, benchmark return, edge, strategy edge) and aggregates by lane/playbook for post-analysis selection quality monitoring |
-| **Signal Attribution** | **Dominant-family edge accounting** | `analyze-batch` now maps each queue item to dominant signal families from dealflow subscores and publishes by-family horizon attribution (`by_signal_family`, `signal_family_counts`) |
+| **Connector Observability** | **Per-Run Telemetry Artifact** | Deal Flow pipeline records connector latency/status/coverage into `connector_health.json` and exposes `connector_health_summary` in candidate_list output |
+| **Score Explainability** | **Per-Family Contribution Report** | Pipeline publishes deterministic contribution decomposition (`core`, `momentum`, `asymmetry`) in `family_contributions.json` for each candidate_list run |
+| **Batch Attribution** | **Lane + Playbook Outcome Breakdown** | `retired post-scout batch command` emits recommendation/score attribution by lane (`CORE`/`MOMENTUM`) and playbook from per-symbol `analysis_report.json` |
+| **Realized Attribution** | **5d/20d horizon edge tracking** | `retired post-scout batch command` now appends realized horizon metrics (return, benchmark return, edge, strategy edge) and aggregates by lane/playbook for post-analysis selection quality monitoring |
+| **Signal Attribution** | **Dominant-family edge accounting** | `retired post-scout batch command` now maps each queue item to dominant signal families from dealflow subscores and publishes by-family horizon attribution (`by_signal_family`, `signal_family_counts`) |
 | **Sector Canonicalization** | **Static + profile + cache + symbol normalization** | Deal Flow universe now resolves sectors through deterministic baseline, yfinance profile, and persisted cache keyed by normalized symbols; queue items now persist explicit `sector` plus queue-level `canonical_sector_map` |
 | **Analyze Sector Fallback** | **Ticker-normalized sector context fallback chain** | `sector_context.py` now normalizes ticker variants and falls back to dealflow baseline + sector cache when yfinance sector metadata is missing, preventing `Unknown` sectors in Aeternus scoring output |
 | **House Feed Automation** | **Scheduler-driven PTR refresh + runtime URL wiring** | `DealFlowScheduler` now runs configurable House PTR refresh via `house_feed.py`, mirrors primary/fallback artifacts, and injects generated local source paths for congress ingestion when URLs are unset |
 | **Local Congress Source Support** | **HTTP + file path compatible connectors** | Smart-money source loader now accepts `file://` and plain local JSON paths for Senate/House feeds, enabling local primary/fallback validation without external hosting |
 | **Manual Idea Overlay** | **Hybrid Merge with slot guarantees** | Deal Flow now merges operator watchlist ideas into Top-20 with deterministic slot policy (`target/min/max`), liquidity + diversification guards, and per-run merge trace (`manual_merge.json`) |
-| **Manual Research Priority** | **Manual names forced into deep-selection set** | Queue builder now guarantees at least one manual candidate is selected for deep research when manual symbols are present in shortlist |
+| **Manual Research Priority** | **Manual names forced into fundamental-intake set** | Queue builder now guarantees at least one manual candidate is selected for deep research when manual symbols are present in candidate_list |
 | **Manual Inclusion Reliability** | **Low-data and missing-auto manual fallback** | Manual ideas are no longer dropped solely for `LOW_DATA`; when a manual symbol lacks auto candidate coverage, a safe synthesized candidate is created for merge evaluation (still constrained by liquidity/diversification) |
 | **Manual Override Policy** | **Force-insert with explicit risk tags** | With `dealflow_manual_force_insert=true`, manual ideas can override diversification/liquidity rejection paths and are tagged (`Manual cap override`, `Manual liquidity override/unchecked`) instead of being silently dropped |
-| **X Scope Telemetry** | **Run-level coverage counters** | Cashtag stream now emits scope metadata (`handles`, `symbol_calls`, `expansions`) surfaced in shortlist JSON and CLI output for budget/coverage diagnostics |
-| **Feed Provenance Visibility** | **Source-detail tags in shortlist/queue** | Deal Flow candidates now expose `source_detail` (`X_FEED`, `WEB_NEWS`, `REDDIT`, `SEC_CONGRESS`, `MANUAL_WATCHLIST`) and CLI tables render a `Source` column for each name |
+| **X Scope Telemetry** | **Run-level coverage counters** | Cashtag stream now emits scope metadata (`handles`, `symbol_calls`, `expansions`) surfaced in candidate_list JSON and CLI output for budget/coverage diagnostics |
+| **Feed Provenance Visibility** | **Source-detail tags in candidate_list/queue** | Deal Flow candidates now expose `source_detail` (`X_FEED`, `WEB_NEWS`, `REDDIT`, `SEC_CONGRESS`, `MANUAL_WATCHLIST`) and CLI tables render a `Source` column for each name |
 | **Reddit Live Intake** | **Subreddit-backed social/news augmentation** | `social_news.py` now fetches recent per-symbol posts from configured subreddits (default `wallstreetbets,stocks,investing`) and blends them into social/news evidence and scoring |
 | **X Account Discovery** | **Weekly approval-based handle expansion** | `x-discovery` generates ranked non-seed account candidates (`x_account_candidates.json`) using engagement quality, cashtag yield, and downstream edge proxies without auto-follow side effects |
 | **Run Cost Control** | **Low-cost default + Max-Recall override** | `source`/`orchestrate` now default to `--profile daily` (LOW_COST), while `--profile max-recall` enables higher-coverage settings; LOW_COST applies stricter X/social/discovery caps for faster routine runs |
 | **Provider Throttle Handling** | **Per-method 429 quarantine + fallback continuation** | Dataflow router now disables throttled vendors for the active process after first 429/retry-limit event, so remaining symbols continue on fallback vendors instead of repeatedly hitting the same limit |
 | **Batch Vendor Scope** | **xAI-only overrides for non-interactive queue runs** | Queue-driven non-interactive analyze/batch now forces `get_news/get_global_news/get_fundamentals` to xAI when provider is xAI, preventing costly multi-vendor fan-out during backfill and attribution runs |
 | **Analyze Loop Guard** | **Tool-iteration cap + payload compaction** | Analyst routing now caps tool-call iterations per stage (`max_tool_iterations_per_analyst`), message resets use neutral placeholder text, and fundamentals tool payloads are compacted to prevent long-horizon stalls |
-| **Batch Failure Recovery** | **Cached report fallback (`SUCCESS_CACHED`)** | `analyze-batch` can now reuse existing symbol/date `analysis_report.json` when live execution fails/times out, preserving lane/playbook/signal-family attribution continuity |
+| **Batch Failure Recovery** | **Cached report fallback (`SUCCESS_CACHED`)** | `retired post-scout batch command` can now reuse existing symbol/date `analysis_report.json` when live execution fails/times out, preserving lane/playbook/signal-family attribution continuity |
 | **X Budget Governance** | **Attribution-driven auto tuner with guardrails** | `x_budget.py` computes deterministic X call/budget recommendations from realized by-family attribution (5d/20d), enforces horizon-alignment hold + call/budget clamps, and persists policy artifacts for runtime + audit visibility |
 | **Step 1 Readiness Gate** | **Artifact-based go/no-go evaluation** | `readiness.py` + `aeternus step1-readiness` now gate Step 2 transition on deterministic checks: consecutive stable batch cycles, realized attribution sample sufficiency, and connector policy compliance |
 | **Congress Feed Resilience** | **Primary + Fallback House URL Chain** | Smart-money source tries Senate + House primary + House fallback URLs with schema/ticker parsing fallbacks |
@@ -114,9 +114,9 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 | **Portfolio Admission Benchmark** | **Conservative V3 hurdle with fail-open missing-proxy policy** | `paper_execution.py` now compares candidate expected-return proxies against the configured V3 benchmark window, blocks only explicit underperformers, and leaves missing-proxy names eligible in v1 with explicit metadata for later tightening |
 | **Step 2 Evidence Integrity** | **Read-only all-candidate classification layer** | `evidence_integrity.py` classifies every Step 2 candidate as `CONFIRMED`, `SPARSE_BUT_INTERESTING`, `DATA_DEGRADED`, or `LOW_SIGNAL` using candidate scores, signal statuses, and connector health; persisted as `evidence_integrity.json` without changing the current evidence gate in v1 |
 | **Step 2 Evidence Review** | **Summary CLI + cohort scorecards** | Evidence Integrity now mirrors Discovery Delta rollout shape: live CLI summary renders class counts plus top `SPARSE_BUT_INTERESTING` / `DATA_DEGRADED` names, and `hindsight` / `performance_review` now embed `evidence_integrity_cohorts` with baseline and peer comparisons before any Step 2 gate rewrite |
-| **Step 3 Shortlist Integrity** | **Read-only shortlist-boundary artifact** | `shortlist_integrity.py` now measures the Step 3 cut with `selected_shortlist`, `near_miss_eligible`, and `selected_for_deep`, persists `shortlist_integrity.json`, and surfaces candidate false negatives without changing ranking behavior |
-| **Step 4 Deep Selection Integrity** | **Read-only deep-research boundary artifact** | `deep_selection_integrity.py` now measures the Step 4 cut with `selected_for_deep`, `near_miss_eligible`, and `injected_selected`, persists `deep_selection_integrity.json`, and separates auto-selected names from manual / IV / portfolio injections without changing `deep_k` or quota behavior |
-| **Step 5 Research Conversion Integrity** | **Read-only research execution / portfolio conversion artifact** | `research_conversion_integrity.py` now measures the Step 5 path from `analyze-batch` into portfolio inclusion, persists `research_conversion_integrity.json`, and separates deep/quick fresh-success, cached, and failed cohorts without changing analysis or portfolio behavior |
+| **Step 3 Candidate List Integrity** | **Read-only candidate_list-boundary artifact** | `candidate_list_integrity.py` now measures the Step 3 cut with `selected_candidate_list`, `near_miss_eligible`, and `legacy_deep_flag`, persists `candidate_list_integrity.json`, and surfaces candidate false negatives without changing ranking behavior |
+| **Step 4 Fundamental Intake Integrity** | **Read-only deep-research boundary artifact** | `fundamental_intake_integrity.py` now measures the Step 4 cut with `legacy_deep_flag`, `near_miss_eligible`, and `injected_selected`, persists `fundamental_intake_integrity.json`, and separates auto-selected names from manual / IV / portfolio injections without changing `deep_k` or quota behavior |
+| **Step 5 Research Conversion Integrity** | **Read-only research execution / portfolio conversion artifact** | `research_conversion_integrity.py` now measures the Step 5 path from `retired post-scout batch command` into portfolio inclusion, persists `research_conversion_integrity.json`, and separates deep/quick fresh-success, cached, and failed cohorts without changing analysis or portfolio behavior |
 | **Industry Disruption First Principles** | **Reusable strategy gate for Zero-to-One company/wedge thinking** | Added `.agents/skills/industry-disruption-first-principles/SKILL.md` plus an Aeternus worked example and memo so future strategy discussions are forced through immutable truths, inherited infrastructure, incumbent waste, wedge, scorecard, and platform-expansion analysis |
 | **Autoresearch Decision Gate** | **Reusable optimization gate for brute force vs deterministic search vs autoresearch** | Added `.agents/skills/autoresearch-decision-gate/SKILL.md` plus examples so future optimization work must define the metric, cheapest trustworthy evaluator, search-surface size, best tool, and promotion ladder before any agent-led tuning begins. The hard rule is: tiny enumerable spaces should be brute-forced, not autoresearched. |
 | **Aeternus Operating System Thesis** | **Canonical strategic framing for the company** | `docs/research/aeternus-operating-system-thesis.md` is now the easy-access strategic memo: Aeternus is a capital allocation operating system whose edge is faster verified learning, and roadmap items should be judged by whether they improve that loop |
@@ -165,8 +165,8 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 | Smart Money Source | `tradingagents/dealflow/sources/smart_money.py` |
 | X Direct Source | `tradingagents/dealflow/sources/x_social.py` |
 | Cashtag Source | `tradingagents/dealflow/sources/cashtag_stream.py` |
-| Deal Flow Scoring | `tradingagents/dealflow/scoring.py` |
-| Deal Flow Ranking | `tradingagents/dealflow/ranking.py` |
+| Legacy Pre-Fundamental Scoring | `legacy pre-fundamental scorer` |
+| Legacy Pre-Fundamental Selection | `legacy selector` |
 | Durable Prompt | `memory/Prompt.md` |
 | Durable Plans | `memory/Plans.md` |
 | Durable Architecture | `memory/Architecture.md` |
@@ -190,7 +190,7 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 
 ## Recent Addendum (2026-02-06)
 
-- `analyze-batch` now has deterministic per-item timeout control in `cli/main.py` via `--per-item-timeout-seconds` (env: `AETERNUS_ANALYZE_BATCH_ITEM_TIMEOUT_SECONDS`, default `420`).
+- `retired post-scout batch command` now has deterministic per-item timeout control in `cli/main.py` via `--per-item-timeout-seconds` (env: `AETERNUS_ANALYZE_BATCH_ITEM_TIMEOUT_SECONDS`, default `420`).
 - Timeout behavior is fail-fast per item (status `FAILED`, return code `124`) while allowing the batch loop to continue and persist attribution summaries.
 
 ---
@@ -202,24 +202,24 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 - Added Step 2 execution abstraction in `tradingagents/graph/paper_execution.py` with a stable broker boundary (`ExecutionAdapter` + `PaperExecutionAdapter`) so paper execution and future live brokerage share the same order/close interface.
 - Added idempotent order execution by `order_intent_id` and broker-compatible order metadata (`client_order_id`, `idempotency_key`, `order_type`, `time_in_force`) to reduce integration risk when switching to live order routing.
 - Added Step 2 CLI execution chain in `cli/main.py`:
-  - `portfolio-plan` -> deterministic order intents from `analyze-batch`
+  - `portfolio-plan` -> deterministic order intents from `retired post-scout batch command`
   - `execute-paper` -> fill intents through adapter
   - `paper-positions` -> inspect open ledger
   - `close-paper` -> close position and propagate to `TrackRecord.update_outcome`
 
 ## Recent Addendum (2026-02-07T19:55:00Z)
 
-- Step 1 hardening moved Deal Flow default shortlist size from Top-20 to Top-30:
-  - `dealflow_top_k=30`
+- Step 1 hardening moved Deal Flow default candidate_list size from Top-20 to Top-30:
+  - `legacy_top_count=30`
   - lane quotas updated to `18 CORE / 12 MOMENTUM` in `tradingagents/default_config.py`.
 - Added discovered-cashtag symbol sanitization in `tradingagents/dealflow/pipeline.py` using configurable min/max length and denylist gates to reduce non-tradable token ingress.
-- Added connector timeout/retry guards in `tradingagents/dealflow/pipeline.py` (`dealflow_connector_timeout_seconds`, `dealflow_connector_max_attempts`) to prevent single-source stalls from blocking shortlist generation.
+- Added connector timeout/retry guards in `tradingagents/dealflow/pipeline.py` (`dealflow_connector_timeout_seconds`, `dealflow_connector_max_attempts`) to prevent single-source stalls from blocking candidate_list generation.
 - Hardened yfinance-heavy connectors (`price_momentum.py`, `macro.py`) with batched downloads, suppressed noisy stderr/stdout output, and non-threaded fetches for more stable runtime behavior in max-recall conditions.
 
 ## Recent Addendum (2026-02-07T01:42:07Z)
 
-- `analyze-batch` in `cli/main.py` now supports dual-pass execution in one run:
-  - `DEEP` analysis for queue items where `selected_for_deep=true`
+- `retired post-scout batch command` in `cli/main.py` now supports dual-pass execution in one run:
+  - `DEEP` analysis for queue items where `legacy_deep_flag=true`
 
 ## Recent Addendum (2026-03-11T12:40:00Z)
 
@@ -245,8 +245,8 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
   - `universe_gate_edge`
   - `universe_gate_haystack`
   - `evidence_gate`
-  - `shortlist_cut`
-  - `deep_selection_cut`
+  - `candidate_list_cut`
+  - `fundamental_intake_cut`
 - Investigation now prefers this canonical payload (`reason_code`, `reason_text`, `threshold`, `observed_value`, `delta_to_pass`) and only falls back to heuristic inference when metadata is absent.
 
 ## Recent Addendum (2026-03-18T14:24:07Z)
@@ -274,7 +274,7 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 - Forward-return ownership is now split deliberately:
   - `tradingagents/dealflow/hindsight.py` enriches shared-lane stage rows with realized `5d` returns.
   - `tradingagents/dealflow/performance_tracker.py` enriches shared-lane stage rows with realized `5d`, `20d`, and available `3m` return maps plus benchmark context.
-- This keeps the funnel instrumentation append-only while letting later scorecards evaluate shortlist/deep-selection/portfolio cuts against actual outcomes without recomputing stage membership.
+- This keeps the funnel instrumentation append-only while letting later scorecards evaluate candidate_list/fundamental-intake/portfolio cuts against actual outcomes without recomputing stage membership.
 
 ## Recent Addendum (2026-03-06T22:55:00Z)
 
@@ -282,8 +282,8 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
   - `universe_gate_edge`
   - `universe_gate_haystack`
   - `evidence_gate`
-  - `shortlist_cut`
-  - `deep_selection_cut`
+  - `candidate_list_cut`
+  - `fundamental_intake_cut`
   - `portfolio_inclusion_cut`
 - `tradingagents/dealflow/akg_universe.py` now preserves last-run universe filter snapshots so the pipeline can log early-stage cuts without rebuilding AKG state.
 - Universe-gate semantics are intentionally split:
@@ -305,8 +305,8 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
   - against the full Step 1 kept-universe baseline
   - against the average of the other Delta cohorts
 - The review artifacts also track:
-  - `shortlist_conversion`
-  - `deep_selection_conversion`
+  - `candidate_list_conversion`
+  - `fundamental_intake_conversion`
 - This keeps Discovery Delta read-only while making it possible to determine whether multi-channel discovery is genuinely stronger or whether later funnel stages are suppressing a good discovery cohort.
 
 ## Recent Addendum (2026-02-07T15:21:17Z)
@@ -399,7 +399,7 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 - Added full one-command workflow orchestration in `cli/main.py`:
   - new command `workflow-run` executes:
     - scheduler orchestration (`auto|daily|event|manual`)
-    - `analyze-batch`
+    - `retired post-scout batch command`
     - `portfolio-plan`
     - `execute-paper` (optional)
     - `execution-sync` (optional)
@@ -1075,7 +1075,7 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 - [cli/commands/scoring.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/scoring.py) now exposes:
   - `--analyst-provider`
   - `--post-analyst-provider`
-  on both `analyze` and `analyze-batch`
+  on both `analyze` and `retired post-scout batch command`
 - Current supported combinations:
   - `GPT analysts + Claude post-analyst`
   - `GPT analysts + GPT post-analyst`
@@ -1370,7 +1370,7 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 
 - `v1` non-interference policy:
   - the new layer is sidecar-only
-  - it must not change universe construction, collector inputs, scoring, shortlist, or portfolio behavior
+  - it must not change universe construction, collector inputs, scoring, candidate_list, or portfolio behavior
   - it must not mutate AKG in `v1`
 
 - Approved sidecar artifacts:
@@ -1393,7 +1393,7 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 
 - Runtime behavior:
   - `discover()` now automatically runs a shadow `Scout Compiler` at the end of the scout/discovery phase
-  - it does not alter universe construction, collectors, scoring, shortlist, or portfolio behavior
+  - it does not alter universe construction, collectors, scoring, candidate_list, or portfolio behavior
   - it emits:
     - `event_cards.json`
     - `coverage_precheck.json`
@@ -1493,16 +1493,16 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
 - The investigation backend now consumes hypothesis-ledger evidence for reject reasoning where available:
   - `universe_gate_edge` / `universe_gate_haystack`
   - `evidence_gate`
-  - `shortlist_cut`
-  - `deep_selection_cut`
+  - `candidate_list_cut`
+  - `fundamental_intake_cut`
 
 - This closes the major observability gap captured in the 2026-03-17 savepoint:
   - before: robust `where` diagnostics, weak `why` precision
   - now: stage-level deterministic miss reasons for the core discovery/selection funnel
 
-- Additional shortlist precision:
-  - reconstructed score ranks from `all_scored_candidates` to quantify shortlist cutoff misses
-  - includes anomaly detection when a symbol ranks inside `top_k` but is absent from shortlist output
+- Additional candidate_list precision:
+  - reconstructed score ranks from `legacy_scored_artifact` to quantify candidate_list cutoff misses
+  - includes anomaly detection when a symbol ranks inside `top_k` but is absent from candidate_list output
 
 ## Architecture Addendum (2026-03-18T20:20:54-0400) — Session Engine Now Persists Pre/Post LLM Score Influence
 
@@ -1568,4 +1568,4 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
   - macro-on uses candidate subscores as supplied
   - macro-neutral forces `macro_regime_fit=50`
   - downstream core/momentum/asymmetry/lane values are recomputed
-  - selection uses production `rank_candidates`, not a standalone score sort
+  - selection uses production `legacy_rank_function`, not a standalone score sort

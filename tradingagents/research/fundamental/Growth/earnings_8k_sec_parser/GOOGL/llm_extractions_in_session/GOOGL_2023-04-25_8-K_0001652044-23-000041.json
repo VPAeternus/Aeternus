@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended March 31, 2023",
+    "period_end_date": "March 31, 2023"
+  },
+  "reported_results": {
+    "revenue_millions": 69787.0,
+    "revenue_yoy_pct": 3.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "chai, CEO of Alphabet and Google, said: “We are pleased with our business performance in the first quarter, with Search performing well and momentum in Cloud.",
+    "wave_signal": "1Alphabet Announces First Quarter 2023 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "69,787 Change in revenues year over year23 %3 %Change in constant currency revenues year over year(1)26 %6 %Operating income$20,094 $17,415 Operating margin30 %25 %Other income (expense), net $(1,160)$790 Net income$16,436 $15,051 Diluted EPS$1.",
+    "risk_signal": "ices, Google Cloud, and Other Bets, beginning in the first quarter of 2023 DeepMind is reported as part of Alphabet’s unallocated corporate costs instead of within Other Bets.",
+    "customer_signal": "•Google Cloud includes infrastructure and platform services, collaboration tools, and other services for enterprise customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 68011 | | | | | $ | 69787 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 68011 | | | | | $ | 69787 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

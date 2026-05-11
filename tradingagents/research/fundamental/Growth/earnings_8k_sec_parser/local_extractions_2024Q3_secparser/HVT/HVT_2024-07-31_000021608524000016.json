@@ -1,0 +1,1285 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HVT",
+    "cik": "216085",
+    "event_date": "2024-07-31",
+    "event_accession": "0000216085-24-000016",
+    "primary_8k_doc": "hvt8k73124.htm",
+    "exhibit_docs": [
+      "hvtex99.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HVT_000021608524000016_hvt8k73124.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HVT_000021608524000016_hvtex99.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HVT",
+    "cik": "216085",
+    "entity_name": "HAVERTY FURNITURE COMPANIES, INC",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "224754000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "12372000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "654133000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-7316000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-6642000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "11074000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.055047",
+    "operating_cash_flow_to_revenue": "0.049272",
+    "assets_to_revenue": "2.91044",
+    "financing_cash_flow_to_revenue": "-0.032551",
+    "investing_cash_flow_to_revenue": "-0.029552"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales decreased 13.",
+      "sales were down 15.",
+      "EPS”) of $0.",
+      "Net income 4.",
+      "Net income as a % of sales 2.",
+      "earnings per share (“EPS”) $ 0."
+    ],
+    "guidance_evidence": [
+      "guidance and are between 60.",
+      "guidance, primarily due to reduced costs for advertising, incentive compensation, and professional fees.",
+      "guidance driven by third party credit expense and delivery costs.",
+      "guidance of 26.",
+      "expected to open in the fourth quarter of this year.",
+      "expected to be in the $282."
+    ],
+    "wave_or_demand_evidence": [
+      "demand cycle.",
+      "demand downturns as others retrench.",
+      "customer deposits, and a $10.",
+      "customer sales and transaction fees for credit card usage.",
+      "customers with a wide selection of quality merchandise in middle to upper-middle price ranges.",
+      "airman and CEO said, “Our teams are continuing to evaluate all aspects of our business from top-line growth to operating efficiencies and cost reductions during this period in the demand cycle."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary,” “would,” “could,” “should,” “position,” “will,” “project,” “intend,” “plan,” “on track,” “anticipate,” “to come,” “may,” “possible,” “assume,” and variations of such words and similar expressions are intended to identify such forward-looking statements.",
+      "decreased 13.",
+      "declined 15.",
+      "decreased to 60.",
+      "decrease is driven by the change in the LIFO reserve which generated an immaterial impact on gross profit in 2024 compared to a positive impact of $3.",
+      "decreased $6."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "hvtex99.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: Haverty Furniture Companies, Inc. Document created using Broadridge PROfile 24.3.1.5224 Copyright 1995 - 2024 Broadridge"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Havertys Reports Operating Results for Second Quarter 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "Atlanta, Georgia, July 31, 2024 – HAVERTYS (NYSE: HVT and HVT.A), today reported operating results for the second quarter ended June 30, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second quarter 2024 versus second quarter 2023:"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Diluted earnings per common share (“EPS”) of $0.27 versus $0.70. • Consolidated sales decreased 13.4% to $178.6 million. Comparable-store sales decreased 13.6%. • Gross profit margin was 60.4% compared to 60.5%. Clarence H. Smith, Chairman and CEO said, “Our teams are continuing to evaluate all aspects of our business from top-line growth to operating efficiencies and cost reductions during this period in the demand cycle. Our experience informs these decisions and we are mindful of measures taken in the near-term and their potential impact on the Havertys brand.\"We are pleased to announce the addition of a second store serving the Indianapolis market. The former Bed, Bath, & Beyond store located in Greenwood, Indiana, is expected to open in the fourth quarter of this year. Our store growth strategy is on track with plans to open a net of five new stores in 2024 and 2025.\"Havertys' strong financial position enables us to make important investments during demand downturns as others retrench. These forward-looking preparations enhance our opportunities for greater success when the economic cycle improves.\""
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "NEWS RELEASE – July 31, 2024 Page 2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Key Results"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(amounts in millions, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Results of Operations Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Sales $ 178.6 $ 206.3 $ 362.6 $ 431.0 Gross Profit 108.0 124.9 219.0 257.7 Gross profit as a % of sales 60.4 % 60.5 % 60.4 % 59.8 % SGA Variable 34.7 41.0 71.8 85.9 Fixed 68.4 69.0 140.7 142.5 Total 103.1 110.0 212.5 228.4 SGA as a % of sales Variable 19.4 % 19.9 % 19.8 % 19.9 % Fixed 38.3 % 33.4 % 38.8 % 33.1 % Total 57.7 % 53.3 % 58.6 % 53.0 % Pre-tax income 6.5 15.8 9.6 31.3 Pre-tax income as a % of sales 3.6 % 7.7 % 2.6 % 7.3 % Net income 4.4 11.8 6.8 24.2 Net income as a % of sales 2.5 % 5.7 % 1.9 % 5.6 % Diluted earnings per share (“EPS”) $ 0.27 $ 0.70 $ 0.41 $ 1.44"
+    },
+    {
+      "type": "TableElement",
+      "text": "Other Financial and Operations Data Six Months Ended June 30, 2024 2023 EBITDA (in millions)(1) $ 16.8 $ 38.3 Sales per square foot $ 166 $ 199 Average ticket $ 3,332 $ 3,250"
+    },
+    {
+      "type": "TableElement",
+      "text": "Liquidity Measures Six Months Ended June 30, Six Months Ended June 30, Free Cash Flow 2024 2023 Cash Returns to Shareholders 2024 2023 Operating cash flow $ 17.5 $ 40.1 Share repurchases $ — $ — Dividends 10.1 9.4 Capital expenditures (16.0 ) (40.5 ) Cash returns to shareholders $ 10.1 $ 9.4 Free cash flow $ 1.5 $ (0.4 ) Cash at period end $ 116.1 $ 116.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) See the reconciliation of the non-GAAP metrics at the end of the release. Second Quarter ended June 30, 2024 Compared to Same Period of 2023 • Total sales down 13.4%, comp-store sales down 13.6% for the quarter. Total written sales were down 15.2% and written comp-store sales declined 15.8% for the quarter. • Gross profit margins decreased to 60.4% in 2024 from 60.5% in 2023. The decrease is driven by the change in the LIFO reserve which generated an immaterial impact on gross profit in 2024 compared to a positive impact of $3.4 million in 2023. • SG&A expenses were 57.7% of sales versus 53.3% and decreased $6.9 million. The primary drivers of this change are: ◦ decrease in warehouse and delivery costs of $3.5 million primarily from reduced labor costs and lower expenditures for supplies and fuel. ◦ decrease of $3.3 million in selling expenses as these are predominantly variable costs tied to commissioned-based compensation expense and third-party creditor costs. ◦ decrease in administrative expenses of $1.6 million largely due to lower stock compensation costs. ◦ decrease of $1.3 million in advertising expenses driven by reduced spending on television and interactive marketing. ◦ increase in occupancy costs of $2.8 million primarily due to a reduction in rent expense in 2023 for a $1.8 million lease incentive payment. Balance Sheet and Cash Flow for the Six Months ended June 30, 2024 • Cash, cash equivalents, and restricted cash equivalents at June 30, 2024 are $116.1 million. • Generated $17.5 million in cash from operating activities primarily from earnings and changes in working capital including a $1.6 million reduction in inventories, $2.9 million increase in customer deposits, and a $10.2 million decrease in accrued liabilities and vendor repayments. • Invested $16.0 million in capital expenditures. • Paid $10.1 million in quarterly cash dividends. • No debt outstanding at June 30, 2024 and credit availability of $80.0 million. Expectations and Other • Our expectations for gross profit margins for 2024 are unchanged from our prior guidance and are between 60.0% to 60.5%. Gross profit margins fluctuate quarter to quarter in relation to our promotional cadence. • Fixed and discretionary expenses within SG&A for the full year of 2024 are expected to be in the $282.0 to $284.0 million range, an $8.0 million reduction in our previous guidance, primarily due to reduced costs for advertising, incentive compensation, and professional fees. Variable SG&A expenses for the full year of 2024 are anticipated to be in the 19.7% to 20.0% range, a decrease of 20 basis points in our previous guidance driven by third party credit expense and delivery costs. • Our effective tax rate for 2024 is expected to be 27.5%, excluding the impact from discrete items and any new tax legislation, an increase from our previous guidance of 26.5%. • Planned capital expenditures for the full year of 2024 are approximately $33.0 million. We expect retail square footage will increase approximately 3.4% in 2024 over 2023."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "NEWS RELEASE – July 31, 2024 Page 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "NEWS RELEASE – July 31, 2024 Page 4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "HAVERTY FURNITURE COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF INCOME"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, (In thousands, except per share data) 2024 2023 2024 2023 Net sales $ 178,636 $ 206,289 $ 362,633 $ 431,042 Cost of goods sold 70,652 81,394 143,630 173,363 Gross profit 107,984 124,895 219,003 257,679 Expenses: Selling, general and administrative 103,099 110,016 212,455 228,377 Other expense (income), net (101 ) 14 (78 ) 9 Total expenses 102,998 110,030 212,377 228,386 Income before interest and income taxes 4,986 14,865 6,626 29,293 Interest income, net 1,467 973 3,022 1,983 Income before income taxes 6,453 15,838 9,648 31,276 Income tax expense 2,015 4,046 2,817 7,112 Net income $ 4,438 $ 11,792 $ 6,831 $ 24,164 Basic earnings per share: Common Stock $ 0.27 $ 0.73 $ 0.42 $ 1.49 Class A Common Stock $ 0.25 $ 0.68 $ 0.39 $ 1.41 Diluted earnings per share: Common Stock $ 0.27 $ 0.70 $ 0.41 $ 1.44 Class A Common Stock $ 0.25 $ 0.67 $ 0.39 $ 1.38 Cash dividends per share: Common Stock $ 0.32 $ 0.30 $ 0.62 $ 0.58 Class A Common Stock $ 0.30 $ 0.28 $ 0.58 $ 0.54"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "NEWS RELEASE – July 31, 2024 Page 5"
+    },
+    {
+      "type": "TitleElement",
+      "text": "HAVERTY FURNITURE COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In thousands) June 30, 2024 December 31, 2023 June 30, 2023 Assets Current assets Cash and cash equivalents $ 109,942 $ 120,635 $ 109,143 Restricted cash and cash equivalents 6,125 7,142 6,959 Inventories 92,401 93,956 114,722 Prepaid expenses 16,445 17,067 11,734 Other current assets 15,497 12,793 14,914 Total current assets 240,410 251,593 257,472 Property and equipment, net 177,449 171,588 169,091 Right-of-use lease assets 195,000 202,306 199,698 Deferred income taxes 15,478 15,641 16,829 Other assets 13,768 13,005 13,100 Total assets $ 642,105 $ 654,133 $ 656,190 Liabilities and Stockholders’ Equity Current liabilities Accounts payable $ 18,058 $ 18,781 $ 20,289 Customer deposits 38,731 35,837 45,589 Accrued liabilities 37,090 46,289 41,798 Current lease liabilities 36,561 37,357 36,799 Total current liabilities 130,440 138,264 144,475 Noncurrent lease liabilities 176,940 180,397 178,835 Other liabilities 27,627 27,106 27,297 Total liabilities 335,007 345,767 350,607 Stockholders’ equity 307,098 308,366 305,583 Total liabilities and stockholders’ equity $ 642,105 $ 654,133 $ 656,190"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "NEWS RELEASE – July 31, 2024 Page 6"
+    },
+    {
+      "type": "TitleElement",
+      "text": "HAVERTY FURNITURE COMPANIES, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In thousands) Six Months Ended June 30, 2024 2023 Cash Flows from Operating Activities: Net income $ 6,831 $ 24,164 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 10,147 9,017 Share-based compensation expense 4,130 4,439 Other 1,314 (256 ) Changes in operating assets and liabilities: Inventories 1,555 3,611 Customer deposits 2,894 (2,380 ) Other assets and liabilities 916 11,637 Accounts payable and accrued liabilities (10,245 ) (10,104 ) Net cash provided by operating activities 17,542 40,128 Cash Flows from Investing Activities: Capital expenditures (15,952 ) (40,482 ) Proceeds from sale of land, property and equipment 52 23 Net cash used in investing activities (15,900 ) (40,459 ) Cash Flows from Financing Activities: Dividends paid (10,070 ) (9,414 ) Taxes on vested restricted shares (3,282 ) (4,083 ) Net cash used in financing activities (13,352 ) (13,497 ) Decrease in cash, cash equivalents and restricted cash equivalents during the period (11,710 ) (13,828 ) Cash, cash equivalents and restricted cash equivalents at beginning of period 127,777 129,930 Cash, cash equivalents and restricted cash equivalents at end of period $ 116,067 $ 116,102"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "NEWS RELEASE – July 31, 2024 Page 7"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP to Non-GAAP Reconciliation"
+    },
+    {
+      "type": "TextElement",
+      "text": "We report our financial results in accordance with accounting principles generally accepted in the United States (\"GAAP\"). We supplement the reporting of our financial information under GAAP with certain non-GAAP financial information. The non-GAAP information presented provides additional useful information but should not be considered in isolation or as substitutes for the related GAAP measures. We believe that EBITDA is a meaningful measure to share with investors."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP measures to EBITDA"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, (in thousands) 2024 2023 Income before income taxes, as reported $ 9,648 $ 31,276 Interest income, net (3,022 ) (1,983 ) Depreciation 10,147 9,017 EBITDA $ 16,773 $ 38,310"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Comparable Store Sales"
+    },
+    {
+      "type": "TextElement",
+      "text": "Comparable-store or “comp-store” sales is a measure which indicates the performance of our existing stores and website by comparing the sales growth for stores and online for a particular month over the corresponding month in the prior year. Stores are considered non-comparable if they were not open during the corresponding month or if the selling square footage has been changed significantly."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Cost of Goods Sold and SG&A Expense"
+    },
+    {
+      "type": "TextElement",
+      "text": "We include substantially all our occupancy and home delivery costs in SG&A expense as well as a portion of our warehousing expenses. Accordingly, our gross profit may not be comparable to those entities that include these costs in cost of goods sold. We classify our SG&A expenses as either variable or fixed and discretionary. Our variable expenses are comprised of selling and delivery costs. Selling expenses are primarily compensation and related benefits for our commission-based sales associates, the discount we pay for third party financing of customer sales and transaction fees for credit card usage. We do not outsource delivery, so these costs include personnel, fuel, and other expenses related to this function. Fixed and discretionary expenses are comprised of rent, depreciation and amortization and other occupancy costs for stores, warehouses and offices, and all advertising and administrative costs."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "The company invites interested parties to listen to the live webcast of the conference call on August 1, 2024 at 10:00 a.m. ET at its website, ir.havertys.com. If you cannot listen live, a replay will be available on the day of the conference call at the website at approximately 1:00 p.m. ET."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Havertys"
+    },
+    {
+      "type": "TextElement",
+      "text": "Havertys (NYSE: HVT and HVT.A), established in 1885, is a full-service home furnishings retailer with 125 showrooms in 17 states in the Southern and Midwestern regions providing its customers with a wide selection of quality merchandise in middle to upper-middle price ranges. Additional information is available on the Company’s website havertys.com."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "NEWS RELEASE – July 31, 2024 Page 8"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Safe Harbor"
+    },
+    {
+      "type": "TextElement",
+      "text": "This press release contains, and the conference call may contain forward-looking statements subject to the safe harbor provisions of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Act of 1934. These forward-looking statements are subject to risks and uncertainties and change based on various important factors, many of which are beyond our control. All statements in the future tense and all statements accompanied by words such as “expect,” “likely,” “outlook,” “forecast,” “preliminary,” “would,” “could,” “should,” “position,” “will,” “project,” “intend,” “plan,” “on track,” “anticipate,” “to come,” “may,” “possible,” “assume,” and variations of such words and similar expressions are intended to identify such forward-looking statements. These forward-looking statements include, without limitation, our expectations for retail and operating margins, selling square footage and capital expenditures for 2024, our liquidity position to continue to fund our growth plans, and our efforts and initiatives to execute our strategic plan.We caution that our forward-looking statements involve risks and uncertainties, and while we believe that our expectations for the future are reasonable in view of currently available information you are cautioned not to place undue reliance on our forward-looking statements, and they should not be relied upon as a prediction of actual results. Factors that could cause actual results to differ materially from those expressed or implied in any forward-looking statements include, but are not limited to: disruptions in our suppliers' operations; changes in national and international legislation or government regulations or policies, including changes to import tariffs and the unpredictability of such changes; failure of vendors to meet our quality control standards or to react to changes in legislative or regulatory frameworks; disruptions in our distribution centers; changes in general economic conditions, including unemployment, inflation (including the impact of tariffs); labor shortages and the Company's ability to successfully attract and retain employees in the current labor market; uncertain credit markets and other macroeconomic conditions; competitive product, service and pricing pressures; failure or weakness in our disclosure controls and procedures and internal controls over financial reporting; disruptions caused by a failure or breach of the Company's information systems and information technology infrastructure, as well as other risks and uncertainties discussed in the Company's Annual Report on Form 10-K for 2023 and from time to time in the Company's subsequent filings with the SEC. Forward-looking statements describe our expectations only as of the date they are made, and the Company undertakes no duty to update its forward-looking statements except as required by law. You are advised, however, to review any further disclosures we make on related subjects in our subsequent Forms 10-K, 10-Q, 8-K, and other reports filed with the SEC. Contact: Havertys 404-443-2900 Jenny Hill Parker SVP, Finance, and Corporate Secretary SOURCE: Havertys"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Diluted earnings per common share (“EPS”) of $0.27 versus $0.70."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Consolidated sales decreased 13.4% to $178.6 million. Comparable-store sales decreased 13.6%."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Gross profit margin was 60.4% compared to 60.5%."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        22,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "Results of Operations",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Sales",
+          "",
+          "$",
+          "178.6",
+          "",
+          "",
+          "$",
+          "206.3",
+          "",
+          "",
+          "$",
+          "362.6",
+          "",
+          "",
+          "$",
+          "431.0",
+          ""
+        ],
+        [
+          "Gross Profit",
+          "",
+          "",
+          "108.0",
+          "",
+          "",
+          "",
+          "124.9",
+          "",
+          "",
+          "",
+          "219.0",
+          "",
+          "",
+          "",
+          "257.7",
+          ""
+        ],
+        [
+          "Gross profit as a % of sales",
+          "",
+          "",
+          "60.4",
+          "%",
+          "",
+          "",
+          "60.5",
+          "%",
+          "",
+          "",
+          "60.4",
+          "%",
+          "",
+          "",
+          "59.8",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "SGA",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Variable",
+          "",
+          "",
+          "34.7",
+          "",
+          "",
+          "",
+          "41.0",
+          "",
+          "",
+          "",
+          "71.8",
+          "",
+          "",
+          "",
+          "85.9",
+          ""
+        ],
+        [
+          "Fixed",
+          "",
+          "",
+          "68.4",
+          "",
+          "",
+          "",
+          "69.0",
+          "",
+          "",
+          "",
+          "140.7",
+          "",
+          "",
+          "",
+          "142.5",
+          ""
+        ],
+        [
+          "Total",
+          "",
+          "",
+          "103.1",
+          "",
+          "",
+          "",
+          "110.0",
+          "",
+          "",
+          "",
+          "212.5",
+          "",
+          "",
+          "",
+          "228.4",
+          ""
+        ],
+        [
+          "SGA as a % of sales",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Variable",
+          "",
+          "",
+          "19.4",
+          "%",
+          "",
+          "",
+          "19.9",
+          "%",
+          "",
+          "",
+          "19.8",
+          "%",
+          "",
+          "",
+          "19.9",
+          "%"
+        ],
+        [
+          "Fixed",
+          "",
+          "",
+          "38.3",
+          "%",
+          "",
+          "",
+          "33.4",
+          "%",
+          "",
+          "",
+          "38.8",
+          "%",
+          "",
+          "",
+          "33.1",
+          "%"
+        ],
+        [
+          "Total",
+          "",
+          "",
+          "57.7",
+          "%",
+          "",
+          "",
+          "53.3",
+          "%",
+          "",
+          "",
+          "58.6",
+          "%",
+          "",
+          "",
+          "53.0",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Pre-tax income",
+          "",
+          "",
+          "6.5",
+          "",
+          "",
+          "",
+          "15.8",
+          "",
+          "",
+          "",
+          "9.6",
+          "",
+          "",
+          "",
+          "31.3",
+          ""
+        ],
+        [
+          "Pre-tax income as a % of sales",
+          "",
+          "",
+          "3.6",
+          "%",
+          "",
+          "",
+          "7.7",
+          "%",
+          "",
+          "",
+          "2.6",
+          "%",
+          "",
+          "",
+          "7.3",
+          "%"
+        ],
+        [
+          "Net income",
+          "",
+          "",
+          "4.4",
+          "",
+          "",
+          "",
+          "11.8",
+          "",
+          "",
+          "",
+          "6.8",
+          "",
+          "",
+          "",
+          "24.2",
+          ""
+        ],
+        [
+          "Net income as a % of sales",
+          "",
+          "",
+          "2.5",
+          "%",
+          "",
+          "",
+          "5.7",
+          "%",
+          "",
+          "",
+          "1.9",
+          "%",
+          "",
+          "",
+          "5.6",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Diluted earnings per share (“EPS”)",
+          "",
+          "$",
+          "0.27",
+          "",
+          "",
+          "$",
+          "0.70",
+          "",
+          "",
+          "$",
+          "0.41",
+          "",
+          "",
+          "$",
+          "1.44",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        7,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "Other Financial and Operations Data",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "EBITDA (in millions)(1)",
+          "",
+          "$",
+          "16.8",
+          "",
+          "",
+          "$",
+          "38.3",
+          ""
+        ],
+        [
+          "Sales per square foot",
+          "",
+          "$",
+          "166",
+          "",
+          "",
+          "$",
+          "199",
+          ""
+        ],
+        [
+          "Average ticket",
+          "",
+          "$",
+          "3332",
+          "",
+          "",
+          "$",
+          "3250",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        10,
+        18
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "rows": [
+        [
+          "Liquidity Measures",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "Free Cash Flow",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Cash Returns to Shareholders",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Operating cash flow",
+          "",
+          "$",
+          "17.5",
+          "",
+          "",
+          "$",
+          "40.1",
+          "",
+          "Share repurchases",
+          "",
+          "$",
+          "—",
+          "",
+          "",
+          "$",
+          "—",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Dividends",
+          "",
+          "",
+          "10.1",
+          "",
+          "",
+          "",
+          "9.4",
+          ""
+        ],
+        [
+          "Capital expenditures",
+          "",
+          "",
+          "(16.0",
+          ")",
+          "",
+          "",
+          "(40.5",
+          ")",
+          "Cash returns to shareholders",
+          "",
+          "$",
+          "10.1",
+          "",
+          "",
+          "$",
+          "9.4",
+          ""
+        ],
+        [
+          "Free cash flow",
+          "",
+          "$",
+          "1.5",
+          "",
+          "",
+          "$",
+          "(0.4",
+          ")",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash at period end",
+          "",
+          "$",
+          "116.1",
+          "",
+          "",
+          "$",
+          "116.1",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "(1)",
+          "See the reconciliation of the non-GAAP metrics at the end of the release."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Total sales down 13.4%, comp-store sales down 13.6% for the quarter. Total written sales were down 15.2% and written comp-store sales declined 15.8% for the quarter."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Gross profit margins decreased to 60.4% in 2024 from 60.5% in 2023. The decrease is driven by the change in the LIFO reserve which generated an immaterial impact on gross profit in 2024 compared to a positive impact of $3.4 million in 2023."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "SG&A expenses were 57.7% of sales versus 53.3% and decreased $6.9 million. The primary drivers of this change are:"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "◦",
+          "decrease in warehouse and delivery costs of $3.5 million primarily from reduced labor costs and lower expenditures for supplies and fuel."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "◦",
+          "decrease of $3.3 million in selling expenses as these are predominantly variable costs tied to commissioned-based compensation expense and third-party creditor costs."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 13.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "• | Consolidated sales decreased 13.4% to $178.6 million. Comparable-store sales decreased 13.6%."
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "• | Consolidated sales decreased 13.4% to $178.6 million. Comparable-store sales decreased 13.6%."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "28.620001",
+    "return_10d_pct": "-0.2446",
+    "return_20d_pct": "-0.1398",
+    "return_30d_pct": "-6.3243",
+    "return_60d_pct": "-4.0182",
+    "return_90d_pct": "-16.3522"
+  },
+  "text_stats": {
+    "primary_text_len": 3225,
+    "exhibit_text_len": 15604,
+    "combined_text_len": 18831,
+    "semantic_text_len": 15734,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

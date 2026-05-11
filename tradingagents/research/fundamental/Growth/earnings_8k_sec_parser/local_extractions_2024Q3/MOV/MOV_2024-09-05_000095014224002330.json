@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MOV",
+    "cik": "72573",
+    "event_date": "2024-09-05",
+    "event_accession": "0000950142-24-002330",
+    "primary_8k_doc": "eh240521709_8k.htm",
+    "exhibit_docs": [
+      "eh240521709_ex9901.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MOV_000095014224002330_eh240521709_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MOV_000095014224002330_eh240521709_ex9901.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MOV",
+    "cik": "72573",
+    "entity_name": "MOVADO GROUP, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "144905000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "9128000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "741496000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "-30282000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "-2883000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "-21497000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.062993",
+    "operating_cash_flow_to_revenue": "-0.148352",
+    "assets_to_revenue": "5.117118",
+    "financing_cash_flow_to_revenue": "-0.208978",
+    "investing_cash_flow_to_revenue": "-0.019896"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Sales of $159.",
+      "net sales of $159.",
+      "Net sales decreased 0.",
+      "net sales decreased 0.",
+      "net sales decreased 3.",
+      "Operating Income of $3."
+    ],
+    "guidance_evidence": [
+      "Outlook ~ ~ Board Declares Quarterly Dividend of $0.",
+      "outlook for the balance of the year.",
+      "Outlook The Company is revising its previously provided outlook to reflect second-quarter results and the expected continuing impact of a challenging environment.",
+      "outlook contemplates approximately $20 million of incremental investments in brand-building initiatives as compared to last year; · An effective tax rate of approximately 25%, as compared to its previous expectation of 22%; and · Earnings of $0.",
+      "outlook does not contemplate further deterioration due to the impact of economic uncertainty and assumes no further significant fluctuations from prevailing foreign currency exchange rates.",
+      "outlook, objectives, plans, intentions or goals are also forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customers’ brick and mortar stores, partially offset by an increase in U.",
+      "customers’ brick and mortar stores and in Movado Company Stores, partially offset by an increase in U.",
+      "ail performance drove improvement in our sales trend from the first quarter, second quarter sales and earnings were below our expectations due to the challenging consumer spending environment compounded by increased expenses to support future growth.",
+      "aign in support of our Movado Icons initiative, as announced yesterday.",
+      "aign features icons Julianne Moore, Jessica Alba, Ludacris, Tyrese Haliburton, and Christian McCaffrey, and showcases Ludacris’ iconic song, Stand Up.",
+      "aign, which marks our largest campaign in Movado brand history, will reach millions of consumers this fall in multiple touchpoints such as print, social, outdoor, digital and television."
+    ],
+    "warning_or_risk_evidence": [
+      "challenging consumer spending environment compounded by increased expenses to support future growth.",
+      "decline in our wholesale channel.",
+      "decreased 0.",
+      "decline on a constant dollar basis) to $159.",
+      "decrease in net sales reflected sales mix in Movado Company Stores and wholesale customers’ brick and mortar stores, partially offset by an increase in U.",
+      "decline on a constant dollar basis) as compared to the second quarter of last year."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 159.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-06",
+    "entry_open": "19.330000",
+    "return_10d_pct": "1.3968",
+    "return_20d_pct": "-3.6213",
+    "return_30d_pct": "-1.5003",
+    "return_60d_pct": "-0.1552",
+    "return_90d_pct": "7.6048"
+  },
+  "text_stats": {
+    "primary_text_len": 3034,
+    "exhibit_text_len": 18805,
+    "combined_text_len": 21841
+  }
+}

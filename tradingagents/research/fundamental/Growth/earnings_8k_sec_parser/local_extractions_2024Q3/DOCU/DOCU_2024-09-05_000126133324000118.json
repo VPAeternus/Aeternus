@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DOCU",
+    "cik": "1261333",
+    "event_date": "2024-09-05",
+    "event_accession": "0001261333-24-000118",
+    "primary_8k_doc": "docu-20240905.htm",
+    "exhibit_docs": [
+      "q225ex-991er.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DOCU_000126133324000118_docu-20240905.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DOCU_000126133324000118_q225ex-991er.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DOCU",
+    "cik": "1261333",
+    "entity_name": "DOCUSIGN, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "661388000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "539000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "2971290000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-01-31",
+    "financing_cash_flow_value": "-20904000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "7812000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "233635000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.000815",
+    "operating_cash_flow_to_revenue": "0.35325",
+    "assets_to_revenue": "4.492507",
+    "financing_cash_flow_to_revenue": "-0.031606",
+    "investing_cash_flow_to_revenue": "0.011812"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $736.",
+      "revenue was $717.",
+      "revenue was $18.",
+      "Revenue Officer, leading enterprise and commercial sales and partnership teams worldwide.",
+      "GAAP gross margin was 78.",
+      "Non-GAAP gross margin was 82."
+    ],
+    "guidance_evidence": [
+      "Guidance The company currently expects the following guidance: ▪ Quarter ending October 31, 2024 (in millions, except percentages): Total revenue $743 to $747 Subscription revenue $722 to $726 Billings $710 to $720 Non-GAAP gross margin 81.",
+      "guidance measures to corresponding GAAP guidance measures is not available on a forward-looking basis without unreasonable effort due to the uncertainty regarding, and the potential variability of, expenses that may be incurred in the future.",
+      "expects the following guidance: ▪ Quarter ending October 31, 2024 (in millions, except percentages): Total revenue $743 to $747 Subscription revenue $722 to $726 Billings $710 to $720 Non-GAAP gross margin 81.",
+      "anticipates,” “could,” “intends,” “target,” “projects,” “contemplates,” “believes,” “estimates,” “predicts,” “potential,” or “continue” or the negative of these words or other similar terms or expressions that concern our expectations, strategy, plans or intentions."
+    ],
+    "wave_or_demand_evidence": [
+      "customer feedback.",
+      "customers in North America and Australia.",
+      "customers across additional geographies throughout the fiscal year.",
+      "customer experience, customer support and revenue operations.",
+      "customers and more than a billion people in over 180 countries use Docusign solutions to accelerate the process of doing business and simplify people's lives.",
+      "customers plus subscription renewals and additional sales to existing customers."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment and lease-related charges, restructuring and other related charges, as these costs are not reflective of ongoing operations and, as applicable, other special items.",
+      "charges associated with such grants).",
+      "charges 208 34 4,836 4,988 6 DOCUSIGN, INC.",
+      "impairment and lease-related charges — 292 — 721 Non-GAAP gross profit $ 605,036 $ 565,791 $ 1,187,206 $ 1,112,285 GAAP gross margin 78.",
+      "impairment and lease-related charges — 206 — 505 Non-GAAP subscription gross profit $ 604,249 $ 569,248 $ 1,186,173 $ 1,114,137 GAAP subscription gross margin 81.",
+      "impairment and lease-related charges — 86 — 216 Non-GAAP professional services and other gross profit $ 787 $ (3,457) $ 1,033 $ (1,852) GAAP professional services and other gross margin (23."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 736,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-06",
+    "entry_open": "60.240002",
+    "return_10d_pct": "-5.7769",
+    "return_20d_pct": "3.8015",
+    "return_30d_pct": "4.2165",
+    "return_60d_pct": "19.9369",
+    "return_90d_pct": "38.9110"
+  },
+  "text_stats": {
+    "primary_text_len": 3745,
+    "exhibit_text_len": 32006,
+    "combined_text_len": 35753
+  }
+}

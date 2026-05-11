@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HWKN",
+    "cik": "46250",
+    "event_date": "2024-07-31",
+    "event_accession": "0000046250-24-000020",
+    "primary_8k_doc": "hwkn-20240731.htm",
+    "exhibit_docs": [
+      "hwknex9912025-q1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HWKN_000004625024000020_hwkn-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HWKN_000004625024000020_hwknex9912025-q1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HWKN",
+    "cik": "46250",
+    "entity_name": "HAWKINS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "774541000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-15",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-03",
+    "net_income_value": "51542000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-15",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-03",
+    "assets_value": "590535000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-15",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-02",
+    "financing_cash_flow_value": "7417000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-15",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-03",
+    "investing_cash_flow_value": "-49756000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-15",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-03",
+    "operating_cash_flow_value": "42837000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-15",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-03",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.066545",
+    "operating_cash_flow_to_revenue": "0.055306",
+    "assets_to_revenue": "0.762432",
+    "financing_cash_flow_to_revenue": "0.009576",
+    "investing_cash_flow_to_revenue": "-0.064239"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $256 million was driven by our acquired businesses in our Water Treatment segment.",
+      "Revenue was down in our Industrial segment due primarily to reduced selling prices driven by lower commodity costs, with volumes relatively flat year over year.",
+      "Sales were $255.",
+      "sales of $251.",
+      "sales increased $23.",
+      "sales increased as a result of added sales from our acquired businesses."
+    ],
+    "guidance_evidence": [
+      "forecasted year-end quantities.",
+      "expected to be approximately 26-27%."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to the highest level possible.",
+      "customer receivable balances, increased inventory and lower liabilities due to the payment of certain year-end accruals in the first quarter.",
+      "customers.",
+      "customers through superb customer service and support, quality products and personalized applications.",
+      "demand for products containing our ingredients and the impacts of those demands, expectations for results in our business segments and the timing of our filings with the Securities and Exchange Commission.",
+      "customers and the timing of any such acceptance, and changes in product supplies."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory and lower liabilities due to the payment of certain year-end accruals in the first quarter.",
+      "charges for the employee stock purchase plan and restricted stock grants; and non-recurring items of income or expense, if applicable.",
+      "decreased sales in our Industrial and Health and Nutrition segments.",
+      "decreased $17.",
+      "decrease in sales was primarily driven by lower selling prices on certain products driven by lower raw material costs and volume pressure.",
+      "decreased $1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 256,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "113.690002",
+    "return_10d_pct": "3.3952",
+    "return_20d_pct": "8.5935",
+    "return_30d_pct": "7.4325",
+    "return_60d_pct": "12.1207",
+    "return_90d_pct": "3.1665"
+  },
+  "text_stats": {
+    "primary_text_len": 2946,
+    "exhibit_text_len": 17967,
+    "combined_text_len": 20915
+  }
+}

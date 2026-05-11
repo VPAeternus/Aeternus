@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HAIN",
+    "cik": "910406",
+    "event_date": "2024-08-27",
+    "event_accession": "0000950170-24-100792",
+    "primary_8k_doc": "hain-20240827.htm",
+    "exhibit_docs": [
+      "hain-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HAIN_000095017024100792_hain-20240827.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HAIN_000095017024100792_hain-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HAIN",
+    "cik": "910406",
+    "entity_name": "The Hain Celestial Group, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1348802000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "6923000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-30",
+    "assets_value": "2258639000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "-34792000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13243000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "26309000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.005133",
+    "operating_cash_flow_to_revenue": "0.019505",
+    "assets_to_revenue": "1.674552",
+    "financing_cash_flow_to_revenue": "-0.025795",
+    "investing_cash_flow_to_revenue": "-0.009818"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales were $419 million, down 6% year-over year.",
+      "net sales decreased 4% compared to the prior year period.",
+      "Net sales were $1,736 million, down 3% year-over year.",
+      "net sales decreased 2% compared to the prior year.",
+      "net sales decreased 6% compared to the prior year.",
+      "net sales increased 4% year-over-year."
+    ],
+    "guidance_evidence": [
+      "Guidance Company Positioned to Deliver Sustainable Growth in Fiscal 2025 HOBOKEN, N.",
+      "guidance.",
+      "GUIDANCE* The company is offering the following guidance for fiscal 2025: • Organic net sales growth is expected to be flat or better.",
+      "outlook.",
+      "expected to be flat or better.",
+      "expected to grow by mid-single-digits."
+    ],
+    "wave_or_demand_evidence": [
+      "ain-ex99_1.",
+      "ain Celestial Reports Fourth Quarter and Fiscal Year 2024 Financial Results Delivers Strong Operating Cash Flow, Debt Reduction & Achieves Updated Guidance Company Positioned to Deliver Sustainable Growth in Fiscal 2025 HOBOKEN, N.",
+      "ain Celestial Group (Nasdaq: HAIN), a leading global health and wellness company whose purpose is to inspire healthier living through better-for-you brands, today reported financial results for its fourth quarter and fiscal year ended June 30, 2024.",
+      "ain Reimagined strategy, during which we made substantial progress in simplifying our business and generating fuel.",
+      "aid Wendy Davidson, President and CEO.",
+      "ain confident in our Hain Reimagined strategy, the strength of our diversified portfolio and geographic footprint, the benefits of our scale model, and our ability to deliver sustainable growth and long-term value to shareholders."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments, gains or losses on sales of assets and businesses, foreign exchange movements and other items.",
+      "impairments.",
+      "impairments, unrealized currency (gains) losses and the related tax effects of such adjustments, and other costs.",
+      "impairment, intangibles and long-lived asset impairments and other adjustments.",
+      "impairment and productivity and transformation costs.",
+      "Impairment charges Intangibles and long-lived asset impairment 5,357 18,578 76,143 175,501 Other - - 1,443 - Adjusted EBITDA $39,544 $43,516 $154,522 $166,622 (a) Expenses and items relating to securities class action, baby food litigation and SEC investigation."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 419,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-28",
+    "entry_open": "8.330000",
+    "return_10d_pct": "0.0000",
+    "return_20d_pct": "-3.2413",
+    "return_30d_pct": "2.8811",
+    "return_60d_pct": "6.2425",
+    "return_90d_pct": "-0.1201"
+  },
+  "text_stats": {
+    "primary_text_len": 3342,
+    "exhibit_text_len": 40506,
+    "combined_text_len": 43850
+  }
+}

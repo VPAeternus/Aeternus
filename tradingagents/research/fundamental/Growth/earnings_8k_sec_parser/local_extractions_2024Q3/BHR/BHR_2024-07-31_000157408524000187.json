@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BHR",
+    "cik": "1574085",
+    "event_date": "2024-07-31",
+    "event_accession": "0001574085-24-000187",
+    "primary_8k_doc": "bhr-20240731.htm",
+    "exhibit_docs": [
+      "bhr2024q2earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BHR_000157408524000187_bhr-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BHR_000157408524000187_bhr2024q2earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BHR",
+    "cik": "1574085",
+    "entity_name": "BRAEMAR HOTELS & RESORTS INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "215301000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "16034000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2226824000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "5273000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-18730000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "42314000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.074472",
+    "operating_cash_flow_to_revenue": "0.196534",
+    "assets_to_revenue": "10.342841",
+    "financing_cash_flow_to_revenue": "0.024491",
+    "investing_cash_flow_to_revenue": "-0.086994"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "operating income for the trailing twelve months ended March 31, 2024.",
+      "NET INCOME (LOSS) ATTRIBUTABLE TO COMMON STOCKHOLDERS $ (21,920) $ (13,024) $ (18,396) $ (9,794) INCOME (LOSS) PER SHARE – BASIC AND DILUTED Basic: Net income (loss) attributable to common stockholders $ (0.",
+      "Net income (loss) attributable to common stockholders $ (0.",
+      "Net Income TTM Hotel Net Income Debt Yield Comparable TTM Hotel EBITDA (13) Comparable TTM Hotel EBITDA Debt Yield Prudential Hilton La Jolla Torrey Pines August 2024 August 2024 9.",
+      "net income (loss) to hotel EBITDA.",
+      "NET INCOME (LOSS) & EBITDA (dollars in thousands) (unaudited) ALL HOTELS: Three Months Ended Six Months Ended June 30, June 30, 2024 2023 % Variance 2024 2023 % Variance Total hotel revenue $ 188,307 $ 187,905 0."
+    ],
+    "guidance_evidence": [
+      "expected to have significant capital expenditures that could result in displacement in 2024 are included in this table."
+    ],
+    "wave_or_demand_evidence": [
+      "aily Rate (ADR), Revenue Per Available Room (RevPAR), and Hotel EBITDA assume each of the hotel properties in the Company’s hotel portfolio as of June 30, 2024, was owned as of the beginning of each of the periods presented.",
+      "ailable to fund hotel operating costs.",
+      "aid off the $30 million loan secured by the 143-room Cameo Beverly Hills in Beverly Hills, California.",
+      "aining 2024 debt maturities, a $50 million preferred share redemption program, and a new $50 million share buyback authorization.",
+      "ailing twelve months ended March 31, 2024.",
+      "aid on October 15, 2024, to stockholders of record as of September 30, 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased 1.",
+      "decreased 4.",
+      "loss attributable to common stockholders for the quarter was $(21.",
+      "uncertainties.",
+      "uncertainties, many of which are outside Braemar’s control.",
+      "LOSS) ATTRIBUTABLE TO COMMON STOCKHOLDERS $ (21,920) $ (13,024) $ (18,396) $ (9,794) INCOME (LOSS) PER SHARE – BASIC AND DILUTED Basic: Net income (loss) attributable to common stockholders $ (0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 50,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "3.380000",
+    "return_10d_pct": "-18.3432",
+    "return_20d_pct": "-14.2012",
+    "return_30d_pct": "-10.3550",
+    "return_60d_pct": "-8.5799",
+    "return_90d_pct": "-13.6095"
+  },
+  "text_stats": {
+    "primary_text_len": 3377,
+    "exhibit_text_len": 117632,
+    "combined_text_len": 121011
+  }
+}

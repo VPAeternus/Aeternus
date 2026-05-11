@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BMRN",
+    "cik": "1048477",
+    "event_date": "2024-08-05",
+    "event_accession": "0001048477-24-000125",
+    "primary_8k_doc": "bmrn-20240805.htm",
+    "exhibit_docs": [
+      "earningsrelease-05aug24ex9.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BMRN_000104847724000125_bmrn-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BMRN_000104847724000125_earningsrelease-05aug24ex9.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BMRN",
+    "cik": "1048477",
+    "entity_name": "BioMarin Pharmaceutical Inc",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "596415000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "50852000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6841603000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-40742000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-30012000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-73932000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.085263",
+    "operating_cash_flow_to_revenue": "-0.123961",
+    "assets_to_revenue": "11.471212",
+    "financing_cash_flow_to_revenue": "-0.068311",
+    "investing_cash_flow_to_revenue": "-0.050321"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $712 million (+20% Y/Y and +25% at Constant Currency Y/Y); First Half 2024 Total Revenues of $1.",
+      "sales of VOXZOGO in additional countries, (iii) the commercialization of ROCTAVIAN for the treatment of severe hemophilia A in the U.",
+      "EPS of $0.",
+      "EPS of $1.",
+      "Earnings per Share (EPS) of $0.",
+      "non-GAAP earnings per share,” said Alexander Hardy, President and Chief Executive Officer of BioMarin."
+    ],
+    "guidance_evidence": [
+      "Guidance Second Quarter 2024 Total Revenues of $712 million (+20% Y/Y and +25% at Constant Currency Y/Y); First Half 2024 Total Revenues of $1.",
+      "guidance.",
+      "guidance for Total Revenues, Non-GAAP Operating Margin, and Non-GAAP Diluted EPS.",
+      "guidance reflects the underlying strength of enzyme products and continued high demand for VOXZOGO, along with BioMarin’s commitment to accelerate profitability while continuing to invest in innovation.",
+      "guidance does not reflect the impact of potential additional future business decisions that may result from its ongoing strategic business review.",
+      "guidance period."
+    ],
+    "wave_or_demand_evidence": [
+      "Demand in the Quarter Resulted in 73% Y/Y Increase in the Number of Children Receiving Treatment Conference Call and Webcast Scheduled Today at 4:30 p.",
+      "demand for VOXZOGO led to nearly 900 new patient starts in the first half of 2024, the highest in VOXZOGO’s history.",
+      "demand for VOXZOGO continued to increase as more families sought treatment with the only approved and genetically-targeted medicine for achondroplasia.",
+      "customer stock levels normalizing facilitated by ample supply.",
+      "demand across BioMarin’s enzyme therapies (VIMIZIM ® , NAGLAZYME ® , ALDURAZYME ® , BRINEURA ® and PALYNZIQ ® ) drove 15% growth compared to the second quarter of 2023.",
+      "orders in certain regions outside the United States and higher PALYNZIQ revenues in the United States driven by new patient starts."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments; gains and losses on investments; and other unusual gains and losses without unreasonable effort.",
+      "impairments of certain right-of-use and fixed assets.",
+      "loss of market exclusivity.",
+      "losses on investments; and other unusual gains and losses without unreasonable effort.",
+      "uncertain, depend on various factors, and could have a material impact on GAAP reported results for the guidance period.",
+      "uncertainties such that actual results may differ materially from these statements."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 712,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "87.790001",
+    "return_10d_pct": "1.9820",
+    "return_20d_pct": "2.4946",
+    "return_30d_pct": "-3.0413",
+    "return_60d_pct": "-21.4489",
+    "return_90d_pct": "-24.8092"
+  },
+  "text_stats": {
+    "primary_text_len": 3624,
+    "exhibit_text_len": 33455,
+    "combined_text_len": 37081
+  }
+}

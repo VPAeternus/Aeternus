@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MG",
+    "cik": "1436126",
+    "event_date": "2024-07-31",
+    "event_accession": "0001436126-24-000046",
+    "primary_8k_doc": "mg-20240731.htm",
+    "exhibit_docs": [
+      "a8kexhibit991-q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MG_000143612624000046_mg-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MG_000143612624000046_a8kexhibit991-q22024.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MG",
+    "cik": "1436126",
+    "entity_name": "Mistras Group, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "168016000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-4986000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "534776000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-3951000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-4460000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "4433000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.029676",
+    "operating_cash_flow_to_revenue": "0.026384",
+    "assets_to_revenue": "3.182887",
+    "financing_cash_flow_to_revenue": "-0.023516",
+    "investing_cash_flow_to_revenue": "-0.026545"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $189.",
+      "Revenue of $374.",
+      "Revenue was up nearly 8% compared to the prior year period, consistent with our expectations for double digit growth in our Aerospace and Defense industry and resilient growth across all other industries.",
+      "revenue was $189.",
+      "revenue was $156.",
+      "revenue was $34."
+    ],
+    "guidance_evidence": [
+      "outlook for 2024 anticipated an incremental year over year Gross Profit benefit of $3 million, and SG&A benefit of $12 million due to Project Phoenix initiatives.",
+      "outlook for fiscal 2024 Adjusted EBITDA.",
+      "projects and higher activity levels than in the prior year comparable quarter, in addition to low double digit Aerospace and Defense revenue growth.",
+      "projects and billings in the second quarter of 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "customer invoicing and an increased accounts receivable balance as of June 30, 2024, due to the timing of projects and billings in the second quarter of 2024.",
+      "ain delivered strong top and bottom-line growth for Mistras Group.",
+      "ain focused on further reductions to our cost footprint.",
+      "ain reiterating our expectation that fiscal 2024 Adjusted EBITDA will be one of our all-time high-performance years.",
+      "ain demonstrates the margin accretive actions and significant operating leverage improvements that we have instituted into our business model.",
+      "aims expense in the second quarter, and strong growth in our higher margin Aerospace and Defense industry."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, reorganization and related charges and, if applicable, certain additional special items which are noted.",
+      "decrease was primarily attributable to an increase in working capital related to the timing of customer invoicing and an increased accounts receivable balance as of June 30, 2024, due to the timing of projects and billings in the second quarter of 2024.",
+      "uncertainties that could cause actual performance or results to differ materially from those expressed in these statements.",
+      "uncertainties can be found in the \"Risk Factors\" section of the 4 Company's 2023 Annual Report on Form 10-K filed on March 11, 2024, as updated by our reports on Form 10-Q and Form 8-K.",
+      "loss, non-cash impairment charges, reorganization and related charges and, if applicable, certain additional special items which are noted.",
+      "Loss) as computed under GAAP is set forth in a table attached to this press release."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 189.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "10.500000",
+    "return_10d_pct": "-4.2857",
+    "return_20d_pct": "12.0952",
+    "return_30d_pct": "6.9524",
+    "return_60d_pct": "8.2857",
+    "return_90d_pct": "5.7143"
+  },
+  "text_stats": {
+    "primary_text_len": 7141,
+    "exhibit_text_len": 29019,
+    "combined_text_len": 36162
+  }
+}

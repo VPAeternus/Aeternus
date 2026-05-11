@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MO",
+    "cik": "764180",
+    "event_date": "2024-07-31",
+    "event_accession": "0000764180-24-000091",
+    "primary_8k_doc": "mo-20240731.htm",
+    "exhibit_docs": [
+      "exhibit991erq22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MO_000076418024000091_mo-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MO_000076418024000091_exhibit991erq22024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MO",
+    "cik": "764180",
+    "entity_name": "ALTRIA GROUP, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5719000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1787000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "38570000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-3045000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-56000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "2984000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.312467",
+    "operating_cash_flow_to_revenue": "0.52177",
+    "assets_to_revenue": "6.744186",
+    "financing_cash_flow_to_revenue": "-0.532436",
+    "investing_cash_flow_to_revenue": "-0.009792"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues decreased 4.",
+      "revenues decreased 3.",
+      "revenues decreased 5.",
+      "revenues increased 4.",
+      "earnings per share (EPS).",
+      "EPS declined by 1."
+    ],
+    "guidance_evidence": [
+      "GUIDANCE RICHMOND, Va.",
+      "guidance for 2024 full-year adjusted diluted earnings per share (EPS).",
+      "guidance expectations for growth to be weighted to the second half of the year.",
+      "guidance and now expect to deliver adjusted diluted EPS in a range of $5.",
+      "Guidance We narrow our guidance for 2024 full-year adjusted diluted EPS to be in a range of $5.",
+      "guidance includes the impact of two additional shipping days in 2024, both of which occur in the second half, and assumes limited impact on combustible and e-vapor product volumes from enforcement efforts in the illicit e-vapor market."
+    ],
+    "wave_or_demand_evidence": [
+      "orders from the FDA for menthol e-vapor products, and we submitted PMTA applications to the FDA for next generation NJOY and on! products.",
+      "Orders (MGOs) • In June 2024, NJOY received marketing authorizations from the FDA for four menthol e-vapor products, including NJOY ACE Pod Menthol 2.",
+      "orders from the U.",
+      "aid Billy Gifford, Altria’s Chief Executive Officer.",
+      "ained resilient, despite a challenging operating environment.",
+      "ailable at www."
+    ],
+    "warning_or_risk_evidence": [
+      "charge of approximately $140 million during the second quarter of 2024, related to a change in the fair value of the contingent payments as part of the NJOY acquisition.",
+      "restriction technology designed to prevent underage use.",
+      "charges associated with tobacco and health and certain other litigation items, and resolutions of certain non-participating manufacturer (NPM) adjustment disputes under the MSA (NPM Adjustment Items).",
+      "impairment of the Skoal trademark, and a change in the fair value of contingent payments associated with the acquisition of NJOY.",
+      "charges related to our former investment in JUUL Labs, Inc.",
+      "impairment 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "49.610001",
+    "return_10d_pct": "1.4110",
+    "return_20d_pct": "4.4346",
+    "return_30d_pct": "8.9901",
+    "return_60d_pct": "2.8825",
+    "return_90d_pct": "1.7940"
+  },
+  "text_stats": {
+    "primary_text_len": 4524,
+    "exhibit_text_len": 55750,
+    "combined_text_len": 60276
+  }
+}

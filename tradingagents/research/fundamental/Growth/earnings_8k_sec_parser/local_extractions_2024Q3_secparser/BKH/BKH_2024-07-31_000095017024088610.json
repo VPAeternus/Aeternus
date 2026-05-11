@@ -1,0 +1,2470 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BKH",
+    "cik": "1130464",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088610",
+    "primary_8k_doc": "bkh-20240731.htm",
+    "exhibit_docs": [
+      "bkh-ex99.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKH_000095017024088610_bkh-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKH_000095017024088610_bkh-ex99.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BKH",
+    "cik": "1130464",
+    "entity_name": "Black Hills Corporation",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "921200000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "114100000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "9620400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-209100000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-101500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "328700000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.12386",
+    "operating_cash_flow_to_revenue": "0.356817",
+    "assets_to_revenue": "10.443335",
+    "financing_cash_flow_to_revenue": "-0.226987",
+    "investing_cash_flow_to_revenue": "-0.110182"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net income available for common stock $ 22.",
+      "Earnings per share, Diluted $ 0.",
+      "earnings per share available for common stock to be in the range of $3.",
+      "Operating income: Electric Utilities $ 46.",
+      "Operating income 70.",
+      "Net income 24."
+    ],
+    "guidance_evidence": [
+      "Guidance RAPID CITY, S.",
+      "guidance for the year,” said Linn Evans, president and CEO of Black Hills Corp.",
+      "outlook.",
+      "GUIDANCE Black Hills affirms its guidance for 2024 earnings per share available for common stock to be in the range of $3.",
+      "guidance.",
+      "expects to file a pre-application notice in South Dakota and request a certificate of public convenience and necessity in Wyoming in the second half of 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "customer-focused strategy and are excited about powering Meta’s newest AI data center in Cheyenne, which we expect to begin serving in 2026.",
+      "customers safely and reliably.",
+      "customers and communities.",
+      "customer demand.",
+      "customers.",
+      "Demand for electricity and natural gas is sensitive to seasonal cooling, heating and industrial load requirements."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased revenues due to unplanned outages at Wygen I and Pueblo Airport Generation #4-5.",
+      "decreased primarily due to lower employee-related expenses.",
+      "decreased primarily due to $11.",
+      "loss) $ 1.",
+      "decrease.",
+      "losses; and•Other factors discussed from time to time in our filings with the SEC."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "bkh-ex99.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EARNINGS RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Black Hills Corp. Reports 2024 Second-Quarter Results and Reaffirms 2024 Earnings Guidance"
+    },
+    {
+      "type": "TextElement",
+      "text": "RAPID CITY, S.D. — July 31, 2024 — Black Hills Corp. (NYSE: BKH) today announced financial results for the second quarter of 2024. Net income available for common stock and earnings per share for the three and six months ended June 30, 2024, compared to the three and six months ended June 30, 2023, were:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 (in millions, except per share amounts) Net income available for common stock $ 22.8 $ 23.1 $ 150.6 $ 137.1 Earnings per share, Diluted $ 0.33 $ 0.35 $ 2.19 $ 2.06"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second quarter earnings were $0.33 per share compared to $0.35 per share in the second quarter of 2023. Financial results were driven by new rates and rider recovery and lower operating expenses, which offset the unfavorable impacts of mild weather and a prior year income tax benefit.“Year-to-date earnings were up 6% compared to last year and we are reaffirming our earnings guidance for the year,” said Linn Evans, president and CEO of Black Hills Corp.“We continue to deliver progress on our customer-focused strategy and are excited about powering Meta’s newest AI data center in Cheyenne, which we expect to begin serving in 2026. Our team continues to attract new data centers with our leading mission-critical reliability and innovative energy solutions, including our unique tariffs and capital-light energy procurement model.“Regulatory activities continue to move forward to recover investments and costs critical to serving our customers safely and reliably. Our rate review for Arkansas Gas is advancing through its final stages, while rate reviews filed during the second quarter for Iowa Gas and Colorado Electric are on schedule.“As we execute on our commitment to a reliable, cost-effective and cleaner energy future, we are delivering new resources to serve the growing needs of our customers and communities. In Colorado, we continue to pursue regulatory approval of our preferred portfolio of clean energy resources to reduce emissions 80% by 2030 as outlined in our Clean Energy Plan. In South Dakota, we plan to add 100 megawatts of utility-owned generation by 2026 to serve growing customer demand. Construction is on schedule for our 260-mile Ready Wyoming electric transmission line to enhance reliability, resiliency and energy market access,” concluded Evans."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECOND-QUARTER 2024 HIGHLIGHTS AND UPDATES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Electric Utilities"
+    },
+    {
+      "type": "TextElement",
+      "text": "•During the second quarter, South Dakota Electric continued its resource planning process to add 100 megawatts of utility-owned, dispatchable natural gas resources by mid-year 2026. South Dakota Electric expects to file a pre-application notice in South Dakota and request a certificate of public convenience and necessity in Wyoming in the second half of 2024.•On July 11, Wyoming Electric announced it will partner with Meta to provide power for its newest AI data center to be constructed in Cheyenne, Wyoming. The company plans to procure market energy under its Large Power Contract Service tariff with customized energy resources essential to Meta's operations and sustainability objectives.•On June 14, Colorado Electric filed a rate review with the Colorado Public Utilities Commission seeking the recovery of significant infrastructure investments in its 3,200-mile electric distribution and 600-mile electric transmission systems. The rate review requested $37 million in new annual revenue based on a capital structure of 53% equity and 47% debt and a return on equity of 10.5%. The company requested new rates effective in the first quarter of 2025.•On April 17, Colorado Electric filed its 120-Day report recommending 400 megawatts of renewable energy resources to advance its Clean Energy Plan. The final composition of resources and timing is subject to review and approval by the Colorado Public Utilities Commission, which is expected later this year.•During the second quarter, Wyoming Electric continued construction on Ready Wyoming, a 260-mile electric transmission project. Construction is expected to be completed in multiple segments in 2024 and 2025."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Gas Utilities"
+    },
+    {
+      "type": "TextElement",
+      "text": "•On May 1, Iowa Gas filed a rate review request with the Iowa Utilities Commission seeking approval to recover approximately $100 million of system investments and inflationary impacts on expenses to serve customers. The rate review requested $21 million of new annual revenue based on a capital structure of 51% equity and 49% debt and a return on equity of 10.5%. Interim rates were effective on May 11, 2024, with final rates requested in the first quarter of 2025.•During the second quarter, Arkansas Gas advanced its rate review request to recover $130 million of system investments and the inflationary impacts on expenses to serve customers. Filed on Dec. 4, 2023, the rate review requested $44 million of new annual revenue based on a capital structure of 48% equity and 52% debt and a return on equity of 10.5%. The company requested new rates in the fourth quarter of 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Corporate and Other"
+    },
+    {
+      "type": "TextElement",
+      "text": "•On July 22, Black Hills’ board of directors approved a quarterly dividend of $0.65 per share payable on Sept. 1, 2024, to common shareholders of record at the close of business on Aug. 19, 2024. The dividend, on an annualized rate, represents 54 consecutive years of dividend increases, the second longest track record in the electric and natural gas industry.•On May 31, Black Hills amended and restated its revolving credit facility with similar terms as the former facility, maintaining total commitments of $750 million and extending the term through May 31, 2029.•On May 16, Black Hills completed a public debt offering of $450 million, 6.00% senior unsecured notes due Jan. 15, 2035. Proceeds were used for general corporate purposes and, along with available cash or short-term borrowings under the company's existing facilities, will be used to fully repay the $600 million notes due Aug. 23, 2024.•On May 9, S&P Global Ratings affirmed Black Hills’ issuer credit rating at BBB+ with a stable outlook.•During the second quarter, Black Hills issued 0.8 million shares of new common stock for net proceeds of $42 million under its at-the-market equity offering program. Year-to-date, the company has issued a total of 1.4 million shares of new common stock for net proceeds of $73 million.•During the second quarter, Black Hills published its 2023 Corporate Sustainability Report, highlighting the company’s environmental, social and governance impacts and its progress on major projects and climate goals. The company reported a 27% reduction in greenhouse gas emissions from its natural gas distribution system since 2022 and is on track to achieve its goal of net zero emissions by 2035. Additionally, the company has reduced its electric utility greenhouse gas emissions by nearly one third since 2005 and is on track to achieve its goals to reduce electric emissions intensity by 40% by 2030 and 70% by 2040 compared to 2005."
+    },
+    {
+      "type": "TitleElement",
+      "text": "2024 EARNINGS GUIDANCE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Black Hills affirms its guidance for 2024 earnings per share available for common stock to be in the range of $3.80 to $4.00 based on the follow assumptions:•Normal weather conditions within our utility service territories including temperatures, precipitation levels and wind conditions;•Normal operations and weather conditions for planned construction, maintenance and/or capital investment projects;•Constructive and timely outcomes of utility regulatory dockets;•No significant unplanned outages at our generating facilities;•Equity issuance of $170 million to $190 million through the at-the-market equity offering program; and•Production tax credits of approximately $18 million associated with wind generation assets."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONFERENCE CALL AND WEBCAST"
+    },
+    {
+      "type": "TextElement",
+      "text": "Black Hills will host a live conference call and webcast at 11 a.m. EDT on Thursday, Aug. 1, 2024, to discuss its financial and operating performance.To access the live webcast and download a copy of the investor presentation, go to the “Investor Relations” section of the Black Hills website at www.blackhillscorp.com and click on “News and Events” and then “Events & Presentation.” The presentation will be posted on the website before the webcast. Listeners should allow at least five minutes for registering and accessing the presentation. For those unable to listen to the live broadcast, a replay will be available on the company’s website.To ask a question during the live broadcast, users can access dial-in information and a personal identification number by registering for the event at https://register.vevent.com/register/BI127d514d8e3a423191cc495600c59aa6.A listen-only webcast player and presentation slides can be accessed live at https://edge.media-server.com/mmc/p/j9weytyi with a replay of the event available for up to one year."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "BLACK HILLS CORPORATION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED FINANCIAL RESULTS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Minor differences may result due to rounding)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 (in millions) Operating income: Electric Utilities $ 46.3 $ 46.6 $ 110.9 $ 107.7 Gas Utilities 23.0 17.7 153.7 132.4 Corporate and Other 1.3 (0.8 ) (0.6 ) (1.7 ) Operating income 70.6 63.5 264.0 238.4 Interest expense, net (42.6 ) (41.5 ) (86.7 ) (85.0 ) Other income (expense), net 0.4 (1.5 ) (0.5 ) (0.9 ) Income tax benefit (expense) (3.7 ) 6.1 (20.6 ) (8.6 ) Net income 24.7 26.6 156.2 143.9 Net income attributable to non-controlling interest (1.9 ) (3.5 ) (5.6 ) (6.8 ) Net income available for common stock $ 22.8 $ 23.1 $ 150.6 $ 137.1"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Weighted average common shares outstanding (in millions): Basic 69.0 66.6 68.6 66.3 Diluted 69.0 66.7 68.7 66.4 Earnings per share: Earnings Per Share, Basic $ 0.33 $ 0.35 $ 2.20 $ 2.07 Earnings Per Share, Diluted $ 0.33 $ 0.35 $ 2.19 $ 2.06"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "USE OF NON-GAAP FINANCIAL MEASURES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Gas and Electric Utility Margin"
+    },
+    {
+      "type": "TextElement",
+      "text": "Gas and Electric Utility margin (revenue less cost of sales) is considered a non-GAAP financial measure due to the exclusion of operation and maintenance expenses, depreciation and amortization expenses, and property and production taxes from the measure. The presentation of Gas and Electric Utility margin is intended to supplement investors’ understanding of operating performance.Electric Utility margin is calculated as operating revenue less cost of fuel and purchased power. Gas Utility margin is calculated as operating revenue less cost of gas sold. Our Gas and Electric Utility margin is impacted by the fluctuations in power purchases and natural gas and other fuel supply costs. However, while these fluctuating costs impact Gas and Electric Utility margin as a percentage of revenue, they only impact total Gas and Electric Utility margin if the costs cannot be passed through to customers.Our Gas and Electric Utility margin measure may not be comparable to other companies’ Gas and Electric Utility margin measures. Furthermore, this measure is not intended to replace operating income as determined in accordance with GAAP as an indicator of operating performance."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SEGMENT PERFORMANCE SUMMARY"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating results from our business segments for the three and six months ended June 30, 2024, and 2023, compared to the three and six months ended June 30, 2023, are discussed below.Certain lines of business in which we operate are highly seasonal, and revenue from, and certain expenses for, such operations may fluctuate significantly between quarterly periods. Demand for electricity and natural gas is sensitive to seasonal cooling, heating and industrial load requirements. In particular, the normal peak usage season for our electric utilities is June through August while the normal peak usage season for our gas utilities is November through March. Significant earnings variances can be expected between the Gas Utilities segment’s peak and off-peak seasons. Due to this seasonal nature, our results of operations for the three and six months ended June 30, 2024, and 2023 are not necessarily indicative of the results of operations to be expected for any other period or for the entire year.All amounts are presented on a pre-tax basis unless otherwise indicated. Minor differences in amounts may result due to rounding."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Electric Utilities"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Variance Six Months Ended June 30, Variance 2024 2023 2024 vs. 2023 2024 2023 2024 vs. 2023 (in millions) Revenue $ 205.1 $ 193.1 $ 12.0 $ 427.3 $ 411.8 $ 15.5 Cost of fuel and purchased power 45.9 36.4 9.5 100.8 91.8 9.0 Electric Utility margin (non-GAAP) 159.2 156.7 2.5 326.5 320.0 6.5 Operations and maintenance 68.1 65.4 2.7 125.5 122.8 2.7 Depreciation and amortization 35.5 35.8 (0.3 ) 70.8 70.9 (0.1 ) Taxes - property and production 9.3 8.9 0.4 19.3 18.6 0.7 Operating income $ 46.3 $ 46.6 $ (0.3 ) $ 110.9 $ 107.7 $ 3.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Three Months Ended June 30, 2024, Compared with Three Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Electric Utility margin increased as a result of:"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions) Weather $ 2.4 New rates and rider recovery 2.3 Retail customer growth and usage 1.8 Integrated Generation (a) (4.4 ) Other 0.4 $ 2.5"
+    },
+    {
+      "type": "TextElement",
+      "text": "a)Primarily driven by decreased revenues due to unplanned outages at Wygen I and Pueblo Airport Generation #4-5.Operations and maintenance expense increased primarily due to $1.9 million of higher outside services expenses driven by unplanned Integrated Generation outages and $1.2 million of higher insurance expense.Depreciation and amortization was comparable to the same period in the prior year.Taxes - property and production was comparable to the same period in the prior year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Six Months Ended June 30, 2024, Compared with Six Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Electric Utility margin increased as a result of:"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions) New rates and rider recovery $ 10.5 Weather 1.2 Integrated Generation (a) (3.5 ) Off-system excess energy sales (3.2 ) Other 1.5 $ 6.5"
+    },
+    {
+      "type": "TextElement",
+      "text": "a)Primarily driven by decreased revenues due to unplanned outages at Wygen I and Pueblo Airport Generation #4-5.Operations and maintenance expense increased primarily due to a prior year one-time $7.7 million gain on the sale of Northern Iowa Windpower assets and $1.6 million of higher insurance expense partially offset by $3.2 million of lower employee-related expenses and $2.6 million of lower outside services expenses. Depreciation and amortization was comparable to the same period in the prior year.Taxes - property and production was comparable to the same period in the prior year."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, Operating Statistics 2024 2023 2024 2023 Quantities Sold (GWh): Retail Sales 1,424.8 1,340.8 2,913.2 2,737.2 Contract/Off-system/Power Marketing Wholesale 301.8 241.7 565.4 643.2 Total Regulated 1,726.6 1,582.5 3,478.6 3,380.4 Non-regulated 21.1 22.8 49.1 77.2 Total quantities sold 1,747.7 1,605.3 3,527.7 3,457.6 Contracted generated facilities availability by fuel type: Coal 75.5 % 92.0 % 85.6 % 92.4 % Natural gas and diesel oil 91.6 % 93.5 % 94.1 % 93.9 % Wind 92.1 % 93.0 % 91.2 % 93.4 % Total availability 87.1 % 93.0 % 91.3 % 93.4 % Wind capacity factor 36.9 % 34.4 % 38.4 % 41.2 %"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, Degree Days 2024 2023 2024 2023 Actual Variance from Normal Actual Variance from Normal Actual Variance from Normal Actual Variance from Normal Heating Degree Days 757 (13)% 840 (6)% 3,577 (8)% 3,940 4% Cooling Degree Days 219 25% 75 (60)% 219 25% 75 (60)%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Gas Utilities"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Variance Six Months Ended June 30, Variance 2024 2023 2024 vs. 2023 2024 2023 2024 vs. 2023 (in millions) Revenue $ 202.0 $ 222.7 $ (20.7 ) $ 710.6 $ 929.6 $ (219.0 ) Cost of natural gas sold 61.3 85.0 (23.7 ) 323.2 555.9 (232.7 ) Gas Utility margin (non-GAAP) 140.7 137.7 3.0 387.4 373.7 13.7 Operations and maintenance 79.3 84.0 (4.7 ) 157.9 171.2 (13.3 ) Depreciation and amortization 31.1 28.8 2.3 61.5 55.3 6.2 Taxes - property and production 7.3 7.2 0.1 14.3 14.8 (0.5 ) Operating income $ 23.0 $ 17.7 $ 5.3 $ 153.7 $ 132.4 $ 21.3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Three Months Ended June 30, 2024, Compared with Three Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Gas Utility margin increased as a result of:"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions) New rates and rider recovery $ 9.1 Retail customer growth and usage 0.9 Weather (6.2 ) Mark-to-market on non-utility natural gas commodity contracts (0.5 ) Other (0.3 ) $ 3.0"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operations and maintenance expense decreased primarily due to lower employee-related expenses.Depreciation and amortization increased primarily due to a higher asset base driven by current year and prior year capital expenditures.Taxes - property and production was comparable to the same period in the prior year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Six Months Ended June 30, 2024, Compared with Six Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Gas Utility margin increased as a result of:"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions) New rates and rider recovery $ 22.1 Mark-to-market on non-utility natural gas commodity contracts 3.2 Retail customer growth and usage 2.4 Weather (13.6 ) Other (0.4 ) $ 13.7"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operations and maintenance expense decreased primarily due to $11.5 million of lower employee-related expenses and $1.9 million of lower outside services expenses.Depreciation and amortization increased primarily due to a higher asset base driven by current year and prior year capital expenditures.Taxes - property and production was comparable to the same period in the prior year."
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, Operating Statistics 2024 2023 2024 2023 Quantities Sold and Transported (Dth in millions): Distribution 12.6 13.1 54.3 58.0 Transport and Transmission 34.5 34.2 81.2 81.4 Total Quantities Sold 47.1 47.3 135.5 139.4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Actual Variance from Normal Actual Variance from Normal Actual Variance from Normal Actual Variance from Normal Heating Degree Days 587 (20)% 674 (10)% 3,452 (10)% 3,870 1%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Corporate and Other"
+    },
+    {
+      "type": "TextElement",
+      "text": "Corporate and Other represents certain unallocated expenses for administrative activities that support our reportable operating segments. Corporate and Other also includes business development activities that are not part of our operating segments and inter-segment eliminations. Three Months Ended June 30, Variance Six Months Ended June 30, Variance 2024 2023 2024 vs. 2023 2024 2023 2024 vs. 2023 (in millions) Operating income (loss) $ 1.3 $ (0.8 ) $ 2.1 $ (0.6 ) $ (1.7 ) $ 1.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Three Months Ended June 30, 2024, Compared with Three Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating income was comparable to the same period in the prior year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Six Months Ended June 30, 2024, Compared with Six Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating income was comparable to the same period in the prior year."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Interest Expense, Other Income and Income Tax Expense"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Variance Six Months Ended June 30, Variance 2024 2023 2024 vs. 2023 2024 2023 2024 vs. 2023 (in millions) Interest expense, net $ (42.6 ) $ (41.5 ) $ (1.1 ) $ (86.7 ) $ (85.0 ) $ (1.7 ) Other income (expense), net $ 0.4 $ (1.5 ) $ 1.9 $ (0.5 ) $ (0.9 ) $ 0.4 Income tax benefit (expense) $ (3.7 ) $ 6.1 $ (9.8 ) $ (20.6 ) $ (8.6 ) $ (12.0 )"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Three Months Ended June 30, 2024, Compared with Three Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Interest expense, net was comparable to the same period in the prior year primarily due to higher interest rates on higher long-term debt balances mostly offset by increased interest income on higher cash and cash equivalents balances.Other (expense), net was comparable to the same period in the prior year.Income tax (expense) increased primarily due to higher pre-tax income and a higher effective tax rate. For the three months ended June 30, 2024, the effective tax rate was 13.0% compared to (29.8)% for the same period in 2023. The higher effective tax rate was primarily driven by a prior year $8.2 million tax benefit from a Nebraska income tax rate decrease."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Six Months Ended June 30, 2024, Compared with Six Months Ended June 30, 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "Interest expense, net was comparable to the same period in the prior year primarily due to higher interest rates on higher long-term debt balances mostly offset by increased interest income on higher cash and cash equivalents balances.Other (expense), net was comparable to the same period in the prior year.Income tax (expense) increased primarily due to higher pre-tax income and a higher effective tax rate. For the six months ended June 30, 2024, the effective tax rate was 11.7% compared to 5.6% for the same period in 2023. The higher effective tax rate was primarily driven by a prior year $8.2 million tax benefit from a Nebraska income tax rate decrease."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ABOUT BLACK HILLS CORP."
+    },
+    {
+      "type": "TextElement",
+      "text": "Black Hills Corp. (NYSE: BKH) is a customer-focused, growth-oriented utility company with a tradition of improving life with energy and a vision to be the energy partner of choice. Based in Rapid City, South Dakota, the company serves 1.34 million natural gas and electric utility customers in eight states: Arkansas, Colorado, Iowa, Kansas, Montana, Nebraska, South Dakota and Wyoming. More information is available at www.blackhillscorp.com, www.blackhillscorp.com/corporateresponsibility and www.blackhillsenergy.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CAUTION REGARDING FORWARD-LOOKING STATEMENTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "This press release includes “forward-looking statements” as defined by the Securities and Exchange Commission. We make these forward-looking statements in reliance on the safe harbor protections provided under the Private Securities Litigation Reform Act of 1995. All statements, other than statements of historical facts, included in this press release that address activities, events or developments that we expect, believe or anticipate will or may occur in the future are forward-looking statements. This includes, without limitations, our 2024 earnings guidance. These forward-looking statements are based on assumptions which we believe are reasonable based on current expectations and projections about future events and industry conditions and trends affecting our business. However, whether actual results and developments will conform to our expectations and predictions is subject to a number of risks and uncertainties that, among other things, could cause actual results to differ materially from those contained in the forward-looking statements, including without limitation, the risk factors described in Item 1A of Part I of our 2023 Annual Report on Form 10-K and other reports that we file with the SEC from time to time, and the following:•The accuracy of our assumptions on which our earnings guidance is based;•Our ability to obtain adequate cost recovery for our utility operations through regulatory proceedings and favorable rulings on periodic applications to recover costs for capital additions, plant retirements and decommissioning, fuel, transmission, purchased power, and other operating costs and the timing in which new rates would go into effect;•Our ability to complete our capital program in a cost-effective and timely manner;•Our ability to execute on our strategy;•Our ability to successfully execute our financing plans;•The effects of changing interest rates;•Our ability to achieve our greenhouse gas emissions intensity reduction goals;•Board of Directors’ approval of any future quarterly dividends;•The impact of future governmental regulation;•Our ability to overcome the impacts of supply chain disruptions on availability and cost of materials;•The effects of inflation and volatile energy prices;•Our ability to obtain sufficient insurance coverage at reasonable costs and whether such coverage will protect us against significant losses; and•Other factors discussed from time to time in our filings with the SEC.New factors that could cause actual results to differ materially from those described in forward-looking statements emerge from time-to-time, and it is not possible for us to predict all such factors, or the extent to which any such factor or combination of factors may cause actual results to differ from those contained in any forward-looking statement. We assume no obligation to update publicly any such forward-looking statements, whether as a result of new information, future events or otherwise."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATING INCOME STATEMENTS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Minor differences may result due to rounding)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Consolidating Income Statement Three Months Ended June 30, 2024 Electric Utilities Gas Utilities Corporate and Other Total (in millions) Revenue $ 205.1 $ 202.0 $ (4.5 ) $ 402.6 Fuel, purchased power and cost of natural gas sold 45.9 61.3 (0.1 ) 107.1 Operations and maintenance 68.1 79.3 (5.7 ) 141.7 Depreciation and amortization 35.5 31.1 - 66.6 Taxes - property and production 9.3 7.3 - 16.6 Operating income (loss) 46.3 23.0 1.3 70.6 Interest expense, net (42.6 ) Other income (expense), net 0.4 Income tax (expense) (3.7 ) Net income 24.7 Net income attributable to non-controlling interest (1.9 ) Net income available for common stock $ 22.8"
+    },
+    {
+      "type": "TableElement",
+      "text": "Consolidating Income Statement Three Months Ended June 30, 2023 Electric Utilities Gas Utilities Corporate and Other Total (in millions) Revenue $ 193.1 $ 222.7 $ (4.5 ) $ 411.3 Fuel, purchased power and cost of natural gas sold 36.4 85.0 (0.1 ) 121.3 Operations and maintenance 65.4 84.0 (3.6 ) 145.8 Depreciation and amortization 35.8 28.8 0.1 64.7 Taxes - property and production 8.9 7.2 (0.1 ) 16.0 Operating income (loss) 46.6 17.7 (0.8 ) 63.5 Interest expense, net (41.5 ) Other income (expense), net (1.5 ) Income tax benefit 6.1 Net income 26.6 Net income attributable to non-controlling interest (3.5 ) Net income available for common stock $ 23.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "TableElement",
+      "text": "Consolidating Income Statement Six Months Ended June 30, 2024 Electric Utilities Gas Utilities Corporate and Other Total (in millions) Revenue $ 427.3 $ 710.6 $ (8.9 ) $ 1,129.0 Fuel, purchased power and cost of natural gas sold 100.8 323.2 (0.3 ) 423.7 Operations and maintenance 125.5 157.9 (8.2 ) 275.2 Depreciation and amortization 70.8 61.5 0.2 132.5 Taxes - property and production 19.3 14.3 - 33.6 Operating income (loss) 110.9 153.7 (0.6 ) 264.0 Interest expense, net (86.7 ) Other income (expense), net (0.5 ) Income tax (expense) (20.6 ) Net income 156.2 Net income attributable to non-controlling interest (5.6 ) Net income available for common stock $ 150.6"
+    },
+    {
+      "type": "TableElement",
+      "text": "Consolidating Income Statement Six Months Ended June 30, 2023 Electric Utilities Gas Utilities Corporate and Other Total (in millions) Revenue $ 411.8 $ 929.6 $ (9.0 ) $ 1,332.4 Fuel, purchased power and cost of natural gas sold 91.8 555.9 (0.2 ) 647.5 Operations and maintenance 122.8 171.2 (7.3 ) 286.7 Depreciation and amortization 70.9 55.3 0.2 126.4 Taxes - property and production 18.6 14.8 - 33.4 Operating income (loss) 107.7 132.4 (1.7 ) 238.4 Interest expense, net (85.0 ) Other income (expense), net (0.9 ) Income tax (expense) (8.6 ) Net income 143.9 Net income attributable to non-controlling interest (6.8 ) Net income available for common stock $ 137.1"
+    },
+    {
+      "type": "TableElement",
+      "text": "Investor Relations: Sal Diaz Phone 605-399-5079 Email investorrelations@blackhillscorp.com Media Contact: 24-hour Media Assistance 888-242-3969"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        6,
+        14
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          "(in millions, except per share amounts)",
+          ""
+        ],
+        [
+          "Net income available for common stock",
+          "$",
+          "22.8",
+          "",
+          "$",
+          "23.1",
+          "",
+          "",
+          "$",
+          "150.6",
+          "",
+          "$",
+          "137.1",
+          ""
+        ],
+        [
+          "Earnings per share, Diluted",
+          "$",
+          "0.33",
+          "",
+          "$",
+          "0.35",
+          "",
+          "",
+          "$",
+          "2.19",
+          "",
+          "$",
+          "2.06",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        16,
+        14
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          ""
+        ],
+        [
+          "Operating income:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Electric Utilities",
+          "$",
+          "46.3",
+          "",
+          "$",
+          "46.6",
+          "",
+          "",
+          "$",
+          "110.9",
+          "",
+          "$",
+          "107.7",
+          ""
+        ],
+        [
+          "Gas Utilities",
+          "",
+          "23.0",
+          "",
+          "",
+          "17.7",
+          "",
+          "",
+          "",
+          "153.7",
+          "",
+          "",
+          "132.4",
+          ""
+        ],
+        [
+          "Corporate and Other",
+          "",
+          "1.3",
+          "",
+          "",
+          "(0.8",
+          ")",
+          "",
+          "",
+          "(0.6",
+          ")",
+          "",
+          "(1.7",
+          ")"
+        ],
+        [
+          "Operating income",
+          "",
+          "70.6",
+          "",
+          "",
+          "63.5",
+          "",
+          "",
+          "",
+          "264.0",
+          "",
+          "",
+          "238.4",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Interest expense, net",
+          "",
+          "(42.6",
+          ")",
+          "",
+          "(41.5",
+          ")",
+          "",
+          "",
+          "(86.7",
+          ")",
+          "",
+          "(85.0",
+          ")"
+        ],
+        [
+          "Other income (expense), net",
+          "",
+          "0.4",
+          "",
+          "",
+          "(1.5",
+          ")",
+          "",
+          "",
+          "(0.5",
+          ")",
+          "",
+          "(0.9",
+          ")"
+        ],
+        [
+          "Income tax benefit (expense)",
+          "",
+          "(3.7",
+          ")",
+          "",
+          "6.1",
+          "",
+          "",
+          "",
+          "(20.6",
+          ")",
+          "",
+          "(8.6",
+          ")"
+        ],
+        [
+          "Net income",
+          "",
+          "24.7",
+          "",
+          "",
+          "26.6",
+          "",
+          "",
+          "",
+          "156.2",
+          "",
+          "",
+          "143.9",
+          ""
+        ],
+        [
+          "Net income attributable to non-controlling interest",
+          "",
+          "(1.9",
+          ")",
+          "",
+          "(3.5",
+          ")",
+          "",
+          "",
+          "(5.6",
+          ")",
+          "",
+          "(6.8",
+          ")"
+        ],
+        [
+          "Net income available for common stock",
+          "$",
+          "22.8",
+          "",
+          "$",
+          "23.1",
+          "",
+          "",
+          "$",
+          "150.6",
+          "",
+          "$",
+          "137.1",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        10,
+        14
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Weighted average common shares outstanding (in millions):",
+          "Weighted average common shares outstanding (in millions):",
+          "Weighted average common shares outstanding (in millions):",
+          "Weighted average common shares outstanding (in millions):",
+          "Weighted average common shares outstanding (in millions):",
+          "Weighted average common shares outstanding (in millions):",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic",
+          "",
+          "69.0",
+          "",
+          "",
+          "66.6",
+          "",
+          "",
+          "",
+          "68.6",
+          "",
+          "",
+          "66.3",
+          ""
+        ],
+        [
+          "Diluted",
+          "",
+          "69.0",
+          "",
+          "",
+          "66.7",
+          "",
+          "",
+          "",
+          "68.7",
+          "",
+          "",
+          "66.4",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Earnings per share:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Earnings Per Share, Basic",
+          "$",
+          "0.33",
+          "",
+          "$",
+          "0.35",
+          "",
+          "",
+          "$",
+          "2.20",
+          "",
+          "$",
+          "2.07",
+          ""
+        ],
+        [
+          "Earnings Per Share, Diluted",
+          "$",
+          "0.33",
+          "",
+          "$",
+          "0.35",
+          "",
+          "",
+          "$",
+          "2.19",
+          "",
+          "$",
+          "2.06",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        12,
+        20
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "Variance",
+          "Variance",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "",
+          "Variance",
+          "Variance",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "2024 vs. 2023",
+          "2024 vs. 2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "2024 vs. 2023",
+          "2024 vs. 2023",
+          ""
+        ],
+        [
+          "",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          ""
+        ],
+        [
+          "Revenue",
+          "$",
+          "205.1",
+          "",
+          "$",
+          "193.1",
+          "",
+          "$",
+          "12.0",
+          "",
+          "",
+          "$",
+          "427.3",
+          "",
+          "$",
+          "411.8",
+          "",
+          "$",
+          "15.5",
+          ""
+        ],
+        [
+          "Cost of fuel and purchased power",
+          "",
+          "45.9",
+          "",
+          "",
+          "36.4",
+          "",
+          "",
+          "9.5",
+          "",
+          "",
+          "",
+          "100.8",
+          "",
+          "",
+          "91.8",
+          "",
+          "",
+          "9.0",
+          ""
+        ],
+        [
+          "Electric Utility margin (non-GAAP)",
+          "",
+          "159.2",
+          "",
+          "",
+          "156.7",
+          "",
+          "",
+          "2.5",
+          "",
+          "",
+          "",
+          "326.5",
+          "",
+          "",
+          "320.0",
+          "",
+          "",
+          "6.5",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operations and maintenance",
+          "",
+          "68.1",
+          "",
+          "",
+          "65.4",
+          "",
+          "",
+          "2.7",
+          "",
+          "",
+          "",
+          "125.5",
+          "",
+          "",
+          "122.8",
+          "",
+          "",
+          "2.7",
+          ""
+        ],
+        [
+          "Depreciation and amortization",
+          "",
+          "35.5",
+          "",
+          "",
+          "35.8",
+          "",
+          "",
+          "(0.3",
+          ")",
+          "",
+          "",
+          "70.8",
+          "",
+          "",
+          "70.9",
+          "",
+          "",
+          "(0.1",
+          ")"
+        ],
+        [
+          "Taxes - property and production",
+          "",
+          "9.3",
+          "",
+          "",
+          "8.9",
+          "",
+          "",
+          "0.4",
+          "",
+          "",
+          "",
+          "19.3",
+          "",
+          "",
+          "18.6",
+          "",
+          "",
+          "0.7",
+          ""
+        ],
+        [
+          "Operating income",
+          "$",
+          "46.3",
+          "",
+          "$",
+          "46.6",
+          "",
+          "$",
+          "(0.3",
+          ")",
+          "",
+          "$",
+          "110.9",
+          "",
+          "$",
+          "107.7",
+          "",
+          "$",
+          "3.2",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        8,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in millions)",
+          "(in millions)",
+          ""
+        ],
+        [
+          "Weather",
+          "$",
+          "2.4",
+          ""
+        ],
+        [
+          "New rates and rider recovery",
+          "",
+          "2.3",
+          ""
+        ],
+        [
+          "Retail customer growth and usage",
+          "",
+          "1.8",
+          ""
+        ],
+        [
+          "Integrated Generation (a)",
+          "",
+          "(4.4",
+          ")"
+        ],
+        [
+          "Other",
+          "",
+          "0.4",
+          ""
+        ],
+        [
+          "",
+          "$",
+          "2.5",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        8,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in millions)",
+          "(in millions)",
+          ""
+        ],
+        [
+          "New rates and rider recovery",
+          "$",
+          "10.5",
+          ""
+        ],
+        [
+          "Weather",
+          "",
+          "1.2",
+          ""
+        ],
+        [
+          "Integrated Generation (a)",
+          "",
+          "(3.5",
+          ")"
+        ],
+        [
+          "Off-system excess energy sales",
+          "",
+          "(3.2",
+          ")"
+        ],
+        [
+          "Other",
+          "",
+          "1.5",
+          ""
+        ],
+        [
+          "",
+          "$",
+          "6.5",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        17,
+        14
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "Operating Statistics",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Quantities Sold (GWh):",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Retail Sales",
+          "",
+          "1424.8",
+          "",
+          "",
+          "1340.8",
+          "",
+          "",
+          "",
+          "2913.2",
+          "",
+          "",
+          "2737.2",
+          ""
+        ],
+        [
+          "Contract/Off-system/Power Marketing Wholesale",
+          "",
+          "301.8",
+          "",
+          "",
+          "241.7",
+          "",
+          "",
+          "",
+          "565.4",
+          "",
+          "",
+          "643.2",
+          ""
+        ],
+        [
+          "Total Regulated",
+          "",
+          "1726.6",
+          "",
+          "",
+          "1582.5",
+          "",
+          "",
+          "",
+          "3478.6",
+          "",
+          "",
+          "3380.4",
+          ""
+        ],
+        [
+          "Non-regulated",
+          "",
+          "21.1",
+          "",
+          "",
+          "22.8",
+          "",
+          "",
+          "",
+          "49.1",
+          "",
+          "",
+          "77.2",
+          ""
+        ],
+        [
+          "Total quantities sold",
+          "",
+          "1747.7",
+          "",
+          "",
+          "1605.3",
+          "",
+          "",
+          "",
+          "3527.7",
+          "",
+          "",
+          "3457.6",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Contracted generated facilities availability by fuel type:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Coal",
+          "",
+          "75.5",
+          "%",
+          "",
+          "92.0",
+          "%",
+          "",
+          "",
+          "85.6",
+          "%",
+          "",
+          "92.4",
+          "%"
+        ],
+        [
+          "Natural gas and diesel oil",
+          "",
+          "91.6",
+          "%",
+          "",
+          "93.5",
+          "%",
+          "",
+          "",
+          "94.1",
+          "%",
+          "",
+          "93.9",
+          "%"
+        ],
+        [
+          "Wind",
+          "",
+          "92.1",
+          "%",
+          "",
+          "93.0",
+          "%",
+          "",
+          "",
+          "91.2",
+          "%",
+          "",
+          "93.4",
+          "%"
+        ],
+        [
+          "Total availability",
+          "",
+          "87.1",
+          "%",
+          "",
+          "93.0",
+          "%",
+          "",
+          "",
+          "91.3",
+          "%",
+          "",
+          "93.4",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Wind capacity factor",
+          "",
+          "36.9",
+          "%",
+          "",
+          "34.4",
+          "%",
+          "",
+          "",
+          "38.4",
+          "%",
+          "",
+          "41.2",
+          "%"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        6,
+        10
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,"
+        ],
+        [
+          "Degree Days",
+          "2024",
+          "2024",
+          "2023",
+          "2023",
+          "",
+          "2024",
+          "2024",
+          "2023",
+          "2023"
+        ],
+        [
+          "",
+          "Actual",
+          "Variance from Normal",
+          "Actual",
+          "Variance from Normal",
+          "",
+          "Actual",
+          "Variance from Normal",
+          "Actual",
+          "Variance from Normal"
+        ],
+        [
+          "Heating Degree Days",
+          "757",
+          "(13)%",
+          "840",
+          "(6)%",
+          "",
+          "3577",
+          "(8)%",
+          "3940",
+          "4%"
+        ],
+        [
+          "Cooling Degree Days",
+          "219",
+          "25%",
+          "75",
+          "(60)%",
+          "",
+          "219",
+          "25%",
+          "75",
+          "(60)%"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        12,
+        20
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "Variance",
+          "Variance",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "",
+          "Variance",
+          "Variance",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "2024 vs. 2023",
+          "2024 vs. 2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "2024 vs. 2023",
+          "2024 vs. 2023",
+          ""
+        ],
+        [
+          "",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          "(in millions)",
+          ""
+        ],
+        [
+          "Revenue",
+          "$",
+          "202.0",
+          "",
+          "$",
+          "222.7",
+          "",
+          "$",
+          "(20.7",
+          ")",
+          "",
+          "$",
+          "710.6",
+          "",
+          "$",
+          "929.6",
+          "",
+          "$",
+          "(219.0",
+          ")"
+        ],
+        [
+          "Cost of natural gas sold",
+          "",
+          "61.3",
+          "",
+          "",
+          "85.0",
+          "",
+          "",
+          "(23.7",
+          ")",
+          "",
+          "",
+          "323.2",
+          "",
+          "",
+          "555.9",
+          "",
+          "",
+          "(232.7",
+          ")"
+        ],
+        [
+          "Gas Utility margin (non-GAAP)",
+          "",
+          "140.7",
+          "",
+          "",
+          "137.7",
+          "",
+          "",
+          "3.0",
+          "",
+          "",
+          "",
+          "387.4",
+          "",
+          "",
+          "373.7",
+          "",
+          "",
+          "13.7",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operations and maintenance",
+          "",
+          "79.3",
+          "",
+          "",
+          "84.0",
+          "",
+          "",
+          "(4.7",
+          ")",
+          "",
+          "",
+          "157.9",
+          "",
+          "",
+          "171.2",
+          "",
+          "",
+          "(13.3",
+          ")"
+        ],
+        [
+          "Depreciation and amortization",
+          "",
+          "31.1",
+          "",
+          "",
+          "28.8",
+          "",
+          "",
+          "2.3",
+          "",
+          "",
+          "",
+          "61.5",
+          "",
+          "",
+          "55.3",
+          "",
+          "",
+          "6.2",
+          ""
+        ],
+        [
+          "Taxes - property and production",
+          "",
+          "7.3",
+          "",
+          "",
+          "7.2",
+          "",
+          "",
+          "0.1",
+          "",
+          "",
+          "",
+          "14.3",
+          "",
+          "",
+          "14.8",
+          "",
+          "",
+          "(0.5",
+          ")"
+        ],
+        [
+          "Operating income",
+          "$",
+          "23.0",
+          "",
+          "$",
+          "17.7",
+          "",
+          "$",
+          "5.3",
+          "",
+          "",
+          "$",
+          "153.7",
+          "",
+          "$",
+          "132.4",
+          "",
+          "$",
+          "21.3",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        8,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in millions)",
+          "(in millions)",
+          ""
+        ],
+        [
+          "New rates and rider recovery",
+          "$",
+          "9.1",
+          ""
+        ],
+        [
+          "Retail customer growth and usage",
+          "",
+          "0.9",
+          ""
+        ],
+        [
+          "Weather",
+          "",
+          "(6.2",
+          ")"
+        ],
+        [
+          "Mark-to-market on non-utility natural gas commodity contracts",
+          "",
+          "(0.5",
+          ")"
+        ],
+        [
+          "Other",
+          "",
+          "(0.3",
+          ")"
+        ],
+        [
+          "",
+          "$",
+          "3.0",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        8,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "(in millions)",
+          "(in millions)",
+          ""
+        ],
+        [
+          "New rates and rider recovery",
+          "$",
+          "22.1",
+          ""
+        ],
+        [
+          "Mark-to-market on non-utility natural gas commodity contracts",
+          "",
+          "3.2",
+          ""
+        ],
+        [
+          "Retail customer growth and usage",
+          "",
+          "2.4",
+          ""
+        ],
+        [
+          "Weather",
+          "",
+          "(13.6",
+          ")"
+        ],
+        [
+          "Other",
+          "",
+          "(0.4",
+          ")"
+        ],
+        [
+          "",
+          "$",
+          "13.7",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        7,
+        14
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "Operating Statistics",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Quantities Sold and Transported (Dth in millions):",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Distribution",
+          "",
+          "12.6",
+          "",
+          "",
+          "13.1",
+          "",
+          "",
+          "",
+          "54.3",
+          "",
+          "",
+          "58.0",
+          ""
+        ],
+        [
+          "Transport and Transmission",
+          "",
+          "34.5",
+          "",
+          "",
+          "34.2",
+          "",
+          "",
+          "",
+          "81.2",
+          "",
+          "",
+          "81.4",
+          ""
+        ],
+        [
+          "Total Quantities Sold",
+          "",
+          "47.1",
+          "",
+          "",
+          "47.3",
+          "",
+          "",
+          "",
+          "135.5",
+          "",
+          "",
+          "139.4",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 37.0,
+    "quarter_revenue_yoy_pct": 6.2144,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "$37 million in new annual revenue"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Revenue | $ | 205.1 |  | $ | 193.1"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 1,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "58.290001",
+    "return_10d_pct": "-2.6420",
+    "return_20d_pct": "-1.0808",
+    "return_30d_pct": "1.4925",
+    "return_60d_pct": "4.8550",
+    "return_90d_pct": "2.1959"
+  },
+  "text_stats": {
+    "primary_text_len": 3235,
+    "exhibit_text_len": 27178,
+    "combined_text_len": 30415,
+    "semantic_text_len": 27089,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

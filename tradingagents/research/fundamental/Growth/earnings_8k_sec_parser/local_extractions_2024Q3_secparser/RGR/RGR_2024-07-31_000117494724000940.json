@@ -1,0 +1,594 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RGR",
+    "cik": "95029",
+    "event_date": "2024-07-31",
+    "event_accession": "0001174947-24-000940",
+    "primary_8k_doc": "form8k-32652_rgr.htm",
+    "exhibit_docs": [
+      "ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RGR_000117494724000940_form8k-32652_rgr.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RGR_000117494724000940_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RGR",
+    "cik": "95029",
+    "entity_name": "STURM, RUGER & COMPANY, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "149453000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "14350000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "398817000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-97861000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "35456000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "5284000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.096017",
+    "operating_cash_flow_to_revenue": "0.035356",
+    "assets_to_revenue": "2.668511",
+    "financing_cash_flow_to_revenue": "-0.654794",
+    "investing_cash_flow_to_revenue": "0.237238"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales were $130.",
+      "net sales were $142.",
+      "net sales were $267.",
+      "net sales were $292.",
+      "Sales of new products, including the Security-380 pistol, Super Wrangler revolver, Marlin lever-action rifles, LC Carbine, Small-Frame Autoloading Rifle, and American Centerfire Rifle Generation II represented $79.",
+      "net income."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "demand in the firearms market declined from the second quarter of last year, the estimated sell-through of our products from our independent distributors to retailers bucked this trend and increased during the same period.",
+      "demand for many of our recently introduced products, including: ·American Rifle Generation II family of rifles, ·Marlin lever-action rifles, including the 1895 Dark Series and the 336 models, ·LC Carbine chambered in .",
+      "ailers bucked this trend and increased during the same period.",
+      "ain focused on the long-term goal of creating shareholder value.",
+      "ailers to confidently invest in our inventory is essential to Ruger’s long-term success and leadership in the volatile firearms market.",
+      "ailers increased 1% in both the second quarter and first half of 2024 compared to the prior year periods."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory is essential to Ruger’s long-term success and leadership in the volatile firearms market.",
+      "declined from the second quarter of last year, the estimated sell-through of our products from our independent distributors to retailers bucked this trend and increased during the same period.",
+      "decreased 8% and 6%, respectively."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "STURM, RUGER & COMPANY, INC. REPORTS SECOND QUARTER"
+    },
+    {
+      "type": "TitleElement",
+      "text": "DILUTED EARNINGS OF 47¢ PER SHARE AND"
+    },
+    {
+      "type": "TitleElement",
+      "text": "DECLARES QUARTERLY DIVIDEND OF 19¢ PER SHARE"
+    },
+    {
+      "type": "TextElement",
+      "text": "SOUTHPORT, CONNECTICUT, July 31, 2024--Sturm, Ruger & Company, Inc. (NYSE-RGR) announced today that for the second quarter of 2024, net sales were $130.8 million and diluted earnings were 47¢ per share. For the corresponding period in 2023, net sales were $142.8 million and diluted earnings were 91¢ per share.For the six months ended June 29, 2024, net sales were $267.6 million and diluted earnings were 87¢ per share. For the corresponding period in 2023, net sales were $292.3 million and diluted earnings were $1.72 per share.The Company also announced today that its Board of Directors declared a dividend of 19¢ per share for the second quarter for stockholders of record as of August 15, 2024, payable on August 30, 2024. This dividend varies every quarter because the Company pays a percentage of earnings rather than a fixed amount per share. This dividend is approximately 40% of net income. Field: Page; Sequence: 1; Options: NewSection; Value: 3 Chief Executive Officer Christopher J. Killoy commented on the second quarter of 2024, “Although consumer demand in the firearms market declined from the second quarter of last year, the estimated sell-through of our products from our independent distributors to retailers bucked this trend and increased during the same period. This growth was primarily driven by the demand for many of our recently introduced products, including: ·American Rifle Generation II family of rifles, ·Marlin lever-action rifles, including the 1895 Dark Series and the 336 models, ·LC Carbine chambered in .45 Auto, ·75th Anniversary Mark IV Target pistol, ·75th Anniversary 10/22 rifles, ·75th Anniversary LCP MAX pistol, and ·Mini-14 rifle with side-folding stock.Further, the industry has recognized many of these innovative products with awards and accolades, including the recently announced Industry Choice Awards for: ·Lever Gun of the Year (Marlin Dark Series Model 1895), ·Carbine of the Year (LC Carbine in .45 Auto), and ·High Overall Rifle of the Year (Ruger American Rifle Gen II Ranch).We look forward to adding to this success with an exciting new product and more product derivatives that we plan to launch in the second half of the year.”Mr. Killoy continued, “Earlier this year, we reorganized some aspects of our business and implemented a reduction in force to achieve greater efficiency, productivity, and flexibility throughout our organization. We are starting to realize the benefits of these actions. Despite a reduction in headcount, second quarter production increased 18% from the first quarter. We expect further improvements from the initiatives we are currently pursuing and we continue to look for additional opportunities to reduce or eliminate inefficiencies in every part of our business.” Field: Page; Sequence: 2; Value: 3 Mr. Killoy concluded, “We remain focused on the long-term goal of creating shareholder value. Our disciplined pricing and promotion strategy may not always benefit current period sales and profitability, but instead enhances our long-term performance and promotes consistency throughout the distribution channel. Allowing both independent distributors and retailers to confidently invest in our inventory is essential to Ruger’s long-term success and leadership in the volatile firearms market. We continue to leverage our strong, debt-free balance sheet. In the first half of 2024, we repurchased 477,917 shares of our stock at an average cost of $42.41 per share, representing approximately 3% of our outstanding shares.”Mr. Killoy made the following observations related to the Company’s second quarter 2024 performance: ·The estimated unit sell-through of the Company’s products from the independent distributors to retailers increased 1% in both the second quarter and first half of 2024 compared to the prior year periods. For the same periods, NICS background checks, as adjusted by the National Shooting Sports Foundation, decreased 8% and 6%, respectively. ·Sales of new products, including the Security-380 pistol, Super Wrangler revolver, Marlin lever-action rifles, LC Carbine, Small-Frame Autoloading Rifle, and American Centerfire Rifle Generation II represented $79.7 million or 31% of firearm sales in the first half of 2024, an increase from $63.3 million or 23% of sales in the first half of 2023. New product sales include only major new products that were introduced in the past two years. ·Our profitability in the second quarter of 2024 improved from the first quarter of 2024 as we increased production, despite the reduction in headcount. ·Compared to the second quarter of 2023, the Company’s and distributor’s finished goods inventories have been reduced by 13,300 units and 88,700 units, respectively, providing an opportunity for replenishment in the second half of the year. ·Cash provided by operations during the first half of 2024 was $26.1 million. At June 29, 2024, our cash and short-term investments totaled $105.6 million. Our current ratio is 4.8 to 1 and we have no debt. ·In the first half of 2024, capital expenditures totaled $10.4 million related to new product introductions, upgrades to our manufacturing equipment, and facilities. We expect our 2024 capital expenditures to approximate $20 million. ·In the first half of 2024, the Company returned $27.1 million to its shareholders through: othe payment of $6.8 million of quarterly dividends, and o$20.3 million through the repurchase of shares of its common stock in the open market. Field: Page; Sequence: 3; Value: 3 ·At June 29, 2024, stockholders’ equity was $321.5 million, which equates to a book value of $18.90 per share, of which $6.21 per share was cash and short-term investments.Today, the Company filed its Quarterly Report on Form 10-Q for the second quarter of 2024. The financial statements included in this Quarterly Report on Form 10-Q are attached to this press release.Tomorrow, August 1, 2024, Sturm, Ruger will host a webcast at 9:00 a.m. ET to discuss the second quarter 2024 operating results. Interested parties can listen to the webcast via this link or by visiting Ruger.com/corporate. Those who wish to ask questions during the webcast will need to pre-register prior to the meeting. The Quarterly Report on Form 10-Q for the second quarter of 2024 is available on the SEC website at SEC.gov and the Ruger website at Ruger.com/corporate. Investors are urged to read the complete Quarterly Report on Form 10-Q to ensure that they have adequate information to make informed investment judgments.About Sturm, Ruger & Co., Inc.Sturm, Ruger & Co., Inc. is one of the nation's leading manufacturers of rugged, reliable firearms for the commercial sporting market. With products made in America, Ruger offers consumers almost 800 variations of more than 40 product lines, across both the Ruger and Marlin brands. For 75 years, Ruger has been a model of corporate and community responsibility. Our motto, “Arms Makers for Responsible Citizens®,” echoes our commitment to these principles as we work hard to deliver quality and innovative firearms.The Company may, from time to time, make forward-looking statements and projections concerning future expectations. Such statements are based on current expectations and are subject to certain qualifying risks and uncertainties, such as market demand, sales levels of firearms, anticipated castings sales and earnings, the need for external financing for operations or capital expenditures, the results of pending litigation against the Company, the impact of future firearms control and environmental legislation, and accounting estimates, any one or more of which could cause actual results to differ materially from those projected. Readers are cautioned not to place undue reliance on these forward-looking statements, which speak only as of the date made. The Company undertakes no obligation to publish revised forward-looking statements to reflect events or circumstances after the date such forward-looking statements are made or to reflect the occurrence of subsequent unanticipated events. Field: Page; Sequence: 4; Value: 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "STURM, RUGER & COMPANY, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS (UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 29, 2024 December 31, 2023 Assets Current Assets Cash $7,153 $15,174 Short-term investments 98,490 102,485 Trade receivables, net 56,119 59,864 Gross inventories 145,839 150,192 Less LIFO reserve (66,854) (64,262) Less excess and obsolescence reserve (5,653) (6,120) Net inventories 73,332 79,810 Prepaid expenses and other current assets 16,857 14,062 Total Current Assets 251,951 271,395 Property, plant and equipment 471,440 462,397 Less allowances for depreciation (400,126) (390,863) Net property, plant and equipment 71,314 71,534 Deferred income taxes 14,727 11,976 Other assets 38,711 43,912 Total Assets $376,703 $398,817"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 5; Value: 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "STURM, RUGER & COMPANY, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS (UNAUDITED) (Continued)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 29, 2024 December 31, 2023 Liabilities and Stockholders’ Equity Current Liabilities Trade accounts payable and accrued expenses $29,583 $31,708 Contract liabilities with customers — 149 Product liability 314 634 Employee compensation and benefits 16,692 24,660 Workers’ compensation 5,432 6,044 Total Current Liabilities 52,021 63,195 Employee compensation 1,252 1,685 Product liability accrual 61 46 Lease liability 1,903 2,170 Contingent liabilities — — Stockholders’ Equity Common Stock, non-voting, par value $1: Authorized shares 50,000; none issued — — Common Stock, par value $1: Authorized shares – 40,000,000 2024 – 24,467,983 issued, 17,011,666 outstanding 2023 – 24,437,020 issued, 17,458,620 outstanding 24,468 24,437 Additional paid-in capital 48,346 46,849 Retained earnings 426,551 418,058 Less: Treasury stock – at cost 2024 – 7,456,317 shares 2023 – 6,978,400 shares (177,899) (157,623) Total Stockholders’ Equity 321,466 331,721 Total Liabilities and Stockholders’ Equity $376,703 $398,817"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 6; Value: 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "STURM, RUGER & COMPANY, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF INCOME AND COMPREHENSIVE INCOME (UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 29, 2024 July 1, 2023 June 29, 2024 July 1, 2023 Net firearms sales $129,829 $141,853 $265,837 $290,746 Net castings sales 932 951 1,744 1,511 Total net sales 130,761 142,804 267,581 292,257 Cost of products sold 101,607 104,656 209,024 215,623 Gross profit 29,154 38,148 58,557 76,634 Operating expenses: Selling 9,484 9,808 19,190 19,033 General and administrative 10,698 9,925 22,864 22,165 Total operating expenses 20,182 19,733 42,054 41,198 Operating income 8,972 18,415 16,503 35,436 Other income: Interest income 1,329 1,479 2,684 2,693 Interest expense (25) (30) (42) (55) Other income, net 179 369 357 651 Total other income, net 1,483 1,818 2,999 3,289 Income before income taxes 10,455 20,233 19,502 38,725 Income taxes 2,191 4,048 4,154 8,190 Net income and comprehensive income $8,264 $16,185 $15,348 $30,535 Basic earnings per share $0.48 $0.91 $0.88 $1.73 Diluted earnings per share $0.47 $0.91 $0.87 $1.72 Weighted average number of common shares outstanding - Basic 17,343,341 17,714,471 17,388,509 17,696,579 Weighted average number of common shares outstanding - Diluted 17,618,508 17,826,205 17,615,244 17,798,521 Cash dividends per share $0.16 $0.32 $0.39 $5.74"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 7; Value: 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "STURM, RUGER & COMPANY, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (UNAUDITED)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 29, 2024 July 1, 2023 Operating Activities Net income $15,348 $30,535 Adjustments to reconcile net income to cash provided by operating activities: Depreciation and amortization 11,137 13,046 Stock-based compensation 2,152 1,948 Excess and obsolescence inventory reserve (467) — Gain on sale of assets — (2) Deferred income taxes (2,751) (3,950) Changes in operating assets and liabilities: Trade receivables 3,745 12,383 Inventories 6,945 (4,423) Trade accounts payable and accrued expenses (2,770) (5,654) Contract liability with customers (149) (931) Employee compensation and benefits (8,469) (8,882) Product liability (305) 199 Prepaid expenses, other assets and other liabilities 1,669 (11,285) Income taxes payable — (1,171) Cash provided by operating activities 26,085 21,813 Investing Activities Property, plant and equipment additions (10,414) (4,873) Proceeds from sale of assets — 3 Purchases of short-term investments (76,409) (117,977) Proceeds from maturities of short-term investments 80,404 150,898 Cash (used for) provided by investing activities (6,419) 28,051 Financing Activities Remittance of taxes withheld from employees related to share-based compensation (624) (2,156) Repurchase of common stock (20,276) — Dividends paid (6,787) (101,425) Cash used for financing activities (27,687) (103,581) Decrease in cash and cash equivalents (8,021) (53,717) Cash and cash equivalents at beginning of period 15,174 65,173 Cash and cash equivalents at end of period $7,153 $11,456"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 8; Value: 3 Non-GAAP Financial MeasuresIn an effort to provide investors with additional information regarding its financial results, the Company refers to various United States generally accepted accounting principles (“GAAP”) financial measures and two non-GAAP financial measures, EBITDA and EBITDA margin, which management believes provides useful information to investors. These non-GAAP financial measures may not be comparable to similarly titled financial measures being disclosed by other companies. In addition, the Company believes that the non-GAAP financial measures should be considered in addition to, and not in lieu of, GAAP financial measures. The Company believes that EBITDA and EBITDA margin are useful to understanding its operating results and the ongoing performance of its underlying business, as EBITDA provides information on the Company’s ability to meet its capital expenditure and working capital requirements, and is also an indicator of profitability. The Company believes that this reporting provides better transparency and comparability to its operating results. The Company uses both GAAP and non-GAAP financial measures to evaluate the Company’s financial performance.EBITDA is defined as earnings before interest, taxes, and depreciation and amortization. The Company calculates this by adding the amount of interest expense, income tax expense, and depreciation and amortization expenses that have been deducted from net income back into net income, and subtracting the amount of interest income that was included in net income from net income to arrive at EBITDA. The Company calculates EBITDA margin by dividing EBITDA by total net sales."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Reconciliation – EBITDA"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EBITDA"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited, dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 29, 2024 July 1, 2023 June 29, 2024 July 1, 2023 Net income $8,264 $16,185 $15,348 $30,535 Income tax expense 2,191 4,048 4,154 8,190 Depreciation and amortization expense 5,304 6,510 11,137 13,046 Interest income (1,329) (1,479) (2,684) (2,693) Interest expense 25 30 42 55 EBITDA $14,455 $25,294 $27,997 $49,133 EBITDA margin 11.1% 17.7% 10.5% 16.8% Net income margin 6.3% 11.3% 5.7% 10.4%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 9; Value: 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "American Rifle Generation II family of rifles,"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Marlin lever-action rifles, including the 1895 Dark Series and the 336 models,"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "LC Carbine chambered in .45 Auto,"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "75th Anniversary Mark IV Target pistol,"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "75th Anniversary 10/22 rifles,"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "75th Anniversary LCP MAX pistol, and"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Mini-14 rifle with side-folding stock."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Lever Gun of the Year (Marlin Dark Series Model 1895),"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Carbine of the Year (LC Carbine in .45 Auto), and"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "High Overall Rifle of the Year (Ruger American Rifle Gen II Ranch)."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "The estimated unit sell-through of the Company’s products from the independent distributors to retailers increased 1% in both the second quarter and first half of 2024 compared to the prior year periods. For the same periods, NICS background checks, as adjusted by the National Shooting Sports Foundation, decreased 8% and 6%, respectively."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Sales of new products, including the Security-380 pistol, Super Wrangler revolver, Marlin lever-action rifles, LC Carbine, Small-Frame Autoloading Rifle, and American Centerfire Rifle Generation II represented $79.7 million or 31% of firearm sales in the first half of 2024, an increase from $63.3 million or 23% of sales in the first half of 2023. New product sales include only major new products that were introduced in the past two years."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 130.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "net sales were $130.8 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " | · | Sales of new products, including the Security-380 pistol, Super Wrangler revolver, Marlin lever-action rifles, LC Carbine, Small-Frame Autoloading Rifle, and American Centerfire Rifle Generation II represented $79.7 million or 31% of firearm sales in the first half of 2024, an increase from $63.3 million or 23% of sales in the first half of 2023. New product sales include only major new products that were introduced in the past two years."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "41.259998",
+    "return_10d_pct": "-0.2908",
+    "return_20d_pct": "2.5933",
+    "return_30d_pct": "0.6786",
+    "return_60d_pct": "1.0179",
+    "return_90d_pct": "-1.1634"
+  },
+  "text_stats": {
+    "primary_text_len": 3484,
+    "exhibit_text_len": 15355,
+    "combined_text_len": 18841,
+    "semantic_text_len": 15684,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

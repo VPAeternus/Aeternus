@@ -60,7 +60,7 @@ def _run_session_engine_analysis(
         ticker=str(selections["ticker"]).upper().strip(),
         analysis_date=str(selections["analysis_date"]).strip(),
         provider=provider,
-        queue_context=selections.get("queue_context"),
+        source_context=selections.get("source_context"),
         config=runtime_config,
     )
     try:
@@ -231,15 +231,14 @@ def run_analysis(selections: Optional[Dict[str, Any]] = None):
             "System",
             f"Selected analysts: {', '.join(analyst.value for analyst in selections['analysts'])}",
         )
-        queue_context = selections.get("queue_context")
-        if queue_context:
+        source_context = selections.get("source_context")
+        if source_context:
             message_buffer.add_message(
                 "System",
-                "Queue context: "
-                f"sector={queue_context.get('sector', 'N/A')} | "
-                f"lane={queue_context.get('lane', 'N/A')} | "
-                f"dealflow={queue_context.get('deal_flow_score', 'N/A')} | "
-                f"playbook={queue_context.get('research_playbook', 'N/A')}",
+                "Source context: "
+                f"sector={source_context.get('sector', 'N/A')} | "
+                f"lane={source_context.get('lane', 'N/A')} | "
+                f"playbook={source_context.get('research_playbook', 'N/A')}",
             )
         update_display(layout)
 
@@ -281,9 +280,8 @@ def run_analysis(selections: Optional[Dict[str, Any]] = None):
         init_agent_state["hedge_signal"] = pretrade_signal
         init_agent_state["hedge_decision"] = pretrade_decision
         init_agent_state["pretrade_risk_brief"] = pretrade_brief
-        # Inject deal flow context into initial state for agents
-        if selections.get("queue_context"):
-            init_agent_state["dealflow_context"] = dict(selections["queue_context"])
+        if selections.get("source_context"):
+            init_agent_state["source_context"] = dict(selections["source_context"])
         message_buffer.add_message(
             "System",
             "Pre-trade risk context loaded: "
@@ -729,16 +727,6 @@ def score(
 
 @app.command()
 def analyze(
-    from_queue_id: Optional[str] = typer.Option(
-        None,
-        "--from-queue-id",
-        help="Analyze a symbol from the deal-flow research queue",
-    ),
-        queue_date: Optional[str] = typer.Option(
-        None,
-        "--queue-date",
-        help="Optional queue date (YYYY-MM-DD) for queue ID lookup",
-    ),
     analyst_provider: str = typer.Option(
         "",
         "--analyst-provider",
@@ -750,422 +738,16 @@ def analyze(
         help="Post-analyst graph provider: gpt|claude|gemini",
     ),
 ):
-    if not from_queue_id:
-        selections = get_user_selections()
-        if analyst_provider.strip():
-            selections["analyst_provider"] = analyst_provider.strip().lower()
-        if post_analyst_provider.strip():
-            selections["post_analyst_provider"] = post_analyst_provider.strip().lower()
-            selections["llm_provider"] = (
-                "codex_cli"
-                if selections["post_analyst_provider"] == "gpt"
-                else "claude_cli"
-                if selections["post_analyst_provider"] == "claude"
-                else selections["post_analyst_provider"]
-            )
-        run_analysis(selections)
-        return
-
-    try:
-        queue_item, queue_data, queue_path = _find_queue_item(from_queue_id, queue_date)
-    except (FileNotFoundError, ValueError) as exc:
-        console.print(f"[red]{exc}[/red]")
-        raise typer.Exit(1)
-
-    ticker = str(queue_item.get("symbol", "")).upper().strip()
-    analysis_date = str(queue_data.get("date") or _today_str())
-    if not ticker:
-        console.print(f"[red]Queue item has no symbol: {from_queue_id}[/red]")
-        raise typer.Exit(1)
-
-    if not queue_item.get("selected_for_deep"):
-        console.print(
-            f"[yellow]Queue ID {from_queue_id} is not marked selected_for_deep; proceeding by request.[/yellow]"
+    selections = get_user_selections()
+    if analyst_provider.strip():
+        selections["analyst_provider"] = analyst_provider.strip().lower()
+    if post_analyst_provider.strip():
+        selections["post_analyst_provider"] = post_analyst_provider.strip().lower()
+        selections["llm_provider"] = (
+            "codex_cli"
+            if selections["post_analyst_provider"] == "gpt"
+            else "claude_cli"
+            if selections["post_analyst_provider"] == "claude"
+            else selections["post_analyst_provider"]
         )
-
-    console.print(
-        f"[green]Running queue-driven analysis[/green] | symbol={ticker} | "
-        f"date={analysis_date} | queue={queue_path}"
-    )
-
-    try:
-        RatingAuditLog().log_event(
-            "DEALFLOW_DEEP_SELECTION",
-            str(queue_data.get("run_id") or from_queue_id),
-            {
-                "queue_id": from_queue_id,
-                "symbol": ticker,
-                "analysis_date": analysis_date,
-                "selected_for_deep": bool(queue_item.get("selected_for_deep")),
-                "deal_flow_score": queue_item.get("deal_flow_score"),
-            },
-        )
-    except Exception:
-        pass
-
-    run_analysis(
-        _build_noninteractive_selections(
-            ticker,
-            analysis_date,
-            queue_item=queue_item,
-            analyst_provider=analyst_provider or None,
-            post_analyst_provider=post_analyst_provider or None,
-        )
-    )
-
-
-@app.command("analyze-batch")
-def analyze_batch(
-    queue_date: Optional[str] = typer.Option(
-        None,
-        "--queue-date",
-        help="Optional queue date (YYYY-MM-DD). Defaults to latest queue artifact.",
-    ),
-    include_unselected: bool = typer.Option(
-        True,
-        "--include-unselected/--selected-only",
-        help="Include queue items that are not marked selected_for_deep.",
-    ),
-    quick_unselected: bool = typer.Option(
-        True,
-        "--quick-unselected/--deep-unselected",
-        help="Run quick score path for non-selected items in the batch.",
-    ),
-    max_items: Optional[int] = typer.Option(
-        None,
-        "--max-items",
-        min=1,
-        help="Optional cap on number of queue items to process.",
-    ),
-    dry_run: bool = typer.Option(
-        False,
-        "--dry-run",
-        help="Preview batch targets without executing analyze runs.",
-    ),
-    fail_fast: bool = typer.Option(
-        False,
-        "--fail-fast",
-        help="Stop batch execution after the first failed item.",
-    ),
-    per_item_timeout_seconds: int = typer.Option(
-        int(os.getenv("AETERNUS_ANALYZE_BATCH_ITEM_TIMEOUT_SECONDS", "420")),
-        "--per-item-timeout-seconds",
-        min=30,
-        help=(
-            "Maximum runtime per analyze item before marking FAILED. "
-            "Set via AETERNUS_ANALYZE_BATCH_ITEM_TIMEOUT_SECONDS."
-        ),
-    ),
-    allow_cached_report_on_failure: bool = typer.Option(
-        True,
-        "--allow-cached-report-on-failure/--no-allow-cached-report-on-failure",
-        help=(
-            "If analyze execution fails or times out but an existing analysis report exists "
-            "for symbol/date, reuse it as SUCCESS_CACHED."
-        ),
-    ),
-    format: str = typer.Option("table", help="Output format: table or json"),
-    analyst_provider: str = typer.Option(
-        "",
-        "--analyst-provider",
-        help="Analyst provider: gpt|claude|grok_manual",
-    ),
-    post_analyst_provider: str = typer.Option(
-        "",
-        "--post-analyst-provider",
-        help="Post-analyst graph provider: gpt|claude|gemini",
-    ),
-):
-    """Run batch research: deep for selected names and optional quick path for others."""
-    output_format = str(format or "table").lower().strip()
-    if output_format not in {"table", "json"}:
-        console.print("[red]Error: format must be table or json[/red]")
-        raise typer.Exit(1)
-
-    try:
-        queue_data, queue_path = _load_research_queue(queue_date)
-    except FileNotFoundError as exc:
-        console.print(f"[red]{exc}[/red]")
-        raise typer.Exit(1)
-
-    queue_items = list(queue_data.get("items", []))
-    if not include_unselected:
-        queue_items = [item for item in queue_items if bool(item.get("selected_for_deep"))]
-
-    if max_items is not None:
-        queue_items = queue_items[: max(0, int(max_items))]
-
-    if not queue_items:
-        console.print("[red]No queue items available for batch analyze.[/red]")
-        raise typer.Exit(1)
-
-    run_date = str(queue_data.get("date") or queue_date or _today_str())
-    run_id = str(queue_data.get("run_id") or f"{run_date}-batch")
-    started_at = datetime.datetime.now(datetime.timezone.utc).isoformat()
-
-    try:
-        RatingAuditLog().log_event(
-            "DEALFLOW_BATCH_ANALYZE_STARTED",
-            run_id,
-            {
-                "queue_date": run_date,
-                "queue_path": str(queue_path),
-                "include_unselected": bool(include_unselected),
-                "quick_unselected": bool(quick_unselected),
-                "max_items": max_items,
-                "dry_run": bool(dry_run),
-                "per_item_timeout_seconds": int(per_item_timeout_seconds),
-                "allow_cached_report_on_failure": bool(allow_cached_report_on_failure),
-                "target_count": len(queue_items),
-            },
-        )
-    except Exception:
-        pass
-
-    summary_items: List[Dict[str, Any]] = []
-    success_count = 0
-    failure_count = 0
-    skipped_count = 0
-    analysis_mode_counts = {"DEEP": 0, "QUICK": 0}
-
-    for item in queue_items:
-        queue_id = str(item.get("queue_id", "")).strip()
-        symbol = str(item.get("symbol", "")).upper().strip()
-        lane = str(item.get("lane", "CORE"))
-        playbook = str(item.get("research_playbook", "N/A"))
-        subscores = _normalized_subscores(item.get("subscores"))
-        selected_for_deep = bool(item.get("selected_for_deep"))
-        analysis_mode = "DEEP"
-        if include_unselected and not selected_for_deep and quick_unselected:
-            analysis_mode = "QUICK"
-        analysis_mode_counts[analysis_mode] = analysis_mode_counts.get(analysis_mode, 0) + 1
-
-        status = "SUCCESS"
-        return_code = 0
-        reason = "Completed."
-        quick_outcome: Optional[Dict[str, Any]] = None
-
-        if not queue_id or not symbol:
-            status = "FAILED"
-            return_code = 1
-            reason = "Queue item missing queue_id or symbol."
-        elif dry_run:
-            status = "SKIPPED"
-            return_code = 0
-            reason = f"Dry run ({analysis_mode} execution skipped)."
-        else:
-            if analysis_mode == "DEEP":
-                cmd = [
-                    sys.executable or "python",
-                    "-m",
-                    "cli.main",
-                    "analyze",
-                    "--from-queue-id",
-                    queue_id,
-                    "--queue-date",
-                    run_date,
-                ]
-                if analyst_provider:
-                    cmd.extend(["--analyst-provider", analyst_provider])
-                if post_analyst_provider:
-                    cmd.extend(["--post-analyst-provider", post_analyst_provider])
-                try:
-                    result = subprocess.run(
-                        cmd,
-                        cwd=str(_repo_root()),
-                        timeout=int(per_item_timeout_seconds),
-                    )
-                    return_code = int(result.returncode)
-                    if return_code != 0:
-                        status = "FAILED"
-                        reason = f"Analyze exited with code {return_code}."
-                except subprocess.TimeoutExpired:
-                    status = "FAILED"
-                    return_code = 124
-                    reason = (
-                        f"Timed out after {int(per_item_timeout_seconds)}s "
-                        f"while analyzing {symbol}."
-                    )
-            else:
-                cmd = [
-                    sys.executable or "python",
-                    "-m",
-                    "cli.main",
-                    "score",
-                    symbol,
-                    "--date",
-                    run_date,
-                    "--format",
-                    "json",
-                ]
-                try:
-                    result = subprocess.run(
-                        cmd,
-                        cwd=str(_repo_root()),
-                        timeout=int(per_item_timeout_seconds),
-                        capture_output=True,
-                        text=True,
-                    )
-                    return_code = int(result.returncode)
-                    if return_code != 0:
-                        status = "FAILED"
-                        stderr_tail = str(result.stderr or "").strip().splitlines()
-                        stderr_hint = stderr_tail[-1] if stderr_tail else ""
-                        if stderr_hint:
-                            reason = (
-                                f"Quick score exited with code {return_code}. "
-                                f"stderr: {stderr_hint}"
-                            )
-                        else:
-                            reason = f"Quick score exited with code {return_code}."
-                    else:
-                        parsed_payload = _extract_json_object_from_output(result.stdout)
-                        if not parsed_payload:
-                            cached_quick = _extract_analysis_outcome(symbol=symbol, analysis_date=run_date)
-                            if bool(cached_quick.get("analysis_report_found")):
-                                quick_outcome = dict(cached_quick)
-                                status = "SUCCESS_QUICK_FALLBACK"
-                                reason = (
-                                    "Quick score completed without JSON payload. "
-                                    "Reused existing analysis report."
-                                )
-                            else:
-                                status = "FAILED"
-                                reason = "Quick score completed but JSON payload was not found."
-                        else:
-                            quick_outcome = _quick_outcome_from_score_payload(parsed_payload)
-                            status = "SUCCESS_QUICK"
-                            reason = "Quick score completed."
-                except subprocess.TimeoutExpired:
-                    status = "FAILED"
-                    return_code = 124
-                    reason = (
-                        f"Timed out after {int(per_item_timeout_seconds)}s "
-                        f"while quick-analyzing {symbol}."
-                    )
-
-        item_result = {
-            "queue_id": queue_id,
-            "symbol": symbol,
-            "analysis_mode": analysis_mode,
-            "lane": lane,
-            "research_playbook": playbook,
-            "subscores": dict(subscores),
-            "dominant_signal_family": _dominant_signal_family(subscores),
-            "dominant_signal_families": _dominant_signal_families(subscores, top_k=3),
-            "selected_for_deep": selected_for_deep,
-            "status": status,
-            "return_code": return_code,
-            "reason": reason,
-            "analysis_report_path": None,
-            "analysis_report_found": False,
-            "recommendation": "UNKNOWN",
-            "aeternus_score": None,
-            "confidence": None,
-            "rating": None,
-            "realized_horizons": {},
-        }
-
-        if status == "SUCCESS_QUICK" and isinstance(quick_outcome, dict):
-            item_result.update(quick_outcome)
-        elif _is_success_status(status):
-            item_result.update(_extract_analysis_outcome(symbol=symbol, analysis_date=run_date))
-        elif allow_cached_report_on_failure:
-            cached = _extract_analysis_outcome(symbol=symbol, analysis_date=run_date)
-            if bool(cached.get("analysis_report_found")):
-                item_result.update(cached)
-                status = "SUCCESS_CACHED"
-                reason = f"{reason} Reused existing analysis report."
-                item_result["status"] = status
-                item_result["reason"] = reason
-
-        if _is_success_status(status):
-            success_count += 1
-        elif status == "FAILED":
-            failure_count += 1
-        else:
-            skipped_count += 1
-        summary_items.append(item_result)
-
-        try:
-            RatingAuditLog().log_event(
-                "DEALFLOW_BATCH_ITEM_RESULT",
-                run_id,
-                item_result,
-            )
-        except Exception:
-            pass
-
-        if status == "FAILED" and fail_fast:
-            break
-
-    if success_count > 0 and not dry_run:
-        _attach_realized_horizons(summary_items, analysis_date=run_date)
-
-    finished_at = datetime.datetime.now(datetime.timezone.utc).isoformat()
-    summary = {
-        "run_id": run_id,
-        "date": run_date,
-        "queue_path": str(queue_path),
-        "research_execution_mode": str(
-            DEFAULT_CONFIG.get("research_execution_mode", "session_engine")
-        ).strip().lower(),
-        "include_unselected": bool(include_unselected),
-        "quick_unselected": bool(quick_unselected),
-        "max_items": max_items,
-        "dry_run": bool(dry_run),
-        "fail_fast": bool(fail_fast),
-        "per_item_timeout_seconds": int(per_item_timeout_seconds),
-        "allow_cached_report_on_failure": bool(allow_cached_report_on_failure),
-        "analysis_mode_counts": analysis_mode_counts,
-        "analyst_provider": str(analyst_provider or "").strip().lower()
-        or str(DEFAULT_CONFIG.get("research_analyst_provider", "gpt")).strip().lower(),
-        "post_analyst_provider": str(post_analyst_provider or "").strip().lower()
-        or str(DEFAULT_CONFIG.get("research_post_analyst_provider", "claude")).strip().lower(),
-        "requested": len(queue_items),
-        "processed": len(summary_items),
-        "success_count": success_count,
-        "failure_count": failure_count,
-        "skipped_count": skipped_count,
-        "started_at": started_at,
-        "finished_at": finished_at,
-        "items": summary_items,
-        "attribution": _build_batch_attribution(summary_items),
-    }
-
-    summary_path = _persist_batch_summary(run_date, summary)
-    summary["summary_path"] = str(summary_path)
-    research_conversion_path = _persist_research_conversion_integrity(run_date, summary)
-    if research_conversion_path is not None:
-        summary["research_conversion_integrity_path"] = str(research_conversion_path)
-
-    try:
-        RatingAuditLog().log_event(
-            "DEALFLOW_BATCH_ANALYZE_COMPLETED",
-            run_id,
-            {
-                "processed": len(summary_items),
-                "success_count": success_count,
-                "failure_count": failure_count,
-                "skipped_count": skipped_count,
-                "summary_path": str(summary_path),
-            },
-        )
-    except Exception:
-        pass
-
-    if output_format == "json":
-        typer.echo(json_lib.dumps(summary, indent=2))
-        if failure_count > 0:
-            raise typer.Exit(1)
-        return
-
-    console.print(
-        f"[green]Batch analyze complete[/green] | processed={len(summary_items)} | "
-        f"success={success_count} | failed={failure_count} | skipped={skipped_count}"
-    )
-    console.print(f"[cyan]Summary artifact:[/cyan] {summary_path}")
-    _render_batch_results_table(summary)
-
-    if failure_count > 0:
-        raise typer.Exit(1)
+    run_analysis(selections)

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BAX",
+    "cik": "10456",
+    "event_date": "2024-08-06",
+    "event_accession": "0001628280-24-034963",
+    "primary_8k_doc": "bax-20240806.htm",
+    "exhibit_docs": [
+      "bax-20240630xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BAX_000162828024034963_bax-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BAX_000162828024034963_bax-20240630xex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BAX",
+    "cik": "10456",
+    "entity_name": "BAXTER INTERNATIONAL INC",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3513000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "44000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "28276000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-372000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-170000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "479000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.012525",
+    "operating_cash_flow_to_revenue": "0.136351",
+    "assets_to_revenue": "8.048961",
+    "financing_cash_flow_to_revenue": "-0.105892",
+    "investing_cash_flow_to_revenue": "-0.048392"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of the Novum IQ large volume infusion pump with Dose IQ Safety Software.",
+      "sales of Front Line Care products, due in part to the previously disclosed dynamics impacting growth in the U.",
+      "sales of in-center hemodialysis products due to select product and market exits.",
+      "sales of our sterile IV solutions, infusion systems, administration sets, parenteral nutrition therapies and surgical hemostat, sealant and adhesion prevention products.",
+      "sales of specialty injectable pharmaceuticals, inhaled anesthesia and drug compounding.",
+      "sales of chronic and acute dialysis therapies and services, including peritoneal dialysis, hemodialysis, continuous renal replacement therapies (CRRT) and other organ support therapies."
+    ],
+    "guidance_evidence": [
+      "guidance and delivering constant currency growth across all segments 1 • Second-quarter U.",
+      "guidance • Baxter increases its full-year sales guidance and now expects sales growth of approximately 3% on both a reported and constant currency basis • Baxter increases its full-year adjusted diluted EPS guidance and now expects adjusted diluted EPS of $2.",
+      "guidance of approximately 1% on a reported basis and 2% to 3% on a constant currency basis.",
+      "guidance of $0.",
+      "Outlook For full-year 2024 : Baxter now expects sales growth of approximately 3% on both a reported and constant currency basis.",
+      "outlook for the remainder of 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for Drug Compounding services.",
+      "demand for a wide range of products across the portfolio, including the first U.",
+      "demand for Care & Connectivity Solutions products, particularly our Patient Support Systems products.",
+      "demand for Acute Therapies and Peritoneal Dialysis products and was partially offset by an expected decline in sales of in-center hemodialysis products due to select product and market exits.",
+      "ain momentum and drive performance benefiting our broad range of stakeholders,” said José (Joe) E.",
+      "air, president and chief executive officer."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charge for the Chronic Therapies business within the company’s Kidney Care segment, separation-related costs and intangible amortization, among other factors.",
+      "charges, acquisition and integration costs, separation-related costs, expenses related to European medical devices regulation, a goodwill impairment, investment impairments, and certain tax matters.",
+      "charges or gains that would be reflected as non-GAAP adjustments to earnings.",
+      "impairments, unusual gains and losses, and changes in foreign currency exchange rates, and the related amounts are unavailable without unreasonable efforts (as specified in the exception provided by Item 10(e)(1)(i)(B) of Regulation S-K).",
+      "IMPAIRMENT 430 — NM OTHER OPERATING INCOME, NET (1) (1) 0% OPERATING LOSS (192) (17) NM % of Net Sales (5.",
+      "impairment 5 — — — (430) 430 430 — 430 430 430 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3810,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "37.520000",
+    "return_10d_pct": "-2.8252",
+    "return_20d_pct": "1.0394",
+    "return_30d_pct": "3.8379",
+    "return_60d_pct": "-4.6642",
+    "return_90d_pct": "-3.7847"
+  },
+  "text_stats": {
+    "primary_text_len": 3945,
+    "exhibit_text_len": 52179,
+    "combined_text_len": 56126
+  }
+}

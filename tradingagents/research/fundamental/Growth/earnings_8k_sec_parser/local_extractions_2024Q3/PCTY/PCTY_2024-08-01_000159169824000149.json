@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PCTY",
+    "cik": "1591698",
+    "event_date": "2024-08-01",
+    "event_accession": "0001591698-24-000149",
+    "primary_8k_doc": "pcty-20240726.htm",
+    "exhibit_docs": [
+      "pcty-20240801xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PCTY_000159169824000149_pcty-20240726.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PCTY_000159169824000149_pcty-20240801xex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PCTY",
+    "cik": "1591698",
+    "entity_name": "PAYLOCITY HOLDING CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "866145000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "103568000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3695680000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "-861958000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-298752000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "206107000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.119574",
+    "operating_cash_flow_to_revenue": "0.237959",
+    "assets_to_revenue": "4.266814",
+    "financing_cash_flow_to_revenue": "-0.995166",
+    "investing_cash_flow_to_revenue": "-0.344921"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $324.",
+      "Revenue of $357.",
+      "Revenue of $1,281.",
+      "Revenue of $1,402.",
+      "revenue of $1,281.",
+      "revenue of $1,402."
+    ],
+    "guidance_evidence": [
+      "Outlook Based on information available as of August 1, 2024, Paylocity is issuing guidance for the first quarter and full fiscal year 2025 as indicated below.",
+      "guidance to their directly comparable GAAP financial measures because the information which is needed to complete the reconciliations is unavailable at this time without unreasonable effort.",
+      "expected to be in the range of $325.",
+      "expected to be in the range of $353.",
+      "expected to be in the range of $116.",
+      "expected to be in the range of $88."
+    ],
+    "wave_or_demand_evidence": [
+      "airman on August 5, 2024; Toby Williams to remain President and assume position of sole CEO SCHAUMBURG, IL.",
+      "cloud-based HCM and payroll software solutions, today announced financial results for the fourth quarter and full fiscal year 2024, which ended June 30, 2024.",
+      "ainst our multi-year goal of $2 billion in total revenue,” said Toby Williams, President and Co-Chief Executive Officer of Paylocity.",
+      "ailable as of August 1, 2024, Paylocity is issuing guidance for the first quarter and full fiscal year 2025 as indicated below.",
+      "ailable at this time without unreasonable effort.",
+      "ails Paylocity will host a conference call to discuss its fourth quarter and full fiscal year 2024 results today at 4:30 p."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties.",
+      "loss), net of tax (2,275) (243) (2,212) 3,579 Comprehensive income $ 34,979 $ 48,576 $ 138,610 $ 210,345 Net income per share: Basic $ 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 324.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 325.5,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "148.600006",
+    "return_10d_pct": "1.2180",
+    "return_20d_pct": "3.0081",
+    "return_30d_pct": "9.3540",
+    "return_60d_pct": "9.6030",
+    "return_90d_pct": "24.2059"
+  },
+  "text_stats": {
+    "primary_text_len": 4969,
+    "exhibit_text_len": 32383,
+    "combined_text_len": 37354
+  }
+}

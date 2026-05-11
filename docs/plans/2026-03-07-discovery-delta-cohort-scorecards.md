@@ -52,7 +52,7 @@ Expected:
 - compute raw cohort metrics
 - compute peer comparisons
 - compute Step 1 baseline comparisons
-- compute shortlist / deep-selection conversion
+- compute candidate_list / fundamental-intake conversion
 
 **Step 2: Run pure tests**
 

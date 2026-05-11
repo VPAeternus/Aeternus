@@ -15,7 +15,7 @@ def _write_json(path, payload):
 def test_cost_alpha_telemetry_aggregates_alpha_cost_and_family_views(tmp_path):
     dealflow_dir = tmp_path / "eval_results" / "deal_flow"
     _write_json(
-        dealflow_dir / "2026-02-06" / "shortlist_top20.json",
+        dealflow_dir / "2026-02-06" / "scout_ticker_summary.json",
         {
             "x_scope_summary": {
                 "mode": "HYBRID",
@@ -198,8 +198,8 @@ def test_cost_alpha_telemetry_aggregates_alpha_cost_and_family_views(tmp_path):
     )
 
     assert report["sample_days"] == 2
-    # With cashtag_stream removed, x_scope is only read from shortlist_top20.json (day 1: HYBRID, 4+3=7 calls).
-    # Day 2 connector_health no longer matches the cashtag_stream lookup, so contributes 0.
+    # X scope is read from scout ticker summary only (day 1: HYBRID, 4+3=7 calls).
+    # Day 2 connector_health is ignored for cost attribution, so contributes 0.
     assert report["totals"]["estimated_x_api_calls"] == 7
     assert round(report["totals"]["estimated_x_cost_usd"], 6) == 3.5
 
@@ -302,7 +302,7 @@ def test_feature_family_dashboard_prioritizes_by_share_and_ablation_impact():
 def test_source_ablation_report_computes_source_deltas_costs_and_roi(tmp_path):
     dealflow_dir = tmp_path / "eval_results" / "deal_flow"
     _write_json(
-        dealflow_dir / "2026-02-06" / "shortlist_top20.json",
+        dealflow_dir / "2026-02-06" / "scout_ticker_summary.json",
         {
             "x_scope_summary": {
                 "mode": "DIRECT_ONLY",

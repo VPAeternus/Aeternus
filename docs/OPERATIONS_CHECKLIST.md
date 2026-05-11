@@ -67,41 +67,36 @@ Expected: 300-450 total.
 
 ---
 
-## STAGE 3: Evidence Gate + Scoring
+## STAGE 3: Scout Ticker Handoff
 
-**What it does:** Filters symbols that lack sufficient evidence, then computes composite scores.
+**What it does:** Dedupes every ticker found by scouts and writes the authoritative dealflow handoff. No scout-sourced ticker is scored or ranked here.
 
 | # | Must Be True | Failure Sign | Fix |
 |---|---|---|---|
-| 23 | >= 3 active signal families per symbol | Most symbols show `status=LOW_DATA` | Check connector health — which connectors failed? |
-| 24 | >= 5 evidence count per symbol | Same as above — evidence count comes from OK connectors | Ensure social cache exists (biggest single lever) |
-| 25 | Score weights sum correctly | Scores are all 0 or identical | Check `CORE_SCORE_WEIGHTS` in scoring.py |
-| 26 | IC adjustments file is valid (if exists) | `load_ic_adjustments()` returns empty (no adjustments applied) | Check `eval_results/control/ic_signal_weights.json` format and expiry |
+| 23 | `scout_ticker_summary.json` exists | No scout totals | Check scout artifacts and manual X-feed output |
+| 24 | `final_dealflow_tickers.json` exists | No downstream handoff | Re-run collect after scout artifacts exist |
+| 25 | Handoff contains only ticker metadata | Score/rank fields appear | Stop run and inspect dealflow cleanup |
+| 26 | Latest pointers update | UI or fundamental adapter reads stale names | Check `latest_final_dealflow_tickers.json` |
 
-**Verify:** `eval_results/deal_flow/YYYY-MM-DD/all_scored_candidates.json` — should have multiple entries with `status=ACTIVE`. If all are `LOW_DATA`, the gate is too tight (likely missing social cache).
-
-**Current score weights:**
+**Verify:**
 ```
-price_momentum: 30% | news_catalyst: 15% | macro_regime_fit: 14%
-smart_money: 11% | social_momentum: 10% | sector_rotation: 8%
-emergence: 7% | insider_cluster: 5% | liquidity: 5%
+python3 -c "import json; h=json.load(open('eval_results/deal_flow/latest_final_dealflow_tickers.json')); print(len(h.get('tickers', [])), 'tickers')"
 ```
 
 ---
 
-## STAGE 4: Ranking
+## STAGE 4: Fundamental Framework Entry
 
-**What it does:** Selects top-30 from ACTIVE candidates, splits into CORE (18) and MOMENTUM (12) lanes.
+**What it does:** Fundamental research consumes the scout ticker handoff, resolves CIKs, and performs the first legitimate scoring step.
 
 | # | Must Be True | Failure Sign | Fix |
 |---|---|---|---|
-| 27 | CORE lane sorts by momentum_score (NOT core_score) | Poor hindsight IC results | Verify ranking.py sort key |
-| 28 | MOMENTUM lane sorts by asymmetry_score | MOMENTUM picks underperform | Verify ranking.py sort key |
-| 29 | Sector cap (max 5 per GICS sector) is enforced | One sector dominates shortlist | Check `dealflow_max_sector_count` config |
-| 30 | Portfolio positions are force-injected into deep selection | Open positions not re-analyzed | `positions.json` must be valid |
-| 31 | Research queue has 8-14 items selected for deep | Too few = wasted analysis capacity, too many = slow | Check quotas: `dealflow_deep_core_quota=4`, `dealflow_deep_momentum_quota=4`, `dealflow_deep_reserve_quota=4` |
+| 27 | Adapter input is `final_dealflow_tickers.json` | Adapter reads stale dealflow artifacts | Use `--handoff` or latest handoff pointer |
+| 28 | Universe CSV has no pre-fundamental score/rank fields | Pre-fundamental scoring leaked in | Fail the run and inspect adapter output |
+| 29 | CIK status is visible per ticker | SEC pipeline misses names silently | Check `cik_status` in universe CSV |
+| 30 | Fundamental output carries its own scores | No score after research | Debug fundamental framework, not dealflow |
 
-**Verify:** `cat eval_results/deal_flow/latest_research_queue.json | python3 -c "import json,sys; q=json.load(sys.stdin); print(len(q['items']), 'items,', len(q['selected_queue_ids']), 'for deep')"`
+**Verify:** `python3 -m cli.main fundamental from-dealflow --date YYYY-MM-DD --handoff eval_results/deal_flow/YYYY-MM-DD/final_dealflow_tickers.json`
 
 ---
 
@@ -168,23 +163,20 @@ emergence: 7% | insider_cluster: 5% | liquidity: 5%
 
 ---
 
-## STAGE 9: Hindsight + Performance Review
+## STAGE 9: Fundamental Performance Review
 
-**What it does:** Measures whether each pipeline filter actually added value. Runs 5+ trading days after a source date.
+**What it does:** Measures whether fundamental recommendations added value. Dealflow scout handoff itself is counted, not scored.
 
 | # | Must Be True | Failure Sign | Fix |
 |---|---|---|---|
-| 51 | All 4 cohort artifact files exist for source_date | Cohort returns "0 tickers" | Ensure source ran on that date and produced all artifacts |
+| 51 | Scout handoff exists for source_date | Cohort returns "0 tickers" | Ensure scout collect ran on that date |
 | 52 | yfinance returns 5-day forward prices | Returns are all NaN | Run after 5 trading days have passed |
-| 53 | Performance review auto-chains after hindsight | `performance_review.json` not created alongside `hindsight.json` | Check new chaining code in hindsight.py |
-| 54 | Hindsight DB rows accumulate | `hindsight-summary` shows fewer cycles than expected | Check `eval_results/deal_flow/hindsight.db` |
-| 55 | momentum_score IC stays positive | IC goes negative | Ranking assumption may need revisiting |
+| 53 | Fundamental recommendation artifact exists | No scored cohort | Run fundamental framework first |
+| 54 | Performance rows accumulate | Review summary missing names | Check fundamental output paths |
 
-**Verify:** `aeternus hindsight YYYY-MM-DD` then `aeternus hindsight-summary`
+**Verify:** compare fundamental recommendations against forward returns after enough trading days.
 
 **Schedule:** Run weekly, every Monday, for the source date from 5+ trading days ago.
-
-**Current state:** 2 cycles complete (Feb 5 + Feb 23). Next due: March 9 for Feb 28 data.
 
 ---
 
@@ -260,8 +252,8 @@ echo "=== POSITIONS ===" && \
 python3 -c "import json; p=json.load(open('eval_results/paper_execution/positions.json')); print(len(p.get('open_positions',{})), 'open positions')" && \
 echo "=== CLOSED TRADES ===" && \
 python3 -c "import json; t=json.load(open('eval_results/paper_execution/track_record.json')); closed=[x for x in t.get('trades',[]) if x.get('status')=='CLOSED']; print(len(closed), 'closed trades')" && \
-echo "=== LAST SOURCE RUN ===" && \
-ls -la eval_results/deal_flow/latest_research_queue.json 2>/dev/null || echo "NO SOURCE RUN FOUND" && \
+echo "=== LAST SCOUT HANDOFF ===" && \
+ls -la eval_results/deal_flow/latest_final_dealflow_tickers.json 2>/dev/null || echo "NO SCOUT HANDOFF FOUND" && \
 echo "=== SOCIAL CACHE ===" && \
 ls eval_results/deal_flow/xai_social_cache_$(date +%Y-%m-%d).json 2>/dev/null && echo "TODAY'S CACHE EXISTS" || echo "NO CACHE FOR TODAY" && \
 echo "=== HINDSIGHT CYCLES ===" && \

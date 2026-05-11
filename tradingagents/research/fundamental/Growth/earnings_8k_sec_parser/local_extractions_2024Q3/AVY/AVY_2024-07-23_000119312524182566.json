@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AVY",
+    "cik": "8818",
+    "event_date": "2024-07-23",
+    "event_accession": "0001193125-24-182566",
+    "primary_8k_doc": "d841269d8k.htm",
+    "exhibit_docs": [
+      "d841269dex991.htm",
+      "d841269dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVY_000119312524182566_d841269d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVY_000119312524182566_d841269dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVY_000119312524182566_d841269dex992.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AVY",
+    "cik": "8818",
+    "entity_name": "AVERY DENNISON CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2065000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "121200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "8209800000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "299800000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-116600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "1900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.058692",
+    "operating_cash_flow_to_revenue": "0.00092",
+    "assets_to_revenue": "3.97569",
+    "financing_cash_flow_to_revenue": "0.145182",
+    "investing_cash_flow_to_revenue": "-0.056465"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $2.",
+      "sales increased 5% to $1.",
+      "Sales were up 6% ex.",
+      "sales were up mid-to-high single-digits on an organic basis.",
+      "sales increased 12% to $689 million.",
+      "Sales were up 14% ex."
+    ],
+    "guidance_evidence": [
+      "guidance ¡ Revising Reported EPS guidance of $8.",
+      "guidance of $9.",
+      "outlook for adjusted earnings per share.",
+      "Guidance In its supplemental presentation materials, Second Quarter 2024 Financial Review and Analysis, the company provides a list of factors that it believes will contribute to its 2024 financial results.",
+      "guidance range for 2024 reported earnings per share from $8.",
+      "guidance range for 2024 for adjusted earnings per share from $9."
+    ],
+    "wave_or_demand_evidence": [
+      "customer experience.",
+      "customers through price increases, without a significant loss of volume; (v) foreign currency fluctuations; and (vi) the execution and integration of acquisitions.",
+      "customers through price increases, without a signiﬁcant loss of volume; (v) foreign currency ﬂuctuations; and (vi) the execution and integration of acquisitions.",
+      "aising Adjusted EPS guidance of $9.",
+      "ains, said Deon Stander, president and CEO.",
+      "aised our full-year outlook for adjusted earnings per share."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary, unaudited results for its second quarter ended June 29, 2024.",
+      "charges.",
+      "charges and other items, the company raised its guidance range for 2024 for adjusted earnings per share from $9.",
+      "Preliminary, unaudited (In millions, except % and per share amounts) 2Q 2Q % Sales Change vs.",
+      "PRELIMINARY CONDENSED CONSOLIDATED STATEMENTS OF INCOME (In millions, except per share amounts) (UNAUDITED) Three Months Ended Six Months Ended Jun.",
+      "PRELIMINARY CONDENSED CONSOLIDATED BALANCE SHEETS (In millions) (UNAUDITED) ASSETS Jun."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "219.520004",
+    "return_10d_pct": "-7.8581",
+    "return_20d_pct": "-4.7513",
+    "return_30d_pct": "-0.2141",
+    "return_60d_pct": "-1.7447",
+    "return_90d_pct": "-3.2480"
+  },
+  "text_stats": {
+    "primary_text_len": 9385,
+    "exhibit_text_len": 50835,
+    "combined_text_len": 60222
+  }
+}

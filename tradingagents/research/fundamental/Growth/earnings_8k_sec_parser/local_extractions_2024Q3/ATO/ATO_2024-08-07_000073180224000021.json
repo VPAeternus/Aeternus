@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ATO",
+    "cik": "731802",
+    "event_date": "2024-08-07",
+    "event_accession": "0000731802-24-000021",
+    "primary_8k_doc": "ato-20240807.htm",
+    "exhibit_docs": [
+      "ato20240807exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ATO_000073180224000021_ato-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ATO_000073180224000021_ato20240807exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ATO",
+    "cik": "731802",
+    "entity_name": "ATMOS ENERGY CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3024982000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "271860000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-12-31",
+    "assets_value": "22516968000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-1438705000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1410390000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "2892716000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.089872",
+    "operating_cash_flow_to_revenue": "0.956275",
+    "assets_to_revenue": "7.44367",
+    "financing_cash_flow_to_revenue": "-0.475608",
+    "investing_cash_flow_to_revenue": "-0.466247"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net income of $908."
+    ],
+    "guidance_evidence": [
+      "Guidance DALLAS (August 7, 2024) - Atmos Energy Corporation (NYSE: ATO) today reported consolidated results for its third fiscal quarter ended June 30, 2024.",
+      "Outlook • Fiscal 2024 earnings per diluted share guidance expected to be in the range of $6.",
+      "guidance expected to be approximately $3.",
+      "guidance range of $6.",
+      "expected to be in the range of $6.",
+      "expected to be approximately $3."
+    ],
+    "wave_or_demand_evidence": [
+      "customers in 1,400 communities,\" said Kevin Akers, President and Chief Executive Officer of Atmos Energy, \"Based on our year-to-date performance, we believe fiscal 2024 earnings will be in the upper end of our earnings guidance range of $6.",
+      "customers; changes in the availability and price of natural gas; and increased costs of providing 2 health care benefits, along with pension and postretirement health care benefits and increased funding requirements.",
+      "customers in over 1,400 communities across eight states located primarily in the South.",
+      "ailable liquidity.",
+      "aid Kevin Akers, President and Chief Executive Officer of Atmos Energy, \"Based on our year-to-date performance, we believe fiscal 2024 earnings will be in the upper end of our earnings guidance range of $6.",
+      "ailable on the website later that day."
+    ],
+    "warning_or_risk_evidence": []
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "127.699997",
+    "return_10d_pct": "1.3391",
+    "return_20d_pct": "1.0885",
+    "return_30d_pct": "4.7768",
+    "return_60d_pct": "7.7995",
+    "return_90d_pct": "8.7549"
+  },
+  "text_stats": {
+    "primary_text_len": 4398,
+    "exhibit_text_len": 6981,
+    "combined_text_len": 11381
+  }
+}

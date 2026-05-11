@@ -20,7 +20,7 @@
 - Add one test for `dealflow discover`:
   - when `discover()` returns `discovery_delta`, the CLI output includes `Discovery Delta`
 - Add one test for `dealflow source`:
-  - when the pipeline returns a shortlist/research queue and a delta payload, the CLI output includes Delta cohort or top-symbol information
+  - when the pipeline returns a candidate_list/fundamental review list and a delta payload, the CLI output includes Delta cohort or top-symbol information
 
 **Step 2: Run tests to verify they fail**
 

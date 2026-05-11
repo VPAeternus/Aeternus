@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NTNX",
+    "cik": "1618732",
+    "event_date": "2024-08-28",
+    "event_accession": "0000950170-24-101375",
+    "primary_8k_doc": "ntnx-20240828.htm",
+    "exhibit_docs": [
+      "ntnx-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NTNX_000095017024101375_ntnx-20240828.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NTNX_000095017024101375_ntnx-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NTNX",
+    "cik": "1618732",
+    "entity_name": "NUTANIX, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1368685000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "-99514000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-10-31",
+    "assets_value": "2526915000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-07-31",
+    "financing_cash_flow_value": "-136361000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "-40873000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "214094000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.072708",
+    "operating_cash_flow_to_revenue": "0.156423",
+    "assets_to_revenue": "1.846236",
+    "financing_cash_flow_to_revenue": "-0.099629",
+    "investing_cash_flow_to_revenue": "-0.029863"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of software entitlement and support subscriptions, subscription software licenses and cloud-based Software as a Service, or SaaS offerings.",
+      "sales of our enterprise cloud platform when delivered on a configured-to-order appliance by us or one of our OEM partners.",
+      "GAAP operating income,” said Rukmini Sivaraman, CFO of Nutanix.",
+      "GAAP Gross Margin 85.",
+      "Non-GAAP Gross Margin 86.",
+      "Non-GAAP Operating Income $70."
+    ],
+    "guidance_evidence": [
+      "Outlook Revenue $565 - $575 million Non-GAAP Operating Margin 14.",
+      "Outlook Revenue $2.",
+      "outlook and/or our fiscal 2025 outlook: non-GAAP gross margin, non-GAAP operating margin, and free cash flow.",
+      "outlook; and our fiscal 2025 outlook.",
+      "expected to impact the GAAP financial measures for these periods but would not impact the non-GAAP financial measures."
+    ],
+    "wave_or_demand_evidence": [
+      "customer, which happens when we make the software available to the customer.",
+      "customer.",
+      "cloud computing, today announced financial results for its fourth quarter and fiscal year ended July 31, 2024.",
+      "aid Rajiv Ramaswami, President and CEO of Nutanix.",
+      "aid Rukmini Sivaraman, CFO of Nutanix.",
+      "ain focused on delivering sustainable, profitable growth."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss $(12.",
+      "Loss) $7.",
+      "loss), operating margin, or net cash provided by (used in) operating activities, respectively.",
+      "loss (5,171 ) 146 Accumulated deficit (4,632,922 ) (4,847,199 ) Total stockholders’ deficit (707,419 ) (728,148 ) Total liabilities and stockholders’ deficit $ 2,526,915 $ 2,143,918 NUTANIX, INC.",
+      "loss $ (13,287 ) $ (126,101 ) $ (254,560 ) $ (124,775 ) Net loss per share attributable to Class A common stockholders, basic and diluted $ (0.",
+      "Loss) income from operations (12,188 ) 81,574 865 216 — — — 70,467 Operating margin (2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1910,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-29",
+    "entry_open": "60.990002",
+    "return_10d_pct": "-1.3773",
+    "return_20d_pct": "-5.8862",
+    "return_30d_pct": "-2.8529",
+    "return_60d_pct": "5.1320",
+    "return_90d_pct": "9.3622"
+  },
+  "text_stats": {
+    "primary_text_len": 3618,
+    "exhibit_text_len": 32920,
+    "combined_text_len": 36540
+  }
+}

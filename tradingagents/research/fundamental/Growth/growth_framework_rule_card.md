@@ -272,7 +272,7 @@ More aggressive than Venture Mode on:
 
 ---
 
-## BE vs NVDA flip map from the fundamental
+## BE vs NVDA flip map from the walkforward
 
 ### Venture Mode
 - flips at `BE 2025-07-31 10-Q`

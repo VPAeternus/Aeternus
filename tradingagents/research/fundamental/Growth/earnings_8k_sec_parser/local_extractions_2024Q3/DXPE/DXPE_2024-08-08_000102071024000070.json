@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DXPE",
+    "cik": "1020710",
+    "event_date": "2024-08-08",
+    "event_accession": "0001020710-24-000070",
+    "primary_8k_doc": "dxpe-20240808.htm",
+    "exhibit_docs": [
+      "earningsrelease6302024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DXPE_000102071024000070_dxpe-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DXPE_000102071024000070_earningsrelease6302024.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DXPE",
+    "cik": "1020710",
+    "entity_name": "DXP Enterprises, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "424267000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "17580000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1177436000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-10354000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3804000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "26449000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.041436",
+    "operating_cash_flow_to_revenue": "0.06234",
+    "assets_to_revenue": "2.775224",
+    "financing_cash_flow_to_revenue": "-0.024404",
+    "investing_cash_flow_to_revenue": "-0.008966"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales increased 8.",
+      "sales were $445.",
+      "sales were $306.",
+      "EPS of $1.",
+      "Net income for the second quarter was $16.",
+      "earnings per share was $1."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "customers throughout North America and Dubai.",
+      "customer-driven, creating competitive advantages for our customers.",
+      "customer preferences and attitudes.",
+      "airman and Chief Executive Officer commented, \"Second quarter results reflect the execution of our growth strategy and the resilience and durability of DXP’s business.",
+      "ain Services.",
+      "ailable on the same website immediately following the call."
+    ],
+    "warning_or_risk_evidence": [
+      "charges (\"Adjusted EBITDA\") • Free Cash Flow of $30.",
+      "uncertainties that could significantly affect anticipated results in the future; and accordingly, such results may differ from those expressed in any forward-looking statement made by or on behalf of the Company.",
+      "loss (31,761) (31,240) Treasury stock, at cost 4,607,773 and 4,141,989 shares, respectively (147,973) (123,995) Total DXP Enterprises, Inc.",
+      "decrease of 2.",
+      "decrease of 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 445.6,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "49.590000",
+    "return_10d_pct": "2.8030",
+    "return_20d_pct": "10.2843",
+    "return_30d_pct": "-2.6417",
+    "return_60d_pct": "6.0899",
+    "return_90d_pct": "44.9687"
+  },
+  "text_stats": {
+    "primary_text_len": 3835,
+    "exhibit_text_len": 20110,
+    "combined_text_len": 23947
+  }
+}

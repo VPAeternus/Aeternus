@@ -1,0 +1,830 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DDD",
+    "cik": "910638",
+    "event_date": "2024-08-13",
+    "event_accession": "0001193125-24-199841",
+    "primary_8k_doc": "d832946d8k.htm",
+    "exhibit_docs": [
+      "d832946dex991.htm",
+      "d690946dex991.htm",
+      "d189782dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DDD_000119312524199841_d832946d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DDD_000119312524199841_d832946dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DDD_000119312524199841_d690946dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DDD_000119312524199841_d189782dex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DDD",
+    "cik": "910638",
+    "entity_name": "3D SYSTEMS CORPORATION",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "405299000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2023-11-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2022-09-30",
+    "net_income_value": "-97158000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2023-11-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-30",
+    "assets_value": "1446613000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2023-11-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2022-12-31",
+    "financing_cash_flow_value": "-12981000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2023-11-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2022-09-30",
+    "investing_cash_flow_value": "-374116000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2023-11-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2022-09-30",
+    "operating_cash_flow_value": "-52449000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2023-11-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2022-09-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.239719",
+    "operating_cash_flow_to_revenue": "-0.129408",
+    "assets_to_revenue": "3.569249",
+    "financing_cash_flow_to_revenue": "-0.032028",
+    "investing_cash_flow_to_revenue": "-0.923062"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [
+      "guidance provided for the full year.",
+      "outlook for the remainder of year.",
+      "guidance for certain measures on a GAAP basis.",
+      "expects general and administrative (G&A) operating expenses for 2024 to be higher than original estimates, driven by external auditor fees and outside services related to the completion of the 2023 Form 10-K.",
+      "expected to total over $9 million, approximately $7.",
+      "expects approximately 65% of these cost overruns occurred in Q1, approximately 25% in Q2, with the balance anticipated in Q3."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to create products and business models never before possible.",
+      "customers to transform how they deliver their products and services.",
+      "ain reclassifications and adjustments were made to its fourth quarter and full year 2023 financial results, originally furnished to the SEC on the Companys Current Report on Form 8-K filed on February 28, 2024.",
+      "airment of goodwill, a decrease in interest income and changes in certain expenses.",
+      "ainder of year.",
+      "powering our customers to create products and business models never before possible."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of goodwill, a decrease in interest income and changes in certain expenses.",
+      "impairment charges, including goodwill, and divestiture gains or losses;  certain compensation expense related to the 2021 Volumetric acquisition; and  costs, including legal fees, related to significant or unusual litigation matters.",
+      "impairment charges, including goodwill, are non-cash.",
+      "impairment charges are difficult to predict and estimate.",
+      "impairment charges 2.",
+      "decrease in interest income and changes in certain expenses."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d832946dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1 3D Systems Announces Final 2023 Financial Results and Dates for Q1 and Q2 2024 Earnings Releases  Company plans to file its 2023 Annual Report on Form 10-K after market on August 13, 2024  Significant filing delays and added costs were experienced due to extended close activities and related audit procedures in connection with the 2023 audit  Final 2023 financial results yielded no change to revenue, and slight improvement in net loss, versus preliminary results filed on February 28, 2024  No restatement of prior years results  Consistent with prior disclosures, the planned transition of the companys independent audit firm began in Q1 of 2024  Company plans to release Q124 financial results on or about August 19, 2024 and Q224 financial results the week of August 26, 2024, followed by a call with investors to discuss results for the first half and outlook for the full year ROCK HILL, South Carolina, August 13, 2024  3D Systems (NYSE:DDD) (the Company) today announced that it plans to file its Annual Report on Form 10-K for the fiscal year ended December 31, 2023 (the Form 10-K) with the Securities and Exchange Commission (the SEC) after market. In connection with the Companys efforts as it concluded its audit, certain reclassifications and adjustments were made to its fourth quarter and full year 2023 financial results, originally furnished to the SEC on the Companys Current Report on Form 8-K filed on February 28, 2024. Revisions relate primarily to a reduction in the impairment of goodwill, a decrease in interest income and changes in certain expenses. Supplemental financial statements and GAAP to non-GAAP reconciliations are included in the Appendix. Changes to originally reported information are shown below:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Unaudited Three Months EndedDecember 31, 2023 Year Ended December 31,2023 (in thousands, expect per share data) Preliminary -Previously Filed Final - To BeFiled Preliminary -Previously Filed Final - To BeFiled Revenue $ 114,848 $ 114,848 $ 488,069 $ 488,069 Gross profit $ 46,348 $ 43,957 $ 198,812 $ 196,421 Operating loss $ (335,594 ) $ (327,295 ) $ (414,303 ) $ (406,004 ) Net loss attributable to 3D Systems Corporation $ (300,412 ) $ (292,668 ) $ (370,432 ) $ (362,688 ) Diluted loss per share $ (2.30 ) $ (2.25 ) $ (2.85 ) $ (2.79 ) Non-GAAP measures for year-over-year comparisons (1) Non-GAAP gross profit margin 41.9 % 39.8 % 41.1 % 40.6 % Adjusted EBITDA $ (12,260 ) $ (13,993 ) $ (24,525 ) $ (26,258 ) Non-GAAP diluted loss per share $ (0.11 ) $ (0.13 ) $ (0.26 ) $ (0.28 )"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) See Presentation of Information in this Press Release below for a description, and the Appendix for the reconciliation of non-GAAP measurements to the most closely comparable GAAP measure."
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company also announced that it expects general and administrative (G&A) operating expenses for 2024 to be higher than original estimates, driven by external auditor fees and outside services related to the completion of the 2023 Form 10-K. These fees incurred by the Company, while transitory in nature, are expected to total over $9 million, approximately $7.5 million higher than anticipated in the original operating expense guidance provided for the full year. From a timing standpoint, the Company expects approximately 65% of these cost overruns occurred in Q1, approximately 25% in Q2, with the balance anticipated in Q3. It is important to note that, with the transition of audit responsibilities to a new firm, the Company expects a substantial improvement in operating expenses beginning in Q4. The Company plans to release its financial results for the first quarter 2024 on or about August 19, 2024 in conjunction with the filing of its Quarterly Report on Form 10-Q for the quarter ended March 31, 2024 with the SEC. In addition, the Company expects to release financial results for the second quarter 2024 during the week of August 26, 2024. Following its second quarter earnings release, the Company will host a conference call and simultaneous webcast to discuss its results for first half 2024 and outlook for the remainder of year. About 3D Systems More than 35 years ago, 3D Systems brought the innovation of 3D printing to the manufacturing industry. Today, as the leading additive manufacturing solutions partner, we bring innovation, performance, and reliability to every interaction  empowering our customers to create products and business models never before possible. Thanks to our unique offering of hardware, software, materials, and services, each application-specific solution is powered by the expertise of our application engineers who collaborate with customers to transform how they deliver their products and services. 3D Systems solutions address a variety of advanced applications in healthcare and industrial markets such as medical and dental, aerospace & defense, automotive, and durable goods. More information on the Company is available at www.3DSystems.com. Forward-Looking Statements Certain statements made in this release that are not statements of historical or current facts are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements involve known and unknown risks, uncertainties and other factors that may cause the actual results, performance or achievements of the Company to be materially different from historical results or from any future results or projections expressed or implied by such forward-looking statements. In many cases, forward looking statements can be identified by terms such as believes, belief, expects, may, will, estimates, intends, anticipates or plans or the negative of these terms or other comparable terminology. Forward-looking statements are based upon managements beliefs, assumptions and current expectations and may include comments as to the Companys beliefs and expectations as to future events and trends affecting its business and are necessarily subject to uncertainties, many of which are outside the control of the Company. The factors described under the headings Forward-Looking Statements and Risk Factors in the Companys periodic filings with the SEC, as well as other factors, could cause actual results to differ materially from those reflected or predicted in forward-looking statements. Although management believes that the expectations reflected in the forward-looking statements are reasonable, forward-looking statements are not, and should not be relied upon as a guarantee of future performance or results, nor will they necessarily prove to be accurate indications of the times at which such performance or results will be achieved. The forward-looking statements included are made only as the date of the statement. 3D Systems undertakes no obligation to update or revise any forward-looking statements made by management or on its behalf, whether as a result of future developments, subsequent events or circumstances or otherwise, except as required by law."
+    },
+    {
+      "type": "TextElement",
+      "text": "Presentation of Information in this Press Release 3D Systems reports its financial results in accordance with GAAP. Management also reviews and reports certain non-GAAP measures, including: non-GAAP gross profit, non-GAAP gross profit margin, non-GAAP diluted income (loss) per share, and Adjusted EBITDA. These non-GAAP measures exclude certain items that management does not view as part of 3D Systems core results as they may be highly variable, may be unusual or infrequent, are difficult to predict and can distort underlying business trends and results. Management believes that the non-GAAP measures provide useful additional insight into underlying business trends and results and provide meaningful information regarding the comparison of period-over-period results. Additionally, management uses the non-GAAP measures for planning, forecasting and evaluating business and financial performance, including allocating resources and evaluating results relative to employee compensation targets. 3D Systems non-GAAP measures are not calculated in accordance with or as required by GAAP and may not be calculated in the same manner as similarly titled measures used by other companies. These non-GAAP measures should thus be considered as supplemental in nature and not considered in isolation or as a substitute for the related financial information prepared in accordance with GAAP. To calculate the non-GAAP measures, 3D Systems excludes the impact of the following items:  amortization of intangible assets, a non-cash expense, as 3D Systems intangible assets were primarily acquired in connection with business combinations;  costs incurred in connection with acquisitions and divestitures, such as legal, consulting and advisory fees;  stock-based compensation expenses, a non-cash expense;  charges related to restructuring and cost optimization plans, impairment charges, including goodwill, and divestiture gains or losses;  certain compensation expense related to the 2021 Volumetric acquisition; and  costs, including legal fees, related to significant or unusual litigation matters. Amortization of intangibles and acquisition and divestiture-related costs are excluded from non-GAAP measures as the timing and magnitude of business combination transactions are not predictable, can vary significantly from period to period and the purchase price allocated to amortizable intangible assets and the related amortization period are unique to each acquisition. Amortization of intangible assets will recur in future periods until such intangible assets have been fully amortized. While intangible assets contribute to the companys revenue generation, the amortization of intangible assets does not directly relate to the sale of the companys products or services. Additionally, intangible assets amortization expense typically fluctuates based on the size and timing of the companys acquisition activity. Accordingly, the company believes excluding the amortization of intangible assets enhances the companys and investors ability to compare the companys past financial performance with its current performance and to analyze underlying business performance and trends. Although stock-based compensation is a key incentive offered to certain of our employees, the expense is non-cash in nature, and we continue to evaluate our business performance excluding stock-based compensation; therefore, it is excluded from non-GAAP measures. Stock-based compensation expenses will recur in future periods. Charges related to restructuring and cost optimization plans, impairment charges, including goodwill, divestiture gains or losses, and the costs, including legal fees, related to significant or unusual litigation matters are excluded from non-GAAP measures as the frequency and magnitude of these activities may vary widely from period to period."
+    },
+    {
+      "type": "TextElement",
+      "text": "Additionally, impairment charges, including goodwill, are non-cash. Furthermore, the company believes the costs, including legal fees, related to significant or unusual litigation matters are not indicative of our core business operations. Finally, 3D Systems excludes contingent consideration recorded as compensation expense related to the 2021 Volumetric acquisition from non-GAAP measures as management evaluates financial performance excluding this expense, which is viewed by management as similar to acquisition consideration. The matters discussed above are tax effected, as applicable, in calculating non-GAAP diluted income (loss) per share. Adjusted EBITDA, defined as net income, plus income tax (provision) benefit, interest and other income (expense), net, stock-based compensation expense, amortization of intangible assets, depreciation expense, and other non-GAAP adjustments, all as described above, is used by management to evaluate performance and helps measure financial performance period-over-period. A reconciliation of GAAP to non-GAAP financial measures is provided in the accompanying schedules. 3D Systems does not provide forward-looking guidance for certain measures on a GAAP basis. The company is unable to provide a quantitative reconciliation of forward-looking non-GAAP gross profit margin, Adjusted EBITDA, and non-GAAP operating expense to the most directly comparable forward-looking GAAP measures without unreasonable effort because certain items, including litigation costs, acquisition expenses, stock-based compensation expense, intangible assets amortization expense, restructuring expenses, and goodwill impairment charges are difficult to predict and estimate. These items are inherently uncertain and depend on various factors, many of which are beyond the companys control, and as such, any associated estimate and its impact on GAAP performance could vary materially."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "3D Systems Corporation"
+    },
+    {
+      "type": "TextElement",
+      "text": "Unaudited Consolidated Balance Sheets December 31, 2023 and December 31, 2022"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in thousands, except par value) December 31,2023 December 31,2022 ASSETS Current assets: Cash and cash equivalents $ 331,525 $ 388,134 Short-term investments  180,603 Accounts receivable, net of reserves  $3,389 and $3,114 101,497 93,886 Inventories 152,188 137,832 Prepaid expenses and other current assets 42,612 33,790 Total current assets 627,822 834,245 Property and equipment, net 64,461 58,072 Intangible assets, net 62,724 90,230 Goodwill 116,082 385,312 Operating lease right-of-use assets 58,406 39,502 Finance lease right-of-use assets 12,174 3,244 Long-term deferred income tax assets 4,230 7,038 Other assets 44,761 28,970 Total assets $ 990,660 $ 1,446,613 LIABILITIES, REDEEMABLE NON-CONTROLLING INTEREST AND EQUITY Current liabilities: Current operating lease liabilities $ 9,924 $ 8,343 Accounts payable 49,757 53,826 Accrued and other liabilities 49,460 56,264 Customer deposits 7,599 6,911 Deferred revenue 30,448 26,464 Total current liabilities 147,188 151,808 Long-term debt, net of deferred financing costs 319,356 449,510 Long-term operating lease liabilities 56,795 38,499 Long-term deferred income tax liabilities 5,162 7,631 Other liabilities 33,400 47,461 Total liabilities 561,901 694,909 Commitments and contingencies (Note 23) Redeemable non-controlling interest 2,006 1,760 Stockholders equity: Common stock, $0.001 par value, authorized 220,000 shares; shares issued 133,619 and 131,207 as of December 31, 2023 and 2022, respectively 134 131 Additional paid-in capital 1,577,519 1,547,597 Accumulated deficit (1,106,650 ) (743,962 ) Accumulated other comprehensive loss (44,250 ) (53,822 ) Total stockholders equity 426,753 749,944 Total liabilities, redeemable non-controlling interest and stockholders equity $ 990,660 $ 1,446,613"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "3D Systems Corporation"
+    },
+    {
+      "type": "TextElement",
+      "text": "Unaudited Consolidated Statements of Operations Year Ended December 31, 2023, 2022 and 2021"
+    },
+    {
+      "type": "TableElement",
+      "text": "Year Ended December 31, (in thousands, except per share amounts) 2023 2022 2021 Revenue: Products $ 328,731 $ 395,396 $ 428,742 Services 159,338 142,635 186,897 Total revenue 488,069 538,031 615,639 Cost of sales: Products 203,258 237,386 245,169 Services 88,390 86,412 106,692 Total cost of sales 291,648 323,798 351,861 Gross profit 196,421 214,233 263,778 Operating expenses: Selling, general and administrative 210,172 244,181 227,697 Research and development 89,466 87,071 69,150 Impairments of goodwill and intangible assets 302,787   Total operating expenses 602,425 331,252 296,847 Loss from operations (406,004 ) (117,019 ) (33,069 ) Interest and other income (expense), net 43,692 (3,790 ) 352,609 (Loss) income before income taxes (362,312 ) (120,809 ) 319,540 Benefit (provision) for income taxes 641 (2,140 ) 2,512 Loss on equity method investment, net of income taxes (1,282 )   Net (loss) income before redeemable non-controlling interest (362,953 ) (122,949 ) 322,052 Less: net loss attributable to redeemable non-controlling interest (265 ) (238 )  Net (loss) income attributable to 3D Systems Corporation $ (362,688 ) $ (122,711 ) $ 322,052 Net (loss) income per common share Basic $ (2.79 ) $ (0.96 ) $ 2.62 Diluted $ (2.79 ) $ (0.96 ) $ 2.55 Weighted average shares outstanding: Basic 129,944 127,818 122,867 Diluted 129,944 127,818 126,334"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "3D Systems Corporation"
+    },
+    {
+      "type": "TextElement",
+      "text": "Unaudited Consolidated Statements of Operations Three Months Ended December 31, 2023, 2022 and 2021"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended December 31, (in thousands, except per share amounts) 2023 2022 2021 Revenue: Products $ 74,763 $ 94,734 $ 117,572 Services 40,085 37,998 33,298 Total revenue 114,848 132,732 150,870 Cost of sales: Products 49,816 55,541 64,918 Services 21,075 22,561 19,734 Total cost of sales 70,891 78,102 84,652 Gross profit 43,957 54,630 66,218 Operating expenses: Selling, general and administrative 59,549 58,783 50,897 Research and development 22,513 23,891 19,163 Impairments of goodwill and intangible assets 289,190   Total operating expenses 371,252 82,674 70,060 Loss from operations (327,295 ) (28,044 ) (3,842 ) Interest and other income (expense), net 34,001 1,666 (1,787 ) Loss before income taxes (293,294 ) (26,378 ) (5,629 ) Benefit (provision) for income taxes 1,045 771 (571 ) Loss on equity method investment, net of income taxes (535 )   Net loss before redeemable non-controlling interest (292,784 ) (25,607 ) (6,200 ) Less: net loss attributable to redeemable non-controlling interest (116 ) (54 )  Net loss attributable to 3D Systems Corporation $ (292,668 ) $ (25,553 ) $ (6,200 ) Net loss per share available to 3D Systems Corporation common stockholders Basic $ (2.25 ) $ (0.20 ) $ (0.05 ) Diluted $ (2.25 ) $ (0.20 ) $ (0.05 )"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "3D Systems Corporation"
+    },
+    {
+      "type": "TextElement",
+      "text": "Unaudited Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "TableElement",
+      "text": "Year EndedDecember 31, (in thousands) 2023 2022 2021 Cash flows from operating activities: Net (loss) income before redeemable non-controlling interest $ (362,953 ) $ (122,949 ) $ 322,052 Adjustments to reconcile net (loss) income to net cash (used in) provided by operating activities: Depreciation, amortization and accretion of debt discount 36,053 38,686 34,623 Stock-based compensation 23,504 42,415 55,153 Loss on short-term investments 6 3,146  Non-cash operating lease expense 9,267 6,366 5,681 Provision for inventory obsolescence and revaluation 6,350 2,586 (2,909 ) Loss on hedge accounting de-designation and termination   721 Provision for bad debts 595 562 232 Loss (gain) on the disposition of businesses, property, equipment and other assets 6 104 (350,846 ) Gain on debt extinguishment (32,181 )   Benefit for deferred income taxes and reserve adjustments (2,412 ) (2,518 ) (11,679 ) Loss on equity method investment 1,282   Impairments of assets 304,698 4,095 1,676 Changes in operating accounts: Accounts receivable (6,186 ) 8,144 (11,912 ) Inventories (20,555 ) (51,082 ) 7,866 Prepaid expenses and other current assets (7,961 ) 8,229 (8,106 ) Accounts payable (5,526 ) (3,787 ) 27,159 Deferred revenue and customer deposits 1,245 (6,947 ) (3,325 ) Accrued and other liabilities (12,933 ) 10,702 (12,389 ) All other operating activities (12,994 ) (7,773 ) (5,850 ) Net cash (used in) provided by operating activities (80,695 ) (70,021 ) 48,147 Cash flows from investing activities: Purchases of property and equipment (27,183 ) (20,907 ) (18,791 ) Purchases of short-term investments  (384,388 )  Sales and maturities of short-term investments 180,925 200,314  Proceeds from sale of assets and businesses, net of cash sold 194 325 421,485 Acquisitions and other investments, net of cash acquired (29,152 ) (103,699 ) (139,685 ) Other investing activities   (2,454 ) Net cash provided by (used in) investing activities 124,784 (308,355 ) 260,555 Cash flows from financing activities: Proceeds from borrowings   460,000 Debt issuance costs   (13,466 ) Repayment of borrowings/long-term debt (100,614 )  (21,392 ) Purchase of non-controlling interests  (2,300 ) (6,300 ) Taxes paid related to net-share settlement of equity awards (5,211 ) (10,864 ) (12,619 ) Other financing activities (644 ) (651 ) (423 ) Net cash (used in) provided by financing activities (106,469 ) (13,815 ) 405,800 Effect of exchange rate changes on cash, cash equivalents and restricted cash 3,516 (5,804 ) (9,243 ) Net (decrease) increase in cash, cash equivalents and restricted cash (58,864 ) (397,995 ) 705,259 Cash, cash equivalents and restricted cash at the beginning of the year a 391,975 789,970 84,711 Cash, cash equivalents and restricted cash at the end of the year a $ 333,111 $ 391,975 $ 789,970"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) The amounts for cash and cash equivalents shown above include restricted cash of $119, $114 and $313 as of December 31, 2023, 2022 and 2021, respectively, which are included in prepaid expenses and other current assets. In addition, included in cash and cash equivalents above as of December 31, 2023 and 2022 is $1,467 and $3,727 of restricted cash, which, is included in other non-current assets."
+    },
+    {
+      "type": "TextElement",
+      "text": "Appendix Unaudited Reconciliations of GAAP to Non-GAAP Measures Three Months Ended December 31, 2023 and 2022. Constant Currency Revenue (4)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "3D Systems Corporation"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended December 31, Constant Currency (1) (in thousands) 2023 2022 $ Change % Change FX Effect (2) % Change (3) Healthcare Solutions $ 51,188 $ 60,694 $ (9,506 ) (15.7 )% $ 454 (16.4 )% Industrial Solutions 63,660 72,038 (8,378 ) (11.6 )% 1,196 (13.3 )% Total revenue $ 114,848 $ 132,732 $ (17,884 ) (13.5 )% $ 1,650 (14.7 )%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) To assist in the analysis of the Companys revenue trends, the Company estimated the impact of foreign exchange on year-over-year revenue growth by recasting revenue for the three months ended December 31, 2023 by applying the foreign exchange rates used to translate 2022 non-US functional currency revenue to 2023 non-US functional currency revenue. (2) Represents the estimated impact on as reported revenue due to changes in foreign currency exchange rates (3) Represents the % increase or decrease in revenue excluding the estimated FX effect"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "(4) Amounts in table may not foot due to rounding"
+    },
+    {
+      "type": "TableElement",
+      "text": "Year Ended December 31, Constant Currency (1) (in thousands) 2023 2022 $ Change % Change FX Effect (2) % Change (3) Healthcare Solutions $ 213,216 $ 260,988 $ (47,772 ) (18.3 )% $ 817 (18.6 )% Industrial Solutions 274,853 277,043 (2,190 ) (0.8 )% 971 (1.1 )% Total revenue $ 488,069 $ 538,031 $ (49,962 ) (9.3 )% $ 1,788 (9.6 )%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) To assist in the analysis of the Companys revenue trends, the Company estimated the impact of foreign exchange on year-over-year revenue growth by recasting revenue for the year ended December 31, 2023 by applying the foreign exchange rates used to translate 2022 non-US functional currency revenue to 2023 non-US functional currency revenue. (2) Represents the estimated impact on as reported revenue due to changes in foreign currency exchange rates (3) Represents the % increase or decrease in revenue excluding the estimated FX effect Gross Profit and Gross Profit Margin (1)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "(4) Amounts in table may not foot due to rounding"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended December 31, (in thousands) 2023 2022 Gross Profit Gross ProfitMargin (2) Gross Profit Gross ProfitMargin (2) GAAP $ 43,957 38.3 % $ 54,630 41.2 % Amortization expense included in Cost of sales 382 (398 ) Restructuring expense included in Cost of sales 1,427  Non-GAAP $ 45,766 39.8 % $ 54,232 40.9 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "(1) Amounts in table may not foot due to rounding"
+    },
+    {
+      "type": "TextElement",
+      "text": "(2) Calculated as non-GAAP gross profit as a percentage of total revenue."
+    },
+    {
+      "type": "TableElement",
+      "text": "Year Ended December 31, (in thousands) 2023 2022 Gross Profit Gross ProfitMargin (2) Gross Profit Gross ProfitMargin(2) GAAP $ 196,421 40.2 % $ 214,233 39.8 % Amortization expense included in Cost of sales 506 14 Restructuring expense included in Cost of sales 1,427  Non-GAAP $ 198,354 40.6 % $ 214,247 39.8 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "(1) Amounts in table may not foot due to rounding"
+    },
+    {
+      "type": "TextElement",
+      "text": "(2) Calculated as non-GAAP gross profit as a percentage of total revenue."
+    },
+    {
+      "type": "TextElement",
+      "text": "Appendix Unaudited Reconciliations of GAAP to Non-GAAP Measures Three and Twelve Months Ended December 31, 2023 and 2022 Net Loss to Adjusted EBITDA (1)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "3D Systems Corporation"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended December 31, Year Ended December 31, (in thousands) 2023 2022 2023 2022 Net loss attributable to 3D Systems Corporation $ (292,668 ) $ (25,553 ) $ (362,688 ) $ (122,711 ) Interest income, net (3,092 ) (2,522 ) (16,210 ) (6,541 ) (Benefit) provision for income taxes (1,045 ) (771 ) (641 ) 2,140 Depreciation expense 5,656 5,104 21,346 21,096 Amortization expense 2,391 5,207 12,067 15,480 Stock-based compensation expense 8,361 10,980 23,504 42,489 Acquisition and divestiture-related expense (1,202 ) 2,978 (1,070 ) 12,360 Legal expense 3,174 (1,418 ) 8,053 19,062 Restructuring expense 4,774 381 11,487 733 Net loss attributable to redeemable non-controlling interest (116 ) (54 ) (265 ) (238 ) Loss (income) on equity method investment, net of income taxes 535  1,282  Goodwill and other assets impairment charges 290,148 3 304,359 18 Gain on repurchase of debt (32,181 )  (32,181 )  Other non-operating expense 1,272 857 4,699 10,331 Adjusted EBITDA $ (13,993 ) $ (4,808 ) $ (26,258 ) $ (5,781 )"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Amounts in table may not foot due to rounding"
+    },
+    {
+      "type": "TextElement",
+      "text": "Appendix Unaudited Reconciliations of GAAP to Non-GAAP Measures Three and Twelve Months Ended December 31, 2023 and 2022 Non-GAAP Diluted Loss per Share (1)(2)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "3D Systems Corporation"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended December 31, Year Ended December 31, (in dollars) 2023 2022 2023 2022 Diluted loss per share $ (2.25 ) $ (0.20 ) $ (2.79 ) $ (0.96 ) Amortization expense 0.02 0.04 0.09 0.12 Stock-based compensation expense 0.06 0.09 0.18 0.33 Acquisition and divestiture-related expense (0.01 ) 0.02 (0.01 ) 0.10 Legal expense 0.03 (0.01 ) 0.06 0.17 Restructuring expense 0.04  0.09 0.01 Goodwill and other assets impairment charges 2.23  2.35  Gain on repurchase of debt (0.25 )  (0.25 )  Non-GAAP diluted loss per share $ (0.13 ) $ (0.06 ) $ (0.28 ) $ (0.23 )"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "(1) Amounts in table may not foot due to rounding"
+    },
+    {
+      "type": "TextElement",
+      "text": "(2) Amounts in table are stated per share"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Company plans to file its 2023 Annual Report on Form 10-K after market on August 13, 2024"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Significant filing delays and added costs were experienced due to extended close activities and related audit procedures in connection with the 2023 audit"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Final 2023 financial results yielded no change to revenue, and slight improvement in net loss, versus preliminary results filed on February 28, 2024"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "No restatement of prior years results"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Consistent with prior disclosures, the planned transition of the companys independent audit firm began in Q1 of 2024"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Company plans to release Q124 financial results on or about August 19, 2024 and Q224 financial results the week of August 26, 2024, followed by a call with investors to discuss results for the first half and outlook for the full year"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        12,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Unaudited",
+          "",
+          "Three Months Ended December 31, 2023",
+          "Three Months Ended December 31, 2023",
+          "Three Months Ended December 31, 2023",
+          "Three Months Ended December 31, 2023",
+          "Three Months Ended December 31, 2023",
+          "Three Months Ended December 31, 2023",
+          "",
+          "",
+          "Year Ended December 31, 2023",
+          "Year Ended December 31, 2023",
+          "Year Ended December 31, 2023",
+          "Year Ended December 31, 2023",
+          "Year Ended December 31, 2023",
+          "Year Ended December 31, 2023",
+          ""
+        ],
+        [
+          "(in thousands, expect per share data)",
+          "",
+          "Preliminary - Previously Filed",
+          "Preliminary - Previously Filed",
+          "",
+          "",
+          "Final - To Be Filed",
+          "Final - To Be Filed",
+          "",
+          "",
+          "Preliminary - Previously Filed",
+          "Preliminary - Previously Filed",
+          "",
+          "",
+          "Final - To Be Filed",
+          "Final - To Be Filed",
+          ""
+        ],
+        [
+          "Revenue",
+          "",
+          "$",
+          "114848",
+          "",
+          "",
+          "$",
+          "114848",
+          "",
+          "",
+          "$",
+          "488069",
+          "",
+          "",
+          "$",
+          "488069",
+          ""
+        ],
+        [
+          "Gross profit",
+          "",
+          "$",
+          "46348",
+          "",
+          "",
+          "$",
+          "43957",
+          "",
+          "",
+          "$",
+          "198812",
+          "",
+          "",
+          "$",
+          "196421",
+          ""
+        ],
+        [
+          "Operating loss",
+          "",
+          "$",
+          "(335,594",
+          ")",
+          "",
+          "$",
+          "(327,295",
+          ")",
+          "",
+          "$",
+          "(414,303",
+          ")",
+          "",
+          "$",
+          "(406,004",
+          ")"
+        ],
+        [
+          "Net loss attributable to 3D Systems Corporation",
+          "",
+          "$",
+          "(300,412",
+          ")",
+          "",
+          "$",
+          "(292,668",
+          ")",
+          "",
+          "$",
+          "(370,432",
+          ")",
+          "",
+          "$",
+          "(362,688",
+          ")"
+        ],
+        [
+          "Diluted loss per share",
+          "",
+          "$",
+          "(2.30",
+          ")",
+          "",
+          "$",
+          "(2.25",
+          ")",
+          "",
+          "$",
+          "(2.85",
+          ")",
+          "",
+          "$",
+          "(2.79",
+          ")"
+        ],
+        [
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "Non-GAAP measures for year-over-year comparisons (1)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP gross profit margin",
+          "",
+          "",
+          "41.9",
+          "%",
+          "",
+          "",
+          "39.8",
+          "%",
+          "",
+          "",
+          "41.1",
+          "%",
+          "",
+          "",
+          "40.6",
+          "%"
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "(12,260",
+          ")",
+          "",
+          "$",
+          "(13,993",
+          ")",
+          "",
+          "$",
+          "(24,525",
+          ")",
+          "",
+          "$",
+          "(26,258",
+          ")"
+        ],
+        [
+          "Non-GAAP diluted loss per share",
+          "",
+          "$",
+          "(0.11",
+          ")",
+          "",
+          "$",
+          "(0.13",
+          ")",
+          "",
+          "$",
+          "(0.26",
+          ")",
+          "",
+          "$",
+          "(0.28",
+          ")"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "(1)",
+          "See Presentation of Information in this Press Release below for a description, and the Appendix for the reconciliation of non-GAAP measurements to the most closely comparable GAAP measure."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "amortization of intangible assets, a non-cash expense, as 3D Systems intangible assets were primarily acquired in connection with business combinations;"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "costs incurred in connection with acquisitions and divestitures, such as legal, consulting and advisory fees;"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "stock-based compensation expenses, a non-cash expense;"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "charges related to restructuring and cost optimization plans, impairment charges, including goodwill, and divestiture gains or losses;"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 114.848,
+    "quarter_revenue_yoy_pct": 0.0,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue |  | $ | 114848 |  | "
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Revenue |  | $ | 114848 |  | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -3,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 3,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-14",
+    "entry_open": "2.590000",
+    "return_10d_pct": "-0.7722",
+    "return_20d_pct": "-26.2548",
+    "return_30d_pct": "-4.6332",
+    "return_60d_pct": "17.7606",
+    "return_90d_pct": "31.2741"
+  },
+  "text_stats": {
+    "primary_text_len": 3324,
+    "exhibit_text_len": 25967,
+    "combined_text_len": 29293,
+    "semantic_text_len": 25953,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

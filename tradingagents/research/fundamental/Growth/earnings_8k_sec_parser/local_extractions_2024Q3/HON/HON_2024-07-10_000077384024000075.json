@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HON",
+    "cik": "773840",
+    "event_date": "2024-07-10",
+    "event_accession": "0000773840-24-000075",
+    "primary_8k_doc": "hon-20240710.htm",
+    "exhibit_docs": [
+      "exhibit99-segmentprofitand.htm",
+      "exhibit99-q22024earningsre.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HON_000077384024000075_hon-20240710.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HON_000077384024000075_exhibit99-segmentprofitand.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HON_000077384024000075_exhibit99-q22024earningsre.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HON",
+    "cik": "773840",
+    "entity_name": "HONEYWELL INTERNATIONAL INC",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "8864000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1394000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "61525000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-1973000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-29000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-784000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.157265",
+    "operating_cash_flow_to_revenue": "-0.088448",
+    "assets_to_revenue": "6.940997",
+    "financing_cash_flow_to_revenue": "-0.222586",
+    "investing_cash_flow_to_revenue": "-0.003272"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "earnings per share.",
+      "earnings per share of common stock - diluted $ 2.",
+      "Earnings per Share to Adjusted Earnings per Share (Unaudited) Three Months Ended March 31, 2023 June 30, 2023 Sept 30, 2023 Dec 31, 2023 Earnings per share of common stock - diluted 1 $ 2.",
+      "earnings per share utilizes weighted average shares of approximately 673.",
+      "Earnings per Share to Adjusted Earnings per Share (Continued) (Unaudited) Three Months Ended March 31, 2024 Twelve Months Ended December 31, 2023 Earnings per share of common stock - diluted 1 $ 2.",
+      "earnings per share utilizes weighted average shares of approximately 656."
+    ],
+    "guidance_evidence": [
+      "expected resolution values in future periods.",
+      "expected resolution values for a subset of asserted claims to adjust for higher claim values in that subset than in the modelled two-year data set."
+    ],
+    "wave_or_demand_evidence": [
+      "ain acquisition-related costs, including the related tax effects, from segment profit and adjusted earnings per share.",
+      "ain business units within the Industrial Automation reportable business segment.",
+      "ain non-GAAP financial measures presented in this press release to which this reconciliation is attached to the most directly comparable financial measures calculated and presented in accordance with generally accepted accounting principles (GAAP).",
+      "ain acquisition-related costs provides investors with a more meaningful measure of its performance period to period, aligns the measure to how management will evaluate performance internally, and makes it easier for investors to compare our performance to peers.",
+      "ain measures presented on a non-GAAP basis represent the impact of adjusting items net of tax.",
+      "air value adjustments to inventory, is approximately $1 million, $4 million, and $2 million, net of tax benefit of approximately $0 million, $2 million, and $0 million, respectively."
+    ],
+    "warning_or_risk_evidence": [
+      "charges 5 — — — — Net expense related to the NARCO Buyout and HWI Sale 6 — 0.",
+      "inventory, is approximately $1 million, $4 million, and $2 million, net of tax benefit of approximately $0 million, $2 million, and $0 million, respectively.",
+      "charges 5 0.",
+      "inventory, is approximately $4 million and $7 million, net of tax benefit of approximately $1 million and $2 million, respectively.",
+      "charges as listed above.",
+      "charges."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-11",
+    "entry_open": "202.639023",
+    "return_10d_pct": "0.9163",
+    "return_20d_pct": "-4.7674",
+    "return_30d_pct": "-8.4698",
+    "return_60d_pct": "-6.4372",
+    "return_90d_pct": "-0.6047"
+  },
+  "text_stats": {
+    "primary_text_len": 6271,
+    "exhibit_text_len": 17033,
+    "combined_text_len": 23306
+  }
+}

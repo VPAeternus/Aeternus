@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WMB",
+    "cik": "107263",
+    "event_date": "",
+    "event_accession": "0000107263-24-000075",
+    "primary_8k_doc": "wmb-20240805.htm",
+    "exhibit_docs": [
+      "wmb_20240630xer.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WMB_000010726324000075_wmb-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WMB_000010726324000075_wmb_20240630xer.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WMB",
+    "cik": "107263",
+    "entity_name": "Williams Companies, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3081000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-06",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "927000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-06",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "52627000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-06",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "450000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-06",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1639000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-06",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1514000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-06",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.300876",
+    "operating_cash_flow_to_revenue": "0.491399",
+    "assets_to_revenue": "17.081142",
+    "financing_cash_flow_to_revenue": "0.146056",
+    "investing_cash_flow_to_revenue": "-0.53197"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "GAAP net income of $401 million, or $0.",
+      "EPS) • Adjusted net income of $521 million, or $0.",
+      "EPS) • Record 2Q Adjusted EBITDA of $1.",
+      "EPS, 2020 to 2025.",
+      "Net income amounts are from continuing operations attributable to The Williams Companies, Inc.",
+      "Net Income $401 $547 $1,032 $1,473 Net Income Per Share $0."
+    ],
+    "guidance_evidence": [
+      "outlook • Optimized portfolio by exiting Aux Sable joint venture position and consolidating ownership interest in Gulf of Mexico Discovery system • Placed Transco's Regional Energy Access into full service ahead of schedule on Aug.",
+      "guidance this year and even higher levels of growth in 2025 with an expected five-year compound annual growth rate of over 12 percent on our Adjusted EPS, 2020 to 2025.",
+      "Guidance Williams continues to expect Adjusted EBITDA at the top half of its 2024 guidance range of $6.",
+      "guidance,” “outlook,” “in-service date,” or other similar expressions.",
+      "expected five-year compound annual growth rate of over 12 percent on our Adjusted EPS, 2020 to 2025.",
+      "projects into service in the Northeast, the West and the Deepwater Gulf of Mexico."
+    ],
+    "wave_or_demand_evidence": [
+      "demand drive strong financial outlook • Optimized portfolio by exiting Aux Sable joint venture position and consolidating ownership interest in Gulf of Mexico Discovery system • Placed Transco's Regional Energy Access into full service ahead of schedule on Aug.",
+      "demand for natural gas accelerates due to increasing electrification and LNG exports.",
+      "backlog of projects and outstanding track record of execution, no other company is better positioned than Williams to convert these opportunities into compounding returns for our shareholders.",
+      "demand.",
+      "demand; • Demand for our services.",
+      "ailable funds from operations (AFFO) of $1."
+    ],
+    "warning_or_risk_evidence": [
+      "charge into the clean energy future – by powering the global economy while delivering immediate emissions reductions within our natural gas network and investing in new energy technologies.",
+      "charges.",
+      "impairments of equity investments and goodwill, depreciation and amortization expense, and accretion expense associated with asset retirement obligations for nonregulated operations.",
+      "losses on commodity derivatives, higher net interest expense from recent debt issuances and retirements, as well as higher operating costs, depreciation and interest expense resulting from recent acquisitions.",
+      "decreased primarily due to lower pretax income.",
+      "losses on commodity derivatives, higher net 2 interest expense from recent debt issuances and retirements, lower realized hedge gains in the West, as well as higher operating costs, depreciation and interest expense resulting from recent acquisitions."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 3817,
+    "exhibit_text_len": 51426,
+    "combined_text_len": 55245
+  }
+}
