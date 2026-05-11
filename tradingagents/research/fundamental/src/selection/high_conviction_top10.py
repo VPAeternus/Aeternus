@@ -1150,7 +1150,7 @@ def _is_shadow_outcome_field(key: str) -> bool:
         "return" in name
         or "winner" in name
         or "loser" in name
-        or "target_label" in name
+        or "target" in name
         or "monitoring_score" in name
         or "final_rank" in name
         or "_delta_" in name

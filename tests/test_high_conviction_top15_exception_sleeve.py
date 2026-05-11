@@ -534,6 +534,9 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
         "forward_return_90d_pct": "12",
         "future_return_alpha": "13",
         "avg_return_90d": "14",
+        "price_target_90d": "150",
+        "target_price": "151",
+        "analyst_target": "152",
     }
     rows = [row(f"C{i}", 100 - i, **broad_return_fields) for i in range(9)]
     rows.insert(5, row(
@@ -567,10 +570,11 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
     assert all("loser" not in column for column in selected_header)
     assert all("current_return" not in column for column in selected_header)
     assert all("final_rank" not in column for column in selected_header)
+    assert all("target" not in column for column in selected_header)
 
     json_artifact = json.loads((output_dir / "high_conviction_top15_core_deterioration_refill_shadow.json").read_text(encoding="utf-8"))
     assert returned_result == json_artifact
-    forbidden_fragments = ("return", "delta", "winner", "loser", "current_return", "final_rank", "target_label")
+    forbidden_fragments = ("return", "delta", "winner", "loser", "current_return", "final_rank", "target")
     for array_key in ("selected_rows", "selected", "core_rows", "exception_rows", "rejected_rows", "rejected"):
         for artifact_row in json_artifact.get(array_key, []):
             assert all(not any(fragment in key.lower() for fragment in forbidden_fragments) for key in artifact_row)
@@ -580,6 +584,7 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
         replacement_header = [column.lower() for column in next(csv.reader(handle))]
     assert all("return" not in column for column in replacement_header)
     assert all("delta" not in column for column in replacement_header)
+    assert all("target" not in column for column in replacement_header)
 
 
 def test_top15_refill_shadow_selector_omits_outcome_fields_from_public_rows():
@@ -593,6 +598,9 @@ def test_top15_refill_shadow_selector_omits_outcome_fields_from_public_rows():
         "final_rank": "1",
         "winner_label": "yes",
         "target_label": "hit",
+        "price_target_90d": "150",
+        "target_price": "151",
+        "analyst_target": "152",
     }
     rows = [row(f"C{i}", 100 - i, **outcome_fields) for i in range(9)]
     rows.insert(5, row(
@@ -618,6 +626,7 @@ def test_top15_refill_shadow_selector_omits_outcome_fields_from_public_rows():
         assert result[array_key]
         for result_row in result[array_key]:
             assert forbidden_keys.isdisjoint(result_row)
+            assert all("target" not in key.lower() for key in result_row)
 
 
 def test_top15_refill_shadow_pairs_multiple_demotions_with_replacements_in_rank_order():
