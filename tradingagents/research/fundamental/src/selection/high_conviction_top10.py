@@ -126,13 +126,29 @@ def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     return base
 
 
+def _refill_bool(value: Any, default: bool) -> bool:
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        token = value.strip().lower()
+        if token in {"false", "0", "no", "n", "off", ""}:
+            return False
+        if token in {"true", "1", "yes", "y", "on"}:
+            return True
+    return truthy(value)
+
+
 def _normalize_core_deterioration_refill_config(config: Mapping[str, Any] | None) -> CoreDeteriorationRefillConfig:
-    nested = config.get("core_deterioration_refill") if isinstance(config, Mapping) and isinstance(config.get("core_deterioration_refill"), Mapping) else config
-    enabled = bool(nested.get("enabled", False)) if isinstance(nested, Mapping) else False
-    mode = str(nested.get("mode", "strict") if isinstance(nested, Mapping) else "strict").strip().lower()
+    nested = config.get("core_deterioration_refill") if isinstance(config, Mapping) else None
+    if not isinstance(nested, Mapping):
+        return CoreDeteriorationRefillConfig()
+    enabled = _refill_bool(nested.get("enabled"), False)
+    mode = str(nested.get("mode", "strict")).strip().lower()
     if mode not in CORE_DETERIORATION_REFILL_MODES:
         raise ValueError(f"core deterioration refill mode must be one of {sorted(CORE_DETERIORATION_REFILL_MODES)}")
-    block = bool(nested.get("block_deterioration_from_exceptions", True)) if isinstance(nested, Mapping) else True
+    block = _refill_bool(nested.get("block_deterioration_from_exceptions"), True)
     return CoreDeteriorationRefillConfig(enabled=enabled, mode=mode, block_deterioration_from_exceptions=block)
 
 

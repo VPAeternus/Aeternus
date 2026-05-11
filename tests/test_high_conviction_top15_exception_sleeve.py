@@ -4,6 +4,7 @@ from tradingagents.research.fundamental.src.selection.high_conviction_top10 impo
     CORE_DETERIORATION_STRICT_ACTION,
     RightTailExceptionConfig,
     _is_right_tail_exception_candidate,
+    _normalize_core_deterioration_refill_config,
     _right_tail_exception_score,
     build_core_deterioration_review_rows,
     select_high_conviction_top10,
@@ -24,6 +25,25 @@ def row(ticker, score=80, confidence=4, **extra):
     }
     base.update(extra)
     return base
+
+
+def test_normalize_core_deterioration_refill_requires_nested_config():
+    cfg = _normalize_core_deterioration_refill_config({"enabled": True})
+    assert cfg.enabled is False
+
+
+def test_normalize_core_deterioration_refill_parses_string_false_booleans():
+    cfg = _normalize_core_deterioration_refill_config(
+        {"core_deterioration_refill": {"enabled": "false", "block_deterioration_from_exceptions": "false"}}
+    )
+    assert cfg.enabled is False
+    assert cfg.block_deterioration_from_exceptions is False
+
+
+def test_normalize_core_deterioration_refill_parses_string_true_and_mode():
+    cfg = _normalize_core_deterioration_refill_config({"core_deterioration_refill": {"enabled": "true", "mode": "downgrade"}})
+    assert cfg.enabled is True
+    assert cfg.mode == "downgrade"
 
 
 def test_top15_preserves_top10_when_exception_disabled():
