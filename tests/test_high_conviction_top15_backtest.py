@@ -77,6 +77,20 @@ def _read_rows(path: Path):
         return list(csv.DictReader(fh))
 
 
+def test_v2_candidates_returns_full_ex_ante_ranked_pool():
+    from tradingagents.research.fundamental.backtests.high_conviction_top10 import _select_v2, _v2_candidates
+
+    rows = [_row(f"C{i}", score=100 - i) for i in range(12)]
+    rows[-1]["return_90d_pct"] = "999"
+    pool = _v2_candidates(rows)
+    selected = _select_v2(rows)
+
+    assert len(pool) == 12
+    assert [r["ticker"] for r in pool[:10]] == [r["ticker"] for r in selected]
+    assert [r["core_candidate_rank"] for r in pool[:3]] == [1, 2, 3]
+    assert pool[-1]["ticker"] == "C11"
+
+
 def test_top15_backtest_outputs_exist(tmp_path):
     out, _ = _fixture(tmp_path)
     for name in [
