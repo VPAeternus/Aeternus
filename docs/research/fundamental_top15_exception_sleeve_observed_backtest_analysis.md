@@ -117,13 +117,26 @@ Final behavior:
 
 ## Core Deterioration Refill Shadow Review
 
+Plain English: this is a safe what-if version of the Top-15 list. It does not change the official Top-15.
+
+What it does:
+
+- Finds core names that look risky because their fundamentals deteriorated.
+- Temporarily removes those names in a shadow list.
+- Replaces them with the next-best eligible names.
+- Shows what the Top-15 would have looked like with those swaps.
+- Blocks the removed risky names from sneaking back in through the exception sleeve.
+- Produces a comparison table showing each removed name, its replacement, and how that swap performed historically.
+
+Why it matters:
+
+- Gives PM a review tool before acting on weak core names.
+- Helps identify avoidable blowups.
+- Keeps the official process unchanged until the shadow process earns trust.
+
 This shadow-only review is not the official Top-15 list. It preserves Top-15 capacity by testing whether demoted/refill-ineligible core deterioration tickers can be replaced without changing the frozen official selection output.
 
-Operational reading:
-
-- Blocks demoted/refill-ineligible deterioration tickers from exception auto-selection.
-- Preserves Top-15 capacity for cleaner core and exception candidates.
-- Treats replacement deltas as post-freeze diagnostics only, not live selection evidence.
+Use `core_deterioration_refill_shadow_replacements.csv` to compare demoted core names against next eligible ex-ante replacements. Return labels and replacement deltas are diagnostic only and are attached after selection is frozen.
 
 ## No-leakage and caveats
 
