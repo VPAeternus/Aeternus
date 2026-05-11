@@ -528,16 +528,23 @@ def test_top15_refill_shadow_replacement_uses_ex_ante_rank_not_return_labels():
 def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
     input_csv = tmp_path / "scores.csv"
     output_dir = tmp_path / "out"
-    rows = [row(f"C{i}", 100 - i, return_90d_pct="10") for i in range(9)]
+    broad_return_fields = {
+        "return_90d_pct": "10",
+        "target_return_90d_pct": "11",
+        "forward_return_90d_pct": "12",
+        "future_return_alpha": "13",
+        "avg_return_90d": "14",
+    }
+    rows = [row(f"C{i}", 100 - i, **broad_return_fields) for i in range(9)]
     rows.insert(5, row(
-        "BAD", 95, return_90d_pct="-40", current_return_pct="-5", final_rank="99", winner_label="no", target_label="miss", replacement_delta_90d_pct="-140",
+        "BAD", 95, **broad_return_fields, current_return_pct="-5", final_rank="99", winner_label="no", target_label="miss", replacement_delta_90d_pct="-140",
         score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="",
         rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
         rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
         rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
     ))
-    rows.append(row("NEXT", 89, return_90d_pct="100", current_return_pct="3", final_rank="1", winner_label="yes", target_label="hit", replacement_delta_90d_pct="140"))
-    rows.append(row("REJECT", 60, return_90d_pct="200", current_return_pct="4", final_rank="2", winner_label="yes", loser_label="no", target_label="hit", replacement_delta_90d_pct="90"))
+    rows.append(row("NEXT", 89, **broad_return_fields, current_return_pct="3", final_rank="1", winner_label="yes", target_label="hit", replacement_delta_90d_pct="140"))
+    rows.append(row("REJECT", 60, **broad_return_fields, current_return_pct="4", final_rank="2", winner_label="yes", loser_label="no", target_label="hit", replacement_delta_90d_pct="90"))
 
     fieldnames = sorted({key for item in rows for key in item})
     with input_csv.open("w", newline="", encoding="utf-8") as handle:
@@ -578,6 +585,10 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
 def test_top15_refill_shadow_selector_omits_outcome_fields_from_public_rows():
     outcome_fields = {
         "return_90d_pct": "10",
+        "target_return_90d_pct": "11",
+        "forward_return_90d_pct": "12",
+        "future_return_alpha": "13",
+        "avg_return_90d": "14",
         "current_return_pct": "3",
         "final_rank": "1",
         "winner_label": "yes",

@@ -1147,9 +1147,7 @@ def _read_csv(path: Path) -> list[dict[str, Any]]:
 def _is_shadow_outcome_field(key: str) -> bool:
     name = str(key).lower()
     return (
-        name.startswith("return_")
-        or name.startswith("return_since_")
-        or "current_return" in name
+        "return" in name
         or "winner" in name
         or "loser" in name
         or "target_label" in name
