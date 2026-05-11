@@ -8,6 +8,7 @@ from tradingagents.research.fundamental.src.selection.high_conviction_top10 impo
     _rank_high_conviction_core_pool,
     _right_tail_exception_score,
     build_core_deterioration_review_rows,
+    rank_high_conviction_core_pool,
     select_high_conviction_top10,
     select_high_conviction_top15_exception_sleeve,
     select_top15_from_csv,
@@ -58,12 +59,15 @@ def test_top15_preserves_top10_when_exception_disabled():
 def test_rank_high_conviction_core_pool_matches_top10_contract():
     rows = [row(f"C{i}", 100 - i) for i in range(12)]
     pool = _rank_high_conviction_core_pool(rows, {"top_n": 10}, None)
+    public_pool = rank_high_conviction_core_pool(rows, {"top_n": 10}, None)
     top10 = select_high_conviction_top10(rows, {"top_n": 10})
 
     assert [r["ticker"] for r in pool["ranked_rows"][:10]] == [r["ticker"] for r in top10["selected_rows"]]
     assert [r["core_candidate_rank"] for r in pool["ranked_rows"][:3]] == [1, 2, 3]
+    assert [r["core_candidate_rank"] for r in public_pool["ranked_rows"][:3]] == [1, 2, 3]
     assert top10["summary"]["selected_count"] == 10
     assert all(r["selected"] is True for r in top10["selected_rows"])
+    assert all("core_candidate_rank" not in r for r in top10["selected_rows"])
 
 
 def test_top15_selects_10_core_plus_5_exceptions():

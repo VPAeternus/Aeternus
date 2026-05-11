@@ -208,6 +208,15 @@ def _rank_high_conviction_core_pool(
     }
 
 
+def rank_high_conviction_core_pool(
+    rows: Sequence[Mapping[str, Any]],
+    config: Mapping[str, Any] | None,
+    coverage_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Return ranked raw core-pool rows for refill/shadow diagnostics."""
+    return _rank_high_conviction_core_pool(rows, config, coverage_rows)
+
+
 def select_high_conviction_top10(
     rows: Sequence[Mapping[str, Any]],
     config: Mapping[str, Any] | None,
@@ -990,4 +999,5 @@ def _write_csv_with_fields(path: Path, rows: Sequence[Mapping[str, Any]], fieldn
 
 
 def _public_row(row: Mapping[str, Any]) -> dict[str, Any]:
-    return {k: v for k, v in row.items() if not k.startswith("_") and k not in {"selected_candidate", "confidence_sort"}}
+    excluded = {"selected_candidate", "confidence_sort", "core_candidate_rank"}
+    return {k: v for k, v in row.items() if not k.startswith("_") and k not in excluded}
