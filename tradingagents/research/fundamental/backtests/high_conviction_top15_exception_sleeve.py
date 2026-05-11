@@ -85,6 +85,12 @@ CORE_DETERIORATION_REFILL_SUMMARY_FIELDS = [
     "avg_return_90d_pct", "winner_90d_30pct_rate", "loser_90d_minus30pct_rate",
 ]
 BASELINE_VARIANT = "high_conviction_top10_v2_final"
+
+
+def _filter_fields(rows: Sequence[Mapping[str, Any]], fields: Sequence[str]) -> list[dict[str, Any]]:
+    return [{field: row.get(field, "") for field in fields} for row in rows]
+
+
 OUTPUT_FILES = [
     "selected_names_by_quarter_top15.csv",
     "strategy_summary_top15.csv",
@@ -493,9 +499,10 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "exception_slot_diagnostics.csv", diagnostics, ["variant", "quarter", "selected_exception_count", "available_exception_candidate_count", "warning_codes", "selected_exception_tickers", "single_rm_exception_count", "rm2plus_exception_count", "no_theme_no_llm_exception_count"])
     core_deterioration_rows = build_core_deterioration_review_rows([row for row in selected_rows if row.get("variant") == main_top15_variant])
     _write_csv(out / "core_deterioration_review_queue.csv", core_deterioration_rows, CORE_DETERIORATION_FIELDS)
-    _write_csv(out / "core_deterioration_refill_shadow_selected.csv", refill_selected_rows, CORE_DETERIORATION_REFILL_SELECTED_FIELDS)
-    _write_csv(out / "core_deterioration_refill_shadow_replacements.csv", refill_replacement_rows, CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS)
-    _write_csv(out / "core_deterioration_refill_shadow_summary.csv", _refill_shadow_summary_rows(refill_selected_rows, refill_quarter_rows), CORE_DETERIORATION_REFILL_SUMMARY_FIELDS)
+    _write_csv(out / "core_deterioration_refill_shadow_selected.csv", _filter_fields(refill_selected_rows, CORE_DETERIORATION_REFILL_SELECTED_FIELDS), CORE_DETERIORATION_REFILL_SELECTED_FIELDS)
+    _write_csv(out / "core_deterioration_refill_shadow_replacements.csv", _filter_fields(refill_replacement_rows, CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS), CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS)
+    refill_summary_rows = _refill_shadow_summary_rows(refill_selected_rows, refill_quarter_rows)
+    _write_csv(out / "core_deterioration_refill_shadow_summary.csv", _filter_fields(refill_summary_rows, CORE_DETERIORATION_REFILL_SUMMARY_FIELDS), CORE_DETERIORATION_REFILL_SUMMARY_FIELDS)
     _write_csv(out / "right_tail_capture_comparison.csv", comparison, ["ticker", "quarter", "return_90d_pct", "old_v2_status", "top15_status", "selected_sleeve", "selected_sleeve_rank", "right_tail_exception_score", "mechanical_exclusion_before", "mechanical_status_after"])
     _write_csv(out / "left_tail_penalty_comparison.csv", left_tail, ["variant", "loser_90d_minus30pct_rate", "avg_return_90d_pct", "2025Q1_avg_90d", "2025Q1_loser_rate", "delta_loser_rate_vs_top10"])
     top15_selected_keys = {

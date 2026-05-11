@@ -3,6 +3,9 @@ import json
 from pathlib import Path
 
 from tradingagents.research.fundamental.backtests.high_conviction_top15_exception_sleeve import (
+    CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS,
+    CORE_DETERIORATION_REFILL_SELECTED_FIELDS,
+    CORE_DETERIORATION_REFILL_SUMMARY_FIELDS,
     TARGET_RIGHT_TAIL_NAMES,
     run_high_conviction_top15_exception_sleeve_backtest,
 )
@@ -75,6 +78,11 @@ def _fixture(tmp_path, inject_forbidden=False):
 def _read_rows(path: Path):
     with path.open(newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
+
+
+def _read_header(path: Path):
+    with path.open(newline="", encoding="utf-8") as fh:
+        return next(csv.reader(fh))
 
 
 def test_v2_candidates_returns_full_ex_ante_ranked_pool():
@@ -395,6 +403,10 @@ def test_core_deterioration_refill_shadow_outputs_full_top15_and_replacement_dia
     selected = _read_rows(out / "core_deterioration_refill_shadow_selected.csv")
     replacements = _read_rows(out / "core_deterioration_refill_shadow_replacements.csv")
     summary = _read_rows(out / "core_deterioration_refill_shadow_summary.csv")
+
+    assert _read_header(out / "core_deterioration_refill_shadow_selected.csv") == CORE_DETERIORATION_REFILL_SELECTED_FIELDS
+    assert _read_header(out / "core_deterioration_refill_shadow_replacements.csv") == CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS
+    assert _read_header(out / "core_deterioration_refill_shadow_summary.csv") == CORE_DETERIORATION_REFILL_SUMMARY_FIELDS
 
     strict_rows = [r for r in selected if r["variant"] == "top15_v4_core_deterioration_refill_strict"]
     assert "BAD" not in {r["ticker"] for r in strict_rows}
