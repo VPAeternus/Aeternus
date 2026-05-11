@@ -43,6 +43,7 @@ HP_OVERRIDE_RE = re.compile(r"^hp\d+_(?:priority|high_priority|llm_supported|ext
 TIER_OVERRIDE_RE = re.compile(r"^tier\d+_L\d+_(?:priority|high_priority|llm_supported|rescan|signal|confirmed)$")
 OPERATING_SETTING = "high_conviction_top10_v2_final"
 TOP15_OPERATING_SETTING = "high_conviction_top15_v3_exception_sleeve"
+TOP15_REFILL_SHADOW_SETTING = "high_conviction_top15_v4_core_deterioration_refill_shadow"
 CORE_DETERIORATION_REVIEW_ACTION = "manual_review_before_buy_underwriting"
 CORE_DETERIORATION_STRICT_ACTION = "move_from_core_buy_underwriting_to_scout_review_unless_pm_override"
 CORE_DETERIORATION_FIELDS = [
@@ -321,6 +322,138 @@ def select_high_conviction_top15_exception_sleeve(
     }
 
 
+def _core_flag_row(row: Mapping[str, Any], rank: int) -> dict[str, Any]:
+    flagged = dict(row)
+    flagged["selected_sleeve"] = "core"
+    flagged["selected_sleeve_rank"] = rank
+    flagged["selection_rank"] = rank
+    return flagged
+
+
+def _replacement_diagnostic(mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any] | None) -> dict[str, Any]:
+    flags = core_deterioration_flags(_core_flag_row(demoted, int(_to_float(demoted.get("core_candidate_rank")) or 999999)))
+    demoted_return = _to_float(demoted.get("return_90d_pct"))
+    replacement_return = _to_float(replacement.get("return_90d_pct")) if replacement else None
+    return {
+        "variant": TOP15_REFILL_SHADOW_SETTING,
+        "quarter": demoted.get("quarter", ""),
+        "mode": mode,
+        "demoted_ticker": str(demoted.get("ticker", "")).upper(),
+        "replacement_ticker": str(replacement.get("ticker", "")).upper() if replacement else "",
+        "demoted_core_candidate_rank": demoted.get("core_candidate_rank", ""),
+        "replacement_core_candidate_rank": replacement.get("core_candidate_rank", "") if replacement else "",
+        "demoted_entry_score_0_100": demoted.get("entry_score_0_100", demoted.get("score", "")),
+        "replacement_entry_score_0_100": replacement.get("entry_score_0_100", replacement.get("score", "")) if replacement else "",
+        "demoted_score_change": demoted.get("score_change", ""),
+        "demoted_negative_revision_risk": demoted.get("negative_revision_risk", ""),
+        "demoted_pre_llm_fundamental_bucket": demoted.get("pre_llm_fundamental_bucket", ""),
+        "demoted_primary_theme": demoted.get("primary_theme", ""),
+        "demoted_rm_count": flags.get("core_deterioration_rm_count", ""),
+        "demoted_hp_count": flags.get("core_deterioration_hp_count", ""),
+        "demoted_market_repricing_score": flags.get("demoted_market_repricing_score", ""),
+        "high_score_deterioration_flag": flags.get("high_score_deterioration_flag", ""),
+        "weak_no_theme_repricing_stack_flag": flags.get("weak_no_theme_repricing_stack_flag", ""),
+        "core_deterioration_review_flag": flags.get("core_deterioration_review_flag", ""),
+        "core_deterioration_downgrade_flag": flags.get("core_deterioration_downgrade_flag", ""),
+        "core_deterioration_strict_override_required": flags.get("core_deterioration_strict_override_required", ""),
+        "core_deterioration_reason_codes": flags.get("core_deterioration_reason_codes", ""),
+        "demoted_return_90d_pct": demoted.get("return_90d_pct", ""),
+        "replacement_return_90d_pct": replacement.get("return_90d_pct", "") if replacement else "",
+        "replacement_delta_90d_pct": round(replacement_return - demoted_return, 6) if replacement_return is not None and demoted_return is not None else "",
+    }
+
+
+def select_high_conviction_top15_core_deterioration_refill_shadow(
+    rows: Sequence[Mapping[str, Any]],
+    config: Mapping[str, Any] | None,
+    coverage_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, Any]:
+    config_map = config or {}
+    cfg = _normalize_exception_config(config_map)
+    refill_cfg = _normalize_core_deterioration_refill_config(config_map)
+    if not refill_cfg.enabled:
+        raise ValueError("core_deterioration_refill.enabled must be true for refill shadow selector")
+
+    core_config = dict(config_map)
+    core_config["top_n"] = cfg.core_n
+    coverage_enabled = bool(core_config.get("coverage_gating"))
+    coverage = _build_coverage(coverage_rows or []) if coverage_enabled else {}
+    pool = _rank_high_conviction_core_pool(rows, core_config, coverage_rows)
+    ranked = pool["ranked_rows"]
+    warnings = list(pool.get("warnings", []))
+
+    blocked_tickers: set[str] = set()
+    for raw in rows:
+        ticker = str(raw.get("ticker") or raw.get("symbol") or "").strip().upper()
+        if ticker and should_refill_demote_core_row(_core_flag_row(raw, 999999), refill_cfg.mode):
+            blocked_tickers.add(ticker)
+
+    core_raw: list[dict[str, Any]] = []
+    demoted_raw: list[dict[str, Any]] = []
+    for candidate in ranked:
+        ticker = str(candidate.get("ticker", "")).strip().upper()
+        rank = int(candidate.get("core_candidate_rank") or 0)
+        if ticker in blocked_tickers:
+            if rank <= cfg.core_n:
+                demoted_raw.append(candidate)
+            continue
+        if len(core_raw) < cfg.core_n:
+            core_raw.append(candidate)
+
+    if len(core_raw) < cfg.core_n:
+        warnings.append(f"CORE_REFILL_SHORTFALL_SELECTED_{len(core_raw)}_OF_{cfg.core_n}")
+
+    replacement_raw = [r for r in core_raw if int(r.get("core_candidate_rank") or 0) > cfg.core_n]
+    refill_rows = [_replacement_diagnostic(refill_cfg.mode, demoted, replacement_raw[idx] if idx < len(replacement_raw) else None) for idx, demoted in enumerate(demoted_raw)]
+
+    core_rows: list[dict[str, Any]] = []
+    for rank, raw in enumerate(core_raw, start=1):
+        row = dict(raw)
+        row["selected"] = True
+        row["selected_sleeve"] = "core"
+        row["selected_sleeve_rank"] = rank
+        row["selection_rank"] = rank
+        row["portfolio_treatment"] = "core_buy_underwriting"
+        row["core_deterioration_refill_shadow"] = 1
+        row["core_refill_source"] = "original_top10" if int(row.get("core_candidate_rank") or 0) <= cfg.core_n else "next_ranked_core_candidate"
+        row.setdefault("right_tail_exception_score", "")
+        row.setdefault("right_tail_exception_reason_codes", [])
+        row.setdefault("right_tail_exception_warning_codes", [])
+        _annotate_operating_guidance(row)
+        core_rows.append(_public_row(row))
+
+    exception_blocks = blocked_tickers if refill_cfg.block_deterioration_from_exceptions else set()
+    exceptions, exception_warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(
+        core_rows, rows, cfg, coverage=coverage, coverage_enabled=coverage_enabled, blocked_tickers=exception_blocks
+    )
+    selected = core_rows + exceptions
+    for row in selected:
+        row["operating_setting"] = TOP15_REFILL_SHADOW_SETTING
+        row["operating_setting_validation_status"] = "shadow_observed_data_not_approved_operating_selector"
+
+    config_snapshot = {**pool.get("config_snapshot", {}), "right_tail_exception_config": asdict(cfg), "core_deterioration_refill": asdict(refill_cfg)}
+    return {
+        "selected_rows": selected,
+        "selected": selected,
+        "core_rows": core_rows,
+        "exception_rows": exceptions,
+        "core_deterioration_refill_rows": refill_rows,
+        "rejected_rows": [_public_row(r) for r in pool.get("rejected_rows", [])],
+        "rejected": [_public_row(r) for r in pool.get("rejected_rows", [])],
+        "summary": {
+            "input_count": len(rows),
+            "selected_count": len(selected),
+            "core_count": len(core_rows),
+            "exception_count": len(exceptions),
+            "top_n": len(selected),
+            "warnings": warnings + exception_warnings,
+        },
+        "config_snapshot": config_snapshot,
+        "config": config_snapshot,
+        "operating_recommendation": {**_top15_operating_recommendation_snapshot(selected, cfg), "operating_setting": TOP15_REFILL_SHADOW_SETTING, "validation_status": "shadow observed-data selector; not approved operating selector"},
+    }
+
+
 def _first_nonblank(row: Mapping[str, Any], *keys: str) -> Any:
     for key in keys:
         if key not in row:
@@ -468,6 +601,30 @@ def select_top15_from_csv(
     _write_csv_with_fields(core_deterioration_path, core_deterioration_rows, CORE_DETERIORATION_FIELDS)
     json_path.write_text(json.dumps(result, indent=2, sort_keys=True), encoding="utf-8")
     recommendation_path.write_text(_daily_recommendation_markdown(result), encoding="utf-8")
+    return result
+
+
+def select_top15_core_deterioration_refill_shadow_from_csv(
+    scores_csv: str | Path,
+    output_root: str | Path,
+    config: Mapping[str, Any] | None,
+    coverage_manifest: str | Path | None = None,
+) -> dict[str, Any]:
+    scores_path = Path(scores_csv)
+    out_root = Path(output_root)
+    rows = _read_csv(scores_path)
+    coverage_rows = _read_csv(Path(coverage_manifest)) if coverage_manifest else None
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(rows, config, coverage_rows)
+    out_root.mkdir(parents=True, exist_ok=True)
+    date = str(result["config_snapshot"].get("selection_date") or (config.get("selection_date", "") if isinstance(config, Mapping) else ""))
+    csv_path = out_root / "high_conviction_top15_core_deterioration_refill_shadow.csv"
+    json_path = out_root / "high_conviction_top15_core_deterioration_refill_shadow.json"
+    replacements_path = out_root / "core_deterioration_refill_shadow_replacements.csv"
+    result["date"] = date
+    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "core_deterioration_refill_shadow_replacements": str(replacements_path)}
+    _write_csv(csv_path, result["selected_rows"])
+    _write_csv_with_fields(replacements_path, result.get("core_deterioration_refill_rows", []), CORE_DETERIORATION_REFILL_FIELDS)
+    json_path.write_text(json.dumps(result, indent=2, sort_keys=True), encoding="utf-8")
     return result
 
 
@@ -997,11 +1154,12 @@ def _write_csv(path: Path, rows: Sequence[Mapping[str, Any]]) -> None:
 
 
 def _write_csv_with_fields(path: Path, rows: Sequence[Mapping[str, Any]], fieldnames: Sequence[str]) -> None:
+    fields = list(fieldnames)
     with path.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(fieldnames))
+        writer = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         for row in rows:
-            writer.writerow({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v for k, v in row.items()})
+            writer.writerow({k: json.dumps(row.get(k), sort_keys=True) if isinstance(row.get(k), (dict, list)) else row.get(k, "") for k in fields})
 
 
 def _public_row(row: Mapping[str, Any]) -> dict[str, Any]:

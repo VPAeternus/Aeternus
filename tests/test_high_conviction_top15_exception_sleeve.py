@@ -459,3 +459,91 @@ def test_exception_sleeve_blocks_explicit_deterioration_tickers():
     )
 
     assert [r["ticker"] for r in exceptions] == ["GOOD"]
+
+
+def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top15_core_deterioration_refill_shadow
+
+    rows = [row(f"C{i}", 100 - i) for i in range(9)]
+    rows.insert(5, row(
+        "BAD", 95,
+        score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="",
+        rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
+        rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
+        rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
+    ))
+    rows += [row("NEXT", 89), row("GOODX", 50, rm1_low_price_dislocation_momentum="1", primary_theme="AI")]
+
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(
+        rows,
+        {"enabled": True, "exception_slots": 1, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
+    )
+
+    assert "BAD" not in [r["ticker"] for r in result["selected_rows"]]
+    assert "NEXT" in [r["ticker"] for r in result["core_rows"]]
+    assert [r["ticker"] for r in result["exception_rows"]] == ["GOODX"]
+    assert result["summary"]["core_count"] == 10
+    assert result["summary"]["exception_count"] == 1
+    assert result["summary"]["selected_count"] == 11
+    assert result["core_deterioration_refill_rows"][0]["demoted_ticker"] == "BAD"
+    assert result["core_deterioration_refill_rows"][0]["replacement_ticker"] == "NEXT"
+
+
+def test_top15_refill_shadow_replacement_uses_ex_ante_rank_not_return_labels():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top15_core_deterioration_refill_shadow
+
+    rows = [row(f"C{i}", 100 - i) for i in range(9)]
+    rows.insert(5, row(
+        "BAD", 95, return_90d_pct="-40",
+        score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="",
+        rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
+        rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
+        rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
+    ))
+    rows += [row("NEXT", 89, return_90d_pct="100"), row("LOWER", 70, return_90d_pct="300")]
+
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(
+        rows,
+        {"enabled": True, "exception_slots": 0, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
+    )
+
+    assert result["core_deterioration_refill_rows"][0]["replacement_ticker"] == "NEXT"
+    assert "LOWER" not in [r["ticker"] for r in result["selected_rows"]]
+
+
+def test_top15_refill_shadow_blocks_below_cutoff_deterioration_from_exceptions():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top15_core_deterioration_refill_shadow
+
+    rows = [row(f"C{i}", 100 - i) for i in range(10)]
+    rows += [
+        row("BADX", 85, score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="", rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum", rm2_weak_acceleration="RM2 - Weak-bucket acceleration", rm4_persistent_repricing_wave="RM4 - Persistent repricing wave"),
+        row("GOODX", 50, rm1_low_price_dislocation_momentum="1", primary_theme="AI"),
+    ]
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(rows, {"enabled": True, "exception_slots": 1, "core_deterioration_refill": {"enabled": True, "mode": "strict"}})
+    assert "BADX" not in [r["ticker"] for r in result["selected_rows"]]
+    assert [r["ticker"] for r in result["exception_rows"]] == ["GOODX"]
+
+
+def test_top15_refill_shadow_blocks_core_ineligible_deterioration_from_exceptions():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top15_core_deterioration_refill_shadow
+
+    rows = [row(f"C{i}", 100 - i) for i in range(10)]
+    rows += [
+        row("BADX", 85, 1, score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="", rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum", rm2_weak_acceleration="RM2 - Weak-bucket acceleration", rm4_persistent_repricing_wave="RM4 - Persistent repricing wave"),
+        row("GOODX", 50, rm1_low_price_dislocation_momentum="1", primary_theme="AI"),
+    ]
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(rows, {"enabled": True, "exception_slots": 1, "core_deterioration_refill": {"enabled": True, "mode": "strict"}})
+    assert "BADX" not in [r["ticker"] for r in result["selected_rows"]]
+    assert [r["ticker"] for r in result["exception_rows"]] == ["GOODX"]
+
+
+def test_top15_refill_shadow_exception_sleeve_respects_coverage_gate():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top15_core_deterioration_refill_shadow
+
+    rows = [row(f"C{i}", 100 - i) for i in range(10)] + [
+        row("BAD", 80, rm1_low_price_dislocation_momentum="1", primary_theme="AI"),
+        row("GOOD", 50, rm1_low_price_dislocation_momentum="1", primary_theme="energy"),
+    ]
+    coverage_rows = [*[{"ticker": f"C{i}", "status": "CACHED_READY"} for i in range(10)], {"ticker": "BAD", "status": "NEEDS_FETCH"}, {"ticker": "GOOD", "status": "CACHED_READY"}]
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(rows, {"enabled": True, "exception_slots": 1, "coverage_gating": True, "core_deterioration_refill": {"enabled": True, "mode": "strict"}}, coverage_rows)
+    assert [r["ticker"] for r in result["exception_rows"]] == ["GOOD"]
