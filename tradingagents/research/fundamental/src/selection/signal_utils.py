@@ -47,6 +47,18 @@ def signal_count(row: Mapping[str, Any], fields: Sequence[str]) -> int:
     return len([field for field in fields if field in row and truthy(row.get(field))])
 
 
+_FALSE_LABELS = {"", "0", "0.0", "false", "no", "n", "none", "null", "nan", "na", "n/a"}
+
+
+def label_active(value: Any) -> bool:
+    text = str(value if value is not None else "").strip().lower()
+    return text not in _FALSE_LABELS
+
+
+def label_signal_count(row: Mapping[str, Any], fields: Sequence[str]) -> int:
+    return len([field for field in fields if field in row and label_active(row.get(field))])
+
+
 def signal_bucket(row: Mapping[str, Any], fields: Sequence[str]) -> tuple[str, list[str]]:
     active = [field for field in fields if field in row and truthy(row.get(field))]
     if len(active) >= 2:

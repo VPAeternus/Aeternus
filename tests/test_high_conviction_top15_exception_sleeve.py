@@ -141,7 +141,15 @@ def test_exception_sleeve_applies_coverage_gate():
 
 def test_core_deterioration_review_queue_flags_strict_core_rows():
     rows = [row(f"C{i}", 100 - i) for i in range(10)]
-    rows[6].update(score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="")
+    rows[6].update(
+        score_change="-2",
+        negative_revision_risk="2",
+        pre_llm_fundamental_bucket="weak",
+        primary_theme="",
+        rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
+        rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
+        rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
+    )
 
     result = select_high_conviction_top15_exception_sleeve(rows, {"enabled": False})
     review_rows = build_core_deterioration_review_rows(result["selected_rows"])
@@ -153,6 +161,58 @@ def test_core_deterioration_review_queue_flags_strict_core_rows():
     assert flagged["core_deterioration_downgrade_flag"] == 1
     assert flagged["core_deterioration_strict_override_required"] == 1
     assert flagged["core_deterioration_recommended_action"] == CORE_DETERIORATION_STRICT_ACTION
+
+
+def test_core_deterioration_flags_count_descriptive_rm_hp_labels():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import core_deterioration_flags
+
+    candidate = row(
+        "STACK",
+        82,
+        selected_sleeve="core",
+        selected_sleeve_rank="4",
+        selection_rank="4",
+        score_change="-2",
+        negative_revision_risk="2",
+        pre_llm_fundamental_bucket="weak",
+        primary_theme="",
+        rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
+        rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
+        rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
+    )
+
+    flags = core_deterioration_flags(candidate)
+
+    assert flags["core_deterioration_rm_count"] == 3
+    assert flags["core_deterioration_hp_count"] == 0
+    assert flags["high_score_deterioration_flag"] == 1
+    assert flags["weak_no_theme_repricing_stack_flag"] == 1
+    assert flags["core_deterioration_review_flag"] == 1
+    assert flags["core_deterioration_downgrade_flag"] == 1
+    assert flags["core_deterioration_strict_override_required"] == 1
+
+
+def test_rank_7_8_alone_does_not_trigger_core_deterioration_flags():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import core_deterioration_flags
+
+    clean = row(
+        "CLEAN",
+        90,
+        selected_sleeve="core",
+        selected_sleeve_rank="7",
+        selection_rank="7",
+        score_change="1",
+        negative_revision_risk="0",
+        pre_llm_fundamental_bucket="strong",
+        primary_theme="AI infrastructure",
+    )
+
+    flags = core_deterioration_flags(clean)
+
+    assert flags["core_deterioration_rank_context_flag"] == 1
+    assert flags["core_deterioration_review_flag"] == 0
+    assert flags["core_deterioration_downgrade_flag"] == 0
+    assert flags["core_deterioration_strict_override_required"] == 0
 
 
 def test_daily_recommendation_labels_exceptions_as_starter_or_research(tmp_path):

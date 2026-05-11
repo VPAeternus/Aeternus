@@ -12,6 +12,7 @@ from .signal_utils import (
     HP_SIGNAL_FIELDS,
     RM_SIGNAL_FIELDS,
     hp_signal_bucket,
+    label_signal_count,
     rm_signal_bucket,
     signal_bucket,
     signal_count,
@@ -44,20 +45,12 @@ TOP15_OPERATING_SETTING = "high_conviction_top15_v3_exception_sleeve"
 CORE_DETERIORATION_REVIEW_ACTION = "manual_review_before_buy_underwriting"
 CORE_DETERIORATION_STRICT_ACTION = "move_from_core_buy_underwriting_to_scout_review_unless_pm_override"
 CORE_DETERIORATION_FIELDS = [
-    "ticker",
-    "quarter",
-    "selection_rank",
-    "selected_sleeve",
-    "entry_score_0_100",
-    "score_change",
-    "negative_revision_risk",
-    "pre_llm_fundamental_bucket",
-    "primary_theme",
-    "core_deterioration_review_flag",
-    "core_deterioration_downgrade_flag",
-    "core_deterioration_strict_override_required",
-    "core_deterioration_recommended_action",
-    "core_deterioration_reason_codes",
+    "ticker", "quarter", "selection_rank", "selected_sleeve", "entry_score_0_100",
+    "score_change", "negative_revision_risk", "pre_llm_fundamental_bucket", "primary_theme",
+    "core_deterioration_rm_count", "core_deterioration_hp_count", "demoted_market_repricing_score",
+    "high_score_deterioration_flag", "weak_no_theme_repricing_stack_flag", "core_deterioration_rank_context_flag",
+    "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
+    "core_deterioration_recommended_action", "core_deterioration_reason_codes",
 ]
 DAILY_RECOMMENDATION_BULLETS = [
     "Run broad discovery / source Top-30.",
@@ -251,28 +244,42 @@ def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
     entry_score = to_float(row.get("entry_score_0_100") or row.get("score"))
     score_change = to_float(row.get("score_change"))
     negative_revision_risk = to_float(row.get("negative_revision_risk"))
+    market_repricing_score = to_float(row.get("demoted_market_repricing_score") or row.get("market_repricing_score")) or 0
+    rm_count = label_signal_count(row, RM_SIGNAL_FIELDS)
+    hp_count = label_signal_count(row, HP_SIGNAL_FIELDS)
     theme_blank = not str(row.get("primary_theme") or "").strip()
     weak_pre_llm = str(row.get("pre_llm_fundamental_bucket") or "").strip().lower() == "weak"
-    review = (
-        sleeve == "core"
-        and entry_score is not None and entry_score >= 80
+    high_score = bool(
+        entry_score is not None and entry_score >= 80
         and score_change is not None and score_change <= -1
         and negative_revision_risk is not None and negative_revision_risk >= 2
     )
-    downgrade = bool(review and (rank_int in {7, 8} or theme_blank or weak_pre_llm))
-    strict = bool(downgrade and theme_blank and weak_pre_llm)
+    weak_stack = bool(
+        theme_blank
+        and weak_pre_llm
+        and (rm_count >= 3 or (hp_count > 0 and market_repricing_score >= 6))
+        and ((score_change is not None and score_change <= 0) or (negative_revision_risk is not None and negative_revision_risk >= 2))
+    )
+    review = bool(sleeve == "core" and (high_score or weak_stack))
+    downgrade = bool(review and (weak_stack or (theme_blank and weak_pre_llm)))
+    strict = bool(review and high_score and weak_stack)
+    rank_context = rank_int in {7, 8}
     reasons: list[str] = []
-    if review:
-        reasons.extend(["entry_score_gte_80", "score_change_lte_minus_1", "negative_revision_risk_gte_2"])
-    if rank_int in {7, 8}:
+    if high_score:
+        reasons.append("high_score_deterioration")
+    if weak_stack:
+        reasons.append("weak_no_theme_repricing_stack")
+    if rank_context:
         reasons.append("selection_rank_7_or_8")
-    if theme_blank:
-        reasons.append("primary_theme_blank")
-    if weak_pre_llm:
-        reasons.append("pre_llm_fundamental_bucket_weak")
     action = CORE_DETERIORATION_STRICT_ACTION if strict else CORE_DETERIORATION_REVIEW_ACTION if review else ""
     return {
-        "core_deterioration_review_flag": int(bool(review)),
+        "core_deterioration_rm_count": rm_count,
+        "core_deterioration_hp_count": hp_count,
+        "demoted_market_repricing_score": market_repricing_score,
+        "high_score_deterioration_flag": int(high_score),
+        "weak_no_theme_repricing_stack_flag": int(weak_stack),
+        "core_deterioration_rank_context_flag": int(rank_context),
+        "core_deterioration_review_flag": int(review),
         "core_deterioration_downgrade_flag": int(downgrade),
         "core_deterioration_strict_override_required": int(strict),
         "core_deterioration_recommended_action": action,
