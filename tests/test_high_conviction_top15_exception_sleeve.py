@@ -473,7 +473,7 @@ def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception()
         rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
     ))
     rows += [row("NEXT", 89)]
-    rows += [row(f"GOOD{i}", 50 + i, rm1_low_price_dislocation_momentum="1", primary_theme="AI") for i in range(5)]
+    rows += [row(f"GOOD{i}", 50 + i, rm1_low_price_dislocation_momentum="1", primary_theme=f"theme{i}") for i in range(5)]
 
     result = select_high_conviction_top15_core_deterioration_refill_shadow(
         rows,
