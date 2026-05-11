@@ -363,7 +363,7 @@ Operational reading:
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`
 """
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(report)
+    report_path.write_text(report, encoding="utf-8")
 
     paths = [out_dir / name for name in outputs] + [report_path]
     analysis_manifest = {
@@ -375,7 +375,7 @@ Operational reading:
         "bundle_manifest_target_summary": manifest.get("target_missed_name_capture_summary", {}),
         "outputs": {str(p): sha256(p) for p in paths},
     }
-    (out_dir / "analysis_manifest.json").write_text(json.dumps(analysis_manifest, indent=2, sort_keys=True) + "\n")
+    (out_dir / "analysis_manifest.json").write_text(json.dumps(analysis_manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return analysis_manifest
 
 
