@@ -252,7 +252,7 @@ def _first_nonblank(row: Mapping[str, Any], *keys: str) -> Any:
 
 def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
     sleeve = str(row.get("selected_sleeve", "")).strip().lower()
-    selected_rank = to_float(row.get("selection_rank") or row.get("selected_sleeve_rank"))
+    selected_rank = to_float(_first_nonblank(row, "selection_rank", "selected_sleeve_rank"))
     rank_int = int(selected_rank) if selected_rank is not None else None
     entry_score = to_float(_first_nonblank(row, "entry_score_0_100", "score"))
     score_change = to_float(row.get("score_change"))

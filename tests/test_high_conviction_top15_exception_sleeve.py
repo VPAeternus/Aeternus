@@ -240,6 +240,29 @@ def test_rank_7_8_alone_does_not_trigger_core_deterioration_flags():
     assert flags["core_deterioration_strict_override_required"] == 0
 
 
+def test_core_deterioration_rank_zero_does_not_truthy_fallback_to_sleeve_rank():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import core_deterioration_flags
+
+    clean = row(
+        "ZERO_RANK",
+        90,
+        selected_sleeve="core",
+        selection_rank=0,
+        selected_sleeve_rank=7,
+        score_change="1",
+        negative_revision_risk="0",
+        pre_llm_fundamental_bucket="strong",
+        primary_theme="AI infrastructure",
+    )
+
+    flags = core_deterioration_flags(clean)
+
+    assert flags["core_deterioration_rank_context_flag"] == 0
+    assert flags["core_deterioration_review_flag"] == 0
+    assert flags["core_deterioration_downgrade_flag"] == 0
+    assert flags["core_deterioration_strict_override_required"] == 0
+
+
 def test_daily_recommendation_labels_exceptions_as_starter_or_research(tmp_path):
     scores = tmp_path / "scores.csv"
     out = tmp_path / "out"
