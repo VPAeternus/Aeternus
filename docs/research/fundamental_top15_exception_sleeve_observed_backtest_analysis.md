@@ -134,9 +134,40 @@ Why it matters:
 - Helps identify avoidable blowups.
 - Keeps the official process unchanged until the shadow process earns trust.
 
+Why it is called "shadow refill":
+
+- "Refill" means a risky core name is removed from the what-if list and the open slot is filled with the next eligible name.
+- "Shadow" means the swap is review-only. It runs beside the official Top-15 and does not change the official recommendation.
+- This lets us learn whether the rule keeps working before promoting it into the official process.
+
 This shadow-only review is not the official Top-15 list. It preserves Top-15 capacity by testing whether demoted/refill-ineligible core deterioration tickers can be replaced without changing the frozen official selection output.
 
 Use `core_deterioration_refill_shadow_replacements.csv` to compare demoted core names against next eligible ex-ante replacements. Return labels and replacement deltas are diagnostic only and are attached after selection is frozen.
+
+Daily workflow:
+
+1. Run the normal `fundamental-top15` process first. This remains the official Top-15.
+2. Run the optional `fundamental-top15-refill-shadow` check after final scores are ready.
+3. Open `core_deterioration_refill_shadow_replacements.csv`.
+4. Review each proposed swap: removed ticker, replacement ticker, deterioration reason, RM/HP evidence, and score context.
+5. Treat the file as a PM review queue, not an automatic trade instruction.
+6. If the PM agrees with a swap, document the override decision manually; otherwise keep the official Top-15 unchanged.
+
+Daily command:
+
+```bash
+python3 -m cli.main fundamental-top15-refill-shadow \
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --date YYYY-MM-DD \
+  --mode strict
+```
+
+Daily outputs:
+
+- `high_conviction_top15_core_deterioration_refill_shadow.csv` — the what-if Top-15 review list.
+- `core_deterioration_refill_shadow_replacements.csv` — the comparison table to review proposed removals and replacements.
+- `high_conviction_top15_core_deterioration_refill_shadow.json` — machine-readable detail for audit/debugging.
 
 ## No-leakage and caveats
 
