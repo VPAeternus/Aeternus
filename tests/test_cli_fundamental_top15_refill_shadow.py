@@ -57,6 +57,7 @@ def test_fundamental_top15_refill_shadow_cli_writes_shadow_outputs(tmp_path):
     assert result.exit_code == 0, result.output
     assert (out / "high_conviction_top15_core_deterioration_refill_shadow.csv").exists()
     assert (out / "core_deterioration_refill_shadow_replacements.csv").exists()
+    assert "Refill Shadow" in result.output or "not official" in result.output
     assert "Wrote shadow" in result.output
 
 

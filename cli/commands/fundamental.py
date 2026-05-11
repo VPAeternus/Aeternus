@@ -30,8 +30,8 @@ def _print_top10_table(rows: list[dict]) -> None:
     console.print(table)
 
 
-def _print_top15_table(rows: list[dict]) -> None:
-    table = Table(title="Fundamental High-Conviction Top 15")
+def _print_top15_table(rows: list[dict], title: str = "Fundamental High-Conviction Top 15") -> None:
+    table = Table(title=title)
     table.add_column("Sleeve")
     table.add_column("Rank", justify="right")
     table.add_column("Ticker", style="bold green")
@@ -234,7 +234,10 @@ def fundamental_top15_refill_shadow(
     if fmt == "json":
         console.print(json.dumps(result, indent=2, sort_keys=True))
     else:
-        _print_top15_table(result.get("selected_rows", []))
+        _print_top15_table(
+            result.get("selected_rows", []),
+            title="Fundamental Top-15 Refill Shadow (not official)",
+        )
         paths = result["output_paths"]
         console.print(f"[green]Wrote shadow[/green] {paths['csv']} | {paths['json']} | {paths['core_deterioration_refill_shadow_replacements']}")
 

@@ -490,6 +490,12 @@ def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception()
     assert "BAD" not in selected_tickers
     assert "NEXT" in core_tickers
     assert set(exception_tickers) == {f"GOOD{i}" for i in range(5)}
+    assert all("shadow" in str(r["portfolio_treatment"]) for r in result["core_rows"])
+    assert all(r["portfolio_treatment"] != "core_buy_underwriting" for r in result["core_rows"])
+    assert all(
+        r["operating_setting_validation_status"] == "shadow_observed_data_not_approved_operating_selector"
+        for r in result["core_rows"]
+    )
     assert result["summary"]["core_count"] == 10
     assert result["summary"]["exception_count"] == 5
     assert result["summary"]["selected_count"] == 15
