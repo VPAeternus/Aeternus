@@ -163,6 +163,30 @@ def test_core_deterioration_review_queue_flags_strict_core_rows():
     assert flagged["core_deterioration_recommended_action"] == CORE_DETERIORATION_STRICT_ACTION
 
 
+def test_core_deterioration_uses_zero_demoted_repricing_without_truthy_fallback():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import core_deterioration_flags
+
+    candidate = row(
+        "ZERO",
+        70,
+        selected_sleeve="core",
+        selected_sleeve_rank="4",
+        selection_rank="4",
+        score_change="0",
+        negative_revision_risk="0",
+        pre_llm_fundamental_bucket="weak",
+        primary_theme="",
+        hp_LLM_best="1",
+        market_repricing_score="10",
+        demoted_market_repricing_score=0,
+    )
+
+    flags = core_deterioration_flags(candidate)
+
+    assert flags["weak_no_theme_repricing_stack_flag"] == 0
+    assert flags["core_deterioration_review_flag"] == 0
+
+
 def test_core_deterioration_flags_count_descriptive_rm_hp_labels():
     from tradingagents.research.fundamental.src.selection.high_conviction_top10 import core_deterioration_flags
 

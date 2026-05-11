@@ -237,14 +237,27 @@ def select_high_conviction_top15_exception_sleeve(
     }
 
 
+def _first_nonblank(row: Mapping[str, Any], *keys: str) -> Any:
+    for key in keys:
+        if key not in row:
+            continue
+        value = row.get(key)
+        if value is None:
+            continue
+        if isinstance(value, str) and value.strip() == "":
+            continue
+        return value
+    return None
+
+
 def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
     sleeve = str(row.get("selected_sleeve", "")).strip().lower()
     selected_rank = to_float(row.get("selection_rank") or row.get("selected_sleeve_rank"))
     rank_int = int(selected_rank) if selected_rank is not None else None
-    entry_score = to_float(row.get("entry_score_0_100") or row.get("score"))
+    entry_score = to_float(_first_nonblank(row, "entry_score_0_100", "score"))
     score_change = to_float(row.get("score_change"))
     negative_revision_risk = to_float(row.get("negative_revision_risk"))
-    market_repricing_score = to_float(row.get("demoted_market_repricing_score") or row.get("market_repricing_score")) or 0
+    market_repricing_score = to_float(_first_nonblank(row, "demoted_market_repricing_score", "market_repricing_score")) or 0.0
     rm_count = label_signal_count(row, RM_SIGNAL_FIELDS)
     hp_count = label_signal_count(row, HP_SIGNAL_FIELDS)
     theme_blank = not str(row.get("primary_theme") or "").strip()
