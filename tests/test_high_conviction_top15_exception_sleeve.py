@@ -54,6 +54,19 @@ def test_top15_preserves_top10_when_exception_disabled():
     assert all(r["selected_sleeve"] == "core" for r in top15)
 
 
+def test_rank_high_conviction_core_pool_matches_top10_contract():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import _rank_high_conviction_core_pool, select_high_conviction_top10
+
+    rows = [row(f"C{i}", 100 - i) for i in range(12)]
+    pool = _rank_high_conviction_core_pool(rows, {"top_n": 10}, None)
+    top10 = select_high_conviction_top10(rows, {"top_n": 10})
+
+    assert [r["ticker"] for r in pool["ranked_rows"][:10]] == [r["ticker"] for r in top10["selected_rows"]]
+    assert [r["core_candidate_rank"] for r in pool["ranked_rows"][:3]] == [1, 2, 3]
+    assert top10["summary"]["selected_count"] == 10
+    assert all(r["selected"] is True for r in top10["selected_rows"])
+
+
 def test_top15_selects_10_core_plus_5_exceptions():
     rows = [row(f"C{i}", 100 - i) for i in range(10)] + [row(f"E{i}", 30 + i, rm1_low_price_dislocation_momentum="1", primary_theme=f"theme{i}") for i in range(5)]
     result = select_high_conviction_top15_exception_sleeve(rows, {"enabled": True})

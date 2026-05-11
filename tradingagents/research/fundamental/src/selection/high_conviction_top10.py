@@ -171,12 +171,11 @@ def _normalize_exception_config(config: Mapping[str, Any] | RightTailExceptionCo
     return RightTailExceptionConfig(**base)
 
 
-def select_high_conviction_top10(
+def _rank_high_conviction_core_pool(
     rows: Sequence[Mapping[str, Any]],
     config: Mapping[str, Any] | None,
     coverage_rows: Sequence[Mapping[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    """Select high-conviction rows after final fundamental scores are already computed."""
     cfg = normalize_config(config)
     coverage_enabled = bool(cfg.get("coverage_gating"))
     coverage = _build_coverage(coverage_rows or []) if coverage_enabled else {}
@@ -195,6 +194,28 @@ def select_high_conviction_top10(
         eligible,
         key=lambda r: (-r["composite_score"], -r["score"], -r["confidence_sort"], r["ticker"]),
     )
+    for rank, row in enumerate(ranked, start=1):
+        row["core_candidate_rank"] = rank
+    return {
+        "ranked_rows": ranked,
+        "rejected_rows": rejected,
+        "warnings": warnings,
+        "config_snapshot": cfg,
+    }
+
+
+def select_high_conviction_top10(
+    rows: Sequence[Mapping[str, Any]],
+    config: Mapping[str, Any] | None,
+    coverage_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Select high-conviction rows after final fundamental scores are already computed."""
+    pool = _rank_high_conviction_core_pool(rows, config, coverage_rows)
+    cfg = pool["config_snapshot"]
+    ranked = pool["ranked_rows"]
+    rejected = list(pool["rejected_rows"])
+    warnings = list(pool["warnings"])
+
     selected = ranked[: int(cfg["top_n"])]
     _annotate_soft_balance(selected, cfg, warnings)
     selected_ids = {r["_row_id"] for r in selected}
