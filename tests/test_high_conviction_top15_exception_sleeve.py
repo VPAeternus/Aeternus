@@ -1,9 +1,11 @@
 import csv
 
 from tradingagents.research.fundamental.src.selection.high_conviction_top10 import (
+    CORE_DETERIORATION_STRICT_ACTION,
     RightTailExceptionConfig,
     _is_right_tail_exception_candidate,
     _right_tail_exception_score,
+    build_core_deterioration_review_rows,
     select_high_conviction_top10,
     select_high_conviction_top15_exception_sleeve,
     select_top15_from_csv,
@@ -137,6 +139,22 @@ def test_exception_sleeve_applies_coverage_gate():
     assert [r["ticker"] for r in result["exception_rows"]] == ["GOOD"]
 
 
+def test_core_deterioration_review_queue_flags_strict_core_rows():
+    rows = [row(f"C{i}", 100 - i) for i in range(10)]
+    rows[6].update(score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="")
+
+    result = select_high_conviction_top15_exception_sleeve(rows, {"enabled": False})
+    review_rows = build_core_deterioration_review_rows(result["selected_rows"])
+
+    assert len(review_rows) == 1
+    flagged = review_rows[0]
+    assert flagged["ticker"] == "C6"
+    assert flagged["core_deterioration_review_flag"] == 1
+    assert flagged["core_deterioration_downgrade_flag"] == 1
+    assert flagged["core_deterioration_strict_override_required"] == 1
+    assert flagged["core_deterioration_recommended_action"] == CORE_DETERIORATION_STRICT_ACTION
+
+
 def test_daily_recommendation_labels_exceptions_as_starter_or_research(tmp_path):
     scores = tmp_path / "scores.csv"
     out = tmp_path / "out"
@@ -150,7 +168,9 @@ def test_daily_recommendation_labels_exceptions_as_starter_or_research(tmp_path)
     text = (out / "high_conviction_top15_daily_recommendation.md").read_text(encoding="utf-8")
     assert "right-tail research / starter-underwriting candidates" in text
     assert "Do not equal-weight all 15 automatically" in text
+    assert "Core deterioration review gate" in text
     assert result["output_paths"]["csv"].endswith("high_conviction_top15.csv")
+    assert result["output_paths"]["core_deterioration_review_queue"].endswith("core_deterioration_review_queue.csv")
 
 
 def test_daily_recommendation_uses_configured_queue_capacity(tmp_path):

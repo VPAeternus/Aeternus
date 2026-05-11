@@ -41,6 +41,24 @@ HP_OVERRIDE_RE = re.compile(r"^hp\d+_(?:priority|high_priority|llm_supported|ext
 TIER_OVERRIDE_RE = re.compile(r"^tier\d+_L\d+_(?:priority|high_priority|llm_supported|rescan|signal|confirmed)$")
 OPERATING_SETTING = "high_conviction_top10_v2_final"
 TOP15_OPERATING_SETTING = "high_conviction_top15_v3_exception_sleeve"
+CORE_DETERIORATION_REVIEW_ACTION = "manual_review_before_buy_underwriting"
+CORE_DETERIORATION_STRICT_ACTION = "move_from_core_buy_underwriting_to_scout_review_unless_pm_override"
+CORE_DETERIORATION_FIELDS = [
+    "ticker",
+    "quarter",
+    "selection_rank",
+    "selected_sleeve",
+    "entry_score_0_100",
+    "score_change",
+    "negative_revision_risk",
+    "pre_llm_fundamental_bucket",
+    "primary_theme",
+    "core_deterioration_review_flag",
+    "core_deterioration_downgrade_flag",
+    "core_deterioration_strict_override_required",
+    "core_deterioration_recommended_action",
+    "core_deterioration_reason_codes",
+]
 DAILY_RECOMMENDATION_BULLETS = [
     "Run broad discovery / source Top-30.",
     "Deep-analyze selected names.",
@@ -226,6 +244,63 @@ def select_high_conviction_top15_exception_sleeve(
     }
 
 
+def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
+    sleeve = str(row.get("selected_sleeve", "")).strip().lower()
+    selected_rank = to_float(row.get("selection_rank") or row.get("selected_sleeve_rank"))
+    rank_int = int(selected_rank) if selected_rank is not None else None
+    entry_score = to_float(row.get("entry_score_0_100") or row.get("score"))
+    score_change = to_float(row.get("score_change"))
+    negative_revision_risk = to_float(row.get("negative_revision_risk"))
+    theme_blank = not str(row.get("primary_theme") or "").strip()
+    weak_pre_llm = str(row.get("pre_llm_fundamental_bucket") or "").strip().lower() == "weak"
+    review = (
+        sleeve == "core"
+        and entry_score is not None and entry_score >= 80
+        and score_change is not None and score_change <= -1
+        and negative_revision_risk is not None and negative_revision_risk >= 2
+    )
+    downgrade = bool(review and (rank_int in {7, 8} or theme_blank or weak_pre_llm))
+    strict = bool(downgrade and theme_blank and weak_pre_llm)
+    reasons: list[str] = []
+    if review:
+        reasons.extend(["entry_score_gte_80", "score_change_lte_minus_1", "negative_revision_risk_gte_2"])
+    if rank_int in {7, 8}:
+        reasons.append("selection_rank_7_or_8")
+    if theme_blank:
+        reasons.append("primary_theme_blank")
+    if weak_pre_llm:
+        reasons.append("pre_llm_fundamental_bucket_weak")
+    action = CORE_DETERIORATION_STRICT_ACTION if strict else CORE_DETERIORATION_REVIEW_ACTION if review else ""
+    return {
+        "core_deterioration_review_flag": int(bool(review)),
+        "core_deterioration_downgrade_flag": int(downgrade),
+        "core_deterioration_strict_override_required": int(strict),
+        "core_deterioration_recommended_action": action,
+        "core_deterioration_reason_codes": ";".join(reasons) if review else "",
+    }
+
+
+def build_core_deterioration_review_rows(rows: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    review_rows: list[dict[str, Any]] = []
+    for row in rows:
+        flags = core_deterioration_flags(row)
+        if not flags["core_deterioration_review_flag"]:
+            continue
+        review_rows.append({
+            "ticker": str(row.get("ticker", "")).upper(),
+            "quarter": row.get("quarter", ""),
+            "selection_rank": row.get("selection_rank", row.get("selected_sleeve_rank", "")),
+            "selected_sleeve": row.get("selected_sleeve", ""),
+            "entry_score_0_100": row.get("entry_score_0_100", row.get("score", "")),
+            "score_change": row.get("score_change", ""),
+            "negative_revision_risk": row.get("negative_revision_risk", ""),
+            "pre_llm_fundamental_bucket": row.get("pre_llm_fundamental_bucket", ""),
+            "primary_theme": row.get("primary_theme", ""),
+            **flags,
+        })
+    return review_rows
+
+
 def select_from_csv(
     scores_csv: str | Path,
     output_root: str | Path,
@@ -266,9 +341,14 @@ def select_top15_from_csv(
     csv_path = out_root / "high_conviction_top15.csv"
     json_path = out_root / "high_conviction_top15.json"
     recommendation_path = out_root / "high_conviction_top15_daily_recommendation.md"
+    core_deterioration_path = out_root / "core_deterioration_review_queue.csv"
+    core_deterioration_rows = build_core_deterioration_review_rows(result["selected_rows"])
+    result["core_deterioration_review_rows"] = core_deterioration_rows
+    result["core_deterioration_review_count"] = len(core_deterioration_rows)
     result["date"] = date
-    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "recommendation_md": str(recommendation_path)}
+    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "recommendation_md": str(recommendation_path), "core_deterioration_review_queue": str(core_deterioration_path)}
     _write_csv(csv_path, result["selected_rows"])
+    _write_csv_with_fields(core_deterioration_path, core_deterioration_rows, CORE_DETERIORATION_FIELDS)
     json_path.write_text(json.dumps(result, indent=2, sort_keys=True), encoding="utf-8")
     recommendation_path.write_text(_daily_recommendation_markdown(result), encoding="utf-8")
     return result
@@ -514,6 +594,7 @@ def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
         queue_capacity = int(rec.get("core_n", exception_cfg.get("core_n", core_count)) or core_count) + int(exception_slots or 0)
         if queue_capacity <= 0:
             queue_capacity = len(rows)
+        deterioration_rows = result.get("core_deterioration_review_rows", [])
         lines = [
             "# Fundamental High-Conviction Top-15 Daily Recommendation",
             "",
@@ -528,14 +609,23 @@ def _daily_recommendation_markdown(result: Mapping[str, Any]) -> str:
             f"Do not equal-weight all {queue_capacity} automatically.",
             "Use high_conviction_top15_v3_exception_sleeve as observed-data extension; do not claim full AKG+macro production v2 validation.",
             "",
+            "## Core deterioration review gate",
+            "",
+            f"Core deterioration review rows: `{len(deterioration_rows)}`.",
+            "If present, review `core_deterioration_review_queue.csv` before core buy-underwriting. Strict rows move from core buy-underwriting to scout/review unless PM overrides.",
+            "",
             "## Selected names",
             "",
-            "| sleeve | rank | ticker | treatment | score | exception_score | reasons |",
-            "| --- | ---: | --- | --- | ---: | ---: | --- |",
+            "| sleeve | rank | ticker | treatment | score | exception_score | core_deterioration_action | reasons |",
+            "| --- | ---: | --- | --- | ---: | ---: | --- | --- |",
         ]
         for row in rows:
-            lines.append("| {sleeve} | {rank} | {ticker} | {treatment} | {score} | {exscore} | {reasons} |".format(
-                sleeve=row.get("selected_sleeve", ""), rank=row.get("selected_sleeve_rank", row.get("selection_rank", "")), ticker=row.get("ticker", ""), treatment=row.get("portfolio_treatment", ""), score=row.get("score", row.get("entry_score_0_100", "")), exscore=row.get("right_tail_exception_score", ""), reasons=",".join(str(x) for x in row.get("right_tail_exception_reason_codes", [])),
+            flags = core_deterioration_flags(row)
+            treatment = row.get("portfolio_treatment", "")
+            if flags.get("core_deterioration_strict_override_required"):
+                treatment = "core_scout_review_unless_pm_override"
+            lines.append("| {sleeve} | {rank} | {ticker} | {treatment} | {score} | {exscore} | {core_action} | {reasons} |".format(
+                sleeve=row.get("selected_sleeve", ""), rank=row.get("selected_sleeve_rank", row.get("selection_rank", "")), ticker=row.get("ticker", ""), treatment=treatment, score=row.get("score", row.get("entry_score_0_100", "")), exscore=row.get("right_tail_exception_score", ""), core_action=flags.get("core_deterioration_recommended_action", ""), reasons=",".join(str(x) for x in row.get("right_tail_exception_reason_codes", [])),
             ))
         return "\n".join(lines) + "\n"
     lines = [
@@ -782,6 +872,14 @@ def _write_csv(path: Path, rows: Sequence[Mapping[str, Any]]) -> None:
                 fieldnames.append(key)
     with path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames or ["ticker"])
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v for k, v in row.items()})
+
+
+def _write_csv_with_fields(path: Path, rows: Sequence[Mapping[str, Any]], fieldnames: Sequence[str]) -> None:
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=list(fieldnames))
         writer.writeheader()
         for row in rows:
             writer.writerow({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v for k, v in row.items()})

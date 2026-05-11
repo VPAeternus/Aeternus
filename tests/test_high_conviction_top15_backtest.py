@@ -85,6 +85,7 @@ def test_top15_backtest_outputs_exist(tmp_path):
         "strategy_by_quarter_top15.csv",
         "core_vs_exception_contribution.csv",
         "exception_slot_diagnostics.csv",
+        "core_deterioration_review_queue.csv",
         "right_tail_capture_comparison.csv",
         "left_tail_penalty_comparison.csv",
         "missed_right_tail_after_top15.csv",
@@ -210,6 +211,8 @@ def test_manifest_records_right_tail_queue_no_leakage_and_selected_hash(tmp_path
     out, _ = _fixture(tmp_path)
     manifest = json.loads((out / "run_manifest.json").read_text())
     assert "right_tail_queue_outputs" in manifest
+    assert "core_deterioration_review_count" in manifest
+    assert "core_deterioration_review_queue" in manifest["right_tail_queue_outputs"]
     assert "right_tail_queue_feature_columns" not in manifest
     assert not set(manifest["right_tail_queue_input_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])
     assert not set(manifest["right_tail_queue_scoring_columns"]) & set(manifest["right_tail_queue_forbidden_columns"])

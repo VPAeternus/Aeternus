@@ -130,6 +130,7 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     selected = read_csv(bundle_dir / "selected_names_by_quarter_top15.csv")
     contrib = read_csv(bundle_dir / "core_vs_exception_contribution.csv")
     right_tail = read_csv(bundle_dir / "right_tail_capture_comparison.csv")
+    core_deterioration = read_csv(bundle_dir / "core_deterioration_review_queue.csv")
     left_tail = read_csv(bundle_dir / "left_tail_penalty_comparison.csv")
     missed = read_csv(bundle_dir / "missed_right_tail_after_top15.csv")
     candidate_queue = read_csv(bundle_dir / "top15_exception_candidate_queue.csv")
@@ -153,6 +154,7 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     queue_summary = pd.DataFrame([
         {"queue": "top15_exception_candidate", "row_count": len(candidate_queue), "avg_right_tail_evidence_score": num(candidate_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "right_tail_scout", "row_count": len(scout_queue), "avg_right_tail_evidence_score": num(scout_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
+        {"queue": "core_deterioration_review", "row_count": len(core_deterioration), "avg_right_tail_evidence_score": ""},
         {"queue": "demote_review_full_audit", "row_count": len(demote_queue), "avg_right_tail_evidence_score": num(demote_queue.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "demote_review_priority_1_daily", "row_count": len(demote_priority_1), "avg_right_tail_evidence_score": num(demote_priority_1.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
         {"queue": "demote_review_priority_2", "row_count": len(demote_priority_2), "avg_right_tail_evidence_score": num(demote_priority_2.get("right_tail_evidence_score", pd.Series(dtype=str))).mean()},
@@ -179,6 +181,7 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         "exception_sleeve_drivers.csv": exception_drivers,
         "core_vs_exception_summary.csv": sleeve_summary,
         "left_tail_penalty_comparison.csv": left_tail,
+        "core_deterioration_review_queue.csv": core_deterioration,
         "missed_right_tail_after_top15.csv": missed,
         "right_tail_queue_summary.csv": queue_summary,
         "target_visibility_metrics.csv": target_visibility_metrics,
@@ -278,9 +281,10 @@ Final behavior:
 1. Top-10 Core: clean buy-underwriting queue.
 2. Top-15 Exception Sleeve: selected right-tail exception/starter-underwriting rows; output unchanged.
 3. Top-15 Exception Candidate Queue: visibility/staging only.
-4. Demote Review: full file is audit-only; daily PM consumption uses `demote_review_priority_1.csv`.
-5. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
-6. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
+4. Core Deterioration Review: selected core rows that require manual review before buy-underwriting; strict rows move to scout/review unless PM overrides.
+5. Demote Review: full file is audit-only; daily PM consumption uses `demote_review_priority_1.csv`.
+6. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
+7. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
 ## No-leakage and caveats
 
@@ -298,6 +302,7 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/core_vs_exception_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/left_tail_penalty_comparison.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/missed_right_tail_after_top15.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_review_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/right_tail_queue_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`

@@ -19,6 +19,8 @@
     "tier_rule_version",
     "winner_90d_30pct"
   ],
+  "core_deterioration_review_count": 16,
+  "core_deterioration_strict_override_count": 11,
   "demote_review_low_priority_count": 0,
   "demote_review_priority_1_count": 99,
   "demote_review_priority_2_count": 233,
@@ -116,6 +118,7 @@
   "output_dir": "outputs/fundamental_backtest/high_conviction_top15_exception_sleeve",
   "output_hashes": {
     "README_ANALYSIS.md": "45370eb920c4f21bd3629f0208a244de6c7128677adad17844ab01df247b18dc",
+    "core_deterioration_review_queue.csv": "75daa5d533fd01762d1df006de0cf7d213dfc23d794478f6efc50c32841e31c9",
     "core_vs_exception_contribution.csv": "f90df5c6bc48802173fc461a522120771d115e5354df6f2f2eae9062d468b76d",
     "demote_review_low_priority.csv": "964b14da81416c0b5d81eb923597ed126e6360e352336258ee03e789006c7749",
     "demote_review_priority_1.csv": "0ce16972c0fa4c0013419bc7451e0e449976a769d85894f951306fbcaa7b2b9c",
@@ -242,6 +245,7 @@
   ],
   "right_tail_queue_no_leakage_statement": "Forbidden return/monitoring/final-rank/current-return/return_since/target/label/winner/loser fields are removed before scoring/routing; input columns include pass-through fields, scoring columns are the right-tail fields actually referenced by scoring/routing.",
   "right_tail_queue_outputs": {
+    "core_deterioration_review_queue": "core_deterioration_review_queue.csv",
     "demote_review_low_priority": "demote_review_low_priority.csv",
     "demote_review_priority_1": "demote_review_priority_1.csv",
     "demote_review_priority_2": "demote_review_priority_2.csv",
@@ -294,7 +298,7 @@
     "theme_tailwind_score",
     "ticker"
   ],
-  "run_id": "top15-exception-ec6fffc5-dcd7-4038-b181-2f967ac0749c",
+  "run_id": "top15-exception-cb275e1a-5b7b-404f-86ab-4bc8b0936024",
   "runner_version": "fundamental_high_conviction_top15_exception_sleeve_backtest_v1",
   "target_actionable_research_routed_count": 6,
   "target_buy_underwriting_routed_count": 1,

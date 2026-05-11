@@ -414,7 +414,11 @@ python3 -m cli.main fundamental-right-tail-queues \
   --date YYYY-MM-DD
 ```
 
-Default outputs:
+Default Top-15 output:
+
+- `core_deterioration_review_queue.csv` core names requiring manual review before buy-underwriting; strict rows move to scout/review unless PM overrides
+
+Default right-tail visibility outputs:
 
 - `top15_exception_candidate_queue.csv`
 - `right_tail_scout_queue.csv`
@@ -430,9 +434,10 @@ Default outputs:
 Daily review order:
 
 1. Top-15 core / exception names
-2. `right_tail_scout_queue.csv`
-3. `demote_review_priority_1.csv`
-4. top-ranked names from `thin_signal_watchlist_top100.csv`
+2. `core_deterioration_review_queue.csv`
+3. `right_tail_scout_queue.csv`
+4. `demote_review_priority_1.csv`
+5. top-ranked names from `thin_signal_watchlist_top100.csv`
 
 Do not treat scout, demote-review, or thin-signal queues as buy lists. Approved live use is visibility/research only after Top-15 selection is frozen. Full production-v2 historical validation still depends on PIT AKG/theme/macro provenance; missing provenance should remain visible in audit artifacts, not silently neutralized.
 

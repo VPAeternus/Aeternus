@@ -27,7 +27,9 @@ from tradingagents.research.fundamental.backtests.high_conviction_top10 import (
     _write_csv,
 )
 from tradingagents.research.fundamental.src.selection.high_conviction_top10 import (
+    CORE_DETERIORATION_FIELDS,
     RightTailExceptionConfig,
+    build_core_deterioration_review_rows,
     select_high_conviction_top15_exception_sleeve,
 )
 from tradingagents.research.fundamental.src.selection.right_tail_queues import (
@@ -68,6 +70,7 @@ OUTPUT_FILES = [
     "strategy_by_quarter_top15.csv",
     "core_vs_exception_contribution.csv",
     "exception_slot_diagnostics.csv",
+    "core_deterioration_review_queue.csv",
     "right_tail_capture_comparison.csv",
     "left_tail_penalty_comparison.csv",
     "missed_right_tail_after_top15.csv",
@@ -343,6 +346,8 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "strategy_by_quarter_top15.csv", quarter_rows, ["variant", "quarter", "pick_count", "eligible_count", "shortfall"])
     _write_csv(out / "core_vs_exception_contribution.csv", _core_exception_rows(selected_rows), ["variant", "sleeve", "pick_count", "avg_return_90d_pct", "winner_90d_30pct_rate", "loser_90d_minus30pct_rate", "contribution_to_strategy_avg", "top_winners", "top_losers"])
     _write_csv(out / "exception_slot_diagnostics.csv", diagnostics, ["variant", "quarter", "selected_exception_count", "available_exception_candidate_count", "warning_codes", "selected_exception_tickers", "single_rm_exception_count", "rm2plus_exception_count", "no_theme_no_llm_exception_count"])
+    core_deterioration_rows = build_core_deterioration_review_rows([row for row in selected_rows if row.get("variant") == main_top15_variant])
+    _write_csv(out / "core_deterioration_review_queue.csv", core_deterioration_rows, CORE_DETERIORATION_FIELDS)
     _write_csv(out / "right_tail_capture_comparison.csv", comparison, ["ticker", "quarter", "return_90d_pct", "old_v2_status", "top15_status", "selected_sleeve", "selected_sleeve_rank", "right_tail_exception_score", "mechanical_exclusion_before", "mechanical_status_after"])
     _write_csv(out / "left_tail_penalty_comparison.csv", left_tail, ["variant", "loser_90d_minus30pct_rate", "avg_return_90d_pct", "2025Q1_avg_90d", "2025Q1_loser_rate", "delta_loser_rate_vs_top10"])
     top15_selected_keys = {
@@ -435,6 +440,7 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         "no_leakage_statement": "Top15 selector receives only allowlisted selection-time fields plus safe hard-gate/confidence/coverage fields; labels/returns are attached after selection is frozen.",
         "right_tail_queue_outputs": {
             "top15_exception_candidate_queue": "top15_exception_candidate_queue.csv",
+            "core_deterioration_review_queue": "core_deterioration_review_queue.csv",
             "right_tail_scout_queue": "right_tail_scout_queue.csv",
             "demote_review_queue": "demote_review_queue.csv",
             "demote_review_priority_1": "demote_review_priority_1.csv",
@@ -447,6 +453,8 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
             "target_miss_rescue_audit": "target_miss_rescue_audit.csv",
             "v4_rescue_variant_summary": "v4_rescue_variant_summary.csv",
         },
+        "core_deterioration_review_count": len(core_deterioration_rows),
+        "core_deterioration_strict_override_count": sum(str(row.get("core_deterioration_strict_override_required")) == "1" for row in core_deterioration_rows),
         "right_tail_queue_forbidden_columns": sorted(set(FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS) | set(forbidden_right_tail_input_columns)),
         "right_tail_queue_input_columns": right_tail_input_columns,
         "right_tail_queue_scoring_columns": right_tail_scoring_columns,
