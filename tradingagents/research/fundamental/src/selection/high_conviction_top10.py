@@ -63,7 +63,7 @@ CORE_DETERIORATION_REFILL_FIELDS = [
     "demoted_primary_theme", "demoted_rm_count", "demoted_hp_count", "demoted_market_repricing_score",
     "high_score_deterioration_flag", "weak_no_theme_repricing_stack_flag",
     "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
-    "core_deterioration_reason_codes", "demoted_return_90d_pct", "replacement_return_90d_pct", "replacement_delta_90d_pct",
+    "core_deterioration_reason_codes",
 ]
 DAILY_RECOMMENDATION_BULLETS = [
     "Run broad discovery / source Top-30.",
@@ -355,9 +355,6 @@ def _replacement_diagnostic(mode: str, demoted: Mapping[str, Any], replacement: 
         "core_deterioration_downgrade_flag": flags.get("core_deterioration_downgrade_flag", ""),
         "core_deterioration_strict_override_required": flags.get("core_deterioration_strict_override_required", ""),
         "core_deterioration_reason_codes": flags.get("core_deterioration_reason_codes", ""),
-        "demoted_return_90d_pct": "",
-        "replacement_return_90d_pct": "",
-        "replacement_delta_90d_pct": "",
     }
 
 

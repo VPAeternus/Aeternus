@@ -516,10 +516,44 @@ def test_top15_refill_shadow_replacement_uses_ex_ante_rank_not_return_labels():
 
     diagnostic = result["core_deterioration_refill_rows"][0]
     assert diagnostic["replacement_ticker"] == "NEXT"
-    assert diagnostic["demoted_return_90d_pct"] == ""
-    assert diagnostic["replacement_return_90d_pct"] == ""
-    assert diagnostic["replacement_delta_90d_pct"] == ""
+    assert "demoted_return_90d_pct" not in diagnostic
+    assert "replacement_return_90d_pct" not in diagnostic
+    assert "replacement_delta_90d_pct" not in diagnostic
     assert "LOWER" not in [r["ticker"] for r in result["selected_rows"]]
+
+
+def test_top15_refill_shadow_writer_omits_return_and_delta_headers(tmp_path):
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_top15_core_deterioration_refill_shadow_from_csv
+
+    input_csv = tmp_path / "scores.csv"
+    output_dir = tmp_path / "out"
+    rows = [row(f"C{i}", 100 - i, return_90d_pct="10") for i in range(9)]
+    rows.insert(5, row(
+        "BAD", 95, return_90d_pct="-40",
+        score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="",
+        rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
+        rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
+        rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
+    ))
+    rows.append(row("NEXT", 89, return_90d_pct="100"))
+
+    fieldnames = sorted({key for item in rows for key in item})
+    with input_csv.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    select_top15_core_deterioration_refill_shadow_from_csv(
+        input_csv,
+        output_dir,
+        config={"enabled": True, "exception_slots": 0, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
+    )
+
+    replacements_csv = output_dir / "core_deterioration_refill_shadow_replacements.csv"
+    with replacements_csv.open(newline="", encoding="utf-8") as handle:
+        header = next(csv.reader(handle))
+    assert all("return" not in column for column in header)
+    assert all("delta" not in column for column in header)
 
 
 def test_top15_refill_shadow_blocks_below_cutoff_deterioration_from_exceptions():
