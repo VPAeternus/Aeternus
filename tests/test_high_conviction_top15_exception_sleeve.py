@@ -210,6 +210,7 @@ def test_rank_7_8_alone_does_not_trigger_core_deterioration_flags():
     flags = core_deterioration_flags(clean)
 
     assert flags["core_deterioration_rank_context_flag"] == 1
+    assert "rank_7_8_context_only" in flags["core_deterioration_reason_codes"].split(";")
     assert flags["core_deterioration_review_flag"] == 0
     assert flags["core_deterioration_downgrade_flag"] == 0
     assert flags["core_deterioration_strict_override_required"] == 0

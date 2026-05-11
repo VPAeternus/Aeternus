@@ -270,7 +270,7 @@ def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
     if weak_stack:
         reasons.append("weak_no_theme_repricing_stack")
     if rank_context:
-        reasons.append("selection_rank_7_or_8")
+        reasons.append("selection_rank_7_or_8" if review else "rank_7_8_context_only")
     action = CORE_DETERIORATION_STRICT_ACTION if strict else CORE_DETERIORATION_REVIEW_ACTION if review else ""
     return {
         "core_deterioration_rm_count": rm_count,
@@ -283,7 +283,7 @@ def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
         "core_deterioration_downgrade_flag": int(downgrade),
         "core_deterioration_strict_override_required": int(strict),
         "core_deterioration_recommended_action": action,
-        "core_deterioration_reason_codes": ";".join(reasons) if review else "",
+        "core_deterioration_reason_codes": ";".join(reasons),
     }
 
 
