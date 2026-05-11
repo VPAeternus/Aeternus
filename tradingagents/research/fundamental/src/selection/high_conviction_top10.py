@@ -1,6 +1,7 @@
 """Deterministic post-score high-conviction Top-N selector."""
 from __future__ import annotations
 
+import copy
 import csv
 import json
 import re
@@ -217,8 +218,8 @@ def rank_high_conviction_core_pool(
     pool = _rank_high_conviction_core_pool(rows, config, coverage_rows)
     return {
         **pool,
-        "ranked_rows": [dict(row) for row in pool["ranked_rows"]],
-        "rejected_rows": [dict(row) for row in pool["rejected_rows"]],
+        "ranked_rows": [copy.deepcopy(row) for row in pool["ranked_rows"]],
+        "rejected_rows": [copy.deepcopy(row) for row in pool["rejected_rows"]],
     }
 
 
