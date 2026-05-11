@@ -169,6 +169,30 @@ Daily outputs:
 - `core_deterioration_refill_shadow_replacements.csv` — the comparison table to review proposed removals and replacements.
 - `high_conviction_top15_core_deterioration_refill_shadow.json` — machine-readable detail for audit/debugging.
 
+Operating cadence:
+
+- The official Top-15 can change daily when the pipeline is rerun.
+- The shadow refill list can also change daily when the pipeline is rerun.
+- The 90-day performance comparison updates only after enough time has passed to know the forward returns.
+- Historical proof therefore updates on a delayed 90-day / quarterly cadence, but daily review output can update every day.
+
+What can realistically change daily:
+
+- New 8-Ks, press releases, earnings updates, or newly cached SEC documents.
+- Price and repricing momentum.
+- Macro/regime permission.
+- New theme, AKG, or dealflow evidence.
+- New names entering the universe.
+- More complete document extraction after a rerun.
+
+Important practical point: the core fundamental score is mostly filing-driven. For many names, it should stay stable between quarterly filings unless new evidence arrives. Most major deterioration/refill movement should cluster around earnings and filing cycles. If the shadow refill list changes sharply day-to-day without new evidence, treat that as a scoring-stability issue to investigate.
+
+Current interpretation:
+
+- The historical shadow refill results look better than the official Top-15 v3 baseline, with higher average 90-day return and lower observed loser rate.
+- That supports using it as a PM review tool now.
+- It does not yet make it an automatic official replacement rule; forward validation is still required.
+
 ## No-leakage and caveats
 
 - Selector receives selection-time fields only; returns are attached after selection is frozen.
