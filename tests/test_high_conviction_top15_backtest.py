@@ -364,6 +364,42 @@ def test_core_deterioration_refill_shadow_outputs_full_top15_and_replacement_dia
     assert "core_deterioration_refill_shadow_outputs" in manifest
 
 
+def test_refill_shadow_replacement_diagnostics_keep_unmatched_demotions(tmp_path):
+    pit = tmp_path / "pit.csv"
+    prior = tmp_path / "prior.csv"
+    out = tmp_path / "out"
+    rows = [_row(f"C{i}", score=100 - i, ret90=5 + i) for i in range(10)]
+    rows[5].update({
+        "ticker": "BAD",
+        "entry_score_0_100": "95",
+        "score_change": "-2",
+        "negative_revision_risk": "2",
+        "pre_llm_fundamental_bucket": "weak",
+        "primary_theme": "",
+        "rm1_low_price_dislocation_momentum": "RM1 - Low-price dislocation momentum",
+        "rm2_weak_acceleration": "RM2 - Weak-bucket acceleration",
+        "rm4_persistent_repricing_wave": "RM4 - Persistent repricing wave",
+        "return_90d_pct": "-40",
+        "winner_90d_30pct": "False",
+        "loser_90d_minus30pct": "True",
+    })
+    rows += [_row(ticker, score=30, ret90=0, eligible_for_backtest="False") for ticker in TARGET_RIGHT_TAIL_NAMES]
+    _write_csv(pit, rows)
+    baseline = [dict(r, variant="high_conviction_top10_v2_final", selection_rank=i + 1) for i, r in enumerate(rows[:10])]
+    _write_csv(prior, baseline)
+
+    run_high_conviction_top15_exception_sleeve_backtest(pit, prior, out)
+    replacements = _read_rows(out / "core_deterioration_refill_shadow_replacements.csv")
+
+    bad_rows = [
+        r for r in replacements
+        if r["variant"] == "top15_v4_core_deterioration_refill_strict" and r["demoted_ticker"] == "BAD"
+    ]
+    assert len(bad_rows) == 1
+    assert bad_rows[0]["replacement_ticker"] == ""
+    assert bad_rows[0]["replacement_delta_90d_pct"] == ""
+
+
 def test_refill_shadow_does_not_change_official_top15_selected_output(tmp_path):
     out, _ = _fixture(tmp_path)
     first = (out / "selected_names_by_quarter_top15.csv").read_text(encoding="utf-8")

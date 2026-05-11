@@ -305,9 +305,10 @@ def _core_refill_flag_row(row: Mapping[str, Any], rank: int) -> dict[str, Any]:
     return {**dict(row), "selected_sleeve": "core", "selected_sleeve_rank": rank, "selection_rank": rank}
 
 
-def _build_refill_replacement_row(variant: str, quarter: str, mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any], by_ticker: Mapping[str, Mapping[str, Any]]) -> dict[str, Any]:
+def _build_refill_replacement_row(variant: str, quarter: str, mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any] | None, by_ticker: Mapping[str, Mapping[str, Any]]) -> dict[str, Any]:
     demoted_ticker = str(demoted.get("ticker", "")).upper()
-    replacement_ticker = str(replacement.get("ticker", "")).upper()
+    replacement_row = replacement or {}
+    replacement_ticker = str(replacement_row.get("ticker", "")).upper()
     d_original = by_ticker.get(demoted_ticker, {})
     r_original = by_ticker.get(replacement_ticker, {})
     d_ret = _to_float(d_original.get("return_90d_pct"))
@@ -320,9 +321,9 @@ def _build_refill_replacement_row(variant: str, quarter: str, mode: str, demoted
         "demoted_ticker": demoted_ticker,
         "replacement_ticker": replacement_ticker,
         "demoted_core_candidate_rank": demoted.get("core_candidate_rank", ""),
-        "replacement_core_candidate_rank": replacement.get("core_candidate_rank", ""),
+        "replacement_core_candidate_rank": replacement_row.get("core_candidate_rank", ""),
         "demoted_entry_score_0_100": demoted.get("entry_score_0_100", ""),
-        "replacement_entry_score_0_100": replacement.get("entry_score_0_100", ""),
+        "replacement_entry_score_0_100": replacement_row.get("entry_score_0_100", ""),
         "demoted_score_change": demoted.get("score_change", ""),
         "demoted_negative_revision_risk": demoted.get("negative_revision_risk", ""),
         "demoted_pre_llm_fundamental_bucket": demoted.get("pre_llm_fundamental_bucket", ""),
@@ -369,8 +370,10 @@ def _build_core_deterioration_refill_shadow(variant: str, mode: str, quarter: st
     replacements_raw = [r for r in selected_core_raw if (_to_float(r.get("core_candidate_rank")) or 0) > 10]
     replacement_by_ticker: dict[str, str] = {}
     replacement_rows: list[dict[str, Any]] = []
-    for demoted, replacement in zip(demoted_raw, replacements_raw):
-        replacement_by_ticker[str(replacement.get("ticker", "")).upper()] = str(demoted.get("ticker", "")).upper()
+    for idx, demoted in enumerate(demoted_raw):
+        replacement = replacements_raw[idx] if idx < len(replacements_raw) else None
+        if replacement is not None:
+            replacement_by_ticker[str(replacement.get("ticker", "")).upper()] = str(demoted.get("ticker", "")).upper()
         replacement_rows.append(_build_refill_replacement_row(variant, quarter, mode, demoted, replacement, by_ticker))
     for rank, row in enumerate(selected_core_raw, 1):
         ticker = str(row.get("ticker", "")).upper()
