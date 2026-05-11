@@ -5,6 +5,7 @@ from tradingagents.research.fundamental.src.selection.high_conviction_top10 impo
     RightTailExceptionConfig,
     _is_right_tail_exception_candidate,
     _normalize_core_deterioration_refill_config,
+    _rank_high_conviction_core_pool,
     _right_tail_exception_score,
     build_core_deterioration_review_rows,
     select_high_conviction_top10,
@@ -55,8 +56,6 @@ def test_top15_preserves_top10_when_exception_disabled():
 
 
 def test_rank_high_conviction_core_pool_matches_top10_contract():
-    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import _rank_high_conviction_core_pool, select_high_conviction_top10
-
     rows = [row(f"C{i}", 100 - i) for i in range(12)]
     pool = _rank_high_conviction_core_pool(rows, {"top_n": 10}, None)
     top10 = select_high_conviction_top10(rows, {"top_n": 10})

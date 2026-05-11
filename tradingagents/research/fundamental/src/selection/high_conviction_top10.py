@@ -176,6 +176,10 @@ def _rank_high_conviction_core_pool(
     config: Mapping[str, Any] | None,
     coverage_rows: Sequence[Mapping[str, Any]] | None = None,
 ) -> dict[str, Any]:
+    """Return mutable assessed rows ranked for internal selector/refill use.
+
+    Rows are returned before selection annotations and public output conversion.
+    """
     cfg = normalize_config(config)
     coverage_enabled = bool(cfg.get("coverage_gating"))
     coverage = _build_coverage(coverage_rows or []) if coverage_enabled else {}
