@@ -52,6 +52,17 @@ CORE_DETERIORATION_FIELDS = [
     "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
     "core_deterioration_recommended_action", "core_deterioration_reason_codes",
 ]
+CORE_DETERIORATION_REFILL_MODES = {"strict", "downgrade", "all_review"}
+CORE_DETERIORATION_REFILL_FIELDS = [
+    "variant", "quarter", "mode", "demoted_ticker", "replacement_ticker",
+    "demoted_core_candidate_rank", "replacement_core_candidate_rank",
+    "demoted_entry_score_0_100", "replacement_entry_score_0_100",
+    "demoted_score_change", "demoted_negative_revision_risk", "demoted_pre_llm_fundamental_bucket",
+    "demoted_primary_theme", "demoted_rm_count", "demoted_hp_count", "demoted_market_repricing_score",
+    "high_score_deterioration_flag", "weak_no_theme_repricing_stack_flag",
+    "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
+    "core_deterioration_reason_codes", "demoted_return_90d_pct", "replacement_return_90d_pct", "replacement_delta_90d_pct",
+]
 DAILY_RECOMMENDATION_BULLETS = [
     "Run broad discovery / source Top-30.",
     "Deep-analyze selected names.",
@@ -93,6 +104,13 @@ class RightTailExceptionConfig:
     max_same_sector: int = 3
 
 
+@dataclass(frozen=True)
+class CoreDeteriorationRefillConfig:
+    enabled: bool = False
+    mode: str = "strict"
+    block_deterioration_from_exceptions: bool = True
+
+
 def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     base = asdict(HighConvictionConfig())
     if config:
@@ -106,6 +124,16 @@ def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     base["min_confidence"] = float(base["min_confidence"])
     base["theme_acceleration_override_score"] = float(base["theme_acceleration_override_score"])
     return base
+
+
+def _normalize_core_deterioration_refill_config(config: Mapping[str, Any] | None) -> CoreDeteriorationRefillConfig:
+    nested = config.get("core_deterioration_refill") if isinstance(config, Mapping) and isinstance(config.get("core_deterioration_refill"), Mapping) else config
+    enabled = bool(nested.get("enabled", False)) if isinstance(nested, Mapping) else False
+    mode = str(nested.get("mode", "strict") if isinstance(nested, Mapping) else "strict").strip().lower()
+    if mode not in CORE_DETERIORATION_REFILL_MODES:
+        raise ValueError(f"core deterioration refill mode must be one of {sorted(CORE_DETERIORATION_REFILL_MODES)}")
+    block = bool(nested.get("block_deterioration_from_exceptions", True)) if isinstance(nested, Mapping) else True
+    return CoreDeteriorationRefillConfig(enabled=enabled, mode=mode, block_deterioration_from_exceptions=block)
 
 
 def _normalize_exception_config(config: Mapping[str, Any] | RightTailExceptionConfig | None) -> RightTailExceptionConfig:
@@ -300,6 +328,19 @@ def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
     }
 
 
+def should_refill_demote_core_row(row: Mapping[str, Any], mode: str = "strict") -> bool:
+    mode = str(mode or "strict").strip().lower()
+    if mode not in CORE_DETERIORATION_REFILL_MODES:
+        raise ValueError(f"core deterioration refill mode must be one of {sorted(CORE_DETERIORATION_REFILL_MODES)}")
+    flags = core_deterioration_flags(row)
+    if mode == "strict":
+        return bool(flags.get("core_deterioration_strict_override_required"))
+    if mode == "downgrade":
+        return bool(flags.get("core_deterioration_downgrade_flag"))
+    return bool(flags.get("core_deterioration_review_flag"))
+
+
+
 def build_core_deterioration_review_rows(rows: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
     review_rows: list[dict[str, Any]] = []
     for row in rows:
@@ -470,8 +511,10 @@ def _select_exception_sleeve(
     cfg: RightTailExceptionConfig,
     coverage: dict[str, dict[str, int]] | None = None,
     coverage_enabled: bool = False,
+    blocked_tickers: set[str] | None = None,
 ) -> tuple[list[dict], list[str]]:
     core_tickers = {str(r.get("ticker", "")).upper() for r in core_rows}
+    core_tickers |= {str(t).upper() for t in (blocked_tickers or set())}
     candidates: list[dict[str, Any]] = []
     for raw in all_rows:
         row = dict(raw)

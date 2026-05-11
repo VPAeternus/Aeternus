@@ -314,3 +314,76 @@ def test_top15_rows_use_top15_operating_setting(tmp_path):
     assert "Operating setting: `high_conviction_top15_v3_exception_sleeve`" in text
     assert "Exception sleeve selected 1 of 1 configured slots" in text
     assert "Exception 5" not in text
+
+
+def test_should_refill_demote_core_row_uses_bad_feature_combos_not_rank():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import should_refill_demote_core_row
+
+    strict_combo = row(
+        "STRICT",
+        85,
+        selected_sleeve="core",
+        selection_rank="4",
+        selected_sleeve_rank="4",
+        score_change="-2",
+        negative_revision_risk="2",
+        pre_llm_fundamental_bucket="weak",
+        primary_theme="",
+        rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
+        rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
+        rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
+    )
+    rank_only = row(
+        "RANK7",
+        90,
+        selected_sleeve="core",
+        selection_rank="7",
+        selected_sleeve_rank="7",
+        score_change="1",
+        negative_revision_risk="0",
+        pre_llm_fundamental_bucket="strong",
+        primary_theme="AI infrastructure",
+    )
+
+    assert should_refill_demote_core_row(strict_combo, "strict") is True
+    assert should_refill_demote_core_row(strict_combo, "downgrade") is True
+    assert should_refill_demote_core_row(rank_only, "strict") is False
+    assert should_refill_demote_core_row(rank_only, "downgrade") is False
+
+
+def test_should_refill_demote_core_row_allows_downgrade_without_strict_stack():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import should_refill_demote_core_row
+
+    high_score_blank_weak = row(
+        "DOWN",
+        85,
+        selected_sleeve="core",
+        selection_rank="3",
+        selected_sleeve_rank="3",
+        score_change="-2",
+        negative_revision_risk="2",
+        pre_llm_fundamental_bucket="weak",
+        primary_theme="",
+    )
+
+    assert should_refill_demote_core_row(high_score_blank_weak, "strict") is False
+    assert should_refill_demote_core_row(high_score_blank_weak, "downgrade") is True
+
+
+def test_exception_sleeve_blocks_explicit_deterioration_tickers():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import RightTailExceptionConfig, _select_exception_sleeve
+
+    core_rows = [row(f"C{i}", 100 - i) for i in range(10)]
+    all_rows = core_rows + [
+        row("BAD", 80, rm1_low_price_dislocation_momentum="1", primary_theme="AI"),
+        row("GOOD", 50, rm1_low_price_dislocation_momentum="1", primary_theme="energy"),
+    ]
+
+    exceptions, _ = _select_exception_sleeve(
+        core_rows,
+        all_rows,
+        RightTailExceptionConfig(enabled=True, exception_slots=1),
+        blocked_tickers={"BAD"},
+    )
+
+    assert [r["ticker"] for r in exceptions] == ["GOOD"]
