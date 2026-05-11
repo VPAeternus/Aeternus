@@ -501,6 +501,8 @@ def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception()
     recommendation = result["operating_recommendation"]["recommendation"]
     assert "shadow-only" in recommendation or "not official" in recommendation
     assert "starter-underwriting" not in recommendation
+    assert "buy-underwriting" not in recommendation
+    assert "buy_underwriting" not in recommendation
     assert all(
         r["operating_setting_validation_status"] == "shadow_observed_data_not_approved_operating_selector"
         for r in result["core_rows"]

@@ -460,7 +460,7 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
             "operating_setting": TOP15_REFILL_SHADOW_SETTING,
             "validation_status": "shadow observed-data selector; not approved operating selector",
             "recommendation": (
-                "Shadow-only review/research list; not official Top15 and not buy-underwriting. "
+                "Shadow-only review/research list; not official Top15. "
                 "PM override is required before any action."
             ),
         },
