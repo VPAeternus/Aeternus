@@ -34,20 +34,84 @@ def _write_scores(path):
         writer.writerows(rows)
 
 
+def _invoke_shadow(scores, *args):
+    return runner.invoke(app, [
+        "fundamental-top15-refill-shadow",
+        "--scores-csv", str(scores),
+        *args,
+    ])
+
+
 def test_fundamental_top15_refill_shadow_cli_writes_shadow_outputs(tmp_path):
     scores = tmp_path / "scores.csv"
     out = tmp_path / "out"
     _write_scores(scores)
 
-    result = runner.invoke(app, [
-        "fundamental-top15-refill-shadow",
-        "--scores-csv", str(scores),
+    result = _invoke_shadow(
+        scores,
         "--output-root", str(out),
         "--date", "2026-05-11",
         "--mode", "strict",
-    ])
+    )
 
     assert result.exit_code == 0, result.output
     assert (out / "high_conviction_top15_core_deterioration_refill_shadow.csv").exists()
     assert (out / "core_deterioration_refill_shadow_replacements.csv").exists()
     assert "Wrote shadow" in result.output
+
+
+def test_fundamental_top15_refill_shadow_cli_json_output(tmp_path):
+    scores = tmp_path / "scores.csv"
+    out = tmp_path / "out"
+    _write_scores(scores)
+
+    result = _invoke_shadow(
+        scores,
+        "--output-root", str(out),
+        "--date", "2026-05-11",
+        "--format", "json",
+    )
+
+    assert result.exit_code == 0, result.output
+    assert "high_conviction_top15_v4_core_deterioration_refill_shadow" in result.output
+    assert "core_deterioration_refill_rows" in result.output
+
+
+def test_fundamental_top15_refill_shadow_cli_rejects_invalid_mode(tmp_path):
+    scores = tmp_path / "scores.csv"
+    _write_scores(scores)
+
+    result = _invoke_shadow(scores, "--mode", "rank78_review")
+
+    assert result.exit_code != 0
+    assert "--mode must be" in result.output
+
+
+def test_fundamental_top15_refill_shadow_cli_missing_scores_path(tmp_path):
+    result = _invoke_shadow(tmp_path / "missing.csv")
+
+    assert result.exit_code != 0
+    assert "scores CSV not found" in result.output
+
+
+def test_fundamental_top15_refill_shadow_cli_default_output_root(tmp_path, monkeypatch):
+    scores = tmp_path / "scores.csv"
+    _write_scores(scores)
+    monkeypatch.chdir(tmp_path)
+
+    result = _invoke_shadow(scores, "--date", "2026-05-11")
+
+    assert result.exit_code == 0, result.output
+    out = tmp_path / "eval_results" / "fundamental" / "2026-05-11"
+    assert (out / "high_conviction_top15_core_deterioration_refill_shadow.csv").exists()
+    assert (out / "core_deterioration_refill_shadow_replacements.csv").exists()
+
+
+def test_fundamental_top15_refill_shadow_cli_missing_coverage_manifest(tmp_path):
+    scores = tmp_path / "scores.csv"
+    _write_scores(scores)
+
+    result = _invoke_shadow(scores, "--coverage-manifest", str(tmp_path / "missing_coverage.csv"))
+
+    assert result.exit_code != 0
+    assert "coverage manifest not found" in result.output

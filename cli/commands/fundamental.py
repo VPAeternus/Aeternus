@@ -199,6 +199,10 @@ def fundamental_top15_refill_shadow(
     if fmt not in {"table", "json"}:
         console.print("[red]--format must be table or json[/red]")
         raise typer.Exit(1)
+    mode_value = mode.strip().lower()
+    if mode_value not in {"strict", "downgrade", "all_review"}:
+        console.print("[red]--mode must be strict, downgrade, or all_review[/red]")
+        raise typer.Exit(1)
     scores_path = Path(scores_csv)
     if not scores_path.exists():
         console.print(f"[red]scores CSV not found: {scores_path}[/red]")
@@ -217,7 +221,7 @@ def fundamental_top15_refill_shadow(
         "core_n": core_n,
         "exception_slots": exception_slots,
         "coverage_gating": coverage_path is not None,
-        "core_deterioration_refill": {"enabled": True, "mode": mode.strip().lower()},
+        "core_deterioration_refill": {"enabled": True, "mode": mode_value},
     }
     result = select_top15_core_deterioration_refill_shadow_from_csv(scores_path, out_root, config, coverage_path)
     if fmt == "json":
