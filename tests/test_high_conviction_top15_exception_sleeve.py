@@ -472,19 +472,24 @@ def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception()
         rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
         rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
     ))
-    rows += [row("NEXT", 89), row("GOODX", 50, rm1_low_price_dislocation_momentum="1", primary_theme="AI")]
+    rows += [row("NEXT", 89)]
+    rows += [row(f"GOOD{i}", 50 + i, rm1_low_price_dislocation_momentum="1", primary_theme="AI") for i in range(5)]
 
     result = select_high_conviction_top15_core_deterioration_refill_shadow(
         rows,
-        {"enabled": True, "exception_slots": 1, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
+        {"enabled": True, "exception_slots": 5, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
     )
 
-    assert "BAD" not in [r["ticker"] for r in result["selected_rows"]]
-    assert "NEXT" in [r["ticker"] for r in result["core_rows"]]
-    assert [r["ticker"] for r in result["exception_rows"]] == ["GOODX"]
+    selected_tickers = [r["ticker"] for r in result["selected_rows"]]
+    core_tickers = [r["ticker"] for r in result["core_rows"]]
+    exception_tickers = [r["ticker"] for r in result["exception_rows"]]
+
+    assert "BAD" not in selected_tickers
+    assert "NEXT" in core_tickers
+    assert set(exception_tickers) == {f"GOOD{i}" for i in range(5)}
     assert result["summary"]["core_count"] == 10
-    assert result["summary"]["exception_count"] == 1
-    assert result["summary"]["selected_count"] == 11
+    assert result["summary"]["exception_count"] == 5
+    assert result["summary"]["selected_count"] == 15
     assert result["core_deterioration_refill_rows"][0]["demoted_ticker"] == "BAD"
     assert result["core_deterioration_refill_rows"][0]["replacement_ticker"] == "NEXT"
 
