@@ -1,4 +1,5 @@
 import csv
+import json
 
 from tradingagents.research.fundamental.src.selection.high_conviction_top10 import (
     CORE_DETERIORATION_STRICT_ACTION,
@@ -535,6 +536,7 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
         rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
     ))
     rows.append(row("NEXT", 89, return_90d_pct="100", current_return_pct="3", final_rank="1", winner_label="yes", target_label="hit", replacement_delta_90d_pct="140"))
+    rows.append(row("REJECT", 60, return_90d_pct="200", current_return_pct="4", final_rank="2", winner_label="yes", loser_label="no", target_label="hit", replacement_delta_90d_pct="90"))
 
     fieldnames = sorted({key for item in rows for key in item})
     with input_csv.open("w", newline="", encoding="utf-8") as handle:
@@ -557,6 +559,12 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
     assert all("loser" not in column for column in selected_header)
     assert all("current_return" not in column for column in selected_header)
     assert all("final_rank" not in column for column in selected_header)
+
+    json_artifact = json.loads((output_dir / "high_conviction_top15_core_deterioration_refill_shadow.json").read_text(encoding="utf-8"))
+    forbidden_fragments = ("return", "delta", "winner", "loser", "current_return", "final_rank", "target_label")
+    for array_key in ("selected_rows", "selected", "core_rows", "exception_rows", "rejected_rows", "rejected"):
+        for artifact_row in json_artifact.get(array_key, []):
+            assert all(not any(fragment in key.lower() for fragment in forbidden_fragments) for key in artifact_row)
 
     replacements_csv = output_dir / "core_deterioration_refill_shadow_replacements.csv"
     with replacements_csv.open(newline="", encoding="utf-8") as handle:

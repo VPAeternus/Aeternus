@@ -1165,7 +1165,7 @@ def _strip_shadow_artifact_outcome_fields(row: Mapping[str, Any]) -> dict[str, A
 
 def _safe_shadow_artifact_result(result: Mapping[str, Any]) -> dict[str, Any]:
     artifact = copy.deepcopy(dict(result))
-    for key in ("selected_rows", "selected", "core_rows", "exception_rows"):
+    for key in ("selected_rows", "selected", "core_rows", "exception_rows", "rejected_rows", "rejected"):
         artifact[key] = [_strip_shadow_artifact_outcome_fields(row) for row in artifact.get(key, [])]
     return artifact
 
