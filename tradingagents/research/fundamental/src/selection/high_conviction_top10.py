@@ -1,6 +1,7 @@
 """Deterministic post-score high-conviction Top-N selector."""
 from __future__ import annotations
 
+import copy
 import csv
 import json
 import re
@@ -12,6 +13,7 @@ from .signal_utils import (
     HP_SIGNAL_FIELDS,
     RM_SIGNAL_FIELDS,
     hp_signal_bucket,
+    label_signal_count,
     rm_signal_bucket,
     signal_bucket,
     signal_count,
@@ -41,22 +43,26 @@ HP_OVERRIDE_RE = re.compile(r"^hp\d+_(?:priority|high_priority|llm_supported|ext
 TIER_OVERRIDE_RE = re.compile(r"^tier\d+_L\d+_(?:priority|high_priority|llm_supported|rescan|signal|confirmed)$")
 OPERATING_SETTING = "high_conviction_top10_v2_final"
 TOP15_OPERATING_SETTING = "high_conviction_top15_v3_exception_sleeve"
+TOP15_REFILL_SHADOW_SETTING = "high_conviction_top15_v4_core_deterioration_refill_shadow"
 CORE_DETERIORATION_REVIEW_ACTION = "manual_review_before_buy_underwriting"
 CORE_DETERIORATION_STRICT_ACTION = "move_from_core_buy_underwriting_to_scout_review_unless_pm_override"
 CORE_DETERIORATION_FIELDS = [
-    "ticker",
-    "quarter",
-    "selection_rank",
-    "selected_sleeve",
-    "entry_score_0_100",
-    "score_change",
-    "negative_revision_risk",
-    "pre_llm_fundamental_bucket",
-    "primary_theme",
-    "core_deterioration_review_flag",
-    "core_deterioration_downgrade_flag",
-    "core_deterioration_strict_override_required",
-    "core_deterioration_recommended_action",
+    "ticker", "quarter", "selection_rank", "selected_sleeve", "entry_score_0_100",
+    "score_change", "negative_revision_risk", "pre_llm_fundamental_bucket", "primary_theme",
+    "core_deterioration_rm_count", "core_deterioration_hp_count", "demoted_market_repricing_score",
+    "high_score_deterioration_flag", "weak_no_theme_repricing_stack_flag", "core_deterioration_rank_context_flag",
+    "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
+    "core_deterioration_recommended_action", "core_deterioration_reason_codes",
+]
+CORE_DETERIORATION_REFILL_MODES = {"strict", "downgrade", "all_review"}
+CORE_DETERIORATION_REFILL_FIELDS = [
+    "variant", "quarter", "mode", "demoted_ticker", "replacement_ticker",
+    "demoted_core_candidate_rank", "replacement_core_candidate_rank",
+    "demoted_entry_score_0_100", "replacement_entry_score_0_100",
+    "demoted_score_change", "demoted_negative_revision_risk", "demoted_pre_llm_fundamental_bucket",
+    "demoted_primary_theme", "demoted_rm_count", "demoted_hp_count", "demoted_market_repricing_score",
+    "high_score_deterioration_flag", "weak_no_theme_repricing_stack_flag",
+    "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
     "core_deterioration_reason_codes",
 ]
 DAILY_RECOMMENDATION_BULLETS = [
@@ -100,6 +106,13 @@ class RightTailExceptionConfig:
     max_same_sector: int = 3
 
 
+@dataclass(frozen=True)
+class CoreDeteriorationRefillConfig:
+    enabled: bool = False
+    mode: str = "strict"
+    block_deterioration_from_exceptions: bool = True
+
+
 def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     base = asdict(HighConvictionConfig())
     if config:
@@ -113,6 +126,32 @@ def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     base["min_confidence"] = float(base["min_confidence"])
     base["theme_acceleration_override_score"] = float(base["theme_acceleration_override_score"])
     return base
+
+
+def _refill_bool(value: Any, default: bool) -> bool:
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        token = value.strip().lower()
+        if token in {"false", "0", "no", "n", "off", ""}:
+            return False
+        if token in {"true", "1", "yes", "y", "on"}:
+            return True
+    return truthy(value)
+
+
+def _normalize_core_deterioration_refill_config(config: Mapping[str, Any] | None) -> CoreDeteriorationRefillConfig:
+    nested = config.get("core_deterioration_refill") if isinstance(config, Mapping) else None
+    if not isinstance(nested, Mapping):
+        return CoreDeteriorationRefillConfig()
+    enabled = _refill_bool(nested.get("enabled"), False)
+    mode = str(nested.get("mode", "strict")).strip().lower()
+    if mode not in CORE_DETERIORATION_REFILL_MODES:
+        raise ValueError(f"core deterioration refill mode must be one of {sorted(CORE_DETERIORATION_REFILL_MODES)}")
+    block = _refill_bool(nested.get("block_deterioration_from_exceptions"), True)
+    return CoreDeteriorationRefillConfig(enabled=enabled, mode=mode, block_deterioration_from_exceptions=block)
 
 
 def _normalize_exception_config(config: Mapping[str, Any] | RightTailExceptionConfig | None) -> RightTailExceptionConfig:
@@ -134,12 +173,15 @@ def _normalize_exception_config(config: Mapping[str, Any] | RightTailExceptionCo
     return RightTailExceptionConfig(**base)
 
 
-def select_high_conviction_top10(
+def _rank_high_conviction_core_pool(
     rows: Sequence[Mapping[str, Any]],
     config: Mapping[str, Any] | None,
     coverage_rows: Sequence[Mapping[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    """Select high-conviction rows after final fundamental scores are already computed."""
+    """Return mutable assessed rows ranked for internal selector/refill use.
+
+    Rows are returned before selection annotations and public output conversion.
+    """
     cfg = normalize_config(config)
     coverage_enabled = bool(cfg.get("coverage_gating"))
     coverage = _build_coverage(coverage_rows or []) if coverage_enabled else {}
@@ -158,6 +200,42 @@ def select_high_conviction_top10(
         eligible,
         key=lambda r: (-r["composite_score"], -r["score"], -r["confidence_sort"], r["ticker"]),
     )
+    for rank, row in enumerate(ranked, start=1):
+        row["core_candidate_rank"] = rank
+    return {
+        "ranked_rows": ranked,
+        "rejected_rows": rejected,
+        "warnings": warnings,
+        "config_snapshot": cfg,
+    }
+
+
+def rank_high_conviction_core_pool(
+    rows: Sequence[Mapping[str, Any]],
+    config: Mapping[str, Any] | None,
+    coverage_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Return ranked raw core-pool rows for refill/shadow diagnostics."""
+    pool = _rank_high_conviction_core_pool(rows, config, coverage_rows)
+    return {
+        **pool,
+        "ranked_rows": [copy.deepcopy(row) for row in pool["ranked_rows"]],
+        "rejected_rows": [copy.deepcopy(row) for row in pool["rejected_rows"]],
+    }
+
+
+def select_high_conviction_top10(
+    rows: Sequence[Mapping[str, Any]],
+    config: Mapping[str, Any] | None,
+    coverage_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Select high-conviction rows after final fundamental scores are already computed."""
+    pool = _rank_high_conviction_core_pool(rows, config, coverage_rows)
+    cfg = pool["config_snapshot"]
+    ranked = pool["ranked_rows"]
+    rejected = list(pool["rejected_rows"])
+    warnings = list(pool["warnings"])
+
     selected = ranked[: int(cfg["top_n"])]
     _annotate_soft_balance(selected, cfg, warnings)
     selected_ids = {r["_row_id"] for r in selected}
@@ -244,40 +322,225 @@ def select_high_conviction_top15_exception_sleeve(
     }
 
 
+def _core_flag_row(row: Mapping[str, Any], rank: int) -> dict[str, Any]:
+    flagged = dict(row)
+    flagged["selected_sleeve"] = "core"
+    flagged["selected_sleeve_rank"] = rank
+    flagged["selection_rank"] = rank
+    return flagged
+
+
+def _replacement_diagnostic(mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any] | None) -> dict[str, Any]:
+    flags = core_deterioration_flags(_core_flag_row(demoted, int(_to_float(demoted.get("core_candidate_rank")) or 999999)))
+    return {
+        "variant": TOP15_REFILL_SHADOW_SETTING,
+        "quarter": demoted.get("quarter", ""),
+        "mode": mode,
+        "demoted_ticker": str(demoted.get("ticker", "")).upper(),
+        "replacement_ticker": str(replacement.get("ticker", "")).upper() if replacement else "",
+        "demoted_core_candidate_rank": demoted.get("core_candidate_rank", ""),
+        "replacement_core_candidate_rank": replacement.get("core_candidate_rank", "") if replacement else "",
+        "demoted_entry_score_0_100": demoted.get("entry_score_0_100", demoted.get("score", "")),
+        "replacement_entry_score_0_100": replacement.get("entry_score_0_100", replacement.get("score", "")) if replacement else "",
+        "demoted_score_change": demoted.get("score_change", ""),
+        "demoted_negative_revision_risk": demoted.get("negative_revision_risk", ""),
+        "demoted_pre_llm_fundamental_bucket": demoted.get("pre_llm_fundamental_bucket", ""),
+        "demoted_primary_theme": demoted.get("primary_theme", ""),
+        "demoted_rm_count": flags.get("core_deterioration_rm_count", ""),
+        "demoted_hp_count": flags.get("core_deterioration_hp_count", ""),
+        "demoted_market_repricing_score": flags.get("demoted_market_repricing_score", ""),
+        "high_score_deterioration_flag": flags.get("high_score_deterioration_flag", ""),
+        "weak_no_theme_repricing_stack_flag": flags.get("weak_no_theme_repricing_stack_flag", ""),
+        "core_deterioration_review_flag": flags.get("core_deterioration_review_flag", ""),
+        "core_deterioration_downgrade_flag": flags.get("core_deterioration_downgrade_flag", ""),
+        "core_deterioration_strict_override_required": flags.get("core_deterioration_strict_override_required", ""),
+        "core_deterioration_reason_codes": flags.get("core_deterioration_reason_codes", ""),
+    }
+
+
+def select_high_conviction_top15_core_deterioration_refill_shadow(
+    rows: Sequence[Mapping[str, Any]],
+    config: Mapping[str, Any] | None,
+    coverage_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, Any]:
+    config_map = config or {}
+    cfg = _normalize_exception_config(config_map)
+    refill_cfg = _normalize_core_deterioration_refill_config(config_map)
+    if not refill_cfg.enabled:
+        raise ValueError("core_deterioration_refill.enabled must be true for refill shadow selector")
+
+    core_config = dict(config_map)
+    core_config["top_n"] = cfg.core_n
+    coverage_enabled = bool(core_config.get("coverage_gating"))
+    coverage = _build_coverage(coverage_rows or []) if coverage_enabled else {}
+    pool = _rank_high_conviction_core_pool(rows, core_config, coverage_rows)
+    ranked = pool["ranked_rows"]
+    warnings = list(pool.get("warnings", []))
+
+    blocked_tickers: set[str] = set()
+    for raw in rows:
+        ticker = str(raw.get("ticker") or raw.get("symbol") or "").strip().upper()
+        if ticker and should_refill_demote_core_row(_core_flag_row(raw, 999999), refill_cfg.mode):
+            blocked_tickers.add(ticker)
+
+    core_raw: list[dict[str, Any]] = []
+    demoted_raw: list[dict[str, Any]] = []
+    for candidate in ranked:
+        ticker = str(candidate.get("ticker", "")).strip().upper()
+        rank = int(candidate.get("core_candidate_rank") or 0)
+        if ticker in blocked_tickers:
+            if rank <= cfg.core_n:
+                demoted_raw.append(candidate)
+            continue
+        if len(core_raw) < cfg.core_n:
+            core_raw.append(candidate)
+
+    if len(core_raw) < cfg.core_n:
+        warnings.append(f"CORE_REFILL_SHORTFALL_SELECTED_{len(core_raw)}_OF_{cfg.core_n}")
+
+    replacement_raw = [r for r in core_raw if int(r.get("core_candidate_rank") or 0) > cfg.core_n]
+    refill_rows = [_replacement_diagnostic(refill_cfg.mode, demoted, replacement_raw[idx] if idx < len(replacement_raw) else None) for idx, demoted in enumerate(demoted_raw)]
+
+    core_rows: list[dict[str, Any]] = []
+    for rank, raw in enumerate(core_raw, start=1):
+        row = dict(raw)
+        row["selected"] = True
+        row["selected_sleeve"] = "core"
+        row["selected_sleeve_rank"] = rank
+        row["selection_rank"] = rank
+        row["portfolio_treatment"] = "shadow_core_review_not_official"
+        row["core_deterioration_refill_shadow"] = 1
+        row["core_refill_source"] = "original_top10" if int(row.get("core_candidate_rank") or 0) <= cfg.core_n else "next_ranked_core_candidate"
+        row.setdefault("right_tail_exception_score", "")
+        row.setdefault("right_tail_exception_reason_codes", [])
+        row.setdefault("right_tail_exception_warning_codes", [])
+        _annotate_operating_guidance(row)
+        core_rows.append(_strip_shadow_artifact_outcome_fields(_public_row(row)))
+
+    exception_blocks = blocked_tickers if refill_cfg.block_deterioration_from_exceptions else set()
+    exceptions, exception_warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(
+        core_rows, rows, cfg, coverage=coverage, coverage_enabled=coverage_enabled, blocked_tickers=exception_blocks
+    )
+    exceptions = [_strip_shadow_artifact_outcome_fields(row) for row in exceptions]
+    for row in exceptions:
+        row["portfolio_treatment"] = "shadow_exception_review_not_official"
+    selected = core_rows + exceptions
+    for row in selected:
+        row["operating_setting"] = TOP15_REFILL_SHADOW_SETTING
+        row["operating_setting_validation_status"] = "shadow_observed_data_not_approved_operating_selector"
+
+    config_snapshot = {**pool.get("config_snapshot", {}), "right_tail_exception_config": asdict(cfg), "core_deterioration_refill": asdict(refill_cfg)}
+    refill_summary = {
+        "mode": refill_cfg.mode,
+        "demoted_count": len(demoted_raw),
+        "replacement_count": len(replacement_raw),
+        "blocked_from_exception_count": len(exception_blocks),
+    }
+    return {
+        "selected_rows": selected,
+        "selected": selected,
+        "core_rows": core_rows,
+        "exception_rows": exceptions,
+        "core_deterioration_refill_rows": refill_rows,
+        "core_deterioration_refill_summary": refill_summary,
+        "rejected_rows": [_strip_shadow_artifact_outcome_fields(_public_row(r)) for r in pool.get("rejected_rows", [])],
+        "rejected": [_strip_shadow_artifact_outcome_fields(_public_row(r)) for r in pool.get("rejected_rows", [])],
+        "summary": {
+            "input_count": len(rows),
+            "selected_count": len(selected),
+            "core_count": len(core_rows),
+            "exception_count": len(exceptions),
+            "top_n": len(selected),
+            "warnings": warnings + exception_warnings,
+        },
+        "config_snapshot": config_snapshot,
+        "config": config_snapshot,
+        "operating_recommendation": {
+            **_top15_operating_recommendation_snapshot(selected, cfg),
+            "operating_setting": TOP15_REFILL_SHADOW_SETTING,
+            "validation_status": "shadow observed-data selector; not approved operating selector",
+            "recommendation": (
+                "Shadow-only review/research list; not official Top15. "
+                "PM override is required before any action."
+            ),
+        },
+    }
+
+
+def _first_nonblank(row: Mapping[str, Any], *keys: str) -> Any:
+    for key in keys:
+        if key not in row:
+            continue
+        value = row.get(key)
+        if value is None:
+            continue
+        if isinstance(value, str) and value.strip() == "":
+            continue
+        return value
+    return None
+
+
 def core_deterioration_flags(row: Mapping[str, Any]) -> dict[str, Any]:
     sleeve = str(row.get("selected_sleeve", "")).strip().lower()
-    selected_rank = to_float(row.get("selection_rank") or row.get("selected_sleeve_rank"))
+    selected_rank = to_float(_first_nonblank(row, "selection_rank", "selected_sleeve_rank"))
     rank_int = int(selected_rank) if selected_rank is not None else None
-    entry_score = to_float(row.get("entry_score_0_100") or row.get("score"))
+    entry_score = to_float(_first_nonblank(row, "entry_score_0_100", "score"))
     score_change = to_float(row.get("score_change"))
     negative_revision_risk = to_float(row.get("negative_revision_risk"))
+    market_repricing_score = to_float(_first_nonblank(row, "demoted_market_repricing_score", "market_repricing_score")) or 0.0
+    rm_count = label_signal_count(row, RM_SIGNAL_FIELDS)
+    hp_count = label_signal_count(row, HP_SIGNAL_FIELDS)
     theme_blank = not str(row.get("primary_theme") or "").strip()
     weak_pre_llm = str(row.get("pre_llm_fundamental_bucket") or "").strip().lower() == "weak"
-    review = (
-        sleeve == "core"
-        and entry_score is not None and entry_score >= 80
+    high_score = bool(
+        entry_score is not None and entry_score >= 80
         and score_change is not None and score_change <= -1
         and negative_revision_risk is not None and negative_revision_risk >= 2
     )
-    downgrade = bool(review and (rank_int in {7, 8} or theme_blank or weak_pre_llm))
-    strict = bool(downgrade and theme_blank and weak_pre_llm)
+    weak_stack = bool(
+        theme_blank
+        and weak_pre_llm
+        and (rm_count >= 3 or (hp_count > 0 and market_repricing_score >= 6))
+        and ((score_change is not None and score_change <= 0) or (negative_revision_risk is not None and negative_revision_risk >= 2))
+    )
+    review = bool(sleeve == "core" and (high_score or weak_stack))
+    downgrade = bool(review and (weak_stack or (theme_blank and weak_pre_llm)))
+    strict = bool(review and high_score and weak_stack)
+    rank_context = rank_int in {7, 8}
     reasons: list[str] = []
-    if review:
-        reasons.extend(["entry_score_gte_80", "score_change_lte_minus_1", "negative_revision_risk_gte_2"])
-    if rank_int in {7, 8}:
-        reasons.append("selection_rank_7_or_8")
-    if theme_blank:
-        reasons.append("primary_theme_blank")
-    if weak_pre_llm:
-        reasons.append("pre_llm_fundamental_bucket_weak")
+    if high_score:
+        reasons.append("high_score_deterioration")
+    if weak_stack:
+        reasons.append("weak_no_theme_repricing_stack")
+    if rank_context:
+        reasons.append("selection_rank_7_or_8" if review else "rank_7_8_context_only")
     action = CORE_DETERIORATION_STRICT_ACTION if strict else CORE_DETERIORATION_REVIEW_ACTION if review else ""
     return {
-        "core_deterioration_review_flag": int(bool(review)),
+        "core_deterioration_rm_count": rm_count,
+        "core_deterioration_hp_count": hp_count,
+        "demoted_market_repricing_score": market_repricing_score,
+        "high_score_deterioration_flag": int(high_score),
+        "weak_no_theme_repricing_stack_flag": int(weak_stack),
+        "core_deterioration_rank_context_flag": int(rank_context),
+        "core_deterioration_review_flag": int(review),
         "core_deterioration_downgrade_flag": int(downgrade),
         "core_deterioration_strict_override_required": int(strict),
         "core_deterioration_recommended_action": action,
-        "core_deterioration_reason_codes": ";".join(reasons) if review else "",
+        "core_deterioration_reason_codes": ";".join(reasons),
     }
+
+
+def should_refill_demote_core_row(row: Mapping[str, Any], mode: str = "strict") -> bool:
+    mode = str(mode or "strict").strip().lower()
+    if mode not in CORE_DETERIORATION_REFILL_MODES:
+        raise ValueError(f"core deterioration refill mode must be one of {sorted(CORE_DETERIORATION_REFILL_MODES)}")
+    flags = core_deterioration_flags(row)
+    if mode == "strict":
+        return bool(flags.get("core_deterioration_strict_override_required"))
+    if mode == "downgrade":
+        return bool(flags.get("core_deterioration_downgrade_flag"))
+    return bool(flags.get("core_deterioration_review_flag"))
+
 
 
 def build_core_deterioration_review_rows(rows: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
@@ -352,6 +615,31 @@ def select_top15_from_csv(
     json_path.write_text(json.dumps(result, indent=2, sort_keys=True), encoding="utf-8")
     recommendation_path.write_text(_daily_recommendation_markdown(result), encoding="utf-8")
     return result
+
+
+def select_top15_core_deterioration_refill_shadow_from_csv(
+    scores_csv: str | Path,
+    output_root: str | Path,
+    config: Mapping[str, Any] | None,
+    coverage_manifest: str | Path | None = None,
+) -> dict[str, Any]:
+    scores_path = Path(scores_csv)
+    out_root = Path(output_root)
+    rows = _read_csv(scores_path)
+    coverage_rows = _read_csv(Path(coverage_manifest)) if coverage_manifest else None
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(rows, config, coverage_rows)
+    out_root.mkdir(parents=True, exist_ok=True)
+    date = str(result["config_snapshot"].get("selection_date") or (config.get("selection_date", "") if isinstance(config, Mapping) else ""))
+    csv_path = out_root / "high_conviction_top15_core_deterioration_refill_shadow.csv"
+    json_path = out_root / "high_conviction_top15_core_deterioration_refill_shadow.json"
+    replacements_path = out_root / "core_deterioration_refill_shadow_replacements.csv"
+    result["date"] = date
+    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "core_deterioration_refill_shadow_replacements": str(replacements_path)}
+    artifact_result = _safe_shadow_artifact_result(result)
+    _write_csv(csv_path, artifact_result["selected_rows"])
+    _write_csv_with_fields(replacements_path, artifact_result.get("core_deterioration_refill_rows", []), CORE_DETERIORATION_REFILL_FIELDS)
+    json_path.write_text(json.dumps(artifact_result, indent=2, sort_keys=True), encoding="utf-8")
+    return artifact_result
 
 
 _truthy = truthy
@@ -450,8 +738,10 @@ def _select_exception_sleeve(
     cfg: RightTailExceptionConfig,
     coverage: dict[str, dict[str, int]] | None = None,
     coverage_enabled: bool = False,
+    blocked_tickers: set[str] | None = None,
 ) -> tuple[list[dict], list[str]]:
-    core_tickers = {str(r.get("ticker", "")).upper() for r in core_rows}
+    core_tickers = {str(r.get("ticker", "")).strip().upper() for r in core_rows if str(r.get("ticker", "")).strip()}
+    core_tickers |= {ticker for ticker in (str(t).strip().upper() for t in (blocked_tickers or set())) if ticker}
     candidates: list[dict[str, Any]] = []
     for raw in all_rows:
         row = dict(raw)
@@ -864,6 +1154,31 @@ def _read_csv(path: Path) -> list[dict[str, Any]]:
         return list(csv.DictReader(fh))
 
 
+def _is_shadow_outcome_field(key: str) -> bool:
+    name = str(key).lower()
+    return (
+        "return" in name
+        or "winner" in name
+        or "loser" in name
+        or "target" in name
+        or "monitoring_score" in name
+        or "final_rank" in name
+        or "_delta_" in name
+        or name.startswith("delta_")
+    )
+
+
+def _strip_shadow_artifact_outcome_fields(row: Mapping[str, Any]) -> dict[str, Any]:
+    return {key: value for key, value in row.items() if not _is_shadow_outcome_field(str(key))}
+
+
+def _safe_shadow_artifact_result(result: Mapping[str, Any]) -> dict[str, Any]:
+    artifact = copy.deepcopy(dict(result))
+    for key in ("selected_rows", "selected", "core_rows", "exception_rows", "rejected_rows", "rejected"):
+        artifact[key] = [_strip_shadow_artifact_outcome_fields(row) for row in artifact.get(key, [])]
+    return artifact
+
+
 def _write_csv(path: Path, rows: Sequence[Mapping[str, Any]]) -> None:
     fieldnames: list[str] = []
     for row in rows:
@@ -878,12 +1193,14 @@ def _write_csv(path: Path, rows: Sequence[Mapping[str, Any]]) -> None:
 
 
 def _write_csv_with_fields(path: Path, rows: Sequence[Mapping[str, Any]], fieldnames: Sequence[str]) -> None:
+    fields = list(fieldnames)
     with path.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(fieldnames))
+        writer = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         for row in rows:
-            writer.writerow({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v for k, v in row.items()})
+            writer.writerow({k: json.dumps(row.get(k), sort_keys=True) if isinstance(row.get(k), (dict, list)) else row.get(k, "") for k in fields})
 
 
 def _public_row(row: Mapping[str, Any]) -> dict[str, Any]:
-    return {k: v for k, v in row.items() if not k.startswith("_") and k not in {"selected_candidate", "confidence_sort"}}
+    excluded = {"selected_candidate", "confidence_sort", "core_candidate_rank"}
+    return {k: v for k, v in row.items() if not k.startswith("_") and k not in excluded}

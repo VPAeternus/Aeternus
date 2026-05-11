@@ -32,8 +32,8 @@ def _print_top10_table(rows: list[dict]) -> None:
     console.print(table)
 
 
-def _print_top15_table(rows: list[dict]) -> None:
-    table = Table(title="Fundamental High-Conviction Top 15")
+def _print_top15_table(rows: list[dict], title: str = "Fundamental High-Conviction Top 15") -> None:
+    table = Table(title=title)
     table.add_column("Sleeve")
     table.add_column("Rank", justify="right")
     table.add_column("Ticker", style="bold green")
@@ -181,6 +181,67 @@ def fundamental_top15(
         _print_top15_table(result.get("selected_rows", []))
         paths = result["output_paths"]
         console.print(f"[green]Wrote[/green] {paths['csv']} | {paths['json']} | {paths['recommendation_md']}")
+
+
+@app.command("fundamental-top15-refill-shadow")
+def fundamental_top15_refill_shadow(
+    scores_csv: str = typer.Option(..., "--scores-csv", help="Required final fundamental scores CSV path"),
+    coverage_manifest: str = typer.Option("", "--coverage-manifest", help="Optional SEC coverage manifest CSV path"),
+    output_root: str = typer.Option("", "--output-root", help="Output root; defaults to scores CSV parent or eval_results/fundamental/<date>"),
+    date: str = typer.Option("", "--date", help="Selection date YYYY-MM-DD"),
+    mode: str = typer.Option("strict", "--mode", help="Core deterioration refill mode"),
+    core_n: int = typer.Option(10, "--core-n", min=1, help="Core names to select"),
+    exception_slots: int = typer.Option(5, "--exception-slots", min=0, help="Right-tail exception slots"),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Emit shadow Top-15 refill variant; does not replace normal Top-15."""
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_top15_core_deterioration_refill_shadow_from_csv
+
+    fmt = format.strip().lower()
+    if fmt not in {"table", "json"}:
+        console.print("[red]--format must be table or json[/red]")
+        raise typer.Exit(1)
+    mode_value = mode.strip().lower()
+    if mode_value not in {"strict", "downgrade", "all_review"}:
+        console.print("[red]--mode must be strict, downgrade, or all_review[/red]")
+        raise typer.Exit(1)
+    scores_path = Path(scores_csv)
+    if not scores_path.is_file():
+        console.print(f"[red]scores CSV not found: {scores_path}[/red]")
+        raise typer.Exit(1)
+    coverage_path = Path(coverage_manifest) if coverage_manifest.strip() else None
+    if coverage_path is not None and not coverage_path.is_file():
+        console.print(f"[red]coverage manifest not found: {coverage_path}[/red]")
+        raise typer.Exit(1)
+    selection_date = date.strip()
+    if selection_date:
+        try:
+            if _dt.date.fromisoformat(selection_date).isoformat() != selection_date:
+                raise ValueError
+        except ValueError:
+            console.print("[red]--date must be YYYY-MM-DD[/red]")
+            raise typer.Exit(1)
+    out_root = Path(output_root.strip()) if output_root.strip() else (
+        Path("eval_results") / "fundamental" / selection_date if selection_date else scores_path.parent
+    )
+    config = {
+        "selection_date": selection_date,
+        "enabled": True,
+        "core_n": core_n,
+        "exception_slots": exception_slots,
+        "coverage_gating": coverage_path is not None,
+        "core_deterioration_refill": {"enabled": True, "mode": mode_value},
+    }
+    result = select_top15_core_deterioration_refill_shadow_from_csv(scores_path, out_root, config, coverage_path)
+    if fmt == "json":
+        console.print(json.dumps(result, indent=2, sort_keys=True))
+    else:
+        _print_top15_table(
+            result.get("selected_rows", []),
+            title="Fundamental Top-15 Refill Shadow (not official)",
+        )
+        paths = result["output_paths"]
+        console.print(f"[green]Wrote shadow[/green] {paths['csv']} | {paths['json']} | {paths['core_deterioration_refill_shadow_replacements']}")
 
 
 @app.command("fundamental-right-tail-queues")

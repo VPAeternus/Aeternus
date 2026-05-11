@@ -3,6 +3,9 @@ import json
 from pathlib import Path
 
 from tradingagents.research.fundamental.backtests.high_conviction_top15_exception_sleeve import (
+    CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS,
+    CORE_DETERIORATION_REFILL_SELECTED_FIELDS,
+    CORE_DETERIORATION_REFILL_SUMMARY_FIELDS,
     TARGET_RIGHT_TAIL_NAMES,
     run_high_conviction_top15_exception_sleeve_backtest,
 )
@@ -75,6 +78,27 @@ def _fixture(tmp_path, inject_forbidden=False):
 def _read_rows(path: Path):
     with path.open(newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
+
+
+def _read_header(path: Path):
+    with path.open(newline="", encoding="utf-8") as fh:
+        return next(csv.reader(fh))
+
+
+def test_v2_candidates_returns_full_ex_ante_ranked_pool():
+    from tradingagents.research.fundamental.backtests.high_conviction_top10 import _select_v2, _v2_candidates
+
+    rows = [_row(f"C{i}", score=100 - i) for i in range(12)]
+    rows[-1]["return_90d_pct"] = "999"
+    pool = _v2_candidates(rows)
+    selected = _select_v2(rows)
+
+    assert len(pool) == 12
+    assert all("core_candidate_rank" in r for r in pool)
+    assert all("core_candidate_rank" not in r for r in selected)
+    assert [r["ticker"] for r in pool[:10]] == [r["ticker"] for r in selected]
+    assert [r["core_candidate_rank"] for r in pool[:3]] == [1, 2, 3]
+    assert pool[-1]["ticker"] == "C11"
 
 
 def test_top15_backtest_outputs_exist(tmp_path):
@@ -295,6 +319,158 @@ def test_v4_diagnostics_are_visibility_not_buy_list(tmp_path):
     }
     assert all("visibility" in r["description"].lower() for r in rows)
     assert {"scout_or_top15_routed_count", "demote_review_routed_count"}.issubset(rows[0])
+
+
+def _refill_fixture(tmp_path):
+    pit = tmp_path / "pit.csv"
+    prior = tmp_path / "prior.csv"
+    out = tmp_path / "out"
+    rows = [_row(f"C{i}", score=100 - i, ret90=5 + i) for i in range(10)]
+    rows[5].update({
+        "ticker": "BAD",
+        "entry_score_0_100": "95",
+        "score_change": "-2",
+        "negative_revision_risk": "2",
+        "pre_llm_fundamental_bucket": "weak",
+        "primary_theme": "",
+        "rm1_low_price_dislocation_momentum": "RM1 - Low-price dislocation momentum",
+        "rm2_weak_acceleration": "RM2 - Weak-bucket acceleration",
+        "rm4_persistent_repricing_wave": "RM4 - Persistent repricing wave",
+        "return_90d_pct": "-40",
+        "winner_90d_30pct": "False",
+        "loser_90d_minus30pct": "True",
+    })
+    rows.append(_row("NEXT", score=89, ret90=30))
+    rows.append(_row("BADX", score=85, ret90=-20, confidence="1", score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="", rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum", rm2_weak_acceleration="RM2 - Weak-bucket acceleration", rm4_persistent_repricing_wave="RM4 - Persistent repricing wave"))
+    rows.append(_row("GOODX", score=50, ret90=20, rm1_low_price_dislocation_momentum="1", primary_theme="AI"))
+    rows.append(_row("LOWER", score=70, ret90=300))
+    rows += [_row(ticker, score=30, ret90=0, eligible_for_backtest="False") for ticker in TARGET_RIGHT_TAIL_NAMES]
+    _write_csv(pit, rows)
+    baseline = [dict(r, variant="high_conviction_top10_v2_final", selection_rank=i + 1) for i, r in enumerate(rows[:10])]
+    _write_csv(prior, baseline)
+    manifest = run_high_conviction_top15_exception_sleeve_backtest(pit, prior, out)
+    return out, manifest
+
+
+def test_top15_analysis_emits_core_deterioration_refill_shadow_tables(tmp_path):
+    from scripts.analyze_fundamental_top15_exception_sleeve import run
+
+    out_bundle, _ = _refill_fixture(tmp_path)
+    shadow_names = [
+        "core_deterioration_refill_shadow_selected.csv",
+        "core_deterioration_refill_shadow_replacements.csv",
+        "core_deterioration_refill_shadow_summary.csv",
+    ]
+    analysis_out = tmp_path / "analysis"
+    report = tmp_path / "report.md"
+    analysis_manifest = run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+
+    for name in shadow_names:
+        path = analysis_out / name
+        assert path.exists()
+        assert str(path) in analysis_manifest["outputs"]
+        assert _read_rows(path)
+    text = report.read_text(encoding="utf-8")
+    assert "Core Deterioration Refill Shadow Review" in text
+    assert "shadow-only" in text
+    assert "not the official Top-15 list" in text
+
+
+def test_top15_analysis_emits_empty_refill_shadow_tables_for_older_bundles(tmp_path):
+    from scripts.analyze_fundamental_top15_exception_sleeve import run
+
+    out_bundle, _ = _refill_fixture(tmp_path)
+    shadow_names = [
+        "core_deterioration_refill_shadow_selected.csv",
+        "core_deterioration_refill_shadow_replacements.csv",
+        "core_deterioration_refill_shadow_summary.csv",
+    ]
+    for name in shadow_names:
+        (out_bundle / name).unlink()
+    analysis_out = tmp_path / "analysis_missing_shadow"
+    report = tmp_path / "report_missing_shadow.md"
+    analysis_manifest = run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+
+    for name in shadow_names:
+        path = analysis_out / name
+        assert path.exists()
+        assert str(path) in analysis_manifest["outputs"]
+        assert _read_rows(path) == []
+
+
+def test_core_deterioration_refill_shadow_outputs_full_top15_and_replacement_diagnostics(tmp_path):
+    out, manifest = _refill_fixture(tmp_path)
+    selected = _read_rows(out / "core_deterioration_refill_shadow_selected.csv")
+    replacements = _read_rows(out / "core_deterioration_refill_shadow_replacements.csv")
+    summary = _read_rows(out / "core_deterioration_refill_shadow_summary.csv")
+
+    assert _read_header(out / "core_deterioration_refill_shadow_selected.csv") == CORE_DETERIORATION_REFILL_SELECTED_FIELDS
+    assert _read_header(out / "core_deterioration_refill_shadow_replacements.csv") == CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS
+    assert _read_header(out / "core_deterioration_refill_shadow_summary.csv") == CORE_DETERIORATION_REFILL_SUMMARY_FIELDS
+
+    strict_rows = [r for r in selected if r["variant"] == "top15_v4_core_deterioration_refill_strict"]
+    assert "BAD" not in {r["ticker"] for r in strict_rows}
+    assert "BADX" not in {r["ticker"] for r in strict_rows}
+    assert "NEXT" in {r["ticker"] for r in strict_rows}
+    assert any(r["selected_sleeve"] == "right_tail_exception" for r in strict_rows)
+    assert any(r["demoted_ticker"] == "BAD" and r["replacement_ticker"] == "NEXT" for r in replacements)
+    assert any(r["replacement_delta_90d_pct"] == "70.000000" for r in replacements)
+    strict_summary = next(r for r in summary if r["variant"] == "top15_v4_core_deterioration_refill_strict")
+    assert strict_summary["core_count"] == "10"
+    assert int(strict_summary["total_picks"]) >= 10
+    assert "avg_return_90d_pct" in strict_summary
+    assert "core_deterioration_refill_shadow_outputs" in manifest
+
+
+def test_refill_shadow_replacement_diagnostics_keep_unmatched_demotions(tmp_path):
+    pit = tmp_path / "pit.csv"
+    prior = tmp_path / "prior.csv"
+    out = tmp_path / "out"
+    rows = [_row(f"C{i}", score=100 - i, ret90=5 + i) for i in range(10)]
+    rows[5].update({
+        "ticker": "BAD",
+        "entry_score_0_100": "95",
+        "score_change": "-2",
+        "negative_revision_risk": "2",
+        "pre_llm_fundamental_bucket": "weak",
+        "primary_theme": "",
+        "rm1_low_price_dislocation_momentum": "RM1 - Low-price dislocation momentum",
+        "rm2_weak_acceleration": "RM2 - Weak-bucket acceleration",
+        "rm4_persistent_repricing_wave": "RM4 - Persistent repricing wave",
+        "return_90d_pct": "-40",
+        "winner_90d_30pct": "False",
+        "loser_90d_minus30pct": "True",
+    })
+    rows += [_row(ticker, score=30, ret90=0, eligible_for_backtest="False") for ticker in TARGET_RIGHT_TAIL_NAMES]
+    _write_csv(pit, rows)
+    baseline = [dict(r, variant="high_conviction_top10_v2_final", selection_rank=i + 1) for i, r in enumerate(rows[:10])]
+    _write_csv(prior, baseline)
+
+    run_high_conviction_top15_exception_sleeve_backtest(pit, prior, out)
+    replacements = _read_rows(out / "core_deterioration_refill_shadow_replacements.csv")
+
+    bad_rows = [
+        r for r in replacements
+        if r["variant"] == "top15_v4_core_deterioration_refill_strict" and r["demoted_ticker"] == "BAD"
+    ]
+    assert len(bad_rows) == 1
+    assert bad_rows[0]["replacement_ticker"] == ""
+    assert bad_rows[0]["replacement_delta_90d_pct"] == ""
+
+
+def test_refill_shadow_does_not_change_official_top15_selected_output(tmp_path):
+    out, _ = _fixture(tmp_path)
+    first = (out / "selected_names_by_quarter_top15.csv").read_text(encoding="utf-8")
+    pit = tmp_path / "pit.csv"
+    prior = tmp_path / "prior.csv"
+    run_high_conviction_top15_exception_sleeve_backtest(pit, prior, out)
+    second = (out / "selected_names_by_quarter_top15.csv").read_text(encoding="utf-8")
+    manifest = json.loads((out / "run_manifest.json").read_text(encoding="utf-8"))
+
+    assert second == first
+    assert "core_deterioration_refill_shadow_selected.csv" in manifest["output_hashes"]
+    assert "core_deterioration_refill_shadow_replacements.csv" in manifest["output_hashes"]
+    assert "core_deterioration_refill_shadow_summary.csv" in manifest["output_hashes"]
 
 
 def test_top15_analysis_emits_queue_visibility_tables(tmp_path):

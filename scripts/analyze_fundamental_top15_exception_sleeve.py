@@ -23,6 +23,25 @@ TARGET_EVENTS = {
 TARGET_NAMES = list(TARGET_EVENTS)
 MAIN_VARIANT = "high_conviction_top15_v3_exception_sleeve"
 BASELINE = "high_conviction_top10_v2_final"
+LABEL_COLUMNS = ["return_10d_pct", "return_20d_pct", "return_30d_pct", "return_60d_pct", "return_90d_pct"]
+REFILL_SHADOW_SELECTED_COLUMNS = [
+    "variant", "quarter", "selection_rank", "selected_sleeve", "selected_sleeve_rank", "ticker",
+    "core_refill_source", "demoted_replacement_for", "right_tail_exception_score", *LABEL_COLUMNS,
+]
+REFILL_SHADOW_REPLACEMENT_COLUMNS = [
+    "variant", "quarter", "mode", "demoted_ticker", "replacement_ticker",
+    "demoted_core_candidate_rank", "replacement_core_candidate_rank",
+    "demoted_entry_score_0_100", "replacement_entry_score_0_100",
+    "demoted_score_change", "demoted_negative_revision_risk", "demoted_pre_llm_fundamental_bucket",
+    "demoted_primary_theme", "demoted_rm_count", "demoted_hp_count", "demoted_market_repricing_score",
+    "high_score_deterioration_flag", "weak_no_theme_repricing_stack_flag",
+    "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
+    "core_deterioration_reason_codes", "demoted_return_90d_pct", "replacement_return_90d_pct", "replacement_delta_90d_pct",
+]
+REFILL_SHADOW_SUMMARY_COLUMNS = [
+    "variant", "quarter_count", "core_count", "exception_count", "total_picks", "avg_picks_per_quarter",
+    "avg_return_90d_pct", "winner_90d_30pct_rate", "loser_90d_minus30pct_rate",
+]
 
 
 def sha256(path: Path) -> str:
@@ -35,6 +54,12 @@ def sha256(path: Path) -> str:
 
 def read_csv(path: Path) -> pd.DataFrame:
     return pd.read_csv(path, dtype=str, keep_default_na=False)
+
+
+def read_csv_optional(path: Path, columns: list[str] | None = None) -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame(columns=columns or [])
+    return read_csv(path)
 
 
 def num(series: pd.Series) -> pd.Series:
@@ -144,6 +169,12 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     diagnostics_queue = read_csv(bundle_dir / "right_tail_evidence_score_diagnostics.csv")
     target_visibility_audit = read_csv(bundle_dir / "target_miss_rescue_audit.csv")
     v4_diagnostics = read_csv(bundle_dir / "v4_rescue_variant_summary.csv")
+    refill_shadow_selected_path = bundle_dir / "core_deterioration_refill_shadow_selected.csv"
+    refill_shadow_replacements_path = bundle_dir / "core_deterioration_refill_shadow_replacements.csv"
+    refill_shadow_summary_path = bundle_dir / "core_deterioration_refill_shadow_summary.csv"
+    refill_shadow_selected = read_csv_optional(refill_shadow_selected_path, REFILL_SHADOW_SELECTED_COLUMNS)
+    refill_shadow_replacements = read_csv_optional(refill_shadow_replacements_path, REFILL_SHADOW_REPLACEMENT_COLUMNS)
+    refill_shadow_summary = read_csv_optional(refill_shadow_summary_path, REFILL_SHADOW_SUMMARY_COLUMNS)
     manifest = json.loads((bundle_dir / "run_manifest.json").read_text())
 
     adoption = build_adoption_check(summary, contrib)
@@ -196,6 +227,12 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         "thin_signal_watchlist_queue.csv": thin_signal_queue,
         "thin_signal_watchlist_top100.csv": thin_signal_top100,
     }
+    outputs.update({
+        "core_deterioration_refill_shadow_selected.csv": refill_shadow_selected,
+        "core_deterioration_refill_shadow_replacements.csv": refill_shadow_replacements,
+        "core_deterioration_refill_shadow_summary.csv": refill_shadow_summary,
+    })
+
     for name, df in outputs.items():
         write_df(df, out_dir / name)
 
@@ -286,6 +323,16 @@ Final behavior:
 6. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
 7. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
+## Core Deterioration Refill Shadow Review
+
+This shadow-only review is not the official Top-15 list. It preserves Top-15 capacity by testing whether demoted/refill-ineligible core deterioration tickers can be replaced without changing the frozen official selection output.
+
+Operational reading:
+
+- Blocks demoted/refill-ineligible deterioration tickers from exception auto-selection.
+- Preserves Top-15 capacity for cleaner core and exception candidates.
+- Treats replacement deltas as post-freeze diagnostics only, not live selection evidence.
+
 ## No-leakage and caveats
 
 - Selector receives selection-time fields only; returns are attached after selection is frozen.
@@ -307,13 +354,16 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_selected.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_replacements.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/demote_review_priority_1.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_top100.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`
 """
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(report)
+    report_path.write_text(report, encoding="utf-8")
 
     paths = [out_dir / name for name in outputs] + [report_path]
     analysis_manifest = {
@@ -325,7 +375,7 @@ Final behavior:
         "bundle_manifest_target_summary": manifest.get("target_missed_name_capture_summary", {}),
         "outputs": {str(p): sha256(p) for p in paths},
     }
-    (out_dir / "analysis_manifest.json").write_text(json.dumps(analysis_manifest, indent=2, sort_keys=True) + "\n")
+    (out_dir / "analysis_manifest.json").write_text(json.dumps(analysis_manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return analysis_manifest
 
 

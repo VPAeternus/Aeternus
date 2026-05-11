@@ -83,7 +83,7 @@ These queues are visibility/research outputs, not buy lists. A target can be vis
 | --- | --- | --- |
 | top15_exception_candidate | 0 |  |
 | right_tail_scout | 18 | 31.444444444444443 |
-| core_deterioration_review | 16 |  |
+| core_deterioration_review | 77 |  |
 | demote_review_full_audit | 332 | 4.9397590361445785 |
 | demote_review_priority_1_daily | 99 | 11.858585858585858 |
 | demote_review_priority_2 | 233 | 2.0 |
@@ -115,6 +115,84 @@ Final behavior:
 6. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
 7. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
+## Core Deterioration Refill Shadow Review
+
+Plain English: this is a safe what-if version of the Top-15 list. It does not change the official Top-15.
+
+What it does:
+
+- Finds core names that look risky because their fundamentals deteriorated.
+- Temporarily removes those names in a shadow list.
+- Replaces them with the next-best eligible names.
+- Shows what the Top-15 would have looked like with those swaps.
+- Blocks the removed risky names from sneaking back in through the exception sleeve.
+- Produces a comparison table showing each removed name, its replacement, and how that swap performed historically.
+
+Why it matters:
+
+- Gives PM a review tool before acting on weak core names.
+- Helps identify avoidable blowups.
+- Keeps the official process unchanged until the shadow process earns trust.
+
+Why it is called "shadow refill":
+
+- "Refill" means a risky core name is removed from the what-if list and the open slot is filled with the next eligible name.
+- "Shadow" means the swap is review-only. It runs beside the official Top-15 and does not change the official recommendation.
+- This lets us learn whether the rule keeps working before promoting it into the official process.
+
+This shadow-only review is not the official Top-15 list. It preserves Top-15 capacity by testing whether demoted/refill-ineligible core deterioration tickers can be replaced without changing the frozen official selection output.
+
+Use `core_deterioration_refill_shadow_replacements.csv` to compare demoted core names against next eligible ex-ante replacements. Return labels and replacement deltas are diagnostic only and are attached after selection is frozen.
+
+Daily workflow:
+
+1. Run the normal `fundamental-top15` process first. This remains the official Top-15.
+2. Run the optional `fundamental-top15-refill-shadow` check after final scores are ready.
+3. Open `core_deterioration_refill_shadow_replacements.csv`.
+4. Review each proposed swap: removed ticker, replacement ticker, deterioration reason, RM/HP evidence, and score context.
+5. Treat the file as a PM review queue, not an automatic trade instruction.
+6. If the PM agrees with a swap, document the override decision manually; otherwise keep the official Top-15 unchanged.
+
+Daily command:
+
+```bash
+python3 -m cli.main fundamental-top15-refill-shadow \
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --date YYYY-MM-DD \
+  --mode strict
+```
+
+Daily outputs:
+
+- `high_conviction_top15_core_deterioration_refill_shadow.csv` — the what-if Top-15 review list.
+- `core_deterioration_refill_shadow_replacements.csv` — the comparison table to review proposed removals and replacements.
+- `high_conviction_top15_core_deterioration_refill_shadow.json` — machine-readable detail for audit/debugging.
+
+Operating cadence:
+
+- The official Top-15 can change daily when the pipeline is rerun.
+- The shadow refill list can also change daily when the pipeline is rerun.
+- The 90-day performance comparison updates only after enough time has passed to know the forward returns.
+- Historical proof therefore updates on a delayed 90-day / quarterly cadence, but daily review output can update every day.
+
+What can realistically change daily:
+
+- New 8-Ks, press releases, earnings updates, or newly cached SEC documents.
+- Price and repricing momentum.
+- Macro/regime permission.
+- New theme, AKG, or dealflow evidence.
+- New names entering the universe.
+- More complete document extraction after a rerun.
+
+Important practical point: the core fundamental score is mostly filing-driven. For many names, it should stay stable between quarterly filings unless new evidence arrives. Most major deterioration/refill movement should cluster around earnings and filing cycles. If the shadow refill list changes sharply day-to-day without new evidence, treat that as a scoring-stability issue to investigate.
+
+Current interpretation:
+
+- The historical shadow refill results look better than the official Top-15 v3 baseline, with higher average 90-day return and lower observed loser rate.
+- That supports using it as a PM review tool now.
+- It does not yet make it an automatic official replacement rule; forward validation is still required.
+
 ## No-leakage and caveats
 
 - Selector receives selection-time fields only; returns are attached after selection is frozen.
@@ -136,6 +214,9 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_selected.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_replacements.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/demote_review_priority_1.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_top100.csv`

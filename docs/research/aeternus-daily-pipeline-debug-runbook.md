@@ -350,6 +350,24 @@ python3 -m cli.main fundamental-top15 \
   --date YYYY-MM-DD
 ```
 
+Optional shadow-only core deterioration refill check:
+
+```bash
+python3 -m cli.main fundamental-top15-refill-shadow \
+  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --date YYYY-MM-DD \
+  --mode strict
+```
+
+Outputs:
+
+- `high_conviction_top15_core_deterioration_refill_shadow.csv`
+- `core_deterioration_refill_shadow_replacements.csv`
+- `high_conviction_top15_core_deterioration_refill_shadow.json`
+
+This is not the official Top-15 list. Use it to compare core deterioration demotions against next eligible replacements before PM override.
+
 Then run visibility queues:
 
 ```bash
@@ -379,11 +397,12 @@ Default right-tail visibility outputs:
 
 Daily review order:
 
-1. Top-15 core / exception names
+1. Official Top-15 core / exception names
 2. `core_deterioration_review_queue.csv`
-3. `right_tail_scout_queue.csv`
-4. `demote_review_priority_1.csv`
-5. top-ranked names from `thin_signal_watchlist_top100.csv`
+3. Optional `core_deterioration_refill_shadow_replacements.csv`
+4. `right_tail_scout_queue.csv`
+5. `demote_review_priority_1.csv`
+6. top-ranked names from `thin_signal_watchlist_top100.csv`
 
 Do not treat scout, demote-review, or thin-signal queues as buy lists. Approved live use is visibility/research only after Top-15 selection is frozen. Full production-v2 historical validation still depends on PIT AKG/theme/macro provenance; missing provenance should remain visible in audit artifacts, not silently neutralized.
 
