@@ -624,9 +624,10 @@ def select_top15_core_deterioration_refill_shadow_from_csv(
     replacements_path = out_root / "core_deterioration_refill_shadow_replacements.csv"
     result["date"] = date
     result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "core_deterioration_refill_shadow_replacements": str(replacements_path)}
-    _write_csv(csv_path, result["selected_rows"])
-    _write_csv_with_fields(replacements_path, result.get("core_deterioration_refill_rows", []), CORE_DETERIORATION_REFILL_FIELDS)
-    json_path.write_text(json.dumps(result, indent=2, sort_keys=True), encoding="utf-8")
+    artifact_result = _safe_shadow_artifact_result(result)
+    _write_csv(csv_path, artifact_result["selected_rows"])
+    _write_csv_with_fields(replacements_path, artifact_result.get("core_deterioration_refill_rows", []), CORE_DETERIORATION_REFILL_FIELDS)
+    json_path.write_text(json.dumps(artifact_result, indent=2, sort_keys=True), encoding="utf-8")
     return result
 
 
@@ -1140,6 +1141,33 @@ def _parse_confidence(value: Any) -> float | None:
 def _read_csv(path: Path) -> list[dict[str, Any]]:
     with path.open("r", newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
+
+
+def _is_shadow_outcome_field(key: str) -> bool:
+    name = str(key).lower()
+    return (
+        name.startswith("return_")
+        or name.startswith("return_since_")
+        or "current_return" in name
+        or "winner" in name
+        or "loser" in name
+        or "target_label" in name
+        or "monitoring_score" in name
+        or "final_rank" in name
+        or "_delta_" in name
+        or name.startswith("delta_")
+    )
+
+
+def _strip_shadow_artifact_outcome_fields(row: Mapping[str, Any]) -> dict[str, Any]:
+    return {key: value for key, value in row.items() if not _is_shadow_outcome_field(str(key))}
+
+
+def _safe_shadow_artifact_result(result: Mapping[str, Any]) -> dict[str, Any]:
+    artifact = copy.deepcopy(dict(result))
+    for key in ("selected_rows", "selected", "core_rows", "exception_rows"):
+        artifact[key] = [_strip_shadow_artifact_outcome_fields(row) for row in artifact.get(key, [])]
+    return artifact
 
 
 def _write_csv(path: Path, rows: Sequence[Mapping[str, Any]]) -> None:

@@ -11,6 +11,7 @@ from tradingagents.research.fundamental.src.selection.high_conviction_top10 impo
     rank_high_conviction_core_pool,
     select_high_conviction_top10,
     select_high_conviction_top15_exception_sleeve,
+    select_top15_core_deterioration_refill_shadow_from_csv,
     select_top15_from_csv,
 )
 
@@ -522,20 +523,18 @@ def test_top15_refill_shadow_replacement_uses_ex_ante_rank_not_return_labels():
     assert "LOWER" not in [r["ticker"] for r in result["selected_rows"]]
 
 
-def test_top15_refill_shadow_writer_omits_return_and_delta_headers(tmp_path):
-    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_top15_core_deterioration_refill_shadow_from_csv
-
+def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
     input_csv = tmp_path / "scores.csv"
     output_dir = tmp_path / "out"
     rows = [row(f"C{i}", 100 - i, return_90d_pct="10") for i in range(9)]
     rows.insert(5, row(
-        "BAD", 95, return_90d_pct="-40",
+        "BAD", 95, return_90d_pct="-40", current_return_pct="-5", final_rank="99", winner_label="no", target_label="miss", replacement_delta_90d_pct="-140",
         score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="",
         rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
         rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
         rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
     ))
-    rows.append(row("NEXT", 89, return_90d_pct="100"))
+    rows.append(row("NEXT", 89, return_90d_pct="100", current_return_pct="3", final_rank="1", winner_label="yes", target_label="hit", replacement_delta_90d_pct="140"))
 
     fieldnames = sorted({key for item in rows for key in item})
     with input_csv.open("w", newline="", encoding="utf-8") as handle:
@@ -549,11 +548,48 @@ def test_top15_refill_shadow_writer_omits_return_and_delta_headers(tmp_path):
         config={"enabled": True, "exception_slots": 0, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
     )
 
+    selected_csv = output_dir / "high_conviction_top15_core_deterioration_refill_shadow.csv"
+    with selected_csv.open(newline="", encoding="utf-8") as handle:
+        selected_header = [column.lower() for column in next(csv.reader(handle))]
+    assert all("return" not in column for column in selected_header)
+    assert all("delta" not in column for column in selected_header)
+    assert all("winner" not in column for column in selected_header)
+    assert all("loser" not in column for column in selected_header)
+    assert all("current_return" not in column for column in selected_header)
+    assert all("final_rank" not in column for column in selected_header)
+
     replacements_csv = output_dir / "core_deterioration_refill_shadow_replacements.csv"
     with replacements_csv.open(newline="", encoding="utf-8") as handle:
-        header = next(csv.reader(handle))
-    assert all("return" not in column for column in header)
-    assert all("delta" not in column for column in header)
+        replacement_header = [column.lower() for column in next(csv.reader(handle))]
+    assert all("return" not in column for column in replacement_header)
+    assert all("delta" not in column for column in replacement_header)
+
+
+def test_top15_refill_shadow_pairs_multiple_demotions_with_replacements_in_rank_order():
+    from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top15_core_deterioration_refill_shadow
+
+    rows = [row(f"C{i}", 100 - i) for i in range(8)]
+    bad_kwargs = {
+        "score_change": "-2",
+        "negative_revision_risk": "2",
+        "pre_llm_fundamental_bucket": "weak",
+        "primary_theme": "",
+        "rm1_low_price_dislocation_momentum": "RM1 - Low-price dislocation momentum",
+        "rm2_weak_acceleration": "RM2 - Weak-bucket acceleration",
+        "rm4_persistent_repricing_wave": "RM4 - Persistent repricing wave",
+    }
+    rows.insert(2, row("BAD1", 99, **bad_kwargs))
+    rows.insert(6, row("BAD2", 98, **bad_kwargs))
+    rows += [row("NEXT1", 89), row("NEXT2", 88), row("LOWER", 70)]
+
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(
+        rows,
+        {"enabled": True, "exception_slots": 0, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
+    )
+
+    diagnostics = result["core_deterioration_refill_rows"]
+    assert len(diagnostics) == 2
+    assert [(row["demoted_ticker"], row["replacement_ticker"]) for row in diagnostics] == [("BAD1", "NEXT1"), ("BAD2", "NEXT2")]
 
 
 def test_top15_refill_shadow_blocks_below_cutoff_deterioration_from_exceptions():
