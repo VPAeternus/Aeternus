@@ -403,7 +403,7 @@ def test_exception_sleeve_blocks_explicit_deterioration_tickers():
         core_rows,
         all_rows,
         RightTailExceptionConfig(enabled=True, exception_slots=1),
-        blocked_tickers={"BAD"},
+        blocked_tickers={" BAD ", ""},
     )
 
     assert [r["ticker"] for r in exceptions] == ["GOOD"]

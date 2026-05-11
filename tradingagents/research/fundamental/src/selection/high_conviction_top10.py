@@ -529,8 +529,8 @@ def _select_exception_sleeve(
     coverage_enabled: bool = False,
     blocked_tickers: set[str] | None = None,
 ) -> tuple[list[dict], list[str]]:
-    core_tickers = {str(r.get("ticker", "")).upper() for r in core_rows}
-    core_tickers |= {str(t).upper() for t in (blocked_tickers or set())}
+    core_tickers = {str(r.get("ticker", "")).strip().upper() for r in core_rows if str(r.get("ticker", "")).strip()}
+    core_tickers |= {ticker for ticker in (str(t).strip().upper() for t in (blocked_tickers or set())) if ticker}
     candidates: list[dict[str, Any]] = []
     for raw in all_rows:
         row = dict(raw)
