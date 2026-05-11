@@ -422,6 +422,8 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         core_rows, rows, cfg, coverage=coverage, coverage_enabled=coverage_enabled, blocked_tickers=exception_blocks
     )
     exceptions = [_strip_shadow_artifact_outcome_fields(row) for row in exceptions]
+    for row in exceptions:
+        row["portfolio_treatment"] = "shadow_exception_review_not_official_buy_underwriting"
     selected = core_rows + exceptions
     for row in selected:
         row["operating_setting"] = TOP15_REFILL_SHADOW_SETTING
@@ -453,7 +455,15 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         },
         "config_snapshot": config_snapshot,
         "config": config_snapshot,
-        "operating_recommendation": {**_top15_operating_recommendation_snapshot(selected, cfg), "operating_setting": TOP15_REFILL_SHADOW_SETTING, "validation_status": "shadow observed-data selector; not approved operating selector"},
+        "operating_recommendation": {
+            **_top15_operating_recommendation_snapshot(selected, cfg),
+            "operating_setting": TOP15_REFILL_SHADOW_SETTING,
+            "validation_status": "shadow observed-data selector; not approved operating selector",
+            "recommendation": (
+                "Shadow-only review/research list; not official Top15 and not buy-underwriting. "
+                "PM override is required before any action."
+            ),
+        },
     }
 
 
