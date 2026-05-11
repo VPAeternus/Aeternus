@@ -491,9 +491,12 @@ def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception()
     assert "NEXT" in core_tickers
     assert set(exception_tickers) == {f"GOOD{i}" for i in range(5)}
     assert all("shadow" in str(r["portfolio_treatment"]) for r in result["core_rows"])
+    assert all("not_official" in str(r["portfolio_treatment"]) for r in result["core_rows"])
+    assert all("buy_underwriting" not in str(r["portfolio_treatment"]) for r in result["core_rows"])
     assert all(r["portfolio_treatment"] != "core_buy_underwriting" for r in result["core_rows"])
     assert all("shadow" in str(r["portfolio_treatment"]) for r in result["exception_rows"])
     assert all("not_official" in str(r["portfolio_treatment"]) for r in result["exception_rows"])
+    assert all("buy_underwriting" not in str(r["portfolio_treatment"]) for r in result["exception_rows"])
     assert all(r["portfolio_treatment"] != "exception_research_or_starter_underwriting" for r in result["exception_rows"])
     recommendation = result["operating_recommendation"]["recommendation"]
     assert "shadow-only" in recommendation or "not official" in recommendation

@@ -408,7 +408,7 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         row["selected_sleeve"] = "core"
         row["selected_sleeve_rank"] = rank
         row["selection_rank"] = rank
-        row["portfolio_treatment"] = "shadow_core_review_not_official_buy_underwriting"
+        row["portfolio_treatment"] = "shadow_core_review_not_official"
         row["core_deterioration_refill_shadow"] = 1
         row["core_refill_source"] = "original_top10" if int(row.get("core_candidate_rank") or 0) <= cfg.core_n else "next_ranked_core_candidate"
         row.setdefault("right_tail_exception_score", "")
@@ -423,7 +423,7 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
     )
     exceptions = [_strip_shadow_artifact_outcome_fields(row) for row in exceptions]
     for row in exceptions:
-        row["portfolio_treatment"] = "shadow_exception_review_not_official_buy_underwriting"
+        row["portfolio_treatment"] = "shadow_exception_review_not_official"
     selected = core_rows + exceptions
     for row in selected:
         row["operating_setting"] = TOP15_REFILL_SHADOW_SETTING
