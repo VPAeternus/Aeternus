@@ -415,12 +415,13 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         row.setdefault("right_tail_exception_reason_codes", [])
         row.setdefault("right_tail_exception_warning_codes", [])
         _annotate_operating_guidance(row)
-        core_rows.append(_public_row(row))
+        core_rows.append(_strip_shadow_artifact_outcome_fields(_public_row(row)))
 
     exception_blocks = blocked_tickers if refill_cfg.block_deterioration_from_exceptions else set()
     exceptions, exception_warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(
         core_rows, rows, cfg, coverage=coverage, coverage_enabled=coverage_enabled, blocked_tickers=exception_blocks
     )
+    exceptions = [_strip_shadow_artifact_outcome_fields(row) for row in exceptions]
     selected = core_rows + exceptions
     for row in selected:
         row["operating_setting"] = TOP15_REFILL_SHADOW_SETTING
@@ -440,8 +441,8 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         "exception_rows": exceptions,
         "core_deterioration_refill_rows": refill_rows,
         "core_deterioration_refill_summary": refill_summary,
-        "rejected_rows": [_public_row(r) for r in pool.get("rejected_rows", [])],
-        "rejected": [_public_row(r) for r in pool.get("rejected_rows", [])],
+        "rejected_rows": [_strip_shadow_artifact_outcome_fields(_public_row(r)) for r in pool.get("rejected_rows", [])],
+        "rejected": [_strip_shadow_artifact_outcome_fields(_public_row(r)) for r in pool.get("rejected_rows", [])],
         "summary": {
             "input_count": len(rows),
             "selected_count": len(selected),
@@ -628,7 +629,7 @@ def select_top15_core_deterioration_refill_shadow_from_csv(
     _write_csv(csv_path, artifact_result["selected_rows"])
     _write_csv_with_fields(replacements_path, artifact_result.get("core_deterioration_refill_rows", []), CORE_DETERIORATION_REFILL_FIELDS)
     json_path.write_text(json.dumps(artifact_result, indent=2, sort_keys=True), encoding="utf-8")
-    return result
+    return artifact_result
 
 
 _truthy = truthy

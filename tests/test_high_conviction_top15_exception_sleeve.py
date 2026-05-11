@@ -11,6 +11,7 @@ from tradingagents.research.fundamental.src.selection.high_conviction_top10 impo
     build_core_deterioration_review_rows,
     rank_high_conviction_core_pool,
     select_high_conviction_top10,
+    select_high_conviction_top15_core_deterioration_refill_shadow,
     select_high_conviction_top15_exception_sleeve,
     select_top15_core_deterioration_refill_shadow_from_csv,
     select_top15_from_csv,
@@ -544,7 +545,7 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
         writer.writeheader()
         writer.writerows(rows)
 
-    select_top15_core_deterioration_refill_shadow_from_csv(
+    returned_result = select_top15_core_deterioration_refill_shadow_from_csv(
         input_csv,
         output_dir,
         config={"enabled": True, "exception_slots": 0, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
@@ -561,6 +562,7 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
     assert all("final_rank" not in column for column in selected_header)
 
     json_artifact = json.loads((output_dir / "high_conviction_top15_core_deterioration_refill_shadow.json").read_text(encoding="utf-8"))
+    assert returned_result == json_artifact
     forbidden_fragments = ("return", "delta", "winner", "loser", "current_return", "final_rank", "target_label")
     for array_key in ("selected_rows", "selected", "core_rows", "exception_rows", "rejected_rows", "rejected"):
         for artifact_row in json_artifact.get(array_key, []):
@@ -571,6 +573,40 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
         replacement_header = [column.lower() for column in next(csv.reader(handle))]
     assert all("return" not in column for column in replacement_header)
     assert all("delta" not in column for column in replacement_header)
+
+
+def test_top15_refill_shadow_selector_omits_outcome_fields_from_public_rows():
+    outcome_fields = {
+        "return_90d_pct": "10",
+        "current_return_pct": "3",
+        "final_rank": "1",
+        "winner_label": "yes",
+        "target_label": "hit",
+    }
+    rows = [row(f"C{i}", 100 - i, **outcome_fields) for i in range(9)]
+    rows.insert(5, row(
+        "BAD", 95, **outcome_fields,
+        score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="",
+        rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum",
+        rm2_weak_acceleration="RM2 - Weak-bucket acceleration",
+        rm4_persistent_repricing_wave="RM4 - Persistent repricing wave",
+    ))
+    rows.extend([
+        row("NEXT", 89, **outcome_fields),
+        row("EXC", 50, rm1_low_price_dislocation_momentum="1", primary_theme="AI", **outcome_fields),
+        row("REJECT", 60, **outcome_fields),
+    ])
+
+    result = select_high_conviction_top15_core_deterioration_refill_shadow(
+        rows,
+        {"enabled": True, "exception_slots": 1, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
+    )
+
+    forbidden_keys = set(outcome_fields)
+    for array_key in ("selected_rows", "core_rows", "exception_rows", "rejected_rows"):
+        assert result[array_key]
+        for result_row in result[array_key]:
+            assert forbidden_keys.isdisjoint(result_row)
 
 
 def test_top15_refill_shadow_pairs_multiple_demotions_with_replacements_in_rank_order():
