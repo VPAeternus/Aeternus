@@ -234,7 +234,7 @@ def _select_v1(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
     return _rank_top10(candidates)
 
 
-def _select_v2(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+def _v2_candidates(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
     candidates = []
     for row in rows:
         if _macro_blocks_v2(row):
@@ -245,7 +245,12 @@ def _select_v2(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
         theme_or_t5 = _truthy(row.get("theme_acceleration_research_visibility")) or str(row.get("akg_universe_tier", "")).strip() == "T5_RESCAN"
         if entry_score >= 70 or hp_override or rm_override or theme_or_t5:
             candidates.append(_with_score(row, _v2_score(row)))
-    return _rank_top10(candidates)
+    ranked = sorted(candidates, key=lambda r: (-(_to_float(r.get("hc_score")) or float("-inf")), -(_to_float(r.get("entry_score_0_100")) or float("-inf")), str(r.get("ticker", "")).upper()))
+    return [{**row, "selection_rank": rank, "core_candidate_rank": rank} for rank, row in enumerate(ranked, 1)]
+
+
+def _select_v2(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [{k: v for k, v in row.items() if k != "core_candidate_rank"} for row in _v2_candidates(rows)[:10]]
 
 
 def _select_variant(name: str, rows: Sequence[dict[str, str]], feature_cols: Sequence[str]) -> list[dict[str, Any]]:

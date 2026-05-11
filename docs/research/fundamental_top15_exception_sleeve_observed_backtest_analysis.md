@@ -83,7 +83,7 @@ These queues are visibility/research outputs, not buy lists. A target can be vis
 | --- | --- | --- |
 | top15_exception_candidate | 0 |  |
 | right_tail_scout | 18 | 31.444444444444443 |
-| core_deterioration_review | 16 |  |
+| core_deterioration_review | 77 |  |
 | demote_review_full_audit | 332 | 4.9397590361445785 |
 | demote_review_priority_1_daily | 99 | 11.858585858585858 |
 | demote_review_priority_2 | 233 | 2.0 |
@@ -115,6 +115,16 @@ Final behavior:
 6. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
 7. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
+## Core Deterioration Refill Shadow Review
+
+This shadow-only review is not the official Top-15 list. It preserves Top-15 capacity by testing whether demoted/refill-ineligible core deterioration tickers can be replaced without changing the frozen official selection output.
+
+Operational reading:
+
+- Blocks demoted/refill-ineligible deterioration tickers from exception auto-selection.
+- Preserves Top-15 capacity for cleaner core and exception candidates.
+- Treats replacement deltas as post-freeze diagnostics only, not live selection evidence.
+
 ## No-leakage and caveats
 
 - Selector receives selection-time fields only; returns are attached after selection is frozen.
@@ -136,6 +146,9 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_selected.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_replacements.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/demote_review_priority_1.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_top100.csv`

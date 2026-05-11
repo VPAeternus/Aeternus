@@ -1,6 +1,7 @@
 import csv
 
 from tradingagents.research.fundamental.src.selection import HighConvictionConfig, select_from_csv, select_high_conviction_top10
+from tradingagents.research.fundamental.src.selection.high_conviction_top10 import rank_high_conviction_core_pool
 
 
 def row(ticker, score=80, confidence=4, **extra):
@@ -123,6 +124,17 @@ def test_output_includes_stable_aliases_summary_and_config():
     assert result["rejected"] == result["rejected_rows"]
     assert "summary" in result
     assert result["config"] == result["config_snapshot"]
+
+
+def test_public_core_pool_rows_deepcopy_nested_state():
+    rows = [row("A", 80), row("B", 79)]
+
+    public_pool = rank_high_conviction_core_pool(rows, {"top_n": 10})
+    public_pool["ranked_rows"][0]["reason_codes"].append("MUTATED")
+
+    fresh_pool = rank_high_conviction_core_pool(rows, {"top_n": 10})
+
+    assert "MUTATED" not in fresh_pool["ranked_rows"][0]["reason_codes"]
 
 
 def test_missing_confidence_fails_when_required():

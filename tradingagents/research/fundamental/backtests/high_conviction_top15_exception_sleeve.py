@@ -23,14 +23,19 @@ from tradingagents.research.fundamental.backtests.high_conviction_top10 import (
     _read_csv,
     _to_float,
     _truthy,
+    _v2_candidates,
     _validate_unique_ticker_quarter,
     _write_csv,
 )
 from tradingagents.research.fundamental.src.selection.high_conviction_top10 import (
     CORE_DETERIORATION_FIELDS,
+    CORE_DETERIORATION_REFILL_FIELDS,
     RightTailExceptionConfig,
+    _select_exception_sleeve,
     build_core_deterioration_review_rows,
+    core_deterioration_flags,
     select_high_conviction_top15_exception_sleeve,
+    should_refill_demote_core_row,
 )
 from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS,
@@ -63,7 +68,29 @@ TOP15_VARIANTS: dict[str, RightTailExceptionConfig] = {
     "top15_conservative_10_core_3_exception": RightTailExceptionConfig(enabled=True, core_n=10, exception_slots=3),
     "top15_rm1_priority_max2_rm2plus": RightTailExceptionConfig(enabled=True, core_n=10, exception_slots=5, max_rm2plus_slots=2),
 }
+CORE_DETERIORATION_REFILL_SHADOW_VARIANTS = {
+    "top15_v4_core_deterioration_refill_strict": "strict",
+    "top15_v4_core_deterioration_refill_downgrade": "downgrade",
+}
+CORE_DETERIORATION_REFILL_SELECTED_FIELDS = [
+    "variant", "quarter", "selection_rank", "selected_sleeve", "selected_sleeve_rank", "ticker",
+    "core_refill_source", "demoted_replacement_for", "right_tail_exception_score", *LABEL_COLUMNS,
+]
+CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS = [
+    *CORE_DETERIORATION_REFILL_FIELDS,
+    "demoted_return_90d_pct", "replacement_return_90d_pct", "replacement_delta_90d_pct",
+]
+CORE_DETERIORATION_REFILL_SUMMARY_FIELDS = [
+    "variant", "quarter_count", "core_count", "exception_count", "total_picks", "avg_picks_per_quarter",
+    "avg_return_90d_pct", "winner_90d_30pct_rate", "loser_90d_minus30pct_rate",
+]
 BASELINE_VARIANT = "high_conviction_top10_v2_final"
+
+
+def _filter_fields(rows: Sequence[Mapping[str, Any]], fields: Sequence[str]) -> list[dict[str, Any]]:
+    return [{field: row.get(field, "") for field in fields} for row in rows]
+
+
 OUTPUT_FILES = [
     "selected_names_by_quarter_top15.csv",
     "strategy_summary_top15.csv",
@@ -71,6 +98,9 @@ OUTPUT_FILES = [
     "core_vs_exception_contribution.csv",
     "exception_slot_diagnostics.csv",
     "core_deterioration_review_queue.csv",
+    "core_deterioration_refill_shadow_selected.csv",
+    "core_deterioration_refill_shadow_replacements.csv",
+    "core_deterioration_refill_shadow_summary.csv",
     "right_tail_capture_comparison.csv",
     "left_tail_penalty_comparison.csv",
     "missed_right_tail_after_top15.csv",
@@ -277,6 +307,119 @@ def _validate_selected(rows: Sequence[Mapping[str, Any]]) -> None:
         seen_ticker.add(kt); seen_rank.add(kr)
 
 
+def _core_refill_flag_row(row: Mapping[str, Any], rank: int) -> dict[str, Any]:
+    return {**dict(row), "selected_sleeve": "core", "selected_sleeve_rank": rank, "selection_rank": rank}
+
+
+def _build_refill_replacement_row(variant: str, quarter: str, mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any] | None, by_ticker: Mapping[str, Mapping[str, Any]]) -> dict[str, Any]:
+    demoted_ticker = str(demoted.get("ticker", "")).upper()
+    replacement_row = replacement or {}
+    replacement_ticker = str(replacement_row.get("ticker", "")).upper()
+    d_original = by_ticker.get(demoted_ticker, {})
+    r_original = by_ticker.get(replacement_ticker, {})
+    d_ret = _to_float(d_original.get("return_90d_pct"))
+    r_ret = _to_float(r_original.get("return_90d_pct"))
+    flags = core_deterioration_flags(_core_refill_flag_row(demoted, int(_to_float(demoted.get("core_candidate_rank")) or 999999)))
+    return {
+        "variant": variant,
+        "quarter": quarter,
+        "mode": mode,
+        "demoted_ticker": demoted_ticker,
+        "replacement_ticker": replacement_ticker,
+        "demoted_core_candidate_rank": demoted.get("core_candidate_rank", ""),
+        "replacement_core_candidate_rank": replacement_row.get("core_candidate_rank", ""),
+        "demoted_entry_score_0_100": demoted.get("entry_score_0_100", ""),
+        "replacement_entry_score_0_100": replacement_row.get("entry_score_0_100", ""),
+        "demoted_score_change": demoted.get("score_change", ""),
+        "demoted_negative_revision_risk": demoted.get("negative_revision_risk", ""),
+        "demoted_pre_llm_fundamental_bucket": demoted.get("pre_llm_fundamental_bucket", ""),
+        "demoted_primary_theme": demoted.get("primary_theme", ""),
+        "demoted_rm_count": flags.get("core_deterioration_rm_count", ""),
+        "demoted_hp_count": flags.get("core_deterioration_hp_count", ""),
+        "demoted_market_repricing_score": flags.get("demoted_market_repricing_score", ""),
+        "high_score_deterioration_flag": flags.get("high_score_deterioration_flag", ""),
+        "weak_no_theme_repricing_stack_flag": flags.get("weak_no_theme_repricing_stack_flag", ""),
+        "core_deterioration_review_flag": flags.get("core_deterioration_review_flag", ""),
+        "core_deterioration_downgrade_flag": flags.get("core_deterioration_downgrade_flag", ""),
+        "core_deterioration_strict_override_required": flags.get("core_deterioration_strict_override_required", ""),
+        "core_deterioration_reason_codes": flags.get("core_deterioration_reason_codes", ""),
+        "demoted_return_90d_pct": d_original.get("return_90d_pct", ""),
+        "replacement_return_90d_pct": r_original.get("return_90d_pct", ""),
+        "replacement_delta_90d_pct": f"{(r_ret - d_ret):.6f}" if r_ret is not None and d_ret is not None else "",
+    }
+
+
+def _build_core_deterioration_refill_shadow(variant: str, mode: str, quarter: str, eligible: Sequence[Mapping[str, Any]], selection_safe_cols: Sequence[str]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    identity_cols = ["ticker", "quarter", "tradable_date", "entry_open", "eligible_for_backtest"]
+    cols = list(dict.fromkeys([*identity_cols, *selection_safe_cols]))
+    safe_rows = [{c: r.get(c, "") for c in cols} for r in eligible]
+    by_ticker = {str(r.get("ticker", "")).upper(): r for r in eligible}
+    ranked = _v2_candidates(safe_rows)
+    blocked_tickers: set[str] = set()
+    for row in safe_rows:
+        ticker = str(row.get("ticker", "")).upper()
+        if ticker and should_refill_demote_core_row(_core_refill_flag_row(row, 999999), mode):
+            blocked_tickers.add(ticker)
+    selected_core_raw: list[dict[str, Any]] = []
+    demoted_raw: list[dict[str, Any]] = []
+    for candidate in ranked:
+        ticker = str(candidate.get("ticker", "")).upper()
+        rank = int(_to_float(candidate.get("core_candidate_rank")) or 999999)
+        if ticker in blocked_tickers:
+            if rank <= 10:
+                demoted_raw.append(candidate)
+            continue
+        selected_core_raw.append(candidate)
+        if len(selected_core_raw) >= 10:
+            break
+    selected: list[dict[str, Any]] = []
+    replacements_raw = [r for r in selected_core_raw if (_to_float(r.get("core_candidate_rank")) or 0) > 10]
+    replacement_by_ticker: dict[str, str] = {}
+    replacement_rows: list[dict[str, Any]] = []
+    for idx, demoted in enumerate(demoted_raw):
+        replacement = replacements_raw[idx] if idx < len(replacements_raw) else None
+        if replacement is not None:
+            replacement_by_ticker[str(replacement.get("ticker", "")).upper()] = str(demoted.get("ticker", "")).upper()
+        replacement_rows.append(_build_refill_replacement_row(variant, quarter, mode, demoted, replacement, by_ticker))
+    for rank, row in enumerate(selected_core_raw, 1):
+        ticker = str(row.get("ticker", "")).upper()
+        frozen = _freeze({**row, "selected_sleeve": "core", "selected_sleeve_rank": rank}, by_ticker[ticker], variant, quarter, rank)
+        frozen["core_refill_source"] = "original_top10" if (_to_float(row.get("core_candidate_rank")) or 999999) <= 10 else "next_ranked_core_candidate"
+        frozen["demoted_replacement_for"] = replacement_by_ticker.get(ticker, "")
+        selected.append(frozen)
+    exceptions, _warnings = _select_exception_sleeve(selected_core_raw, safe_rows, RightTailExceptionConfig(enabled=True, core_n=10, exception_slots=5), blocked_tickers=blocked_tickers)
+    for row in exceptions:
+        ticker = str(row.get("ticker", "")).upper()
+        if ticker not in by_ticker:
+            continue
+        frozen = _freeze(row, by_ticker[ticker], variant, quarter, len(selected) + 1)
+        frozen["selected_sleeve"] = "right_tail_exception"
+        frozen["selected_sleeve_rank"] = row.get("selected_sleeve_rank", "")
+        frozen["core_refill_source"] = ""
+        frozen["demoted_replacement_for"] = ""
+        selected.append(frozen)
+    return selected, replacement_rows
+
+
+def _refill_shadow_summary_rows(selected_rows: Sequence[Mapping[str, Any]], quarter_rows: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for variant in CORE_DETERIORATION_REFILL_SHADOW_VARIANTS:
+        picks = [r for r in selected_rows if r.get("variant") == variant]
+        qrows = [r for r in quarter_rows if r.get("variant") == variant]
+        rows.append({
+            "variant": variant,
+            "quarter_count": len(qrows),
+            "core_count": sum(1 for r in picks if r.get("selected_sleeve") == "core"),
+            "exception_count": sum(1 for r in picks if r.get("selected_sleeve") == "right_tail_exception"),
+            "total_picks": len(picks),
+            "avg_picks_per_quarter": f"{len(picks) / len(qrows):.6f}" if qrows else "",
+            "avg_return_90d_pct": _avg(qrows, "avg_return_90d_pct"),
+            "winner_90d_30pct_rate": _avg(qrows, "winner_90d_30pct_rate"),
+            "loser_90d_minus30pct_rate": _avg(qrows, "loser_90d_minus30pct_rate"),
+        })
+    return rows
+
+
 def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, prior_selected: str | Path, out_dir: str | Path = DEFAULT_OUTPUT_DIR, run_id: str | None = None) -> dict[str, Any]:
     panel_path, prior_path, out = Path(pit_panel), Path(prior_selected), Path(out_dir)
     rows, headers = _read_csv(panel_path); _validate_unique_ticker_quarter(rows)
@@ -286,6 +429,9 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     selected_rows: list[dict[str, Any]] = list(baseline)
     quarter_rows: list[dict[str, Any]] = []
     diagnostics: list[dict[str, Any]] = []
+    refill_selected_rows: list[dict[str, Any]] = []
+    refill_replacement_rows: list[dict[str, Any]] = []
+    refill_quarter_rows: list[dict[str, Any]] = []
     status = _status_map(baseline)
     baseline_by_quarter: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in baseline:
@@ -322,6 +468,11 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
             exception_rows = [r for r in frozen if r.get("selected_sleeve") == "right_tail_exception"]
             available = [r for r in result.get("rejected_rows", []) if r.get("right_tail_exception_score")]
             diagnostics.append({"variant": variant, "quarter": q, "selected_exception_count": len(exception_rows), "available_exception_candidate_count": len(exception_rows) + len(available), "warning_codes": ";".join(result.get("summary", {}).get("warnings", [])), "selected_exception_tickers": ";".join(r["ticker"] for r in exception_rows), "single_rm_exception_count": sum(str(r.get("rm_signal_bucket")) == "1" for r in exception_rows), "rm2plus_exception_count": sum(str(r.get("rm_signal_bucket")) == "2+" for r in exception_rows), "no_theme_no_llm_exception_count": sum(not (str(r.get("primary_theme", "")).strip() or _truthy(r.get("hp_LLM_best"))) for r in exception_rows)})
+        for refill_variant, mode in CORE_DETERIORATION_REFILL_SHADOW_VARIANTS.items():
+            refill_selected, refill_replacements = _build_core_deterioration_refill_shadow(refill_variant, mode, q, eligible, safe_cols)
+            refill_selected_rows.extend(refill_selected)
+            refill_replacement_rows.extend(refill_replacements)
+            refill_quarter_rows.append(_summarize_quarter(refill_variant, q, refill_selected, len(eligible), 15))
 
     _validate_selected([r for r in selected_rows if r["variant"] != BASELINE_VARIANT] + baseline)
     variants = [BASELINE_VARIANT, *TOP15_VARIANTS.keys()]
@@ -348,6 +499,10 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
     _write_csv(out / "exception_slot_diagnostics.csv", diagnostics, ["variant", "quarter", "selected_exception_count", "available_exception_candidate_count", "warning_codes", "selected_exception_tickers", "single_rm_exception_count", "rm2plus_exception_count", "no_theme_no_llm_exception_count"])
     core_deterioration_rows = build_core_deterioration_review_rows([row for row in selected_rows if row.get("variant") == main_top15_variant])
     _write_csv(out / "core_deterioration_review_queue.csv", core_deterioration_rows, CORE_DETERIORATION_FIELDS)
+    _write_csv(out / "core_deterioration_refill_shadow_selected.csv", _filter_fields(refill_selected_rows, CORE_DETERIORATION_REFILL_SELECTED_FIELDS), CORE_DETERIORATION_REFILL_SELECTED_FIELDS)
+    _write_csv(out / "core_deterioration_refill_shadow_replacements.csv", _filter_fields(refill_replacement_rows, CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS), CORE_DETERIORATION_REFILL_HISTORICAL_FIELDS)
+    refill_summary_rows = _refill_shadow_summary_rows(refill_selected_rows, refill_quarter_rows)
+    _write_csv(out / "core_deterioration_refill_shadow_summary.csv", _filter_fields(refill_summary_rows, CORE_DETERIORATION_REFILL_SUMMARY_FIELDS), CORE_DETERIORATION_REFILL_SUMMARY_FIELDS)
     _write_csv(out / "right_tail_capture_comparison.csv", comparison, ["ticker", "quarter", "return_90d_pct", "old_v2_status", "top15_status", "selected_sleeve", "selected_sleeve_rank", "right_tail_exception_score", "mechanical_exclusion_before", "mechanical_status_after"])
     _write_csv(out / "left_tail_penalty_comparison.csv", left_tail, ["variant", "loser_90d_minus30pct_rate", "avg_return_90d_pct", "2025Q1_avg_90d", "2025Q1_loser_rate", "delta_loser_rate_vs_top10"])
     top15_selected_keys = {
@@ -455,6 +610,13 @@ def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, p
         },
         "core_deterioration_review_count": len(core_deterioration_rows),
         "core_deterioration_strict_override_count": sum(str(row.get("core_deterioration_strict_override_required")) == "1" for row in core_deterioration_rows),
+        "core_deterioration_refill_shadow_outputs": {
+            "selected": "core_deterioration_refill_shadow_selected.csv",
+            "replacements": "core_deterioration_refill_shadow_replacements.csv",
+            "summary": "core_deterioration_refill_shadow_summary.csv",
+        },
+        "core_deterioration_refill_shadow_variants": CORE_DETERIORATION_REFILL_SHADOW_VARIANTS,
+        "core_deterioration_refill_shadow_no_leakage_statement": "Selection/refill uses PIT feature columns only; return labels are attached after selection is frozen for diagnostics.",
         "right_tail_queue_forbidden_columns": sorted(set(FORBIDDEN_RIGHT_TAIL_ROUTING_COLUMNS) | set(forbidden_right_tail_input_columns)),
         "right_tail_queue_input_columns": right_tail_input_columns,
         "right_tail_queue_scoring_columns": right_tail_scoring_columns,
