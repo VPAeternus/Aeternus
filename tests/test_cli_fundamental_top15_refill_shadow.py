@@ -94,6 +94,23 @@ def test_fundamental_top15_refill_shadow_cli_missing_scores_path(tmp_path):
     assert "scores CSV not found" in result.output
 
 
+def test_fundamental_top15_refill_shadow_cli_rejects_scores_directory(tmp_path):
+    result = _invoke_shadow(tmp_path)
+
+    assert result.exit_code != 0
+    assert "scores CSV not found" in result.output
+
+
+def test_fundamental_top15_refill_shadow_cli_rejects_invalid_date(tmp_path):
+    scores = tmp_path / "scores.csv"
+    _write_scores(scores)
+
+    result = _invoke_shadow(scores, "--date", "../shadow")
+
+    assert result.exit_code != 0
+    assert "--date must be YYYY-MM-DD" in result.output
+
+
 def test_fundamental_top15_refill_shadow_cli_default_output_root(tmp_path, monkeypatch):
     scores = tmp_path / "scores.csv"
     _write_scores(scores)
@@ -112,6 +129,16 @@ def test_fundamental_top15_refill_shadow_cli_missing_coverage_manifest(tmp_path)
     _write_scores(scores)
 
     result = _invoke_shadow(scores, "--coverage-manifest", str(tmp_path / "missing_coverage.csv"))
+
+    assert result.exit_code != 0
+    assert "coverage manifest not found" in result.output
+
+
+def test_fundamental_top15_refill_shadow_cli_rejects_coverage_manifest_directory(tmp_path):
+    scores = tmp_path / "scores.csv"
+    _write_scores(scores)
+
+    result = _invoke_shadow(scores, "--coverage-manifest", str(tmp_path))
 
     assert result.exit_code != 0
     assert "coverage manifest not found" in result.output

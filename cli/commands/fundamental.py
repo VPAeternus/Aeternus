@@ -204,14 +204,21 @@ def fundamental_top15_refill_shadow(
         console.print("[red]--mode must be strict, downgrade, or all_review[/red]")
         raise typer.Exit(1)
     scores_path = Path(scores_csv)
-    if not scores_path.exists():
+    if not scores_path.is_file():
         console.print(f"[red]scores CSV not found: {scores_path}[/red]")
         raise typer.Exit(1)
     coverage_path = Path(coverage_manifest) if coverage_manifest.strip() else None
-    if coverage_path is not None and not coverage_path.exists():
+    if coverage_path is not None and not coverage_path.is_file():
         console.print(f"[red]coverage manifest not found: {coverage_path}[/red]")
         raise typer.Exit(1)
     selection_date = date.strip()
+    if selection_date:
+        try:
+            if _dt.date.fromisoformat(selection_date).isoformat() != selection_date:
+                raise ValueError
+        except ValueError:
+            console.print("[red]--date must be YYYY-MM-DD[/red]")
+            raise typer.Exit(1)
     out_root = Path(output_root.strip()) if output_root.strip() else (
         Path("eval_results") / "fundamental" / selection_date if selection_date else scores_path.parent
     )
