@@ -250,7 +250,7 @@ def _v2_candidates(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _select_v2(rows: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
-    return _v2_candidates(rows)[:10]
+    return [{k: v for k, v in row.items() if k != "core_candidate_rank"} for row in _v2_candidates(rows)[:10]]
 
 
 def _select_variant(name: str, rows: Sequence[dict[str, str]], feature_cols: Sequence[str]) -> list[dict[str, Any]]:

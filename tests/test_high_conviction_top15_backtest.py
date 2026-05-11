@@ -86,6 +86,8 @@ def test_v2_candidates_returns_full_ex_ante_ranked_pool():
     selected = _select_v2(rows)
 
     assert len(pool) == 12
+    assert all("core_candidate_rank" in r for r in pool)
+    assert all("core_candidate_rank" not in r for r in selected)
     assert [r["ticker"] for r in pool[:10]] == [r["ticker"] for r in selected]
     assert [r["core_candidate_rank"] for r in pool[:3]] == [1, 2, 3]
     assert pool[-1]["ticker"] == "C11"
