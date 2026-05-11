@@ -70,6 +70,20 @@ def test_rank_high_conviction_core_pool_matches_top10_contract():
     assert all("core_candidate_rank" not in r for r in top10["selected_rows"])
 
 
+def test_public_core_pool_row_mutation_does_not_affect_selector():
+    rows = [row(f"C{i}", 100 - i) for i in range(12)]
+    expected_ticker = "C0"
+
+    public_pool = rank_high_conviction_core_pool(rows, {"top_n": 10})
+    public_pool["ranked_rows"][0]["ticker"] = "MUTATED"
+
+    top10 = select_high_conviction_top10(rows, {"top_n": 10})
+    public_pool_again = rank_high_conviction_core_pool(rows, {"top_n": 10})
+
+    assert top10["selected_rows"][0]["ticker"] == expected_ticker
+    assert public_pool_again["ranked_rows"][0]["ticker"] == expected_ticker
+
+
 def test_top15_selects_10_core_plus_5_exceptions():
     rows = [row(f"C{i}", 100 - i) for i in range(10)] + [row(f"E{i}", 30 + i, rm1_low_price_dislocation_momentum="1", primary_theme=f"theme{i}") for i in range(5)]
     result = select_high_conviction_top15_exception_sleeve(rows, {"enabled": True})

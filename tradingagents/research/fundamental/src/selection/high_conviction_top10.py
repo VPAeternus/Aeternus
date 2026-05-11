@@ -214,7 +214,12 @@ def rank_high_conviction_core_pool(
     coverage_rows: Sequence[Mapping[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Return ranked raw core-pool rows for refill/shadow diagnostics."""
-    return _rank_high_conviction_core_pool(rows, config, coverage_rows)
+    pool = _rank_high_conviction_core_pool(rows, config, coverage_rows)
+    return {
+        **pool,
+        "ranked_rows": [dict(row) for row in pool["ranked_rows"]],
+        "rejected_rows": [dict(row) for row in pool["rejected_rows"]],
+    }
 
 
 def select_high_conviction_top10(
