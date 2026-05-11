@@ -132,6 +132,28 @@ def test_exception_sleeve_missing_akg_macro_fields_are_neutral():
     assert [r["ticker"] for r in result["exception_rows"]] == ["E"]
 
 
+def test_top15_official_path_ignores_absent_or_disabled_refill_config():
+    rows = [row(f"C{i}", 100 - i) for i in range(10)] + [
+        row(
+            "DETERIORATING",
+            50,
+            rm1_low_price_dislocation_momentum="1",
+            score_change="-2",
+            negative_revision_risk="2",
+            pre_llm_fundamental_bucket="weak",
+            primary_theme="",
+        )
+    ]
+
+    absent_refill = select_high_conviction_top15_exception_sleeve(rows, {"enabled": True, "exception_slots": 1})
+    disabled_refill = select_high_conviction_top15_exception_sleeve(
+        rows,
+        {"enabled": True, "exception_slots": 1, "core_deterioration_refill": {"enabled": False}},
+    )
+
+    assert [r["ticker"] for r in absent_refill["selected_rows"]] == [r["ticker"] for r in disabled_refill["selected_rows"]]
+
+
 def test_exception_sleeve_does_not_use_return_labels():
     rows = [row(f"C{i}", 100 - i) for i in range(10)] + [
         row("BADRET", 40, rm1_low_price_dislocation_momentum="1", return_90d_pct="999"),
