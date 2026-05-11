@@ -492,6 +492,8 @@ def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception()
     assert result["summary"]["selected_count"] == 15
     assert result["core_deterioration_refill_rows"][0]["demoted_ticker"] == "BAD"
     assert result["core_deterioration_refill_rows"][0]["replacement_ticker"] == "NEXT"
+    assert result["core_deterioration_refill_summary"]["demoted_count"] == 1
+    assert result["core_deterioration_refill_summary"]["replacement_count"] >= 1
 
 
 def test_top15_refill_shadow_replacement_uses_ex_ante_rank_not_return_labels():
@@ -512,7 +514,11 @@ def test_top15_refill_shadow_replacement_uses_ex_ante_rank_not_return_labels():
         {"enabled": True, "exception_slots": 0, "core_deterioration_refill": {"enabled": True, "mode": "strict"}},
     )
 
-    assert result["core_deterioration_refill_rows"][0]["replacement_ticker"] == "NEXT"
+    diagnostic = result["core_deterioration_refill_rows"][0]
+    assert diagnostic["replacement_ticker"] == "NEXT"
+    assert diagnostic["demoted_return_90d_pct"] == ""
+    assert diagnostic["replacement_return_90d_pct"] == ""
+    assert diagnostic["replacement_delta_90d_pct"] == ""
     assert "LOWER" not in [r["ticker"] for r in result["selected_rows"]]
 
 

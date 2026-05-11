@@ -332,8 +332,6 @@ def _core_flag_row(row: Mapping[str, Any], rank: int) -> dict[str, Any]:
 
 def _replacement_diagnostic(mode: str, demoted: Mapping[str, Any], replacement: Mapping[str, Any] | None) -> dict[str, Any]:
     flags = core_deterioration_flags(_core_flag_row(demoted, int(_to_float(demoted.get("core_candidate_rank")) or 999999)))
-    demoted_return = _to_float(demoted.get("return_90d_pct"))
-    replacement_return = _to_float(replacement.get("return_90d_pct")) if replacement else None
     return {
         "variant": TOP15_REFILL_SHADOW_SETTING,
         "quarter": demoted.get("quarter", ""),
@@ -357,9 +355,9 @@ def _replacement_diagnostic(mode: str, demoted: Mapping[str, Any], replacement: 
         "core_deterioration_downgrade_flag": flags.get("core_deterioration_downgrade_flag", ""),
         "core_deterioration_strict_override_required": flags.get("core_deterioration_strict_override_required", ""),
         "core_deterioration_reason_codes": flags.get("core_deterioration_reason_codes", ""),
-        "demoted_return_90d_pct": demoted.get("return_90d_pct", ""),
-        "replacement_return_90d_pct": replacement.get("return_90d_pct", "") if replacement else "",
-        "replacement_delta_90d_pct": round(replacement_return - demoted_return, 6) if replacement_return is not None and demoted_return is not None else "",
+        "demoted_return_90d_pct": "",
+        "replacement_return_90d_pct": "",
+        "replacement_delta_90d_pct": "",
     }
 
 
@@ -432,12 +430,19 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         row["operating_setting_validation_status"] = "shadow_observed_data_not_approved_operating_selector"
 
     config_snapshot = {**pool.get("config_snapshot", {}), "right_tail_exception_config": asdict(cfg), "core_deterioration_refill": asdict(refill_cfg)}
+    refill_summary = {
+        "mode": refill_cfg.mode,
+        "demoted_count": len(demoted_raw),
+        "replacement_count": len(replacement_raw),
+        "blocked_from_exception_count": len(exception_blocks),
+    }
     return {
         "selected_rows": selected,
         "selected": selected,
         "core_rows": core_rows,
         "exception_rows": exceptions,
         "core_deterioration_refill_rows": refill_rows,
+        "core_deterioration_refill_summary": refill_summary,
         "rejected_rows": [_public_row(r) for r in pool.get("rejected_rows", [])],
         "rejected": [_public_row(r) for r in pool.get("rejected_rows", [])],
         "summary": {
