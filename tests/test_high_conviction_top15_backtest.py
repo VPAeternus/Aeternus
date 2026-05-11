@@ -344,6 +344,23 @@ def _refill_fixture(tmp_path):
     return out, manifest
 
 
+def test_top15_analysis_emits_core_deterioration_refill_shadow_tables(tmp_path):
+    from scripts.analyze_fundamental_top15_exception_sleeve import run
+
+    out_bundle, _ = _refill_fixture(tmp_path)
+    analysis_out = tmp_path / "analysis"
+    report = tmp_path / "report.md"
+    run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+
+    assert (analysis_out / "core_deterioration_refill_shadow_selected.csv").exists()
+    assert (analysis_out / "core_deterioration_refill_shadow_replacements.csv").exists()
+    assert (analysis_out / "core_deterioration_refill_shadow_summary.csv").exists()
+    text = report.read_text(encoding="utf-8")
+    assert "Core Deterioration Refill Shadow Review" in text
+    assert "shadow-only" in text
+    assert "not the official Top-15 list" in text
+
+
 def test_core_deterioration_refill_shadow_outputs_full_top15_and_replacement_diagnostics(tmp_path):
     out, manifest = _refill_fixture(tmp_path)
     selected = _read_rows(out / "core_deterioration_refill_shadow_selected.csv")

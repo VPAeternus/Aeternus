@@ -37,6 +37,12 @@ def read_csv(path: Path) -> pd.DataFrame:
     return pd.read_csv(path, dtype=str, keep_default_na=False)
 
 
+def read_csv_optional(path: Path) -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame()
+    return read_csv(path)
+
+
 def num(series: pd.Series) -> pd.Series:
     return pd.to_numeric(series, errors="coerce")
 
@@ -144,6 +150,12 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     diagnostics_queue = read_csv(bundle_dir / "right_tail_evidence_score_diagnostics.csv")
     target_visibility_audit = read_csv(bundle_dir / "target_miss_rescue_audit.csv")
     v4_diagnostics = read_csv(bundle_dir / "v4_rescue_variant_summary.csv")
+    refill_shadow_selected_path = bundle_dir / "core_deterioration_refill_shadow_selected.csv"
+    refill_shadow_replacements_path = bundle_dir / "core_deterioration_refill_shadow_replacements.csv"
+    refill_shadow_summary_path = bundle_dir / "core_deterioration_refill_shadow_summary.csv"
+    refill_shadow_selected = read_csv_optional(refill_shadow_selected_path)
+    refill_shadow_replacements = read_csv_optional(refill_shadow_replacements_path)
+    refill_shadow_summary = read_csv_optional(refill_shadow_summary_path)
     manifest = json.loads((bundle_dir / "run_manifest.json").read_text())
 
     adoption = build_adoption_check(summary, contrib)
@@ -196,6 +208,15 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         "thin_signal_watchlist_queue.csv": thin_signal_queue,
         "thin_signal_watchlist_top100.csv": thin_signal_top100,
     }
+    optional_outputs = [
+        ("core_deterioration_refill_shadow_selected.csv", refill_shadow_selected_path, refill_shadow_selected),
+        ("core_deterioration_refill_shadow_replacements.csv", refill_shadow_replacements_path, refill_shadow_replacements),
+        ("core_deterioration_refill_shadow_summary.csv", refill_shadow_summary_path, refill_shadow_summary),
+    ]
+    for name, path, df in optional_outputs:
+        if path.exists():
+            outputs[name] = df
+
     for name, df in outputs.items():
         write_df(df, out_dir / name)
 
@@ -286,6 +307,16 @@ Final behavior:
 6. Thin-Signal Watchlist: weak RM/HP/repricing evidence with insufficient proof; full file is audit-only; daily PM consumption uses Top 25 / Top 50 / Top 100 cuts from `thin_signal_watchlist_top100.csv`.
 7. Right-Tail Scout + Demote Review: messy theme-wave / turnaround / hidden-supplier candidates too important to ignore but not automatically buys.
 
+## Core Deterioration Refill Shadow Review
+
+This shadow-only review is not the official Top-15 list. It preserves Top-15 capacity by testing whether demoted/refill-ineligible core deterioration tickers can be replaced without changing the frozen official selection output.
+
+Operational reading:
+
+- Blocks demoted/refill-ineligible deterioration tickers from exception auto-selection.
+- Preserves Top-15 capacity for cleaner core and exception candidates.
+- Treats replacement deltas as post-freeze diagnostics only, not live selection evidence.
+
 ## No-leakage and caveats
 
 - Selector receives selection-time fields only; returns are attached after selection is frozen.
@@ -307,6 +338,9 @@ Final behavior:
 - `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_selected.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_replacements.csv`
+- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_summary.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/demote_review_priority_1.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
 - `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_top100.csv`
