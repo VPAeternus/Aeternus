@@ -348,17 +348,46 @@ def test_top15_analysis_emits_core_deterioration_refill_shadow_tables(tmp_path):
     from scripts.analyze_fundamental_top15_exception_sleeve import run
 
     out_bundle, _ = _refill_fixture(tmp_path)
+    shadow_names = [
+        "core_deterioration_refill_shadow_selected.csv",
+        "core_deterioration_refill_shadow_replacements.csv",
+        "core_deterioration_refill_shadow_summary.csv",
+    ]
     analysis_out = tmp_path / "analysis"
     report = tmp_path / "report.md"
-    run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+    analysis_manifest = run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
 
-    assert (analysis_out / "core_deterioration_refill_shadow_selected.csv").exists()
-    assert (analysis_out / "core_deterioration_refill_shadow_replacements.csv").exists()
-    assert (analysis_out / "core_deterioration_refill_shadow_summary.csv").exists()
+    for name in shadow_names:
+        path = analysis_out / name
+        assert path.exists()
+        assert str(path) in analysis_manifest["outputs"]
+        assert _read_rows(path)
     text = report.read_text(encoding="utf-8")
     assert "Core Deterioration Refill Shadow Review" in text
     assert "shadow-only" in text
     assert "not the official Top-15 list" in text
+
+
+def test_top15_analysis_emits_empty_refill_shadow_tables_for_older_bundles(tmp_path):
+    from scripts.analyze_fundamental_top15_exception_sleeve import run
+
+    out_bundle, _ = _refill_fixture(tmp_path)
+    shadow_names = [
+        "core_deterioration_refill_shadow_selected.csv",
+        "core_deterioration_refill_shadow_replacements.csv",
+        "core_deterioration_refill_shadow_summary.csv",
+    ]
+    for name in shadow_names:
+        (out_bundle / name).unlink()
+    analysis_out = tmp_path / "analysis_missing_shadow"
+    report = tmp_path / "report_missing_shadow.md"
+    analysis_manifest = run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+
+    for name in shadow_names:
+        path = analysis_out / name
+        assert path.exists()
+        assert str(path) in analysis_manifest["outputs"]
+        assert _read_rows(path) == []
 
 
 def test_core_deterioration_refill_shadow_outputs_full_top15_and_replacement_diagnostics(tmp_path):

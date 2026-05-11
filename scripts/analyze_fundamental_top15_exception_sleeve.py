@@ -23,6 +23,25 @@ TARGET_EVENTS = {
 TARGET_NAMES = list(TARGET_EVENTS)
 MAIN_VARIANT = "high_conviction_top15_v3_exception_sleeve"
 BASELINE = "high_conviction_top10_v2_final"
+LABEL_COLUMNS = ["return_10d_pct", "return_20d_pct", "return_30d_pct", "return_60d_pct", "return_90d_pct"]
+REFILL_SHADOW_SELECTED_COLUMNS = [
+    "variant", "quarter", "selection_rank", "selected_sleeve", "selected_sleeve_rank", "ticker",
+    "core_refill_source", "demoted_replacement_for", "right_tail_exception_score", *LABEL_COLUMNS,
+]
+REFILL_SHADOW_REPLACEMENT_COLUMNS = [
+    "variant", "quarter", "mode", "demoted_ticker", "replacement_ticker",
+    "demoted_core_candidate_rank", "replacement_core_candidate_rank",
+    "demoted_entry_score_0_100", "replacement_entry_score_0_100",
+    "demoted_score_change", "demoted_negative_revision_risk", "demoted_pre_llm_fundamental_bucket",
+    "demoted_primary_theme", "demoted_rm_count", "demoted_hp_count", "demoted_market_repricing_score",
+    "high_score_deterioration_flag", "weak_no_theme_repricing_stack_flag",
+    "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
+    "core_deterioration_reason_codes", "demoted_return_90d_pct", "replacement_return_90d_pct", "replacement_delta_90d_pct",
+]
+REFILL_SHADOW_SUMMARY_COLUMNS = [
+    "variant", "quarter_count", "core_count", "exception_count", "total_picks", "avg_picks_per_quarter",
+    "avg_return_90d_pct", "winner_90d_30pct_rate", "loser_90d_minus30pct_rate",
+]
 
 
 def sha256(path: Path) -> str:
@@ -37,9 +56,9 @@ def read_csv(path: Path) -> pd.DataFrame:
     return pd.read_csv(path, dtype=str, keep_default_na=False)
 
 
-def read_csv_optional(path: Path) -> pd.DataFrame:
+def read_csv_optional(path: Path, columns: list[str] | None = None) -> pd.DataFrame:
     if not path.exists():
-        return pd.DataFrame()
+        return pd.DataFrame(columns=columns or [])
     return read_csv(path)
 
 
@@ -153,9 +172,9 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
     refill_shadow_selected_path = bundle_dir / "core_deterioration_refill_shadow_selected.csv"
     refill_shadow_replacements_path = bundle_dir / "core_deterioration_refill_shadow_replacements.csv"
     refill_shadow_summary_path = bundle_dir / "core_deterioration_refill_shadow_summary.csv"
-    refill_shadow_selected = read_csv_optional(refill_shadow_selected_path)
-    refill_shadow_replacements = read_csv_optional(refill_shadow_replacements_path)
-    refill_shadow_summary = read_csv_optional(refill_shadow_summary_path)
+    refill_shadow_selected = read_csv_optional(refill_shadow_selected_path, REFILL_SHADOW_SELECTED_COLUMNS)
+    refill_shadow_replacements = read_csv_optional(refill_shadow_replacements_path, REFILL_SHADOW_REPLACEMENT_COLUMNS)
+    refill_shadow_summary = read_csv_optional(refill_shadow_summary_path, REFILL_SHADOW_SUMMARY_COLUMNS)
     manifest = json.loads((bundle_dir / "run_manifest.json").read_text())
 
     adoption = build_adoption_check(summary, contrib)
@@ -208,14 +227,11 @@ def run(bundle_dir: Path, prior_analysis_dir: Path, out_dir: Path, report_path: 
         "thin_signal_watchlist_queue.csv": thin_signal_queue,
         "thin_signal_watchlist_top100.csv": thin_signal_top100,
     }
-    optional_outputs = [
-        ("core_deterioration_refill_shadow_selected.csv", refill_shadow_selected_path, refill_shadow_selected),
-        ("core_deterioration_refill_shadow_replacements.csv", refill_shadow_replacements_path, refill_shadow_replacements),
-        ("core_deterioration_refill_shadow_summary.csv", refill_shadow_summary_path, refill_shadow_summary),
-    ]
-    for name, path, df in optional_outputs:
-        if path.exists():
-            outputs[name] = df
+    outputs.update({
+        "core_deterioration_refill_shadow_selected.csv": refill_shadow_selected,
+        "core_deterioration_refill_shadow_replacements.csv": refill_shadow_replacements,
+        "core_deterioration_refill_shadow_summary.csv": refill_shadow_summary,
+    })
 
     for name, df in outputs.items():
         write_df(df, out_dir / name)
