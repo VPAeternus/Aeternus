@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GHM",
+    "cik": "716314",
+    "event_date": "2024-08-07",
+    "event_accession": "0001193125-24-195406",
+    "primary_8k_doc": "d867574d8k.htm",
+    "exhibit_docs": [
+      "d867574dex991.htm",
+      "d867574dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GHM_000119312524195406_d867574d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GHM_000119312524195406_d867574dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GHM_000119312524195406_d867574dex992.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GHM",
+    "cik": "716314",
+    "entity_name": "GRAHAM CORP",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "122814000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-07",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "-8773000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-07",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "203918000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-07",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "14419000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-07",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-57106000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-07",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "-2219000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-07",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.071433",
+    "operating_cash_flow_to_revenue": "-0.018068",
+    "assets_to_revenue": "1.660381",
+    "financing_cash_flow_to_revenue": "0.117405",
+    "investing_cash_flow_to_revenue": "-0.46498"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $50.",
+      "GROSS MARGIN EXPANDED 170 BASIS POINTS TO 24.",
+      "NET INCOME ¹ WAS UP 20% TO $3.",
+      "Net Income and Adjusted EBITDA are non-GAAP measures.",
+      "Net Income Increased 12% to $3.",
+      "Gross Margin of 24."
+    ],
+    "guidance_evidence": [
+      "Outlook The Companys outlook for 2025 is reaffirmed as follows: (as of August 7, 2024) Fiscal 2025 Guidance Net Sales: $200 million to $210 million Gross Margin: 22% to 23% of sales SG&A expense (1) 16.",
+      "outlook.",
+      "outlook, anticipates, believes, could, guidance, should, may, will, plan and other similar words.",
+      "expected to be converted to sales in the next twelve months and another 25% to 30% is expected to convert to sales over the following year.",
+      "expected to convert beyond twelve months are for the defense industry, specifically the U.",
+      "expects, future, outlook, anticipates, believes, could, guidance, should, may, will, plan and other similar words."
+    ],
+    "wave_or_demand_evidence": [
+      "DEMAND , RESULTED IN A BOOK - TO - BILL RATIO OF 1.",
+      "BACKLOG 2  S TRONG BALANCE SHEET WITH NO DEBT AND $21.",
+      "customers have bestowed on us and the effectiveness of our strategy to build better companies.",
+      "backlog provides, it is worth noting that the growth of our defense business has also reduced our economic sensitivity as we receive a steady flow of program renewals and new opportunities with the U.",
+      "customers needs.",
+      "Orders, backlog and book-to-bill ratio are key performance metrics."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary estimates and are subject to risks and uncertainties, including, among others, changes in connection with purchase accounting, quarter-end, and year-end adjustments.",
+      "preliminary financial estimates set forth above may be material.",
+      "decreased $1.",
+      "uncertainties and assumptions and are identified by words such as expects, future, outlook, anticipates, believes, could, guidance, should, may, will, plan and other similar words.",
+      "uncertainties.",
+      "uncertainties are more fully described in Graham Corporations most recent Annual Report filed with the Securities and Exchange Commission (the SEC), included under the heading entitled Risk Factors, and in other reports filed with the SEC."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 50,
+    "quarter_revenue_yoy_pct": 5,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "28.360001",
+    "return_10d_pct": "4.7602",
+    "return_20d_pct": "9.4852",
+    "return_30d_pct": "-1.0931",
+    "return_60d_pct": "4.4781",
+    "return_90d_pct": "14.4922"
+  },
+  "text_stats": {
+    "primary_text_len": 3748,
+    "exhibit_text_len": 31176,
+    "combined_text_len": 34926
+  }
+}

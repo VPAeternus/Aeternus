@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FAST",
+    "cik": "815556",
+    "event_date": "2024-07-12",
+    "event_accession": "0000815556-24-000028",
+    "primary_8k_doc": "fast-20240712.htm",
+    "exhibit_docs": [
+      "ex_99106302024earningsrele.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FAST_000081555624000028_fast-20240712.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FAST_000081555624000028_ex_99106302024earningsrele.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FAST",
+    "cik": "815556",
+    "entity_name": "FASTENAL CO",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1859100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-16",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "295100000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-16",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4462900000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-16",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-348900000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-16",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-31000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-16",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "388500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-16",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.158733",
+    "operating_cash_flow_to_revenue": "0.208972",
+    "assets_to_revenue": "2.40057",
+    "financing_cash_flow_to_revenue": "-0.187671",
+    "investing_cash_flow_to_revenue": "-0.016675"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales increased $33.",
+      "net sales was below growth in SG&A, resulting in our deleveraging of costs in the second quarter of 2024.",
+      "net income', 'selling, general, and administrative (SG&A) expenses', and 'income before income taxes', respectively, and are calculated in conformity with U.",
+      "Operating income $ 777.",
+      "Net income $ 590.",
+      "net income per share $ 1."
+    ],
+    "guidance_evidence": [
+      "expected output of each type of device.",
+      "expected.",
+      "expected range for investment in property and equipment, net of proceeds from sales, reflects an increase in expected investment in vending devices to reflect both strong signings and that those signings are concentrated more heavily in higher-value, higher-cost units.",
+      "forecasts of future events."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and Onsite locations opened in the last two years.",
+      "customers due to market share gains, product mix, and easier comparisons.",
+      "customers with significant managed spend where our service model and technology is particularly impactful.",
+      "customers.",
+      "customers in two categories: national accounts, which are customers with significant revenue potential and a national, multi-site contract, and non-national accounts, which include large regional customers, small local customers, and government customers.",
+      "customers versus our non-national account customers, which relates to the relative growth of our sales through Onsite locations and larger, key accounts."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker industrial production.",
+      "inventory swung to a modest use of cash in the second quarter of 2024 versus a significant source of cash in the second quarter of 2023.",
+      "inventory was a significantly more modest source of cash in the first six months of 2024 than we experienced in the first six months of 2023.",
+      "inventory balance in the second quarter of 2024 reflects three factors.",
+      "inventory as they adjust production to address soft demand.",
+      "inventory following the normalization of the supply chain after the disruptions experienced in 2022."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-15",
+    "entry_open": "32.700001",
+    "return_10d_pct": "5.5963",
+    "return_20d_pct": "1.5291",
+    "return_30d_pct": "1.3303",
+    "return_60d_pct": "6.7584",
+    "return_90d_pct": "17.2630"
+  },
+  "text_stats": {
+    "primary_text_len": 2876,
+    "exhibit_text_len": 32720,
+    "combined_text_len": 35598
+  }
+}

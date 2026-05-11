@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BKNG",
+    "cik": "1075531",
+    "event_date": "2024-08-01",
+    "event_accession": "0001075531-24-000039",
+    "primary_8k_doc": "bkng-20240801.htm",
+    "exhibit_docs": [
+      "ex99163024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKNG_000107553124000039_bkng-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKNG_000107553124000039_ex99163024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BKNG",
+    "cik": "1075531",
+    "entity_name": "Booking Holdings Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3778000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1892798000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2016-02-17",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2013-12-31",
+    "assets_value": "24342000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-2562000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "1586000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "2889000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.501005",
+    "operating_cash_flow_to_revenue": "0.76469",
+    "assets_to_revenue": "6.443092",
+    "financing_cash_flow_to_revenue": "-0.678137",
+    "investing_cash_flow_to_revenue": "0.419799"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $5.",
+      "Net income was $1.",
+      "Net income per diluted common share (EPS) was $44.",
+      "Net income per diluted common share (Adjusted EPS) was $41.",
+      "Net income, Adjusted EPS and Adjusted EBITDA, and the attached financial and statistical supplement reconciles non-GAAP financial results with Booking Holdings' financial results under GAAP.",
+      "operating income exceeding our prior expectations,\" said Glenn Fogel, Chief Executive Officer of Booking Holdings."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "bookings, which refers to the total dollar value, generally inclusive of taxes and fees, of all travel services booked by our customers, net of cancellations, were $41.",
+      "bookings 6,931 3,254 Short-term debt 3,447 1,961 Total current liabilities 18,206 13,330 Deferred income taxes 264 258 Operating lease liabilities 529 599 Long-term U.",
+      "Bookings and Total Revenues in billions (1) (Unaudited) Units Sold 2Q22 3Q22 4Q22 1Q23 2Q23 3Q23 4Q23 1Q24 2Q24 Room Nights 246 240 211 274 268 276 231 297 287 Year/Year Growth 56.",
+      "Bookings (2) 2Q22 3Q22 4Q22 1Q23 2Q23 3Q23 4Q23 1Q24 2Q24 Merchant $ 15.",
+      "Bookings Year/Year Growth (Decline) Merchant 126.",
+      "bookings is an operating and statistical metric that captures the total dollar value, generally inclusive of taxes and fees, of all travel services booked by our customers, net of cancellations."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments and changes in accounting estimates; and other business and industry changes.",
+      "impairments of investments in equity securities are recorded in Other income (expense), net and excluded from Net income to calculate Adjusted Net income and Adjusted EBITDA.",
+      "loss), Adjusted EPS, Adjusted EBITDA and Free cash flow (Net cash provided by (used in) operating activities less capital expenditures).",
+      "loss), Net income (loss) or Net cash provided by (used in) operating activities as measured under GAAP.",
+      "loss, dilutive shares that are included in the GAAP weighted-average number of diluted common shares outstanding are excluded from the non-GAAP weighted-average number of diluted common shares outstanding.",
+      "loss but an Adjusted Net income, anti-dilutive shares that are excluded from the GAAP weighted-average number of diluted common shares outstanding are included in the non-GAAP weighted-average number of diluted common shares outstanding."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 5900,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "132.463593",
+    "return_10d_pct": "3.8528",
+    "return_20d_pct": "13.7849",
+    "return_30d_pct": "15.1646",
+    "return_60d_pct": "23.8375",
+    "return_90d_pct": "41.2086"
+  },
+  "text_stats": {
+    "primary_text_len": 5850,
+    "exhibit_text_len": 21742,
+    "combined_text_len": 27594
+  }
+}

@@ -69,9 +69,9 @@ Patterns to avoid. Review at session start.
 
 ### 2026-03-02: Large-cap scoring bias — social_momentum + news_catalyst = 30% weight
 
-**Rule:** Acceptable as long as scored explicitly. Review if 3+ consecutive cycles show no mid-cap names in research queue.
+**Rule:** Acceptable as long as scored explicitly. Review if 3+ consecutive cycles show no mid-cap names in fundamental review list.
 
-**Applies to:** Deal flow scoring, research queue ranking.
+**Applies to:** Deal flow scoring, fundamental review list ranking.
 
 ---
 
@@ -169,15 +169,15 @@ Patterns to avoid. Review at session start.
 
 ### 2026-03-05: `claude -p` cannot nest inside Claude Code sessions
 
-**What happened:** `analyze-batch` with `claude_cli` provider spawns `claude -p` subprocesses. These inherit the `CLAUDECODE` env var from the parent Claude Code session, causing every subprocess to exit with code 120 ("cannot launch inside another session"). All 14 tickers silently failed. The earlier "provider mapping" fix was necessary but not sufficient — the real blocker was nesting.
+**What happened:** `retired post-scout batch command` with `claude_cli` provider spawns `claude -p` subprocesses. These inherit the `CLAUDECODE` env var from the parent Claude Code session, causing every subprocess to exit with code 120 ("cannot launch inside another session"). All 14 tickers silently failed. The earlier "provider mapping" fix was necessary but not sufficient — the real blocker was nesting.
 
 **Root cause:** The `ChatClaudeCLI` class runs `subprocess.run(["claude", "-p", ...])` which inherits environment. Claude Code CLI v2+ blocks nested sessions by detecting `CLAUDECODE` in env.
 
-**Workaround applied:** Use session mode (`/session-analysis` skill) when inside Claude Code — this uses Sonnet subagents instead of `claude -p` subprocesses. `analyze-batch` with `claude_cli` provider works fine from a standalone terminal.
+**Workaround applied:** Use session mode (`/session-analysis` skill) when inside Claude Code — this uses Sonnet subagents instead of `claude -p` subprocesses. `retired post-scout batch command` with `claude_cli` provider works fine from a standalone terminal.
 
-**Rule:** When running inside a Claude Code session, always use session mode for deep analysis. Reserve `analyze-batch --selected-only` for standalone terminal execution (e.g., cron jobs, manual runs outside Claude Code). The two modes produce identical output format — downstream tools (`portfolio-plan`, `execute-paper`) don't care which path generated the report.
+**Rule:** When running inside a Claude Code session, always use session mode for deep analysis. Reserve `retired post-scout batch command --selected-only` for standalone terminal execution (e.g., cron jobs, manual runs outside Claude Code). The two modes produce identical output format — downstream tools (`portfolio-plan`, `execute-paper`) don't care which path generated the report.
 
-**Applies to:** Any command that uses `ChatClaudeCLI` (i.e., `llm_provider=claude_cli`) — currently `analyze`, `analyze-batch`, `workflow-run`.
+**Applies to:** Any command that uses `ChatClaudeCLI` (i.e., `llm_provider=claude_cli`) — currently `analyze`, `retired post-scout batch command`, `workflow-run`.
 
 ---
 

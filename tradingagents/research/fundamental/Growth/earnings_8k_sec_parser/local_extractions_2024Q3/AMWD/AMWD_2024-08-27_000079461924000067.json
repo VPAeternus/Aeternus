@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AMWD",
+    "cik": "794619",
+    "event_date": "2024-08-27",
+    "event_accession": "0000794619-24-000067",
+    "primary_8k_doc": "amwd-20240827.htm",
+    "exhibit_docs": [
+      "ex991202407318k.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMWD_000079461924000067_amwd-20240827.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMWD_000079461924000067_ex991202407318k.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AMWD",
+    "cik": "794619",
+    "entity_name": "American Woodmark Corp",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1857186000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-26",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "-29722000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-26",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "1518798000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-26",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "-41619000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-26",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "-51572000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-26",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "24445000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-26",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.016004",
+    "operating_cash_flow_to_revenue": "0.013162",
+    "assets_to_revenue": "0.817795",
+    "financing_cash_flow_to_revenue": "-0.02241",
+    "investing_cash_flow_to_revenue": "-0.027769"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $459.",
+      "Net income of $29.",
+      "GAAP EPS of $1.",
+      "Net income was $29.",
+      "Net income decreased $8.",
+      "EPS per diluted share was $1."
+    ],
+    "guidance_evidence": [
+      "outlook excludes the impact of certain income and expense items that management believes are not part of underlying operations.",
+      "outlook.",
+      "expected to continue and we have seen a recent slowdown in new construction single family starts.",
+      "expects: • Low single-digit decline in net sales year-over-year AMWD Announces First Quarter Results Page 2 August 27, 2024 • Adjusted EBITDA in the range of $225 million to $245 million “During the first fiscal quarter, we achieved an Adjusted EBITDA of $62."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in the remodel market,” said Scott Culbreth, President and CEO.",
+      "demand in the remodel market is expected to continue and we have seen a recent slowdown in new construction single family starts.",
+      "demand challenges, we continue to target share gains in all channels to ensure our performance exceeds market demand for the fiscal year.",
+      "customer satisfaction, integrity, teamwork, and excellence.",
+      "customer relationship intangibles.",
+      "customer relationship intangibles — 11,417 Tax benefit of add backs — (2,940) Adjusted net income (Non-GAAP) $ 29,633 $ 46,175 Weighted average diluted shares (GAAP) 15,673,570 16,589,481 EPS per diluted share (GAAP) $ 1."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker than projected demand in the remodel market,” said Scott Culbreth, President and CEO.",
+      "charge related to the plywood case last fiscal year of $4.",
+      "weaker sales in the repair and remodel market during the quarter.",
+      "charges, (3) net gain/loss on debt forgiveness, (4) stock-based compensation expense, (5) gain/loss on asset disposals, and (6) change in fair value of foreign exchange forward contracts.",
+      "charges, the net gain on debt forgiveness and modification, and the amortization of customer relationship intangibles.",
+      "charges that the Company incurred related to the acquisition."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 459.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-28",
+    "entry_open": "87.639999",
+    "return_10d_pct": "-4.6668",
+    "return_20d_pct": "5.7280",
+    "return_30d_pct": "6.0703",
+    "return_60d_pct": "9.6417",
+    "return_90d_pct": "4.5413"
+  },
+  "text_stats": {
+    "primary_text_len": 3022,
+    "exhibit_text_len": 18082,
+    "combined_text_len": 21106
+  }
+}

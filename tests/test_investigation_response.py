@@ -14,11 +14,11 @@ def test_build_investigation_response_complete():
                 {"stage": "event_cards", "status": "FOUND"},
                 {"stage": "universe_filter", "status": "FOUND"},
                 {"stage": "collect", "status": "FOUND"},
-                {"stage": "shortlist", "status": "FOUND"},
-                {"stage": "deep_selection", "status": "FOUND"},
+                {"stage": "scout_handoff", "status": "FOUND"},
+                {"stage": "fundamental_intake", "status": "FOUND"},
             ],
             "matched_event_cards": ["evt_mu_1"],
-            "evidence_found": ["scouts", "event_cards", "shortlist"],
+            "evidence_found": ["scouts", "event_cards", "scout_handoff"],
             "evidence_missing": [],
         }
     )
@@ -33,24 +33,24 @@ def test_build_investigation_response_partial_with_missing_inputs():
         investigation_result={
             "query_type": "reverse_forensic",
             "target_entities": ["MU"],
-            "first_miss_stage": "shortlist",
+            "first_miss_stage": "scout_handoff",
             "stage_diagnosis": [
                 {"stage": "scouts", "status": "FOUND"},
                 {"stage": "event_cards", "status": "FOUND"},
                 {"stage": "universe_filter", "status": "FOUND"},
                 {"stage": "collect", "status": "FOUND"},
-                {"stage": "shortlist", "status": "MISS"},
-                {"stage": "deep_selection", "status": "MISS"},
+                {"stage": "scout_handoff", "status": "MISS"},
+                {"stage": "fundamental_intake", "status": "MISS"},
             ],
             "matched_event_cards": ["evt_mu_1"],
             "evidence_found": ["scouts", "event_cards", "collect"],
-            "evidence_missing": ["shortlist", "deep_selection"],
+            "evidence_missing": ["scout_handoff", "fundamental_intake"],
         }
     )
 
     assert payload["coverage_status"] == "PARTIAL"
     assert payload["manual_gap_fill_requests"]
-    assert "shortlist" in " ".join(payload["evidence_missing"]).lower()
+    assert "scout_handoff" in " ".join(payload["evidence_missing"]).lower()
 
 
 def test_build_investigation_response_missing():
@@ -64,12 +64,12 @@ def test_build_investigation_response_missing():
                 {"stage": "event_cards", "status": "MISS"},
                 {"stage": "universe_filter", "status": "MISS"},
                 {"stage": "collect", "status": "MISS"},
-                {"stage": "shortlist", "status": "MISS"},
-                {"stage": "deep_selection", "status": "MISS"},
+                {"stage": "scout_handoff", "status": "MISS"},
+                {"stage": "fundamental_intake", "status": "MISS"},
             ],
             "matched_event_cards": [],
             "evidence_found": [],
-            "evidence_missing": ["scouts", "event_cards", "universe_filter", "collect", "shortlist", "deep_selection"],
+            "evidence_missing": ["scouts", "event_cards", "universe_filter", "collect", "scout_handoff", "fundamental_intake"],
         }
     )
 
@@ -89,12 +89,12 @@ def test_build_investigation_response_payload_shape():
                 {"stage": "event_cards", "status": "FOUND"},
                 {"stage": "universe_filter", "status": "FOUND"},
                 {"stage": "collect", "status": "MISS"},
-                {"stage": "shortlist", "status": "MISS"},
-                {"stage": "deep_selection", "status": "MISS"},
+                {"stage": "scout_handoff", "status": "MISS"},
+                {"stage": "fundamental_intake", "status": "MISS"},
             ],
             "matched_event_cards": ["evt_iran"],
             "evidence_found": ["scouts", "event_cards", "universe_filter"],
-            "evidence_missing": ["collect", "shortlist", "deep_selection"],
+            "evidence_missing": ["collect", "scout_handoff", "fundamental_intake"],
         }
     )
 
@@ -111,4 +111,3 @@ def test_build_investigation_response_payload_shape():
         "confidence",
     ):
         assert key in payload
-

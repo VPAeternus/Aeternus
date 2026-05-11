@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended September 30, 2024",
+    "period_end_date": "September 30, 2024"
+  },
+  "reported_results": {
+    "revenue_millions": 88268.0,
+    "revenue_yoy_pct": 15.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "3 billion reflecting strong momentum across the business.",
+    "wave_signal": "1Alphabet Announces Third Quarter 2024 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "•Total operating income increased 34% and operating margin percent expanded by 4.",
+    "risk_signal": "1,947 Other Bets(1,194)$(1,116)Alphabet-level activities(1)(1,666)$(3,166)Total income from operations$21,343 $28,521 (1)In addition to the costs included in Alphabet-level activities, hedging gains (losses) related to revenue were $(1) million and $17 million for the three months ended September 30, 2023 and 2024, respectively.",
+    "customer_signal": "In Cloud, our AI solutions are helping drive deeper product adoption with existing customers, attract new customers and win larger deals."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 76693 | | | | | $ | 88268 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 76693 | | | | | $ | 88268 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

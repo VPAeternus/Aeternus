@@ -157,10 +157,10 @@ def show_accounts(
 
 @app.command("execute-accounts")
 def execute_accounts(
-    queue_date: Optional[str] = typer.Option(
+    summary_path: Optional[Path] = typer.Option(
         None,
-        "--queue-date",
-        help="Queue date (YYYY-MM-DD) used to locate batch summary.",
+        "--summary-path",
+        help="Explicit post-fundamental analysis summary path.",
     ),
     accounts_path: Optional[Path] = typer.Option(
         None,
@@ -194,9 +194,13 @@ def execute_accounts(
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(1)
 
+    if summary_path is None:
+        console.print("[red]Provide --summary-path for a post-fundamental analysis summary.[/red]")
+        raise typer.Exit(1)
+
     try:
-        batch_summary, resolved_summary_path = _load_batch_summary(queue_date=queue_date)
-    except FileNotFoundError as exc:
+        batch_summary, resolved_summary_path = _load_analysis_summary(summary_path)
+    except (FileNotFoundError, ValueError) as exc:
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(1)
 

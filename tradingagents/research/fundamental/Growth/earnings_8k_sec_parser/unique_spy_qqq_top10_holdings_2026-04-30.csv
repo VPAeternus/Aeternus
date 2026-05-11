@@ -1,0 +1,12 @@
+ticker,name,in_spy_top10,spy_rank,spy_weight_pct,in_qqq_top10,qqq_rank,qqq_weight_pct,top10_sources
+NVDA,NVIDIA Corporation,True,1,7.85,True,1,8.53,SPY;QQQ
+AAPL,Apple Inc.,True,2,6.45,True,2,7.01,SPY;QQQ
+MSFT,Microsoft Corporation,True,3,4.9,True,3,5.33,SPY;QQQ
+AMZN,"Amazon.com, Inc.",True,4,4.19,True,4,5.01,SPY;QQQ
+GOOGL,Alphabet Inc.,True,5,3.63,True,5,3.94,SPY;QQQ
+AVGO,Broadcom Inc.,True,6,3.2,True,7,3.48,SPY;QQQ
+GOOG,Alphabet Inc.,True,7,2.89,True,6,3.65,SPY;QQQ
+META,"Meta Platforms, Inc.",True,8,2.17,True,9,3.18,SPY;QQQ
+TSLA,"Tesla, Inc.",True,9,1.74,True,8,3.35,SPY;QQQ
+BRK-B,Berkshire Hathaway Inc.,True,10,1.41,False,,,SPY
+WMT,Walmart Inc.,False,,,True,10,3.13,QQQ

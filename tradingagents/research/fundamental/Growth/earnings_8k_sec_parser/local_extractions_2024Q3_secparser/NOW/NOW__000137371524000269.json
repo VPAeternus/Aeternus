@@ -1,0 +1,976 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NOW",
+    "cik": "1373715",
+    "event_date": "",
+    "event_accession": "0001373715-24-000269",
+    "primary_8k_doc": "erq2fy24.htm",
+    "exhibit_docs": [
+      "ex101agreement.htm",
+      "now-20240724.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NOW_000137371524000269_erq2fy24.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NOW_000137371524000269_ex101agreement.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NOW_000137371524000269_now-20240724.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NOW",
+    "cik": "1373715",
+    "entity_name": "SERVICENOW, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2096000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-06",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "150000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-06",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "17387000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-06",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "5000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-06",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-524000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-06",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "902000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-06",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.071565",
+    "operating_cash_flow_to_revenue": "0.430344",
+    "assets_to_revenue": "8.295324",
+    "financing_cash_flow_to_revenue": "0.002385",
+    "investing_cash_flow_to_revenue": "-0.25"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "demands by or against third parties, or in connection with other matters arising from events, acts, or failures to act that occurred (or are alleged to have occurred) during the period of your employment by the Company.",
+      "Customer Officer.",
+      "ai Re: Mutual Separation and Release Agreement Dear CJ:As discussed, ServiceNow, Inc.",
+      "ai”).",
+      "aid base salary and any earned but unpaid bonus through the Separation Date, subject to required deductions and withholdings.",
+      "aid amounts, including any amount payable under the specific terms of any agreements, plans, or awards, unless otherwise specifically provided in this Agreement, subject to required deductions and withholdings."
+    ],
+    "warning_or_risk_evidence": [
+      "losses incurred by you pursuant to Section 2802 including, but not limited to, attorney’s fees and costs."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-10.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex101agreement.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-10.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "ImageElement",
+      "text": "ServiceNowwww.servicenow.com2225 Lawson LaneSanta Clara, CA 95054Tel+1 (408) 501-8550Fax+1 (408) 501 8550"
+    },
+    {
+      "type": "TextElement",
+      "text": "July 24, 2024Chirantan J. (“CJ”) Desai"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Re: Mutual Separation and Release Agreement"
+    },
+    {
+      "type": "TextElement",
+      "text": "Dear CJ:As discussed, ServiceNow, Inc. (the “Company”) and you (collectively the “Parties”) have agreed you will resign from all positions at the Company (“you” or “Desai”). The Company hereby provides this Separation and Release Agreement (the “Agreement”). This Agreement includes various terms and conditions including a cooperation agreement, a release, Severance Pay (defined below) and termination of your employment agreement with the Company (i.e., the Confirmatory Employment Letter Agreement dated October 31, 2017 between the Parties, as amended by the Amendment to Employment Agreement, effective April 30, 2021 (the “Employment Agreement”)). 1.Separation Date. Your last day of work with the Company and your employment termination date will be Wednesday, July 24, 2024 (the “Separation Date”). The Company will pay you all accrued wages to include any earned but unpaid base salary and any earned but unpaid bonus through the Separation Date, subject to required deductions and withholdings. You will also be eligible to receive all other vested but unpaid amounts, including any amount payable under the specific terms of any agreements, plans, or awards, unless otherwise specifically provided in this Agreement, subject to required deductions and withholdings. You are entitled to these payments regardless of whether or not you sign this Agreement.2.Severance Benefits. If, on or within twenty-one (21) days of your receipt of this Agreement, you sign it and allow the releases contained herein to become effective, and comply with the restrictive covenants applicable to you and the obligations stated in this Agreement; then the Company will provide you with the following severance benefits:(a)Severance Pay. The Company will pay you Five Hundred and Twenty-Five Thousand dollars ($525,000.00), which is the equivalent of: (i) six (6) months base salary [using an annual salary rate of $1,050,000 per year] (“Base Severance Pay”); plus (ii) fifty percent of your actual bonus for fiscal year 2024 based on: (x) actual achievement of Company performance objectives and (y) deemed 100% achievement of any personal performance objectives, less any quarterly payment previously paid, if any, and paid when annual bonuses are otherwise paid to active employees, but no later than March 15, 2025 (“Bonus Severance Pay”). Both the Base Severance Pay and the Bonus Severance Pay (collectively, the “Severance Pay”) will be subject to required deductions and withholdings. Your Base Severance Pay will be paid in a lump sum on the first regular payday no earlier than one week after you sign and return this Agreement to the Company and after your Separation Date has passed, provided you have not revoked your acceptance of the Agreement pursuant to Section 12(c) of this Agreement."
+    },
+    {
+      "type": "TitleElement",
+      "text": "(b)Health Care Continuation Coverage."
+    },
+    {
+      "type": "TextElement",
+      "text": "(i)COBRA. To the extent provided by the federal COBRA law or, if applicable, state insurance laws, and by the Company’s current group health insurance policies, you will be eligible to continue your group health insurance benefits at your own expense. Later, you may be able to convert to an individual policy through the provider of the Company’s health insurance, if you wish. (ii)COBRA Premiums. If you timely elect continued coverage under COBRA, the Company will pay your COBRA premiums to continue your existing coverage (including coverage for eligible dependents, if applicable) (“COBRA Premiums”) for six (6) months (the “COBRA Premium Period”) starting on the Separation Date and ending on the earliest to occur of: (i) January 31, 2025; (ii) the date you become eligible for group health insurance coverage through a new employer; or (iii) the date you cease to be eligible for COBRA continuation coverage for any reason, including plan termination. In the event you become covered under another employer's group health plan or otherwise cease to be eligible for COBRA during the COBRA Premium Period, you must immediately notify the Company in writing of such event.(iii)Special Cash Payments in Lieu of COBRA Premiums. Notwithstanding the foregoing, if the Company determines, in its sole discretion, that it cannot pay the COBRA Premiums without a substantial risk of violating applicable law (including Section 2716 of the Public Health Service Act), the Company instead shall pay to you, on the first day of each calendar month, a fully taxable cash payment equal to the applicable COBRA premiums for that month (including premiums for you and your eligible dependents who have elected and remain enrolled in such COBRA coverage), subject to required deductions and withholdings (such amount, the “Special Cash Payment”), for the remainder of the COBRA Premium Period. You may, but are not obligated to, use such Special Cash Payment toward the cost of COBRA premiums. To the extent that the Company elects to make a Special Cash Payment, then on the thirtieth (30th) day following your Separation from Service, the Company will make the first payment to you under this paragraph, in a lump sum, equal to the aggregate Special Cash Payments that the Company would have paid to you through such date had the Special Cash Payment commenced on the first day of the first month following the Separation from Service through such thirtieth (30th) day, with the balance of the Special Cash Payment paid thereafter on the schedule described above. 3.Equity. You were granted an option(s) (the “Option”) to purchase shares of the Company’s common stock (the “Common Stock”), pursuant to the Company’s 2012 and/or 2021 Equity Incentive Plan (collectively, the “Plan”) and the Company’s standard form of stock option agreement (the “Option Agreement”). Under the terms of the Plan and the Option Agreement, your Option will cease to vest, and all unvested shares of Common Stock subject to the Option will be cancelled, in each case as of the Separation Date. Your right to exercise the Option with respect to any shares of Common Stock that have vested as of the Separation Date (the “Remaining Option”) will be as set forth in the Plan and the Option Agreement. If you do not exercise your Remaining Option in accordance with the terms of the Plan and the Option Agreement within ninety (90) calendar days after the Separation Date (or such shorter period provided in the Plan), the Remaining Option will expire unexercised.You were granted restricted stock units (“RSUs”), pursuant to the Plan and the Company’s standard form of RSU agreement (the “RSU Agreement”). Under the terms of the Plan and the RSU"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page | 2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Agreement, your RSUs will cease to vest, and all shares of Common Stock underlying your RSUs shall be cancelled, in each case as of the Separation Date. 4.Other Compensation or Benefits. You acknowledge that, except as expressly provided in this Agreement and except for the tax support and protection as set forth in the Temporary Relocation Agreement dated July 25, 2023 (previously referenced in the Company’s Form 10-Q for the quarter ended September 30, 2023) as amended on April 1, 2024 (the “Relocation Agreement”), you will not receive any additional compensation, severance, or benefits (e.g., the housing allowance set forth in the Relocation Agreement) after the Separation Date. Pursuant to your obligations set forth in the Relocation Agreement, you agree to return the security deposit of Thirty-Two Thousand Dollars and Zero Cents ($32,000) (“the Security Deposit”) in full to the Company once you vacate the property. If you would like the Security Deposit deducted from the Severance Pay, you must provide written notice further to the notice provision below requesting same in advance of the Company’s payment of the Severance Pay. Your eligibility for all relocation benefits set forth in the Relocation Agreement will cease as of your Separation Date. The Company recognizes its indemnity obligations to you under California Labor Code Section 2802 (“Section 2802”) and confirms that such obligations include paying you for all reasonable and necessary business expenditures or losses incurred by you pursuant to Section 2802 including, but not limited to, attorney’s fees and costs.5.Expense Reimbursements. You agree that, within ten (10) calendar days after the Separation Date, you will submit your final documented expense reimbursement statement reflecting all reasonable and necessary business expenses you incurred in connection with your performance of services on behalf of the Company in accordance with applicable Company policies and guidelines through the Separation Date, if any, for which you seek reimbursement. The Company will reimburse you for these expenses pursuant to its regular business practice. 6.Return of Company Property. No later than five (5) business days after your Separation Date (the “Return Period”), you shall return to the Company, all Company documents (including documents of any subsidiary or affiliate of the Company) and other Company property in your possession, custody, or control (collectively, “Property”). Property should be construed broadly and includes any data, materials, or information owned by the Company (whether or not it is confidential or proprietary) as well as any information created, modified, or used in any way in connection with your employment by the Company. Property includes Company data stored on your personal electronic equipment or systems (e.g., any personally owned computer, phone, server, e-mail system) as well as in your personal accounts (e.g., personal email accounts, messaging services, storage services). You agree that you will make a diligent search to locate any such Property within the Return Period. Should you find any information that is electronically stored (e.g., documents, emails, text messages, spreadsheets), you must preserve that Property and advise the Company immediately so we can safeguard and collect such Property from you. In order to allow the Company to collect and protect its Property, you agree to retain a forensic expert jointly selected by you and the Company to preserve copies of system(s), device(s), and account(s) wherever such Property is located, so that such Company Property can be identified and exported, via a mutually agreed upon protocol that is sufficient to identify and export all Company property. Such expert shall be promptly selected by the Parties following the execution of this Agreement. You agree that a complete forensic copy of any system(s), device(s), and/or account(s) where any Company Property is identified shall be created"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page | 3"
+    },
+    {
+      "type": "TextElement",
+      "text": "promptly following the execution of this Agreement and shall be preserved by your legal counsel until the Company directs you, in writing, that such copies may be deleted. As you know, there is a pending investigation and you have an ongoing obligation to preserve all relevant materials related to this matter on any of your devices, whether business or personal. Your timely compliance with the provisions of this paragraph is a precondition to your receipt of the severance benefits provided hereunder. To the extent that you identify any other Property in your possession, custody, or control after the Return Period, you agree to promptly notify the Company and cooperate in the preservation and return of that Property to the Company, including granting the forensic expert selected by the Parties prompt access to your system(s), device(s) and/or account(s) so we can safeguard and collect such newly identified Property.7.Proprietary Information Obligations. You acknowledge your continuing obligations, both during and after your employment, under your At Will Employment, Confidential Information and Invention Assignment Agreement (“CIIAA”), including your obligations not to use or disclose any confidential or proprietary information of the Company. 8.No Voluntary Adverse Action. You agree that you will not voluntarily (except in response to legal compulsion) assist any non-Government entity in bringing or pursuing any proposed or pending litigation, arbitration, administrative claim, or other formal proceeding against the Company, its parent or subsidiary entities, affiliates, officers, directors, employees, or agents.9.Cooperation. You agree to cooperate fully with the Company in connection with its actual or contemplated defense, prosecution, or investigation of any claims or demands by or against third parties, or in connection with other matters arising from events, acts, or failures to act that occurred (or are alleged to have occurred) during the period of your employment by the Company. Such cooperation includes, so long as consistent with your Constitutional rights, making yourself available to the Company upon reasonable notice, without requiring a subpoena, to provide complete, truthful, and accurate information in witness interviews, depositions, and trial testimony. The Company will reimburse you for reasonable out-of-pocket expenses you incur in connection with any such cooperation (excluding foregone wages) and will make reasonable efforts to accommodate your scheduling needs.10.You represent that you are not aware of any action or failure to act that gives rise to any claim against the Company, except for that matter previously described in the Company’s Form 10-Q for the quarter ending March 31, 2024 at page 17 (i.e., a complaint that raised potential compliance issues during the procurement process related to one of its government contracts).11.No Admissions. You understand and agree that the promises and payments in consideration of this Agreement shall not be construed to be an admission of any liability or obligation by the Company to you or to any other person, and that the Company makes no such admission."
+    },
+    {
+      "type": "TitleElement",
+      "text": "12.Release of Claims By Desai."
+    },
+    {
+      "type": "TextElement",
+      "text": "(a)General Release. In exchange for the consideration provided to you under this Agreement, you hereby generally and completely release the Company, and its affiliated, related, parent, and subsidiary entities, and its and their current and former directors, officers,"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page | 4"
+    },
+    {
+      "type": "TextElement",
+      "text": "employees, shareholders, partners, agents, attorneys, predecessors, successors, insurers, affiliates, and assigns (collectively, the “Released Parties”) from any and all claims, liabilities, and obligations, both known and unknown, that arise out of or are in any way related to events, acts, conduct, or omissions occurring prior to or on the date you sign this Agreement (collectively, the “Released Claims”). (b)Scope of Release. To the maximum extent permitted by law, the Released Claims include, but are not limited to: (i) all claims arising out of or in any way related to your employment with the Company, or the termination of that employment as well as claims under your Employment Agreement or your Relocation Agreement; (ii) all claims related to your compensation or benefits from the Company, including salary, bonuses, commissions, vacation, expense reimbursements, severance pay, fringe benefits, stock, stock options, or any other ownership, equity, or profits interests in the Company; (iii) all claims for breach of contract, promissory estoppel, wrongful termination, and breach of the implied covenant of good faith and fair dealing; (iv) all tort claims, including claims for fraud, defamation, emotional distress, and discharge in violation of public policy; and (v) all federal, state, and local statutory claims, including claims for discrimination, harassment, retaliation, attorneys’ fees, or other claims arising under the federal Civil Rights Act of 1964 (as amended), the federal Americans with Disabilities Act of 1990, the federal Age Discrimination in Employment Act of 1967 (as amended) (the “ADEA”), the Equal Pay Act of 1963, the state and federal Worker Adjustment and Retraining Notification Acts, Section 1981 of the Civil Rights Act of 1866, the Family and Medical Leave Act, the Fair Labor Standards Act, the California Labor Code (as amended), the California Equal Pay Act, the California Fair Employment and Housing Act (as amended), the California Family Rights Act, the California Private Attorneys General Act (“PAGA”), California Business and Professions Code Section 17200 et seq., the New York State Human Rights Act (N.Y. Exec. Law §§ 290 et seq.), the Minimum Wage Act (N.Y. Lab. Law § 650 et seq.), the New York City Human Rights Law (N.Y.C. Admin. Code. §§ 8-101-8-703), the New York State Labor Law (N.Y. Lab. Law § 215 et seq.), the New York Paid Family Leave Law (N.Y. Workers’ Comp. Law § 200 et seq.), the discrimination or retaliation provisions of the New York State Workers’ Compensation Law, the New York Equal Pay Law (N.Y. Lab. Law § 194), Wage Theft Prevention Act (N.Y. Lab. Law § 195), New York Paid Sick Leave Law (N.Y. Lab. Law § 196-b), Article 23-A of the New York State Corrections Law (N.Y. Correct. Law § 750 to 755 et seq.), the Fair Chance Act (N.Y.C. Admin. Code § 8-107(10) et seq.), Pregnant Workers Fairness Act (N.Y.C. Admin. Code § 8-107(22)), New York City Earned Safe and Sick Time Act (N.Y.C. Admin. Code §§ 20-911-20-924), and for any known and unknown claims under any other federal, California, New York, or local statute, act, rule, ordinance, or regulation. The identification of specific federal, state, and local statutes in this release is for purposes of example only, and the omission of any specific federal, state, or local statute or law or amendments thereto shall not limit the scope of this general release in any manner. (c)ADEA Waiver. You acknowledge that you are knowingly and voluntarily waiving and releasing any rights you may have under the ADEA (the “ADEA Waiver”), and that the consideration given for the ADEA Waiver is in addition to anything of value to which you are already entitled. You further acknowledge that you have been advised that: (i) your ADEA Waiver does not apply to any rights or claims that may arise after the date that you sign this Agreement; (ii) you should consult with an attorney prior to signing this Agreement (although you may choose voluntarily not to do so); (iii) you have twenty-one (21) days to consider this Agreement (although you may choose voluntarily to sign it earlier); (iv) you have seven (7) days following the date you sign this Agreement to revoke the ADEA Waiver (by providing written notice of your revocation to Russell Elmer, General Counsel); and (v) this Agreement will not be effective until the date upon which the"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page | 5"
+    },
+    {
+      "type": "TextElement",
+      "text": "revocation period has expired, which will be the eighth day after the date that this Agreement is signed by you provided that you do not revoke it (the “Effective Date”).(d)Excluded Claims. Notwithstanding the foregoing, the following are not included in the Released Claims: (i) any rights or claims for indemnification you may have pursuant to applicable law or any written indemnification agreement with the Company to which you are a party; (ii) any rights which are not waivable as a matter of law; and (iii) any claims for breach of this Agreement (collectively, the “Excluded Claims”). Specific to the state of California and New York, the following claims are Excluded Claims and excluded from this release as a matter of law: claims under Cal. Labor Code § 206.5; Cal. Un. Ins. Code § 1342; Cal. Labor Code § 5000; California Labor Code §§ 2800-2810; the New York Unemployment Insurance Law and the non-discrimination and retaliation provisions of the New York State Workers’ Compensation Law. You hereby represent and warrant that, other than the Excluded Claims, you are not aware of any claims you have or might have against any of the Released Parties that are not included in the Released Claims. You understand that nothing in this Agreement limits your ability to file a charge or complaint with the Equal Employment Opportunity Commission, the Department of Labor, the National Labor Relations Board, the Occupational Safety and Health Administration, the Securities and Exchange Commission, or any other federal, state, or local governmental agency or commission (“Government Agencies”). You further understand this Agreement does not limit your ability to communicate with any Government Agencies or otherwise participate in any investigation or proceeding that may be conducted by any Government Agency, including providing documents or other information, without notice to the Company. While this Agreement does not limit your right to receive an award for information provided to the Securities and Exchange Commission, you understand and agree that, to the maximum extent permitted by law, you are otherwise waiving any and all rights you may have to individual relief based on any claims that you have released and any rights you have waived by signing this Agreement. 13.Release by the Company. In exchange for this Agreement, the Company, on behalf of itself its affiliated, related, parent, and subsidiary entities, and its predecessors, successors, affiliates, and assigns, hereby generally and completely releases you from any and all claims, demands, causes of action, and liabilities of any kind (upon any legal or equitable theory, whether contractual, common law, statutory, federal, state, local, or otherwise, including any claims for fees, costs, or disbursements of any kind), whether known or unknown, which the Company now has, ever had, or hereafter may have, against you based on any act, omission, practice, conduct, event, or other matter occurring up to and including the Effective Date."
+    },
+    {
+      "type": "TitleElement",
+      "text": "14.Section 1542 Waiver."
+    },
+    {
+      "type": "TextElement",
+      "text": "(a)BOTH PARTIES UNDERSTAND THAT THIS AGREEMENT INCLUDES A RELEASE OF ALL KNOWN AND UNKNOWN CLAIMS. In giving the release herein and to the maximum extent permitted by law, which includes claims which may be unknown to you at present, each Party acknowledges that he/it has read and understands Section 1542 of the California Civil Code, which reads as follows:"
+    },
+    {
+      "type": "TitleElement",
+      "text": "“A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release, and that if known by him or her, would have materially affected his or her settlement with the debtor or released party.”"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page | 6"
+    },
+    {
+      "type": "TextElement",
+      "text": "Each Party hereby expressly waives and relinquishes all rights and benefits under that section and any law of any other jurisdiction of similar effect with respect to their respective release of any unknown or unsuspected claims herein.15.Representations. You hereby represent that you have been paid all compensation owed and for all hours worked, have received all the leave and leave benefits and protections for which you are eligible, pursuant to the Family and Medical Leave Act or otherwise, and have not suffered any on-the-job injury for which you have not already filed a claim. You further represent that prior to the execution of this Agreement, (i) you have consulted an attorney about this Agreement, (ii) you have read this Agreement, understand all of its terms, and have reviewed (or have had the opportunity to review) this Agreement with your legal counsel, accounting and tax consultants and other advisors of your choosing and (iii) you are executing this Agreement voluntarily, without outside inducement or coercion.16.Notices. Notices under this Agreement must be in writing. Notice will be deemed to have been given when personally delivered or two days after emailed. Mailed notices to you will be addressed to you at the home address which you have most recently communicated to the Company in writing. Notices to the Company will be addressed both to Russell Elmer, General Counsel and Jacqui Canney, CPO at the Company’s corporate headquarters (2225 Lawson Lane, Santa Clara, CA 95054). All notices to the Company shall be sent both via FedEx as well as via email to the following email addresses: russell.elmer@servicenow.com and jacqui.canney@servicenow.com.17.Arbitration. Except to the extent prohibited by federal law, you will continue to be bound by and comply fully with your existing Arbitration Agreement (the “Arbitration Agreement”). You agree and acknowledge that any dispute arising out of or relating to this Agreement or the breach, termination, enforcement, interpretation or validity thereof is subject to the Parties’ Arbitration Agreement and that any such arbitration shall be conducted in Santa Clara County, California. This clause shall not preclude parties from seeking provisional remedies in aid of arbitration from a court of appropriate jurisdiction.18.General. This Agreement, including the CIIAA and Arbitration Agreement referenced above and incorporated herein by reference, constitutes the complete, final, and exclusive embodiment of the entire agreement between you and the Company with regard to this subject matter. It is entered into without reliance on any promise or representation, written or oral, other than those expressly contained herein, and it supersedes any other such promises, warranties, or representations. This Agreement may not be modified or amended except in a writing signed by both you and a duly authorized officer of the Company. This Agreement will bind the heirs, personal representatives, successors, and assigns of both you and the Company, and inure to the benefit of both you and the Company, and your and their heirs, successors, and assigns. If any provision of this Agreement is determined to be invalid or unenforceable, in whole or in part, that determination will not affect any other provision of this Agreement and the provision in question will be modified by the court so as to be rendered enforceable to the fullest extent permitted by law, consistent with the intent of the Parties. This Agreement will be deemed to have been entered into and will be construed and enforced in accordance with the laws of the State of California as applied to contracts made and to be performed entirely within California."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "* * * * *"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page | 7"
+    },
+    {
+      "type": "TextElement",
+      "text": "If this Agreement is acceptable to you, please sign below and return this Agreement to me within twenty-one (21) calendar days.Sincerely,"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ServiceNow, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "By: /s/ Jacqui Canney"
+    },
+    {
+      "type": "TextElement",
+      "text": "Jacqui CanneyChief People Officer"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Accepted and Agreed:"
+    },
+    {
+      "type": "TitleElement",
+      "text": "/s/ Chirantan J. (“CJ”) Desai"
+    },
+    {
+      "type": "TextElement",
+      "text": "Chirantan J. (“CJ”) Desai"
+    },
+    {
+      "type": "TitleElement",
+      "text": "July 24, 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "Date"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page | 8"
+    },
+    {
+      "type": "TextElement",
+      "text": "xml version='1.0' encoding='ASCII'?XBRL Document Created with the Workiva PlatformCopyright 2024 Workivar:293ba714-736c-435e-b064-520ae7099cdc,g:5404c0b2-8acd-4912-bee9-7c48bed272cc,d:70f77be97a814696a0fdb48c72732e29now-202407240001373715false00013737152024-07-242024-07-24"
+    },
+    {
+      "type": "TitleElement",
+      "text": "UNITED STATES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECURITIES AND EXCHANGE COMMISSION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Washington, DC 20549"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FORM 8-K"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CURRENT REPORT"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Pursuant to Section 13 or 15(d) of"
+    },
+    {
+      "type": "TitleElement",
+      "text": "the Securities Exchange Act of 1934"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Date of report (Date of earliest event reported): July 24, 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SERVICENOW, INC."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Exact name of registrant as specified in its charter)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Delaware001-3558020-2056195(State or other jurisdiction ofincorporation or organization)(Commission File Number)(I.R.S. EmployerIdentification Number)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "2225 Lawson Lane"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Santa Clara, California 95054"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Address of Principal Executive Offices and Zip Code)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "(408) 501-8550"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Registrant's telephone number, including area code)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Not Applicable(Former Name or Former Address, if Changed Since Last Report)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions (see General Instruction A.2 below):"
+    },
+    {
+      "type": "TableElement",
+      "text": "☐Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)☐Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)☐Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))☐Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))"
+    },
+    {
+      "type": "TextElement",
+      "text": "Securities registered pursuant to Section 12(b) of the Act:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Title of each classTrading SymbolName of each exchange on which registeredCommon stock, par value $0.001 per shareNOWThe New York Stock Exchange"
+    },
+    {
+      "type": "TextElement",
+      "text": "Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).Emerging growth company ☐ If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐"
+    },
+    {
+      "type": "TopSectionTitle",
+      "text": "Item 2.02 Results of Operations and Financial Condition."
+    },
+    {
+      "type": "TextElement",
+      "text": "On July 24, 2024, ServiceNow, Inc. (“ServiceNow” or the “Company”) issued a press release announcing financial results for the three months ended June 30, 2024.A copy of the press release is furnished as Exhibit 99.1 to this Current Report on Form 8-K and is incorporated by reference herein.The information above, including Exhibit 99.1, is furnished pursuant to Item 2.02 of Form 8-K and is not deemed to be “filed” for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), or otherwise subject to liabilities of that section, nor shall it be deemed incorporated by reference in any filing of ServiceNow under the Securities Act of 1933, as amended (the “Securities Act”), or the Exchange Act, whether made before or after the date hereof and irrespective of any general incorporation language in any filings."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Item 5.02 Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers."
+    },
+    {
+      "type": "TextElement",
+      "text": "On July 24, 2024, the Company and its President and Chief Operating Officer, Chirantan “CJ” Desai, came to a mutual agreement that Mr. Desai would resign from all positions with the Company, effective immediately. As previously referenced in the Company’s Form 10-Q for the quarter ended March 31, 2024, through its internal processes, the Company received a complaint that raised potential compliance issues related to one of its government contracts. The Company initiated an internal investigation, with the assistance of outside legal counsel, into the validity of these claims that concern the hiring of the Chief Information Officer of the U.S. Army as the Company’s Head of Global Public Sector in March 2023. As a result of the investigation, the Company’s Board of Directors (the “Board”) determined that Mr. Desai and the hired individual violated Company policy regarding a possible conflict relating to such individual’s hiring. Mr. Desai has fully cooperated with the investigation and maintains that he did not intentionally violate Company policy. The other individual also has departed the Company. The Company has informed the Department of Justice, the Department of Defense Office of Inspector General and the Army Suspension and Debarment Office of the investigation and is continuing to cooperate with the Department of Justice, which has commenced its own investigation into these matters. The Company cannot predict the timing, outcome or possible impact of the investigation."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Separation Agreement with President and Chief Operating Officer"
+    },
+    {
+      "type": "TextElement",
+      "text": "In connection with his mutually agreed resignation, Mr. Desai and the Company entered into a separation and release agreement (the “Separation Agreement”), dated as of July 24, 2024. The terms of the Separation Agreement are consistent with the terms of the Confirmatory Employment Letter Agreement between the Company and Mr. Desai, dated October 31, 2017, as amended by the Amendment to Employment Agreement, effective April 30, 2021. The Separation Agreement provides that Mr. Desai is eligible to receive, subject to required deductions and withholdings, (i) any earned but unpaid base salary; (ii) any unpaid earned bonus; (iii) other unpaid and then-vested amounts, including any amount payable under the specific terms of any agreements, plans or awards, except as otherwise specifically provided in the Separation Agreement; and (iv) reimbursement for all reasonable and necessary expenses incurred in connection with his performance of services on behalf of the Company in accordance with applicable Company policies and guidelines. In addition, subject to Mr. Desai providing an effective release of claims against the Company and his compliance with the restrictive covenants applicable to him and the obligations under the Separation Agreement, Mr. Desai will also receive: (i) a lump sum payment equal to 6 months of his base salary; (ii) a lump sum payment equal to 50% of his actual bonus for fiscal year 2024 based on: (x) actual achievement of Company performance objectives and (y) deemed 100% achievement of personal performance objectives, if any, less any quarterly payment previously paid, if any, and (iii) a payment of the COBRA premiums (or reimbursement of such premiums) for continued health coverage for Mr. Desai and his dependents for a period of 6 months. Mr. Desai will forfeit all unvested equity awards that had been previously granted to him.The foregoing description of the terms and conditions of the Separation Agreement does not purport to be complete and is qualified in its entirety by reference to such agreement, which is filed as Exhibit 10.1 hereto and is incorporated herein by reference."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Appointment of Interim Chief Product Officer"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company has appointed Chris Bedi as Interim Chief Product Officer, effective immediately. Mr. Bedi has been at the Company for nearly a decade with roles including Chief Digital Information Officer and Chief Customer Officer."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Item 9.01 Financial Statements and Exhibits."
+    },
+    {
+      "type": "TextElement",
+      "text": "(d)Exhibits.10.1Mutual Separation and Release Agreement dated July 24, 2024, between the Company and Chirantan J. (\"CJ\") Desai99.1Press release dated July 24, 2024, announcing ServiceNow, Inc.'s financial results for the three months ended June 30, 2024104Cover Page Interactive Data File – the cover page XBRL tags are embedded within the Inline XBRL document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SIGNATURES"
+    },
+    {
+      "type": "TextElement",
+      "text": "Pursuant to the requirements of the Securities Exchange Act of 1934, as amended, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized.SERVICENOW, INC.By:/s/ Russell S. ElmerRussell S. ElmerGeneral CounselDate: July 24, 2024"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        2,
+        12
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "ServiceNowwww.servicenow.com",
+          "ServiceNowwww.servicenow.com",
+          "ServiceNowwww.servicenow.com",
+          "2225 Lawson LaneSanta Clara, CA 95054",
+          "2225 Lawson LaneSanta Clara, CA 95054",
+          "2225 Lawson LaneSanta Clara, CA 95054",
+          "Tel+1 (408) 501-8550Fax+1 (408) 501 8550",
+          "Tel+1 (408) 501-8550Fax+1 (408) 501 8550",
+          "Tel+1 (408) 501-8550Fax+1 (408) 501 8550"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        3,
+        15
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Delaware",
+          "Delaware",
+          "Delaware",
+          "",
+          "",
+          "",
+          "001-35580",
+          "001-35580",
+          "001-35580",
+          "",
+          "",
+          "",
+          "20-2056195",
+          "20-2056195",
+          "20-2056195"
+        ],
+        [
+          "(State or other jurisdiction ofincorporation or organization)",
+          "(State or other jurisdiction ofincorporation or organization)",
+          "(State or other jurisdiction ofincorporation or organization)",
+          "",
+          "",
+          "",
+          "(Commission File Number)",
+          "(Commission File Number)",
+          "(Commission File Number)",
+          "",
+          "",
+          "",
+          "(I.R.S. EmployerIdentification Number)",
+          "(I.R.S. EmployerIdentification Number)",
+          "(I.R.S. EmployerIdentification Number)"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        3,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "Not Applicable",
+          "Not Applicable",
+          "Not Applicable"
+        ],
+        [
+          "(Former Name or Former Address, if Changed Since Last Report)",
+          "(Former Name or Former Address, if Changed Since Last Report)",
+          "(Former Name or Former Address, if Changed Since Last Report)"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        8,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "☐",
+          "☐",
+          "☐",
+          "Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)",
+          "Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)",
+          "Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "☐",
+          "☐",
+          "☐",
+          "Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)",
+          "Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)",
+          "Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "☐",
+          "☐",
+          "☐",
+          "Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))",
+          "Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))",
+          "Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "☐",
+          "☐",
+          "☐",
+          "Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))",
+          "Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))",
+          "Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        3,
+        15
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Title of each class",
+          "Title of each class",
+          "Title of each class",
+          "",
+          "",
+          "",
+          "Trading Symbol",
+          "Trading Symbol",
+          "Trading Symbol",
+          "",
+          "",
+          "",
+          "Name of each exchange on which registered",
+          "Name of each exchange on which registered",
+          "Name of each exchange on which registered"
+        ],
+        [
+          "Common stock, par value $0.001 per share",
+          "Common stock, par value $0.001 per share",
+          "Common stock, par value $0.001 per share",
+          "",
+          "",
+          "",
+          "NOW",
+          "NOW",
+          "NOW",
+          "",
+          "",
+          "",
+          "The New York Stock Exchange",
+          "The New York Stock Exchange",
+          "The New York Stock Exchange"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        6,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(d)",
+          "(d)",
+          "(d)",
+          "Exhibits.",
+          "Exhibits.",
+          "Exhibits.",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "10.1",
+          "10.1",
+          "10.1",
+          "Mutual Separation and Release Agreement dated July 24, 2024, between the Company and Chirantan J. (\"CJ\") Desai",
+          "Mutual Separation and Release Agreement dated July 24, 2024, between the Company and Chirantan J. (\"CJ\") Desai",
+          "Mutual Separation and Release Agreement dated July 24, 2024, between the Company and Chirantan J. (\"CJ\") Desai"
+        ],
+        [
+          "",
+          "",
+          "",
+          "99.1",
+          "99.1",
+          "99.1",
+          "Press release dated July 24, 2024, announcing ServiceNow, Inc.'s financial results for the three months ended June 30, 2024",
+          "Press release dated July 24, 2024, announcing ServiceNow, Inc.'s financial results for the three months ended June 30, 2024",
+          "Press release dated July 24, 2024, announcing ServiceNow, Inc.'s financial results for the three months ended June 30, 2024"
+        ],
+        [
+          "",
+          "",
+          "",
+          "104",
+          "104",
+          "104",
+          "Cover Page Interactive Data File – the cover page XBRL tags are embedded within the Inline XBRL document",
+          "Cover Page Interactive Data File – the cover page XBRL tags are embedded within the Inline XBRL document",
+          "Cover Page Interactive Data File – the cover page XBRL tags are embedded within the Inline XBRL document"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        7,
+        15
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "SERVICENOW, INC.",
+          "SERVICENOW, INC.",
+          "SERVICENOW, INC.",
+          "SERVICENOW, INC.",
+          "SERVICENOW, INC.",
+          "SERVICENOW, INC."
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "By:",
+          "By:",
+          "By:",
+          "/s/ Russell S. Elmer",
+          "/s/ Russell S. Elmer",
+          "/s/ Russell S. Elmer"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Russell S. Elmer General Counsel",
+          "Russell S. Elmer General Counsel",
+          "Russell S. Elmer General Counsel"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Date: July 24, 2024",
+          "Date: July 24, 2024",
+          "Date: July 24, 2024",
+          "Date: July 24, 2024",
+          "Date: July 24, 2024",
+          "Date: July 24, 2024",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 2096.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 35197,
+    "exhibit_text_len": 34491,
+    "combined_text_len": 69690,
+    "semantic_text_len": 34527,
+    "table_count": 7,
+    "semantic_parse_status": "sec_parser"
+  }
+}

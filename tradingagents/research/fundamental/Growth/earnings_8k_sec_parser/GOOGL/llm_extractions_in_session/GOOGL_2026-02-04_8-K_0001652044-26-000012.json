@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended December 31, 2025",
+    "period_end_date": "December 31, 2025"
+  },
+  "reported_results": {
+    "revenue_millions": 113828.0,
+    "revenue_yoy_pct": 18.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "8 billion, reflecting strong momentum across the business and acceleration in growth in both Google Services and Google Cloud.",
+    "wave_signal": "1Alphabet Announces Fourth Quarter and Fiscal Year 2025 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "•Consolidated Alphabet operating income increased 16% and operating margin was 31.",
+    "risk_signal": "Forward-Looking Statements This press release may contain forward-looking statements that involve risks and uncertainties.",
+    "customer_signal": "•Google Cloud saw a continued increase in customer demand as revenues increased 48% to $17."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 96469 | | | | | $ | 113828 | | | | | $ | 350018 | | | | | $ | 402836 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 96469 | | | | | $ | 113828 | | | | | $ | 350018 | | | | | $ | 402836 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

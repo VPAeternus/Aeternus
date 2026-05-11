@@ -398,7 +398,7 @@ git commit -m "feat: wire analyze to codex research bridge"
 
 Add a batch-level test that proves:
 
-- `analyze-batch --selected-only` still writes `analysis_report.json`
+- `retired post-scout batch command --selected-only` still writes `analysis_report.json`
 - batch summaries still populate `analysis_report_path` and `analysis_report_found`
 - downstream consumers such as reanalysis still read the same path
 
@@ -456,7 +456,7 @@ Run:
 ```bash
 codex --version
 codex login
-python -m cli.main analyze --from-queue-id <QUEUE_ID> --queue-date <YYYY-MM-DD>
+python -m cli.main analyze --from-queue-id <QUEUE_ID> --run-date <YYYY-MM-DD>
 ```
 
 Expected:

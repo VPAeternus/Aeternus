@@ -214,25 +214,11 @@ def _mean(values: Iterable[float]) -> float | None:
 def _cohort_metrics(
     *,
     symbols: List[str],
-    shortlist_symbols: set[str],
-    deep_selection_symbols: set[str],
     forward_returns_by_horizon: Dict[str, Dict[str, float]],
     benchmark_returns_by_horizon: Dict[str, float | None],
 ) -> Dict[str, Any]:
     metrics: Dict[str, Any] = {"count": len(symbols)}
     symbol_set = {str(symbol).upper().strip() for symbol in symbols if str(symbol).upper().strip()}
-    shortlist_conversion = (
-        len(symbol_set & shortlist_symbols) / float(len(symbol_set))
-        if symbol_set
-        else None
-    )
-    deep_selection_conversion = (
-        len(symbol_set & deep_selection_symbols) / float(len(symbol_set))
-        if symbol_set
-        else None
-    )
-    metrics["shortlist_conversion"] = _round_metric(shortlist_conversion)
-    metrics["deep_selection_conversion"] = _round_metric(deep_selection_conversion)
 
     for horizon, returns_map in forward_returns_by_horizon.items():
         returns = [
@@ -256,23 +242,11 @@ def build_discovery_delta_cohort_scorecards(
     *,
     discovery_delta: Dict[str, Any] | None,
     step1_symbols: List[str],
-    shortlist_symbols: List[str],
-    deep_selection_symbols: List[str],
     forward_returns_by_horizon: Dict[str, Dict[str, float]],
     benchmark_returns_by_horizon: Dict[str, float | None],
 ) -> Dict[str, Any]:
     cohort_names = ("scout_only", "technical_only", "multi_channel")
     cohorts_input = dict((discovery_delta or {}).get("cohorts", {}) or {})
-    shortlist_set = {
-        str(symbol).upper().strip()
-        for symbol in shortlist_symbols
-        if str(symbol).upper().strip()
-    }
-    deep_selection_set = {
-        str(symbol).upper().strip()
-        for symbol in deep_selection_symbols
-        if str(symbol).upper().strip()
-    }
     step1_list = [
         str(symbol).upper().strip()
         for symbol in step1_symbols
@@ -280,8 +254,6 @@ def build_discovery_delta_cohort_scorecards(
     ]
     step1_baseline = _cohort_metrics(
         symbols=step1_list,
-        shortlist_symbols=shortlist_set,
-        deep_selection_symbols=deep_selection_set,
         forward_returns_by_horizon=forward_returns_by_horizon,
         benchmark_returns_by_horizon=benchmark_returns_by_horizon,
     )
@@ -295,14 +267,12 @@ def build_discovery_delta_cohort_scorecards(
         ]
         cohorts[cohort_name] = _cohort_metrics(
             symbols=cohort_symbols,
-            shortlist_symbols=shortlist_set,
-            deep_selection_symbols=deep_selection_set,
             forward_returns_by_horizon=forward_returns_by_horizon,
             benchmark_returns_by_horizon=benchmark_returns_by_horizon,
         )
 
     def _metric_keys() -> List[str]:
-        keys = ["shortlist_conversion", "deep_selection_conversion"]
+        keys = []
         for horizon in forward_returns_by_horizon.keys():
             keys.append(f"mean_return_{horizon}")
             keys.append(f"edge_vs_benchmark_{horizon}")

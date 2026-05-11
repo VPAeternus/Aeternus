@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SR",
+    "cik": "1126956",
+    "event_date": "2024-07-31",
+    "event_accession": "0001437749-24-023987",
+    "primary_8k_doc": "ex_684778.htm",
+    "exhibit_docs": [
+      "spre20240606_8k.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SR_000143774924023987_ex_684778.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SR_000143774924023987_spre20240606_8k.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SR",
+    "cik": "1126956",
+    "entity_name": "Spire Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1937400000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "270200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "10049000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "161500000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-340700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "179900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.139465",
+    "operating_cash_flow_to_revenue": "0.092856",
+    "assets_to_revenue": "5.186848",
+    "financing_cash_flow_to_revenue": "0.083359",
+    "investing_cash_flow_to_revenue": "-0.175854"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "ained in Items 2."
+    ],
+    "warning_or_risk_evidence": []
+  },
+  "semantic_rows": [
+    {
+      "type": "TextElement",
+      "text": "false 0001126956 0001126956 2024-07-31 2024-07-31 0001126956 sr:CommonStockCustomMember 2024-07-31 2024-07-31 0001126956 sr:DepositarySharesCustomMember 2024-07-31 2024-07-31"
+    },
+    {
+      "type": "TitleElement",
+      "text": "UNITED STATES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECURITIES AND EXCHANGE COMMISSION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Washington, D.C. 20549"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FORM 8-K"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CURRENT REPORT"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Date of Report (Date of earliest event reported): July 31, 2024"
+    },
+    {
+      "type": "TableElement",
+      "text": "Commission File Number Name of Registrant, Address of Principal Executive Offices and Telephone Number State of Incorporation IRS Employer Identification No. 1-16681 Spire Inc. 700 Market Street St. Louis, MO 63101 314-342-0500 Missouri 74-2976504"
+    },
+    {
+      "type": "TextElement",
+      "text": "Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 13e-4(c))Securities registered pursuant to Section 12(b) of the Exchange Act:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock $1.00 par value SR New York Stock Exchange LLC Depositary Shares, each representing a 1/1,000th interest in a share of 5.90% Series A Cumulative Redeemable Perpetual Preferred Stock, par value $25.00 per share SR.PRA New York Stock Exchange LLC"
+    },
+    {
+      "type": "TextElement",
+      "text": "Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).Emerging growth company ☐ If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐"
+    },
+    {
+      "type": "TopSectionTitle",
+      "text": "Item 2.02 Results of Operations and Financial Condition"
+    },
+    {
+      "type": "TextElement",
+      "text": "See Item 7.01."
+    },
+    {
+      "type": "TextElement",
+      "text": "Item 7.01 Regulation FD Disclosure"
+    },
+    {
+      "type": "TextElement",
+      "text": "On July 31, 2024, the Company issued an earnings news release announcing its results for the three months ended June 30, 2024. The text of the release is included in Exhibit 99.1 attached to this report."
+    },
+    {
+      "type": "TextElement",
+      "text": "Item 9.01 Financial Statements and Exhibits"
+    },
+    {
+      "type": "TextElement",
+      "text": "(d) Exhibits 99.1 News release dated July 31, 2024. 104 Cover page Interactive Data File (embedded within the Inline XBRL document). The information contained in Items 2.02 and 7.01 of this report, including Exhibit 99.1 attached hereto, is being furnished and shall not be deemed filed for purposes of Section 18 of the Securities Exchange Act of 1934, as amended, or otherwise subject to the liabilities of Section 18. Furthermore, the information contained in Items 2.02 and 7.01 of this report shall not be deemed to be incorporated by reference into any registration statement or other document filed pursuant to the Securities Act of 1933, as amended."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SIGNATURES"
+    },
+    {
+      "type": "TextElement",
+      "text": "Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized. Spire Inc. Date: July 31, 2024 By: /s/ Steven P. Rasche Steven P. Rasche Executive Vice President and Chief Financial Officer"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 1937.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "66.580002",
+    "return_10d_pct": "-4.6561",
+    "return_20d_pct": "-2.3581",
+    "return_30d_pct": "-0.6458",
+    "return_60d_pct": "1.0664",
+    "return_90d_pct": "-3.1541"
+  },
+  "text_stats": {
+    "primary_text_len": 21639,
+    "exhibit_text_len": 3491,
+    "combined_text_len": 25132,
+    "semantic_text_len": 3460,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

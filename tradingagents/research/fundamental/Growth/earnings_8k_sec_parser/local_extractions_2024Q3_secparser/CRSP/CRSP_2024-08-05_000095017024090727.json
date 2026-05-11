@@ -1,0 +1,988 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CRSP",
+    "cik": "1674416",
+    "event_date": "2024-08-05",
+    "event_accession": "0000950170-24-090727",
+    "primary_8k_doc": "crsp-20240805.htm",
+    "exhibit_docs": [
+      "crsp-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRSP_000095017024090727_crsp-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRSP_000095017024090727_crsp-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CRSP",
+    "cik": "1674416",
+    "entity_name": "CRISPR THERAPEUTICS AG",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "100000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-53065000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2229571000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "5404000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "117829000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "8799000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.53065",
+    "operating_cash_flow_to_revenue": "0.08799",
+    "assets_to_revenue": "22.29571",
+    "financing_cash_flow_to_revenue": "0.05404",
+    "investing_cash_flow_to_revenue": "1.17829"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [
+      "Outlook •Hemoglobinopathies and CASGEVY (exagamglogene autotemcel [exa-cel]) oCASGEVY is approved in the U.",
+      "expects to report preliminary clinical data this year.",
+      "expects to initiate both clinical trials in the second half of 2025.",
+      "expected benefits of its collaborations; and (v) the therapeutic value, development, and commercial potential of CRISPR/Cas9 gene editing technologies and therapies, including as compared to other therapies."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Samarth Kulkarni, Ph.",
+      "airman of CRISPR Therapeutics.",
+      "ain, the European Union (EU), the Kingdom of Saudi Arabia (KSA), and the Kingdom of Bahrain (Bahrain) for the treatment of both sickle cell disease (SCD) and transfusion-dependent beta thalassemia (TDT), and launches are ongoing.",
+      "ain novel potency edits which can lead to significantly higher CAR T cell expansion and cytotoxicity, potentially representing best-in-class allogeneic CAR T products for these targets.",
+      "ains committed to its goal of developing a beta-cell replacement product that does not require chronic immunosuppression.",
+      "ain CRISPR Therapeutics’ CRISPR/Cas9 technology to accelerate development of potentially curative cell therapies for T1D."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary clinical data this year.",
+      "loss-of-function mutations in ANGPTL3 are associated with reduced low-density lipoprotein (LDL-C), triglycerides (TG) and atherosclerotic cardiovascular disease (ASCVD) risk without any negative impact on overall health.",
+      "decrease in R&D expense was primarily driven by reduced variable external research and manufacturing costs.",
+      "Loss: Net loss was $126.",
+      "loss of $77.",
+      "uncertainties, actual results may differ materially from those expressed or implied by such forward-looking statements."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "crsp-ex99_1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CRISPR Therapeutics Provides Business Update and Reports Second Quarter 2024 Financial Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "-More than 35 authorized treatment centers (ATCs) activated globally for CASGEVY and approximately 20 patients have had cells collected across all regions as of mid-July-"
+    },
+    {
+      "type": "TitleElement",
+      "text": "-Clinical trials ongoing for next generation CAR T product candidates, CTX112 and CTX131 targeting CD19 and CD70 respectively, across multiple indications-"
+    },
+    {
+      "type": "TitleElement",
+      "text": "-Clinical trials opened for CTX112 in systemic lupus erythematosus (SLE) and for CTX131 in hematological malignancies-"
+    },
+    {
+      "type": "TitleElement",
+      "text": "-Clinical trials ongoing for in vivo gene editing product candidates, CTX310 and CTX320 targeting ANGPTL3 and LPA, respectively-"
+    },
+    {
+      "type": "TitleElement",
+      "text": "-Clinical trial ongoing for CTX211, an allogeneic, hypoimmune, gene-edited, stem cell derived product candidate for the treatment of Type 1 Diabetes (T1D)-"
+    },
+    {
+      "type": "TitleElement",
+      "text": "-Strong balance sheet with approximately $2 billion in cash, cash equivalents, and marketable securities as of June 30, 2024-"
+    },
+    {
+      "type": "TextElement",
+      "text": "ZUG, Switzerland and BOSTON, August 5, 2024 -- CRISPR Therapeutics (Nasdaq: CRSP), a biopharmaceutical company focused on creating transformative gene-based medicines for serious diseases, today reported financial results for the second quarter ended June 30, 2024.“In addition to the continued momentum of CASGEVY’s launch, we are making significant progress across the rest of our pipeline,” said Samarth Kulkarni, Ph.D., Chief Executive Officer and Chairman of CRISPR Therapeutics. “We continue to advance our next generation CD19-directed CAR T cell program, CTX112, which has the potential to be best-in-class in both oncology and autoimmune indications. We have opened the clinical trial for CTX131 in hematologic malignancies, and continue to dose-escalate with our in vivo directed programs, CTX310 and CTX320. We are making outstanding progress across our early stage discovery efforts and are well-positioned to realize our mission of bringing multiple transformative medicines to patients in need.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Recent Highlights and Outlook"
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Hemoglobinopathies and CASGEVY (exagamglogene autotemcel [exa-cel])"
+    },
+    {
+      "type": "TextElement",
+      "text": "oCASGEVY is approved in the U.S., Great Britain, the European Union (EU), the Kingdom of Saudi Arabia (KSA), and the Kingdom of Bahrain (Bahrain) for the treatment of both sickle cell disease (SCD) and transfusion-dependent beta thalassemia (TDT), and launches are ongoing. Regulatory submissions for CASGEVY have been completed in both SCD and TDT in Switzerland and Canada where it received Priority Review. CASGEVY is the first therapy to emerge from a strategic partnership between CRISPR Therapeutics and Vertex Pharmaceuticals established in 2015. As part of an amendment to the collaboration agreement in 2021, Vertex now leads global development, manufacturing, regulatory and commercialization of CASGEVY with support from CRISPR Therapeutics.oAs of mid-July, more than 35 authorized treatment centers (ATCs) have been activated globally, including centers in all regions where CASGEVY is approved, and approximately 20 patients have had cells collected across all regions.oThe French National Authority for Health (HAS) approved Vertex’s request for the implementation of an early access program (EAP) for the use of CASGEVY in indicated patients with SCD. HAS previously approved the implementation of an EAP for CASGEVY in indicated patients with TDT in the first quarter of 2024.oIn June, positive long-term data from CLIMB-111, CLIMB-121 and the long-term follow-up study of CASGEVY were presented at the 2024 Annual European Hematology Association Congress. These long-term data from more than 100 patients dosed with CASGEVY, with the longest follow-up of more than five years, confirm the transformative, consistent, and durable clinical benefits of CASGEVY over time.oEnrollment has been completed in two global Phase 3 studies of CASGEVY in people 5 to 11 years of age with SCD or TDT and the trials are ongoing.oCRISPR Therapeutics has two next generation approaches with the potential to significantly expand the addressable population with SCD and TDT. The Company continues to advance its internally developed targeted conditioning program, an anti-CD117 (c-Kit) antibody-drug conjugate (ADC), through preclinical studies. Additionally, the Company has ongoing research efforts to enable in vivo editing of hematopoietic stem cells. This work could obviate the need for conditioning altogether, expand geographic reach, and enable the treatment of multiple additional other diseases beyond SCD and TDT."
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Immuno-Oncology and Autoimmune Diseases"
+    },
+    {
+      "type": "TextElement",
+      "text": "oCRISPR Therapeutics’ next generation allogeneic CAR T candidates reflect the Company’s mission of innovating continuously to bring potentially transformative medicines to patients as quickly as possible. Clinical trials are ongoing for the Company’s next generation CAR T product candidates, CTX112 and CTX131, targeting CD19 and CD70, respectively, across multiple indications. CTX112 and CTX131 both contain novel potency edits which can lead to significantly higher CAR T cell expansion and cytotoxicity, potentially representing best-in-class allogeneic CAR T products for these targets.oCTX112 is being developed for both oncology and autoimmune indications. In oncology settings, CTX112 is in a Phase 1/2 trial for CD19 positive relapsed or refractory B-cell malignancies, and the Company expects to report preliminary clinical data this year. oCRISPR Therapeutics opened a clinical trial for CTX112 in systemic lupus erythematosus (SLE), with the potential to expand into additional autoimmune indications in the future. Early clinical studies conducted by third parties have shown that CD19-directed autologous CAR T therapy can produce long-lasting remissions in multiple autoimmune indications by deeply depleting B cells. The Company’s first generation allogeneic CD19-directed CAR T program has demonstrated effective depletion of B cells in oncology settings, which supports the potential for CTX112 in autoimmune diseases.oCTX131 is currently in an ongoing clinical trial in solid tumors. In addition, the Company has opened a clinical trial for CTX131 in hematologic malignancies including T cell lymphomas (TCL). Allogeneic CAR T approaches for TCL may have greater potential to meet the unmet need in this patient population given the patients’ own T cells are not suitable for autologous manufacturing."
+    },
+    {
+      "type": "TitleElement",
+      "text": "•In Vivo"
+    },
+    {
+      "type": "TextElement",
+      "text": "oCRISPR Therapeutics has established a proprietary lipid nanoparticle (LNP) platform for the delivery of CRISPR/Cas9 to the liver. The first two in vivo programs utilizing this proprietary platform, CTX310 and CTX320, are directed towards validated therapeutic targets associated with cardiovascular disease. oCTX310 is currently in an ongoing Phase 1 trial targeting ANGPTL3 in patients with homozygous familial hypercholesterolemia (HoFH), severe hypertriglyceridemia (SHTG), heterozygous familial hypercholesterolemia (HeFH), or mixed dyslipidemias. Natural loss-of-function mutations in ANGPTL3 are associated with reduced low-density lipoprotein (LDL-C), triglycerides (TG) and atherosclerotic cardiovascular disease (ASCVD) risk without any negative impact on overall health.oCTX320 is currently in an ongoing Phase 1 trial targeting LPA in patients with elevated lipoprotein(a) [Lp(a)], which has shown to have an independent association with major adverse cardiovascular events (MACE). Up to 20% of the global population has elevated Lp(a) levels. oThe Company continues to advance two additional preclinical programs, CTX340 targeting angiotensinogen (AGT) for the treatment of refractory hypertension and CTX450 targeting 5’ aminolevulinic acid synthase (ALAS1) for the treatment of acute hepatic porphyrias (AHP). CRISPR Therapeutics has initiated IND/CTA-enabling studies for CTX340, targeting hepatic AGT for hypertension, and expects to initiate both clinical trials in the second half of 2025."
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Regenerative Medicine"
+    },
+    {
+      "type": "TextElement",
+      "text": "oCTX211, an allogeneic, gene-edited, stem cell-derived beta islet cell precursor, is currently in an ongoing Phase 1 clinical trial for the treatment of Type 1 Diabetes (T1D). CRISPR Therapeutics remains committed to its goal of developing a beta-cell replacement product that does not require chronic immunosuppression.oVertex has non-exclusive rights to certain CRISPR Therapeutics’ CRISPR/Cas9 technology to accelerate development of potentially curative cell therapies for T1D. CRISPR Therapeutics remains eligible for development milestones and would receive royalties on any future products resulting from this agreement."
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Other Corporate Matters"
+    },
+    {
+      "type": "TextElement",
+      "text": "oIn May, CRISPR Therapeutics announced the appointment of Naimish Patel, M.D., as Chief Medical Officer. Dr. Patel brings in-depth experience in successfully accelerating innovation and advancing drug candidates across a breadth of modalities and disease areas. Dr. Patel is an experienced drug developer who has worked across a wide range of disease areas, including his most recent leadership role as the Global Development Therapeutic Area Head of Immunology and Inflammation at Sanofi. In addition, the Company announced the promotions of (i) Julianne Bruno, M.B.A., to Chief Operating Officer; Ms. Bruno previously served as the Company’s Senior Vice President and Head of Programs & Portfolio Management; and (ii) Susan Kim to Senior Vice President, Investor Relations and Corporate Communications; Ms. Kim previously served as the Company’s Vice President of Investor Relations and Corporate Communications."
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Second Quarter 2024 Financial Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "oCash Position: Cash, cash equivalents, and marketable securities were $2,012.8 million as of June 30, 2024, compared to $1,695.7 million as of December 31, 2023. The increase in cash was primarily driven by proceeds from the $280.0 million February 2024 registered direct offering, a $200.0 million milestone payment received from Vertex in connection with the approval of CASGEVY, proceeds from employee option exercises as well as interest income, offset by operating expenses.oRevenue: Total collaboration revenue for the second quarter of 2024 was not material. Collaboration revenue for the second quarter of 2023 was $70.0 million. Collaboration revenue recognized in the second quarter of 2023 was primarily attributable to a research milestone achieved during the current quarter in connection with a non-exclusive license agreement with Vertex.oR&D Expenses: R&D expenses were $80.2 million for the second quarter of 2024, compared to $101.6 million for the second quarter of 2023. The decrease in R&D expense was primarily driven by reduced variable external research and manufacturing costs.oG&A Expenses: General and administrative expenses were $19.5 million for the second quarter of 2024, compared to $19.0 million for the second quarter of 2023. oCollaboration Expense: Collaboration expense, net, was $52.1 million for the second quarter of 2024, compared to $44.6 million for the second quarter of 2023. The increase in collaboration expense, net, was primarily attributable to manufacturing and commercial costs under the CASGEVY collaboration with Vertex.oNet Loss: Net loss was $126.4 million for the second quarter of 2024, compared to a net loss of $77.7 million for the second quarter of 2023."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About CASGEVY (exagamglogene autotemcel [exa-cel])"
+    },
+    {
+      "type": "TextElement",
+      "text": "CASGEVY is a non-viral, ex vivo CRISPR/Cas9 gene-edited cell therapy for eligible patients with SCD or TDT, in which a patient’s own hematopoietic stem and progenitor cells are edited at the erythroid specific enhancer region of the BCL11A gene. This edit results in the production of high levels of fetal hemoglobin (HbF; hemoglobin F) in red blood cells. HbF is the form of the oxygen-carrying hemoglobin that is naturally present during fetal development, which then switches to the adult form of hemoglobin after birth. CASGEVY has been shown to reduce or eliminate VOCs for patients with SCD and transfusion requirements for patients with TDT. CASGEVY is approved for certain indications in multiple jurisdictions for eligible patients."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About the CRISPR Therapeutics-Vertex Collaboration"
+    },
+    {
+      "type": "TextElement",
+      "text": "CRISPR Therapeutics and Vertex entered into a strategic research collaboration in 2015 focused on the use of CRISPR/Cas9 to discover and develop potential new treatments aimed at the underlying genetic causes of human disease. CASGEVY represents the first potential treatment to emerge from the joint research program. Under an amended collaboration agreement, Vertex now leads global development, manufacturing, and commercialization of CASGEVY and splits program costs and profits worldwide 60/40 with CRISPR Therapeutics. Vertex is the manufacturer and exclusive license holder of CASGEVY."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About CTX112"
+    },
+    {
+      "type": "TextElement",
+      "text": "CTX112 is being developed for both oncology and autoimmune indications. CTX112 is a next-generation, wholly-owned, allogeneic CAR T product candidate targeting Cluster of Differentiation 19, or CD19, which incorporates additional edits designed to enhance CAR T potency and reduce CAR T exhaustion. CTX112 is being investigated in an ongoing clinical trial designed to assess safety and efficacy of the product candidate in adult patients with relapsed or refractory CD19-positive B-cell malignancies who have received at least two prior lines of therapy. In addition, the Company has opened a clinical trial of CTX112 in systemic lupus erythematosus."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About CTX131"
+    },
+    {
+      "type": "TextElement",
+      "text": "CTX131 is being developed for both solid tumors and hematologic malignancies, including T cell lymphomas (TCL). CTX131 is a next-generation, wholly-owned, allogeneic CAR T product candidate targeting Cluster of Differentiation 70, or CD70, an antigen expressed on various solid tumors and hematologic malignancies. CTX131 incorporates additional edits designed to enhance CAR T potency and reduce CAR T exhaustion. CTX131 is being investigated in a clinical trial designed to assess the safety and efficacy of the product candidate in adult patients with relapsed or refractory solid tumors. In addition, we have opened a clinical trial of CTX131 in hematologic malignancies, including TCL."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About In Vivo Programs"
+    },
+    {
+      "type": "TextElement",
+      "text": "CRISPR Therapeutics has established a proprietary LNP platform for the delivery of CRISPR/Cas9 to the liver. The Company’s in vivo portfolio includes its lead investigational programs, CTX310 (directed towards angiopoietin-related protein 3 (ANGPTL3)) and CTX320 (directed towards LPA, the gene encoding apo(a), a critical component of lipoprotein(a) [Lp(a)]), targeting two validated therapeutic targets for cardiovascular disease. CTX310 and CTX320 are in ongoing clinical trials in patients with heterozygous familial hypercholesterolemia, homozygous familial hypercholesterolemia, mixed dyslipidemias, or severe hypertriglyceridemia, and in patients with elevated lipoprotein(a), respectively. In addition, the Company’s research and preclinical development candidates include CTX340 and CTX450, targeting angiotensinogen (AGT) for refractory hypertension and 5’-aminolevulinate synthase 1 (ALAS1) for acute hepatic porphyria (AHP), respectively."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About CTX211"
+    },
+    {
+      "type": "TextElement",
+      "text": "CTX211 is an allogeneic, gene-edited, stem cell-derived investigational therapy for the treatment of type 1 diabetes (T1D), which incorporates gene edits that aim to make cells hypoimmune and enhance cell fitness. This immune-evasive cell replacement therapy is designed to enable patients to produce their own insulin in response to glucose. A Phase 1 clinical trial for CTX211 for the treatment of T1D is ongoing."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About CRISPR Therapeutics"
+    },
+    {
+      "type": "TextElement",
+      "text": "Since its inception over a decade ago, CRISPR Therapeutics has transformed from a research-stage company advancing programs in the field of gene editing, to a company that recently celebrated the historic approval of the first-ever CRISPR-based therapy and has a diverse portfolio of product candidates across a broad range of disease areas including hemoglobinopathies, oncology, regenerative medicine, cardiovascular, autoimmune, and rare diseases. CRISPR Therapeutics advanced the first-ever CRISPR/Cas9 gene-edited therapy into the clinic in 2018 to investigate the treatment of sickle cell disease or transfusion-dependent beta thalassemia, and beginning in late 2023, CASGEVY (exagamglogene autotemcel [exa-cel]) was approved in some countries to treat eligible patients with either of those conditions. The Nobel Prize-winning CRISPR science has revolutionized biomedical research and represents a powerful, clinically validated approach with the potential to create a new class of potentially transformative medicines. To accelerate and expand its efforts, CRISPR Therapeutics has established strategic partnerships with leading companies including Bayer and Vertex Pharmaceuticals. CRISPR Therapeutics AG is headquartered in Zug, Switzerland, with its wholly-owned U.S. subsidiary, CRISPR Therapeutics, Inc., and R&D operations based in Boston, Massachusetts and San Francisco, California, and business offices in London, United Kingdom. To learn more, visit www.crisprtx.com.CRISPR THERAPEUTICS® standard character mark and design logo, CTX112, CTX131, CTX211, CTX310, CTX320, CTX340 and CTX450 are trademarks and registered trademarks of CRISPR Therapeutics AG. The CASGEVY word mark and design are trademarks of Vertex Pharmaceuticals Incorporated. All other trademarks and registered trademarks are the property of their respective owners."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CRISPR Therapeutics Forward-Looking Statement"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "Statements contained in this press release regarding matters that are not historical facts are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995. Because such statements are subject to risks and uncertainties, actual results may differ materially from those expressed or implied by such forward-looking statements. Such statements include, but are not limited to, statements regarding any or all of the following: (i) CRISPR Therapeutics preclinical studies, clinical trials and pipeline products and programs, including, without limitation, manufacturing capabilities, status of such studies and trials, potential expansion into new indications and expectations regarding data, safety and efficacy generally; (ii) its strategy, goals, anticipated financial performance and the sufficiency of its cash resources; (iii) regulatory submissions and authorizations, including timelines for and expectations regarding additional regulatory agency decisions; (iv) the expected benefits of its collaborations; and (v) the therapeutic value, development, and commercial potential of CRISPR/Cas9 gene editing technologies and therapies, including as compared to other therapies. Risks that contribute to the uncertain nature of the forward-looking statements include, without limitation, the risks and uncertainties discussed under the heading “Risk Factors” in its most recent annual report on Form 10-K and in any other subsequent filings made by CRISPR Therapeutics with the U.S. Securities and Exchange Commission. Existing and prospective investors are cautioned not to place undue reliance on these forward-looking statements, which speak only as of the date they are made. We disclaim any obligation or undertaking to update or revise any forward-looking statements contained in this press release, other than to the extent required by law."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "This press release discusses CRISPR/Cas9 gene editing investigational therapies and is not intended to convey conclusions about efficacy or safety as to those investigational therapies or uses of such investigational therapies. There is no guarantee that any investigational therapy will successfully complete clinical development or gain approval from applicable regulatory authorities."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Investor Contact:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Susan Kim+1-617-307-7503"
+    },
+    {
+      "type": "TitleElement",
+      "text": "susan.kim@crisprtx.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Media Contact:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Rachel Eides+1-617-315-4493"
+    },
+    {
+      "type": "TitleElement",
+      "text": "rachel.eides@crisprtx.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CRISPR Therapeutics AG"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Operations"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited, In thousands except share data and per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Revenue: Collaboration revenue $ — $ 70,000 $ — $ 170,000 Grant revenue 517 — 1,021 — Total revenue 517 $ 70,000 $ 1,021 $ 170,000 Operating expenses: Research and development 80,165 101,555 156,338 201,490 General and administrative 19,481 19,032 37,434 41,392 Collaboration expense, net 52,131 44,636 99,097 86,828 Total operating expenses 151,777 165,223 292,869 329,710 Loss from operations (151,260 ) (95,223 ) (291,848 ) (159,710 ) Total other income, net 26,139 18,406 50,860 31,148 Net loss before income taxes (125,121 ) (76,817 ) (240,988 ) (128,562 ) Provision for income taxes (1,287 ) (923 ) (2,011 ) (2,243 ) Net loss (126,408 ) (77,740 ) (242,999 ) (130,805 ) Foreign currency translation adjustment 2 28 (9 ) 60 Unrealized (loss) gain on marketable securities (1,329 ) 452 (4,783 ) 6,679 Comprehensive loss $ (127,735 ) $ (77,260 ) $ (247,791 ) $ (124,066 ) Net loss per common share — basic $ (1.49 ) $ (0.98 ) $ (2.92 ) $ (1.66 ) Basic weighted-average common shares outstanding 84,920,929 79,091,061 83,357,780 78,885,168 Net loss per common share — diluted $ (1.49 ) $ (0.98 ) $ (2.92 ) $ (1.66 ) Diluted weighted-average common shares outstanding 84,920,929 79,091,061 83,357,780 78,885,168"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CRISPR Therapeutics AG"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Balance Sheets Data"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited, in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "As of June 30, 2024 December 31, 2023 Cash and cash equivalents $ 484,472 $ 389,477 Marketable securities 1,517,147 1,304,215 Marketable securities, non-current 11,216 1,973 Working capital 1,882,584 1,799,287 Total assets 2,339,853 2,229,571 Total shareholders' equity 1,980,949 1,882,803"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        24,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Revenue:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Collaboration revenue",
+          "",
+          "$",
+          "—",
+          "",
+          "",
+          "$",
+          "70000",
+          "",
+          "",
+          "$",
+          "—",
+          "",
+          "",
+          "$",
+          "170000",
+          ""
+        ],
+        [
+          "Grant revenue",
+          "",
+          "",
+          "517",
+          "",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "1021",
+          "",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Total revenue",
+          "",
+          "",
+          "517",
+          "",
+          "",
+          "$",
+          "70000",
+          "",
+          "",
+          "$",
+          "1021",
+          "",
+          "",
+          "$",
+          "170000",
+          ""
+        ],
+        [
+          "Operating expenses:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Research and development",
+          "",
+          "",
+          "80165",
+          "",
+          "",
+          "",
+          "101555",
+          "",
+          "",
+          "",
+          "156338",
+          "",
+          "",
+          "",
+          "201490",
+          ""
+        ],
+        [
+          "General and administrative",
+          "",
+          "",
+          "19481",
+          "",
+          "",
+          "",
+          "19032",
+          "",
+          "",
+          "",
+          "37434",
+          "",
+          "",
+          "",
+          "41392",
+          ""
+        ],
+        [
+          "Collaboration expense, net",
+          "",
+          "",
+          "52131",
+          "",
+          "",
+          "",
+          "44636",
+          "",
+          "",
+          "",
+          "99097",
+          "",
+          "",
+          "",
+          "86828",
+          ""
+        ],
+        [
+          "Total operating expenses",
+          "",
+          "",
+          "151777",
+          "",
+          "",
+          "",
+          "165223",
+          "",
+          "",
+          "",
+          "292869",
+          "",
+          "",
+          "",
+          "329710",
+          ""
+        ],
+        [
+          "Loss from operations",
+          "",
+          "",
+          "(151,260",
+          ")",
+          "",
+          "",
+          "(95,223",
+          ")",
+          "",
+          "",
+          "(291,848",
+          ")",
+          "",
+          "",
+          "(159,710",
+          ")"
+        ],
+        [
+          "Total other income, net",
+          "",
+          "",
+          "26139",
+          "",
+          "",
+          "",
+          "18406",
+          "",
+          "",
+          "",
+          "50860",
+          "",
+          "",
+          "",
+          "31148",
+          ""
+        ],
+        [
+          "Net loss before income taxes",
+          "",
+          "",
+          "(125,121",
+          ")",
+          "",
+          "",
+          "(76,817",
+          ")",
+          "",
+          "",
+          "(240,988",
+          ")",
+          "",
+          "",
+          "(128,562",
+          ")"
+        ],
+        [
+          "Provision for income taxes",
+          "",
+          "",
+          "(1,287",
+          ")",
+          "",
+          "",
+          "(923",
+          ")",
+          "",
+          "",
+          "(2,011",
+          ")",
+          "",
+          "",
+          "(2,243",
+          ")"
+        ],
+        [
+          "Net loss",
+          "",
+          "",
+          "(126,408",
+          ")",
+          "",
+          "",
+          "(77,740",
+          ")",
+          "",
+          "",
+          "(242,999",
+          ")",
+          "",
+          "",
+          "(130,805",
+          ")"
+        ],
+        [
+          "Foreign currency translation adjustment",
+          "",
+          "",
+          "2",
+          "",
+          "",
+          "",
+          "28",
+          "",
+          "",
+          "",
+          "(9",
+          ")",
+          "",
+          "",
+          "60",
+          ""
+        ],
+        [
+          "Unrealized (loss) gain on marketable securities",
+          "",
+          "",
+          "(1,329",
+          ")",
+          "",
+          "",
+          "452",
+          "",
+          "",
+          "",
+          "(4,783",
+          ")",
+          "",
+          "",
+          "6679",
+          ""
+        ],
+        [
+          "Comprehensive loss",
+          "",
+          "$",
+          "(127,735",
+          ")",
+          "",
+          "$",
+          "(77,260",
+          ")",
+          "",
+          "$",
+          "(247,791",
+          ")",
+          "",
+          "$",
+          "(124,066",
+          ")"
+        ],
+        [
+          "Net loss per common share — basic",
+          "",
+          "$",
+          "(1.49",
+          ")",
+          "",
+          "$",
+          "(0.98",
+          ")",
+          "",
+          "$",
+          "(2.92",
+          ")",
+          "",
+          "$",
+          "(1.66",
+          ")"
+        ],
+        [
+          "Basic weighted-average common shares outstanding",
+          "",
+          "",
+          "84920929",
+          "",
+          "",
+          "",
+          "79091061",
+          "",
+          "",
+          "",
+          "83357780",
+          "",
+          "",
+          "",
+          "78885168",
+          ""
+        ],
+        [
+          "Net loss per common share — diluted",
+          "",
+          "$",
+          "(1.49",
+          ")",
+          "",
+          "$",
+          "(0.98",
+          ")",
+          "",
+          "$",
+          "(2.92",
+          ")",
+          "",
+          "$",
+          "(1.66",
+          ")"
+        ],
+        [
+          "Diluted weighted-average common shares outstanding",
+          "",
+          "",
+          "84920929",
+          "",
+          "",
+          "",
+          "79091061",
+          "",
+          "",
+          "",
+          "83357780",
+          "",
+          "",
+          "",
+          "78885168",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        9,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "As of",
+          "As of",
+          "As of",
+          "As of",
+          "As of",
+          "As of",
+          ""
+        ],
+        [
+          "",
+          "",
+          "June 30, 2024",
+          "June 30, 2024",
+          "",
+          "",
+          "December 31, 2023",
+          "December 31, 2023",
+          ""
+        ],
+        [
+          "Cash and cash equivalents",
+          "",
+          "$",
+          "484472",
+          "",
+          "",
+          "$",
+          "389477",
+          ""
+        ],
+        [
+          "Marketable securities",
+          "",
+          "",
+          "1517147",
+          "",
+          "",
+          "",
+          "1304215",
+          ""
+        ],
+        [
+          "Marketable securities, non-current",
+          "",
+          "",
+          "11216",
+          "",
+          "",
+          "",
+          "1973",
+          ""
+        ],
+        [
+          "Working capital",
+          "",
+          "",
+          "1882584",
+          "",
+          "",
+          "",
+          "1799287",
+          ""
+        ],
+        [
+          "Total assets",
+          "",
+          "",
+          "2339853",
+          "",
+          "",
+          "",
+          "2229571",
+          ""
+        ],
+        [
+          "Total shareholders' equity",
+          "",
+          "",
+          "1980949",
+          "",
+          "",
+          "",
+          "1882803",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 70.0,
+    "quarter_revenue_yoy_pct": -58.8235,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue for the second quarter of 2023 was $70.0 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Collaboration revenue |  | $ | — |  | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -1,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "50.209999",
+    "return_10d_pct": "-4.7003",
+    "return_20d_pct": "-2.0713",
+    "return_30d_pct": "-9.8785",
+    "return_60d_pct": "-9.4005",
+    "return_90d_pct": "0.7568"
+  },
+  "text_stats": {
+    "primary_text_len": 3442,
+    "exhibit_text_len": 21696,
+    "combined_text_len": 25140,
+    "semantic_text_len": 21649,
+    "table_count": 2,
+    "semantic_parse_status": "sec_parser"
+  }
+}

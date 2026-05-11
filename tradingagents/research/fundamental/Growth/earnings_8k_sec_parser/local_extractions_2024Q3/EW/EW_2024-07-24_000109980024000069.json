@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EW",
+    "cik": "1099800",
+    "event_date": "2024-07-24",
+    "event_accession": "0001099800-24-000069",
+    "primary_8k_doc": "ew-20240724.htm",
+    "exhibit_docs": [
+      "ex-991q22024.htm",
+      "ex-992q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EW_000109980024000069_ew-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EW_000109980024000069_ex-991q22024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EW_000109980024000069_ex-992q22024.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EW",
+    "cik": "1099800",
+    "entity_name": "EDWARDS LIFESCIENCES CORPORATION",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1459600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-29",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "340500000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-29",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "9363200000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-29",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-206600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-29",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-29",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "314100000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-29",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.233283",
+    "operating_cash_flow_to_revenue": "0.215196",
+    "assets_to_revenue": "6.414908",
+    "financing_cash_flow_to_revenue": "-0.141546",
+    "investing_cash_flow_to_revenue": "0.000343"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $1.",
+      "sales were $83 million, led by the PASCAL system and the early commercial introduction of the EVOQUE system in the U.",
+      "EPS of $0.",
+      "gross margin benefited from a more favorable impact from foreign exchange rates.",
+      "Earnings Per Share of $0.",
+      "EPS in Q3 of $0."
+    ],
+    "guidance_evidence": [
+      "Outlook • Q2 sales grew 7%; constant currency 1 sales grew 8% • Q2 TAVR sales grew 5%; constant currency 1 sales grew 6% • Q2 TMTT sales grew 75%; increasing contribution to Edwards' growth • Q2 EPS of $0.",
+      "guidance to the higher end of $320 to $340 million “Second quarter total company sales growth of 8 percent reflected strong contributions from our rapidly growing TMTT product group, offset by lower-than-expected growth in TAVR,\" said Bernard Zovighian, CEO.",
+      "Outlook Based on current trends, the company anticipates second half TAVR sales growth similar to the first half year-over-year growth rate, or 5 to 7% full-year growth versus previous guidance of 8 to 10%.",
+      "guidance to the higher end of the previous $320 to $340 millio n range.",
+      "guidance,” “outlook,” “optimistic,” “aspire,” “confident” or other forms of these words or similar expressions and include, but are not limited to, statements made by Mr.",
+      "Outlook section."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for this novel solution for patients suffering from tricuspid regurgitation.",
+      "Demand was also strong for Swan-Ganz catheters.",
+      "aid Bernard Zovighian, CEO.",
+      "ainable TAVR growth in 2025 and beyond, driven by advancements in our leading SAPIEN platform, indication expansions to much larger populations of patients, and improving patient access to this important therapy.",
+      "aintained.",
+      "ains pleased with the performance of its SAPIEN 3 Ultra RESILIA platform, which is the leading platform in the U."
+    ],
+    "warning_or_risk_evidence": [
+      "charges or gains, and management's inability to forecast charges associated with future transactions and initiatives.",
+      "charge and a $139.",
+      "charge in the first and second quarter of 2023, respectively, related to an Intellectual Property Agreement with Medtronic, Inc.",
+      "uncertain, difficult to predict, and may be outside of the company’s control.",
+      "uncertainties that could cause actual results or experience to differ materially from that expressed or implied by the forward-looking statements.",
+      "Loss) income from discontinued operations, net of tax (1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1000,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "64.010002",
+    "return_10d_pct": "-5.1711",
+    "return_20d_pct": "3.8900",
+    "return_30d_pct": "7.4051",
+    "return_60d_pct": "5.2336",
+    "return_90d_pct": "10.3109"
+  },
+  "text_stats": {
+    "primary_text_len": 8709,
+    "exhibit_text_len": 39478,
+    "combined_text_len": 48189
+  }
+}

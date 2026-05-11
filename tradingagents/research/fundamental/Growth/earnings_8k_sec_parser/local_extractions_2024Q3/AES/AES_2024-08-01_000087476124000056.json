@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AES",
+    "cik": "874761",
+    "event_date": "2024-08-01",
+    "event_accession": "0000874761-24-000056",
+    "primary_8k_doc": "aes-20240801.htm",
+    "exhibit_docs": [
+      "q22024earningsreleaseexs.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AES_000087476124000056_aes-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AES_000087476124000056_q22024earningsreleaseexs.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AES",
+    "cik": "874761",
+    "entity_name": "AES CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3239000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "151000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "44799000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "1016000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1624000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "625000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.046619",
+    "operating_cash_flow_to_revenue": "0.192961",
+    "assets_to_revenue": "13.831121",
+    "financing_cash_flow_to_revenue": "0.313677",
+    "investing_cash_flow_to_revenue": "-0.501389"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "EPS Guidance Range Strategic Accomplishments • Signed 2.",
+      "EPS of $0.",
+      "Net Income (Loss) Attributable to The AES Corporation of $185 million, compared to ($39) million in Q2 2023 • Non-GAAP Adjusted Financial Metrics ◦ Adjusted EPS 1 of $0.",
+      "EPS 1 guidance range of $1.",
+      "EPS is a non-GAAP financial measure.",
+      "EPS and a description of the adjustments to reconcile Adjusted EPS to Diluted EPS for the quarter ended June 30, 2024."
+    ],
+    "guidance_evidence": [
+      "Guidance Range Strategic Accomplishments • Signed 2.",
+      "Outlook • Now expects to achieve upper half of 2024 Adjusted EPS 1 guidance range of $1.",
+      "guidance ◦ Now expects 2024 Adjusted EBITDA with Tax Attributes 2,3 to be in the upper half of the range of $3,550 to $3,950 million ARLINGTON, Va.",
+      "guidance without unreasonable effort.",
+      "outlook for the remainder of the year, we now expect our 2024 Adjusted EBITDA with Tax Attributes and Adjusted EPS to be in the upper half of our ranges.",
+      "Guidance and Expectations 6,7 The Company now expects 2024 Adjusted EBITDA with Tax Attributes 6,8 to be in the upper half of the range of $3,550 to $3,950 million, driven by new renewables."
+    ],
+    "wave_or_demand_evidence": [
+      "customers ◦ Signed agreements to support 1.",
+      "backlog of signed long-term PPAs now 12.",
+      "backlog of signed Power Purchase Agreements is now 12.",
+      "customers makes our business model highly resilient and ensures strong growth for years to come.",
+      "customers, including through transmission and distribution, renewables PPAs and retail supply.",
+      "backlog; ◦ 15-year PPAs for 727 MW of wind and solar to serve data center growth in Texas; and ◦ A 310 MW retail supply agreement to support data centers throughout Ohio, which is not included in the Company's PPA backlog."
+    ],
+    "warning_or_risk_evidence": [
+      "charge by addressing a request to the Office of the Corporate Secretary, The AES Corporation, 4300 Wilson Boulevard, Arlington, Virginia 22203.",
+      "charge equal to the reproduction cost thereof will be made.",
+      "impairments; and (e) gains, losses, and costs due to the early retirement of debt or troubled debt restructuring.",
+      "impairments, strategic decisions to dispose of or acquire business interests or retire debt, and the variability of allocations of earnings to tax equity investors, which affect results in a given period or periods.",
+      "impairments, and strategic decisions to dispose of or acquire business interests or retire debt, which affect results in a given period or periods.",
+      "Impairment losses 114 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 63,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "17.299999",
+    "return_10d_pct": "-3.4104",
+    "return_20d_pct": "2.7168",
+    "return_30d_pct": "-3.1792",
+    "return_60d_pct": "16.9942",
+    "return_90d_pct": "-4.6821"
+  },
+  "text_stats": {
+    "primary_text_len": 7538,
+    "exhibit_text_len": 43983,
+    "combined_text_len": 51523
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "UFPI",
+    "cik": "912767",
+    "event_date": "2024-07-30",
+    "event_accession": "0000912767-24-000024",
+    "primary_8k_doc": "ufpi-20240730x8k.htm",
+    "exhibit_docs": [
+      "ufpi-20240730xex99da.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UFPI_000091276724000024_ufpi-20240730x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UFPI_000091276724000024_ufpi-20240730xex99da.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "UFPI",
+    "cik": "912767",
+    "entity_name": "UFP INDUSTRIES, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2975091000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-11-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2017-09-30",
+    "net_income_value": "126069000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "3696789000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "-59368000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-41858000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "-37076000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.042375",
+    "operating_cash_flow_to_revenue": "-0.012462",
+    "assets_to_revenue": "1.24258",
+    "financing_cash_flow_to_revenue": "-0.019955",
+    "investing_cash_flow_to_revenue": "-0.014069"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $1.",
+      "Net sales of $1.",
+      "sales of $134 million were 7.",
+      "Net sales of $809 million, down 14 percent compared to the second quarter of 2023, while gross profit increased 3 percent.",
+      "sales decreased 2 percent for Deckorators, 6 percent for ProWood and 4 percent for UFP-Edge.",
+      "sales decreased 5 percent with big box customers, a decline that largely correlates with an easing in repair and remodel activity, and were flat with independent retailers."
+    ],
+    "guidance_evidence": [
+      "outlook for growth remains strong.",
+      "Outlook Lumber Market: We continue to anticipate lumber prices will remain at lower levels in 2024 based on current supply and demand dynamics .",
+      "outlook for the balance of 2024.",
+      "outlook and information included in this news release at 9 a.",
+      "expected near-term softness in demand have enabled us to more aggressively pursue our long-term expansion plans and improvement strategies.",
+      "projects have been approved in 2024 and another $96 million in projects are pending approval."
+    ],
+    "wave_or_demand_evidence": [
+      "demand,” said Chairman and CEO Matthew J.",
+      "demand have enabled us to more aggressively pursue our long-term expansion plans and improvement strategies.",
+      "customers, a decline that largely correlates with an easing in repair and remodel activity, and were flat with independent retailers.",
+      "demand.",
+      "demand dynamics .",
+      "Demand: We continue to follow key indicators and forecasts in the markets we serve and have revised our outlook for the balance of 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker environment and expected near-term softness in demand have enabled us to more aggressively pursue our long-term expansion plans and improvement strategies.",
+      "delay some investments until 2025 .",
+      "inventory positioning and utilization of our managed inventory programs.",
+      "weaker demand.",
+      "soft demand and competitive price environment will continue for the remainder of the year, resulting in more challenging year-over-year unit sales and profitability comparisons.",
+      "challenging business cycle, and I am grateful for the efforts of all of our UFP teammates to adapt to this environment and adjust capacity to meet demand,” said Chairman and CEO Matthew J."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1900,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "135.960007",
+    "return_10d_pct": "-14.6734",
+    "return_20d_pct": "-12.9450",
+    "return_30d_pct": "-10.5105",
+    "return_60d_pct": "-3.4937",
+    "return_90d_pct": "-9.5028"
+  },
+  "text_stats": {
+    "primary_text_len": 3188,
+    "exhibit_text_len": 27239,
+    "combined_text_len": 30429
+  }
+}

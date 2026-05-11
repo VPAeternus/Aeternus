@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DECK",
+    "cik": "910521",
+    "event_date": "2024-07-25",
+    "event_accession": "0000910521-24-000037",
+    "primary_8k_doc": "deck-20240725.htm",
+    "exhibit_docs": [
+      "deckex991pressrelease-6302.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DECK_000091052124000037_deck-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DECK_000091052124000037_deckex991pressrelease-6302.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DECK",
+    "cik": "910521",
+    "entity_name": "DECKERS OUTDOOR CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3150339000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-24",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "451949000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-24",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "2556203000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-24",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-367482000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-24",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-51009000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-24",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "172353000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-24",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.14346",
+    "operating_cash_flow_to_revenue": "0.054709",
+    "assets_to_revenue": "0.811406",
+    "financing_cash_flow_to_revenue": "-0.116648",
+    "investing_cash_flow_to_revenue": "-0.016192"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "REVENUE INCREASED 22% TO $825 MILLION • FIRST QUARTER FY 2025 DILUTED EPS INCREASED 87% TO $4.",
+      "Net sales increased 22.",
+      "net sales increased 23.",
+      "net sales increased 24.",
+      "net sales increased 21.",
+      "net sales increased 20."
+    ],
+    "guidance_evidence": [
+      "GUIDANCE RAISED TO RANGE OF $29.",
+      "outlook for the full fiscal year ending March 31, 2025.",
+      "outlook for the full fiscal year,\" said Stefano Caroti, Chief Commercial Officer and incoming President and Chief Executive Officer.",
+      "outlook is forward-looking in nature, reflecting our expectations as of July 25, 2024, and is subject to significant risks and uncertainties that limit our ability to accurately forecast results.",
+      "forecast results.",
+      "expected to increase approximately 10% to $4."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in the global marketplace by delivering compelling product that consumers love.",
+      "AISED TO RANGE OF $29.",
+      "aid Dave Powers, President and Chief Executive Officer.",
+      "aid Stefano Caroti, Chief Commercial Officer and incoming President and Chief Executive Officer.",
+      "ain focused on the long-term opportunities ahead for this great company.",
+      "aid per share of $858."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased 4.",
+      "decreased 28.",
+      "uncertainties that limit our ability to accurately forecast results.",
+      "uncertainties.",
+      "uncertainties and other factors that may cause our actual results, performance or achievements to be materially different from any future results, performance or achievements predicted, assumed or implied by the forward-looking statements.",
+      "loss, net of tax (3,800) (8,299) Comprehensive income $ 111,825 $ 55,253 Net income per share Basic $ 4."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 825,
+    "quarter_revenue_yoy_pct": 22,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "159.968338",
+    "return_10d_pct": "-11.3908",
+    "return_20d_pct": "-1.2773",
+    "return_30d_pct": "-1.5399",
+    "return_60d_pct": "-3.4809",
+    "return_90d_pct": "-4.9562"
+  },
+  "text_stats": {
+    "primary_text_len": 3684,
+    "exhibit_text_len": 13325,
+    "combined_text_len": 17011
+  }
+}

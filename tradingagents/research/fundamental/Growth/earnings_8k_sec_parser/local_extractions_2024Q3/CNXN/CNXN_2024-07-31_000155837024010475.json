@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CNXN",
+    "cik": "1050377",
+    "event_date": "2024-07-31",
+    "event_accession": "0001558370-24-010475",
+    "primary_8k_doc": "cnxn-20240731x8k.htm",
+    "exhibit_docs": [
+      "cnxn-20240731xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CNXN_000155837024010475_cnxn-20240731x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CNXN_000155837024010475_cnxn-20240731xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CNXN",
+    "cik": "1050377",
+    "entity_name": "PC CONNECTION, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "727545000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "14198000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1118057000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-5743000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1882000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "19505000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.019515",
+    "operating_cash_flow_to_revenue": "0.026809",
+    "assets_to_revenue": "1.536753",
+    "financing_cash_flow_to_revenue": "-0.007894",
+    "investing_cash_flow_to_revenue": "-0.002587"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales increased by 7% year over year and accounted for 47% of net sales in the second quarter of 2024, compared to 44% of net sales in the second quarter of 2023.",
+      "sales increased by 7% year over year and accounted for 9% of net sales in the second quarter of 2024 and 2023.",
+      "sales increased by 19% year over year and accounted for 9% of net sales in the second quarter of 2024, compared to 7% of net sales in the second quarter of 2023.",
+      "sales decreased by 33% year over year and accounted for 7% of net sales in the second quarter of 2024, compared to 11% of net sales in the second quarter of 2023.",
+      "sales decreased by 6% year over year and accounted for 11% of net sales in the second quarter of 2024 and 2023.",
+      "net sales increased to 14."
+    ],
+    "guidance_evidence": [
+      "expected impact of current macroeconomic ​ ​ conditions on our businesses and results of operations."
+    ],
+    "wave_or_demand_evidence": [
+      "customers in this dynamic and rapidly evolving technology landscape.",
+      "customers.",
+      "customers through its GlobalServe subsidiary, a global IT procurement and service management company.",
+      "customers are willing to make in IT products.",
+      "aid Timothy McGrath, President and Chief Executive Officer of Connection.",
+      "storage sales increased by 19% year over year and accounted for 9% of net sales in the second quarter of 2024, compared to 7% of net sales in the second quarter of 2023."
+    ],
+    "warning_or_risk_evidence": [
+      "charges (“Adjusted EBITDA”) 1 increased 4% to $125.",
+      "impairment charges, competition and the expected impact of current macroeconomic ​ ​ conditions on our businesses and results of operations.",
+      "inventory for the prior four-month period.",
+      "charges for the last twelve months.",
+      "charges, and stock-based compensation.",
+      "charges in 2024 and 2023 consisted of severance and other charges related to internal restructuring activities."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 736.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "73.779999",
+    "return_10d_pct": "-9.2844",
+    "return_20d_pct": "-4.2695",
+    "return_30d_pct": "-5.8823",
+    "return_60d_pct": "2.2364",
+    "return_90d_pct": "-8.7151"
+  },
+  "text_stats": {
+    "primary_text_len": 3622,
+    "exhibit_text_len": 26837,
+    "combined_text_len": 30461
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CHDN",
+    "cik": "20212",
+    "event_date": "2024-07-24",
+    "event_accession": "0000020212-24-000100",
+    "primary_8k_doc": "chdn-20240724.htm",
+    "exhibit_docs": [
+      "ex991pressrelease7-24x24.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CHDN_000002021224000100_chdn-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CHDN_000002021224000100_ex991pressrelease7-24x24.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CHDN",
+    "cik": "20212",
+    "entity_name": "Churchill Downs Inc",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "559500000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "155700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6955500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-237700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "54500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "215900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.278284",
+    "operating_cash_flow_to_revenue": "0.38588",
+    "assets_to_revenue": "12.431635",
+    "financing_cash_flow_to_revenue": "-0.424844",
+    "investing_cash_flow_to_revenue": "0.097408"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $890.",
+      "Net income attributable to CDI of $209.",
+      "Net income attributable to CDI $ 209.",
+      "EPS attributable to CDI $ 2.",
+      "NET INCOME ATTRIBUTABLE TO CDI The Company's second quarter 2024 net income attributable to CDI was $209.",
+      "net income to the prior year quarter: • an $18."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "customers and intercompany revenue from each of our reportable segments.",
+      "customers: Live and Historical Racing: Churchill Downs Racetrack $ 228.",
+      "customers $ 890.",
+      "customers Pari-mutuel: Live and simulcast racing $ 50.",
+      "customers Pari-mutuel: Live and simulcast racing $ 40.",
+      "customers' loyalty points are recorded at the estimated standalone selling prices in Other revenue with a corresponding offset recorded as a reduction in historical racing pari-mutuel revenue for HRMs or gaming revenue for our casino properties."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment costs; and • a $5.",
+      "charges, as well as legal, accounting, and other deal-related expense; pre-opening expense; and certain other gains, charges, recoveries, and expenses.",
+      "impairments; • Gain on property sales; • Legal reserves; • Pre-opening expense; and • Other charges, recoveries, and expenses.",
+      "impairments — 24.",
+      "charges and recoveries, net (0.",
+      "decline in TwinSpires retail horse racing handle due to shifts in race days at other tracks and market access, and a $1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 890.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "137.710007",
+    "return_10d_pct": "-5.3446",
+    "return_20d_pct": "-1.5395",
+    "return_30d_pct": "-0.8278",
+    "return_60d_pct": "-0.3849",
+    "return_90d_pct": "-2.5997"
+  },
+  "text_stats": {
+    "primary_text_len": 3623,
+    "exhibit_text_len": 35234,
+    "combined_text_len": 38859
+  }
+}

@@ -4,15 +4,10 @@ from tradingagents.graph.csp_overlay import evaluate_csp_regime, CspRecommendati
 
 @app.command("portfolio-plan")
 def portfolio_plan(
-    queue_date: Optional[str] = typer.Option(
-        None,
-        "--queue-date",
-        help="Queue date (YYYY-MM-DD) used to locate batch summary.",
-    ),
     summary_path: Optional[Path] = typer.Option(
         None,
         "--summary-path",
-        help="Optional explicit batch summary path.",
+        help="Explicit post-fundamental analysis summary path.",
     ),
     capital_usd: float = typer.Option(
         float(DEFAULT_CONFIG.get("portfolio_capital_usd", 100000.0)),
@@ -77,18 +72,19 @@ def portfolio_plan(
     ),
     format: str = typer.Option("table", help="Output format: table or json"),
 ):
-    """Build a deterministic portfolio plan from analyze-batch outcomes."""
+    """Build a deterministic portfolio plan from post-fundamental outcomes."""
     output_format = str(format or "table").lower().strip()
     if output_format not in {"table", "json"}:
         console.print("[red]Error: format must be table or json[/red]")
         raise typer.Exit(1)
 
+    if summary_path is None:
+        console.print("[red]Provide --summary-path for a post-fundamental analysis summary.[/red]")
+        raise typer.Exit(1)
+
     try:
-        batch_summary, resolved_summary_path = _load_batch_summary(
-            queue_date=queue_date,
-            summary_path=summary_path,
-        )
-    except FileNotFoundError as exc:
+        analysis_summary, resolved_summary_path = _load_analysis_summary(summary_path)
+    except (FileNotFoundError, ValueError) as exc:
         console.print(f"[red]{exc}[/red]")
         raise typer.Exit(1)
 
@@ -97,7 +93,7 @@ def portfolio_plan(
     use_whole_shares = execution_mode.startswith("alpaca") and enforce_whole_shares
 
     plan = build_portfolio_plan(
-        batch_summary=batch_summary,
+        batch_summary=analysis_summary,
         capital_usd=float(capital_usd),
         max_positions=int(max_positions),
         min_score=float(min_score),
@@ -105,11 +101,7 @@ def portfolio_plan(
         long_only=bool(long_only),
         max_weight_per_position=float(max_weight_per_position),
         enforce_whole_shares=use_whole_shares,
-        ledger_base_dir=(
-            Path("eval_results") / "deal_flow" / str(batch_summary.get("date", "")).strip()
-            if str(batch_summary.get("date", "")).strip()
-            else None
-        ),
+        ledger_base_dir=None,
     )
 
     # ── Held Position Review ────────────────────────────────────────────────
@@ -130,7 +122,7 @@ def portfolio_plan(
             held_reviews = review_positions(
                 positions=open_positions,
                 akg=akg,
-                pipeline_candidates=batch_summary.get("items", []),
+                pipeline_candidates=analysis_summary.get("items", []),
             )
     except Exception:
         pass
@@ -564,4 +556,3 @@ def portfolio_plan(
         format_kerberos_overlay_panel(k_sig, k_dec, state=k_state)
     elif kerb_ctx.get("error"):
         console.print(f"[red]Kerberos overlay: {kerb_ctx['error']}[/red]")
-

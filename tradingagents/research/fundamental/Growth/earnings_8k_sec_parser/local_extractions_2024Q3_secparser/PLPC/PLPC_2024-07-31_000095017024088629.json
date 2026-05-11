@@ -1,0 +1,1367 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PLPC",
+    "cik": "80035",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088629",
+    "primary_8k_doc": "plpc-20240731.htm",
+    "exhibit_docs": [
+      "plpc-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLPC_000095017024088629_plpc-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLPC_000095017024088629_plpc-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PLPC",
+    "cik": "80035",
+    "entity_name": "Preformed Line Products Company",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "181824000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "21398000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "603151000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-9307000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-22295000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "25430000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.117685",
+    "operating_cash_flow_to_revenue": "0.139861",
+    "assets_to_revenue": "3.317224",
+    "financing_cash_flow_to_revenue": "-0.051187",
+    "investing_cash_flow_to_revenue": "-0.122619"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales was 31.",
+      "Net sales decreased 23% to $279.",
+      "Net income for the quarter ended June 30, 2024, was $9.",
+      "net income was impacted by decreased gross profit from lower sales levels, similar to our Q1 2024 results, partially offset by lower period expenses, lower interest expense and reduced income tax expense.",
+      "Net income for the six months ended June 30, 2024 was $19.",
+      "net income was impacted by decreased gross profit resulting from the decrease in sales which was partially offset by lower period expenses, lower interest expense and reduced income tax expense."
+    ],
+    "guidance_evidence": [
+      "expected temporary slow-down within our end markets."
+    ],
+    "wave_or_demand_evidence": [
+      "customer inventory levels with current manufacturing lead times.",
+      "customer service portfolio.",
+      "customers with the high-quality products and timely service they have come to expect from PLP.",
+      "customer expectations, and other factors described under the headings “Forward-Looking Statements” and “Risk Factors” in the Company’s 2023 Annual Report on Form 10-K filed with the SEC on March 8, 2024 and subsequent filings with the SEC.",
+      "customers around the world.",
+      "aintain solid financial results during this expected temporary slow-down within our end markets."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory de-stocking within the communications end market.",
+      "delay in BEAD stimulus funding and continued inventory de-stocking to re-align customer inventory levels with current manufacturing lead times.",
+      "decrease.",
+      "decrease in sales is a continuation of the slowdown in spending in the communications end market.",
+      "decreased gross profit from lower sales levels, similar to our Q1 2024 results, partially offset by lower period expenses, lower interest expense and reduced income tax expense.",
+      "decrease of 460 basis points versus the same quarter in 2023."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "plpc-ex99_1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PREFORMED LINE PRODUCTS ANNOUNCES SECOND QUARTER 2024 FINANCIAL RESULTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "CLEVELAND, OHIO – July 31, 2024 - Preformed Line Products Company (NASDAQ: PLPC) today reported financial results for its second quarter of 2024.Net sales in the second quarter of 2024 were $138.7 million compared to $181.8 million in the second quarter of 2023, a 24% decrease. The decrease in sales is a continuation of the slowdown in spending in the communications end market. Foreign currency translation reduced second quarter 2024 net sales by $1.1 million.Net income for the quarter ended June 30, 2024, was $9.4 million, or $1.89 per diluted share, compared to $20.5 million, or $4.08 per diluted share, for the comparable period in 2023. The second quarter of 2024 net income was impacted by decreased gross profit from lower sales levels, similar to our Q1 2024 results, partially offset by lower period expenses, lower interest expense and reduced income tax expense. Gross profit as a percentage of net sales was 31.9% for the second quarter of 2024, a decrease of 460 basis points versus the same quarter in 2023. Net sales decreased 23% to $279.6 million for the first six months of 2024 compared to $363.6 million for the first six months of 2023. The year-over-year decline in sales is due primarily to the slowdown in spending and inventory de-stocking within the communications end market. Foreign currency translation rates reduced net sales by $0.3 million for the six months ended June 30, 2024.Net income for the six months ended June 30, 2024 was $19.0 million, or $3.83 per diluted share, compared to $41.9 million, or $8.35 per diluted share, for the comparable period in 2023. YTD June 30, 2024 net income was impacted by decreased gross profit resulting from the decrease in sales which was partially offset by lower period expenses, lower interest expense and reduced income tax expense.Rob Ruhlman, Executive Chairman, said, “The decline in net sales continues to be primarily related to the softness in the communications end market, caused primarily by a reduction in deployment due to higher borrowing costs, a delay in BEAD stimulus funding and continued inventory de-stocking to re-align customer inventory levels with current manufacturing lead times. Our cost reduction activities implemented in 2023 have helped us maintain solid financial results during this expected temporary slow-down within our end markets. We remain optimistic about the prospects of the markets that we serve and will continue our investment in new product development, streamlining our manufacturing operations and expanding our customer service portfolio. These actions, along with our continued strong liquidity, will allow us to take advantage of favorable market conditions when they return. Our current focus is unchanged: provide our customers with the high-quality products and timely service they have come to expect from PLP.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FORWARD-LOOKING STATEMENTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "This news release contains “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Exchange Act of 1934 regarding the Company, including those statements regarding the Company’s and management’s beliefs and expectations concerning the Company’s future performance or anticipated financial results, among others. Except for historical information, the matters discussed in this release are forward-looking statements that involve risks and uncertainties which may cause results to differ materially from those set forth in those statements. Among other things, factors that could cause actual results to differ materially from those expressed in such"
+    },
+    {
+      "type": "TextElement",
+      "text": "forward-looking statements include the uncertainty in global business conditions and the economy due to factors such as inflation, rising interest rates, labor disruptions, military conflict, political instability, exchange rates and lingering effects of COVID-19, the strength of demand and availability of funding for the Company’s products and the mix of products sold, the relative degree of competitive and customer price pressure on the Company’s products, the cost, availability and quality of raw materials required for the manufacture of products, opportunities for business growth through acquisitions and the ability to successfully integrate any acquired businesses, changes in regulations and tax rates, security breaches, litigation and claims and the Company’s ability to continue to develop proprietary technology and maintain high-quality products and customer service to meet or exceed new industry performance standards and individual customer expectations, and other factors described under the headings “Forward-Looking Statements” and “Risk Factors” in the Company’s 2023 Annual Report on Form 10-K filed with the SEC on March 8, 2024 and subsequent filings with the SEC. The Annual Report on Form 10-K and the Company’s other filings with the SEC can be found on the SEC’s website at http://www.sec.gov. The Company assumes no obligation to update or supplement forward-looking statements that become untrue because of subsequent events."
+    },
+    {
+      "type": "TitleElement",
+      "text": "ABOUT PLP"
+    },
+    {
+      "type": "TextElement",
+      "text": "PLP protects the world’s most critical connections by creating stronger and more reliable networks. The company’s precision-engineered solutions are trusted by energy and communications providers worldwide to perform better and last longer. With locations in 20 countries, PLP works as a united global corporation, delivering high-quality products and unparalleled service to customers around the world."
+    },
+    {
+      "type": "TitleElement",
+      "text": "MEDIA RELATIONS INVESTOR RELATIONS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "JOSH NELSON ANDREW S. KLAUS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "MANAGER, MARKETING COMMUNICATIONS CHIEF FINANCIAL OFFICER"
+    },
+    {
+      "type": "TextElement",
+      "text": "+1 440 473 9120 +1 440 473 9246"
+    },
+    {
+      "type": "TitleElement",
+      "text": "JOSH.NELSON@PLP.COM ANDY.KLAUS@PLP.COM"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PREFORMED LINE PRODUCTS COMPANY"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 December 31, 2023 (Thousands of dollars, except share and per share data) (Unaudited) ASSETS Cash, cash equivalents and restricted cash $ 47,424 $ 53,607 Accounts receivable, net 101,460 106,892 Inventories, net 141,812 148,814 Prepaid expenses 7,394 8,246 Other current assets 6,983 7,256 TOTAL CURRENT ASSETS 305,073 324,815 Property, plant and equipment, net 200,441 207,892 Goodwill 27,901 29,497 Other intangible assets, net 11,059 12,981 Deferred income taxes 7,721 7,109 Other assets 20,392 20,857 TOTAL ASSETS $ 572,587 $ 603,151 LIABILITIES AND SHAREHOLDERS' EQUITY Trade accounts payable $ 42,945 $ 37,788 Notes payable to banks 6,938 6,968 Current portion of long-term debt 2,812 6,486 Accrued compensation and other benefits 24,398 28,018 Accrued expenses and other liabilities 26,891 32,057 TOTAL CURRENT LIABILITIES 103,984 111,317 Long-term debt, less current portion 28,820 48,796 Other noncurrent liabilities and deferred income taxes 23,565 26,882 SHAREHOLDERS' EQUITY Common shares – $2 par value per share, 15,000,000 shares authorized, 4,913,496 and 4,908,413 issued and outstanding, at June 30, 2024 and December 31, 2023 13,711 13,607 Common shares issued to rabbi trust, 238,787 and 243,118 shares at June 30, 2024 and December 31, 2023, respectively (10,233 ) (10,183 ) Deferred compensation liability 10,233 10,183 Paid-in capital 62,361 60,958 Retained earnings 537,079 520,154 Treasury shares, at cost, 1,941,690 and 1,894,419 shares at June 30, 2024 and December 31, 2023, respectively (124,269 ) (118,249 ) Accumulated other comprehensive loss (72,664 ) (60,306 ) TOTAL PREFORMED LINE PRODUCTS COMPANY SHAREHOLDERS' EQUITY 416,218 416,164 Noncontrolling interest - (8 ) TOTAL SHAREHOLDERS' EQUITY 416,218 416,156 TOTAL LIABILITIES AND SHAREHOLDERS' EQUITY $ 572,587 $ 603,151"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PREFORMED LINE PRODUCTS COMPANY"
+    },
+    {
+      "type": "TitleElement",
+      "text": "STATEMENTS OF CONSOLIDATED INCOME"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 (Thousands of dollars, except per share data) Net sales $ 138,720 $ 181,813 $ 279,625 $ 363,637 Cost of products sold 94,447 115,486 191,220 231,026 GROSS PROFIT 44,273 66,327 88,405 132,611 Costs and expenses Selling 11,928 13,013 23,828 25,401 General and administrative 15,250 18,220 31,858 36,830 Research and engineering 5,358 5,760 10,789 10,953 Other operating expense, net 445 1,186 (921 ) 2,298 32,981 38,179 65,554 75,482 OPERATING INCOME 11,292 28,148 22,851 57,129 Other (expense) income Interest income 346 419 1,318 723 Interest expense (568 ) (1,134 ) (1,276 ) (2,199 ) Other income, net 91 108 126 147 (131 ) (607 ) 168 (1,329 ) INCOME BEFORE INCOME TAXES 11,161 27,541 23,019 55,800 Income tax expense 1,794 7,077 4,049 13,917 NET INCOME $ 9,367 $ 20,464 $ 18,970 $ 41,883 Net income attributable to noncontrolling interests (1 ) 8 (8 ) (13 ) NET INCOME ATTRIBUTABLE TO PREFORMED LINE PRODUCTS COMPANY SHAREHOLDERS $ 9,366 $ 20,472 $ 18,962 $ 41,870 AVERAGE NUMBER OF SHARES OF COMMON STOCK OUTSTANDING: Basic 4,915 4,944 4,915 4,940 Diluted 4,964 5,024 4,955 5,013 EARNINGS PER SHARE OF COMMON STOCK ATTRIBUTABLE TO PREFORMED LINE PRODUCTS COMPANY SHAREHOLDERS: Basic $ 1.91 $ 4.14 $ 3.86 $ 8.48 Diluted $ 1.89 $ 4.08 $ 3.83 $ 8.35 Cash dividends declared per share $ 0.20 $ 0.20 $ 0.40 $ 0.40"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          "Exhibit 99.1"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        37,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "June 30, 2024",
+          "June 30, 2024",
+          "",
+          "",
+          "December 31, 2023",
+          "December 31, 2023",
+          ""
+        ],
+        [
+          "(Thousands of dollars, except share and per share data)",
+          "",
+          "(Unaudited)",
+          "(Unaudited)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASSETS",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash, cash equivalents and restricted cash",
+          "",
+          "$",
+          "47424",
+          "",
+          "",
+          "$",
+          "53607",
+          ""
+        ],
+        [
+          "Accounts receivable, net",
+          "",
+          "",
+          "101460",
+          "",
+          "",
+          "",
+          "106892",
+          ""
+        ],
+        [
+          "Inventories, net",
+          "",
+          "",
+          "141812",
+          "",
+          "",
+          "",
+          "148814",
+          ""
+        ],
+        [
+          "Prepaid expenses",
+          "",
+          "",
+          "7394",
+          "",
+          "",
+          "",
+          "8246",
+          ""
+        ],
+        [
+          "Other current assets",
+          "",
+          "",
+          "6983",
+          "",
+          "",
+          "",
+          "7256",
+          ""
+        ],
+        [
+          "TOTAL CURRENT ASSETS",
+          "",
+          "",
+          "305073",
+          "",
+          "",
+          "",
+          "324815",
+          ""
+        ],
+        [
+          "Property, plant and equipment, net",
+          "",
+          "",
+          "200441",
+          "",
+          "",
+          "",
+          "207892",
+          ""
+        ],
+        [
+          "Goodwill",
+          "",
+          "",
+          "27901",
+          "",
+          "",
+          "",
+          "29497",
+          ""
+        ],
+        [
+          "Other intangible assets, net",
+          "",
+          "",
+          "11059",
+          "",
+          "",
+          "",
+          "12981",
+          ""
+        ],
+        [
+          "Deferred income taxes",
+          "",
+          "",
+          "7721",
+          "",
+          "",
+          "",
+          "7109",
+          ""
+        ],
+        [
+          "Other assets",
+          "",
+          "",
+          "20392",
+          "",
+          "",
+          "",
+          "20857",
+          ""
+        ],
+        [
+          "TOTAL ASSETS",
+          "",
+          "$",
+          "572587",
+          "",
+          "",
+          "$",
+          "603151",
+          ""
+        ],
+        [
+          "LIABILITIES AND SHAREHOLDERS' EQUITY",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Trade accounts payable",
+          "",
+          "$",
+          "42945",
+          "",
+          "",
+          "$",
+          "37788",
+          ""
+        ],
+        [
+          "Notes payable to banks",
+          "",
+          "",
+          "6938",
+          "",
+          "",
+          "",
+          "6968",
+          ""
+        ],
+        [
+          "Current portion of long-term debt",
+          "",
+          "",
+          "2812",
+          "",
+          "",
+          "",
+          "6486",
+          ""
+        ],
+        [
+          "Accrued compensation and other benefits",
+          "",
+          "",
+          "24398",
+          "",
+          "",
+          "",
+          "28018",
+          ""
+        ],
+        [
+          "Accrued expenses and other liabilities",
+          "",
+          "",
+          "26891",
+          "",
+          "",
+          "",
+          "32057",
+          ""
+        ],
+        [
+          "TOTAL CURRENT LIABILITIES",
+          "",
+          "",
+          "103984",
+          "",
+          "",
+          "",
+          "111317",
+          ""
+        ],
+        [
+          "Long-term debt, less current portion",
+          "",
+          "",
+          "28820",
+          "",
+          "",
+          "",
+          "48796",
+          ""
+        ],
+        [
+          "Other noncurrent liabilities and deferred income taxes",
+          "",
+          "",
+          "23565",
+          "",
+          "",
+          "",
+          "26882",
+          ""
+        ],
+        [
+          "SHAREHOLDERS' EQUITY",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Common shares – $2 par value per share, 15,000,000 shares authorized, 4,913,496 and 4,908,413 issued and outstanding, at June 30, 2024 and December 31, 2023",
+          "",
+          "",
+          "13711",
+          "",
+          "",
+          "",
+          "13607",
+          ""
+        ],
+        [
+          "Common shares issued to rabbi trust, 238,787 and 243,118 shares at June 30, 2024 and December 31, 2023, respectively",
+          "",
+          "",
+          "(10,233",
+          ")",
+          "",
+          "",
+          "(10,183",
+          ")"
+        ],
+        [
+          "Deferred compensation liability",
+          "",
+          "",
+          "10233",
+          "",
+          "",
+          "",
+          "10183",
+          ""
+        ],
+        [
+          "Paid-in capital",
+          "",
+          "",
+          "62361",
+          "",
+          "",
+          "",
+          "60958",
+          ""
+        ],
+        [
+          "Retained earnings",
+          "",
+          "",
+          "537079",
+          "",
+          "",
+          "",
+          "520154",
+          ""
+        ],
+        [
+          "Treasury shares, at cost, 1,941,690 and 1,894,419 shares at June 30, 2024 and December 31, 2023, respectively",
+          "",
+          "",
+          "(124,269",
+          ")",
+          "",
+          "",
+          "(118,249",
+          ")"
+        ],
+        [
+          "Accumulated other comprehensive loss",
+          "",
+          "",
+          "(72,664",
+          ")",
+          "",
+          "",
+          "(60,306",
+          ")"
+        ],
+        [
+          "TOTAL PREFORMED LINE PRODUCTS COMPANY SHAREHOLDERS' EQUITY",
+          "",
+          "",
+          "416218",
+          "",
+          "",
+          "",
+          "416164",
+          ""
+        ],
+        [
+          "Noncontrolling interest",
+          "",
+          "",
+          "-",
+          "",
+          "",
+          "",
+          "(8",
+          ")"
+        ],
+        [
+          "TOTAL SHAREHOLDERS' EQUITY",
+          "",
+          "",
+          "416218",
+          "",
+          "",
+          "",
+          "416156",
+          ""
+        ],
+        [
+          "TOTAL LIABILITIES AND SHAREHOLDERS' EQUITY",
+          "",
+          "$",
+          "572587",
+          "",
+          "",
+          "$",
+          "603151",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        32,
+        16
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          "Six Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "(Thousands of dollars, except per share data)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net sales",
+          "$",
+          "138720",
+          "",
+          "",
+          "$",
+          "181813",
+          "",
+          "",
+          "$",
+          "279625",
+          "",
+          "",
+          "$",
+          "363637",
+          ""
+        ],
+        [
+          "Cost of products sold",
+          "",
+          "94447",
+          "",
+          "",
+          "",
+          "115486",
+          "",
+          "",
+          "",
+          "191220",
+          "",
+          "",
+          "",
+          "231026",
+          ""
+        ],
+        [
+          "GROSS PROFIT",
+          "",
+          "44273",
+          "",
+          "",
+          "",
+          "66327",
+          "",
+          "",
+          "",
+          "88405",
+          "",
+          "",
+          "",
+          "132611",
+          ""
+        ],
+        [
+          "Costs and expenses",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Selling",
+          "",
+          "11928",
+          "",
+          "",
+          "",
+          "13013",
+          "",
+          "",
+          "",
+          "23828",
+          "",
+          "",
+          "",
+          "25401",
+          ""
+        ],
+        [
+          "General and administrative",
+          "",
+          "15250",
+          "",
+          "",
+          "",
+          "18220",
+          "",
+          "",
+          "",
+          "31858",
+          "",
+          "",
+          "",
+          "36830",
+          ""
+        ],
+        [
+          "Research and engineering",
+          "",
+          "5358",
+          "",
+          "",
+          "",
+          "5760",
+          "",
+          "",
+          "",
+          "10789",
+          "",
+          "",
+          "",
+          "10953",
+          ""
+        ],
+        [
+          "Other operating expense, net",
+          "",
+          "445",
+          "",
+          "",
+          "",
+          "1186",
+          "",
+          "",
+          "",
+          "(921",
+          ")",
+          "",
+          "",
+          "2298",
+          ""
+        ],
+        [
+          "",
+          "",
+          "32981",
+          "",
+          "",
+          "",
+          "38179",
+          "",
+          "",
+          "",
+          "65554",
+          "",
+          "",
+          "",
+          "75482",
+          ""
+        ],
+        [
+          "OPERATING INCOME",
+          "",
+          "11292",
+          "",
+          "",
+          "",
+          "28148",
+          "",
+          "",
+          "",
+          "22851",
+          "",
+          "",
+          "",
+          "57129",
+          ""
+        ],
+        [
+          "Other (expense) income",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Interest income",
+          "",
+          "346",
+          "",
+          "",
+          "",
+          "419",
+          "",
+          "",
+          "",
+          "1318",
+          "",
+          "",
+          "",
+          "723",
+          ""
+        ],
+        [
+          "Interest expense",
+          "",
+          "(568",
+          ")",
+          "",
+          "",
+          "(1,134",
+          ")",
+          "",
+          "",
+          "(1,276",
+          ")",
+          "",
+          "",
+          "(2,199",
+          ")"
+        ],
+        [
+          "Other income, net",
+          "",
+          "91",
+          "",
+          "",
+          "",
+          "108",
+          "",
+          "",
+          "",
+          "126",
+          "",
+          "",
+          "",
+          "147",
+          ""
+        ],
+        [
+          "",
+          "",
+          "(131",
+          ")",
+          "",
+          "",
+          "(607",
+          ")",
+          "",
+          "",
+          "168",
+          "",
+          "",
+          "",
+          "(1,329",
+          ")"
+        ],
+        [
+          "INCOME BEFORE INCOME TAXES",
+          "",
+          "11161",
+          "",
+          "",
+          "",
+          "27541",
+          "",
+          "",
+          "",
+          "23019",
+          "",
+          "",
+          "",
+          "55800",
+          ""
+        ],
+        [
+          "Income tax expense",
+          "",
+          "1794",
+          "",
+          "",
+          "",
+          "7077",
+          "",
+          "",
+          "",
+          "4049",
+          "",
+          "",
+          "",
+          "13917",
+          ""
+        ],
+        [
+          "NET INCOME",
+          "$",
+          "9367",
+          "",
+          "",
+          "$",
+          "20464",
+          "",
+          "",
+          "$",
+          "18970",
+          "",
+          "",
+          "$",
+          "41883",
+          ""
+        ],
+        [
+          "Net income attributable to noncontrolling interests",
+          "",
+          "(1",
+          ")",
+          "",
+          "",
+          "8",
+          "",
+          "",
+          "",
+          "(8",
+          ")",
+          "",
+          "",
+          "(13",
+          ")"
+        ],
+        [
+          "NET INCOME ATTRIBUTABLE TO PREFORMED LINE PRODUCTS COMPANY SHAREHOLDERS",
+          "$",
+          "9366",
+          "",
+          "",
+          "$",
+          "20472",
+          "",
+          "",
+          "$",
+          "18962",
+          "",
+          "",
+          "$",
+          "41870",
+          ""
+        ],
+        [
+          "AVERAGE NUMBER OF SHARES OF COMMON STOCK OUTSTANDING:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic",
+          "",
+          "4915",
+          "",
+          "",
+          "",
+          "4944",
+          "",
+          "",
+          "",
+          "4915",
+          "",
+          "",
+          "",
+          "4940",
+          ""
+        ],
+        [
+          "Diluted",
+          "",
+          "4964",
+          "",
+          "",
+          "",
+          "5024",
+          "",
+          "",
+          "",
+          "4955",
+          "",
+          "",
+          "",
+          "5013",
+          ""
+        ],
+        [
+          "EARNINGS PER SHARE OF COMMON STOCK ATTRIBUTABLE TO PREFORMED LINE PRODUCTS COMPANY SHAREHOLDERS:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic",
+          "$",
+          "1.91",
+          "",
+          "",
+          "$",
+          "4.14",
+          "",
+          "",
+          "$",
+          "3.86",
+          "",
+          "",
+          "$",
+          "8.48",
+          ""
+        ],
+        [
+          "Diluted",
+          "$",
+          "1.89",
+          "",
+          "",
+          "$",
+          "4.08",
+          "",
+          "",
+          "$",
+          "3.83",
+          "",
+          "",
+          "$",
+          "8.35",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash dividends declared per share",
+          "$",
+          "0.20",
+          "",
+          "",
+          "$",
+          "0.20",
+          "",
+          "",
+          "$",
+          "0.40",
+          "",
+          "",
+          "$",
+          "0.40",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 138.7,
+    "quarter_revenue_yoy_pct": -23.7018,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net sales in the second quarter of 2024 were $138.7 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Net sales | $ | 138720 |  |  | $"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -1,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "136.500000",
+    "return_10d_pct": "-16.9231",
+    "return_20d_pct": "-13.1941",
+    "return_30d_pct": "-15.3919",
+    "return_60d_pct": "-6.1685",
+    "return_90d_pct": "-9.5751"
+  },
+  "text_stats": {
+    "primary_text_len": 3127,
+    "exhibit_text_len": 9127,
+    "combined_text_len": 12256,
+    "semantic_text_len": 9122,
+    "table_count": 6,
+    "semantic_parse_status": "sec_parser"
+  }
+}

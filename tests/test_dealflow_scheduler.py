@@ -19,27 +19,26 @@ class _FakePipeline:
 
     def run(self, as_of_date: str, trigger: str, top_k: int):
         self.run_calls.append((as_of_date, trigger, top_k))
-        shortlist = {
+        handoff = {
             "run_id": f"{as_of_date}-090000-{trigger}",
             "date": as_of_date,
             "trigger": trigger,
             "candidates": [],
             "event_reasons": ["shock"] if self.event_triggered else [],
         }
-        queue = {
-            "run_id": shortlist["run_id"],
+        pending = {
+            "run_id": handoff["run_id"],
             "date": as_of_date,
             "items": [],
             "selected_queue_ids": [],
         }
-        return shortlist, queue, [{"symbol": "AAPL"}], self.evaluate_event_trigger(as_of_date)
+        return handoff, pending, [{"symbol": "AAPL"}], self.evaluate_event_trigger(as_of_date)
 
 
 def test_scheduler_runs_daily_once_in_preopen_window(tmp_path):
     pipeline = _FakePipeline(event_triggered=False)
     scheduler = DealFlowScheduler(
         config={
-            "dealflow_top_k": 20,
             "dealflow_scheduler_timezone": "America/New_York",
             "dealflow_scheduler_preopen_start": "08:00",
             "dealflow_scheduler_preopen_end": "09:25",
@@ -63,7 +62,6 @@ def test_scheduler_enforces_event_cooldown(tmp_path):
     pipeline = _FakePipeline(event_triggered=True)
     scheduler = DealFlowScheduler(
         config={
-            "dealflow_top_k": 20,
             "dealflow_scheduler_timezone": "America/New_York",
             "dealflow_scheduler_preopen_start": "08:00",
             "dealflow_scheduler_preopen_end": "09:25",
@@ -88,7 +86,6 @@ def test_scheduler_wires_x_budget_policy(tmp_path):
     pipeline = _FakePipeline(event_triggered=False)
     scheduler = DealFlowScheduler(
         config={
-            "dealflow_top_k": 20,
             "dealflow_scheduler_timezone": "America/New_York",
             "dealflow_scheduler_preopen_start": "08:00",
             "dealflow_scheduler_preopen_end": "09:25",

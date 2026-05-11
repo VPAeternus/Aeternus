@@ -328,7 +328,7 @@
 - X/reddit/news integration with profile controls
 
 2. Batch research is live:
-- `analyze-batch` supports deep + quick modes
+- `retired post-scout batch command` supports deep + quick modes
 - Attribution by lane/playbook/signal family exists
 - Realized-horizon scaffolding exists (5d/20d)
 
@@ -485,7 +485,7 @@ Implication for new account:
 3. Optional: wire local DGS10/CPI series artifacts for richer regime classification
 
 ### Backlog explicitly requested by user
-1. Increase shortlist from 20 to 30 (already implemented in config; continue tuning/reporting as needed)
+1. Increase candidate_list from 20 to 30 (already implemented in config; continue tuning/reporting as needed)
 2. Scheduler wrapper as P1 (deferred by request)
 
 ---
@@ -539,7 +539,7 @@ Switching accounts is safe **if and only if** the next account follows the proto
   - run heartbeats (RUNNING/IDLE)
   - one-shot run intent resolution + receipt writing
 - `tradingagents/dealflow/pipeline.py`
-  - negative constraints suppress deep-selection promotion
+  - negative constraints suppress fundamental-intake promotion
 
 6. Config additions:
 - operator gateway path and safety defaults in `tradingagents/default_config.py`
@@ -607,7 +607,7 @@ Switching accounts is safe **if and only if** the next account follows the proto
 
 4. Config defaults added in `tradingagents/default_config.py`:
 - `operator_gateway_dealflow_base_dir`
-- `operator_gateway_research_queue_path`
+- `operator_gateway_legacy_queue_artifact_path`
 - `operator_gateway_thesis_summary_max_chars`
 - `operator_gateway_detail_summary_max_chars`
 

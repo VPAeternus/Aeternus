@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TSCO",
+    "cik": "916365",
+    "event_date": "2024-07-25",
+    "event_accession": "0000916365-24-000083",
+    "primary_8k_doc": "tsco-20240725.htm",
+    "exhibit_docs": [
+      "ex991-q22024earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TSCO_000091636524000083_tsco-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TSCO_000091636524000083_ex991-q22024earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TSCO",
+    "cik": "916365",
+    "entity_name": "TRACTOR SUPPLY CO /DE/",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3299225000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "183088000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "8848815000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "125706000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-157684000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "19554000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.055494",
+    "operating_cash_flow_to_revenue": "0.005927",
+    "assets_to_revenue": "2.682089",
+    "financing_cash_flow_to_revenue": "0.038102",
+    "investing_cash_flow_to_revenue": "-0.047794"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales was driven by new store openings, partially offset by the decline in comparable store sales.",
+      "sales decreased 0.",
+      "Earnings per Share (“EPS”) of $3.",
+      "EPS results that were in line with our outlook.",
+      "gross margin increased 43 basis points to 36.",
+      "gross margin rate increase was primarily attributable to ongoing lower transportation costs along with disciplined product cost management and the continued execution of an everyday low price strategy."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK Brentwood, Tenn.",
+      "Outlook “We are pleased with our second quarter EPS results that were in line with our outlook.",
+      "Outlook Based on year-to-date performance and its outlook, Tractor Supply is updating its financial guidance.",
+      "guidance for 2024, including net sales, comparable store sales, operating margin rates, net income, earnings per diluted share, capital expenditures and plans, share repurchase, and sale-leaseback transactions.",
+      "expected, consumable, usable and edible products were modestly negative with positive unit growth offset by average unit price pressure.",
+      "expects the following: Updated Previous Net Sales $14."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and each other.",
+      "customers,” said Hal Lawton, President and Chief Executive Officer of Tractor Supply.",
+      "customers given the strength of our second half operational initiatives.",
+      "customers pursue their passions, whether that means being closer to the land, taking care of animals or living a hands-on, DIY lifestyle.",
+      "customers need – anytime, anywhere, any way they choose at the low prices they deserve.",
+      "customer or stockholder support and have a material adverse effect on our business, liquidity, financial condition, and/or results of operations."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory per store (000’s) (b) $1,138.",
+      "Inventory turns (annualized) 3.",
+      "inventory cost, excluding inventory in transit.",
+      "Decrease of 0.",
+      "decline in comparable store sales.",
+      "decreased 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 14800,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "51.891998",
+    "return_10d_pct": "-1.2757",
+    "return_20d_pct": "1.3644",
+    "return_30d_pct": "5.1492",
+    "return_60d_pct": "6.9799",
+    "return_90d_pct": "5.7157"
+  },
+  "text_stats": {
+    "primary_text_len": 3126,
+    "exhibit_text_len": 18342,
+    "combined_text_len": 21470
+  }
+}

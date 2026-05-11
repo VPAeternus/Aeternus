@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MRNA",
+    "cik": "1682852",
+    "event_date": "2024-08-01",
+    "event_accession": "0001682852-24-000043",
+    "primary_8k_doc": "mrna-20240801.htm",
+    "exhibit_docs": [
+      "exhibit9912024q2pressrelea.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MRNA_000168285224000043_mrna-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MRNA_000168285224000043_exhibit9912024q2pressrelea.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MRNA",
+    "cik": "1682852",
+    "entity_name": "MODERNA, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1862000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "79000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "18426000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-542000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "2011000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-1225000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.042427",
+    "operating_cash_flow_to_revenue": "-0.657895",
+    "assets_to_revenue": "9.895811",
+    "financing_cash_flow_to_revenue": "-0.291085",
+    "investing_cash_flow_to_revenue": "1.080021"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $241 million , GAAP net loss of $1.",
+      "sales of the Company’s COVID-19 vaccine.",
+      "sales were largely recognized from doses delivered and deferred from 2022.",
+      "sales decreased by $616 million, or 84%.",
+      "sales was 62% for the second quarter of 2024, down from 249% in the second quarter of 2023.",
+      "sales was primarily due to a lower sales volume and decreased unutilized manufacturing capacity, inventory write-downs, and losses on firm purchase commitments and related cancellation fees."
+    ],
+    "guidance_evidence": [
+      "expects very low EU sales in 2024.",
+      "expected shift to a seasonal COVID-19 vaccine market, with higher demand anticipated in the fall and winter.",
+      "expected net product sales to $3.",
+      "expects a sales split of 40-50% in the third quarter with the balance in the fourth quarter of 2024, subject to the timing of regulatory approvals.",
+      "expected to be in the range of 40-50% of product sales for the year.",
+      "expected to be approximately $0."
+    ],
+    "wave_or_demand_evidence": [
+      "demand anticipated in the fall and winter.",
+      "demand and increased product seasonality.",
+      "ainst influenza and COVID-19 Announced positive Phase 3 data for next-generation COVID-19 vaccine CAMBRIDGE, MA / ACCESSWIRE / August 1, 2024 / Moderna, Inc.",
+      "ain focused on execution for the 2024-25 COVID season and the launch of our RSV vaccine in the U.",
+      "aid Stéphane Bancel, Chief Executive Officer of Moderna.",
+      "ainly driven by lower costs, partially offset by the reduced sales volume, reflecting a decline in product demand and increased product seasonality."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory write-downs of $14 million.",
+      "inventory write-downs, and losses on firm purchase commitments and related cancellation fees.",
+      "loss of $1.",
+      "decline was primarily attributable to decreased sales of the Company’s COVID-19 vaccine.",
+      "decrease compared to the same period in 2023.",
+      "decreased by $616 million, or 84%."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 241,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "91.169998",
+    "return_10d_pct": "-10.8369",
+    "return_20d_pct": "-11.1111",
+    "return_30d_pct": "-19.9956",
+    "return_60d_pct": "-29.8782",
+    "return_90d_pct": "-40.3751"
+  },
+  "text_stats": {
+    "primary_text_len": 3346,
+    "exhibit_text_len": 20702,
+    "combined_text_len": 24050
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ZBRA",
+    "cik": "877212",
+    "event_date": "2024-07-30",
+    "event_accession": "0000877212-24-000149",
+    "primary_8k_doc": "zbra-20240730.htm",
+    "exhibit_docs": [
+      "zbraex99120240629.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ZBRA_000087721224000149_zbra-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ZBRA_000087721224000149_zbraex99120240629.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ZBRA",
+    "cik": "877212",
+    "entity_name": "Zebra Technologies Corporation",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1405000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "150000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "7306000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "70000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-17000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "-76000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.106762",
+    "operating_cash_flow_to_revenue": "-0.054093",
+    "assets_to_revenue": "5.2",
+    "financing_cash_flow_to_revenue": "0.049822",
+    "investing_cash_flow_to_revenue": "-0.0121"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $1,217 million; year-over-year increase of 0.",
+      "Net sales were $1,217 million in the second quarter of 2024 compared to $1,214 million in the prior year.",
+      "net sales were $397 million in the second quarter of 2024 compared to $459 million in the prior year.",
+      "Net income of $113 million and net income per diluted share of $2.",
+      "EPS decreased year-over-year to $3.",
+      "gross margin,\" said Bill Burns, Chief Executive Officer of Zebra Technologies."
+    ],
+    "guidance_evidence": [
+      "guidance ranges.",
+      "outlook reflects our second quarter performance and early signs of momentum in demand led by mobile computing, balanced with continued cautious customer spending behavior, particularly for large orders, which have not yet returned to historical levels.",
+      "Outlook Third Quarter 2024 The Company expects net sales to increase between 25% and 28% compared to the prior year.",
+      "guidance for the full year.",
+      "outlook.",
+      "outlook,” and “expect” and similar expressions, as they relate to the company or its management, are intended to identify such forward-looking statements, but are not the exclusive means of identifying these statements."
+    ],
+    "wave_or_demand_evidence": [
+      "demand led by mobile computing, balanced with continued cautious customer spending behavior, particularly for large orders, which have not yet returned to historical levels.",
+      "customers’ workflows across the supply chain.",
+      "customers include over 80% of the Fortune 500.",
+      "customer acceptance of Zebra’s offerings and competitors' offerings, and the potential effects of emerging technologies and changes in customer requirements.",
+      "customers.",
+      "customer demand could negatively impact Zebra's results of operations and customer relationships."
+    ],
+    "warning_or_risk_evidence": [
+      "charges associated with the Exit and Restructuring plans are expected to be approximately $130 million.",
+      "charges of $123 million incurred cumulatively through the second quarter of 2024.",
+      "decreased year-over-year to $3.",
+      "decreased year-over-year to $250 million • On track with $120 million annualized net expense savings from our Exit and Restructuring plans Lincolnshire, Ill.",
+      "decline (0.",
+      "decreased 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1217,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "357.779999",
+    "return_10d_pct": "-10.4645",
+    "return_20d_pct": "-3.6140",
+    "return_30d_pct": "-3.4658",
+    "return_60d_pct": "3.5049",
+    "return_90d_pct": "7.5186"
+  },
+  "text_stats": {
+    "primary_text_len": 3353,
+    "exhibit_text_len": 27447,
+    "combined_text_len": 30802
+  }
+}

@@ -678,7 +678,7 @@ Tier 1.2 — Causal Re-Rating Candidate:
 Tier 1.3 — Best Balanced Production Subset:
 
 - Rule: Tier 1 AND `post_llm_candidate_flag = 1` AND `causal_change = 3` AND `negative_revision_risk <= 2`.
-- Interpretation: primary Tier 1 post-LLM shortlist.
+- Interpretation: primary Tier 1 post-LLM candidate_list.
 - Use case: best balanced production subset for limited capital deployment.
 
 Tier 1.4 — Clean High-Priority Subset:
@@ -697,7 +697,7 @@ Tier 2 — Compact High-Conviction Feed:
 - Typical characteristics: lower-priced names.
 - Typical characteristics: higher beta.
 - Typical characteristics: more extreme outcomes, both `+30%` and `-30%`.
-- Use case: high-conviction shortlist.
+- Use case: high-conviction candidate_list.
 - Use case: aggressive strategy.
 - Use case: when you want fewer names.
 

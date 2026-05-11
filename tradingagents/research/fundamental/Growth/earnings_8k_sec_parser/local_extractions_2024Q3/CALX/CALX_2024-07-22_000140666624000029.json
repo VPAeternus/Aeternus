@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CALX",
+    "cik": "1406666",
+    "event_date": "2024-07-22",
+    "event_accession": "0001406666-24-000029",
+    "primary_8k_doc": "calx-20240722.htm",
+    "exhibit_docs": [
+      "ex991pressrelease24q2.htm",
+      "ex992stockholderletter24q2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CALX_000140666624000029_calx-20240722.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CALX_000140666624000029_ex991pressrelease24q2.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CALX_000140666624000029_ex992stockholderletter24q2.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CALX",
+    "cik": "1406666",
+    "entity_name": "Calix, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "250008000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-23",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "9598000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-23",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "941865000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-23",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "10222000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-23",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-3278000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-23",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "8112000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-23",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.038391",
+    "operating_cash_flow_to_revenue": "0.032447",
+    "assets_to_revenue": "3.767339",
+    "financing_cash_flow_to_revenue": "0.040887",
+    "investing_cash_flow_to_revenue": "-0.013112"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $198.",
+      "revenue was $198.",
+      "revenue was 92% of total revenue for the second quarter of 2024, down from 93% in the first quarter of 2023, and up from 89% of revenue for the year ago quarter.",
+      "revenue was 8% of revenue in the second quarter of 2024, down $0.",
+      "revenue was down 46% compared with the year ago period primarily due to lower shipments to Europe and to a lesser extent the Americas outside the United States.",
+      "revenue was down in the second quarter of 2024."
+    ],
+    "guidance_evidence": [
+      "Guidance Non-GAAP 1 Revenue $198.",
+      "guidance provided on April 22, 2024.",
+      "Guidance Guidance Non-GAAP Guidance Reconciled to GAAP Revenue $198.",
+      "guidance for the third quarter of 2024, ending September 28, 2024, reflects our expectations as of the date of this letter.",
+      "guidance for the third quarter of 2024 is for revenue to be between $198 million and $204 million, representing an increase of $3 million (at the midpoint) from the prior quarter.",
+      "guidance for the third quarter of 2024 of 55."
+    ],
+    "wave_or_demand_evidence": [
+      "customers of any size to operate efficiently, acquire subscribers and deliver exceptional experiences.",
+      "customers and their communities.",
+      "customers continued to gain subscribers due to the outstanding services and value they are providing their subscribers.",
+      "customers’ success with their subscribers as they simplify their operations, subscriber engagement and services, innovate for their consumer, business and municipal subscribers and grow their value for members, investors and the communities they serve.",
+      "customer performance is accelerating.",
+      "customers in the quarter, up from 10 in the prior quarter."
+    ],
+    "warning_or_risk_evidence": [
+      "delays on BEAD and government funding, customer purchase adjustments related to our shortened lead-times, and persistently high interest rates, which have BSP customers balancing new subscriber acquisition on existing networks versus incremental builds.",
+      "Inventory turns were 2.",
+      "inventory turns relate to an increase in component inventory and lower shipments.",
+      "Inventory turns based on finished goods inventory only was 3.",
+      "Inventory turns for the second quarter of 2024 were below our Target Financial Model of 3 to 4 turns.",
+      "inventory deposits decreased by $5."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 198.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-23",
+    "entry_open": "37.160000",
+    "return_10d_pct": "0.9957",
+    "return_20d_pct": "-0.3767",
+    "return_30d_pct": "-2.1529",
+    "return_60d_pct": "4.5210",
+    "return_90d_pct": "3.9559"
+  },
+  "text_stats": {
+    "primary_text_len": 5074,
+    "exhibit_text_len": 35538,
+    "combined_text_len": 40614
+  }
+}

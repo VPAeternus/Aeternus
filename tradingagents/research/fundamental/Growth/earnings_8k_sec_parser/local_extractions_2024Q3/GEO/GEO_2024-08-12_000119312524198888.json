@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GEO",
+    "cik": "923796",
+    "event_date": "2024-08-12",
+    "event_accession": "0001193125-24-198888",
+    "primary_8k_doc": "d750002d8k.htm",
+    "exhibit_docs": [
+      "d750002dex991.htm",
+      "d750002dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GEO_000119312524198888_d750002d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GEO_000119312524198888_d750002dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GEO_000119312524198888_d750002dex992.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GEO",
+    "cik": "923796",
+    "entity_name": "GEO GROUP INC",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "608209000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "28003000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3696406000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-45878000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-15162000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "94740000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.046042",
+    "operating_cash_flow_to_revenue": "0.155769",
+    "assets_to_revenue": "6.077526",
+    "financing_cash_flow_to_revenue": "-0.075431",
+    "investing_cash_flow_to_revenue": "-0.024929"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $607.",
+      "revenues of $1.",
+      "revenues of approximately $2.",
+      "revenues of approximately $607 million.",
+      "revenues of $606 million to $616 million.",
+      "revenues of $611 million to $621 million."
+    ],
+    "guidance_evidence": [
+      "Guidance Today, we updated our financial guidance for 2024.",
+      "guidance reflects the costs associated with the extinguishment of debt of $82.",
+      "outlook.",
+      "guidance range .",
+      "guidance and outlook for the second half of 2024 and the full year.",
+      "guidance for the full year and the third and fourth quarters of 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "customers? Wayne H.",
+      "airman of GEO, said, Our diversified business units have continued to deliver steady financial and operational performance.",
+      "ain focused on the disciplined allocation of capital to enhance long-term value for shareholders as we execute our companys strategic priorities and pursue quality growth opportunities.",
+      "ain relief from previously disclosed COVID-related litigation that currently prevents full use of the Adelanto Center.",
+      "ailable on the website for one year.",
+      "ailable through August 14, 2024, at 1-877-344-7529 (U."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment, loss on extinguishment of debt, start-up expenses, ATM equity program expenses, close-out expenses, and transaction fees.",
+      "restriction.",
+      "restriction in the entire country.",
+      "Loss Attributable to GEO of $0.",
+      "loss attributable to GEO of $32.",
+      "loss attributable to GEO of $9."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 607.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-13",
+    "entry_open": "12.710000",
+    "return_10d_pct": "11.8804",
+    "return_20d_pct": "3.9339",
+    "return_30d_pct": "-0.7868",
+    "return_60d_pct": "16.0504",
+    "return_90d_pct": "108.3399"
+  },
+  "text_stats": {
+    "primary_text_len": 9971,
+    "exhibit_text_len": 79813,
+    "combined_text_len": 89786
+  }
+}

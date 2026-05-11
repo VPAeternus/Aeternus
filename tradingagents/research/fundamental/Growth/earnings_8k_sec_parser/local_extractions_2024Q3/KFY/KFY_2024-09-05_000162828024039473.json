@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KFY",
+    "cik": "56679",
+    "event_date": "2024-09-05",
+    "event_accession": "0001628280-24-039473",
+    "primary_8k_doc": "kfy-20240904.htm",
+    "exhibit_docs": [
+      "kfy-2024731xex991q1fy25.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KFY_000162828024039473_kfy-20240904.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KFY_000162828024039473_kfy-2024731xex991q1fy25.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KFY",
+    "cik": "56679",
+    "entity_name": "KORN FERRY",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2643455000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-28",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "326360000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-28",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "3574444000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-28",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "-137444000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-28",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "-184332000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-28",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "501658000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-28",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.12346",
+    "operating_cash_flow_to_revenue": "0.189774",
+    "assets_to_revenue": "1.352186",
+    "financing_cash_flow_to_revenue": "-0.051994",
+    "investing_cash_flow_to_revenue": "-0.069731"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $674.",
+      "revenue was primarily due to lower fee revenues in Professional Search & Interim and RPO driven by a decline in demand due to the current economic environment, partially offset by an increase in Executive Search fee revenue.",
+      "revenue was $167.",
+      "revenue was $88.",
+      "revenue was $208.",
+      "revenue was primarily driven by a 4% increase in the number of engagements billed in our North America region."
+    ],
+    "guidance_evidence": [
+      "Outlook Low High Consolidated diluted earnings per share $ 1.",
+      "guidance”, “may”, “should”, “could”, “will” or “likely”, and variations of such words and similar expressions are intended to identify such forward-looking statements.",
+      "expected to be in the range of $655 million and $685 million; and ▪ Q2 FY’25 diluted earnings per share is expected to range between $1.",
+      "expected to be in the range from $1.",
+      "expected demand for and relevance of our products and services, expected results of our business diversification strategy, and other statements of future events or conditions are forward-looking statements that involve a number of risks and uncertainties.",
+      "expects”, “anticipates”, “goals”, “estimates”, “guidance”, “may”, “should”, “could”, “will” or “likely”, and variations of such words and similar expressions are intended to identify such forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "demand due to the current economic environment, partially offset by an increase in Executive Search fee revenue.",
+      "demand in the current economic environment.",
+      "demand for and relevance of our products and services, expected results of our business diversification strategy, and other statements of future events or conditions are forward-looking statements that involve a number of risks and uncertainties.",
+      "aid Gary D.",
+      "ained success stems from a balanced approach – from our colleagues and IP to our diversified strategy and broad offerings.",
+      "aintained their positive momentum, with improved growth in Executive Search and stable trends across Professional Search permanent placement and RPO."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of fixed assets, impairment of right-of-use assets and restructuring charges, net when applicable.",
+      "Impairment of fixed assets $ — $ 0.",
+      "Impairment of right-of-use assets $ — $ 1.",
+      "charges, net $ — $ 0.",
+      "Impairment of right-of-use assets $ — $ 0.",
+      "impairment of fixed assets, impairment of right-of-use assets and restructuring charges, net when applicable, and Consolidated and Executive Search Adjusted EBITDA margin."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 674.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 655,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-06",
+    "entry_open": "67.559998",
+    "return_10d_pct": "6.5571",
+    "return_20d_pct": "8.0521",
+    "return_30d_pct": "7.3268",
+    "return_60d_pct": "9.3843",
+    "return_90d_pct": "6.6904"
+  },
+  "text_stats": {
+    "primary_text_len": 3950,
+    "exhibit_text_len": 30118,
+    "combined_text_len": 34070
+  }
+}

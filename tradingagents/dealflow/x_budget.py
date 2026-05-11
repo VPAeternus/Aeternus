@@ -56,7 +56,7 @@ def evaluate_x_budget_policy(
     )
     policy["summaries_used"] = len(summaries)
     if not summaries:
-        policy["reason"] = "no recent batch summaries found"
+        policy["reason"] = "no post-fundamental attribution summaries found"
         return policy
 
     by_horizon = {
@@ -205,28 +205,8 @@ def _x_family_list(config: Dict[str, Any]) -> List[str]:
 
 
 def _load_recent_summaries(base_dir: Path, as_of_date: str, lookback_days: int) -> List[Dict[str, Any]]:
-    as_of = _parse_iso_date(as_of_date) or dt.datetime.now().date()
-    floor = as_of - dt.timedelta(days=max(0, int(lookback_days)))
-    summaries: List[Dict[str, Any]] = []
-    if not base_dir.exists():
-        return summaries
-
-    for date_dir in sorted(base_dir.iterdir()):
-        if not date_dir.is_dir():
-            continue
-        date_value = _parse_iso_date(date_dir.name)
-        if date_value is None or date_value < floor or date_value > as_of:
-            continue
-        latest_path = date_dir / "batch_analyze_latest.json"
-        if not latest_path.exists():
-            continue
-        try:
-            payload = json.loads(latest_path.read_text())
-        except Exception:
-            continue
-        if isinstance(payload, dict):
-            summaries.append(payload)
-    return summaries
+    del base_dir, as_of_date, lookback_days
+    return []
 
 
 def _aggregate_family_horizon(

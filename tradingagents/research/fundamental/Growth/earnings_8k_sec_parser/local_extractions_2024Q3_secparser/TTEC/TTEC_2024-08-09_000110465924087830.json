@@ -1,0 +1,772 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TTEC",
+    "cik": "1013880",
+    "event_date": "2024-08-09",
+    "event_accession": "0001104659-24-087830",
+    "primary_8k_doc": "tm2421219d1_8k.htm",
+    "exhibit_docs": [
+      "tm2421219d1_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TTEC_000110465924087830_tm2421219d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TTEC_000110465924087830_tm2421219d1_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TTEC",
+    "cik": "1013880",
+    "entity_name": "TTEC Holdings, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "633286000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "18647000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2185598000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-43639000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13643000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "49058000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.029445",
+    "operating_cash_flow_to_revenue": "0.077466",
+    "assets_to_revenue": "3.451202",
+    "financing_cash_flow_to_revenue": "-0.068909",
+    "investing_cash_flow_to_revenue": "-0.021543"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue was $534.",
+      "revenue decreased 11.",
+      "Operating Income of $29.",
+      "Net Income of $6.",
+      "Net Income Per Share of $0.",
+      "operating income was primarily the result of a non-cash pre-tax $196 million impairment charge related to the fair value of the TTEC Engage reporting unit, in addition to other factors."
+    ],
+    "guidance_evidence": [
+      "Outlook for Full Year 2024 DENVER, August 8, 2024 – TTEC Holdings, Inc.",
+      "Guidance Full Year 2024 Mid-Point Revenue $2,210M — $2,260M $2,235M Non-GAAP adjusted EBITDA $201M — $217M $209M Non-GAAP adjusted EBITDA margins 9.",
+      "Outlook Full Year 2024 Guidance Full Year 2024 Mid-Point Revenue $1,730M — $1,760M $1,745M Non-GAAP adjusted EBITDA $130M — $140M $135M Non-GAAP adjusted EBITDA margins 7.",
+      "Outlook Full Year 2024 Guidance Full Year 2024 Mid-Point Revenue $480M — $500M $490M Non-GAAP adjusted EBITDA $70M — $76M $73M Non-GAAP adjusted EBITDA margins 14.",
+      "forecasted revenue as well as initiatives to improve our operating efficiencies at the client program level.",
+      "forecasting softer third quarter performance than originally anticipated before seeing stronger results in the fourth quarter."
+    ],
+    "wave_or_demand_evidence": [
+      "customer experience) technology and services innovator for AI-enabled CX with solutions from TTEC Engage and TTEC Digital, announced today financial results for the second quarter ended June 30, 2024.",
+      "demand and budget constraints putting pressure on our top line in the Engage business, while our Digital business had a solid quarter,” commented Ken Tuchman, chairman and chief executive officer of TTEC.",
+      "customer care, acquisition, and fraud mitigation services ·Second quarter 2024 GAAP revenue for TTEC Engage decreased 13.",
+      "demand for our cloud-based offerings.",
+      "customer experience) technology and services innovator for AI-enabled digital CX solutions.",
+      "customer journey."
+    ],
+    "warning_or_risk_evidence": [
+      "Impairments and Related Tax Adjustments (Operating Income of $29.",
+      "impairment charges and related tax adjustments.",
+      "impairment charge related to the fair value of the TTEC Engage reporting unit, in addition to other factors.",
+      "impairment charges, equity-based compensation expenses, amortization of purchased intangibles, and other items, was $29.",
+      "impairment charges, equity-based compensation expenses, amortization of purchased intangibles, among other items.",
+      "Loss of $224."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "tm2421219d1_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "TTEC Announces Second Quarter 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Financial Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second Quarter 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Revenue was $534.1 Million, down 11.0 Percent"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Operating Loss of $224.4 Million or negative 42.0 Percent of Revenue, due to $233.5 Million"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-cash Goodwill Impairments and Related Tax Adjustments"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Operating Income of $29.5 Million or 5.5 Percent of Revenue Non-GAAP)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Net Loss of $296.8 Million or negative 55.6 Percent of Revenue"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Net Income of $6.6 Million or 1.2 Percent of Revenue Non-GAAP)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted EBITDA was $46.2 Million or 8.7 Percent of Revenue"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fully Diluted Net Loss Per Share of $6.23 (Net Income Per Share of $0.14 Non-GAAP)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Updated Outlook for Full Year 2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "DENVER, August 8, 2024 – TTEC Holdings, Inc. (NASDAQ:TTEC), a leading global CX (customer experience) technology and services innovator for AI-enabled CX with solutions from TTEC Engage and TTEC Digital, announced today financial results for the second quarter ended June 30, 2024.“Our results this quarter are impacted by non-cash goodwill impairment charges and related tax adjustments. We continue to operate in a dynamic macroeconomic environment where clients are facing softer demand and budget constraints putting pressure on our top line in the Engage business, while our Digital business had a solid quarter,” commented Ken Tuchman, chairman and chief executive officer of TTEC.Tuchman continued, “We have continued to implement material cost optimization and transformation initiatives to improve the profitability of our Engage segment. In addition, we are making meaningful progress on our diversification strategy expanding our geographic footprint, attracting new enterprise clients, launching new solutions and deepening our partnerships. With these initiatives, we are confident in our ability to return the company to sustainable long-term growth and increased profitability.”"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 1; Options: NewSection"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECOND QUARTER 2024 FINANCIAL HIGHLIGHTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "Revenue ·Second quarter 2024 GAAP revenue decreased 11.0 percent to $534.1 million compared to $600.4 million in the prior year. ·Foreign exchange had a $1.8 million negative impact on revenue in the second quarter of 2024.Income (Loss) from Operations ·Second quarter 2024 GAAP loss from operations was $224.4 million, or negative 42.0 percent of revenue, compared to income from operations of $31.3 million, or 5.2 percent of revenue in the prior year. The significant decrease in operating income was primarily the result of a non-cash pre-tax $196 million impairment charge related to the fair value of the TTEC Engage reporting unit, in addition to other factors. ·Non-GAAP income from operations, excluding restructuring and impairment charges, equity-based compensation expenses, amortization of purchased intangibles, and other items, was $29.5 million, or 5.5 percent of revenue, compared to $50.6 million, or 8.4 percent, for the prior year. ·Foreign exchange had a $0.8 million positive impact on Non-GAAP income from operations in the second quarter of 2024.Adjusted EBITDA ·Second quarter 2024 Non-GAAP Adjusted EBITDA was $46.2 million, or 8.7 percent of revenue, compared to $67.2 million, or 11.2 percent of revenue, in the prior year.Net Income (Loss) Per Share ·Second quarter 2024 GAAP fully diluted net loss per share was $6.23 compared to net income per share of $0.08 in the prior year. ·Non-GAAP fully diluted net income per share was $0.14 compared to Non-GAAP net income per share of $0.55 in the prior year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CASH FLOW AND BALANCE SHEET"
+    },
+    {
+      "type": "TextElement",
+      "text": "·Cash flow from operations in the second quarter of 2024 was $49.3 million compared to $95.9 million for the second quarter of 2023. ·Capital expenditures in the second quarter of 2024 were $14.2 million compared to $19.3 million for the second quarter of 2023. ·As of June 30, 2024, TTEC had cash and cash equivalents of $79.8 million and debt of $933.2 million, resulting in a net debt position of $853.4 million. This compares to a net debt position of $804.2 million for the same period in 2023. ·As of June 30, 2024, TTEC’s remaining borrowing capacity under its revolving credit facility was approximately $100 million compared to $265 million for the same period in 2023. ·On April 30, 2024, TTEC paid a dividend of $0.06 per share, or $2.8 million, to shareholders of record as of April 3, 2024."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SEGMENT REPORTING & COMMENTARY"
+    },
+    {
+      "type": "TextElement",
+      "text": "TTEC reports financial results for TTEC Digital and TTEC Engage business segments. Financial highlights for the two business segments are provided below.TTEC Digital – Design, build and operate tech-enabled, insight-driven CX solutions ·Second quarter 2024 GAAP revenue for TTEC Digital decreased 1.0 percent to $116.4 million from $117.6 million for the year ago period. Income from operations was $6.0 million or 5.2 percent of revenue compared to an operating income of $7.2 million, or 6.1 percent of revenue, in the prior year. ·Non-GAAP income from operations was $15.0 million, or 12.8 percent of revenue, compared to Non-GAAP income from operations of $14.7 million, or 12.5 percent of revenue, in the prior year.TTEC Engage – Digitally-enabled customer care, acquisition, and fraud mitigation services ·Second quarter 2024 GAAP revenue for TTEC Engage decreased 13.5 percent to $417.7 million from $482.8 million for the year ago period. Loss from operations was ($230.4) million, or negative 55.2 percent of revenue, compared to operating income of $24.1 million, or 5.0 percent of revenue in the prior year. ·Non-GAAP income from operations was $14.6 million, or 3.5 percent of revenue, compared to Non-GAAP income from operations of $35.9 million, or 7.4 percent of revenue, in the prior year. ·Foreign exchange had a $1.7 million negative impact on revenue and $0.8 million positive impact on income from operations."
+    },
+    {
+      "type": "TitleElement",
+      "text": "BUSINESS OUTLOOK"
+    },
+    {
+      "type": "TextElement",
+      "text": "“While our second quarter Non-GAAP results were largely in line with our expectations, we see continued pressure in the back half of the year primarily in our Engage business where operational execution remains a top priority,” commented Kenny Wagers, chief financial officer of TTEC.Wagers continued, “We are taking measurable actions in our Engage business to strengthen the foundation for increased profitability. This includes broad actions to align our Engage and corporate cost structure with forecasted revenue as well as initiatives to improve our operating efficiencies at the client program level. Our bottoms-up approach has been meticulous to deliver the intended benefits without impacting the quality of our service delivery and go-to-market platform as we position ourselves for 2025. In our Digital business, clients across numerous industries are increasingly using our CX technology professional and managed services, with particularly strong demand for our cloud-based offerings.”Wagers concluded, “We continue to believe that the second quarter will be the peak of the headwinds in our Engage business. While we expect moderate sequential top and bottom line improvement in the third quarter, we are forecasting softer third quarter performance than originally anticipated before seeing stronger results in the fourth quarter.”"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "Full Year 2024 Guidance Full Year 2024 Mid-Point Revenue $2,210M — $2,260M $2,235M Non-GAAP adjusted EBITDA $201M — $217M $209M Non-GAAP adjusted EBITDA margins 9.1% — 9.6% 9.3% Non-GAAP operating income $134M — $150M $142M Non-GAAP operating income margins 6.0% — 6.6% 6.3% Interest expense, net ($82M) — ($84M) ($83M) Non-GAAP adjusted tax rate 32% — 34% 33% Diluted share count 47.5M — 47.7M 47.6M Non-GAAP earnings per a share $0.74 — $0.97 $0.86"
+    },
+    {
+      "type": "TableElement",
+      "text": "Engage Full Year 2024 Outlook Full Year 2024 Guidance Full Year 2024 Mid-Point Revenue $1,730M — $1,760M $1,745M Non-GAAP adjusted EBITDA $130M — $140M $135M Non-GAAP adjusted EBITDA margins 7.5% — 8.0% 7.8% Non-GAAP operating income $74M — $84M $79M Non-GAAP operating income margins 4.3% — 4.8% 4.5%"
+    },
+    {
+      "type": "TableElement",
+      "text": "Digital Full Year 2024 Outlook Full Year 2024 Guidance Full Year 2024 Mid-Point Revenue $480M — $500M $490M Non-GAAP adjusted EBITDA $70M — $76M $73M Non-GAAP adjusted EBITDA margins 14.7% — 15.3% 15.0% Non-GAAP operating income $59M — $65M $62M Non-GAAP operating income margins 12.4% — 13.1% 12.7%"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company has not quantitatively reconciled its guidance for Non-GAAP operating income, Non-GAAP operating income margins, Non-GAAP adjusted EBITDA, Non-GAAP adjusted EBITDA margins, or Non-GAAP earnings per share to their respective most comparable GAAP measures because certain of the reconciling items that impact these metrics, including restructuring and impairment charges, equity-based compensation expense, changes in acquisition contingent consideration, depreciation and amortization expense, and provision for income taxes are dependent on the timing of future events outside of the Company’s control or cannot be reliably predicted. Accordingly, the Company is unable to provide reconciliations to GAAP operating income, operating income margins, EBITDA margins, and diluted earnings per share without unreasonable effort. Please note that the unavailable reconciling items could significantly impact the Company’s 2024 financial results as reported under GAAP."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "NON-GAAP FINANCIAL MEASURES"
+    },
+    {
+      "type": "TextElement",
+      "text": "This press release contains a discussion of certain Non-GAAP financial measures that the Company includes to allow investors and analysts to measure, analyze and compare its financial condition and results of operations in a meaningful and consistent manner. A reconciliation of these Non-GAAP financial measures can be found in the tables accompanying this press release. ·GAAP metrics are presented in accordance with Generally Accepted Accounting Principles. ·Non-GAAP - As reflected in the attached reconciliation table, the definition of Non-GAAP may exclude from operating income, EBITDA, net income and earnings per share restructuring and impairment charges, equity-based compensation expenses, amortization of purchased intangibles, among other items."
+    },
+    {
+      "type": "TitleElement",
+      "text": "EARNINGS WEBCAST/CONFERENCE CALL"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company will host a live webcast and conference call at 8:30 a.m. ET on Friday, August 9, 2024. You are invited to join a live webcast of the conference call by visiting the \"Investors Relations\" section of the TTEC website at www.ttec.com. If you are unable to participate during the live webcast, a replay will be available on the TTEC website."
+    },
+    {
+      "type": "TitleElement",
+      "text": "ABOUT TTEC"
+    },
+    {
+      "type": "TextElement",
+      "text": "TTEC (pronounced T-TEC) Holdings, Inc. (NASDAQ:TTEC) is a leading global CX (customer experience) technology and services innovator for AI-enabled digital CX solutions. Serving iconic and disruptive brands, TTEC's outcome-based solutions span the entire enterprise, touch every virtual interaction channel, and improve each step of the customer journey. Leveraging next-gen digital technology, the Company's TTEC Digital business designs, builds, and operates omnichannel contact center technology, CRM, AI and analytics solutions. The Company's TTEC Engage business delivers AI-enabled customer engagement, customer acquisition and growth, tech support, back office, and fraud prevention services. Founded in 1982, the Company's singular obsession with CX excellence has earned it leading client, customer, and employee satisfaction scores across the globe. The Company's approximately 54,000 employees operate on six continents and bring technology and humanity together to deliver happy customers and differentiated business results. To learn more visit us at https://www.ttec.com."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FORWARD-LOOKING STATEMENTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "This Earnings Press Release contains “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, Section 21E of the Securities Exchange Act of 1934, and the Private Securities Litigation Reform Act of 1995. Forward-looking statements include, but are not limited to, statements relating to our operations, expected financial position, results of operation, effective tax rate, cash flow, leverage, liquidity, business strategy, competitive position, demand for our services in international operations, acquisition opportunities and impact of acquisitions, capital allocation and dividends, growth opportunities, spending, capital expenditures and investments, competition and market forecasts, industry trends, our human capital resources, and other business matters that are based on our current expectations, assumptions, and projections with respect to the future, and are not a guarantee of performance.In this Release when we use words such as “may,” “believe,” “plan,” “will,” “anticipate,” “estimate,” “expect,” “intend,” “project,” “would,” “could,” “target,” or similar expressions, or when we discuss our strategy, plans, goals, initiatives, or objectives, we are making forward-looking statements. Unless otherwise indicated or except where the context otherwise requires, the terms “TTEC,” “the Company,” “we,” “us” and “our” and other similar terms in this report refer to TTEC Holdings, Inc. and its subsidiaries. We caution you not to rely unduly on any forward-looking statements. Actual results may differ materially from those expressed in the forward-looking statements, and you should review and consider carefully the risks, uncertainties, and other factors that affect our business and may cause such differences as outlined in Item 1A. Risk Factors in our Annual Report on Form 10-K for the year ended December 31, 2023 and any subsequent filings with the U.S. Securities and Exchange Commission (the “SEC”) which are available on TTEC’s website www.ttec.com, and on the SEC's public website at www.sec.gov.Our forward-looking statements speak only as of the date that this release is issued. We undertake no obligation to update them, except as may be required by applicable law. Although we believe that our forward-looking statements are reasonable, they depend on many factors outside of our control and we can provide no assurance that they will prove to be correct."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "###"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TTEC HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED STATEMENTS OF OPERATIONS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, Six months ended June 30, 2024 2023 2024 2023 Revenue $534,085 $600,394 $1,110,723 $1,233,680 Operating Expenses: Cost of services 417,890 464,686 871,708 947,364 Selling, general and administrative 73,726 75,338 148,301 149,348 Depreciation and amortization 25,071 24,946 50,216 50,773 Restructuring charges, net 5,095 1,474 5,344 3,527 Impairment losses 236,716 2,652 236,856 6,959 Total operating expenses 758,498 569,096 1,312,425 1,157,971 (Loss) / Income From Operations (224,413) 31,298 (201,702) 75,709 Other income (expense), net (18,229) (21,439) (38,111) (37,011) (Loss) / Income Before Income Taxes (242,642) 9,859 (239,813) 38,698 Provision for income taxes (54,126) (6,102) (56,455) (14,024) Net (Loss) / Income (296,768) 3,757 (296,268) 24,674 Net (loss) / income attributable to noncontrolling interest (2,771) (2,546) (5,576) (4,816) Net (Loss) / Income Attributable to TTEC Stockholders $(299,539) $1,211 $(301,844) $19,858 Net (Loss) / Income Per Share Basic $(6.24) $0.08 $(6.24) $0.52 Diluted $(6.23) $0.08 $(6.23) $0.52 Net (Loss) / Income Per Share Attributable to TTEC Stockholders Basic $(6.30) $0.03 $(6.35) $0.42 Diluted $(6.29) $0.03 $(6.34) $0.42 (Loss) / Income From Operations Margin (42.0)% 5.2% (18.2)% 6.1% Net (Loss) / Income Margin (55.6)% 0.6% (26.7)% 2.0% Net (Loss) / Income Attributable to TTEC Stockholders Margin (56.1)% 0.2% (27.2)% 1.6% Effective Tax Rate (22.3)% 61.9% (23.5)% 36.2% Weighted Average Shares Outstanding Basic 47,564 47,264 47,498 47,249 Diluted 47,623 47,453 47,585 47,417"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TTEC HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SEGMENT INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended Six months ended June 30, June 30, 2024 2023 2024 2023 Revenue: TTEC Digital $116,368 $117,585 $228,399 $234,512 TTEC Engage 417,717 482,809 882,324 999,168 Total $534,085 $600,394 $1,110,723 $1,233,680 (Loss) / Income From Operations TTEC Digital $6,008 $7,154 $9,296 $7,939 TTEC Engage (230,421) 24,144 (210,998) 67,770 Total $(224,413) $31,298 $(201,702) $75,709"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TTEC HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, December 31, 2024 2023 ASSETS Current assets: Cash and cash equivalents $79,780 $172,747 Accounts receivable, net 381,685 394,868 Prepaids and other current assets 117,081 95,064 Income and other tax receivables 24,872 18,524 Total current assets 603,418 681,203 Property and equipment, net 149,114 191,003 Assets Held for Sale 29,449 - Operating lease assets 106,185 121,574 Goodwill 573,625 808,988 Other intangibles assets, net 181,338 198,433 Income and other tax receivables, long-term 37,194 44,673 Other assets 112,298 139,724 Total assets $1,792,621 $2,185,598 LIABILITIES AND EQUITY Current liabilities: Accounts payable $87,115 $96,577 Accrued employee compensation and benefits 132,824 146,184 Deferred revenue 77,783 81,171 Current operating lease liabilities 35,650 38,271 Other current liabilities 54,284 40,824 Total current liabilities 387,656 403,027 Long-term liabilities: Line of credit 930,000 995,000 Non-current operating lease liabilities 83,855 96,809 Other long-term liabilities 86,934 75,220 Total long-term liabilities 1,100,789 1,167,029 Equity: Common stock 476 474 Additional paid in capital 414,728 407,415 Treasury stock (586,812) (589,807) Accumulated other comprehensive income (loss) (107,581) (89,876) Retained earnings 565,738 870,429 Noncontrolling interest 17,627 16,907 Total equity 304,176 615,542 Total liabilities and equity $1,792,621 $2,185,598"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TTEC HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, Six Months Ended June 30, 2024 2023 Cash flows from operating activities: Net (loss) income $(296,268) $24,674 Adjustment to reconcile net (loss) income to net cash provided by operating activities : Depreciation and amortization 50,216 50,773 Amortization of contract acquisition costs 677 1,158 Amortization of debt issuance costs 985 534 Imputed interest expense and fair value adjustments to contingent consideration (1,047) 6,762 Provision for credit losses 2,644 1,704 Loss on disposal of assets 1,252 856 Impairment losses 236,856 6,959 Loss on dissolution of subsidiary - 301 Deferred income taxes 37,148 (10,390) Excess tax benefit from equity-based awards 1,732 243 Equity-based compensation expense 10,916 9,802 Loss / (gain) on foreign currency derivatives 145 247 Changes in assets and liabilities, net of acquisitions: Accounts receivable 8,315 14,645 Prepaids and other assets (10,804) 20,324 Accounts payable and accrued expenses (996) 43,429 Deferred revenue and other liabilities (8,126) (27,072) Net cash provided by operating activities 33,645 144,949 Cash flows from investing activities: Proceeds from sale of property, plant and equipment 116 28 Purchases of property, plant and equipment (27,682) (32,954) Net cash used in investing activities (27,566) (32,926) Cash flows from financing activities: Net proceeds from / (repayments of) line of credit (65,000) (45,000) Payments on other debt (1,379) (1,217) Payments of contingent consideration and hold back payments to acquisitions - (37,676) Dividends paid to shareholders (2,847) (24,572) Payments to noncontrolling interest (4,770) (5,887) Tax payments related to the issuance of restricted stock units (606) (629) Payments of debt issuance costs (1,100) - Net cash used in financing activities (75,702) (114,981) Effect of exchange rate changes on cash and cash equivalents and restricted cash (4,612) 1,275 (Decrease) in cash, cash equivalents and restricted cash (74,235) (1,683) Cash, cash equivalents and restricted cash, beginning of period 173,905 167,064 Cash, cash equivalents and restricted cash, end of period $99,670 $165,381"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TTEC HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NON-GAAP FINANCIAL INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, Six months ended June 30, 2024 2023 2024 2023 Revenue $534,085 $600,394 $1,110,723 $1,233,680 Reconciliation of Non-GAAP Income from Operations and EBITDA: Net (Loss) / Income from Operations $(224,413) $31,298 $(201,702) $75,709 Restructuring charges, net 5,095 1,474 5,344 3,527 Impairment losses 236,716 2,652 236,856 6,959 Cybersecurity incident related impact, net of insurance recovery - 26 - (3,210) Grant income for pandemic relief - 40 - 40 Property costs not related to operations 872 - 1,905 - Change in acquisition related obligation - 483 - 483 Liability related to notifications triggered by labor scheme(1) (2,275) - (2,750) - Equity-based compensation expenses 5,104 5,648 10,916 9,802 Amortization of purchased intangibles 8,439 9,007 16,884 18,010 Non-GAAP Income from Operations $29,538 $50,628 $67,453 $111,320 Non-GAAP Income from Operations Margin 5.5% 8.4% 6.1% 9.0% Depreciation and amortization 16,210 15,939 32,279 32,763 Changes in acquisition contingent consideration 193 3,584 (1,047) 6,762 Change in escrow balance related to acquisition - - - 625 Loss on dissolution of subsidiary - - - 301 Foreign SS Tax Recovery (853) - (853) - Foreign VAT receivable writeoff - - 770 - Foreign exchange loss / (gain), net (636) 578 556 1,212 Other Income (expense), net 1,788 (3,574) 1,994 (2,919) Adjusted EBITDA $46,240 $67,155 $101,152 $150,064 Adjusted EBITDA Margin 8.7% 11.2% 9.1% 12.2% Reconciliation of Non-GAAP EPS: Net Income $(296,768) $3,757 $(296,268) $24,674 Add:Asset impairment and restructuring charges 241,811 4,126 242,200 10,486 Add:Equity-based compensation expenses 5,104 5,648 10,916 9,802 Add:Amortization of purchased intangibles 8,439 9,007 16,884 18,010 Add:Cybersecurity incident related impact, net of insurance recovery - 26 - (3,210) Add:Grant income for pandemic relief - 40 - 40 Add:Change in acquisition related obligation - 483 - 483 Add:Property costs not related to operations 872 - 1,905 - Add:Liability related to notifications triggered by labor scheme (2,275) - (2,750) - Add:Foreign SS Tax Recovery (853) - (853) - Add:Foreign VAT receivable writeoff - - 770 - Add:Changes in acquisition contingent consideration 193 3,584 (1,047) 6,762 Add:Changes in escrow balance related to acquisition - - - 625 Add:Loss on dissolution of subsidiary - - - 301 Add:Foreign exchange loss / (gain), net (636) 578 556 1,212 Less:Changes in valuation allowance, return to provision adjustments and other, and tax effects of items separately disclosed above 50,748 (1,349) 46,942 (6,384) Non-GAAP Net Income $6,635 $25,900 $19,255 $62,801 Diluted shares outstanding 47,623 47,453 47,585 47,417 Non-GAAP EPS $0.14 $0.55 $0.40 $1.32 Reconciliation of Free Cash Flow: Cash Flow From Operating Activities: Net (loss) / income $(296,768) $3,757 $(296,268) $24,674 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 25,071 24,946 50,216 50,773 Other 320,971 67,188 279,697 69,502 Net cash provided by operating activities 49,274 95,891 33,645 144,949 Less - Total Cash Capital Expenditures 14,209 19,285 27,682 32,954 Free Cash Flow $35,065 $76,606 $5,963 $111,995"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)- For further information, please see discussion in the Risk Factors section of the 2023 Form 10-K filed on February 29, 2024."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "TTEC HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NON-GAAP FINANCIAL INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Non-GAAP Income from Operations and Adjusted EBITDA by Segment :"
+    },
+    {
+      "type": "TableElement",
+      "text": "TTEC Engage TTEC Digital TTEC Engage TTEC Digital Q2 24 Q2 23 Q2 24 Q2 23 YTD 24 YTD 23 YTD 24 YTD 23 (Loss) / Income from Operations $(230,421) $24,144 $6,008 $7,154 $(210,999) $67,770 $9,297 $7,939 Restructuring charges, net 4,842 801 253 673 5,495 1,793 (151) 1,734 Impairment losses 234,205 2,652 2,511 - 234,345 4,105 2,511 2,854 Cybersecurity incident related impact, net of insurance recovery 26 - (3,210) - - Grant income for pandemic relief 40 - 40 - - Property costs not related to operations 872 - - 1,905 - - - Change in acquisition related obligation - 483 - - 483 Liability related to notifications triggered by labor scheme (2,275) - - (2,750) - - - Equity-based compensation expenses 3,264 3,596 1,840 2,052 7,047 6,272 3,869 3,530 Amortization of purchased intangibles 4,101 4,652 4,338 4,355 8,208 9,302 8,676 8,708 Non-GAAP Income from Operations $14,588 $35,911 $14,950 $14,717 $43,251 $86,072 $24,202 $25,248 Depreciation and amortization 13,534 13,572 2,676 2,367 26,891 27,888 5,388 4,875 Changes in acquisition contingent consideration 193 3,584 - (1,047) 6,762 - - Change in escrow balance related to acquisition - - - 625 - - Loss on dissolution of subsidiary - - - 301 - - Foreign VAT receivable writeoff - - 770 - Foreign SS Tax Recovery (853) (853) Foreign exchange loss / (gain), net (585) 411 (51) 167 793 1,112 (238) 100 Other Income (expense), net 1,733 (3,422) 55 (152) 1,777 (2,910) 218 (9) Adjusted EBITDA $28,610 $50,056 $17,630 $17,099 $71,582 $119,850 $29,570 $30,214"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 12; Options: Last"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Second quarter 2024 GAAP revenue decreased 11.0 percent to $534.1 million compared to $600.4 million in the prior year."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Foreign exchange had a $1.8 million negative impact on revenue in the second quarter of 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Second quarter 2024 GAAP loss from operations was $224.4 million, or negative 42.0 percent of revenue, compared to income from operations of $31.3 million, or 5.2 percent of revenue in the prior year. The significant decrease in operating income was primarily the result of a non-cash pre-tax $196 million impairment charge related to the fair value of the TTEC Engage reporting unit, in addition to other factors."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Non-GAAP income from operations, excluding restructuring and impairment charges, equity-based compensation expenses, amortization of purchased intangibles, and other items, was $29.5 million, or 5.5 percent of revenue, compared to $50.6 million, or 8.4 percent, for the prior year."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Foreign exchange had a $0.8 million positive impact on Non-GAAP income from operations in the second quarter of 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Second quarter 2024 Non-GAAP Adjusted EBITDA was $46.2 million, or 8.7 percent of revenue, compared to $67.2 million, or 11.2 percent of revenue, in the prior year."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Second quarter 2024 GAAP fully diluted net loss per share was $6.23 compared to net income per share of $0.08 in the prior year."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Non-GAAP fully diluted net income per share was $0.14 compared to Non-GAAP net income per share of $0.55 in the prior year."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Cash flow from operations in the second quarter of 2024 was $49.3 million compared to $95.9 million for the second quarter of 2023."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Capital expenditures in the second quarter of 2024 were $14.2 million compared to $19.3 million for the second quarter of 2023."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "As of June 30, 2024, TTEC had cash and cash equivalents of $79.8 million and debt of $933.2 million, resulting in a net debt position of $853.4 million. This compares to a net debt position of $804.2 million for the same period in 2023."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "As of June 30, 2024, TTEC’s remaining borrowing capacity under its revolving credit facility was approximately $100 million compared to $265 million for the same period in 2023."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 534.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue was $534.1 Million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " | · | Second quarter 2024 GAAP revenue decreased 11.0 percent to $534.1 million compared to $600.4 million in the prior year."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-12",
+    "entry_open": "4.520000",
+    "return_10d_pct": "-10.8407",
+    "return_20d_pct": "10.1770",
+    "return_30d_pct": "-7.7434",
+    "return_60d_pct": "34.0708",
+    "return_90d_pct": "6.4159"
+  },
+  "text_stats": {
+    "primary_text_len": 3582,
+    "exhibit_text_len": 25236,
+    "combined_text_len": 28820,
+    "semantic_text_len": 25458,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

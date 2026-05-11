@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MAT",
+    "cik": "63276",
+    "event_date": "2024-07-23",
+    "event_accession": "0001628280-24-032594",
+    "primary_8k_doc": "mat-20240723.htm",
+    "exhibit_docs": [
+      "matq22024earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MAT_000162828024032594_mat-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MAT_000162828024032594_matq22024earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MAT",
+    "cik": "63276",
+    "entity_name": "MATTEL INC /DE/",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "814579000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-106471000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5831738000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-53209000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-42511000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-206380000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.130707",
+    "operating_cash_flow_to_revenue": "-0.253358",
+    "assets_to_revenue": "7.159205",
+    "financing_cash_flow_to_revenue": "-0.065321",
+    "investing_cash_flow_to_revenue": "-0.052188"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Sales of $1,080 million, down 1% as reported, and comparable in constant currency • Gross Margin of 49.",
+      "Net Sales were down 1% as reported, and comparable in constant currency, versus the prior year’s second quarter.",
+      "Gross Margin of 49.",
+      "Operating Income of $83 million, an improvement of $20 million; Adjusted Operating Income of $96 million, an improvement of $21 million • Net Income of $57 million, an improvement of $30 million • Earnings per Share of $0.",
+      "Earnings per Share of $0.",
+      "gross margin expansion, and growth in Adjusted EBITDA and Adjusted EPS."
+    ],
+    "guidance_evidence": [
+      "guidance EL SEGUNDO, Calif.",
+      "guidance and grow both sales and earnings in 2025.",
+      "Guidance Mattel’s full year 2024 guidance remains: (in millions, except EPS and percentages) FY2024 Guidance FY2023 Net Sales Comparable (Constant Currency) $5,441 Adjusted Gross Margin 48.",
+      "guidance considers what the company is aware of today, but remains subject to market volatility, unexpected disruptions, and other risks and uncertainties.",
+      "guidance and goals for future periods and other future events.",
+      "expected disruptions, and other risks and uncertainties."
+    ],
+    "wave_or_demand_evidence": [
+      "demand.",
+      "customers.",
+      "customers and do not include the impact of sales adjustments, such as trade discounts and other allowances.",
+      "airman and CEO of Mattel, said: “This was a good quarter for Mattel, where we achieved significant gross margin expansion, and growth in Adjusted EBITDA and Adjusted EPS.",
+      "ailing twelve-month period.",
+      "ail support."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory management costs.",
+      "charges, and severance and restructuring charges, due to the unpredictable nature of such items, which may have a significant impact on Mattel’s GAAP measures.",
+      "preliminary until Mattel’s Form 10-Q is filed with the SEC.",
+      "preliminary results.",
+      "declined 1% as reported and in constant currency, versus the prior year’s first six months.",
+      "decreased 3% as reported and in constant currency."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1080,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "17.700001",
+    "return_10d_pct": "3.5028",
+    "return_20d_pct": "6.5537",
+    "return_30d_pct": "10.4520",
+    "return_60d_pct": "8.1921",
+    "return_90d_pct": "2.3164"
+  },
+  "text_stats": {
+    "primary_text_len": 3826,
+    "exhibit_text_len": 44136,
+    "combined_text_len": 47964
+  }
+}

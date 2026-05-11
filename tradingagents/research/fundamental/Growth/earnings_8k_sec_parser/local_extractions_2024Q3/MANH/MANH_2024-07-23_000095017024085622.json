@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MANH",
+    "cik": "1056696",
+    "event_date": "2024-07-23",
+    "event_accession": "0000950170-24-085622",
+    "primary_8k_doc": "manh-20240723.htm",
+    "exhibit_docs": [
+      "manh-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MANH_000095017024085622_manh-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MANH_000095017024085622_manh-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MANH",
+    "cik": "1056696",
+    "entity_name": "MANHATTAN ASSOCIATES, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "221013000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "38791000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "673353000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-101688000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-666000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "58716000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.175515",
+    "operating_cash_flow_to_revenue": "0.265668",
+    "assets_to_revenue": "3.046667",
+    "financing_cash_flow_to_revenue": "-0.4601",
+    "investing_cash_flow_to_revenue": "-0.003013"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $265.",
+      "revenue was $265.",
+      "revenue was $82.",
+      "revenue was $3.",
+      "revenue was $136.",
+      "revenue was $160."
+    ],
+    "guidance_evidence": [
+      "Guidance ATLANTA – July 23, 2024 – Leading Supply Chain and Omnichannel Commerce Solutions provider Manhattan Associates Inc.",
+      "guidance for the full year 2024: Guidance Range - 2024 Full Year ($'s in millions, except operating margin and EPS) $ Range % Growth Range Total revenue - current guidance $1,036 $1,044 12% 12% Operating margin: GAAP operating margin - current guidance 22.",
+      "guidance 32.",
+      "guidance $3.",
+      "guidance $4.",
+      "guidance provided above, are forward looking."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings Increase 29% over Prior Year on Strong Demand Company Raises 2024 Full-Year Guidance ATLANTA – July 23, 2024 – Leading Supply Chain and Omnichannel Commerce Solutions provider Manhattan Associates Inc.",
+      "customers and deliver industry leading innovation to the market.",
+      "customers.",
+      "aises 2024 Full-Year Guidance ATLANTA – July 23, 2024 – Leading Supply Chain and Omnichannel Commerce Solutions provider Manhattan Associates Inc.",
+      "aid Manhattan Associates president and CEO Eddie Capel.",
+      "ain appropriately cautious regarding the global economy, we enter the second half of the year with a record pipeline and are optimistic on our growing opportunity,” Mr."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties, and that actual results may differ materially from those contemplated by those forward-looking statements.",
+      "loss (27,754 ) (27,038 ) Total shareholders' equity 240,629 278,278 Total liabilities and shareholders' equity $ 665,312 $ 673,353 MANHATTAN ASSOCIATES, INC.",
+      "losses) in other income (810) (516) 387 (527) (1,466) (564) (577) $(1,141) $(278) $721 $2,109 $602 $3,154 $(92) $(435) $(527) Manhattan Associates has a large research and development center in Bangalore, India.",
+      "losses) in other income (283) (31) 812 (105) 393 164 41 205 Total impact of changes in the Indian Rupee $1,349 $1,191 $1,540 $162 $4,242 $349 $348 $697 4.",
+      "losses) (810) (516) 387 (527) (1,466) (564) (577) (1,141) Other non-operating income (expense) (16) 2 (19) (15) (48) 146 (12) 134 Total other income (loss) $143 $1,041 $1,739 $867 $3,790 $996 $914 $1,910 5."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 265.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "247.389999",
+    "return_10d_pct": "-3.4480",
+    "return_20d_pct": "1.4309",
+    "return_30d_pct": "6.1118",
+    "return_60d_pct": "13.6990",
+    "return_90d_pct": "18.1616"
+  },
+  "text_stats": {
+    "primary_text_len": 5727,
+    "exhibit_text_len": 23010,
+    "combined_text_len": 28739
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CVCO",
+    "cik": "278166",
+    "event_date": "2024-08-02",
+    "event_accession": "0000278166-24-000102",
+    "primary_8k_doc": "cvco-20240801.htm",
+    "exhibit_docs": [
+      "cvco-20240629xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CVCO_000027816624000102_cvco-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CVCO_000027816624000102_cvco-20240629xex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CVCO",
+    "cik": "278166",
+    "entity_name": "CAVCO INDUSTRIES, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1627158000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-24",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-02",
+    "net_income_value": "197699000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-24",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-02",
+    "assets_value": "1307975000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-24",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "-65095000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-24",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-02",
+    "investing_cash_flow_value": "-159102000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-24",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-02",
+    "operating_cash_flow_value": "144224000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-24",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.1215",
+    "operating_cash_flow_to_revenue": "0.088636",
+    "assets_to_revenue": "0.80384",
+    "financing_cash_flow_to_revenue": "-0.040005",
+    "investing_cash_flow_to_revenue": "-0.097779"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $478 million, up $2 million or 0.",
+      "revenue was 22.",
+      "revenue was (0.",
+      "revenue increased for the three months from more insurance policies in force in the current period compared to the prior year, partially offset by reduced revenue from loan sales.",
+      "net income per share of approximately $0.",
+      "Net income per diluted share attributable to Cavco common stockholders was $4."
+    ],
+    "guidance_evidence": [
+      "outlook with respect to the Company and the manufactured housing business in general; (iv) the expected effect of certain risks and uncertainties on our business; and (iv) the strength of Cavco's business model.",
+      "outlook,\" \"plan,\" \"potential,\" \"project,\" \"seek,\" \"target,\" \"can,\" \"could,\" \"may,\" \"should,\" \"would,\" \"will,\" the negatives thereof and other words and terms of similar meaning.",
+      "outlook for future periods.",
+      "expected effect of certain risks and uncertainties on our business; and (iv) the strength of Cavco's business model.",
+      "forecast,\" \"future,\" \"goal,\" \"intend,\" \"likely,\" \"outlook,\" \"plan,\" \"potential,\" \"project,\" \"seek,\" \"target,\" \"can,\" \"could,\" \"may,\" \"should,\" \"would,\" \"will,\" the negatives thereof and other words and terms of similar meaning."
+    ],
+    "wave_or_demand_evidence": [
+      "Backlogs totaled $232 million at the end of the quarter, up $41 million, or 21.",
+      "backlog growing 22%.",
+      "Orders continued to increase, resulting in production increases and a growing backlog.",
+      "aims in Insurance Operation PHOENIX, August 1, 2024 (GLOBE NEWSWIRE) – Cavco Industries, Inc.",
+      "aims from multiple weather events in Texas, as well as the wildfires in New Mexico.",
+      "aid, \"The momentum we experienced exiting the fourth quarter carried through the first quarter."
+    ],
+    "warning_or_risk_evidence": [
+      "loss as a percentage of Net revenue was (0.",
+      "loss of $5.",
+      "loss was caused by unusually high insurance claims from multiple weather events in Texas, as well as the wildfires in New Mexico.",
+      "losses) gains on corporate equity securities (0.",
+      "uncertainties on our business; and (iv) the strength of Cavco's business model.",
+      "uncertainties indicated from time to time in documents filed or to be filed with the Securities and Exchange Commission (the \"SEC\") by Cavco."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 478,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "351.279999",
+    "return_10d_pct": "11.3869",
+    "return_20d_pct": "15.0905",
+    "return_30d_pct": "13.6045",
+    "return_60d_pct": "20.2118",
+    "return_90d_pct": "26.4547"
+  },
+  "text_stats": {
+    "primary_text_len": 3132,
+    "exhibit_text_len": 13832,
+    "combined_text_len": 16966
+  }
+}

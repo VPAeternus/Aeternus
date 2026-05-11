@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TEX",
+    "cik": "97216",
+    "event_date": "2024-07-30",
+    "event_accession": "0000097216-24-000131",
+    "primary_8k_doc": "tex-20240730.htm",
+    "exhibit_docs": [
+      "terexearningsreleaseexq2-24.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TEX_000009721624000131_tex-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TEX_000009721624000131_terexearningsreleaseexq2-24.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TEX",
+    "cik": "97216",
+    "entity_name": "TEREX CORP",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1235700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "112600000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3615500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-31700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-29700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "9100000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.091122",
+    "operating_cash_flow_to_revenue": "0.007364",
+    "assets_to_revenue": "2.925872",
+    "financing_cash_flow_to_revenue": "-0.025653",
+    "investing_cash_flow_to_revenue": "-0.024035"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $1.",
+      "Net sales of $1.",
+      "Net sales of $498.",
+      "Net sales of $881.",
+      "Earnings per share of $2.",
+      "EPS of $2."
+    ],
+    "guidance_evidence": [
+      "outlook of $7.",
+      "outlook to be in the range of $7.",
+      "Outlook (in millions, except per share data) Terex Outlook (1) PREVIOUS Outlook UPDATED Outlook Adjusted Net Sales $5,200 - $5,400 $5,100 - $5,300 Operating Margin 12.",
+      "Outlook (1) PREVIOUS Outlook UPDATED Outlook Adjusted Net Sales Operating Margin Net Sales Operating Margin Materials Processing $2,200 - $2,300 15.",
+      "Outlook The Company's 2024 outlook for earnings per share is a non-GAAP financial measure because it excludes the impact of the ESG acquisition, potential future acquisitions, divestitures, restructuring, and other unusual items.",
+      "guidance to investors about the Company's EPS expectations excluding unusual items that the Company does not believe is reflective of its ongoing operations."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for Genie products in North America was offset by lower end-market demand in Europe, primarily impacting our materials processing business.",
+      "demand across certain product lines and geographies as well as inventory rebalancing at our dealers.",
+      "demand for aerial work platforms and telehandlers in North America .",
+      "customers to reduce their impact on the environment including electric and hybrid offerings that deliver quiet and emission-free performance, products that support renewable energy, and products that aid in the recovery of useful materials from various types of waste.",
+      "customers through all stages of the product life cycle, from initial specification to parts and service support.",
+      "aid Simon Meester, Terex President and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory rebalancing at our dealers.",
+      "charges (246.",
+      "losses recorded on equity investments.",
+      "lossary at the end of this press release contains further details about this subject.",
+      "uncertainties, including those discussed in our Annual Report on Form 10-K for the year ended December 31, 2023, and subsequent reports we file with the U.",
+      "Uncertainties."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1400,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "62.650002",
+    "return_10d_pct": "-15.0359",
+    "return_20d_pct": "-14.2538",
+    "return_30d_pct": "-9.3855",
+    "return_60d_pct": "-15.5467",
+    "return_90d_pct": "-13.3919"
+  },
+  "text_stats": {
+    "primary_text_len": 3188,
+    "exhibit_text_len": 27882,
+    "combined_text_len": 31072
+  }
+}

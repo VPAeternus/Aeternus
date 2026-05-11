@@ -20,16 +20,14 @@ def evaluate_step1_readiness(
     window_start = as_of - dt.timedelta(days=max(0, lookback_days))
 
     required_stable_cycles = int(config.get("dealflow_step1_required_stable_cycles", 3))
-    min_batch_executed = int(config.get("dealflow_step1_min_batch_executed_per_cycle", 1))
-    max_batch_failure_ratio = float(config.get("dealflow_step1_max_batch_failure_ratio", 0.40))
+    min_handoff_tickers = int(config.get("dealflow_step1_min_handoff_tickers_per_cycle", 1))
     max_connector_errors = int(config.get("dealflow_step1_max_connector_errors_per_cycle", 0))
 
     cycle_rows = _load_cycle_rows(
         root=root,
         as_of=as_of,
         window_start=window_start,
-        min_batch_executed=min_batch_executed,
-        max_batch_failure_ratio=max_batch_failure_ratio,
+        min_handoff_tickers=min_handoff_tickers,
         max_connector_errors=max_connector_errors,
     )
 
@@ -47,28 +45,19 @@ def evaluate_step1_readiness(
         "latest_cycle_count": len(cycle_rows),
     }
 
-    attribution_stats = _collect_unique_realized_samples(cycle_rows)
-    min_eval_5d = int(config.get("dealflow_step1_min_evaluated_5d", 2))
-    min_eval_20d = int(config.get("dealflow_step1_min_evaluated_20d", 2))
-    target_eval_5d = int(config.get("dealflow_step1_target_evaluated_5d", 20))
-    target_eval_20d = int(config.get("dealflow_step1_target_evaluated_20d", 20))
+    handoff_stats = _collect_unique_handoff_samples(cycle_rows)
+    min_unique_tickers = int(config.get("dealflow_step1_min_unique_handoff_tickers", 1))
 
-    attribution_gate = {
-        "pass": (
-            int(attribution_stats["evaluated_5d"]) >= min_eval_5d
-            and int(attribution_stats["evaluated_20d"]) >= min_eval_20d
-        ),
-        "evaluated_5d": int(attribution_stats["evaluated_5d"]),
-        "evaluated_20d": int(attribution_stats["evaluated_20d"]),
-        "required_5d": min_eval_5d,
-        "required_20d": min_eval_20d,
+    handoff_gate = {
+        "pass": int(handoff_stats["unique_tickers"]) >= min_unique_tickers,
+        "unique_tickers": int(handoff_stats["unique_tickers"]),
+        "total_mentions": int(handoff_stats["total_mentions"]),
+        "required_unique_tickers": min_unique_tickers,
     }
 
     production_targets = {
-        "evaluated_5d_target": target_eval_5d,
-        "evaluated_20d_target": target_eval_20d,
-        "evaluated_5d_met": int(attribution_stats["evaluated_5d"]) >= target_eval_5d,
-        "evaluated_20d_met": int(attribution_stats["evaluated_20d"]) >= target_eval_20d,
+        "unique_handoff_tickers": int(handoff_stats["unique_tickers"]),
+        "total_handoff_mentions": int(handoff_stats["total_mentions"]),
     }
 
     connector_policy = _evaluate_connector_policy(
@@ -85,7 +74,7 @@ def evaluate_step1_readiness(
 
     gates = {
         "stability": stability_gate,
-        "attribution_sample": attribution_gate,
+        "handoff_sample": handoff_gate,
         "connector_policy": connector_policy,
         "evidence_quality": evidence_quality,
     }
@@ -99,7 +88,7 @@ def evaluate_step1_readiness(
         "gates": gates,
         "production_targets": production_targets,
         "recent_cycles": cycle_rows[:10],
-        "unique_samples": attribution_stats,
+        "unique_samples": handoff_stats,
         "blockers": blockers,
         "next_action": (
             "READY_FOR_STEP_2"
@@ -129,29 +118,28 @@ def _load_cycle_rows(
     root: Path,
     as_of: dt.date,
     window_start: dt.date,
-    min_batch_executed: int,
-    max_batch_failure_ratio: float,
+    min_handoff_tickers: int,
     max_connector_errors: int,
 ) -> List[Dict[str, Any]]:
     paths = sorted(
-        root.glob("*/batch_analyze_summary_*.json"),
+        root.glob("*/final_dealflow_tickers.json"),
         key=lambda p: p.stat().st_mtime,
         reverse=True,
     )
     rows: List[Dict[str, Any]] = []
     for path in paths:
-        summary = _read_json(path)
-        if not isinstance(summary, dict):
+        handoff = _read_json(path)
+        if not isinstance(handoff, dict):
             continue
-        date_value = _parse_iso_date(summary.get("date"))
+        date_value = _parse_iso_date(handoff.get("date") or path.parent.name)
         if date_value is None or date_value > as_of or date_value < window_start:
             continue
 
         run_date = date_value.isoformat()
-        shortlist = _read_json(root / run_date / "shortlist_top20.json")
+        connector_health = _read_json(root / run_date / "connector_health.json")
         connector_summary = (
-            shortlist.get("connector_health_summary", {})
-            if isinstance(shortlist, dict)
+            {"status_totals": _status_totals(connector_health)}
+            if isinstance(connector_health, list)
             else {}
         )
         status_totals = (
@@ -160,25 +148,25 @@ def _load_cycle_rows(
             else {}
         )
         connector_errors = int(status_totals.get("ERROR", 0) or 0)
-
-        success_count = int(summary.get("success_count", 0) or 0)
-        failure_count = int(summary.get("failure_count", 0) or 0)
-        skipped_count = int(summary.get("skipped_count", 0) or 0)
-        executed_count = max(0, success_count + failure_count)
-        failure_ratio = (
-            float(failure_count) / float(executed_count)
-            if executed_count > 0
-            else 1.0
-        )
+        tickers = []
+        metadata = dict(handoff.get("metadata_by_ticker") or {})
+        for raw_item in list(handoff.get("tickers", []) or []):
+            if isinstance(raw_item, dict):
+                symbol = str(raw_item.get("ticker", "") or raw_item.get("symbol", "")).upper().strip()
+                mention_count = int(raw_item.get("mention_count", 0) or 0)
+            else:
+                symbol = str(raw_item or "").upper().strip()
+                meta = metadata.get(symbol, {}) if isinstance(metadata.get(symbol, {}), dict) else {}
+                mention_count = len(list(meta.get("scouts", []) or [])) or 1
+            if symbol:
+                tickers.append({"ticker": symbol, "mention_count": mention_count})
+        ticker_count = len(tickers)
+        mention_count = sum(int(item.get("mention_count", 0) or 0) for item in tickers)
 
         reasons: List[str] = []
-        if executed_count < min_batch_executed:
+        if ticker_count < min_handoff_tickers:
             reasons.append(
-                f"executed_count={executed_count} below min={min_batch_executed}"
-            )
-        if failure_ratio > max_batch_failure_ratio:
-            reasons.append(
-                f"failure_ratio={failure_ratio:.3f} above max={max_batch_failure_ratio:.3f}"
+                f"ticker_count={ticker_count} below min={min_handoff_tickers}"
             )
         if connector_errors > max_connector_errors:
             reasons.append(
@@ -188,78 +176,37 @@ def _load_cycle_rows(
         row = {
             "date": run_date,
             "summary_path": str(path),
-            "run_id": str(summary.get("run_id") or ""),
-            "processed": int(summary.get("processed", 0) or 0),
-            "executed_count": int(executed_count),
-            "success_count": success_count,
-            "failure_count": failure_count,
-            "skipped_count": skipped_count,
-            "failure_ratio": float(round(failure_ratio, 4)),
+            "run_id": str(handoff.get("run_id") or ""),
+            "ticker_count": ticker_count,
+            "mention_count": mention_count,
             "connector_errors": connector_errors,
             "connector_not_configured": int(status_totals.get("NOT_CONFIGURED", 0) or 0),
             "stable": len(reasons) == 0,
             "stability_reasons": reasons,
-            "finished_at": str(summary.get("finished_at") or ""),
-            "items": list(summary.get("items", [])) if isinstance(summary.get("items"), list) else [],
+            "finished_at": str(handoff.get("generated_at") or ""),
+            "items": tickers,
         }
         rows.append(row)
     return rows
 
 
-def _collect_unique_realized_samples(cycle_rows: List[Dict[str, Any]]) -> Dict[str, Any]:
-    by_symbol_date: Dict[Tuple[str, str], Dict[str, Any]] = {}
-    instance_eval_5d = 0
-    instance_eval_20d = 0
-
+def _collect_unique_handoff_samples(cycle_rows: List[Dict[str, Any]]) -> Dict[str, Any]:
+    symbols: set[str] = set()
+    total_mentions = 0
     for row in cycle_rows:
-        date_value = str(row.get("date") or "")
         for item in row.get("items", []):
             if not isinstance(item, dict):
                 continue
-            status = str(item.get("status", "")).upper()
-            if status not in {"SUCCESS", "SUCCESS_CACHED"}:
+            symbol = str(item.get("ticker", "") or item.get("symbol", "")).upper().strip()
+            if not symbol:
                 continue
-            symbol = str(item.get("symbol", "")).upper().strip()
-            if not symbol or not date_value:
-                continue
-            horizons = item.get("realized_horizons", {})
-            if not isinstance(horizons, dict):
-                continue
-            h5 = horizons.get("5d", {})
-            h20 = horizons.get("20d", {})
-            if isinstance(h5, dict) and str(h5.get("status", "")).upper() == "READY":
-                instance_eval_5d += 1
-            if isinstance(h20, dict) and str(h20.get("status", "")).upper() == "READY":
-                instance_eval_20d += 1
-
-            key = (date_value, symbol)
-            by_symbol_date[key] = item
-
-    unique_eval_5d = 0
-    unique_eval_20d = 0
-    ready_5d_symbols: List[str] = []
-    ready_20d_symbols: List[str] = []
-    for (run_date, symbol), item in by_symbol_date.items():
-        horizons = item.get("realized_horizons", {})
-        if not isinstance(horizons, dict):
-            continue
-        h5 = horizons.get("5d", {})
-        h20 = horizons.get("20d", {})
-        if isinstance(h5, dict) and str(h5.get("status", "")).upper() == "READY":
-            unique_eval_5d += 1
-            ready_5d_symbols.append(f"{run_date}:{symbol}")
-        if isinstance(h20, dict) and str(h20.get("status", "")).upper() == "READY":
-            unique_eval_20d += 1
-            ready_20d_symbols.append(f"{run_date}:{symbol}")
+            symbols.add(symbol)
+            total_mentions += int(item.get("mention_count", 0) or 0)
 
     return {
-        "unique_symbols_dates": int(len(by_symbol_date)),
-        "evaluated_5d": int(instance_eval_5d),
-        "evaluated_20d": int(instance_eval_20d),
-        "unique_evaluated_5d": int(unique_eval_5d),
-        "unique_evaluated_20d": int(unique_eval_20d),
-        "ready_5d_symbols": sorted(ready_5d_symbols),
-        "ready_20d_symbols": sorted(ready_20d_symbols),
+        "unique_tickers": int(len(symbols)),
+        "total_mentions": int(total_mentions),
+        "symbols": sorted(symbols),
     }
 
 
@@ -269,13 +216,13 @@ def _evaluate_connector_policy(
     window_start: dt.date,
     config: Dict[str, Any],
 ) -> Dict[str, Any]:
-    latest_date = _latest_shortlist_date(root=root, as_of=as_of, window_start=window_start)
+    latest_date = _latest_handoff_date(root=root, as_of=as_of, window_start=window_start)
     if latest_date is None:
         return {
             "pass": False,
             "latest_date": None,
             "required_connectors": [],
-            "missing_connectors": ["NO_SHORTLIST_RUNS"],
+            "missing_connectors": ["NO_SCOUT_HANDOFF_RUNS"],
             "degraded_connectors": [],
             "optional_connector_issues": [],
         }
@@ -329,9 +276,9 @@ def _evaluate_connector_policy(
     }
 
 
-def _latest_shortlist_date(root: Path, as_of: dt.date, window_start: dt.date) -> Optional[str]:
+def _latest_handoff_date(root: Path, as_of: dt.date, window_start: dt.date) -> Optional[str]:
     best: Optional[str] = None
-    for path in root.glob("*/shortlist_top20.json"):
+    for path in root.glob("*/final_dealflow_tickers.json"):
         date_value = _parse_iso_date(path.parent.name)
         if date_value is None or date_value > as_of or date_value < window_start:
             continue
@@ -345,17 +292,17 @@ def _build_blockers(gates: Dict[str, Dict[str, Any]]) -> List[str]:
     stability = gates.get("stability", {})
     if not bool(stability.get("pass")):
         blockers.append(
-            "Need more consecutive stable batch cycles "
+            "Need more consecutive stable scout handoff cycles "
             f"({stability.get('consecutive_stable_cycles', 0)}/"
             f"{stability.get('required_stable_cycles', 0)})."
         )
 
-    attribution = gates.get("attribution_sample", {})
-    if not bool(attribution.get("pass")):
+    handoff = gates.get("handoff_sample", {})
+    if not bool(handoff.get("pass")):
         blockers.append(
-            "Need more realized attribution samples "
-            f"(5d={attribution.get('evaluated_5d', 0)}/{attribution.get('required_5d', 0)}, "
-            f"20d={attribution.get('evaluated_20d', 0)}/{attribution.get('required_20d', 0)})."
+            "Need more scout handoff samples "
+            f"({handoff.get('unique_tickers', 0)}/"
+            f"{handoff.get('required_unique_tickers', 0)} unique tickers)."
         )
 
     connector = gates.get("connector_policy", {})
@@ -499,6 +446,18 @@ def _parse_csv_list(value: Any) -> List[str]:
         if part and part not in seen:
             seen.append(part)
     return seen
+
+
+def _status_totals(rows: Any) -> Dict[str, int]:
+    totals: Dict[str, int] = {}
+    if not isinstance(rows, list):
+        return totals
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        status = str(row.get("status") or "UNKNOWN").upper().strip()
+        totals[status] = totals.get(status, 0) + 1
+    return totals
 
 
 def _read_json(path: Path) -> Any:

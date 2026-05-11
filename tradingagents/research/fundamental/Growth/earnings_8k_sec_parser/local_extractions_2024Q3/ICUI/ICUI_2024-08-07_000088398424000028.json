@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ICUI",
+    "cik": "883984",
+    "event_date": "2024-08-07",
+    "event_accession": "0000883984-24-000028",
+    "primary_8k_doc": "icui-20240807.htm",
+    "exhibit_docs": [
+      "exhibit991q22024er.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ICUI_000088398424000028_icui-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ICUI_000088398424000028_exhibit991q22024er.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ICUI",
+    "cik": "883984",
+    "entity_name": "ICU MEDICAL INC/DE",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "568649000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-9812000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-30",
+    "assets_value": "4378439000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-15837000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-15183000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "41245000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.017255",
+    "operating_cash_flow_to_revenue": "0.072532",
+    "assets_to_revenue": "7.699722",
+    "financing_cash_flow_to_revenue": "-0.02785",
+    "investing_cash_flow_to_revenue": "-0.0267"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $596.",
+      "revenue of $15.",
+      "GAAP gross margin for the second quarter of 2024 and 2023 was 35%.",
+      "earnings per share for the second quarter of 2024 was $1.",
+      "earnings per share are measures calculated and presented on the basis of methodologies other than in accordance with GAAP.",
+      "earnings per share from a range of $4."
+    ],
+    "guidance_evidence": [
+      "Guidance SAN CLEMENTE, Calif.",
+      "Guidance For Fiscal Year 2024 the Company updated its estimates of GAAP net loss from a range of $(127) to $(110) to a range of $(118) to $(108) and GAAP diluted loss per share from a range of $(5.",
+      "guidance of adjusted EBITDA from a range of $330 million to $370 million to a range of $345 million to $365 million and diluted earnings per share from a range of $4.",
+      "forecasts and projections about the Company and assumptions management believes are reasonable, all of which are subject to risks and uncertainties that could cause actual results and events to differ materially from those stated in the forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customers worldwide.",
+      "ain, ICU Medical’s Chief Executive Officer, said, “Second quarter results were generally in line with our expectations.",
+      "ailable by webcast, which can be accessed by going to the Company's website at www.",
+      "ailable by replay.",
+      "ains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended.",
+      "ainties that could cause actual results and events to differ materially from those stated in the forward-looking statements."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and labor, rising interest rates, and the Company's ability to meet expectations regarding the ongoing integration of the Smiths Medical business.",
+      "charges that result from events, which arise from unforeseen circumstances and/or often occur outside of the ordinary course of our ongoing business.",
+      "charges in determining our non-GAAP financial measures as they may limit the comparability of our ongoing operations with prior and future periods and distort the evaluation of our normal operating performance.",
+      "charges : Occasionally, we may write-off certain assets or we may sell certain assets.",
+      "charges 3,924 13,134 Asset write-offs and similar charges (8) 19 Provision (Benefit) for income taxes 1,873 (12,929) Total non-GAAP adjustments 112,743 107,988 Adjusted EBITDA $ 91,337 $ 98,054 ICU MEDICAL, INC.",
+      "charges — — — — — — — (8) (8) 2 (6) — Tax expense from valuation allowance* — — — — — — — — — 10,387 10,387 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 596.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "143.479996",
+    "return_10d_pct": "8.6284",
+    "return_20d_pct": "13.6744",
+    "return_30d_pct": "15.3680",
+    "return_60d_pct": "23.5015",
+    "return_90d_pct": "24.7630"
+  },
+  "text_stats": {
+    "primary_text_len": 3077,
+    "exhibit_text_len": 26407,
+    "combined_text_len": 29486
+  }
+}

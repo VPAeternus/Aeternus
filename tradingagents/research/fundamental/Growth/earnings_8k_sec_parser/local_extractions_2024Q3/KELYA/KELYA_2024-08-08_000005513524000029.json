@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KELYA",
+    "cik": "55135",
+    "event_date": "2024-08-08",
+    "event_accession": "0000055135-24-000029",
+    "primary_8k_doc": "kelya-20240808.htm",
+    "exhibit_docs": [
+      "a20242qearningsreleaseform.htm",
+      "q22024earningsreleasesup.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KELYA_000005513524000029_kelya-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KELYA_000005513524000029_a20242qearningsreleaseform.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KELYA_000005513524000029_q22024earningsreleasesup.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KELYA",
+    "cik": "55135",
+    "entity_name": "KELLY SERVICES, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1268300000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-02",
+    "net_income_value": "10900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-02",
+    "assets_value": "2581600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-24800000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-02",
+    "investing_cash_flow_value": "-2200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-02",
+    "operating_cash_flow_value": "-13500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.008594",
+    "operating_cash_flow_to_revenue": "-0.010644",
+    "assets_to_revenue": "2.035481",
+    "financing_cash_flow_to_revenue": "-0.019554",
+    "investing_cash_flow_to_revenue": "-0.001735"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Earnings per share in the second quarter of 2024 were $0.",
+      "earnings per share of $0.",
+      "earnings per share in the second quarter of 2024 were a loss on the sale of EMEA staffing operations and a gain on the sale of Ayers Group, net of tax of $0.",
+      "earnings per share in the second quarter of 2023 are $0.",
+      "earnings per share were $0.",
+      "earnings per share $ 0."
+    ],
+    "guidance_evidence": [
+      "expects further expansion of EBITDA margin from the May 31, 2024 acquisition of Motion Recruitment Partners, LLC (\"MRP\") TROY, Mich.",
+      "projects or capital spending."
+    ],
+    "wave_or_demand_evidence": [
+      "customers’ more guarded approach to hiring and initiating new projects or capital spending.",
+      "customer demand stabilized on a sequential basis across much of our business – a development that is reflected in Kelly’s organic revenue for the quarter,” said Quigley.",
+      "customers, (xii) cyberattacks or other breaches of network or information technology security, and (xiii) other risks, uncertainties and factors discussed in this release and in the Company’s filings with the Securities and Exchange Commission.",
+      "demand levels and reflects a repositioning of our P&I staffing business to better capitalize on opportunities in local markets.",
+      "airment charge related to excess leased property and a gain on the sale of assets related to the Ayers Group.",
+      "airment charge."
+    ],
+    "warning_or_risk_evidence": [
+      "charges related to transformation actions and the sale of our European staffing operations, an impairment charge related to excess leased property and a gain on the sale of assets related to the Ayers Group.",
+      "charges and an asset impairment charge.",
+      "charges associated with our transformation and an asset impairment charge, net of tax, of $0.",
+      "charges and an asset impairment charge, net of tax.",
+      "impairment charge 5.",
+      "impairment charge — 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1060,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "19.459999",
+    "return_10d_pct": "6.4234",
+    "return_20d_pct": "8.3248",
+    "return_30d_pct": "3.6999",
+    "return_60d_pct": "4.7276",
+    "return_90d_pct": "-6.7831"
+  },
+  "text_stats": {
+    "primary_text_len": 3568,
+    "exhibit_text_len": 30065,
+    "combined_text_len": 33635
+  }
+}

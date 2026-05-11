@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GPN",
+    "cik": "1123360",
+    "event_date": "2024-08-07",
+    "event_accession": "0001123360-24-000024",
+    "primary_8k_doc": "gpn-20240807.htm",
+    "exhibit_docs": [
+      "exhibit99120240630.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GPN_000112336024000024_gpn-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GPN_000112336024000024_exhibit99120240630.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GPN",
+    "cik": "1123360",
+    "entity_name": "Global Payments Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2292447000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-11041000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "50570186000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "3610829000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-4206793000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "599526000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.004816",
+    "operating_cash_flow_to_revenue": "0.261522",
+    "assets_to_revenue": "22.059479",
+    "financing_cash_flow_to_revenue": "1.575098",
+    "investing_cash_flow_to_revenue": "-1.835067"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $2.",
+      "revenues were $2.",
+      "revenues increased 6% to $2.",
+      "earnings per share (EPS) of $1.",
+      "EPS of $2.",
+      "earnings per share growth in the second quarter,” said Cameron Bready, chief executive officer."
+    ],
+    "guidance_evidence": [
+      "outlook for 2024 • Announces official commerce technology partnership with Diamond Baseball Holdings • Renews long-standing issuer relationship with NatWest ATLANTA -- Global Payments Inc.",
+      "Outlook “We are pleased with our financial performance in the second quarter, and overall execution across the business,” said Josh Whipple, chief financial officer.",
+      "outlook continues to reflect the potential for a slightly more tempered economic environment in the second half of 2024.",
+      "outlook measures.",
+      "OUTLOOK SUMMARY (UNAUDITED) GLOBAL PAYMENTS INC.",
+      "Outlook Growth Revenues: GAAP revenues $9,654 $10,130 to $10,260 5% to 6% Adjustments (1) (983) (960) Adjusted net revenue $8,671 $9,170 to $9,300 6% to 7% Earnings Per Share: GAAP diluted EPS $3."
+    ],
+    "wave_or_demand_evidence": [
+      "customer-centric solutions, while further emphasizing service as a key differentiator.",
+      "customers globally.",
+      "customers to operate their businesses more efficiently across a variety of channels around the world.",
+      "aid Cameron Bready, chief executive officer.",
+      "ainable growth.",
+      "aid Josh Whipple, chief financial officer."
+    ],
+    "warning_or_risk_evidence": [
+      "charges of $10.",
+      "charges of $3.",
+      "charges of $11.",
+      "charges of $34.",
+      "charges of $29.",
+      "charges of $0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2570,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "100.419998",
+    "return_10d_pct": "9.4404",
+    "return_20d_pct": "7.9466",
+    "return_30d_pct": "9.5399",
+    "return_60d_pct": "-2.8381",
+    "return_90d_pct": "14.5589"
+  },
+  "text_stats": {
+    "primary_text_len": 3742,
+    "exhibit_text_len": 43068,
+    "combined_text_len": 46812
+  }
+}

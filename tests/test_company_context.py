@@ -49,42 +49,16 @@ def test_company_context_collects_internal_sources(tmp_path: Path):
     )
 
     dealflow_dir = tmp_path / "eval_results" / "deal_flow"
-    queue_dir = dealflow_dir / "2026-03-20"
-    queue_dir.mkdir(parents=True, exist_ok=True)
-    queue_dir.joinpath("research_queue.json").write_text(
+    handoff_dir = dealflow_dir / "2026-03-20"
+    handoff_dir.mkdir(parents=True, exist_ok=True)
+    handoff_dir.joinpath("final_dealflow_tickers.json").write_text(
         json.dumps(
             {
-                "run_id": "rq-1",
+                "run_id": "handoff-1",
                 "date": "2026-03-20",
-                "items": [
-                    {
-                        "queue_id": "rq-1:AAPL",
-                        "symbol": "AAPL",
-                        "lane": "CORE",
-                        "deal_flow_score": 71.2,
-                        "selected_for_deep": True,
-                        "research_playbook": "QUALITY_COMPOUNDER",
-                    }
-                ],
-            }
-        )
-    )
-
-    shortlist_dir = dealflow_dir / "2026-03-19"
-    shortlist_dir.mkdir(parents=True, exist_ok=True)
-    shortlist_dir.joinpath("shortlist_top20.json").write_text(
-        json.dumps(
-            {
-                "run_id": "sl-1",
-                "date": "2026-03-19",
-                "candidates": [
-                    {
-                        "symbol": "AAPL",
-                        "rank": 2,
-                        "deal_flow_score": 69.5,
-                        "source_detail": "PRICE_ACTION+WEB_NEWS",
-                    }
-                ],
+                "tickers": ["AAPL"],
+                "source_stage": "scout_handoff",
+                "metadata_by_ticker": {"AAPL": {"scouts": ["x_manual"], "mention_count": 2}},
             }
         )
     )
@@ -140,10 +114,8 @@ def test_company_context_collects_internal_sources(tmp_path: Path):
     assert payload["analysis"]["latest_report_date"] == "2026-03-21"
     assert payload["analysis"]["rating"] == "Buy"
     assert payload["analysis"]["aeternus_score"] == 63.4
-    assert payload["dealflow"]["research_queue"]["found"] is True
-    assert payload["dealflow"]["research_queue"]["date"] == "2026-03-20"
-    assert payload["dealflow"]["shortlist"]["found"] is True
-    assert payload["dealflow"]["shortlist"]["date"] == "2026-03-19"
+    assert payload["dealflow"]["scout_handoff"]["found"] is True
+    assert payload["dealflow"]["scout_handoff"]["date"] == "2026-03-20"
     assert payload["portfolio"]["found"] is True
     assert payload["portfolio"]["position"]["net_quantity"] == 25
     assert payload["x_feed"]["found"] is True
@@ -186,12 +158,10 @@ def test_company_context_reports_missing_internal_sources(tmp_path: Path):
 
     assert payload["akg"]["found"] is True
     assert payload["analysis"]["found"] is False
-    assert payload["dealflow"]["research_queue"]["found"] is False
-    assert payload["dealflow"]["shortlist"]["found"] is False
+    assert payload["dealflow"]["scout_handoff"]["found"] is False
     assert payload["portfolio"]["found"] is False
     assert payload["x_feed"]["found"] is False
     assert "No internal analysis report found." in payload["known_gaps"]
-    assert "Ticker not present in latest internal research queue." in payload["known_gaps"]
-    assert "Ticker not present in latest internal shortlist." in payload["known_gaps"]
+    assert "Ticker not present in latest scout ticker handoff." in payload["known_gaps"]
     assert "Ticker not present in current internal positions." in payload["known_gaps"]
     assert "Ticker not present in internal X-feed coverage." in payload["known_gaps"]

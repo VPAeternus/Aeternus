@@ -82,7 +82,7 @@ Rules:
   - artifact availability
   - manual-input readiness
 - **L1_PIPELINE** (standard run):
-  - discovery -> collect -> shortlist -> deep-selection -> analysis synthesis
+  - discovery -> collect -> candidate_list -> fundamental-intake -> analysis synthesis
 - **L2_DEEP_RESEARCH** (gated escalation):
   - committee debate + optional web enrichment + scenario expansion
 

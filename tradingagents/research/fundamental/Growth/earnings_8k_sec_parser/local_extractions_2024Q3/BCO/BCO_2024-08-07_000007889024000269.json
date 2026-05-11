@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BCO",
+    "cik": "78890",
+    "event_date": "2024-08-07",
+    "event_accession": "0000078890-24-000269",
+    "primary_8k_doc": "bco-20240807.htm",
+    "exhibit_docs": [
+      "ex991q22024.htm",
+      "exhibit992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BCO_000007889024000269_bco-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BCO_000007889024000269_ex991q22024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BCO_000007889024000269_exhibit992.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BCO",
+    "cik": "78890",
+    "entity_name": "THE BRINK’S COMPANY",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1185400000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "15000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6601800000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-97100000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-57600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "41100000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2023-08-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2022-06-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.012654",
+    "operating_cash_flow_to_revenue": "0.034672",
+    "assets_to_revenue": "5.569259",
+    "financing_cash_flow_to_revenue": "-0.081913",
+    "investing_cash_flow_to_revenue": "-0.048591"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "GAAP net income up 44% to $46M and adjusted EBITDA up 16% to $226M GAAP EPS up 51% to $1.",
+      "non-GAAP EPS up 31% to $1.",
+      "Net Income / Adjusted EBITDA (a) $ 46 44% $ 226 16% 39% EPS $ 1.",
+      "net income attributable to Brink's.",
+      "EPS from continuing operations attributable to Brink's $ 7.",
+      "Net income $ 53."
+    ],
+    "guidance_evidence": [
+      "outlook reflects management's current assumptions regarding variables that are difficult to accurately forecast, including those discussed in the Risk Factors set forth in the Company's filings with the United States Securities and Exchange Commission.",
+      "outlook assumes the continuation of current economic trends and does not contemplate a significant economic downturn for the balance of the year.",
+      "Outlook Revenues $ 5,075 - 5,225 Adjusted EBITDA $ 935 - 985 Adjusted EBITDA margin 18.",
+      "outlook, including revenue, adjusted EBITDA, adjusted EBITDA margin, earnings per share, and free cash flow before dividends (and drivers thereof), capital allocation priorities, the impact of U.",
+      "outlook amounts for EPS from continuing operations, free cash flow before dividends, Adjusted EBITDA and EPS from continuing operations attributable to Brink's cannot be reconciled to GAAP without unreasonable effort.",
+      "guidance is issued and effective date of such guidance is provided."
+    ],
+    "wave_or_demand_evidence": [
+      "customer obligations or proceeds from the sale of property, equipment and investments in 2024.",
+      "customers 298.",
+      "customers (16.",
+      "customer obligations (32.",
+      "customers include financial institutions, retailers, government agencies, mints, jewelers and other commercial operations.",
+      "customers in more than 100 countries."
+    ],
+    "warning_or_risk_evidence": [
+      "Impairment losses 5.",
+      "charges, and disposition related gains/losses.",
+      "charges under this program, including $0.",
+      "charges, these management-directed items have not been allocated to segment results and are excluded from non-GAAP results.",
+      "charges of $1.",
+      "charges in Argentina in the first six months of 2024 for an inflation-adjusted labor increase to expected payments to union workers of the Maco Transportadora and Maco Litoral businesses (together \"Maco\")."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "94.669998",
+    "return_10d_pct": "9.8447",
+    "return_20d_pct": "14.6403",
+    "return_30d_pct": "10.3201",
+    "return_60d_pct": "16.3515",
+    "return_90d_pct": "8.4610"
+  },
+  "text_stats": {
+    "primary_text_len": 4127,
+    "exhibit_text_len": 103032,
+    "combined_text_len": 107161
+  }
+}

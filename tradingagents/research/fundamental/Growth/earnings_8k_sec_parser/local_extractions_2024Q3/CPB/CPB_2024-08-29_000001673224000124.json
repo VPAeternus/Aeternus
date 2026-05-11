@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CPB",
+    "cik": "16732",
+    "event_date": "2024-08-29",
+    "event_accession": "0000016732-24-000124",
+    "primary_8k_doc": "cpb-20240829.htm",
+    "exhibit_docs": [
+      "exhibit991-q420248xka.htm",
+      "exhibit991-q42024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CPB_000001673224000124_cpb-20240829.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CPB_000001673224000124_exhibit991-q420248xka.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CPB_000001673224000124_exhibit991-q42024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CPB",
+    "cik": "16732",
+    "entity_name": "THE CAMPBELL'S COMPANY",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "7289000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-05",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "689000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-05",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "12058000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-05",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-07-30",
+    "financing_cash_flow_value": "-535000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-05",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "-269000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-05",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "918000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-05",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.094526",
+    "operating_cash_flow_to_revenue": "0.125943",
+    "assets_to_revenue": "1.654274",
+    "financing_cash_flow_to_revenue": "-0.073398",
+    "investing_cash_flow_to_revenue": "-0.036905"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Sales increased 11% to $2.",
+      "Net Sales increased 3% to $9.",
+      "net sales decreased 1% to $2.",
+      "Net sales increased 3% to $9.",
+      "net sales decreased 1% to $9.",
+      "net sales increased 1% driven by gains in U."
+    ],
+    "guidance_evidence": [
+      "GUIDANCE CAMDEN, N.",
+      "Guidance.",
+      "guidance below and is estimated to be worth approximately 2 points of growth to both reported and organic net sales and adjusted EBIT, along with $0.",
+      "guidance below and is estimated to be worth approximately 2 points of growth to reported net sales and adjusted EBIT, along with $0.",
+      "GUIDANCE For the fourth quarter: • Net Sales increased 11% to $2.",
+      "outlook driven by our advantaged market-leading brands, capabilities and execution."
+    ],
+    "wave_or_demand_evidence": [
+      "customer relationship intangible assets due to the loss of certain contract manufacturing customers, which began in the fourth quarter of fiscal 2023.",
+      "ainst our longer-term strategic plan despite an evolving consumer landscape,” said Campbell’s President and CEO, Mark Clouse.",
+      "ain.",
+      "ailed reconciliation of the reported (GAAP) financial information to the adjusted financial information is included at the end of this news release.",
+      "ailed reconciliation of the re ported (GAAP) financial information to the adjusted information is included at the 2 end of this news release.",
+      "ains) $0."
+    ],
+    "warning_or_risk_evidence": [
+      "Impairment charges $0.",
+      "Charges associated with divestiture $— $0.",
+      "impairment charges related to Pop Secret and Allied brands (including Tom's , Jays , Kruncher's , O-Ke-Doke , Stella D'oro and Archway ) and by pension and postretirement actuarial adjustments.",
+      "impairment charges and pension and postretirement actuarial adjustments.",
+      "impairment charges.",
+      "impairment charges and costs associated with the acquisition."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2300,
+    "quarter_revenue_yoy_pct": 11,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-30",
+    "entry_open": "49.009998",
+    "return_10d_pct": "5.5703",
+    "return_20d_pct": "3.7339",
+    "return_30d_pct": "-0.1836",
+    "return_60d_pct": "-4.5909",
+    "return_90d_pct": "-5.7335"
+  },
+  "text_stats": {
+    "primary_text_len": 4254,
+    "exhibit_text_len": 50176,
+    "combined_text_len": 54432
+  }
+}

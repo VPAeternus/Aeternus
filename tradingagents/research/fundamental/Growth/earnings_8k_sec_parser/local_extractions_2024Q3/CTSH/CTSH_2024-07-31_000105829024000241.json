@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CTSH",
+    "cik": "1058290",
+    "event_date": "2024-07-31",
+    "event_accession": "0001058290-24-000241",
+    "primary_8k_doc": "ctsh-20240731.htm",
+    "exhibit_docs": [
+      "exhibit9916302024.htm",
+      "exhibit9926302024.htm",
+      "exhibit9936302024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTSH_000105829024000241_ctsh-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTSH_000105829024000241_exhibit9916302024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTSH_000105829024000241_exhibit9926302024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTSH_000105829024000241_exhibit9936302024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CTSH",
+    "cik": "1058290",
+    "entity_name": "Cognizant Technology Solutions Corporation",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4812000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "580000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "18483000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-350000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-215000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "729000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.120532",
+    "operating_cash_flow_to_revenue": "0.151496",
+    "assets_to_revenue": "3.841022",
+    "financing_cash_flow_to_revenue": "-0.072735",
+    "investing_cash_flow_to_revenue": "-0.04468"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $4.",
+      "EPS $1.",
+      "EPS 1 $1.",
+      "Earnings Per Share (\"Adjusted Diluted EPS\") are not measures of financial performance prepared in accordance with GAAP.",
+      "EPS 3 is expected to be in the range of $4.",
+      "EPS guidance to the corresponding GAAP measures on a forward-looking basis cannot be provided without unreasonable efforts."
+    ],
+    "guidance_evidence": [
+      "guidance range; sequentially increased 1.",
+      "guidance of flat to 1.",
+      "guidance narrowed to a decline of 0.",
+      "guidance unchanged at 15.",
+      "guidance range, expanded adjusted operating margin, and maintained our large deal momentum,” said Ravi Kumar S, Chief Executive Officer.",
+      "outlook for the full year demonstrate how our execution against these priorities is beginning to translate to our results and support long-term shareholder value."
+    ],
+    "wave_or_demand_evidence": [
+      "bookings of $26.",
+      "Bookings Bookings in the second quarter increased 5% year-over-year.",
+      "bookings declined 1% year-over-year to $26.",
+      "customer base across the commercial aerospace, defense, space, marine and industrial verticals, for $1.",
+      "customer experience and engineer innovative strategies aimed at driving growth.",
+      "customer loyalty and become future-ready."
+    ],
+    "warning_or_risk_evidence": [
+      "charges.",
+      "charges, net non-operating foreign currency exchange gains or losses and the tax impact of all the applicable adjustments.",
+      "charges (a) 29 117 52 117 Adjusted Income From Operations $ 737 $ 694 $ 1,455 $ 1,396 GAAP operating margin 14.",
+      "charges 0.",
+      "charges, pre-tax 0.",
+      "charges $ 29 $ 117 $ 52 $ 117 The costs related to the NextGen program are reported in \"Restructuring charges\" in our unaudited consolidated statements of operations."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4900,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "78.000000",
+    "return_10d_pct": "-6.2308",
+    "return_20d_pct": "-1.7692",
+    "return_30d_pct": "-1.5769",
+    "return_60d_pct": "-1.0513",
+    "return_90d_pct": "-4.6795"
+  },
+  "text_stats": {
+    "primary_text_len": 3897,
+    "exhibit_text_len": 55511,
+    "combined_text_len": 59410
+  }
+}

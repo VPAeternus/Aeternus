@@ -37,7 +37,7 @@ Do **not** solve this by lowering the core entry-score threshold globally. That 
 Solve it with a constrained exception sleeve:
 
 ```text
-Top-15 research queue =
+Top-15 fundamental review list =
     10 core high-conviction names
     + up to 5 right-tail exception names
 ```
@@ -50,7 +50,7 @@ This is a research/underwriting queue, **not** an instruction to buy all 15 equa
 
 1. Preserve existing `high_conviction_top10_v2_final` behavior.
 2. Add a new variant; do not silently change current Top-10 semantics.
-3. Treat the Top-15 as a **research queue**, not a 15-stock equal-weight portfolio.
+3. Treat the Top-15 as a **fundamental review list**, not a 15-stock equal-weight portfolio.
 4. Separate selected rows by sleeve:
    - `core`
    - `right_tail_exception`
@@ -512,7 +512,7 @@ If these fail:
 
 ```text
 Use Top-10 v2 as buy-underwriting queue.
-Use Top-15 exception sleeve as watchlist/research queue only.
+Use Top-15 exception sleeve as watchlist/fundamental review list only.
 ```
 
 ---
@@ -588,7 +588,7 @@ Next test: Top-15 exception sleeve
 Clarify:
 
 ```text
-Top-15 is a research queue.
+Top-15 is a fundamental review list.
 Top-10 remains the core buy-underwriting sleeve.
 Exception names are not automatic equal-weight buys.
 ```

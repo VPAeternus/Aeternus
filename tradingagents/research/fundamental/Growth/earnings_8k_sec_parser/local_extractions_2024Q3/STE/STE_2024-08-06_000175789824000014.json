@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "STE",
+    "cik": "1757898",
+    "event_date": "2024-08-06",
+    "event_accession": "0001757898-24-000014",
+    "primary_8k_doc": "ste-20240806.htm",
+    "exhibit_docs": [
+      "ste6302024ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/STE_000175789824000014_ste-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/STE_000175789824000014_ste6302024ex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "STE",
+    "cik": "1757898",
+    "entity_name": "STERIS plc",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4223403000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-29",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "243888000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-29",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "10821839000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-29",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "115830000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-29",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-666559000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-29",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "684811000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-29",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.057747",
+    "operating_cash_flow_to_revenue": "0.162147",
+    "assets_to_revenue": "2.562351",
+    "financing_cash_flow_to_revenue": "0.027426",
+    "investing_cash_flow_to_revenue": "-0.157825"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 5% for the quarter compared with the prior year.",
+      "revenue offset by a 15% decline in capital equipment revenue and 17% decline in service revenue.",
+      "revenue increased 4% in the quarter compared with the prior year.",
+      "EPS from continuing operations increased to $1.",
+      "EPS increased to $2.",
+      "net income for the first quarter was $139."
+    ],
+    "guidance_evidence": [
+      "outlook reiterated DUBLIN, IRELAND - (August 6, 2024) - STERIS plc (NYSE: STE) (“STERIS” or the “Company”) today announced financial results for its fiscal 2025 first quarter ended June 30, 2024.",
+      "outlook for fiscal 2025 and are confident in our ability to deliver on our full year guidance.",
+      "Outlook Reiterated For fiscal 2025, the Company continues to expect as reported revenue from continuing operations to increase 6.",
+      "outlook assumes an effective tax rate of approximately 23%.",
+      "outlook,” “impact,” “potential,” “confidence,” “improve,” “optimistic,” “deliver,” “orders,” “backlog,” “comfortable,” “trend,” and “seeks,” or the negative of such terms or other variations on such terms or comparable terminology.",
+      "Outlook Twelve Months Ended March 31, 2025 (Outlook)** Net income from continuing operations per diluted share $6."
+    ],
+    "wave_or_demand_evidence": [
+      "CUSTOMERS CREATE A HEALTHIER AND SAFER WORLD by providing innovative healthcare and life sciences products and services.",
+      "orders,” “backlog,” “comfortable,” “trend,” and “seeks,” or the negative of such terms or other variations on such terms or comparable terminology.",
+      "orders, including but not limited to any new trade or tax legislation (including CAMT and excise tax on stock buybacks), regulations or orders, that may be implemented by the U.",
+      "Backlog $ 361,984 $ 491,732 Life Sciences Backlog $ 72,200 $ 104,900 Total Backlog - Continuing Operations $ 434,184 $ 596,632 As reported, U.",
+      "backlog, free cash flow and net debt.",
+      "aid Dan Carestio, President and CEO of STERIS."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and cash expenditures associated with the announced restructuring plan may not be realized on the timeline or timelines we expect, or at all.",
+      "inventory and property \"step up\" to fair value 694 597 1,391 1,622 Restructuring charges 2,382 — 28,082 19 Net impact of adjustments after tax (1) 61,759 51,921 5,484 22,738 67,243 74,659 Net EPS impact 0.",
+      "charges 0.",
+      "decline in capital equipment revenue.",
+      "decreased 2% to $128.",
+      "decline in capital equipment revenue and 17% decline in service revenue."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 901.2,
+    "quarter_revenue_yoy_pct": 10,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "238.039993",
+    "return_10d_pct": "-1.8778",
+    "return_20d_pct": "-0.6764",
+    "return_30d_pct": "0.7478",
+    "return_60d_pct": "-5.0496",
+    "return_90d_pct": "-4.4530"
+  },
+  "text_stats": {
+    "primary_text_len": 3990,
+    "exhibit_text_len": 30472,
+    "combined_text_len": 34464
+  }
+}

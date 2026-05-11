@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KAI",
+    "cik": "886346",
+    "event_date": "2024-07-30",
+    "event_accession": "0000886346-24-000129",
+    "primary_8k_doc": "kai-20240730.htm",
+    "exhibit_docs": [
+      "kaiform8kex991q224.htm",
+      "kaiform8kex992q224.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KAI_000088634624000129_kai-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KAI_000088634624000129_kaiform8kex991q224.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KAI_000088634624000129_kaiform8kex992q224.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KAI",
+    "cik": "886346",
+    "entity_name": "KADANT INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "229758000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "28075000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "1175665000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "-27757000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-4467000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "36866000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.122194",
+    "operating_cash_flow_to_revenue": "0.160456",
+    "assets_to_revenue": "5.116971",
+    "financing_cash_flow_to_revenue": "-0.12081",
+    "investing_cash_flow_to_revenue": "-0.019442"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue increased 12% to a record $275 million • Gross margin was 44.",
+      "Revenue increased 12 percent to a record $274.",
+      "revenue increased two percent, which excludes an 11 percent increase from acquisitions and a one percent decrease from the unfavorable effect of foreign currency translation.",
+      "revenue of $1.",
+      "revenue of $257 to $269 million, GAAP EPS of $2.",
+      "Revenue of $274."
+    ],
+    "guidance_evidence": [
+      "Outlook “With our excellent start to the year and ability to generate strong cash flows, we are well positioned to capitalize on new opportunities that may emerge in the second half of 2024,” Mr.",
+      "guidance for the full year and now expect revenue of $1.",
+      "guidance of $1.",
+      "guidance for 2024 is now $9.",
+      "guidance of $9.",
+      "guidance excludes $0."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings increased 17% to $252 million Note: Percent changes above are based on comparison to the prior year period.",
+      "demand combined with strong capital business helped to deliver these outstanding results.",
+      "Bookings increased 17 percent to $251.",
+      "bookings increased five percent, which excludes a 13 percent increase from acquisitions and a one percent decrease from the unfavorable effect of foreign currency translation.",
+      "demand in the second half of the year to be similar to the first half of the year, despite persistent economic headwinds in certain regions.",
+      "backlog, acquisition costs, and other income or expense, as indicated."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory and backlog, acquisition costs, and other income or expense, as indicated.",
+      "inventory and backlog of $1.",
+      "inventory and backlog of $0.",
+      "inventory and backlog of $4.",
+      "inventory and backlog of $3.",
+      "Inventory and Backlog Amortization 929 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 275,
+    "quarter_revenue_yoy_pct": 12,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "355.000000",
+    "return_10d_pct": "-18.2254",
+    "return_20d_pct": "-13.9972",
+    "return_30d_pct": "-9.5408",
+    "return_60d_pct": "-4.7887",
+    "return_90d_pct": "-9.7042"
+  },
+  "text_stats": {
+    "primary_text_len": 3998,
+    "exhibit_text_len": 38390,
+    "combined_text_len": 42390
+  }
+}

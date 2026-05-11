@@ -14,6 +14,20 @@ def _compat(name: str):
         return getattr(facade, name)
     return globals()[name]
 
+
+def _render_scout_ticker_summary(summary: Dict[str, Any]) -> None:
+    console.print(
+        f"[cyan]Scout tickers:[/cyan] unique={int(summary.get('total_unique_tickers', 0) or 0)} | "
+        f"mentions={int(summary.get('total_mentions', 0) or 0)}"
+    )
+    counts = dict(summary.get("scout_counts") or {})
+    if counts:
+        labels = [f"{name}={count}" for name, count in counts.items()]
+        console.print(f"[cyan]Scout counts:[/cyan] {', '.join(labels)}")
+    tickers = list(summary.get("tickers", []) or [])
+    if tickers:
+        console.print(f"[cyan]Ticker handoff:[/cyan] {', '.join(str(t) for t in tickers[:60])}")
+
 @app.command()
 def discover(
     date: Optional[str] = typer.Option(None, help="Run date (YYYY-MM-DD), defaults to today"),
@@ -63,7 +77,6 @@ def discover(
         )
     _render_universe_filter_summary(summary.get("universe_filter", {}))
     _render_discovery_delta_summary(summary.get("discovery_delta", {}))
-    _render_evidence_integrity_summary(summary.get("evidence_integrity_summary", {}))
 
 
 @app.command("scenario-retrieve")
@@ -191,16 +204,16 @@ def universe_filter(
 def collect(
     date: Optional[str] = typer.Option(None, help="Run date (YYYY-MM-DD), defaults to today"),
     top_k: int = typer.Option(
-        int(DEFAULT_CONFIG.get("dealflow_top_k", 20)),
+        1,
         "--top-k",
         min=1,
-        help="Shortlist size",
+        help="Deprecated; scout-only dealflow ignores this selection cap",
     ),
     trigger: str = typer.Option("manual", help="Trigger mode: daily|event|manual"),
     profile: str = typer.Option("daily", "--profile", help="Run profile: daily|max-recall|auto"),
     format: str = typer.Option("table", help="Output format: table or json"),
 ):
-    """Run collectors, scoring, and ranking (no scouts).  Use after discover."""
+    """Persist scout ticker totals after discover."""
     run_date = date or _today_str()
     trigger_mode = str(trigger or "manual").lower().strip()
     output_format = str(format or "table").lower().strip()
@@ -220,7 +233,7 @@ def collect(
 
     run_config = _apply_run_profile_overrides(DEFAULT_CONFIG.copy(), run_profile)
     pipeline = _compat("DealFlowPipeline")(config=run_config)
-    shortlist, research_queue, normalized_signals, event_state = pipeline.collect(
+    scout_summary, _, normalized_signals, event_state = pipeline.collect(
         as_of_date=run_date,
         trigger=trigger_mode,
         top_k=top_k,
@@ -230,8 +243,7 @@ def collect(
         typer.echo(
             json_lib.dumps(
                 {
-                    "shortlist": shortlist,
-                    "research_queue": research_queue,
+                    "scout_ticker_summary": scout_summary,
                     "event_trigger": event_state,
                     "signal_count": len(normalized_signals),
                     "run_profile": run_profile,
@@ -242,27 +254,21 @@ def collect(
         return
 
     console.print(
-        f"[green]Collection complete[/green] | run_id={shortlist.get('run_id')} | "
+        f"[green]Collection complete[/green] | run_id={scout_summary.get('run_id')} | "
         f"signals={len(normalized_signals)}"
     )
     console.print(f"[cyan]Run profile:[/cyan] {run_profile}")
-    lane_counts = _lane_summary(shortlist.get("candidates", []))
-    console.print(
-        f"[cyan]Lane mix:[/cyan] CORE={lane_counts.get('CORE', 0)} | "
-        f"MOMENTUM={lane_counts.get('MOMENTUM', 0)}"
-    )
-    _render_shortlist_table(shortlist)
-    _render_fundamental_shadow_summary(shortlist.get("fundamental_shadow_summary", {}))
+    _render_scout_ticker_summary(scout_summary)
 
 
 @app.command()
 def source(
     date: Optional[str] = typer.Option(None, help="Run date (YYYY-MM-DD), defaults to today"),
     top_k: int = typer.Option(
-        int(DEFAULT_CONFIG.get("dealflow_top_k", 20)),
+        1,
         "--top-k",
         min=1,
-        help="Shortlist size",
+        help="Deprecated; scout-only dealflow ignores this selection cap",
     ),
     trigger: str = typer.Option(
         "daily",
@@ -275,7 +281,7 @@ def source(
     ),
     format: str = typer.Option("table", help="Output format: table or json"),
 ):
-    """Generate deal-flow shortlist and research queue artifacts."""
+    """Generate deal-flow scout ticker totals and final ticker handoff."""
     run_date = date or _today_str()
     trigger_mode = trigger.lower()
     output_format = format.lower()
@@ -296,7 +302,7 @@ def source(
 
     run_config = _apply_run_profile_overrides(DEFAULT_CONFIG.copy(), run_profile)
     pipeline = _compat("DealFlowPipeline")(config=run_config)
-    shortlist, research_queue, normalized_signals, event_state = pipeline.run(
+    scout_summary, _, normalized_signals, event_state = pipeline.run(
         as_of_date=run_date,
         trigger=trigger_mode,
         top_k=top_k,
@@ -304,13 +310,13 @@ def source(
 
     try:
         _compat("RatingAuditLog")().log_event(
-            "DEALFLOW_QUEUE_GENERATED",
-            shortlist.get("run_id", run_date),
+            "DEALFLOW_SCOUT_TICKERS_GENERATED",
+            scout_summary.get("run_id", run_date),
             {
-                "shortlist_size": len(shortlist.get("candidates", [])),
-                "deep_k": research_queue.get("deep_k"),
-                "event_triggered": shortlist.get("event_triggered"),
-                "event_reasons": shortlist.get("event_reasons", []),
+                "total_unique_tickers": int(scout_summary.get("total_unique_tickers", 0) or 0),
+                "scout_counts": dict(scout_summary.get("scout_counts", {}) or {}),
+                "event_triggered": scout_summary.get("event_triggered"),
+                "event_reasons": scout_summary.get("event_reasons", []),
                 "signal_count": len(normalized_signals),
                 "run_profile": run_profile,
             },
@@ -322,8 +328,7 @@ def source(
         typer.echo(
             json_lib.dumps(
                 {
-                    "shortlist": shortlist,
-                    "research_queue": research_queue,
+                    "scout_ticker_summary": scout_summary,
                     "event_trigger": event_state,
                     "signal_count": len(normalized_signals),
                     "run_profile": run_profile,
@@ -334,54 +339,14 @@ def source(
         return
 
     console.print(
-        f"[green]Deal-flow run complete[/green] | run_id={shortlist.get('run_id')} | "
-        f"signals={len(normalized_signals)} | event_triggered={shortlist.get('event_triggered')}"
+        f"[green]Deal-flow run complete[/green] | run_id={scout_summary.get('run_id')} | "
+        f"signals={len(normalized_signals)} | event_triggered={scout_summary.get('event_triggered')}"
     )
     console.print(f"[cyan]Run profile:[/cyan] {run_profile}")
-    lane_counts = _lane_summary(shortlist.get("candidates", []))
-    console.print(
-        f"[cyan]Lane mix:[/cyan] CORE={lane_counts.get('CORE', 0)} | "
-        f"MOMENTUM={lane_counts.get('MOMENTUM', 0)}"
-    )
-    top_momentum = [
-        c for c in shortlist.get("candidates", []) if str(c.get("lane", "CORE")).upper() == "MOMENTUM"
-    ]
-    top_momentum.sort(key=lambda c: -float(c.get("asymmetry_score", 0.0)))
-    if top_momentum:
-        labels = ", ".join(str(c.get("symbol", "N/A")) for c in top_momentum[:5])
-        console.print(f"[cyan]Top momentum names:[/cyan] {labels}")
-    if shortlist.get("event_reasons"):
-        console.print(f"[cyan]Event reasons:[/cyan] {', '.join(shortlist.get('event_reasons', []))}")
-    connector_summary = shortlist.get("connector_health_summary")
-    if isinstance(connector_summary, dict):
-        statuses = connector_summary.get("status_totals", {})
-        console.print(
-            "[cyan]Connector health:[/cyan] "
-            f"ok={statuses.get('OK', 0)} "
-            f"no_data={statuses.get('NO_DATA', 0)} "
-            f"errors={statuses.get('ERROR', 0)} "
-            f"not_configured={statuses.get('NOT_CONFIGURED', 0)}"
-        )
-    x_scope = shortlist.get("x_scope_summary")
-    if isinstance(x_scope, dict):
-        console.print(
-            "[cyan]X scope:[/cyan] "
-            f"handles={int(x_scope.get('handles', 0) or 0)} "
-            f"symbol_calls={int(x_scope.get('symbol_calls', 0) or 0)} "
-            f"expansions={int(x_scope.get('expansions', 0) or 0)}"
-        )
-    manual_summary = shortlist.get("manual_merge_summary")
-    if isinstance(manual_summary, dict):
-        console.print(
-            "[cyan]Manual merge:[/cyan] "
-            f"requested={int(manual_summary.get('requested', 0) or 0)} "
-            f"included={int(manual_summary.get('included', 0) or 0)} "
-            f"reinforced={int(manual_summary.get('reinforced', 0) or 0)} "
-            f"rejected={int(manual_summary.get('rejected', 0) or 0)}"
-        )
+    _render_scout_ticker_summary(scout_summary)
+    if scout_summary.get("event_reasons"):
+        console.print(f"[cyan]Event reasons:[/cyan] {', '.join(scout_summary.get('event_reasons', []))}")
     _render_discovery_delta_summary(getattr(pipeline, "_last_discovery_delta", {}))
-    _render_evidence_integrity_summary(shortlist.get("evidence_integrity_summary", {}))
-    _render_shortlist_table(shortlist)
 
 
 @app.command()
@@ -395,10 +360,10 @@ def orchestrate(
         help="Optional run date (YYYY-MM-DD) for forced modes",
     ),
     top_k: int = typer.Option(
-        int(DEFAULT_CONFIG.get("dealflow_top_k", 20)),
+        1,
         "--top-k",
         min=1,
-        help="Shortlist size when run executes",
+        help="Deprecated; scout-only dealflow no longer ranks tickers",
     ),
     profile: str = typer.Option(
         "daily",
@@ -488,43 +453,11 @@ def orchestrate(
             f"horizon={x_policy.get('horizon_used') or 'N/A'} | "
             f"calls={rec.get('max_api_calls_per_run')} | budget=${rec.get('daily_budget_usd')}"
         )
-    shortlist = result.get("shortlist", {})
-    if isinstance(shortlist, dict):
-        lane_counts = _lane_summary(shortlist.get("candidates", []))
-        console.print(
-            f"[cyan]Lane mix:[/cyan] CORE={lane_counts.get('CORE', 0)} | "
-            f"MOMENTUM={lane_counts.get('MOMENTUM', 0)}"
-        )
-        if shortlist.get("event_reasons"):
-            console.print(f"[cyan]Event reasons:[/cyan] {', '.join(shortlist.get('event_reasons', []))}")
-        connector_summary = shortlist.get("connector_health_summary")
-        if isinstance(connector_summary, dict):
-            statuses = connector_summary.get("status_totals", {})
-            console.print(
-                "[cyan]Connector health:[/cyan] "
-                f"ok={statuses.get('OK', 0)} "
-                f"no_data={statuses.get('NO_DATA', 0)} "
-                f"errors={statuses.get('ERROR', 0)} "
-                f"not_configured={statuses.get('NOT_CONFIGURED', 0)}"
-            )
-        x_scope = shortlist.get("x_scope_summary")
-        if isinstance(x_scope, dict):
-            console.print(
-                "[cyan]X scope:[/cyan] "
-                f"handles={int(x_scope.get('handles', 0) or 0)} "
-                f"symbol_calls={int(x_scope.get('symbol_calls', 0) or 0)} "
-                f"expansions={int(x_scope.get('expansions', 0) or 0)}"
-            )
-        manual_summary = shortlist.get("manual_merge_summary")
-        if isinstance(manual_summary, dict):
-            console.print(
-                "[cyan]Manual merge:[/cyan] "
-                f"requested={int(manual_summary.get('requested', 0) or 0)} "
-                f"included={int(manual_summary.get('included', 0) or 0)} "
-                f"reinforced={int(manual_summary.get('reinforced', 0) or 0)} "
-                f"rejected={int(manual_summary.get('rejected', 0) or 0)}"
-            )
-        _render_shortlist_table(shortlist)
+    scout_summary = result.get("scout_ticker_summary", {})
+    if isinstance(scout_summary, dict):
+        _render_scout_ticker_summary(scout_summary)
+        if scout_summary.get("event_reasons"):
+            console.print(f"[cyan]Event reasons:[/cyan] {', '.join(scout_summary.get('event_reasons', []))}")
 
 
 @app.command()
@@ -532,21 +465,25 @@ def queue(
     date: Optional[str] = typer.Option(None, help="Queue date (YYYY-MM-DD). Defaults to latest."),
     format: str = typer.Option("table", help="Output format: table or json"),
 ):
-    """View latest or dated research queue generated by deal-flow."""
+    """View latest or dated scout ticker summary generated by deal-flow."""
     output_format = format.lower()
     if output_format not in {"table", "json"}:
         console.print("[red]Error: format must be table or json[/red]")
         raise typer.Exit(1)
 
-    try:
-        queue_data, queue_path = _compat("_load_research_queue")(date)
-    except FileNotFoundError as exc:
-        console.print(f"[red]{exc}[/red]")
+    root = Path("eval_results") / "deal_flow"
+    if date:
+        queue_path = root / date / "scout_ticker_summary.json"
+    else:
+        queue_path = root / "latest_scout_ticker_summary.json"
+    if not queue_path.exists():
+        console.print(f"[red]Scout ticker summary not found: {queue_path}[/red]")
         raise typer.Exit(1)
+    queue_data = json_lib.loads(queue_path.read_text())
 
     if output_format == "json":
         print(json_lib.dumps(queue_data, indent=2))
         return
 
-    console.print(f"[green]Loaded queue[/green] from {queue_path}")
-    _render_queue_table(queue_data, title_suffix=f"({queue_data.get('date', 'N/A')})")
+    console.print(f"[green]Loaded scout ticker summary[/green] from {queue_path}")
+    _render_scout_ticker_summary(queue_data)

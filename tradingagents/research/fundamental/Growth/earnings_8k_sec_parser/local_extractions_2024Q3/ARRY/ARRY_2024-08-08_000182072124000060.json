@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ARRY",
+    "cik": "1820721",
+    "event_date": "2024-08-08",
+    "event_accession": "0001820721-24-000060",
+    "primary_8k_doc": "arry-20240808.htm",
+    "exhibit_docs": [
+      "a2024_q2earningspresenta.htm",
+      "exhibit9912024q2pressrelea.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARRY_000182072124000060_arry-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARRY_000182072124000060_a2024_q2earningspresenta.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARRY_000182072124000060_exhibit9912024q2pressrelea.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ARRY",
+    "cik": "1820721",
+    "entity_name": "ARRAY TECHNOLOGIES, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "376773000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "29635000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1706741000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-23762000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3883000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "45816000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.078655",
+    "operating_cash_flow_to_revenue": "0.121601",
+    "assets_to_revenue": "4.529892",
+    "financing_cash_flow_to_revenue": "-0.063067",
+    "investing_cash_flow_to_revenue": "-0.010306"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $255.",
+      "revenue of $256 million, which was slightly ahead of the expectations signaled on our last earnings call.",
+      "Net Income, Adjusted Net Income per share, and Free Cash Flow.",
+      "Net Income per share as Adjusted Net Income (as detailed above) divided by the basic and diluted weighted average number of shares outstanding for the applicable period.",
+      "net income, Adj.",
+      "Net Income Adj."
+    ],
+    "guidance_evidence": [
+      "guidance assessment causing new delays in project timing as customers navigate potential implications ► Rapid devaluation of Brazilian Real leading to extended project timelines as project developers work to renegotiate PPA pricing ► Solar continues to dominate new U.",
+      "Guidance Update Full Year Ending December 31, 2024 Revenue $0.",
+      "outlook, we have not included estimates for these items and are unable to address the probable significance of the unavailable information, which could be material to future results.",
+      "guidance.",
+      "guidance range previously provided for the full-year.",
+      "outlook for the year."
+    ],
+    "wave_or_demand_evidence": [
+      "customers navigate potential implications ► Rapid devaluation of Brazilian Real leading to extended project timelines as project developers work to renegotiate PPA pricing ► Solar continues to dominate new U.",
+      "customer experience • Customers pleased with increased engagement and transparency into processes 7 ► Capacity: 50+ GW Globally; 30+ GW in the U.",
+      "demand we’re seeing in our high-probability pipeline.",
+      "customers’ interest in our portfolio of products and services and the longer-term tailwinds supporting utility-scale solar as one of the lowest cost options to satisfy rapidly growing energy needs,” said Chief Executive Officer, Kevin Hostetler.",
+      "customers continue to report struggles with short-term dynamics causing project delays, which has caused us to reduce our revenue outlook for the year.",
+      "customers’ projects."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in project timing as customers navigate potential implications ► Rapid devaluation of Brazilian Real leading to extended project timelines as project developers work to renegotiate PPA pricing ► Solar continues to dominate new U.",
+      "inventory, commodity and cost-out programs ► Domestic Content: 100% U.",
+      "delays, which has caused us to reduce our revenue outlook for the year.",
+      "delay projects in Brazil as they work through renegotiating power purchase agreements.",
+      "uncertainties described in more detail in the Company’s most recent Annual Report on Form 10-K and other documents on file with the SEC, each of which can be found on our website www.",
+      "loss) to Common Shareholders(1) $12."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 900,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "7.940000",
+    "return_10d_pct": "-15.7431",
+    "return_20d_pct": "-13.7280",
+    "return_30d_pct": "-24.3073",
+    "return_60d_pct": "-18.8917",
+    "return_90d_pct": "-21.9144"
+  },
+  "text_stats": {
+    "primary_text_len": 4384,
+    "exhibit_text_len": 49296,
+    "combined_text_len": 53682
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KOP",
+    "cik": "1315257",
+    "event_date": "2024-08-08",
+    "event_accession": "0000950170-24-093360",
+    "primary_8k_doc": "kop-20240808.htm",
+    "exhibit_docs": [
+      "kop-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KOP_000095017024093360_kop-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KOP_000095017024093360_kop-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KOP",
+    "cik": "1315257",
+    "entity_name": "KOPPERS HOLDINGS INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "513400000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "25500000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1835500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "56800000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-28500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-15300000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.049669",
+    "operating_cash_flow_to_revenue": "-0.029801",
+    "assets_to_revenue": "3.575185",
+    "financing_cash_flow_to_revenue": "0.110635",
+    "investing_cash_flow_to_revenue": "-0.055512"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $563.",
+      "sales of $563.",
+      "sales decreased by $13.",
+      "sales increased by $19.",
+      "sales of $176.",
+      "sales of $180."
+    ],
+    "guidance_evidence": [
+      "Outlook Second Quarter Sales of $563.",
+      "Outlook Koppers continues to expand and optimize its business and make further progress on the company's strategic pillars toward its long-term financial goals.",
+      "guidance as previously communicated.",
+      "guidance for adjusted EBITDA and adjusted EPS to comparable GAAP measures, in reliance on the unreasonable efforts exception.",
+      "outlook,” “guidance,” “forecast,” “believe,” “anticipate,” “expect,” “estimate,” “may,” “will,” “should,” “continue,” “plan,” “potential,” “intend,” “likely,” or other similar words or phrases are generally intended to identify forward-looking statements.",
+      "expects 2024 sales of approximately $2."
+    ],
+    "wave_or_demand_evidence": [
+      "demand, with sales and profitability significantly impacted by lower prices and reduced volumes for carbon pitch globally.",
+      "demand for our residential wood-treatment preservatives continued to be resilient despite unfavorable industry trends.",
+      "demand, especially in Europe where sales were down $22.",
+      "ailroad and Utility Products and Services (RUPS) business generated record-quarter sales, but profitability remained flat, as higher costs and a decline in the crosstie recovery business offset top-line increases and improved plant utilization.",
+      "aid, “All three business segments showed significant sequential improvement in the second quarter, pushing consolidated results to new heights.",
+      "ains realized from the company’s copper hedging program, net of higher copper costs recognized to date in cost of goods sold."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, acquisition-related costs, mark-to-market commodity hedging, and LIFO adjustments that are difficult to forecast for a GAAP estimate and may be significant.",
+      "impairment charges, profitability and anticipated expenses and cash outflows.",
+      "Impairment, restructuring and plant closure costs 0.",
+      "inventory step-up amortization 1.",
+      "inventory basis.",
+      "Impairment, restructuring and plant closure costs 1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 563.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "35.279999",
+    "return_10d_pct": "6.5760",
+    "return_20d_pct": "10.4875",
+    "return_30d_pct": "2.1259",
+    "return_60d_pct": "2.9195",
+    "return_90d_pct": "7.7948"
+  },
+  "text_stats": {
+    "primary_text_len": 2734,
+    "exhibit_text_len": 23854,
+    "combined_text_len": 26590
+  }
+}

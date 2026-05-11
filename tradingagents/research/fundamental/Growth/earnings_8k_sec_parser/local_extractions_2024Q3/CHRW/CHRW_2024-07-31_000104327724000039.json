@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CHRW",
+    "cik": "1043277",
+    "event_date": "2024-07-31",
+    "event_accession": "0001043277-24-000039",
+    "primary_8k_doc": "chrw-20240731.htm",
+    "exhibit_docs": [
+      "ex991earningsreleaseq20630.htm",
+      "q22024earningsdeck.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CHRW_000104327724000039_chrw-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CHRW_000104327724000039_ex991earningsreleaseq20630.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CHRW_000104327724000039_q22024earningsdeck.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CHRW",
+    "cik": "1043277",
+    "entity_name": "C.H. ROBINSON WORLDWIDE, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4611670000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "114891000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5595584000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-205992000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-26950000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "254544000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.024913",
+    "operating_cash_flow_to_revenue": "0.055196",
+    "assets_to_revenue": "1.213353",
+    "financing_cash_flow_to_revenue": "-0.044668",
+    "investing_cash_flow_to_revenue": "-0.005844"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues increased 1.",
+      "revenues decreased 1.",
+      "earnings per share (EPS) increased 29.",
+      "EPS (1) increased 25.",
+      "EPS are non-GAAP financial measures.",
+      "operating income and delivering higher highs and higher lows over the course of freight market cycles."
+    ],
+    "guidance_evidence": [
+      "expected to be toward the lower end of the previously provided range of $85 million to $95 million."
+    ],
+    "wave_or_demand_evidence": [
+      "customer experience and our cost to serve, we continue to focus on ensuring that we’ll be ready for the eventual freight market rebound, with a disciplined operating model that decouples headcount growth from volume growth and drives operating leverage.",
+      "demand.",
+      "customers, which excludes fuel surcharges, decreased approximately 2.",
+      "customers.",
+      "customers and 450,000 contract carriers in our network trust us to manage $22 billion in freight annually.",
+      "customers; risks associated with reliance on technology to operate our business; cyber-security related risks; our ability to staff and retain employees; risks associated with operations outside of the U."
+    ],
+    "warning_or_risk_evidence": [
+      "charged to our customers, which excludes fuel surcharges, decreased approximately 2.",
+      "charges, also decreased approximately 3.",
+      "charges, primarily related to reducing our facilities footprint including early termination or abandonment of office buildings under operating leases.",
+      "charges, primarily related to an impairment of internally developed software and charges related to reducing our facilities footprint including early termination or abandonment of office buildings under operating leases.",
+      "charges.",
+      "charges and costs."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3000,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "98.860001",
+    "return_10d_pct": "-0.1618",
+    "return_20d_pct": "1.8309",
+    "return_30d_pct": "4.8048",
+    "return_60d_pct": "11.6427",
+    "return_90d_pct": "10.9043"
+  },
+  "text_stats": {
+    "primary_text_len": 3478,
+    "exhibit_text_len": 66041,
+    "combined_text_len": 69521
+  }
+}

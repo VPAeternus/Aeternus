@@ -1212,7 +1212,7 @@ python3 -m cli.main fundamental-right-tail-queues \
 ```
 
 Without `--target-events-csv`, no `target_miss_rescue_audit.csv` is written in daily live mode.
-These queues are visibility/research queues, not buy lists.
+These queues are visibility/fundamental review lists, not buy lists.
 ```
 
 - [ ] **Step 2: Add final behavior statement**

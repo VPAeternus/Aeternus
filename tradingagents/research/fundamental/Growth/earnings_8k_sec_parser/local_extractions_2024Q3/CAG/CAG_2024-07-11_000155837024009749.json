@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CAG",
+    "cik": "23217",
+    "event_date": "2024-07-11",
+    "event_accession": "0001558370-24-009749",
+    "primary_8k_doc": "tmb-20240711x8k.htm",
+    "exhibit_docs": [
+      "tmb-20240711xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CAG_000155837024009749_tmb-20240711x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CAG_000155837024009749_tmb-20240711xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CAG",
+    "cik": "23217",
+    "entity_name": "CONAGRA BRANDS, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "9303700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-04",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-02-26",
+    "net_income_value": "-77500000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-04",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-08-28",
+    "assets_value": "22052600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-04",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-05-28",
+    "financing_cash_flow_value": "-454500000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-04",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-02-26",
+    "investing_cash_flow_value": "-260200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-04",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-02-26",
+    "operating_cash_flow_value": "703400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-04",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-02-26",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.00833",
+    "operating_cash_flow_to_revenue": "0.075604",
+    "assets_to_revenue": "2.370304",
+    "financing_cash_flow_to_revenue": "-0.048852",
+    "investing_cash_flow_to_revenue": "-0.027967"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales decreased 2.",
+      "net sales decreased 1.",
+      "net sales of (1.",
+      "net sales of more than $12 billion.",
+      "earnings per share (EPS) was $0.",
+      "EPS for fiscal 2024 decreased 49."
+    ],
+    "guidance_evidence": [
+      "guidance to reflect: o Organic net sales of (1.",
+      "Outlook The company is providing the following guidance for fiscal 2025: ​ ● Organic net sales of (1.",
+      "Guidance anticipates net inflation (input cost inflation including the impacts of hedging and other sourcing benefits) to be roughly 3%.",
+      "Outlook Conagra Brands will issue pre-recorded remarks prior to hosting a live Q&A conference call and webcast at 9:30 a.",
+      "outlook.",
+      "guidance includes certain non-GAAP financial measures (organic net sales growth, adjusted operating margin, adjusted EPS, net leverage ratio, and adjusted effective tax rate) that are presented on a forward-looking basis."
+    ],
+    "wave_or_demand_evidence": [
+      "ainst the prior-year fiscal period, unless otherwise noted.",
+      "ain non-cash goodwill and brand impairment charges, and adjusted earnings per share (EPS) was $0.",
+      "ain drove volume improvement in our Domestic Retail business.",
+      "ains, where we also saw market share gains.",
+      "ain productivity initiatives enabled us to expand adjusted gross margins, and we continued to strengthen the balance sheet and reduce our net leverage ratio.",
+      "airment charges and a 5."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, and adjusted earnings per share (EPS) was $0.",
+      "impairment charges and a 5.",
+      "impairment charges outlined above.",
+      "inventory balances.",
+      "impairment charges ● Approximately $0.",
+      "impairment charges, legacy legal contingencies, and unusual tax items."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 12000,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-12",
+    "entry_open": "28.350000",
+    "return_10d_pct": "4.6208",
+    "return_20d_pct": "6.7019",
+    "return_30d_pct": "5.2205",
+    "return_60d_pct": "15.6614",
+    "return_90d_pct": "3.8448"
+  },
+  "text_stats": {
+    "primary_text_len": 3533,
+    "exhibit_text_len": 55942,
+    "combined_text_len": 59477
+  }
+}

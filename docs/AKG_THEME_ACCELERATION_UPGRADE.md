@@ -34,7 +34,7 @@ Existing filing / analysis / LLM output
 → write theme acceleration signal to AKG node
 → mark node as rescan/emergence/research-visible candidate
 → existing DealFlowPipeline picks it up
-→ research queue / fundamental framework
+→ fundamental review list / fundamental framework
 
 AKG remains the source of truth.
 

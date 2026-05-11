@@ -23,7 +23,7 @@ RESULTS_HISTORY_COLUMNS = [
     "Total PnL",
     "Avg R:R",
     "target_pct",
-    "sma50_filter",
+    "regime_filter",
     "sma10_exit",
     "vix_filter",
     "refresh_data",
@@ -36,7 +36,7 @@ def _append_results_history(results: pd.DataFrame, args: argparse.Namespace) -> 
     history_rows.insert(0, "run_at", run_at)
     history_rows["start_date"] = args.start_date
     history_rows["target_pct"] = args.target_pct
-    history_rows["sma50_filter"] = "BELOW"
+    history_rows["regime_filter"] = "SMA50_BELOW"
     history_rows["sma10_exit"] = "CLOSE"
     history_rows["vix_filter"] = not args.no_vix
     history_rows["refresh_data"] = not args.no_refresh
@@ -72,7 +72,7 @@ def _append_trades_history(executor: V3PortfolioExecutor, args: argparse.Namespa
         "pnl",
         "start_date",
         "target_pct",
-        "sma50_filter",
+        "regime_filter",
         "sma10_exit",
         "vix_filter",
         "refresh_data",
@@ -95,7 +95,7 @@ def _append_trades_history(executor: V3PortfolioExecutor, args: argparse.Namespa
         trade_rows.insert(0, "run_at", run_at)
         trade_rows["start_date"] = args.start_date
         trade_rows["target_pct"] = args.target_pct
-        trade_rows["sma50_filter"] = "BELOW"
+        trade_rows["regime_filter"] = "SMA50_BELOW"
         trade_rows["sma10_exit"] = "CLOSE"
         trade_rows["vix_filter"] = not args.no_vix
         trade_rows["refresh_data"] = not args.no_refresh
@@ -138,7 +138,7 @@ def main() -> None:
         refresh_data=not args.no_refresh,
     )
     executor.run_portfolio()
-    executor.generate_report()
+    executor.write_outputs()
     trades_history_path = _append_trades_history(executor, args)
 
     results_path = Path("portfolio_ticker_results.csv")

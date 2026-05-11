@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FIX",
+    "cik": "1035983",
+    "event_date": "2024-07-25",
+    "event_accession": "0001558370-24-010175",
+    "primary_8k_doc": "fix-20240725x8k.htm",
+    "exhibit_docs": [
+      "fix-20240725xex99d1.htm",
+      "fix-20240725xex99d2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FIX_000155837024010175_fix-20240725x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FIX_000155837024010175_fix-20240725xex99d1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FIX_000155837024010175_fix-20240725xex99d2.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FIX",
+    "cik": "1035983",
+    "entity_name": "Comfort Systems USA, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1174640000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "57216000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3305579000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-66618000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-68945000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "126909000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.048709",
+    "operating_cash_flow_to_revenue": "0.108041",
+    "assets_to_revenue": "2.814121",
+    "financing_cash_flow_to_revenue": "-0.056714",
+    "investing_cash_flow_to_revenue": "-0.058695"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $3.",
+      "net income was $134.",
+      "net income of $230.",
+      "Operating income ​ 184,670 ​ 10.",
+      "Net income ​ $ 134,009 ​ 7.",
+      "Net income excluding tax gains ​ $ 134,009 ​ $ 69,476 ​ $ 230,328 ​ $ 123,657 ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ Diluted income per share ​ $ 3."
+    ],
+    "guidance_evidence": [
+      "forecasts for its existing operations and do not include the potential impact of any future acquisitions."
+    ],
+    "wave_or_demand_evidence": [
+      "customers this quarter, and early results from recently acquired companies also exceeded our high expectations.",
+      "Backlog as of June 30, 2024 was $5.",
+      "backlog increased from $4.",
+      "Backlog also remains at extremely high levels despite a roughly 30% surge in same-store revenue.",
+      "backlog is 25% above last year, demand continues at unprecedented levels and our job pipelines are robust.",
+      "aid, “Our teams achieved superb execution for our customers this quarter, and early results from recently acquired companies also exceeded our high expectations."
+    ],
+    "warning_or_risk_evidence": [
+      "restrictions related thereto; and other risks detailed in our reports filed with the Securities and Exchange Commission (the “SEC”).",
+      "impairment, other one-time expenses or gains and depreciation and amortization.",
+      "uncertainties (some of which are beyond the Company’s control) and assumptions that could cause actual future results to differ materially from the Company’s historical experience and its present expectations or projections."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1810,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "302.279999",
+    "return_10d_pct": "-0.4565",
+    "return_20d_pct": "11.6316",
+    "return_30d_pct": "11.6548",
+    "return_60d_pct": "28.4174",
+    "return_90d_pct": "36.7838"
+  },
+  "text_stats": {
+    "primary_text_len": 4592,
+    "exhibit_text_len": 17802,
+    "combined_text_len": 22396
+  }
+}

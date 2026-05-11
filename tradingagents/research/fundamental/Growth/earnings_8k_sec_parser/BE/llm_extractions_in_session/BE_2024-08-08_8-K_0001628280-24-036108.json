@@ -1,0 +1,55 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the second quarter ended June 30, 2024",
+    "period_end_date": "June 30, 2024"
+  },
+  "reported_results": {
+    "revenue_millions": 335.767,
+    "revenue_yoy_pct": 11.5153,
+    "revenue_qoq_pct": 42.6986,
+    "gross_margin_pct": 21.8,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "KR Sridhar, CEO of Bloom Energy said, “It is now widely understood that demand for electricity is expected to far exceed available supply through the grid.",
+    "wave_signal": "•Announced agreement with CoreWeave, a leader in AI, to power the high-performance data center owned by Chirisa Technology Parks located in Volo, Illinois.",
+    "margin_signal": "•Gross margin of 20.",
+    "risk_signal": "•Operating loss of $23.",
+    "customer_signal": "These forward-looking statements include, but are not limited to, Bloom’s expectations regarding: innovation and solutions; customer reaction to Bloom’s products; Bloom’s liquidity position; market demand for energy solutions; and Bloom’s 2024 outlook for revenue and profitability."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | 335767 | 335767 | | 235298 | 235298 | | 301095 | 301095 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | 335767 | 335767 | | 235298 | 235298 | | 301095 | 301095 |"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | 335767 | 335767 | | 235298 | 235298 | | 301095 | 301095 |"
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "Gross Margin Gross Margin Gross Margin 21.8% 21.8% 21.8% 17.5% 17.5% 17.5% 20.4% 20.4% 20.4%"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

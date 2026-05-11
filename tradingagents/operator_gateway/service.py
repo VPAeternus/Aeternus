@@ -66,12 +66,12 @@ class OperatorGatewayService:
         return schedule
 
     def get_dealflow_feed(self, *, now: Optional[dt.datetime] = None, limit: Optional[int] = None) -> Dict[str, Any]:
-        queue_payload, queue_path = self._load_latest_research_queue()
+        handoff_payload, handoff_path = self._load_latest_scout_handoff()
         out = transform_dealflow_feed(
-            raw_queue=queue_payload,
+            raw_queue=handoff_payload,
             snapshot=build_snapshot_envelope(
-                raw_payload=queue_payload,
-                artifact_path=queue_path,
+                raw_payload=handoff_payload,
+                artifact_path=handoff_path,
                 now=now,
             ),
             thesis_summary_max_chars=int(self.config.get("operator_gateway_thesis_summary_max_chars", 140)),
@@ -82,14 +82,14 @@ class OperatorGatewayService:
 
     def get_candidate_detail(self, *, symbol: str, now: Optional[dt.datetime] = None) -> Dict[str, Any]:
         symbol_norm = str(symbol or "").upper().strip()
-        queue_payload, queue_path = self._load_latest_research_queue()
-        snapshot = build_snapshot_envelope(raw_payload=queue_payload, artifact_path=queue_path, now=now)
-        queue_item = self._find_queue_item(queue_payload=queue_payload, symbol=symbol_norm)
-        queue_date = str(queue_payload.get("date") or "")
-        analysis_report, _analysis_path = self._load_analysis_report(symbol=symbol_norm, analysis_date=queue_date)
+        handoff_payload, handoff_path = self._load_latest_scout_handoff()
+        snapshot = build_snapshot_envelope(raw_payload=handoff_payload, artifact_path=handoff_path, now=now)
+        handoff_item = self._find_handoff_item(handoff_payload=handoff_payload, symbol=symbol_norm)
+        handoff_date = str(handoff_payload.get("date") or "")
+        analysis_report, _analysis_path = self._load_analysis_report(symbol=symbol_norm, analysis_date=handoff_date)
         return transform_candidate_detail(
             symbol=symbol_norm,
-            queue_item=queue_item,
+            queue_item=handoff_item,
             analysis_report=analysis_report,
             snapshot=snapshot,
             detail_summary_max_chars=int(self.config.get("operator_gateway_detail_summary_max_chars", 320)),
@@ -168,12 +168,12 @@ class OperatorGatewayService:
         now_utc = _as_utc(now)
         bucket_seconds = max(1, int(self.config.get("operator_gateway_bootstrap_etag_bucket_seconds", 20)))
         bucket = int(now_utc.timestamp()) // bucket_seconds
-        queue_path = self._resolve_latest_research_queue_path()
+        handoff_path = self._resolve_latest_scout_handoff_path()
         payload = {
             "bucket": bucket,
             "heartbeat": _file_fingerprint(Path(str(self.config.get("operator_gateway_heartbeat_path", "")))),
             "system_halt": _file_fingerprint(Path(str(self.config.get("operator_gateway_system_halt_path", "")))),
-            "queue": _file_fingerprint(queue_path),
+            "scout_handoff": _file_fingerprint(handoff_path),
             "intents": _file_fingerprint(triage_intents_path(self.config)),
             "receipts": _file_fingerprint(triage_receipts_path(self.config)),
             "allocator_db": _file_fingerprint(self._allocator_db_path()),
@@ -195,8 +195,7 @@ class OperatorGatewayService:
         universe_filter = self._safe_read_json(date_dir / "universe_filter.json")
         discovery_delta = self._safe_read_json(date_dir / "discovery_delta.json")
         connector_health = self._safe_read_json_list(date_dir / "connector_health.json")
-        shortlist = self._safe_read_json(date_dir / "shortlist_top20.json")
-        research_queue = self._safe_read_json(date_dir / "research_queue.json")
+        scout_handoff = self._safe_read_json(date_dir / "final_dealflow_tickers.json")
         learning_status = self._safe_read_json(date_dir / "learning_status.json")
         source_attribution = self._safe_read_json(date_dir / "source_attribution.json")
 
@@ -288,41 +287,41 @@ class OperatorGatewayService:
             },
         )
 
-        shortlist_candidates = list(shortlist.get("candidates", []) or []) if shortlist else []
+        handoff_tickers = list(scout_handoff.get("tickers", []) or []) if scout_handoff else []
         connector_errors = sum(1 for row in connector_health if str((row or {}).get("status") or "") == "ERROR")
         collect_status = "MISSING"
-        if shortlist:
+        if scout_handoff:
             collect_status = "DEGRADED" if connector_errors > 0 or not connector_health else "OK"
         collect_stage = self._make_stage(
             stage_id="collect",
-            label="Collect & Score",
+            label="Collect Scouts",
             status=collect_status,
             summary=(
-                f"{len(shortlist_candidates)} shortlisted, {len(connector_health)} connectors, "
+                f"{len(handoff_tickers)} scout tickers, {len(connector_health)} connectors, "
                 f"{connector_errors} connector errors"
             ),
             artifacts=self._existing_artifact_strings(
                 [
                     date_dir / "connector_health.json",
                     date_dir / "signals_raw.json",
-                    date_dir / "shortlist_top20.json",
-                    date_dir / "all_scored_candidates.json",
+                    date_dir / "scout_ticker_summary.json",
+                    date_dir / "final_dealflow_tickers.json",
                 ]
             ),
             metrics={
-                "shortlist_count": len(shortlist_candidates),
+                "scout_ticker_count": len(handoff_tickers),
                 "connector_count": len(connector_health),
                 "connector_error_count": connector_errors,
-                "event_triggered": bool(shortlist.get("event_triggered")) if shortlist else False,
+                "event_triggered": bool(scout_handoff.get("event_triggered")) if scout_handoff else False,
             },
         )
 
-        queue_items = list(research_queue.get("items", []) or []) if research_queue else []
-        analysis_paths = self._analysis_report_paths(resolved_date, queue_items)
+        analysis_items = [{"symbol": symbol} for symbol in handoff_tickers]
+        analysis_paths = self._analysis_report_paths(resolved_date, analysis_items)
         analysis_count = len(analysis_paths)
         research_status = "MISSING"
-        if queue_items:
-            if analysis_count >= len(queue_items):
+        if handoff_tickers:
+            if analysis_count >= len(handoff_tickers):
                 research_status = "OK"
             elif analysis_count > 0:
                 research_status = "DEGRADED"
@@ -330,12 +329,12 @@ class OperatorGatewayService:
                 research_status = "PENDING"
         research_stage = self._make_stage(
             stage_id="research",
-            label="Research",
+            label="Fundamental Research",
             status=research_status,
-            summary=f"{analysis_count}/{len(queue_items)} analysis reports available",
-            artifacts=self._existing_artifact_strings([date_dir / "research_queue.json", *analysis_paths[:8]]),
+            summary=f"{analysis_count}/{len(handoff_tickers)} analysis reports available",
+            artifacts=self._existing_artifact_strings([date_dir / "final_dealflow_tickers.json", *analysis_paths[:8]]),
             metrics={
-                "queue_count": len(queue_items),
+                "scout_ticker_count": len(handoff_tickers),
                 "analysis_count": analysis_count,
             },
         )
@@ -439,9 +438,9 @@ class OperatorGatewayService:
         if discover_stage["status"] == "MISSING":
             blockers.append("Discovery artifacts are missing for this date.")
         if collect_stage["status"] == "MISSING":
-            blockers.append("Collection/scoring artifacts are missing for this date.")
+            blockers.append("Scout ticker handoff is missing for this date.")
         if research_stage["status"] in {"MISSING", "PENDING"}:
-            recommendations.append("Run batch/deep analysis so shortlist symbols produce analysis reports.")
+            recommendations.append("Run the fundamental framework on the scout ticker handoff.")
         if learning_stage["status"] == "MISSING":
             recommendations.append("Run learning cycle to produce hindsight, IC, and writeback artifacts.")
 
@@ -1214,10 +1213,10 @@ class OperatorGatewayService:
             if dated_dirs:
                 return dated_dirs[-1]
 
-        queue_payload, _ = self._load_latest_research_queue()
-        queue_date = str(queue_payload.get("date") or "").strip()
-        if re.match(r"^\d{4}-\d{2}-\d{2}$", queue_date):
-            return queue_date
+        handoff_payload, _ = self._load_latest_scout_handoff()
+        handoff_date = str(handoff_payload.get("date") or "").strip()
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", handoff_date):
+            return handoff_date
         return dt.date.today().isoformat()
 
     def _dealflow_base_dir(self) -> Path:
@@ -1313,7 +1312,7 @@ class OperatorGatewayService:
 
             return [int(value) for value in PASS_NUMBERS]
         except Exception:
-            return list(range(1, 16))
+            return list(range(1, 17))
 
     def _analysis_report_paths(self, as_of_date: str, queue_items: List[Dict[str, Any]]) -> List[Path]:
         results_dir = Path(str(self.config.get("results_dir", "./results")))
@@ -1368,7 +1367,7 @@ class OperatorGatewayService:
                 "category": "social",
                 "mode": "manual",
                 "status": x_status,
-                "description": "15-pass Grok-assisted social discovery sweep with pass-level ingest.",
+                "description": "16-pass Grok-assisted social discovery sweep with pass-level ingest.",
                 "last_run_at_utc": self._latest_artifact_timestamp(
                     [self._x_feed_date_dir(as_of_date) / "merged.json", scout_audit_path]
                 ),
@@ -1543,25 +1542,25 @@ class OperatorGatewayService:
             raise OperatorGatewayError("Invalid JSON payload.")
         return parsed
 
-    def _load_latest_research_queue(self) -> Tuple[Dict[str, Any], Optional[Path]]:
-        queue_path = self._resolve_latest_research_queue_path()
-        if queue_path is not None and queue_path.exists():
-            return self._safe_read_json(queue_path), queue_path
+    def _load_latest_scout_handoff(self) -> Tuple[Dict[str, Any], Optional[Path]]:
+        handoff_path = self._resolve_latest_scout_handoff_path()
+        if handoff_path is not None and handoff_path.exists():
+            return self._safe_read_json(handoff_path), handoff_path
         return {}, None
 
-    def _resolve_latest_research_queue_path(self) -> Optional[Path]:
-        configured = str(self.config.get("operator_gateway_research_queue_path", "")).strip()
+    def _resolve_latest_scout_handoff_path(self) -> Optional[Path]:
+        configured = str(self.config.get("operator_gateway_scout_handoff_path", "")).strip()
         if configured:
             path = Path(configured)
             if path.exists():
                 return path
 
         base = Path(str(self.config.get("operator_gateway_dealflow_base_dir", "eval_results/deal_flow")))
-        latest_path = base / "latest_research_queue.json"
+        latest_path = base / "latest_final_dealflow_tickers.json"
         if latest_path.exists():
             return latest_path
 
-        dated = sorted(base.glob("*/research_queue.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        dated = sorted(base.glob("*/final_dealflow_tickers.json"), key=lambda p: p.stat().st_mtime, reverse=True)
         if dated:
             return dated[0]
         return None
@@ -1585,16 +1584,14 @@ class OperatorGatewayService:
         return None, None
 
     @staticmethod
-    def _find_queue_item(*, queue_payload: Dict[str, Any], symbol: str) -> Optional[Dict[str, Any]]:
-        rows = queue_payload.get("items", [])
-        if not isinstance(rows, list):
-            return None
+    def _find_handoff_item(*, handoff_payload: Dict[str, Any], symbol: str) -> Optional[Dict[str, Any]]:
         target = str(symbol or "").upper().strip()
-        for row in rows:
-            if not isinstance(row, dict):
-                continue
-            if str(row.get("symbol") or "").upper().strip() == target:
-                return dict(row)
+        tickers = handoff_payload.get("tickers", [])
+        if target not in {str(row or "").upper().strip() for row in tickers if row}:
+            return None
+        metadata = handoff_payload.get("metadata_by_ticker", {})
+        meta = metadata.get(target, {}) if isinstance(metadata, dict) else {}
+        return {"symbol": target, **(dict(meta) if isinstance(meta, dict) else {})}
         return None
 
     def _allocator_db_path(self) -> Path:

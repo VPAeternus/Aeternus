@@ -40,14 +40,13 @@ class SnapshotEnvelope(BaseModel):
 class CandidateDTO(BaseModel):
     symbol: str
     lane: str
-    score: int
-    confidence: int
+    score: Optional[int] = None
+    confidence: Optional[int] = None
     thesis_summary: str
     risk_flags: List[str]
     quality_tier: str
     snapshot_id: str
     queue_id: str
-    selected_for_deep: bool
     research_playbook: str
 
 
@@ -55,7 +54,7 @@ class DealflowSummaryDTO(BaseModel):
     run_id: str
     date: str
     total_candidates: int
-    selected_for_deep: int
+    handoff_count: int
     lane_counts: Dict[str, int]
     top_symbols: List[str]
 

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ON",
+    "cik": "1097864",
+    "event_date": "2024-07-29",
+    "event_accession": "0001193125-24-186735",
+    "primary_8k_doc": "d858048d8k.htm",
+    "exhibit_docs": [
+      "d858048dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ON_000119312524186735_d858048d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ON_000119312524186735_d858048dex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ON",
+    "cik": "1097864",
+    "entity_name": "ON Semiconductor Corporation",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1959700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-29",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "461700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-29",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "13215200000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-29",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-63400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-29",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-562000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-29",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "408900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-29",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.235597",
+    "operating_cash_flow_to_revenue": "0.208654",
+    "assets_to_revenue": "6.743481",
+    "financing_cash_flow_to_revenue": "-0.032352",
+    "investing_cash_flow_to_revenue": "-0.286779"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $1,735.",
+      "GAAP gross margin and non-GAAP gross margin of 45.",
+      "earnings per share and non-GAAP diluted earnings per share of $0.",
+      "Net Income in millions) Q2 2024 Q1 2024 Q2 2023 Q2 2024 Q1 2024 Q2 2023 Revenue $1,735.",
+      "Gross Margin 45.",
+      "Net Income attributable to ON Semiconductor Corporation $338."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK The following table outlines onsemis projected third quarter of 2024 GAAP and non-GAAP outlook.",
+      "outlook.",
+      "guidance for the third quarter of 2024.",
+      "expects, projects, may, will, intends, plans, anticipates, should or similar expressions or by discussions of strategy, plans or intentions.",
+      "forecasts, estimates and assumptions and involve risks, uncertainties and other factors that could cause results or events to differ materially from those expressed in the forward-looking statements.",
+      "forecast future results and evaluate onsemis current performance."
+    ],
+    "wave_or_demand_evidence": [
+      "ains, doubling down on investments in strategic markets, and expanding the breadth of our portfolio of industry-leading products with analog and mixed-signal solutions, said Hassane El-Khoury, president and CEO, onsemi.",
+      "ain reporting units and its segment reporting structure.",
+      "airments and other, net; goodwill impairment charges; gains and losses on debt prepayment; actuarial (gains) losses on pension plans and other pension benefits; and certain other special items, as necessary.",
+      "ailable would include a forward-looking income statement, balance sheet and statement of cash flows in accordance with GAAP.",
+      "ailable at this site approximately one hour following the live broadcast and will continue to be available for approximately 30 days following the conference call.",
+      "ainable energy grids, industrial automation, and 5G and cloud infrastructure."
+    ],
+    "warning_or_risk_evidence": [
+      "impairments and other, net; goodwill impairment charges; gains and losses on debt prepayment; actuarial (gains) losses on pension plans and other pension benefits; and certain other special items, as necessary.",
+      "impairments and other charges, net 72.",
+      "impairment charges 15.",
+      "impairments and other, net (72.",
+      "impairments and other, net 72.",
+      "impairments and other, net 4."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1735.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-30",
+    "entry_open": "77.800003",
+    "return_10d_pct": "-8.3548",
+    "return_20d_pct": "-0.1028",
+    "return_30d_pct": "-1.9280",
+    "return_60d_pct": "-6.6710",
+    "return_90d_pct": "-7.1465"
+  },
+  "text_stats": {
+    "primary_text_len": 3766,
+    "exhibit_text_len": 32990,
+    "combined_text_len": 36758
+  }
+}

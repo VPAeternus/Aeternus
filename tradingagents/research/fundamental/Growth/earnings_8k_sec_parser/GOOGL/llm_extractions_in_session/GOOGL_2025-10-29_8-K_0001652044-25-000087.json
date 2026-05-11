@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended September 30, 2025",
+    "period_end_date": "September 30, 2025"
+  },
+  "reported_results": {
+    "revenue_millions": 102346.0,
+    "revenue_yoy_pct": 16.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "•With the growth across our business and demand from Cloud customers, we now expect 2025 capital expenditures to be in a range of $91 billion to $93 billion.",
+    "wave_signal": "1Alphabet Announces Third Quarter 2025 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "•Total operating income increased 9% and operating margin was 30.",
+    "risk_signal": "6 Total TAC$13,719 $14,876 Number of employees181,269190,167 Segment Operating Results Quarter Ended September 30,20242025Operating income (loss):Google Services(1)$30,856 $33,527 Google Cloud1,947 $3,594 Other Bets(1,116)$(1,426)Alphabet-level activities(2)(3,166)$(4,467)Total income from operations$28,521 $31,228 (1)Includes the EC fine of $3.",
+    "customer_signal": "•With the growth across our business and demand from Cloud customers, we now expect 2025 capital expenditures to be in a range of $91 billion to $93 billion."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 88268 | | | | | $ | 102346 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 88268 | | | | | $ | 102346 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

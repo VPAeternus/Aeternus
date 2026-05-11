@@ -1,0 +1,48 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended June 30, 2025",
+    "period_end_date": "June 30, 2025"
+  },
+  "reported_results": {
+    "revenue_millions": 96428.0,
+    "revenue_yoy_pct": null,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "4 billion reflecting robust momentum across the business.",
+    "wave_signal": "1Alphabet Announces Second Quarter 2025 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "•Total operating income increased 14% and operating margin was 32.",
+    "risk_signal": "2,826 Other Bets(1,134)$(1,246)Alphabet-level activities(1)(2,287)$(3,372)Total income from operations$27,425 $31,271 (1)In addition to the costs included in Alphabet-level activities, hedging gains (losses) related to revenue were $102 million and $(112) million for the three months ended June 30, 2024 and 2025, respectively.",
+    "customer_signal": "•Google Cloud includes infrastructure and platform services, applications, and other services for enterprise customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 84742 | | | | | $ | 96428 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 84742 | | | | | $ | 96428 |"
+    }
+  ],
+  "missing_fields": [
+    "reported_results.revenue_yoy_pct",
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

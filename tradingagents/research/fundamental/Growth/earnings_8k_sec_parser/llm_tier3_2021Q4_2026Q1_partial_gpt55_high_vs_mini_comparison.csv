@@ -1,0 +1,1269 @@
+sample_id,quarter,ticker,mini_bucket,xhigh_bucket,bucket_changed,mini_score,xhigh_score,score_change,score_changed,mini_risk,xhigh_risk,risk_change,risk_changed,mini_action,xhigh_action,action_change,action_changed,mini_confidence,xhigh_confidence,confidence_changed,mini_detected_driver_category,xhigh_detected_driver_category,driver_category_changed
+T3000001,2021Q4,ACCO,inflecting,constructive,1,9,4,-5,1,1,2,1,1,3,1,-2,1,high,high,0,pricing_cost_mix,demand_pricing_margin,1
+T3000002,2021Q4,ARLO,inflecting,constructive,1,8,6,-2,1,2,2,0,0,3,1,-2,1,high,high,0,demand_and_subscriptions,subscription_mix,1
+T3000003,2021Q4,BHR,neutral,deteriorating,1,0,-2,-2,1,3,4,1,1,0,-3,-3,1,medium,medium,0,revpar_recovery,travel_recovery,1
+T3000004,2021Q4,CNDT,neutral,deteriorating,1,1,-3,-4,1,4,5,1,1,-3,-3,0,0,medium,medium,0,contract_signings_and_restructuring,contract_pipeline,1
+T3000005,2021Q4,COMP,constructive,neutral,1,3,1,-2,1,3,3,0,0,1,0,-1,1,high,high,0,scale_and_margin_improvement,scale_unit_economics,1
+T3000006,2021Q4,CTLP,constructive,constructive,0,5,6,1,1,2,1,-1,1,1,1,0,0,high,high,0,payments_and_devices_growth,transaction_growth,1
+T3000007,2021Q4,DNUT,inflecting,inflecting,0,9,7,-2,1,1,2,1,1,3,3,0,0,high,high,0,hub_and_spoke_scale,operating_model_scale,1
+T3000008,2021Q4,DRH,inflecting,constructive,1,8,3,-5,1,1,3,2,1,3,1,-2,1,high,high,0,hotel_recovery,travel_recovery,1
+T3000009,2021Q4,DXLG,inflecting,inflecting,0,7,8,1,1,3,2,-1,1,3,3,0,0,high,high,0,demand_recovery_margin,demand recovery and efficiency,1
+T3000010,2021Q4,EEX,constructive,constructive,0,5,6,1,1,2,2,0,0,1,1,0,0,medium,high,1,event_reopen_recovery,post-COVID event recovery,1
+T3000011,2021Q4,ESRT,deteriorating,deteriorating,0,-1,-2,-1,1,3,2,-1,1,-3,-3,0,0,low,medium,1,reopening_lease_activity,insufficient positive driver,1
+T3000012,2021Q4,GTX,constructive,neutral,1,4,2,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,margin_expansion,mix and productivity margin improvement,1
+T3000013,2021Q4,HIMS,constructive,neutral,1,3,0,-3,1,3,3,0,0,1,0,-1,1,medium,high,1,subscriber_growth,subscription growth,1
+T3000014,2021Q4,HLIT,inflecting,inflecting,0,7,9,2,1,2,1,-1,1,3,3,0,0,high,high,0,demand_momentum_margin,segment growth and backlog,1
+T3000015,2021Q4,HLX,neutral,deteriorating,1,2,-3,-5,1,3,4,1,1,0,-3,-3,1,medium,high,1,cycle_recovery,weak utilization and rates,1
+T3000016,2021Q4,JBLU,neutral,deteriorating,1,1,-1,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,demand_recovery_capacity_actions,travel demand recovery with near-term pressure,1
+T3000017,2021Q4,KEQU,neutral,deteriorating,1,1,-2,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,operational_recovery,demand_backlog_with_margin_pressure,1
+T3000018,2021Q4,KLXE,constructive,constructive,0,3,6,3,1,3,2,-1,1,1,1,0,0,high,high,0,pricing_and_utilization,pricing_utilization_synergy,1
+T3000019,2021Q4,KOS,constructive,constructive,0,5,4,-1,1,2,3,1,1,1,1,0,0,high,medium,1,portfolio_and_production_improvement,portfolio_transition_and_deleveraging,1
+T3000020,2021Q4,LFST,constructive,deteriorating,1,5,-1,-6,1,2,4,2,1,1,-3,-4,1,high,high,0,clinic_network_growth,growth_with_margin_deterioration,1
+T3000021,2021Q4,MERC,constructive,constructive,0,6,6,0,0,2,2,0,0,1,1,0,0,high,high,0,pricing_and_cost_mix,pricing_realization,1
+T3000022,2021Q4,NNBR,deteriorating,deteriorating,0,-1,-4,-3,1,3,4,1,1,-3,-3,0,0,high,high,0,volume_and_inflation_pressure,supply_chain_and_inflation_pressure,1
+T3000023,2021Q4,NVRI,constructive,deteriorating,1,3,-2,-5,1,3,4,1,1,1,-3,-4,1,high,high,0,segment_mix_and_demand,segment_divergence_and_guidance_shortfall,1
+T3000024,2021Q4,OI,neutral,constructive,1,2,6,4,1,2,2,0,0,0,1,1,1,high,high,0,pricing_and_volume_mix,outlook_raise_and_cash_flow,1
+T3000025,2021Q4,ORGO,constructive,constructive,0,5,3,-2,1,2,2,0,0,1,1,0,0,high,high,0,pricing_and_mix,product growth,1
+T3000026,2021Q4,OSUR,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,medium,medium,0,demand_and_mixture,capacity/demand,1
+T3000027,2021Q4,OSW,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,medium,high,1,reopening_and_volume_recovery,reopening recovery,1
+T3000028,2021Q4,PAYO,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,broad_based_growth,platform growth,1
+T3000029,2021Q4,PWP,constructive,constructive,0,6,6,0,0,1,1,0,0,1,1,0,0,high,high,0,advisory_volume_growth,advisory demand,1
+T3000030,2021Q4,RBBN,constructive,deteriorating,1,3,-1,-4,1,2,4,2,1,1,-3,-4,1,high,high,0,supply_chain_and_order_timing,supply/demand mismatch,1
+T3000031,2021Q4,REAL,constructive,neutral,1,3,1,-2,1,1,2,1,1,1,0,-1,1,medium,medium,0,gmv_growth,marketplace demand,1
+T3000032,2021Q4,RELL,inflecting,constructive,1,7,6,-1,1,1,1,0,0,3,1,-2,1,high,high,0,broad_based_sales_and_backlog,broad-based sales growth,1
+T3000033,2021Q4,RIG,deteriorating,deteriorating,0,-3,-2,1,1,4,3,-1,1,-3,-3,0,0,medium,high,1,operational_efficiency,operations/contracts,1
+T3000034,2021Q4,RYAM,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,medium,medium,0,pricing_mix,portfolio/pricing,1
+T3000035,2021Q4,SHO,deteriorating,deteriorating,0,-2,-1,1,1,4,3,-1,1,-3,-3,0,0,low,low,0,hotel_recovery,property-level recovery,1
+T3000036,2021Q4,SMHI,neutral,deteriorating,1,1,-1,-2,1,3,3,0,0,0,-3,-3,1,medium,high,1,utilization_and_rates,cycle/utilization,1
+T3000037,2021Q4,STGW,constructive,constructive,0,6,6,0,0,1,1,0,0,1,1,0,0,high,high,0,organic_growth,organic growth/guidance,1
+T3000038,2021Q4,UTI,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,student_demand,enrollment/operational improvement,1
+T3000039,2021Q4,ZETA,constructive,inflecting,1,5,7,2,1,1,1,0,0,1,3,2,1,high,high,0,revenue_growth,customer/revenue scaling,1
+T3000040,2022Q1,ALTG,constructive,constructive,0,5,5,0,0,1,2,1,1,1,1,0,0,high,high,0,diversified_demand,demand/acquisitions,1
+T3000041,2022Q1,ARLO,inflecting,inflecting,0,7,9,2,1,2,1,-1,1,3,3,0,0,high,high,0,growth_and_margin,recurring_revenue_growth,1
+T3000042,2022Q1,BHR,constructive,constructive,0,3,3,0,0,2,1,-1,1,1,1,0,0,medium,medium,0,operating_recovery,demand_recovery,1
+T3000043,2022Q1,BTU,inflecting,inflecting,0,8,8,0,0,1,2,1,1,3,3,0,0,high,high,0,commodity_pricing,pricing_margin_inflection,1
+T3000044,2022Q1,CNDT,deteriorating,deteriorating,0,-1,-2,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,mix_and_contract_volume,contract_volume_pressure,1
+T3000045,2022Q1,CNTY,constructive,constructive,0,5,4,-1,1,1,2,1,1,1,1,0,0,medium,medium,0,operating_recovery,post_covid_recovery,1
+T3000046,2022Q1,COMP,constructive,neutral,1,3,1,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,market_share_and_growth,scale_growth,1
+T3000047,2022Q1,CTOS,constructive,constructive,0,5,6,1,1,2,2,0,0,1,1,0,0,medium,high,1,integration_and_demand,backlog_demand_growth,1
+T3000048,2022Q1,DBI,inflecting,inflecting,0,8,8,0,0,1,1,0,0,3,3,0,0,high,high,0,margin_and_brand_mix,gross_margin_recovery,1
+T3000049,2022Q1,DRH,neutral,deteriorating,1,1,-3,-4,1,4,4,0,0,-3,-3,0,0,medium,high,1,operating recovery,demand recovery delay,1
+T3000050,2022Q1,EVCM,neutral,neutral,0,0,1,1,1,2,1,-1,1,0,0,0,0,low,medium,1,guidance update,preliminary guidance beat,1
+T3000051,2022Q1,EZPW,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,operating improvement,core operating improvement,1
+T3000052,2022Q1,FSTR,deteriorating,deteriorating,0,-1,-2,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,demand and margin pressure,margin and order pressure,1
+T3000053,2022Q1,HBB,neutral,constructive,1,1,3,2,1,3,2,-1,1,0,1,1,1,medium,high,1,supply chain disruption,supply-constrained demand and product growth,1
+T3000054,2022Q1,HIMS,constructive,neutral,1,3,0,-3,1,3,3,0,0,1,0,-1,1,medium,high,1,growth scaling,subscription revenue growth,1
+T3000055,2022Q1,HLIT,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,backlog and demand strength,backlog-led growth,1
+T3000056,2022Q1,JBLU,neutral,deteriorating,1,1,-2,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,demand shock and recovery,demand shock and recovery claim,1
+T3000057,2022Q1,JILL,inflecting,inflecting,0,7,9,2,1,2,1,-1,1,3,3,0,0,high,high,0,margin_improvement,margin recovery,1
+T3000058,2022Q1,KEQU,neutral,deteriorating,1,1,-3,-4,1,3,4,1,1,0,-3,-3,1,medium,medium,0,backlog_growth,backlog growth,1
+T3000059,2022Q1,KLXE,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,medium,medium,0,sequential_revenue_growth,sequential revenue recovery,1
+T3000060,2022Q1,LBTYA,inflecting,constructive,1,8,3,-5,1,1,2,1,1,3,1,-2,1,high,high,0,cash_flow_recovery,top-line stabilization,1
+T3000061,2022Q1,LBTYK,inflecting,constructive,1,8,3,-5,1,1,2,1,1,3,1,-2,1,high,high,0,cash_flow_recovery,top-line stabilization,1
+T3000062,2022Q1,LFST,constructive,neutral,1,6,0,-6,1,2,3,1,1,1,0,-1,1,high,high,0,growth_investment,high revenue growth with margin dilution,1
+T3000063,2022Q1,MQ,deteriorating,constructive,1,-1,3,4,1,4,1,-3,1,-3,1,4,1,medium,medium,0,volume_outperformance,processing-volume upside,1
+T3000064,2022Q1,MTRX,constructive,deteriorating,1,3,-2,-5,1,2,4,2,1,1,-3,-4,1,medium,high,1,order_backlog,backlog and award recovery,1
+T3000065,2022Q1,NVRI,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,margin_and_mix,demand_recovery_and_initiatives,1
+T3000066,2022Q1,ORGO,constructive,constructive,0,3,6,3,1,2,2,0,0,1,1,0,0,high,high,0,growth_and_margin_expansion,commercial_execution_and_margin_expansion,1
+T3000067,2022Q1,OSCR,deteriorating,neutral,1,-2,0,2,1,4,4,0,0,-3,-3,0,0,high,high,0,growth_with_losses,membership_and_premium_growth,1
+T3000068,2022Q1,OSUR,deteriorating,deteriorating,0,-4,-4,0,0,4,4,0,0,-3,-3,0,0,high,high,0,mixed_operating_pressure,covid_product_decline_and_strategic_review,1
+T3000069,2022Q1,OSW,constructive,constructive,0,3,4,1,1,2,3,1,1,1,1,0,0,high,high,0,reopening_and_scale,cruise_operations_reopening,1
+T3000070,2022Q1,PAYO,constructive,neutral,1,3,1,-2,1,3,4,1,1,1,-3,-4,1,high,high,0,volume_and_take_rate_mix,higher_value_services_growth_with_geopolitical_reset,1
+T3000071,2022Q1,PLTR,constructive,inflecting,1,5,8,3,1,2,1,-1,1,1,3,2,1,high,high,0,growth_and_operating_efficiency,commercial_customer_growth,1
+T3000072,2022Q1,PWP,neutral,neutral,0,2,1,-1,1,1,2,1,1,0,0,0,0,medium,medium,0,revenue_driven_compensation_leverage,revenue_growth_with_compensation_leverage,1
+T3000073,2022Q1,RBBN,neutral,deteriorating,1,0,-1,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,supply_chain,supply_chain_and_mix_pressure,1
+T3000074,2022Q1,REAL,neutral,constructive,1,1,3,2,1,2,1,-1,1,0,1,1,1,medium,medium,0,demand_metrics,marketplace_volume_growth,1
+T3000075,2022Q1,RELY,neutral,neutral,0,0,0,0,0,0,0,0,0,0,0,0,0,high,high,0,none,earnings_date_announcement,1
+T3000076,2022Q1,RIG,constructive,neutral,1,3,2,-1,1,2,2,0,0,1,0,-1,1,medium,high,1,pricing_and_utilization,offshore_drilling_market_recovery,1
+T3000077,2022Q1,RLJ,constructive,constructive,0,6,3,-3,1,2,2,0,0,1,1,0,0,high,high,0,travel_recovery,lodging_demand_recovery,1
+T3000078,2022Q1,RSI,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,high,high,0,revenue_growth,growth_investment_tradeoff,1
+T3000079,2022Q1,SHO,inflecting,deteriorating,1,7,-1,-8,1,1,2,1,1,3,-3,-6,1,high,low,1,hotel_recovery,supplemental_financial_disclosure,1
+T3000080,2022Q1,SLQT,deteriorating,neutral,1,-1,0,1,1,5,5,0,0,-3,-3,0,0,high,high,0,persistency_and_cohort_adjustment,unit_economics_and_persistency_break,1
+T3000081,2022Q1,SMHI,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,high,high,0,operational_improvement,demand_recovery,1
+T3000082,2022Q1,TALO,constructive,constructive,0,6,4,-2,1,1,2,1,1,1,1,0,0,high,medium,1,production_and_cash_flow,production_and_cash_flow,0
+T3000083,2022Q1,TDAY,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,high,0,digital_growth_and_cash_flow,digital_transition_and_cash_flow,1
+T3000084,2022Q1,ULCC,deteriorating,deteriorating,0,-3,-1,2,1,4,3,-1,1,-3,-3,0,0,high,high,0,merger_and_guidance_withdrawal,capacity_growth,1
+T3000085,2022Q1,UTZ,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,high,high,0,pricing_and_productivity,pricing_and_productivity,0
+T3000086,2022Q1,VERX,constructive,neutral,1,4,0,-4,1,2,3,1,1,1,0,-1,1,high,high,0,subscription_and_cloud_growth,cloud_revenue_growth,1
+T3000087,2022Q1,VITL,constructive,constructive,0,6,3,-3,1,1,2,1,1,1,1,0,0,high,high,0,top_line_growth,top_line_growth,0
+T3000088,2022Q1,VRT,constructive,neutral,1,4,0,-4,1,2,4,2,1,1,-3,-4,1,high,high,0,pricing_actions_and_backlog,pricing_backlog_supply_chain,1
+T3000089,2022Q1,VYGR,neutral,neutral,0,2,0,-2,1,3,2,-1,1,0,0,0,0,high,medium,1,pipeline_progress,platform partnership and preclinical pipeline,1
+T3000090,2022Q1,ZETA,inflecting,inflecting,0,8,8,0,0,2,1,-1,1,3,3,0,0,high,high,0,scaled_growth_and_margin_expansion,customer growth and margin expansion,1
+T3000091,2022Q2,AHCO,constructive,constructive,0,6,6,0,0,2,2,0,0,1,1,0,0,high,high,0,revenue_growth_and_cost_absorption,recovery and profitability improvement,1
+T3000092,2022Q2,AIOT,constructive,deteriorating,1,3,-1,-4,1,2,3,1,1,1,-3,-4,1,medium,high,1,recurring_revenue_growth,SaaS and recurring revenue transition,1
+T3000093,2022Q2,ALTG,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,high,0,broad_based_revenue_growth,revenue mix and product support growth,1
+T3000094,2022Q2,AMRX,neutral,neutral,0,2,0,-2,1,2,2,0,0,0,0,0,0,high,high,0,stable_results_with_margin_pressure,portfolio offset and guidance maintenance,1
+T3000095,2022Q2,BLBD,constructive,deteriorating,1,3,-3,-6,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_and_supply_disruption,backlog and pricing response under supply stress,1
+T3000096,2022Q2,BRSP,constructive,inflecting,1,5,7,2,1,1,1,0,0,1,3,2,1,high,high,0,capital_deployment_and_dividend,loan portfolio deployment and dividend growth,1
+T3000097,2022Q2,CCL,neutral,neutral,0,2,0,-2,1,4,4,0,0,-3,-3,0,0,medium,high,1,demand_recovery,demand_recovery,0
+T3000098,2022Q2,CDE,neutral,neutral,0,2,1,-1,1,2,2,0,0,0,0,0,0,medium,medium,0,production_and_guidance,operations_execution,1
+T3000099,2022Q2,CLNE,deteriorating,deteriorating,0,-1,-2,-1,1,4,3,-1,1,-3,-3,0,0,medium,high,1,volume_growth_with_guidance_pressure,volume_growth,1
+T3000100,2022Q2,CNDT,deteriorating,deteriorating,0,-1,-2,-1,1,3,3,0,0,-3,-3,0,0,medium,high,1,mix_shift_and_lost_business,contract_mix,1
+T3000101,2022Q2,CNK,constructive,constructive,0,6,4,-2,1,2,2,0,0,1,1,0,0,high,high,0,box_office_recovery,demand_recovery,1
+T3000102,2022Q2,COMP,constructive,deteriorating,1,3,-3,-6,1,2,4,2,1,1,-3,-4,1,high,high,0,market_share_and_volume,market_share_growth,1
+T3000103,2022Q2,CTLP,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,transaction_volume_growth,transaction_growth,1
+T3000104,2022Q2,CTOS,neutral,deteriorating,1,0,-3,-3,1,3,3,0,0,0,-3,-3,1,medium,medium,0,preliminary_update_and_transition,management_transition,1
+T3000105,2022Q2,CVGI,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,medium,medium,0,cost_and_mix,cost_repositioning_and_price_cost_recovery,1
+T3000106,2022Q2,CXM,deteriorating,neutral,1,-1,1,2,1,4,3,-1,1,-3,0,3,1,high,high,0,growth_with_margin_pressure,subscription_saas_growth,1
+T3000107,2022Q2,DCGO,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,business_mix_shift,non_covid_growth_transition,1
+T3000108,2022Q2,DNOW,inflecting,inflecting,0,7,8,1,1,1,1,0,0,3,3,0,0,medium,high,1,operating_efficiency,operating_efficiency_and_inventory_leverage,1
+T3000109,2022Q2,DNUT,inflecting,constructive,1,7,4,-3,1,1,2,1,1,3,1,-2,1,high,high,0,same_store_and_geographic_expansion,hub_and_spoke_expansion,1
+T3000110,2022Q2,EVCM,constructive,constructive,0,3,6,3,1,2,1,-1,1,1,1,0,0,medium,high,1,guidance_raise,vertical_saas_growth_and_guidance_raise,1
+T3000111,2022Q2,FLNC,neutral,deteriorating,1,1,-3,-4,1,4,5,1,1,-3,-3,0,0,high,high,0,backlog_and_bookings,backlog_growth_with_execution_pressure,1
+T3000112,2022Q2,FSTR,constructive,deteriorating,1,3,-2,-5,1,2,4,2,1,1,-3,-4,1,medium,high,1,order_book_and_pricing,backlog_and_pricing_actions,1
+T3000113,2022Q2,FWRG,inflecting,inflecting,0,7,8,1,1,2,1,-1,1,3,3,0,0,high,high,0,same-store-sales and traffic,traffic_and_unit_growth,1
+T3000114,2022Q2,GNE,constructive,constructive,0,4,6,2,1,2,1,-1,1,1,1,0,0,medium,high,1,margin improvement in retail energy,margin_expansion,1
+T3000115,2022Q2,GRPN,deteriorating,deteriorating,0,-1,-5,-4,1,5,4,-1,1,-3,-3,0,0,high,high,0,turnaround and cost restructuring,demand_decline,1
+T3000116,2022Q2,GT,constructive,constructive,0,5,3,-2,1,2,2,0,0,1,1,0,0,high,medium,1,acquisition and pricing mix,merger_and_pricing,1
+T3000117,2022Q2,HBB,neutral,deteriorating,1,2,-1,-3,1,3,3,0,0,0,-3,-3,1,medium,high,1,pricing and commercial rebound,cost_and_demand_pressure,1
+T3000118,2022Q2,HIMS,constructive,constructive,0,6,5,-1,1,2,2,0,0,1,1,0,0,high,high,0,subscriber and platform growth,subscription_growth,1
+T3000119,2022Q2,HLMN,constructive,deteriorating,1,3,-1,-4,1,2,2,0,0,1,-3,-4,1,medium,medium,0,pricing and volume stability,preliminary_mixed_results,1
+T3000120,2022Q2,KLXE,constructive,constructive,0,3,3,0,0,3,3,0,0,1,1,0,0,medium,high,1,sequential volume and pricing improvement,market_recovery,1
+T3000121,2022Q2,KOS,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,cash flow / production,production and free cash flow,1
+T3000122,2022Q2,LE,neutral,deteriorating,1,1,-3,-4,1,3,4,1,1,0,-3,-3,1,high,high,0,margin / cost pressure,margin pressure,1
+T3000123,2022Q2,LFST,constructive,neutral,1,4,1,-3,1,2,2,0,0,1,0,-1,1,high,high,0,growth / capacity expansion,capacity growth,1
+T3000124,2022Q2,LMB,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,backlog / margin expansion,backlog and margin improvement,1
+T3000125,2022Q2,LTH,inflecting,constructive,1,8,3,-5,1,1,3,2,1,3,1,-2,1,high,high,0,same-store / membership growth,reopening recovery,1
+T3000126,2022Q2,MGNI,inflecting,constructive,1,7,4,-3,1,1,2,1,1,3,1,-2,1,high,high,0,platform growth,CTV growth,1
+T3000127,2022Q2,MIR,neutral,deteriorating,1,2,-3,-5,1,3,4,1,1,0,-3,-3,1,high,high,0,guidance reset / mix shift,guidance reduction and project disruption,1
+T3000128,2022Q2,NRDS,constructive,constructive,0,5,6,1,1,1,1,0,0,1,1,0,0,high,high,0,traffic / monetization growth,vertical diversification and brand investment,1
+T3000129,2022Q2,NTNX,neutral,neutral,0,0,1,1,1,4,4,0,0,-3,-3,0,0,high,high,0,subscription execution,subscription transition,1
+T3000130,2022Q2,NVRI,neutral,deteriorating,1,0,-3,-3,1,4,5,1,1,-3,-3,0,0,high,high,0,inflation and cost pressure,cost inflation,1
+T3000131,2022Q2,OI,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,pricing and volume leverage,operational improvement,1
+T3000132,2022Q2,ORGO,constructive,deteriorating,1,3,-2,-5,1,2,3,1,1,1,-3,-4,1,high,high,0,product and mix growth,product growth versus operating headwinds,1
+T3000133,2022Q2,ORN,constructive,neutral,1,5,0,-5,1,1,3,2,1,1,0,-1,1,high,high,0,backlog growth,backlog growth,0
+T3000134,2022Q2,OSCR,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,membership scale and operating leverage,scale efficiency,1
+T3000135,2022Q2,PAYO,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,higher value services and customer acquisition,revenue mix and customer acquisition,1
+T3000136,2022Q2,PLTK,constructive,neutral,1,4,2,-2,1,1,2,1,1,1,0,-1,1,high,high,0,portfolio mix and user monetization,portfolio mix growth,1
+T3000137,2022Q2,PNTG,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,medium,high,1,volume_and_margins,volume and margin recovery,1
+T3000138,2022Q2,POWL,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,high,0,order_growth_and_margin_recovery,orders and margin recovery,1
+T3000139,2022Q2,PWP,deteriorating,deteriorating,0,-2,-3,-1,1,3,3,0,0,-3,-3,0,0,high,high,0,advisory_revenue_decline,advisory activity decline,1
+T3000140,2022Q2,REAL,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,medium,high,1,gmv_growth_and_topline_guidance,top-line growth,1
+T3000141,2022Q2,RELY,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,high,0,customer_growth_and_unit_economics,customer and volume growth,1
+T3000142,2022Q2,SFIX,deteriorating,deteriorating,0,-4,-5,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,guidance_cut_and_margin_pressure,demand and restructuring pressure,1
+T3000143,2022Q2,SHLS,constructive,constructive,0,6,3,-3,1,2,4,2,1,1,-3,-4,1,high,high,0,record_backlog_and_margin_expansion,backlog and margin recovery,1
+T3000144,2022Q2,SHO,neutral,deteriorating,1,0,-2,-2,1,0,1,1,1,0,-3,-3,1,low,medium,1,non_gaap_reconciliation_only,insufficient operating evidence,1
+T3000145,2022Q2,SLQT,neutral,deteriorating,1,2,-3,-5,1,3,4,1,1,0,-3,-3,1,medium,high,1,operational_improvement,early efficiency and new business growth,1
+T3000146,2022Q2,SMHI,deteriorating,deteriorating,0,-2,-2,0,0,3,3,0,0,-3,-3,0,0,medium,high,1,operational_recovery,demand recovery with cost pressure,1
+T3000147,2022Q2,SSP,inflecting,inflecting,0,7,8,1,1,2,1,-1,1,3,3,0,0,high,high,0,pricing_and_mix,advertising growth and expense control,1
+T3000148,2022Q2,SWIM,inflecting,constructive,1,8,6,-2,1,1,2,1,1,3,1,-2,1,high,high,0,pricing_and_volume,pricing and demand growth,1
+T3000149,2022Q2,TH,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,demand_expansion,contract execution and demand recovery,1
+T3000150,2022Q2,TPC,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,high,high,0,cash_and_backlog,cash collection and backlog stability,1
+T3000151,2022Q2,TWI,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,demand_cycle,multi-year equipment demand cycle,1
+T3000152,2022Q2,UTZ,neutral,deteriorating,1,2,-1,-3,1,3,3,0,0,0,-3,-3,1,high,high,0,pricing_and_productivity,pricing-led sales growth under inflation,1
+T3000153,2022Q2,VERX,constructive,neutral,1,3,2,-1,1,2,2,0,0,1,0,-1,1,high,medium,1,growth_and_retention,subscription_growth,1
+T3000154,2022Q2,VRT,constructive,neutral,1,3,2,-1,1,3,4,1,1,1,-3,-4,1,high,high,0,pricing_and_backlog,pricing_and_backlog,0
+T3000155,2022Q2,VYGR,neutral,deteriorating,1,1,-1,-2,1,1,2,1,1,0,-3,-3,1,medium,medium,0,pipeline_progress,pipeline_progress,0
+T3000156,2022Q2,WNC,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,demand_and_backlog,demand_and_backlog,0
+T3000157,2022Q3,ACCO,deteriorating,deteriorating,0,-1,-5,-4,1,4,5,1,1,-3,-3,0,0,high,high,0,pricing_vs_inflation_pressure,inflation_and_demand_pressure,1
+T3000158,2022Q3,AIOT,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,margin_improvement_and_recurring_mix,margin_and_recurring_revenue,1
+T3000159,2022Q3,ALTG,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,broad_based_growth,revenue_growth_and_guidance_raise,1
+T3000160,2022Q3,ARLO,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,subscription_and_gross_margin_expansion,subscription_arr_and_margin,1
+T3000161,2022Q3,ATRO,constructive,constructive,0,3,3,0,0,3,3,0,0,1,1,0,0,high,high,0,backlog and bookings,demand_backlog_recovery,1
+T3000162,2022Q3,BRSP,neutral,neutral,0,2,2,0,0,3,3,0,0,0,0,0,0,high,medium,1,loan originations and dividend,portfolio_earnings_support,1
+T3000163,2022Q3,BVS,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,high,0,sales growth and guidance update,revenue_growth_margin_recovery,1
+T3000164,2022Q3,CCL,constructive,neutral,1,5,1,-4,1,3,4,1,1,1,-3,-4,1,high,high,0,booking momentum and occupancy,post_restriction_demand_recovery,1
+T3000165,2022Q3,CLNE,deteriorating,deteriorating,0,-2,-2,0,0,4,3,-1,1,-3,-3,0,0,high,medium,1,guidance and commodity volatility,volume_growth_without_profit_conversion,1
+T3000166,2022Q3,COMP,constructive,deteriorating,1,3,-2,-5,1,2,4,2,1,1,-3,-4,1,high,high,0,market share and cost actions,cost_reduction_against_market_downturn,1
+T3000167,2022Q3,CRCT,neutral,neutral,0,1,1,0,0,2,4,2,1,0,-3,-3,1,high,high,0,user growth offset by hardware weakness,subscription_growth_vs_hardware_demand_break,1
+T3000168,2022Q3,CRDO,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,product ramp and guidance,product_ramp_structural_growth,1
+T3000169,2022Q3,CTOS,inflecting,constructive,1,7,4,-3,1,3,2,-1,1,3,1,-2,1,high,high,0,demand_and_backlog,demand_and_margin,1
+T3000170,2022Q3,CVGI,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,medium,medium,0,pricing_and_cost_reset,pricing,1
+T3000171,2022Q3,CXM,constructive,constructive,0,4,6,2,1,2,1,-1,1,1,1,0,0,medium,high,1,growth_and_margin_improvement,subscription_growth,1
+T3000172,2022Q3,CYH,neutral,deteriorating,1,1,-5,-6,1,4,5,1,1,-3,-3,0,0,high,high,0,cost_pressure_and_volume,operating_pressure,1
+T3000173,2022Q3,DCGO,inflecting,inflecting,0,8,8,0,0,2,1,-1,1,3,3,0,0,high,high,0,rapid_growth_and_guidance_raise,growth_and_profitability,1
+T3000174,2022Q3,DNUT,neutral,deteriorating,1,2,-3,-5,1,3,4,1,1,0,-3,-3,1,high,high,0,international_margin_pressure,margin_pressure,1
+T3000175,2022Q3,DRH,unscorable,neutral,1,0,0,0,0,0,0,0,0,0,0,0,0,low,low,0,insufficient_evidence,insufficient_evidence,0
+T3000176,2022Q3,EVCM,inflecting,constructive,1,9,5,-4,1,1,1,0,0,3,1,-2,1,high,high,0,growth_and_guidance_raise,growth_and_guidance_raise,0
+T3000177,2022Q3,FOR,neutral,neutral,0,2,2,0,0,4,4,0,0,-3,-3,0,0,high,high,0,supply_constraints_and_demand_moderation,guidance_revision_and_margin,1
+T3000178,2022Q3,GBTG,constructive,constructive,0,4,6,2,1,2,2,0,0,1,1,0,0,high,high,0,travel_recovery_and_share_gains,demand_recovery,1
+T3000179,2022Q3,GRPN,neutral,deteriorating,1,0,-5,-5,1,4,5,1,1,-3,-3,0,0,high,high,0,turnaround_and_cost_actions,turnaround_execution,1
+T3000180,2022Q3,GT,constructive,constructive,0,5,4,-1,1,2,2,0,0,1,1,0,0,high,high,0,pricing_mix_and_acquisition_synergies,merger_volume_pricing,1
+T3000181,2022Q3,GTX,neutral,deteriorating,1,0,-3,-3,1,3,4,1,1,0,-3,-3,1,high,high,0,volume_and_input_cost_pressure,volume_cost_pressure,1
+T3000182,2022Q3,HBAN,constructive,neutral,1,6,2,-4,1,1,2,1,1,1,0,-1,1,medium,medium,0,net_interest_income_expansion,net_interest_income,1
+T3000183,2022Q3,HIMS,constructive,constructive,0,4,5,1,1,2,2,0,0,1,1,0,0,high,high,0,subscriber_and_revenue_scaling,subscription_growth,1
+T3000184,2022Q3,HLIT,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,backlog_and_demand_strength,backlog_and_segment_growth,1
+T3000185,2022Q3,HLMN,deteriorating,deteriorating,0,-1,-4,-3,1,3,4,1,1,-3,-3,0,0,high,high,0,pricing and mix,pricing_and_margin_pressure,1
+T3000186,2022Q3,HOOD,neutral,neutral,0,0,0,0,0,0,0,0,0,0,0,0,0,low,low,0,order flow economics,non_earnings_operational_disclosure,1
+T3000187,2022Q3,KLXE,constructive,inflecting,1,5,9,4,1,2,1,-1,1,1,3,2,1,high,high,0,pricing and activity recovery,pricing_activity_operating_leverage,1
+T3000188,2022Q3,KOS,inflecting,inflecting,0,8,8,0,0,1,1,0,0,3,3,0,0,high,high,0,production and cash generation,free_cash_flow_deleveraging,1
+T3000189,2022Q3,LFST,constructive,deteriorating,1,3,-1,-4,1,3,3,0,0,1,-3,-4,1,high,high,0,clinician expansion,clinician_growth_with_margin_pressure,1
+T3000190,2022Q3,LMB,constructive,constructive,0,3,5,2,1,1,1,0,0,1,1,0,0,high,high,0,margin improvement,margin_expansion_backlog_execution,1
+T3000191,2022Q3,MG,deteriorating,deteriorating,0,-1,-1,0,0,3,2,-1,1,-3,-3,0,0,medium,high,1,demand mix and cost pressure,delayed_recovery_and_digital_growth,1
+T3000192,2022Q3,MGNI,inflecting,constructive,1,8,5,-3,1,1,1,0,0,3,1,-2,1,high,high,0,CTV growth,ctv_revenue_growth,1
+T3000193,2022Q3,MPAA,inflecting,constructive,1,9,3,-6,1,1,2,1,1,3,1,-2,1,high,medium,1,demand_growth_and_margin_leverage,demand_pricing_margin,1
+T3000194,2022Q3,NCLH,neutral,neutral,0,1,0,-1,1,4,4,0,0,-3,-3,0,0,medium,high,1,pricing_recovery_and_booking_improvement,reopening_pricing_recovery,1
+T3000195,2022Q3,NEO,neutral,deteriorating,1,1,-4,-5,1,3,4,1,1,0,-3,-3,1,medium,high,1,pricing_mix_offset_by_cost_pressure,weak_growth_cost_pressure,1
+T3000196,2022Q3,NNBR,neutral,deteriorating,1,0,-4,-4,1,4,4,0,0,-3,-3,0,0,medium,high,1,pricing_to_offset_inflation,inflation_supply_chain_guidance_cut,1
+T3000197,2022Q3,NRDS,constructive,constructive,0,5,3,-2,1,2,2,0,0,1,1,0,0,high,high,0,user_growth_and_vertical_diversification,vertical_diversification_growth,1
+T3000198,2022Q3,NVRI,deteriorating,deteriorating,0,-2,-5,-3,1,5,5,0,0,-3,-3,0,0,high,high,0,guidance_cut_and_impairment,guidance_cut_impairment_inflation,1
+T3000199,2022Q3,OI,inflecting,inflecting,0,9,9,0,0,0,1,1,1,3,3,0,0,high,high,0,pricing_and_margin_expansion,pricing_margin_cash_flow_upgrade,1
+T3000200,2022Q3,OII,inflecting,constructive,1,8,3,-5,1,1,2,1,1,3,1,-2,1,high,medium,1,offshore_demand_recovery,offshore_demand_recovery,0
+T3000201,2022Q3,OSW,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,operating recovery,operating recovery,0
+T3000202,2022Q3,PANL,inflecting,inflecting,0,8,8,0,0,1,2,1,1,3,3,0,0,high,high,0,pricing and utilization,pricing and utilization,0
+T3000203,2022Q3,PBI,neutral,neutral,0,1,0,-1,1,3,5,2,1,0,-3,-3,1,high,high,0,segment mix / cost pressure,negative revision risk,1
+T3000204,2022Q3,POWL,inflecting,constructive,1,8,6,-2,1,1,2,1,1,3,1,-2,1,high,high,0,order growth and recovery,backlog recovery,1
+T3000205,2022Q3,RBBN,deteriorating,neutral,1,-1,1,2,1,4,3,-1,1,-3,0,3,1,high,medium,1,guidance / pipeline,sequential margin recovery,1
+T3000206,2022Q3,REAL,neutral,deteriorating,1,0,-1,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,demand mix / execution,guidance reduction,1
+T3000207,2022Q3,RLJ,inflecting,inflecting,0,7,7,0,0,1,2,1,1,3,3,0,0,high,high,0,reopening / demand recovery,demand recovery,1
+T3000208,2022Q3,RNGR,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,pricing and activity growth,activity and pricing recovery,1
+T3000209,2022Q3,RSI,deteriorating,deteriorating,0,-1,-1,0,0,3,2,-1,1,-3,-3,0,0,medium,high,1,growth with margin pressure,growth with worsening losses,1
+T3000210,2022Q3,RSVR,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,high,high,0,top-line growth with margin expansion,mix-driven profitable growth,1
+T3000211,2022Q3,SFIX,deteriorating,deteriorating,0,-5,-5,0,0,4,4,0,0,-3,-3,0,0,medium,medium,0,demand softness and profitability pressure,demand and profitability deterioration,1
+T3000212,2022Q3,SG,deteriorating,deteriorating,0,-1,-1,0,0,4,5,1,1,-3,-3,0,0,high,high,0,growth offset by demand softness,growth with guidance cut,1
+T3000213,2022Q3,SHO,neutral,neutral,0,0,0,0,0,0,0,0,0,0,0,0,0,low,low,0,insufficient operating evidence,insufficient operating evidence,0
+T3000214,2022Q3,SLQT,deteriorating,deteriorating,0,-1,-5,-4,1,4,5,1,1,-3,-3,0,0,medium,high,1,mix and cohort-adjustment noise,severe profitability deterioration,1
+T3000215,2022Q3,SSP,constructive,inflecting,1,6,7,1,1,1,2,1,1,1,3,2,1,high,high,0,ad revenue and distribution gains,political advertising and distribution growth,1
+T3000216,2022Q3,STKL,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,pricing and margin expansion,margin-accretive growth,1
+T3000217,2022Q3,TALO,neutral,neutral,0,1,1,0,0,2,2,0,0,0,0,0,0,medium,medium,0,operational_update,balance_sheet_deleveraging,1
+T3000218,2022Q3,TH,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,contract_expansion,contract_expansion,0
+T3000219,2022Q3,TTMI,constructive,inflecting,1,6,7,1,1,1,1,0,0,1,3,2,1,high,medium,1,margin_expansion,margin_and_cash_flow_improvement,1
+T3000220,2022Q3,UIS,neutral,deteriorating,1,1,-3,-4,1,3,4,1,1,0,-3,-3,1,medium,high,1,mixed_operating_results,pipeline_growth_vs_cash_pressure,1
+T3000221,2022Q3,VYGR,neutral,neutral,0,1,0,-1,1,1,2,1,1,0,0,0,0,medium,medium,0,pipeline_prioritization,pipeline_prioritization,0
+T3000222,2022Q3,WTTR,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,margin_expansion,sequential_margin_expansion,1
+T3000223,2022Q3,ZETA,inflecting,inflecting,0,9,9,0,0,0,1,1,1,3,3,0,0,high,high,0,customer_growth,customer_and_platform_scaling,1
+T3000224,2022Q4,ACCO,deteriorating,deteriorating,0,-2,-1,1,1,5,5,0,0,-3,-3,0,0,high,high,0,guidance_cut,guidance_cut,0
+T3000225,2022Q4,ACVA,neutral,neutral,0,1,1,0,0,4,4,0,0,-3,-3,0,0,high,high,0,market-demand-and-conversion,marketplace growth with macro pressure,1
+T3000226,2022Q4,AFRM,neutral,deteriorating,1,0,-3,-3,1,4,5,1,1,-3,-3,0,0,high,high,0,macro-and-partner-pressure,growth under funding and merchant pressure,1
+T3000227,2022Q4,AIOT,constructive,inflecting,1,5,9,4,1,1,1,0,0,1,3,2,1,high,high,0,margin-improvement-and-efficiency,margin expansion and recurring revenue growth,1
+T3000228,2022Q4,ALTG,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,broad-based-revenue-growth,broad-based revenue and EBITDA growth,1
+T3000229,2022Q4,APEI,neutral,deteriorating,1,1,-4,-5,1,3,4,1,1,0,-3,-3,1,high,high,0,acquisition-and-enrollment-mix,acquisition-led revenue growth with margin deterioration,1
+T3000230,2022Q4,ARLO,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,high,high,0,service-mix-and-gross-margin-expansion,services growth and gross margin expansion,1
+T3000231,2022Q4,ATRO,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,high,high,0,backlog-and-demand-recovery,demand backlog with execution shortfall,1
+T3000232,2022Q4,BMEA,neutral,deteriorating,1,1,-2,-3,1,1,3,2,1,0,-3,-3,1,medium,medium,0,pipeline-progress,clinical pipeline progress with rising losses,1
+T3000233,2022Q4,BRSP,deteriorating,deteriorating,0,-1,-1,0,0,2,3,1,1,-3,-3,0,0,medium,medium,0,financial_results,capital allocation / rate defense,1
+T3000234,2022Q4,BVS,neutral,deteriorating,1,1,-4,-5,1,4,5,1,1,-3,-3,0,0,high,high,0,guidance_update,guidance reduction / margin pressure,1
+T3000235,2022Q4,CCL,deteriorating,neutral,1,-2,2,4,1,4,3,-1,1,-3,0,3,1,high,medium,1,recovery_and_guidance,post-disruption recovery,1
+T3000236,2022Q4,CLNE,neutral,constructive,1,2,3,1,1,3,2,-1,1,0,1,1,1,medium,medium,0,pricing_and_volume_mix,volume / commodity price tailwind,1
+T3000237,2022Q4,CNK,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,high,0,recovery_and_operating_leverage,end-market recovery,1
+T3000238,2022Q4,COMP,deteriorating,deteriorating,0,-2,-2,0,0,4,5,1,1,-3,-3,0,0,high,high,0,cost_restructuring,demand break / restructuring,1
+T3000239,2022Q4,CRCT,neutral,neutral,0,1,1,0,0,2,3,1,1,0,0,0,0,high,high,0,customer_and_product_mix,mixed subscriber growth and product demand pressure,1
+T3000240,2022Q4,CRDO,inflecting,constructive,1,7,6,-1,1,1,1,0,0,3,1,-2,1,high,medium,1,growth_outlook,data infrastructure growth,1
+T3000241,2022Q4,CTOS,constructive,neutral,1,3,1,-2,1,2,2,0,0,1,0,-1,1,medium,medium,0,operational improvement / supply chain normalization,mixed operations / supply chain,1
+T3000242,2022Q4,CVNA,deteriorating,neutral,1,-1,0,1,1,4,5,1,1,-3,-3,0,0,high,high,0,profitability initiatives / demand weakness,demand / profitability deterioration,1
+T3000243,2022Q4,CXM,constructive,inflecting,1,6,7,1,1,1,1,0,0,1,3,2,1,high,high,0,profitable growth,growth plus margin inflection,1
+T3000244,2022Q4,DCGO,constructive,inflecting,1,6,7,1,1,1,1,0,0,1,3,2,1,high,high,0,growth and margin expansion,growth and profitability raise,1
+T3000245,2022Q4,DNUT,neutral,neutral,0,2,0,-2,1,2,3,1,1,0,0,0,0,medium,high,1,international growth with margin pressure,growth offset by margin pressure,1
+T3000246,2022Q4,EVCM,constructive,deteriorating,1,3,-2,-5,1,2,4,2,1,1,-3,-4,1,medium,high,1,efficient growth,growth shortfall / macro pressure,1
+T3000247,2022Q4,FOR,constructive,neutral,1,6,1,-5,1,2,4,2,1,1,-3,-4,1,high,high,0,margin expansion / lot demand,cyclical demand moderation,1
+T3000248,2022Q4,GBTG,neutral,constructive,1,2,5,3,1,3,2,-1,1,0,1,1,1,medium,high,1,travel recovery / acquisition integration,travel recovery / operating leverage,1
+T3000249,2022Q4,GHM,constructive,constructive,0,6,4,-2,1,2,2,0,0,1,1,0,0,high,high,0,backlog-and-defense-mix,Backlog and defense orders,1
+T3000250,2022Q4,GT,neutral,deteriorating,1,1,-1,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,pricing-and-mix-with-volume-pressure,Pricing versus volume pressure,1
+T3000251,2022Q4,GTX,constructive,constructive,0,3,4,1,1,1,2,1,1,1,1,0,0,high,high,0,volume-and-pass-through-pricing,Volume growth and cost flexibility,1
+T3000252,2022Q4,HIMS,constructive,inflecting,1,5,8,3,1,2,1,-1,1,1,3,2,1,high,high,0,subscription-scale-and-margin-expansion,Scale-driven profitability inflection,1
+T3000253,2022Q4,HLMN,constructive,neutral,1,3,1,-2,1,2,3,1,1,1,0,-1,1,medium,medium,0,pricing-and-operations,Pricing and operations offset cost pressure,1
+T3000254,2022Q4,KOS,inflecting,constructive,1,8,6,-2,1,1,2,1,1,3,1,-2,1,high,high,0,production-and-cash-flow,Production and cash flow growth,1
+T3000255,2022Q4,LE,deteriorating,deteriorating,0,-2,-4,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,inventory-and-transportation-pressure,Demand and margin deterioration,1
+T3000256,2022Q4,LFCR,constructive,deteriorating,1,5,-3,-8,1,2,4,2,1,1,-3,-4,1,high,high,0,segment-growth-and-pipeline,Segment growth offset by consolidated losses,1
+T3000257,2022Q4,LFST,neutral,neutral,0,2,0,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,growth_and_scale,growth with guidance pressure,1
+T3000258,2022Q4,LMB,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,high,high,0,margin_expansion,mix shift and margin expansion,1
+T3000259,2022Q4,LTH,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,medium,1,membership_growth_and_scale,profitability recovery,1
+T3000260,2022Q4,MGNI,constructive,constructive,0,5,4,-1,1,2,2,0,0,1,1,0,0,high,medium,1,CTV_growth,CTV growth and margin resilience,1
+T3000261,2022Q4,MQ,constructive,neutral,1,4,0,-4,1,2,3,1,1,1,0,-1,1,high,high,0,platform_growth,platform volume growth with loss pressure,1
+T3000262,2022Q4,MTRX,constructive,deteriorating,1,3,-2,-5,1,2,4,2,1,1,-3,-4,1,high,high,0,backlog_and_awards,backlog recovery with project-margin execution risk,1
+T3000263,2022Q4,NCLH,deteriorating,deteriorating,0,-1,-4,-3,1,4,3,-1,1,-3,-3,0,0,medium,medium,0,booking_curve_and_yield_management,strategic presentation without current-quarter proof,1
+T3000264,2022Q4,NEO,neutral,deteriorating,1,1,-3,-4,1,3,3,0,0,0,-3,-3,1,high,high,0,diagnostics_growth,modest revenue growth with profit deterioration,1
+T3000265,2022Q4,NNBR,neutral,constructive,1,2,3,1,1,3,2,-1,1,0,1,1,1,medium,medium,0,pricing_mix_costs,pricing_volume_mix,1
+T3000266,2022Q4,NRDS,constructive,inflecting,1,5,8,3,1,2,2,0,0,1,3,2,1,high,high,0,growth_and_mix,category_expansion_marketplace_execution,1
+T3000267,2022Q4,OFIX,neutral,deteriorating,1,2,-2,-4,1,1,3,2,1,0,-3,-3,1,medium,medium,0,sales_momentum,mixed_segment_growth_merger,1
+T3000268,2022Q4,OSCR,neutral,neutral,0,2,0,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,membership_and_pricing,membership_premium_growth_margin_recovery,1
+T3000269,2022Q4,OSUR,constructive,constructive,0,5,5,0,0,2,2,0,0,1,1,0,0,high,high,0,volume_and_capacity,capacity_scale_cash_flow_inflection,1
+T3000270,2022Q4,OSW,inflecting,inflecting,0,8,7,-1,1,1,2,1,1,3,3,0,0,high,high,0,reopening_recovery,post_pandemic_reopening_operating_leverage,1
+T3000271,2022Q4,PAYO,constructive,inflecting,1,5,7,2,1,2,2,0,0,1,3,2,1,high,high,0,volume_and_take_rate,customer_growth_take_rate_operating_efficiency,1
+T3000272,2022Q4,PKOH,constructive,inflecting,1,4,8,4,1,2,2,0,0,1,3,2,1,high,high,0,demand_and_operational_improvement,demand_backlog_operational_improvement,1
+T3000273,2022Q4,PNTG,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,medium,medium,0,operating momentum and cash flow,operational recovery,1
+T3000274,2022Q4,POWL,inflecting,inflecting,0,7,8,1,1,1,1,0,0,3,3,0,0,high,high,0,order growth and backlog expansion,backlog and margin inflection,1
+T3000275,2022Q4,PTON,neutral,deteriorating,1,2,-2,-4,1,4,4,0,0,-3,-3,0,0,high,high,0,turnaround / cost reset,turnaround with execution risk,1
+T3000276,2022Q4,RDNW,neutral,deteriorating,1,2,-4,-6,1,3,4,1,1,0,-3,-3,1,medium,high,1,mix shift and margin pressure,segment deterioration,1
+T3000277,2022Q4,REAL,neutral,neutral,0,1,2,1,1,3,3,0,0,0,0,0,0,medium,medium,0,top-line growth with path to profitability,loss narrowing,1
+T3000278,2022Q4,RLJ,constructive,constructive,0,5,6,1,1,1,2,1,1,1,1,0,0,medium,high,1,hotel recovery,travel demand recovery,1
+T3000279,2022Q4,RNGR,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,high,high,0,margin expansion and cash generation,margin inflection,1
+T3000280,2022Q4,RSI,deteriorating,deteriorating,0,-3,-2,1,1,4,3,-1,1,-3,-3,0,0,high,high,0,growth with margin pressure,growth without profit conversion,1
+T3000281,2022Q4,RSVR,constructive,constructive,0,5,5,0,0,1,1,0,0,1,1,0,0,high,high,0,demand_mix,demand_mix_and_guidance_raise,1
+T3000282,2022Q4,SHO,neutral,neutral,0,0,0,0,0,0,0,0,0,0,0,0,0,low,low,0,unclear,insufficient_operating_evidence,1
+T3000283,2022Q4,SLQT,constructive,deteriorating,1,3,-2,-5,1,2,3,1,1,1,-3,-4,1,high,high,0,segment_mix,margin_recovery_vs_revenue_quality_pressure,1
+T3000284,2022Q4,SSP,constructive,neutral,1,3,0,-3,1,2,4,2,1,1,-3,-4,1,high,high,0,advertising_mix,political_ad_and_retransmission_growth_with_guidance_cut,1
+T3000285,2022Q4,STKL,constructive,constructive,0,3,4,1,1,2,2,0,0,1,1,0,0,high,high,0,pricing_mix,pricing_and_margin_recovery,1
+T3000286,2022Q4,UIS,neutral,deteriorating,1,2,-4,-6,1,3,5,2,1,0,-3,-3,1,high,high,0,transformation_pipeline,pipeline_growth_vs_guidance_and_margin_pressure,1
+T3000287,2022Q4,UPWK,constructive,deteriorating,1,3,-2,-5,1,2,3,1,1,1,-3,-4,1,high,high,0,marketplace_growth,growth_with_profitability_deterioration,1
+T3000288,2022Q4,UTI,constructive,neutral,1,3,2,-1,1,1,1,0,0,1,0,-1,1,medium,medium,0,capital_structure,preliminary_results_and_financing_capacity,1
+T3000289,2022Q4,VYGR,constructive,constructive,0,4,3,-1,1,1,2,1,1,1,1,0,0,medium,medium,0,platform_validation,platform validation,1
+T3000290,2022Q4,WEST,constructive,neutral,1,6,2,-4,1,2,3,1,1,1,0,-1,1,high,medium,1,volume_growth_and_efficiency,volume growth and cost pass-through,1
+T3000291,2022Q4,WLDN,constructive,deteriorating,1,4,-1,-5,1,1,2,1,1,1,-3,-4,1,medium,high,1,demand_shift,end-market demand,1
+T3000292,2022Q4,WTTR,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,margin_mix_shift_and_acquisition,margin mix shift and acquisitions,1
+T3000293,2022Q4,XHR,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,medium,medium,0,hotel_recovery,hospitality demand recovery,1
+T3000294,2022Q4,ZETA,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,customer_and_revenue_scale,scaled customer expansion,1
+T3000295,2023Q1,ACVA,neutral,deteriorating,1,1,-1,-2,1,2,3,1,1,0,-3,-3,1,medium,high,1,market_share_and_margin_mix,market share and margin expansion,1
+T3000296,2023Q1,AFRM,deteriorating,deteriorating,0,-4,-5,-1,1,5,5,0,0,-3,-3,0,0,high,high,0,pricing_and_funding_pressure,pricing and credit tightening,1
+T3000297,2023Q1,AIOT,constructive,inflecting,1,3,8,5,1,2,1,-1,1,1,3,2,1,medium,high,1,margin_improvement,margin_and_cost_efficiency,1
+T3000298,2023Q1,ARLO,inflecting,inflecting,0,8,7,-1,1,2,2,0,0,3,3,0,0,high,high,0,subscription_growth,subscription_mix_shift,1
+T3000299,2023Q1,ATRO,constructive,constructive,0,5,6,1,1,1,2,1,1,1,1,0,0,medium,medium,0,demand_recovery,demand_recovery_and_supply_chain,1
+T3000300,2023Q1,BV,neutral,deteriorating,1,1,-1,-2,1,2,3,1,1,0,-3,-3,1,medium,high,1,cost_mitigation,organic_growth_with_margin_pressure,1
+T3000301,2023Q1,CCL,constructive,inflecting,1,4,7,3,1,3,2,-1,1,1,3,2,1,high,high,0,demand_recovery,travel_demand_recovery,1
+T3000302,2023Q1,CENX,constructive,deteriorating,1,3,-3,-6,1,2,4,2,1,1,-3,-4,1,medium,high,1,cost_and_volume_mix,cost_pressure_and_commodity_exposure,1
+T3000303,2023Q1,CNK,inflecting,neutral,1,8,2,-6,1,2,3,1,1,3,0,-3,1,high,high,0,recovery_and_cash_generation,industry_recovery,1
+T3000304,2023Q1,CRCT,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,high,0,user_and_margin_growth,user_base_and_subscription_growth,1
+T3000305,2023Q1,CRDO,neutral,deteriorating,1,2,-1,-3,1,2,4,2,1,0,-3,-3,1,medium,high,1,product demand,guidance_risk,1
+T3000306,2023Q1,CTLP,constructive,constructive,0,5,4,-1,1,1,2,1,1,1,1,0,0,medium,high,1,integration and synergy,revenue_growth,1
+T3000307,2023Q1,CVNA,neutral,deteriorating,1,1,-3,-4,1,4,5,1,1,-3,-3,0,0,medium,high,1,cost discipline and inventory reduction,volume_profitability_reset,1
+T3000308,2023Q1,CXM,inflecting,inflecting,0,7,8,1,1,1,1,0,0,3,3,0,0,high,high,0,subscription growth and operating leverage,profitable_growth,1
+T3000309,2023Q1,DBI,neutral,deteriorating,1,2,-3,-5,1,2,4,2,1,0,-3,-3,1,medium,high,1,brand mix and gross margin,demand_margin_pressure,1
+T3000310,2023Q1,DNUT,inflecting,inflecting,0,8,8,0,0,1,1,0,0,3,3,0,0,high,high,0,international expansion and margin expansion,growth_operating_leverage,1
+T3000311,2023Q1,DRS,constructive,constructive,0,5,5,0,0,1,1,0,0,1,1,0,0,medium,medium,0,order backlog and defense demand,backlog_defense_demand,1
+T3000312,2023Q1,DXLG,neutral,neutral,0,2,2,0,0,2,2,0,0,0,0,0,0,medium,high,1,comparable sales and margin,steady_profitability,1
+T3000313,2023Q1,EBS,neutral,deteriorating,1,1,-4,-5,1,3,4,1,1,0,-3,-3,1,medium,high,1,restructuring,restructuring / strategic focus,1
+T3000314,2023Q1,EVCM,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,high,medium,1,growth_and_margin_expansion,growth with cost discipline,1
+T3000315,2023Q1,FA,neutral,constructive,1,0,3,3,1,4,3,-1,1,-3,1,4,1,medium,high,1,macro_slowdown_and_guidance_reset,operating efficiency amid demand slowdown,1
+T3000316,2023Q1,GBTG,constructive,constructive,0,4,6,2,1,2,2,0,0,1,1,0,0,high,high,0,acquisition_integration_growth,travel recovery and integration scale,1
+T3000317,2023Q1,GHM,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,high,high,0,order_and_backlog_strength,execution recovery and defense backlog,1
+T3000318,2023Q1,GRPN,deteriorating,deteriorating,0,-2,-4,-2,1,5,5,0,0,-3,-3,0,0,high,high,0,turnaround_and_cost_cuts,turnaround restructuring,1
+T3000319,2023Q1,HIMS,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,growth_and_profitability_inflection,subscription growth and margin expansion,1
+T3000320,2023Q1,HLMN,neutral,constructive,1,1,3,2,1,2,2,0,0,0,1,1,1,medium,high,1,pricing_and_cost_mix,price-cost catch-up and working-capital improvement,1
+T3000321,2023Q1,HOOD,neutral,deteriorating,1,2,-1,-3,1,2,0,-2,1,0,-3,-3,1,medium,medium,0,payment_for_order_flow,unrelated_disclosure,1
+T3000322,2023Q1,KLXE,constructive,inflecting,1,6,7,1,1,1,1,0,0,1,3,2,1,high,high,0,margin_and_leverage_improvement,profitability_inflection,1
+T3000323,2023Q1,KOS,inflecting,inflecting,0,8,8,0,0,1,1,0,0,3,3,0,0,high,high,0,production_and_free_cash_flow,production_and_free_cash_flow_growth,1
+T3000324,2023Q1,LE,neutral,deteriorating,1,2,-3,-5,1,3,3,0,0,0,-3,-3,1,high,high,0,demand_and_margin_pressure,demand_and_margin_pressure,0
+T3000325,2023Q1,LFST,constructive,constructive,0,3,3,0,0,3,2,-1,1,1,1,0,0,high,high,0,clinic_network_expansion,growth_with_profitability_rebuild,1
+T3000326,2023Q1,LILA,inflecting,neutral,1,8,1,-7,1,1,3,2,1,3,0,-3,1,high,high,0,subscriber_and_oibda_growth,integration_and_rebased_growth,1
+T3000327,2023Q1,LILAK,inflecting,neutral,1,8,1,-7,1,1,3,2,1,3,0,-3,1,high,high,0,subscriber_and_oibda_growth,integration_and_rebased_growth,1
+T3000328,2023Q1,LTH,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,revenue_and_margin_expansion,margin_expansion_and_revenue_growth,1
+T3000329,2023Q1,MERC,neutral,deteriorating,1,2,-2,-4,1,3,3,0,0,0,-3,-3,1,medium,medium,0,pricing-cost-mix,commodity_price_cost_pressure,1
+T3000330,2023Q1,MGNI,neutral,constructive,1,0,3,3,1,4,2,-2,1,-3,1,4,1,medium,high,1,growth-and-margin,platform_growth,1
+T3000331,2023Q1,MPAA,constructive,neutral,1,3,0,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,pricing-volume-and-orders,customer_order_delay_margin_recovery,1
+T3000332,2023Q1,MQ,deteriorating,deteriorating,0,-2,-4,-2,1,4,4,0,0,-3,-3,0,0,medium,high,1,growth-with-losses,growth_deceleration_margin_pressure,1
+T3000333,2023Q1,NCLH,deteriorating,deteriorating,0,-5,-4,1,1,5,4,-1,1,-3,-3,0,0,high,medium,1,financing-and-liquidity,refinancing_liquidity,1
+T3000334,2023Q1,NNBR,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,high,1,pricing-and-cash-flow,pricing_cost_control_balance_sheet_flexibility,1
+T3000335,2023Q1,OSCR,deteriorating,deteriorating,0,-5,-1,4,1,3,2,-1,1,-3,-3,0,0,low,medium,1,guidance-update,guidance_reaffirmation,1
+T3000336,2023Q1,OSUR,constructive,constructive,0,4,4,0,0,2,3,1,1,1,1,0,0,medium,high,1,mix-shift-and-cost-savings,revenue_scale_cost_savings_profitability_path,1
+T3000337,2023Q1,OSW,inflecting,inflecting,0,7,9,2,1,2,1,-1,1,3,3,0,0,high,high,0,growth_and_margin_expansion,demand recovery and operating execution,1
+T3000338,2023Q1,PAYO,deteriorating,neutral,1,-1,2,3,1,1,1,0,0,-3,0,3,1,medium,medium,0,management_transition,preliminary guidance update and management transition,1
+T3000339,2023Q1,PKOH,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,medium,high,1,demand_and_operational_improvement,"demand recovery, backlog, and operational improvement",1
+T3000340,2023Q1,RBBN,constructive,constructive,0,4,5,1,1,1,2,1,1,1,1,0,0,medium,high,1,margin_and_bookings_improvement,"customer wins, bookings, and cost reduction",1
+T3000341,2023Q1,RDNW,neutral,deteriorating,1,1,-4,-5,1,4,4,0,0,-3,-3,0,0,high,high,0,margin_pressure_and_supply_mix,margin pressure and demand normalization,1
+T3000342,2023Q1,REAL,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,mix_shift_and_margin_improvement,business mix shift toward consignment,1
+T3000343,2023Q1,RLJ,constructive,inflecting,1,4,8,4,1,1,1,0,0,1,3,2,1,medium,high,1,hotel_revenue_recovery,lodging demand recovery and balance sheet improvement,1
+T3000344,2023Q1,RSI,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,medium,medium,0,market_expansion_and_growth,market expansion and path to profitability,1
+T3000345,2023Q1,SG,neutral,deteriorating,1,0,-1,-1,1,4,3,-1,1,-3,-3,0,0,high,medium,1,unit_growth_and_margin_guidance,restaurant growth and path to profitability,1
+T3000346,2023Q1,SHO,neutral,neutral,0,0,0,0,0,0,0,0,0,0,0,0,0,high,low,1,non-gaap_reconciliation_only,insufficient operating evidence,1
+T3000347,2023Q1,SLQT,inflecting,inflecting,0,10,9,-1,1,0,1,1,1,3,3,0,0,high,high,0,guidance_raise_and_operating_execution,guidance raise and operating redesign,1
+T3000348,2023Q1,SMCI,inflecting,inflecting,0,7,7,0,0,0,1,1,1,3,3,0,0,medium,high,1,guidance_raise_and_demand_strength,guidance beat from market expansion,1
+T3000349,2023Q1,SMHI,constructive,constructive,0,4,3,-1,1,1,2,1,1,1,1,0,0,high,medium,1,pricing_and_utilization_improvement,pricing and utilization recovery,1
+T3000350,2023Q1,SYM,inflecting,constructive,1,8,5,-3,1,0,2,2,1,3,1,-2,1,high,high,0,backlog_and_deployment_scaling,automation demand and backlog growth,1
+T3000351,2023Q1,UPWK,constructive,neutral,1,5,0,-5,1,1,3,2,1,1,0,-1,1,medium,medium,0,product_mix_and_client_spend,marketplace monetization and sales productivity recovery,1
+T3000352,2023Q1,VYGR,constructive,constructive,0,4,5,1,1,0,2,2,1,1,1,0,0,medium,medium,0,collaboration_monetization,strategic collaboration and financing,1
+T3000353,2023Q1,WEST,constructive,constructive,0,5,5,0,0,2,2,0,0,1,1,0,0,high,high,0,growth_and_margin,revenue_and_adjusted_ebitda_growth,1
+T3000354,2023Q1,WTTR,constructive,inflecting,1,5,9,4,1,1,1,0,0,1,3,2,1,medium,high,1,margin_expansion_and_integration,margin_expansion_and_acquisition_integration,1
+T3000355,2023Q1,XHR,neutral,neutral,0,2,0,-2,1,2,2,0,0,0,0,0,0,low,medium,1,hotel_operating_recovery,hotel_recovery_disclosure,1
+T3000356,2023Q1,XPER,deteriorating,deteriorating,0,-4,-4,0,0,4,4,0,0,-3,-3,0,0,high,high,0,guidance_and_impairment,platform_design_wins,1
+T3000357,2023Q2,ACVA,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,high,0,growth_and_guidance_raise,market_recovery_and_share_gain,1
+T3000358,2023Q2,AFRM,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,medium,high,1,credit_and_transaction_growth,transaction_growth_and_credit_performance,1
+T3000359,2023Q2,ARLO,inflecting,constructive,1,9,6,-3,1,1,2,1,1,3,1,-2,1,high,high,0,subscription_and_margin_expansion,subscription_mix_shift,1
+T3000360,2023Q2,BHR,neutral,neutral,0,1,2,1,1,3,3,0,0,0,0,0,0,medium,high,1,hotel_asset_performance,hotel_revenue_recovery,1
+T3000361,2023Q2,CCL,inflecting,inflecting,0,8,7,-1,1,2,2,0,0,3,3,0,0,high,high,0,pricing-yield-recovery,revenue recovery and cash flow inflection,1
+T3000362,2023Q2,CDE,neutral,deteriorating,1,2,-2,-4,1,3,3,0,0,0,-3,-3,1,medium,high,1,production-and-guidance,production and project timing,1
+T3000363,2023Q2,COMP,deteriorating,neutral,1,-2,1,3,1,3,3,0,0,-3,0,3,1,medium,high,1,cash-flow-turnaround,cost reduction and cash flow path,1
+T3000364,2023Q2,CRDO,neutral,deteriorating,1,1,-3,-4,1,2,3,1,1,0,-3,-3,1,medium,medium,0,product-demand-growth,technology demand narrative,1
+T3000365,2023Q2,CTLP,constructive,inflecting,1,6,7,1,1,1,1,0,0,1,3,2,1,high,high,0,digital-payments-growth,payments volume and recurring-fee growth,1
+T3000366,2023Q2,CTOS,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,demand-and-guidance-raise,demand and supply-chain improvement,1
+T3000367,2023Q2,CVGI,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,pricing-cost-leverage,"pricing, cost reduction, and new business wins",1
+T3000368,2023Q2,CVNA,neutral,neutral,0,2,1,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,profitability-and-liquidity-turnaround,profitability initiatives and inventory normalization,1
+T3000369,2023Q2,CWK,neutral,deteriorating,1,0,-1,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,cyclical demand decline,demand deterioration / cost actions,1
+T3000370,2023Q2,CXM,inflecting,inflecting,0,7,8,1,1,2,1,-1,1,3,3,0,0,high,high,0,profitability inflection,subscription growth / operating leverage,1
+T3000371,2023Q2,DAN,constructive,inflecting,1,5,8,3,1,1,2,1,1,1,3,2,1,medium,high,1,margin expansion,pricing / volume recovery,1
+T3000372,2023Q2,DBI,deteriorating,deteriorating,0,-3,-2,1,1,3,5,2,1,-3,-3,0,0,high,high,0,consumer demand weakness,guidance cut / consumer demand weakness,1
+T3000373,2023Q2,DCGO,constructive,constructive,0,3,3,0,0,2,3,1,1,1,1,0,0,medium,medium,0,new project ramp,backlog growth / margin recovery plan,1
+T3000374,2023Q2,DDD,constructive,deteriorating,1,5,-2,-7,1,1,4,3,1,1,-3,-4,1,medium,high,1,cost discipline and end-market mix,demand weakness / restructuring,1
+T3000375,2023Q2,DNOW,constructive,constructive,0,5,5,0,0,1,2,1,1,1,1,0,0,medium,medium,0,margin and liquidity strength,international growth / balance sheet strength,1
+T3000376,2023Q2,DRH,constructive,constructive,0,6,6,0,0,1,1,0,0,1,1,0,0,high,high,0,travel demand recovery,travel demand recovery,0
+T3000377,2023Q2,EEX,constructive,neutral,1,3,2,-1,1,2,2,0,0,1,0,-1,1,medium,medium,0,demand_recovery,post-COVID recovery,1
+T3000378,2023Q2,EVCM,constructive,constructive,0,5,5,0,0,1,1,0,0,1,1,0,0,high,medium,1,cost_discipline,cost discipline,1
+T3000379,2023Q2,FIGS,neutral,deteriorating,1,2,-1,-3,1,2,2,0,0,0,-3,-3,1,high,medium,1,brand_growth,demand softness,1
+T3000380,2023Q2,FNKO,deteriorating,deteriorating,0,-1,-2,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,cost_reset,inventory destocking and cost reduction,1
+T3000381,2023Q2,GBTG,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,transaction_volume_growth,travel demand recovery,1
+T3000382,2023Q2,GRPN,neutral,deteriorating,1,0,-4,-4,1,4,5,1,1,-3,-3,0,0,high,high,0,turnaround_cost_cuts,turnaround restructuring,1
+T3000383,2023Q2,HBB,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,high,medium,1,inventory_rebalancing,retailer inventory rebalancing,1
+T3000384,2023Q2,HIMS,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,subscriber_growth,subscription growth and scale economics,1
+T3000385,2023Q2,HLMN,neutral,neutral,0,1,0,-1,1,2,2,0,0,0,0,0,0,medium,high,1,working-capital,working_capital_cash_flow,1
+T3000386,2023Q2,JBLU,neutral,constructive,1,2,3,1,1,3,2,-1,1,0,1,1,1,medium,high,1,revenue-and-cost-execution,demand_cost_execution,1
+T3000387,2023Q2,KLXE,constructive,constructive,0,4,5,1,1,2,2,0,0,1,1,0,0,high,high,0,activity-and-pricing,activity_pricing_utilization,1
+T3000388,2023Q2,LE,constructive,constructive,0,5,4,-1,1,2,2,0,0,1,1,0,0,medium,high,1,margin-expansion,gross_margin_mix_supply_chain,1
+T3000389,2023Q2,LFST,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,medium,high,1,network-growth-and-margin,profitable_growth_operational_excellence,1
+T3000390,2023Q2,LXU,neutral,deteriorating,1,1,-3,-4,1,2,3,1,1,0,-3,-3,1,medium,high,1,pricing-and-demand,commodity_pricing_pressure,1
+T3000391,2023Q2,LYFT,neutral,neutral,0,2,2,0,0,3,3,0,0,0,0,0,0,high,high,0,cost-reduction-and-rideshare-strength,cost_reduction_service_reinvestment,1
+T3000392,2023Q2,MAC,neutral,constructive,1,1,4,3,1,4,2,-2,1,-3,1,4,1,medium,high,1,leasing-and-noi,leasing_occupancy_noi,1
+T3000393,2023Q2,MPAA,constructive,neutral,1,4,0,-4,1,2,3,1,1,1,0,-1,1,high,medium,1,pricing_mix_operations,margin_recovery,1
+T3000394,2023Q2,MQ,deteriorating,deteriorating,0,-2,-1,1,1,4,4,0,0,-3,-3,0,0,high,high,0,cost_restructuring,cost_restructuring,0
+T3000395,2023Q2,NATR,neutral,constructive,1,2,4,2,1,2,2,0,0,0,1,1,1,high,medium,1,margin_and_mix,profitability_and_cash_flow_recovery,1
+T3000396,2023Q2,NCLH,inflecting,inflecting,0,9,8,-1,1,1,2,1,1,3,3,0,0,high,high,0,operational_recovery,demand_and_margin_recovery,1
+T3000397,2023Q2,NMRK,neutral,deteriorating,1,0,-3,-3,1,2,4,2,1,0,-3,-3,1,high,high,0,cost_reduction,cyclical_cost_reduction,1
+T3000398,2023Q2,NRDS,constructive,constructive,0,5,5,0,0,1,2,1,1,1,1,0,0,high,high,0,growth_expansion,multi_vertical_growth,1
+T3000399,2023Q2,NVRI,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,portfolio_execution,guidance_raise_and_segment_margin_expansion,1
+T3000400,2023Q2,ORGO,constructive,deteriorating,1,4,-2,-6,1,1,3,2,1,1,-3,-4,1,high,medium,1,product_reimbursement,guidance_raise_with_margin_pressure,1
+T3000401,2023Q2,OSUR,constructive,neutral,1,4,2,-2,1,3,4,1,1,1,-3,-4,1,medium,high,1,cost_efficiency_and_mix,manufacturing_efficiency_and_covid_test_demand,1
+T3000402,2023Q2,OSW,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,demand_acceleration,demand_recovery_and_capacity_expansion,1
+T3000403,2023Q2,PKOH,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,operational_improvement_and_backlog,demand_growth_and_margin_improvement,1
+T3000404,2023Q2,PLTR,constructive,constructive,0,5,6,1,1,1,1,0,0,1,1,0,0,medium,medium,0,product_platform_momentum,profitability_inflection_and_ai_platform_demand,1
+T3000405,2023Q2,PNTG,inflecting,constructive,1,7,6,-1,1,1,1,0,0,3,1,-2,1,high,high,0,volume_and_occupancy_growth,healthcare_services_recovery_and_cash_generation,1
+T3000406,2023Q2,PTON,deteriorating,deteriorating,0,-5,-4,1,1,5,5,0,0,-3,-3,0,0,high,high,0,margin_pressure_and_guidance_cuts,restructuring_and_margin_recovery_attempt,1
+T3000407,2023Q2,PWP,deteriorating,deteriorating,0,-2,-4,-2,1,2,3,1,1,-3,-3,0,0,medium,high,1,fee_momentum_mixed_with_cost_actions,advisory_market_pressure,1
+T3000408,2023Q2,RDNW,neutral,deteriorating,1,0,-2,-2,1,2,4,2,1,0,-3,-3,1,medium,high,1,margin_mixed_with_volume_weakness,cost_reduction_and_inventory_rebalancing,1
+T3000409,2023Q2,REAL,neutral,constructive,1,2,3,1,1,3,2,-1,1,0,1,1,1,high,high,0,mix_shift / margin improvement,mix_shift_margin_improvement,1
+T3000410,2023Q2,RLJ,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,pricing / occupancy recovery,demand_recovery,1
+T3000411,2023Q2,RNGR,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,operational efficiency / demand mix,utilization_efficiency,1
+T3000412,2023Q2,SG,neutral,neutral,0,2,2,0,0,2,2,0,0,0,0,0,0,medium,high,1,same-store sales / margin improvement,cost_relief_and_margin_progress,1
+T3000413,2023Q2,SLQT,inflecting,inflecting,0,7,7,0,0,2,2,0,0,3,3,0,0,high,high,0,segment mix / unit economics,unit_economics_and_guidance_raise,1
+T3000414,2023Q2,SMCI,deteriorating,deteriorating,0,-3,-3,0,0,4,4,0,0,-3,-3,0,0,high,high,0,supply chain disruption,supply_chain_shortfall,1
+T3000415,2023Q2,SMHI,constructive,constructive,0,3,3,0,0,1,2,1,1,1,1,0,0,medium,medium,0,market recovery / utilization,industry_recovery,1
+T3000416,2023Q2,SPNT,constructive,inflecting,1,3,7,4,1,2,2,0,0,1,3,2,1,medium,high,1,underwriting improvement / portfolio de-risking,underwriting_turnaround,1
+T3000417,2023Q2,STGW,neutral,deteriorating,1,2,-2,-4,1,2,3,1,1,0,-3,-3,1,medium,high,1,guidance_and_execution,demand / new business outlook,1
+T3000418,2023Q2,SWIM,neutral,neutral,0,0,0,0,0,4,4,0,0,-3,-3,0,0,medium,high,1,demand_and_inventory,demand / channel inventory,1
+T3000419,2023Q2,TEAD,deteriorating,deteriorating,0,-1,-1,0,0,4,4,0,0,-3,-3,0,0,medium,high,1,demand_and_pricing,advertising demand / partner retention,1
+T3000420,2023Q2,TH,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,demand_and_expansion,capacity / customer demand,1
+T3000421,2023Q2,TWI,constructive,inflecting,1,6,8,2,1,1,2,1,1,1,3,2,1,medium,high,1,margin_and_costs,productivity / cost reduction,1
+T3000422,2023Q2,UIS,constructive,constructive,0,6,5,-1,1,2,2,0,0,1,1,0,0,medium,high,1,margin_and_pipeline,software license renewals / margin expansion,1
+T3000423,2023Q2,ULCC,constructive,constructive,0,3,3,0,0,2,3,1,1,1,1,0,0,medium,high,1,capacity_and_network,network optimization / demand mix,1
+T3000424,2023Q2,UPWK,neutral,constructive,1,0,3,3,1,3,4,1,1,0,-3,-3,1,medium,high,1,pricing_and_cost_actions,cost reduction / pricing model,1
+T3000425,2023Q2,WEST,neutral,deteriorating,1,1,-1,-2,1,2,2,0,0,0,-3,-3,1,medium,high,1,operational ramp and margin build,capacity_expansion,1
+T3000426,2023Q2,WRBY,constructive,constructive,0,6,6,0,0,2,2,0,0,1,1,0,0,high,high,0,margin expansion and operating leverage,profitability_improvement,1
+T3000427,2023Q2,WTTR,inflecting,inflecting,0,8,8,0,0,1,2,1,1,3,3,0,0,high,high,0,backlog-driven growth and cash conversion,infrastructure_growth,1
+T3000428,2023Q2,XHR,neutral,constructive,1,2,6,4,1,2,2,0,0,0,1,1,1,medium,high,1,hotel demand resilience,demand_recovery,1
+T3000429,2023Q2,XPER,neutral,deteriorating,1,0,-1,-1,1,2,3,1,1,0,-3,-3,1,medium,high,1,commercial wins and licensing,design_wins,1
+T3000430,2023Q3,ACCO,inflecting,constructive,1,7,3,-4,1,1,3,2,1,3,1,-2,1,high,high,0,pricing and cost actions,margin_expansion,1
+T3000431,2023Q3,AEO,deteriorating,neutral,1,-2,1,3,1,1,1,0,0,-3,0,3,1,low,medium,1,guidance raise,preliminary_results_above_guidance,1
+T3000432,2023Q3,AIOT,constructive,constructive,0,3,4,1,1,2,2,0,0,1,1,0,0,medium,high,1,cost savings and mix shift,business_model_mix_shift,1
+T3000433,2023Q3,ANGO,neutral,neutral,0,2,1,-1,1,3,3,0,0,0,0,0,0,medium,medium,0,portfolio_shift_and_margin,portfolio_mix_medtech_growth,1
+T3000434,2023Q3,ARLO,inflecting,inflecting,0,8,8,0,0,2,1,-1,1,3,3,0,0,high,high,0,subscription_and_margin_expansion,subscription_services_mix,1
+T3000435,2023Q3,AVD,neutral,deteriorating,1,1,-5,-6,1,3,4,1,1,0,-3,-3,1,medium,high,1,demand_timing_and_restocking,channel_destocking_rebound_claim,1
+T3000436,2023Q3,BHFAM,neutral,deteriorating,1,1,-2,-3,1,4,3,-1,1,-3,-3,0,0,medium,medium,0,annuity_sales_and_investment_income,insurance_sales_mix,1
+T3000437,2023Q3,BV,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,cost_efficiency_and_margin_expansion,cost_management_margin_expansion,1
+T3000438,2023Q3,BVS,neutral,neutral,0,1,1,0,0,4,3,-1,1,-3,0,3,1,medium,high,1,pricing_and_mix,profitability_discipline,1
+T3000439,2023Q3,CCL,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,demand_recovery_and_yield,demand_recovery_pricing_yield,1
+T3000440,2023Q3,CDE,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,medium,high,1,mine_operational_recovery,mine_ramp_operational_recovery,1
+T3000441,2023Q3,CECO,inflecting,inflecting,0,9,8,-1,1,1,1,0,0,3,3,0,0,high,high,0,growth_and_backlog,orders_backlog_guidance_raise,1
+T3000442,2023Q3,COMP,constructive,constructive,0,6,6,0,0,2,2,0,0,1,1,0,0,high,high,0,cash_flow_and_cost_discipline,cost_reduction_cash_flow_inflection,1
+T3000443,2023Q3,CRDO,constructive,neutral,1,5,2,-3,1,1,2,1,1,1,0,-1,1,medium,medium,0,revenue_growth_and_margin,sequential_growth_outlook,1
+T3000444,2023Q3,CTLP,constructive,constructive,0,5,6,1,1,1,1,0,0,1,1,0,0,high,high,0,transaction_and_subscription_growth,payments_subscription_growth_margin_recovery,1
+T3000445,2023Q3,CTOS,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,medium,medium,0,demand_and_supply_chain_recovery,demand_supply_chain_recovery,1
+T3000446,2023Q3,CVGI,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,pricing_and_mix,pricing_cost_reduction_margin_expansion,1
+T3000447,2023Q3,CWK,deteriorating,neutral,1,-2,0,2,1,4,4,0,0,-3,-3,0,0,high,high,0,commercial_real_estate_slowdown,macro_transaction_volume_decline,1
+T3000448,2023Q3,CYH,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,high,0,volume_and_reimbursement,volume_reimbursement_labor_cost_improvement,1
+T3000449,2023Q3,DDD,deteriorating,neutral,1,-2,1,3,1,4,4,0,0,-3,-3,0,0,high,high,0,demand weakness and guidance cut,Demand weakness and guidance cut,1
+T3000450,2023Q3,DRH,constructive,constructive,0,4,3,-1,1,1,2,1,1,1,1,0,0,medium,medium,0,hotel operating performance,Travel demand mix,1
+T3000451,2023Q3,EBS,deteriorating,deteriorating,0,-3,-1,2,1,5,5,0,0,-3,-3,0,0,high,high,0,guidance cut and margin pressure,Guidance cut and margin pressure,1
+T3000452,2023Q3,EVER,deteriorating,deteriorating,0,-5,-1,4,1,4,3,-1,1,-3,-3,0,0,high,medium,1,credit facility amendment,Liquidity and credit facility terms,1
+T3000453,2023Q3,FIGS,constructive,constructive,0,4,3,-1,1,1,2,1,1,1,1,0,0,high,high,0,growth with margin pressure,Revenue growth with margin compression,1
+T3000454,2023Q3,FNKO,neutral,neutral,0,0,0,0,0,4,4,0,0,-3,-3,0,0,high,high,0,operational turnaround and guidance reset,Operational turnaround amid sales decline,1
+T3000455,2023Q3,GBTG,inflecting,inflecting,0,8,7,-1,1,1,2,1,1,3,3,0,0,high,high,0,accelerating growth and margin expansion,Guidance raise and operating leverage,1
+T3000456,2023Q3,GRPN,neutral,neutral,0,2,2,0,0,2,3,1,1,0,0,0,0,high,high,0,turnaround progress,Transformation plan with shrinking revenue base,1
+T3000457,2023Q3,GT,neutral,deteriorating,1,0,-1,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,demand_weakness,demand_volume_decline,1
+T3000458,2023Q3,HBB,neutral,constructive,1,1,4,3,1,2,2,0,0,0,1,1,1,high,high,0,working_capital,working_capital_cash_flow,1
+T3000459,2023Q3,HLIT,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,medium,medium,0,backlog_and_product_mix,segment_mix_backlog,1
+T3000460,2023Q3,HLMN,neutral,neutral,0,1,1,0,0,2,3,1,1,0,0,0,0,high,high,0,inventory_and_mix,inventory_cash_conversion,1
+T3000461,2023Q3,HLX,constructive,inflecting,1,3,9,6,1,2,1,-1,1,1,3,2,1,medium,high,1,utilization,utilization_market_strength,1
+T3000462,2023Q3,HRTG,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,underwriting_improvement,underwriting_profitability,1
+T3000463,2023Q3,JBLU,deteriorating,deteriorating,0,-1,-1,0,0,4,4,0,0,-3,-3,0,0,high,high,0,demand_and_guidance,guidance_demand_pressure,1
+T3000464,2023Q3,KLXE,neutral,constructive,1,1,4,3,1,2,3,1,1,0,1,1,1,high,medium,1,mix_and_efficiency,margin_mix_improvement,1
+T3000465,2023Q3,LC,deteriorating,deteriorating,0,-1,-4,-3,1,3,5,2,1,-3,-3,0,0,high,high,0,liquidity_and_credit_margins,demand_and_credit_pressure,1
+T3000466,2023Q3,LCUT,constructive,constructive,0,3,3,0,0,1,2,1,1,1,1,0,0,high,medium,1,margin_improvement_and_guidance_reaffirmation,margin_restructuring,1
+T3000467,2023Q3,LE,constructive,neutral,1,5,2,-3,1,1,3,2,1,1,0,-1,1,high,medium,1,inventory_and_margin_discipline,inventory_and_margin_reset,1
+T3000468,2023Q3,LFST,constructive,neutral,1,3,2,-1,1,2,2,0,0,1,0,-1,1,medium,medium,0,same_store_capacity_growth,growth_with_profitability_transition,1
+T3000469,2023Q3,LOCO,constructive,neutral,1,3,2,-1,1,1,3,2,1,1,0,-1,1,high,medium,1,restaurant_operating_efficiency,restaurant_operations,1
+T3000470,2023Q3,LYFT,constructive,constructive,0,5,6,1,1,2,2,0,0,1,1,0,0,high,medium,1,margin_expansion_and_cost_control,cost_restructuring_and_operating_leverage,1
+T3000471,2023Q3,MBC,inflecting,inflecting,0,8,8,0,0,1,2,1,1,3,3,0,0,high,high,0,cost_savings_and_margin_expansion,margin_and_cash_flow_inflection,1
+T3000472,2023Q3,MEC,inflecting,constructive,1,8,5,-3,1,1,2,1,1,3,1,-2,1,high,medium,1,volume_growth_and_acquisition_synergies,guidance_raise_and_margin_initiatives,1
+T3000473,2023Q3,MG,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,medium,high,1,cost_savings_and_mix,cost savings and mix shift,1
+T3000474,2023Q3,MPAA,neutral,neutral,0,1,0,-1,1,2,2,0,0,0,0,0,0,medium,medium,0,pricing_and_cost_mix,pricing and working capital management,1
+T3000475,2023Q3,MQ,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,medium,high,1,growth_and_contract_retention,volume growth and customer contract,1
+T3000476,2023Q3,MTRX,inflecting,constructive,1,9,5,-4,1,1,2,1,1,3,1,-2,1,high,high,0,backlog_and_awards,backlog growth,1
+T3000477,2023Q3,NNBR,constructive,deteriorating,1,3,-1,-4,1,2,4,2,1,1,-3,-4,1,medium,high,1,operational_turnaround,cost actions and new business wins,1
+T3000478,2023Q3,NRDS,neutral,deteriorating,1,2,-2,-4,1,2,3,1,1,0,-3,-3,1,medium,medium,0,growth_with_profitability_improvement,revenue growth with margin guidance,1
+T3000479,2023Q3,OSUR,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,medium,high,1,contract_driven_recovery,contracted revenue and efficiency actions,1
+T3000480,2023Q3,OSW,inflecting,inflecting,0,10,9,-1,1,0,1,1,1,3,3,0,0,high,high,0,volume_and_margin_expansion,demand recovery and asset-light leverage,1
+T3000481,2023Q3,OUT,neutral,deteriorating,1,2,-2,-4,1,3,5,2,1,0,-3,-3,1,high,high,0,mix_shift_and_headwind,demand weakness / impairment,1
+T3000482,2023Q3,PEB,neutral,constructive,1,1,5,4,1,3,2,-1,1,0,1,1,1,high,high,0,demand_headwind_with_offset,travel demand recovery,1
+T3000483,2023Q3,PTON,deteriorating,deteriorating,0,-1,-3,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,turnaround_with_margin_pressure,turnaround execution risk,1
+T3000484,2023Q3,PWP,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,high,high,0,revenue_growth_with_cost_headwinds,mixed revenue recovery / cost pressure,1
+T3000485,2023Q3,QUAD,neutral,constructive,1,1,3,2,1,3,2,-1,1,0,1,1,1,high,high,0,cost_and_working_capital_improvement,productivity and cash-flow improvement,1
+T3000486,2023Q3,REAL,constructive,constructive,0,3,4,1,1,3,3,0,0,1,1,0,0,high,high,0,business_model_shift,business model margin reset,1
+T3000487,2023Q3,RELL,constructive,constructive,0,5,3,-2,1,2,3,1,1,1,1,0,0,high,high,0,segment_growth_and_margin_mix,segment mix shift,1
+T3000488,2023Q3,RIG,constructive,constructive,0,6,5,-1,1,2,3,1,1,1,1,0,0,high,high,0,cyclical_rate_and_utilization_improvement,offshore drilling demand recovery,1
+T3000489,2023Q3,RNGR,constructive,constructive,0,5,3,-2,1,1,4,3,1,1,-3,-4,1,high,high,0,pricing_volume_mix,margin and free cash flow improvement under cyclical pressure,1
+T3000490,2023Q3,RSI,constructive,inflecting,1,5,7,2,1,1,1,0,0,1,3,2,1,high,high,0,operating_improvement,profitability inflection,1
+T3000491,2023Q3,RSVR,constructive,inflecting,1,6,8,2,1,0,1,1,1,1,3,2,1,high,high,0,topline_growth,segment growth with operating leverage,1
+T3000492,2023Q3,RYAM,deteriorating,deteriorating,0,-3,-3,0,0,4,5,1,1,-3,-3,0,0,high,high,0,pricing_pressure,guidance cut and demand weakness,1
+T3000493,2023Q3,SG,constructive,inflecting,1,6,7,1,1,1,1,0,0,1,3,2,1,high,high,0,unit_economics,restaurant margin improvement,1
+T3000494,2023Q3,SLQT,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,high,1,scale_and_mix,turnaround with segment EBITDA improvement,1
+T3000495,2023Q3,SMHI,constructive,constructive,0,5,6,1,1,1,2,1,1,1,1,0,0,high,high,0,pricing_utilization,rate and utilization recovery,1
+T3000496,2023Q3,SPNT,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,underwriting_improvement,underwriting and capital turnaround,1
+T3000497,2023Q3,STGW,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,high,high,0,demand_and_new_business,demand_and_cost_reset,1
+T3000498,2023Q3,SWIM,neutral,neutral,0,2,2,0,0,4,3,-1,1,-3,0,3,1,high,high,0,cost_actions_and_mix,cost_and_inventory_management,1
+T3000499,2023Q3,TBLA,inflecting,constructive,1,7,4,-3,1,1,2,1,1,3,1,-2,1,high,high,0,guidance_raise_and_cash_generation,guidance_beat_and_cash_flow,1
+T3000500,2023Q3,TEAD,deteriorating,constructive,1,-2,3,5,1,4,2,-2,1,-3,1,4,1,high,high,0,demand_weakness_and_mix,guidance_and_expense_control,1
+T3000501,2023Q3,TG,neutral,deteriorating,1,0,-1,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,market_slowdown_and_inventory,volume_and_margin_pressure,1
+T3000502,2023Q3,TH,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,demand_expansion_and_partnerships,demand_growth_and_partnership_expansion,1
+T3000503,2023Q3,TILE,constructive,neutral,1,3,1,-2,1,2,3,1,1,1,0,-1,1,high,high,0,pricing_mix_and_supply_chain,pricing_and_supply_chain_offset,1
+T3000504,2023Q3,UEIC,deteriorating,deteriorating,0,-4,-2,2,1,5,5,0,0,-3,-3,0,0,high,high,0,demand_and_execution_pressure,restructuring_under_revenue_decline,1
+T3000505,2023Q3,UIS,constructive,neutral,1,4,1,-3,1,2,2,0,0,1,0,-1,1,high,high,0,pipeline_growth,portfolio mix / pipeline,1
+T3000506,2023Q3,ULCC,neutral,constructive,1,2,4,2,1,2,3,1,1,0,1,1,1,high,high,0,cost_efficiency,cost efficiency / capacity growth,1
+T3000507,2023Q3,UPWK,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,high,high,0,pricing_and_cost_actions,margin inflection / cost actions,1
+T3000508,2023Q3,VITL,inflecting,inflecting,0,9,9,0,0,0,1,1,1,3,3,0,0,high,high,0,demand_and_margin_expansion,brand-led growth / margin expansion,1
+T3000509,2023Q3,VYGR,neutral,neutral,0,2,1,-1,1,1,2,1,1,0,0,0,0,medium,medium,0,pipeline_progress,pipeline progress / collaboration funding,1
+T3000510,2023Q3,WEST,neutral,deteriorating,1,1,-1,-2,1,3,3,0,0,0,-3,-3,1,high,high,0,capacity_expansion,capacity expansion / financing,1
+T3000511,2023Q3,WRBY,inflecting,constructive,1,9,6,-3,1,0,1,1,1,3,1,-2,1,high,high,0,growth_and_margin_expansion,revenue growth / SG&A leverage,1
+T3000512,2023Q3,WWW,neutral,deteriorating,1,1,-3,-4,1,4,5,1,1,-3,-3,0,0,high,high,0,deleveraging_and_cost_actions,demand slowdown / margin pressure,1
+T3000513,2023Q3,XPER,neutral,deteriorating,1,0,-2,-2,1,3,2,-1,1,0,-3,-3,1,medium,high,1,guidance / strategic momentum,strategic wins,1
+T3000514,2023Q4,ACCO,neutral,constructive,1,1,3,2,1,4,3,-1,1,-3,1,4,1,high,high,0,cost discipline / margin expansion,margin and cash flow improvement,1
+T3000515,2023Q4,ACVA,constructive,constructive,0,6,3,-3,1,1,2,1,1,1,1,0,0,high,high,0,growth / guidance raise,marketplace growth and guidance raise,1
+T3000516,2023Q4,ADTN,deteriorating,deteriorating,0,-1,-5,-4,1,4,5,1,1,-3,-3,0,0,high,high,0,cost reduction / restructuring,inventory and restructuring pressure,1
+T3000517,2023Q4,AIOT,inflecting,constructive,1,8,6,-2,1,0,2,2,1,3,1,-2,1,high,high,0,business model transition / margin mix,SaaS transition and cost reduction,1
+T3000518,2023Q4,AMC,deteriorating,constructive,1,-1,3,4,1,5,4,-1,1,-3,-3,0,0,high,high,0,operational recovery / attendance and spend,post-pandemic recovery and monetization,1
+T3000519,2023Q4,AMRX,inflecting,inflecting,0,7,8,1,1,0,2,2,1,3,3,0,0,high,high,0,guidance raise / deleveraging,guidance raise and multi-year growth,1
+T3000520,2023Q4,ARLO,inflecting,inflecting,0,7,8,1,1,1,2,1,1,3,3,0,0,high,high,0,product and subscription mix,subscription growth and product launch,1
+T3000521,2023Q4,AVD,neutral,deteriorating,1,1,-1,-2,1,3,4,1,1,0,-3,-3,1,medium,high,1,turnaround / transformation,turnaround_cost_actions,1
+T3000522,2023Q4,BE,deteriorating,neutral,1,-5,1,6,1,5,3,-2,1,-3,0,3,1,high,high,0,guidance / margin pressure,revenue_growth_margin_mix,1
+T3000523,2023Q4,BHFAM,neutral,neutral,0,1,2,1,1,2,2,0,0,0,0,0,0,medium,medium,0,capital and spread income,investment_income_capital,1
+T3000524,2023Q4,BVS,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,medium,high,1,margin expansion / guidance raise,profitability_turnaround,1
+T3000525,2023Q4,CDE,inflecting,constructive,1,7,5,-2,1,1,3,2,1,3,1,-2,1,high,high,0,production ramp / cost reduction,production_ramp_cost_reduction,1
+T3000526,2023Q4,COMP,constructive,constructive,0,3,3,0,0,3,3,0,0,1,1,0,0,medium,high,1,cost discipline / cash flow,cost_reduction_cash_flow,1
+T3000527,2023Q4,CTLP,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,customer growth / operating leverage,recurring_revenue_operating_leverage,1
+T3000528,2023Q4,CTOS,constructive,constructive,0,4,4,0,0,2,3,1,1,1,1,0,0,medium,high,1,demand / supply chain improvement,demand_supply_chain_production,1
+T3000529,2023Q4,CXM,inflecting,inflecting,0,8,7,-1,1,1,1,0,0,3,3,0,0,high,high,0,profitability_improvement,growth and operating leverage,1
+T3000530,2023Q4,CYH,deteriorating,neutral,1,-1,0,1,1,4,3,-1,1,-3,0,3,1,high,medium,1,guidance_pressure,margin and cash pressure,1
+T3000531,2023Q4,DDD,deteriorating,neutral,1,-1,0,1,1,4,5,1,1,-3,-3,0,0,high,high,0,restructuring,restructuring under demand pressure,1
+T3000532,2023Q4,DRVN,neutral,neutral,0,1,0,-1,1,3,4,1,1,0,-3,-3,1,high,high,0,mix_shift,segment impairment and demand weakness,1
+T3000533,2023Q4,EBS,deteriorating,deteriorating,0,-2,-1,1,1,4,5,1,1,-3,-3,0,0,high,high,0,guidance_revision,guidance and margin deterioration,1
+T3000534,2023Q4,EVER,neutral,deteriorating,1,1,-2,-3,1,2,4,2,1,0,-3,-3,1,high,high,0,cost_discipline,demand and profitability pressure,1
+T3000535,2023Q4,FIGS,constructive,inflecting,1,5,7,2,1,1,1,0,0,1,3,2,1,high,high,0,growth_and_margin,growth and margin execution,1
+T3000536,2023Q4,FNKO,neutral,neutral,0,1,2,1,1,2,3,1,1,0,0,0,0,high,medium,1,cost_savings,cost savings amid sales decline,1
+T3000537,2023Q4,GBTG,inflecting,inflecting,0,7,8,1,1,1,1,0,0,3,3,0,0,high,high,0,cash flow / margin improvement,cash flow and margin inflection,1
+T3000538,2023Q4,GRPN,neutral,deteriorating,1,0,-3,-3,1,4,5,1,1,-3,-3,0,0,high,high,0,liquidity / operating stabilization,liquidity and demand pressure,1
+T3000539,2023Q4,HAIN,neutral,deteriorating,1,2,-1,-3,1,2,2,0,0,0,-3,-3,1,high,high,0,margin / execution improvement,turnaround with margin pressure,1
+T3000540,2023Q4,HBB,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,margin expansion / cash generation,working capital and margin improvement,1
+T3000541,2023Q4,HE,deteriorating,deteriorating,0,-4,-4,0,0,5,4,-1,1,-3,-3,0,0,high,high,0,wildfire-related disruption,event-driven cost and financing risk,1
+T3000542,2023Q4,HLIT,deteriorating,deteriorating,0,-1,-2,-1,1,3,3,0,0,-3,-3,0,0,high,high,0,backlog / mix offset by weak revenue,backlog versus near-term demand weakness,1
+T3000543,2023Q4,HLX,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,utilization / activity recovery,utilization and rate recovery,1
+T3000544,2023Q4,HOOD,neutral,neutral,0,0,0,0,0,0,0,0,0,0,0,0,0,low,low,0,order-routing disclosure,unusable earnings evidence,1
+T3000545,2023Q4,HRTG,deteriorating,deteriorating,0,-2,-3,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,catastrophe_losses,catastrophe_loss,1
+T3000546,2023Q4,JELD,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,cost_reduction_and_pricing,margin_expansion,1
+T3000547,2023Q4,KLXE,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,medium,1,pricing_and_cost_control,margin_resilience,1
+T3000548,2023Q4,KW,constructive,constructive,0,3,3,0,0,2,3,1,1,1,1,0,0,medium,medium,0,asset_growth_and_fee_bearing_capital,asset_conversion_and_fee_growth,1
+T3000549,2023Q4,LC,constructive,neutral,1,4,1,-3,1,3,3,0,0,1,0,-1,1,high,high,0,cost_structure_actions,cost_restructuring,1
+T3000550,2023Q4,LCUT,deteriorating,deteriorating,0,-1,-3,-2,1,4,4,0,0,-3,-3,0,0,medium,high,1,liquidity_and_debt_refinancing,debt_refinancing_and_preliminary_results,1
+T3000551,2023Q4,LE,inflecting,constructive,1,7,4,-3,1,1,3,2,1,3,1,-2,1,high,high,0,gross_margin_expansion,gross_margin_recovery,1
+T3000552,2023Q4,LFST,inflecting,neutral,1,7,2,-5,1,1,3,2,1,3,0,-3,1,high,high,0,operating_scaling,operational_efficiency,1
+T3000553,2023Q4,LILA,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,high,1,pricing_mix,telecom operating mix,1
+T3000554,2023Q4,LILAK,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,high,1,pricing_mix,telecom operating mix,1
+T3000555,2023Q4,LXFR,neutral,deteriorating,1,2,-3,-5,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_slowdown,guidance deterioration,1
+T3000556,2023Q4,LYFT,inflecting,constructive,1,8,6,-2,1,1,1,0,0,3,1,-2,1,high,high,0,margin_expansion,rideshare operating leverage,1
+T3000557,2023Q4,MPAA,inflecting,inflecting,0,7,7,0,0,1,2,1,1,3,3,0,0,high,high,0,margin_expansion,margin inflection,1
+T3000558,2023Q4,MQ,inflecting,neutral,1,7,2,-5,1,1,3,2,1,3,0,-3,1,high,high,0,margin_expansion,cost reduction and contract renewal,1
+T3000559,2023Q4,MTRX,inflecting,constructive,1,7,3,-4,1,1,2,1,1,3,1,-2,1,high,high,0,backlog_growth,backlog conversion,1
+T3000560,2023Q4,NCLH,constructive,neutral,1,6,2,-4,1,3,4,1,1,1,-3,-4,1,high,high,0,cost_improvement,cruise recovery with guidance cut,1
+T3000561,2023Q4,NEWT,constructive,constructive,0,6,3,-3,1,1,1,0,0,1,1,0,0,high,medium,1,loan_growth,loan production growth,1
+T3000562,2023Q4,NNBR,constructive,constructive,0,3,4,1,1,3,2,-1,1,1,1,0,0,high,high,0,cost_reduction_margin_expansion,transformation cost actions,1
+T3000563,2023Q4,NPKI,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,margin_expansion_and_cash_generation,margin expansion and cash conversion,1
+T3000564,2023Q4,NRDS,neutral,neutral,0,2,0,-2,1,2,3,1,1,0,0,0,0,high,medium,1,revenue_growth,mixed vertical growth,1
+T3000565,2023Q4,NTGR,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,high,high,0,premium_mix_and_inventory_reduction,premium mix and inventory reduction,1
+T3000566,2023Q4,NWL,neutral,neutral,0,1,0,-1,1,3,4,1,1,0,-3,-3,1,high,high,0,cost_savings_and_cash_flow,cost and cash-flow improvement under declining demand,1
+T3000567,2023Q4,OFIX,neutral,deteriorating,1,1,-5,-6,1,3,5,2,1,0,-3,-3,1,high,high,0,restructuring_and_financing,reported growth with weak cash and guidance cut,1
+T3000568,2023Q4,OSUR,constructive,constructive,0,4,3,-1,1,1,3,2,1,1,1,0,0,high,medium,1,margin_improvement_and_cash_generation,operational efficiency and margin recovery,1
+T3000569,2023Q4,PAHC,deteriorating,neutral,1,-1,1,2,1,3,4,1,1,-3,-3,0,0,medium,high,1,demand_pressure,demand weakness and guidance pressure,1
+T3000570,2023Q4,PTEN,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,medium,medium,0,activity_recovery,activity outlook and acquisition integration,1
+T3000571,2023Q4,PTON,neutral,neutral,0,0,0,0,0,4,3,-1,1,-3,0,3,1,medium,high,1,cost_restructuring,turnaround guidance with subscriber pressure,1
+T3000572,2023Q4,QUAD,neutral,neutral,0,2,1,-1,1,3,4,1,1,0,-3,-3,1,medium,high,1,cost_efficiency,cost control and cash flow amid revenue decline,1
+T3000573,2023Q4,RBBN,constructive,constructive,0,4,5,1,1,2,2,0,0,1,1,0,0,medium,high,1,margin_expansion,margin improvement and segment profitability inflection,1
+T3000574,2023Q4,REAL,constructive,constructive,0,4,5,1,1,2,2,0,0,1,1,0,0,medium,high,1,unit_economics,business mix shift and take-rate improvement,1
+T3000575,2023Q4,RGP,deteriorating,neutral,1,-2,1,3,1,3,4,1,1,-3,-3,0,0,medium,high,1,macro_weakness,macro-driven demand slowdown,1
+T3000576,2023Q4,RSI,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,scale_and_efficiency,profitable growth inflection,1
+T3000577,2023Q4,RUN,neutral,neutral,0,2,1,-1,1,2,4,2,1,0,-3,-3,1,medium,high,1,mix shift and storage growth,guidance_cut_vs_storage_growth,1
+T3000578,2023Q4,RYAM,deteriorating,neutral,1,-2,0,2,1,4,4,0,0,-3,-3,0,0,medium,high,1,demand weakness and cost response,demand_weakness_guidance_cut,1
+T3000579,2023Q4,SG,constructive,constructive,0,5,5,0,0,1,2,1,1,1,1,0,0,medium,high,1,same-store sales and pricing,margin_inflection,1
+T3000580,2023Q4,SLQT,constructive,constructive,0,5,4,-1,1,1,2,1,1,1,1,0,0,medium,high,1,revenue mix and operating scale,revenue_growth_loss_narrowing,1
+T3000581,2023Q4,SNDX,deteriorating,constructive,1,-1,5,6,1,3,1,-2,1,-3,1,4,1,medium,medium,0,clinical pipeline progress,clinical_pipeline_progress,1
+T3000582,2023Q4,SWBI,constructive,neutral,1,4,1,-3,1,1,3,2,1,1,0,-1,1,medium,high,1,share gains and seasonal demand,share_gain_with_margin_pressure,1
+T3000583,2023Q4,SWIM,constructive,neutral,1,3,1,-2,1,2,4,2,1,1,-3,-4,1,medium,high,1,cost reduction and pricing leverage,cost_reduction_vs_guidance_cut,1
+T3000584,2023Q4,TBLA,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,high,high,0,scale and cash generation,guidance_beat_raise_cash_flow,1
+T3000585,2023Q4,TEAD,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,medium,1,margin and cost discipline,margin and cost discipline,0
+T3000586,2023Q4,TG,neutral,neutral,0,1,0,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,demand weakness and margin pressure,demand and margin deterioration,1
+T3000587,2023Q4,TILE,neutral,constructive,1,1,3,2,1,3,3,0,0,0,1,1,1,high,medium,1,margin improvement,gross margin improvement,1
+T3000588,2023Q4,UEIC,deteriorating,deteriorating,0,-4,-2,2,1,5,5,0,0,-3,-3,0,0,high,high,0,demand decline and capacity reduction,demand contraction and impairment,1
+T3000589,2023Q4,UIS,constructive,constructive,0,4,3,-1,1,1,2,1,1,1,1,0,0,high,medium,1,guidance raise and pipeline growth,guidance raise and pipeline growth,0
+T3000590,2023Q4,ULCC,neutral,deteriorating,1,0,-2,-2,1,3,5,2,1,0,-3,-3,1,high,high,0,cost efficiency amid demand pressure,unit revenue and profitability pressure,1
+T3000591,2023Q4,UPWK,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,pricing and platform monetization,profitable growth inflection,1
+T3000592,2023Q4,UTZ,constructive,constructive,0,5,4,-1,1,2,2,0,0,1,1,0,0,high,medium,1,productivity and cost savings,productivity and EBITDA margin improvement,1
+T3000593,2023Q4,VITL,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,brand_and_volume_growth,brand_volume_profitability,1
+T3000594,2023Q4,VYGR,constructive,neutral,1,3,1,-2,1,3,2,-1,1,1,0,-1,1,medium,medium,0,pipeline_progress,pipeline_milestones,1
+T3000595,2023Q4,WEST,deteriorating,deteriorating,0,-1,-1,0,0,5,5,0,0,-3,-3,0,0,high,high,0,demand_weakness,demand_shortfall_guidance_cut,1
+T3000596,2023Q4,WRBY,neutral,neutral,0,2,2,0,0,2,2,0,0,0,0,0,0,high,high,0,growth_with_margin_pressure,revenue_growth_mix_pressure,1
+T3000597,2023Q4,WWW,deteriorating,neutral,1,-1,1,2,1,4,5,1,1,-3,-3,0,0,high,high,0,turnaround_and_divestiture,transformation_guidance_cut,1
+T3000598,2023Q4,XPER,constructive,neutral,1,3,2,-1,1,3,3,0,0,1,0,-1,1,medium,medium,0,design_wins_and_partner_momentum,design_wins_cost_transformation,1
+T3000599,2023Q4,XRX,constructive,constructive,0,5,3,-2,1,2,3,1,1,1,1,0,0,high,high,0,cost_and_mix_transformation,cost_reinvention_cash_flow,1
+T3000600,2024Q1,ACCO,constructive,neutral,1,5,2,-3,1,2,3,1,1,1,0,-1,1,high,high,0,restructuring_and_margin_expansion,restructuring_margin_cash_flow,1
+T3000601,2024Q1,ADTN,neutral,neutral,0,2,0,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,cost_mix_margin,margin improvement and cost reduction,1
+T3000602,2024Q1,AHR,neutral,neutral,0,1,2,1,1,2,2,0,0,0,0,0,0,medium,medium,0,same_store_noi,portfolio operations,1
+T3000603,2024Q1,AIOT,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,saas_transition,SaaS mix shift and efficiency,1
+T3000604,2024Q1,ALTG,constructive,constructive,0,5,6,1,1,2,2,0,0,1,1,0,0,high,high,0,revenue_growth,revenue growth and high-margin mix,1
+T3000605,2024Q1,AMC,neutral,constructive,1,1,3,2,1,4,4,0,0,-3,-3,0,0,high,high,0,box_office_recovery,post-pandemic recovery,1
+T3000606,2024Q1,AMRX,deteriorating,neutral,1,-1,0,1,1,1,0,-1,1,-3,0,3,1,high,low,1,guidance_reaffirmation,guidance reaffirmation,1
+T3000607,2024Q1,ANGO,deteriorating,deteriorating,0,-1,-2,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,product_mix,guidance revision and portfolio shift,1
+T3000608,2024Q1,ARLO,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,subscription_growth,recurring service mix shift,1
+T3000609,2024Q1,AVD,constructive,inflecting,1,3,7,4,1,2,2,0,0,1,3,2,1,medium,high,1,transformation_and_demand,demand_normalization_and_transformation,1
+T3000610,2024Q1,BE,deteriorating,neutral,1,-1,0,1,1,4,3,-1,1,-3,0,3,1,medium,high,1,margin_recovery_and_product_launches,margin_recovery_and_product_innovation,1
+T3000611,2024Q1,BGS,neutral,deteriorating,1,0,-3,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,pricing_cost_mix_improvement,pricing_cost_spread,1
+T3000612,2024Q1,BRSP,deteriorating,deteriorating,0,-1,-3,-2,1,4,4,0,0,-3,-3,0,0,medium,high,1,liquidity_and_credit_quality,credit_quality_and_liquidity,1
+T3000613,2024Q1,BV,constructive,neutral,1,3,1,-2,1,2,2,0,0,1,0,-1,1,medium,high,1,cost_reduction_and_portfolio_action,cost_control_and_portfolio_actions,1
+T3000614,2024Q1,BVS,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,cost_savings_and_liquidity_improvement,revenue_reacceleration_and_restructuring,1
+T3000615,2024Q1,CDE,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,production_ramp_and_asset_expansion,capacity_expansion_and_ramp,1
+T3000616,2024Q1,COMP,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,medium,high,1,expense_reduction_and_cash_flow_improvement,expense_reduction_and_cash_flow_improvement,0
+T3000617,2024Q1,CORZ,neutral,neutral,0,2,1,-1,1,3,3,0,0,0,0,0,0,medium,medium,0,strategic_optimization,business mix and balance sheet,1
+T3000618,2024Q1,CTLP,constructive,inflecting,1,6,9,3,1,2,1,-1,1,1,3,2,1,high,high,0,growth_with_margin_expansion,recurring revenue growth,1
+T3000619,2024Q1,CTOS,constructive,neutral,1,5,0,-5,1,2,3,1,1,1,0,-1,1,medium,high,1,inventory_and_demand_rebound,supply chain and backlog,1
+T3000620,2024Q1,CXM,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,profitability_inflection,subscription growth and margin expansion,1
+T3000621,2024Q1,DDD,deteriorating,deteriorating,0,-1,-5,-4,1,4,4,0,0,-3,-3,0,0,high,high,0,restructuring_and_demand_weakness,demand weakness and restructuring,1
+T3000622,2024Q1,DNUT,inflecting,inflecting,0,7,7,0,0,2,2,0,0,3,3,0,0,high,high,0,scale_and_margin_expansion,unit expansion and operating leverage,1
+T3000623,2024Q1,EBS,deteriorating,deteriorating,0,-1,-5,-4,1,4,5,1,1,-3,-3,0,0,medium,high,1,restructuring_and_guidance_reset,turnaround guidance,1
+T3000624,2024Q1,EE,constructive,constructive,0,6,5,-1,1,1,2,1,1,1,1,0,0,high,high,0,contract_and_rate_tailwind,contracted infrastructure earnings,1
+T3000625,2024Q1,EVCM,constructive,constructive,0,4,4,0,0,1,2,1,1,1,1,0,0,medium,medium,0,margin expansion,margin expansion,0
+T3000626,2024Q1,EZPW,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,demand growth,demand growth,0
+T3000627,2024Q1,GBTG,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,scale leverage,profitability inflection,1
+T3000628,2024Q1,GRPN,deteriorating,deteriorating,0,-2,-1,1,1,3,3,0,0,-3,-3,0,0,medium,medium,0,guidance reaffirmation,preliminary outlook,1
+T3000629,2024Q1,HAIN,neutral,deteriorating,1,1,-1,-2,1,3,4,1,1,0,-3,-3,1,medium,high,1,restructuring and mix shift,restructuring,1
+T3000630,2024Q1,HE,neutral,deteriorating,1,0,-1,-1,1,3,4,1,1,0,-3,-3,1,medium,medium,0,balance sheet repositioning,balance sheet repositioning,0
+T3000631,2024Q1,HIMS,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,growth and profitability,growth with margin expansion,1
+T3000632,2024Q1,HLMN,neutral,constructive,1,1,4,3,1,2,2,0,0,0,1,1,1,medium,medium,0,pricing and mix,margin recovery,1
+T3000633,2024Q1,HLX,inflecting,inflecting,0,8,8,0,0,2,1,-1,1,3,3,0,0,high,high,0,operational turnaround,utilization_pricing_cash_flow,1
+T3000634,2024Q1,HOOD,deteriorating,neutral,1,-2,0,2,1,2,0,-2,1,-3,0,3,1,low,low,0,brokerage monetization,insufficient_earnings_evidence,1
+T3000635,2024Q1,HRTG,inflecting,inflecting,0,8,9,1,1,2,1,-1,1,3,3,0,0,high,high,0,underwriting improvement,underwriting_profitability_mix_shift,1
+T3000636,2024Q1,KOS,constructive,constructive,0,3,3,0,0,4,3,-1,1,-3,1,4,1,high,high,0,production and cash generation,production_reserves_project_execution,1
+T3000637,2024Q1,KW,neutral,deteriorating,1,2,-4,-6,1,3,4,1,1,0,-3,-3,1,medium,high,1,capital raising and fee-bearing capital growth,platform_growth_vs_real_estate_valuation_pressure,1
+T3000638,2024Q1,LC,inflecting,constructive,1,9,3,-6,1,1,2,1,1,3,1,-2,1,high,high,0,originations and profitability,marketplace_originations_capital_credit,1
+T3000639,2024Q1,LE,constructive,neutral,1,4,1,-3,1,2,3,1,1,1,0,-1,1,high,high,0,margin expansion and inventory improvement,margin_inventory_reset,1
+T3000640,2024Q1,LFST,deteriorating,deteriorating,0,-2,-5,-3,1,2,4,2,1,-3,-3,0,0,medium,medium,0,legal settlement and liquidity,litigation_liquidity,1
+T3000641,2024Q1,LILA,constructive,deteriorating,1,3,-2,-5,1,2,3,1,1,1,-3,-4,1,medium,high,1,asset_monetization_cost_efficiency,mixed margin improvement with revenue pressure,1
+T3000642,2024Q1,LILAK,constructive,deteriorating,1,3,-2,-5,1,2,3,1,1,1,-3,-4,1,medium,high,1,asset_monetization_cost_efficiency,mixed margin improvement with revenue pressure,1
+T3000643,2024Q1,LTH,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,growth_margin_expansion,growth with cash flow inflection,1
+T3000644,2024Q1,LYFT,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,medium,high,1,margin_expansion_cash_flow,profitability and free cash flow inflection,1
+T3000645,2024Q1,MATV,neutral,deteriorating,1,0,-3,-3,1,3,4,1,1,0,-3,-3,1,medium,high,1,restructuring_cost_actions,volume-driven downturn with restructuring plan,1
+T3000646,2024Q1,MIR,inflecting,constructive,1,7,5,-2,1,1,1,0,0,3,1,-2,1,high,high,0,backlog_growth_margin_expansion,steady growth with backlog support,1
+T3000647,2024Q1,MPAA,constructive,neutral,1,5,1,-4,1,2,3,1,1,1,0,-1,1,medium,high,1,gross_margin_improvement,operating recovery offset by financing and net loss pressure,1
+T3000648,2024Q1,MQ,neutral,deteriorating,1,1,-2,-3,1,2,3,1,1,0,-3,-3,1,medium,high,1,scale_and_margin_mix,volume growth with revenue and GAAP loss disconnect,1
+T3000649,2024Q1,MTRX,constructive,neutral,1,4,1,-3,1,3,3,0,0,1,0,-1,1,medium,high,1,backlog_and_margin_recovery,Backlog and volume recovery,1
+T3000650,2024Q1,NEWT,constructive,inflecting,1,3,7,4,1,2,1,-1,1,1,3,2,1,medium,medium,0,loan_pipeline_growth,Loan growth and efficiency,1
+T3000651,2024Q1,NNBR,constructive,constructive,0,5,3,-2,1,2,2,0,0,1,1,0,0,medium,high,1,transformation_and_cost_savings,Transformation and cost savings,1
+T3000652,2024Q1,NPKI,constructive,inflecting,1,5,7,2,1,2,2,0,0,1,3,2,1,medium,high,1,operating_leverage_and_cash_generation,Portfolio mix and operating leverage,1
+T3000653,2024Q1,NRDS,neutral,deteriorating,1,0,-1,-1,1,3,4,1,1,0,-3,-3,1,medium,high,1,guidance_and_cash_generation,Outlook miss and revenue pressure,1
+T3000654,2024Q1,NTGR,neutral,constructive,1,1,4,3,1,2,2,0,0,0,1,1,1,medium,medium,0,mix_and_margin,Premium mix and margin improvement,1
+T3000655,2024Q1,NVRI,inflecting,inflecting,0,7,9,2,1,2,1,-1,1,3,3,0,0,high,high,0,revenue_and_ebitda_growth,"Demand, pricing, and EBITDA expansion",1
+T3000656,2024Q1,NWL,constructive,constructive,0,5,3,-2,1,3,4,1,1,1,-3,-4,1,high,high,0,cost_savings_and_cash_flow,Cost productivity and cash conversion,1
+T3000657,2024Q1,OFIX,constructive,constructive,0,6,6,0,0,1,1,0,0,1,1,0,0,medium,medium,0,revenue_growth,revenue_growth,0
+T3000658,2024Q1,OSUR,constructive,neutral,1,4,2,-2,1,1,3,2,1,1,0,-1,1,medium,medium,0,margin_expansion,margin_cash_improvement,1
+T3000659,2024Q1,PAHC,constructive,deteriorating,1,3,-3,-6,1,2,4,2,1,1,-3,-4,1,medium,high,1,guidance_and_mix,guidance_pressure,1
+T3000660,2024Q1,PTON,constructive,neutral,1,4,0,-4,1,3,4,1,1,1,-3,-4,1,medium,medium,0,cost_restructuring,turnaround_cost_control,1
+T3000661,2024Q1,QUAD,constructive,neutral,1,5,0,-5,1,2,4,2,1,1,-3,-4,1,medium,high,1,cost_savings,cost_savings_vs_revenue_decline,1
+T3000662,2024Q1,RBBN,constructive,inflecting,1,6,7,1,1,1,2,1,1,1,3,2,1,medium,high,1,profitability_improvement,profitability_inflection,1
+T3000663,2024Q1,REAL,constructive,neutral,1,5,2,-3,1,2,3,1,1,1,0,-1,1,medium,medium,0,margin_and_cash_flow,profitability_turnaround,1
+T3000664,2024Q1,RELL,constructive,deteriorating,1,3,-3,-6,1,2,4,2,1,1,-3,-4,1,medium,high,1,backlog_and_mix,demand_weakness,1
+T3000665,2024Q1,RGP,neutral,deteriorating,1,2,-5,-7,1,3,4,1,1,0,-3,-3,1,high,high,0,margin_pressure,demand slowdown,1
+T3000666,2024Q1,RILYZ,deteriorating,neutral,1,-2,0,2,1,4,3,-1,1,-3,0,3,1,high,medium,1,mixed_segment_restructuring,mixed segment recovery,1
+T3000667,2024Q1,RIVN,constructive,constructive,0,6,4,-2,1,3,3,0,0,1,1,0,0,high,high,0,scale_and_cost_improvement,cost efficiency,1
+T3000668,2024Q1,RSI,inflecting,inflecting,0,8,9,1,1,2,1,-1,1,3,3,0,0,high,high,0,growth_and_profitability_inflection,profitability inflection,1
+T3000669,2024Q1,RUN,constructive,constructive,0,3,4,1,1,3,2,-1,1,1,1,0,0,high,medium,1,cash_generation_and_attachment_rate,storage mix and cash generation,1
+T3000670,2024Q1,SHLS,constructive,neutral,1,5,0,-5,1,3,4,1,1,1,-3,-4,1,high,high,0,order_growth,backlog growth with near-term headwinds,1
+T3000671,2024Q1,SLQT,inflecting,constructive,1,7,4,-3,1,2,2,0,0,3,1,-2,1,high,high,0,guidance_raise_and_profitability,guidance raise,1
+T3000672,2024Q1,STKL,neutral,neutral,0,2,2,0,0,3,3,0,0,0,0,0,0,medium,medium,0,volume_growth_with_margin_pressure,volume growth,1
+T3000673,2024Q1,SWIM,constructive,constructive,0,4,3,-1,1,2,3,1,1,1,1,0,0,high,high,0,cost reduction / margin expansion,cost productivity / mix shift,1
+T3000674,2024Q1,TBLA,constructive,constructive,0,4,5,1,1,2,2,0,0,1,1,0,0,medium,high,1,growth and profitability,growth acceleration / profitability guidance,1
+T3000675,2024Q1,TEAD,neutral,neutral,0,1,2,1,1,2,2,0,0,0,0,0,0,medium,high,1,operational efficiency,expense discipline / ex-TAC profitability,1
+T3000676,2024Q1,UEIC,deteriorating,deteriorating,0,-1,-2,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,cost reduction / restructuring,factory footprint / efficiency initiatives,1
+T3000677,2024Q1,UIS,constructive,constructive,0,6,3,-3,1,1,2,1,1,1,1,0,0,high,high,0,order growth / backlog,contract signings / backlog,1
+T3000678,2024Q1,ULCC,neutral,deteriorating,1,1,-1,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,cost discipline / network optimization,network simplification / unit cost reduction,1
+T3000679,2024Q1,VYGR,constructive,constructive,0,5,5,0,0,1,2,1,1,1,1,0,0,medium,medium,0,strategic partnership / financing,strategic collaboration / non-dilutive funding,1
+T3000680,2024Q1,WEST,unscorable,deteriorating,1,0,-2,-2,1,0,1,1,1,0,-3,-3,1,low,medium,1,insufficient evidence,credit agreement / financing terms,1
+T3000681,2024Q1,WRBY,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,medium,medium,0,unit economics / expansion,revenue_growth_with_margin_mixed,1
+T3000682,2024Q1,WWW,deteriorating,neutral,1,-1,1,2,1,3,3,0,0,-3,0,3,1,low,medium,1,transformation / portfolio reshaping,turnaround_cost_savings_deleveraging,1
+T3000683,2024Q1,XHR,constructive,constructive,0,3,3,0,0,1,2,1,1,1,1,0,0,medium,medium,0,expense control / hotel operations,expense_control_and_lodging_recovery,1
+T3000684,2024Q1,XPER,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,medium,medium,0,portfolio simplification / profitability,portfolio_refocus_and_platform_growth,1
+T3000685,2024Q2,AHR,constructive,constructive,0,3,3,0,0,1,2,1,1,1,1,0,0,medium,medium,0,occupancy / portfolio growth,healthcare_real_estate_occupancy_recovery,1
+T3000686,2024Q2,ALTG,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,medium,high,1,service mix / cycle resilience,mixed_revenue_growth_margin_pressure,1
+T3000687,2024Q2,AMC,deteriorating,deteriorating,0,-4,-5,-1,1,5,5,0,0,-3,-3,0,0,high,high,0,liquidity / operating loss,liquidity_and_demand_pressure,1
+T3000688,2024Q2,ANGO,deteriorating,deteriorating,0,-2,-4,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,divestiture / margin pressure,divestiture_restructuring_margin_pressure,1
+T3000689,2024Q2,ARLO,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,services growth and cash generation,subscription mix shift,1
+T3000690,2024Q2,ASAN,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,cash flow and operating leverage improvement,margin and cash flow improvement,1
+T3000691,2024Q2,AVD,neutral,constructive,1,1,3,2,1,4,3,-1,1,-3,1,4,1,high,medium,1,margin and EBITDA improvement,operating leverage and transformation,1
+T3000692,2024Q2,BE,deteriorating,deteriorating,0,-3,-4,-1,1,3,3,0,0,-3,-3,0,0,high,high,0,guidance and margin pressure,guidance reaffirmation despite weak quarter,1
+T3000693,2024Q2,BVS,constructive,inflecting,1,5,8,3,1,1,2,1,1,1,3,2,1,high,high,0,growth and profitability expansion,growth plus margin expansion,1
+T3000694,2024Q2,CDE,constructive,constructive,0,5,4,-1,1,2,3,1,1,1,1,0,0,high,high,0,production ramp and cash flow,production ramp,1
+T3000695,2024Q2,CMP,deteriorating,deteriorating,0,-3,-4,-1,1,3,4,1,1,-3,-3,0,0,high,high,0,weather-driven volume weakness and segment stress,deleveraging actions amid weak operations,1
+T3000696,2024Q2,COMP,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,high,high,0,cash flow improvement and transaction growth,cost reduction and cash flow inflection,1
+T3000697,2024Q2,CORZ,constructive,constructive,0,3,4,1,1,3,2,-1,1,1,1,0,0,medium,medium,0,capacity_expansion,capacity expansion and diversification,1
+T3000698,2024Q2,CRNC,deteriorating,deteriorating,0,-4,-5,-1,1,5,5,0,0,-3,-3,0,0,high,high,0,guidance_cut,guidance reduction and execution pressure,1
+T3000699,2024Q2,CTLP,constructive,inflecting,1,5,8,3,1,1,1,0,0,1,3,2,1,medium,high,1,secular_growth,recurring transaction growth,1
+T3000700,2024Q2,CTOS,deteriorating,deteriorating,0,-1,-3,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_softness,demand pressure and guidance cut,1
+T3000701,2024Q2,DAN,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,efficiency_improvement,efficiency and cash flow improvement,1
+T3000702,2024Q2,DBI,constructive,constructive,0,4,3,-1,1,1,1,0,0,1,1,0,0,medium,medium,0,margin_improvement,margin improvement with stable outlook,1
+T3000703,2024Q2,DCGO,neutral,neutral,0,1,0,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,business_mix_shift,contract wind-down offsetting operating improvement,1
+T3000704,2024Q2,DNOW,constructive,constructive,0,6,6,0,0,1,1,0,0,1,1,0,0,medium,medium,0,cash_generation,acquisition and free cash flow execution,1
+T3000705,2024Q2,DNUT,constructive,constructive,0,3,4,1,1,2,2,0,0,1,1,0,0,high,high,0,operating expansion,distribution expansion and productivity,1
+T3000706,2024Q2,DRH,deteriorating,neutral,1,-1,2,3,1,3,1,-2,1,-3,0,3,1,high,high,0,pricing and occupancy,guidance and lodging revenue growth,1
+T3000707,2024Q2,DXLG,deteriorating,deteriorating,0,-2,-3,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,margin pressure,demand pressure and lowered outlook,1
+T3000708,2024Q2,FIGS,constructive,deteriorating,1,3,-1,-4,1,1,2,1,1,1,-3,-4,1,high,medium,1,margin and outlook,outlook raise with margin pressure,1
+T3000709,2024Q2,FNKO,neutral,constructive,1,0,3,3,1,2,2,0,0,0,1,1,1,medium,high,1,gross margin and cost control,inventory and margin recovery,1
+T3000710,2024Q2,GBTG,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,growth plus cash flow,"productivity, margin expansion, and cash flow acceleration",1
+T3000711,2024Q2,GRPN,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,turnaround improvement,turnaround and profitability improvement,1
+T3000712,2024Q2,HRTG,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,underwriting improvement,underwriting profitability and portfolio mix,1
+T3000713,2024Q2,JRVR,constructive,constructive,0,5,4,-1,1,2,2,0,0,1,1,0,0,high,high,0,underwriting discipline,underwriting discipline,0
+T3000714,2024Q2,KRO,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,pricing-cost mix,volume recovery and cost improvement,1
+T3000715,2024Q2,KW,neutral,neutral,0,2,2,0,0,1,2,1,1,0,0,0,0,medium,medium,0,asset sales and fee capital growth,asset sales and fee capital growth,0
+T3000716,2024Q2,LBTYA,neutral,deteriorating,1,1,-1,-2,1,3,3,0,0,0,-3,-3,1,high,high,0,pricing and network investment,ARPU support offset by operating pressure,1
+T3000717,2024Q2,LBTYK,neutral,deteriorating,1,1,-1,-2,1,3,3,0,0,0,-3,-3,1,high,high,0,pricing and network investment,ARPU support offset by operating pressure,1
+T3000718,2024Q2,LE,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,high,high,0,gross margin expansion,gross margin recovery with revenue pressure,1
+T3000719,2024Q2,LFST,constructive,inflecting,1,6,7,1,1,2,2,0,0,1,3,2,1,high,high,0,operating scale and margin expansion,profitable growth and operating efficiency,1
+T3000720,2024Q2,LILA,neutral,deteriorating,1,0,-2,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,subscriber and revenue pressure,subscriber and revenue pressure,0
+T3000721,2024Q2,LILAK,neutral,neutral,0,1,0,-1,1,3,3,0,0,0,0,0,0,medium,medium,0,subscriber_mix_and_price,subscriber_revenue_pressure,1
+T3000722,2024Q2,LPSN,neutral,neutral,0,2,1,-1,1,3,4,1,1,0,-3,-3,1,medium,high,1,turnaround_cost_structure,cost_restructuring_turnaround,1
+T3000723,2024Q2,LTH,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,membership_growth_and_pricing_mix,membership_growth_and_guidance_raise,1
+T3000724,2024Q2,LXFR,inflecting,constructive,1,7,4,-3,1,1,2,1,1,3,1,-2,1,high,high,0,profitability_and_cash_flow_improvement,margin_cash_flow_recovery,1
+T3000725,2024Q2,MCS,neutral,neutral,0,0,1,1,1,3,3,0,0,0,0,0,0,medium,high,1,cyclical_content_slump,cyclical_demand_weakness,1
+T3000726,2024Q2,MCW,inflecting,inflecting,0,8,7,-1,1,1,1,0,0,3,3,0,0,high,high,0,unit_growth_and_cash_generation,unit_and_subscription_growth,1
+T3000727,2024Q2,MERC,constructive,neutral,1,5,2,-3,1,2,3,1,1,1,0,-1,1,high,high,0,commodity_pricing_and_costs,commodity_cost_and_pricing_recovery,1
+T3000728,2024Q2,MGNI,constructive,constructive,0,6,5,-1,1,1,2,1,1,1,1,0,0,high,high,0,ad_spend_and_share_gains,ad_spend_and_ctv_growth,1
+T3000729,2024Q2,MIR,constructive,constructive,0,4,6,2,1,2,1,-1,1,1,1,0,0,high,high,0,growth_and_margin_expansion,margin expansion,1
+T3000730,2024Q2,MPAA,inflecting,constructive,1,8,5,-3,1,1,2,1,1,3,1,-2,1,high,high,0,margin_and_cash_flow_improvement,profitability improvement,1
+T3000731,2024Q2,MQ,neutral,constructive,1,0,4,4,1,2,2,0,0,0,1,1,1,medium,high,1,volume_growth_with_mixed_reporting_effects,platform volume growth,1
+T3000732,2024Q2,MTRX,constructive,constructive,0,4,3,-1,1,1,3,2,1,1,1,0,0,medium,medium,0,backlog_and_award_pipeline,backlog inflection,1
+T3000733,2024Q2,NEO,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,pricing_volume_mix_improvement,commercial execution,1
+T3000734,2024Q2,NNBR,inflecting,inflecting,0,7,7,0,0,1,2,1,1,3,3,0,0,high,high,0,turnaround_and_operating_improvement,business transformation,1
+T3000735,2024Q2,NPKI,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,high,0,fleet_utilization_and_margin_expansion,margin expansion,1
+T3000736,2024Q2,NVCR,neutral,neutral,0,2,2,0,0,2,3,1,1,0,0,0,0,medium,high,1,commercial_traction,commercial and clinical progress,1
+T3000737,2024Q2,NWL,constructive,constructive,0,6,3,-3,1,2,3,1,1,1,1,0,0,high,high,0,cost_savings_margin_mix,cost/productivity and mix,1
+T3000738,2024Q2,OFIX,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,high,high,0,sales_growth_margin_expansion,revenue growth and margin improvement,1
+T3000739,2024Q2,ORGO,neutral,deteriorating,1,0,-2,-2,1,3,3,0,0,0,-3,-3,1,medium,high,1,revenue_growth_with_mixed_profitability,commercial execution with margin pressure,1
+T3000740,2024Q2,OSUR,constructive,deteriorating,1,5,-2,-7,1,1,4,3,1,1,-3,-4,1,high,high,0,cost_savings_margin_recovery,restructuring and cash-flow plan,1
+T3000741,2024Q2,OSW,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,demand_and_operating_leverage,demand growth and operating execution,1
+T3000742,2024Q2,PBI,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,cost_reduction_and_mix,cost reduction and segment mix,1
+T3000743,2024Q2,PDM,constructive,deteriorating,1,4,-3,-7,1,2,4,2,1,1,-3,-4,1,medium,high,1,occupancy_and_core_ffo,leasing stabilization with balance-sheet pressure,1
+T3000744,2024Q2,PGY,inflecting,constructive,1,8,5,-3,1,1,3,2,1,3,1,-2,1,high,medium,1,capital_efficiency_and_fee_growth,fee revenue growth and capital efficiency,1
+T3000745,2024Q2,PTEN,inflecting,constructive,1,7,4,-3,1,3,2,-1,1,3,1,-2,1,high,high,0,cost synergies and cash conversion,cost_synergy_free_cash_flow,1
+T3000746,2024Q2,PTLO,neutral,neutral,0,2,1,-1,1,2,2,0,0,0,0,0,0,high,high,0,margin improvement,margin_improvement,1
+T3000747,2024Q2,PTON,neutral,constructive,1,1,3,2,1,4,3,-1,1,-3,1,4,1,high,high,0,cost reduction and mix,restructuring_margin_mix,1
+T3000748,2024Q2,PWP,deteriorating,deteriorating,0,-2,-4,-2,1,3,4,1,1,-3,-3,0,0,high,high,0,capital markets activity,backlog_vs_current_shortfall,1
+T3000749,2024Q2,REAL,inflecting,constructive,1,9,6,-3,1,1,2,1,1,3,1,-2,1,high,high,0,gross margin expansion,core_business_gross_margin,1
+T3000750,2024Q2,RELL,neutral,deteriorating,1,0,-4,-4,1,2,4,2,1,0,-3,-3,1,high,high,0,inventory normalization,cyclical_recovery_claim,1
+T3000751,2024Q2,RELY,inflecting,inflecting,0,7,8,1,1,2,2,0,0,3,3,0,0,high,high,0,customer growth and scale,scale_growth_profitability,1
+T3000752,2024Q2,RIG,constructive,neutral,1,3,2,-1,1,3,3,0,0,1,0,-1,1,high,high,0,backlog and utilization,contract_activity_backlog,1
+T3000753,2024Q2,RIVN,constructive,neutral,1,3,1,-2,1,3,3,0,0,1,0,-1,1,high,medium,1,cost_efficiency_and_product_mix,cost efficiency and platform launch planning,1
+T3000754,2024Q2,RSI,constructive,inflecting,1,6,9,3,1,2,1,-1,1,1,3,2,1,high,high,0,growth_and_margin_expansion,revenue growth with operating leverage,1
+T3000755,2024Q2,RUN,neutral,deteriorating,1,1,-1,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,unit_economics_and_cash_generation,storage growth and cash generation outlook,1
+T3000756,2024Q2,SLQT,inflecting,constructive,1,8,6,-2,1,1,2,1,1,3,1,-2,1,high,medium,1,platform_scale_and_segment_growth,healthcare services scale and acquisition efficiency,1
+T3000757,2024Q2,SMHI,neutral,deteriorating,1,2,-1,-3,1,2,3,1,1,0,-3,-3,1,high,high,0,pricing_and_utilization,dayrate improvement with utilization weakness,1
+T3000758,2024Q2,STKL,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,volume_growth_and_margin_expansion,volume growth and operational execution,1
+T3000759,2024Q2,SWIM,inflecting,constructive,1,8,3,-5,1,1,3,2,1,3,1,-2,1,high,high,0,cost_efficiency_and_product_mix,cost savings and productivity,1
+T3000760,2024Q2,TASK,constructive,constructive,0,6,6,0,0,1,1,0,0,1,1,0,0,high,high,0,guidance_and_margin_execution,cash conversion and guidance improvement,1
+T3000761,2024Q2,TEAD,constructive,constructive,0,4,5,1,1,1,1,0,0,1,1,0,0,high,high,0,margin_and_cash_flow_improvement,margin and cash flow improvement,1
+T3000762,2024Q2,TG,neutral,constructive,1,1,3,2,1,2,2,0,0,0,1,1,1,medium,medium,0,segment_recovery_and_mix,segment recovery and cost improvement,1
+T3000763,2024Q2,ULCC,neutral,deteriorating,1,2,-1,-3,1,2,3,1,1,0,-3,-3,1,high,high,0,cost_management,cost efficiency offset by profitability pressure,1
+T3000764,2024Q2,WEST,inflecting,constructive,1,9,5,-4,1,1,2,1,1,3,1,-2,1,high,medium,1,commercialization_and_contract_wins,commercialization and EBITDA growth,1
+T3000765,2024Q2,WTTR,constructive,constructive,0,4,6,2,1,1,1,0,0,1,1,0,0,high,high,0,water_infrastructure_growth,infrastructure mix and margin improvement,1
+T3000766,2024Q2,WWW,constructive,constructive,0,4,4,0,0,1,2,1,1,1,1,0,0,high,high,0,margin_expansion_and_turnaround,turnaround and margin expansion,1
+T3000767,2024Q2,XHR,neutral,neutral,0,0,0,0,0,2,2,0,0,0,0,0,0,medium,medium,0,hotel_demand_recovery,portfolio recovery with renovation drag,1
+T3000768,2024Q2,XPER,neutral,neutral,0,0,2,2,1,2,2,0,0,0,0,0,0,medium,medium,0,product_scaling_and_mix,growth platform transition,1
+T3000769,2024Q3,ACCO,constructive,constructive,0,5,3,-2,1,2,3,1,1,1,1,0,0,high,high,0,cost reduction and mix,cost savings and mix,1
+T3000770,2024Q3,ADTN,deteriorating,deteriorating,0,-3,-3,0,0,5,4,-1,1,-3,-3,0,0,high,high,0,turnaround / restructuring,margin stabilization attempt,1
+T3000771,2024Q3,AIOT,constructive,neutral,1,3,2,-1,1,3,4,1,1,1,-3,-4,1,medium,high,1,synergy and scale,growth plus acquisition synergy,1
+T3000772,2024Q3,ALTG,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,segment mix and backlog,segment mix and backlog,0
+T3000773,2024Q3,AMC,deteriorating,deteriorating,0,-4,-3,1,1,4,3,-1,1,-3,-3,0,0,low,medium,1,balance-sheet / earnings pressure,pro forma financial overview,1
+T3000774,2024Q3,ANGO,constructive,constructive,0,3,4,1,1,2,3,1,1,1,1,0,0,medium,high,1,product mix and innovation,portfolio transition and Med Tech growth,1
+T3000775,2024Q3,ASAN,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,high,high,0,enterprise adoption and retention,enterprise customer momentum,1
+T3000776,2024Q3,AVD,deteriorating,deteriorating,0,-1,-4,-3,1,3,5,2,1,-3,-3,0,0,medium,high,1,portfolio mix / transformation,restructuring amid demand and margin pressure,1
+T3000777,2024Q3,BANC,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,medium,0,funding mix and balance-sheet mix,integration and funding mix,1
+T3000778,2024Q3,BDN,neutral,deteriorating,1,0,-3,-3,1,3,3,0,0,0,-3,-3,1,medium,high,1,one-time recapitalization gain,portfolio recapitalization and leasing,1
+T3000779,2024Q3,BE,constructive,neutral,1,3,2,-1,1,2,2,0,0,1,0,-1,1,medium,high,1,growth and margin expansion,margin improvement and guidance reaffirmation,1
+T3000780,2024Q3,BTSG,inflecting,constructive,1,7,3,-4,1,1,2,1,1,3,1,-2,1,high,high,0,broad-based operating growth,guidance increase and segment growth,1
+T3000781,2024Q3,CALY,deteriorating,deteriorating,0,-2,-3,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,guidance cut and strategic review,guidance cut and strategic review,0
+T3000782,2024Q3,CDE,inflecting,constructive,1,7,6,-1,1,1,2,1,1,3,1,-2,1,medium,high,1,production ramp and cost leverage,mine expansion and cost improvement,1
+T3000783,2024Q3,CENX,neutral,neutral,0,2,2,0,0,2,2,0,0,0,0,0,0,medium,high,1,price and premium leverage,commodity price and operating performance,1
+T3000784,2024Q3,CLNE,neutral,neutral,0,0,0,0,0,3,4,1,1,0,-3,-3,1,medium,high,1,volume growth with financing-related charges,volume growth offset by GAAP loss outlook,1
+T3000785,2024Q3,CNDT,deteriorating,neutral,1,-1,1,2,1,4,3,-1,1,-3,0,3,1,high,medium,1,cost_pressure_and_lost_business,margin_pressure_restructuring,1
+T3000786,2024Q3,CNTY,deteriorating,deteriorating,0,-2,-2,0,0,4,3,-1,1,-3,-3,0,0,high,high,0,mixed_operating_trend_with_margin_pressure,earnings_pressure,1
+T3000787,2024Q3,COMP,inflecting,inflecting,0,9,8,-1,1,1,2,1,1,3,3,0,0,high,high,0,operating_leverage_and_market_share,growth_operating_leverage_cash_flow,1
+T3000788,2024Q3,CTLP,constructive,constructive,0,3,4,1,1,2,2,0,0,1,1,0,0,medium,medium,0,margin_expansion_and_revenue_growth,recurring_revenue_margin_leverage,1
+T3000789,2024Q3,CTOS,deteriorating,neutral,1,-2,0,2,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_and_margin_pressure,guidance_cut_demand_margin_pressure,1
+T3000790,2024Q3,CWK,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,high,medium,1,cost_savings_and_business_mix,cost_savings_mixed_recovery,1
+T3000791,2024Q3,CYH,neutral,neutral,0,2,2,0,0,2,2,0,0,0,0,0,0,medium,medium,0,guidance_and_operating_stability,healthcare_ebitda_cash_flow_improvement,1
+T3000792,2024Q3,DCGO,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,high,high,0,cash_flow_and_margin_expansion,growth_margin_cash_flow_guidance_raise,1
+T3000793,2024Q3,DRVN,constructive,constructive,0,6,3,-3,1,1,2,1,1,1,1,0,0,high,high,0,same-store-sales-and-unit-growth,unit_growth_same_store_sales,1
+T3000794,2024Q3,EBS,deteriorating,deteriorating,0,-5,-5,0,0,5,5,0,0,-3,-3,0,0,high,high,0,guidance-cut-and-demand-softness,guidance_loss_deterioration,1
+T3000795,2024Q3,ECVT,neutral,deteriorating,1,2,-2,-4,1,3,5,2,1,0,-3,-3,1,high,high,0,demand-mix-and-pricing-pressure,demand_softening_guidance_cut,1
+T3000796,2024Q3,FNKO,constructive,constructive,0,4,6,2,1,2,2,0,0,1,1,0,0,medium,high,1,margin-expansion-and-inventory-discipline,margin_inventory_turnaround,1
+T3000797,2024Q3,GBTG,constructive,inflecting,1,5,9,4,1,2,1,-1,1,1,3,2,1,high,high,0,cash-flow-and-margin-expansion,productivity_margin_cash_flow,1
+T3000798,2024Q3,GRPN,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,high,high,0,local-demand-recovery-and-cash-flow,cash_flow_turnaround_local_growth,1
+T3000799,2024Q3,GT,constructive,constructive,0,4,5,1,1,3,3,0,0,1,1,0,0,high,high,0,transformation-and-price-mix,transformation_cost_price_mix,1
+T3000800,2024Q3,HCSG,neutral,neutral,0,1,2,1,1,2,3,1,1,0,0,0,0,high,high,0,revenue-and-cash-collection-improvement,collections_revenue_outlook,1
+T3000801,2024Q3,IRWD,neutral,neutral,0,1,1,0,0,4,4,0,0,-3,-3,0,0,high,high,0,commercial_pricing_pressure,pricing pressure and guidance cut,1
+T3000802,2024Q3,JELD,neutral,neutral,0,2,1,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,demand_weakness_and_cost_pressure,demand weakness and guidance cut,1
+T3000803,2024Q3,KLXE,constructive,inflecting,1,5,7,2,1,2,2,0,0,1,3,2,1,high,high,0,cost_actions_and_mix_improvement,cost optimization and mix shift,1
+T3000804,2024Q3,KRO,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,medium,0,capital_structure_and_control,acquisition and balance-sheet repositioning,1
+T3000805,2024Q3,KW,constructive,constructive,0,4,5,1,1,1,2,1,1,1,1,0,0,high,medium,1,fee_growth_and_asset_stabilization,investment management growth and deleveraging,1
+T3000806,2024Q3,LBTYA,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,subscriber_pricing_and_mix,stable revenue with cash-flow offset,1
+T3000807,2024Q3,LBTYK,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,subscriber_pricing_and_mix,stable revenue with cash-flow offset,1
+T3000808,2024Q3,LFST,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,scale_and_operating_leverage,profitable growth and operating discipline,1
+T3000809,2024Q3,LXFR,constructive,neutral,1,6,0,-6,1,1,2,1,1,1,0,-1,1,high,high,0,margin_recovery_and_guidance,margin_efficiency_one_time_recovery,1
+T3000810,2024Q3,MERC,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,high,high,0,commodity_price_and_cost_spread,commodity_recovery_cost_relief,1
+T3000811,2024Q3,MG,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,operating_leverage_and_mix,operating_leverage_mix_shift,1
+T3000812,2024Q3,MIR,constructive,constructive,0,6,5,-1,1,1,1,0,0,1,1,0,0,high,high,0,guidance_raise_and_margin_improvement,end_market_growth_margin_expansion,1
+T3000813,2024Q3,MPAA,neutral,deteriorating,1,1,-1,-2,1,3,3,0,0,0,-3,-3,1,high,high,0,volume_growth_with_fx_drag,sales_growth_cost_savings_offset_by_fx_and_debt_cost,1
+T3000814,2024Q3,MQ,deteriorating,deteriorating,0,-2,-2,0,0,2,3,1,1,-3,-3,0,0,high,high,0,metric_mismatch,volume_growth_revenue_presentation_drag,1
+T3000815,2024Q3,NDLS,deteriorating,deteriorating,0,-5,-5,0,0,4,4,0,0,-3,-3,0,0,high,medium,1,guidance_revision_and_noncash_adjustment,guidance_revision_impairment,1
+T3000816,2024Q3,NEWT,constructive,inflecting,1,3,8,5,1,1,1,0,0,1,3,2,1,medium,medium,0,funding_and_originations,funding_platform_scale,1
+T3000817,2024Q3,NMRK,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,medium,medium,0,guidance_outlook,guidance_reaffirmation,1
+T3000818,2024Q3,NNBR,constructive,inflecting,1,5,9,4,1,2,1,-1,1,1,3,2,1,high,high,0,operational_transformation,transformation_margin_expansion,1
+T3000819,2024Q3,NUS,neutral,deteriorating,1,0,-3,-3,1,3,4,1,1,0,-3,-3,1,high,high,0,cost_efficiency_and_mix,restructuring_under_pressure,1
+T3000820,2024Q3,NVRI,constructive,constructive,0,4,3,-1,1,1,2,1,1,1,1,0,0,medium,high,1,segment_mix_and_pricing,segment_recovery,1
+T3000821,2024Q3,OI,deteriorating,deteriorating,0,-1,-3,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,guidance_cut,guidance_cut_demand_shortfall,1
+T3000822,2024Q3,ORN,neutral,neutral,0,2,0,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,backlog_and_pricing,backlog_growth_guidance_cut,1
+T3000823,2024Q3,OUT,constructive,constructive,0,4,4,0,0,1,1,0,0,1,1,0,0,medium,medium,0,cash_flow_and_cost_control,organic_revenue_growth_cash_flow,1
+T3000824,2024Q3,PBI,constructive,constructive,0,5,6,1,1,1,2,1,1,1,1,0,0,high,high,0,cost_reduction_and_balance_sheet_actions,strategic_exit_cost_reduction,1
+T3000825,2024Q3,PGY,constructive,inflecting,1,5,7,2,1,2,2,0,0,1,3,2,1,high,high,0,funding_structure_and_unit_economics,capital efficiency and unit economics,1
+T3000826,2024Q3,PLCE,neutral,neutral,0,2,1,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,cost_takeout_and_mix,margin recovery via cost and sales rationalization,1
+T3000827,2024Q3,PTON,neutral,neutral,0,2,1,-1,1,3,4,1,1,0,-3,-3,1,high,high,0,cost_reduction_and_margin_mix,cost restructuring and margin expansion,1
+T3000828,2024Q3,QUAD,constructive,neutral,1,4,1,-3,1,2,3,1,1,1,0,-1,1,high,high,0,cost_productivity_and_cash_generation,productivity and cost reduction,1
+T3000829,2024Q3,REAL,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,high,high,0,revenue_growth_with_margin_progress,margin improvement and revenue growth,1
+T3000830,2024Q3,RIG,constructive,constructive,0,4,5,1,1,2,2,0,0,1,1,0,0,high,high,0,utilization_and_revenue_efficiency,utilization and revenue efficiency,1
+T3000831,2024Q3,RIVN,neutral,neutral,0,0,2,2,1,3,4,1,1,0,-3,-3,1,high,high,0,product_cost_reduction_and_retooling,product cost reduction and platform redesign,1
+T3000832,2024Q3,RSI,inflecting,inflecting,0,8,7,-1,1,1,1,0,0,3,3,0,0,high,high,0,growth_and_operating_leverage,scaled revenue growth and EBITDA inflection,1
+T3000833,2024Q3,RSVR,inflecting,constructive,1,7,4,-3,1,1,2,1,1,3,1,-2,1,high,medium,1,growth_and_margin_mix,organic growth and mix shift,1
+T3000834,2024Q3,SHC,constructive,neutral,1,3,2,-1,1,2,2,0,0,1,0,-1,1,medium,medium,0,steady_growth_with_cost_pressure,stabilization and pricing,1
+T3000835,2024Q3,SLQT,constructive,inflecting,1,5,7,2,1,3,2,-1,1,1,3,2,1,medium,high,1,profitability_improvement,profitability turnaround,1
+T3000836,2024Q3,SSP,constructive,neutral,1,4,2,-2,1,2,2,0,0,1,0,-1,1,medium,medium,0,advertising_mix,cyclical advertising uplift,1
+T3000837,2024Q3,STGW,constructive,constructive,0,5,4,-1,1,1,2,1,1,1,1,0,0,medium,medium,0,new_business_growth,new business and organic growth,1
+T3000838,2024Q3,STKL,constructive,constructive,0,6,6,0,0,1,2,1,1,1,1,0,0,high,high,0,volume_and_margin_improvement,volume growth and capacity ramp,1
+T3000839,2024Q3,SVV,deteriorating,deteriorating,0,-1,-4,-3,1,4,4,0,0,-3,-3,0,0,medium,high,1,demand_softness,guidance reduction,1
+T3000840,2024Q3,SWIM,constructive,constructive,0,5,6,1,1,1,2,1,1,1,1,0,0,high,high,0,cost_structure_improvement,cost structure improvement,1
+T3000841,2024Q3,TEAD,constructive,neutral,1,5,2,-3,1,2,3,1,1,1,0,-1,1,medium,medium,0,merger-synergy,M&A synergy plan,1
+T3000842,2024Q3,TITN,neutral,neutral,0,1,1,0,0,4,5,1,1,-3,-3,0,0,high,high,0,demand-cycle,Demand contraction and guidance cut,1
+T3000843,2024Q3,TROX,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,high,high,0,pricing-volume-mix,Volume recovery with cost pressure,1
+T3000844,2024Q3,ULCC,neutral,neutral,0,1,1,0,0,3,4,1,1,0,-3,-3,1,high,high,0,capacity-and-network-repositioning,Capacity reset and cost savings,1
+T3000845,2024Q3,WEST,constructive,constructive,0,5,3,-2,1,1,3,2,1,1,1,0,0,high,high,0,capacity-buildout,Plant ramp and margin improvement,1
+T3000846,2024Q3,WWW,inflecting,inflecting,0,7,7,0,0,1,2,1,1,3,3,0,0,high,high,0,turnaround-transformation,Turnaround execution,1
+T3000847,2024Q3,XPER,constructive,neutral,1,5,2,-3,1,1,2,1,1,1,0,-1,1,medium,high,1,product-platform-growth,Platform monetization ramp,1
+T3000848,2024Q4,ACCO,constructive,neutral,1,3,1,-2,1,2,3,1,1,1,0,-1,1,high,high,0,turnaround-cost-actions,Cost savings offsetting demand weakness,1
+T3000849,2024Q4,ADTN,neutral,constructive,1,1,3,2,1,4,2,-2,1,-3,1,4,1,medium,high,1,margin recovery / efficiency,inventory_normalization_margin_recovery,1
+T3000850,2024Q4,AIOT,inflecting,inflecting,0,7,8,1,1,1,1,0,0,3,3,0,0,high,high,0,post-merger synergy / revenue growth,post_merger_synergy_growth,1
+T3000851,2024Q4,ALTG,neutral,neutral,0,0,0,0,0,3,2,-1,1,0,0,0,0,medium,high,1,product support / mix resilience,mix_shift_product_support,1
+T3000852,2024Q4,AMC,deteriorating,deteriorating,0,-2,-4,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,cost efficiency / attendance rebound,cost_efficiency_box_office_recovery,1
+T3000853,2024Q4,AVD,neutral,neutral,0,0,0,0,0,2,3,1,1,0,0,0,0,medium,high,1,transformation / inventory normalization,transformation_cost_savings,1
+T3000854,2024Q4,BDN,neutral,deteriorating,1,0,-3,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,asset sales / leasing progress,leasing_progress_asset_sales,1
+T3000855,2024Q4,BE,constructive,neutral,1,3,1,-2,1,2,2,0,0,1,0,-1,1,medium,high,1,guidance reaffirmation / project execution,gross_margin_recovery_guidance_reaffirmation,1
+T3000856,2024Q4,BMEA,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,high,high,0,clinical catalyst / pipeline progress,clinical_regulatory_progress,1
+T3000857,2024Q4,BNED,neutral,inflecting,1,2,8,6,1,3,2,-1,1,0,3,3,1,medium,high,1,operational_improvement,business transformation and cost management,1
+T3000858,2024Q4,CDE,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,cost_and_cash_flow_improvement,production growth and cost improvement,1
+T3000859,2024Q4,CLNE,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,medium,medium,0,volume_growth,volume growth and adjusted profitability,1
+T3000860,2024Q4,CNDT,neutral,deteriorating,1,0,-2,-2,1,4,3,-1,1,-3,-3,0,0,high,high,0,mixed_operational_pressure,lost business and stranded costs,1
+T3000861,2024Q4,CNTY,neutral,deteriorating,1,1,-2,-3,1,2,3,1,1,0,-3,-3,1,medium,medium,0,property_opening,capacity expansion amid weak current results,1
+T3000862,2024Q4,COMP,inflecting,inflecting,0,9,8,-1,1,1,2,1,1,3,3,0,0,high,high,0,market_share_gain,market share gains and cost control,1
+T3000863,2024Q4,CRNC,deteriorating,deteriorating,0,-5,-5,0,0,4,4,0,0,-3,-3,0,0,medium,high,1,guidance_and_executive_transition,leadership transition without financial proof,1
+T3000864,2024Q4,CTOS,neutral,deteriorating,1,1,-4,-5,1,3,5,2,1,0,-3,-3,1,high,high,0,margin_pressure_with_guidance_cut,guidance reduction and margin pressure,1
+T3000865,2024Q4,CWK,constructive,deteriorating,1,3,-2,-5,1,2,3,1,1,1,-3,-4,1,high,high,0,operating improvement,cost actions and leasing mix,1
+T3000866,2024Q4,CYH,neutral,neutral,0,0,1,1,1,4,3,-1,1,-3,0,3,1,high,medium,1,operating improvement,"volume, reimbursement, and cost mix",1
+T3000867,2024Q4,EBS,deteriorating,neutral,1,-3,0,3,1,3,2,-1,1,-3,0,3,1,medium,medium,0,liquidity,liquidity and refinancing,1
+T3000868,2024Q4,EVH,deteriorating,deteriorating,0,-3,-5,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,guidance reset,guidance revision and profitability pressure,1
+T3000869,2024Q4,FNKO,neutral,constructive,1,1,3,2,1,3,3,0,0,0,1,1,1,high,high,0,margin expansion,margin recovery despite demand caution,1
+T3000870,2024Q4,GRPN,neutral,deteriorating,1,1,-2,-3,1,3,4,1,1,0,-3,-3,1,medium,high,1,platform transformation,platform transformation with financing need,1
+T3000871,2024Q4,GT,constructive,constructive,0,4,4,0,0,3,3,0,0,1,1,0,0,high,high,0,transformation plan,transformation and price-cost benefits,1
+T3000872,2024Q4,HLIT,constructive,inflecting,1,6,9,3,1,2,1,-1,1,1,3,2,1,high,high,0,product growth,broadband growth and margin expansion,1
+T3000873,2024Q4,IRWD,constructive,neutral,1,3,1,-2,1,2,2,0,0,1,0,-1,1,medium,high,1,demand,product demand and pipeline execution,1
+T3000874,2024Q4,JBLU,neutral,constructive,1,2,3,1,1,3,3,0,0,0,1,1,1,medium,high,1,operational execution,operational reliability and revenue initiatives,1
+T3000875,2024Q4,KRO,inflecting,constructive,1,7,6,-1,1,1,2,1,1,3,1,-2,1,high,high,0,pricing and cost,cyclical volume recovery and cost improvement,1
+T3000876,2024Q4,KW,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,medium,high,1,capital formation and platform growth,investment platform growth,1
+T3000877,2024Q4,LC,inflecting,inflecting,0,9,8,-1,1,1,2,1,1,3,3,0,0,high,high,0,credit performance and balance sheet growth,marketplace funding and balance sheet expansion,1
+T3000878,2024Q4,LFCR,neutral,deteriorating,1,2,-3,-5,1,3,4,1,1,0,-3,-3,1,medium,high,1,customer wins and capacity expansion,capacity expansion and new customer wins,1
+T3000879,2024Q4,LFST,inflecting,inflecting,0,9,8,-1,1,1,2,1,1,3,3,0,0,high,high,0,scale and operating leverage,operational leverage and disciplined growth,1
+T3000880,2024Q4,MATV,constructive,neutral,1,3,1,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,cost and mix improvement,cost actions and segment margin improvement,1
+T3000881,2024Q4,MEI,neutral,deteriorating,1,2,-1,-3,1,3,3,0,0,0,-3,-3,1,high,medium,1,demand-mix-shift,demand_mix_and_cost_actions,1
+T3000882,2024Q4,MERC,deteriorating,neutral,1,-2,2,4,1,3,3,0,0,-3,0,3,1,medium,medium,0,operational-disruption,commodity_market_and_production_recovery,1
+T3000883,2024Q4,MIR,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,broad-demand-and-margin-expansion,operating_efficiency_and_end_market_growth,1
+T3000884,2024Q4,MPAA,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,medium,1,efficiency-and-volume,volume_growth_and_efficiency_actions,1
+T3000885,2024Q4,MQ,constructive,constructive,0,4,5,1,1,3,3,0,0,1,1,0,0,high,high,0,payment-volume-growth,platform_volume_growth_and_cost_control,1
+T3000886,2024Q4,MTRX,constructive,neutral,1,5,0,-5,1,2,3,1,1,1,0,-1,1,high,medium,1,backlog-and-awards,backlog_conversion_and_project_timing,1
+T3000887,2024Q4,NDLS,deteriorating,deteriorating,0,-5,-5,0,0,4,5,1,1,-3,-3,0,0,high,high,0,demand-and-guidance-weakness,restaurant_sales_and_margin_decline,1
+T3000888,2024Q4,NEWT,constructive,constructive,0,3,5,2,1,2,2,0,0,1,1,0,0,high,medium,1,loan-origination-growth,loan_origination_growth_and_platform_advantage,1
+T3000889,2024Q4,NVRI,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,high,high,0,pricing-demand mix,guidance_cut_operational_challenges,1
+T3000890,2024Q4,ORN,constructive,constructive,0,5,5,0,0,2,2,0,0,1,1,0,0,high,high,0,project execution and backlog,project_revenue_operating_leverage,1
+T3000891,2024Q4,OSCR,constructive,neutral,1,6,2,-4,1,2,3,1,1,1,0,-1,1,high,high,0,membership and pricing / cost ratio improvement,revenue_growth_cost_ratio_improvement,1
+T3000892,2024Q4,PBI,constructive,constructive,0,6,4,-2,1,2,2,0,0,1,1,0,0,high,high,0,cost reduction and mix,cost_reduction_margin_expansion,1
+T3000893,2024Q4,PGY,constructive,constructive,0,6,5,-1,1,2,3,1,1,1,1,0,0,medium,high,1,capital efficiency and fee growth,capital_efficiency_operating_leverage,1
+T3000894,2024Q4,PLCE,constructive,constructive,0,5,3,-2,1,3,4,1,1,1,-3,-4,1,high,high,0,profitability reset and cost discipline,profitability_turnaround_liquidity_risk,1
+T3000895,2024Q4,PTON,inflecting,constructive,1,8,3,-5,1,1,3,2,1,3,1,-2,1,high,high,0,margin expansion and cost savings,cost_restructuring_margin_expansion,1
+T3000896,2024Q4,QUAD,constructive,neutral,1,6,0,-6,1,2,3,1,1,1,0,-1,1,high,high,0,manufacturing productivity and cost reduction,cost_productivity_offsetting_sales_decline,1
+T3000897,2024Q4,REAL,constructive,constructive,0,5,5,0,0,1,1,0,0,1,1,0,0,medium,high,1,guidance_raise,guidance_raise_profitability,1
+T3000898,2024Q4,RIG,constructive,constructive,0,3,6,3,1,3,2,-1,1,1,1,0,0,medium,high,1,backlog_and_utilization,demand_backlog_utilization,1
+T3000899,2024Q4,RIVN,deteriorating,deteriorating,0,-1,-2,-1,1,5,5,0,0,-3,-3,0,0,high,high,0,guidance_cut,guidance_cut_production_disruption,1
+T3000900,2024Q4,RSI,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,revenue_and_ebitda_acceleration,growth_profitability_guidance_raise,1
+T3000901,2024Q4,RUN,neutral,constructive,1,2,4,2,1,2,2,0,0,0,1,1,1,medium,medium,0,deployment_mix_and_cash_generation,storage_growth_recurring_cash_generation,1
+T3000902,2024Q4,RYAM,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,fcf_and_refinancing,free_cash_flow_raise_refinancing_cost_actions,1
+T3000903,2024Q4,SEDG,deteriorating,deteriorating,0,-5,-2,3,1,5,5,0,0,-3,-3,0,0,high,high,0,margin_collapse_and_impairment,margin_collapse_impairment_revenue_decline,1
+T3000904,2024Q4,SLQT,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,medium,high,1,segment_growth,segment_revenue_ebitda_improvement,1
+T3000905,2024Q4,SSP,constructive,constructive,0,6,5,-1,1,2,2,0,0,1,1,0,0,high,high,0,pricing_mix,political advertising and cost control,1
+T3000906,2024Q4,STGW,inflecting,constructive,1,8,6,-2,1,1,1,0,0,3,1,-2,1,high,high,0,commercial_momentum,organic growth and new business,1
+T3000907,2024Q4,STKL,constructive,constructive,0,5,3,-2,1,2,2,0,0,1,1,0,0,high,high,0,volume_growth,volume growth and facility ramp,1
+T3000908,2024Q4,TROX,deteriorating,deteriorating,0,-3,-4,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_weakness,demand slowdown and guidance miss,1
+T3000909,2024Q4,ULCC,deteriorating,neutral,1,-2,1,3,1,4,3,-1,1,-3,0,3,1,high,high,0,cost_and_capacity,cost savings and capacity adjustment,1
+T3000910,2024Q4,VSAT,constructive,deteriorating,1,3,-3,-6,1,3,4,1,1,1,-3,-4,1,medium,high,1,backlog_and_awards,orderbook strength offset by EBITDA pressure,1
+T3000911,2024Q4,WEST,constructive,deteriorating,1,3,-1,-4,1,3,4,1,1,1,-3,-4,1,medium,high,1,customer_growth,facility ramp and customer wins,1
+T3000912,2024Q4,XPER,neutral,neutral,0,1,2,1,1,2,3,1,1,0,0,0,0,high,high,0,margin_mix,business transformation and margin expansion,1
+T3000913,2025Q1,ADTN,deteriorating,neutral,1,-1,0,1,1,4,3,-1,1,-3,0,3,1,medium,medium,0,demand_recovery_cost_actions,demand recovery,1
+T3000914,2025Q1,AIOT,inflecting,inflecting,0,9,8,-1,1,1,1,0,0,3,3,0,0,high,high,0,acquisition_synergy_and_margin_expansion,scale and margin expansion,1
+T3000915,2025Q1,AMC,deteriorating,neutral,1,-1,2,3,1,4,3,-1,1,-3,0,3,1,medium,high,1,cash_flow_recovery_and_balance_sheet_actions,box office recovery and cash generation,1
+T3000916,2025Q1,ARLO,inflecting,inflecting,0,9,8,-1,1,1,1,0,0,3,3,0,0,high,high,0,subscription_growth_margin_expansion_cash_generation,recurring revenue mix shift,1
+T3000917,2025Q1,ASAN,inflecting,constructive,1,9,4,-5,1,1,2,1,1,3,1,-2,1,high,medium,1,efficiency_and_ai_product_expansion,efficiency and profitability transition,1
+T3000918,2025Q1,AVD,neutral,neutral,0,2,0,-2,1,2,3,1,1,0,0,0,0,medium,medium,0,restructuring_and_inventory_reduction,turnaround and balance sheet repair,1
+T3000919,2025Q1,BDN,neutral,deteriorating,1,1,-4,-5,1,2,4,2,1,0,-3,-3,1,medium,high,1,leasing_momentum_and_occ_maintenance,office leasing pressure,1
+T3000920,2025Q1,BGS,neutral,deteriorating,1,0,-2,-2,1,3,3,0,0,0,-3,-3,1,medium,high,1,cost_mix_and_deleveraging,volume and cost pressure,1
+T3000921,2025Q1,BHFAM,neutral,constructive,1,0,3,3,1,4,2,-2,1,-3,1,4,1,medium,medium,0,mix_shift,earnings_recovery_product_mix,1
+T3000922,2025Q1,BNED,deteriorating,deteriorating,0,-3,-3,0,0,4,4,0,0,-3,-3,0,0,high,high,0,cash_flow_pressure,cash_burn_liquidity_pressure,1
+T3000923,2025Q1,BVS,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,growth_and_margin_expansion,growth_margin_cash_inflection,1
+T3000924,2025Q1,CDE,constructive,constructive,0,3,5,2,1,2,3,1,1,1,1,0,0,medium,high,1,transaction_and_growth,production_cost_cash_flow_improvement,1
+T3000925,2025Q1,CLNE,neutral,neutral,0,2,0,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,volume_growth,volume_adjusted_ebitda_growth_offset_by_losses,1
+T3000926,2025Q1,CMP,neutral,deteriorating,1,2,-4,-6,1,3,4,1,1,0,-3,-3,1,high,high,0,pricing_and_cost_mix,volume_decline_margin_pressure,1
+T3000927,2025Q1,CNDT,neutral,deteriorating,1,2,-4,-6,1,3,4,1,1,0,-3,-3,1,medium,high,1,new_business_and_cost_efficiency,lost_business_volume_decline,1
+T3000928,2025Q1,CTLP,constructive,inflecting,1,5,9,4,1,1,1,0,0,1,3,2,1,high,high,0,subscription_growth,subscription_transaction_growth_margin_expansion,1
+T3000929,2025Q1,CYH,inflecting,constructive,1,8,5,-3,1,2,2,0,0,3,1,-2,1,high,high,0,pricing-volume-cost mix,volume_reimbursement_cost_efficiency,1
+T3000930,2025Q1,DNUT,neutral,deteriorating,1,2,-4,-6,1,3,4,1,1,0,-3,-3,1,high,high,0,incident recovery and mix,cybersecurity_disruption_margin_pressure,1
+T3000931,2025Q1,EBS,constructive,neutral,1,4,2,-2,1,2,3,1,1,1,0,-1,1,high,high,0,portfolio reset and margin expansion,portfolio_restructuring_margin_recovery,1
+T3000932,2025Q1,EVH,neutral,deteriorating,1,1,-4,-5,1,3,4,1,1,0,-3,-3,1,medium,medium,0,guidance and cost discipline,medical_cost_pressure_guidance_reset,1
+T3000933,2025Q1,FNKO,constructive,constructive,0,3,4,1,1,2,2,0,0,1,1,0,0,high,high,0,channel mix and margin,gross_margin_dtc_emea_recovery,1
+T3000934,2025Q1,GRPN,inflecting,constructive,1,7,3,-4,1,1,3,2,1,3,1,-2,1,high,high,0,turnaround and cash flow,turnaround_cash_flow_local_growth,1
+T3000935,2025Q1,HRTG,deteriorating,deteriorating,0,-4,-3,1,1,5,4,-1,1,-3,-3,0,0,medium,high,1,catastrophe loss,catastrophe_loss_volatility,1
+T3000936,2025Q1,IRWD,inflecting,neutral,1,7,2,-5,1,1,3,2,1,3,0,-3,1,high,high,0,product demand and pipeline,product_demand_restructuring_offset_by_pricing,1
+T3000937,2025Q1,JBLU,neutral,neutral,0,1,2,1,1,4,3,-1,1,-3,0,3,1,medium,medium,0,revenue mix / operations,revenue initiatives and operational reliability,1
+T3000938,2025Q1,KW,constructive,constructive,0,5,3,-2,1,1,2,1,1,1,1,0,0,medium,medium,0,fee revenue / pipeline,investment management growth and transaction gains,1
+T3000939,2025Q1,LC,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,loan growth / credit performance,"originations, marketplace pricing, and credit improvement",1
+T3000940,2025Q1,LFCR,neutral,neutral,0,1,1,0,0,2,3,1,1,0,0,0,0,low,medium,1,capacity expansion / pipeline,capacity expansion and CDMO development pipeline,1
+T3000941,2025Q1,LFST,constructive,inflecting,1,3,8,5,1,2,1,-1,1,1,3,2,1,medium,high,1,same-store growth / clinician growth,clinic scale and operating efficiency,1
+T3000942,2025Q1,LPSN,deteriorating,deteriorating,0,-1,-4,-3,1,4,5,1,1,-3,-3,0,0,high,high,0,customer retention / AI product adoption,turnaround and bookings recovery,1
+T3000943,2025Q1,MQ,inflecting,inflecting,0,9,7,-2,1,1,1,0,0,3,3,0,0,high,high,0,processing volume / gross profit expansion,processing volume and gross profit expansion,1
+T3000944,2025Q1,MTRX,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,medium,high,1,backlog conversion / project execution,backlog conversion and fixed cost absorption,1
+T3000945,2025Q1,MYGN,neutral,deteriorating,1,1,-4,-5,1,3,4,1,1,0,-3,-3,1,medium,high,1,guidance_update,guidance_reset,1
+T3000946,2025Q1,NEO,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,operating_growth_and_margin_expansion,volume_price_mix,1
+T3000947,2025Q1,NEWT,constructive,constructive,0,3,6,3,1,2,1,-1,1,1,1,0,0,medium,medium,0,deposit_growth,deposit_franchise_growth,1
+T3000948,2025Q1,NMRK,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,broad_based_growth_with_margin_expansion,commercial_real_estate_recovery,1
+T3000949,2025Q1,ORN,inflecting,inflecting,0,7,8,1,1,1,2,1,1,3,3,0,0,high,high,0,margin_recovery_and_project_growth,margin_recovery_backlog,1
+T3000950,2025Q1,PBI,neutral,constructive,1,1,4,3,1,3,2,-1,1,0,1,1,1,medium,medium,0,deleveraging_and_cost_control,deleveraging_cost_efficiency,1
+T3000951,2025Q1,PGY,inflecting,inflecting,0,10,7,-3,1,0,2,2,1,3,3,0,0,high,high,0,profitability_inflection,capital_efficiency_operating_leverage,1
+T3000952,2025Q1,PTON,inflecting,constructive,1,7,3,-4,1,1,3,2,1,3,1,-2,1,high,high,0,margin_and_cash_flow_improvement,cost_and_margin_turnaround,1
+T3000953,2025Q1,RBBN,inflecting,inflecting,0,7,8,1,1,2,1,-1,1,3,3,0,0,high,high,0,demand_and_margin_expansion,demand_and_margin_expansion,0
+T3000954,2025Q1,REAL,constructive,neutral,1,6,2,-4,1,2,2,0,0,1,0,-1,1,high,medium,1,profitability_and_guidance_raise,margin_improvement,1
+T3000955,2025Q1,RIVN,neutral,neutral,0,1,0,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,gross_profit_improvement_with_guidance_pressure,gross_profit_inflection,1
+T3000956,2025Q1,RSI,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,growth_and_scale,revenue_growth_and_operating_leverage,1
+T3000957,2025Q1,RSVR,inflecting,inflecting,0,8,8,0,0,1,1,0,0,3,3,0,0,high,high,0,catalog_growth_and_cost_control,organic_growth_and_margin_expansion,1
+T3000958,2025Q1,RUN,neutral,constructive,1,1,4,3,1,4,2,-2,1,-3,1,4,1,high,medium,1,cash_generation_and_deleveraging,cash_generation_and_storage_mix,1
+T3000959,2025Q1,SHC,neutral,neutral,0,1,0,-1,1,2,2,0,0,0,0,0,0,medium,medium,0,preliminary_topline_growth,preliminary_revenue_growth,1
+T3000960,2025Q1,SLQT,neutral,neutral,0,1,0,-1,1,4,3,-1,1,-3,0,3,1,medium,medium,0,capital_structure_recap_and_growth_funding,balance_sheet_recapitalization,1
+T3000961,2025Q1,STGW,constructive,inflecting,1,5,8,3,1,2,1,-1,1,1,3,2,1,high,high,0,scale-and-margin,new business and margin expansion,1
+T3000962,2025Q1,TROX,neutral,neutral,0,1,1,0,0,3,4,1,1,0,-3,-3,1,high,high,0,cost-and-absorption,cost absorption and production efficiency,1
+T3000963,2025Q1,ULCC,constructive,inflecting,1,6,9,3,1,2,1,-1,1,1,3,2,1,high,high,0,yield-and-cost-discipline,capacity discipline and unit cost advantage,1
+T3000964,2025Q1,UTZ,constructive,inflecting,1,4,7,3,1,2,1,-1,1,1,3,2,1,high,high,0,volume-mix-and-margin,brand mix and margin expansion,1
+T3000965,2025Q1,VREX,constructive,constructive,0,3,5,2,1,2,1,-1,1,1,1,0,0,high,medium,1,mix-and-productivity,mix and productivity,1
+T3000966,2025Q1,VSAT,constructive,neutral,1,3,2,-1,1,3,3,0,0,1,0,-1,1,medium,high,1,mix-and-flow-through,defense and aviation orderbook growth,1
+T3000967,2025Q1,VYGR,neutral,neutral,0,2,1,-1,1,2,2,0,0,0,0,0,0,medium,medium,0,pipeline-milestone,pipeline progress and cash runway,1
+T3000968,2025Q1,WEST,deteriorating,deteriorating,0,-1,-2,-1,1,4,4,0,0,-3,-3,0,0,medium,high,1,growth-and-scale-up,capacity ramp and customer commitments,1
+T3000969,2025Q1,XPER,constructive,constructive,0,4,4,0,0,1,2,1,1,1,1,0,0,medium,medium,0,mix-and-monetization,business transformation / platform scale,1
+T3000970,2025Q2,ACAD,constructive,inflecting,1,6,8,2,1,1,1,0,0,1,3,2,1,high,high,0,commercial-growth,product growth / pipeline acceleration,1
+T3000971,2025Q2,ACH,neutral,constructive,1,2,3,1,1,1,2,1,1,0,1,1,1,medium,medium,0,operational-mix,segment margin expansion,1
+T3000972,2025Q2,ADTN,neutral,constructive,1,0,5,5,1,3,2,-1,1,0,1,1,1,medium,high,1,turnaround-operations,demand recovery / margin improvement,1
+T3000973,2025Q2,AHCO,constructive,deteriorating,1,3,-3,-6,1,1,3,2,1,1,-3,-4,1,medium,high,1,cash-flow-and-scale,cash flow improvement amid profit pressure,1
+T3000974,2025Q2,AIOT,constructive,inflecting,1,5,8,3,1,2,2,0,0,1,3,2,1,high,medium,1,integration-synergies,integration synergy / organic growth,1
+T3000975,2025Q2,ALTG,neutral,deteriorating,1,1,-2,-3,1,2,3,1,1,0,-3,-3,1,medium,high,1,portfolio-repositioning,portfolio rebalancing / demand stability claim,1
+T3000976,2025Q2,AMC,deteriorating,deteriorating,0,-5,-5,0,0,5,5,0,0,-3,-3,0,0,high,high,0,liquidity-pressure,post-quarter demand rebound claim,1
+T3000977,2025Q2,AVD,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,medium,high,1,cost reduction / working capital,cost_structure,1
+T3000978,2025Q2,AVNS,constructive,constructive,0,5,6,1,1,2,1,-1,1,1,1,0,0,high,high,0,margin / cost discipline,volume_growth,1
+T3000979,2025Q2,BBBY,neutral,deteriorating,1,2,-3,-5,1,4,4,0,0,-3,-3,0,0,high,high,0,turnaround / cost reduction,restructuring,1
+T3000980,2025Q2,BHFAM,neutral,neutral,0,2,2,0,0,3,2,-1,1,0,0,0,0,medium,medium,0,insurance spread / sales mix,earnings_recovery,1
+T3000981,2025Q2,BVS,constructive,constructive,0,4,5,1,1,2,1,-1,1,1,1,0,0,high,high,0,organic growth / portfolio mix,organic_growth,1
+T3000982,2025Q2,CALY,neutral,deteriorating,1,1,-2,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,cost reduction / portfolio change,guidance_pressure,1
+T3000983,2025Q2,CDE,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,resource expansion / margin,production_margin_inflection,1
+T3000984,2025Q2,CLNE,neutral,deteriorating,1,0,-3,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,guidance / contract marks,impairment_and_outlook_risk,1
+T3000985,2025Q2,CNTY,neutral,deteriorating,1,0,-2,-2,1,3,3,0,0,0,-3,-3,1,high,high,0,margin resilience amid revenue pressure,cost/cash improvement claim,1
+T3000986,2025Q2,COMP,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,growth and operating leverage,growth with operating leverage,1
+T3000987,2025Q2,CRNC,constructive,constructive,0,5,4,-1,1,1,2,1,1,1,1,0,0,high,high,0,guidance raise and cash generation,profitability and cash-flow improvement,1
+T3000988,2025Q2,CTOS,neutral,deteriorating,1,0,-2,-2,1,3,3,0,0,0,-3,-3,1,high,high,0,stable revenue with margin/cash flow focus,guidance reaffirmation with cash-flow target,1
+T3000989,2025Q2,CVGI,neutral,deteriorating,1,0,-2,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,cost savings offsetting demand weakness,cost transformation offset by demand weakness,1
+T3000990,2025Q2,CWK,constructive,inflecting,1,5,8,3,1,1,1,0,0,1,3,2,1,high,high,0,service-line growth and cost savings,margin recovery and service-line growth,1
+T3000991,2025Q2,CXM,constructive,neutral,1,5,1,-4,1,2,2,0,0,1,0,-1,1,high,high,0,cash generation and revenue growth,cash generation during transition,1
+T3000992,2025Q2,DAN,neutral,neutral,0,2,0,-2,1,2,3,1,1,0,0,0,0,high,high,0,cost savings and tariff recovery,cost savings and cash-flow improvement,1
+T3000993,2025Q2,DBI,deteriorating,deteriorating,0,-1,-2,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,cost reduction / margin pressure,guidance_withdrawal_consumer_discretionary_pressure,1
+T3000994,2025Q2,DCGO,neutral,neutral,0,1,1,0,0,4,5,1,1,-3,-3,0,0,high,high,0,guidance reset / mix shift,guidance_cut_revenue_removal,1
+T3000995,2025Q2,DDD,deteriorating,neutral,1,-2,0,2,1,5,5,0,0,-3,-3,0,0,high,high,0,demand weakness / guidance withdrawal,guidance_withdrawal_capex_weakness,1
+T3000996,2025Q2,DNUT,constructive,neutral,1,3,0,-3,1,3,4,1,1,1,-3,-4,1,high,high,0,growth mix / franchise expansion,consumer_softness_operating_deleverage,1
+T3000997,2025Q2,DXLG,deteriorating,neutral,1,-1,1,2,1,3,3,0,0,-3,0,3,1,high,high,0,margin compression / weak traffic,apparel_demand_and_margin_pressure,1
+T3000998,2025Q2,EBS,constructive,constructive,0,5,6,1,1,2,2,0,0,1,1,0,0,medium,medium,0,turnaround / margin expansion,turnaround_margin_improvement,1
+T3000999,2025Q2,EVH,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,medium,medium,0,stable guidance / operating execution,guidance_reaffirmation_pipeline,1
+T3001000,2025Q2,FET,constructive,constructive,0,6,6,0,0,1,2,1,1,1,1,0,0,high,high,0,cash generation / order strength,cash_flow_execution_backlog,1
+T3001001,2025Q2,FTRE,deteriorating,deteriorating,0,-1,-1,0,0,4,3,-1,1,-3,-3,0,0,medium,medium,0,backlog / book-to-bill,backlog_and_guidance,1
+T3001002,2025Q2,HLMN,neutral,neutral,0,0,0,0,0,4,4,0,0,-3,-3,0,0,medium,high,1,cost / tariff pressure,tariff_and_cash_flow_risk,1
+T3001003,2025Q2,HTZ,constructive,deteriorating,1,3,-1,-4,1,3,4,1,1,1,-3,-4,1,medium,medium,0,fleet mix / operating leverage,turnaround_execution,1
+T3001004,2025Q2,HURC,deteriorating,deteriorating,0,-1,-2,-1,1,3,3,0,0,-3,-3,0,0,medium,high,1,cost savings / mix,cost_savings_vs_demand_weakness,1
+T3001005,2025Q2,IART,deteriorating,deteriorating,0,-2,-2,0,0,4,4,0,0,-3,-3,0,0,medium,high,1,tariff / supply disruption,guidance_cut_and_supply_quality_execution,1
+T3001006,2025Q2,IEP,deteriorating,deteriorating,0,-5,-5,0,0,5,4,-1,1,-3,-3,0,0,high,high,0,losses / impairment,earnings_deterioration,1
+T3001007,2025Q2,JBLU,neutral,deteriorating,1,0,-1,-1,1,4,4,0,0,-3,-3,0,0,medium,high,1,network / demand strategy,demand_softening_vs_turnaround_plan,1
+T3001008,2025Q2,KRO,constructive,constructive,0,5,6,1,1,2,2,0,0,1,1,0,0,high,high,0,pricing / cost savings,volume_price_cost_leverage,1
+T3001009,2025Q2,LE,neutral,neutral,0,0,2,2,1,3,2,-1,1,0,0,0,0,medium,high,1,margin_improvement,margin/inventory improvement,1
+T3001010,2025Q2,LESL,deteriorating,deteriorating,0,-4,-4,0,0,4,3,-1,1,-3,-3,0,0,medium,high,1,turnaround_execution,turnaround/transformation,1
+T3001011,2025Q2,LFCR,neutral,deteriorating,1,1,-1,-2,1,3,3,0,0,0,-3,-3,1,medium,high,1,customer_mix_and_volume,mixed demand/pricing,1
+T3001012,2025Q2,LFST,inflecting,inflecting,0,7,9,2,1,2,1,-1,1,3,3,0,0,high,high,0,volume_and_margin_expansion,volume growth and margin expansion,1
+T3001013,2025Q2,LILA,constructive,neutral,1,3,0,-3,1,3,4,1,1,1,-3,-4,1,high,high,0,cost_efficiency_and_mix,cost actions offset demand pressure,1
+T3001014,2025Q2,LILAK,constructive,neutral,1,3,0,-3,1,3,4,1,1,1,-3,-4,1,high,high,0,cost_efficiency_and_mix,cost actions offset demand pressure,1
+T3001015,2025Q2,LPSN,deteriorating,deteriorating,0,-4,-3,1,1,4,4,0,0,-3,-3,0,0,medium,high,1,customer_retention_and_ai_demand,AI demand and cost transformation,1
+T3001016,2025Q2,LYFT,inflecting,inflecting,0,8,10,2,1,1,0,-1,1,3,3,0,0,high,high,0,growth_and_operating_leverage,scaled marketplace growth with cash conversion,1
+T3001017,2025Q2,MAGN,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,high,high,0,integration_synergy,merger_integration,1
+T3001018,2025Q2,MATV,deteriorating,deteriorating,0,-3,-3,0,0,4,4,0,0,-3,-3,0,0,high,high,0,cost_pressure_and_demand_weakness,segment_mixed_execution,1
+T3001019,2025Q2,MERC,deteriorating,deteriorating,0,-2,-2,0,0,3,3,0,0,-3,-3,0,0,high,high,0,commodity_pricing_and_costs,commodity_cost_pressure,1
+T3001020,2025Q2,MGNI,constructive,constructive,0,5,5,0,0,3,2,-1,1,1,1,0,0,high,high,0,monetization_growth,platform_growth_operating_leverage,1
+T3001021,2025Q2,MPAA,constructive,constructive,0,6,3,-3,1,2,2,0,0,1,1,0,0,high,high,0,pricing_margin_and_cash_flow,margin_recovery_cash_flow,1
+T3001022,2025Q2,MYE,constructive,constructive,0,6,6,0,0,1,1,0,0,1,1,0,0,high,high,0,acquisition_mix_and_costs,mix_cost_productivity,1
+T3001023,2025Q2,MYGN,deteriorating,deteriorating,0,-4,-5,-1,1,5,5,0,0,-3,-3,0,0,high,high,0,guidance_cut_and_volume_softness,guidance_cut_volume_pressure,1
+T3001024,2025Q2,NEO,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,high,0,volume_growth_and_margin_expansion,growth_margin_improvement,1
+T3001025,2025Q2,NEOG,neutral,deteriorating,1,0,-1,-1,1,4,5,1,1,-3,-3,0,0,high,high,0,cost_pressure_and_guidance_cut,guidance_cut_macro_pressure,1
+T3001026,2025Q2,NEWT,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,medium,high,1,balance_sheet_growth,balance_sheet_growth_operating_model,1
+T3001027,2025Q2,NVRI,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,medium,medium,0,segment_mix_and_cost_control,segment_mix_margin_resilience,1
+T3001028,2025Q2,NWL,constructive,constructive,0,5,3,-2,1,2,2,0,0,1,1,0,0,high,high,0,margin_expansion_and_cost_action,cost_productivity_margin_expansion,1
+T3001029,2025Q2,OFIX,deteriorating,neutral,1,-1,0,1,1,3,3,0,0,-3,0,3,1,medium,medium,0,commercial_execution_and_product_mix,turnaround_commercial_execution,1
+T3001030,2025Q2,ONEW,neutral,deteriorating,1,0,-1,-1,1,3,4,1,1,0,-3,-3,1,high,high,0,demand_softness,demand_pressure_outlook_update,1
+T3001031,2025Q2,ORGO,deteriorating,deteriorating,0,-2,-3,-1,1,4,5,1,1,-3,-3,0,0,medium,high,1,reimbursement_and_competitive_pressure,profitability_deterioration_reimbursement_risk,1
+T3001032,2025Q2,PD,neutral,constructive,1,2,3,1,1,4,4,0,0,-3,-3,0,0,high,high,0,subscription_growth_with_guidance_cut,margin_cash_flow_strength_with_revenue_guide_cut,1
+T3001033,2025Q2,PGY,inflecting,inflecting,0,9,7,-2,1,1,2,1,1,3,3,0,0,high,high,0,profitability inflection,profitability inflection,0
+T3001034,2025Q2,PLCE,deteriorating,deteriorating,0,-3,-3,0,0,4,5,1,1,-3,-3,0,0,high,high,0,turnaround / restructuring,turnaround risk,1
+T3001035,2025Q2,PTON,constructive,constructive,0,4,3,-1,1,2,3,1,1,1,1,0,0,high,high,0,margin improvement,cost and margin improvement,1
+T3001036,2025Q2,QVCGA,neutral,deteriorating,1,0,-3,-3,1,3,4,1,1,0,-3,-3,1,high,high,0,cost restructuring,sales deleverage,1
+T3001037,2025Q2,RBBN,neutral,neutral,0,1,2,1,1,2,3,1,1,0,0,0,0,high,high,0,backlog / demand timing,backlog and mix recovery,1
+T3001038,2025Q2,REAL,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,high,0,efficiency / AI operations,growth with efficiency,1
+T3001039,2025Q2,RIVN,constructive,constructive,0,3,4,1,1,3,3,0,0,1,1,0,0,high,high,0,profitability progression,gross profit inflection,1
+T3001040,2025Q2,RSI,inflecting,inflecting,0,9,8,-1,1,1,1,0,0,3,3,0,0,high,high,0,growth plus profitability,profitable growth,1
+T3001041,2025Q2,RUN,constructive,inflecting,1,4,8,4,1,2,2,0,0,1,3,2,1,high,high,0,cash_generation_and_storage_mix,cash generation and subscriber economics,1
+T3001042,2025Q2,RXO,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,high,1,integration_and_productivity,integration synergy and freight-cycle execution,1
+T3001043,2025Q2,SABR,neutral,neutral,0,0,2,2,1,3,3,0,0,0,0,0,0,medium,high,1,cost_savings_and_portfolio_action,portfolio deleveraging and cost savings,1
+T3001044,2025Q2,SLQT,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,medium,high,1,segment_execution_and_mix,segment mix and execution,1
+T3001045,2025Q2,SMHI,neutral,neutral,0,1,0,-1,1,2,3,1,1,0,0,0,0,medium,high,1,rate_stability_and_fleet_rotation,fleet repositioning and utilization recovery,1
+T3001046,2025Q2,STGW,constructive,neutral,1,4,0,-4,1,2,3,1,1,1,0,-1,1,medium,high,1,new_business_and_acquisition_expansion,"new business, acquisitions, and capability expansion",1
+T3001047,2025Q2,SWIM,inflecting,constructive,1,7,5,-2,1,1,2,1,1,3,1,-2,1,high,high,0,margin_expansion_and_operating_leverage,margin improvement and operating leverage,1
+T3001048,2025Q2,TALO,constructive,inflecting,1,6,7,1,1,1,2,1,1,1,3,2,1,high,high,0,cash_flow_and_hedging,free cash flow and balance sheet strength,1
+T3001049,2025Q2,TBI,neutral,deteriorating,1,2,-3,-5,1,3,3,0,0,0,-3,-3,1,high,high,0,demand_and_margin,demand weakness with cost actions,1
+T3001050,2025Q2,TROX,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,high,high,0,pricing_and_volume_pressure,cost restructuring under demand pressure,1
+T3001051,2025Q2,TTEC,constructive,inflecting,1,3,7,4,1,2,1,-1,1,1,3,2,1,high,high,0,margin_and_cash_improvement,margin and cash flow improvement,1
+T3001052,2025Q2,TWI,constructive,deteriorating,1,3,-1,-4,1,2,3,1,1,1,-3,-4,1,high,high,0,mix_and_tariff_resilience,acquisition offset by end-market demand weakness,1
+T3001053,2025Q2,UEIC,constructive,constructive,0,3,4,1,1,2,2,0,0,1,1,0,0,high,high,0,mix_shift_and_cost_control,channel mix and loss narrowing,1
+T3001054,2025Q2,ULCC,deteriorating,deteriorating,0,-2,-2,0,0,4,5,1,1,-3,-3,0,0,high,high,0,demand_weakness,guidance reduction and demand break,1
+T3001055,2025Q2,UTZ,neutral,neutral,0,0,0,0,0,0,0,0,0,0,0,0,0,high,low,1,insufficient_earnings_evidence,no earnings evidence,1
+T3001056,2025Q2,VSAT,constructive,constructive,0,3,3,0,0,3,2,-1,1,1,1,0,0,high,medium,1,backlog_and_mix,defense growth and balance sheet progress,1
+T3001057,2025Q2,VYGR,neutral,constructive,1,1,3,2,1,1,2,1,1,0,1,1,1,medium,medium,0,pipeline_progress,pipeline_progress,0
+T3001058,2025Q2,VYX,neutral,constructive,1,1,4,3,1,3,2,-1,1,0,1,1,1,medium,medium,0,customer_wins_and_transition,margin_improvement,1
+T3001059,2025Q2,WEST,neutral,deteriorating,1,2,-2,-4,1,1,3,2,1,0,-3,-3,1,medium,medium,0,volume_and_margin_mixture,guidance_reaffirmation,1
+T3001060,2025Q2,WNC,deteriorating,deteriorating,0,-1,-3,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_slowdown_and_guidance_cut,guidance_cut,1
+T3001061,2025Q2,XPER,inflecting,constructive,1,7,4,-3,1,1,2,1,1,3,1,-2,1,medium,medium,0,platform_monetization_and_cost_actions,cost_transformation,1
+T3001062,2025Q3,ACDC,neutral,deteriorating,1,1,-2,-3,1,3,4,1,1,0,-3,-3,1,medium,high,1,fleet_redeployment_and_customer_activity,sequential_decline,1
+T3001063,2025Q3,ALTG,neutral,constructive,1,2,3,1,1,2,3,1,1,0,1,1,1,medium,medium,0,operational_efficiency_and_mix,cost_reduction,1
+T3001064,2025Q3,AMC,constructive,constructive,0,3,5,2,1,4,3,-1,1,-3,1,4,1,high,high,0,recovery_and_liquidity_risk,box_office_recovery,1
+T3001065,2025Q3,AMRX,inflecting,inflecting,0,7,7,0,0,1,1,0,0,3,3,0,0,high,medium,1,profitability improvement,profitability_improvement,1
+T3001066,2025Q3,AVD,constructive,inflecting,1,5,9,4,1,2,1,-1,1,1,3,2,1,high,high,0,margin expansion,margin_expansion,1
+T3001067,2025Q3,BBBY,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,high,high,0,turnaround progress,loss_reduction,1
+T3001068,2025Q3,BDN,deteriorating,deteriorating,0,-3,-4,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,guidance cut,guidance_reduction,1
+T3001069,2025Q3,BHFAM,neutral,deteriorating,1,1,-3,-4,1,2,3,1,1,0,-3,-3,1,high,high,0,sales growth with margin pressure,mixed_sales_growth_profit_pressure,1
+T3001070,2025Q3,BHFAN,neutral,deteriorating,1,1,-3,-4,1,2,3,1,1,0,-3,-3,1,high,high,0,sales growth with margin pressure,mixed_sales_growth_profit_pressure,1
+T3001071,2025Q3,CC,neutral,neutral,0,2,0,-2,1,3,4,1,1,0,-3,-3,1,high,high,0,pricing/volume mix and operational disruption,operational_disruption,1
+T3001072,2025Q3,CDE,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,commodity price and cost leverage,commodity_leverage_and_cash_flow,1
+T3001073,2025Q3,CMCO,neutral,neutral,0,0,0,0,0,3,3,0,0,0,0,0,0,high,high,0,backlog and order intake,orders_backlog,1
+T3001074,2025Q3,CNTY,constructive,constructive,0,4,4,0,0,2,2,0,0,1,1,0,0,high,high,0,new asset ramp and operating improvement,portfolio_growth,1
+T3001075,2025Q3,CORZ,deteriorating,deteriorating,0,-3,-3,0,0,5,4,-1,1,-3,-3,0,0,high,high,0,digital asset mining decline,business_model_transition,1
+T3001076,2025Q3,CRSR,constructive,inflecting,1,4,7,3,1,2,2,0,0,1,3,2,1,high,high,0,demand recovery and cost discipline,product_demand,1
+T3001077,2025Q3,CTOS,inflecting,inflecting,0,8,8,0,0,1,1,0,0,3,3,0,0,high,high,0,order and backlog growth,order_backlog_growth,1
+T3001078,2025Q3,CWK,constructive,inflecting,1,5,9,4,1,1,1,0,0,1,3,2,1,medium,high,1,service-line growth and cost savings,margin_expansion,1
+T3001079,2025Q3,CYH,deteriorating,deteriorating,0,-1,-3,-2,1,3,4,1,1,-3,-3,0,0,high,high,0,hospital utilization and payor mix pressure,volume_margin_pressure,1
+T3001080,2025Q3,DDD,neutral,deteriorating,1,2,-1,-3,1,2,4,2,1,0,-3,-3,1,medium,high,1,cost reduction and niche demand growth,cost_reduction_vs_demand_weakness,1
+T3001081,2025Q3,DNUT,deteriorating,deteriorating,0,-2,-5,-3,1,5,4,-1,1,-3,-3,0,0,high,high,0,turnaround / demand mix,turnaround,1
+T3001082,2025Q3,EBS,inflecting,constructive,1,9,5,-4,1,1,2,1,1,3,1,-2,1,high,high,0,profitability improvement / execution,profitability transformation,1
+T3001083,2025Q3,EVH,neutral,neutral,0,2,1,-1,1,3,3,0,0,0,0,0,0,medium,high,1,guidance / execution,profitability guidance,1
+T3001084,2025Q3,FORR,neutral,deteriorating,1,1,-3,-4,1,3,3,0,0,0,-3,-3,1,medium,high,1,mixed operating performance,demand pressure,1
+T3001085,2025Q3,GT,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,medium,high,1,cost transformation / portfolio actions,cost transformation,1
+T3001086,2025Q3,HCSG,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,cash flow / restructuring,cash flow improvement,1
+T3001087,2025Q3,HTZ,inflecting,constructive,1,7,5,-2,1,2,3,1,1,3,1,-2,1,high,high,0,operating turnaround,operational turnaround,1
+T3001088,2025Q3,IART,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,medium,high,1,product growth / efficiency initiative,margin initiative,1
+T3001089,2025Q3,ICHR,neutral,deteriorating,1,1,-1,-2,1,2,2,0,0,0,-3,-3,1,medium,high,1,mix_and_margin,product portfolio / demand,1
+T3001090,2025Q3,JBLU,neutral,constructive,1,2,4,2,1,3,3,0,0,0,1,1,1,medium,high,1,demand_and_cost_reduction,cost execution / demand recovery,1
+T3001091,2025Q3,JELD,deteriorating,deteriorating,0,-1,-1,0,0,4,5,1,1,-3,-3,0,0,high,high,0,demand_and_pricing_pressure,demand decline / guidance pressure,1
+T3001092,2025Q3,KLXE,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,medium,high,1,segment_mix_and_utilization,utilization / segment mix,1
+T3001093,2025Q3,LE,neutral,neutral,0,2,2,0,0,2,2,0,0,0,0,0,0,medium,high,1,margin_and_inventory,margin discipline / inventory management,1
+T3001094,2025Q3,LEG,neutral,constructive,1,2,4,2,1,2,2,0,0,0,1,1,1,medium,high,1,restructuring_and_asset_sales,restructuring / cost execution,1
+T3001095,2025Q3,LESL,deteriorating,deteriorating,0,-1,-3,-2,1,3,4,1,1,-3,-3,0,0,medium,medium,0,cost_review_and_mix,strategic review / sales decline,1
+T3001096,2025Q3,MATV,neutral,constructive,1,2,3,1,1,3,3,0,0,0,1,1,1,medium,high,1,cost_control_and_cash_flow,cash flow / cost control,1
+T3001097,2025Q3,MERC,neutral,deteriorating,1,1,-2,-3,1,4,4,0,0,-3,-3,0,0,high,high,0,pricing_and_cost_pressure,Margin pressure / weak demand,1
+T3001098,2025Q3,MPAA,inflecting,inflecting,0,9,8,-1,1,1,1,0,0,3,3,0,0,high,high,0,pricing_volume_mix_and_cost_actions,Sales growth / margin recovery,1
+T3001099,2025Q3,MTW,neutral,deteriorating,1,2,-3,-5,1,3,4,1,1,0,-3,-3,1,high,high,0,backlog_conversion_and_market_rebound,Orders growth offset by execution and demand risk,1
+T3001100,2025Q3,MYE,constructive,neutral,1,4,2,-2,1,1,2,1,1,1,0,-1,1,high,medium,1,portfolio_mix_and_cash_flow_improvement,Cash flow improvement amid sales softness,1
+T3001101,2025Q3,MYGN,neutral,neutral,0,2,2,0,0,3,3,0,0,0,0,0,0,high,high,0,guidance_raise_with_margin_support,Guidance raise with cash burn and implementation friction,1
+T3001102,2025Q3,NDLS,neutral,deteriorating,1,1,-4,-5,1,3,4,1,1,0,-3,-3,1,high,high,0,traffic_and_value_pressure,Demand softness / guidance revision,1
+T3001103,2025Q3,NEO,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,high,high,0,acquisition_plus_impairment_mix,Revenue growth with guidance cut and impairment,1
+T3001104,2025Q3,NEOG,deteriorating,deteriorating,0,-1,-3,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,integration_and_margin_pressure,Integration and margin pressure,1
+T3001105,2025Q3,NEWT,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,operating leverage and deposit funding mix,funding_cost_operating_leverage,1
+T3001106,2025Q3,NNBR,constructive,constructive,0,3,3,0,0,2,3,1,1,1,1,0,0,medium,medium,0,cost discipline and margin mix,cost_mix_margin_improvement,1
+T3001107,2025Q3,NUS,constructive,constructive,0,4,3,-1,1,1,2,1,1,1,1,0,0,medium,medium,0,margin and guidance improvement,profitability_optimization,1
+T3001108,2025Q3,OFIX,inflecting,constructive,1,7,4,-3,1,1,3,2,1,3,1,-2,1,medium,medium,0,profitable growth and free-cash-flow turnaround,margin_expansion_turnaround,1
+T3001109,2025Q3,ORGO,deteriorating,deteriorating,0,-1,-5,-4,1,3,4,1,1,-3,-3,0,0,medium,high,1,mixed guidance with reimbursement and execution risk,regulatory_profitability_risk,1
+T3001110,2025Q3,ORN,constructive,inflecting,1,6,9,3,1,1,1,0,0,1,3,2,1,medium,high,1,backlog and infrastructure demand,backlog_margin_growth,1
+T3001111,2025Q3,PBI,constructive,deteriorating,1,4,-2,-6,1,1,4,3,1,1,-3,-4,1,medium,high,1,capital allocation and mix shift,guidance_cut_volume_pressure,1
+T3001112,2025Q3,PLCE,deteriorating,deteriorating,0,-3,-4,-1,1,4,4,0,0,-3,-3,0,0,high,high,0,turnaround with liquidity pressure,retail_demand_margin_liquidity_risk,1
+T3001113,2025Q3,PTON,neutral,constructive,1,2,3,1,1,3,3,0,0,0,1,1,1,high,high,0,cost_savings_restructuring,cost restructuring and margin mix,1
+T3001114,2025Q3,QUAD,neutral,neutral,0,1,1,0,0,3,2,-1,1,0,0,0,0,high,high,0,cost_savings_restructuring,cost reduction and productivity,1
+T3001115,2025Q3,REAL,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,growth_and_margin_expansion,growth plus efficiency,1
+T3001116,2025Q3,RIVN,deteriorating,deteriorating,0,-3,-3,0,0,4,4,0,0,-3,-3,0,0,high,high,0,regulatory_and_guidance_pressure,execution and guidance pressure,1
+T3001117,2025Q3,RUN,inflecting,inflecting,0,7,7,0,0,1,2,1,1,3,3,0,0,high,high,0,unit_economics_and_cash_generation,unit economics and cash generation,1
+T3001118,2025Q3,RXO,constructive,constructive,0,3,4,1,1,2,2,0,0,1,1,0,0,high,high,0,integration_and_margin_improvement,integration synergies and brokerage margin,1
+T3001119,2025Q3,RYAM,deteriorating,deteriorating,0,-3,-5,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_weakness_and_production_cuts,demand and guidance deterioration,1
+T3001120,2025Q3,SABR,neutral,deteriorating,1,0,-1,-1,1,3,4,1,1,0,-3,-3,1,high,high,0,cost_reduction_and_cloud_migration,cost savings offset by booking pressure,1
+T3001121,2025Q3,SG,deteriorating,neutral,1,-1,1,2,1,4,5,1,1,-3,-3,0,0,high,high,0,same_store_sales_and_margin_pressure,demand_pressure,1
+T3001122,2025Q3,SLQT,neutral,constructive,1,1,3,2,1,3,2,-1,1,0,1,1,1,high,medium,1,mix_shift_and_segment_growth,segment_mix_shift,1
+T3001123,2025Q3,SMHI,neutral,neutral,0,0,2,2,1,3,3,0,0,0,0,0,0,high,medium,1,fleet_utilization_and_day_rate,utilization_and_dayrate_recovery,1
+T3001124,2025Q3,SNDX,inflecting,constructive,1,8,5,-3,1,1,2,1,1,3,1,-2,1,high,medium,1,product_revenue_growth,commercial_launch_momentum,1
+T3001125,2025Q3,STGW,constructive,constructive,0,5,6,1,1,2,1,-1,1,1,1,0,0,high,medium,1,cost_savings_and_cash_flow_improvement,cost_savings_and_net_revenue_growth,1
+T3001126,2025Q3,STKL,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,volume_growth_and_margin_expansion,volume_growth_and_margin_initiatives,1
+T3001127,2025Q3,SWBI,neutral,deteriorating,1,1,-2,-3,1,2,3,1,1,0,-3,-3,1,high,high,0,seasonality_and_product_pipeline,seasonal_demand_and_product_pipeline,1
+T3001128,2025Q3,SWIM,inflecting,inflecting,0,8,9,1,1,1,1,0,0,3,3,0,0,high,high,0,volume_and_margin_expansion,margin_expansion_and_share_gain,1
+T3001129,2025Q3,TALO,constructive,constructive,0,6,5,-1,1,2,1,-1,1,1,1,0,0,high,medium,1,production / cost efficiency,guidance_improvement,1
+T3001130,2025Q3,TBI,neutral,neutral,0,1,0,-1,1,2,2,0,0,0,0,0,0,medium,medium,0,cost discipline / mix,cost_efficiency,1
+T3001131,2025Q3,TNDM,constructive,deteriorating,1,3,-2,-5,1,2,4,2,1,1,-3,-4,1,medium,high,1,commercial growth / gross margin,guidance_recast,1
+T3001132,2025Q3,TSEOF,deteriorating,deteriorating,0,-1,-5,-4,1,4,5,1,1,-3,-3,0,0,medium,high,1,restructuring / volume decline,demand_pressure,1
+T3001133,2025Q3,UEIC,constructive,constructive,0,4,3,-1,1,2,3,1,1,1,1,0,0,high,medium,1,product mix / footprint optimization,margin_inflection,1
+T3001134,2025Q3,ULCC,deteriorating,deteriorating,0,-1,-4,-3,1,3,4,1,1,-3,-3,0,0,medium,high,1,capacity discipline / commercial initiatives,margin_pressure,1
+T3001135,2025Q3,VYGR,neutral,constructive,1,2,4,2,1,2,2,0,0,0,1,1,1,medium,medium,0,pipeline / cash runway,cash_runway_extension,1
+T3001136,2025Q3,VYX,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,medium,medium,0,recurring software / cash flow,software_platform_growth,1
+T3001137,2025Q3,WEST,neutral,neutral,0,2,2,0,0,3,2,-1,1,0,0,0,0,medium,medium,0,growth_and_margins,capacity ramp and volume growth,1
+T3001138,2025Q3,WOOF,constructive,inflecting,1,3,7,4,1,2,1,-1,1,1,3,2,1,medium,high,1,margin_and_outlook,margin recovery and earnings outlook raise,1
+T3001139,2025Q3,WTI,neutral,neutral,0,2,0,-2,1,3,3,0,0,0,0,0,0,medium,medium,0,production_and_capital_allocation,production recovery and acquisition ramp,1
+T3001140,2025Q3,XPER,neutral,deteriorating,1,0,-4,-4,1,4,5,1,1,-3,-3,0,0,medium,high,1,guidance_cut_and_macro,outlook cut from macro uncertainty,1
+T3001141,2025Q3,XRX,neutral,deteriorating,1,0,-3,-3,1,4,4,0,0,-3,-3,0,0,medium,high,1,guidance_and_integration,tariff and integration pressure,1
+T3001142,2025Q4,ACCO,constructive,deteriorating,1,3,-2,-5,1,3,4,1,1,1,-3,-4,1,medium,high,1,cost_reduction,cost reduction offsetting demand softness,1
+T3001143,2025Q4,AI,neutral,deteriorating,1,0,-2,-2,1,4,4,0,0,-3,-3,0,0,medium,high,1,bookings_and_customer_scale,bookings recovery with weak current financials,1
+T3001144,2025Q4,AIOT,inflecting,inflecting,0,8,8,0,0,1,1,0,0,3,3,0,0,high,high,0,revenue_and_leverage,platform growth and operating leverage,1
+T3001145,2025Q4,ALTG,deteriorating,deteriorating,0,-1,-2,-1,1,4,3,-1,1,-3,-3,0,0,high,medium,1,cost and balance sheet pressure,equipment demand and portfolio optimization,1
+T3001146,2025Q4,AMC,deteriorating,neutral,1,-5,0,5,1,5,4,-1,1,-3,-3,0,0,high,high,0,demand softness and liquidity risk,box office cycle and refinancing,1
+T3001147,2025Q4,ANGO,constructive,inflecting,1,3,9,6,1,2,1,-1,1,1,3,2,1,high,high,0,growth and margin expansion,product mix growth,1
+T3001148,2025Q4,AVD,neutral,constructive,1,1,5,4,1,2,2,0,0,0,1,1,1,medium,medium,0,margin and cash improvement,margin recovery and channel normalization,1
+T3001149,2025Q4,BBBY,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,high,high,0,operational efficiency and margin expansion,profitability turnaround,1
+T3001150,2025Q4,BHFAM,neutral,deteriorating,1,1,-1,-2,1,0,1,1,1,0,-3,-3,1,medium,medium,0,preliminary balance sheet metrics,preliminary capital disclosure and corporate transaction,1
+T3001151,2025Q4,BHFAN,neutral,deteriorating,1,1,-1,-2,1,0,1,1,1,0,-3,-3,1,medium,medium,0,preliminary balance sheet metrics,preliminary capital disclosure and corporate transaction,1
+T3001152,2025Q4,BLMN,constructive,deteriorating,1,3,-2,-5,1,2,4,2,1,1,-3,-4,1,high,high,0,margin and efficiency improvement,restaurant margin pressure and turnaround,1
+T3001153,2025Q4,BNED,constructive,constructive,0,4,6,2,1,3,3,0,0,1,1,0,0,medium,high,1,operating_improvement,program adoption and expense discipline,1
+T3001154,2025Q4,CNTY,deteriorating,deteriorating,0,-3,-3,0,0,4,3,-1,1,-3,-3,0,0,medium,high,1,regional_mixed_performance,regional mix,1
+T3001155,2025Q4,CODI,deteriorating,deteriorating,0,-5,-5,0,0,5,5,0,0,-3,-3,0,0,high,high,0,restatement_and_liquidity,restatement and credit risk,1
+T3001156,2025Q4,CRSR,constructive,inflecting,1,6,8,2,1,2,2,0,0,1,3,2,1,high,high,0,demand_and_mix_improvement,product cycle and mix,1
+T3001157,2025Q4,CTOS,constructive,constructive,0,3,6,3,1,3,3,0,0,1,1,0,0,high,high,0,demand_and_inventory_efficiency,rental demand and fleet utilization,1
+T3001158,2025Q4,CYH,deteriorating,constructive,1,-1,3,4,1,3,2,-1,1,-3,1,4,1,medium,medium,0,non-operating_and_reimbursement_items,reimbursement and non-patient revenue,1
+T3001159,2025Q4,DDD,neutral,deteriorating,1,1,-2,-3,1,2,3,1,1,0,-3,-3,1,high,high,0,cost_reduction_and_product_cycle,cost reduction with hoped-for sequential recovery,1
+T3001160,2025Q4,EBS,deteriorating,neutral,1,-1,1,2,1,3,3,0,0,-3,0,3,1,high,high,0,mix_and_reimbursement,contract demand and margin management,1
+T3001161,2025Q4,FORR,deteriorating,deteriorating,0,-1,-3,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,guidance_pressure,cost discipline versus shrinking demand,1
+T3001162,2025Q4,GO,constructive,neutral,1,4,0,-4,1,2,3,1,1,1,0,-1,1,medium,high,1,restructuring_and_margin_mix,restructuring and cost optimization,1
+T3001163,2025Q4,GT,neutral,deteriorating,1,1,-1,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,cost_savings_offsetting_volume_pressure,turnaround program offset by volume and cost pressure,1
+T3001164,2025Q4,HAIN,neutral,constructive,1,1,3,2,1,3,3,0,0,0,1,1,1,medium,medium,0,productivity_and_pricing,productivity and pricing efficiencies,1
+T3001165,2025Q4,HTZ,inflecting,inflecting,0,7,8,1,1,2,2,0,0,3,3,0,0,high,high,0,operating_turnaround,fleet economics and operational turnaround,1
+T3001166,2025Q4,IART,constructive,neutral,1,4,2,-2,1,2,4,2,1,1,-3,-4,1,high,high,0,mix_and_product_growth,portfolio demand and cost discipline constrained by supply interruptions,1
+T3001167,2025Q4,JBLU,constructive,neutral,1,3,0,-3,1,2,3,1,1,1,0,-1,1,medium,high,1,cost_execution_and_network_momentum,strategic cost and commercial initiatives,1
+T3001168,2025Q4,LCUT,deteriorating,deteriorating,0,-3,-5,-2,1,4,4,0,0,-3,-3,0,0,high,high,0,cost_control_under_pressure,cost controls under demand and tariff pressure,1
+T3001169,2025Q4,LE,constructive,constructive,0,5,5,0,0,2,2,0,0,1,1,0,0,high,high,0,margin-expansion,margin and efficiency,1
+T3001170,2025Q4,LFCR,neutral,neutral,0,1,1,0,0,2,3,1,1,0,0,0,0,medium,medium,0,growth-strategy,pipeline and capacity expansion,1
+T3001171,2025Q4,LOVE,deteriorating,deteriorating,0,-4,-4,0,0,4,4,0,0,-3,-3,0,0,high,high,0,margin-pressure,margin pressure,1
+T3001172,2025Q4,LPSN,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,high,high,0,capital-structure-and-cost-reset,turnaround and cost rationalization,1
+T3001173,2025Q4,MEI,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,high,high,0,mix-and-cost-actions,execution improvement versus demand decline,1
+T3001174,2025Q4,MTW,constructive,inflecting,1,5,7,2,1,2,3,1,1,1,3,2,1,high,high,0,mix-and-aftermarket-growth,"mix, execution, and recurring revenue",1
+T3001175,2025Q4,MYGN,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,high,high,0,guidance-reattachment,execution and mix improvement,1
+T3001176,2025Q4,NDLS,neutral,deteriorating,1,1,-3,-4,1,2,4,2,1,0,-3,-3,1,high,high,0,cost-and-margin-improvement,restaurant profitability improvement claim,1
+T3001177,2025Q4,NEO,constructive,neutral,1,3,1,-2,1,2,2,0,0,1,0,-1,1,high,high,0,clinical volume growth,clinical volume growth,0
+T3001178,2025Q4,NEOG,neutral,deteriorating,1,2,-3,-5,1,2,3,1,1,0,-3,-3,1,high,high,0,portfolio mix / divestiture,portfolio reshaping,1
+T3001179,2025Q4,NEWT,constructive,inflecting,1,5,8,3,1,1,2,1,1,1,3,2,1,high,high,0,deposit and loan growth,digital banking scale,1
+T3001180,2025Q4,OFIX,inflecting,constructive,1,7,3,-4,1,1,2,1,1,3,1,-2,1,medium,medium,0,profitable growth / margin expansion,profitability improvement plan,1
+T3001181,2025Q4,OI,inflecting,inflecting,0,7,9,2,1,1,1,0,0,3,3,0,0,high,high,0,margin expansion / cost control,margin and cash flow improvement,1
+T3001182,2025Q4,ORN,constructive,constructive,0,5,3,-2,1,1,2,1,1,1,1,0,0,high,high,0,backlog and project wins,backlog and segment mix,1
+T3001183,2025Q4,PENN,deteriorating,deteriorating,0,-1,-5,-4,1,3,4,1,1,-3,-3,0,0,high,high,0,digital gaming mix / hold volatility,digital gaming strategy reset,1
+T3001184,2025Q4,QUAD,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,high,high,0,cost savings / productivity,cost productivity and guidance tightening,1
+T3001185,2025Q4,RBBN,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,guidance_and_margin,revenue growth and cost discipline,1
+T3001186,2025Q4,REAL,inflecting,inflecting,0,9,7,-2,1,1,2,1,1,3,3,0,0,high,high,0,growth_and_margin_expansion,profitable growth,1
+T3001187,2025Q4,RGP,neutral,deteriorating,1,0,-1,-1,1,3,4,1,1,0,-3,-3,1,high,high,0,cost_and_margin_improvement,margin repair amid demand decline,1
+T3001188,2025Q4,RIG,deteriorating,neutral,1,-1,1,2,1,4,4,0,0,-3,-3,0,0,high,high,0,operational_execution,operational improvement with balance-sheet pressure,1
+T3001189,2025Q4,RILY,constructive,neutral,1,3,1,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,capital_markets_activity,transaction-driven profitability,1
+T3001190,2025Q4,RILYZ,constructive,neutral,1,3,1,-2,1,2,3,1,1,1,0,-1,1,medium,high,1,capital_markets_activity,transaction-driven profitability,1
+T3001191,2025Q4,RIVN,deteriorating,deteriorating,0,-4,-1,3,1,5,4,-1,1,-3,-3,0,0,high,high,0,product_and_execution,product roadmap and technology progress,1
+T3001192,2025Q4,RMNI,constructive,neutral,1,5,2,-3,1,2,3,1,1,1,0,-1,1,high,high,0,recurring_revenue_and_retention,recurring revenue backlog with legal/product wind-down overhang,1
+T3001193,2025Q4,RXO,constructive,neutral,1,3,2,-1,1,3,3,0,0,1,0,-1,1,medium,medium,0,market-tightening / cost actions,market_tightening_and_cost_actions,1
+T3001194,2025Q4,SABR,neutral,constructive,1,2,4,2,1,2,2,0,0,0,1,1,1,medium,medium,0,deleveraging / revenue mix,cost_efficiency_and_deleveraging,1
+T3001195,2025Q4,SBGI,constructive,neutral,1,4,1,-3,1,2,2,0,0,1,0,-1,1,medium,medium,0,transaction / political-cycle upside,advertising_recovery_and_station_transactions,1
+T3001196,2025Q4,SEAT,neutral,deteriorating,1,1,-4,-5,1,3,5,2,1,0,-3,-3,1,medium,high,1,cost reduction / efficiency,turnaround_cost_reduction,1
+T3001197,2025Q4,SG,deteriorating,deteriorating,0,-4,-5,-1,1,5,5,0,0,-3,-3,0,0,high,high,0,margin deterioration / demand decline,restaurant_traffic_decline,1
+T3001198,2025Q4,SLQT,neutral,deteriorating,1,0,-2,-2,1,4,4,0,0,-3,-3,0,0,medium,high,1,reimbursement headwind / segment mix,segment_mix_and_reimbursement_headwind,1
+T3001199,2025Q4,SMHI,neutral,deteriorating,1,2,-2,-4,1,3,4,1,1,0,-3,-3,1,medium,medium,0,fleet utilization / cost structure,fleet_repositioning_and_market_softness,1
+T3001200,2025Q4,SNDX,inflecting,constructive,1,9,6,-3,1,1,2,1,1,3,1,-2,1,high,high,0,commercial launch acceleration,commercial_launch_growth,1
+T3001201,2025Q4,STGW,constructive,constructive,0,4,4,0,0,2,1,-1,1,1,1,0,0,medium,high,1,operating efficiency,growth plus cost discipline,1
+T3001202,2025Q4,SWBI,neutral,constructive,1,1,3,2,1,3,2,-1,1,0,1,1,1,medium,high,1,product mix and inventory,product cycle and channel normalization,1
+T3001203,2025Q4,TALO,inflecting,inflecting,0,7,8,1,1,1,1,0,0,3,3,0,0,medium,high,1,cash flow and cost efficiency,cost and capital efficiency program,1
+T3001204,2025Q4,TBI,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,medium,high,1,acquisition and operating improvement,turnaround execution,1
+T3001205,2025Q4,TROX,deteriorating,deteriorating,0,-3,-4,-1,1,5,5,0,0,-3,-3,0,0,high,high,0,cost actions and idling,cash preservation actions,1
+T3001206,2025Q4,TSEOF,deteriorating,deteriorating,0,-5,-4,1,1,5,5,0,0,-3,-3,0,0,high,high,0,restructuring and demand weakness,restructuring and working-capital actions,1
+T3001207,2025Q4,TTEC,neutral,neutral,0,1,0,-1,1,2,2,0,0,0,0,0,0,medium,medium,0,execution timing and seasonality,client ramp and seasonality,1
+T3001208,2025Q4,TWI,constructive,constructive,0,4,5,1,1,2,2,0,0,1,1,0,0,medium,high,1,margin expansion and fixed cost leverage,margin recovery and inventory normalization,1
+T3001209,2025Q4,ULCC,deteriorating,deteriorating,0,-1,-2,-1,1,3,3,0,0,-3,-3,0,0,high,medium,1,capacity management / commercial initiatives,capacity_and_commercial_actions,1
+T3001210,2025Q4,VYGR,deteriorating,deteriorating,0,-1,-2,-1,1,2,3,1,1,-3,-3,0,0,medium,medium,0,pipeline development / collaboration revenue,pipeline_and_runway,1
+T3001211,2025Q4,WEST,neutral,deteriorating,1,2,-5,-7,1,4,5,1,1,-3,-3,0,0,high,high,0,revenue growth / segment expansion,outlook_reset_and_liquidity,1
+T3001212,2025Q4,XPER,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,medium,medium,0,user growth / cost reset,platform_growth_and_cost_reduction,1
+T3001213,2026Q1,ACVA,inflecting,constructive,1,8,3,-5,1,1,2,1,1,3,1,-2,1,high,medium,1,marketplace scaling / operating leverage,marketplace_scale,1
+T3001214,2026Q1,AI,neutral,deteriorating,1,0,-5,-5,1,3,5,2,1,0,-3,-3,1,medium,high,1,bookings / subscription mix,restructuring_and_demand_mix,1
+T3001215,2026Q1,AIOT,inflecting,constructive,1,8,6,-2,1,1,2,1,1,3,1,-2,1,high,high,0,services revenue growth / operating leverage,recurring_revenue_operating_leverage,1
+T3001216,2026Q1,AMC,neutral,deteriorating,1,0,-3,-3,1,4,4,0,0,-3,-3,0,0,medium,high,1,box office / liquidity,box_office_recovery_and_balance_sheet,1
+T3001217,2026Q1,ANGO,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,growth_and_margin_expansion,Med Tech growth and margin expansion,1
+T3001218,2026Q1,AVD,neutral,deteriorating,1,0,-1,-1,1,3,4,1,1,0,-3,-3,1,medium,medium,0,demand_softness_and_cost_absorption,Cost actions and utilization plan,1
+T3001219,2026Q1,BBBY,neutral,constructive,1,2,4,2,1,2,2,0,0,0,1,1,1,medium,high,1,turnaround_and_cost_discipline,Loss narrowing and cash-use improvement,1
+T3001220,2026Q1,BDN,neutral,neutral,0,1,0,-1,1,3,3,0,0,0,0,0,0,medium,medium,0,same_store_noi_and_liquidity_actions,Asset recycling and liquidity plan,1
+T3001221,2026Q1,BHFAM,neutral,deteriorating,1,0,-2,-2,1,4,3,-1,1,-3,-3,0,0,medium,high,1,insurance_spread_and_sales_mix,Sales growth offset by earnings pressure,1
+T3001222,2026Q1,BHFAN,neutral,deteriorating,1,0,-2,-2,1,4,3,-1,1,-3,-3,0,0,medium,high,1,insurance_spread_and_sales_mix,Sales growth offset by earnings pressure,1
+T3001223,2026Q1,BNED,inflecting,constructive,1,8,6,-2,1,2,2,0,0,3,1,-2,1,high,high,0,program_adoption_and_margin_recovery,Program adoption and profitability recovery,1
+T3001224,2026Q1,CLNE,deteriorating,deteriorating,0,-1,-5,-4,1,4,4,0,0,-3,-3,0,0,medium,high,1,commodity_and_contract_exposure,2026 outlook pressured by losses and contract/warrant volatility,1
+T3001225,2026Q1,CNTY,neutral,neutral,0,1,2,1,1,3,3,0,0,0,0,0,0,medium,medium,0,margin recovery,margin_improvement,1
+T3001226,2026Q1,CODI,deteriorating,deteriorating,0,-3,-5,-2,1,4,4,0,0,-3,-3,0,0,low,medium,1,guidance / portfolio performance,reporting_quality_risk,1
+T3001227,2026Q1,CRSR,inflecting,inflecting,0,7,9,2,1,2,1,-1,1,3,3,0,0,high,high,0,product mix and margin expansion,mix_shift_operating_leverage,1
+T3001228,2026Q1,CTOS,inflecting,constructive,1,7,5,-2,1,2,2,0,0,3,1,-2,1,high,high,0,fleet utilization and deleveraging,working_capital_and_margin,1
+T3001229,2026Q1,EMBC,neutral,constructive,1,2,3,1,1,2,2,0,0,0,1,1,1,medium,high,1,margin improvement,profitability_and_cash_flow_recovery,1
+T3001230,2026Q1,GRPN,constructive,constructive,0,4,3,-1,1,2,3,1,1,1,1,0,0,high,high,0,local demand and cash generation,local_marketplace_cash_flow,1
+T3001231,2026Q1,HPP,neutral,deteriorating,1,2,-1,-3,1,3,4,1,1,0,-3,-3,1,medium,medium,0,asset sales and leasing pipeline,leasing_and_balance_sheet_actions,1
+T3001232,2026Q1,JBLU,constructive,constructive,0,3,4,1,1,3,3,0,0,1,1,0,0,high,high,0,demand recovery and cost control,turnaround_program,1
+T3001233,2026Q1,LCID,deteriorating,constructive,1,-1,3,4,1,4,1,-3,1,-3,1,4,1,medium,medium,0,volume_growth,production_delivery_ramp,1
+T3001234,2026Q1,LCUT,constructive,constructive,0,3,3,0,0,3,2,-1,1,1,1,0,0,medium,medium,0,margin_expansion,cost_structure_and_brand_growth,1
+T3001235,2026Q1,LE,constructive,constructive,0,6,4,-2,1,2,2,0,0,1,1,0,0,high,medium,1,margin_expansion,margin_expansion_and_product_franchise_recovery,1
+T3001236,2026Q1,LFCR,neutral,constructive,1,2,4,2,1,4,3,-1,1,-3,1,4,1,high,medium,1,guidance_and_pipeline,transformation_and_margin_recovery,1
+T3001237,2026Q1,LFST,inflecting,inflecting,0,7,8,1,1,2,1,-1,1,3,3,0,0,high,high,0,scale_and_unit_economics,profitable_growth_and_capacity_expansion,1
+T3001238,2026Q1,LPSN,neutral,deteriorating,1,1,-4,-5,1,4,4,0,0,-3,-3,0,0,high,high,0,restructuring_and_retention,cost_reduction_vs_revenue_decline,1
+T3001239,2026Q1,MEI,neutral,deteriorating,1,0,-4,-4,1,4,4,0,0,-3,-3,0,0,high,high,0,cost_actions_and_margins,transformation_under_market_pressure,1
+T3001240,2026Q1,MERC,deteriorating,deteriorating,0,-1,-5,-4,1,4,5,1,1,-3,-3,0,0,high,high,0,commodity_and_cost_pressure,commodity_downturn_and_cost_pressure,1
+T3001241,2026Q1,MTW,neutral,constructive,1,2,4,2,1,3,2,-1,1,0,1,1,1,high,high,0,order_and_backlog_momentum,orders_backlog_restructuring,1
+T3001242,2026Q1,MYGN,neutral,constructive,1,1,3,2,1,3,2,-1,1,0,1,1,1,high,medium,1,guidance_and_margin_expansion,guidance_margin_expansion,1
+T3001243,2026Q1,NEO,neutral,neutral,0,0,0,0,0,2,2,0,0,0,0,0,0,high,medium,1,revenue_growth_and_management_transition,revenue_growth_management_transition,1
+T3001244,2026Q1,NEOG,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,high,high,0,margin_improvement_and_core_growth,outlook_raise_operational_improvement,1
+T3001245,2026Q1,NEWT,deteriorating,deteriorating,0,-3,-1,2,1,1,1,0,0,-3,-3,0,0,high,medium,1,guidance_only,eps_guidance,1
+T3001246,2026Q1,NMRK,inflecting,inflecting,0,7,8,1,1,1,1,0,0,3,3,0,0,high,high,0,organic_growth_and_high_margin_fees,organic_growth_high_margin_platform,1
+T3001247,2026Q1,NVCR,constructive,constructive,0,4,3,-1,1,2,1,-1,1,1,1,0,0,high,medium,1,product_and_usage_growth,product_launch_patient_growth,1
+T3001248,2026Q1,OFIX,constructive,inflecting,1,4,7,3,1,2,2,0,0,1,3,2,1,high,high,0,margin_expansion_and_cash_conversion,margin_expansion_free_cash_flow,1
+T3001249,2026Q1,ONEW,constructive,neutral,1,3,2,-1,1,2,3,1,1,1,0,-1,1,high,medium,1,margin_mix,margin discipline and inventory optimization,1
+T3001250,2026Q1,PENN,constructive,constructive,0,4,3,-1,1,2,2,0,0,1,1,0,0,high,medium,1,growth_mix,interactive growth and property ramp,1
+T3001251,2026Q1,PGY,inflecting,constructive,1,8,5,-3,1,2,3,1,1,3,1,-2,1,high,medium,1,growth_and_leverage,platform monetization and risk-managed growth,1
+T3001252,2026Q1,QNST,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,acquisition_and_growth,revenue acceleration and margin expansion,1
+T3001253,2026Q1,QUAD,neutral,neutral,0,2,1,-1,1,2,3,1,1,0,0,0,0,medium,high,1,cost_productivity,cost productivity amid secular revenue decline,1
+T3001254,2026Q1,RBBN,deteriorating,deteriorating,0,-3,-3,0,0,4,4,0,0,-3,-3,0,0,high,high,0,demand_delay,customer project delays and conservative growth reset,1
+T3001255,2026Q1,REAL,inflecting,inflecting,0,9,9,0,0,1,1,0,0,3,3,0,0,high,high,0,unit_volume_growth,marketplace scale and profitability inflection,1
+T3001256,2026Q1,RGP,deteriorating,deteriorating,0,-3,-5,-2,1,4,5,1,1,-3,-3,0,0,high,high,0,demand_pressure,demand contraction and margin pressure,1
+T3001257,2026Q1,SABR,deteriorating,deteriorating,0,-1,-2,-1,1,4,3,-1,1,-3,-3,0,0,medium,high,1,balance_sheet_deleveraging,balance_sheet_and_cost_actions,1
+T3001258,2026Q1,SBGI,neutral,constructive,1,2,4,2,1,3,2,-1,1,0,1,1,1,medium,high,1,advertising_mix,advertising_cycle_and_guidance,1
+T3001259,2026Q1,SEAT,deteriorating,deteriorating,0,-1,-5,-4,1,4,5,1,1,-3,-3,0,0,medium,high,1,cost_reduction_and_product,demand_decline_and_cost_reduction,1
+T3001260,2026Q1,SG,constructive,deteriorating,1,3,-5,-8,1,3,5,2,1,1,-3,-4,1,medium,high,1,restaurant_footprint_and_efficiency,restaurant_traffic_and_margin_pressure,1
+T3001261,2026Q1,SLQT,neutral,neutral,0,2,1,-1,1,4,4,0,0,-3,-3,0,0,medium,high,1,membership_growth_and_mix,partner_headwinds_and_segment_mix,1
+T3001262,2026Q1,STGW,constructive,inflecting,1,4,9,5,1,2,1,-1,1,1,3,2,1,medium,high,1,net_revenue_growth_and_cash_generation,organic_growth_and_cash_flow_inflection,1
+T3001263,2026Q1,SWBI,neutral,inflecting,1,2,7,5,1,2,1,-1,1,0,3,3,1,medium,high,1,margin_expansion,market_share_and_margin_recovery,1
+T3001264,2026Q1,TROX,deteriorating,deteriorating,0,-1,-1,0,0,4,4,0,0,-3,-3,0,0,medium,high,1,pricing_and_cost_actions,pricing_cost_and_restructuring_actions,1
+T3001265,2026Q1,ULCC,neutral,constructive,1,0,4,4,1,3,1,-2,1,0,1,1,1,medium,medium,0,guidance_update,guidance_update,0
+T3001266,2026Q1,VREX,constructive,constructive,0,3,3,0,0,2,2,0,0,1,1,0,0,high,high,0,operating_performance,segment_growth,1
+T3001267,2026Q1,WEST,deteriorating,neutral,1,-1,1,2,1,4,3,-1,1,-3,0,3,1,medium,medium,0,scale_up_and_guidance,scale_up_efficiency,1
+T3001268,2026Q1,XPER,constructive,neutral,1,4,0,-4,1,2,3,1,1,1,0,-1,1,high,high,0,platform_monetization,platform_monetization,0

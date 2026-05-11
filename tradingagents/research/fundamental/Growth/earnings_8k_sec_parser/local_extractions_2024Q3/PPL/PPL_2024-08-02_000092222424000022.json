@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PPL",
+    "cik": "922224",
+    "event_date": "2024-08-02",
+    "event_accession": "0000922224-24-000022",
+    "primary_8k_doc": "ppl-20240802.htm",
+    "exhibit_docs": [
+      "ppl-6302024exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PPL_000092222424000022_ppl-20240802.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PPL_000092222424000022_ppl-6302024exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PPL",
+    "cik": "922224",
+    "entity_name": "PPL Corporation",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2415000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "285000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "39236000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "177000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-503000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "430000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.118012",
+    "operating_cash_flow_to_revenue": "0.178054",
+    "assets_to_revenue": "16.246791",
+    "financing_cash_flow_to_revenue": "0.073292",
+    "investing_cash_flow_to_revenue": "-0.208282"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of assets not in the ordinary course of business.",
+      "earnings per share of $0.",
+      "earnings per share and dividend growth of 6% to 8% through at least 2027.",
+      "net income) to earnings from ongoing operations, including an itemization of special items.",
+      "earnings per share $ 0.",
+      "earnings per share in the text and tables of this news release are stated in terms of diluted earnings per share unless otherwise noted."
+    ],
+    "guidance_evidence": [
+      "guidance and expect to achieve at least the midpoint of our 2024 forecast,” said Vincent Sorgi, PPL president and chief executive officer.",
+      "guidance.",
+      "forecast range of $1.",
+      "forecast,” said Vincent Sorgi, PPL president and chief executive officer.",
+      "forecast for 2024 earnings from ongoing operations remains $1.",
+      "forecast range."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and to make progress on our planned $14.",
+      "customers, especially in the face of more frequent and severe storms,\" said Sorgi.",
+      "customers in the U.",
+      "aid Vincent Sorgi, PPL president and chief executive officer.",
+      "ains $1.",
+      "aintenance savings of at least $175 million by 2026 from the company’s 2021 baseline, with a cumulative $120-$130 million of annual savings planned by the end of 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "charges of $92 million, or $0.",
+      "charges of $103 million, or $0.",
+      "charges of $187 million, or $0.",
+      "charges of $170 million, or $0.",
+      "Impairment charges.",
+      "charges or credits that are, in management’s view, non-recurring or otherwise not reflective of the company’s ongoing operations."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "30.969999",
+    "return_10d_pct": "0.0323",
+    "return_20d_pct": "3.0352",
+    "return_30d_pct": "4.0039",
+    "return_60d_pct": "5.1017",
+    "return_90d_pct": "3.5195"
+  },
+  "text_stats": {
+    "primary_text_len": 4162,
+    "exhibit_text_len": 28669,
+    "combined_text_len": 32833
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KALU",
+    "cik": "811596",
+    "event_date": "2024-07-24",
+    "event_accession": "0000950170-24-086093",
+    "primary_8k_doc": "kalu-20240724.htm",
+    "exhibit_docs": [
+      "kalu-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KALU_000095017024086093_kalu-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KALU_000095017024086093_kalu-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KALU",
+    "cik": "811596",
+    "entity_name": "KAISER ALUMINUM CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "807600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "15900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2267400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "25000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-25900000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-20300000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.019688",
+    "operating_cash_flow_to_revenue": "-0.025136",
+    "assets_to_revenue": "2.807578",
+    "financing_cash_flow_to_revenue": "0.030956",
+    "investing_cash_flow_to_revenue": "-0.03207"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $133 million, reflecting a 2% increase driven primarily by an improved mix of the Company's diverse product offering.",
+      "revenue was $119 million, reflecting an 11% decrease over the prior year quarter due mainly to an 11% reduction in shipments primarily as a result of an unplanned outage at the Warrick facility during the second quarter of 2024.",
+      "revenue was $83 million, reflecting a modest year-over-year increase due to a 6% increase in shipments as demand remained relatively stable during the quarter.",
+      "revenue was $33 million, reflecting a 9% increase driven by a modest increase in shipments on improved pricing over the prior year quarter.",
+      "revenue was 14.",
+      "Net Income $3 Million; Net Income per Diluted Share $0."
+    ],
+    "guidance_evidence": [
+      "outlook based on the reduction in commercial jet build rates and as a result of the extended outage at our Warrick facility during the second quarter.",
+      "Outlook The Company expects demand across its end markets in 2024 to remain relatively consistent with 2023 with the potential for a modest upside.",
+      "outlook for the commercial aerospace market due to lower than expected 2024 build rates resulting in reduced anticipated shipments and conversion revenue year-over-year.",
+      "expects demand across its end markets in 2024 to remain relatively consistent with 2023 with the potential for a modest upside.",
+      "expected 2024 build rates resulting in reduced anticipated shipments and conversion revenue year-over-year.",
+      "expected to improve from current levels, which were negatively impacted due to various outages during the first half of 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "customers worldwide with highly-engineered solutions for aerospace and high-strength, packaging, general engineering, automotive extrusions, and other industrial applications, today announced second quarter 2024 results.",
+      "demand met or exceeded our expectations,\" said Keith A.",
+      "demand remained steady at strong levels, illustrating the benefits of our diversified product mix.",
+      "demand to remain at healthy levels, we are revising our financial outlook based on the reduction in commercial jet build rates and as a result of the extended outage at our Warrick facility during the second quarter.",
+      "demand remained relatively stable during the quarter.",
+      "demand across its end markets in 2024 to remain relatively consistent with 2023 with the potential for a modest upside."
+    ],
+    "warning_or_risk_evidence": [
+      "charge related to significant inventory reductions we made during the quarter, consistent with our focus on managing working capital.",
+      "charges, net — — 0.",
+      "impairment charge — — 0.",
+      "losses upon settlement of $6.",
+      "losses upon settlement of $8.",
+      "losses upon settlement of hedges for metal price exposure on shipments for the six months ended June 30, 2024."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 773,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "85.000000",
+    "return_10d_pct": "-18.6941",
+    "return_20d_pct": "-20.0235",
+    "return_30d_pct": "-12.6353",
+    "return_60d_pct": "-16.9059",
+    "return_90d_pct": "-20.5294"
+  },
+  "text_stats": {
+    "primary_text_len": 3493,
+    "exhibit_text_len": 21626,
+    "combined_text_len": 25121
+  }
+}

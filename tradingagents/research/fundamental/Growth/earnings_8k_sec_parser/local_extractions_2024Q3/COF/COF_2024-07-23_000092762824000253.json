@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "COF",
+    "cik": "927628",
+    "event_date": "2024-07-23",
+    "event_accession": "0000927628-24-000253",
+    "primary_8k_doc": "cof-20240723.htm",
+    "exhibit_docs": [
+      "ex991q22024earningsrelease.htm",
+      "ex992q22024earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COF_000092762824000253_cof-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COF_000092762824000253_ex991q22024earningsrelease.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COF_000092762824000253_ex992q22024earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "COF",
+    "cik": "927628",
+    "entity_name": "CAPITAL ONE FINANCIAL CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "8903000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "960000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "478464000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "15719000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-2994000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "2992000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.107829",
+    "operating_cash_flow_to_revenue": "0.336066",
+    "assets_to_revenue": "53.741885",
+    "financing_cash_flow_to_revenue": "1.765585",
+    "investing_cash_flow_to_revenue": "-0.336291"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 1 percent to $9.",
+      "revenue was reduced by $649 million in Q2 2024, $630 million in Q1 2024, $566 million in Q4 2023, $449 million in Q3 2023 and $443 million in Q2 2023 for credit card finance charges and fees charged-off as uncollectible.",
+      "Net Income of $597 million, or $1.",
+      "Net Income of $3.",
+      "net income for the second quarter of 2024 of $597 million, or $1.",
+      "net income of $1."
+    ],
+    "guidance_evidence": [
+      "outlook” or other words of similar meaning.",
+      "forecast,” “outlook” or other words of similar meaning."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Richard D.",
+      "airbank, Founder, Chairman, and Chief Executive Officer.",
+      "aid increased 3 basis points to 3.",
+      "ain statements in this release may constitute forward-looking statements, which involve a number of risks and uncertainties.",
+      "ained in the forward-looking information due to a number of factors.",
+      "ained in this Financial Supplement is preliminary and based on data available at the time of the earnings presentation."
+    ],
+    "warning_or_risk_evidence": [
+      "charge-offs of $2.",
+      "preliminary and therefore subject to change.",
+      "preliminary and based on data available at the time of the earnings presentation.",
+      "charge-offs $ 2,644 $ 2,616 $ 2,533 $ 1,999 $ 2,185 1% 21% $ 5,260 $ 3,882 35% Net charge-off rate (11) 3.",
+      "charges and fees charged-off as uncollectible.",
+      "charge-off rate is calculated based on annualized net charge-offs for the period divided by average loans held for investment for the period."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 9500,
+    "quarter_revenue_yoy_pct": 1,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "143.669998",
+    "return_10d_pct": "-8.5265",
+    "return_20d_pct": "-6.7307",
+    "return_30d_pct": "-0.7865",
+    "return_60d_pct": "5.2760",
+    "return_90d_pct": "8.5961"
+  },
+  "text_stats": {
+    "primary_text_len": 5589,
+    "exhibit_text_len": 62908,
+    "combined_text_len": 68499
+  }
+}

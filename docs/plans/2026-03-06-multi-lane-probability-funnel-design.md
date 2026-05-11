@@ -16,7 +16,7 @@ The current pipeline already has the right major pieces:
 
 - AKG-backed universe and scout enrichment
 - deterministic scoring and ranking
-- research queue and deep analysis
+- fundamental review list and deep analysis
 - hindsight, attribution, and post-trade review
 
 What it does not yet have is a formal probability ledger around every major funnel cut.
@@ -156,8 +156,8 @@ Every major funnel stage should emit a ledger row per cycle, per lane.
 
 - universe gate
 - evidence gate
-- shortlist cut
-- deep-selection cut
+- candidate_list cut
+- fundamental-intake cut
 - portfolio inclusion cut
 
 ### Minimum Ledger Fields
@@ -223,7 +223,7 @@ Add the hypothesis ledger to the current funnel without changing route selection
 Deliverables:
 
 - ledger module and artifact contract
-- logging for universe, evidence, shortlist, deep-selection, and portfolio stages
+- logging for universe, evidence, candidate_list, fundamental-intake, and portfolio stages
 - kept/dropped symbol snapshots
 
 ### Phase 2: Add Lane Metadata
@@ -249,8 +249,8 @@ Auto-adjust only low-risk knobs first:
 
 - evidence thresholds
 - lane quotas
-- shortlist quotas
-- deep-selection quotas
+- candidate_list quotas
+- fundamental-intake quotas
 - score weights
 
 Keep portfolio and exit rules manual until sample sizes are much stronger.

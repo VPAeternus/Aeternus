@@ -26,8 +26,8 @@ def build_snapshot_envelope(
     payload = raw_payload if isinstance(raw_payload, dict) else {}
     run_id = str(payload.get("run_id") or "").strip()
     as_of_date = str(payload.get("date") or "").strip()
-    items = payload.get("items", [])
-    has_items = isinstance(items, list)
+    tickers = payload.get("tickers", [])
+    has_tickers = isinstance(tickers, list)
     stale_reasons: List[str] = []
 
     canonical_hash_value = canonical_hash(payload)
@@ -46,8 +46,8 @@ def build_snapshot_envelope(
         stale_reasons.append("Missing run_id.")
     if not as_of_date:
         stale_reasons.append("Missing date.")
-    if not has_items:
-        stale_reasons.append("Missing items list.")
+    if not has_tickers:
+        stale_reasons.append("Missing ticker list.")
 
     parsed_date = _parse_date(as_of_date)
     if parsed_date and parsed_date < now_utc.date():
@@ -69,7 +69,7 @@ def build_snapshot_envelope(
         "generated_at_utc": generated_at_utc or now_utc.isoformat(),
         "validity": validity,
         "stale_reasons": stale_reasons,
-        "triage_enabled": validity == VALIDITY_VALID,
+        "triage_enabled": False,
     }
 
 
@@ -79,9 +79,13 @@ def transform_dealflow_feed(
     snapshot: Dict[str, Any],
     thesis_summary_max_chars: int = 140,
 ) -> Dict[str, Any]:
-    queue = raw_queue if isinstance(raw_queue, dict) else {}
-    items = queue.get("items", [])
-    rows = items if isinstance(items, list) else []
+    handoff = raw_queue if isinstance(raw_queue, dict) else {}
+    tickers = handoff.get("tickers", [])
+    metadata = handoff.get("metadata_by_ticker", {}) if isinstance(handoff.get("metadata_by_ticker"), dict) else {}
+    rows = [
+        {"symbol": str(symbol), **(metadata.get(str(symbol), {}) if isinstance(metadata, dict) else {})}
+        for symbol in tickers
+    ] if isinstance(tickers, list) else []
     cards = [
         transform_candidate_card(
             queue_item=item,
@@ -91,15 +95,8 @@ def transform_dealflow_feed(
         for item in rows
         if isinstance(item, dict)
     ]
-    cards.sort(
-        key=lambda row: (
-            int(row.get("selected_for_deep", False)),
-            float(row.get("score", 0.0)),
-        ),
-        reverse=True,
-    )
 
-    summary = transform_dealflow_summary(raw_queue=queue, cards=cards)
+    summary = transform_dealflow_summary(raw_queue=handoff, cards=cards)
     return {
         "snapshot": snapshot,
         "summary": summary,
@@ -108,19 +105,16 @@ def transform_dealflow_feed(
 
 
 def transform_dealflow_summary(*, raw_queue: Any, cards: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
-    queue = raw_queue if isinstance(raw_queue, dict) else {}
+    handoff = raw_queue if isinstance(raw_queue, dict) else {}
     card_rows = list(cards)
     total = len(card_rows)
-    momentum_count = sum(1 for row in card_rows if str(row.get("lane") or "") == "MOMENTUM")
-    selected_for_deep = sum(1 for row in card_rows if bool(row.get("selected_for_deep")))
     return {
-        "run_id": str(queue.get("run_id") or ""),
-        "date": str(queue.get("date") or ""),
+        "run_id": str(handoff.get("run_id") or ""),
+        "date": str(handoff.get("date") or ""),
         "total_candidates": total,
-        "selected_for_deep": selected_for_deep,
+        "handoff_count": total,
         "lane_counts": {
-            "CORE": total - momentum_count,
-            "MOMENTUM": momentum_count,
+            "SCOUT": total,
         },
         "top_symbols": [str(row.get("symbol") or "") for row in card_rows[:5]],
     }
@@ -133,29 +127,23 @@ def transform_candidate_card(
     thesis_summary_max_chars: int = 140,
 ) -> Dict[str, Any]:
     symbol = str(queue_item.get("symbol") or "UNKNOWN").upper().strip() or "UNKNOWN"
-    lane = str(queue_item.get("lane") or "CORE").upper().strip()
-    if lane not in {"CORE", "MOMENTUM"}:
-        lane = "CORE"
-    score = _clamp_int(_to_float(queue_item.get("deal_flow_score"), 0.0), 0, 100)
-    confidence = _derive_confidence(queue_item)
+    lane = "SCOUT"
+    scouts = list(queue_item.get("scouts", []) or [])
     thesis_summary = _truncate(
-        str(queue_item.get("why_now") or "Data Unavailable"),
+        "Scout handoff: " + (", ".join(str(s) for s in scouts) if scouts else "source unknown"),
         int(thesis_summary_max_chars),
     )
-    risk_flags = _sanitize_risk_flags(queue_item.get("risk_tags"))
-    quality_tier = _quality_tier(_to_float(queue_item.get("triage_score"), 0.0))
     return {
         "symbol": symbol,
         "lane": lane,
-        "score": score,
-        "confidence": confidence,
+        "score": None,
+        "confidence": None,
         "thesis_summary": thesis_summary,
-        "risk_flags": risk_flags,
-        "quality_tier": quality_tier,
+        "risk_flags": [],
+        "quality_tier": "UNSCORED",
         "snapshot_id": snapshot_id,
-        "queue_id": str(queue_item.get("queue_id") or ""),
-        "selected_for_deep": bool(queue_item.get("selected_for_deep")),
-        "research_playbook": str(queue_item.get("research_playbook") or ""),
+        "queue_id": "",
+        "research_playbook": "",
     }
 
 
@@ -177,19 +165,7 @@ def transform_candidate_detail(
         snapshot_id=str(snapshot.get("snapshot_id") or ""),
     )
 
-    subscores = item.get("subscores") if isinstance(item.get("subscores"), dict) else {}
-    top_signals = sorted(
-        [
-            {
-                "family": str(name),
-                "score": float(value),
-            }
-            for name, value in subscores.items()
-            if isinstance(value, (int, float))
-        ],
-        key=lambda row: row["score"],
-        reverse=True,
-    )[:3]
+    top_signals = [{"family": str(name)} for name in list(item.get("scouts", []) or [])[:3]]
 
     aeternus = report.get("aeternus_score") if isinstance(report.get("aeternus_score"), dict) else {}
     thesis = report.get("thesis_check") if isinstance(report.get("thesis_check"), dict) else {}
@@ -233,16 +209,6 @@ def _derive_confidence(item: Dict[str, Any]) -> int:
     if freshness_hours > 48:
         confidence -= 1
     return _clamp_int(confidence, 1, 5)
-
-
-def _quality_tier(triage_score: float) -> str:
-    if triage_score >= 70:
-        return "A"
-    if triage_score >= 60:
-        return "B"
-    if triage_score >= 50:
-        return "C"
-    return "D"
 
 
 def _sanitize_risk_flags(raw: Any) -> List[str]:

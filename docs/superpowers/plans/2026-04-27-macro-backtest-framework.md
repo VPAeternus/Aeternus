@@ -6,7 +6,7 @@
 
 **Architecture:** Add small pure-function modules under `tradingagents/backtesting/macro/` for snapshots, forward returns, tables, and dealflow macro ablation. Keep network I/O in `scripts/backtest_macro_framework.py`; core modules accept already-loaded pandas objects to prevent lookahead and make tests deterministic.
 
-**Tech Stack:** Python, pandas, pytest, existing `macro_engine.py` scoring helpers, existing dealflow score weights.
+**Tech Stack:** Python, pandas, pytest, existing `macro_engine.py` scoring helpers, existing macro weighting helpers.
 
 ---
 

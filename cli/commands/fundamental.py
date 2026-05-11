@@ -1,10 +1,12 @@
-"""CLI command: fundamental — run fundamental framework from dealflow queue."""
+"""CLI command: fundamental — run fundamental framework from scout handoff."""
 from __future__ import annotations
 
 from cli.common import *  # noqa: F401,F403
 
 import datetime as _dt
 import json
+import os
+import subprocess
 import sys as _sys
 
 
@@ -228,19 +230,138 @@ def fundamental_right_tail_queues(
             console.print(f"[green]Target audit[/green] {paths['target_miss_rescue_audit']}")
 
 
+def _export_final_scores(lake_root: Path, out_root: Path, run_date: str) -> Path | None:
+    try:
+        import pandas as pd
+    except Exception as exc:  # noqa: BLE001
+        console.print(f"[yellow]Could not export final scores CSV: pandas unavailable ({exc})[/yellow]")
+        return None
+
+    scores_parquet = lake_root / "candidate_scores.parquet"
+    if not scores_parquet.exists():
+        console.print(f"[yellow]No candidate_scores parquet to export: {scores_parquet}[/yellow]")
+        return None
+    out_path = out_root / f"fundamental_final_scores_{run_date}.csv"
+    frame = pd.read_parquet(scores_parquet).fillna("")
+    frame.to_csv(out_path, index=False)
+    summary_path = out_root / f"fundamental_final_scores_summary_{run_date}.json"
+    summary = {
+        "rows": int(len(frame)),
+        "score_path": str(out_path),
+        "decision_counts": frame["decision_type"].value_counts(dropna=False).to_dict() if "decision_type" in frame else {},
+        "document_status_counts": frame["document_status"].value_counts(dropna=False).to_dict() if "document_status" in frame else {},
+    }
+    summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True, default=str) + "\n", encoding="utf-8")
+    console.print(f"[green]Final scores CSV[/green] {out_path}")
+    return out_path
+
+
+def _run_in_session_llm(
+    *,
+    packets_path: Path,
+    output_dir: Path,
+    output_csv: Path,
+    lake_root: Path,
+    as_of: str,
+    model: str,
+    reasoning_effort: str,
+    batch_size: int,
+) -> Path:
+    from tradingagents.research.fundamental.src.features.llm_extraction import read_packets, run_llm_batches, write_consolidated_csv
+    from tradingagents.research.fundamental.src.storage import add_run_lineage, make_pipeline_run_id, source_file_hash, write_table
+
+    packets = read_packets(packets_path)
+    rows = run_llm_batches(
+        packets,
+        output_dir=output_dir,
+        model=model,
+        reasoning_effort=reasoning_effort,
+        batch_size=batch_size,
+        resume=True,
+    )
+    write_consolidated_csv(output_dir, output_csv)
+    lineage = add_run_lineage(rows, pipeline_run_id=make_pipeline_run_id("llm"), as_of_date=as_of, source_hash=source_file_hash(packets_path))
+    write_table(lake_root, "post_llm_scores", lineage)
+    return output_csv
+
+
+def _run_external_llm(
+    *,
+    packets_path: Path,
+    output_dir: Path,
+    output_csv: Path,
+    lake_root: Path,
+    as_of: str,
+    model: str,
+    reasoning_effort: str,
+    batch_size: int,
+    fundamental_root: Path,
+) -> Path:
+    script = fundamental_root / "src" / "pipeline" / "run_llm_extraction.py"
+    env = os.environ.copy()
+    existing = env.get("PYTHONPATH", "")
+    env["PYTHONPATH"] = str(fundamental_root.resolve()) + (os.pathsep + existing if existing else "")
+    cmd = [
+        _sys.executable,
+        str(script),
+        "--packets",
+        str(packets_path),
+        "--as-of",
+        as_of,
+        "--output-dir",
+        str(output_dir),
+        "--output-csv",
+        str(output_csv),
+        "--lake-root",
+        str(lake_root),
+        "--model",
+        model,
+        "--reasoning-effort",
+        reasoning_effort,
+        "--batch-size",
+        str(batch_size),
+    ]
+    subprocess.run(cmd, check=True, env=env)
+    return output_csv
+
+
+def _write_subagent_llm_job(*, out_root: Path, packets_path: Path, output_dir: Path, output_csv: Path, lake_root: Path, as_of: str, model: str, reasoning_effort: str, batch_size: int) -> Path:
+    job_path = out_root / "llm_subagent_job.json"
+    payload = {
+        "status": "needs_subagent_execution",
+        "packets": str(packets_path),
+        "output_dir": str(output_dir),
+        "output_csv": str(output_csv),
+        "lake_root": str(lake_root),
+        "as_of": as_of,
+        "model": model,
+        "reasoning_effort": reasoning_effort,
+        "batch_size": batch_size,
+        "required_result": "Run LLM extraction and write output_csv, then rerun fundamental with --llm-mode post-file --post-llm output_csv.",
+    }
+    job_path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return job_path
+
+
 @app.command("fundamental")
 def fundamental(
-    date: str = typer.Option("", "--date", help="Dealflow queue date YYYY-MM-DD; defaults to today"),
+    date: str = typer.Option("", "--date", help="Dealflow handoff date YYYY-MM-DD; defaults to today"),
     quarter: str = typer.Option("", "--quarter", help="Fundamental quarter, e.g. 2026Q2; defaults from --date"),
-    queue: str = typer.Option("", "--queue", help="Optional research_queue.json path"),
+    handoff: str = typer.Option("", "--handoff", help="Optional final_dealflow_tickers.json path"),
     output_root: str = typer.Option("", "--output-root", help="Output root; defaults to eval_results/fundamental/<date>"),
-    all_items: bool = typer.Option(False, "--all", help="Use all queue items, not only selected_for_deep"),
     refresh_cik_map: bool = typer.Option(False, "--refresh-cik-map", help="Refresh SEC company_tickers.json cache"),
     skip_sec_fetch: bool = typer.Option(False, "--skip-sec-fetch", help="Skip SEC filing/document fetch"),
-    skip_llm: bool = typer.Option(True, "--skip-llm/--run-llm", help="Skip LLM extraction stage by default"),
+    skip_llm: bool = typer.Option(True, "--skip-llm/--run-llm", help="Legacy switch. --run-llm maps to --llm-mode in-session unless --llm-mode is set."),
     skip_price_fetch: bool = typer.Option(True, "--skip-price-fetch/--fetch-prices", help="Skip Yahoo price fetch by default"),
+    llm_mode: str = typer.Option("skip", "--llm-mode", help="LLM mode: skip|post-file|in-session|external|subagent"),
+    post_llm: str = typer.Option("", "--post-llm", help="Existing post_llm_scores.csv for --llm-mode post-file"),
+    llm_model: str = typer.Option("gpt-5.5", "--llm-model", help="Model for in-session/external LLM extraction"),
+    llm_reasoning_effort: str = typer.Option("high", "--llm-reasoning-effort", help="Reasoning effort for Codex-backed extraction"),
+    llm_batch_size: int = typer.Option(8, "--llm-batch-size", min=1, help="Packets per LLM batch"),
+    llm_output_dir: str = typer.Option("", "--llm-output-dir", help="LLM batch output dir; defaults under output root"),
+    llm_output_csv: str = typer.Option("", "--llm-output-csv", help="LLM consolidated CSV; defaults under output root"),
 ):
-    """Run the fundamental framework from a dealflow research queue."""
+    """Run the fundamental framework from dealflow scout ticker handoff."""
     import sys as _sys
 
     fundamental_root = Path("tradingagents") / "research" / "fundamental"
@@ -257,19 +378,18 @@ def fundamental(
     run_date = date.strip() or _dt.date.today().strftime("%Y-%m-%d")
     out_root = Path(output_root.strip()) if output_root.strip() else Path("eval_results") / "fundamental" / run_date
     out_root.mkdir(parents=True, exist_ok=True)
-    queue_path = Path(queue.strip()) if queue.strip() else Path("eval_results") / "deal_flow" / run_date / "research_queue.json"
-    if not queue_path.exists():
-        console.print(f"[red]research queue not found: {queue_path}[/red]")
+    handoff_path = Path(handoff.strip()) if handoff.strip() else Path("eval_results") / "deal_flow" / run_date / "final_dealflow_tickers.json"
+    if not handoff_path.exists():
+        console.print(f"[red]dealflow ticker handoff not found: {handoff_path}[/red]")
         raise typer.Exit(1)
 
     universe_path = out_root / "dealflow_universe.csv"
     adapter_result = build_dealflow_universe_csv(
         as_of_date=run_date,
-        queue_path=queue_path,
+        handoff_path=handoff_path,
         output_path=universe_path,
         quarter=quarter.strip() or None,
         refresh_cik_map=bool(refresh_cik_map),
-        selected_only=not bool(all_items),
     )
     console.print(
         f"[green]Universe ready[/green] rows={adapter_result['row_count']} | "
@@ -279,18 +399,119 @@ def fundamental(
         console.print(f"[yellow]Unresolved CIKs: {adapter_result['unresolved_cik_count']}[/yellow]")
 
     lake_root = out_root / "lake"
-    result = run_quarter_pipeline(
-        quarter=str(adapter_result["quarter"]),
-        universe_path=universe_path,
-        as_of=run_date,
-        lake_root=lake_root,
-        post_llm_path=None,
-        skip_sec_fetch=bool(skip_sec_fetch),
-        skip_llm=bool(skip_llm),
-        skip_price_fetch=bool(skip_price_fetch),
-    )
+    mode = llm_mode.strip().lower().replace("_", "-")
+    if mode == "skip" and not skip_llm:
+        mode = "in-session"
+    valid_modes = {"skip", "post-file", "in-session", "external", "subagent"}
+    if mode not in valid_modes:
+        console.print(f"[red]--llm-mode must be one of: {', '.join(sorted(valid_modes))}[/red]")
+        raise typer.Exit(1)
+
+    post_llm_path = Path(post_llm.strip()) if post_llm.strip() else None
+    llm_dir = Path(llm_output_dir.strip()) if llm_output_dir.strip() else out_root / "llm_batches"
+    llm_csv = Path(llm_output_csv.strip()) if llm_output_csv.strip() else out_root / "post_llm_scores.csv"
+
+    if mode == "post-file":
+        if post_llm_path is None or not post_llm_path.exists() or post_llm_path.stat().st_size == 0:
+            console.print("[red]--llm-mode post-file requires a non-empty --post-llm CSV[/red]")
+            raise typer.Exit(1)
+        result = run_quarter_pipeline(
+            quarter=str(adapter_result["quarter"]),
+            universe_path=universe_path,
+            as_of=run_date,
+            lake_root=lake_root,
+            post_llm_path=post_llm_path,
+            skip_sec_fetch=bool(skip_sec_fetch),
+            skip_llm=False,
+            skip_price_fetch=bool(skip_price_fetch),
+        )
+    elif mode == "skip":
+        result = run_quarter_pipeline(
+            quarter=str(adapter_result["quarter"]),
+            universe_path=universe_path,
+            as_of=run_date,
+            lake_root=lake_root,
+            post_llm_path=None,
+            skip_sec_fetch=bool(skip_sec_fetch),
+            skip_llm=True,
+            skip_price_fetch=bool(skip_price_fetch),
+        )
+    else:
+        first = run_quarter_pipeline(
+            quarter=str(adapter_result["quarter"]),
+            universe_path=universe_path,
+            as_of=run_date,
+            lake_root=lake_root,
+            post_llm_path=None,
+            skip_sec_fetch=bool(skip_sec_fetch),
+            skip_llm=True,
+            skip_price_fetch=bool(skip_price_fetch),
+        )
+        packets_path = Path(str(first["packet_path"]))
+        raw_docs_path = lake_root / "raw_documents.parquet"
+        if not raw_docs_path.exists() or raw_docs_path.stat().st_size == 0:
+            console.print("[red]LLM mode requires SEC raw documents. Run without --skip-sec-fetch first, or reuse a lake with raw_documents.parquet.[/red]")
+            raise typer.Exit(1)
+        if not packets_path.exists() or packets_path.stat().st_size == 0:
+            console.print(f"[red]LLM packet file missing/empty: {packets_path}[/red]")
+            raise typer.Exit(1)
+        if mode == "subagent":
+            job_path = _write_subagent_llm_job(
+                out_root=out_root,
+                packets_path=packets_path,
+                output_dir=llm_dir,
+                output_csv=llm_csv,
+                lake_root=lake_root,
+                as_of=run_date,
+                model=llm_model,
+                reasoning_effort=llm_reasoning_effort,
+                batch_size=llm_batch_size,
+            )
+            console.print(f"[yellow]Subagent job written[/yellow] {job_path}")
+            console.print("[yellow]Run the subagent job, then rerun with --llm-mode post-file --post-llm " + str(llm_csv) + "[/yellow]")
+            raise typer.Exit(2)
+        if mode == "in-session":
+            post_llm_path = _run_in_session_llm(
+                packets_path=packets_path,
+                output_dir=llm_dir,
+                output_csv=llm_csv,
+                lake_root=lake_root,
+                as_of=run_date,
+                model=llm_model,
+                reasoning_effort=llm_reasoning_effort,
+                batch_size=llm_batch_size,
+            )
+        else:
+            post_llm_path = _run_external_llm(
+                packets_path=packets_path,
+                output_dir=llm_dir,
+                output_csv=llm_csv,
+                lake_root=lake_root,
+                as_of=run_date,
+                model=llm_model,
+                reasoning_effort=llm_reasoning_effort,
+                batch_size=llm_batch_size,
+                fundamental_root=fundamental_root,
+            )
+        if post_llm_path is None or not post_llm_path.exists() or post_llm_path.stat().st_size == 0:
+            console.print(f"[red]LLM output CSV missing/empty: {post_llm_path}[/red]")
+            raise typer.Exit(1)
+        result = run_quarter_pipeline(
+            quarter=str(adapter_result["quarter"]),
+            universe_path=universe_path,
+            as_of=run_date,
+            lake_root=lake_root,
+            post_llm_path=post_llm_path,
+            skip_sec_fetch=True,
+            skip_llm=False,
+            skip_price_fetch=bool(skip_price_fetch),
+        )
+
     console.print(
         f"[green]Fundamental run complete[/green] run_id={result['pipeline_run_id']} | "
-        f"candidates={result['candidate_rows']} | lake={lake_root}"
+        f"candidates={result['candidate_rows']} | lake={lake_root} | llm_mode={mode}"
     )
+    final_scores_path = _export_final_scores(lake_root, out_root, run_date)
+    if final_scores_path is None:
+        raise typer.Exit(1)
     _print_candidate_scores(lake_root)

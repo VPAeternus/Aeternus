@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "ticker": "SNDK",
+    "company": "Sandisk Corp",
+    "form": "8-K",
+    "items": "2.02,9.01",
+    "accession": "0001193125-25-180782",
+    "sec_filing_date": "2025-08-14",
+    "sec_acceptance_datetime_utc": "2025-08-14T20:10:43.000Z",
+    "sec_report_date_event_date": "2025-08-14",
+    "primary_document": "d926236d8k.htm",
+    "ex99_1_document": "d926236dex991.htm",
+    "sec_filing_url": "https://www.sec.gov/Archives/edgar/data/2023554/000119312525180782/d926236d8k.htm",
+    "ex99_1_url": "https://www.sec.gov/Archives/edgar/data/2023554/000119312525180782/d926236dex991.htm",
+    "periodic_filing_form": "10-K",
+    "periodic_filing_date": "2025-08-21"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $1.",
+      "earnings per share (EPS) was $0.",
+      "earnings per share expected to be in the range of $0.",
+      "non-GAAP EPS exceeding our guidance.",
+      "Gross Margin 26.",
+      "Operating Income (Loss) $ 18 $ (1,881 ) up 101% $ 100 $ 2 up 4900% Net Income (Loss) $ (23 ) $ (1,933 ) up 99% $ 42 $ (43 ) up 198% Net Income (Loss) Per Share $ (0."
+    ],
+    "guidance_evidence": [
+      "guidance range.",
+      "guidance.",
+      "Outlook for Fiscal First Quarter of 2026 GAAP(1) Non-GAAP(1) Revenue ($B) $2.",
+      "guidance excludes stock-based compensation expense and expense for short term incentives granted in connection with the separation, totaling approximately $4 million to $6 million.",
+      "guidance excludes stock-based compensation expense and expense for short term incentives granted in connection with the separation, totaling approximately $51 million to $69 million.",
+      "guidance excludes the accretion of the present value discount on consideration receivable from the sale of an interest in a subsidiary, totaling approximately $2 million."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "demand improving and industry fundamentals strengthening, we are well-positioned to drive sustainable growth, expand margins, and generate strong cash flow.",
+      "demand and market conditions and dynamics; the impact of the Company’s technological innovations; and growth opportunities.",
+      "demand, the Company may terminate employees and/or restructure its operations.",
+      "aid David Goeckeler, Sandisk CEO.",
+      "AI inference solutions."
+    ],
+    "warning_or_risk_evidence": [
+      "charges excluded from Non-GAAP gross margin, Non-GAAP operating expenses, Non-GAAP interest and other expenses, net, and Non-GAAP diluted earnings (loss) per share cannot be further allocated or quantified with certainty.",
+      "charges the Company excludes from its Non-GAAP diluted earnings (loss) per share are dependent on the timing and determination of certain actions and cannot be reasonably predicted.",
+      "impairment, stock-based compensation expense, business separation costs, employee termination and other, recoveries of contamination related charges, expenses related to our strategic review, gain on business divestiture, other adjustments, and income tax adjustments.",
+      "impairment.",
+      "impairment indicators related to the trading price of the Company’s common stock and resulting market capitalization that warranted a quantitative impairment analysis of long-lived assets and goodwill.",
+      "impairment analysis and determined that the carrying value of the reporting unit exceeded its fair value, resulting in the recognition of a $1."
+    ]
+  },
+  "financial_extracts": {
+    "quarter_revenue_millions": 1900,
+    "quarter_revenue_yoy_pct": null,
+    "guidance_revenue_millions": 2100,
+    "guidance_gross_margin_pct": null
+  },
+  "earnings_score": {
+    "earnings_score": 1,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 2,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": 10.5263
+  },
+  "returns": {
+    "tradable_date": "2025-08-15",
+    "entry_open": "43.060001",
+    "return_10d_pct": "8.6391",
+    "return_20d_pct": "45.1463",
+    "return_30d_pct": "109.2197",
+    "return_60d_pct": "195.6108",
+    "return_90d_pct": "465.6526"
+  },
+  "semantic_stats": {
+    "semantic_char_count": 28994,
+    "semantic_element_count": 50,
+    "semantic_element_type_counts": {
+      "PageHeaderElement": 5,
+      "PageNumberElement": 11,
+      "SupplementaryText": 5,
+      "TableElement": 10,
+      "TextElement": 11,
+      "TitleElement": 8
+    }
+  },
+  "quality": {
+    "quality_flags": [],
+    "quality_ok": true
+  }
+}

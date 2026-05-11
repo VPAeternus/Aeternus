@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TRS",
+    "cik": "842633",
+    "event_date": "2024-07-30",
+    "event_accession": "0000842633-24-000071",
+    "primary_8k_doc": "trs-20240730.htm",
+    "exhibit_docs": [
+      "trs_06302024xexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TRS_000084263324000071_trs-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TRS_000084263324000071_trs_06302024xexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TRS",
+    "cik": "842633",
+    "entity_name": "TRIMAS CORPORATION",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "215460000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "4910000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1341660000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-17320000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-52570000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "9690000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.022788",
+    "operating_cash_flow_to_revenue": "0.044974",
+    "assets_to_revenue": "6.226956",
+    "financing_cash_flow_to_revenue": "-0.080386",
+    "investing_cash_flow_to_revenue": "-0.24399"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $240.",
+      "net sales were $30.",
+      "eps will improve performance during the second half of the year, albeit on a lower sales base than anticipated,\" commented Amato.",
+      "net income of $10.",
+      "net income (2) was $17.",
+      "earnings per share (2) was $0."
+    ],
+    "guidance_evidence": [
+      "outlook provided on February 29, 2024.",
+      "outlook is attributable to the lower-than-expected sales and related earnings in our Specialty Products segment for the year.",
+      "outlook includes the impact of all announced acquisitions.",
+      "outlook provided assumes no detrimental impact related to input costs or end market demand associated with escalating global conflicts.",
+      "guidance are after adjusting for any current or future amounts that may be considered Special Items, and in the case of adjusted diluted earnings per share, acquisition-related intangible asset amortization expense for deals that have not yet been consummated.",
+      "Guidance (Unaudited - dollars per share) Twelve months ended December 31, 2024 Low High Diluted earnings per share (GAAP) $ 1."
+    ],
+    "wave_or_demand_evidence": [
+      "demand within Specialty Products • Improved adjusted operating profit margin within its Aerospace segment by 730 basis points year-over-year • Reduced net shares outstanding by approximately 1.",
+      "demand, which was expected to occur during the second quarter.",
+      "demand and constrained supply network in the aerospace and defense end market.",
+      "customer demand rates at peak capacity in certain product lines, similar to what we have experienced in other businesses emerging from a demand trough.",
+      "demand levels.",
+      "demand for products used in certain industrial, and oil and gas, applications within the Specialty Products segment."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory positions.",
+      "charge — 0.",
+      "decreased demand within Specialty Products • Improved adjusted operating profit margin within its Aerospace segment by 730 basis points year-over-year • Reduced net shares outstanding by approximately 1.",
+      "decrease of 11.",
+      "decrease of 45.",
+      "decreased significantly despite cost reduction actions in the quarter, given the material decrease in sales rate and the related lower absorption of structural costs."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 240.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "25.190001",
+    "return_10d_pct": "-5.6769",
+    "return_20d_pct": "-5.2799",
+    "return_30d_pct": "1.2703",
+    "return_60d_pct": "1.3497",
+    "return_90d_pct": "8.1778"
+  },
+  "text_stats": {
+    "primary_text_len": 3464,
+    "exhibit_text_len": 29552,
+    "combined_text_len": 33018
+  }
+}

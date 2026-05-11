@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WAT",
+    "cik": "1000697",
+    "event_date": "2024-07-31",
+    "event_accession": "0001193125-24-189455",
+    "primary_8k_doc": "d860217d8k.htm",
+    "exhibit_docs": [
+      "d860217dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WAT_000119312524189455_d860217d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WAT_000119312524189455_d860217dex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WAT",
+    "cik": "1000697",
+    "entity_name": "Waters Corporation",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "684674000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "140923000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "4626854000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-159211000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-34406000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "196751000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.205825",
+    "operating_cash_flow_to_revenue": "0.287364",
+    "assets_to_revenue": "6.757747",
+    "financing_cash_flow_to_revenue": "-0.232535",
+    "investing_cash_flow_to_revenue": "-0.050252"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $709 million exceeded guidance on a reported basis, declined 4% as reported and 4% in organic constant currency  GAAP EPS of $2.",
+      "sales of $741 million for the second quarter of 2023.",
+      "sales decreased 14% as reported and 17% in organic constant currency.",
+      "GAAP EPS of $2.",
+      "non-GAAP EPS of $2.",
+      "earnings per share (EPS) for the second quarter of 2024 was $2."
+    ],
+    "guidance_evidence": [
+      "guidance on a reported basis, declined 4% as reported and 4% in organic constant currency  GAAP EPS of $2.",
+      "guidance with non-GAAP EPS of $2.",
+      "outlook reflects the potential for a more gradual market improvement in the second half of the year than previously anticipated Second Quarter 2024 MILFORD, Mass.",
+      "guidance, said Dr.",
+      "Guidance Full-Year 2024 Financial Guidance The Company now expects full-year 2024 organic constant currency sales growth to be in the range of -2.",
+      "outlook for the full year."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to obtain letters of credit or other financing alternatives; risks associated with litigation and other legal and regulatory proceedings; and the impact and costs incurred from changes in accounting principles and practices.",
+      "aid Dr.",
+      "ained resilient, thanks to our disciplined approach to operational management, which offset headwinds from volume, currency, and inflation.",
+      "ails Waters Corporation will webcast its second quarter 2024 financial results conference call today, July 31, 2024, at 8:00 a.",
+      "ailable through August 28, 2024 on the same website by webcast and also by phone at (800) 839-9317.",
+      "ailable in more than 100 countries."
+    ],
+    "warning_or_risk_evidence": [
+      "charges that are inherently difficult to predict and estimate due to their unknown timing, effect and/or significance.",
+      "declined 4% as reported and 4% in organic constant currency  GAAP EPS of $2.",
+      "decrease of 4% as reported, compared to sales of $741 million for the second quarter of 2023.",
+      "decreased sales by 2%, while the impact of acquisitions increased sales by 2%.",
+      "headwind of approximately 5% due to unfavorable foreign exchange.",
+      "headwinds from volume, currency, and inflation."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 709,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "340.279999",
+    "return_10d_pct": "-2.0160",
+    "return_20d_pct": "-0.8640",
+    "return_30d_pct": "-0.1558",
+    "return_60d_pct": "5.7629",
+    "return_90d_pct": "-4.0232"
+  },
+  "text_stats": {
+    "primary_text_len": 3442,
+    "exhibit_text_len": 28529,
+    "combined_text_len": 31973
+  }
+}

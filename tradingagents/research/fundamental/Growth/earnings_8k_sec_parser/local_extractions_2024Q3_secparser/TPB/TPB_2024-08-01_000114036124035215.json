@@ -1,0 +1,668 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TPB",
+    "cik": "1290677",
+    "event_date": "2024-08-01",
+    "event_accession": "0001140361-24-035215",
+    "primary_8k_doc": "ef20033437_8k.htm",
+    "exhibit_docs": [
+      "ef20033437_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TPB_000114036124035215_ef20033437_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TPB_000114036124035215_ef20033437_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TPB",
+    "cik": "1290677",
+    "entity_name": "Turning Point Brands, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "197256000",
+    "revenue_fact_name": "SalesRevenueNet",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-03-08",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2015-12-31",
+    "net_income_value": "7597000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "569356000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-14553000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-2432000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "15384000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.038513",
+    "operating_cash_flow_to_revenue": "0.07799",
+    "assets_to_revenue": "2.886381",
+    "financing_cash_flow_to_revenue": "-0.073777",
+    "investing_cash_flow_to_revenue": "-0.012329"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales increased 2.",
+      "net sales increased 8.",
+      "net sales increased 18.",
+      "net sales decreased 33.",
+      "sales of FRE, our modern oral nicotine pouch, grew 76% sequentially as we continue to expand our national footprint.",
+      "net sales were $15."
+    ],
+    "guidance_evidence": [
+      "guidance to $98 to $102 million LOUISVILLE, KY – August 1, 2024 – Turning Point Brands, Inc.",
+      "Outlook The Company is increasing its previous full-year 2024 adjusted EBITDA guidance from $95 to $100 million to $98 to $102 million, which excludes CDS."
+    ],
+    "wave_or_demand_evidence": [
+      "customers of $0.",
+      "ainable growth trajectory, and Stoker’s MST continues to grow market share.",
+      "aid Purdy.",
+      "ainably growing the Zig-Zag brand.",
+      "aining $118.",
+      "ailable on the Events and Presentations section of the investor relations portion of the Company website (www."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment (f) 2,722 4,092 FET Refund (g) (1,674 ) - Adjusted EBITDA $ 27,035 $ 25,279 (a) Represents costs associated with corporate and CDS restructuring, including severance.",
+      "impairment of investment assets.",
+      "impairment (g) 2,722 693 - 2,029 0.",
+      "decreased 33.",
+      "declined 330 basis points to 53.",
+      "decline in loose-leaf tobacco."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ef20033437_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: Broadridge Financial Solutions. Inc. Document created using Broadridge PROfile 24.6.2.5244 Copyright 1995 - 2024 Broadridge"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Turning Point Brands Announces Second Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Q2 2024 Adjusted EBITDA of $27.0 million, up 7% over prior year"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Zig-Zag and Stoker’s Products Net Sales for Q2 2024 Increased 13% Year-Over-Year"
+    },
+    {
+      "type": "TitleElement",
+      "text": "• Company increases full-year 2024 adjusted EBITDA guidance to $98 to $102 million"
+    },
+    {
+      "type": "TextElement",
+      "text": "LOUISVILLE, KY – August 1, 2024 – Turning Point Brands, Inc. (“TPB” or “the Company”) (NYSE: TPB), a manufacturer, marketer and distributor of branded consumer products, including alternative smoking accessories and consumables with active ingredients, today announced financial results for the second quarter ended June 30, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q2 2024 vs. Q2 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Total consolidated net sales increased 2.8% to $108.5 million o Zig-Zag Products net sales increased 8.0% o Stoker’s Products net sales increased 18.5% o Creative Distribution Solutions net sales decreased 33.0% • Gross profit increased 2.6% to $53.8 million • Net income increased 31.0% to $13.0 million • Adjusted net income increased 12.2% to $17.2 million (see Schedule B for a reconciliation to net income) • Adjusted EBITDA increased 6.9% to $27.0 million (see Schedule A for a reconciliation to net income) • Diluted EPS of $0.68 and Adjusted Diluted EPS of $0.89 compared to $0.53 and $0.79, respectively, in the same period one year ago (see Schedule B for a reconciliation to Diluted EPS) Graham Purdy, President and CEO, commented: “We were pleased by our second quarter results. We achieved our highest quarterly EBITDA since the second quarter of 2021. We believe Zig-Zag is on a sustainable growth trajectory, and Stoker’s MST continues to grow market share. In addition, sales of FRE, our modern oral nicotine pouch, grew 76% sequentially as we continue to expand our national footprint.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Zig-Zag Products Segment (47% of total net sales in the quarter)"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the second quarter, Zig-Zag Products net sales increased 8.0% to $50.5 million driven by solid performance in our North American Papers & Wraps businesses as well as solid growth in cigars.For the quarter, the Zig-Zag Products segment gross profit increased 1.7% to $26.9 million. Gross margin declined 330 basis points to 53.2% driven primarily by product mix.“We are encouraged by our Zig-Zag results for the quarter,” said Purdy. “Our ongoing initiatives continue to demonstrate progress toward sustainably growing the Zig-Zag brand.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Stoker’s Products Segment (39% of total net sales in the quarter)"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the second quarter, Stoker’s Products net sales increased 18.5% to $42.7 million. The segment was driven by high teens growth from MST and triple-digit growth off of a low base for FRE, partially offset by low-single-digit decline in loose-leaf tobacco. For the second quarter, total Stoker’s Products segment volume increased 5.3%, while price / mix increased 13.2%.PROfilePageNumberReset%Num%2%%%For the quarter, the Stoker’s Products segment gross profit increased 17.8% to $23.5 million. Gross margin contracted 30 basis points to 55.0%."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Performance Measures in the Second Quarter"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second quarter consolidated selling, general and administrative (“SG&A”) expenses were $32.8 million compared to $31.9 million in the second quarter of 2023. The second quarter SG&A included the following notable items: • $1.9 million of stock compensation expense compared to $2.1 million in the year-ago period; and • $1.0 million of FDA PMTA-related expenses for modern oral products compared to $0.7 million in the year-ago period. Total gross debt as of June 30, 2024 was $368.5 million. Net debt (total gross debt less unrestricted cash) as of June 30, 2024 was $226.4 million. The Company ended the quarter with total liquidity of $201.0 million, comprised of $142.2 million in cash and $58.8 million of asset backed revolving credit facility capacity.On July 15, 2024, the Company retired the remaining $118.5 million of its convertible notes outstanding with cash on hand. Pro forma for retirement of the convertible notes as of June 30, 2024, the Company had gross debt outstanding of $250.0 million and net debt of $226.4 million.During the quarter, the Company re-purchased 34,350 shares of common stock at a cost of $1.0 million."
+    },
+    {
+      "type": "TitleElement",
+      "text": "2024 Outlook"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company is increasing its previous full-year 2024 adjusted EBITDA guidance from $95 to $100 million to $98 to $102 million, which excludes CDS."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Creative Distribution Solutions (“CDS”) (14% of total net sales in the quarter)"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the second quarter, CDS net sales were $15.3 million, gross profit was $3.4 million, and gross margin was 22.5%."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Earnings Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "As previously disclosed, a conference call with the investment community to review TPB’s financial results has been scheduled for 10:00 a.m. Eastern on Thursday, August 1, 2024. Investment community participants should dial in 10 minutes ahead of time using the toll-free number (888) 330-2502 (international participants should call (240) 789-2713 and follow the audio prompts after typing in the event ID: 6640134). A live listen-only webcast of the call will be available on the Events and Presentations section of the investor relations portion of the Company website (www.turningpointbrands.com). A replay of the webcast will be available on the site two hours following the call."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Financial Measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "In addition to financial measures prepared in accordance with generally accepted accounting principles in the United States (GAAP), this press release includes certain non-GAAP financial measures including EBITDA, Adjusted EBITDA, Adjusted Net Income, Adjusted Diluted EPS and Adjusted Operating Income (Loss). A reconciliation of these non-GAAP financial measures accompanies this release."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Turning Point Brands, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Turning Point Brands (NYSE: TPB) is a manufacturer, marketer and distributor of branded consumer products including alternative smoking accessories and consumables with active ingredients through its iconic Zig-Zag® and Stoker’s® brands. TPB’s products are available in more than 217,000 retail outlets in North America, and on sites such as www.zigzag.com. For the latest news and information about TPB and its brands, please visit www.turningpointbrands.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "This press release contains forward-looking statements within the meaning of the federal securities laws. Forward-looking statements may generally be identified by the use of words such as “anticipate,” “believe,” “expect,” “intend,” “plan” and “will” or, in each case, their negative, or other variations or comparable terminology. These forward-looking statements include all matters that are not historical facts. By their nature, forward-looking statements involve risks and uncertainties because they relate to events and depend on circumstances that may or may not occur in the future. As a result, these statements are not guarantees of future performance and actual events may differ materially from those expressed in or suggested by the forward-looking statements. Any forward-looking statement made by TPB in this press release, its reports filed with the Securities and Exchange Commission (the “SEC”) and other public statements made from time-to-time speak only as of the date made. New risks and uncertainties come up from time to time, and it is impossible for TPB to predict or identify all such events or how they may affect it. TPB has no obligation, and does not intend, to update any forward-looking statements after the date hereof, except as required by federal securities laws. Factors that could cause these differences include, but are not limited to those included in the Company’s Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q and other reports filed by the Company with the SEC. These statements constitute the Company’s cautionary statements under the Private Securities Litigation Reform Act of 1995."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Investor Contacts"
+    },
+    {
+      "type": "TextElement",
+      "text": "Turning Point Brands, Inc.ir@tpbi.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Financial Statements Follow on Subsequent Pages"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Turning Point Brands, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statements of Income"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(dollars in thousands except share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 2023 Net sales (1) $ 108,512 $ 105,595 Cost of sales 54,671 53,117 Gross profit 53,841 52,478 Selling, general, and administrative expenses 32,753 31,933 Other operating income (1,674 ) - Operating income 22,762 20,545 Interest expense, net 2,991 4,019 Investment loss 2,439 4,080 Gain on extinguishment of debt - (600 ) Income before income taxes 17,332 13,046 Income tax expense 4,415 3,338 Consolidated net income 12,917 9,708 Net loss attributable to non-controlling interest (87 ) (217 ) Net income attributable to Turning Point Brands, Inc. $ 13,004 $ 9,925 Basic income per common share: Net income attributable to Turning Point Brands, Inc. $ 0.74 $ 0.56 Diluted income per common share: Net income attributable to Turning Point Brands, Inc. $ 0.68 $ 0.53 Weighted average common shares outstanding: Basic 17,656,732 17,584,241 Diluted 20,156,854 20,409,943"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Net sales include excise taxes billed to customers of $0.8 million and $1.2 million for the three months ended June 30, 2024 and 2023, respectively."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Turning Point Brands, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(dollars in thousands except share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(unaudited) June 30, December 31, ASSETS 2024 2023 Current assets: Cash $ 142,159 $ 117,886 Accounts receivable, net of allowances of $54 in 2024 and $78 in 2023 12,557 9,989 Inventories, net 102,333 98,960 Other current assets 32,688 40,781 Total current assets 289,737 267,616 Property, plant, and equipment, net 26,441 25,300 Deferred income taxes 1,177 1,468 Right of use assets 10,305 11,480 Deferred financing costs, net 2,145 2,450 Goodwill 136,307 136,250 Other intangible assets, net 79,393 80,942 Master Settlement Agreement (MSA) escrow deposits 28,407 28,684 Other assets 17,644 15,166 Total assets $ 591,556 $ 569,356 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities: Accounts payable $ 11,919 $ 8,407 Accrued liabilities 30,428 33,635 Current portion of long-term debt 118,470 58,294 Total current liabilities 160,817 100,336 Notes payable and long-term debt 247,960 307,064 Lease liabilities 8,834 9,950 Total liabilities 417,611 417,350 Commitments and contingencies Stockholders’ equity: Preferred stock, $0.01 par value; authorized shares 40,000,000; issued and outstanding shares -0- - - Common stock, voting, $0.01 par value; authorized shares, 190,000,000; 20,126,521 issued shares and 17,703,166 outstanding shares at June 30, 2024, and 19,922,137 issued shares and 17,605,677 outstanding shares at December 31, 2023 201 199 Common stock, nonvoting, $0.01 par value; authorized shares, 10,000,000; issued and outstanding shares -0- - - Additional paid-in capital 121,948 119,075 Cost of repurchased common stock (2,423,355 shares at June 30, 2024, and 2,316,460 shares at December 31, 2023) (81,144 ) (78,093 ) Accumulated other comprehensive loss (3,072 ) (2,648 ) Accumulated earnings 134,917 112,443 Non-controlling interest 1,095 1,030 Total stockholders’ equity 173,945 152,006 Total liabilities and stockholders’ equity $ 591,556 $ 569,356"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Turning Point Brands, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(dollars in thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Six Months Ended June 30, 2024 2023 Cash flows from operating activities: Consolidated net income $ 25,096 $ 17,050 Adjustments to reconcile net income to net cash provided by operating activities: Gain on extinguishment of debt - (1,377 ) Loss on sale of property, plant, and equipment 7 44 Loss on MSA investments 6 - Depreciation and other amortization expense 1,916 1,535 Amortization of other intangible assets 1,559 1,542 Amortization of deferred financing costs 1,393 1,225 Deferred income tax expense 363 659 Stock compensation expense 3,951 2,836 Noncash lease income (85 ) (29 ) Loss on investments 2,722 8,989 Changes in operating assets and liabilities: Accounts receivable (2,489 ) 456 Inventories (3,218 ) (5,146 ) Other current assets 4,863 3,769 Other assets (279 ) (4,548 ) Accounts payable 3,565 2,500 Accrued liabilities and other (3,293 ) (1,972 ) Net cash provided by operating activities $ 36,077 $ 27,533 Cash flows from investing activities: Capital expenditures $ (2,858 ) $ (2,993 ) Purchases of investments (7,934 ) - Proceeds from sale of investments 3,314 - Purchases of non-marketable equity investments (500 ) - Restricted cash, MSA escrow deposits 4 - Proceeds on the sale of property, plant and equipment 2 3 Net cash used in investing activities $ (7,972 ) $ (2,990 ) Cash flows from financing activities: Convertible Senior Notes repurchased $ - $ (27,357 ) Proceeds from call options - 70 Payment of financing costs (133 ) - Payment of dividends (2,407 ) (2,209 ) Exercise of options 900 406 Redemption of options (4 ) (346 ) Redemption of restricted stock units (840 ) - Redemption of performance based restricted stock units (1,212 ) (995 ) Common stock repurchased (3,051 ) - Net cash used in financing activities $ (6,747 ) $ (30,431 ) Net increase (decrease) in cash $ 21,358 $ (5,888 ) Effect of foreign currency translation on cash $ (76 ) $ (8 ) Cash, beginning of period: Unrestricted $ 117,886 $ 106,403 Restricted 4,929 4,929 Total cash at beginning of period $ 122,815 $ 111,332 Cash, end of period: Unrestricted $ 142,159 $ 100,507 Restricted 1,938 4,929 Total cash at end of period $ 144,097 $ 105,436"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Financial Measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "To supplement our financial information presented in accordance with generally accepted accounting principles in the United States, or U.S. GAAP, we use non-U.S. GAAP financial measures, including EBITDA, Adjusted EBITDA, Adjusted Net Income, Adjusted Diluted EPS, and Adjusted Operating Income (Loss). We believe Adjusted EBITDA provides useful information to management and investors regarding certain financial and business trends relating to our financial condition and results of operations. Adjusted EBITDA, Adjusted Net Income, Adjusted Diluted EPS, and Adjusted Operating Income (Loss) are used by management to compare our performance to that of prior periods for trend analyses and planning purposes and are presented to our board of directors. We believe that EBITDA, Adjusted EBITDA, Adjusted Net Income, Adjusted Diluted EPS, and Adjusted Operating Income (Loss) are appropriate measures of operating performance because they eliminate the impact of expenses that do not relate to business performance.We define “EBITDA” as net income before interest expense, gain (loss) on extinguishment of debt, income tax expense, depreciation and amortization. We define “Adjusted EBITDA” as net income before interest expense, gain (loss) on extinguishment of debt, income tax expense, depreciation, amortization, other non-cash items and other items that we do not consider ordinary course in our evaluation of ongoing operating performance. We define “Adjusted Net Income” as net income excluding items that we do not consider ordinary course in our evaluation of ongoing operating performance. We define “Adjusted Diluted EPS” as diluted earnings per share excluding items that we do not consider ordinary course in our evaluation of ongoing operating performance. We define “Adjusted Operating Income (Loss)” as operating income excluding other non-cash items and other items that we do not consider ordinary course in our evaluation of ongoing operating performance.Non-U.S. GAAP measures should not be considered a substitute for, or superior to, financial measures calculated in accordance with U.S. GAAP. EBITDA, Adjusted Net Income, Adjusted EBITDA, Adjusted Diluted EPS, and Adjusted Operating Income (Loss) exclude significant expenses that are required by U.S. GAAP to be recorded in our financial statements and is subject to inherent limitations. In addition, other companies in our industry may calculate this non-U.S. GAAP measure differently than we do or may not calculate it at all, limiting its usefulness as a comparative measure.In accordance with SEC rules, we have provided, in the supplemental information attached, a reconciliation of the non-GAAP measures to the next directly comparable GAAP measures. Schedule A Turning Point Brands, Inc. Reconciliation of GAAP Net Income to Adjusted EBITDA (dollars in thousands) (unaudited)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 2023 Net income attributable to Turning Point Brands, Inc. $ 13,004 $ 9,925 Add: Interest expense, net 2,991 4,019 Gain on extinguishment of debt - (600 ) Income tax expense 4,415 3,338 Depreciation expense 891 759 Amortization expense 931 771 EBITDA $ 22,232 $ 18,212 Components of Adjusted EBITDA Corporate and CDS restructuring (a) 283 - ERP/CRM (b) 489 138 Stock options, restricted stock, and incentives expense (c) 1,889 2,093 Transactional expenses and strategic initiatives (d) 97 82 FDA PMTA (e) 997 662 Non-cash asset impairment (f) 2,722 4,092 FET Refund (g) (1,674 ) - Adjusted EBITDA $ 27,035 $ 25,279"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) Represents costs associated with corporate and CDS restructuring, including severance. (b) Represents cost associated with scoping and mobilization of new ERP and CRM systems and cost of duplicative ERP licenses. (c) Represents non-cash stock options, restricted stock, incentives expense and Solace performance stock units. (d) Represents the fees incurred for transaction expenses. (e) Represents costs associated with applications related to FDA premarket tobacco product application (“PMTA”). The PMTA regime requires the Company to submit an application to the FDA to receive marketing authorization to continue to sell certain of its product lines with continued sales permitted during the pendency of the applications. The application is a onetime resource-intensive process for each covered product line; however, due to the nature of the implementation process for those product lines already in the market, applications can take multiple years to complete rather than the typical one-time submission. The Company currently has only two product lines currently subject to the PMTA process, having utilized other regulatory pathway options available for our other product lines. The Company does not expect to submit additional PMTA applications for any new product lines after the submission for the remaining two are complete. (f) Represents impairment of investment assets. (g) Represents a federal excise tax refund included in other operating income. Schedule B Turning Point Brands Reconciliation of GAAP Net Income to Adjusted Net Income and Diluted EPS to Adjusted Diluted EPS (dollars in thousands except share data)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "TableElement",
+      "text": "(unaudited) Three Months Ended Three Months Ended June 30, 2024 June 30, 2023 Income before income taxes Income tax expense (h) Net loss attributable to non- controlling interest Adjusted Net Income Adjusted Diluted EPS Income before income taxes Income tax expense (h) Net loss attributable to non- controlling interest Net Income Diluted EPS GAAP Net Income and Diluted EPS $ 17,332 $ 4,415 $ (87 ) $ 13,004 $ 0.68 $ 13,046 $ 3,338 $ (217 ) $ 9,925 $ 0.53 Gain on extinguishment of debt (a) - - - - - (600 ) (154 ) - (446 ) (0.02 ) Corporate restructuring (b) 283 72 - 211 0.01 - - - - - ERP/CRM (c) 489 125 - 364 0.02 138 35 - 103 0.01 Stock options, restricted stock, and incentives expense (d) 1,889 481 - 1,408 0.07 2,093 536 - 1,557 0.08 Transactional expenses and strategic initiatives (e) 97 25 - 72 0.00 82 21 - 61 0.00 FDA PMTA (f) 997 254 - 743 0.04 662 169 - 493 0.02 Non-cash asset impairment (g) 2,722 693 - 2,029 0.10 4,092 1,047 - 3,045 0.15 FET refund (i) (1,674 ) (426 ) - (1,248 ) (0.06 ) - - - - - Tax benefit (j) - (577 ) - 577 0.03 - (560 ) - 560 0.03 Adjusted Net Income and Adjusted Diluted EPS $ 22,135 $ 5,062 $ (87 ) $ 17,160 $ 0.89 $ 19,513 $ 4,433 $ (217 ) $ 15,297 $ 0.79"
+    },
+    {
+      "type": "TextElement",
+      "text": "Totals may not foot due to rounding (a) Represents gain on extinguishment of debt. (b) Represents costs associated with corporate and CDS restructuring, including severance. (c) Represents cost associated with scoping and mobilization of new ERP and CRM systems and cost of duplicative ERP licenses. (d) Represents non-cash stock options, restricted stock, incentives expense and Solace PRSUs. (e) Represents the fees incurred for transaction expenses. (f) Represents costs associated with applications related to FDA premarket tobacco product application (“PMTA”). The PMTA regime requires the Company to submit an application to the FDA to receive marketing authorization to continue to sell certain of its product lines with continued sales permitted during the pendency of the applications. The application is a onetime resource-intensive process for each covered product line; however, due to the nature of the implementation process for those product lines already in the market, applications can take multiple years to complete rather than the typical one-time submission. The Company currently has only two product lines currently subject to the PMTA process, having utilized other regulatory pathway options available for our other product lines. The Company does not expect to submit additional PMTA applications for any new product lines after the submission for the remaining two are complete. (g) Represents impairment of investment assets. (h) Income tax expense calculated using the effective tax rate for the quarter of 25.5% in 2024 and 25.6% in 2023. (i) Represents a federal excise tax refund included in other operating income. (j) Represents adjustment from quarterly tax rate to annual projected tax rate of 23% in 2024 and 2023. Schedule C Turning Point Brands, Inc. Reconciliation of GAAP Operating Income (Loss) to Adjusted Operating Income (Loss) (dollars in thousands) (unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Consolidated Zig-Zag Products Stoker’s Products Creative Distribution Solutions 2nd Quarter 2nd Quarter 2nd Quarter 2nd Quarter 2nd Quarter 2nd Quarter 2nd Quarter 2nd Quarter 2024 2023 2024 2023 2024 2023 2024 2023 Net sales $ 108,512 $ 105,595 $ 50,482 $ 46,722 $ 42,743 $ 36,056 $ 15,287 $ 22,817 Gross profit $ 53,841 $ 52,478 $ 26,872 $ 26,422 $ 23,524 $ 19,968 $ 3,445 $ 6,088 Operating income (loss) $ 22,762 $ 20,545 $ 18,260 $ 17,000 $ 17,862 $ 15,110 $ (108 ) $ 460 Adjustments: Corporate restructuring 283 - - - - - - - ERP/CRM 489 138 - - - - - - Transactional expenses and strategic initiatives 97 82 - - - - - - FDA PMTA 997 662 - - - - - - FET refund (1,674 ) - (1,674 ) - - - - - Adjusted operating income (loss) $ 22,954 $ 21,427 $ 16,586 $ 17,000 $ 17,862 $ 15,110 $ (108 ) $ 460"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Turning Point Brands, Inc. | www.turningpointbrands.com | ir@tpbi.com | 502.774.9238 9"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Q2 2024 Adjusted EBITDA of $27.0 million, up 7% over prior year"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Zig-Zag and Stoker’s Products Net Sales for Q2 2024 Increased 13% Year-Over-Year"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Company increases full-year 2024 adjusted EBITDA guidance to $98 to $102 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Total consolidated net sales increased 2.8% to $108.5 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Zig-Zag Products net sales increased 8.0%"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Stoker’s Products net sales increased 18.5%"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Creative Distribution Solutions net sales decreased 33.0%"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Gross profit increased 2.6% to $53.8 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Net income increased 31.0% to $13.0 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted net income increased 12.2% to $17.2 million (see Schedule B for a reconciliation to net income)"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted EBITDA increased 6.9% to $27.0 million (see Schedule A for a reconciliation to net income)"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Diluted EPS of $0.68 and Adjusted Diluted EPS of $0.89 compared to $0.53 and $0.79, respectively, in the same period one year ago (see Schedule B for a reconciliation to Diluted EPS)"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 102.0,
+    "quarter_revenue_yoy_pct": 13.0,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 102.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net Sales for Q2 2024 Increased 13% Year-Over-Year • Company increases full-year 2024 adjusted EBITDA guidance to $98 to $102 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "• | Zig-Zag and Stoker’s Products Net Sales for Q2 2024 Increased 13% Year-Over-Year"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "Net Sales for Q2 2024 Increased 13% Year-Over-Year • Company increases full-year 2024 adjusted EBITDA guidance to $98 to $102 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 1,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 1,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 0.0,
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "36.889999",
+    "return_10d_pct": "1.3012",
+    "return_20d_pct": "7.4275",
+    "return_30d_pct": "8.7287",
+    "return_60d_pct": "15.4784",
+    "return_90d_pct": "28.0293"
+  },
+  "text_stats": {
+    "primary_text_len": 4139,
+    "exhibit_text_len": 23126,
+    "combined_text_len": 27267,
+    "semantic_text_len": 23274,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

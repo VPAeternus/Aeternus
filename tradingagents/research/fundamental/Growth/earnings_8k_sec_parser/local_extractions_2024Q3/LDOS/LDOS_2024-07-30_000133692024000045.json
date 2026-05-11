@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LDOS",
+    "cik": "1336920",
+    "event_date": "2024-07-30",
+    "event_accession": "0001336920-24-000045",
+    "primary_8k_doc": "ldos-20240730.htm",
+    "exhibit_docs": [
+      "ldos062824q2pressreleaseex.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LDOS_000133692024000045_ldos-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LDOS_000133692024000045_ldos062824q2pressreleaseex.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LDOS",
+    "cik": "1336920",
+    "entity_name": "LEIDOS HOLDINGS, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3699000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "162000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "12695000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-29",
+    "financing_cash_flow_value": "-57000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-39000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-98000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.043796",
+    "operating_cash_flow_to_revenue": "-0.026494",
+    "assets_to_revenue": "3.432009",
+    "financing_cash_flow_to_revenue": "-0.01541",
+    "investing_cash_flow_to_revenue": "-0.010543"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $4.",
+      "revenues of approximately $15.",
+      "revenues of $1.",
+      "revenues of $495 million increased by 6% compared to the prior year quarter, primarily driven by increased volumes within the airborne surveillance and reconnaissance and hypersonics businesses.",
+      "Net income of $324 million or $2.",
+      "Earnings per Share of $2."
+    ],
+    "guidance_evidence": [
+      "Guidance Leidos is updating its fiscal year 2024 guidance as follows: FY24 Guidance Measure Current Prior Revenues (billions) $16.",
+      "guidance\" and similar words or phrases.",
+      "guidance and other forward-looking statements made in this release depending on a variety of factors, including, but not limited to: developments in the U.",
+      "guidance or any other forward-looking statement provided in this release to reflect subsequent events, actual results or changes in Leidos' expectations.",
+      "forecasting and quantifying certain amounts that are necessary for such reconciliation.",
+      "forecast on a GAAP basis with reasonable certainty all deductions needed in order to provide a GAAP calculation of projected net income at this time."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings of $4.",
+      "demand across all customer segments, especially for managed health services.",
+      "bookings totaled $4.",
+      "backlog at the end of the quarter was $36.",
+      "bookings were several notable awards: • Defense Enclave Services (DES) Department of Defense Network (DoDNet) Services.",
+      "customers in heavily regulated industries."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in the U.",
+      "delays or loss of contracts as a result of competitor protests; changes in U.",
+      "uncertainties in tax due to new tax legislation or other regulatory developments, strategy, planned investments, sustainability goals and our future dividends, share repurchases, capital expenditures, debt repayments, acquisitions, dispositions and cash flow conversion.",
+      "uncertainties in tax due to new tax legislation or other regulatory developments; rising inflationary pressures and fluctuations in interest rates; delays in the U.",
+      "loss of contracts as a result of competitor protests; changes in U.",
+      "uncertainties associated with our business, please refer to the filings we make from time to time with the U."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4100,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "148.000000",
+    "return_10d_pct": "-2.2365",
+    "return_20d_pct": "1.4459",
+    "return_30d_pct": "7.1013",
+    "return_60d_pct": "10.1351",
+    "return_90d_pct": "25.5811"
+  },
+  "text_stats": {
+    "primary_text_len": 3761,
+    "exhibit_text_len": 40252,
+    "combined_text_len": 44015
+  }
+}

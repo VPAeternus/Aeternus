@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "OPCH",
+    "cik": "1014739",
+    "event_date": "2024-07-31",
+    "event_accession": "0001014739-24-000032",
+    "primary_8k_doc": "bios-20240731.htm",
+    "exhibit_docs": [
+      "exhibit9912024063010-q.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OPCH_000101473924000032_bios-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OPCH_000101473924000032_exhibit9912024063010-q.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "OPCH",
+    "cik": "1014739",
+    "entity_name": "OPTION CARE HEALTH, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1015848000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-23",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "39208000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-23",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3217035000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-23",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-80402000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-23",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-5760000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-23",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "89752000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-23",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.038596",
+    "operating_cash_flow_to_revenue": "0.088352",
+    "assets_to_revenue": "3.166847",
+    "financing_cash_flow_to_revenue": "-0.079148",
+    "investing_cash_flow_to_revenue": "-0.00567"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $1,227.",
+      "revenue of $4.",
+      "Net income of $53.",
+      "earnings per share, down 53.",
+      "net income of $114.",
+      "earnings per share, in the second quarter of 2023 • Adjusted EBITDA of $108."
+    ],
+    "guidance_evidence": [
+      "Guidance For the full year 2024, Option Care Health expects to generate: • Net revenue of $4.",
+      "guidance • Net interest expense of approximately $55 million to $60 million, consistent with previous guidance Conference Call Option Care Health will host a conference call to discuss its second quarter 2024 financial results later today at 8:30 a.",
+      "guidance to net income as management believes creation of this reconciliation would not be practicable due to the uncertainty regarding, and potential variability of, material reconciling items.",
+      "expects to generate: • Net revenue of $4."
+    ],
+    "wave_or_demand_evidence": [
+      "demand listening shortly after the completion of the call, at the same web link, and will remain available for approximately 90 days.",
+      "customers and team members.",
+      "ain committed to delivering on our commitments for 2024.",
+      "ailable online at https://investors.",
+      "ailable via webcast for on-demand listening shortly after the completion of the call, at the same web link, and will remain available for approximately 90 days.",
+      "ain “forward-looking statements” within the meaning of the safe harbor provisions of the U."
+    ],
+    "warning_or_risk_evidence": [
+      "charges such as the write down of certain long‑lived assets, temporary redundant expenses, professional fees, potential retention and severance costs and potential accelerated payments or termination costs for certain of its contractual obligations.",
+      "uncertainties, risks and changes in circumstances that are difficult to predict and many of which are outside of our control.",
+      "loss of relationships with managed care organizations and other non-governmental third party payers.",
+      "loss on extinguishment of debt, and restructuring, acquisition, integration and other.",
+      "uncertainty regarding, and potential variability of, material reconciling items."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1227.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "29.969999",
+    "return_10d_pct": "1.9019",
+    "return_20d_pct": "3.5369",
+    "return_30d_pct": "8.0080",
+    "return_60d_pct": "4.4378",
+    "return_90d_pct": "-21.4214"
+  },
+  "text_stats": {
+    "primary_text_len": 3326,
+    "exhibit_text_len": 12835,
+    "combined_text_len": 16163
+  }
+}

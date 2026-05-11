@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SLVM",
+    "cik": "1856485",
+    "event_date": "2024-08-09",
+    "event_accession": "0001856485-24-000021",
+    "primary_8k_doc": "syl-20240809.htm",
+    "exhibit_docs": [
+      "sylvamoex9912024secondquar.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SLVM_000185648524000021_syl-20240809.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SLVM_000185648524000021_sylvamoex9912024secondquar.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SLVM",
+    "cik": "1856485",
+    "entity_name": "SYLVAMO CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "941000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "97000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2872000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-8000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-228000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "63000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.103082",
+    "operating_cash_flow_to_revenue": "0.06695",
+    "assets_to_revenue": "3.052072",
+    "financing_cash_flow_to_revenue": "-0.008502",
+    "investing_cash_flow_to_revenue": "-0.242295"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net income of $83 million ($1.",
+      "net income (GAAP), net of tax and net special items.",
+      "net income, provides for a more complete analysis of the results of operations.",
+      "Net income is the most directly comparable GAAP measure.",
+      "net income, provides for a more complete analysis of the results of its operations.",
+      "Net Income $ 83 $ 49 $ 43 $ 126 $ 146 Earnings Per Share Basic $ 2."
+    ],
+    "guidance_evidence": [
+      "Outlook MEMPHIS, Tenn.",
+      "Outlook\" and \"Management Summary from Chairman and Chief Executive Officer Jean-Michel Ribiéras.",
+      "expected to decrease by $28 million 1 Management Summary from Chairman and Chief Executive Officer Jean-Michel Ribiéras In the second quarter, price and mix were favorable and input costs largely remained stable compared to last quarter.",
+      "projects, which will allow us to grow our earnings and cash flows as we reinvest in our business in the coming years."
+    ],
+    "wave_or_demand_evidence": [
+      "demand up in Europe and North America and down slightly in Latin America.",
+      "airman and Chief Executive Officer Jean-Michel Ribiéras In the second quarter, price and mix were favorable and input costs largely remained stable compared to last quarter.",
+      "aintenance outage quarter of 2024, we have more than 70% of our annual planned maintenance outages behind us.",
+      "ains stable.",
+      "aining on our $150 million share repurchase authorization from September 2023.",
+      "aid July 29."
+    ],
+    "warning_or_risk_evidence": [
+      "charge of $0 million ($0.",
+      "charge of $2 million ($0.",
+      "charges.",
+      "inventory sold during the first quarter.",
+      "decrease by $28 million 1 Management Summary from Chairman and Chief Executive Officer Jean-Michel Ribiéras In the second quarter, price and mix were favorable and input costs largely remained stable compared to last quarter.",
+      "uncertainties and other factors, many of which are beyond our control."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3700,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-12",
+    "entry_open": "73.400002",
+    "return_10d_pct": "4.5913",
+    "return_20d_pct": "3.4605",
+    "return_30d_pct": "0.3815",
+    "return_60d_pct": "14.0327",
+    "return_90d_pct": "30.0272"
+  },
+  "text_stats": {
+    "primary_text_len": 3526,
+    "exhibit_text_len": 23573,
+    "combined_text_len": 27101
+  }
+}

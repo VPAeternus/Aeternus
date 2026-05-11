@@ -1,0 +1,510 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ED",
+    "cik": "1047862",
+    "event_date": "2024-08-01",
+    "event_accession": "0001047862-24-000048",
+    "primary_8k_doc": "ed-20240801.htm",
+    "exhibit_docs": [
+      "a2q2024earningsreleasepr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ED_000104786224000048_ed-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ED_000104786224000048_a2q2024earningsreleasepr.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ED",
+    "cik": "1047862",
+    "entity_name": "Consolidated Edison, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4403000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1433000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "66331000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-3466000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "2618000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "92000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.32546",
+    "operating_cash_flow_to_revenue": "0.020895",
+    "assets_to_revenue": "15.064956",
+    "financing_cash_flow_to_revenue": "-0.787191",
+    "investing_cash_flow_to_revenue": "0.594595"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "earnings per share (adjusted EPS), that are not determined in accordance with generally accepted accounting principles in the United States of America (GAAP).",
+      "net income for common stock or net income per share, respectively, each of which is an indicator of financial performance determined in accordance with GAAP.",
+      "earnings per share (GAAP) / $0.",
+      "earnings per share (non- GAAP) $5.",
+      "EPS guidance range 2Q 2024 earnings reflect higher utility rate base and denial of our request to capitalize incremental costs for the new customer service billing and information system 6 a2q2024earningsreleasepr007.",
+      "earnings per share for the year 2024 to be in the range of $5."
+    ],
+    "guidance_evidence": [
+      "guidance,” “potential,” “goal,” “consider” and similar expressions identify forward-looking statements.",
+      "outlook shown in order of Moody’s / S&P Global Ratings (S&P) / Fitch.",
+      "Outlook(b): Positive / Stable / Stable Consolidated Edison Company of New York, Inc.",
+      "Outlook(b): Stable / Stable / Stable FERC Regulated Transmission Market Cap(a): $30.",
+      "Outlook(b): Stable / Stable / Stable Con Edison Transmission, Inc.",
+      "guidance range 2Q 2024 earnings reflect higher utility rate base and denial of our request to capitalize incremental costs for the new customer service billing and information system 6 a2q2024earningsreleasepr007."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, gas to approximately 1.",
+      "customers and steam to approximately 1,520 customers.",
+      "customers and gas to approximately 0.",
+      "customers.",
+      "customers with the most reliable electric service in New York State, while building new substations, transmission lines and other infrastructure to bring clean energy to our customers 4 a.",
+      "customer service billing and information system 6 a2q2024earningsreleasepr007."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary results of the viability and sufficiency assessments and facility characterizations by the close of Q3 2024, with its final report following in Q4 2024.",
+      "charges that are recovered in revenues from customers.",
+      "Decrease) $18 $11 ($27) $14 $17 ($3) Rate Base $1,324 $1,305 $1,286 $695 $711 $707 ROE 10.",
+      "decreased its requested January 2024 rate increase by $7.",
+      "decrease of $27.",
+      "decrease of $2."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q2024earningsreleasepr.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc a2q2024earningsreleasepr"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2nd Quarter 2024 Earnings Release Presentation August 1, 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Available Information On August 1, 2024, Consolidated Edison, Inc. issued a press release reporting its second quarter 2024 earnings and filed with the Securities and Exchange Commission the company’s second quarter 2024 Form 10-Q. This presentation should be read together with, and is qualified in its entirety by reference to, the earnings press release and the Form 10-Q. Copies of the earnings press release and the Form 10-Q are available at: www.conedison.com/en/. (Select “For Investors” and then select “Press Releases” and “SEC Filings,” respectively.) Forward-Looking Statements This presentation contains forward-looking statements that are intended to qualify for the safe-harbor provisions of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended. Forward-looking statements are statements of future expectations and not facts. Words such as “forecasts,” “expects,” “estimates,” “anticipates,” “intends,” “believes,” “plans,” “will,” “target,” “guidance,” “potential,” “goal,” “consider” and similar expressions identify forward-looking statements. The forward-looking statements reflect information available and assumptions at the time the statements are made, and accordingly speak only as of that time. Actual results or developments might differ materially from those included in the forward-looking statements because of various factors such as those identified in reports Con Edison has filed with the Securities and Exchange Commission, including that Con Edison's subsidiaries are extensively regulated and are subject to substantial penalties; its utility subsidiaries' rate plans may not provide a reasonable return; it may be adversely affected by changes to the utility subsidiaries' rate plans; the failure of, or damage to, its subsidiaries' facilities could adversely affect it; a cyber-attack could adversely affect it; the failure of processes and systems, the failure to retain and attract employees and contractors, and their negative performance could adversely affect it; it is exposed to risks from the environmental consequences of its subsidiaries' operations, including increased costs related to climate change; its ability to pay dividends or interest depends on dividends from its subsidiaries; changes to tax laws could adversely affect it; it requires access to capital markets to satisfy funding requirements; a disruption in the wholesale energy markets, increased commodity costs or failure by an energy supplier or customer could adversely affect it; it faces risks related to health epidemics and other outbreaks; its strategies may not be effective to address changes in the external business environment; it faces risks related to supply chain disruptions and inflation; and it also faces other risks that are beyond its control. This list of factors is not all-inclusive because it is not possible to predict all factors. Con Edison assumes no obligation to update or revise any forward-looking statements, whether as a result of new information, future events or otherwise, except as required by law. Non-GAAP Financial Measures This presentation also contains financial measures, adjusted earnings and adjusted earnings per share (adjusted EPS), that are not determined in accordance with generally accepted accounting principles in the United States of America (GAAP). These non-GAAP financial measures should not be considered as an alternative to net income for common stock or net income per share, respectively, each of which is an indicator of financial performance determined in accordance with GAAP. Adjusted earnings and adjusted earnings per share exclude from net income for common stock and net income per share, respectively, certain items that Con Edison does not consider indicative of its ongoing financial performance such as adjustments to the gain and other impacts related to the sale of all of the stock of its former subsidiary the Clean Energy Businesses in 2023, the effects of HLBV accounting for tax equity investments and mark-to-market accounting. Management uses these non-GAAP financial measures to facilitate the analysis of Con Edison's financial performance as compared to its internal budgets and previous financial results and to communicate to investors and others Con Edison's expectations regarding its future earnings and dividends on its common stock. Management believes that these non-GAAP financial measures are also useful and meaningful to investors to facilitate their analysis of Con Edison's financial performance. See slides 13, 17, 18, 22, 26, 27, and 28 for a reconciliation of non-GAAP financial measures to their GAAP equivalent. For more information, contact: Jan Childress, Director, Investor Relations Caroline Elsasser, Section Manager, Investor Relations Allison Duignan, Sr. Analyst, Investor Relations Tel: 212-460-6611 Tel: 212-460-4431 Tel: 212-460-6912 Email: childressj@coned.com Email: elsasserc@coned.com Email: duignana@coned.com Investor Relations conEdison.com 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "3 Organizational Structure a. As of June 30, 2024. b. Con Edison's issuer ratings and the senior unsecured ratings of CECONY and O&R and outlook shown in order of Moody’s / S&P Global Ratings (S&P) / Fitch. Ratings are not a recommendation to buy, sell or hold securities and may be subject to revision or withdrawal at any time. c. CECONY delivers electricity to approximately 3.7 million customers, gas to approximately 1.1 million customers and steam to approximately 1,520 customers. d. O&R delivers electricity to approximately 0.3 million customers and gas to approximately 0.1 million customers. Regulated Energy Delivery Orange and Rockland Utilities, Inc. (O&R)(d) Ratings(b): Baa2 / A- / A- Outlook(b): Positive / Stable / Stable Consolidated Edison Company of New York, Inc. (CECONY)(c) Ratings(b): A3 / A- / A- Outlook(b): Stable / Stable / Stable FERC Regulated Transmission Market Cap(a): $30.8 billion Ratings(b): Baa1 / A- / BBB+ Outlook(b): Stable / Stable / Stable Con Edison Transmission, Inc. (Con Edison Transmission or CET) Rockland Electric Company (RECO) Percentages of Total Assets by Business 93.7% 5.7% 0.7% CECONY O&R CET 2024 Total Assets: $68 billion(a) 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "4 Our Story ◦ Continued investment efforts to support the region's climate goals ▪ New York City Offshore Wind Public Policy Transmission Need Solicitation(a) • CECONY - Brooklyn Clean Energy Hub identified as a point of interconnection for 26 of the 28 proposals submitted to the New York Independent System Operator • CET - Through NY Transco submitted 10 proposals ▪ In April 2024, CET submitted a proposal jointly with National Grid Ventures to build transmission infrastructure to support offshore wind power delivery to New Jersey's electric grid(b) ◦ Safety and reliability remain our top priority ▪ NYSPSC annual electric reliability performance report(c) found we provide our customers with the most reliable electric service in New York State ◦ Filed first-of-its kind annual report on investing in disadvantaged communities(d) ▪ Provides valuable data to inform implementation of the Climate Leadership and Community Protection Act ▪ Filed in May 2024 We provide our customers with the most reliable electric service in New York State, while building new substations, transmission lines and other infrastructure to bring clean energy to our customers 4 a. NYISO Public Policy Transmission Projects proposed to meet NYC PPTN b. Press Release: National Grid Ventures and Con Edison Transmission Propose Garden State Energy Path to Connect NJ Offshore Wind c. NYSPSC docket number: 24-E-0140 d. NYSPSC docket number: 22-E-0064"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "5 Focusing on our Regulated Businesses ◦ Opportunities for infrastructure investment to support reliability and the clean energy transition: ▪ $28 billion in capital investments from 2024 - 2028 ▪ CECONY, O&R and CET have increased focus on regional transmission needs ◦ Strong projected regulated rate base growth: ▪ Target 6.4% annual rate base growth forecasted through 2028 ▪ Revenue predictability in place for all New York energy services ◦ Con Edison plans for expected future growth in electric volumes: ▪ New York City and State bans on fossil fuels for new buildings(a) ▪ New Yorkers transition to electrification of building space heating and to electric vehicles A regulated business model with a strong and simple balance sheet 5 a. NYC Local Law 154 and Assembly Bill A3006C"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q Financial Highlights $0.58 earnings per share (GAAP) / $0.59 adjusted earnings per share (non- GAAP) $5.20 - $5.40 (non-GAAP) Reaffirmed 2024 adjusted EPS guidance range 2Q 2024 earnings reflect higher utility rate base and denial of our request to capitalize incremental costs for the new customer service billing and information system 6"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Regulatory Updates 7"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Additional rate plan information: Rate Plan Information | Consolidated Edison, Inc. Typical timeline for rate setting process: Jan 26, 2024 Apr 5, 2024 May 24, 2024 Jun 10, 2024 Jul 2024 Aug 2024 Sep 2024 Oct 2024 Nov 2024 Dec 2024 Jan 2025 Filing with NYSPSC Company Update Staff/Intervenor Testimony Rebuttal Testimony Evidentiary Hearings Final Rate Decision New Rates in EffectInitial Briefs Reply Briefs ALJ Recommended Decision Briefs on Exception Settlement Negotiations Joint Proposal O&R Electric & Gas Rate Case Filing Comparison and Timeline 8 Electric Gas ($ in millions) Case number 24-E-0060 Case number 24-G-0061 Rate Year 1: Jan 2025 - Dec 2025 Jan 2024 Filing Apr 2024 Update May 2024 Staff/ Intervenor Testimony Jan 2024 Filing Apr 2024 Update May 2024 Staff/ Intervenor Testimony New infrastructure investment, including return, depreciation and property taxes $17 $14 $11 $6 $7 $7 ROE/Financing 15 15 7 7 8 4 Depreciation changes due to proposed rates 2 2 (1) 9 10 1 Sales revenue change (9) (9) (15) 4 5 4 Operations & maintenance expenses 8 8 (8) (5) (5) (10) Regulatory amortization (10) (11) (12) (8) (8) (8) Other revenues (7) (7) (7) — — — Income taxes 2 (1) (2) 1 — (1) Total Rate Increase (Decrease) $18 $11 ($27) $14 $17 ($3) Rate Base $1,324 $1,305 $1,286 $695 $711 $707 ROE 10.25% 10.25% 9.50% 10.25% 10.25% 9.50% Equity Ratio 50% 50% 48% 50% 50% 48% Will begin if settlement not reached"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "NYSPSC & NYISO Proceedings and Developments ◦ In April 2024, Department of Public Service Staff authorized CECONY's three and O&R's one UTEN pilot project proposals and budgets ($17.1 million and $4.6 million, respectively) through Stage 2(c). Stage 2 compliance filings are due January 9, 2025. ◦ In May 2024, CECONY filed a petition(c) with the NYSPSC for confirmation to incur $6 million in previously requested administration and contingency funding to complete engineering design and customer protection plans (\"Stage 2\") for its pilot project portfolio. ◦ In June 2024, NYSPSC issued an order(e) approving a roadmap that established an energy storage goal of up to 6,000 MW by 2030. The roadmap includes: ▪ NYSERDA will conduct a minimum of three bulk energy storage solicitations, held no less than annually, which will include a 15-year maximum contract term length for lithium-ion battery bulk storage projects and 25-year maximum contract term length for bulk non-lithium ion battery storage projects. ▪ CECONY and O&R can continue Utility Dispatch Rights solicitations to establish long-term dispatch rights contracts with third party owned storage projects. ▪ New York State utilities are given an opportunity to study the potential of energy storage projects to provide services integrated into their transmission and distribution systems. Energy Storage d NYSPSC docket number 22-E-0064 e. NYSPSC docket number 18-E-0130 9 a. For more information on NYC Public Policy Transmission Need, please visit : New York City Public Policy Transmission Need b. NYISO Public Policy Transmission Projects proposed to meet NYC PPTN c. NYSPSC docket number 22-M-0429 NYISO ◦ The NYISO's New York City Public Policy Transmission Need (PPTN) solicitation aims to accommodate at least 4,770 MW of offshore wind into New York City with developers having the option to collaborate with CECONY on the proposals(a). ◦ In June 2024, NYISO released(b) the list of 28 submitted proposals from four developers: Energy Re Giga-Projects (3 projects), Viridon (3 projects), New York Transco (10 projects), and NYPA partnering with LS Power (12 projects). 26 of the 28 proposals included CECONY's Brooklyn Clean Energy Hub as a point of injection. ◦ NYISO is expected to release preliminary results of the viability and sufficiency assessments and facility characterizations by the close of Q3 2024, with its final report following in Q4 2024. The final project selection decision is expected to be made by Q2 - Q3 2025. Utility Thermal Energy Network (UTEN) Pilot Projects Disadvantaged Communities Report ◦ In May 2024, CECONY filed(d) its first annual Investing in Disadvantaged Communities Report, as required by the NYSPSC. The report summarizes the impacts of CECONY's investments in disadvantaged communities (DACs) within the company’s service territory, based on 2023 data. The report includes, among other things, building electrification and energy efficiency initiatives, as well as data related to the CECONY's long-running electric and gas operations. DACs locations were identified by New York State in connection with the implementation process for the CLCPA."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Strong Economic Performance 10"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Dividend and Earnings Announcements • On July 18, 2024, the company declared a quarterly dividend of 83 cents a share on its common stock. • On August 1, 2024, the company issued a press release in which it reaffirmed its previous forecast of adjusted earnings per share for the year 2024 to be in the range of $5.20 to $5.40 a share.(a)(b) Reported EPS (GAAP) Adjusted EPS (Non-GAAP) $0.58 $0.65 $0.59 $0.61 2024 2023 2024 2023 2Q 2024 vs. 2Q 2023 a. Adjusted earnings and adjusted earnings per share during the three months ended 2024 and 2023 periods exclude the effects of hypothetical liquidation at book value (HLBV) accounting for tax equity investments. Adjusted earnings and adjusted earnings per share during the three months ended 2023 period excludes adjustments to the gain and other impacts related to the sale of all of the stock of its former subsidiary, Con Edison Clean Energy Businesses, Inc. (the Clean Energy Businesses) in 2023. Adjusted earnings and adjusted earnings per share during the six months ended 2024 and 2023 periods exclude the effects of HLBV accounting for tax equity investments and adjustments to the gain and other impacts related to the sale of the Clean Energy Businesses in 2023. Adjusted earnings and adjusted earnings per share during the six months ended 2023 period excludes the net mark-to-market effects of the Clean Energy Businesses. b. On March 1, 2023, Con Edison completed the sale of all of the stock of the Clean Energy Businesses. Con Edison’s forecast of adjusted earnings per share for the year of 2024 excludes the effects of HLBV accounting for tax equity investments (approximately $(0.01) a share after-tax), accretion of the basis difference of Con Edison's equity investment in the Mountain Valley Pipeline (approximately $(0.01) a share after-tax) and adjustments to the gain and other impacts related to the sale of all of the stock of the Clean Energy Businesses in 2023, the amount of which will not be determinable until year-end. Reported EPS (GAAP) Adjusted EPS (Non-GAAP) $2.67 $4.74 $2.73 $2.45 2024 2023 2024 2023 YTD 2024 vs. YTD 2023 11"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Dividend Aristocrat and King Fifty (50) consecutive years of dividend increases with a CAGR of 5.65% and a target payout of 55% to 65% of adjusted earnings (Non-GAAP) 12"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q 2024 EPS to Adjusted EPS (non-GAAP) Reconciliation Earnings per Share Net Income for Common Stock ($ in Millions) 2024 2023 2024 2023 Reported EPS and Net Income for Common Stock – GAAP basis $0.58 $0.65 $202 $226 Gain and other impacts related to sale of the Clean Energy Businesses (pre-tax) (a) — (0.03) — (12) Income taxes (b) — (0.02) — (6) Gain and other impacts related to sale of the Clean Energy Businesses (net of tax) — (0.05) — (18) HLBV effects (pre-tax) 0.01 0.01 1 3 Income taxes (c) — — — (1) HLBV effects (net of tax) 0.01 0.01 1 2 Adjusted EPS and Adjusted Earnings – non-GAAP basis $0.59 $0.61 $203 $210 a. The gain and other impacts related to the sale of all of the stock of the Clean Energy Businesses for the three months ended June 30, 2023 is comprised of an adjustment to the gain on the sale of of the stock of the Clean Energy Businesses ($(0.03) a share or $(13) million and transaction costs of $1 million net of tax). b. Amounts shown include impact of changes in state apportionments ($(0.02) a share net of federal taxes or $(6) million net of federal taxes) for the three months ended June 30, 2023. The amount of income taxes for transaction costs was calculated using a combined federal and state income tax rate of 27% for the three months ended June 30, 2023. c. The amount of income taxes was calculated using a combined federal and state income tax rate of 24% and 25% for the three months ended June 30, 2024 and 2023, respectively. 13"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Variance in Reported EPS (GAAP) Variance in Adjusted EPS (non-GAAP) 2Q 2023 Reported EPS CECONY O&R CEBs CET Other 2Q 2024 Reported EPS $0.65 $(0.01) $(0.01) $— $0.03 $0.58 2Q 2023 Adjusted EPS CECONY O&R CEBs CET Other 2Q 2024 Adjusted EPS $0.61 $(0.01) $(0.01) $(0.03) $0.59 $— (a) (a) $0.03 $(0.08) a. Other includes the parent company, Con Edison's tax equity investments, the deferred project held for sale and consolidation adjustments. Walk from 2Q 2023 EPS to 2Q 2024 EPS and 2Q 2023 Adjusted EPS (non-GAAP) to 2Q 2024 Adjusted EPS (non-GAAP) 14"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr015.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "EPS (GAAP Basis) Adjusted EPS (non-GAAP Basis) Higher electric rate base $0.05 $0.05 CECONY(a) New steam rate plan effective November 2023 0.03 0.03 Higher gas rate base 0.01 0.01 Change in incentives earned under the electric and gas earnings adjustment mechanisms 0.01 0.01 Impact of the NYSPSC order denying an April 2023 petition by CECONY that requested permission to capitalize costs to implement its new customer billing and information system (0.11) (0.11) Higher health care costs (0.02) (0.02) Other 0.02 0.02 Total CECONY $(0.01) $(0.01) Higher storm-related costs (0.01) (0.01) O&R(a) Total O&R $(0.01) $(0.01) 2Q 2024 vs. 2Q 2023 EPS and Adjusted EPS (non-GAAP) Variances – Three Months Ended Variation a. Under the revenue decoupling mechanisms in the Utilities’ New York electric and gas rate plans and the weather-normalization clause applicable to their gas businesses, revenues are generally not affected by changes in delivery volumes from levels assumed when rates were approved. Effective November 1, 2023, revenues from CECONY’s steam sales are also subject to a weather normalization clause, as a result of which, delivery revenues reflect normal weather conditions during the heating season. In general, the Utilities recover on a current basis the fuel, gas purchased for resale and purchased power costs they incur in supplying energy to their full-service customers. Accordingly, such costs do not generally affect Con Edison’s results of operations. 15"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr016.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "EPS (GAAP Basis) Adjusted EPS (non-GAAP Basis) Higher investment income and an income tax adjustment due to allowance for funds used during construction (AFUDC) from Mountain Valley Pipeline, LLC 0.02 0.02 CET Other 0.01 0.01 Total CET $0.03 $0.03 Gain and other impacts related to the sale of the Clean Energy Businesses (0.05) — Other, including parent company expensesLower interest income (0.02) (0.02) Other (0.01) (0.01) Total Other $(0.08) $(0.03) Total Variance $(0.07) $(0.02) 2Q 2024 vs. 2Q 2023 EPS and Adjusted EPS (non-GAAP) Variances – Three Months Ended Variation 16"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr017.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q 2024 vs. 2Q 2023 EPS to Adjusted EPS (non-GAAP) Reconciliation by Company CECONY O&R CET Other(b) Total Reported EPS – GAAP basis $0.54 $0.01 $0.04 $(0.01) $0.58 HLBV effects (pre-tax) — — — 0.01 0.01 Income taxes (a) — — — — — HLBV effects (net of tax) — — — 0.01 0.01 Adjusted EPS – non-GAAP basis $0.54 $0.01 $0.04 $— $0.59 Three Months Ended June 30, 2024 a. The amount of income taxes was calculated using a combined federal and state income tax rate of 24% for the three months ended June 30, 2024. b. Other includes the parent company, Con Edison's tax adjustments, the deferred project held for sale and consolidation adjustments. 17"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr018.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q 2024 vs. 2Q 2023 EPS to Adjusted EPS (non-GAAP) Reconciliation by Company (Cont'd) CECONY O&R CET Other(b) Total Reported EPS – GAAP basis $0.55 $0.02 $0.01 $0.07 $0.65 Gain on Sale of the Clean Energy Businesses (pre-tax) — — — (0.03) (0.03) Income taxes — — — — — Gain on Sale of the Clean Energy Businesses (net of tax) — — — (0.03) (0.03) Impact of the sale of the Clean Energy Businesses on the changes in state apportionments (net of federal taxes) — — — (0.02) (0.02) Impact of the sale of the Clean Energy Businesses on the changes in state apportionments (net of federal taxes) — — — (0.02) (0.02) HLBV effects (pre-tax) — — — 0.01 0.01 Income taxes (a) — — — — — HLBV effects (net of tax) — — — 0.01 0.01 Adjusted EPS – non-GAAP basis $0.55 $0.02 $0.01 $0.03 $0.61 Three Months Ended June 30, 2023 a. The amount of income taxes was calculated using a combined federal and state income tax rate of 25% for the three months ended June 30, 2023. b. Other includes the parent company, Con Edison's tax adjustments, the deferred project held for sale and consolidation adjustments. 18"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr019.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q 2024 Developments(a) CECONY & O&R In April 2024, O&R filed an update to its January 2024 request to the NYSPSC for an electric rate increase effective January 1, 2025. The company decreased its requested January 2024 rate increase by $7.5 million to $10.7 million. For purposes of illustration, the filing calculated rate increases of $34.8 million and $55 million effective January 2026 and 2027, respectively, based upon the proposed return on common equity of 10.25 percent and a common equity ratio of 50 percent. In May 2024, the New York State Department of Public Service (NYSDPS) submitted testimony in the NYSPSC proceeding in which O&R requested an electric rate increase, effective January 1, 2025. The NYSDPS testimony supports an electric rate decrease of $27.6 million reflecting, among other things, a 9.50 percent return on common equity and a common equity ratio of 48 percent. (page 22) In April 2024, O&R filed an update to its January 2024 request to the NYSPSC for a gas rate increase effective January 1, 2025. The company increased its requested January 2024 rate increase by $3.1 million to $17.5 million. For purposes of illustration, the filing calculated rate increases of $22.8 million and $19.2 million effective January 2026 and 2027, respectively, based upon the proposed return on common equity of 10.25 percent and a common equity ratio of 50 percent. In May 2024, the NYSDPS submitted testimony in the NYSPSC proceeding in which O&R requested a gas rate increase, effective January 1, 2025. The NYSDPS testimony supports a gas rate decrease of $2.9 million reflecting, among other things, a 9.50 percent return on common equity and a common equity ratio of 48 percent. (page 22) In May 2024, the NYSPSC issued an order denying an April 2023 petition by CECONY that requested permission to capitalize costs to implement its new customer billing and information system to the extent those costs exceeded the $421 million cap established in CECONY’s 2020 – 2022 electric and gas rate plans. CECONY’s final costs for the new system were $510 million ($89 million above the $421 million cap in the rate plans). CECONY believes that the incremental costs were both prudent and necessary for the successful deployment of the system for the benefit of its customers. In May 2024, CECONY expensed incremental costs of $51 million for the new system that were previously capitalized, in addition to a $38 million reserve established at December 31, 2023. In June 2024, CECONY filed a petition for rehearing with the NYSPSC. CECONY is unable to predict the NYSPSC's response to its rehearing petition. (page 23) In May 2024, CECONY filed its inaugural annual Investing in Disadvantaged Communities Report, as required by the NYSPSC. The report summarizes the impacts of CECONY's investments in disadvantaged communities (DACs) within the company’s service territory, based on 2023 data. The report includes, among other things, building electrification and energy efficiency initiatives, as well as data related to the company’s long-running electric and gas operations. DAC locations were identified by New York State in connection with the implementation process for the CLCPA. (page 77) At June 30, 2024, CECONY’s and O&R’s customer accounts receivables balances of $2,742 million and $117 million, respectively, included aged accounts receivables (balances outstanding in excess of 60 days) of $1,553 million and $37 million, respectively. In comparison, CECONY’s and O&R’s customer accounts receivable balances at February 28, 2020 were $1,322 million and $89 million, respectively, including aged accounts receivables (balances outstanding in excess of 60 days) of $408 million and $15 million, respectively. (page 49) In June 2024, CECONY reached a four-year collective bargaining agreement with its largest union covering approximately 7,300 employees (which is subject to ratification by the employees).(page 50) In June 2024, CECONY decreased its five-year forecast of average annual growth of the firm peak gas demand in its service area at design conditions from approximately 0.8 percent (for 2024 to 2028) to approximately 0.1 percent (for 2025 to 2029). The decrease is reflective of and aligned with state and local clean energy future policies driving the phase-out of the use of natural gas. (page 50) a. Page references to 2Q 2024 Form 10-Q unless noted otherwise. 19"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr020.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2Q 2024 Developments (continued)(a) a. Page references to 2Q 2024 Form 10-Q unless noted otherwise. 20 CECONY & O&R In June 2024, CECONY increased its five-year forecast of the average annual peak steam demand in its service area at design conditions from a 0.5 percent decrease (for 2024 to 2028) to a 0.4 percent decrease (for 2025 to 2029). The increase is reflective of and aligned with local policies driving the phase-out of the use of natural gas along with an anticipated increase in oil-to-steam customer conversions. (page 50) In June 2024, O&R increased its five-year forecast of the average annual firm peak gas demand in its service area at design conditions from a 0.2 percent decrease (for 2024 to 2028) to a 0.1 percent decrease (for 2025 to 2029). This change is reflective of and aligned with state clean energy future policies driving the phase-out of the use of natural gas. (page 50) In April 2024, the NYSDPS approved CECONY’s and O&R’s December 2023 Stage 1 filings (Project Scope, Feasibility, and Stakeholder Engagement) for utility-scale thermal energy network pilot projects. The NYSDPS also confirmed CECONY and O&R are authorized to incur costs of $17.1 million and $4.6 million, respectively, through the completion of Stage 2 (Pilot Project Engineering Design and Customer Protection Plan). These projected costs are within the budgets proposed by CECONY and O&R of $255 million and $46 million, respectively. The remaining proposed budget amounts are subject to approval by the NYSPSC. (page 78) Con Edison Transmission In June 2024, the Mountain Valley Pipeline, a 303-mile gas transmission pipeline in West Virginia and Virginia, entered service. The project operator is continuing restoration of the right of way and estimates a total project cost of approximately $7,900 million (excluding allowance for funds used during construction (AFUDC)). Con Edison Transmission's interest in MVP, the company that developed the project, is expected to be approximately 6.7 percent. At June 30, 2024, the carrying value of Con Edison Transmission's investment in MVP was $156 million. and its cash contributions to the joint venture amounted to $530 million. Con Edison records its pro rata share of earnings from its equity investment in MVP, adjusted for accretion of basis difference and income taxes, on its consolidated income statement. (page 20) Con Edison Transmission is also participating in competitive solicitations to develop additional electric projects, including a proposal submitted in April 2024 with another entity to build transmission infrastructure that will carry offshore wind power to New Jersey's electric grid and multiple proposals submitted in June 2024 through its New York Transco partnership to integrate offshore wind into New York City's energy grid. (page 49)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr021.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "YTD 2024 EPS to Adjusted EPS (non-GAAP) Reconciliation Earnings per Share Net Income for Common Stock ($ in Millions) 2024 2023 2024 2023 Reported Net Income for Common Stock and EPS – GAAP basis $2.67 $4.74 $922 $1,658 Gain and other impacts related to sale of the Clean Energy Businesses (pre-tax) (a) 0.08 (2.56) 30 (895) Income taxes (a)(b) (0.02) 0.24 (8) 83 Gain and other impacts related to sale of the Clean Energy Businesses (net of tax) 0.06 (2.32) 22 (812) HLBV effects (pre-tax) — — 1 1 Income taxes (c) — — — — HLBV effects (net of tax) — — 1 1 Net mark-to-market effects (pre-tax) — 0.04 — 13 Income taxes (d) — (0.01) — (4) Net mark-to-market effects (net of tax) — 0.03 — 9 Adjusted Earnings and Adjusted EPS – non-GAAP basis $2.73 $2.45 $945 $856 a. The gain and other impacts related to the sale of all of the stock of the Clean Energy Businesses were adjusted during the six months ended June 30, 2024 ($0.08 a share and $0.06 a share net of tax or $30 million and $22 million net of tax) to reflect closing adjustments. The gain and other impacts related to the sale of all of the stock of the Clean Energy Businesses for the six months ended June 30, 2023 is comprised of the gain on the sale of all of the stock of the Clean Energy Businesses ($(2.48) a share and ($2.30) a share net of tax or $(867) million and $(804) million net of tax), transaction costs and other accruals ($0.04 a share and $0.03 a share net of tax or $14 million and $10 million net of tax) and the effects of ceasing to record depreciation and amortization expenses on the Clean Energy Businesses’ assets ($(0.12) a share and $(0.08) a share net of tax or $(41) million and $(28) million net of tax). b. The amount of income taxes for the adjustment on the gain on the sale of all of the stock of the Clean Energy Businesses had an effective tax rate of 28% and 7% for the six months ended June 30, 2024 and June 30, 2023, respectively. Amounts shown include impact of changes in state apportionments ($0.03 a share net of federal taxes or $10 million net of federal taxes) for the six months ended June 30, 2023. The amount of income taxes for transaction costs and other accruals and the effects of ceasing to record depreciation and amortization expenses was calculated using a combined federal and state income tax rate of 27% and 32% for the six months ended June 30, 2023, respectively. c. The amount of income taxes was calculated using a combined federal and state income tax rate of 2% for the six months ended June 30, 2023. d. The amount of income taxes was calculated using a combined federal and state income tax rate of 32% for the six months ended June 30, 2023. 21"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr022.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "YTD 2023 Adjusted EPS CECONY O&R CEBs CET Other YTD 2024 Adjusted EPS Variance in Reported EPS (GAAP) Variance in Adjusted EPS (non-GAAP) YTD 2023 Reported EPS CECONY O&R CEBs CET Other YTD 2024 Reported EPS $4.74 $0.28 $0.01 $(0.06) $0.05 $(2.35) $2.67 $2.45 $0.28 $0.01 $— $0.05 $(0.06) $2.73 (a) (a) a. Other includes the parent company, Con Edison's tax equity investments, the deferred project held for sale and consolidation adjustments. Walk from YTD 2023 EPS to YTD 2024 EPS and YTD 2023 Adjusted EPS (non- GAAP) to YTD 2024 Adjusted EPS (non-GAAP) 22"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr023.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "EPS (GAAP Basis) Adjusted EPS (non- GAAP Basis) New steam rate plan effective November 2023 $0.16 $0.16 CECONY(a) Higher electric rate base 0.09 0.09 Higher gas rate base 0.08 0.08 Change in incentives earned under the electric and gas earnings adjustment mechanisms 0.01 0.01 Impact of the NYSPSC order denying an April 2023 petition by CECONY that requested permission to capitalize costs to implement its new customer billing and information system (0.11) (0.11) Accretive effect of share repurchase 0.04 0.04 Other 0.01 0.01 Total CECONY $0.28 $0.28 Electric base rate increase 0.02 0.02 O&R(a)Gas base rate increase 0.01 0.01 Total O&R $0.01 $0.01 a. Under the revenue decoupling mechanisms in the Utilities’ New York electric and gas rate plans and the weather- normalization clause applicable to their gas businesses, revenues are generally not affected by changes in delivery volumes from levels assumed when rates were approved. Effective November 1, 2023, revenues from CECONY’s steam sales are also subject to a weather normalization clause, as a result of which, delivery revenues reflect normal weather conditions during the heating season. In general, the Utilities recover on a current basis the fuel, gas purchased for resale and purchased power costs they incur in supplying energy to their full-service customers. Accordingly, such costs do not generally affect Con Edison’s results of operations. YTD 2024 vs. YTD 2023 EPS and Adjusted EPS (non- GAAP) Variances – Six Months Ended Variation 23"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr024.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "EPS (GAAP Basis) Adjusted EPS (non- GAAP Basis) Total Clean Energy Businesses $(0.06) $(0.06) CEBs(a) Higher investment income and an income tax adjustment due to AFUDC from Mountain Valley Pipeline, LLC 0.04 0.04 CET Other 0.01 0.01 Total CET $0.05 $0.05 HLBV effects 0.01 $— Other, including parent company expenses Gain and other impacts related to the sale of the Clean Energy Businesses (2.31) — Lower interest income (0.04) (0.04) Other (0.01) (0.01) Total Other $(2.35) $(0.05) Total $(2.07) $0.28 a. On March 1, 2023, Con Edison completed the sale of all of the stock of the Clean Energy Businesses and therefore 2023 reflects the financial results for the two months ended February 2023. YTD 2024 vs. YTD 2023 EPS and Adjusted EPS (non- GAAP) Variances – Six Months Ended Variation 24"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr025.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "YTD 2024 vs. YTD 2023 EPS to Adjusted EPS (non-GAAP) Reconciliation by Company CECONY O&R CET Other(f) Total Reported EPS – GAAP basis $2.55 $0.12 $0.07 $(0.07) $2.67 Gain on Sale of the Clean Energy Businesses (pre-tax) — — — 0.08 0.08 Income taxes (a) — — — (0.02) (0.02) Gain on Sale of the Clean Energy Businesses (net of tax) — — — 0.06 0.06 Adjusted EPS – non-GAAP basis $2.55 $0.12 $0.07 ($0.01) $2.73 Six months ended June 30, 2024 a. The amount of income taxes was calculated using a combined federal and state income tax rate of 28% for the six months ended June 30, 2024. b. Other includes parent company, Con Edison's tax adjustments, the deferred project held for sale and consolidation adjustments. 25"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr026.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "YTD 2024 vs. YTD 2023 EPS to Adjusted EPS (non-GAAP) Reconciliation by Company (Cont'd) CECONY O&R CEBs CET Other(f) Total Reported EPS – GAAP basis $2.27 $0.11 $0.06 $0.02 $2.28 $4.74 Gain on Sale of the Clean Energy Businesses (pre-tax) — — — — (2.48) (2.48) Income taxes (a) — — — — 0.18 0.18 Gain on Sale of the Clean Energy Businesses (net of tax) — — — — (2.30) (2.30) Transaction costs and other accruals related to the sale of the Clean Energy Businesses (pre-tax) — — — — 0.04 0.04 Income taxes (b) — — — — (0.01) (0.01) Transaction costs and other accruals related to the sale of the Clean Energy Businesses (net of tax) — — — — 0.03 0.03 Ceasing recording of depreciation and amortization expenses related to the sale of the Clean Energy Businesses (pre-tax) — — (0.12) — — (0.12) Income taxes (c) — — 0.03 — 0.01 0.04 Ceasing recording of depreciation and amortization expenses related to the sale of the Clean Energy Businesses (net of tax) — — (0.09) — 0.01 (0.08) Impact of the sale of the Clean Energy Businesses on the changes in state apportionments (net of federal taxes) — — — — 0.03 0.03 Impact of the sale of the Clean Energy Businesses on the changes in state apportionments (net of federal taxes) — — — — 0.03 0.03 HLBV effects (pre-tax) — — — — — — Income taxes (d) — — — — — — HLBV effects (net of tax) — — — — — — Net mark-to-market effects (pre-tax) — — 0.04 — — 0.04 Income taxes (e) — — (0.01) — — (0.01) Net mark-to-market effects (net of tax) — — 0.03 — — 0.03 Adjusted EPS – non-GAAP basis $2.27 $0.11 $— $0.02 $0.05 $2.45 Six months ended June 30, 2023 a. The income taxes on the gain on sale of the Clean Energy Businesses had an effective tax rate of 7% for the six months ended June 30, 2023. b. The amount of income taxes was calculated using a combined federal and state income tax rate of 27% for the six months ended June 30, 2023. c. The amount of income taxes was calculated using a combined federal and state income tax rate of 32% for the six months ended June 30, 2023. d. The amount of income taxes was calculated using a combined federal and state income tax rate of 2% for the six months ended June 30, 2023. e. The amount of income taxes was calculated using a combined federal and state income tax rate of 32% for the six months ended June 30, 2023. f. Other includes parent company, Con Edison's tax adjustments, the deferred project held for sale and consolidation adjustments. 26"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr027.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Three-Year Reconciliation of Reported EPS (GAAP) to Adjusted EPS (non-GAAP) 2022 2023 2024(a) Reported EPS – GAAP basis $4.68 $7.21 $5.16 Gain and other impacts related to sale of the Clean Energy Businesses (pre-tax) (a) (0.03) (2.53) 0.10 Income taxes (b) 0.35 0.32 0.06 Gain and other impacts related to sale of the Clean Energy Businesses (net of tax) 0.32 (2.21) 0.16 HLBV effects (pre-tax) (0.17) 0.04 0.05 Income taxes (b) 0.05 (0.01) (0.01) HLBV effects (net of tax) (0.12) 0.03 0.04 Net mark-to-market effects (pre-tax) (0.51) 0.04 — Income taxes (b) 0.16 (0.01) — Net mark-to-market effects (net of tax) (0.35) 0.03 — Remeasurement of deferred state taxes related to dispositions prior to 2022 (net of federal taxes) 0.04 — — Remeasurement of deferred state taxes related to dispositions prior to 2022 (net of federal taxes) 0.04 — — Adjusted EPS – non-GAAP basis $4.57 $5.06 $5.36 12 Months Ending December 31, 27 a. Represents 12-month trailing EPS ending June 30, 2024. b. The amount of income taxes was calculated using applicable combined federal and state income tax rates for the six months ended June 30, 2024 and the years 2022 – 2023."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr028.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "$1,220 $811 $990 $1,585 $1,522 $1,494 $149 $(93) $(31) $448 $372 $185 $184 $165 $189 $171 $191 $196 $538 $409 $412 $436 $466 $560 $349 $330 $420 $530 $493 $553 2019 2020 2021 2022 2023 2024E CECONY and O&R Operations and Maintenance Expenses(a) a. Prior to 2020, select facilities and telecommunication expenses were categorized as Other Expenses. After 2020, the expenses are included in the Departmental category. b. Other Expenses generally are either reconciled through amounts reflected in rates, or represent surcharges that are recovered in revenues from customers. c. Represents service costs net of capitalization and rate reconciliation; excludes non-service components of Pension/OPEBs pursuant to Accounting Standards Update 2017-07. For the six months ended June 30, 2024, CECONY and O&R recorded net non-service cost components of $(263) million and $(12) million, respectively. See page 29 of the Form 10-Q. For the year ended December 31, 2024, CECONY and O&R forecast net non-service cost components of $(527) million and $(26) million, respectively. d. Certain prior period amounts have been reclassified within the Companies' other operations and maintenance expenses to conform with current period presentation. Other Expenses(b) $1,722 $1,767 $1,775 $1,808 $2,029 $2,106 2019 2020 2021 2022 2023 2024E Departmental Pension/ OPEBs (c) Regulatory Fees and Assessments Healthcare/ Other Employee Benefits Other ($ in millions) ($ in millions) 28 (d)(d) (d) (d) $1,078 YTD $333 YTD $260 YTD $81 YTD $98 YTD (d)(d) (d)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr029.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Composition of Average Rate Base(a) (as of June 30, 2024) a. Average rate base for 12 months ended June 30, 2024. CECONY ($ in millions) Electric New York $27,885 Gas New York 10,052 Steam New York 1,905 Total CECONY $39,842 O&R ($ in millions) O&R Electric New York $1,114 O&R Gas New York 632 RECO New Jersey 352 Total O&R $2,098 Total Rate Base $41,940 CECONY Electric CECONY Gas CECONY Steam O&R Electric and Gas RECO 29"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr030.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "$30,559 $32,359 $35,038 $37,309 $40,241 $42,301 $44,555 $47,557 $50,654 $54,872 $29,008 $30,697 $33,239 $35,380 $38,192 $40,151 $42,271 $45,128 $48,063 $52,088 $1,551 $1,662 $1,799 $1,929 $2,049 $2,150 $2,284 $2,429 $2,591 $2,784 Average Rate Base Balances O&R CECONY 5-year CAGR 6.4% 2019 2020 2021 2022 2023 2024E 2025E 2026E 2027E 2028E CECONY Electric $21,149 $22,101 $23,614 $24,753 $26,680 $27,923 $29,362 $31,238 $33,301 $36,280 Gas 6,408 7,110 8,008 8,924 9,692 10,428 11,061 12,008 12,827 13,828 Steam 1,451 1,486 1,617 1,703 1,820 1,800 1,848 1,882 1,935 1,980 O&R Electric 842 901 965 1,032 1,083 1,144 1,223 1,306 1,392 1,489 Gas 455 490 527 578 626 649 681 718 768 836 RECO Electric 254 271 307 319 340 357 380 405 431 459 ForecastActual a. Amounts reflect O&R's request for new electric and gas rates, effective January 2025. The proposal is subject to approval by the NYSPSC. b. Amounts reflect the company's five-year forecast presented to the Board of Directors on January 18, 2024. . (a)(b) (a)(b) (b) (b) (b) (b) ($ in millions) 30"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr031.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Regulated Utilities' Rates of Return and Equity Ratios (12 Months ended June 30, 2024) Regulated Basis Authorized Actual CECONY Electric 9.25% 9.26% Gas 9.25 9.55 Steam 9.27 (b) 6.47 Overall – CECONY 9.25 9.19 CECONY Equity Ratio 48.00% 47.42% O&R Electric 9.20% 9.15% Gas 9.20 9.20 RECO 9.60 10.45 Overall – O&R 9.25 9.40 O&R Equity Ratio 48.00% 47.78% a. Weighted by rate base. b. Reflects an authorized return on equity pro-rated 33%/67% between 9.30% and 9.25% from the new base rates effective November 1, 2023. (a) (a) 31"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr032.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Capital Investments $3,676 $4,085 $3,964 $4,465 $4,509 $4,849 $5,243 $5,987 $5,987 $5,986 $3,223 $3,466 $3,635 $4,001 $4,379 $4,822 $5,212 $5,879 $5,874 $5,867 $248 $616 $298 $399 $81 $205 $3 $31 $65 $49 $27 $31 $108 $113 $119 2019 2020 2021 2022 2023 2024E 2025E 2026E 2027E 2028E Actual Forecast (a)(c) CECONY & O&R - actual Con Edison Transmission - actual Clean Energy Businesses - actual CECONY & O&R - forecast Con Edison Transmission - forecast a. Amounts reflect the company's five-year forecast as of January 2024. b. Amounts reflect O&R's request for new electric and gas rates, effective January 2025. The proposal is subject to approval by the NYSPSC. c. 2023 Form 10-K, page 28. (b) ($ in millions) 32"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr033.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "$3,223 $3,466 $3,635 $4,001 $4,379 $4,822 $5,212 $5,879 $5,874 $5,867 2019 2020 2021 2022 2023 2024E 2025E 2026E 2027E 2028E Utilities' Capital Investments Gas Electric Annual CECONY Capital Investments Annual O&R Capital Investments Electric Gas Steam Depreciation Electric Gas Depreciation 2019 1,851 1,078 91 1,373 142 61 84 2020 2,080 1,044 122 1,598 159 61 90 2021 2,189 1,126 103 1,705 147 70 95 2022 2,522 1,128 108 1,778 167 76 98 2023 2,909 1,046 128 1,942 211 85 105 2024E 3,277 1,152 104 2,126 209 80 119 2025E 3,554 1,116 107 2,267 350 85 123 2026E 4,171 1,126 110 2,414 380 92 127 2027E 4,128 1,156 138 2,557 367 85 138 2028E 4,115 1,177 142 2,705 353 80 148 Steam Depreciation Actual Forecast a. Amounts reflect the company's five-year forecast as of January 2024. b. Amounts reflect O&R's request for new electric and gas rates, effective January 2025. The proposal is subject to approval by the NYSPSC. c. 2023 Form 10-K, page 28. (a)(b) ($ in millions) 33"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr034.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Financing Plan for 2024-2028(a) Equity ($ in millions) 2024 2025 2026 - 2028 Common Equity Issuance(b) $— up to $1,300 up to $2,800 Debt ($ in millions) 2024 2025 2026 - 2028 Long-term Debt up to $3,250 up to $1,000 up to $6,000 a. Con Edison's estimates of its capital requirements and related financing plans reflect information available and assumptions at the time the statements are made and include, among other things, the assumptions that Con Edison's non-utility gas transmission investments remain unchanged through 2028 and the Utilities' forecasted capital investments and financing plans through 2028 are approved by the NYSPSC. Actual developments and the timing and amounts of funding may differ materially. b. Excludes common equity issued under the dividend reinvestment, employee stock purchase and long-term incentive plans. Debt Maturities ($ in millions) 2024 2025 2026 2027 2028 Con Edison $— $— $— $— $— CECONY 250 — 250 350 800 O&R — — — 80 — Total $250 $— $250 $430 $800 Con Edison expects to issue up to $3.25 billion of long-term debt at the utilities and does not plan to issue common equity in 2024, except for equity issued under its dividend reinvestment, employee stock purchase and long-term incentive plans 34"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr035.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Financing Activity in 2024 Credit Facilities ($ in millions) Entity Amount Description Con Edison, CECONY and O&R $2,500 In March, the termination date of the companies' $2,500 million revolving credit agreement was extended from March 2028 to March 2029. CECONY $500 In March, CECONY entered into a $500 million 364-day revolving credit facility which replaced a $500 million 364-day revolving credit facility that was set to expire in March 2024. 35 Debt Financing ($ in millions) Entity Amount Description CECONY $400 $1,000 In May, issued 5.375% Debentures due 2034 In May, issued 5.70% Debentures due 2054"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr036.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Commercial Paper Borrowings ($ in millions) a. The revolving credit facilities support Con Edison's, CECONY's and O&R's commercial programs. 36"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr037.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Capital Structure – June 30, 2024 Consolidated Edison, Inc. Baa1 / A- / BBB+ CECONY A3 / A- / A- O&R Baa2 / A- / A- Parent and Other Debt $ 23,561 52% Equity 21,560 48 Total $ 45,121 100% Debt $ 22,444 53% Equity 19,570 47 Total $ 42,014 100% Debt $ 1,118 51% Equity 1,084 49 Total $ 2,202 100% Debt $ — —% Equity 906 100 Total $ 906 100% Amounts shown exclude notes payable and include the current portion of long-term debt. Con Edison's issuer ratings and the senior unsecured credit ratings of CECONY and O&R shown in order of Moody's / S&P / Fitch. Moody's has a positive outlook for O&R and stable outlooks for Con Edison and CECONY. S&P and Fitch have stable outlooks for each entity. Ratings are not a recommendation to buy, sell or hold securities and may be subject to revision or withdrawal at any time. ($ in millions) 37"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr038.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Income Statement - 2024 Second Quarter and Year-to-Date ($ in millions) QTD CECONY O&R CET(b) Other(d) Total Total operating revenues $2,996 $224 $1 $(1) $3,220 Depreciation and amortization 482 29 — 1 512 Other operating expenses 2,200 186 3 (1) 2,388 Total operating expenses 2,682 215 3 — 2,900 Operating income (loss) 314 9 (2) (1) 320 Other income (deductions) 142 8 11 (1) 160 Interest expense (benefit) 269 14 — 5 288 Income before income tax expense (benefit) 187 3 9 (7) 192 Income tax expense (benefit) 1 — (4) (7) (10) Net income for common stock $186 $3 $13 $— $202 YTD CECONY O&R CET(c) Other(d) Total Total operating revenues $6,967 $527 $2 $(1) $7,495 Depreciation and amortization 993 58 1 (1) 1,051 Other operating expenses 4,670 405 6 2 5,083 Total operating expenses 5,663 463 7 1 6,134 Loss on sale of the Clean Energy Businesses (a) — — — (30) (30) Operating income (loss) 1,304 64 (5) (32) 1,331 Other income (deductions) 298 16 30 (2) 342 Interest expense (benefit) 540 27 — 10 577 Income before income tax expense (benefit) 1,062 53 25 (44) 1,096 Income tax expense (benefit) 182 13 1 (22) 174 Net income (loss) for common stock $880 $40 $24 $(22) $922 a. On March 1, 2023, Con Edison completed the sale of all of the stock of the Clean Energy Businesses. b. Net income for common stock for CET of $13 million includes pre-tax investment income of $2.9 million from Mountain Valley Pipeline, LLC, and $8.2 million from New York Transco LLC for the three months ended June 30, 2024. c. Net income for common stock for CET of $24 million includes pre-tax investment income of $12.8 million from Mountain Valley Pipeline, LLC, and $16.6 million from New York Transco LLC for the six months ended June 30, 2024. d. Other includes the parent company, Con Edison's tax equity investments, the deferred project held for sale and consolidation adjustments. Con Edison’s consolidated financial statements and the notes thereto are in Part I, Item 1 of the 2024 Second Quarter Form 10-Q. 38"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr039.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Statement of Cash Flows – 2024 Year-to-Date ($ in millions) CECONY O&R CET Other(a)(c) Total Net cash flows from operating activities $1,791 $71 $— $50 $1,912 Net cash flows used in investing activities (2,453) (157) (13) 1 (2,622) Net cash flows from (used in) financing activities 985 86 (1) (48) 1,022 Net change for the period 323 — (14) 3 312 Balance at beginning of period 1,138 23 25 9 1,195 Balance at end of period (b) 1,461 23 11 12 1,507 Less: Cash balances held for sale (c) — — — 7 7 Balance at end of period excluding held for sale $1,461 $23 $11 $5 $1,500 a. Other includes the parent company, Con Edison's tax equity investments, the deferred project held for sale and consolidation adjustments. b. See \"Reconciliation of Cash, Temporary Cash Investments and Restricted Cash\" in Note A in Item 1 of the 2024 Second Quarter Form 10-Q. c. On March 1, 2023, Con Edison completed the sale of all of the stock of the Clean Energy Businesses. Con Edison’s consolidated financial statements and the notes thereto are in Part I, Item 1 of the 2024 Second Quarter Form 10-Q. 39"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr040.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Condensed Balance Sheet - As of June 30, 2024 ($ in millions) Balance Sheet CECONY O&R CET Other(a) Total ASSETS Current assets $5,974 $325 $13 $175 $6,487 Investments 653 23 405 — 1,081 Net plant 47,572 3,037 16 — 50,625 Other noncurrent assets 8,876 425 7 419 9,727 Total assets $63,075 $3,810 $441 $594 $67,920 LIABILITIES AND SHAREHOLDERS' EQUITY Current liabilities $5,348 $463 $7 $398 $6,216 Noncurrent liabilities 15,963 1,145 (74) (201) 16,833 Long-term debt 22,194 1,118 — (1) 23,311 Equity 19,570 1,084 508 398 21,560 Total liabilities and equity $63,075 $3,810 $441 $594 $67,920 a. Other includes the parent company, Con Edison's tax equity investments, the deferred project held for sale and consolidation adjustments. Con Edison’s consolidated financial statements and the notes thereto are in Part I, Item 1 of the 2024 Second Quarter Form 10-Q. 40"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr041.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Con Edison Environmental, Social & Governance Resources • Policy Statement on Environmental Justice • 2023 Disadvantaged Communities Report • CECONY Climate Change Vulnerability Study and Climate Change Resilience and Adaptation Plan • O&R Climate Change Vulnerability Study and Climate Change Resilience and Adaptation Plan • Diversity and Inclusion Report examines Con Edison's diverse and inclusive culture • 2024 Proxy Statement • Highlighting how the Company supports our communities through Community Partnerships • Our Standards of Business Conduct guide our Political Engagement • Con Edison’s Clean Energy Vision looking toward a clean energy future • Sustainability Report - Con Edison's Sustainability report • 2023 Consolidated Edison Clean Energy Webinar Our ESG reporting standards: • Global Reporting Initiative Content Index • Edison Electric Institute / American Gas Association ESG templates – Industry reporting standards • Sustainability Accounting Standards Board (SASB) – Broad ESG reporting standard • Task Force on Climate-Related Financial Disclosures (TCFD) – Broad ESG reporting standard • Equal Employment Opportunity Component 1 Report (EEO-1) - Federal employer information report • Our environmental impacts including carbon emissions disclosures are filed with the Carbon Disclosure Project (CDP) Link to more ESG resources: https://conedison.gcs-web.com/environmental-social-and-governance-esg-resources 41"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q2024earningsreleasepr042.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "INTERNAL 2nd Quarter 2024 Earnings Release Presentation August 1, 2024"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 4403.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 2,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "103.150002",
+    "return_10d_pct": "-1.1730",
+    "return_20d_pct": "-2.4043",
+    "return_30d_pct": "0.1260",
+    "return_60d_pct": "1.9389",
+    "return_90d_pct": "-1.4251"
+  },
+  "text_stats": {
+    "primary_text_len": 3640,
+    "exhibit_text_len": 52309,
+    "combined_text_len": 55951,
+    "semantic_text_len": 53687,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

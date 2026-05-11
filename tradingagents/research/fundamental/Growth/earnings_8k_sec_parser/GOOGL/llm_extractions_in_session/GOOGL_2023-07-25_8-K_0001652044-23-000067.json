@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended June 30, 2023",
+    "period_end_date": "June 30, 2023"
+  },
+  "reported_results": {
+    "revenue_millions": 74604.0,
+    "revenue_yoy_pct": 7.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "Sundar Pichai, CEO of Alphabet and Google, said: “There’s exciting momentum across our products and the company, which drove strong results this quarter.",
+    "wave_signal": "Quarter 2023 Results Announces Plans for Chief Financial Officer Transition and Appointment of President and Chief Investment Officer MOUNTAIN VIEW, Calif.",
+    "margin_signal": "74,604 Change in revenues year over year13 %7 %Change in constant currency revenues year over year(1)16 %9 %Operating income$19,453 $21,838 Operating margin28 %29 %Other income (expense), net $(439)$65 Net income$16,002 $18,368 Diluted EPS$1.",
+    "risk_signal": "The group, called Google DeepMind, is reported within Alphabet's unallocated corporate costs prospectively beginning in the second quarter of 2023.",
+    "customer_signal": "•Google Cloud includes infrastructure and platform services, collaboration tools, and other services for enterprise customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 69685 | | | | | $ | 74604 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 69685 | | | | | $ | 74604 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

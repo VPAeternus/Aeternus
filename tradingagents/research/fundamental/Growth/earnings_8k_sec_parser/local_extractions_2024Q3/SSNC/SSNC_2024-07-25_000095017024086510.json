@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SSNC",
+    "cik": "1402436",
+    "event_date": "2024-07-25",
+    "event_accession": "0000950170-24-086510",
+    "primary_8k_doc": "ssnc-20240725.htm",
+    "exhibit_docs": [
+      "ssnc-ex99_1.htm",
+      "ssnc-ex99_2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SSNC_000095017024086510_ssnc-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SSNC_000095017024086510_ssnc-ex99_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SSNC_000095017024086510_ssnc-ex99_2.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SSNC",
+    "cik": "1402436",
+    "entity_name": "SS&C TECHNOLOGIES HOLDINGS, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1362700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "126000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "18102500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-755300000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-49800000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "254800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.092463",
+    "operating_cash_flow_to_revenue": "0.186982",
+    "assets_to_revenue": "13.284289",
+    "financing_cash_flow_to_revenue": "-0.554267",
+    "investing_cash_flow_to_revenue": "-0.036545"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue were not adjusted to fair value at the date of acquisition and b) amounts that would have been recognized if not for adjustments to deferred revenue and retained earnings related to the adoption of ASC 606.",
+      "GAAP Earnings Per Share $0.",
+      "Earnings Per Share $1.",
+      "Operating income 327.",
+      "Operating income margin 22.",
+      "earnings per share attributable to SS&C $0."
+    ],
+    "guidance_evidence": [
+      "Guidance Q3 2024 FY 2024 Adjusted Revenue ($M) $1,420.",
+      "guidance for Adjusted Revenues and Adjusted Net Income to comparable GAAP measures, in reliance on the unreasonable efforts exception provided under Item 10(e)(1)(i)(B) of Regulation S-K.",
+      "guidance for the third quarter and full year of 2024 constitute forward-looking statements for purposes of the safe harbor provisions under the Private Securities Litigation Reform Act of 1995.",
+      "guidance © SS&C Technologies, Inc.",
+      "GUIDANCE © SS&C Technologies, Inc.",
+      "forecast certain items required to develop meaningful comparable GAAP financial measures."
+    ],
+    "wave_or_demand_evidence": [
+      "airman of the Carlyle Group as our keynote speaker.",
+      "airman and Chief Executive Officer.",
+      "ailable for use in connection with the SS&C’s stock plans and for other corporate purposes.",
+      "ain items required to develop meaningful comparable GAAP financial measures.",
+      "ailable information could have a significant impact on Q3 2024 and FY 2024 GAAP financial results.",
+      "ailable on SS&C’s website at www."
+    ],
+    "warning_or_risk_evidence": [
+      "decrease.",
+      "uncertainties, which could cause actual results to differ materially from those anticipated.",
+      "Loss on extinguishment of debt (27.",
+      "loss), net of tax: Foreign currency exchange translation adjustment 2.",
+      "loss), net of tax 2.",
+      "losses (gains) on investments 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1451.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "71.000000",
+    "return_10d_pct": "-2.4507",
+    "return_20d_pct": "1.9718",
+    "return_30d_pct": "4.4789",
+    "return_60d_pct": "5.3944",
+    "return_90d_pct": "5.8451"
+  },
+  "text_stats": {
+    "primary_text_len": 5071,
+    "exhibit_text_len": 53140,
+    "combined_text_len": 58213
+  }
+}

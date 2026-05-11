@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "UFCS",
+    "cik": "101199",
+    "event_date": "2024-08-06",
+    "event_accession": "0000101199-24-000054",
+    "primary_8k_doc": "ufcs-20240806.htm",
+    "exhibit_docs": [
+      "q22024-pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UFCS_000010119924000054_ufcs-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UFCS_000010119924000054_q22024-pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "UFCS",
+    "cik": "101199",
+    "entity_name": "UNITED FIRE GROUP, INC",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "267104000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "694000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3144190000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-4133000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-32501000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-6786000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.002598",
+    "operating_cash_flow_to_revenue": "-0.025406",
+    "assets_to_revenue": "11.771407",
+    "financing_cash_flow_to_revenue": "-0.015473",
+    "investing_cash_flow_to_revenue": "-0.121679"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "eps are a prudent measure to mitigate the impact of a potential further acceleration in severity trends.",
+      "operating income in the second quarter, excluding the impact of this rating adjustment.",
+      "Net income (loss) $ (2,735) $ (56,382) $ 10,767 $ (55,688) Adjusted operating income (loss) (4) (1,764) (57,270) 12,688 (55,197) Net income (loss) per diluted share $ (0.",
+      "operating income (loss) per diluted share (4) (0.",
+      "operating income (loss) is a non-GAAP financial measure of net income excluding net investment gains and losses, after applicable taxes.",
+      "operating income (loss) to net income."
+    ],
+    "guidance_evidence": [
+      "expected and/or projected.",
+      "forecasts and projections about the Company, the industry in which we operate, and beliefs and assumptions made by management."
+    ],
+    "wave_or_demand_evidence": [
+      "aid UFG President and CEO Kevin Leidwinger.",
+      "ained steady with average renewal premium increases of 12.",
+      "ainst the future inflationary uncertainty challenging our industry in certain liability lines.",
+      "ains within our expectations, and we believe these proactive steps are a prudent measure to mitigate the impact of a potential further acceleration in severity trends.",
+      "ain committed to establishing a strong and stable reserve position, providing a solid foundation to grow our business.",
+      "ain affected policyholders."
+    ],
+    "warning_or_risk_evidence": [
+      "charge for an estimated contingent liability related to rating errors.",
+      "charge of $3.",
+      "charged for insurance policy contracts issued and recognized on an annualized basis at the effective date of the policy.",
+      "charge to certain policyholders.",
+      "Loss of $0.",
+      "loss of $2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "19.400000",
+    "return_10d_pct": "3.0412",
+    "return_20d_pct": "4.7423",
+    "return_30d_pct": "3.4536",
+    "return_60d_pct": "-0.5670",
+    "return_90d_pct": "2.7320"
+  },
+  "text_stats": {
+    "primary_text_len": 3235,
+    "exhibit_text_len": 29958,
+    "combined_text_len": 33195
+  }
+}

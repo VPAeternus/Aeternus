@@ -57,7 +57,7 @@ Buy/pass/starter decision = **Stage 5A underwriting**, after `entry_score_0_100`
 Core logic:
 
 - `entry_score >= 75` → buy underwriting queue
-- `entry_score 65-74` → research queue / possible starter
+- `entry_score 65-74` → fundamental review list / possible starter
 - `entry_score 50-64` → watchlist
 - `<50` → pass / low priority
 

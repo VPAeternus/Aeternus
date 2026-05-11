@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NPKI",
+    "cik": "71829",
+    "event_date": "2024-08-05",
+    "event_accession": "0000071829-24-000090",
+    "primary_8k_doc": "nr-20240805.htm",
+    "exhibit_docs": [
+      "a2024q28k-erex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NPKI_000007182924000090_nr-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NPKI_000007182924000090_a2024q28k-erex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NPKI",
+    "cik": "71829",
+    "entity_name": "NPK International Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "200030000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "5620000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "642336000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-30270000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "921000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "29444000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.028096",
+    "operating_cash_flow_to_revenue": "0.147198",
+    "assets_to_revenue": "3.211198",
+    "financing_cash_flow_to_revenue": "-0.151327",
+    "investing_cash_flow_to_revenue": "0.004604"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased nearly 40% on an organic basis versus the prior-year period,” stated Matthew Lanigan, President and CEO of Newpark.",
+      "sales increased to an all-time quarterly record in the second quarter, while rental revenue increased 9% versus the prior-year period.",
+      "revenue increased 2% to $66 million and Canada increased 28% to $13 million.",
+      "revenue of $179.",
+      "revenue of $183.",
+      "revenues of $66."
+    ],
+    "guidance_evidence": [
+      "guidance for our Industrial Solutions segment,” concluded Lanigan.",
+      "outlook across our core end-markets, as we continue to expand our market.",
+      "GUIDANCE The following forward-looking guidance reflects the Company’s current expectations and beliefs as of August 5, 2024 and is subject to change.",
+      "projects.",
+      "anticipates,” “believes,” “estimates,” “expects,” “plans,” “intends,” and similar expressions are intended to identify these forward-looking statements but are not the exclusive means of identifying them."
+    ],
+    "wave_or_demand_evidence": [
+      "customer preference from legacy, wood-based mats toward our DURA-BASE composite-based matting system.",
+      "demand outlook across our core end-markets, as we continue to expand our market.",
+      "demand strengthens in the second quarter 2024.",
+      "demand.",
+      "demand from the power transmission sector and project timing.",
+      "customers’ future spending; our customer concentration and reliance on the U."
+    ],
+    "warning_or_risk_evidence": [
+      "restrictions associated with the ongoing Fluids Systems segment sale process.",
+      "charges including $2.",
+      "impairment charges related to inventory and long-lived assets associated with the exit of certain operations.",
+      "charge at www.",
+      "charges — — 2,816 — 2,816 Gain on insurance recovery — (807) — (807) — Facility exit costs and other, net 741 — 1,944 741 4,236 Severance costs 36 515 148 551 1,103 Adjusted EBITDA (non-GAAP) $ 5,176 $ 8,602 $ 8,834 $ 13,778 $ 17,522 Operating Margin (GAAP) 2.",
+      "charges — 3,540 — — 3,540 Gain on insurance recovery — — (807) — (807) Facility exit costs and other, net 358 — — 741 1,099 Severance costs 40 29 515 36 620 Adjusted EBITDA (non-GAAP) $ 10,147 $ 4,705 $ 8,602 $ 5,176 $ 28,630 Operating Margin (GAAP) 5."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 30,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "8.220000",
+    "return_10d_pct": "-3.1630",
+    "return_20d_pct": "0.6083",
+    "return_30d_pct": "-8.5158",
+    "return_60d_pct": "-13.2603",
+    "return_90d_pct": "-20.0730"
+  },
+  "text_stats": {
+    "primary_text_len": 4871,
+    "exhibit_text_len": 29646,
+    "combined_text_len": 34519
+  }
+}

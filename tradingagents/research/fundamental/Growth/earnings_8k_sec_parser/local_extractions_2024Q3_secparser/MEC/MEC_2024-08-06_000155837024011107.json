@@ -1,0 +1,846 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MEC",
+    "cik": "1766368",
+    "event_date": "2024-08-06",
+    "event_accession": "0001558370-24-011107",
+    "primary_8k_doc": "tmb-20240806x8k.htm",
+    "exhibit_docs": [
+      "tmb-20240806xex99.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MEC_000155837024011107_tmb-20240806x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MEC_000155837024011107_tmb-20240806xex99.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MEC",
+    "cik": "1766368",
+    "entity_name": "Mayville Engineering Company, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "142645000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "2571000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "496661000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "8297000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-2255000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-6043000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.018024",
+    "operating_cash_flow_to_revenue": "-0.042364",
+    "assets_to_revenue": "3.481797",
+    "financing_cash_flow_to_revenue": "0.058165",
+    "investing_cash_flow_to_revenue": "-0.015808"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $163.",
+      "Net sales increased by 17.",
+      "sales was primarily due to increased demand and new project wins associated with strong end-market demand from infrastructure-related projects.",
+      "sales was the result of higher volumes from new project wins and share gains from both new and existing customers.",
+      "sales was mostly driven by the MSA acquisition, which was somewhat offset by expected demand softness in our legacy large-ag market.",
+      "Net income of $3."
+    ],
+    "guidance_evidence": [
+      "guidance for the full year 2024 to a range of between $45 million to $55 million.",
+      "GUIDANCE Today, the Company reaffirmed its financial guidance for Net Sales and Adjusted EBITDA for the full year 2024 but increased its guidance for full year Free Cash Flow.",
+      "guidance is current as of the time provided and is subject to change.",
+      "guidance also reflects incremental contribution from the MSA acquisition, including $20 to $30 million of incremental net sales and $4 to $6 million of incremental Adjusted EBITDA.",
+      "guidance also reflects incremental contributions from MBX and commercial pricing related initiatives of between $3 to $6 million.",
+      "guidance demonstrates strong cash flow generation in the first and second quarters of 2024 due to improved working capital utilization related to its MBX initiatives."
+    ],
+    "wave_or_demand_evidence": [
+      "demand is projected to soften in certain key end markets, but we anticipate delivering continued above-market growth across all of our end markets as a result of market share gains and strong strategic execution.",
+      "customers.",
+      "demand in our legacy agriculture end market and the foreseen roll-off of certain military aftermarket programs at the end of 2023.",
+      "customer, incremental expense associated with the MSA acquisition and higher costs related to compliance requirements.",
+      "demand fell by 0.",
+      "demand and new project wins associated with strong end-market demand from infrastructure-related projects."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory, and operations planning (SIOP), and further optimization of its supply chain and procurement strategies.",
+      "inventory efficiency by leveraging its recent investments in advanced manufacturing capabilities and automation.",
+      "inventory optimization.",
+      "inventory days-on-hand.",
+      "decrease of 26.",
+      "decrease in net sales compared to the prior year was primarily attributable to the expected roll-off of certain aftermarket programs at the end of 2023."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "tmb-20240806xex99.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99"
+    },
+    {
+      "type": "TextElement",
+      "text": "Enhanced HTML document created with Toppan Merrill Bridge 10.6.125.0Created on: 8/5/2024 09:30:12 PM (UTC)HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\""
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99"
+    },
+    {
+      "type": "TitleElement",
+      "text": "MAYVILLE ENGINEERING COMPANY ANNOUNCES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECOND QUARTER 2024 RESULTS"
+    },
+    {
+      "type": "TextElement",
+      "text": "MILWAUKEE, Wis., August 6, 2024 – Mayville Engineering Company (NYSE: MEC) (the “Company” or “MEC”), a leading value-added provider of design, prototyping and manufacturing solutions serving diverse end markets, today announced results for the three-months ended June 30, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECOND QUARTER 2024 RESULTS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(All comparisons versus the prior-year period)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "●Net sales of $163.6 million, or +17.7%, including organic growth of 6.9%●Net income of $3.8 million, or $0.18 per diluted share, an increase of $2.2 million, or $0.10 per diluted share ●Non-GAAP Adjusted Diluted EPS of $0.26, an increase of $0.06 ●Adjusted EBITDA of $19.6 million, an increase of 28.4% ●Adjusted EBITDA margin of 12.0%, an increase of 100 bps ●Free Cash Flow of $19.2 million, an increase of $22.9 million ●Ratio of net debt to trailing twelve-month Adjusted EBITDA of slightly below 1.7x as of June 30, 2024●Full Year 2024 Free Cash Flow expected to be in a range of $45 million to $55 million"
+    },
+    {
+      "type": "TitleElement",
+      "text": "MANAGEMENT COMMENTARY"
+    },
+    {
+      "type": "TextElement",
+      "text": "“We continued to demonstrate strong strategic execution during the second quarter, as net sales, margin realization, and free cash generation each increased significantly above prior-year levels,” stated Jag Reddy, President and Chief Executive Officer. “Our collective focus on higher-value, integrated solutions, increased operational efficiency, and return-focused capital allocation strategy has positioned MEC to outperform the broader market through the current economic cycle.”“Strong project volumes within our commercial vehicle, powersports, agriculture, and construction & access markets more than offset softness within our military vertical in the period,” stated Reddy. “Going into the second half of 2024, underlying demand is projected to soften in certain key end markets, but we anticipate delivering continued above-market growth across all of our end markets as a result of market share gains and strong strategic execution.”“Second quarter sales growth continues to reflect the implementation of our value-added pricing model and the pricing discipline our MEC Business Excellence (“MBX”) process drives,” continued Reddy. “Operationally, we continued to implement MBX which led to improvements across the organization that are expected to result in additional cost savings, labor efficiency gains, and working capital improvements. Our working capital improvements have been particularly successful, as reflected by our higher-than-expected free cash conversion through the first half of 2024. As a result, we are increasing our free cash flow guidance for the full year 2024 to a range of between $45 million to $55 million.”"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "“Importantly, our MBX initiatives have driven ratable operating leverage improvements across our manufacturing footprint, providing for sustained margin expansion,” continued Reddy, “This progress, together with improved utilization at our Hazel Park facility, have put us on on-track to achieve meaningful margin expansion in 2024, while remaining on-pace to realize an Adjusted EBITDA margin of between 14% to 16% by year-end 2026.”“Our strong free cash generation during the second quarter allowed us to repay more than $17 million of debt during the period, reducing our net leverage to slightly below 1.7x at the end of the quarter, well within our target of between 1.5x and 2.0x by year-end 2024. Additionally, during the second quarter, we repurchased $1.0 million of common equity under our share repurchase program, with $24.0 million remaining under the existing authorization. As we further reduce our leverage, we intend to prioritize strategic, bolt-on acquisitions that expand our commercial reach and capabilities as well as a structured approach to our share repurchase strategy. Our capital deployment priorities will continue to be governed by our unwavering commitment to maximize long-term shareholder value.”PERFORMANCE SUMMARYNet sales increased by 17.7% on a year-over-year basis in the second quarter 2024, driven in part by the acquisition of Mid-States Aluminum (MSA) in the third quarter of 2023 and increased organic volumes in our powersports, commercial vehicle and construction & access end markets because of new project volumes resulting from the Company’s focus on growing its market share with new and existing customers. The Company’s above-market growth in its powersports, commercial vehicle and construction & access markets was partly offset by softening demand in our legacy agriculture end market and the foreseen roll-off of certain military aftermarket programs at the end of 2023.Manufacturing margin was $22.3 million in the second quarter of 2024, or 13.6% of net sales, as compared to $16.1 million, or 11.6% of net sales, in the prior year period. The year-over-year increase in manufacturing margin was driven by the increased organic sales volumes, the MSA acquisition, MBX initiatives and commercial pricing initiatives.Other selling, general and administrative expenses were $8.3 million in the second quarter of 2024 as compared to $7.4 million for the same prior year period. The increase in these expenses during the second quarter primarily reflects the increase in legal costs associated with litigation against the former fitness customer, incremental expense associated with the MSA acquisition and higher costs related to compliance requirements. Interest expense was $3.0 million in the second quarter of 2024, as compared to $2.0 million in the prior year period due to an increase in borrowings. The increase in borrowings relative to the prior year is due to the acquisition of MSA, which closed on July 1, 2023.Net income for the second quarter of 2024 was $3.8 million, or $0.18 per diluted share, versus $1.6 million, or $0.08 per diluted share, in the prior-year period.MEC reported Adjusted EBITDA of $19.6 million in the second quarter of 2024, or 12.0% of net sales, versus $15.3 million, or 11.0% of net sales, in the prior-year period. The increase in Adjusted EBITDA and Adjusted EBITDA margin, when compared to the prior year, reflects the benefit of the MSA acquisition, continued execution of the Company’s MBX strategic initiatives, improved commercial pricing and higher volumes, partially offset by higher SG&A expenses.Second quarter Adjusted net income was $5.5 million, or $0.26 per diluted share, versus $4.1 million, or $0.20 per diluted share, in the prior year period. The increase in adjusted net income reflects an increase in income from operations, which was partially offset by higher interest expense.​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Free cash flow during the second quarter of 2024 was $19.2 million as compared to ($3.7) million in the prior year period. The increase in free cash flow was primarily attributable to a $23.1 million increase in net cash provided by operating activities due to improved working capital efficiency and the payout of deferred compensation to a retired Company executive made in the prior year period."
+    },
+    {
+      "type": "TitleElement",
+      "text": "END MARKET UPDATE"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​Three Months Ended​​June 30, ​​2024​2023Commercial Vehicle​$ 62,130​$ 56,075Construction & Access​ 27,230​​ 26,522Powersports​ 30,306​​ 23,995Agriculture​ 14,639​​ 13,444Military​​ 6,579​​ 8,910Other​​ 22,752​​ 10,033Net Sales​$ 163,636​$ 138,980"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Commercial Vehicles"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "MEC is a Tier 1 supplier to many of the country’s top original equipment manufacturers (OEM) of commercial vehicles providing exhaust & aftertreatment, engine components, cooling, fuel and structural systems for both heavy- and medium-duty commercial vehicles."
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales to the commercial vehicle market were $62.1 million in the second quarter of 2024, an increase of 10.8% versus the prior-year period. The increase in net sales to this end market during the quarter was attributable to organic volume growth from new projects. The successful execution of the Company’s organic growth strategy delivered above-market growth for this end-market as overall commercial vehicle demand fell by 0.3% year-over-year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Construction & Access"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "MEC manufactures components and sub-assemblies for OEMs within the construction & access market including fenders, hoods, supports, frames, platforms, frame structures, doors and tubular products such as exhaust & aftertreatment, engine components, cooling system components, handrails and full electro-mechanical assemblies."
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales to the construction & access market were $27.2 million in the second quarter of 2024, an increase of 2.7% versus the prior-year period. The increase in sales was primarily due to increased demand and new project wins associated with strong end-market demand from infrastructure-related projects."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Powersports"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "MEC manufactures stampings and complex metal assemblies and coatings for OEMs within marine propulsion, all-terrain vehicles (ATV), multi-utility vehicles (MUV) and motorcycle markets. MEC’s powersports expertise includes axle housings, steering columns, swing arms, fenders, suspension components, ATV/MUV racks, cowl assemblies and vehicle frames."
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales to the powersports market were $30.3 million in the second quarter of 2024, an increase of 26.3% versus the prior-year period. The increase in sales was the result of higher volumes from new project wins and share gains from both new and existing customers."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Agriculture"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "MEC is an integral partner in the supply chain of the world’s leading agriculture OEMs manufacturing components and sub-assemblies including fenders, hoods, supports, frames, platforms, frame structures, doors, and tubular products such as exhaust, engine components, cooling system components, handrails and full electro-mechanical assemblies."
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales to the agriculture market were $14.6 million in the second quarter of 2024, an increase of 8.9% versus the prior-year period. The increase in sales was mostly driven by the MSA acquisition, which was somewhat offset by expected demand softness in our legacy large-ag market."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Military"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "MEC holds the International Traffic in Arms Regulations (ITAR) certification and produces components for the United States military. Products include exhaust, engine components, cooling, fuel, suspension, structural systems, and chemical agent resistant coating (CARC) painting capabilities."
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales to the military market were $6.6 million in the second quarter of 2024, a decrease of 26.2% versus the prior-year period. The decrease in net sales compared to the prior year was primarily attributable to the expected roll-off of certain aftermarket programs at the end of 2023."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Other"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "MEC also produces a wide variety of components and assemblies for customers in the power generation, industrial equipment & fixtures, consumer tools, mining, forestry, automotive, and medical markets."
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales to other end markets for the second quarter of 2024 were $22.8 million, an increase of 126.8% year-over-year. The increase is primarily attributable to MSA-related contributions, which was acquired on July 1, 2023."
+    },
+    {
+      "type": "TitleElement",
+      "text": "STRATEGIC UPDATE"
+    },
+    {
+      "type": "TextElement",
+      "text": "During the second quarter, MEC continued the successful execution of our MEC Business Excellence (MBX) initiative, a value-creation framework designed to drive sustained operational and commercial excellence execution across all aspects of the organization. Over the next two years, MEC expects that this value creation framework will drive total net sales to between $750 to $850 million, Adjusted EBITDA margin expansion to between 14% to 16% and free cash flow to between $65 to $75 million by year-end 2026. ●Drive a High-Performance Culture. The Company is focused on effectuating cultural change across the organization by implementing performance-based metrics, lean daily management and other process-oriented strategies. Through these efforts, the Company is building a high-performance culture capable of driving improved performance, asset utilization and cost optimization. During the second quarter, the Company continued the implementation and alignment of processes and best practices across the enterprise to drive strategic execution. Additionally, the Company launched an employee recognition program aimed at further fostering our high-performance culture. This peer recognition initiative allows employees to nominate peers who consistently embody the Company values and uphold the Company culture through their daily interactions and exceptional performance.●Drive Operational Excellence. The Company is focused on leveraging technologies and capabilities to increase productivity and reduce costs across the value chain. The Company intends to achieve this objective through the implementation of lean initiatives such as value stream mapping, sales, inventory, and operations planning (SIOP), and further optimization of its supply chain and procurement strategies. The Company’s operational excellence initiatives also focus on improving fixed cost absorption, labor productivity and inventory efficiency by leveraging its recent investments in advanced manufacturing capabilities and automation. As of the end of the second quarter of 2024, the Company had held over 65"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "MBX kaizen events in 2024 which contributed to improved margins and inventory optimization. Year-over-year, the Company recognized $0.9 million of savings related to sourcing optimization and improved labor utilization. The Company also realized a significant year-over-year improvement in working capital efficiencies due to improvements in days sales outstanding and inventory days-on-hand. Additionally, the Company recognized $0.6 million, net of inflation, in year-over-year pricing improvements as a result of its on-going commercial pricing initiatives. ●Drive Commercial Expansion. The Company is focused on driving commercial growth through an integrated, solutions-oriented approach that leverages its full suite of design, prototyping, and aftermarket services; an expansion of its fabrication capabilities beyond steel, with an emphasis on lightweight aluminum, plastics and composites; diversification within high-growth energy transition markets; further market penetration within existing end markets; and the implementation of value-based pricing. During the third quarter of 2023, the Company closed the acquisition of MSA, which positions MEC to capitalize on revenue synergies within its existing legacy customer base and is now positioned to grow organically by pursuing demand for light-weight aluminum products in high-growth energy transition and fleet electrification applications. During the second quarter of 2024, MEC made substantial progress in growing its share of wallet with existing customers with multiple multi-year contract wins with major customers in the military, commercial vehicle, powersports and other end-markets. Going forward, the Company will continue to evaluate opportunistic acquisition opportunities to further expand its differentiated suite of capabilities.●Drive Human Resource Optimization. The Company remains focused on the recruitment and retention of skilled, experienced employees to support the growth of its business. This component of the MBX value creation framework is designed to provide competitive, performance-based incentives; develop high-potential candidates for internal development and advancement; ensure business continuity through multi-tiered succession planning; and to ensure a stable recruiting pipeline. During the second quarter, the Company re-aligned its commercial team, further enhancing customer experience, aligning technical aspects and standardizing processes."
+    },
+    {
+      "type": "TitleElement",
+      "text": "BALANCE SHEET UPDATE"
+    },
+    {
+      "type": "TextElement",
+      "text": "As of June 30, 2024, MEC had net debt outstanding of $125.1 million and total cash and availability on its senior secured revolving credit facility of $250.01 million. During the second quarter of 2024, the Company repaid $17.8 million of debt incurred in conjunction with the MSA acquisition. At the end of the second quarter, the ratio of net debt to trailing twelve-month Adjusted EBITDA was slightly below 1.7x, resulting in a 30 bps rate reduction in the third quarter."
+    },
+    {
+      "type": "TitleElement",
+      "text": "FINANCIAL GUIDANCE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Today, the Company reaffirmed its financial guidance for Net Sales and Adjusted EBITDA for the full year 2024 but increased its guidance for full year Free Cash Flow. All guidance is current as of the time provided and is subject to change."
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​​​​​​​​FY 2023​FY 2024 Forecast​Prior FY 2024 Forecast(in Millions)​Actual​Low​Mid​High​Low​Mid​HighNet Sales​$588.4​$620​$ 630​$ 640​$620​$ 630​$ 640Adjusted EBITDA​$66.1​$ 72​$ 74​$ 76​$ 72​$ 74​$ 76Free Cash Flow​$23.8​$ 45​$ 50​$ 55​$ 35​$ 40​$ 45"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 This amount is reduced to approximately $127.9 million after taking into account the $122.1 million of outstanding borrowings under the credit facility as of June 30, 2024."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "​The Company’s 2024 guidance reflects the expected softening in commercial vehicle, powersports and agriculture end market demand in the second half of the year as the result of various macroeconomic factors, which the Company expects will be offset by the continued ramp-up of new project work with both new and existing customers. The Company’s 2024 financial guidance also reflects incremental contribution from the MSA acquisition, including $20 to $30 million of incremental net sales and $4 to $6 million of incremental Adjusted EBITDA.The Company’s 2024 financial guidance also reflects incremental contributions from MBX and commercial pricing related initiatives of between $3 to $6 million. The impact of these initiatives is net of normal annual cost inflation, representing the Company’s ability to improve efficiency and manage price, given higher labor and input costs.The Company’s updated 2024 Free Cash Flow guidance demonstrates strong cash flow generation in the first and second quarters of 2024 due to improved working capital utilization related to its MBX initiatives. The Company also continues to expect that its capital expenditures for the full year 2024 will be between $15 and $20 million.SECOND QUARTER 2024 RESULTS CONFERENCE CALLThe Company will host a conference call on Wednesday, August 7, 2024 at 10:00 a.m. Eastern Time (9:00 a.m. Central Time).For a live webcast of the conference call and to access the accompanying investor presentation, please visit www.mecinc.com and click on the link to the live webcast on the Investors page.For telephone access to the conference, call (833) 470-1428 within the United States, or call (833) 950-0062 within Canada and please use the Access Code: 300362.FORWARD-LOOKING STATEMENTSThis press-release includes forward-looking statements that reflect plans, estimates and beliefs. Such statements involve risk and uncertainties. Actual results may differ materially from those contemplated by these forward-looking statements as a result of various factors. Important factors that could cause actual results or events to differ materially from those expressed in forward-looking statements include, but are not limited to: macroeconomic conditions, including inflation, elevated interest rates and recessionary concerns, as well as continuing supply chain constraints affecting some of our customers, labor availability and material cost pressures, have had, and may continue to have, a negative impact on our business, financial condition, cash flows and results of operations (including future uncertain impacts); risks relating to developments in the industries in which our customers operate; risks related to scheduling production accurately and maximizing efficiency; our ability to realize net sales represented by our awarded business; failure to compete successfully in our markets; our ability to maintain our manufacturing, engineering and technological expertise; the loss of any of our large customers or the loss of their respective market shares; risks related to entering new markets; our ability to recruit and retain our key executive officers, managers and trade-skilled personnel; volatility in the prices or availability of raw materials critical to our business; manufacturing risks, including delays and technical problems, issues with third-party suppliers, environmental risks and applicable statutory and regulatory requirements; our ability to successfully identify or integrate acquisitions; our ability to develop new and innovative processes and gain customer acceptance of such processes; risks related to our information technology systems and infrastructure, including cybersecurity risks and data leakage risks; geopolitical and economic developments, including foreign trade relations and associated tariffs; results of legal disputes, including product liability, intellectual property infringement and other claims; risks associated with our capital-intensive industry; risks related to our treatment as an S Corporation prior to the consummation of our initial public offering; risks related to our employee stock ​ownership plan’s treatment as a tax-qualified retirement plan; and other factors described in “Risk Factors” in Part I, Item 1A of our Annual Report on Form 10-K for the year ended December 31, 2023, as such may be amended or supplemented in our subsequently filed Quarterly Reports on Form 10-Q. This discussion should be read in conjunction with our audited consolidated financial statements included in the Company’s previously filed Annual Report on Form 10-K for the year ended December 31, 2023. We undertake no obligation to update or revise any forward-looking statements after the date on which any such statement is made, whether as a result of new information, future events or otherwise, except as required by federal securities laws.ABOUT MAYVILLE ENGINEERING COMPANYFounded in 1945, MEC is a leading U.S.-based, vertically-integrated, value-added manufacturing partner providing a full suite of manufacturing solutions from concept to production, including design, prototyping and tooling, fabrication, aluminum extrusion, coating, assembly and aftermarket components. Our customers operate in diverse end markets, including heavy- and medium-duty commercial vehicles, construction & access equipment, powersports, agriculture, military and other end markets. Along with process engineering and development services, MEC maintains an extensive manufacturing infrastructure with 23 facilities across seven states. These facilities make it possible to offer conventional and CNC (computer numerical control) stamping, shearing, fiber laser cutting, forming, drilling, tapping, grinding, tube bending, machining, welding, assembly, and logistic services. MEC also possesses a broad range of finishing capabilities including shot blasting, e-coating, powder coating, wet spray and military grade chemical agent resistant coating (CARC) painting. For more information, please visit www.mecinc.com.NON-GAAP FINANCIAL MEASURESThis press release contains financial information calculated in a manner other than in accordance with U.S. generally accepted accounting principles (“GAAP”).​The non-GAAP measures used in this press release are EBITDA, EBITDA Margin, Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income and Diluted EPS, and Free Cash Flow.​EBITDA represents net income before interest expense, provision for income taxes, depreciation, and amortization. EBITDA Margin represents EBITDA as a percentage of net sales for each period. Adjusted EBITDA represents EBITDA before stock-based compensation expense, loss on extinguishment of debt, MSA acquisition related costs, field replacement claim and legal costs due to the former fitness customer. Adjusted EBITDA Margin represents Adjusted EBITDA as a percentage of net sales for each period. Adjusted Net Income and Diluted EPS represent net income before the aforementioned Adjusted EBITDA addback items which do not reflect our core operating performance. Free Cash Flow represents net cash provided by, or used in, operating activities, less cash flows used in the purchase of property, plant and equipment. We present Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income and Diluted EPS, and Free Cash Flow as management uses these measures as key performance indicators, and we believe they are measures frequently used by securities analysts, investors and other parties to evaluate companies in our industry. These metrics are supplemental measures of our operating performance that are neither required by, nor presented in accordance with, GAAP. These measures should not be considered as an alternative to net income or cash flow provided by, or used in, operating activities, or any other performance measure derived in accordance with GAAP as an indicator of our operating performance. These measures may not be comparable to the similarly named measures reported by other companies and have limitations as analytical tools and should not be considered in isolation or as substitutes for analysis of our results as reported under GAAP. ​Please reference our reconciliation of net income, the most directly comparable measure calculated in accordance with GAAP, to EBITDA, Adjusted EBITDA, Adjusted Net Income and Diluted EPS, Free Cash Flow and the calculation of EBITDA Margin and Adjusted EBITDA Margin included in this press release.​"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Mayville Engineering Company, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Balance Sheet"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​June 30, ​December 31, ​ 2024 2023ASSETS ​ ​ Cash and cash equivalents​$ 314​$ 672Receivables, net of allowances for doubtful accounts of $697 at June 30, 2024and $685 at December 31, 2023​ 67,853​ 57,445Inventories, net​ 60,816​ 67,782Tooling in progress​ 6,074​ 5,457Prepaid expenses and other current assets​ 5,155​ 3,267Total current assets​ 140,212​ 134,623Property, plant and equipment, net​ 168,757​ 175,745Goodwill​ 92,650​ 92,650Intangible assets, net​ 55,201​ 58,667Operating lease assets​​ 29,868​​ 32,233Other long-term assets​ 1,463​ 2,743Total assets​$ 488,151​$ 496,661LIABILITIES AND SHAREHOLDERS’ EQUITY​ ​ Accounts payable​$ 53,963​$ 46,526Current portion of operating lease obligation​​ 4,856​​ 5,064Accrued liabilities:​ ​​ ​Salaries, wages, and payroll taxes​ 7,211​ 6,368Profit sharing and bonus​ 3,275​ 3,107Other current liabilities​ 12,523​ 10,644Total current liabilities​​ 81,828​​ 71,709Bank revolving credit notes​ 122,063​ 147,493Operating lease obligation, less current maturities​​ 26,616​​ 28,606Deferred compensation, less current portion​ 4,315​ 3,816Deferred income tax liability​ 12,847​ 12,606Other long-term liabilities​ 2,398​ 2,453Total liabilities​$ 250,067​$ 266,683Commitments and contingencies​ ​ ​Common shares, no par value, 75,000,000 authorized, 22,077,389 shares issued atJune 30, 2024 and 21,853,477 at December 31, 2023​ —​ —Additional paid-in-capital​ 207,454​ 205,373Retained earnings​ 41,141​ 34,118Treasury shares at cost, 1,604,090 shares at June 30, 2024 and 1,542,893 at December 31, 2023​ (10,511)​ (9,513)Total shareholders’ equity​ 238,084​ 229,978Total​$ 488,151​$ 496,661"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Mayville Engineering Company, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statement of Net Income"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except share amounts and per share data)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​Three Months Ended ​Six Months Ended​​June 30, ​June 30, ​ 2024 2023 2024​2023Net sales​$ 163,636​$ 138,980​$ 324,905​$ 281,626Cost of sales​ 141,359 ​ 122,885​ 281,696​ 249,154Amortization of intangible assets​ 1,733 ​ 1,738​ 3,466​ 3,476Profit sharing, bonuses, and deferred compensation​ 4,133 ​ 2,688​ 7,933​ 5,690Other selling, general and administrative expenses​ 8,261 ​ 7,396​ 16,030​ 14,363Income from operations​ 8,150​ 4,273​ 15,780​ 8,943Interest expense​ (2,969) ​ (1,968)​ (6,324)​ (3,626)Loss on extinguishment of debt​​ —​​ (216)​​ —​​ (216)Income before taxes​ 5,181 ​ 2,089​ 9,456​ 5,101Income tax expense​ 1,399 ​ 475​ 2,433​ 916Net income and comprehensive income​$ 3,782​$ 1,614​$ 7,023​$ 4,185​​​​​​​​​​​​​Earnings per share:​ ​ ​ ​ Basic​$ 0.18​$ 0.08​$ 0.34​$ 0.21Diluted​$ 0.18​$ 0.08​$ 0.34​$ 0.20​​​​​​​​​​​​​Weighted average shares outstanding:​ ​ ​ ​ Basic​ 20,602,650​ 20,494,437​ 20,544,292​ 20,405,383Diluted​ 21,034,780​ 20,827,728​ 20,914,499​ 20,789,175"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Mayville Engineering Company, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statement of Cash Flows"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​Six Months Ended​​June 30, ​ 2024 2023CASH FLOWS FROM OPERATING ACTIVITIES ​ ​ Net income​$ 7,023​$ 4,185Adjustments to reconcile net income to net cash provided (used in) by operating activities:​ ​​​​Depreciation​ 15,179​ 12,415Amortization​ 3,466​ 3,476Allowance for doubtful accounts​ 12​ 6Inventory excess and obsolescence reserve​ (164)​ 41Stock-based compensation expense​ 2,495​ 2,420Loss (gain) on disposal of property, plant and equipment​ 2​ (135)Deferred compensation​ 451​ (17,475)Loss on extinguishment of debt​ —​​ 216Non-cash lease expense​​ 2,702​ 2,144Other non-cash adjustments​​ 143​​ 184Changes in operating assets and liabilities:​ ​​ ​Accounts receivable​ (10,420)​ (11,071)Inventories​ 7,130​ 4,839Tooling in progress​ (617)​ 111Prepaids and other current assets​ (1,951)​ (897)Accounts payable​ 6,391​ (3,061)Deferred income taxes​ 1,764​ 638Operating lease obligations​​ (2,535)​​ (1,986)Accrued liabilities​ 2,829​ (1,915)Net cash provided by (used in) operating activities​ 33,900​ (5,865)CASH FLOWS FROM INVESTING ACTIVITIES​ ​ Purchase of property, plant and equipment​ (6,874)​ (6,320)Proceeds from sale of property, plant and equipment​ 107​ 153Net cash used in investing activities​ (6,767)​ (6,167)CASH FLOWS FROM FINANCING ACTIVITIES​ ​​ Proceeds from bank revolving credit notes​ 273,536​ 347,324Payments on bank revolving credit notes​ (298,967)​ (241,618)Repayments of other long-term debt​ (306)​ (575)Payments of financing costs​​ —​​ (1,248)Shares withheld for employees' taxes​ (758)​ —Purchase of treasury stock​​ (998)​​ (1,661)Payments on finance leases​ (343)​ (192)Proceeds from the exercise of stock options​​ 345​​ —Net cash provided by (used in) financing activities​ (27,491)​ 102,030Net increase (decrease) in cash and cash equivalents​ (358)​ 89,998Cash and cash equivalents at beginning of period​ 672​ 127Cash and cash equivalents at end of period ​$ 314​$ 90,125"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Mayville Engineering Company, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Net Income to EBITDA and Adjusted EBITDA"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​Three Months Ended ​Six Months Ended​​June 30, ​June 30, ​ 2024 2023 2024 2023 Net income and comprehensive income​$ 3,782​$ 1,614​$ 7,023​$ 4,185​Interest expense​ 2,969 ​ 1,968​ 6,324​ 3,626​Provision for income taxes​ 1,399 ​ 475​ 2,433​ 916​Depreciation and amortization​ 9,391 ​ 8,011​ 18,645​ 15,891​EBITDA​ 17,541​ 12,068​ 34,425​ 24,618​Loss on extinguishment of debt​​ —​​ 216​​ —​​ 216​MSA acquisition related costs​​ —​​ 899​​ —​​ 899​Stock-based compensation expense​​ 1,338​​ 1,354​​ 2,495​​ 2,420​Field replacement claim​​ —​​ 490​​ —​​ 490​Legal costs due to former fitness customer​ 760 ​ 272​ 1,239​ 495​Adjusted EBITDA​$ 19,639​$ 15,299​$ 38,159​$ 29,138​Net sales​$ 163,636​$ 138,980​$ 324,905​$ 281,626​EBITDA Margin​ 10.7% 8.7% 10.6% 8.7% Adjusted EBITDA Margin​ 12.0% 11.0% 11.7% 10.3%"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Mayville Engineering Company, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Net Income and Diluted EPS to Adjusted Net Income and Diluted EPS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except share amounts and per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​​​​​​​​​​​​​Three Months Ended​Six Months Ended​​June 30, ​June 30, ​​2024​​2023​2024​​2023​ Earnings​Diluted EPS ​Earnings​Diluted EPS​Earnings​Diluted EPS ​Earnings​Diluted EPSNet income and comprehensive income​$ 3,782​$ 0.18​​$ 1,614​$ 0.08​$ 7,023​$ 0.34​​$ 4,185​$ 0.20Loss on extinguishment of debt​ —​​ —​​​ 216​​ 0.01​ —​ — ​​ 216​​ 0.01MSA acquisition related costs​ —​​ —​​​ 899​​ 0.04​ —​ — ​​ 899​​ 0.04Stock-based compensation expense​​ 1,338​​ 0.06​​​ 1,354​​ 0.07​​ 2,495​​ 0.12​​​ 2,420​​ 0.12Field replacement claim​ —​​ —​​​ 490​​ 0.02​ —​ —​​ 490​ 0.02Legal costs due to former fitness customer​​ 760​​ 0.04​​​ 272​​ 0.01​​ 1,239​​ 0.06​​​ 495​​ 0.02Tax effect of above adjustments​​ (383)​​ (0.02)​​​ (783)​​ (0.04)​​ (654)​​ (0.04)​​​ (1,095)​​ (0.05)Adjusted net income and comprehensive income​$ 5,497​$ 0.26​​$ 4,062​$ 0.20​$ 10,103​$ 0.48 ​$ 7,610​$ 0.37"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Mayville Engineering Company, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Free Cash Flow"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​Three Months Ended​​Six Months Ended​​June 30, ​​June 30, ​ 2024 2023​ 2024​ 2023Net cash provided by (used in) operating activities​$ 23,275​$ 178​​$ 33,900​​$ (5,865)Less: Capital expenditures​​ 4,099​​ 3,912​​​ 6,874​​​ 6,320Free cash flow​$ 19,176​$ (3,734)​​$ 27,026​​$ (12,185)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Net sales of $163.6 million, or +17.7%, including organic growth of 6.9%"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Net income of $3.8 million, or $0.18 per diluted share, an increase of $2.2 million, or $0.10 per diluted share"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Non-GAAP Adjusted Diluted EPS of $0.26, an increase of $0.06"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Adjusted EBITDA of $19.6 million, an increase of 28.4%"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Adjusted EBITDA margin of 12.0%, an increase of 100 bps"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Free Cash Flow of $19.2 million, an increase of $22.9 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Ratio of net debt to trailing twelve-month Adjusted EBITDA of slightly below 1.7x as of June 30, 2024"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Full Year 2024 Free Cash Flow expected to be in a range of $45 million to $55 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        11,
+        7
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended"
+        ],
+        [
+          "​",
+          "​",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,"
+        ],
+        [
+          "​",
+          "​",
+          "2024",
+          "2024",
+          "​",
+          "2023",
+          "2023"
+        ],
+        [
+          "Commercial Vehicle",
+          "​",
+          "$",
+          "62130",
+          "​",
+          "$",
+          "56075"
+        ],
+        [
+          "Construction & Access",
+          "​",
+          "",
+          "27230",
+          "​",
+          "​",
+          "26522"
+        ],
+        [
+          "Powersports",
+          "​",
+          "",
+          "30306",
+          "​",
+          "​",
+          "23995"
+        ],
+        [
+          "Agriculture",
+          "​",
+          "",
+          "14639",
+          "​",
+          "​",
+          "13444"
+        ],
+        [
+          "Military",
+          "​",
+          "​",
+          "6579",
+          "​",
+          "​",
+          "8910"
+        ],
+        [
+          "Other",
+          "​",
+          "​",
+          "22752",
+          "​",
+          "​",
+          "10033"
+        ],
+        [
+          "Net Sales",
+          "​",
+          "$",
+          "163636",
+          "​",
+          "$",
+          "138980"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Drive a High-Performance Culture. The Company is focused on effectuating cultural change across the organization by implementing performance-based metrics, lean daily management and other process-oriented strategies. Through these efforts, the Company is building a high-performance culture capable of driving improved performance, asset utilization and cost optimization. During the second quarter, the Company continued the implementation and alignment of processes and best practices across the enterprise to drive strategic execution. Additionally, the Company launched an employee recognition program aimed at further fostering our high-performance culture. This peer recognition initiative allows employees to nominate peers who consistently embody the Company values and uphold the Company culture through their daily interactions and exceptional performance."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Drive Operational Excellence. The Company is focused on leveraging technologies and capabilities to increase productivity and reduce costs across the value chain. The Company intends to achieve this objective through the implementation of lean initiatives such as value stream mapping, sales, inventory, and operations planning (SIOP), and further optimization of its supply chain and procurement strategies. The Company’s operational excellence initiatives also focus on improving fixed cost absorption, labor productivity and inventory efficiency by leveraging its recent investments in advanced manufacturing capabilities and automation. As of the end of the second quarter of 2024, the Company had held over 65"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "MBX kaizen events in 2024 which contributed to improved margins and inventory optimization. Year-over-year, the Company recognized $0.9 million of savings related to sourcing optimization and improved labor utilization. The Company also realized a significant year-over-year improvement in working capital efficiencies due to improvements in days sales outstanding and inventory days-on-hand. Additionally, the Company recognized $0.6 million, net of inflation, in year-over-year pricing improvements as a result of its on-going commercial pricing initiatives."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 163.6,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 850.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net sales of $163.6 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "● | Net sales of $163.6 million, or +17.7%, including organic growth of 6.9%"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "expects that this value creation framework will drive total net sales to between $750 to $850 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 3,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 419.5599,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "17.260000",
+    "return_10d_pct": "12.1669",
+    "return_20d_pct": "12.5145",
+    "return_30d_pct": "6.4311",
+    "return_60d_pct": "16.5701",
+    "return_90d_pct": "26.3615"
+  },
+  "text_stats": {
+    "primary_text_len": 3144,
+    "exhibit_text_len": 33529,
+    "combined_text_len": 36675,
+    "semantic_text_len": 32750,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

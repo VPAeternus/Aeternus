@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ERIE",
+    "cik": "922621",
+    "event_date": "2024-07-25",
+    "event_accession": "0000922621-24-000018",
+    "primary_8k_doc": "erie-20240723.htm",
+    "exhibit_docs": [
+      "ex-99106302024.htm",
+      "ex-99206302024.htm",
+      "ex991image06302022.gif"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ERIE_000092262124000018_erie-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ERIE_000092262124000018_ex-99106302024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ERIE_000092262124000018_ex-99206302024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ERIE_000092262124000018_ex991image06302022.gif.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ERIE",
+    "cik": "922621",
+    "entity_name": "ERIE INDEMNITY COMPANY",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "752465000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "86241000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2471964000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-55419000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-12326000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "48031000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.114611",
+    "operating_cash_flow_to_revenue": "0.063832",
+    "assets_to_revenue": "3.285155",
+    "financing_cash_flow_to_revenue": "-0.07365",
+    "investing_cash_flow_to_revenue": "-0.016381"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Income per Diluted Share was $3.",
+      "Net income was $163.",
+      "Net income was $288.",
+      "Net income $ 163,903 $ 117,852 $ 288,455 $ 204,093 2Q 2024 Highlights Operating income before taxes increased $56.",
+      "Operating income before taxes increased $84.",
+      "Net income $ 163,903 $ 117,852 $ 288,455 $ 204,093 Net income per share Class A common stock – basic $ 3."
+    ],
+    "guidance_evidence": [
+      "forecasted in such forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "Customer service costs increased $2.",
+      "Customer service costs increased $4.",
+      "ains were $0.",
+      "ailable on ERIE's website at www.",
+      "ained herein that are not historical fact are forward-looking statements and, as such, are subject to risks and uncertainties that could cause actual events and results to differ, perhaps materially, from those discussed herein.",
+      "ainties that are difficult to predict."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased $3.",
+      "decrease in professional fees and personnel costs.",
+      "decreased $7.",
+      "decrease in professional fees and personnel costs largely driven by an increase in capitalized labor costs related to technology initiatives.",
+      "losses of $10.",
+      "losses of $7."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 127.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "396.720001",
+    "return_10d_pct": "10.0676",
+    "return_20d_pct": "17.8010",
+    "return_30d_pct": "22.4113",
+    "return_60d_pct": "37.3362",
+    "return_90d_pct": "15.5223"
+  },
+  "text_stats": {
+    "primary_text_len": 3697,
+    "exhibit_text_len": 25456,
+    "combined_text_len": 29155
+  }
+}

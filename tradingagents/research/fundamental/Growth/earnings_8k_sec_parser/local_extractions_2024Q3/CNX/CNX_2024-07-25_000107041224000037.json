@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CNX",
+    "cik": "1070412",
+    "event_date": "2024-07-25",
+    "event_accession": "0001070412-24-000037",
+    "primary_8k_doc": "cnx-20240725.htm",
+    "exhibit_docs": [
+      "ex991supplementalq224.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CNX_000107041224000037_cnx-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CNX_000107041224000037_ex991supplementalq224.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CNX",
+    "cik": "1070412",
+    "entity_name": "CNX Resources Corporation",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1275977000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "710395000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "8340145000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-107749000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-159511000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "248738000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.556746",
+    "operating_cash_flow_to_revenue": "0.194939",
+    "assets_to_revenue": "6.536282",
+    "financing_cash_flow_to_revenue": "-0.084444",
+    "investing_cash_flow_to_revenue": "-0.125011"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of Natural Gas, NGL and Oil, including Cash Settlements and Natural Gas, NGL and Oil Production Costs.",
+      "sales of $0.",
+      "Net Income.",
+      "operating income, net cash provided by operating activities and total production costs, given the unknown effect, timing, and potential significance of certain income statement items.",
+      "Earnings per Share Basic $(0.",
+      "Earnings Per Share in the Notes to the Unaudited Consolidated Financial Statements in Item 1 of CNX’s quarterly report on Form 10-Q for the period ended March 31, 2024)."
+    ],
+    "guidance_evidence": [
+      "Guidance….",
+      "GUIDANCE Previous (1) Updated ($ in millions) 2024E 2024E Low High Low High Production Volumes (Bcfe) 540 - 560 545 - 555 % Liquids ~8% ‘- ~9% ~8% ‘- ~9% % of Natural Gas Hedged 86% 86% Prices on Open Volumes (2) Natural Gas NYMEX ($/MMBtu) $2.",
+      "guidance as of 4/25/2024.",
+      "guidance as of 7/5/2024.",
+      "guidance includes approximately $30 million in expected asset sales in 2024.",
+      "guidance for 2024 FCF per share based on shares outstanding of 153,245,448, as of 4/11/2024."
+    ],
+    "wave_or_demand_evidence": [
+      "customer, employee or supplier relationships; ability to quality for environmental attribute credits and the volatility of environmental attribute markets; and changes in safety, health, environmental and other regulations.",
+      "ain/Loss Projections and Actuals.",
+      "ained in this presentation, including the non-GAAP measures referenced above, to their respective comparable financial measure calculated in accordance with GAAP.",
+      "ain income statement items.",
+      "aily Production (MMcfe) 1,472.",
+      "AIN/LOSS PROJECTIONS Q3 2024 CY2024 CY2025 Hedged Volumes Wtd."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory adjustments of $0.",
+      "Loss Projections and Actuals.",
+      "LOSS PROJECTIONS Q3 2024 CY2024 CY2025 Hedged Volumes Wtd.",
+      "Loss) (2) ($ in 000s) (000 MMBtu) Hedged Price Forward Market (1) Gain/(Loss) (2) ($ in 000s) (000 MMBtu) Hedged Price Forward Market Gain/(Loss) (2) ($ in 000s) NYMEX 82,110 $2.",
+      "Loss) $81,399 $285,404 ($104,415) Note: Forward market prices, hedged volumes, and hedge prices are as of 7/5/2024.",
+      "Loss) amounts are based on sum of current monthly hedge positions vs."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "25.340000",
+    "return_10d_pct": "-4.8934",
+    "return_20d_pct": "5.0908",
+    "return_30d_pct": "8.9582",
+    "return_60d_pct": "23.3228",
+    "return_90d_pct": "46.8035"
+  },
+  "text_stats": {
+    "primary_text_len": 3794,
+    "exhibit_text_len": 38431,
+    "combined_text_len": 42227
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "OII",
+    "cik": "73756",
+    "event_date": "2024-07-24",
+    "event_accession": "0000073756-24-000125",
+    "primary_8k_doc": "oii-20240724.htm",
+    "exhibit_docs": [
+      "exhibit_991x8kx2qx2024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OII_000007375624000125_oii-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/OII_000007375624000125_exhibit_991x8kx2qx2024.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "OII",
+    "cik": "73756",
+    "entity_name": "OCEANEERING INTERNATIONAL INC",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "536987000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "4060000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2239006000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-4936000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-15690000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-42919000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.007561",
+    "operating_cash_flow_to_revenue": "-0.079926",
+    "assets_to_revenue": "4.169572",
+    "financing_cash_flow_to_revenue": "-0.009192",
+    "investing_cash_flow_to_revenue": "-0.029219"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $669 million for the three months ended June 30, 2024.",
+      "net income of $35.",
+      "net income was $28.",
+      "Net Income (Loss) 34,997 19,002 15,135 50,132 23,062 Diluted Earnings (Loss) Per Share $ 0.",
+      "Net income was $35.",
+      "operating income was $60."
+    ],
+    "guidance_evidence": [
+      "guidance and consensus estimates.",
+      "guidance range to $340 million to $370 million.",
+      "guidance for the quarter but higher than the same period last year.",
+      "Guidance On a consolidated basis, third quarter 2024 operating results are expected to continue to improve sequentially, with EBITDA in the range of $95 million to $105 million on a low- to mid-single digit percentage increase in revenue.",
+      "guidance for the full year and third quarter of 2024.",
+      "outlook, performance, opportunities, and future financials, including as increasing, favorable, positive, encouraging, improving, seasonal, strong, supportive, robust, meaningful, healthy or significant (which is used herein to indicate a change of 20% or greater)."
+    ],
+    "wave_or_demand_evidence": [
+      "backlog was $713 million Roderick A.",
+      "Backlog was $713 million on June 30, 2024, an increase of $295 million year-over-year.",
+      "ains recognized during the quarter, along with $(5.",
+      "ainder of the year, partially offset by lower expectations in our Aerospace and Defense Technologies (ADTech) segment.",
+      "ain identified items.",
+      "ails Oceaneering has scheduled a conference call and webcast on Thursday, July 25, 2024 at 10:00 a."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss) from Operations 60,364 49,199 36,693 97,057 75,949 Net Income (Loss) 34,997 19,002 15,135 50,132 23,062 Diluted Earnings (Loss) Per Share $ 0.",
+      "declined 23% on a 10% increase in revenue compared to the second quarter of 2023, due to the timing of pre-contract award costs that were expensed during the quarter and changes in project mix.",
+      "declined to 9% from 13% in the same period in 2023.",
+      "decreased on a 16% increase in revenue.",
+      "declined significantly as compared to the same period last year, due to a reserve taken during the quarter for a contract dispute as well as lower activity levels in our space systems business.",
+      "loss) and earnings (loss) per share; EBITDA and adjusted EBITDA (as well as EBITDA and adjusted EBITDA margins); and free cash flow are non-GAAP measures that exclude the impacts of certain identified items."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 669,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "25.750000",
+    "return_10d_pct": "-2.1359",
+    "return_20d_pct": "2.7184",
+    "return_30d_pct": "6.0583",
+    "return_60d_pct": "2.3301",
+    "return_90d_pct": "-9.7864"
+  },
+  "text_stats": {
+    "primary_text_len": 3519,
+    "exhibit_text_len": 29171,
+    "combined_text_len": 32692
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DFIN",
+    "cik": "1669811",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088229",
+    "primary_8k_doc": "dfin-20240731.htm",
+    "exhibit_docs": [
+      "dfin-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DFIN_000095017024088229_dfin-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DFIN_000095017024088229_dfin-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DFIN",
+    "cik": "1669811",
+    "entity_name": "Donnelley Financial Solutions, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "198600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "15800000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "871300000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "47700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-51500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.079557",
+    "operating_cash_flow_to_revenue": "-0.259315",
+    "assets_to_revenue": "4.38721",
+    "financing_cash_flow_to_revenue": "0.240181",
+    "investing_cash_flow_to_revenue": "-0.00856"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $85.",
+      "net sales of $242.",
+      "Net sales increased primarily due to growth in software solutions net sales driven by Venue, partially offset by lower capital markets and investment companies compliance volumes and the impact of the eBrevia disposition.",
+      "sales of investments in equity securities 0.",
+      "earnings per share, Free Cash Flow and organic net sales.",
+      "earnings per share, are adjusted to exclude the impact of certain costs, expenses, gains and losses and other specified items that management believes are not indicative of our ongoing operations."
+    ],
+    "guidance_evidence": [
+      "expected losses of $24.",
+      "expected losses on accounts receivable 10."
+    ],
+    "wave_or_demand_evidence": [
+      "aining share repurchase authorization was $122.",
+      "ain items noted in the reconciliation tables below.",
+      "aid Daniel N.",
+      "ain resulted in year-over-year improvements in both operating cash flow and free cash flow.",
+      "ain focused on investing to drive profitable, recurring revenue growth, including realizing opportunities from the Tailored Shareholder Reports regulation, which became mandatory in late July.",
+      "ailored Shareholder Reports regulation."
+    ],
+    "warning_or_risk_evidence": [
+      "charges of $5.",
+      "impairment and other charges, net.",
+      "charges of $2.",
+      "charges was primarily related to restructuring, impairment and other charges, net.",
+      "impairment and other charges, net and gain or loss on certain investments, business sales and asset sales.",
+      "impairment and other charges, net 1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 242.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "67.239998",
+    "return_10d_pct": "-6.6330",
+    "return_20d_pct": "-3.2272",
+    "return_30d_pct": "-1.6211",
+    "return_60d_pct": "-2.0970",
+    "return_90d_pct": "-4.9970"
+  },
+  "text_stats": {
+    "primary_text_len": 3162,
+    "exhibit_text_len": 36908,
+    "combined_text_len": 40072
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CRM",
+    "cik": "1108524",
+    "event_date": "2024-08-28",
+    "event_accession": "0001108524-24-000020",
+    "primary_8k_doc": "crm-20240828.htm",
+    "exhibit_docs": [
+      "crm-q2fy25xexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRM_000110852424000020_crm-20240828.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRM_000110852424000020_crm-q2fy25xexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CRM",
+    "cik": "1108524",
+    "entity_name": "Salesforce, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "8247000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "199000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "99823000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-01-31",
+    "financing_cash_flow_value": "-2716000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "347000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "4491000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.02413",
+    "operating_cash_flow_to_revenue": "0.544562",
+    "assets_to_revenue": "12.104159",
+    "financing_cash_flow_to_revenue": "-0.329332",
+    "investing_cash_flow_to_revenue": "0.042076"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $9.",
+      "Revenue of $8.",
+      "Earnings per Share (3) $1.",
+      "Earnings per Share (3) $2.",
+      "EPS are non-GAAP financial measures.",
+      "EPS guidance and non-GAAP Diluted EPS guidance excludes any impact to share count from potential Q3 - Q4 FY25 repurchase activity under our share repurchase program."
+    ],
+    "guidance_evidence": [
+      "Guidance Highlights • Initiates Third Quarter FY25 Revenue Guidance of $9.",
+      "Guidance of $37.",
+      "Guidance of Slightly Below 10% Y/Y & Approximately 10% in CC • Updates Full Year FY25 GAAP Operating Margin Guidance to 19.",
+      "Guidance to 32.",
+      "Guidance to 23% to 25% Y/Y “In Q2, we delivered strong performance across revenue, cash flow, margin and cRPO, and raised our fiscal year non-GAAP operating margin and cash flow growth guidance,” said Marc Benioff, Chair and CEO, Salesforce.",
+      "Guidance Our guidance includes GAAP and non-GAAP financial measures."
+    ],
+    "wave_or_demand_evidence": [
+      "customer success together.",
+      "customers and our values as our north star.",
+      "customers drive cost savings, boost efficiency, and build trust.",
+      "customers in a whole new way through the power of CRM + AI + Data + Trust on one unified platform: Einstein 1.",
+      "customers has occurred or services have been provided.",
+      "customer lists and customer relationships, and, in some cases, acquired lease intangibles, as items arising from pre-acquisition activities determined at the time of an acquisition."
+    ],
+    "warning_or_risk_evidence": [
+      "charges associated with the Company's restructuring initiatives.",
+      "charges and expected timing of product releases and enhancements.",
+      "impairment of right-of-use assets.",
+      "charges associated with the Company's restructuring activities.",
+      "charges related to the Company's restructuring activities and income tax adjustments.",
+      "impairment, amortization of the cost of purchased intangibles is a static expense, which is not typically affected by operations during any particular period."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 9330,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-29",
+    "entry_open": "271.010010",
+    "return_10d_pct": "-9.3170",
+    "return_20d_pct": "-6.8558",
+    "return_30d_pct": "0.9963",
+    "return_60d_pct": "8.3982",
+    "return_90d_pct": "21.7704"
+  },
+  "text_stats": {
+    "primary_text_len": 6049,
+    "exhibit_text_len": 39988,
+    "combined_text_len": 46039
+  }
+}

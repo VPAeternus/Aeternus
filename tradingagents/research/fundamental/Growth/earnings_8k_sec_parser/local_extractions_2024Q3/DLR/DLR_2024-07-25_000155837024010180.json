@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DLR",
+    "cik": "1297996",
+    "event_date": "2024-07-25",
+    "event_accession": "0001558370-24-010180",
+    "primary_8k_doc": "dlr-20240725x8k.htm",
+    "exhibit_docs": [
+      "dlr-20240725xex99d1.htm",
+      "dlr-20240725xex99d2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DLR_000155837024010180_dlr-20240725x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DLR_000155837024010180_dlr-20240725xex99d1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DLR_000155837024010180_dlr-20240725xex99d2.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DLR",
+    "cik": "1297996",
+    "entity_name": "DIGITAL REALTY TRUST, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1338723000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "68726000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "44113258000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "390908000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-749007000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "349726000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.051337",
+    "operating_cash_flow_to_revenue": "0.261239",
+    "assets_to_revenue": "32.951744",
+    "financing_cash_flow_to_revenue": "0.292001",
+    "investing_cash_flow_to_revenue": "-0.559494"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue Officer: Colin M.",
+      "revenues of $1.",
+      "Net income / (loss) per common share - basic ​ ​ $0.",
+      "Net income / (loss) per common share - diluted ​ ​ $0.",
+      "net income available to common stockholders to EBITDA, see page 30 .",
+      "net income available to common stockholders to Adjusted EBITDA, see page 30 ."
+    ],
+    "guidance_evidence": [
+      "Outlook) Preferred Stock: ​ BB+ ​ ​ These credit ratings may not reflect the potential impact of risks relating to the structure or trading of the company’s securities and are provided solely for informational purposes.",
+      "outlook of $6.",
+      "Outlook Digital Realty maintained its 2024 Core FFO per share and Constant-Currency Core FFO per share outlook of $6.",
+      "outlook are summarized in the following table.",
+      "Guidance 3.",
+      "projects in progress."
+    ],
+    "wave_or_demand_evidence": [
+      "customers across a variety of industry verticals ranging from cloud and information technology services, communications and social networking to financial services, manufacturing, energy, healthcare, and consumer products.",
+      "customers.",
+      "demand for data center capacity, along with a keen focus on our value proposition,” said Digital Realty President & Chief Executive Officer Andy Power.",
+      "bookings that are expected to generate $164 million of annualized GAAP rental revenue, including a $40 million contribution from the 0–1 megawatt category and a $14 million contribution from interconnection.",
+      "customers, including a broad array of connectivity providers, technology companies, and financial services firms, utilizing over 2,000 cross connects.",
+      "customers with a secure data meeting place and a proven Pervasive Datacenter Architecture (PDx®) solution methodology for powering innovation and efficiently managing Data Gravity challenges."
+    ],
+    "warning_or_risk_evidence": [
+      "charges (5) ​ 152,529 ​ 148,239 ​ 156,851 ​ 150,079 ​ 149,181 Interest coverage ratio (6) ​ 4.",
+      "charge coverage ratio (7) ​ 4.",
+      "impairment, (vii) other non-core adjustments, net, (viii) non-controlling interests, (ix) preferred stock dividends, and (x) issuance costs associated with redeemed preferred stock.",
+      "charges consist of GAAP interest expense, capitalized interest, scheduled debt principal payments and preferred stock dividends.",
+      "charge coverage ratio is Adjusted EBITDA divided by fixed charges (including our share of unconsolidated joint venture fixed charges).",
+      "charge coverage was 4."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 40,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "142.860001",
+    "return_10d_pct": "1.1270",
+    "return_20d_pct": "4.8999",
+    "return_30d_pct": "5.4109",
+    "return_60d_pct": "13.4887",
+    "return_90d_pct": "15.5887"
+  },
+  "text_stats": {
+    "primary_text_len": 5892,
+    "exhibit_text_len": 171490,
+    "combined_text_len": 177384
+  }
+}

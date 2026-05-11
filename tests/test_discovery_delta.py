@@ -92,8 +92,6 @@ def test_discovery_delta_cohorts_scorecards_compare_peers_and_step1_baseline():
             }
         },
         step1_symbols=["AMD", "PLTR", "NVDA", "AAPL"],
-        shortlist_symbols=["NVDA", "PLTR"],
-        deep_selection_symbols=["NVDA"],
         forward_returns_by_horizon={
             "5d": {"AMD": 0.01, "PLTR": 0.03, "NVDA": 0.08, "AAPL": 0.02},
             "20d": {"AMD": 0.04, "PLTR": 0.06, "NVDA": 0.14, "AAPL": 0.05},
@@ -106,18 +104,13 @@ def test_discovery_delta_cohorts_scorecards_compare_peers_and_step1_baseline():
     assert multi["count"] == 1
     assert multi["mean_return_5d"] == 0.08
     assert multi["edge_vs_benchmark_20d"] == 0.1
-    assert multi["shortlist_conversion"] == 1.0
-    assert multi["deep_selection_conversion"] == 1.0
 
     baseline = result["step1_baseline"]
     assert baseline["count"] == 4
     assert baseline["mean_return_5d"] == 0.035
-    assert baseline["deep_selection_conversion"] == 0.25
 
     vs_baseline = result["comparisons"]["vs_step1_baseline"]["multi_channel"]
     assert vs_baseline["mean_return_5d_delta"] == 0.045
-    assert vs_baseline["shortlist_conversion_delta"] == 0.5
 
     vs_peers = result["comparisons"]["vs_other_cohorts"]["multi_channel"]
     assert vs_peers["mean_return_20d_delta"] == 0.09
-    assert vs_peers["deep_selection_conversion_delta"] == 1.0

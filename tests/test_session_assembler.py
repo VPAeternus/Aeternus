@@ -20,7 +20,6 @@ from tradingagents.graph.session_assembler import (
     gather_computation_data,
     build_session_score,
     write_analysis_report,
-    write_batch_summary,
 )
 
 
@@ -411,38 +410,3 @@ class TestWriteAnalysisReport:
                      "news_report", "legacy_removed_state", "legacy_removed_state",
                      "structured_trader_verdict", "aeternus_score"):
             assert key in data
-
-
-# --- Tests for write_batch_summary ---
-
-class TestWriteBatchSummary:
-
-    def _write_batch(self, tmp_path, monkeypatch, queue_date="2026-02-25", items=None):
-        monkeypatch.chdir(tmp_path)
-        if items is None:
-            items = [
-                {"ticker": "AAPL", "aeternus_score": 72.5, "rating": "Buy"},
-                {"ticker": "MSFT", "aeternus_score": 65.0, "rating": "Buy"},
-            ]
-        write_batch_summary(queue_date=queue_date, items=items)
-        return tmp_path / "eval_results" / "deal_flow" / queue_date
-
-    def test_batch_file_written(self, tmp_path, monkeypatch):
-        base = self._write_batch(tmp_path, monkeypatch)
-        assert (base / "batch_analyze_latest.json").exists()
-        assert (base / "batch_analyze_summary.json").exists()
-
-    def test_items_array_correct(self, tmp_path, monkeypatch):
-        base = self._write_batch(tmp_path, monkeypatch)
-        data = json.loads((base / "batch_analyze_latest.json").read_text())
-
-        assert len(data["items"]) == 2
-        assert data["items"][0]["ticker"] == "AAPL"
-        assert data["items"][1]["ticker"] == "MSFT"
-        assert data["analyzed_count"] == 2
-
-    def test_queue_date_in_summary(self, tmp_path, monkeypatch):
-        base = self._write_batch(tmp_path, monkeypatch, queue_date="2026-03-01")
-        data = json.loads((base / "batch_analyze_latest.json").read_text())
-
-        assert data["queue_date"] == "2026-03-01"

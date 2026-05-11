@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SIGI",
+    "cik": "230557",
+    "event_date": "2024-07-18",
+    "event_accession": "0000230557-24-000018",
+    "primary_8k_doc": "sigi-20240718.htm",
+    "exhibit_docs": [
+      "q22024pressreleaseexh991.htm",
+      "q22024pressreleasesuppleme.htm",
+      "sigiinvestorpresentation.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SIGI_000023055724000018_sigi-20240718.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SIGI_000023055724000018_q22024pressreleaseexh991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SIGI_000023055724000018_q22024pressreleasesuppleme.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SIGI_000023055724000018_sigiinvestorpresentation.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SIGI",
+    "cik": "230557",
+    "entity_name": "SELECTIVE INSURANCE GROUP, INC",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "999820000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "92574000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "11802546000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-27075000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-98238000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "135769000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.092591",
+    "operating_cash_flow_to_revenue": "0.135793",
+    "assets_to_revenue": "11.804671",
+    "financing_cash_flow_to_revenue": "-0.02708",
+    "investing_cash_flow_to_revenue": "-0.098256"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net income (loss) available to common stockholders (65.",
+      "Non-GAAP operating income (loss) 1 (66.",
+      "Net income (loss) available to common stockholders per diluted common share $ (1.",
+      "Non-GAAP operating income (loss) per diluted common share 1 (1.",
+      "net income per diluted common share.",
+      "net income (loss)."
+    ],
+    "guidance_evidence": [
+      "Guidance For 2024, we increased our expected GAAP combined ratio to 101.",
+      "guidance of 96.",
+      "guidance of 5.",
+      "Guidance 12 *As of July 18, 2024 101.",
+      "Guidance as of July 18, 2024 Average premium per policyholder: Industry Average SIGI $17KStandard Commercial $4.",
+      "expected GAAP combined ratio to 101."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and distribution partners reinforce the importance of our role in rebuilding lives and businesses, making communities safer, and supporting economic expansion.",
+      "customers feel like the #1 priority.",
+      "Customer experience • Areas for operational enhancements include: • Robotics and artificial intelligence • Talent development • Product innovation 25 33.",
+      "customers and communities safer • Support economic growth by providing capital that protects against covered losses and allows businesses to invest confidently in their operations Sustainability initiatives are embedded into Selective's business.",
+      "customers, distribution partners, employees, and shareholders.",
+      "ain loss trends,” said John J."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss of $1.",
+      "Loss 1 of $1.",
+      "loss per diluted common share of $1.",
+      "loss 1 per diluted com mon share of $1.",
+      "losses of $91 million increased the combined ratio by 8.",
+      "challenging quarter."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-19",
+    "entry_open": "91.430000",
+    "return_10d_pct": "-2.7125",
+    "return_20d_pct": "-6.9561",
+    "return_30d_pct": "-2.5265",
+    "return_60d_pct": "0.8094",
+    "return_90d_pct": "8.1592"
+  },
+  "text_stats": {
+    "primary_text_len": 4826,
+    "exhibit_text_len": 82704,
+    "combined_text_len": 87532
+  }
+}

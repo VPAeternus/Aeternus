@@ -42,12 +42,12 @@ def route_candidate_state(row: dict[str, Any], entry_score: int) -> str:
     if row.get("candidate_state"):
         return str(row["candidate_state"])
     if rm_buy_review_flag(row):
-        return "research_queue"
+        return "fundamental_review"
     if row.get("repricing_momentum_priority"):
-        return "research_queue"
+        return "fundamental_review"
     if row.get("repricing_momentum_extension"):
         return "active_watchlist"
-    return "research_queue" if entry_score >= 65 else "watchlist"
+    return "fundamental_review" if entry_score >= 65 else "watchlist"
 
 
 def build_signal_tables(

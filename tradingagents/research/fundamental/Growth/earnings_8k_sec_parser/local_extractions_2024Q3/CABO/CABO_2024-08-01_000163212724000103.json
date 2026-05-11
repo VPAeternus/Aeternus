@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CABO",
+    "cik": "1632127",
+    "event_date": "2024-08-01",
+    "event_accession": "0001632127-24-000103",
+    "primary_8k_doc": "cabo-20240801.htm",
+    "exhibit_docs": [
+      "a2024q2-pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CABO_000163212724000103_cabo-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CABO_000163212724000103_a2024q2-pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CABO",
+    "cik": "1632127",
+    "entity_name": "Cable One, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "807266000",
+    "revenue_fact_name": "SalesRevenueNet",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-03-01",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2015-12-31",
+    "net_income_value": "57426000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6846933000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-73491000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-100714000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "161787000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.071136",
+    "operating_cash_flow_to_revenue": "0.200413",
+    "assets_to_revenue": "8.481632",
+    "financing_cash_flow_to_revenue": "-0.091037",
+    "investing_cash_flow_to_revenue": "-0.124759"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $394.",
+      "Revenues were $394.",
+      "revenues decreased $16.",
+      "revenues decreased $9.",
+      "revenues increased $0.",
+      "Net income $ 47,649 $ 55,246 $ (7,597) (13."
+    ],
+    "guidance_evidence": [
+      "anticipates,” “estimates,” “expects,” “projects,” “intends,” “plans,” “believes” and words and terms of similar substance in connection with discussions of future operating or financial performance.",
+      "forecast, forward-looking statements are inherently susceptible to uncertainty and changes in circumstances."
+    ],
+    "wave_or_demand_evidence": [
+      "customer losses, a $5.",
+      "Customer premise equipment includes costs incurred at customer locations, including installation costs and customer premise equipment (e.",
+      "customers and PSUs, including small and medium-sized businesses and enterprise customers.",
+      "customer premise equipment to secure growth of new customers and PSUs or provide service enhancements (e.",
+      "customer installation activities.",
+      "customers and communities to what matters most."
+    ],
+    "warning_or_risk_evidence": [
+      "charge resulting from organizational changes implemented during the quarter and a $7.",
+      "headwinds, the underlying fundamentals of both residential and business data additions and retention levels maintained positive momentum during the second quarter, with both connects and disconnects improving year-over-year for the second consecutive quarter.",
+      "decreased by approximately 4,200 sequentially, of which approximately 4,000 related to the expiration of the ACP during the second quarter.",
+      "decreased $16.",
+      "decrease in average revenue per unit.",
+      "decreased $9."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 394.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "394.910004",
+    "return_10d_pct": "-4.5580",
+    "return_20d_pct": "-15.1781",
+    "return_30d_pct": "-10.1264",
+    "return_60d_pct": "-11.7622",
+    "return_90d_pct": "-13.5094"
+  },
+  "text_stats": {
+    "primary_text_len": 3704,
+    "exhibit_text_len": 30626,
+    "combined_text_len": 34332
+  }
+}

@@ -43,7 +43,7 @@
   - deterministic scoring under partial source availability
 
 ## M4 - Batch Deep Research Orchestration (Implemented)
-- Goal: process `selected_for_deep=true` queue items in one command.
+- Goal: process `legacy_deep_flag=true` queue items in one command.
 - Outputs:
   - queue batch execution command
   - per-item and aggregate run artifacts

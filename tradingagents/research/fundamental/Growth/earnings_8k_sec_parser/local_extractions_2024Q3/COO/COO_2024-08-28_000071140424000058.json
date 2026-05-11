@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "COO",
+    "cik": "711404",
+    "event_date": "2024-08-28",
+    "event_accession": "0000711404-24-000058",
+    "primary_8k_doc": "coo-20240828.htm",
+    "exhibit_docs": [
+      "cooperq32024pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COO_000071140424000058_coo-20240828.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COO_000071140424000058_cooperq32024pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "COO",
+    "cik": "711404",
+    "entity_name": "The Cooper Companies, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1735900000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-31",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "84600000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-31",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-01-31",
+    "assets_value": "11658900000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-31",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-10-31",
+    "financing_cash_flow_value": "-124400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-31",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "-195300000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-31",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "290800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-31",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.048736",
+    "operating_cash_flow_to_revenue": "0.167521",
+    "assets_to_revenue": "6.716343",
+    "financing_cash_flow_to_revenue": "-0.071663",
+    "investing_cash_flow_to_revenue": "-0.112506"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue increased 8% year-over-year to $1,002.",
+      "Revenue of $1,002.",
+      "Revenue of $675.",
+      "Revenue of $327.",
+      "revenue of $3,892 - $3,913 million (organic growth of 8% to 8.",
+      "revenue of $2,606 - $2,618 million (organic growth of 9% to 9."
+    ],
+    "guidance_evidence": [
+      "Guidance The Company raised its fiscal year 2024 financial guidance.",
+      "guidance excludes amortization and impairment of intangible assets, and certain income or gains and charges or expenses including acquisition and integration costs which we may incur as part of our continuing operations.",
+      "guidance to GAAP diluted earnings per share due to the inherent difficulty in forecasting acquisition-related, integration and restructuring charges and expenses, which are reconciling items between the non-GAAP and GAAP measure.",
+      "guidance.",
+      "guidance are not meant to be considered in isolation or as a substitute for comparable GAAP measures and should be read only in conjunction with our consolidated financial statements prepared in accordance with GAAP.",
+      "guidance, plans, prospects, goals, strategies, future actions, events or performance and other statements of which are other than statements of historical fact, including our fiscal year 2024 financial guidance, are forward looking."
+    ],
+    "wave_or_demand_evidence": [
+      "customers; disruptions in supplies of raw materials, particularly components used to manufacture our silicone hydrogel lenses; new U.",
+      "aid, \"Our strong performance this quarter reflects the strength of our business, the successful execution on our multi-year growth strategy, and the hard work and dedication of our amazing employees.",
+      "ains and product mix, offset by currency.",
+      "aised its fiscal year 2024 financial guidance.",
+      "ails are summarized as follows: • Fiscal 2024 total revenue of $3,892 - $3,913 million (organic growth of 8% to 8.",
+      "airment of intangible assets, and certain income or gains and charges or expenses including acquisition and integration costs which we may incur as part of our continuing operations."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of intangible assets, and certain income or gains and charges or expenses including acquisition and integration costs which we may incur as part of our continuing operations.",
+      "charges and expenses, which are reconciling items between the non-GAAP and GAAP measure.",
+      "charges and expenses that impact GAAP diluted earnings per share, the Company is not able to provide such guidance.",
+      "charges (1) 0.",
+      "charges (4) 1.",
+      "charges (1) 1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1002.8,
+    "quarter_revenue_yoy_pct": 8,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-29",
+    "entry_open": "104.099998",
+    "return_10d_pct": "3.7752",
+    "return_20d_pct": "6.1768",
+    "return_30d_pct": "5.9942",
+    "return_60d_pct": "1.3545",
+    "return_90d_pct": "-0.6436"
+  },
+  "text_stats": {
+    "primary_text_len": 3630,
+    "exhibit_text_len": 25946,
+    "combined_text_len": 29578
+  }
+}

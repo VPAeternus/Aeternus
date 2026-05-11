@@ -82,7 +82,7 @@ git commit -m "feat: add question compiler contracts"
 
 Add tests for:
 - loading internal artifacts for a date
-- stage diagnosis when ticker appears in Event Cards but not shortlist
+- stage diagnosis when ticker appears in Event Cards but not candidate_list
 - stage diagnosis when ticker never appears in any discovery-side artifact
 - first miss point ordering
 
@@ -105,8 +105,8 @@ Implement:
   - event cards
   - universe filter
   - collect/scored set
-  - shortlist
-  - research queue / deep selection
+  - candidate_list
+  - fundamental review list / fundamental intake
 - first-miss-point selection
 
 **Step 4: Run tests to verify they pass**

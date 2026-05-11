@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "IESC",
+    "cik": "1048268",
+    "event_date": "2024-08-02",
+    "event_accession": "0001048268-24-000099",
+    "primary_8k_doc": "iesc-20240802.htm",
+    "exhibit_docs": [
+      "q32024pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IESC_000104826824000099_iesc-20240802.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IESC_000104826824000099_q32024pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "IESC",
+    "cik": "1048268",
+    "entity_name": "IES Holdings, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1143755000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "52926000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "889088000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-82060000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "12282000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "60059000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.046274",
+    "operating_cash_flow_to_revenue": "0.05251",
+    "assets_to_revenue": "0.777341",
+    "financing_cash_flow_to_revenue": "-0.071746",
+    "investing_cash_flow_to_revenue": "0.010738"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $768 million for the third quarter of fiscal 2024, an increase of 31% compared with $584 million for the same quarter of fiscal 2023 • Operating income of $90.",
+      "revenue was $192.",
+      "revenue was $377.",
+      "revenue was $102.",
+      "revenue was $96.",
+      "Operating income of $90."
+    ],
+    "guidance_evidence": [
+      "projects, while maintaining a focus on managing contract risk.",
+      "forecast its future results and better identify future operating trends that may not otherwise be apparent.",
+      "projects, as well as other risk factors discussed in this document, in the Company’s annual report on Form 10-K for the year ended September 30, 2023 and in the Company’s other reports on file with the SEC."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, of approximately $1.",
+      "Backlog (a non-GAAP financial measure, as defined below) of approximately $1.",
+      "demand, particularly in the data center market.",
+      "customer demand, operating leverage from our increased scale and strong project execution across all four segments.",
+      "customer demand in our Infrastructure Solutions segment.",
+      "customers."
+    ],
+    "warning_or_risk_evidence": [
+      "charge through the Company's website as soon as reasonably practicable after they are filed with, or furnished to, the SEC.",
+      "decrease next fiscal quarter, as compared with the second and third quarters of fiscal 2024, when activity on this project was at its peak.",
+      "loss carryforwards during fiscal 2023, and as a result, we will have a higher cash tax rate in fiscal 2024.",
+      "uncertainties that could cause the Company’s actual future outcomes to differ materially from those set forth in such statements.",
+      "uncertainties, and risks described herein.",
+      "loss carryforwards to offset the cash impact of income tax expense for the three and nine months ended June 30, 2023."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 768,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "135.000000",
+    "return_10d_pct": "30.5852",
+    "return_20d_pct": "38.0444",
+    "return_30d_pct": "18.8222",
+    "return_60d_pct": "53.4815",
+    "return_90d_pct": "76.5259"
+  },
+  "text_stats": {
+    "primary_text_len": 3445,
+    "exhibit_text_len": 26172,
+    "combined_text_len": 29619
+  }
+}

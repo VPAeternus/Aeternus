@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ROKU",
+    "cik": "1428439",
+    "event_date": "2024-08-01",
+    "event_accession": "0001428439-24-000031",
+    "primary_8k_doc": "wk-20240801.htm",
+    "exhibit_docs": [
+      "a08form8ker-exhibit991q224.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ROKU_000142843924000031_wk-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ROKU_000142843924000031_a08form8ker-exhibit991q224.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ROKU",
+    "cik": "1428439",
+    "entity_name": "Roku, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "740990000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-193604000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4261792000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-79109000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-59243000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-153412000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.261277",
+    "operating_cash_flow_to_revenue": "-0.207037",
+    "assets_to_revenue": "5.751484",
+    "financing_cash_flow_to_revenue": "-0.106761",
+    "investing_cash_flow_to_revenue": "-0.079951"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $968 million, up 14% year over year (YoY) • Platform revenue was $824 million, up 11% YoY • Gross profit was $425 million, up 12% YoY • Streaming Households were 83.",
+      "revenue was $824 million in Q2, up 11% YoY, reflecting contributions from streaming services distribution and advertising activities, despite continued softness within the media and entertainment (M&E) vertical.",
+      "revenue of $1.",
+      "gross margin % 53.",
+      "gross margin % (17.",
+      "gross margin % 44."
+    ],
+    "guidance_evidence": [
+      "Outlook ($ in millions) Q3 2024E A - Refer to the reconciliation of Net loss to Adjusted EBITDA and Cash flow from operations to Free Cash Flow in the non-GAAP information at the end of this letter.",
+      "Outlook We are pleased with our continued growth in scale and engagement, along with the execution of our monetization initiatives that position us strongly in the ongoing shift to streaming."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for Roku, leveraging our Home Screen as the lead-in for TV, and growing Roku-billed subscriptions.",
+      "demand title in The Roku Channel’s history during its opening weekend and was sponsored by Airbnb.",
+      "demand Roku Q2 2024 Shareholder Letter 5 The NBC Olympics Zone, presented by Delta Advertising Activities In Q2, the YoY growth of advertising across the Roku platform – excluding M&E – outperformed both the overall ad market and the OTT ad market in the U.",
+      "customers can leverage Roku Media and audience data programmatically to better understand and optimize their campaigns for TV streaming viewers.",
+      "demand-side platforms (DSPs).",
+      "demand curve at multiple price points."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, and income tax (benefit)/expense from net income (loss), and the FCF reconciliation excludes purchases of property and equipment and effects of exchange rates on cash from the cash flows from operating activities, in each case where applicable.",
+      "charges (1) 10,682 46 12,478 31,316 Income tax expense (9,161) 1,630 (4,396) 5,194 Adjusted EBITDA $ 43,642 $ (17,790) $ 84,507 $ (86,872) (1) Restructuring charges for the three months ended June 30, 2024 primarily include asset impairment charges of $10.",
+      "charges for the six months ended June 30, 2024 primarily include asset impairment charges of $11.",
+      "charges for the six months ended June 30, 2023 include severance and related charges of $25.",
+      "impairment charges of $4.",
+      "loss) (17."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 968,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "56.900002",
+    "return_10d_pct": "-5.9402",
+    "return_20d_pct": "8.6292",
+    "return_30d_pct": "14.6221",
+    "return_60d_pct": "30.6503",
+    "return_90d_pct": "12.6186"
+  },
+  "text_stats": {
+    "primary_text_len": 3387,
+    "exhibit_text_len": 28932,
+    "combined_text_len": 32321
+  }
+}

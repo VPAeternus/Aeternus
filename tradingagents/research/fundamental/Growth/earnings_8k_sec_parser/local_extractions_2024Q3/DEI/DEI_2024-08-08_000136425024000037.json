@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DEI",
+    "cik": "1364250",
+    "event_date": "2024-08-08",
+    "event_accession": "0001364250-24-000037",
+    "primary_8k_doc": "nysedei-20240808.htm",
+    "exhibit_docs": [
+      "a2024q2epexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DEI_000136425024000037_nysedei-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DEI_000136425024000037_a2024q2epexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DEI",
+    "cik": "1364250",
+    "entity_name": "Douglas Emmett, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "252393000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "18373000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "9644218000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-60929000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-51403000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "145474000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.072795",
+    "operating_cash_flow_to_revenue": "0.576379",
+    "assets_to_revenue": "38.211115",
+    "financing_cash_flow_to_revenue": "-0.241405",
+    "investing_cash_flow_to_revenue": "-0.203663"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues decreased by 3.",
+      "revenue was more than offset by vacancy at Barrington Plaza and lower office occupancy.",
+      "sales of investments in real estate and net income (loss) attributable to noncontrolling interests.",
+      "net income attributable to common stockholders increased by 249.",
+      "net income of $10.",
+      "net income of $0."
+    ],
+    "guidance_evidence": [
+      "Guidance : Our second quarter FFO benefited from anticipated property tax refunds and the timing of operating expenses.",
+      "guidance for the rest of the year, we have not included similar benefits, but have factored in the usual seasonal increase in our utility costs in the third quarter, the move out of Warner Bros.",
+      "guidance for Net Income Per Common Share - Diluted to be between $0.",
+      "guidance does not include the impact of future property acquisitions or dispositions, stock sales or repurchases, financings, property damage insurance recoveries, impairment charges or other possible capital markets activities.",
+      "Guidance 2024 Guidance (1) Metric Per Share Net income per common share - diluted $0.",
+      "guidance does not include the impact of future property acquisitions or dispositions, common stock sales or repurchases, financings, property damage insurance recoveries, impairment charges or other possible capital markets activities."
+    ],
+    "wave_or_demand_evidence": [
+      "demand and to compare our performance and value with other REITs.",
+      "demand and to compare our performance with other REITs.",
+      "aight-line rents increased by 1.",
+      "ains essentially fully leased at 99.",
+      "aid a quarterly cash dividend of $0.",
+      "airment charges or other possible capital markets activities."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges or other possible capital markets activities.",
+      "impairment charges.",
+      "decreased by 3.",
+      "decreased by 4.",
+      "decreased by 0.",
+      "decreased by 12."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 11.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "15.150000",
+    "return_10d_pct": "0.9241",
+    "return_20d_pct": "6.0726",
+    "return_30d_pct": "3.5644",
+    "return_60d_pct": "15.0495",
+    "return_90d_pct": "26.8647"
+  },
+  "text_stats": {
+    "primary_text_len": 3216,
+    "exhibit_text_len": 64827,
+    "combined_text_len": 68045
+  }
+}

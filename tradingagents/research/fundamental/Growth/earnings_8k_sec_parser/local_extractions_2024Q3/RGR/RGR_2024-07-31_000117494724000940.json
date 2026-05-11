@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RGR",
+    "cik": "95029",
+    "event_date": "2024-07-31",
+    "event_accession": "0001174947-24-000940",
+    "primary_8k_doc": "form8k-32652_rgr.htm",
+    "exhibit_docs": [
+      "ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RGR_000117494724000940_form8k-32652_rgr.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RGR_000117494724000940_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RGR",
+    "cik": "95029",
+    "entity_name": "STURM, RUGER & COMPANY, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "149453000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "14350000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "398817000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-97861000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "35456000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "5284000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.096017",
+    "operating_cash_flow_to_revenue": "0.035356",
+    "assets_to_revenue": "2.668511",
+    "financing_cash_flow_to_revenue": "-0.654794",
+    "investing_cash_flow_to_revenue": "0.237238"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales were $130.",
+      "net sales were $142.",
+      "net sales were $267.",
+      "net sales were $292.",
+      "Sales of new products, including the Security-380 pistol, Super Wrangler revolver, Marlin lever-action rifles, LC Carbine, Small-Frame Autoloading Rifle, and American Centerfire Rifle Generation II represented $79.",
+      "net income."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "demand in the firearms market declined from the second quarter of last year, the estimated sell-through of our products from our independent distributors to retailers bucked this trend and increased during the same period.",
+      "demand for many of our recently introduced products, including: · American Rifle Generation II family of rifles, · Marlin lever-action rifles, including the 1895 Dark Series and the 336 models, · LC Carbine chambered in .",
+      "ailers bucked this trend and increased during the same period.",
+      "ain focused on the long-term goal of creating shareholder value.",
+      "ailers to confidently invest in our inventory is essential to Ruger’s long-term success and leadership in the volatile firearms market.",
+      "ailers increased 1% in both the second quarter and first half of 2024 compared to the prior year periods."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory is essential to Ruger’s long-term success and leadership in the volatile firearms market.",
+      "declined from the second quarter of last year, the estimated sell-through of our products from our independent distributors to retailers bucked this trend and increased during the same period.",
+      "decreased 8% and 6%, respectively."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 130.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "41.259998",
+    "return_10d_pct": "-0.2908",
+    "return_20d_pct": "2.5933",
+    "return_30d_pct": "0.6786",
+    "return_60d_pct": "1.0179",
+    "return_90d_pct": "-1.1634"
+  },
+  "text_stats": {
+    "primary_text_len": 3484,
+    "exhibit_text_len": 15355,
+    "combined_text_len": 18841
+  }
+}

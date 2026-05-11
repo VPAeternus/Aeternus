@@ -1,0 +1,3414 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BV",
+    "cik": "1734713",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088596",
+    "primary_8k_doc": "bv-20240731.htm",
+    "exhibit_docs": [
+      "bv-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BV_000095017024088596_bv-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BV_000095017024088596_bv-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BV",
+    "cik": "1734713",
+    "entity_name": "BrightView Holdings, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1658864000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-08-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2017-06-30",
+    "net_income_value": "-40900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3352200000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-12300000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-51800000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "55000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.024655",
+    "operating_cash_flow_to_revenue": "0.033155",
+    "assets_to_revenue": "2.02078",
+    "financing_cash_flow_to_revenue": "-0.007415",
+    "investing_cash_flow_to_revenue": "-0.031226"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue decreased 3.",
+      "revenue decreased 1.",
+      "revenues decreased by $68.",
+      "Net income increased 39.",
+      "Net income margin expansion of 100 basis points, •Adjusted EBITDA2 increased 6% year-over-year to $107.",
+      "Net Income (Loss) $ 23."
+    ],
+    "guidance_evidence": [
+      "GUIDANCE, AND RAISES FREE CASH FLOW GUIDANCE BLUE BELL, PA, July 31, 2024 -- BrightView Holdings, Inc.",
+      "GUIDANCE1 Prior Guidance Updated Guidance Total Revenue $2.",
+      "guidance for fiscal 2024, while raising our Free Cash Flow guidance for a second time this year.",
+      "guidance, see the Q3 2024 presentation at investor.",
+      "outlook are difficult to reliably predict or estimate without unreasonable effort due to their dependence on future uncertainties, such as items discussed below.",
+      "outlook,” “guidance,” “projects,” “believes,” “expects,” “may,” “will,” “should,” “seeks,” “intends,” “plans,” “estimates,” “continues,” or “anticipates,” and variations of such words or similar expressions are intended to identify forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and driving profitable growth.",
+      "AISES FREE CASH FLOW GUIDANCE BLUE BELL, PA, July 31, 2024 -- BrightView Holdings, Inc.",
+      "aid BrightView President and Chief Executive Officer Dale Asplund.",
+      "aising our Free Cash Flow guidance for a second time this year.",
+      "ains in the early innings as we continue down the path of positioning BrightView as the employer of choice, while providing better service to our customers and driving profitable growth.",
+      "ainties, such as items discussed below."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased 3.",
+      "uncertainties, such as items discussed below.",
+      "Loss) $ 23.",
+      "Loss) Margin 3.",
+      "loss) available to common shareholders $ 9.",
+      "Loss) per Share $ 0."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "bv-ex99_1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "BRIGHTVIEW REPORTS THIRD QUARTER EARNINGS WITH RECORD EBITDA; REAFFIRMS MIDPOINT OF FULL YEAR REVENUE, EBITDA, AND MARGIN GUIDANCE, AND RAISES FREE CASH FLOW GUIDANCE"
+    },
+    {
+      "type": "TextElement",
+      "text": "BLUE BELL, PA, July 31, 2024 -- BrightView Holdings, Inc. (NYSE: BV) (the “Company” or “BrightView”), the leading commercial landscaping services company in the United States, today reported unaudited results for the third quarter ended June 30, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "THIRD QUARTER FISCAL 2024 SUMMARY"
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Total revenue decreased 3.6% year-over-year to $738.8 million,"
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Net income increased 39.9% year-over-year to $23.5 million, Net income margin expansion of 100 basis points,"
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Adjusted EBITDA2 increased 6% year-over-year to $107.9 million, Adjusted EBITDA margin2 expansion of 130 basis points,"
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Year-to-date Net cash provided by operating activities of $152.1 million, an increase of $62.8 million,"
+    },
+    {
+      "type": "TitleElement",
+      "text": "•Year-to-date free cash flow2 of $120.2 million, an increase of $82.0 million,"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "•Strengthened liquidity by refinancing our Term loan and AR securitization facility."
+    },
+    {
+      "type": "TitleElement",
+      "text": "COMPANY UPDATES FISCAL YEAR 2024 GUIDANCE1"
+    },
+    {
+      "type": "TableElement",
+      "text": "Prior Guidance Updated Guidance Total Revenue $2.740 - $2.800 billion $2.750 - $2.790 billion Adjusted EBITDA2 $315 - $335 million $320 - $330 million Adj. EBITDA Margin2 +90bps to +130bps +100bps to +120bps Free Cash Flow2 $55 - $75 million $65 - $80 million"
+    },
+    {
+      "type": "TextElement",
+      "text": "\"Third quarter served as another milestone as we continue to progress with our One BrightView initiatives and delivered margin improvement across all segments for both the quarter and the year-to-date results,” said BrightView President and Chief Executive Officer Dale Asplund. “Consequently, this positioned us to reaffirm the midpoint of our Revenue, EBITDA and Margin guidance for fiscal 2024, while raising our Free Cash Flow guidance for a second time this year. Our relentless pursuit to drive transformational change remains in the early innings as we continue down the path of positioning BrightView as the employer of choice, while providing better service to our customers and driving profitable growth.\""
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "_______________1 For assumptions underlying the prior and updated fiscal year 2024 guidance, see the Q3 2024 presentation at investor.brightview.com2 Adjusted EBITDA, Adjusted EBITDA margin, and Free cash flow, are non-GAAP measures. Refer to the “Non-GAAP Financial Measures” section for more information. The Company is not providing a quantitative reconciliation of its financial outlook for Adjusted EBITDA to net income (loss), Adjusted EBITDA margin to net income (loss) margin, or Free cash flows to Cash flows provided by operating activities, their corresponding GAAP measures, because the respective GAAP measures that are excluded from the non-GAAP financial outlook are difficult to reliably predict or estimate without unreasonable effort due to their dependence on future uncertainties, such as items discussed below. Additionally, information that is currently not available to the Company could have a potentially unpredictable & potentially significant impact on its future GAAP financial results."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fiscal 2024 Results – Total BrightView"
+    },
+    {
+      "type": "TableElement",
+      "text": "Total BrightView - Operating Highlights Three Months Ended June 30, Nine Months Ended June 30, ($ in millions, except per share figures) 2024 2023 Change 2024 2023 Change Revenue $ 738.8 $ 766.0 (3.6%) $ 2,038.4 $ 2,072.3 (1.6%) Net Income (Loss) $ 23.5 $ 16.8 39.9% $ 40.8 $ (24.1 ) 269.3% Net Income (Loss) Margin 3.2 % 2.2 % 100 bps 2.0 % (1.2 %) 320 bps Adjusted EBITDA $ 107.9 $ 101.8 6.0% $ 219.5 $ 197.1 11.4% Adjusted EBITDA Margin 14.6 % 13.3 % 130 bps 10.8 % 9.5 % 130 bps Net income (loss) available to common shareholders $ 9.3 $ 16.8 (44.6%) $ 9.0 $ (24.1 ) 137.3% Weighted average number of common shares outstanding 94.5 93.5 1.1% 94.7 93.4 1.4% Basic Earnings (Loss) per Share $ 0.10 $ 0.18 (44.4%) $ 0.09 $ (0.26 ) 134.6% Adjusted Net Income $ 48.3 $ 41.4 16.7% $ 68.1 $ 33.5 103.3% Adjusted weighted average number of common shares outstanding 148.8 93.5 59.1% 148.8 93.4 59.3% Adjusted Earnings per Share $ 0.32 $ 0.44 (27.3%) $ 0.46 $ 0.36 27.8%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income (Loss), Adjusted Earnings (Loss) per Share, and Adjusted weighted average number of common shares outstanding are non-GAAP measures. Refer to the “Non-GAAP Financial Measures” and “Reconciliation of GAAP to Non-GAAP Financial Measures” sections for more information. Basic Earnings (Loss) per Share is determined by dividing Net Income (Loss) available to common shareholders by the Weighted average number of common shares outstanding. Net income (Loss) available to common shareholders is calculated as Net Income (Loss) less dividends declared on Series A Convertible Preferred Shares and Earnings allocated to Convertible Preferred Shares"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the third quarter of fiscal 2024, total revenue decreased 3.6% to $738.8 million driven by a $39.2 million year over year decrease in revenue from our commercial landscaping business. These decreases were partially offset by an $11.6 million increase in our development services revenue. For the three months ended June 30, 2024, Adjusted EBITDA increased by $6.1 million to $107.9 million representing a 130 basis point increase in Adjusted EBITDA margin. The increase was due to the increased revenue described above combined with successful cost management due to ongoing cost management initiatives focused on payroll and overhead costs and reduction in non-core businesses. For the nine months ended June 30, 2024, total revenue decreased 1.6% to $2,038.4 million driven by a $79.5 million decrease in our commercial landscaping business. The decrease was partially offset by $31.5 million of increased revenue from our development services revenue and an $11.3 million increase in snow removal revenue compared to the prior year.During the nine months ended June 30, 2024, Adjusted EBITDA increased by $22.4 million to $219.5 representing a 130 basis point expansion of Adjusted EBITDA margin. The increase was due to successful cost management initiatives focused on payroll and overhead costs, partially offset by decreased revenue described above."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Fiscal 2024 Results – Segments"
+    },
+    {
+      "type": "TableElement",
+      "text": "Maintenance Services - Operating Highlights Three Months Ended June 30, Nine Months Ended June 30, ($ in millions) 2024 2023 Change 2024 2023 Change Landscape Maintenance $ 516.2 $ 555.3 (7.0%) $ 1,256.3 $ 1,335.8 (6.0%) Snow Removal $ 8.5 $ 9.3 (8.6%) $ 221.2 $ 209.9 5.4% Total Revenue $ 524.7 $ 564.6 (7.1%) $ 1,477.5 $ 1,545.7 (4.4%) Adjusted EBITDA $ 89.3 $ 94.0 (5.0%) $ 197.8 $ 196.2 0.8% Adjusted EBITDA Margin 17.0 % 16.6 % 40 bps 13.4 % 12.7 % 70 bps Capital Expenditures $ 15.4 $ 9.3 65.6% $ 31.9 $ 46.0 (30.7%)"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the third quarter of fiscal 2024, revenue in the Maintenance Services Segment decreased by $39.9 million, or 7.1%, from the 2023 period. The decrease was principally driven by a reduction in underlying commercial landscape services, underpinned by strategic reductions of non-core businesses and reduced ancillary services.Adjusted EBITDA for the Maintenance Services Segment for the three months ended June 30, 2024 decreased by $4.7 million to $89.3 million from $94.0 million in the 2023 period. Segment Adjusted EBITDA Margin increased 40 basis points, to 17.0%, in the three months ended June 30, 2024, from 16.6% in the 2023 period. The decrease in Segment Adjusted EBITDA was principally driven by the decrease in revenues described above. The increase in Segment Adjusted EBITDA Margin was driven by lower overhead as a result of the Company's cost management initiatives partially offset by the decrease in revenues described above and increased landscape services labor costs.For the nine months ended June 30, 2024, Maintenance Services net service revenues decreased by $68.2 million, or 4.4%, from the 2023 period. The decrease was driven by a $79.5 million, or 5.9%, decrease in underlying commercial landscape services, largely underpinned by strategic reductions in our non-core businesses, as well as decline in our Ancillary services business. This was partially offset by a $11.3 million increase in snow removal services revenue, primarily due to higher snowfall than in the prior period3. Adjusted EBITDA for the Maintenance Services Segment for the nine months ended June 30, 2024 increased by $1.6 million to $197.8 million from $196.2 million in the 2023 period. Segment Adjusted EBITDA Margin increased 70 basis points, to 13.4%, in the nine months ended June 30, 2024, from 12.7% in the 2023 period. The increases in Segment Adjusted EBITDA and Segment Adjusted EBITDA Margin were principally driven by lower labor costs as a result of the Company's cost management initiatives partially offset by the decrease in maintenance services revenue described above and increased landscape services labor costs."
+    },
+    {
+      "type": "TitleElement",
+      "text": "_______________ 3 As defined by the National Oceanic Atmospheric Administration, U.S. Department of Commerce (“NOAA”) for the Company's footprint during the respective nine month period 3"
+    },
+    {
+      "type": "TableElement",
+      "text": "Development Services - Operating Highlights Three Months Ended June 30, Nine Months Ended June 30, ($ in millions) 2024 2023 Change 2024 2023 Change Revenue $ 215.0 $ 203.4 5.7% $ 564.8 $ 533.3 5.9% Adjusted EBITDA $ 31.1 $ 24.1 29.0% $ 65.1 $ 53.6 21.5% Adjusted EBITDA Margin 14.5 % 11.8 % 270 bps 11.5 % 10.1 % 140 bps Capital Expenditures $ 5.8 $ 2.5 132.0% $ 10.2 $ 7.2 41.7%"
+    },
+    {
+      "type": "TextElement",
+      "text": "For the third quarter of fiscal 2024, revenue in the Development Services Segment increased by $11.6 million, or 5.7%, compared to the 2023 period. The increase was driven by an increase in Development Services project volumes.Adjusted EBITDA for the Development Services Segment for the three months ended June 30, 2024 increased $7.0 million, to $31.1 million, compared to the 2023 period. Segment Adjusted EBITDA Margin increased 270 basis points, to 14.5% for the quarter from 11.8% in the 2023 period. The increases in Segment Adjusted EBITDA and Segment Adjusted EBITDA Margin were primarily driven by the increase in revenues described above combined with decreased labor costs associated with the mix of projects.For the nine months ended June 30, 2024, revenue in the Development Services Segment increased $31.5 million, or 5.9%, compared to the 2023 period. The increase was primarily driven by an increase in Development Services project volumes.Adjusted EBITDA for the Development Services Segment for the nine months ended June 30, 2024 increased $11.5 million, to $65.1 million in the 2023 period. Segment Adjusted EBITDA Margin increased 140 basis points, to 11.5% for the period from 10.1% in the 2023 period. The increases in Segment Adjusted EBITDA and Segment Adjusted EBITDA Margin were primarily driven by the increase in revenues described above coupled with savings primarily from the Company's cost management initiatives."
+    },
+    {
+      "type": "TableElement",
+      "text": "Total BrightView Cash Flow Metrics Nine Months Ended June 30, ($ in millions) 2024 2023 Change Net Cash Provided by Operating Activities $ 152.1 $ 89.3 70.3% Free Cash Flow $ 120.2 $ 38.2 214.7% Capital Expenditures $ 46.0 $ 57.9 (20.6%)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Net cash provided by operating activities for the nine months ended June 30, 2024 increased $62.8 million, to $152.1 million, from $89.3 million in the 2023 period. This increase was due to increases in cash provided by accounts receivable and unbilled and deferred revenue and an increase in net income. This was partially offset by a decrease in cash provided by other operating assets and an increase in cash used by accounts payable and other operating liabilities. Free Cash Flow increased $82.0 million to $120.2 million for the nine months ended June 30, 2024 from $38.2 million in the prior year. The increase in Free Cash Flow was due to an increase in net cash provided by operating activities coupled with a decrease in cash used for capital expenditures, each as described below. For the nine months ended June 30, 2024, capital expenditures were $46.0 million, compared with $57.9 million in the prior year. The Company also generated proceeds from the sale of property and equipment of $14.1 million and $6.8 million during the nine months ended June 30, 2024 and 2023, respectively. Net of the proceeds from the sale of property and equipment, net capital expenditures represented 1.6% of revenue in the nine months ended June 30, 2024, a decrease of 90 bps compared to 2.5% for the nine months ended June 30, 2023. The year-over-year reduction in capital expenditures was the result of timing of the delivery of trucks in the third quarter of 2024, resulting in $21.3 million of accrued capital expenditures as of June 30, 2024."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TableElement",
+      "text": "Total BrightView Balance Sheet Metrics ($ in millions) June 30, 2024 September 30, 2023 June 30, 2023 Total Financial Debt1 $ 885.3 $ 937.5 $ 1,404.3 Minus: Total Cash & Equivalents 115.9 67.0 9.6 Total Net Financial Debt2 $ 769.4 $ 870.5 $ 1,394.7 Total Net Financial Debt to Adjusted EBITDA ratio3 2.4x 2.9x 4.8x 1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations 2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents 3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA."
+    },
+    {
+      "type": "TextElement",
+      "text": "As of June 30, 2024, the Company’s Total Net Financial Debt was $769.4 million, a decrease of $101.1 million compared to $870.5 as of September 30, 2023. The year-over-year reduction in Total Net Financial Debt was the result of the Company's voluntary repayment of the $82.2 million outstanding balance on its Receivables Financing Agreement. The Company’s Total Net Financial Debt to Adjusted EBITDA ratio was 2.4x as of June 30, 2024, compared to 2.9x as of September 30, 2023."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "A conference call to discuss the third quarter fiscal 2024 financial results is scheduled for August 1, 2024, at 8:30 a.m. ET. The U.S. toll free dial-in for the conference call is (833) 470-1428 and the international dial-in is +1 (404) 975-4839. The Conference Access Code is 747713. A live audio webcast of the conference call will be available on the Company’s investor website https://investor.brightview.com, where presentation materials will be posted prior to the call.A replay of the call will be available until 11:59 p.m. ET on August 15, 2024. To access the recording, dial (866) 813-9403 (Access Code 207867). A link to the current Earnings Call slides can be found at investor.brightview.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About BrightView"
+    },
+    {
+      "type": "TextElement",
+      "text": "BrightView (NYSE: BV), the nation’s largest commercial landscaper, proudly designs, creates, and maintains some of the best landscapes on Earth and provides the most efficient and comprehensive snow and ice removal services. With a dependable service commitment, BrightView brings brilliant landscapes to life at premier properties across the United States, including business parks and corporate offices, homeowners' associations, healthcare facilities, educational institutions, retail centers, resorts and theme parks, municipalities, golf courses, and sports venues. BrightView also serves as the Official Field Consultant to Major League Baseball. Through industry-leading best practices and sustainable solutions, BrightView is invested in taking care of our team members, engaging our clients, inspiring our communities, and preserving our planet. Visit www.BrightView.com and connect with us on X (formerly known as Twitter), Facebook, and LinkedIn."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "This press release contains “forward-looking statements” within the meaning of the safe harbor provision of the U.S. Private Securities Litigation Reform Act of 1995, Section 27A of the Securities Act of 1933, as amended (the “Securities Act”), and Section 21E of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), which are subject to the “safe harbor” created by those sections. All statements, other than statements of historical facts included in this press release, including statements concerning our plans, objectives, goals, beliefs, business outlook, business trends, expectations regarding our industry, strategy, future events, future operations, future liquidity and financial position, future revenues, projected costs, prospects, plans and objectives of management and other information, may be forward-looking statements.Words such as “outlook,” “guidance,” “projects,” “believes,” “expects,” “may,” “will,” “should,” “seeks,” “intends,” “plans,” “estimates,” “continues,” or “anticipates,” and variations of such words or similar expressions are intended to identify forward-looking statements. The forward-looking statements are not historical facts, or guarantees of future performance and are based upon our current expectations, beliefs, estimates and projections, and various assumptions, many of which, by their nature, are inherently uncertain and beyond our control. Our expectations, beliefs, and projections are expressed in good faith, and we believe there is a reasonable basis for them. However, there can be no assurance that management’s expectations, beliefs and projections will result or be achieved, and actual results may vary materially from what is expressed in or indicated by the forward-looking statements. There are a number of risks, uncertainties and other important factors, many of which are beyond our control, that could cause our actual results to differ materially from the forward-looking statements contained in this press release. New risk factors and uncertainties may emerge from time to time, and it is not possible for management to predict all risk factors and uncertainties. Some of the key factors that could cause actual results to differ from our expectations include risks related to: general business, economic, and financial market conditions; increases in raw material costs, fuel prices, wages and other operating costs, and changes in our ability to source adequate supplies and materials in a timely manner; competitive industry pressures; the failure to retain current customers, renew existing customer contracts and obtain new customer contracts; the failure to enter into profitable contracts, or maintaining customer contracts that are unprofitable; a determination by customers to reduce their outsourcing or use of preferred vendors; the dispersed nature of our operating structure; our ability to implement our business strategies and achieve our growth objectives; the possibility that the anticipated benefits from our business acquisitions will not be realized in full or at all or may take longer to realize than expected; the possibility that costs or difficulties related to the integration of acquired businesses’ operations will be greater than expected and the possibility that integration efforts will disrupt our business and strain management time and resources; the potential impacts on revenues and our financial condition caused by any disposition of assets or discontinuation of lines of business; the seasonal nature of our landscape maintenance services; our dependence on weather conditions and the impact of severe weather and climate change on our business; disruptions in our supply chain and changes in our ability to source adequate supplies and materials in a timely manner; any failure to accurately estimate the overall risk, requirements, or costs when we bid on or negotiate contracts that are ultimately awarded to us; the conditions and periodic fluctuations of real estate markets, including residential and commercial construction; the level, timing and location of snowfall; our ability to retain or hire our executive management and other key personnel, and particularly reflecting competition for talent in light of non-compete rulemaking and legislation; our ability to attract and retain field and hourly employees, trained workers, and third-party contractors and re-employ seasonal workers; any failure to properly verify employment eligibility of our employees; subcontractors taking actions that harm our business; our recognition of future impairment charges; laws and governmental regulations, including those relating to employees, wage and hour, immigration, human health, safety, transportation, and the associated financial impact of such regulations; environmental, health and safety laws and regulations, including regulatory costs, claims and litigation related to the use of chemicals and pesticides by employees and related third-party claims; the distraction and impact caused by litigation, adverse litigation judgments and settlements resulting from legal proceedings; tax increases and changes in tax rules; increase in on-job accidents involving employees; any failure, inadequacy, interruption, security failure or breach of our information technology systems; compliance with data privacy requirements; our ability to adequately protect our intellectual property; restrictions imposed by our debt agreements that limit our flexibility in operating our business; Increases in interest rates governing our variable rate indebtedness increasing the cost of servicing our substantial indebtedness; our ability to generate sufficient cash flow to satisfy our significant debt service obligations; our ability to obtain additional financing to fund future working capital, capital expenditures, investments or acquisitions, or other general corporate requirements; risks related to counterparty credit worthiness or non-performance of the derivative financial instruments we utilize; any future sales, or the perception of future sales, by us or our affiliates, which could cause the market price for our common stock to decline; the ability of KKR BrightView Aggregator L.P., Birch-OR Equity Holdings, LLC and Birch Equity Holdings, LP, which collectively hold approximately 58.7% of our shares as of June 30, 2024, to exert significant influence over us; the fact that the holders of our Series A Preferred Stock may have different interests from and vote their shares in a manner deemed adverse to, holders of our common stock; the dividend, liquidation, and redemption rights of the holders of our Series A Preferred Stock; occurrence of natural disasters, terrorist attacks, or other external events; occurrence of a pandemic or other public health emergency; inflation, geopolitical conflicts, recession, financial market disruptions and other economic conditions; our ability to pursue and achieve our environmental, social and corporate governance goals and targets and the possibility that complying with such standards and meeting our goals may be significantly more costly than anticipated; and costs and requirements imposed as a result of maintaining compliance with the requirements of being a public company.Additional factors that could cause our results to differ materially from those described in the forward-looking statements can be found under “Item 1A. Risk Factors” in our Form 10-K for the fiscal year ended September 30, 2023, and such factors may be updated from time to time in our periodic filings with the Securities and Exchange Commission, which are accessible on the SEC’s website at www.sec.gov. Accordingly, there are or will be important factors that could cause actual outcomes or results to differ materially from those indicated in these statements. These factors should not be construed as exhaustive and should be read in conjunction with the other cautionary statements that are included in this release and in our filings with the SEC. Any forward-looking statement made in this press release speaks only as of the date on which it was made. We caution you that the risks, uncertainties, and other factors referenced above may not contain all of the risks, uncertainties and other factors that are important to you. In addition, we cannot assure you that we will realize the results, benefits, or developments that we expect or anticipate or, even if substantially realized, that they will result in the consequences or affect us or our business in the way expected. We undertake no obligation to publicly update or revise any forward-looking statements to reflect subsequent events or circumstances, any change in assumptions, beliefs or expectations or any change in circumstances upon which any such forward-looking statements are based, except as required by law."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Financial Measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "To supplement the Company’s financial information presented in accordance with GAAP and aid understanding of the Company’s business performance, the Company uses certain non-GAAP financial measures, namely “Adjusted EBITDA”, “Adjusted EBITDA Margin”, “Adjusted Net Income (Loss)”, “Adjusted Earnings (Loss) per Share”, “Free Cash Flow”, “Total Financial Debt”, “Total Net Financial Debt” and “Total Net Financial Debt to Adjusted EBITDA ratio”. We believe Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income (Loss), Adjusted Earnings (Loss) per Share, Free Cash Flow, Total Financial Debt, Total Net Financial Debt, and Total Net Financial Debt to Adjusted EBITDA ratio assist investors in comparing our results across reporting periods on a consistent basis by excluding items that we do not believe are indicative of our core operating performance. Management believes these non-GAAP financial measures are useful to investors in highlighting trends in our operating performance, while other measures can differ significantly depending on long-term strategic decisions regarding capital structure, the tax jurisdictions in which we operate and capital investments. Management regularly uses these measures as tools in evaluating our operating performance, financial performance and liquidity. Management uses Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income (Loss), Adjusted Earnings (Loss) per Share, Free Cash Flow, Total Financial Debt, Total Net Financial Debt, and Total Net Financial Debt to Adjusted EBITDA ratio to supplement comparable GAAP measures in the evaluation of the effectiveness of our business strategies, to make budgeting decisions, to establish discretionary annual incentive compensation and to compare our performance against that of other peer companies using similar measures. In addition, we believe that Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income (Loss), Adjusted Earnings (Loss) per Share, Free Cash Flow, Total Financial Debt, Total Net Financial Debt, and Total Net Financial Debt to Adjusted EBITDA ratio are frequently used by investors and other interested parties in the evaluation of issuers, many of which also present Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income (Loss), Adjusted Earnings (Loss) per Share, Free Cash Flow, Total Financial Debt, Total Net Financial Debt, and Total Net Financial Debt to Adjusted EBITDA ratio when reporting their results in an effort to facilitate an understanding of their operating and financial results and liquidity. Management supplements GAAP results with non-GAAP financial measures to provide a more complete understanding of the factors and trends affecting the business than GAAP results alone.Adjusted EBITDA: We define Adjusted EBITDA as net income (loss) before interest, taxes, depreciation and amortization, as further adjusted to exclude certain non-cash, non-recurring and other adjustment items.Adjusted EBITDA Margin: We define Adjusted EBITDA Margin as Adjusted EBITDA, defined above, divided by Net Service Revenues.Adjusted Net Income (Loss): We define Adjusted Net Income (Loss) as net income (loss) including interest and depreciation, and excluding other items used to calculate Adjusted EBITDA and further adjusted for the tax effect of these exclusions and the removal of the discrete tax items.Adjusted Earnings (Loss) per Share: We define Adjusted Earnings (Loss) per Share as Adjusted Net Income (Loss) divided by the Adjusted Weighted Average Number of Common Shares Outstanding for the period.Adjusted Weighted Average Number of Common Shares Outstanding: We define Adjusted Weighted Average Number of Common Shares Outstanding as the weighted average number of common shares outstanding used in the calculation of basic earnings per share plus shares of common stock related to the Series A Preferred Stock on an as-converted basis, assumed to be converted for the entire period. The addition of shares of common stock related to the Series A Convertible Preferred Stock on an as-converted basis reflects the dilutive impact of the potential conversion of the Series A Preferred Stock and is expected to provide comparability in future periods.Free Cash Flow: We define Free Cash Flow as cash flows from operating activities less capital expenditures, net of proceeds from the sale of property and equipment. Total Financial Debt: We define Total Financial Debt as total long-term debt, net of original issue discount, and finance lease obligations.Total Net Financial Debt: We define Total Net Financial Debt as Total Financial Debt minus total cash and cash equivalents.Total Net Financial Debt to Adjusted EBITDA ratio: We define Total Net Financial Debt to Adjusted EBITDA ratio as Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.Adjusted EBITDA, Adjusted EBITDA Margin, Adjusted Net Income (Loss), Adjusted Earnings (Loss) per Share, Free Cash Flow, Total Financial Debt, Total Net Financial Debt, and Total Net Financial Debt to Adjusted EBITDA ratio are not recognized terms under GAAP and should not be considered as an alternative to net income (loss) or the ratio of net income (loss) to net revenue as a measure of financial performance, cash flows provided by operating activities as a measure of liquidity, or any other performance measure derived in accordance with GAAP. Additionally, these measures are not intended to be a measure of free cash flow available for management’s discretionary use as they do not consider certain cash requirements such as interest payments, tax payments and debt service requirements. The presentations of these measures have limitations as analytical tools and should not be considered in isolation, or as a substitute for analysis of our results as reported under GAAP. Because not all companies use identical calculations, the presentations of these measures may not be comparable to the same or other similarly titled measures of other companies and can differ significantly from company to company."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "TableElement",
+      "text": "INVESTOR RELATIONS CONTACT: MEDIA CONTACT: Chris Stoczko, VP Finance David Freireich, VP of Communications & Public Affairs 484.567.7289 484.567.7244 IR@BrightView.com David.Freireich@BrightView.com"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "BrightView Holdings, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "(in millions)* June 30, 2024 September 30, 2023 Assets Current assets: Cash and cash equivalents $ 115.9 $ 67.0 Accounts receivable, net 446.4 442.3 Unbilled revenue 123.5 143.5 Other current assets 74.3 89.3 Total current assets 760.1 742.1 Property and equipment, net 355.6 315.2 Intangible assets, net 104.1 132.3 Goodwill 2,015.7 2,021.4 Operating lease assets 83.0 86.1 Other assets 44.7 55.1 Total assets $ 3,363.2 $ 3,352.2 Liabilities and stockholders’ equity Current liabilities: Accounts payable $ 140.5 $ 136.2 Deferred revenue 94.6 68.2 Current portion of self-insurance reserves 54.2 54.8 Accrued expenses and other current liabilities 210.0 180.2 Current portion of operating lease liabilities 25.3 27.3 Total current liabilities 524.6 466.7 Long-term debt, net 807.0 888.1 Deferred tax liabilities 40.5 51.1 Self-insurance reserves 111.1 105.1 Long-term operating lease liabilities 64.0 65.1 Other liabilities 45.1 34.6 Total liabilities 1,592.3 1,610.7 Mezzanine equity: Series A convertible preferred shares, $0.01 par value, 7% cumulative dividends; 500,000 shares issued and outstanding as of June 30, 2024 and September 30, 2023, aggregate liquidation preference of $512.0 and $503.2 as of June 30, 2024 and September 30, 2023, respectively 507.1 498.2 Stockholders’ equity: Preferred stock, $0.01 par value; 50,000,000 shares authorized; no shares issued or outstanding as of June 30, 2024 and September 30, 2023 — — Common stock, $0.01 par value; 500,000,000 shares authorized; 108,000,000 and 106,600,000 shares issued and 94,600,000 and 93,600,000 shares outstanding as of June 30, 2024 and September 30, 2023, respectively 1.1 1.1 Treasury stock, at cost; 13,400,000 and 13,000,000 shares as of June 30, 2024 and September 30, 2023, respectively (173.5 ) (170.4 ) Additional paid-in capital 1,520.0 1,530.8 Accumulated deficit (94.5 ) (135.3 ) Accumulated other comprehensive income 10.7 17.1 Total stockholders’ equity 1,263.8 1,243.3 Total liabilities, mezzanine equity and stockholders’ equity $ 3,363.2 $ 3,352.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "(*) Amounts may not total due to rounding."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "BrightView Holdings, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statements of Operations"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Nine Months Ended June 30, 2024 2023 2024 2023 (in millions)* Net service revenues $ 738.8 $ 766.0 $ 2,038.4 $ 2,072.3 Cost of services provided 561.2 567.4 1,575.0 1,579.0 Gross profit 177.6 198.6 463.4 493.3 Selling, general and administrative expense 120.1 136.6 375.0 413.0 Gain on divestiture (0.1 ) — (44.0 ) — Amortization expense 8.6 10.8 27.4 33.7 Income from operations 49.0 51.2 105.0 46.6 Other expense (income) 0.5 (0.6 ) (1.5 ) (2.1 ) Interest expense, net 15.1 27.4 48.2 78.3 Income (loss) before income taxes 33.4 24.4 58.3 (29.6 ) Income tax expense (benefit) 9.9 7.6 17.5 (5.5 ) Net income (loss) $ 23.5 $ 16.8 $ 40.8 $ (24.1 ) Less: dividends on Series A convertible preferred shares 8.9 - 26.7 - Net income (loss) attributable to common stockholders $ 14.6 $ 16.8 $ 14.1 $ (24.1 ) Earnings (loss) per share: Basic and diluted earnings (loss) per share $ 0.10 $ 0.18 $ 0.09 $ (0.26 )"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Net Income (Loss) Available to Common Shareholders"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Nine Months Ended June 30, 2024 2023 2024 2023 (in millions)* Net income (loss) $ 23.5 $ 16.8 $ 40.8 $ (24.1 ) Less: dividends on Series A convertible preferred shares (8.9 ) — (26.7 ) — Less: Earnings allocated to Convertible Preferred Shares (5.3 ) — (5.1 ) — Net income (loss) available to common shareholders $ 9.3 $ 16.8 $ 9.0 $ (24.1 )"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Segment Reporting"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Nine Months Ended June 30, 2024 2023 2024 2023 (in millions)* Maintenance Services $ 524.7 $ 564.6 $ 1,477.5 $ 1,545.7 Development Services 215.0 203.4 564.8 533.3 Eliminations (0.9 ) (2.0 ) (3.9 ) (6.7 ) Net Service Revenues $ 738.8 $ 766.0 $ 2,038.4 $ 2,072.3 Maintenance Services $ 89.3 $ 94.0 $ 197.8 $ 196.2 Development Services 31.1 24.1 65.1 53.6 Corporate (12.5 ) (16.3 ) (43.4 ) (52.7 ) Adjusted EBITDA $ 107.9 $ 101.8 $ 219.5 $ 197.1 Maintenance Services $ 15.4 $ 9.3 $ 31.9 $ 46.0 Development Services 5.8 2.5 10.2 7.2 Corporate 2.0 3.4 3.9 4.7 Capital Expenditures $ 23.2 $ 15.2 $ 46.0 $ 57.9"
+    },
+    {
+      "type": "TextElement",
+      "text": "(*) Amounts may not total due to rounding."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "BrightView Holdings, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Nine Months Ended June 30, 2024 2023 (in millions)* Cash flows from operating activities: Net income (loss) $ 40.8 $ (24.1 ) Adjustments to reconcile net income (loss) to net cash provided by operating activities: Depreciation 79.8 80.9 Amortization of intangible assets 27.4 33.7 Amortization of financing costs and original issue discount 2.0 2.7 Loss on debt extinguishment 0.6 — Deferred taxes (10.1 ) (23.0 ) Equity-based compensation 15.1 15.7 Realized gain on hedges (8.5 ) (6.9 ) Gain on divestiture (44.0 ) — Other non-cash activities (6.0 ) 0.1 Change in operating assets and liabilities: Accounts receivable (9.9 ) (53.3 ) Unbilled and deferred revenue 47.1 11.0 Other operating assets 21.4 17.3 Accounts payable and other operating liabilities (3.6 ) 35.2 Net cash provided by operating activities 152.1 89.3 Cash flows from investing activities: Purchase of property and equipment (46.0 ) (57.9 ) Proceeds from sale of property and equipment 14.1 6.8 Business acquisitions, net of cash acquired — (13.8 ) Proceeds from divestiture 51.6 — Other investing activities 3.2 1.9 Net cash provided (used) by investing activities 22.9 (63.0 ) Cash flows from financing activities: Repayments of finance lease obligations (26.4 ) (20.9 ) Repayments of term loan — (9.0 ) Repayments of receivables financing agreement (82.2 ) (448.0 ) Repayments of revolving credit facility — (33.5 ) Proceeds from receivables financing agreement, net of issuance costs 0.5 460.0 Proceeds from revolving credit facility — 33.5 Debt issuance and prepayment costs (2.4 ) — Series A preferred stock dividend (8.9 ) — Proceeds from issuance of common stock, net of share issuance costs 1.3 1.0 Repurchase of common stock and distributions (3.1 ) (1.3 ) Contingent business acquisition payments (4.7 ) (18.5 ) Other financing activities (0.2 ) (0.1 ) Net cash (used) by financing activities (126.1 ) (36.8 ) Net change in cash and cash equivalents 48.9 (10.5 ) Cash and cash equivalents, beginning of period 67.0 20.1 Cash and cash equivalents, end of period $ 115.9 $ 9.6 Supplemental Cash Flow Information: Cash paid (received) for income taxes, net $ 14.8 $ (18.4 ) Cash paid for interest $ 61.9 $ 62.9 Non-cash Series A Preferred Stock dividends $ 8.9 $ - Accrual for property and equipment $ 21.3 $ —"
+    },
+    {
+      "type": "TextElement",
+      "text": "(*) Amounts may not total due to rounding."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "BrightView Holdings, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP to Non-GAAP Financial Measures"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Nine Months Ended June 30, (in millions)* 2024 2023 2024 2023 Adjusted EBITDA Net income (loss) $ 23.5 $ 16.8 $ 40.8 $ (24.1 ) Plus: Interest expense, net 15.1 27.4 48.2 78.3 Income tax expense (benefit) 9.9 7.6 17.5 (5.5 ) Depreciation expense 28.1 26.4 79.8 80.9 Amortization expense 8.6 10.8 27.4 33.7 Business transformation and integration costs (a) 17.1 8.9 33.9 17.5 Gain on divestiture (b) (0.1 ) — (44.0 ) — Equity-based compensation (c) 5.1 3.9 15.3 15.9 COVID-19 related expenses (d) — — — 0.4 Debt extinguishment (e) 0.6 — 0.6 — Adjusted EBITDA $ 107.9 $ 101.8 $ 219.5 $ 197.1 Adjusted Net Income Net income (loss) $ 23.5 $ 16.8 $ 40.8 $ (24.1 ) Plus: Amortization expense 8.6 10.8 27.4 33.7 Business transformation and integration costs (a) 17.1 8.9 33.9 17.5 Gain on divestiture (b) (0.1 ) — (44.0 ) — Equity-based compensation (c) 5.1 3.9 15.3 15.9 COVID-19 related expenses (d) — — — 0.4 Debt extinguishment (e) 0.6 — 0.6 — Income tax adjustment (f) (6.5 ) 1.0 (5.9 ) (9.9 ) Adjusted Net Income $ 48.3 $ 41.4 $ 68.1 $ 33.5 Free Cash Flow Cash flows provided by operating activities $ 42.7 $ 34.3 $ 152.1 $ 89.3 Minus: Capital expenditures 23.2 15.2 46.0 57.9 Plus: Proceeds from sale of property and equipment 11.5 3.2 14.1 6.8 Free Cash Flow $ 31.0 $ 22.3 $ 120.2 $ 38.2 Adjusted Earnings per Share Numerator: Adjusted Net Income (Loss) $ 48.3 $ 41.4 $ 68.1 $ 33.5 Denominator: — — — 0.0 Weighted average number of common shares outstanding – basic 94,549,000 93,504,000 94,668,000 93,409,000 Plus: Dilutive impact of Series A convertible preferred stock as-converted 54,242,000 — 54,127,000 — Adjusted weighted average number of common shares outstanding 148,791,000 93,504,000 148,795,000 93,409,000 Adjusted Earnings per Share $ 0.32 $ 0.44 $ 0.46 $ 0.36"
+    },
+    {
+      "type": "TextElement",
+      "text": "(*) Amounts may not total due to rounding."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "BrightView Holdings, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP to Non-GAAP Financial Measures"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a)Business transformation and integration costs consist of (i) severance and related costs; (ii) business integration costs and (iii) information technology infrastructure, transformation costs, and other."
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Nine Months Ended June 30, (in millions)* 2024 2023 2024 2023 Severance and related costs $ 4.3 $ 4.1 $ 10.5 $ 6.0 Business integration (g) 0.4 2.8 (0.5 ) 5.3 IT infrastructure, transformation, and other (h) 12.4 2.0 23.9 6.2 Business transformation and integration costs $ 17.1 $ 8.9 $ 33.9 $ 17.5"
+    },
+    {
+      "type": "TextElement",
+      "text": "(b)Represents the realized gain on sale and transaction related expenses related to the divestiture of U.S. Lawns on January 12, 2024.(c)Represents equity-based compensation expense and related taxes recognized for equity incentive plans outstanding. (d)Represents expenses related to the Company’s response to the COVID-19 pandemic, principally temporary and incremental salary and related expenses, personal protective equipment and cleaning and supply purchases, and other.(e)Represents losses on the extinguishment of debt related to Amendment No. 8 to the Credit Agreement and includes the write-off of deferred finance fees and original issue discount.(f)Represents the tax effect of pre-tax items excluded from Adjusted Net Income and the removal of the applicable discrete tax items, which collectively result in a reduction of income tax (benefit). The tax effect of pre-tax items excluded from Adjusted Net Income is computed using the statutory rate related to the jurisdiction that was impacted by the adjustment after taking into account the impact of permanent differences and valuation allowances. Discrete tax items include changes in laws or rates, changes in uncertain tax positions relating to prior years and changes in valuation allowances."
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Nine Months Ended June 30, (in millions)* 2024 2023 2024 2023 Tax impact of pre-tax income adjustments $ 6.9 $ (2.0 ) $ 19.3 $ 10.8 Discrete tax items (0.4 ) 1.0 (13.4 ) (0.9 ) Income tax adjustment $ 6.5 $ (1.0 ) $ 5.9 $ 9.9"
+    },
+    {
+      "type": "TextElement",
+      "text": "(g)Represents isolated expenses specifically related to the integration of acquired companies such as one-time employee retention costs, employee onboarding and training costs, fleet and uniform rebranding costs, and adjustments to performance based contingent consideration. The Company excludes Business integration costs from the measures disclosed above since such expenses vary in amount due to the number of acquisitions and size of acquired companies as well as factors specific to each acquisition, and as a result lack predictability as to occurrence and/or timing, and create a lack of comparability between periods.(h)Represents expenses related to distinct initiatives, typically significant enterprise-wide changes. Such expenses are excluded from the measures disclosed above since such expenses vary in amount based on occurrence as well as factors specific to each of the activities, are outside of the normal operations of the business, and create a lack of comparability between periods."
+    },
+    {
+      "type": "TableElement",
+      "text": "Total Financial Debt and Total Net Financial Debt (in millions)* June 30, 2024 September 30, 2023 June 30, 2023 Long-term debt, net $ 807.0 $ 888.1 $ 1,336.2 Plus: Current portion of long term debt — — 12.0 Financing costs, net 6.8 6.6 9.4 Present value of net minimum payment - finance lease obligations (i) 71.5 42.8 46.7 Total Financial Debt 885.3 937.5 1,404.3 Less: Cash and cash equivalents (115.9 ) (67.0 ) (9.6 ) Total Net Financial Debt $ 769.4 $ 870.5 $ 1,394.7 Total Net Financial Debt to Adjusted EBITDA ratio 2.4x 2.9x 4.8x"
+    },
+    {
+      "type": "TextElement",
+      "text": "(i)Balance is presented within Accrued expenses and other current liabilities and Other liabilities in the Consolidated Balance Sheet.(*) Amounts may not total due to rounding."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "13"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        6,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Prior Guidance",
+          "Updated Guidance"
+        ],
+        [
+          "Total Revenue",
+          "$2.740 - $2.800 billion",
+          "$2.750 - $2.790 billion"
+        ],
+        [
+          "Adjusted EBITDA2",
+          "$315 - $335 million",
+          "$320 - $330 million"
+        ],
+        [
+          "Adj. EBITDA Margin2",
+          "+90bps to +130bps",
+          "+100bps to +120bps"
+        ],
+        [
+          "Free Cash Flow2",
+          "$55 - $75 million",
+          "$65 - $80 million"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        15,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights",
+          "Total BrightView - Operating Highlights"
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,"
+        ],
+        [
+          "($ in millions, except per share figures)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Change",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Change"
+        ],
+        [
+          "Revenue",
+          "",
+          "$",
+          "738.8",
+          "",
+          "$",
+          "766.0",
+          "",
+          "(3.6%)",
+          "",
+          "$",
+          "2038.4",
+          "",
+          "$",
+          "2072.3",
+          "",
+          "(1.6%)"
+        ],
+        [
+          "Net Income (Loss)",
+          "",
+          "$",
+          "23.5",
+          "",
+          "$",
+          "16.8",
+          "",
+          "39.9%",
+          "",
+          "$",
+          "40.8",
+          "",
+          "$",
+          "(24.1",
+          ")",
+          "269.3%"
+        ],
+        [
+          "Net Income (Loss) Margin",
+          "",
+          "",
+          "3.2",
+          "%",
+          "",
+          "2.2",
+          "%",
+          "100 bps",
+          "",
+          "",
+          "2.0",
+          "%",
+          "",
+          "(1.2",
+          "%)",
+          "320 bps"
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "107.9",
+          "",
+          "$",
+          "101.8",
+          "",
+          "6.0%",
+          "",
+          "$",
+          "219.5",
+          "",
+          "$",
+          "197.1",
+          "",
+          "11.4%"
+        ],
+        [
+          "Adjusted EBITDA Margin",
+          "",
+          "",
+          "14.6",
+          "%",
+          "",
+          "13.3",
+          "%",
+          "130 bps",
+          "",
+          "",
+          "10.8",
+          "%",
+          "",
+          "9.5",
+          "%",
+          "130 bps"
+        ],
+        [
+          "Net income (loss) available to common shareholders",
+          "",
+          "$",
+          "9.3",
+          "",
+          "$",
+          "16.8",
+          "",
+          "(44.6%)",
+          "",
+          "$",
+          "9.0",
+          "",
+          "$",
+          "(24.1",
+          ")",
+          "137.3%"
+        ],
+        [
+          "Weighted average number of common shares outstanding",
+          "",
+          "",
+          "94.5",
+          "",
+          "",
+          "93.5",
+          "",
+          "1.1%",
+          "",
+          "",
+          "94.7",
+          "",
+          "",
+          "93.4",
+          "",
+          "1.4%"
+        ],
+        [
+          "Basic Earnings (Loss) per Share",
+          "",
+          "$",
+          "0.10",
+          "",
+          "$",
+          "0.18",
+          "",
+          "(44.4%)",
+          "",
+          "$",
+          "0.09",
+          "",
+          "$",
+          "(0.26",
+          ")",
+          "134.6%"
+        ],
+        [
+          "Adjusted Net Income",
+          "",
+          "$",
+          "48.3",
+          "",
+          "$",
+          "41.4",
+          "",
+          "16.7%",
+          "",
+          "$",
+          "68.1",
+          "",
+          "$",
+          "33.5",
+          "",
+          "103.3%"
+        ],
+        [
+          "Adjusted weighted average number of common shares outstanding",
+          "",
+          "",
+          "148.8",
+          "",
+          "",
+          "93.5",
+          "",
+          "59.1%",
+          "",
+          "",
+          "148.8",
+          "",
+          "",
+          "93.4",
+          "",
+          "59.3%"
+        ],
+        [
+          "Adjusted Earnings per Share",
+          "",
+          "$",
+          "0.32",
+          "",
+          "$",
+          "0.44",
+          "",
+          "(27.3%)",
+          "",
+          "$",
+          "0.46",
+          "",
+          "$",
+          "0.36",
+          "",
+          "27.8%"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        10,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights",
+          "Maintenance Services - Operating Highlights"
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,"
+        ],
+        [
+          "($ in millions)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Change",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Change"
+        ],
+        [
+          "Landscape Maintenance",
+          "",
+          "$",
+          "516.2",
+          "",
+          "$",
+          "555.3",
+          "",
+          "(7.0%)",
+          "",
+          "$",
+          "1256.3",
+          "",
+          "$",
+          "1335.8",
+          "",
+          "(6.0%)"
+        ],
+        [
+          "Snow Removal",
+          "",
+          "$",
+          "8.5",
+          "",
+          "$",
+          "9.3",
+          "",
+          "(8.6%)",
+          "",
+          "$",
+          "221.2",
+          "",
+          "$",
+          "209.9",
+          "",
+          "5.4%"
+        ],
+        [
+          "Total Revenue",
+          "",
+          "$",
+          "524.7",
+          "",
+          "$",
+          "564.6",
+          "",
+          "(7.1%)",
+          "",
+          "$",
+          "1477.5",
+          "",
+          "$",
+          "1545.7",
+          "",
+          "(4.4%)"
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "89.3",
+          "",
+          "$",
+          "94.0",
+          "",
+          "(5.0%)",
+          "",
+          "$",
+          "197.8",
+          "",
+          "$",
+          "196.2",
+          "",
+          "0.8%"
+        ],
+        [
+          "Adjusted EBITDA Margin",
+          "",
+          "",
+          "17.0",
+          "%",
+          "",
+          "16.6",
+          "%",
+          "40 bps",
+          "",
+          "",
+          "13.4",
+          "%",
+          "",
+          "12.7",
+          "%",
+          "70 bps"
+        ],
+        [
+          "Capital Expenditures",
+          "",
+          "$",
+          "15.4",
+          "",
+          "$",
+          "9.3",
+          "",
+          "65.6%",
+          "",
+          "$",
+          "31.9",
+          "",
+          "$",
+          "46.0",
+          "",
+          "(30.7%)"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        8,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights",
+          "Development Services - Operating Highlights"
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,"
+        ],
+        [
+          "($ in millions)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Change",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Change"
+        ],
+        [
+          "Revenue",
+          "",
+          "$",
+          "215.0",
+          "",
+          "$",
+          "203.4",
+          "",
+          "5.7%",
+          "",
+          "$",
+          "564.8",
+          "",
+          "$",
+          "533.3",
+          "",
+          "5.9%"
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "31.1",
+          "",
+          "$",
+          "24.1",
+          "",
+          "29.0%",
+          "",
+          "$",
+          "65.1",
+          "",
+          "$",
+          "53.6",
+          "",
+          "21.5%"
+        ],
+        [
+          "Adjusted EBITDA Margin",
+          "",
+          "",
+          "14.5",
+          "%",
+          "",
+          "11.8",
+          "%",
+          "270 bps",
+          "",
+          "",
+          "11.5",
+          "%",
+          "",
+          "10.1",
+          "%",
+          "140 bps"
+        ],
+        [
+          "Capital Expenditures",
+          "",
+          "$",
+          "5.8",
+          "",
+          "$",
+          "2.5",
+          "",
+          "132.0%",
+          "",
+          "$",
+          "10.2",
+          "",
+          "$",
+          "7.2",
+          "",
+          "41.7%"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        7,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics",
+          "Total BrightView Cash Flow Metrics"
+        ],
+        [
+          "",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,"
+        ],
+        [
+          "($ in millions)",
+          "",
+          "2024",
+          "2024",
+          "",
+          "2023",
+          "2023",
+          "",
+          "Change"
+        ],
+        [
+          "Net Cash Provided by Operating Activities",
+          "",
+          "$",
+          "152.1",
+          "",
+          "$",
+          "89.3",
+          "",
+          "70.3%"
+        ],
+        [
+          "Free Cash Flow",
+          "",
+          "$",
+          "120.2",
+          "",
+          "$",
+          "38.2",
+          "",
+          "214.7%"
+        ],
+        [
+          "Capital Expenditures",
+          "",
+          "$",
+          "46.0",
+          "",
+          "$",
+          "57.9",
+          "",
+          "(20.6%)"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        11,
+        11
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          "Total BrightView Balance Sheet Metrics",
+          ""
+        ],
+        [
+          "($ in millions)",
+          "",
+          "June 30, 2024",
+          "June 30, 2024",
+          "",
+          "September 30, 2023",
+          "September 30, 2023",
+          "",
+          "June 30, 2023",
+          "June 30, 2023",
+          ""
+        ],
+        [
+          "Total Financial Debt1",
+          "",
+          "$",
+          "885.3",
+          "",
+          "$",
+          "937.5",
+          "",
+          "$",
+          "1404.3",
+          ""
+        ],
+        [
+          "Minus:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total Cash & Equivalents",
+          "",
+          "",
+          "115.9",
+          "",
+          "",
+          "67.0",
+          "",
+          "",
+          "9.6",
+          ""
+        ],
+        [
+          "Total Net Financial Debt2",
+          "",
+          "$",
+          "769.4",
+          "",
+          "$",
+          "870.5",
+          "",
+          "$",
+          "1394.7",
+          ""
+        ],
+        [
+          "Total Net Financial Debt to Adjusted EBITDA ratio3",
+          "",
+          "2.4x",
+          "2.4x",
+          "",
+          "2.9x",
+          "2.9x",
+          "",
+          "4.8x",
+          "4.8x",
+          ""
+        ],
+        [
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          "1Total Financial Debt includes total long-term debt, net of original issue discount, and finance lease obligations",
+          ""
+        ],
+        [
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          "2Total Net Financial Debt equals Total Financial Debt minus Total Cash & Equivalents",
+          ""
+        ],
+        [
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          "3Total Net Financial Debt to Adjusted EBITDA ratio equals Total Net Financial Debt divided by the trailing twelve month Adjusted EBITDA.",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        5,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "INVESTOR RELATIONS CONTACT:",
+          "",
+          "MEDIA CONTACT:"
+        ],
+        [
+          "Chris Stoczko, VP Finance",
+          "",
+          "David Freireich, VP of Communications & Public Affairs"
+        ],
+        [
+          "484.567.7289",
+          "",
+          "484.567.7244"
+        ],
+        [
+          "IR@BrightView.com",
+          "",
+          "David.Freireich@BrightView.com"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        40,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(in millions)*",
+          "",
+          "June 30, 2024",
+          "June 30, 2024",
+          "",
+          "",
+          "September 30, 2023",
+          "September 30, 2023",
+          ""
+        ],
+        [
+          "Assets",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current assets:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash and cash equivalents",
+          "",
+          "$",
+          "115.9",
+          "",
+          "",
+          "$",
+          "67.0",
+          ""
+        ],
+        [
+          "Accounts receivable, net",
+          "",
+          "",
+          "446.4",
+          "",
+          "",
+          "",
+          "442.3",
+          ""
+        ],
+        [
+          "Unbilled revenue",
+          "",
+          "",
+          "123.5",
+          "",
+          "",
+          "",
+          "143.5",
+          ""
+        ],
+        [
+          "Other current assets",
+          "",
+          "",
+          "74.3",
+          "",
+          "",
+          "",
+          "89.3",
+          ""
+        ],
+        [
+          "Total current assets",
+          "",
+          "",
+          "760.1",
+          "",
+          "",
+          "",
+          "742.1",
+          ""
+        ],
+        [
+          "Property and equipment, net",
+          "",
+          "",
+          "355.6",
+          "",
+          "",
+          "",
+          "315.2",
+          ""
+        ],
+        [
+          "Intangible assets, net",
+          "",
+          "",
+          "104.1",
+          "",
+          "",
+          "",
+          "132.3",
+          ""
+        ],
+        [
+          "Goodwill",
+          "",
+          "",
+          "2015.7",
+          "",
+          "",
+          "",
+          "2021.4",
+          ""
+        ],
+        [
+          "Operating lease assets",
+          "",
+          "",
+          "83.0",
+          "",
+          "",
+          "",
+          "86.1",
+          ""
+        ],
+        [
+          "Other assets",
+          "",
+          "",
+          "44.7",
+          "",
+          "",
+          "",
+          "55.1",
+          ""
+        ],
+        [
+          "Total assets",
+          "",
+          "$",
+          "3363.2",
+          "",
+          "",
+          "$",
+          "3352.2",
+          ""
+        ],
+        [
+          "Liabilities and stockholders’ equity",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current liabilities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Accounts payable",
+          "",
+          "$",
+          "140.5",
+          "",
+          "",
+          "$",
+          "136.2",
+          ""
+        ],
+        [
+          "Deferred revenue",
+          "",
+          "",
+          "94.6",
+          "",
+          "",
+          "",
+          "68.2",
+          ""
+        ],
+        [
+          "Current portion of self-insurance reserves",
+          "",
+          "",
+          "54.2",
+          "",
+          "",
+          "",
+          "54.8",
+          ""
+        ],
+        [
+          "Accrued expenses and other current liabilities",
+          "",
+          "",
+          "210.0",
+          "",
+          "",
+          "",
+          "180.2",
+          ""
+        ],
+        [
+          "Current portion of operating lease liabilities",
+          "",
+          "",
+          "25.3",
+          "",
+          "",
+          "",
+          "27.3",
+          ""
+        ],
+        [
+          "Total current liabilities",
+          "",
+          "",
+          "524.6",
+          "",
+          "",
+          "",
+          "466.7",
+          ""
+        ],
+        [
+          "Long-term debt, net",
+          "",
+          "",
+          "807.0",
+          "",
+          "",
+          "",
+          "888.1",
+          ""
+        ],
+        [
+          "Deferred tax liabilities",
+          "",
+          "",
+          "40.5",
+          "",
+          "",
+          "",
+          "51.1",
+          ""
+        ],
+        [
+          "Self-insurance reserves",
+          "",
+          "",
+          "111.1",
+          "",
+          "",
+          "",
+          "105.1",
+          ""
+        ],
+        [
+          "Long-term operating lease liabilities",
+          "",
+          "",
+          "64.0",
+          "",
+          "",
+          "",
+          "65.1",
+          ""
+        ],
+        [
+          "Other liabilities",
+          "",
+          "",
+          "45.1",
+          "",
+          "",
+          "",
+          "34.6",
+          ""
+        ],
+        [
+          "Total liabilities",
+          "",
+          "",
+          "1592.3",
+          "",
+          "",
+          "",
+          "1610.7",
+          ""
+        ],
+        [
+          "Mezzanine equity:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Series A convertible preferred shares, $0.01 par value, 7% cumulative dividends; 500,000 shares issued and outstanding as of June 30, 2024 and September 30, 2023, aggregate liquidation preference of $512.0 and $503.2 as of June 30, 2024 and September 30, 2023, respectively",
+          "",
+          "",
+          "507.1",
+          "",
+          "",
+          "",
+          "498.2",
+          ""
+        ],
+        [
+          "Stockholders’ equity:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Preferred stock, $0.01 par value; 50,000,000 shares authorized; no shares issued or outstanding as of June 30, 2024 and September 30, 2023",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Common stock, $0.01 par value; 500,000,000 shares authorized; 108,000,000 and 106,600,000 shares issued and 94,600,000 and 93,600,000 shares outstanding as of June 30, 2024 and September 30, 2023, respectively",
+          "",
+          "",
+          "1.1",
+          "",
+          "",
+          "",
+          "1.1",
+          ""
+        ],
+        [
+          "Treasury stock, at cost; 13,400,000 and 13,000,000 shares as of June 30, 2024 and September 30, 2023, respectively",
+          "",
+          "",
+          "(173.5",
+          ")",
+          "",
+          "",
+          "(170.4",
+          ")"
+        ],
+        [
+          "Additional paid-in capital",
+          "",
+          "",
+          "1520.0",
+          "",
+          "",
+          "",
+          "1530.8",
+          ""
+        ],
+        [
+          "Accumulated deficit",
+          "",
+          "",
+          "(94.5",
+          ")",
+          "",
+          "",
+          "(135.3",
+          ")"
+        ],
+        [
+          "Accumulated other comprehensive income",
+          "",
+          "",
+          "10.7",
+          "",
+          "",
+          "",
+          "17.1",
+          ""
+        ],
+        [
+          "Total stockholders’ equity",
+          "",
+          "",
+          "1263.8",
+          "",
+          "",
+          "",
+          "1243.3",
+          ""
+        ],
+        [
+          "Total liabilities, mezzanine equity and stockholders’ equity",
+          "",
+          "$",
+          "3363.2",
+          "",
+          "",
+          "$",
+          "3352.2",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        20,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "(in millions)*",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net service revenues",
+          "",
+          "$",
+          "738.8",
+          "",
+          "",
+          "$",
+          "766.0",
+          "",
+          "",
+          "$",
+          "2038.4",
+          "",
+          "",
+          "$",
+          "2072.3",
+          ""
+        ],
+        [
+          "Cost of services provided",
+          "",
+          "",
+          "561.2",
+          "",
+          "",
+          "",
+          "567.4",
+          "",
+          "",
+          "",
+          "1575.0",
+          "",
+          "",
+          "",
+          "1579.0",
+          ""
+        ],
+        [
+          "Gross profit",
+          "",
+          "",
+          "177.6",
+          "",
+          "",
+          "",
+          "198.6",
+          "",
+          "",
+          "",
+          "463.4",
+          "",
+          "",
+          "",
+          "493.3",
+          ""
+        ],
+        [
+          "Selling, general and administrative expense",
+          "",
+          "",
+          "120.1",
+          "",
+          "",
+          "",
+          "136.6",
+          "",
+          "",
+          "",
+          "375.0",
+          "",
+          "",
+          "",
+          "413.0",
+          ""
+        ],
+        [
+          "Gain on divestiture",
+          "",
+          "",
+          "(0.1",
+          ")",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(44.0",
+          ")",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Amortization expense",
+          "",
+          "",
+          "8.6",
+          "",
+          "",
+          "",
+          "10.8",
+          "",
+          "",
+          "",
+          "27.4",
+          "",
+          "",
+          "",
+          "33.7",
+          ""
+        ],
+        [
+          "Income from operations",
+          "",
+          "",
+          "49.0",
+          "",
+          "",
+          "",
+          "51.2",
+          "",
+          "",
+          "",
+          "105.0",
+          "",
+          "",
+          "",
+          "46.6",
+          ""
+        ],
+        [
+          "Other expense (income)",
+          "",
+          "",
+          "0.5",
+          "",
+          "",
+          "",
+          "(0.6",
+          ")",
+          "",
+          "",
+          "(1.5",
+          ")",
+          "",
+          "",
+          "(2.1",
+          ")"
+        ],
+        [
+          "Interest expense, net",
+          "",
+          "",
+          "15.1",
+          "",
+          "",
+          "",
+          "27.4",
+          "",
+          "",
+          "",
+          "48.2",
+          "",
+          "",
+          "",
+          "78.3",
+          ""
+        ],
+        [
+          "Income (loss) before income taxes",
+          "",
+          "",
+          "33.4",
+          "",
+          "",
+          "",
+          "24.4",
+          "",
+          "",
+          "",
+          "58.3",
+          "",
+          "",
+          "",
+          "(29.6",
+          ")"
+        ],
+        [
+          "Income tax expense (benefit)",
+          "",
+          "",
+          "9.9",
+          "",
+          "",
+          "",
+          "7.6",
+          "",
+          "",
+          "",
+          "17.5",
+          "",
+          "",
+          "",
+          "(5.5",
+          ")"
+        ],
+        [
+          "Net income (loss)",
+          "",
+          "$",
+          "23.5",
+          "",
+          "",
+          "$",
+          "16.8",
+          "",
+          "",
+          "$",
+          "40.8",
+          "",
+          "",
+          "$",
+          "(24.1",
+          ")"
+        ],
+        [
+          "Less: dividends on Series A convertible preferred shares",
+          "",
+          "",
+          "8.9",
+          "",
+          "",
+          "",
+          "-",
+          "",
+          "",
+          "",
+          "26.7",
+          "",
+          "",
+          "",
+          "-",
+          ""
+        ],
+        [
+          "Net income (loss) attributable to common stockholders",
+          "",
+          "$",
+          "14.6",
+          "",
+          "",
+          "$",
+          "16.8",
+          "",
+          "",
+          "$",
+          "14.1",
+          "",
+          "",
+          "$",
+          "(24.1",
+          ")"
+        ],
+        [
+          "Earnings (loss) per share:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic and diluted earnings (loss) per share",
+          "",
+          "$",
+          "0.10",
+          "",
+          "",
+          "$",
+          "0.18",
+          "",
+          "",
+          "$",
+          "0.09",
+          "",
+          "",
+          "$",
+          "(0.26",
+          ")"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        8,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "(in millions)*",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net income (loss)",
+          "",
+          "$",
+          "23.5",
+          "",
+          "",
+          "$",
+          "16.8",
+          "",
+          "",
+          "$",
+          "40.8",
+          "",
+          "",
+          "$",
+          "(24.1",
+          ")"
+        ],
+        [
+          "Less: dividends on Series A convertible preferred shares",
+          "",
+          "",
+          "(8.9",
+          ")",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(26.7",
+          ")",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Less: Earnings allocated to Convertible Preferred Shares",
+          "",
+          "",
+          "(5.3",
+          ")",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(5.1",
+          ")",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Net income (loss) available to common shareholders",
+          "",
+          "$",
+          "9.3",
+          "",
+          "",
+          "$",
+          "16.8",
+          "",
+          "",
+          "$",
+          "9.0",
+          "",
+          "",
+          "$",
+          "(24.1",
+          ")"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        16,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "(in millions)*",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Maintenance Services",
+          "",
+          "$",
+          "524.7",
+          "",
+          "",
+          "$",
+          "564.6",
+          "",
+          "",
+          "$",
+          "1477.5",
+          "",
+          "",
+          "$",
+          "1545.7",
+          ""
+        ],
+        [
+          "Development Services",
+          "",
+          "",
+          "215.0",
+          "",
+          "",
+          "",
+          "203.4",
+          "",
+          "",
+          "",
+          "564.8",
+          "",
+          "",
+          "",
+          "533.3",
+          ""
+        ],
+        [
+          "Eliminations",
+          "",
+          "",
+          "(0.9",
+          ")",
+          "",
+          "",
+          "(2.0",
+          ")",
+          "",
+          "",
+          "(3.9",
+          ")",
+          "",
+          "",
+          "(6.7",
+          ")"
+        ],
+        [
+          "Net Service Revenues",
+          "",
+          "$",
+          "738.8",
+          "",
+          "",
+          "$",
+          "766.0",
+          "",
+          "",
+          "$",
+          "2038.4",
+          "",
+          "",
+          "$",
+          "2072.3",
+          ""
+        ],
+        [
+          "Maintenance Services",
+          "",
+          "$",
+          "89.3",
+          "",
+          "",
+          "$",
+          "94.0",
+          "",
+          "",
+          "$",
+          "197.8",
+          "",
+          "",
+          "$",
+          "196.2",
+          ""
+        ],
+        [
+          "Development Services",
+          "",
+          "",
+          "31.1",
+          "",
+          "",
+          "",
+          "24.1",
+          "",
+          "",
+          "",
+          "65.1",
+          "",
+          "",
+          "",
+          "53.6",
+          ""
+        ],
+        [
+          "Corporate",
+          "",
+          "",
+          "(12.5",
+          ")",
+          "",
+          "",
+          "(16.3",
+          ")",
+          "",
+          "",
+          "(43.4",
+          ")",
+          "",
+          "",
+          "(52.7",
+          ")"
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "107.9",
+          "",
+          "",
+          "$",
+          "101.8",
+          "",
+          "",
+          "$",
+          "219.5",
+          "",
+          "",
+          "$",
+          "197.1",
+          ""
+        ],
+        [
+          "Maintenance Services",
+          "",
+          "$",
+          "15.4",
+          "",
+          "",
+          "$",
+          "9.3",
+          "",
+          "",
+          "$",
+          "31.9",
+          "",
+          "",
+          "$",
+          "46.0",
+          ""
+        ],
+        [
+          "Development Services",
+          "",
+          "",
+          "5.8",
+          "",
+          "",
+          "",
+          "2.5",
+          "",
+          "",
+          "",
+          "10.2",
+          "",
+          "",
+          "",
+          "7.2",
+          ""
+        ],
+        [
+          "Corporate",
+          "",
+          "",
+          "2.0",
+          "",
+          "",
+          "",
+          "3.4",
+          "",
+          "",
+          "",
+          "3.9",
+          "",
+          "",
+          "",
+          "4.7",
+          ""
+        ],
+        [
+          "Capital Expenditures",
+          "",
+          "$",
+          "23.2",
+          "",
+          "",
+          "$",
+          "15.2",
+          "",
+          "",
+          "$",
+          "46.0",
+          "",
+          "",
+          "$",
+          "57.9",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        51,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          "Nine Months Ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "(in millions)*",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash flows from operating activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net income (loss)",
+          "",
+          "$",
+          "40.8",
+          "",
+          "",
+          "$",
+          "(24.1",
+          ")"
+        ],
+        [
+          "Adjustments to reconcile net income (loss) to net cash provided by operating activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Depreciation",
+          "",
+          "",
+          "79.8",
+          "",
+          "",
+          "",
+          "80.9",
+          ""
+        ],
+        [
+          "Amortization of intangible assets",
+          "",
+          "",
+          "27.4",
+          "",
+          "",
+          "",
+          "33.7",
+          ""
+        ],
+        [
+          "Amortization of financing costs and original issue discount",
+          "",
+          "",
+          "2.0",
+          "",
+          "",
+          "",
+          "2.7",
+          ""
+        ],
+        [
+          "Loss on debt extinguishment",
+          "",
+          "",
+          "0.6",
+          "",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Deferred taxes",
+          "",
+          "",
+          "(10.1",
+          ")",
+          "",
+          "",
+          "(23.0",
+          ")"
+        ],
+        [
+          "Equity-based compensation",
+          "",
+          "",
+          "15.1",
+          "",
+          "",
+          "",
+          "15.7",
+          ""
+        ],
+        [
+          "Realized gain on hedges",
+          "",
+          "",
+          "(8.5",
+          ")",
+          "",
+          "",
+          "(6.9",
+          ")"
+        ],
+        [
+          "Gain on divestiture",
+          "",
+          "",
+          "(44.0",
+          ")",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Other non-cash activities",
+          "",
+          "",
+          "(6.0",
+          ")",
+          "",
+          "",
+          "0.1",
+          ""
+        ],
+        [
+          "Change in operating assets and liabilities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Accounts receivable",
+          "",
+          "",
+          "(9.9",
+          ")",
+          "",
+          "",
+          "(53.3",
+          ")"
+        ],
+        [
+          "Unbilled and deferred revenue",
+          "",
+          "",
+          "47.1",
+          "",
+          "",
+          "",
+          "11.0",
+          ""
+        ],
+        [
+          "Other operating assets",
+          "",
+          "",
+          "21.4",
+          "",
+          "",
+          "",
+          "17.3",
+          ""
+        ],
+        [
+          "Accounts payable and other operating liabilities",
+          "",
+          "",
+          "(3.6",
+          ")",
+          "",
+          "",
+          "35.2",
+          ""
+        ],
+        [
+          "Net cash provided by operating activities",
+          "",
+          "",
+          "152.1",
+          "",
+          "",
+          "",
+          "89.3",
+          ""
+        ],
+        [
+          "Cash flows from investing activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Purchase of property and equipment",
+          "",
+          "",
+          "(46.0",
+          ")",
+          "",
+          "",
+          "(57.9",
+          ")"
+        ],
+        [
+          "Proceeds from sale of property and equipment",
+          "",
+          "",
+          "14.1",
+          "",
+          "",
+          "",
+          "6.8",
+          ""
+        ],
+        [
+          "Business acquisitions, net of cash acquired",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(13.8",
+          ")"
+        ],
+        [
+          "Proceeds from divestiture",
+          "",
+          "",
+          "51.6",
+          "",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Other investing activities",
+          "",
+          "",
+          "3.2",
+          "",
+          "",
+          "",
+          "1.9",
+          ""
+        ],
+        [
+          "Net cash provided (used) by investing activities",
+          "",
+          "",
+          "22.9",
+          "",
+          "",
+          "",
+          "(63.0",
+          ")"
+        ],
+        [
+          "Cash flows from financing activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Repayments of finance lease obligations",
+          "",
+          "",
+          "(26.4",
+          ")",
+          "",
+          "",
+          "(20.9",
+          ")"
+        ],
+        [
+          "Repayments of term loan",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(9.0",
+          ")"
+        ],
+        [
+          "Repayments of receivables financing agreement",
+          "",
+          "",
+          "(82.2",
+          ")",
+          "",
+          "",
+          "(448.0",
+          ")"
+        ],
+        [
+          "Repayments of revolving credit facility",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "(33.5",
+          ")"
+        ],
+        [
+          "Proceeds from receivables financing agreement, net of issuance costs",
+          "",
+          "",
+          "0.5",
+          "",
+          "",
+          "",
+          "460.0",
+          ""
+        ],
+        [
+          "Proceeds from revolving credit facility",
+          "",
+          "",
+          "—",
+          "",
+          "",
+          "",
+          "33.5",
+          ""
+        ],
+        [
+          "Debt issuance and prepayment costs",
+          "",
+          "",
+          "(2.4",
+          ")",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Series A preferred stock dividend",
+          "",
+          "",
+          "(8.9",
+          ")",
+          "",
+          "",
+          "—",
+          ""
+        ],
+        [
+          "Proceeds from issuance of common stock, net of share issuance costs",
+          "",
+          "",
+          "1.3",
+          "",
+          "",
+          "",
+          "1.0",
+          ""
+        ],
+        [
+          "Repurchase of common stock and distributions",
+          "",
+          "",
+          "(3.1",
+          ")",
+          "",
+          "",
+          "(1.3",
+          ")"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 11.3,
+    "quarter_revenue_yoy_pct": -0.3636,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue from our development services revenue and an $11.3 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Total Revenue | $2.740 - $2.800 billion | $2.750 - $2.790 billion"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -1,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "14.650000",
+    "return_10d_pct": "-1.6382",
+    "return_20d_pct": "7.3038",
+    "return_30d_pct": "5.8703",
+    "return_60d_pct": "7.4403",
+    "return_90d_pct": "13.8567"
+  },
+  "text_stats": {
+    "primary_text_len": 3487,
+    "exhibit_text_len": 43253,
+    "combined_text_len": 46742,
+    "semantic_text_len": 43192,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ROL",
+    "cik": "84839",
+    "event_date": "2024-07-24",
+    "event_accession": "0000084839-24-000090",
+    "primary_8k_doc": "rol-20240724.htm",
+    "exhibit_docs": [
+      "rol-20240724xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ROL_000008483924000090_rol-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ROL_000008483924000090_rol-20240724xex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ROL",
+    "cik": "84839",
+    "entity_name": "ROLLINS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "658015000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "88234000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2595460000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-71082000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13590000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "100773000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.134091",
+    "operating_cash_flow_to_revenue": "0.153147",
+    "assets_to_revenue": "3.944378",
+    "financing_cash_flow_to_revenue": "-0.108025",
+    "investing_cash_flow_to_revenue": "-0.020653"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $892 million, an increase of 8.",
+      "revenue of our acquired entities.",
+      "Revenues of divestitures — (5,924) 5,924 (0.",
+      "revenues of divestitures — (3,373) 3,373 (0.",
+      "revenues of divestitures — (2,551) 2,551 (1.",
+      "operating income was $182 million, an increase of 17."
+    ],
+    "guidance_evidence": [
+      "forecasts, and assumptions, and involve a number of judgments, risks and uncertainties."
+    ],
+    "wave_or_demand_evidence": [
+      "Demand for our services remains strong and our pipeline for acquisitions is robust.",
+      "customers,” Mr.",
+      "customers in North America, South America, Europe, Asia, Africa, and Australia, with more than 20,000 employees from more than 800 locations.",
+      "demand for our services; our pipeline of acquisitions; continuous improvement initiatives enhancing profitability; and a balanced capital allocation program.",
+      "aid dividends totaling $73 million.",
+      "aid Jerry Gahlhoff, Jr."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties.",
+      "losses on the sale of non-operational assets and by further subtracting the tax impact of those expenses, gains, or losses.",
+      "losses on the sale of non-operational assets.",
+      "loss on the sale of non-operational assets.",
+      "losses related to non-operational asset sales.",
+      "losses on non-operational assets allows us to better compare our operating performance consistently over various periods."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 892,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "49.389999",
+    "return_10d_pct": "-3.5635",
+    "return_20d_pct": "-1.8020",
+    "return_30d_pct": "0.6277",
+    "return_60d_pct": "2.2474",
+    "return_90d_pct": "0.7289"
+  },
+  "text_stats": {
+    "primary_text_len": 3415,
+    "exhibit_text_len": 25740,
+    "combined_text_len": 29157
+  }
+}

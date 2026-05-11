@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CRH",
+    "cik": "849395",
+    "event_date": "2024-08-08",
+    "event_accession": "0001628280-24-035820",
+    "primary_8k_doc": "crh-20240808.htm",
+    "exhibit_docs": [
+      "q2resultsannouncement2024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRH_000162828024035820_crh-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRH_000162828024035820_q2resultsannouncement2024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CRH",
+    "cik": "849395",
+    "entity_name": "CRH public limited company",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "6427000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-28000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "45107000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-191000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-492000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-671000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.004357",
+    "operating_cash_flow_to_revenue": "-0.104403",
+    "assets_to_revenue": "7.01836",
+    "financing_cash_flow_to_revenue": "-0.029718",
+    "investing_cash_flow_to_revenue": "-0.076552"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $9.",
+      "revenues were 6% ahead of Q2 2023, as pricing progress across all lines of business and contributions from recent acquisitions offset the impact of lower activity in certain markets due to unfavorable weather.",
+      "revenues were 1% behind Q2 2023 as challenging weather and subdued new-build residential demand were partially offset by contributions from acquisitions.",
+      "revenues were 8% behind Q2 2023 as activity levels were impacted by the divestiture of the European Lime operations, poor weather and subdued demand in certain markets.",
+      "revenues were 7% behind Q2 2023, impacted by subdued demand in new-build residential markets.",
+      "revenues increased by 5% supported by pricing growth in both aggregates and cement, ahead by 12% and 8% respectively."
+    ],
+    "guidance_evidence": [
+      "Outlook positive with favorable underlying demand across key markets • Raising FY24 guidance; Net Income $3.",
+      "guidance and remain well positioned to deliver another record year in 2024.",
+      "Guidance Updated Guidance (i) Previous Guidance (ii) (in $ billions, except per share data) Low High Low High Net income 3.",
+      "Guidance are based on approximately $0.",
+      "Guidance were based on approximately $0.",
+      "outlook."
+    ],
+    "wave_or_demand_evidence": [
+      "demand across key markets • Raising FY24 guidance; Net Income $3.",
+      "demand were partially offset by contributions from acquisitions.",
+      "demand in certain markets.",
+      "demand in new-build residential markets.",
+      "demand in infrastructure and key non-residential markets, further supported by disciplined cost control.",
+      "demand."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in the telecommunications sector.",
+      "charges of $0.",
+      "impairments, gain/loss on divestitures and unrealized gain/loss on investments, income/loss from equity method investments, substantial acquisition-related costs and pension expense/income excluding current service cost component.",
+      "impairment 1.",
+      "challenging weather and subdued new-build residential demand were partially offset by contributions from acquisitions.",
+      "declined by 3% and 2%, respectively, impacted by adverse weather conditions and subdued new-build residential demand."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 9700,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "82.120003",
+    "return_10d_pct": "3.4827",
+    "return_20d_pct": "7.5377",
+    "return_30d_pct": "2.6547",
+    "return_60d_pct": "8.6581",
+    "return_90d_pct": "22.5767"
+  },
+  "text_stats": {
+    "primary_text_len": 4290,
+    "exhibit_text_len": 39781,
+    "combined_text_len": 44073
+  }
+}

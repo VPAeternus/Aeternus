@@ -70,7 +70,7 @@ That is exactly the layer Aeternus does not yet have.
 - ambient data collection through scouts and collectors
 - market-specific source coverage
 - durable AKG memory
-- portfolio, shortlist, and execution context
+- portfolio, candidate_list, and execution context
 - diagnostics like `why_missed`
 - learning loops, hindsight, source attribution, and signal-family IC
 

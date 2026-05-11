@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EG",
+    "cik": "1095073",
+    "event_date": "2024-07-31",
+    "event_accession": "0001095073-24-000032",
+    "primary_8k_doc": "everestre-20240731.htm",
+    "exhibit_docs": [
+      "earningsrelease-exx991q220.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EG_000109507324000032_everestre-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EG_000109507324000032_earningsrelease-exx991q220.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EG",
+    "cik": "1095073",
+    "entity_name": "Everest Group, Ltd.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3286000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "365000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "49399000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-103000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-752000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1064000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.111077",
+    "operating_cash_flow_to_revenue": "0.323798",
+    "assets_to_revenue": "15.033171",
+    "financing_cash_flow_to_revenue": "-0.031345",
+    "investing_cash_flow_to_revenue": "-0.22885"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Income of $724 million and Operating Income of $730 million Operating Income ROE of 19.",
+      "Net Income ROE and 19.",
+      "Operating Income ROE • Net Income of $724 million; Operating Income of $730 million driven by attritional underwriting margin improvement and strong net investment income generation • $4.",
+      "Net Income and Other Items • Net income of $724 million, equal to $16.",
+      "net income of $670 million, equal to $16.",
+      "operating income of $730 million, equal to $16."
+    ],
+    "guidance_evidence": [
+      "expected margins."
+    ],
+    "wave_or_demand_evidence": [
+      "customers’ most pressing challenges.",
+      "customers, shareholders, and communities worldwide.",
+      "aid Juan C.",
+      "aining focused on disciplined underwriting and risk selection.",
+      "ain evidenced by our success through the most recent renewals.",
+      "ains (losses) - Fixed inc."
+    ],
+    "warning_or_risk_evidence": [
+      "losses, versus the second quarter 2023 figure of 87.",
+      "losses The following table summarizes the Company’s Net Income and related financial metrics.",
+      "loss) 724 1,457 670 1,035 Net operating income (loss) (1) 730 1,439 627 1,070 Net income (loss) per diluted common share 16.",
+      "loss) per diluted common share 16.",
+      "loss) return on average equity (annualized) 19.",
+      "loss) 724 1,457 670 1,035 Change - unrealized gains (losses) - Fixed inc."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "385.000000",
+    "return_10d_pct": "-6.2571",
+    "return_20d_pct": "-1.6494",
+    "return_30d_pct": "2.1480",
+    "return_60d_pct": "1.7740",
+    "return_90d_pct": "-1.2987"
+  },
+  "text_stats": {
+    "primary_text_len": 4227,
+    "exhibit_text_len": 23465,
+    "combined_text_len": 27694
+  }
+}

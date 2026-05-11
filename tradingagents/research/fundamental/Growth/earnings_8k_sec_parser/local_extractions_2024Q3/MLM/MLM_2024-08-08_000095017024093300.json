@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MLM",
+    "cik": "916076",
+    "event_date": "2024-08-08",
+    "event_accession": "0000950170-24-093300",
+    "primary_8k_doc": "mlm-20240808.htm",
+    "exhibit_docs": [
+      "mlm-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MLM_000095017024093300_mlm-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MLM_000095017024093300_mlm-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MLM",
+    "cik": "916076",
+    "entity_name": "Martin Marietta Materials, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1354000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "121000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "15125000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-138000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-152000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "161000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.089365",
+    "operating_cash_flow_to_revenue": "0.118907",
+    "assets_to_revenue": "11.170606",
+    "financing_cash_flow_to_revenue": "-0.10192",
+    "investing_cash_flow_to_revenue": "-0.11226"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of products and services to customers (net of any discounts or allowances) and freight revenues.",
+      "revenues of $1.",
+      "revenues of $81 million were in line with the prior-year quarter, as strong pricing offset lower chemical and lime shipments; gross profit decreased 2 percent to $27 million due to higher regularly scheduled maintenance costs.",
+      "operating income, net (14 ) (19 ) (46 ) (35 ) Consolidated earnings from continuing operations before income tax expense $ 372 $ 440 $ 1,785 $ 610 - MORE - Appendix MARTIN MARIETTA MATERIALS, INC.",
+      "cash flow."
+    ],
+    "guidance_evidence": [
+      "Guidance RALEIGH, N.",
+      "guidance to $2.",
+      "Guidance The Company’s 2024 revised guidance below includes the BWI Southeast acquisition as of its closing date.",
+      "GUIDANCE (Dollars in Millions) Low * High * Consolidated Revenues 1 $ 6,500 $ 6,940 Interest expense, net of interest income $ 130 $ 140 Estimated tax rate 2 22.",
+      "Guidance range represents the low end and high end of the respective line items provided above.",
+      "guidance”, “anticipate”, “may”, “expect”, “should”, “believe”, “will”, and other words of similar meaning in connection with future events or future operating or financial performance."
+    ],
+    "wave_or_demand_evidence": [
+      "customers (net of any discounts or allowances) and freight revenues.",
+      "demand in the interest-rate-sensitive private construction sector.",
+      "demand.",
+      "demand and price fluctuations; the termination, capping and/or reduction or suspension of the federal and/or state fuel tax(es) or other revenue related to public construction; the impact of the U.",
+      "ains Across All Product Lines Closing and Integration of Blue Water Acquisition Reinforces Aggregates-Led Business Model Revised Full-Year Guidance RALEIGH, N.",
+      "air value as part of acquisition accounting."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory after its markup to fair value as part of acquisition accounting.",
+      "inventory after markup to fair value as part of acquisition accounting.",
+      "charge, or Adjusted EBITDA, is a non-GAAP financial measure.",
+      "inventory related to the BWI Southeast acquisition, which was fully realized in the second quarter.",
+      "inventory after its markup to fair value as part of acquisition accounting and a noncash asset and portfolio rationalization charge.",
+      "inventory after its markup to fair value as part of acquisition accounting, which was fully realized in the quarter ended June 30, 2024."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1700,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "536.609985",
+    "return_10d_pct": "-0.3913",
+    "return_20d_pct": "-2.3518",
+    "return_30d_pct": "-5.6708",
+    "return_60d_pct": "-2.3518",
+    "return_90d_pct": "15.0109"
+  },
+  "text_stats": {
+    "primary_text_len": 4269,
+    "exhibit_text_len": 32802,
+    "combined_text_len": 37073
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BWXT",
+    "cik": "1486957",
+    "event_date": "2024-08-05",
+    "event_accession": "0001486957-24-000040",
+    "primary_8k_doc": "bwxt-20240805.htm",
+    "exhibit_docs": [
+      "bwxt_63024xerexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BWXT_000148695724000040_bwxt-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BWXT_000148695724000040_bwxt_63024xerexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BWXT",
+    "cik": "1486957",
+    "entity_name": "BWX TECHNOLOGIES, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "568360000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-06",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "61092000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-06",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2747065000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-06",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "49336000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-06",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-29780000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-06",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-13024000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-06",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.107488",
+    "operating_cash_flow_to_revenue": "-0.022915",
+    "assets_to_revenue": "4.833319",
+    "financing_cash_flow_to_revenue": "0.086804",
+    "investing_cash_flow_to_revenue": "-0.052396"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $681.",
+      "revenue increased in both operating segments.",
+      "net income of $73.",
+      "GAAP EPS of $0.",
+      "EPS of $0.",
+      "non-GAAP EPS (1) guidance revised to $3."
+    ],
+    "guidance_evidence": [
+      "guidance revised to $3.",
+      "guidance.",
+      "guidance to $3.",
+      "Guidance BWXT reaffirmed its 2024 guidance for Revenue, Adjusted EBITDA (1) , and Free Cash Flow (1) and narrowed its guidance range for Non-GAAP EPS (1) .",
+      "Guidance Prior Guidance Revenue $2,496 >$2,600 >$2,600 Adjusted EBITDA (1) $472 ~$500 ~$500 Non-GAAP (1) Earnings Per Share $3.",
+      "guidance because it is unable to reliably forecast most of the items that are excluded from GAAP to calculate non-GAAP results."
+    ],
+    "wave_or_demand_evidence": [
+      "demand momentum in our end-markets,” continued Geveden.",
+      "backlog; federal budget uncertainty, the risk of future budget cuts, the impact of continuing resolution funding mechanisms and the debt ceiling, the potential for (1) A reconciliation of non-GAAP results are detailed in Exhibit 1.",
+      "backlog.",
+      "BOOKINGS: Government Operations $ 497,021 $ 788,668 $ 676,434 $ 841,405 Commercial Operations 83,183 164,375 145,597 310,061 TOTAL $ 580,204 $ 953,043 $ 822,031 $ 1,151,466 (1) A reconciliation of non-GAAP results are detailed in Exhibit 1.",
+      "ailed in Exhibit 1.",
+      "aid Rex."
+    ],
+    "warning_or_risk_evidence": [
+      "delays, changes or termination of contracts in backlog.",
+      "decreased as higher net income was more than offset by greater working capital needs due to contract timing.",
+      "losses and other one-time items, such as restructuring, transformation, and acquisition-related costs.",
+      "uncertainty, the risk of future budget cuts, the impact of continuing resolution funding mechanisms and the debt ceiling, the potential for (1) A reconciliation of non-GAAP results are detailed in Exhibit 1.",
+      "Loss (Income) Attributable to Noncontrolling Interest (73) (68) (139) 31 Net Income Attributable to BWX Technologies, Inc.",
+      "loss) (23,044) (7,463) Stockholders' Equity – BWX Technologies, Inc."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 681.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "95.370003",
+    "return_10d_pct": "2.9884",
+    "return_20d_pct": "6.3123",
+    "return_30d_pct": "2.2963",
+    "return_60d_pct": "21.8832",
+    "return_90d_pct": "25.4902"
+  },
+  "text_stats": {
+    "primary_text_len": 3641,
+    "exhibit_text_len": 27047,
+    "combined_text_len": 30690
+  }
+}

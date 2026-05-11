@@ -509,7 +509,7 @@ except Exception:
 if kg is not None:
     dark_nodes = kg.get_dark_nodes(min_centrality=0.25)
     dark_tickers = [n["id"] for n in dark_nodes[:10]]
-    # These tickers get a signal_strength bonus in the deal flow scorer
+    # These tickers get signal_strength metadata for downstream framework use
     # (this is informational for now; scorer integration is a follow-up task)
 
 # 2. After deal flow run completes, update graph with discoveries

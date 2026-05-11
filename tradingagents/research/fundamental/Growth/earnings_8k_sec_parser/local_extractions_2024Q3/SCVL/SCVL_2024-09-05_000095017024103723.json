@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SCVL",
+    "cik": "895447",
+    "event_date": "2024-09-05",
+    "event_accession": "0000950170-24-103723",
+    "primary_8k_doc": "scvl-20240905.htm",
+    "exhibit_docs": [
+      "scvl-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SCVL_000095017024103723_scvl-20240905.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SCVL_000095017024103723_scvl-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SCVL",
+    "cik": "895447",
+    "entity_name": "SHOE CARNIVAL, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "281184000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-29",
+    "net_income_value": "16526000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-29",
+    "assets_value": "976629000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-29",
+    "financing_cash_flow_value": "-5811000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-29",
+    "investing_cash_flow_value": "-15026000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-29",
+    "operating_cash_flow_value": "2052000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.058773",
+    "operating_cash_flow_to_revenue": "0.007298",
+    "assets_to_revenue": "3.473274",
+    "financing_cash_flow_to_revenue": "-0.020666",
+    "investing_cash_flow_to_revenue": "-0.053438"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "EPS also exceeded the Company’s expectation with second quarter 2024 GAAP EPS of $0.",
+      "EPS of $0.",
+      "GAAP operating income increased 22.",
+      "operating income increased 23.",
+      "operating income totaled $30.",
+      "Operating income in the quarter included $0."
+    ],
+    "guidance_evidence": [
+      "guidance range is increased to growth of 5 percent to 6 percent.",
+      "guidance in the quarter.",
+      "guidance, Fiscal 2024 year end inventory dollars are expected to be lower by approximately $20 million, or 5 percent, versus Fiscal 2023 year end, excluding the impacts of the Rogan’s acquisition.",
+      "Outlook Based on year-to-date results and the comparable store sales growth achieved during Back-to-School, the Company is increasing guidance ranges as follows: Net Sales: Increased range to $1.",
+      "guidance range $1.",
+      "guidance range down 3 percent to up 1 percent) GAAP EPS: Increased range to $2."
+    ],
+    "wave_or_demand_evidence": [
+      "Customer engagement continued to exceed our expectations and sales momentum accelerated rapidly during our most important shopping event of the year, the Back-to-School season.",
+      "ailer of footwear and accessories for the family, today reported results for the second quarter ended August 3, 2024.",
+      "ained significant market share, and we delivered earnings above our guidance in the quarter.",
+      "aid Mark Worden, President and Chief Executive Officer.",
+      "ailer,” concluded Mr.",
+      "ailable for future repurchases under its share repurchase program."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory Second quarter 2024 inventory totaled $425.",
+      "inventory acquired in February 2024, partially offset by continued inventory efficiencies in Shoe Carnival and Shoe Station as part of the Company’s on-going inventory optimization improvement plan.",
+      "inventory dollars are expected to be lower by approximately $20 million, or 5 percent, versus Fiscal 2023 year end, excluding the impacts of the Rogan’s acquisition.",
+      "inventory and expenses included in SG&A related to deal formation and legal and accounting advice and purchase accounting and integration expenses.",
+      "inventory 333 0.",
+      "inventory fair value adjustment and acquisition related fees and expenses 105 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 332.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-06",
+    "entry_open": "40.279999",
+    "return_10d_pct": "3.4260",
+    "return_20d_pct": "7.4975",
+    "return_30d_pct": "-5.0894",
+    "return_60d_pct": "-11.5194",
+    "return_90d_pct": "-18.8431"
+  },
+  "text_stats": {
+    "primary_text_len": 3471,
+    "exhibit_text_len": 24578,
+    "combined_text_len": 28051
+  }
+}

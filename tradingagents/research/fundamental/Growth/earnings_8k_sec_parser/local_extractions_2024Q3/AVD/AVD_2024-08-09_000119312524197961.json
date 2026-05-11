@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AVD",
+    "cik": "5981",
+    "event_date": "2024-08-09",
+    "event_accession": "0001193125-24-197961",
+    "primary_8k_doc": "d796763d8k.htm",
+    "exhibit_docs": [
+      "d796763dex991.htm",
+      "d796763dex992.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVD_000119312524197961_d796763d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVD_000119312524197961_d796763dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVD_000119312524197961_d796763dex992.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AVD",
+    "cik": "5981",
+    "entity_name": "AMERICAN VANGUARD CORPORATION",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "124885000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1918000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "767548000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "43777000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3308000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-41452000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.015358",
+    "operating_cash_flow_to_revenue": "-0.331921",
+    "assets_to_revenue": "6.146038",
+    "financing_cash_flow_to_revenue": "0.350538",
+    "investing_cash_flow_to_revenue": "-0.026488"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $128.",
+      "Net sales of $263.",
+      "net sales were slightly below, and first half net sales were slightly above, those of the comparable periods last year.",
+      "net sales of our domestic non-crop business and Green Solutions products, driven by strong demand in Central America.",
+      "sales of Dacthal last April and submitted a mitigated label in an effort to meet the agencys concerns.",
+      "net sales decreased slightly to $128."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "guidance here a little bit, and more the current North American ag market and the international side.",
+      "outlook is.",
+      "guidance and the outlook for 2026 once all your initiatives have been implemented.",
+      "guidance implies the EBITDA margin midpoint in the high 7% range, really ratcheted down from where you were before.",
+      "forecast assumptions."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in Central America.",
+      "demand and controlling the accounts receivable/accounts payable cycle.",
+      "customers to ensure compliance with the suspension order and will have more to report on this in the near term.",
+      "customer and pricing strategies and structural reorganization, which, we believe, will meaningfully improve our cost structure, in an effort to push our adjusted EBITDA margins to 15% on a fully-realized basis in 2026.",
+      "customers, and employees deserve.",
+      "customers and lower our working capital."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, including severance compensation for the former CEO and other one-time costs including various expenses in support of our business transformation activity.",
+      "charges that we can exclude from our adjusted EBITDA calculation.",
+      "inventory downward, including selling out select non-strategic inventory positions to generate cash, building to demand and controlling the accounts receivable/accounts payable cycle.",
+      "inventory management on slide 13.",
+      "inventory.",
+      "charges to allow us to follow through on our transformation projects without impacting borrowing capacity."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 128.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-12",
+    "entry_open": "5.130000",
+    "return_10d_pct": "9.5517",
+    "return_20d_pct": "15.0097",
+    "return_30d_pct": "18.3236",
+    "return_60d_pct": "0.3899",
+    "return_90d_pct": "10.3314"
+  },
+  "text_stats": {
+    "primary_text_len": 3886,
+    "exhibit_text_len": 77506,
+    "combined_text_len": 81394
+  }
+}

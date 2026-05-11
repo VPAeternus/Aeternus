@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FORM",
+    "cik": "1039399",
+    "event_date": "2024-07-31",
+    "event_accession": "0001039399-24-000025",
+    "primary_8k_doc": "form-20240731.htm",
+    "exhibit_docs": [
+      "ex9901-earningsreleasexq224.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FORM_000103939924000025_form-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FORM_000103939924000025_ex9901-earningsreleasexq224.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FORM",
+    "cik": "1039399",
+    "entity_name": "FormFactor, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "167448000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "1342000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "1106794000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "4378000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-13539000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "12309000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.008014",
+    "operating_cash_flow_to_revenue": "0.073509",
+    "assets_to_revenue": "6.609777",
+    "financing_cash_flow_to_revenue": "0.026145",
+    "investing_cash_flow_to_revenue": "-0.080855"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $197.",
+      "net income for the second quarter of fiscal 2024 was $19.",
+      "net income for the first quarter of fiscal 2024 of $21.",
+      "net income for the second quarter of fiscal 2023 of $0.",
+      "Gross margin for the second quarter of 2024 was 44.",
+      "net income for the second quarter of fiscal 2024 was $27."
+    ],
+    "guidance_evidence": [
+      "Outlook Range; Sees Steady Overall Demand in the Third Quarter LIVERMORE, Calif.",
+      "Outlook Dr.",
+      "outlook*: GAAP Reconciling Items** Non-GAAP Revenue $200 million +/- $5 million — $200 million +/- $5 million Gross Margin 42% +/- 1.",
+      "outlook assumes consistent foreign currency rates.",
+      "outlook provided before, as well as for the comparable periods of fiscal 2023, are provided below, and on the Investor Relations section of our website at www.",
+      "Outlook” above, customer demand, conditions in the semiconductor industry, and other statements regarding the Company’s business."
+    ],
+    "wave_or_demand_evidence": [
+      "Demand in the Third Quarter LIVERMORE, Calif.",
+      "demand for HBM probe cards is the direct result of large hyperscalers’ investments in generative-AI infrastructure, and our customers’ corresponding ramps of HBM semiconductor capacity and output.",
+      "demand to continue at levels similar to those achieved in the second quarter, although we expect a less-favorable DRAM product mix, with heavier weighting towards DDR5 probe cards.",
+      "customers with greater than 10% of total revenue on the Investor Relations section of our website at www.",
+      "customers through its network of facilities in Asia, Europe, and North America.",
+      "customer demand, conditions in the semiconductor industry, and other statements regarding the Company’s business."
+    ],
+    "warning_or_risk_evidence": [
+      "delayed refresh cycle in important high-unit-volume end-markets like PC and mobile.",
+      "restrictions, dynamic tariffs, trade disputes between the U.",
+      "charges — — 332 — 357 Non-GAAP Gross Profit $ 89,416 $ 65,296 $ 63,236 $ 154,712 $ 127,605 GAAP Gross Margin 44.",
+      "inventory and fixed asset fair value adjustments due to acquisitions, and other 0.",
+      "charges — % — % 0.",
+      "charges — — 618 — 1,540 Gain on sale of business and related costs (267) (19,625) — (19,892) — Non-GAAP operating income $ 28,538 $ 12,953 $ 11,166 $ 41,491 $ 24,372 FORMFACTOR, INC."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 197.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "53.680000",
+    "return_10d_pct": "-18.1818",
+    "return_20d_pct": "-5.3465",
+    "return_30d_pct": "-17.0082",
+    "return_60d_pct": "-14.3070",
+    "return_90d_pct": "-18.3867"
+  },
+  "text_stats": {
+    "primary_text_len": 3637,
+    "exhibit_text_len": 21860,
+    "combined_text_len": 25499
+  }
+}

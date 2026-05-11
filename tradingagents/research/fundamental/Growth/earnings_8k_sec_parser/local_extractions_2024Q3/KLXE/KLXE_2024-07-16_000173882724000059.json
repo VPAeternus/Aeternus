@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KLXE",
+    "cik": "1738827",
+    "event_date": "2024-07-16",
+    "event_accession": "0001738827-24-000059",
+    "primary_8k_doc": "klxe-20240716.htm",
+    "exhibit_docs": [
+      "klxeq22024earningspre-rele.htm",
+      "a202407-klxxinvestorpres.htm",
+      "klxeq22024earningsreleasee.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KLXE_000173882724000059_klxe-20240716.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KLXE_000173882724000059_klxeq22024earningspre-rele.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KLXE_000173882724000059_a202407-klxxinvestorpres.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KLXE_000173882724000059_klxeq22024earningsreleasee.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KLXE",
+    "cik": "1738827",
+    "entity_name": "KLX Energy Services Holdings, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "239600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "9400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "539800000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-5600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-3600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-8600000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.039232",
+    "operating_cash_flow_to_revenue": "-0.035893",
+    "assets_to_revenue": "2.252922",
+    "financing_cash_flow_to_revenue": "-0.023372",
+    "investing_cash_flow_to_revenue": "-0.015025"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net income as determined in accordance with GAAP, or as an indicator of our operating performance or liquidity.",
+      "operating income — 3.",
+      "Free Cash Flow and Net Leverage Ratio measures.",
+      "cash flows as determined by GAAP.",
+      "Free Cash Flow as net cash provided by operating activities less capital expenditures and proceeds from sale of property and equipment.",
+      "Free Cash Flow to assess the Company’s liquidity and ability to repay maturing debt, fund operations and make additional investments."
+    ],
+    "guidance_evidence": [
+      "guidance.",
+      "expected to increase approximately 3% sequentially and Adjusted EBITDA Margin results are materially above our previously 1 provided guidance.",
+      "projects.",
+      "forecasts for our existing operations, experience, expectations and perception of historical trends, current conditions, anticipated future developments and their effect on us and other factors believed to be appropriate."
+    ],
+    "wave_or_demand_evidence": [
+      "customer conversations, we expect third quarter 2024 revenue to be flat to slightly up relative to the second quarter, with similar margins to the prior quarter,” concluded Baker.",
+      "demanding wells from over 50 service and support facilities located throughout the United States.",
+      "airston 713-529-6600 KLXE@dennardlascar.",
+      "ainability in the face of market weakness, we once again saw a similar rotation this quarter, highlighting the strengths of the KLX platform as seasonal impacts waned and production and intervention activity returned to a normalized level.",
+      "ainable results even in a flat market.",
+      "air and maintenance capabilities."
+    ],
+    "warning_or_risk_evidence": [
+      "Preliminary Second Quarter 2024 Results HOUSTON - July 16, 2024 - KLX Energy Services Holdings, Inc.",
+      "preliminary financial results for the three months ended June 30, 2024.",
+      "preliminary estimated financial information disclosed above.",
+      "preliminary estimated financial results described above constitute forward-looking statements.",
+      "preliminary estimated financial information presented herein is subject to change, and the Company’s actual financial results may differ from such preliminary estimates and such differences could be material.",
+      "preliminary estimates."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 178,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-17",
+    "entry_open": "5.540000",
+    "return_10d_pct": "16.4260",
+    "return_20d_pct": "3.9711",
+    "return_30d_pct": "26.1733",
+    "return_60d_pct": "-10.1083",
+    "return_90d_pct": "-6.1372"
+  },
+  "text_stats": {
+    "primary_text_len": 3696,
+    "exhibit_text_len": 16842,
+    "combined_text_len": 20540
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LZB",
+    "cik": "57131",
+    "event_date": "2024-08-20",
+    "event_accession": "0000057131-24-000080",
+    "primary_8k_doc": "lzb-20240820.htm",
+    "exhibit_docs": [
+      "fy25q1pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LZB_000005713124000080_lzb-20240820.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LZB_000005713124000080_fy25q1pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LZB",
+    "cik": "57131",
+    "entity_name": "LA-Z-BOY INCORPORATED",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2356811000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-17",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "150017000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-17",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "1866263000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-17",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-29",
+    "financing_cash_flow_value": "-144561000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-17",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "-78371000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-17",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "79004000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-17",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.063653",
+    "operating_cash_flow_to_revenue": "0.033522",
+    "assets_to_revenue": "0.791859",
+    "financing_cash_flow_to_revenue": "-0.061338",
+    "investing_cash_flow_to_revenue": "-0.033253"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $496 million – Up 3% versus prior year • Wholesale segment sales increased 5% on growth to external customers • Delivered sales and Non-GAAP (1) operating margin in line with guidance • GAAP diluted EPS of $0.",
+      "sales totaled $496 million, an increase of 3% against the prior year comparable period.",
+      "sales decreased 3% to $202 million versus last year, as the prior year benefited from the delivery of residual backlog related to component shortages • Operating Margin: – GAAP operating margin and GAAP operating income was 10.",
+      "EPS of $0.",
+      "earnings per share totaled $0.",
+      "GAAP operating income 32,370 34,526 (6)% Non-GAAP operating income 32,764 33,751 (3)% GAAP operating margin 6."
+    ],
+    "guidance_evidence": [
+      "guidance • GAAP diluted EPS of $0.",
+      "Outlook : Bob Lucian, Chief Financial Officer of La-Z-Boy Incorporated, said, “The overall macroeconomic and consumer spending environment remains challenging.",
+      "guidance and saw modest sales growth in line with our outlook."
+    ],
+    "wave_or_demand_evidence": [
+      "customers • Delivered sales and Non-GAAP (1) operating margin in line with guidance • GAAP diluted EPS of $0.",
+      "customer service and showcasing our industry leading product assortment.",
+      "backlog related to component shortages • Operating Margin: – GAAP operating margin and GAAP operating income was 10.",
+      "customers, partially offset by lower intercompany sales to our Retail segment and lowered delivered volume in our casegoods business • Operating Margin: – GAAP operating margin was 6.",
+      "customers nationwide.",
+      "ail and manufacture of residential furniture, today reported first quarter results for the period ended July 27, 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "charges related to acquisitions completed in prior periods totaling $0.",
+      "charges and purchase accounting charges.",
+      "charges include a lease termination gain and costs related to the relocation of equipment and inventory resulting from the closure of our Torreón manufacturing facility (previously disclosed as Mexico optimization).",
+      "charges include the amortization of intangible assets, incremental expense upon the sale of inventory acquired at fair value, and fair value adjustments of future cash payments recorded as interest expense.",
+      "charges because the amount and timing of such charges are significantly impacted by the timing, size, number and nature of the acquisitions consummated and the success with which we operate the businesses acquired.",
+      "charges is unique to each acquisition and can vary significantly from acquisition to acquisition."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 52,
+    "quarter_revenue_yoy_pct": 3,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-21",
+    "entry_open": "39.490002",
+    "return_10d_pct": "4.1529",
+    "return_20d_pct": "-0.7597",
+    "return_30d_pct": "10.0279",
+    "return_60d_pct": "0.6837",
+    "return_90d_pct": "7.1410"
+  },
+  "text_stats": {
+    "primary_text_len": 3445,
+    "exhibit_text_len": 25646,
+    "combined_text_len": 29093
+  }
+}

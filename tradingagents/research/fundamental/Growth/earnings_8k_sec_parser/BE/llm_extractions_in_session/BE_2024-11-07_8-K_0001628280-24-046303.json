@@ -1,0 +1,55 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the third quarter ended September 30, 2024",
+    "period_end_date": "September 30, 2024"
+  },
+  "reported_results": {
+    "revenue_millions": 330.399,
+    "revenue_yoy_pct": -17.4556,
+    "revenue_qoq_pct": -1.5987,
+    "gross_margin_pct": 25.2,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "•Announced follow on orders from Quanta, expected to create the world’s largest fuel cell islanded microgrid site.",
+    "wave_signal": "“Today we are announcing an 80 MW power project using Bloom Energy fuel cells” said KR Sridhar, Founder, Chairman and CEO of Bloom Energy.",
+    "margin_signal": "•Gross margin of 23.",
+    "risk_signal": "•Operating loss of $9.",
+    "customer_signal": "These forward-looking statements include, but are not limited to, Bloom’s expectations regarding: innovation and solutions; customer reaction to Bloom’s products; Bloom’s liquidity position; market demand for energy and hydrogen solutions; and Bloom’s 2024 outlook for revenue and profitability."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | 330399 | 330399 | | 335767 | 335767 | | 400268 | 400268 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | 330399 | 330399 | | 335767 | 335767 | | 400268 | 400268 |"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | 330399 | 330399 | | 335767 | 335767 | | 400268 | 400268 |"
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "Gross Margin Gross Margin Gross Margin 25.2% 25.2% 25.2% 21.8% 21.8% 21.8% 31.6% 31.6% 31.6%"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

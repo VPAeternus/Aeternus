@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FIVN",
+    "cik": "1288847",
+    "event_date": "2024-08-08",
+    "event_accession": "0001288847-24-000116",
+    "primary_8k_doc": "fivn-20240808.htm",
+    "exhibit_docs": [
+      "a063024ex991earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FIVN_000128884724000116_fivn-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FIVN_000128884724000116_a063024ex991earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FIVN",
+    "cik": "1288847",
+    "entity_name": "FIVE9, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "218439000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-27248000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1494568000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "3125000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-75686000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "33412000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.12474",
+    "operating_cash_flow_to_revenue": "0.152958",
+    "assets_to_revenue": "6.842038",
+    "financing_cash_flow_to_revenue": "0.014306",
+    "investing_cash_flow_to_revenue": "-0.346486"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "GAAP gross margin was 53.",
+      "gross margin was 60.",
+      "Non-GAAP net income for the second quarter of 2024 was $38.",
+      "non-GAAP net income of $37.",
+      "Non-GAAP net income per share in the range of $2.",
+      "Non-GAAP net income per share in the range of $0."
+    ],
+    "guidance_evidence": [
+      "guidance by 3.",
+      "Outlook Five9 provides guidance based on current market conditions and expectations.",
+      "guidance is subject to various important cautionary factors referenced in the section entitled \"Forward-Looking Statements\" below, including risks and uncertainties associated with the ongoing macroeconomic conditions.",
+      "guidance as provided above, please refer to the “Reconciliation of GAAP Net Loss to Non-GAAP net income - Guidance” table for more details, including important assumptions upon which such guidance is based.",
+      "Outlook,” that are based on our current expectations and involve numerous risks and uncertainties that may cause these forward-looking statements to be inaccurate.",
+      "guidance discussed on August 8, 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "bookings trends and the uncertain economic conditions.",
+      "customer experiences.",
+      "ainder of the year, we are reducing our annual revenue guidance by 3.",
+      "ain economic conditions.",
+      "ain confident in our massive market opportunity and are committed to driving balanced growth and profitability.",
+      "AI-powered CX platform and market reach."
+    ],
+    "warning_or_risk_evidence": [
+      "loss for the second quarter of 2024 was $(12.",
+      "loss of $(21.",
+      "uncertain economic conditions.",
+      "uncertainties associated with the ongoing macroeconomic conditions.",
+      "loss per share in the range of $(0.",
+      "Loss to Non-GAAP net income - Guidance” table for more details, including important assumptions upon which such guidance is based."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 126,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "34.200001",
+    "return_10d_pct": "2.2515",
+    "return_20d_pct": "-3.6842",
+    "return_30d_pct": "-18.7427",
+    "return_60d_pct": "-18.0994",
+    "return_90d_pct": "-4.0643"
+  },
+  "text_stats": {
+    "primary_text_len": 3377,
+    "exhibit_text_len": 28627,
+    "combined_text_len": 32006
+  }
+}

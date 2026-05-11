@@ -1,0 +1,21 @@
+metric,bucket,value
+rows,,21989
+coverage,has_post_llm,3877
+coverage,in_tier1_post_llm_file,3877
+coverage,in_tier2_post_llm_file,2302
+coverage,in_tier3_post_llm_file,1268
+coverage,in_tier4_post_llm_file,737
+post_llm_sub_tier_count,Tier 1.1 - LLM-supported candidate,1724
+post_llm_sub_tier_count,Tier 1.2 - Causal re-rating candidate,695
+post_llm_sub_tier_count,Tier 1.3 - Best balanced production subset,610
+post_llm_sub_tier_count,Tier 1.4 - Clean high-priority subset,653
+post_llm_sub_tier_count,Tier 2.1 - LLM-supported,975
+post_llm_sub_tier_count,Tier 2.2 - Causal re-rating,402
+post_llm_sub_tier_count,Tier 2.3 - Best balanced LLM subset,349
+post_llm_sub_tier_count,Tier 3.1 - Cleaner LLM-positive Tier 3,546
+post_llm_sub_tier_count,Tier 3.2 - LLM inflection / high priority,232
+post_llm_sub_tier_count,Tier 3.3 - Persistent re-rating setup,304
+post_llm_sub_tier_count,Tier 3.4 - Persistent high-priority re-rating,155
+post_llm_sub_tier_count,Tier 4.1 - LLM-supported aggressive,245
+post_llm_sub_tier_count,Tier 4.2 - Causal re-rating candidate,97
+post_llm_sub_tier_count,Tier 4.3 - Clean high-priority,76

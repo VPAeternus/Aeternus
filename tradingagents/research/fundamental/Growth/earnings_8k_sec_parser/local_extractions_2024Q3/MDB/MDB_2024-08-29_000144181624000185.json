@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MDB",
+    "cik": "1441816",
+    "event_date": "2024-08-29",
+    "event_accession": "0001441816-24-000185",
+    "primary_8k_doc": "mdb-20240829.htm",
+    "exhibit_docs": [
+      "mdb-73124xex991xrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MDB_000144181624000185_mdb-20240829.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MDB_000144181624000185_mdb-73124xex991xrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MDB",
+    "cik": "1441816",
+    "entity_name": "MONGODB, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "368280000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-31",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "-54246000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-31",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "2869642000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-31",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-01-31",
+    "financing_cash_flow_value": "130000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-31",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "211282000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-31",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "53730000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-31",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.147296",
+    "operating_cash_flow_to_revenue": "0.145894",
+    "assets_to_revenue": "7.792012",
+    "financing_cash_flow_to_revenue": "0.000353",
+    "investing_cash_flow_to_revenue": "0.573699"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $478.",
+      "revenue was $478.",
+      "revenue was $463.",
+      "revenue was $14.",
+      "gross margin compared to 75% in the year-ago period.",
+      "non-GAAP gross margin, compared to a non-GAAP gross margin of 78% in the year-ago period."
+    ],
+    "guidance_evidence": [
+      "Guidance Based on information available to management as of today, August 29, 2024, MongoDB is issuing the following financial guidance for the third quarter and full year fiscal 2025.",
+      "outlook.",
+      "expected Atlas consumption trends.",
+      "expects the variability of the above charges to have a significant, and potentially unpredictable, impact on its future GAAP financial results."
+    ],
+    "wave_or_demand_evidence": [
+      "Customer Growth with Over 50,700 Customers as of July 31, 2024 MongoDB Atlas Revenue up 27% Year-over-Year; 71% of Total Q2 Revenue NEW YORK - August 29, 2024 - MongoDB, Inc.",
+      "customers incorporate generative AI into their business and modernize their legacy application estate.",
+      "customers in July.",
+      "customers quickly build and deploy AI applications.",
+      "customers looking to build powerful AI applications.",
+      "customers in over 100 countries."
+    ],
+    "warning_or_risk_evidence": [
+      "charges excluded from these non-GAAP measures; in particular, the measures and effects of stock-based compensation expense specific to equity compensation awards that are directly impacted by unpredictable fluctuations in MongoDB’s stock price.",
+      "charges to have a significant, and potentially unpredictable, impact on its future GAAP financial results.",
+      "delays, we encourage participants to dial into the conference call fifteen minutes ahead of the scheduled start time.",
+      "decrease of 1% year-over-year.",
+      "Loss from Operations: Loss from operations was $71.",
+      "loss from operations of $49."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 478.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-30",
+    "entry_open": "290.100006",
+    "return_10d_pct": "-1.2134",
+    "return_20d_pct": "-2.1510",
+    "return_30d_pct": "-6.8080",
+    "return_60d_pct": "-5.1327",
+    "return_90d_pct": "11.1651"
+  },
+  "text_stats": {
+    "primary_text_len": 3445,
+    "exhibit_text_len": 29912,
+    "combined_text_len": 33359
+  }
+}

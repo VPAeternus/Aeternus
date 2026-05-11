@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MBUU",
+    "cik": "1590976",
+    "event_date": "2024-08-29",
+    "event_accession": "0001590976-24-000070",
+    "primary_8k_doc": "mbuu-20240829.htm",
+    "exhibit_docs": [
+      "exhibit991-4q2024earningre.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MBUU_000159097624000070_mbuu-20240829.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MBUU_000159097624000070_exhibit991-4q2024earningre.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MBUU",
+    "cik": "1590976",
+    "entity_name": "MALIBU BOATS, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1016062000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "121933000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "925924000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-30",
+    "financing_cash_flow_value": "-112847000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-43505000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "107990000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.120005",
+    "operating_cash_flow_to_revenue": "0.106283",
+    "assets_to_revenue": "0.911287",
+    "financing_cash_flow_to_revenue": "-0.111063",
+    "investing_cash_flow_to_revenue": "-0.042817"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales decreased 57.",
+      "Net sales decreased 40.",
+      "net sales was primarily due to lower wholesale shipments driven by lower retail activity during the period, increased promotional costs and elevated dealer channel inventory levels.",
+      "net sales was driven by a decrease in units and increased dealer flooring program costs, partially offset by a favorable model mix and inflation-driven year-over-year price increases.",
+      "net sales was driven primarily by a decrease in units and increased dealer flooring program costs, partially offset by inflation-driven year-over-year price increases.",
+      "sales was primarily driven by a 59."
+    ],
+    "guidance_evidence": [
+      "Guidance For the full fiscal year 2025, Malibu anticipates net sales increase percentage in the low single digits year-over-year and Adjusted EBITDA margin ranging from 10%-12%.",
+      "guidance for Adjusted EBITDA margin, in reliance on the unreasonable efforts exception provided under Item 10(e)(1)(i)(B) of Regulation S-K.",
+      "guidance for fiscal year 2025 net sales and Adjusted EBITDA margin.",
+      "anticipates net sales increase percentage in the low single digits year-over-year and Adjusted EBITDA margin ranging from 10%-12%.",
+      "forecast certain items required to develop meaningful comparable GAAP financial measures."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, and shareholders.",
+      "demand environment, we are pleased with our execution as we closed out the fiscal fourth quarter,” commented Bruce Beckman, Chief Financial Officer of Malibu Boats, Inc.",
+      "demand experienced throughout the fiscal year.",
+      "demand; the seasonality of our business; competition within our industry and with other activities for consumers’ 6 Exhibit 99.",
+      "ailable to Class A Common Stock per share (diluted) increased 9.",
+      "ailable to Class A Common Stock per share (diluted) decreased 154."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory to more normalized levels while upgrading our dealer network.",
+      "inventory levels.",
+      "inventory resulting from weakening retail demand experienced throughout the fiscal year.",
+      "inventory levels during the period and increased promotional costs, partially offset by lower dealer flooring program costs.",
+      "inventory levels and increased flooring costs for the Saltwater Fishing and Cobalt segments, partially offset by a favorable model mix in our Saltwater Fishing segment and inflation-driven year-over-year price increases.",
+      "impairment expense, abandonment of construction in process, litigation settlements, certain professional fees, non-cash compensation expense and adjustments to our tax receivable agreement liability."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 213.6,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-30",
+    "entry_open": "35.049999",
+    "return_10d_pct": "1.6548",
+    "return_20d_pct": "13.9800",
+    "return_30d_pct": "10.7275",
+    "return_60d_pct": "20.8559",
+    "return_90d_pct": "23.6805"
+  },
+  "text_stats": {
+    "primary_text_len": 2961,
+    "exhibit_text_len": 44020,
+    "combined_text_len": 46983
+  }
+}

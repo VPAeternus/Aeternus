@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AEO",
+    "cik": "919012",
+    "event_date": "2024-08-29",
+    "event_accession": "0000950170-24-101592",
+    "primary_8k_doc": "aeo-20240829.htm",
+    "exhibit_docs": [
+      "aeo-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AEO_000095017024101592_aeo-20240829.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AEO_000095017024101592_aeo-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AEO",
+    "cik": "919012",
+    "entity_name": "AMERICAN EAGLE OUTFITTERS INC",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1080926000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-29",
+    "net_income_value": "18453000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-29",
+    "assets_value": "3373894000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-29",
+    "financing_cash_flow_value": "1908000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-29",
+    "investing_cash_flow_value": "-46020000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-29",
+    "operating_cash_flow_value": "-8216000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.017071",
+    "operating_cash_flow_to_revenue": "-0.007601",
+    "assets_to_revenue": "3.1213",
+    "financing_cash_flow_to_revenue": "0.001765",
+    "investing_cash_flow_to_revenue": "-0.042575"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $1.",
+      "revenue increased 12%.",
+      "revenue of $416 million rose 9%, with comp sales up 4%.",
+      "revenue of $828 million increased 8%, with comp sales growing 5%.",
+      "Operating Income Outlook to the High-End of Prior Guidance • Record second quarter revenue of $1.",
+      "operating income outlook to $455 to $465 million, the high-end of prior guidance range August 29, 2024 PITTSBURGH -- (BUSINESS WIRE) – American Eagle Outfitters, Inc."
+    ],
+    "guidance_evidence": [
+      "Outlook to the High-End of Prior Guidance • Record second quarter revenue of $1.",
+      "outlook to $455 to $465 million, the high-end of prior guidance range August 29, 2024 PITTSBURGH -- (BUSINESS WIRE) – American Eagle Outfitters, Inc.",
+      "outlook for 2024.",
+      "Outlook For the third quarter, the company expects operating income to be in the range of $120 to $125 million.",
+      "outlook to $455 to $465 million, the high end of prior guidance.",
+      "outlook,” \"estimate,\" \"project,\" \"plan,\" \"believe,\" \"expect,\" \"anticipate,\" \"intend,\" “may,” “potential,” and similar expressions may identify forward-looking statements, although not all forward-looking statements contain these identifying words."
+    ],
+    "wave_or_demand_evidence": [
+      "Powering Profitable Growth strategy is off to a great start, locking in a strong first half and setting us on track to achieve the high end of our prior operating profit outlook for 2024.",
+      "airman of the Board and Chief Executive Officer.",
+      "ains a cornerstone of our brands, positioning us perfectly for today’s consumers.",
+      "ain disciplined and focused on delivering profitable growth and long-term shareholder value,” he continued.",
+      "ail calendar shift.",
+      "aintenance costs, also improved as a rate to revenue."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory Total ending inventory increased 4% to $664 million.",
+      "Inventory levels are healthy and well positioned for the balance of the season.",
+      "Impairment, restructuring, and other charges - 0.",
+      "inventory provisions, asset impairments, restructuring and other charges recognized in relation to Quiet Platforms, as well as the company’s international and corporate operations.",
+      "Impairment, Restructuring and Other Charges,” to the Consolidated Financial Statements included in the Company's Annual Report on Form 10-K filed with the Securities and Exchange Commission on March 15, 2024 for further information on the nature of these amounts.",
+      "Impairment, Restructuring and Other Charges $ 152,645 Non-GAAP Basis $ 375,362 % of Revenue 7."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1300,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-30",
+    "entry_open": "20.719999",
+    "return_10d_pct": "-8.3012",
+    "return_20d_pct": "-3.2336",
+    "return_30d_pct": "8.0598",
+    "return_60d_pct": "-3.2336",
+    "return_90d_pct": "-7.1429"
+  },
+  "text_stats": {
+    "primary_text_len": 4340,
+    "exhibit_text_len": 16909,
+    "combined_text_len": 21251
+  }
+}

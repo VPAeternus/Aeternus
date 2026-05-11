@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "XEL",
+    "cik": "72903",
+    "event_date": "2024-08-01",
+    "event_accession": "0000072903-24-000169",
+    "primary_8k_doc": "xel-20240801.htm",
+    "exhibit_docs": [
+      "xcelearningsreleaseq22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XEL_000007290324000169_xel-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/XEL_000007290324000169_xcelearningsreleaseq22024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "XEL",
+    "cik": "72903",
+    "entity_name": "XCEL ENERGY INC",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "8657000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2019-10-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2018-09-30",
+    "net_income_value": "418000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "64079000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-250000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1284000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1537000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.048285",
+    "operating_cash_flow_to_revenue": "0.177544",
+    "assets_to_revenue": "7.401987",
+    "financing_cash_flow_to_revenue": "-0.028878",
+    "investing_cash_flow_to_revenue": "-0.148319"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales decreased due to a 1.",
+      "sales decreased due to a 2.",
+      "sales increased due to higher use per customer, primarily driven by the energy sector.",
+      "sales was driven by residential and C&I customer growth in all jurisdictions and increased use per customer in PSCo.",
+      "earnings per share were $0.",
+      "EPS guidance of $3."
+    ],
+    "guidance_evidence": [
+      "guidance of $3.",
+      "outlook,” “plan,” “project,” “possible,” “potential,” “should,” “will,” “would” and similar expressions.",
+      "outlook to analysts and investors.",
+      "outlook assigned to Xcel Energy Inc.",
+      "Outlook Rating Outlook Rating Outlook Xcel Energy Inc.",
+      "Guidance and Long-Term EPS and Dividend Growth Rate Objectives Xcel Energy 2024 Earnings Guidance — Xcel Energy’s 2024 ongoing earnings guidance is a range of $3."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for energy from our customers while driving forward the clean energy transition and adapting to changing regulatory and environmental conditions,” said Bob Frenzel, chairman, president and CEO of Xcel Energy.",
+      "customers.",
+      "customers’ natural gas rates below the national average.",
+      "demand were partially offset by increased depreciation.",
+      "customers, temperature variances, the amount of natural gas or electricity historically used per degree of temperature and excludes any incremental related operating expenses that could result due to storm activity or vegetation management requirements.",
+      "demand, a demand factor is applied to the weather impact on sales."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and O&M expenses.",
+      "charges (0.",
+      "charge (b) 37 37 Estimated impact of weather (net of sales true-up) 34 27 Other, net (35) (38) Total increase (decrease) $ 58 $ (20) (a) Sales excludes weather impact, net of sales true-up mechanism in Minnesota.",
+      "Charges — Interest charges increased $51 million for the second quarter and $89 million year-to-date, largely due to increased debt levels and higher interest rates.",
+      "charged from PSCo’s power lines after one of the power lines detached from its insulator in strong winds, and further states that it cannot be ruled out that the second ignition was caused by an underground coal fire.",
+      "uncertainties and assumptions."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 60,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 60,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "61.220001",
+    "return_10d_pct": "-5.2271",
+    "return_20d_pct": "-2.1235",
+    "return_30d_pct": "2.1235",
+    "return_60d_pct": "6.6972",
+    "return_90d_pct": "9.1310"
+  },
+  "text_stats": {
+    "primary_text_len": 3866,
+    "exhibit_text_len": 50675,
+    "combined_text_len": 54543
+  }
+}

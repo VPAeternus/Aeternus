@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GFF",
+    "cik": "50725",
+    "event_date": "2024-08-07",
+    "event_accession": "0000050725-24-000091",
+    "primary_8k_doc": "gff-20240807.htm",
+    "exhibit_docs": [
+      "gffq32024exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GFF_000005072524000091_gff-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GFF_000005072524000091_gffq32024exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GFF",
+    "cik": "50725",
+    "entity_name": "GRIFFON CORPORATION",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1360368000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "48702000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-12-31",
+    "assets_value": "2418879000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-99631000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-2571000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "83125000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2012-11-16",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2010-09-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.035801",
+    "operating_cash_flow_to_revenue": "0.061105",
+    "assets_to_revenue": "1.778106",
+    "financing_cash_flow_to_revenue": "-0.073238",
+    "investing_cash_flow_to_revenue": "-0.00189"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $394.",
+      "revenue of $253.",
+      "revenue of $2.",
+      "Net income totaled $41.",
+      "net income was $60.",
+      "net income to adjusted net income, and earnings per share to adjusted earnings per share, see the attached table."
+    ],
+    "guidance_evidence": [
+      "guidance.",
+      "Outlook We continue to expect 2024 revenue of $2.",
+      "guidance for 2024 remains unchanged, including amortization of $22 million, depreciation $41 million, interest expense of $103 million, a normalized tax rate of 28% and free cash flow to exceed net income.",
+      "expected to be complete by the end of calendar 2024 and remains on budget.",
+      "forecast,” “management is of the opinion,” “may,” “will,” “estimates,” “intends,” “explores,” “opportunities,” the negative of these expressions, use of the future tense and similar words or phrases."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in North America, partially offset by increased volume in Australia.",
+      "customers with a more flexible and cost-effective sourcing model that leverages supplier relationships around the world.",
+      "customers and suppliers; Griffon’s ability to service and refinance its debt; and the impact of recent and future legislative and regulatory changes, including, without limitation, changes in tax laws.",
+      "aid Ronald J.",
+      "airman and Chief Executive Officer.",
+      "storage and organization product lines for the U."
+    ],
+    "warning_or_risk_evidence": [
+      "charges related to the former strategic review and AMES’s global sourcing expansion.",
+      "charges, non-cash impairment charges, restructuring charges, gain/loss from debt extinguishment and acquisition related expenses, as well as other items that may affect comparability, as applicable.",
+      "Charges (6,452) (15,494) (19,580) TTM Stock and ESOP-based compensation 32,251 41,112 45,744 TTM Adjusted EBITDA $ 523,158 $ 530,950 $ 535,046 Leverage ratio 2.",
+      "charges, debt extinguishment, net and acquisition related expenses, as well as other items that may affect comparability, as applicable.",
+      "charges (1) 15,744 1,777 28,724 76,422 Gross profit, as adjusted $ 264,893 $ 276,401 $ 785,179 $ 779,363 % of revenue 40.",
+      "charges relate to the CPP global sourcing expansion."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 647.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "57.590000",
+    "return_10d_pct": "10.7658",
+    "return_20d_pct": "13.0405",
+    "return_30d_pct": "7.8139",
+    "return_60d_pct": "18.7533",
+    "return_90d_pct": "16.7737"
+  },
+  "text_stats": {
+    "primary_text_len": 3330,
+    "exhibit_text_len": 28219,
+    "combined_text_len": 31551
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BLKB",
+    "cik": "1280058",
+    "event_date": "2024-07-30",
+    "event_accession": "0001280058-24-000054",
+    "primary_8k_doc": "blkb-20240730.htm",
+    "exhibit_docs": [
+      "blkbq22024exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BLKB_000128005824000054_blkb-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BLKB_000128005824000054_blkbq22024exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BLKB",
+    "cik": "1280058",
+    "entity_name": "Blackbaud, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "261753000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-14701000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2912279000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-353238000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-15331000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "21806000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.056164",
+    "operating_cash_flow_to_revenue": "0.083308",
+    "assets_to_revenue": "11.126058",
+    "financing_cash_flow_to_revenue": "-1.349509",
+    "investing_cash_flow_to_revenue": "-0.05857"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $287.",
+      "revenue increased 6.",
+      "revenue was $281.",
+      "revenue increased 7.",
+      "revenue of $1.",
+      "revenue of $23."
+    ],
+    "guidance_evidence": [
+      "Outlook Blackbaud today reiterated its 2024 full year financial guidance: • GAAP revenue of $1.",
+      "guidance are the following updated assumptions: • Non-GAAP annualized effective tax rate is expected to be approximately 24.",
+      "expected to be approximately 24.",
+      "expected to be approximately $52 million to $56 million • Fully diluted shares for the year are expected to be approximately 51.",
+      "expects net cash outlays of $8 million to $13 million for ongoing legal fees related to the Security Incident."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and increases our ability to attract new prospects.",
+      "customers’ business offices, incorporating AI for greater impact, and delivering a unified view for Raiser’s Edge NXT®.",
+      "customers direct access to a cutting-edge suite of marketing and admissions tools with seamless data integration across the platform.",
+      "customers—from AI-powered fundraising and content tools to digital assistant chatbots.",
+      "customer claims, negotiated settlements and accruals for certain loss contingencies.",
+      "customers related to the Security Incident that we believe we can reasonably estimate."
+    ],
+    "warning_or_risk_evidence": [
+      "charge at the SEC’s website at www.",
+      "impairment of capitalized software development costs.",
+      "decrease of 90 basis points.",
+      "decrease of $4.",
+      "decrease of 220 basis points.",
+      "decrease of $7."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 287.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "81.000000",
+    "return_10d_pct": "-6.8148",
+    "return_20d_pct": "-4.3951",
+    "return_30d_pct": "3.2099",
+    "return_60d_pct": "4.5432",
+    "return_90d_pct": "8.0000"
+  },
+  "text_stats": {
+    "primary_text_len": 3688,
+    "exhibit_text_len": 34145,
+    "combined_text_len": 37835
+  }
+}

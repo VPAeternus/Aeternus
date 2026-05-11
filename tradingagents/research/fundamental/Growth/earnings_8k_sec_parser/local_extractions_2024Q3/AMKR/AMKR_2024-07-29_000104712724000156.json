@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AMKR",
+    "cik": "1047127",
+    "event_date": "2024-07-29",
+    "event_accession": "0001047127-24-000156",
+    "primary_8k_doc": "amkr-20240729.htm",
+    "exhibit_docs": [
+      "amkr6302024erex-991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMKR_000104712724000156_amkr-20240729.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMKR_000104712724000156_amkr6302024erex-991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AMKR",
+    "cik": "1047127",
+    "entity_name": "Amkor Technology, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1471539000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "45351000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "6771125000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-66206000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-155704000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "175746000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.030819",
+    "operating_cash_flow_to_revenue": "0.11943",
+    "assets_to_revenue": "4.60139",
+    "financing_cash_flow_to_revenue": "-0.044991",
+    "investing_cash_flow_to_revenue": "-0.10581"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $1.",
+      "Net sales of $1.",
+      "operating income $82 million • Net in come $67 million, earnings per diluted share $0.",
+      "Gross margin 14.",
+      "Operating income $82 $73 $76 Operating income margin 5.",
+      "Net income attributable to Amkor $67 $59 $64 Earnings per diluted share $0."
+    ],
+    "guidance_evidence": [
+      "Outlook The following information presents Amkor’s guidance for the third quarter 2024 (unless otherwise noted): • Net sales of $1.",
+      "expects,” “plans,” “anticipates,” “believes,” “estimates,” “predicts,” “potential,” “continue” or “intend,” by the negative of these terms or other comparable terminology or by discussions of strategy, plans or intentions.",
+      "forecasts, estimates and assumptions."
+    ],
+    "wave_or_demand_evidence": [
+      "demand and ongoing inventory corrections in the Automotive & Industrial and Consumer end markets.",
+      "AI solutions utilizing 2.",
+      "aid Giel Rutten, Amkor’s president and chief executive officer.",
+      "aid a quarterly dividend of $0.",
+      "data centers, artificial intelligence and wearables.",
+      "ainment, safety) 20 % 22 % 23 % Computing (data center, infrastructure, PC/laptop, storage) 20 % 17 % 20 % Consumer (AR & gaming, connected home, home electronics, wearables) 12 % 14 % 16 % Total 100 % 100 % 100 % Gross Margin Data: Net sales 100."
+    ],
+    "warning_or_risk_evidence": [
+      "soft demand and ongoing inventory corrections in the Automotive & Industrial and Consumer end markets.",
+      "uncertainties described in this press release, the Form 10-K and other reports filed with or furnished to the SEC before making any investment decision with respect to our securities.",
+      "uncertainties continues or occurs, our business, financial condition or operating results could be materially and adversely affected, the trading prices of our securities could decline, and you could lose part or all of your investment."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1460,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-30",
+    "entry_open": "34.970001",
+    "return_10d_pct": "-9.2079",
+    "return_20d_pct": "-5.4332",
+    "return_30d_pct": "-6.4055",
+    "return_60d_pct": "-12.4964",
+    "return_90d_pct": "-15.5562"
+  },
+  "text_stats": {
+    "primary_text_len": 3246,
+    "exhibit_text_len": 17167,
+    "combined_text_len": 20415
+  }
+}

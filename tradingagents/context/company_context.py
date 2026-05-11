@@ -30,8 +30,7 @@ def get_company_context(
 
     akg = _lookup_akg_node(symbol_norm, Path(knowledge_graph_path))
     analysis = _lookup_latest_analysis(symbol_norm, resolved_date, Path(results_base_dir))
-    research_queue = _lookup_latest_queue_hit(symbol_norm, resolved_date, Path(dealflow_base_dir))
-    shortlist = _lookup_latest_shortlist_hit(symbol_norm, resolved_date, Path(dealflow_base_dir))
+    scout_handoff = _lookup_latest_scout_handoff_hit(symbol_norm, resolved_date, Path(dealflow_base_dir))
     portfolio = _lookup_position(symbol_norm, Path(positions_path))
     x_feed = _lookup_latest_x_feed_hit(symbol_norm, resolved_date, Path(x_feed_base_dir))
 
@@ -40,10 +39,8 @@ def get_company_context(
         known_gaps.append("Ticker not present in AKG.")
     if not analysis.get("found"):
         known_gaps.append("No internal analysis report found.")
-    if not research_queue.get("found"):
-        known_gaps.append("Ticker not present in latest internal research queue.")
-    if not shortlist.get("found"):
-        known_gaps.append("Ticker not present in latest internal shortlist.")
+    if not scout_handoff.get("found"):
+        known_gaps.append("Ticker not present in latest scout ticker handoff.")
     if not portfolio.get("found"):
         known_gaps.append("Ticker not present in current internal positions.")
     if not x_feed.get("found"):
@@ -56,8 +53,7 @@ def get_company_context(
         "akg": akg,
         "analysis": analysis,
         "dealflow": {
-            "research_queue": research_queue,
-            "shortlist": shortlist,
+            "scout_handoff": scout_handoff,
         },
         "portfolio": portfolio,
         "x_feed": x_feed,
@@ -139,57 +135,28 @@ def _lookup_latest_analysis(symbol: str, as_of_date: str, results_base_dir: Path
     }
 
 
-def _lookup_latest_queue_hit(symbol: str, as_of_date: str, base_dir: Path) -> Dict[str, Any]:
-    return _lookup_latest_dealflow_hit(
-        symbol=symbol,
-        as_of_date=as_of_date,
-        base_dir=base_dir,
-        artifact_name="research_queue.json",
-        items_key="items",
-    )
-
-
-def _lookup_latest_shortlist_hit(symbol: str, as_of_date: str, base_dir: Path) -> Dict[str, Any]:
-    return _lookup_latest_dealflow_hit(
-        symbol=symbol,
-        as_of_date=as_of_date,
-        base_dir=base_dir,
-        artifact_name="shortlist_top20.json",
-        items_key="candidates",
-    )
-
-
-def _lookup_latest_dealflow_hit(
-    *,
-    symbol: str,
-    as_of_date: str,
-    base_dir: Path,
-    artifact_name: str,
-    items_key: str,
-) -> Dict[str, Any]:
+def _lookup_latest_scout_handoff_hit(symbol: str, as_of_date: str, base_dir: Path) -> Dict[str, Any]:
     for date_str, date_dir in _iter_dated_dirs(base_dir, as_of_date):
-        artifact_path = date_dir / artifact_name
+        artifact_path = date_dir / "final_dealflow_tickers.json"
         payload = _read_json(artifact_path)
-        rows = payload.get(items_key, []) if isinstance(payload, dict) else []
-        if not isinstance(rows, list):
+        tickers = payload.get("tickers", []) if isinstance(payload, dict) else []
+        if symbol not in {str(ticker).upper().strip() for ticker in tickers}:
             continue
-        for row in rows:
-            if not isinstance(row, dict):
-                continue
-            if str(row.get("symbol", "")).upper().strip() != symbol:
-                continue
-            return {
-                "found": True,
-                "date": date_str,
-                "path": str(artifact_path),
-                "item": row,
-            }
+        metadata = dict((payload.get("metadata_by_ticker") or {}).get(symbol) or {})
+        return {
+            "found": True,
+            "date": date_str,
+            "path": str(artifact_path),
+            "source_stage": payload.get("source_stage"),
+            "metadata": metadata,
+        }
 
     return {
         "found": False,
         "date": None,
         "path": None,
-        "item": None,
+        "source_stage": None,
+        "metadata": None,
     }
 
 

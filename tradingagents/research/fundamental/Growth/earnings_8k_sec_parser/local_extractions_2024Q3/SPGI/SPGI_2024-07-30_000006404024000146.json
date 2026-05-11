@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SPGI",
+    "cik": "64040",
+    "event_date": "2024-07-30",
+    "event_accession": "0000064040-24-000146",
+    "primary_8k_doc": "spgi-20240730.htm",
+    "exhibit_docs": [
+      "spgi2q2024-earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SPGI_000006404024000146_spgi-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SPGI_000006404024000146_spgi2q2024-earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SPGI",
+    "cik": "64040",
+    "entity_name": "S&P Global Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3160000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "795000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "60589000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-230000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-253000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "594000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.251582",
+    "operating_cash_flow_to_revenue": "0.187975",
+    "assets_to_revenue": "19.173734",
+    "financing_cash_flow_to_revenue": "-0.072785",
+    "investing_cash_flow_to_revenue": "-0.080063"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $3.",
+      "revenue increased 14% and revenue excluding Engineering Solutions increased 16%, driven by growth in all divisions.",
+      "GAAP net income increased 98% to $1.",
+      "earnings per share increased 102% to $3.",
+      "net income was driven primarily by strong growth in Ratings and Indices.",
+      "net income for the second quarter increased 27% to $1."
+    ],
+    "guidance_evidence": [
+      "guidance, issued today.",
+      "guidance.",
+      "Guidance now calls for revenue growth of 8.",
+      "Outlook GAAP Adjusted Revenue growth 8.",
+      "guidance of ~$4.",
+      "guidance by $30 million to reflect the Visible Alpha acquisition."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "customers, shareholders, and our people.",
+      "customers, suppliers or competitors; ▪ the introduction of competing products or technologies by other companies; ▪ our ability to develop new products or technologies, to integrate our products with new technologies (e.",
+      "customers assess new investments to guiding them through sustainability and energy transition across supply chains, we unlock new opportunities, solve challenges and accelerate progress for the world.",
+      "customer relationship-based pricing programs, fees for entity credit ratings and global research and analytics at CRISIL.",
+      "ailable at http://investor."
+    ],
+    "warning_or_risk_evidence": [
+      "charges will apply).",
+      "charges of $4 million and $35 million, respectively.",
+      "charges of $16 million and $22 million, respectively, IHS Markit merger costs of $12 million and $25 million, respectively, and an asset impairment of $5 million.",
+      "charges of $2 million.",
+      "charges of $4 million and $5 million, respectively.",
+      "charges of $14 million and $15 million, respectively, and IHS Markit merger costs of $8 million and $20 million, respectively."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3549,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "491.549988",
+    "return_10d_pct": "-1.4403",
+    "return_20d_pct": "1.2837",
+    "return_30d_pct": "4.4126",
+    "return_60d_pct": "5.1002",
+    "return_90d_pct": "-0.9765"
+  },
+  "text_stats": {
+    "primary_text_len": 3535,
+    "exhibit_text_len": 47005,
+    "combined_text_len": 50542
+  }
+}

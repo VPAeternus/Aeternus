@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DBX",
+    "cik": "1467623",
+    "event_date": "2024-08-08",
+    "event_accession": "0001467623-24-000039",
+    "primary_8k_doc": "dbx-20240808.htm",
+    "exhibit_docs": [
+      "q22024er-exhibit991q2xq4.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DBX_000146762324000039_dbx-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DBX_000146762324000039_q22024er-exhibit991q2xq4.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DBX",
+    "cik": "1467623",
+    "entity_name": "Dropbox, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "611100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "69000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2983500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-241300000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "200800000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "139900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.112911",
+    "operating_cash_flow_to_revenue": "0.228931",
+    "assets_to_revenue": "4.88218",
+    "financing_cash_flow_to_revenue": "-0.394862",
+    "investing_cash_flow_to_revenue": "0.328588"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $634.",
+      "revenue was $634.",
+      "sales of short-term investments 3.",
+      "GAAP gross margin was 83.",
+      "Non-GAAP gross margin was 84.",
+      "GAAP net income was $110."
+    ],
+    "guidance_evidence": [
+      "Outlook Dropbox will provide forward-looking guidance in connection with this quarterly earnings announcement on its conference call, webcast, and on its investor relations website at http://investors.",
+      "outlook.",
+      "forecasting purposes, for short and long-term operating plans, and to evaluate Dropbox's financial performance and the ability to generate cash from operations."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to discover, try, and buy everything we have to offer,” said Dropbox Co-Founder and Chief Executive Officer Drew Houston.",
+      "customers’ biggest new pain points in securing, organizing and sharing their content, and are investing in our future bets for AI-powered universal search with Dropbox Dash.",
+      "aid Dropbox Co-Founder and Chief Executive Officer Drew Houston.",
+      "ain points in securing, organizing and sharing their content, and are investing in our future bets for AI-powered universal search with Dropbox Dash.",
+      "ain committed to operating efficiently and driving improved shareholder returns.",
+      "ain infrastructure assets from four to five years due to recent technological advancements."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges related to real estate assets as a result of our Virtual First work model.",
+      "loss on real estate assets (3) — 2.",
+      "loss (18.",
+      "loss on real estate assets — 2.",
+      "loss on real estate assets (1) Workforce reduction expense (2) Non-GAAP Cost of revenue $ 120.",
+      "loss on real estate assets 2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 634.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "22.500000",
+    "return_10d_pct": "4.9333",
+    "return_20d_pct": "11.4667",
+    "return_30d_pct": "2.8444",
+    "return_60d_pct": "13.2444",
+    "return_90d_pct": "23.9111"
+  },
+  "text_stats": {
+    "primary_text_len": 3757,
+    "exhibit_text_len": 28743,
+    "combined_text_len": 32502
+  }
+}

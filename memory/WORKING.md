@@ -1,8 +1,20 @@
 # Current Session State
 
+**Current note:** Fundamental CLI LLM wiring fixed in `cli/commands/fundamental.py`. Added `--llm-mode skip|post-file|in-session|external|subagent`, `--post-llm`, LLM model/batch/output options, in-session runner, external subprocess runner for existing `run_llm_extraction.py`, subagent job-handoff manifest, non-empty post-LLM/packet/raw-doc guards, automatic final scores CSV/summary export, and fatal exit if export missing. Legacy `--run-llm` now maps to in-session when `--llm-mode` is not set. Caveat: subagent mode writes `llm_subagent_job.json` and exits; it does not auto-launch a Pi subagent. Verification: `py_compile`, CLI help exposes LLM options, focused CLI tests `8 passed, 2 warnings`. Last updated 2026-05-11T18:29:44-04:00.
+
+**Current note:** Completed remaining non-LLM 2026Q2 SEC/fundamental run steps for `eval_results/fundamental/2026-05-11_2026Q2_sec`. SEC doc fetch was already complete (`3,185/3,185`, no errors). Ran fundamental pipeline with SEC cache + price fetch: lake outputs include universe `162`, filing events `160`, raw docs `480`, pre-LLM scores `162`, candidate scores `162`, investment decisions `162`, research memos `162`, price rows `9,408`. Exported `fundamental_final_scores_2026-05-11.csv` (`162` rows). Ran Top10, Top15, and right-tail queues; outputs are valid but empty because no rows met thresholds under the no-post-LLM scoring state. LLM extraction was not run: current CLI does not execute LLM directly; `--run-llm` requires an external `post_llm_path`, and no API keys were visible in env. Last updated 2026-05-11T17:43:27-04:00.
+
+**Current note:** Added and merged Top15 shadow refill cadence documentation. PR #4 merged to `origin/main` at `3ccb632`; report now states live Top15/shadow can change daily when rerun, historical 90d proof updates on delayed quarterly/90d cadence, and core fundamental scores should mostly move around filings/new evidence. Last updated 2026-05-11T17:13:03-04:00.
+
+**Current note:** Added and merged plain-English daily workflow docs for Top15 shadow refill. PR #3 merged to `origin/main` at `686621a`; report now explains why it is called shadow/refill, how daily PM review works, command/output files, and that replacements are review-only not automatic trades. Last updated 2026-05-11T17:06:26-04:00.
+
+**Current note:** Top15 refill shadow branch PR #1 was squash-merged to `origin/main` at `7ef3c57`; remote/local feature branch and isolated worktree were removed. PR: https://github.com/VPAeternus/Aeternus/pull/1. Local main worktree was not pulled because it contains pre-existing unrelated dirty files. Last updated 2026-05-11T16:09:25-04:00.
+
+**Current note:** Top15 core deterioration refill shadow implementation completed in isolated worktree `feature/top15-refill-shadow` and pushed to origin at `2ae2bc2`. Added opt-in live shadow selector/CLI, historical shadow backtest artifacts, analysis tables/report section, compact shadow schemas, and daily runbook update. Official Top15 selected-row hash guard remains `true`; refill is not wired into default `fundamental-top15`; live shadow labels are review-only/non-official. Verification: focused suite `76 passed, 2 warnings`; broader relevant suite `110 passed, 2 warnings`; final Oracle approved. Last updated 2026-05-11T15:17:30-04:00.
+
 **Branch:** `feature/opus46`
 **Last updated:** 2026-05-09T00:00:00-04:00
-**Status:** Discovery Delta v1 and Evidence Integrity v1 are operator-visible and review-measurable; Shortlist Integrity v1, Deep Selection Integrity v1, and Research Conversion Integrity v1 are live as read-only Step 3/4/5 artifacts; first-principles strategy gate exists as a reusable skill with an Aeternus worked example and memo; V3 benchmark contract is same-window/config-driven/return-based in track-record and conservatively enforced in portfolio admission; Fundamental Pillar Autoresearch Harness v1 now includes cache-first SEC raw payloads, SEC-official ticker→CIK resolution with cached fallback, historical 2009+ filing snapshot backfill, market-return attachment, deterministic constrained/autoresearch evaluation, a registry-backed signal promotion layer, and a live registry-driven `fundamental_factor_shadow` adapter wired through the dealflow pipeline as a shadow-only signal family; manual X-feed is now a first-class workflow preflight for manual-mode workflow runs and now also serves as the only live `social_news` source, with Theme Emergence Graph v1 preserving per-pass evidence and account/ticker/theme/co-mention edges instead of destructive ticker overwrites; the Yahoo-finance `earnings_iv` collector path and old `earnings-scan` CLI surface are removed from active dealflow behavior; deep analysis no longer defaults to the provider-aware analyst bridge: it now defaults to a session-style top-level research engine that mirrors the simple Claude path (one provider run over one computation packet, then Python scoring/report writing), while the old LangGraph/bridge stack remains available behind `research_execution_mode=codex_bridge`; the GPT/Codex bridge issues remain known legacy-path blockers, but the new default session engine has already passed live smoke runs for `BATL` and a bounded `analyze-batch` run for `RLMD` on `2026-03-10`; workflow runs now have a fail-open learning phase that attempts hindsight/performance/writeback every cycle, persists `learning_status.json`, writes normalized `source_attribution.json`, and can reinforce simple observed `co_mentioned` AKG edges from manual X-feed evidence without blocking the rest of the run; the MiroFish-inspired next slice is now approved as a Python-first `Question Compiler` chat backend for manual investigation queries, with no required Zep integration, bounded/optional LLM usage, and a frontend-ready investigation response contract; operator gateway now includes a MissionControl scaffold that maps end-to-end pipeline stages plus scout inventory/prompt/ingest APIs for manual Grok workflows; `question-investigate` now emits stage-native miss metadata and now has authoritative write-time stage-drop metadata persisted in hypothesis-ledger rows (`dropped_symbols_metadata_path`) for universe/evidence/shortlist/deep-selection cuts; watchlist CLI is now intentionally reduced to a ticker feed surface (`add/remove/list`) with minimal persisted schema (`symbol`, `created_at`, `active`, `context_snapshot`), AKG-backed internal context enrichment on add, and support for multi-symbol add/remove in both quoted and unquoted shell forms; `x-feed --run-browser` now targets the user's existing logged-in Chrome window via AppleScript + Chrome JS + clipboard/System Events instead of fresh browser-use windows, uses the current front Grok tab if the active tab is already `https://grok.com...`, otherwise opens a new Grok tab only in the current front Chrome window, and no longer scans/reuses arbitrary background Grok tabs; readiness remains tolerant of real Grok conversation titles/composer counts; the isolated pass-1 xAI API probe has been removed and manual Grok generate/paste/ingest remains the intended operator path; standalone `recall` CLI commands now expose FVG and FMA recall channels outside the pipeline with table explanations and JSON artifact output; `recall fvg <SYMBOL>` and `recall fma <SYMBOL>` now provide readable per-stock pass/fail explanations with metrics and threshold checks; `recall performance` now provides an investor-facing historical signal-study scorecard using saved or refreshed FVG/FMA backtest summaries; canonical investor-facing backtest universes are now `semis_ai`, `qqq_top20`, and `spy_top20`, and `recall performance --multi` produces a broad benchmark-comparison table across all three; CC Overbought is now explicitly treated as a stock-only engine in code/docs/CLI wording and returns no signal for index ETFs (`QQQ`, `SPY`, `IWM`); added a standalone Pi extension artifact set for a conservative model-router v2 is now installed globally under `~/.pi/agent/extensions/model-router-v2/` with weighted route scoring, fallback chains, manual lock behavior, persisted `autoRoutingEnabled`, Node-runner tests for core policy helpers, global config at `~/.pi/agent/model-router.json`, and a fixed directory-based extension layout so Pi no longer misloads helper modules as top-level extension factories
+**Status:** Discovery Delta v1 and Evidence Integrity v1 are operator-visible and review-measurable; Candidate List Integrity v1, Fundamental Intake Integrity v1, and Research Conversion Integrity v1 are live as read-only Step 3/4/5 artifacts; first-principles strategy gate exists as a reusable skill with an Aeternus worked example and memo; V3 benchmark contract is same-window/config-driven/return-based in track-record and conservatively enforced in portfolio admission; Fundamental Pillar Autoresearch Harness v1 now includes cache-first SEC raw payloads, SEC-official ticker→CIK resolution with cached fallback, historical 2009+ filing snapshot backfill, market-return attachment, deterministic constrained/autoresearch evaluation, a registry-backed signal promotion layer, and a live registry-driven `fundamental_factor_shadow` adapter wired through the dealflow pipeline as a shadow-only signal family; manual X-feed is now a first-class workflow preflight for manual-mode workflow runs and now also serves as the only live `social_news` source, with Theme Emergence Graph v1 preserving per-pass evidence and account/ticker/theme/co-mention edges instead of destructive ticker overwrites; the Yahoo-finance `earnings_iv` collector path and old `earnings-scan` CLI surface are removed from active dealflow behavior; deep analysis no longer defaults to the provider-aware analyst bridge: it now defaults to a session-style top-level research engine that mirrors the simple Claude path (one provider run over one computation packet, then Python scoring/report writing), while the old LangGraph/bridge stack remains available behind `research_execution_mode=codex_bridge`; the GPT/Codex bridge issues remain known legacy-path blockers, but the new default session engine has already passed live smoke runs for `BATL` and a bounded `retired post-scout batch command` run for `RLMD` on `2026-03-10`; workflow runs now have a fail-open learning phase that attempts hindsight/performance/writeback every cycle, persists `learning_status.json`, writes normalized `source_attribution.json`, and can reinforce simple observed `co_mentioned` AKG edges from manual X-feed evidence without blocking the rest of the run; the MiroFish-inspired next slice is now approved as a Python-first `Question Compiler` chat backend for manual investigation queries, with no required Zep integration, bounded/optional LLM usage, and a frontend-ready investigation response contract; operator gateway now includes a MissionControl scaffold that maps end-to-end pipeline stages plus scout inventory/prompt/ingest APIs for manual Grok workflows; `question-investigate` now emits stage-native miss metadata and now has authoritative write-time stage-drop metadata persisted in hypothesis-ledger rows (`dropped_symbols_metadata_path`) for universe/evidence/candidate_list/fundamental-intake cuts; watchlist CLI is now intentionally reduced to a ticker feed surface (`add/remove/list`) with minimal persisted schema (`symbol`, `created_at`, `active`, `context_snapshot`), AKG-backed internal context enrichment on add, and support for multi-symbol add/remove in both quoted and unquoted shell forms; `x-feed --run-browser` now targets the user's existing logged-in Chrome window via AppleScript + Chrome JS + clipboard/System Events instead of fresh browser-use windows, uses the current front Grok tab if the active tab is already `https://grok.com...`, otherwise opens a new Grok tab only in the current front Chrome window, and no longer scans/reuses arbitrary background Grok tabs; readiness remains tolerant of real Grok conversation titles/composer counts; the isolated pass-1 xAI API probe has been removed and manual Grok generate/paste/ingest remains the intended operator path; standalone `recall` CLI commands now expose FVG and FMA recall channels outside the pipeline with table explanations and JSON artifact output; `recall fvg <SYMBOL>` and `recall fma <SYMBOL>` now provide readable per-stock pass/fail explanations with metrics and threshold checks; `recall performance` now provides an investor-facing historical signal-study scorecard using saved or refreshed FVG/FMA backtest summaries; canonical investor-facing backtest universes are now `semis_ai`, `qqq_top20`, and `spy_top20`, and `recall performance --multi` produces a broad benchmark-comparison table across all three; CC Overbought is now explicitly treated as a stock-only engine in code/docs/CLI wording and returns no signal for index ETFs (`QQQ`, `SPY`, `IWM`); added a standalone Pi extension artifact set for a conservative model-router v2 is now installed globally under `~/.pi/agent/extensions/model-router-v2/` with weighted route scoring, fallback chains, manual lock behavior, persisted `autoRoutingEnabled`, Node-runner tests for core policy helpers, global config at `~/.pi/agent/model-router.json`, and a fixed directory-based extension layout so Pi no longer misloads helper modules as top-level extension factories
 
 **Current note:** Right-tail visibility reporting fixes completed. Manifest now splits `right_tail_queue_input_columns` from `right_tail_queue_scoring_columns` and removes misleading `right_tail_queue_feature_columns`; target audit/reporting now separates visibility `9/9`, actionable research `6/9`, scout/top15 quality `2/9`, demote review `4/9`, and buy-underwriting `1/9`. Top15 selected-row hash guard remains `true`; selection unchanged. Verification: focused pytest `30 passed`. Last updated 2026-05-09T13:55:04.
 
@@ -15,6 +27,18 @@
 **Current note:** PIT/live-readiness QA audit implemented under oversight. Added `pit_feature_lineage_audit.csv` for Top15 selection/right-tail fields, tightened forward-looking column stripping/tests without changing selected rows, and documented production-v2 PIT AKG/theme/macro caveat in runbook. Top15 selected hash guard remains `true`; PIT audit rows `74` with status counts: `36` pit_documented, `14` not_full_production_v2_validated, `13` source_only_not_field_validated, `10` unavailable/neutral, `1` AKG missing provenance. Verification: focused pytest `39 passed, 2 warnings`; regenerated Top15 backtest/analysis. Last updated 2026-05-10T08:25:42.
 
 **Current note:** Core deterioration gate added for Top15 core buy-underwriting review. New `core_deterioration_review_queue.csv` flags core rows with `entry_score_0_100 >= 80`, `score_change <= -1`, and `negative_revision_risk >= 2`; downgrade/strict handling moves primary-theme-blank + weak pre-LLM rows to scout/review unless PM overrides. Historical queue count: `16` review rows, `11` strict override rows. Top15 selected-row hash guard remains `true`. Verification: focused pytest `40 passed, 2 warnings`; regenerated Top15 backtest/analysis. Last updated 2026-05-11T07:37:05.
+
+**Current note:** Implementation plan drafted for Top15 core deterioration refill shadow variant. Plan path: `docs/superpowers/plans/2026-05-11-top15-core-deterioration-refill.md`; spec path: `docs/superpowers/plans/2026-05-11-top15-core-deterioration-refill-spec.md`. Scope: opt-in shadow v4 refill, preserve Top15 v3 outputs/hash, block demoted/flagged refill-ineligible tickers from exception auto-selection, add historical/daily diagnostics. Plan-review loop found blockers and fixes were applied; final re-review was not rerun after last fixes to avoid more review churn. Last updated 2026-05-11T08:42:32.
+
+**Current note:** Top15 core deterioration refill plan updated after user feedback + Oracle QAQC. Added explicit high-score deterioration and weak/no-theme/repricing-stack flag definitions, label-active RM/HP counts, rank diagnostic-only tests, full Top15 shadow historical output (core+exceptions), ex-ante no-leakage replacement tests, demoted/refill-ineligible exception blocking, and PM replacement delta fields. Oracle blocker on historical safe rows fixed by requiring `eligible_for_backtest` in safe identity columns. Last updated 2026-05-11T11:00:11.
+
+**Current note:** Reviewed 15 Grok manual X-feed prompts for generic coverage of `NOK`, `AAOI`, `PENG`, `P`, `MP`, `SKYX`, and unmapped sectors. Existing coverage is broad: sector passes 1-11 cover GICS-like buckets plus small/emerging names; passes 12-14 are generic catch-alls for cross-sector themes, contrarian/silent movers, and equity options flow. `MP` is already captured directly by Materials/Cross-Sector evidence in recent X-feed runs; `AAOI` appears as a Tech co-mention. Main gap is not missing sector labels but prompt scope ambiguity for ADRs/foreign issuers (`NOK`) and ambiguous microcap/product-category names (`SKYX`). Last updated 2026-05-11T11:11:19-04:00.
+
+**Current note:** Confidence loop completed for Top15 core deterioration refill plan. Additional loopholes found and fixed in plan: contradictory high-score test (`score_change=0`), old strict test semantics, full-universe exception blocking for core-ineligible deterioration names, coverage-gating passthrough, core config preservation, fixed-field CSV writer safety, optional analysis reader, historical safe-column coverage, output-hash assertions, missing snippet imports, and `asdict` import note. Final plan-only reviewer status: Approved. Last updated 2026-05-11T11:15:29.
+
+**Current note:** Task 4 spec blocker fixed in Top15 core deterioration refill plan/spec. Live/refill replacement diagnostics are now outcome-field-free: no `return_*`, winner/loser, target/current-return, or replacement delta fields; implementation snippets/tests updated to exclude `demoted_return_90d_pct`, `replacement_return_90d_pct`, and `replacement_delta_90d_pct`. Verification: grep confirms no remaining return/delta diagnostic fields except negative assertions/documented prohibition. Last updated 2026-05-11T12:38:45-04:00.
+
+**Current note:** Manual X-feed is now a 16-pass workflow. Added pass 16 `Blindspot & Unmapped Ticker Audit` to `tradingagents/dealflow/sources/x_feed_manual.py` with dynamic context from same-date merged tickers/co-mentions/themes, audit seeds `NOK/AAOI/PENG/P/MP/SKYX`, parser preservation for blindspot fields, and readiness/default run-browser/help text updated to 16. Browser runner now regenerates prompts before each pass so pass 16 can see results from passes 1-15 in the same run; `x-feed --generate --date` now passes the date into prompt generation. Verification: focused X-feed suite `47 passed, 2 warnings`; touched files py_compile passed. Known unrelated operator-gateway endpoint subset still has macro scout inventory/ingest failures. Last updated 2026-05-11T11:34:12-04:00.
 
 **Daily runbook:** `docs/research/aeternus-daily-pipeline-debug-runbook.md` is now the canonical start-of-run checklist and debug order for the full daily pipeline.
 
@@ -38,7 +62,7 @@
 
 **Current note:** Fundamental SEC cleanup/audit completed for `eval_results/fundamental/2026-05-07_full` and `2026-05-08_xfeed_sec_test`. Source-of-truth SEC pipeline logic now lives under `tradingagents/research/fundamental/src/sec_pipeline/`, including promoted `cache_coverage_manifest.py` and `cleanup_audit.py`; run-folder `sec_*.py` files are thin wrappers only. Each run has `sec_reproducibility_manifest.json` and `sec_cleanup_manifest.json`; immutable artifacts and SQLite sidecars were kept. Verification: `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_sec_pipeline_cleanup_audit.py -q` -> `5 passed`.
 
-**Current note:** Dealflow collect now writes a single authoritative deduped ticker handoff for downstream/fundamental research: `eval_results/deal_flow/<date>/final_dealflow_tickers.json` and `.txt`, plus latest pointers under `eval_results/deal_flow/latest_final_dealflow_tickers.*`. Contract is `AUTHORITATIVE_DEALFLOW_TICKER_HANDOFF_V1`; source is the full `all_scored_candidates` dealflow universe, not the narrowed deep-research queue. It preserves scored-candidate order, uppercases symbols, and dedupes. 2026-05-07 regenerated handoff contains 165 tickers.
+**Current note:** Dealflow collect now writes a single authoritative deduped ticker handoff for downstream/fundamental research: `eval_results/deal_flow/<date>/final_dealflow_tickers.json` and `.txt`, plus latest pointers under `eval_results/deal_flow/latest_final_dealflow_tickers.*`. Contract is `AUTHORITATIVE_DEALFLOW_TICKER_HANDOFF_V1`; source is the full `legacy_scored_artifact` dealflow universe, not the narrowed deep-fundamental review list. It preserves scored-candidate order, uppercases symbols, and dedupes. 2026-05-07 regenerated handoff contains 165 tickers.
 
 **Current note:** Full 2026-05-07 fundamental framework run completed on the 165-name dealflow universe. Output root is `eval_results/fundamental/2026-05-07_full`; final CSV is `eval_results/fundamental/2026-05-07_full/fundamental_final_scores_2026-05-07.csv`. Run included SEC fetch, Codex LLM extraction, post-LLM scoring, price fetch, and final candidate scoring. Summary: 165 rows, LLM `complete=24` / `not_required=141`, decisions `pass=158` / `watchlist=7`, top scores `COMP=93 A+`, `EVC=89 A+`, `TALO=74 B`, `PINS=69 B`, `LRCX=67 B`, `ET=67 B`, `SNDK=66 B`. Fixes applied: CIK float normalization in `run_quarter.py`; derived post-LLM flags in `llm_extraction.py`. Verification: targeted tests `11 passed`.
 
@@ -59,6 +83,19 @@
 ---
 
 ## Completed Today
+
+- Daily X-feed Grok automation ran for `2026-05-11`:
+  - completed passes `1-16`
+  - target model used: `Grok 4.3 (beta)`
+  - final readiness: `ready=True`, finalized manifest exists
+  - raw archives: 16
+  - merged symbols: 35
+  - Theme Emergence Graph: 35 tickers, 10 multi-ticker themes, 185 edges
+  - edge types: `account_mentions_ticker`, `ticker_linked_to_theme`, `ticker_co_mentioned`
+  - low-yield valid passes: `14`, `15`
+  - pass `16`, `Blindspot & Unmapped Ticker Audit`, added `NOK` and `AAOI`
+  - automation prompt updated to run every required pass from `generate_prompts/get_readiness`; currently 16 passes including blindspot audit
+  - operational note: direct DOM set plus submit-button click worked; longer response wait avoided prior false timeouts
 
 - Daily X-feed Grok automation attempted for `2026-05-10`:
   - initial readiness: no completed passes; missing `1-15`
@@ -161,7 +198,7 @@
     - forward labels enter on the next trading bar after the snapshot date
     - historical snapshots slice price/FRED-like inputs at or before each snapshot date, with optional FRED release lag
     - regime/sector tables aggregate count, mean, median, hit rate, best, and worst returns
-    - macro-neutral ablation now reuses production dealflow ranking (`rank_candidates`) after recomputing core/momentum/asymmetry/lane from neutralized macro subscores
+    - macro-neutral ablation now reuses production legacy dealflow selection (`legacy_rank_function`) after recomputing core/momentum/asymmetry/lane from neutralized macro subscores
     - script writes `macro_snapshots_labeled.csv`, `regime_performance.csv`, `sector_performance.csv`, optional ablation CSVs, and `manifest.json` with PIT disclaimer
   - verification:
     - `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_macro_backtest_forward_returns.py tests/test_macro_backtest_snapshots.py tests/test_macro_backtest_regime_tables.py tests/test_macro_backtest_ablation.py tests/test_macro_engine.py tests/test_macro_collector.py tests/test_macro_prompt.py -q` → `80 passed, 2 warnings`
@@ -348,8 +385,8 @@
       - `universe_gate_edge`
       - `universe_gate_haystack`
       - `evidence_gate`
-      - `shortlist_cut`
-      - `deep_selection_cut`
+      - `candidate_list_cut`
+      - `fundamental_intake_cut`
     - includes canonical fields:
       - `reason_code`
       - `reason_text`
@@ -378,9 +415,9 @@
   - integrated hypothesis-ledger drop context into stage diagnosis where available:
     - universe gate (`universe_gate_edge` / `universe_gate_haystack`)
     - evidence gate (`evidence_gate`)
-    - shortlist cut (`shortlist_cut`)
-    - deep selection cut (`deep_selection_cut`)
-  - added shortlist rank-based miss reasoning (`RANK_BELOW_SHORTLIST_CUT`) and anomaly flagging (`SHORTLIST_EXCLUSION_ANOMALY`) from `all_scored_candidates`
+    - candidate_list cut (`candidate_list_cut`)
+    - fundamental intake cut (`fundamental_intake_cut`)
+  - added candidate_list rank-based miss reasoning (`RANK_BELOW_CANDIDATE_LIST_CUT`) and anomaly flagging (`CANDIDATE_LIST_EXCLUSION_ANOMALY`) from `legacy_scored_artifact`
   - preserved existing `question-investigate` payload contract while enriching `stage_diagnosis`
   - test updates:
     - `tests/test_investigation_runner.py` now asserts reason metadata and hypothesis-ledger reason capture
@@ -467,7 +504,7 @@
   - `cli/commands/dealflow.py`
     - `workflow-run` now appends `steps.learning`
     - learning failures degrade status to `COMPLETED_WITH_LEARNING_DEGRADED` instead of failing the workflow
-  - `tradingagents/dealflow/scoring.py`
+  - `legacy pre-fundamental scorer`
     - existing `ic_signal_weights.json` read path remains the live consumer of signal-family weight deltas
   - `tradingagents/graph/ensemble_weights.py`
     - `update_weights(...)` is no longer a stub; it now applies conservative bounded nudges and persists update history
@@ -492,7 +529,7 @@
     - removed collect-time `earnings_iv` connector wiring
     - removed legacy discover-time IV scanner hook
     - Grok provenance now reads `eval_results/x_feed/<date>/merged.json` instead of the old xAI social cache
-  - `tradingagents/dealflow/scoring.py`
+  - `legacy pre-fundamental scorer`
     - removed `earnings_iv_divergence` from core scoring families/weights
   - `tradingagents/dealflow/contracts.py`
     - removed `earnings_iv_divergence` from the `DealFlowSignal` contract
@@ -647,7 +684,7 @@
     - prompt generation
     - manual Grok analyst ingest
     - bundle readiness status
-  - wired [cli/commands/scoring.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/scoring.py) so `analyze` and `analyze-batch` now take:
+  - wired [cli/commands/scoring.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/scoring.py) so `analyze` and `retired post-scout batch command` now take:
     - `--analyst-provider`
     - `--post-analyst-provider`
   - default execution model is now explicit and auditable:
@@ -663,7 +700,7 @@
   - focused verification:
     - `python3 -m pytest tests/test_codex_cli.py tests/test_cli_research_analysts.py tests/test_scoring_codex_bridge.py -v`
       - result: `13 passed`
-    - `python3 -m pytest tests/test_claude_cli.py tests/test_cli_score.py tests/test_cli_dealflow.py -k 'analyze_batch or analyze-batch or scoring or x_feed or workflow_run' -v`
+    - `python3 -m pytest tests/test_claude_cli.py tests/test_cli_score.py tests/test_cli_dealflow.py -k 'analyze_batch or retired post-scout batch command or scoring or x_feed or workflow_run' -v`
       - result: `19 passed`
 
 - Saved today's reconstructed first-universe audit and fixed standalone collector bootstrap consistency:
@@ -681,7 +718,7 @@
 - Ran today's collector stage after the bootstrap fix:
   - collector artifacts now exist under `eval_results/deal_flow/2026-03-09/`
   - key output:
-    - shortlist top 20:
+    - candidate_list top 20:
       - `AMD, NVDA, ALAB, META, XOP, PLTR, MRVL, BBAI, AAL, CDE, PYPL, PBF, MPC, XLE, OXY, CVX, ETN, EOG, RTX, ALB`
     - selected for deep:
       - `NVDA, ALAB, XOP, AMD, PLTR, MRVL, BBAI, AAL, CDE, META, PBF, MPC, AXP, AAPL, TSM, BMY, JNJ`
@@ -858,8 +895,8 @@
   - `performance_review.json` now embeds `discovery_delta_cohorts` with `5d`, `20d`, and `3m` peer and Step 1 baseline comparisons
 - Added a shared rollup helper in [tradingagents/dealflow/discovery_delta.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/discovery_delta.py) for:
   - cohort metrics for `scout_only`, `technical_only`, `multi_channel`
-  - `shortlist_conversion`
-  - `deep_selection_conversion`
+  - `candidate_list_conversion`
+  - `fundamental_intake_conversion`
   - `vs_step1_baseline`
   - `vs_other_cohorts`
 - Added focused regression coverage in:
@@ -909,7 +946,7 @@
   - no change to current `ACTIVE` / `LOW_DATA` gate behavior in v1
 - Wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py) to persist:
   - `eval_results/deal_flow/<date>/evidence_integrity.json`
-  - `shortlist["evidence_integrity_summary"]`
+  - `candidate_list["evidence_integrity_summary"]`
 - Focused evidence-integrity verification:
   - `python3 -m pytest tests/test_evidence_integrity.py tests/test_dealflow_pipeline.py -k 'evidence_integrity' -v`
   - result: `5 passed`
@@ -938,41 +975,41 @@
   - result: `4 passed`
   - `python3 -m pytest tests/test_evidence_integrity.py tests/test_dealflow_pipeline.py tests/test_hindsight.py tests/test_performance_tracker.py tests/test_cli_dealflow.py -k 'evidence_integrity or collect_standalone_bootstraps_without_discover or hindsight_command_renders_hypothesis_stage_summary or performance_review_command_renders_hypothesis_stage_summary' -v`
   - result: `11 passed`
-- Added read-only Step 3 shortlist-boundary measurement in [tradingagents/dealflow/shortlist_integrity.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/shortlist_integrity.py):
+- Added read-only Step 3 candidate_list-boundary measurement in [tradingagents/dealflow/candidate_list_integrity.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/candidate_list_integrity.py):
   - groups:
-    - `selected_shortlist`
+    - `selected_candidate_list`
     - `near_miss_eligible`
-    - `selected_for_deep`
+    - `legacy_deep_flag`
   - top candidate false negatives:
     - highest-ranked near misses just below the cut
   - persisted artifact:
-    - `eval_results/deal_flow/<date>/shortlist_integrity.json`
-- Wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py) to persist `shortlist_integrity.json` without changing ranking or shortlist behavior.
-- Focused Shortlist Integrity verification:
-  - `python3 -m pytest tests/test_shortlist_integrity.py -v`
+    - `eval_results/deal_flow/<date>/candidate_list_integrity.json`
+- Wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py) to persist `candidate_list_integrity.json` without changing ranking or candidate_list behavior.
+- Focused Candidate List Integrity verification:
+  - `python3 -m pytest tests/test_candidate_list_integrity.py -v`
   - result: `1 passed`
-  - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'shortlist_integrity' -v`
+  - `python3 -m pytest tests/test_dealflow_pipeline.py -k 'candidate_list_integrity' -v`
   - result: `1 passed`
-  - `python3 -m pytest tests/test_shortlist_integrity.py tests/test_dealflow_pipeline.py -k 'shortlist_integrity or collect_standalone_bootstraps_without_discover' -v`
+  - `python3 -m pytest tests/test_candidate_list_integrity.py tests/test_dealflow_pipeline.py -k 'candidate_list_integrity or collect_standalone_bootstraps_without_discover' -v`
   - result: `3 passed`
 
-- Traced the current system left-to-right: AKG universe -> scouts -> connectors -> scoring -> ranking -> research queue -> analysis -> portfolio -> hindsight/performance.
+- Traced the current system left-to-right: AKG universe -> scouts -> connectors -> scoring -> ranking -> fundamental review list -> analysis -> portfolio -> hindsight/performance.
 - Identified the current learning gap: not every funnel cut is logged as a first-class kept-vs-dropped experiment.
 - Designed the multi-lane architecture:
   - shared `L0` feature store
   - shared `L1` recall scan
   - split at `L2` into `3-Month Upside` and `Emergence` lanes
   - lane-specific triage and research escalation
-- Defined the hypothesis-ledger contract for universe, evidence, shortlist, deep-selection, and portfolio cuts.
+- Defined the hypothesis-ledger contract for universe, evidence, candidate_list, fundamental-intake, and portfolio cuts.
 - Wrote the design doc in [docs/plans/2026-03-06-multi-lane-probability-funnel-design.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-multi-lane-probability-funnel-design.md).
 - Wrote the Phase 1 implementation plan in [docs/plans/2026-03-06-multi-lane-probability-funnel.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/plans/2026-03-06-multi-lane-probability-funnel.md).
 - Implemented the hypothesis-ledger foundation in [tradingagents/dealflow/hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hypothesis_ledger.py) with deterministic snapshot paths and append-only row storage.
-- Instrumented `shortlist_cut`, `deep_selection_cut`, and `portfolio_inclusion_cut` in the live pipeline/portfolio path.
+- Instrumented `candidate_list_cut`, `fundamental_intake_cut`, and `portfolio_inclusion_cut` in the live pipeline/portfolio path.
 - Added focused coverage in [tests/test_hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_hypothesis_ledger.py), [tests/test_dealflow_hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_dealflow_hypothesis_ledger.py), and [tests/test_portfolio_hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_portfolio_hypothesis_ledger.py).
 - Checkpointed implementation commits:
   - `2f56f396 feat: add hypothesis ledger contract`
-  - `8d1a7e20 feat: log shortlist cut to hypothesis ledger`
-  - `d3f99cfb feat: log deep selection and portfolio inclusion cuts`
+  - `8d1a7e20 feat: log candidate_list cut to hypothesis ledger`
+  - `d3f99cfb feat: log fundamental intake and portfolio inclusion cuts`
 - Added Phase 1 lane metadata fields to deal-flow candidates and research-queue items:
   - `upside_3m_score`
   - `emergence_proxy_score`
@@ -995,7 +1032,7 @@
   - `universe_gate_edge`
   - `universe_gate_haystack`
   - `evidence_gate`
-- Completed Phase 1 funnel coverage: `universe -> evidence -> shortlist -> deep-selection -> portfolio` are now all append-only ledger rows.
+- Completed Phase 1 funnel coverage: `universe -> evidence -> candidate_list -> fundamental-intake -> portfolio` are now all append-only ledger rows.
 - Added compact hypothesis-stage summaries in [tradingagents/dealflow/hypothesis_ledger.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hypothesis_ledger.py) so persisted shared-lane rows can be rendered without opening raw `rows.json`.
 - Wired [tradingagents/dealflow/hindsight.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/hindsight.py) and [tradingagents/dealflow/performance_tracker.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/performance_tracker.py) to include `hypothesis_stage_summary` in their returned payloads and persisted artifacts.
 - Added a shared CLI renderer in [cli/common.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/common.py) and surfaced the summary in [cli/commands/dealflow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/dealflow.py) and [cli/commands/performance.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/cli/commands/performance.py).
@@ -1093,8 +1130,8 @@
 - Delay lane routing split until the diagnosis command has enough live cycles to justify routing changes with evidence.
 - Revisit the Codex research bridge only after analyst packet compilation is designed off real deal-flow inputs.
 - Decide whether bullish FVG should graduate from replay-only evidence into the future Step 1 recall redesign.
-- Decide whether Shortlist Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review the way Discovery Delta and Evidence Integrity were.
-- Decide whether Deep Selection Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review before any Step 4 deep-budget behavior change.
+- Decide whether Candidate List Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review the way Discovery Delta and Evidence Integrity were.
+- Decide whether Fundamental Intake Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review before any Step 4 deep-budget behavior change.
 - Decide whether Research Conversion Integrity should stay artifact-only for a few cycles or be promoted into hindsight/performance review before any Step 5 research-execution behavior change.
 - Use the new `industry-disruption-first-principles` skill as the strategic gate for future company / wedge / product-thesis discussions.
 - Use [docs/research/aeternus-operating-system-thesis.md](/Users/aeternusholdings/Documents/AeternusAgents-opus46/docs/research/aeternus-operating-system-thesis.md) as the easiest entry point for the current company thesis and roadmap filter.
@@ -1613,7 +1650,7 @@
 - Added live shadow-fundamental observation helper:
   - [tradingagents/dealflow/fundamental_shadow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/fundamental_shadow.py)
 - Wired [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py)
-  - `collect()` now builds `fundamental_shadow_summary` from `fundamental_factor_shadow` signals after the research queue is built
+  - `collect()` now builds `fundamental_shadow_summary` from `fundamental_factor_shadow` signals after the fundamental review list is built
   - `_persist()` now writes:
     - `eval_results/deal_flow/<date>/fundamental_factor_shadow.json`
 - Added CLI render path:
@@ -1622,8 +1659,8 @@
   - `collect` now prints:
     - strategy name
     - signal coverage
-    - shortlist overlap
-    - deep-selection overlap
+    - candidate_list overlap
+    - fundamental-intake overlap
     - top shadow names
 - Added focused tests:
   - [tests/test_fundamental_shadow.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tests/test_fundamental_shadow.py)
@@ -1764,7 +1801,7 @@
   - `python3 -m pytest tests/test_cli_dealflow.py -k 'extract_analysis_outcome_exposes_rating_id_and_recommendation_side or analyze_batch_selected_only_runs_marked_items or analyze_batch_default_uses_quick_mode_for_unselected or analyze_batch_uses_cached_report_when_execution_fails' -q`
     - `4 passed`
   - live smoke:
-    - `python3 -m cli.main analyze --from-queue-id 2026-03-10-082214-manual:OXY --queue-date 2026-03-10`
+    - `python3 -m cli.main analyze --from-queue-id 2026-03-10-082214-manual:OXY --run-date 2026-03-10`
     - appended first session-engine row to `eval_results/track_record.json`
     - confirmed persisted fields:
       - `rating_id = b590a5f0-a5d4-4f15-9cfe-17f893efaeb7`
@@ -1772,7 +1809,7 @@
       - `rating = Hold`
       - `recommendation = BUY`
 - Next likely step:
-  - if we want batch-level proof too, rerun a bounded `analyze-batch --selected-only --max-items 1` and confirm the emitted summary item now includes `rating_id`
+  - if we want batch-level proof too, rerun a bounded `retired post-scout batch command --selected-only --max-items 1` and confirm the emitted summary item now includes `rating_id`
 
 ## Manual Robinhood Position Entry (2026-03-10)
 
@@ -1793,7 +1830,7 @@
 ## V3 Rejected Cohort Tracking (2026-03-10)
 
 - Added an explicit hurdle-rejected cohort to the cohort tracker:
-  - `V3_REJECTED = selected_for_deep AND analyzed AND aeternus_score < 62`
+  - `V3_REJECTED = legacy_deep_flag AND analyzed AND aeternus_score < 62`
 - Added a direct decision metric:
   - `benchmark_to_v3_rejected = benchmark_return - v3_rejected_eq_return`
   - positive means staying in the benchmark was better than owning the names rejected by the hurdle
@@ -1821,9 +1858,9 @@
   - classifies each run by stage reach and likely drop reason using:
     - `x_feed/merged.json`
     - `signals_raw.json`
-    - `all_scored_candidates.json`
-    - `research_queue.json`
-    - `batch_analyze_latest.json`
+    - `legacy_scored_artifact.json`
+    - `legacy_queue_artifact.json`
+    - `retired_batch_latest.json`
     - latest dated `portfolio_plan_*.json`
 - Added CLI command:
   - `python3 -m cli.main why-missed MU`
@@ -1831,7 +1868,7 @@
   - `NOT_FLAGGED`
   - `DISCOVERY_CUT`
   - `SIGNAL_FILTER_CUT`
-  - `SHORTLIST_CUT`
+  - `CANDIDATE_LIST_CUT`
   - `DEEP_SELECTION_CUT`
   - `ANALYSIS_NOT_COMPLETED`
   - `V3_HURDLE_REJECTED`
@@ -1843,7 +1880,7 @@
 - Live smoke:
   - `python3 -m cli.main why-missed MU --format json`
     - `MU` was flagged in `2/5` recent runs (`2026-03-10`, `2026-03-09`)
-    - both recent flagged runs ended at `SHORTLIST_CUT`
+    - both recent flagged runs ended at `CANDIDATE_LIST_CUT`
   - `python3 -m cli.main why-missed BE --format json`
     - `BE` was flagged in `1/5` recent runs
     - only flagged recent run was `2026-03-06`, ending at `DISCOVERY_CUT`
@@ -1874,9 +1911,9 @@
 - Live smoke:
   - `python3 -m cli.main why-missed MU --format json`
     - `2026-03-10` now shows:
-      - `primary_stage_drop = shortlist_cut`
-      - `improvement_target = shortlist_cut`
-      - embedded `rule_snapshot` from the live shortlist ledger row
+      - `primary_stage_drop = candidate_list_cut`
+      - `improvement_target = candidate_list_cut`
+      - embedded `rule_snapshot` from the live candidate_list ledger row
     - forward return fields are currently `PENDING` because the T+5 windows for the recent 5 runs have not elapsed yet
 
 ## X-Feed Carry-Forward Gap Fix (2026-03-10)
@@ -2588,7 +2625,7 @@
   - then runs:
     - `discover`
     - `collect`
-    - `analyze-batch`
+    - `retired post-scout batch command`
     - `portfolio-plan`
     - optional execution / sync
     - learning
@@ -2751,3 +2788,53 @@
 - Deleted SEC cache parsed-year 2016 files: 4,131 files, ~9.7 GiB freed.
 - Deletion manifest retained: `eval_results/sec_filings_deleted_2016_manifest.csv`; path list: `.paths`.
 - Current free disk: ~20 GiB. Remaining SEC cache: ~255 GiB.
+
+
+## Current downstream fundamental/macro/hedge review
+
+- Reviewed downstream pipeline after fundamental/macro paths with QQQ, S7a/b, and hedge focus.
+- Top10/Top15/right-tail fundamental selectors are implemented; Top15 refill shadow is still plan-only.
+- Latest 2026-05-07 full fundamental run has 165 final-score rows; no live `high_conviction_top15` outputs are present in that run folder.
+- Live macro coverage is incomplete: dealflow macro collector is a stub and session research leaves `fundamental_metrics`/`macro_metrics` blank; adaptive macro proxy artifacts exist but tracked generator modules/script are absent.
+- S7a/b are implemented for `QQQ/SPY`; live downstream use is SPY-driven hedge boost only.
+- Current 2026-05-11 market check: SPY/QQQ above SMA200, VIX ~17.94, S7 false, hedge mode bull/0%; QQQ CSP inactive above SMA200, overnight CC held due insufficient VIX compression.
+
+
+## Current S7-only hedge implementation
+
+- `AdaptiveHedgeEngine` default is now S7-only: no plain `SPY < SMA200` base hedge; `S7_STANDBY` targets `0%`, `S7_HEDGE` targets `100%`.
+- Legacy `bear_base` policy remains only for A/B testing via `hedge_policy="bear_base"` or `AETERNUS_HEDGE_POLICY=bear_base`; remove it after A/B if not useful.
+- Updated contracts/docs/tests: `tradingagents/graph/hedging.py`, `tradingagents/graph/contracts.py`, `tests/test_hedging.py`, `ADAPTIVE_HEDGE_FRAMEWORK.md`, `README.md`.
+- Verification: `tests/test_hedging.py tests/test_cli_hedging.py tests/test_paper_execution.py tests/test_portfolio_construction.py -q` -> `72 passed, 2 warnings`; `py_compile` passed; smoke confirmed default `S7_STANDBY 0.0`, `S7_HEDGE 100.0`, legacy `85.0`.
+- Explicit risk: S7 detection failure/data unavailable means default `0%` hedge; legacy crash escalation is disabled in default S7-only mode.
+- CLI/backtest check: live `hedge-evaluate` currently returns `BULL`, target `0%`, `NO_POSITIONS`; simulated Bear/S7 CLI wrapper returns `S7_HEDGE`, target `100%`, `QQQ`, `INCREASE_HEDGE`; PIT close-to-close S7-only 2006-01-03→2026-05-08 on QQQ hedge returns `+3178.6%` total, `18.74%` CAGR, `-31.8%` max DD vs QQQ B&H `+1628.4%`, `15.06%` CAGR, `-53.6%` max DD.
+- QQQ SMA200 trigger variant: pure gate change `QQQ < SMA200 + SPY S7` with QQQ hedge improved to `+3447.3%`, `19.21%` CAGR, `-31.8%` max DD; full QQQ trigger `QQQ < SMA200 + QQQ S7` returned `+3123.5%`, `18.65%` CAGR, `-33.0%` max DD. This separates gate change from S7 source change.
+
+
+## Current dealflow state - scout-only handoff
+
+- Legacy pre-fundamental selection is retired from the active pipeline.
+- Deleted modules: `legacy selector`, `tradingagents/dealflow/legacy_queue_builder.py`.
+- Active dealflow output is now scout ticker totals only:
+  - `eval_results/deal_flow/<date>/scout_ticker_summary.json`
+  - `eval_results/deal_flow/<date>/scout_ticker_summary.md`
+  - `eval_results/deal_flow/<date>/final_dealflow_tickers.json`
+  - `eval_results/deal_flow/<date>/final_dealflow_tickers.txt`
+  - latest pointers for scout summary and final ticker handoff
+- `final_dealflow_tickers` source stage is now `scout_ticker_summary`, contract `AUTHORITATIVE_DEALFLOW_TICKER_HANDOFF_V2`.
+- `collect()` returns scout summary + empty queue + empty signals; no score/rank/fundamental review list/deep analysis runs in dealflow collect.
+- CLI source/collect/orchestrate display scout counts and unique ticker handoff instead of candidate_list/lane/queue stats.
+- Dealflow workflow commands now stop after scout ticker summary/orchestration; they do not proceed to retired post-scout batch command/portfolio planning from dealflow.
+- 2026-05-11 handoff regenerated from existing scout artifacts only: 162 unique tickers, 222 scout mentions. Stale `legacy_queue_artifact.json`, `legacy_candidate_list_artifact.json`, `legacy_scored_artifact.json`, and root `legacy_latest_queue_artifact.json` removed.
+
+## Current dealflow scout-only sweep - complete
+
+- Complete sweep retired pre-fundamental selection language and attachments from active code/tests/docs/memory.
+- Deleted old selection/integrity modules and obsolete tests/docs tied to pre-fundamental scoring.
+- Fundamental handoff now consumes `final_dealflow_tickers.json`; scout-sourced tickers remain unscored until the fundamental framework.
+- Operator gateway renders dealflow handoff candidates as `UNSCORED` with no score/confidence.
+- Verification:
+  - focused relevant suite: `144 passed`
+  - compile: `cli`, `tradingagents`, and `tests` passed
+  - primary removed-identifier grep passed clean for retired pre-fundamental scoring artifacts outside ignored generated/vendor/cache outputs
+- Caveat: repository still has unrelated pre-existing dirty/untracked outputs and fundamental/parser files; they were not reverted.

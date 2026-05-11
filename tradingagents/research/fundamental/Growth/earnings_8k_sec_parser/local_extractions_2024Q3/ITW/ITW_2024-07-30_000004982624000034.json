@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ITW",
+    "cik": "49826",
+    "event_date": "2024-07-30",
+    "event_accession": "0000049826-24-000034",
+    "primary_8k_doc": "itw-20240730.htm",
+    "exhibit_docs": [
+      "a20240630-2q24ex991pressre.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ITW_000004982624000034_itw-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ITW_000004982624000034_a20240630-2q24ex991pressre.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ITW",
+    "cik": "49826",
+    "entity_name": "ILLINOIS TOOL WORKS INC",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4019000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "714000000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "15518000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-185000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-111000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "728000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.177656",
+    "operating_cash_flow_to_revenue": "0.18114",
+    "assets_to_revenue": "3.861159",
+    "financing_cash_flow_to_revenue": "-0.046031",
+    "investing_cash_flow_to_revenue": "-0.027619"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $4.",
+      "revenue of $4.",
+      "revenue of $16.",
+      "Operating income of $1.",
+      "GAAP EPS of $2.",
+      "EPS increased 5% • Narrowing full year GAAP EPS guidance to a range of $10."
+    ],
+    "guidance_evidence": [
+      "guidance to a range of $10.",
+      "guidance for full-year 2024.",
+      "guidance to reflect current levels of demand partially offset by better margin performance.",
+      "Guidance ITW is lowering the top-end of its full year GAAP EPS guidance range of $10.",
+      "guidance from 26 to 27 percent to a narrower range of 26.",
+      "guidance."
+    ],
+    "wave_or_demand_evidence": [
+      "demand environment continued to moderate across our portfolio, we delivered a solid quarter with strong operational execution and profitability,” said Christopher A.",
+      "demand partially offset by better margin performance.",
+      "customer-back innovation, into a core ITW strength,” O’Herlihy concluded.",
+      "demand and foreign currency exchange rates exiting the second quarter, the company is projecting revenue growth and organic growth to be approximately flat for 2024.",
+      "customer-focused solutions are required.",
+      "aid Christopher A."
+    ],
+    "warning_or_risk_evidence": [
+      "decrease of 1% with flat organic growth • Operating income of $1.",
+      "declined by 1.",
+      "declined 0.",
+      "uncertainties, assumptions, and other factors, which could cause actual results to differ materially from those anticipated.",
+      "loss) (1,925) (1,834) Noncontrolling interest 1 1 Total stockholders' equity 2,962 3,013 $ 15,577 $ 15,518 ILLINOIS TOOL WORKS INC."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4000,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "249.240005",
+    "return_10d_pct": "-5.0634",
+    "return_20d_pct": "-2.3511",
+    "return_30d_pct": "1.5808",
+    "return_60d_pct": "5.1476",
+    "return_90d_pct": "2.7283"
+  },
+  "text_stats": {
+    "primary_text_len": 6897,
+    "exhibit_text_len": 17463,
+    "combined_text_len": 24362
+  }
+}

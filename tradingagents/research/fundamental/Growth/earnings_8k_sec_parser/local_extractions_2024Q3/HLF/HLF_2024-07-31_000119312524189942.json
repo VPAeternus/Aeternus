@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HLF",
+    "cik": "1180262",
+    "event_date": "2024-07-31",
+    "event_accession": "0001193125-24-189942",
+    "primary_8k_doc": "d874292d8k.htm",
+    "exhibit_docs": [
+      "d874292dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLF_000119312524189942_d874292d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLF_000119312524189942_d874292dex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HLF",
+    "cik": "1180262",
+    "entity_name": "Herbalife Ltd.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1252100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "29300000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2809400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-76000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-30200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "46200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.023401",
+    "operating_cash_flow_to_revenue": "0.036898",
+    "assets_to_revenue": "2.24375",
+    "financing_cash_flow_to_revenue": "-0.060698",
+    "investing_cash_flow_to_revenue": "-0.024119"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $1.",
+      "net sales of $1.",
+      "net sales increased 0.",
+      "net sales of our foreign operations from period to period.",
+      "Net income of $4.",
+      "net income 1 of $54."
+    ],
+    "guidance_evidence": [
+      "Guidance; Raised Full-Year Adjusted EBITDA 1 Guidance LOS ANGELES , July 31, 2024  Herbalife Ltd.",
+      "guidance; adjusted EBITDA 1 margin up 120 basis points year-over-year  Diluted EPS of $0.",
+      "Outlook  Third quarter 2024 guidance provided  Full-year 2024 guidance revised: net sales reduced, adjusted EBITDA 1 raised, capital expenditures reaffirmed 1 Non-GAAP measure.",
+      "guidance.",
+      "Outlook Third Quarter 2024 Guidance $ million Q3 24 Guidance Q3 23 Results Net Sales (4.",
+      "Guidance  Revised $ million FY 24 Guidance REVISED FY 24 Guidance (as of May 1 24) FY 23 Results Net Sales (3."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to embrace a healthier, more active lifestyle to live their best life.",
+      "aised Full-Year Adjusted EBITDA 1 Guidance LOS ANGELES , July 31, 2024  Herbalife Ltd.",
+      "ain focused on driving shareholder value as the continued increase in new distributors builds the foundation for sales growth.",
+      "airman and CEO  Net cash provided by operating activities of $102.",
+      "aised, capital expenditures reaffirmed 1 Non-GAAP measure.",
+      "ailed reconciliation of these measures to the most directly comparable U."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory write-downs 11.",
+      "charges that management believes do not reflect the Companys operations and underlying operational performance.",
+      "Inventory write-downs 5.",
+      "headwinds ○ Achieved year-over-year net sales growth on constant currency basis 2 , up 0.",
+      "headwind; excluded from adjusted results ○ Loss on extinguishment of debt, net of tax, $0.",
+      "headwind; excluded from adjusted results Our Q2 Adjusted EBITDA 1 is the highest its been in seven quarters."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1300,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "11.910000",
+    "return_10d_pct": "-31.9899",
+    "return_20d_pct": "-29.7229",
+    "return_30d_pct": "-32.3258",
+    "return_60d_pct": "-39.6306",
+    "return_90d_pct": "-42.8212"
+  },
+  "text_stats": {
+    "primary_text_len": 4328,
+    "exhibit_text_len": 32252,
+    "combined_text_len": 36582
+  }
+}

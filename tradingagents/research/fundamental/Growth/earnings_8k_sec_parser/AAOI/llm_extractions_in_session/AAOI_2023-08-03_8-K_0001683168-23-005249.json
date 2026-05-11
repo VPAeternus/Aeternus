@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 41.6,
+    "revenue_yoy_pct": -20.4589,
+    "revenue_qoq_pct": -21.5094,
+    "gross_margin_pct": 19.0,
+    "non_gaap_gross_margin_pct": 24.8,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 63.0,
+    "revenue_low_millions": 60.0,
+    "revenue_high_millions": 66.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 30.25,
+    "guide_direction": "positive"
+  },
+  "qualitative": {
+    "demand_signal": "We are thrilled with the increased demand we saw for our 100G and 400G datacenter products.",
+    "wave_signal": "(NASDAQ: AAOI), a leading provider of fiber-optic access network products for the cable broadband, internet datacenter, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its second quarter 2023 ended June 30, 2023.",
+    "margin_signal": "“Our second quarter revenue was in-line with our expectations, and we are pleased to report non-GAAP gross margin and non-GAAP EPS above our expectations.",
+    "risk_signal": "·GAAP net loss was $16.",
+    "customer_signal": "onsiderable talent to the team, and believe we are well positioned to execute on our new strategy to sell our CATV products directly to MSO customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $41.6 million, compared $52.3 million in the second quarter of 2022 and $53.0 million in the first quarter of 2023."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $41.6 million, compared $52.3 million in the second quarter of 2022 and $53.0 million in the first quarter of 2023."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $41.6 million, compared $52.3 million in the second quarter of 2022 and $53.0 million in the first quarter of 2023."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 19.0%, compared with 16.5% in the second quarter of 2022 and 17.4% in the first quarter of 2023. Non-GAAP gross margin was 24.8%, compared with 16.7% in the second quarter of 2022 and 23.2% in the first quarter of 2023."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 19.0%, compared with 16.5% in the second quarter of 2022 and 17.4% in the first quarter of 2023. Non-GAAP gross margin was 24.8%, compared with 16.7% in the second quarter of 2022 and 23.2% in the first quarter of 2023."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $60 million to $66 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $60 million to $66 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $60 million to $66 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 29.5% to 31%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

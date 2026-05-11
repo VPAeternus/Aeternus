@@ -37,16 +37,14 @@ flowchart TD
     A["Manual X-Feed Readiness"] --> B["Discovery Scouts"]
     B --> C["Discovery Delta / Scout Audit Gate"]
     C --> D["First Universe Filter (Tiers + FVG/FMA + Manual)"]
-    D --> E["Collectors / Evidence Gathering"]
-    E --> F["Evidence Integrity / Collector Audit Gate"]
-    F --> G["Second Universe Filter (ACTIVE vs LOW_DATA + ranking inputs)"]
-    G --> H["Shortlist / Rank Cut"]
-    H --> I["Deep Selection"]
-    I --> J["Analyze-Batch / Research Execution"]
-    J --> K["Research Conversion Integrity"]
-    K --> L["Portfolio Plan"]
-    L --> M["Execution / Sync"]
-    M --> N["Hindsight / Performance Review / Stage Diagnosis"]
+    D --> E["Scout Ticker Summary"]
+    E --> F["Final Dealflow Ticker Handoff"]
+    F --> G["Fundamental Universe Adapter"]
+    G --> H["Fundamental Research + Scoring"]
+    H --> I["Fundamental Top-10"]
+    I --> J["Portfolio Plan"]
+    J --> K["Execution / Sync"]
+    K --> L["Fundamental Performance Review"]
 ```
 
 ## Stage 0: Preflight
@@ -84,7 +82,7 @@ python3 -m cli.main x-feed --status --date YYYY-MM-DD
 ### Pass condition
 
 - status is `READY`
-- `15/15` required passes are present
+- `16/16` required passes are present
 - merged symbol count is non-zero
 
 ### Artifact
@@ -214,157 +212,105 @@ This stage is:
 - workflow console output for tier counts
 - later `stage-diagnosis` should reveal whether `universe_gate_edge` or `universe_gate_haystack` is the leak
 
-## Stage 5: Collectors
+## Stage 5: Scout Handoff
 
 ### What this stage is
 
-This is the **bounded evidence collection layer**, not pure discovery.
+This is the **scout-only ticker handoff layer**. It dedupes names found by X/manual and automated scouts. It does not rank, score, candidate_list, or allocate research budget.
 
-Collectors run on the filtered universe, not the full haystack.
+Current scout inputs include:
 
-Current collectors include:
-
-- social/news
-- price momentum
-- macro
-- smart money
-- sector rotation
+- X manual feed
+- breakout scan
+- IV force queue
 - insider cluster
+- technical ignition
+- 13F watchlist
+- FVG/FMA recall
 
 Relevant code:
 
 - [tradingagents/dealflow/pipeline.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/pipeline.py)
+- [tradingagents/dealflow/scout_ticker_summary.py](/Users/aeternusholdings/Documents/AeternusAgents-opus46/tradingagents/dealflow/scout_ticker_summary.py)
 
 ### Command
 
 ```bash
-python3 -m cli.main collect --date YYYY-MM-DD --top-k 20 --format json
+python3 -m cli.main collect --date YYYY-MM-DD --format json
 ```
 
 ### Pass condition
 
-- connectors execute
-- connector health is written
-- normalized signals and candidates are produced
+- scout artifacts are read
+- scout ticker totals are written
+- final ticker handoff is written
+- handoff contains no pre-fundamental score/rank fields
 
 ### Artifacts
 
-- `eval_results/deal_flow/YYYY-MM-DD/signals_raw.json`
-- `eval_results/deal_flow/YYYY-MM-DD/connector_health.json`
-- `eval_results/deal_flow/YYYY-MM-DD/all_scored_candidates.json`
+- `eval_results/deal_flow/YYYY-MM-DD/scout_ticker_summary.json`
+- `eval_results/deal_flow/YYYY-MM-DD/final_dealflow_tickers.json`
+- `eval_results/deal_flow/YYYY-MM-DD/final_dealflow_tickers.txt`
+- `eval_results/deal_flow/latest_final_dealflow_tickers.json`
 
-## Stage 6: Collector Audit Gate
+## Stage 6: Scout Handoff Audit
 
 ### What this stage is
 
-This is where you decide whether Step 2 failed because:
+This is where you confirm dealflow stayed scout-only.
 
-- the names were weak
-- or the data was weak
-
-The Evidence Integrity classes are:
-
-- `CONFIRMED`
-- `SPARSE_BUT_INTERESTING`
-- `DATA_DEGRADED`
-- `LOW_SIGNAL`
+The only supported dealflow question now is: which tickers did scouts find, and which scouts found them?
 
 ### Pass condition
 
-- `connector_health.json` does not show broad connector failure
-- `evidence_integrity.json` is written
-- `SPARSE_BUT_INTERESTING` and `DATA_DEGRADED` cohorts are inspectable
-
-### Artifacts
-
-- `eval_results/deal_flow/YYYY-MM-DD/evidence_integrity.json`
+- total ticker count is non-zero when scouts found names
+- per-scout counts match source artifacts
+- overlap metadata is visible
+- no scoring fields exist in scout handoff
 
 ### Debug question
 
-If a name was dropped here, ask:
+If a ticker is missing, ask:
 
-- was it actually weak?
-- or did a connector degrade and masquerade as weakness?
+- did a scout artifact omit it?
+- or did ticker normalization drop it?
 
-## Stage 7: Second Universe Filter
+## Stage 7: Fundamental Entry
 
 ### What this stage is
 
-This is the transition from “all collected candidates” to:
-
-- `ACTIVE`
-- `LOW_DATA`
-- ranked shortlist inputs
-
-This is also where score-based lane assignment happens for the live system.
-
-Current live execution lanes are:
-
-- `CORE`
-- `MOMENTUM`
-
-But candidate records also carry forward-looking lane metadata:
-
-- `upside_3m_score`
-- `emergence_proxy_score`
-- `lane_candidates`
-
-So when new lanes are added later, debug them here first.
+This is the first place scout-sourced tickers may enter a scoring framework. The adapter converts the ticker handoff into a fundamental universe CSV with CIK resolution and scout provenance only.
 
 ### Pass condition
 
-- `ACTIVE` names are non-zero
-- `LOW_DATA` names are explainable
-- lane mix is sensible
+- universe CSV row count equals handoff ticker count minus unresolved hard failures
+- columns include ticker, CIK, quarter, source stage, and scout metadata
+- columns do not include pre-fundamental score/rank fields
 
 ### Artifacts
 
-- `all_scored_candidates.json`
-- evidence gate rows in the stage ledger
+- `eval_results/fundamental/YYYY-MM-DD/dealflow_universe.csv`
 
-## Stage 8: Shortlist / Rank Cut
+## Stage 8: Fundamental Research
 
 ### What this stage is
 
-This is the first explicit opportunity-cost cut.
+This is where scoring, ranking, and underwriting can happen. Any ticker score here belongs to the fundamental framework, not dealflow.
 
-It decides:
+### Debug question
 
-- which names make the top-k shortlist
-- which near-misses get dropped
+If a name scores badly, ask:
+
+- did the fundamental data support the scout thesis?
+- or was the scout discovery useful but not investable?
+
+## Stage 9: Fundamental Output Handoff
 
 ### Artifacts
 
-- `eval_results/deal_flow/YYYY-MM-DD/shortlist_top20.json`
-- `eval_results/deal_flow/YYYY-MM-DD/shortlist_integrity.json`
-- `eval_results/deal_flow/YYYY-MM-DD/family_contributions.json`
-
-### Debug question
-
-Are the near-miss names better than the selected shortlist?
-
-If yes, Step 3 is leaking alpha.
-
-## Stage 9: Deep Research Selection
-
-### What this stage is
-
-This allocates scarce research budget.
-
-It decides:
-
-- `selected_for_deep`
-- near-miss queue names
-- injected names like manual, IV force-queue, or portfolio-preservation names
-
-### Artifact
-
-- `eval_results/deal_flow/YYYY-MM-DD/research_queue.json`
-- `eval_results/deal_flow/YYYY-MM-DD/deep_selection_integrity.json`
-
-### Debug question
-
-Did the selected-for-deep names actually deserve the research budget more than the near-misses?
+- fundamental recommendation outputs
+- Top-10 daily recommendation when requested
+- downstream portfolio inputs only after fundamental scoring exists
 
 ## Fundamental Top-10 daily handoff
 
@@ -452,18 +398,18 @@ python3 -m cli.main fundamental-right-tail-queues \
   --date YYYY-MM-DD
 ```
 
-Without `--target-events-csv`, no `target_miss_rescue_audit.csv` is written in daily live mode. These queues are visibility/research queues, not buy lists.
+Without `--target-events-csv`, no `target_miss_rescue_audit.csv` is written in daily live mode. These queues are visibility/fundamental review lists, not buy lists.
 
 ## Stage 10: Research Execution
 
 ### What this stage is
 
-This is where deep-selection turns into actual analysis output.
+This is where fundamental-intake turns into actual analysis output.
 
 Relevant command:
 
 ```bash
-python3 -m cli.main analyze-batch --queue-date YYYY-MM-DD --include-unselected --quick-unselected
+python3 -m cli.main retired post-scout batch command --run-date YYYY-MM-DD --include-unselected --quick-unselected
 ```
 
 ### Pass condition
@@ -490,7 +436,7 @@ This is where research turns into capital allocation.
 Relevant command:
 
 ```bash
-python3 -m cli.main portfolio-plan --queue-date YYYY-MM-DD --capital-usd 100000 --max-positions 8
+python3 -m cli.main portfolio-plan --run-date YYYY-MM-DD --capital-usd 100000 --max-positions 8
 ```
 
 ### Pass condition
@@ -537,11 +483,10 @@ python3 -m cli.main stage-diagnosis --last 30
 
 ### What to look at
 
-- `discovery_delta_cohorts`
-- `evidence_integrity_cohorts`
-- hypothesis stage summaries
-- false-negative cost
-- future winner recall
+- scout hit rate
+- fundamental conversion rate
+- forward returns after fundamental recommendations
+- future winner recall after research scoring
 
 If you are not running these, you are not closing the loop.
 
@@ -554,15 +499,13 @@ Use this exact order:
 3. Inspect `scout_audit.json`, `fvg_recall.json`, `fma_recall.json`, `discovery_delta.json`.
 4. Confirm the first universe filter looks sane.
 5. Run `collect`.
-6. Inspect `connector_health.json`, `evidence_integrity.json`, `all_scored_candidates.json`.
-7. Inspect `shortlist_top20.json`, `shortlist_integrity.json`, `research_queue.json`, `deep_selection_integrity.json`.
-8. Run the fundamental framework on the finalized ticker handoff when the daily fundamental Top-10 is needed.
+6. Inspect `scout_ticker_summary.json` and `final_dealflow_tickers.json`.
+7. Confirm dealflow handoff has ticker metadata only.
+8. Run the fundamental framework on the finalized ticker handoff when daily fundamental Top-10 is needed.
 9. Run `fundamental-top10` and inspect `high_conviction_top10_daily_recommendation.md`.
-10. Run `analyze-batch`.
-11. Inspect `research_conversion_integrity.json`.
-12. Run `portfolio-plan` only after the above looks sane.
-13. Run execution/sync only if this is a capital-bearing run.
-14. Run hindsight/performance/stage-diagnosis after enough forward time has passed.
+10. Run portfolio planning only after fundamental output exists.
+11. Run execution/sync only if this is a capital-bearing run.
+12. Run fundamental performance review after enough forward time has passed.
 
 ## What To Debug First
 
@@ -571,14 +514,14 @@ If today’s run looks wrong:
 - wrong names missing entirely:
   - debug `X-feed`, discovery scouts, `FVG_RECALL`, `FMA_RECALL`, and the first universe filter
 
-- names present but killed too early:
-  - debug Evidence Integrity and the evidence gate
+- names present but not scored:
+  - debug fundamental adapter and CIK resolution
 
-- good names sitting just below the cut:
-  - debug Shortlist Integrity
+- good names rejected after research:
+  - debug fundamental framework assumptions
 
 - research budget spent on the wrong names:
-  - debug Deep Selection Integrity
+  - debug Fundamental Intake Integrity
 
 - research output weak or too cached:
   - debug Research Conversion Integrity

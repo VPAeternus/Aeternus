@@ -1,0 +1,18 @@
+metric,bucket,value
+source_rows,tier2,2302
+source_rows,tier3,1268
+source_rows,tier4,737
+combined_unique_rows,,2781
+combined_source_membership,tier2,2302
+combined_source_membership,tier3,1268
+combined_source_membership,tier4,737
+combined_sub_tier_count,Tier 2.1 - LLM-supported,1035
+combined_sub_tier_count,Tier 2.2 - Causal re-rating,483
+combined_sub_tier_count,Tier 2.3 - Best balanced LLM subset,424
+combined_sub_tier_count,Tier 3.1 - Cleaner LLM-positive Tier 3,613
+combined_sub_tier_count,Tier 3.2 - LLM inflection / high priority,247
+combined_sub_tier_count,Tier 3.3 - Persistent re-rating setup,236
+combined_sub_tier_count,Tier 3.4 - Persistent high-priority re-rating,126
+combined_sub_tier_count,Tier 4.1 - LLM-supported aggressive,297
+combined_sub_tier_count,Tier 4.2 - Causal re-rating candidate,142
+combined_sub_tier_count,Tier 4.3 - Clean high-priority,83

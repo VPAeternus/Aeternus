@@ -1,0 +1,691 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "IPAR",
+    "cik": "822663",
+    "event_date": "2024-07-22",
+    "event_accession": "0001753926-24-001261",
+    "primary_8k_doc": "ipar-20240722.htm",
+    "exhibit_docs": [
+      "ex991_1.htm",
+      "ex991_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IPAR_000175392624001261_ipar-20240722.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IPAR_000175392624001261_ex991_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IPAR_000175392624001261_ex991_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "IPAR",
+    "cik": "822663",
+    "entity_name": "Interparfums, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "879500000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-02-27",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2021-12-31",
+    "net_income_value": "54068000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1369329000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-12555000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "61644000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-7358000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.061476",
+    "operating_cash_flow_to_revenue": "-0.008366",
+    "assets_to_revenue": "1.55694",
+    "financing_cash_flow_to_revenue": "-0.014275",
+    "investing_cash_flow_to_revenue": "0.07009"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were a record $342 million, up 11% from the second quarter of 2023.",
+      "net sales increased 14% from the prior year period, primarily led by Jimmy Choo with 31% sales growth, further expanding upon the 21% increase in brand sales during the same period last year.",
+      "sales were each up 13%.",
+      "sales were up 8% and 14%, respectively, in the first half of 2024.",
+      "sales were largely flat in the second quarter as we enriched the Signorina line with Signorina Unica.",
+      "net sales of $1."
+    ],
+    "guidance_evidence": [
+      "Guidance and Schedules 2024 Second Quarter Results and Conference Call New York, New York, July 22, 2024, Inter Parfums, Inc.",
+      "outlook.",
+      "guidance of net sales of $1.",
+      "expected."
+    ],
+    "wave_or_demand_evidence": [
+      "demand, second quarter sales were a record $342 million, up 11% from the second quarter of 2023.",
+      "orders in-hand and customer input, we are expecting a significant increase in Montblanc brand sales in the second half of the year.",
+      "demand, and the recent addition of Coach Dreams Moonlight resulted in flat sales for the first half of 2024, off a 26% increase in the first half of 2023.",
+      "demand for our products, sell-in continues to grow more slowly than sell-out and we are seeing continued challenges in Eastern Europe.",
+      "airman & Chief Executive Officer of Inter Parfums, stated, “With strong sell-in from our newest licenses, Roberto Cavalli and Lacoste, and healthy fragrance demand, second quarter sales were a record $342 million, up 11% from the second quarter of 2023.",
+      "ains in the same period last year."
+    ],
+    "warning_or_risk_evidence": [
+      "declined slightly during the quarter, following 16% sales gains in the same period last year."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "7"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex991_1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "INTER PARFUMS, INC. REPORTS RECORD 2024 SECOND QUARTER NET SALES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reaffirms 2024 Guidance and Schedules 2024 Second Quarter Results and Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "New York, New York, July 22, 2024, Inter Parfums, Inc. (NASDAQ GS: IPAR) (“Inter Parfums” or the “Company”) today announced that for the three months ended June 30, 2024, net sales rose to $342 million, up 11% from $309 million, in the second quarter of 2023."
+    },
+    {
+      "type": "TableElement",
+      "text": "Net Sales ($ in millions) Three Months Ended Six Months Ended June 30, June 30, 2024 2023 % Change 2024 2023 % Change Total Inter Parfums, Inc. $342 $309 11% $666 $621 7% European based net sales $226 $198 14% $457 $428 7% United States based net sales $120 $111 8% $216 $193 12% Eliminations of intercompany sales ($4) - n/a ($7) - n/a - The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Management Commentary:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Jean Madar, Chairman & Chief Executive Officer of Inter Parfums, stated, “With strong sell-in from our newest licenses, Roberto Cavalli and Lacoste, and healthy fragrance demand, second quarter sales were a record $342 million, up 11% from the second quarter of 2023. This is all the more impressive considering the 26% sales growth in the same quarter of 2023. This growth also reflects our more balanced pace of launches and advertising and promotional investments, as compared to heavy concentrations during peak selling periods. “European based operations net sales increased 14% from the prior year period, primarily led by Jimmy Choo with 31% sales growth, further expanding upon the 21% increase in brand sales during the same period last year. A new extension of the I Want Choo line is coming later this year.“Montblanc brand sales declined slightly during the quarter, following 16% sales gains in the same period last year. The Montblanc Explorer line is performing favorably, in addition to Legend Blue which launched earlier this year. Based on orders in-hand and customer input, we are expecting a significant increase in Montblanc brand sales in the second half of the year. “Coach brand’s established lines continue to see enduring demand, and the recent addition of Coach Dreams Moonlight resulted in flat sales for the first half of 2024, off a 26% increase in the first half of 2023. We have two new fragrance variations for our Coach brand fragrances in the pipeline for 2025.“Several of our midsized brands had a strong second quarter including Karl Lagerfeld and Rochas where fragrance sales were each up 13%.”Mr. Madar continued, “United States based operations grew sales 8% in the second quarter, following a very strong first quarter where we achieved 18% sales growth, and an exceptional prior year period where we grew sales by 42%. For the first half of 2024, sales grew 12%. “On our two largest brands, GUESS and Donna Karan/DKNY, sales were up 8% and 14%, respectively, in the first half of 2024. Line extensions are coming later this year and a surge in brand sales in the second half is expected. Among the new products coming to market are GUESS Elements, the third extension in the Uomo line, Uomo Intenso, and a DKNY blockbuster named DKNY 24/7, currently launching in select European markets, Travel retail and DKNY.com. Full distribution is scheduled to begin in September of this year. Ferragamo sales were largely flat in the second quarter as we enriched the Signorina line with Signorina Unica. Finally, MCM grew high double-digit behind the successful debut of MCM Crush.“Our newest brands, Lacoste and Roberto Cavalli, have performed on par with our expectations, contributing 9% to our sales growth in the current second quarter. For the Roberto Cavalli fragrance family, we will debut a new Just Cavalli brand extension, plus Sweet Ferocious, and the Wild Heart duo for men and women in the second half of 2024. In 2025, a new extension of the legacy Lacoste scent will be launched followed by a new blockbuster women’s fragrance in 2026.” Michel Atwood, Chief Financial Officer of Inter Parfums, concluded, “While the global fragrance market remains robust with positive trends leading to strong demand for our products, sell-in continues to grow more slowly than sell-out and we are seeing continued challenges in Eastern Europe. Given this dynamic backdrop and despite our record second quarter sales, we are maintaining our conservative outlook. As such, we are reaffirming our 2024 guidance of net sales of $1.45 billion, resulting in earnings per diluted share of $5.15.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Van Cleef & Arpels License Update"
+    },
+    {
+      "type": "TextElement",
+      "text": "In 2006, Van Cleef & Arpels and Interparfums SA signed a 12-year worldwide license agreement to manufacture and distribute perfumes and related products under the Van Cleef & Arpels brand name, which was subsequently extended for a further 6 years until December 31, 2024.Discussions have been underway since 2023 with a view to renewing the license agreement. The new agreement will strengthen the selective distribution of Van Cleef & Arpels fragrances worldwide. The license is to be renewed for an additional 9-year term, beginning January 1, 2025."
+    },
+    {
+      "type": "TitleElement",
+      "text": "2024 Second Quarter Results and Conference Call Details"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company will issue financial results for the three and six months ended June 30, 2024, on Tuesday, August 6, 2024, after the close of the stock market. Management will host a conference call to discuss financial results and business operations beginning at 11:00 am ET on Wednesday, August 7, 2024.Interested parties may participate in the live call by dialing: U.S. / Toll-free: (877) 423-9820International: (201) 493-6749Participants are asked to dial-in approximately 10 minutes before the conference call is scheduled to begin.A live audio webcast will also be available in the “Events” tab within the Investor Relations section of the Company’s website at www.interparfumsinc.com, or by clicking here. The conference call will be available for webcast replay for approximately 90 days following the live event."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Inter Parfums, Inc.:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating in the global fragrance business since 1982, Inter Parfums, Inc. produces and distributes a wide array of prestige fragrance and fragrance-related products under license agreements with brand owners. The Company manages its business in two operating segments, European based operations, through its 72% owned subsidiary, Interparfums SA, and United States based operations, through wholly owned subsidiaries in the United States and Italy.The portfolio of prestige brands includes Abercrombie & Fitch, Anna Sui, Boucheron, Coach, Donna Karan/DKNY, Emanuel Ungaro, Ferragamo, Graff, GUESS, Hollister, Jimmy Choo, Karl Lagerfeld, Kate Spade, Lacoste, MCM, Moncler, Montblanc, Oscar de la Renta, Roberto Cavalli, and Van Cleef & Arpels, whose products are distributed in over 120 countries around the world through an extensive and diverse network of distributors. Inter Parfums, Inc. is also the registered owner of several trademarks including Lanvin and Rochas."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Statements in this release which are not historical in nature are forward-looking statements. Although we believe that our plans, intentions, and expectations reflected in such forward-looking statements are reasonable, we can give no assurance that such plans, intentions, or expectations will be achieved. In some cases, you can identify forward-looking statements by forward-looking words such as \"anticipate, \"believe\", \"could\", \"estimate\", \"expect\", \"intend\", \"may\", \"should\", \"will\", and \"would\" or similar words. You should not rely on forward-looking statements, because actual events or results may differ materially from those indicated by these forward-looking statements as a result of a number of important factors. These factors include, but are not limited to, the risks and uncertainties discussed under the headings “Forward Looking Statements” and \"Risk Factors\" in Inter Parfums' annual report on Form 10-K for the fiscal year ended December 31, 2023, and the reports Inter Parfums files from time to time with the Securities and Exchange Commission. Inter Parfums does not intend to and undertakes no duty to update the information contained in this press release."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Contact Information:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Inter Parfums, Inc. or The Equity Group Inc. Michel Atwood Karin Daly Chief Financial Officer Investor Relations Counsel (212) 983-2640 (212) 836-9623 / kdaly@equityny.com www.interparfumsinc.com www.theequitygroup.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "7"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex991_1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "INTER PARFUMS, INC. REPORTS RECORD 2024 SECOND QUARTER NET SALES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reaffirms 2024 Guidance and Schedules 2024 Second Quarter Results and Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "New York, New York, July 22, 2024, Inter Parfums, Inc. (NASDAQ GS: IPAR) (“Inter Parfums” or the “Company”) today announced that for the three months ended June 30, 2024, net sales rose to $342 million, up 11% from $309 million, in the second quarter of 2023."
+    },
+    {
+      "type": "TableElement",
+      "text": "Net Sales ($ in millions) Three Months Ended Six Months Ended June 30, June 30, 2024 2023 % Change 2024 2023 % Change Total Inter Parfums, Inc. $342 $309 11% $666 $621 7% European based net sales $226 $198 14% $457 $428 7% United States based net sales $120 $111 8% $216 $193 12% Eliminations of intercompany sales ($4) - n/a ($7) - n/a - The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Management Commentary:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Jean Madar, Chairman & Chief Executive Officer of Inter Parfums, stated, “With strong sell-in from our newest licenses, Roberto Cavalli and Lacoste, and healthy fragrance demand, second quarter sales were a record $342 million, up 11% from the second quarter of 2023. This is all the more impressive considering the 26% sales growth in the same quarter of 2023. This growth also reflects our more balanced pace of launches and advertising and promotional investments, as compared to heavy concentrations during peak selling periods. “European based operations net sales increased 14% from the prior year period, primarily led by Jimmy Choo with 31% sales growth, further expanding upon the 21% increase in brand sales during the same period last year. A new extension of the I Want Choo line is coming later this year.“Montblanc brand sales declined slightly during the quarter, following 16% sales gains in the same period last year. The Montblanc Explorer line is performing favorably, in addition to Legend Blue which launched earlier this year. Based on orders in-hand and customer input, we are expecting a significant increase in Montblanc brand sales in the second half of the year. “Coach brand’s established lines continue to see enduring demand, and the recent addition of Coach Dreams Moonlight resulted in flat sales for the first half of 2024, off a 26% increase in the first half of 2023. We have two new fragrance variations for our Coach brand fragrances in the pipeline for 2025.“Several of our midsized brands had a strong second quarter including Karl Lagerfeld and Rochas where fragrance sales were each up 13%.”Mr. Madar continued, “United States based operations grew sales 8% in the second quarter, following a very strong first quarter where we achieved 18% sales growth, and an exceptional prior year period where we grew sales by 42%. For the first half of 2024, sales grew 12%. “On our two largest brands, GUESS and Donna Karan/DKNY, sales were up 8% and 14%, respectively, in the first half of 2024. Line extensions are coming later this year and a surge in brand sales in the second half is expected. Among the new products coming to market are GUESS Elements, the third extension in the Uomo line, Uomo Intenso, and a DKNY blockbuster named DKNY 24/7, currently launching in select European markets, Travel retail and DKNY.com. Full distribution is scheduled to begin in September of this year. Ferragamo sales were largely flat in the second quarter as we enriched the Signorina line with Signorina Unica. Finally, MCM grew high double-digit behind the successful debut of MCM Crush.“Our newest brands, Lacoste and Roberto Cavalli, have performed on par with our expectations, contributing 9% to our sales growth in the current second quarter. For the Roberto Cavalli fragrance family, we will debut a new Just Cavalli brand extension, plus Sweet Ferocious, and the Wild Heart duo for men and women in the second half of 2024. In 2025, a new extension of the legacy Lacoste scent will be launched followed by a new blockbuster women’s fragrance in 2026.” Michel Atwood, Chief Financial Officer of Inter Parfums, concluded, “While the global fragrance market remains robust with positive trends leading to strong demand for our products, sell-in continues to grow more slowly than sell-out and we are seeing continued challenges in Eastern Europe. Given this dynamic backdrop and despite our record second quarter sales, we are maintaining our conservative outlook. As such, we are reaffirming our 2024 guidance of net sales of $1.45 billion, resulting in earnings per diluted share of $5.15.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Van Cleef & Arpels License Update"
+    },
+    {
+      "type": "TextElement",
+      "text": "In 2006, Van Cleef & Arpels and Interparfums SA signed a 12-year worldwide license agreement to manufacture and distribute perfumes and related products under the Van Cleef & Arpels brand name, which was subsequently extended for a further 6 years until December 31, 2024.Discussions have been underway since 2023 with a view to renewing the license agreement. The new agreement will strengthen the selective distribution of Van Cleef & Arpels fragrances worldwide. The license is to be renewed for an additional 9-year term, beginning January 1, 2025."
+    },
+    {
+      "type": "TitleElement",
+      "text": "2024 Second Quarter Results and Conference Call Details"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company will issue financial results for the three and six months ended June 30, 2024, on Tuesday, August 6, 2024, after the close of the stock market. Management will host a conference call to discuss financial results and business operations beginning at 11:00 am ET on Wednesday, August 7, 2024.Interested parties may participate in the live call by dialing: U.S. / Toll-free: (877) 423-9820International: (201) 493-6749Participants are asked to dial-in approximately 10 minutes before the conference call is scheduled to begin.A live audio webcast will also be available in the “Events” tab within the Investor Relations section of the Company’s website at www.interparfumsinc.com, or by clicking here. The conference call will be available for webcast replay for approximately 90 days following the live event."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Inter Parfums, Inc.:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operating in the global fragrance business since 1982, Inter Parfums, Inc. produces and distributes a wide array of prestige fragrance and fragrance-related products under license agreements with brand owners. The Company manages its business in two operating segments, European based operations, through its 72% owned subsidiary, Interparfums SA, and United States based operations, through wholly owned subsidiaries in the United States and Italy.The portfolio of prestige brands includes Abercrombie & Fitch, Anna Sui, Boucheron, Coach, Donna Karan/DKNY, Emanuel Ungaro, Ferragamo, Graff, GUESS, Hollister, Jimmy Choo, Karl Lagerfeld, Kate Spade, Lacoste, MCM, Moncler, Montblanc, Oscar de la Renta, Roberto Cavalli, and Van Cleef & Arpels, whose products are distributed in over 120 countries around the world through an extensive and diverse network of distributors. Inter Parfums, Inc. is also the registered owner of several trademarks including Lanvin and Rochas."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Statements in this release which are not historical in nature are forward-looking statements. Although we believe that our plans, intentions, and expectations reflected in such forward-looking statements are reasonable, we can give no assurance that such plans, intentions, or expectations will be achieved. In some cases, you can identify forward-looking statements by forward-looking words such as \"anticipate, \"believe\", \"could\", \"estimate\", \"expect\", \"intend\", \"may\", \"should\", \"will\", and \"would\" or similar words. You should not rely on forward-looking statements, because actual events or results may differ materially from those indicated by these forward-looking statements as a result of a number of important factors. These factors include, but are not limited to, the risks and uncertainties discussed under the headings “Forward Looking Statements” and \"Risk Factors\" in Inter Parfums' annual report on Form 10-K for the fiscal year ended December 31, 2023, and the reports Inter Parfums files from time to time with the Securities and Exchange Commission. Inter Parfums does not intend to and undertakes no duty to update the information contained in this press release."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Contact Information:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Inter Parfums, Inc. or The Equity Group Inc. Michel Atwood Karin Daly Chief Financial Officer Investor Relations Counsel (212) 983-2640 (212) 836-9623 / kdaly@equityny.com www.interparfumsinc.com www.theequitygroup.com"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        8,
+        7
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "rows": [
+        [
+          "Net Sales ($ in millions)",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Six Months Ended",
+          "Six Months Ended",
+          "Six Months Ended"
+        ],
+        [
+          "Net Sales ($ in millions)",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,"
+        ],
+        [
+          "Net Sales ($ in millions)",
+          "2024",
+          "2023",
+          "% Change",
+          "2024",
+          "2023",
+          "% Change"
+        ],
+        [
+          "Total Inter Parfums, Inc.",
+          "$342",
+          "$309",
+          "11%",
+          "$666",
+          "$621",
+          "7%"
+        ],
+        [
+          "European based net sales",
+          "$226",
+          "$198",
+          "14%",
+          "$457",
+          "$428",
+          "7%"
+        ],
+        [
+          "United States based net sales",
+          "$120",
+          "$111",
+          "8%",
+          "$216",
+          "$193",
+          "12%"
+        ],
+        [
+          "Eliminations of intercompany sales",
+          "($4)",
+          "-",
+          "",
+          "($7)",
+          "-",
+          ""
+        ],
+        [
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "Inter Parfums, Inc.",
+          "or",
+          "The Equity Group Inc."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Michel Atwood",
+          "Karin Daly"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Chief Financial Officer",
+          "Investor Relations Counsel"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "(212) 983-2640",
+          "(212) 836-9623 / kdaly@equityny.com"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "www.interparfumsinc.com",
+          "www.theequitygroup.com"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        8,
+        7
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "rows": [
+        [
+          "Net Sales ($ in millions)",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Three Months Ended",
+          "Six Months Ended",
+          "Six Months Ended",
+          "Six Months Ended"
+        ],
+        [
+          "Net Sales ($ in millions)",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,",
+          "June 30,"
+        ],
+        [
+          "Net Sales ($ in millions)",
+          "2024",
+          "2023",
+          "% Change",
+          "2024",
+          "2023",
+          "% Change"
+        ],
+        [
+          "Total Inter Parfums, Inc.",
+          "$342",
+          "$309",
+          "11%",
+          "$666",
+          "$621",
+          "7%"
+        ],
+        [
+          "European based net sales",
+          "$226",
+          "$198",
+          "14%",
+          "$457",
+          "$428",
+          "7%"
+        ],
+        [
+          "United States based net sales",
+          "$120",
+          "$111",
+          "8%",
+          "$216",
+          "$193",
+          "12%"
+        ],
+        [
+          "Eliminations of intercompany sales",
+          "($4)",
+          "-",
+          "",
+          "($7)",
+          "-",
+          ""
+        ],
+        [
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations.",
+          "- The average dollar/euro exchange rate for the 2024 second quarter was 1.08 compared to 1.09 in the 2023 second quarter, while for both the first half of 2024 and 2023, the average dollar/euro exchange rate was 1.08, leading to a negative 0.4% foreign exchange impact for the second quarter and no impact for the first half. - Eliminations of intercompany sales relate to European based operations product sales to United States based operations."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "Inter Parfums, Inc.",
+          "or",
+          "The Equity Group Inc."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Michel Atwood",
+          "Karin Daly"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Chief Financial Officer",
+          "Investor Relations Counsel"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "(212) 983-2640",
+          "(212) 836-9623 / kdaly@equityny.com"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "www.interparfumsinc.com",
+          "www.theequitygroup.com"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 342.0,
+    "quarter_revenue_yoy_pct": 0.0,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 1450.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "net sales rose to $342 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Net Sales ($ in millions) | June 30, | June 30, | June 30, | June 30, | June 30,"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "guidance of net sales of $1.45 billion"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 3,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 3,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 323.9766,
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-23",
+    "entry_open": "144.449997",
+    "return_10d_pct": "-6.4728",
+    "return_20d_pct": "-12.2672",
+    "return_30d_pct": "-15.1679",
+    "return_60d_pct": "-16.3309",
+    "return_90d_pct": "-17.4109"
+  },
+  "text_stats": {
+    "primary_text_len": 4032,
+    "exhibit_text_len": 17722,
+    "combined_text_len": 21756,
+    "semantic_text_len": 17655,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

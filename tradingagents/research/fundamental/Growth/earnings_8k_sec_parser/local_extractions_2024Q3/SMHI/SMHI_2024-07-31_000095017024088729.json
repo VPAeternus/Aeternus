@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SMHI",
+    "cik": "1690334",
+    "event_date": "2024-07-31",
+    "event_accession": "0000950170-24-088729",
+    "primary_8k_doc": "smhi-20240731.htm",
+    "exhibit_docs": [
+      "smhi-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SMHI_000095017024088729_smhi-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SMHI_000095017024088729_smhi-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SMHI",
+    "cik": "1690334",
+    "entity_name": "SEACOR Marine Holdings Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "368868000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-03-22",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2015-12-31",
+    "net_income_value": "-9589000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "780336000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-10982000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "12141000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-552000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.025996",
+    "operating_cash_flow_to_revenue": "-0.001496",
+    "assets_to_revenue": "2.115488",
+    "financing_cash_flow_to_revenue": "-0.029772",
+    "investing_cash_flow_to_revenue": "0.032914"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $68.",
+      "revenues of $62.",
+      "operating income of $2.",
+      "GAAP Operating Income (Loss), its most comparable GAAP measure.",
+      "Earnings Per Share: Basic $ (0.",
+      "backlog, including options, with an average contract duration of approximately one year."
+    ],
+    "guidance_evidence": [
+      "expected as shipyards and vendors continue to address various capacity challenges.",
+      "forecast” and similar expressions are intended to identify forward-looking statements.",
+      "expected by the management of the Company."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in the U.",
+      "customers in the U.",
+      "customers and decisions are more generally deferred until after the U.",
+      "backlog, including options, with an average contract duration of approximately one year.",
+      "airs during the quarter compared to $3.",
+      "airs as part of a heavier 2024 maintenance schedule, some of which have taken longer than expected as shipyards and vendors continue to address various capacity challenges."
+    ],
+    "warning_or_risk_evidence": [
+      "delays in the project schedules of our customers in the U.",
+      "loss was $3.",
+      "loss of $10.",
+      "decrease from 78% in the second quarter of 2023 and an increase from 62% in the first quarter of 2024.",
+      "decrease from 44.",
+      "loss was $12."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 69.9,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "13.200000",
+    "return_10d_pct": "-15.6061",
+    "return_20d_pct": "-17.1970",
+    "return_30d_pct": "-21.1364",
+    "return_60d_pct": "-26.8939",
+    "return_90d_pct": "-36.1364"
+  },
+  "text_stats": {
+    "primary_text_len": 3493,
+    "exhibit_text_len": 28316,
+    "combined_text_len": 31811
+  }
+}

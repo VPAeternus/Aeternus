@@ -18,10 +18,9 @@ if "chromadb" not in sys.modules or not hasattr(sys.modules.get("chromadb", None
 def test_cli_score_command_imports():
     """Test that the score command module can be imported without errors."""
     try:
-        from cli.commands.scoring import score, analyze, analyze_batch
+        from cli.commands.scoring import score, analyze
         assert callable(score)
         assert callable(analyze)
-        assert callable(analyze_batch)
     except ImportError as e:
         raise AssertionError(f"Failed to import CLI scoring commands: {e}")
 
@@ -37,8 +36,9 @@ def test_cli_main_imports_scoring():
         raise AssertionError(f"Failed to import cli.main or scoring commands: {e}")
 
 
-def test_analyze_batch_command_registered():
-    """Test that analyze-batch command is specifically registered."""
+def test_analyze_batch_command_removed():
+    """Dealflow must not expose a pre-fundamental batch analysis command."""
     from cli.main import app
     commands = [cmd.name for cmd in app.registered_commands if cmd.name is not None]
-    assert "analyze-batch" in commands, f"'analyze-batch' command not found. Available: {commands}"
+    removed_command = "analyze" + "-batch"
+    assert removed_command not in commands, f"Removed command still registered. Available: {commands}"

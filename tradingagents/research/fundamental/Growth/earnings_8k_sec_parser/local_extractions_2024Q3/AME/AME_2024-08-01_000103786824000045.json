@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AME",
+    "cik": "1037868",
+    "event_date": "2024-08-01",
+    "event_accession": "0001037868-24-000045",
+    "primary_8k_doc": "ame-20240801.htm",
+    "exhibit_docs": [
+      "ametek8kexhibit9918-1x24.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AME_000103786824000045_ame-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AME_000103786824000045_ametek8kexhibit9918-1x24.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AME",
+    "cik": "1037868",
+    "entity_name": "AMETEK, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1597117000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "305712000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "15023533000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-214966000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-122160000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "386536000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.191415",
+    "operating_cash_flow_to_revenue": "0.242021",
+    "assets_to_revenue": "9.406658",
+    "financing_cash_flow_to_revenue": "-0.134596",
+    "investing_cash_flow_to_revenue": "-0.076488"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were $1.",
+      "sales of approximately $7.",
+      "Operating income increased 7% to a record $447.",
+      "operating income and EBITDA, and earnings growth ahead of our expectations,\" commented David A.",
+      "operating income in the quarter increased 14% to $349.",
+      "operating income margins of 30."
+    ],
+    "guidance_evidence": [
+      "Outlook “Our operating results through the first half of 2024 have been solid against the backdrop of a slower growth environment.",
+      "guidance for the year,” continued Mr.",
+      "expected to be in the range of $6.",
+      "expected to be up mid-single digits on a percentage basis compared to the same period last year.",
+      "expected business and financial performance are \"forward-looking statements.",
+      "Forecasted Diluted Earnings Per Share Three Months Ended Year Ended September 30, 2024 December 31, 2024 Low High Low High Diluted earnings per share (GAAP) $ 1."
+    ],
+    "wave_or_demand_evidence": [
+      "customer base,\" stated Mr.",
+      "customer base will continue through the balance of 2024.",
+      "customers are turning more cautious leading to some short-term delays in project spending,” stated Mr.",
+      "demand headwinds, deliver strong operating performance and cash flows, and ensure AMETEK is well positioned for strong growth and profitability.",
+      "airman and Chief Executive Officer.",
+      "ainst the backdrop of a slower growth environment."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels across our OEM customer base,\" stated Mr.",
+      "inventory normalization within our OEM customer base will continue through the balance of 2024.",
+      "delays in project spending,” stated Mr.",
+      "headwinds in the quarter from the normalization of inventory levels across our OEM customer base,\" stated Mr.",
+      "headwinds, our teams delivered solid operating performance with sequential margins improving 50 basis points versus the first quarter’s adjusted margins.",
+      "headwinds, deliver strong operating performance and cash flows, and ensure AMETEK is well positioned for strong growth and profitability."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1730,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "157.649994",
+    "return_10d_pct": "1.9727",
+    "return_20d_pct": "4.8018",
+    "return_30d_pct": "5.7279",
+    "return_60d_pct": "7.2629",
+    "return_90d_pct": "16.2956"
+  },
+  "text_stats": {
+    "primary_text_len": 3584,
+    "exhibit_text_len": 11613,
+    "combined_text_len": 15199
+  }
+}

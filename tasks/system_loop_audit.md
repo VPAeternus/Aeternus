@@ -252,7 +252,7 @@ The CLI (`scoring.py`) does call `record_rating()` at lines 434 and 606, but wit
 
 **Fix D (CLI writeback — DONE 2026-03-03):** `scoring.py` lines 432-436 and 604-608 — changed `AeternusKnowledgeGraph()` to `.load()` + added `.save()`. Both `analyze` and `score` commands now persist ratings. 1870 tests pass.
 
-**Fix E (Engine writeback — DONE 2026-03-03):** `trading_graph.py` line 440-447 — added `AeternusKnowledgeGraph.load()` → `record_rating()` → `save()` after `aeternus_scorer.score()` completes. Wrapped in try/except with logger.warning. Same pattern as CLI Fix D. Both `analyze` (CLI) and `analyze-batch` (engine) paths now write ratings to AKG. 168 KG tests pass, import clean.
+**Fix E (Engine writeback — DONE 2026-03-03):** `trading_graph.py` line 440-447 — added `AeternusKnowledgeGraph.load()` → `record_rating()` → `save()` after `aeternus_scorer.score()` completes. Wrapped in try/except with logger.warning. Same pattern as CLI Fix D. Both `analyze` (CLI) and `retired post-scout batch command` (engine) paths now write ratings to AKG. 168 KG tests pass, import clean.
 
 #### GAP 2: Emergence tier system is write-only — `get_emerging_planets()` never called
 
@@ -272,13 +272,13 @@ Centrality is a static graph-structure metric (how connected a node is). It neve
 
 **Fix scope:** Breakout scanner and/or pipeline should call `get_emerging_planets()` (or at least filter by tier) to prioritize nodes that scouts have lit up with signals.
 
-**Fix design (2026-03-03):** Make emergence a first-class signal family. Three files:
+**Fix design (retired with scout-only dealflow):** Emergence should enrich scout handoff metadata only; scout-sourced tickers are not ranked or scored in dealflow.
 
-1. **`breakout_scanner.py`** — `_get_scan_universe()` adds ATMOSPHERE/HABITABLE nodes alongside centrality filter. Breakout scanner now discovers patterns in emerging tickers, not just well-connected ones.
-2. **`pipeline.py`** — After connectors run and before `score_candidates()`, call `get_emerging_planets()` and inject synthetic emergence signals. Each ATMOSPHERE/HABITABLE node gets an `emergence` signal with `raw_score = emergence_score * 100`, `evidence_count = 2`.
-3. **`scoring.py`** — Add `"emergence"` to GATING_FAMILIES, CORE_SIGNAL_FAMILIES, CORE_SCORE_WEIGHTS (7% weight, same as breakout_discovery). Emergence counts toward the ≥3 signal families gate.
+1. **`breakout_scanner.py`** — `_get_scan_universe()` adds ATMOSPHERE/HABITABLE nodes alongside centrality filter.
+2. **`pipeline.py`** — Collect scout discoveries and persist them through `final_dealflow_tickers.json`.
+3. **Fundamental framework** — Any score/rank decision happens after ticker handoff enters fundamental research.
 
-**Effect:** A HABITABLE ticker with emergence_score=0.6 gets a 60.0 emergence signal. Combined with even 2 other signal families, it passes the evidence gate. Scouts write → tiers progress → pipeline reads tiers as signals → ranking considers them. The loop closes.
+**Effect:** Scouts write → tiers progress → pipeline hands off tickers → fundamental framework evaluates them.
 
 #### GAP 3: No end-to-end loop test
 
@@ -329,17 +329,17 @@ Gaps 1 and 2 prove the chain isn't connected. An integration test with mocked da
 
 ### Ranking Audit (2026-03-03)
 
-Applied Elon's 5-step algorithm + Karpathy guidelines to `ranking.py` (191 lines).
+Applied Elon's 5-step algorithm + Karpathy guidelines to legacy selector (191 lines).
 
 | # | Finding | Priority | Fix |
 |---|---|---|---|
-| R-1 | `_lane_rank_score` returns `core_score` for CORE (IC=-0.52) — fallback + hedge eviction sort by worst-performers-first | P0 | Fixed: returns `momentum_score` for CORE, `asymmetry_score` for MOMENTUM |
-| R-2 | `max_asset_class_count=8` caps shortlist at ~15 on 5K universe (97% Equity) | P0 | Fixed: removed parameter entirely. Macro hedge minimum already ensures non-Equity diversity. |
+| R-1 | Retired dealflow rank scoring could invert selection quality | P0 | Removed; scout-sourced names now wait for fundamental scoring |
+| R-2 | `max_asset_class_count=8` caps candidate_list at ~15 on 5K universe (97% Equity) | P0 | Fixed: removed parameter entirely. Macro hedge minimum already ensures non-Equity diversity. |
 | R-3 | Config divergence — `max_sector_count` hardcoded default, not in config, not passed from pipeline | P1 | Fixed: added `dealflow_max_sector_count` to config, pipeline passes it. |
 | R-4 | Function defaults (12/8) don't match config (18/12) | P2 | Fixed: aligned to 18/12. |
 | R-5 | `DealFlowSignal.signal_family` missing 4 families | P3 | Fixed: added emergence, causal_chain, earnings_catalyst, forward_earnings_anticipation. |
 
-**Files changed:** `ranking.py` (191→174 lines), `default_config.py`, `pipeline.py`, `contracts.py`
+**Files changed:** legacy selector (191→174 lines), `default_config.py`, `pipeline.py`, `contracts.py`
 **Tests:** 14/14 momentum + 4/4 emergence = 18/18 pass.
 
 ### Open — Verification
@@ -350,4 +350,3 @@ Applied Elon's 5-step algorithm + Karpathy guidelines to `ranking.py` (191 lines
 | Run `aeternus x-discover --dry-run` | [ ] |
 
 ---
-

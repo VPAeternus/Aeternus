@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MRVL",
+    "cik": "1835632",
+    "event_date": "2024-08-29",
+    "event_accession": "0001835632-24-000140",
+    "primary_8k_doc": "mrvl-20240829.htm",
+    "exhibit_docs": [
+      "q225_8kx832024ex-991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MRVL_000183563224000140_mrvl-20240829.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MRVL_000183563224000140_q225_8kx832024ex-991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MRVL",
+    "cik": "1835632",
+    "entity_name": "Marvell Technology, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1321700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-31",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-29",
+    "net_income_value": "-168900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-31",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-29",
+    "assets_value": "21228500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-31",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-02-03",
+    "financing_cash_flow_value": "11600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-31",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-29",
+    "investing_cash_flow_value": "-102700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-31",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-29",
+    "operating_cash_flow_value": "208400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-31",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.12779",
+    "operating_cash_flow_to_revenue": "0.157676",
+    "assets_to_revenue": "16.061512",
+    "financing_cash_flow_to_revenue": "0.008777",
+    "investing_cash_flow_to_revenue": "-0.077703"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Gross Margin: 46.",
+      "GAAP gross margin; 61.",
+      "non-GAAP gross margin • Q2 Diluted income (loss) per share: $(0.",
+      "Non-GAAP net income for the second quarter of fiscal 2025 was $266.",
+      "GAAP gross margin is expected to be approximately 47.",
+      "Non-GAAP gross margin is expected to be approximately 61%."
+    ],
+    "guidance_evidence": [
+      "guidance provided on May 30, 2024.",
+      "guidance driven by strong demand from AI.",
+      "Outlook • Net revenue is expected to be $1.",
+      "outlook and future period revenues.",
+      "Outlook for Three Months Ended November 2, 2024 GAAP net revenue $1,450 +/- 5% Special items: — Non-GAAP net revenue $1,450 +/- 5% GAAP gross margin ~ 47.",
+      "forecasted to grow 14% sequentially at the mid-point, accompanied by a significant increase in operating leverage."
+    ],
+    "wave_or_demand_evidence": [
+      "demand from AI.",
+      "customers, distributors, vendors, suppliers, and partners; our maintenance of an effective system of internal controls; financial institution instability; and other risks detailed in our SEC filings from time to time.",
+      "customers.",
+      "customers’ current needs and future ambitions.",
+      "AI.",
+      "AI programs began to ramp,” said Matt Murphy, Marvell’s Chairman and CEO."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, employee severance costs, and facilities related charges), resolution of legal matters, and certain expenses and benefits that are driven primarily by discrete events that management does not consider to be directly related to Marvell’s core business.",
+      "charges 4.",
+      "impairment charges 1.",
+      "charges (b) (4.",
+      "charges (b) 0.",
+      "charges (b) 4."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1273,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 1450,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": 47.2,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-30",
+    "entry_open": "78.300003",
+    "return_10d_pct": "-11.9668",
+    "return_20d_pct": "-4.3678",
+    "return_30d_pct": "-7.8927",
+    "return_60d_pct": "8.3908",
+    "return_90d_pct": "18.3780"
+  },
+  "text_stats": {
+    "primary_text_len": 4321,
+    "exhibit_text_len": 27332,
+    "combined_text_len": 31655
+  }
+}

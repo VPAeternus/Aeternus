@@ -1,0 +1,509 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EEFT",
+    "cik": "1029199",
+    "event_date": "2024-07-19",
+    "event_accession": "0001213900-24-062722",
+    "primary_8k_doc": "eeft-20240718.htm",
+    "exhibit_docs": [
+      "ex991_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EEFT_000121390024062722_eeft-20240718.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EEFT_000121390024062722_ex991_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EEFT",
+    "cik": "1029199",
+    "entity_name": "Euronet Worldwide, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "787200000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-06",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "20100000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-06",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5894400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-06",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-4400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-06",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-18100000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-06",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "3300000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-06",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.025534",
+    "operating_cash_flow_to_revenue": "0.004192",
+    "assets_to_revenue": "7.487805",
+    "financing_cash_flow_to_revenue": "-0.005589",
+    "investing_cash_flow_to_revenue": "-0.022993"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $986.",
+      "Revenues of $305.",
+      "Revenues of $260.",
+      "Revenues of $421.",
+      "revenue was primarily driven by near double-digit growth in cross-border transactions, offset by a decrease in intra-US transactions.",
+      "Operating income of $134."
+    ],
+    "guidance_evidence": [
+      "outlook does not include any changes that may develop in foreign exchange rates, interest rates or other unforeseen factors.",
+      "expected 10-15% range and increases our determination to deliver results beyond the range.",
+      "expected to be delivered in the third and more so the fourth quarters."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for digital product, which represents 12% of total transactions.",
+      "customer marketing spend during the quarter versus last year.",
+      "customer marketing spend, constant currency Operating Income growth would have exceeded 10% producing operating margins consistent with prior year.",
+      "ailability under its revolving credit facilities was approximately $802.",
+      "airman and Chief Executive Officer.",
+      "ains confident in its previously announced expectations that its 2024 adjusted EPS will grow 10-15% year-over-year, consistent with its 10 and 20 year compounded annualized growth rates."
+    ],
+    "warning_or_risk_evidence": [
+      "charges reflected in the Company's reconciliation of historic numbers, the amount of which, based on historical experience, could be significant.",
+      "loss making ATMs in last year's fourth quarter and the first half of this year, together with effective expense management.",
+      "decrease from $263.",
+      "decrease from $26.",
+      "decrease from $28.",
+      "decrease from approximately 810,000."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "7"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex991_1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Contact:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Euronet Worldwide, Inc. Stephanie Taylor +1-913-327-4200"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Euronet Worldwide Reports Second Quarter 2024 Financial Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "LEAWOOD, KANSAS, USA - July 18, 2024 - Euronet Worldwide, Inc. (“Euronet” or the “Company”) (NASDAQ: EEFT), a leading global financial technology solutions and payments provider, reports second quarter 2024 financial results."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Euronet reports the following consolidated results for the second quarter 2024 compared with the same period of 2023:"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Revenues of $986.2 million, a 5% increase from $939.1 million (6% increase on a constant currency1 basis). • Operating income of $134.3 million, a 10% increase from $122.6 million (12% increase on a constant currency basis)."
+    },
+    {
+      "type": "TableElement",
+      "text": "• Adjusted operating income2 of $134.3 million, a 12% increase from $119.6 million (15% increase on a constant currency basis). • Adjusted EBITDA3 of $178.2 million, a 7% increase from $165.8 million (10% increase on a constant currency basis)."
+    },
+    {
+      "type": "TextElement",
+      "text": "• Net income attributable to Euronet of $83.1 million, or $1.73 diluted earnings per share, compared with $86.1 million, or $1.65 diluted earnings per share. • Adjusted earnings per share4 of $2.25, an 11% increase from $2.03. • Euronet's cash and cash equivalents were $1,271.8 million and ATM cash was $795.6 million, totaling $2,067.4 million as of June 30, 2024, and availability under its revolving credit facilities was approximately $802.0 million. See the reconciliation of non-GAAP items in the attached financial schedules. “I am pleased that we achieved a second quarter adjusted EPS of $2.25, an 11% increase over the prior year's $2.03,” stated Michael J. Brown, Euronet’s Chairman and Chief Executive Officer. “We were able to deliver this growth due to our continued focus on expanding our business in new and existing markets, adding more products to our portfolio and continued investment in our industry-leading technology in all three segments. Complementing the 15% constant currency adjusted operating income growth, operating margins expanded by more than 90 basis points. Producing double-digit adjusted EPS growth in the first two quarters of 2024 reinforces our confidence in delivering full year adjusted EPS growth within our expected 10-15% range and increases our determination to deliver results beyond the range.” Taking into consideration recent trends in the business and the global economy, continued double digit quarterly earnings growth, and historical seasonal patterns, the Company remains confident in its previously announced expectations that its 2024 adjusted EPS will grow 10-15% year-over-year, consistent with its 10 and 20 year compounded annualized growth rates. This outlook does not include any changes that may develop in foreign exchange rates, interest rates or other unforeseen factors."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Segment and Other Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "The EFT Processing Segment reports the following results for the second quarter 2024 compared with the same period or date in 2023: • Revenues of $305.4 million, an 8% increase from $282.4 million (10% increase on a constant currency basis). • Operating income of $79.9 million, a 16% increase from $69.1 million (19% increase on a constant currency basis)."
+    },
+    {
+      "type": "TableElement",
+      "text": "• Adjusted operating income of $79.9 million, a 21% increase from $66.1 million (24% increase on a constant currency basis). • Adjusted EBITDA of $105.0 million, a 17% increase from $89.9 million (20% increase on a constant currency basis)."
+    },
+    {
+      "type": "TextElement",
+      "text": "• Transactions of 2,737 million, a 34% increase from 2,035 million. • Total of 54,736 installed ATMs as of June 30, 2024, a 5% increase from 52,327. We operated 54,005 active ATMs as of June 30, 2024, a 5% increase from 51,402 as of June 30, 2023. Constant currency revenue, adjusted operating income, and adjusted EBITDA growth in the second quarter 2024 was driven by increased travel, growth in the merchant services business and growth from new market expansion. Operating margins benefited from transactions driven by continued travel recovery, actions taken by management to remove loss making ATMs in last year's fourth quarter and the first half of this year, together with effective expense management. The increase in active ATMs includes the acquisition of 800 ATMs in Malaysia together with the addition of approximately 1,400 outsourcing ATMs. Transaction growth outpaced revenue growth due to continued growth in high-volume low-value transactions in India. The epay Segment reports the following results for the second quarter 2024 compared with the same period or date in 2023: • Revenues of $260.9 million, a 1% decrease from $263.8 million (no change on a constant currency basis). • Operating income of $26.2 million, a 2% decrease from $26.8 million (no change on a constant currency basis). • Adjusted EBITDA of $28.0 million, a 2% decrease from $28.5 million (no change on a constant currency basis). • Transactions of 1,110 million, a 13% increase from 984 million. • POS terminals of approximately 794,000 as of June 30, 2024, a 2% decrease from approximately 810,000. • Retailer locations of approximately 352,000 as of June 30, 2024, a 1% increase from approximately 349,000. epay’s results were similar to the prior year across all metrics. The prior year 2023 second quarter results included a strong benefit from promotional campaigns run by epay on behalf of retail partners, which did not recur in the second quarter 2024, but are expected to be delivered in the third and more so the fourth quarters. Excluding the promotional campaigns, the core epay business grew revenue, operating income and adjusted EBITDA by 10%. Transaction growth outpaced revenue growth due to continued growth in high-volume low-value transactions in India. The Money Transfer Segment reports the following results for the second quarter 2024 compared with the same period or date in 2023: • Revenues of $421.8 million, a 7% increase from $394.8 million (8% increase on a constant currency basis). • Operating income of $47.3 million, essentially flat compared to $47.2 million (2% increase on a constant currency basis). • Adjusted EBITDA of $54.0 million, a 2% decrease from $55.3 million (1% decrease on a constant currency basis). • Total transactions of 44.3 million, an 8% increase from 41.1 million. • Network locations of approximately 586,000 as of June 30, 2024, a 10% increase from approximately 533,000. Constant currency growth revenue was primarily driven by near double-digit growth in cross-border transactions, offset by a decrease in intra-US transactions. Direct-to-consumer digital transactions increased by 24%, reflecting strong consumer demand for digital product, which represents 12% of total transactions. The constant currency Operating Income increase of 2% was influenced by an additional $3.9 million year-over-year digital customer marketing spend during the quarter versus last year. Excluding the incremental digital customer marketing spend, constant currency Operating Income growth would have exceeded 10% producing operating margins consistent with prior year. Money Transfer’s revenue and gross profit per transaction were consistent with the prior year and Money Transfer volumes sent increased 9%. Corporate and Other reports $19.1 million of expense for the second quarter 2024 compared with $20.5 million for the second quarter 2023."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Balance Sheet and Financial Position"
+    },
+    {
+      "type": "TextElement",
+      "text": "Unrestricted cash and cash equivalents on hand was $1,271.8 million as of June 30, 2024, compared to $1,236.2 million as of March 31, 2024. The net increase in unrestricted cash and cash equivalents is the net result of the generation of cash from operations and an increase in short term borrowings, partially offset by share repurchases, the use of cash for the acquisition of 800 ATMs in Malaysia, cash placed in ATMs reactivated in anticipation of the travel season and working capital fluctuations.Total indebtedness was $2,270.2 million as of June 30, 2024, compared to $1,938.1 million as of March 31, 2024. Availability under the Company's revolving credit facilities was approximately $802.0 million as of June 30, 2024. The Company repurchased one million shares for $114 million during the second quarter, which will improve earnings per share by 2% for future periods."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "In addition to the results presented in accordance with U.S. GAAP, the Company presents non-GAAP financial measures, such as constant currency financial measures, adjusted operating income, adjusted EBITDA, and adjusted earnings per share. These measures should be used in addition to, and not a substitute for, revenues, operating income, net income and earnings per share computed in accordance with U.S. GAAP. We believe that these non-GAAP measures provide useful information to investors regarding the Company's performance and overall results of operations. These non-GAAP measures are also an integral part of the Company's internal reporting and performance assessment for executives and senior management. The non-GAAP measures used by the Company may not be comparable to similarly titled non-GAAP measures used by other companies. The attached schedules provide a full reconciliation of these non-GAAP financial measures to their most directly comparable U.S. GAAP financial measure.The Company does not provide a reconciliation of its forward-looking non-GAAP measures to GAAP due to the inherent difficulty in forecasting and quantifying certain amounts that are necessary for GAAP and the related GAAP and non-GAAP reconciliation, including adjustments that would be necessary for foreign currency exchange rate fluctuations and other charges reflected in the Company's reconciliation of historic numbers, the amount of which, based on historical experience, could be significant. (1) Constant currency financial measures are computed as if foreign currency exchange rates did not change from the prior period. This information is provided to illustrate the impact of changes in foreign currency exchange rates on the Company's results when compared to the prior period.(2) Adjusted operating income is defined as operating income excluding non-cash gain. Adjusted operating income represents a performance measure and is not intended to represent a liquidity measure. (3) Adjusted EBITDA is defined as net income excluding, to the extent incurred in the period, interest expense, income tax expense, depreciation, amortization, share-based compensation, a non-cash gain and other non-operating or non-recurring items that are considered expenses or income under U.S. GAAP. Adjusted EBITDA represents a performance measure and is not intended to represent a liquidity measure.(4) Adjusted earnings per share is defined as diluted U.S. GAAP earnings per share excluding, to the extent incurred in the period, the tax-effected impacts of: a) foreign currency exchange gains or losses, b) share-based compensation, c) acquired intangible asset amortization, d) non-cash income tax expense, e) non-cash gain f) other non-operating or non-recurring items and g) dilutive shares relate to the Company's convertible bonds. Adjusted earnings per share represents a performance measure and is not intended to represent a liquidity measure."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call and Slide Presentation"
+    },
+    {
+      "type": "TextElement",
+      "text": "Euronet Worldwide will host an analyst conference call on July 19, 2024, at 9:00 a.m. Eastern Time to discuss these results. The call may also include discussion of Company developments on the Company's operations, forward-looking information, and other material information about business and financial matters. To listen to the call via telephone please register at Euronet Worldwide Second Quarter 2024 Earnings Call. The conference call will also be available via webcast at http://ir.euronetworldwide.com. Participants should register at least five minutes prior to the scheduled start time of the event. A slideshow will be included in the webcast. A webcast replay will be available beginning approximately one hour after the event at http://ir.euronetworldwide.com and will remain available for one year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Euronet Worldwide, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Starting in Central Europe in 1994 and growing to a global real-time digital and cash payments network with millions of touchpoints today, Euronet now moves money in all the ways consumers and businesses depend upon. This includes money transfers, credit/debit card processing, ATMs, POS services, branded payments, foreign currency exchange and more. With products and services in more than 200 countries and territories provided through its own brand and branded business segments, Euronet and its financial technologies and networks make participation in the global economy easier, faster and more secure for everyone. A leading global financial technology solutions and payments provider, Euronet has developed an extensive global payments network that includes 54,736 installed ATMs, approximately 833,000 EFT POS terminals and a growing portfolio of outsourced debit and credit card services which are under management in 67 countries; card software solutions; a prepaid processing network of approximately 794,000 POS terminals at approximately 352,000 retailer locations in 64 countries; and a global money transfer network of approximately 586,000 locations serving 198 countries and territories. Euronet serves clients from its corporate headquarters in Leawood, Kansas, USA, and 67 worldwide offices. For more information, please visit the Company's website at www.euronetworldwide.com."
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "Statements contained in this news release that concern Euronet's or its management's intentions, expectations, or predictions of future performance, are forward-looking statements. Euronet's actual results may vary materially from those anticipated in such forward-looking statements as a result of a number of factors, including: conditions in world financial markets and general economic conditions, including impacts from the COVID-19 or other pandemics; inflation; the war in the Ukraine and the related economic sanctions; military conflicts in the Middle East; our ability to successfully integrate any acquired operations; economic conditions in specific countries and regions; technological developments affecting the market for our products and services; our ability to successfully introduce new products and services; foreign currency exchange rate fluctuations; the effects of any breach of our computer systems or those of our customers or vendors, including our financial processing networks or those of other third parties; interruptions in any of our systems or those of our vendors or other third parties; our ability to renew existing contracts at profitable rates; changes in fees payable for transactions performed for cards bearing international logos or over switching networks such as card transactions on ATMs; our ability to comply with increasingly stringent regulatory requirements, including anti-money laundering, anti-terrorism, anti-bribery, consumer and data protection and privacy; changes in laws and regulations affecting our business, including tax and immigration laws and any laws regulating payments, including dynamic currency conversion transactions; changes in our relationships with, or in fees charged by, our business partners; competition; the outcome of claims and other loss contingencies affecting Euronet; the cost of borrowing (including fluctuations in interest rates), availability of credit and terms of and compliance with debt covenants; and renewal of sources of funding as they expire and the availability of replacement funding. These risks and other risks are described in the Company's filings with the Securities and Exchange Commission, including our Annual Report on Form 10-K, Quarterly Reports on Form 10-Q and Current Reports on Form 8-K. Copies of these filings may be obtained via the SEC's Edgar website or by contacting the Company. Any forward-looking statements made in this release speak only as of the date of this release. Except as may be required by law, Euronet does not intend to update these forward-looking statements and undertakes no duty to any person to provide any such update under any circumstances. The Company regularly posts important information to the investor relations section of its website."
+    },
+    {
+      "type": "TableElement",
+      "text": "EURONET WORLDWIDE, INC. Condensed Consolidated Balance Sheets (in millions) As of June 30, As of 2024 December 31, (unaudited) 2023 ASSETS Current assets: Cash and cash equivalents $ 1,271.8 $ 1,254.2 ATM cash 795.6 525.2 Restricted cash 23.8 15.2 Settlement assets 1,478.3 1,681.5 Trade accounts receivable, net 428.1 370.6 Prepaid expenses and other current assets 268.9 316.0 Total current assets 4,266.5 4,162.7 Property and equipment, net 331.1 332.1 Right of use lease asset, net 144.3 142.6 Goodwill and acquired intangible assets, net 1,078.2 1,015.1 Other assets, net 240.7 241.9 Total assets $ 6,060.8 $ 5,894.4 LIABILITIES AND EQUITY Current liabilities: Settlement obligations $ 1,478.3 $ 1,681.5 Accounts payable and other current liabilities 807.0 816.9 Current portion of operating lease liabilities 50.9 50.3 Short-term debt obligations 1,235.4 151.9 Total current liabilities 3,571.6 2,700.6 Debt obligations, net of current portion 1,032.7 1,715.4 Operating lease liabilities, net of current portion 97.2 95.8 Capital lease obligations, net of current portion 2.1 2.3 Deferred income taxes 62.9 47.0 Other long-term liabilities 80.7 83.6 Total liabilities 4,847.2 4,644.7 Equity 1,213.6 1,249.7 Total liabilities and equity $ 6,060.8 $ 5,894.4"
+    },
+    {
+      "type": "TableElement",
+      "text": "EURONET WORLDWIDE, INC. Consolidated Statements of Operations (unaudited - in millions, except share and per share data) Three Months Ended June 30, 2024 2023 Revenues $ 986.2 $ 939.1 Operating expenses: Direct operating costs 580.8 558.1 Salaries and benefits 158.0 149.4 Selling, general and administrative 79.4 75.3 Depreciation and amortization 33.7 33.7 Total operating expenses 851.9 816.5 Operating income 134.3 122.6 Other income (expense): Interest income 5.9 3.5 Interest expense (20.1 ) (14.0 ) Foreign currency exchange gain 1.5 6.3 Other income (expense) 0.8 (0.1 ) Total other expense, net (11.9 ) (4.3 ) Income before income taxes 122.4 118.3 Income tax expense (39.2 ) (32.3 ) Net income 83.2 86.0 Net loss attributable to non-controlling interests (0.1 ) 0.1 Net income attributable to Euronet Worldwide, Inc. $ 83.1 $ 86.1 Add: Interest expense from assumed conversion of convertible notes, net of tax 1.0 1.1 Net income for diluted earnings per share calculation $ 84.1 $ 87.2 Earnings per share attributable to Euronet Worldwide, Inc. stockholders - diluted $ 1.73 $ 1.65 Diluted weighted average shares outstanding 48,700,270 52,871,415"
+    },
+    {
+      "type": "TableElement",
+      "text": "EURONET WORLDWIDE, INC. Reconciliation of Net Income to (Adjusted) Operating Income (Expense) and Adjusted EBITDA (unaudited - in millions) Three months ended June 30, 2024 EFT Processing epay Money Transfer Corporate Services Consolidated Net income $ 83.2 Add: Income tax expense 39.2 Add: Total other expense, net 11.9 Operating income (expense) $ 79.9 $ 26.2 $ 47.3 $ (19.1 ) $ 134.3 Add: Depreciation and amortization 25.1 1.8 6.7 0.1 33.7 Add: Share-based compensation — — — 10.2 10.2 Earnings before interest, taxes, depreciation, amortization, share-based compensation(Adjusted EBITDA) (1) $ 105.0 $ 28.0 $ 54.0 $ (8.8 ) $ 178.2 Three months ended June 30, 2023 EFT Processing epay Money Transfer Corporate Services Consolidated Net income $ 86.0 Add: Income tax expense 32.3 Add: Total other expense, net 4.3 Operating income (expense) $ 69.1 $ 26.8 $ 47.2 $ (20.5 ) $ 122.6 Less: Non-cash gain (3.0 ) — — — (3.0 ) Adjusted operating income (expense) (1) 66.1 26.8 47.2 (20.5 ) 119.6 Add: Depreciation and amortization 23.8 1.7 8.1 0.1 33.7 Add: Share-based compensation — — — 12.5 12.5 Earnings before interest, taxes, depreciation, amortization, non-cash gain and share-based compensation (Adjusted EBITDA) (1) $ 89.9 $ 28.5 $ 55.3 $ (7.9 ) $ 165.8"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Adjusted operating income and Adjusted EBITDA are non-GAAP measures that should be considered in addition to, and not a substitute for, net income computed in accordance with U.S. GAAP."
+    },
+    {
+      "type": "TableElement",
+      "text": "EURONET WORLDWIDE, INC. Reconciliation of Adjusted Earnings per Share (unaudited - in millions, except share and per share data) Three Months Ended June 30, 2024 2023 Net income attributable to Euronet Worldwide, Inc. $ 83.1 $ 86.1 Foreign currency exchange gain (1.5 ) (6.3 ) Intangible asset amortization(1) 6.5 6.6 Share-based compensation(2) 10.2 12.5 Non-cash gain(3) — (3.0 ) Income tax effect of above adjustments(4) 4.3 1.7 Non-cash GAAP tax expense(5) 1.9 4.5 Adjusted earnings(6) $ 104.5 $ 102.1 Adjusted earnings per share - diluted(6) $ 2.25 $ 2.03 Diluted weighted average shares outstanding (GAAP) 48,700,270 52,871,415 Effect of adjusted EPS dilution of convertible notes (2,781,818 ) (2,781,818 ) Effect of unrecognized share-based compensation on diluted shares outstanding 420,305 228,127 Adjusted diluted weighted average shares outstanding 46,338,757 50,317,724"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Intangible asset amortization of $6.5 million and $6.6 million are included in depreciation and amortization expense of $33.7 million and $33.7 million for both the three months ended June 30, 2024 and June 30, 2023, in the consolidated statements of operations.(2) Share-based compensation of $10.2 million and $12.5 million are included in salaries and benefits expense of $158.0 million and $149.4 million for the three months ended June 30, 2024 and June 30, 2023, respectively, in the consolidated statements of operations.(3) Non-cash gain of $3.0 million is included in operating income for the three months ended June 30, 2023, in the consolidated statement of operations. (4) Adjustment is the aggregate U.S. GAAP income tax effect on the preceding adjustments determined by applying the applicable statutory U.S. federal, state and/or foreign income tax rates. (5) Adjustment is the non-cash GAAP tax impact recognized on certain items such as the utilization of certain material net deferred tax assets and amortization of indefinite-lived intangible assets.(6) Adjusted earnings and adjusted earnings per share are non-GAAP measures that should be considered in addition to, and not as a substitute for, net income and earnings per share computed in accordance with U.S. GAAP."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "•",
+          "Revenues of $986.2 million, a 5% increase from $939.1 million (6% increase on a constant currency1 basis)."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Operating income of $134.3 million, a 10% increase from $122.6 million (12% increase on a constant currency basis)."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Adjusted operating income2 of $134.3 million, a 12% increase from $119.6 million (15% increase on a constant currency basis)."
+        ],
+        [
+          "•",
+          "Adjusted EBITDA3 of $178.2 million, a 7% increase from $165.8 million (10% increase on a constant currency basis)."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Net income attributable to Euronet of $83.1 million, or $1.73 diluted earnings per share, compared with $86.1 million, or $1.65 diluted earnings per share."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Adjusted earnings per share4 of $2.25, an 11% increase from $2.03."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Euronet's cash and cash equivalents were $1,271.8 million and ATM cash was $795.6 million, totaling $2,067.4 million as of June 30, 2024, and availability under its revolving credit facilities was approximately $802.0 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "•",
+          "Revenues of $305.4 million, an 8% increase from $282.4 million (10% increase on a constant currency basis)."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Operating income of $79.9 million, a 16% increase from $69.1 million (19% increase on a constant currency basis)."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        2,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Adjusted operating income of $79.9 million, a 21% increase from $66.1 million (24% increase on a constant currency basis)."
+        ],
+        [
+          "•",
+          "Adjusted EBITDA of $105.0 million, a 17% increase from $89.9 million (20% increase on a constant currency basis)."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Transactions of 2,737 million, a 34% increase from 2,035 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "•",
+          "Total of 54,736 installed ATMs as of June 30, 2024, a 5% increase from 52,327. We operated 54,005 active ATMs as of June 30, 2024, a 5% increase from 51,402 as of June 30, 2023."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 986.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenues of $986.2 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "• | Revenues of $986.2 million, a 5% increase from $939.1 million (6% increase on a constant currency1 basis)."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-22",
+    "entry_open": "102.860001",
+    "return_10d_pct": "-3.2374",
+    "return_20d_pct": "-5.6387",
+    "return_30d_pct": "1.2736",
+    "return_60d_pct": "-2.1388",
+    "return_90d_pct": "-5.1721"
+  },
+  "text_stats": {
+    "primary_text_len": 3508,
+    "exhibit_text_len": 22502,
+    "combined_text_len": 26012,
+    "semantic_text_len": 22326,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

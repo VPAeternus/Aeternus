@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SLAB",
+    "cik": "1038074",
+    "event_date": "2024-07-24",
+    "event_accession": "0001628280-24-032692",
+    "primary_8k_doc": "slab-20240724.htm",
+    "exhibit_docs": [
+      "slab-20240724q2earningsrel.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SLAB_000162828024032692_slab-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SLAB_000162828024032692_slab-20240724q2earningsrel.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SLAB",
+    "cik": "1038074",
+    "entity_name": "SILICON LABORATORIES INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "246787000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "2117399000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-02-20",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-01-01",
+    "assets_value": "1443056000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "-24539000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "254281000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "-13280000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "8.579864",
+    "operating_cash_flow_to_revenue": "-0.053812",
+    "assets_to_revenue": "5.847374",
+    "financing_cash_flow_to_revenue": "-0.099434",
+    "investing_cash_flow_to_revenue": "1.030366"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "GAAP gross margin was 53% • GAAP operating expenses were $125 million • GAAP operating loss was $48 million • GAAP diluted loss per share was $(2.",
+      "Non-GAAP gross margin was 53% • Non-GAAP operating expenses were $102 million • Non-GAAP operating loss was $25 million • Non-GAAP diluted loss per share was $(0.",
+      "GAAP gross margin to be between 54% to 56% • GAAP operating expenses of approximately $123 million to $125 million • GAAP diluted loss per share per share between $(0.",
+      "Non-GAAP gross margin to be between 54% to 56% • Non-GAAP operating expenses of approximately $101 million to $103 million • Non-GAAP diluted loss per share between $(0.",
+      "Net income (loss) $ (82,157) $ 10,956 $ (138,683) $ 24,923 Earnings (loss) per share: Basic $ (2.",
+      "Operating income (loss) (48,021) (33."
+    ],
+    "guidance_evidence": [
+      "Outlook The company expects third-quarter revenue to be between $160 to $170 million.",
+      "Outlook GAAP Measure Non-GAAP Adjustments** Non-GAAP Measure Gross margin 54% to 56% — % 54% to 56% Operating expenses $123 to $125 $(22) $101 to $103 Diluted loss per share $(0.",
+      "expects third-quarter revenue to be between $160 to $170 million."
+    ],
+    "wave_or_demand_evidence": [
+      "customers working down their excess inventory,” said Matt Johnson, President and Chief Executive Officer at Silicon Labs.",
+      "bookings improve.",
+      "demand, Silicon Labs is expanding its fifth annual Works With Developers Conference this fall with live events in San Jose, Hyderabad, and Shanghai.",
+      "aid Matt Johnson, President and Chief Executive Officer at Silicon Labs.",
+      "ain other items as set forth in the below GAAP to Non-GAAP reconciliation tables were as follows: • Non-GAAP gross margin was 53% • Non-GAAP operating expenses were $102 million • Non-GAAP operating loss was $25 million • Non-GAAP diluted loss per share was $(0.",
+      "ai."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory,” said Matt Johnson, President and Chief Executive Officer at Silicon Labs.",
+      "inventory is further reduced, design wins continue ramping, and bookings improve.",
+      "charges and benefits.",
+      "loss was $48 million • GAAP diluted loss per share was $(2.",
+      "loss was $25 million • Non-GAAP diluted loss per share was $(0.",
+      "loss per share per share between $(0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 145,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "115.239998",
+    "return_10d_pct": "-12.2961",
+    "return_20d_pct": "-15.0816",
+    "return_30d_pct": "2.9677",
+    "return_60d_pct": "-3.3669",
+    "return_90d_pct": "-4.0437"
+  },
+  "text_stats": {
+    "primary_text_len": 9247,
+    "exhibit_text_len": 14637,
+    "combined_text_len": 23886
+  }
+}

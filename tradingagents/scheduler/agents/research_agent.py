@@ -1,15 +1,13 @@
-"""ResearchAgent -- autonomous batch analysis agent.
+"""ResearchAgent -- scout handoff boundary agent.
 
-Wakes when DealFlowScout publishes QUEUE_ITEM_ADDED signals.
-Runs `aeternus analyze-batch` for each queued date.
-Publishes ANALYSIS_COMPLETE when done.
+Wakes when DealFlowScout publishes a handoff signal and stops there. Scout
+tickers must enter the fundamental framework before any scoring or analysis
+completion signal is emitted.
 """
 from __future__ import annotations
 import datetime as dt
-import subprocess
-import sys
 from ..base_agent import BaseAutonomousAgent, AgentRunResult
-from ..agent_bus import AgentBus, AgentSignal, SignalType
+from ..agent_bus import AgentBus, SignalType
 
 
 class ResearchAgent(BaseAutonomousAgent):
@@ -19,13 +17,11 @@ class ResearchAgent(BaseAutonomousAgent):
         started = dt.datetime.utcnow().isoformat()
         trade_date = dt.date.today().isoformat()
 
-        # Consume all pending QUEUE_ITEM_ADDED signals targeted at us
         signals = self.bus.consume(
             self.name,
-            signal_types=[SignalType.QUEUE_ITEM_ADDED],
+            signal_types=[SignalType.SCOUT_HANDOFF_READY],
         )
 
-        # If no signals, do nothing (idle cycle)
         if not signals:
             completed = dt.datetime.utcnow().isoformat()
             return AgentRunResult(
@@ -33,7 +29,7 @@ class ResearchAgent(BaseAutonomousAgent):
                 success=True,
                 started_at=started,
                 completed_at=completed,
-                summary="no queue signals — idle cycle",
+                summary="no scout handoff signals — idle cycle",
             )
 
         # Use the trade_date from the most recent signal if available
@@ -42,25 +38,11 @@ class ResearchAgent(BaseAutonomousAgent):
                 trade_date = sig.payload["trade_date"]
                 break
 
-        cmd = [
-            sys.executable, "-m", "cli.main", "analyze-batch",
-            "--queue-date", trade_date,
-            "--format", "json",
-        ]
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
-        success = result.returncode == 0
+        success = True
         summary = (
-            f"analyze-batch exit={result.returncode}, "
-            f"date={trade_date}, queue_signals={len(signals)}"
+            "scout handoff acknowledged; run fundamental framework before "
+            f"downstream analysis signals, date={trade_date}, signals={len(signals)}"
         )
-
-        if success:
-            self.bus.publish(AgentSignal(
-                signal_type=SignalType.ANALYSIS_COMPLETE,
-                from_agent=self.name,
-                to_agent="PortfolioAgent",
-                payload={"trade_date": trade_date, "signals_consumed": len(signals)},
-            ))
 
         completed = dt.datetime.utcnow().isoformat()
         return AgentRunResult(
@@ -68,7 +50,7 @@ class ResearchAgent(BaseAutonomousAgent):
             success=success,
             started_at=started,
             completed_at=completed,
-            signals_published=1 if success else 0,
+            signals_published=0,
             summary=summary,
-            error=result.stderr[:500] if not success else None,
+            error=None,
         )

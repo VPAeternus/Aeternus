@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HCSG",
+    "cik": "731012",
+    "event_date": "2024-07-24",
+    "event_accession": "0000731012-24-000110",
+    "primary_8k_doc": "hcsg-20240724.htm",
+    "exhibit_docs": [
+      "ex99-2024xq2xpressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HCSG_000073101224000110_hcsg-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HCSG_000073101224000110_ex99-2024xq2xpressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HCSG",
+    "cik": "731012",
+    "entity_name": "HEALTHCARE SERVICES GROUP, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "417230000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "11671000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "790652000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "6907000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-743000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-16290000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.027973",
+    "operating_cash_flow_to_revenue": "-0.039043",
+    "assets_to_revenue": "1.895003",
+    "financing_cash_flow_to_revenue": "0.016554",
+    "investing_cash_flow_to_revenue": "-0.001781"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $426.",
+      "Revenue was reported at $426.",
+      "Net income and diluted EPS of ($1.",
+      "eps us on track to meet our 2024 cash flow objectives.",
+      "EPS (1) Amount % of Revenue Fav/(Unfav) impact on EPS (1) Cost of Services, as reported $ 384,742 90.",
+      "EPS (1) Amount % of Revenue Fav/(Unfav) impact on EPS (1) Cost of Services, as reported $ 743,653 87."
+    ],
+    "guidance_evidence": [
+      "Forecast • Revenue of $426.",
+      "forecast of $40.",
+      "expected revenue ranges are $425.",
+      "anticipates,” “plans,” “expects,” “estimates,” “will,” “goal,” and similar expressions are intended to identify forward-looking statements.",
+      "forecasting and quantifying certain amounts that are necessary for such reconciliation."
+    ],
+    "wave_or_demand_evidence": [
+      "customer base.",
+      "Customers,” “Service Agreements and Collections,” and “Competition” and under Item 1A.",
+      "customers and/or customers in bankruptcy, have resulted in, and could continue to result in, significant additional bad debts in the near future.",
+      "customers.",
+      "customers, retain and provide new services to existing customers, achieve modest price increases on current service agreements with existing customers and/or maintain internal cost reduction strategies at our various operational levels.",
+      "customers in the client restructurings loss pool (i."
+    ],
+    "warning_or_risk_evidence": [
+      "charges.",
+      "delays in payments from customers and/or customers in bankruptcy, have resulted in, and could continue to result in, significant additional bad debts in the near future.",
+      "loss development trends.",
+      "uncertainties.",
+      "Loss) income before income taxes (1,986) 10,934 19,328 27,089 Income tax (benefit) provision (198) 2,680 5,807 7,164 Net (loss) income $ (1,788) $ 8,254 $ 13,521 $ 19,925 Basic (loss) earnings per common share $ (0.",
+      "loss) earnings per common share $ (0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 426.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "11.200000",
+    "return_10d_pct": "-6.9643",
+    "return_20d_pct": "-6.6964",
+    "return_30d_pct": "-0.8929",
+    "return_60d_pct": "-2.2321",
+    "return_90d_pct": "-5.5357"
+  },
+  "text_stats": {
+    "primary_text_len": 3532,
+    "exhibit_text_len": 19345,
+    "combined_text_len": 22879
+  }
+}

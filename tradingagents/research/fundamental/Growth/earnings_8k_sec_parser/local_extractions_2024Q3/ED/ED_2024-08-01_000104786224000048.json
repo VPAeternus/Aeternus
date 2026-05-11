@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ED",
+    "cik": "1047862",
+    "event_date": "2024-08-01",
+    "event_accession": "0001047862-24-000048",
+    "primary_8k_doc": "ed-20240801.htm",
+    "exhibit_docs": [
+      "a2q2024earningsreleasepr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ED_000104786224000048_ed-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ED_000104786224000048_a2q2024earningsreleasepr.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ED",
+    "cik": "1047862",
+    "entity_name": "Consolidated Edison, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4403000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "1433000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "66331000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-3466000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "2618000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "92000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.32546",
+    "operating_cash_flow_to_revenue": "0.020895",
+    "assets_to_revenue": "15.064956",
+    "financing_cash_flow_to_revenue": "-0.787191",
+    "investing_cash_flow_to_revenue": "0.594595"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "earnings per share (adjusted EPS), that are not determined in accordance with generally accepted accounting principles in the United States of America (GAAP).",
+      "net income for common stock or net income per share, respectively, each of which is an indicator of financial performance determined in accordance with GAAP.",
+      "earnings per share (GAAP) / $0.",
+      "earnings per share (non- GAAP) $5.",
+      "earnings per share for the year 2024 to be in the range of $5.",
+      "EPS (GAAP) Adjusted EPS (Non-GAAP) $0."
+    ],
+    "guidance_evidence": [
+      "guidance,” “potential,” “goal,” “consider” and similar expressions identify forward-looking statements.",
+      "outlook shown in order of Moody’s / S&P Global Ratings (S&P) / Fitch.",
+      "Outlook(b): Positive / Stable / Stable Consolidated Edison Company of New York, Inc.",
+      "Outlook(b): Stable / Stable / Stable FERC Regulated Transmission Market Cap(a): $30.",
+      "Outlook(b): Stable / Stable / Stable Con Edison Transmission, Inc.",
+      "outlook for O&R and stable outlooks for Con Edison and CECONY."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, gas to approximately 1.",
+      "customers and steam to approximately 1,520 customers.",
+      "customers and gas to approximately 0.",
+      "customers.",
+      "customers with the most reliable electric service in New York State, while building new substations, transmission lines and other infrastructure to bring clean energy to our customers 4 a.",
+      "customer service billing and information system 6 Regulatory Updates 7 Additional rate plan information: Rate Plan Information | Consolidated Edison, Inc."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary results of the viability and sufficiency assessments and facility characterizations by the close of Q3 2024, with its final report following in Q4 2024.",
+      "charges that are recovered in revenues from customers.",
+      "Decrease) $18 $11 ($27) $14 $17 ($3) Rate Base $1,324 $1,305 $1,286 $695 $711 $707 ROE 10.",
+      "decreased its requested January 2024 rate increase by $7.",
+      "decrease of $27.",
+      "decrease of $2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "103.150002",
+    "return_10d_pct": "-1.1730",
+    "return_20d_pct": "-2.4043",
+    "return_30d_pct": "0.1260",
+    "return_60d_pct": "1.9389",
+    "return_90d_pct": "-1.4251"
+  },
+  "text_stats": {
+    "primary_text_len": 3640,
+    "exhibit_text_len": 52309,
+    "combined_text_len": 55951
+  }
+}

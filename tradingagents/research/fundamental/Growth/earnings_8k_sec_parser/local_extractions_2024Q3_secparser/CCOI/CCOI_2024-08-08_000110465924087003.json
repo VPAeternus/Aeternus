@@ -1,0 +1,843 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CCOI",
+    "cik": "1158324",
+    "event_date": "2024-08-08",
+    "event_accession": "0001104659-24-087003",
+    "primary_8k_doc": "tm2421010d1_8k.htm",
+    "exhibit_docs": [
+      "tm2421010d1_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CCOI_000110465924087003_tm2421010d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CCOI_000110465924087003_tm2421010d1_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CCOI",
+    "cik": "1158324",
+    "entity_name": "COGENT COMMUNICATIONS HOLDINGS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "359949000",
+    "revenue_fact_name": "SalesRevenueNet",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-11-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2017-09-30",
+    "net_income_value": "6148000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3211619000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-54616000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-23204000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "35821000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.01708",
+    "operating_cash_flow_to_revenue": "0.099517",
+    "assets_to_revenue": "8.922428",
+    "financing_cash_flow_to_revenue": "-0.151733",
+    "investing_cash_flow_to_revenue": "-0.064465"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $239.",
+      "revenue of $260.",
+      "revenue decreased by 2.",
+      "revenue was $140.",
+      "revenue was $111.",
+      "revenue was $3."
+    ],
+    "guidance_evidence": [
+      "expects,” “anticipates,” “estimates,” “intends,” “plans,” “targets,” “projects” and similar expressions."
+    ],
+    "wave_or_demand_evidence": [
+      "customers located in buildings that are physically connected to Cogent’s network by Cogent facilities.",
+      "customers are located in buildings directly connected to Cogent’s network using other carriers’ facilities and services to provide the last mile portion of the link from the customers’ premises to Cogent’s network.",
+      "customer connections decreased by 15.",
+      "customer connections decreased by 5.",
+      "customer connections were 754 as of June 30, 2024, 693 as of March 31, 2024 and 414 as of June 30, 2023.",
+      "customer connections were 7,883 as of June 30, 2024, 10,037 as of March 31, 2024 and 19,408 as of June 30, 2023."
+    ],
+    "warning_or_risk_evidence": [
+      "decrease of 2.",
+      "decreased by 2.",
+      "decrease of 5.",
+      "decreased by 39.",
+      "loss) income per share was $(0.",
+      "loss) per share was $(0."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "tm2421010d1_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TableElement",
+      "text": "Cogent Contacts: For Public Relations: For Investor Relations: Jocelyn Johnson John Chang + 1 (202) 295-4299 + 1 (202) 295-4212 jajohnson@cogentco.com investor.relations@cogentco.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Cogent Communications Reports Second Quarter 2024 Results and Increases its Regular Quarterly Dividend on its Common Stock"
+    },
+    {
+      "type": "TextElement",
+      "text": "Financial and Business Highlights ·Service revenue was $239.8 million for Q2 2023 and was $260.4 million for Q2 2024. ·EBITDA margin was 6.9% for Q1 2024 and 10.4% for Q2 2024. ·EBITDA, as adjusted for Sprint acquisition costs and cash received under the IP Transit Agreement with T-Mobile was $115.0 million for Q1 2024 and $106.2 million for Q2 2024. ·Gross margin – Non-GAAP - was 36.7% for Q1 2024 and 40.2% for Q2 2024. oGross margin was 9.9% for Q1 2024 and 11.6% for Q2 2024. ·Gross leverage ratio was 3.57 for Q1 2024 and was 4.06 for Q2 2024. oNet leverage ratio was 3.17 for Q1 2024 and was 3.14 for Q2 2024. oCogent closed its issuance of $206.0 million of its 7.9% IPV4 Securitized Notes on May 2, 2024. oCogent closed its issuance of $300.0 million of its 7.0% Unsecured Notes on June 11, 2024. ·Cogent purchased 153,322 shares of its common stock for $8.0 million in Q2 2024 under its buyback program. ·Cogent approved an increase of $0.01 per share to its regular quarterly dividend for a total of $0.985 per share for Q3 2024 as compared to $0.975 per share for Q2 2024 – Cogent’s forty-eighth consecutive quarterly dividend increase.[WASHINGTON, D.C. August 8, 2024] Cogent Communications Holdings, Inc. (NASDAQ: CCOI) (“Cogent”) today announced service revenue of $260.4 million for the three months ended June 30, 2024, a decrease of 2.2% from the three months ended March 31, 2024 and an increase of 8.6% from the three months ended June 30, 2023. Foreign exchange rates negatively impacted service revenue growth from the three months ended March 31, 2024 to the three months ended June 30, 2024 by $0.3 million and negatively impacted service revenue growth from the three months ended June 30, 2023 to the three months ended June 30, 2024 by $0.4 million. On a constant currency basis, service revenue decreased by 2.0% from the three months ended March 31, 2024 to the three months ended June 30, 2024, and increased by 8.8% for the three months ended June 30, 2023 to the three months ended June 30, 2024. Field: Page; Sequence: 1; Options: NewSection; Value: 1 On-net service is provided to customers located in buildings that are physically connected to Cogent’s network by Cogent facilities. On-net revenue was $140.6 million for the three months ended June 30, 2024, an increase of 1.5% from the three months ended March 31, 2024 and an increase of 10.3% from the three months ended June 30, 2023.Off-net customers are located in buildings directly connected to Cogent’s network using other carriers’ facilities and services to provide the last mile portion of the link from the customers’ premises to Cogent’s network. Off-net revenue was $111.5 million for the three months ended June 30, 2024, a decrease of 5.7% from the three months ended March 31, 2024 and an increase of 9.3% from the three months ended June 30, 2023.Wavelength revenue was $3.6 million for the three months ended June 30, 2024, an increase of 9.0% from the three months ended March 31, 2024 and an increase of 128.7% from the three months ended March 31, 2023.Non-core services are legacy services, which Cogent acquired and continues to support but does not actively sell. Non-core revenue was $4.6 million for the three months ended June 30, 2024, $6.0 million for the three months ended March 31, 2024 and was $8.6 million for the three months ended June 30, 2023.GAAP gross profit is defined as total service revenue less network operations expense, depreciation and amortization and equity-based compensation included in network operations expense. GAAP gross margin is defined as GAAP gross profit divided by total service revenue. GAAP gross profit decreased by 39.3% from the three months ended June 30, 2023 to $30.2 million for the three months ended June 30, 2024 and increased by 14.8% from the three months ended March 31, 2024.GAAP gross margin was 11.6% for the three months ended June 30, 2024, 9.9% for the three months ended March 31, 2024 and 20.8% for the three months ended June 30, 2023. Field: Page; Sequence: 2 Non-GAAP gross profit represents service revenue less network operations expense, excluding equity-based compensation and amounts shown separately (depreciation and amortization expense). Non-GAAP gross margin is defined as Non-GAAP gross profit divided by total service revenue. Non-GAAP gross profit increased by 2.0% from the three months ended June 30, 2023 to $104.6 million for the three months ended June 30, 2024 and increased by 7.2% from the three months ended March 31, 2024.Non-GAAP gross margin was 40.2% for the three months ended June 30, 2024, 36.7% for the three months ended March 31, 2024 and 42.8% for the three months ended June 30, 2023.Net cash used in operating activities was $22.2 million for the three months ended June 30, 2024. Net cash provided by operating activities was $19.2 million for the three months ended March 31, 2024 and $82.7 million for the three months ended June 30, 2023.Total Sprint acquisition costs were $12.4 million for the three months ended June 30, 2024, $9.0 million for the three months ended March 31, 2024 and $0.7 million for the three months ended June 30, 2023. Severance costs, reimbursed by T-Mobile, and included in Sprint acquisition costs, were $8.0 million for the three months ended June 30, 2024 and $4.3 million for the three months ended March 31, 2024.Earnings before interest, taxes, depreciation and amortization (EBITDA), as adjusted, for Sprint acquisition costs and cash paid under the IP Transit Services Agreement (discussed below) was $106.2 million for the three months ended June 30, 2024, $115.0 million for the three months ended March 31, 2024 and $54.1 million for the three months ended June 30, 2023.EBITDA as adjusted, for Sprint acquisition costs and cash paid under the IP Transit Services Agreement margin, was 40.8% for the three months ended June 30, 2024, 43.2% for the three months ended March 31, 2024 and 22.5% for the three months ended June 30, 2023.Basic net (loss) income per share was $(0.68) for the three months ended June 30, 2024, $(1.38) for the three months ended March 31, 2024 and $23.84 for the three months ended June 30, 2023. Diluted net income (loss) per share was $(0.68) for the three months ended June 30, 2024, $(1.38) for the three months ended March 31, 2024 and $23.65 for the three months ended June 30, 2023. Field: Page; Sequence: 3 Total customer connections decreased by 15.0% from June 30, 2023 to128,782 as of June 30, 2024 and decreased by 3.1% from March 31, 2024. On-net customer connections decreased by 5.9% from June 30, 2023 to 87,387 as of June 30, 2024 and decreased by 0.2% from March 31, 2024. Off-net customer connections decreased by 15.5% from June 30, 2023 to 32,758 as of June 30, 2024 and decreased by 5.3% from March 31, 2024. Wavelength customer connections were 754 as of June 30, 2024, 693 as of March 31, 2024 and 414 as of June 30, 2023. Non-core customer connections were 7,883 as of June 30, 2024, 10,037 as of March 31, 2024 and 19,408 as of June 30, 2023.The number of on-net buildings increased by 159 from June 30, 2023 to 3,386 as of June 30, 2024 and increased by 65 from March 31, 2024.IP Transit Services AgreementOn May 1, 2023, the closing date of the Sprint acquisition, Cogent and T-Mobile USA, Inc. (“TMUSA”), a Delaware corporation and direct subsidiary of T-Mobile US, Inc., a Delaware corporation (“T-Mobile”) , entered into an agreement for IP transit services (the “IP Transit Services Agreement”), pursuant to which TMUSA will pay Cogent an aggregate of $700.0 million, consisting of (i) $350.0 million paid in equal monthly installments during the first year after the closing date of the Sprint acquisition and (ii) $350.0 million paid in equal monthly installments over the subsequent 42 months. Amounts paid under the IP Transit Services Agreement were $66.7 million, $87.5 million and $29.2 million in the three months ended June 30, 2024, March 31, 2024 and June 30, 2023 respectively.Commercial Services AgreementAdditionally, on the closing date of the Sprint acquisition, Cogent and T-Mobile entered into a commercial agreement (the “Commercial Agreement”), for colocation and connectivity services. Revenue under the Commercial Agreement was $5.9 million for the three months ended June 30, 2024, an increase of 86.2% from $3.2 million for the three months ended March 31, 2024.Quarterly Dividend Increase ApprovedOn August 7, 2024, Cogent’s Board approved a regular quarterly dividend of $0.985 per share payable on September 6, 2024 to shareholders of record on August 22, 2024. This third quarter 2024 regular dividend represents an increase of $0.01 per share, or 1.0%, from the second quarter 2024 regular dividend of $0.975 per share and an annual increase of 4.2% from the third quarter 2023 dividend of $0.945 per share. Field: Page; Sequence: 4 The payment of any future dividends and any other returns of capital will be at the discretion of the Board and may be reduced, eliminated or increased and will be dependent upon Cogent’s financial position, results of operations, available cash, cash flow, capital requirements, limitations under Cogent’s debt indentures and other factors deemed relevant by the Board.Residual Impact of COVID-19 Pandemic on Corporate ResultsBeginning with and throughout the COVID-19 pandemic, Cogent witnessed a deteriorating real estate market in and around the buildings it serves in central business districts in North America, largely attributable to businesses continuing remote work policies instituted during the COVID-19 pandemic. Because of the rising vacancy levels and falling lease initiations or renewals, Cogent experienced a slowdown in new sales to its corporate customers, which negatively impacted its corporate revenue results. During the three months ended June 30, 2024, Cogent continued to see declining vacancy rates and rising office occupancy rates, and to see positive trends in its corporate business in a number of areas of the United States. In other cities, the impact of the pandemic on leasing activity and office occupancy lingers. Nevertheless, as the option to fully or partially work from home becomes permanently established at many companies, Cogent’s corporate customers are integrating some of the new applications that were part of the remote work environment into their everyday use, which benefits Cogent’s corporate business as these customers upgrade their Internet access infrastructure to higher capacity connections. If and when companies eventually return to the buildings in which Cogent operates, Cogent believes it will present an opportunity for increased sales. However, the exact timing, path and spread of these positive trends remains uncertain, and Cogent may continue to see increased corporate customer turnover, fewer upgrades of existing corporate customer configurations and fewer new tenant opportunities, which would negatively impact Cogent’s corporate revenue growth.These and other risks are described in more detail in Cogent’s Annual Report on Form 10-K for the year ended December 31, 2023 and in its Quarterly Reports on Form 10-Q for the quarterly periods ended June 30, 2023, September 30, 2023, March 31, 2024 and June 30, 2024. Field: Page; Sequence: 5 Conference Call and Website InformationCogent will host a conference call with financial analysts at 8:30 a.m. (ET) on August 8, 2024 to discuss Cogent’s operating results for the second quarter of 2024. Investors and other interested parties may access a live audio webcast of the earnings call in the “Events” section of Cogent’s website at www.cogentco.com/events. A replay of the webcast, together with the press release, will be available on the website following the earnings call. A downloadable file of Cogent’s “Summary of Financial and Operational Results” and a transcript of its conference call will also be available on Cogent’s website following the conference call.About Cogent CommunicationsCogent Communications (NASDAQ: CCOI) is a multinational, Tier 1 facilities-based ISP. Cogent specializes in providing businesses with high-speed Internet access, Ethernet transport, and colocation services. Cogent’s facilities-based, all-optical IP network backbone provides services in 251 markets globally.Cogent Communications is headquartered at 2450 N Street, NW, Washington, D.C. 20037. For more information, visit www.cogentco.com. Cogent Communications can be reached in the United States at (202) 295-4200 or via email at info@cogentco.com. Field: Page; Sequence: 6"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 1 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 2 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 3 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 4 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 5 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 6 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "COGENT COMMUNICATIONS HOLDINGS, INC., AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Summary of Financial and Operational Results"
+    },
+    {
+      "type": "TableElement",
+      "text": "Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 Metric ($ in 000’s, except share, per share, customer connections and network related data) – unaudited On-Net revenue $116,143 $127,665 $129,031 $138,064 $138,624 $140,757 % Change from previous Qtr. 1.0% 9.9% 1.1% 7.0% 0.4% 1.5% Off-Net revenue $37,283 $101,984 $130,560 $123,669 $118,178 $111,451 % Change from previous Qtr. 1.1% 173.5% 28.0% -5.3% -4.4% -5.7% Wavelength revenue (1) $- $1,585 $2,992 $3,108 $3,327 $3,625 % Change from previous Qtr. - - 88.8% 3.9% 7.0% 9.0% Non-Core revenue (2) (16) $162 $8,572 $12,846 $7,258 $6,039 $4,610 % Change from previous Qtr. 3.2% NM 49.9% -43.5% -16.8% -23.7% Service revenue – total $153,588 $239,806 $275,429 $272,099 $266,168 $260,443 % Change from previous Qtr. 1.1% 56.1% 14.9% -1.2% -2.2% -2.2% Constant currency total revenue quarterly growth rate – sequential quarters (3) 0.2% 55.9% 14.9% -1.1% -2.3% -2.0% Constant currency total revenue quarterly growth rate – year over year quarters (3) 4.0% 61.4% 82.4% 78.1% 73.1% 8.8% Constant currency and excise tax impact on total revenue quarterly growth rate – sequential quarters (3) 0.1% 51.4% 13.4% -3.2% -2.3% -1.5% Constant currency and excise tax impact on total revenue quarterly growth rate – year over year quarters (3) 3.7% 56.2% 75.5% 67.4% 62.4% 5.4% Excise Taxes included in service revenue (4) $4,193 $11,040 $14,557 $20,428 $20,549 $19,182 % Change from previous Qtr. 2.6% 163.3% 31.9% 40.3% 0.6% -6.7% Corporate revenue (5) (16) $85,627 $110,998 $120,484 $126,634 $124,864 $119,557 % Change from previous Qtr. -0.2% 29.6% 8.5% 5.1% -1.4% -4.3% Net-centric revenue (5) (15) $67,961 $87,582 $94,936 $93,148 $91,979 $91,107 % Change from previous Qtr. 2.7% 28.9% 8.4% -1.9% -1.3% -0.9% Enterprise revenue (5) - $41,227 $60,009 $52,318 $49,325 $49,781 % Change from previous Qtr. - NM 45.6% -12.8% -5.7% 0.9%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 7"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 7 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "Network operations expenses (4) $58,489 $137,271 $173,224 $174,180 $168,548 $155,817 % Change from previous Qtr. 2.8% 134.7% 26.2% 0.6% -3.2% -7.6% GAAP gross profit (6) $69,790 $49,793 $15,101 $29,744 $26,344 $30,240 % Change from previous Qtr. -2.3% -28.7% -69.7% 97.0% -11.4% 14.8% GAAP gross margin (6) 45.4% 20.8% 5.5% 10.9% 9.9% 11.6% Non-GAAP gross profit (3) (7) $95,099 $102,535 $102,205 $97,919 $97,620 $104,626 % Change from previous Qtr. 0.0% 7.8% -0.3% -4.2% -0.3% 7.2% Non-GAAP gross margin (3) (7) 61.9% 42.8% 37.1% 36.0% 36.7% 40.2% Selling, general and administrative expenses (8) $38,646 $77,640 $58,267 $74,907 $70,131 $65,130 % Change from previous Qtr. 2.5% 100.9% -25.0% 28.6% -6.4% -7.1% Depreciation and amortization expense $25,160 $52,511 $86,734 $67,805 $70,891 $74,036 % Change from previous Qtr. 6.8% 108.7% 65.2% -21.8% 4.6% 4.4% Equity-based compensation expense $6,581 $6,249 $7,411 $6,684 $6,950 $3,565 % Change from previous Qtr. 5.1% -5.0% 18.6% -9.8% 4.0% -48.7% Operating income (loss) $24,312 $(34,604) $(50,558) $(68,478) $(59,389) $(47,143) % Change from previous Qtr. -11.0% NM 46.1% 35.4% 13.3% 20.6% Interest expense (9) $19,005 $28,653 $24,198 $34,928 $23,010 $38,840 % Change from previous Qtr. -13.6% 50.8% -15.5% 44.3% -34.1% 68.8% Non-cash change in valuation – Swap Agreement (9) $(1,847) $1,305 $4,825 $(17,722) $6,152 $(9,299) Gain on bargain purchase (10) - $1,155,719 $(3,332) $254,049 $(5,470) $27,673 Net income (loss) $6,148 $1,123,863 $(56,723) $200,153 $(65,307) $(32,338) Basic net income (loss) per common share $0.13 $23.84 $(1.20) $4.23 $(1.38) $(0.68) Diluted net income (loss) per common share $0.13 $23.65 $(1.20) $4.17 $(1.38) $(0.68) Weighted average common shares – basic 47,037,091 47,137,822 47,227,338 47,353,291 47,416,268 47,511,613 % Change from previous Qtr. 0.3% 0.2% 0.2% 0.3% 0.1% 0.2% Weighted average common shares – diluted 47,381,226 47,526,207 47,227,338 48,037,841 47,416,268 47,511,613 % Change from previous Qtr. 0.4% 0.3% -0.6% 1.7% -1.3% 0.2% EBITDA (3) $56,053 $24,156 $43,587 $6,011 $18,452 $27,126 % Change from previous Qtr. -1.9% -56.9% 80.4% -86.2% 207.0% 47.0%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 8"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 8 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "EBITDA margin (3) 36.5% 10.1% 15.8% 2.2% 6.9% 10.4% Sprint acquisition costs (14) $400 $739 $351 $17,001 $9,037 $12,370 Cash payments under IP Transit Services Agreement (11) $- $29,167 $87,500 $87,500 $87,500 $66,667 EBITDA, as adjusted for Sprint acquisition costs and cash payments under IP Transit Services Agreement (3) (11) (14) $56,453 $54,062 $131,438 $110,512 $114,989 $106,163 % Change from previous Qtr. -1.6% -4.2% 143.1% -15.9% 4.1% -7.7% EBITDA, as adjusted for Sprint acquisition costs and cash payments under IP Transit Services Agreement, margin (3) (11) (14) 36.8% 22.5% 47.7% 40.6% 43.2% 40.8% Net cash provided by (used in) operating activities $35,821 $82,654 $(52,433) $(48,701) $19,219 $(22,171) % Change from previous Qtr. -1.4% 130.7% -163.4% -7.1% -139.5% -215.4% Capital expenditures $23,204 $37,449 $25,373 $43,609 $40,883 $48,767 % Change from previous Qtr. 18.4% 61.4% -32.2% 71.9% -6.3% 19.3% Principal payments of capital (finance) lease obligations $9,450 $7,797 $41,302 $18,813 $23,235 $133,472 % Change from previous Qtr. -61.5% -17.5% 429.7% -54.5% 23.5% 474.4% Dividends paid (17) $45,311 $44,907 $45,136 $46,362 $478 $93,304 Gross Leverage Ratio (3) (11) 5.47 5.63 4.79 4.07 3.57 4.06 Net Leverage Ratio (3) (11) 4.46 4.56 4.24 3.75 3.17 3.14 Customer Connections – end of period (15) (16) On-Net customer connections 83,268 92,846 88,250 88,291 87,574 87,387 % Change from previous Qtr. 0.8% 11.5% -5.0% 0.0% -0.8% -0.2% Off-Net customer connections 13,785 38,762 36,923 36,676 34,579 32,758 % Change from previous Qtr. 1.9% 181.2% -4.7% -0.7% -5.7% -5.3% Wavelength customer connections (1) 414 449 661 693 754 % Change from previous Qtr. - 8.5% 47.2% 4.8% 8.8% Non-Core customer connections (2) (16) 374 19,408 12,403 11,975 10,037 7,883 % Change from previous Qtr. 3.0% NM -36.1% -3.5% -16.2% -21.5%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 9"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 9 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "Total customer connections (15) (16) 97,427 151,430 138,025 137,603 132,883 128,782 % Change from previous Qtr. 0.9% 55.4% -8.9% -0.3% -3.4% -3.1% Corporate customer connections (5) (16) 44,570 61,284 55,045 54,493 51,821 48,690 % Change from previous Qtr. -0.6% 37.5% -10.2% -1.0% -4.9% -6.0% Net-centric customer connections (5) (15) 52,857 66,711 62,291 62,370 61,599 61,736 % Change from previous Qtr. 2.3% 26.2% -6.6% 0.1% -1.2% 0.2% Enterprise customer connections (5) - 23,435 20,689 20,740 19,463 18,356 % Change from previous Qtr. - NM -11.7% 0.2% -6.2% -5.7% On-Net Buildings – end of period Multi-Tenant office buildings 1,841 1,844 1,860 1,862 1,861 1,864 Carrier neutral data center buildings 1,294 1,327 1,337 1,347 1,382 1,436 Cogent data centers 55 56 60 68 78 86 Total on-net buildings 3,190 3,227 3,257 3,277 3,321 3,386 Total carrier neutral data center nodes 1,490 1,526 1,528 1,558 1,586 1,602 Square feet – multi-tenant office buildings – on-net 1,001,382,577 1,001,491,002 1,006,523,795 1,008,006,655 1,009,702,653 1,011,171,523 Total Technical Buildings Owned (12) - 482 482 482 482 482 Square feet – Technical Buildings Owned (12) - 1,603,569 1,603,569 1,603,569 1,603,569 1,603,569 Network – end of period Intercity route miles – Leased 61,300 72,694 72,694 72,552 76,211 75,965 Metro route miles – Leased 17,826 22,556 22,128 24,779 25,977 27,373 Metro fiber miles – Leased 42,863 75,577 69,943 77,365 79,138 80,042 Intercity route miles – Owned 2,748 21,883 21,883 21,883 21,883 21,883 Metro route miles – Owned 445 1,704 1,704 1,704 1,704 1,704 Connected networks – AS’s 7,864 7,891 7,971 7,988 8,098 8,135 Headcount – end of period (13) Sales force – quota bearing (13) 562 647 637 657 677 656 Sales force – total (13) 714 841 833 847 871 851 Total employees (13) 1,107 2,020 1,990 1,947 1,955 1,901 Sales rep productivity – units per full time equivalent sales rep (“FTE”) per month (15) 4.0 9.2 3.6 3.3 4.0 3.8 FTE – sales reps 539 567 621 620 627 632"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 10 Field: Split-Segment; Name: a1 (1) In connection with the acquisition of the Wireline Business, Cogent began to provide optical wavelength services and optical transport services over its fiber network.(2) Consists of legacy services of companies whose assets or businesses were acquired by Cogent.(3) See Schedules of Non-GAAP measures below for definitions and reconciliations to GAAP measures.(4) Network operations expense excludes equity-based compensation expense of $149, $231, $370, $370, $385 and $350 in the three-month periods ended March 31, 2023 through June 30, 2024, respectively. Network operations expense includes excise taxes, including Universal Service Fund fees, of $4,193, $11,040, $14,557, $20,428, $20,549 and $19,182 in the three-month periods ended March 31, 2023 through June 30, 2024, respectively.(5) In connection with the acquisition of the Wireline Business, Cogent classified revenue and customer connections as follows: ·$12.9 million of the Wireline Business monthly recurring revenue and 17,823 customer connections as corporate revenue and corporate customer connections, respectively, ·$6.5 million of monthly recurring revenue and 5,711 customer connections as net-centric revenue and net-centric customer connections, respectively, and ·$20.1 million of monthly recurring revenue and 23,209 customer connections as enterprise revenue and enterprise customer connections, respectively. ·Conversely, Cogent reclassified $0.3 million of monthly recurring revenue and 387 customer connections of legacy Cogent monthly recurring revenue to enterprise revenue and enterprise customer connections, respectively o$0.3 million of corporate monthly recurring revenue and 363 corporate customer connections and $0.02 million of net-centric monthly recurring revenue and 24 net-centric customer connections.(6) GAAP gross profit is defined as total service revenue less network operations expense, depreciation and amortization and equity-based compensation included in network operations expense. GAAP gross margin is defined as GAAP gross profit divided by total service revenue.(7) Non-GAAP gross profit represents service revenue less network operations expense, excluding equity-based compensation and amounts shown separately (depreciation and amortization expense). Non-GAAP gross margin is defined as non-GAAP gross profit divided by total service revenue. Management believes that non-GAAP gross profit and non-GAAP gross margin are relevant measures to provide investors. Management uses them to measure the margin available to the company after network service costs, in essence a measure of the efficiency of the Company’s network.(8) Excludes equity-based compensation expense of $6,432, $6,018, $7,041, $6,314, $6,565 and $3,215 in the three-month periods ended March 31, 2023 through June 30, 2024, respectively and excludes $400, $739, $351, $17,001, $9,037 and $12,370 of Sprint acquisition costs for the three-month periods ended March 31, 2023 through June 30, 2024, respectively.(9) As of June 30, 2024, Cogent was party to an interest rate swap agreement (the “Swap Agreement”) that has the economic effect of modifying the fixed interest rate obligation associated with its Senior Secured 2026 Notes to a variable interest rate obligation based on the Secured Overnight Financing Rate (“SOFR”) so that the interest payable on the 2026 Notes effectively became variable based on overnight SOFR. Interest expense includes payments of $9.5 million, $12.0 million and $12.1 million for the three-month periods ended June 30, 2023, December 31, 2023 and June 30, 2024, respectively related to the Swap Agreement. Under GAAP, changes in the valuation of the Swap Agreement are classified with interest expense in the condensed consolidated statements of comprehensive (loss) income.(10) The gain on bargain purchase from the Sprint acquisition was $1.4 billion as shown below."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 10 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "(In thousands) Gain on bargain purchase Fair value of net assets acquired $826,067 Total net consideration to be received from Seller, net of discounts 602,581 Gain on bargain purchase $1,428,648"
+    },
+    {
+      "type": "TextElement",
+      "text": "(11) Includes cash payments under the IP Transit Services Agreement, as discussed above, of ·$29.2 million for the three months ended June 30, 2023. ·$87.5 million for the three months ended September 30, 2023. ·$87.5 million for the three months ended December 31, 2023. ·$87.5 million for the three months ended March 31, 2024. ·$66.7 million for the three months ended June 30, 2024.(12) In connection with the acquisition of the Wireline Business, Cogent acquired 482 technical buildings. Thirty-four of those buildings have been converted to a Cogent Data Centers. (13) In connection with the acquisition of the Wireline Business, Cogent hired 942 total employees, including 75 quota bearing sales employees and 114 sales employees. ·As of June 30, 2023, there were 888 employees remaining from the original Wireline Business employees. ·As of September 30, 2023, there were 839 employees remaining from the original Wireline Business employees. ·As of December 31, 2023, there were 758 employees remaining from the original Wireline Business employees. ·As of March 31, 2024, there were 718 employees remaining from the original Wireline Business employees. ·As of June 30, 2024, there were 655 employees remaining from the original Wireline Business employees. Field: Page; Sequence: 11 (14) In connection with the acquisition of the Wireline Business the Company incurred the following Sprint Acquisition Costs ·$0.4 million of in the three months ended June 30, 2023, ·$0.7 million in the three months ended June 30, 2023, ·$0.4 million in the three months ended September 30, 2023, ·$17.0 million in the three months ended December 31, 2023, ·$9.0 million in the three months ended March 31, 2024 ·$12.4 million in the three months ended June 30, 2024Included in Sprint acquisition costs were the following reimbursable severance ·$16.2 million of reimbursable severance costs in the three months ended December 31, 2023, ·$4.3 million of reimbursable severance costs in the three months ended March 31, 2024, and ·$8.0 million of reimbursable severance costs in the three months ended June 30, 2024(15) Sales rep productivity for Q2 2023 included 9,084 net-centric customer connections from a commercial services agreement (“CSA”) with TMUSA entered into in May 2023. Net-centric revenue under the CSA was ·$7.3 million for the three months ended June 30, 2023, ·$8.0 million for the three months ended September 30, 2023, ·$8.6 million for the three months ended December 31, 2023 ·$3.2 million for the three months ended March 31, 2024, and ·$5.9 million for the three months ended June 30, 2024Net-centric customer connections under the CSA were ·8,028 as of June 30, 2023, ·4,661 as of September 30, 2023, ·3,576 as of December 31, 2023 ·2,658 as of March 31, 2024, and ·2,117 as of June 30, 2024(16) As of June 30, 2023, total non-core customer connections included 8,486 Session Initiation Protocol (“SIP”) customer connections. This non-core corporate product was discontinued. There were no SIP, non-core customer connections as of September 30, 2023, December 31, 2023, March 31, 2024, or June 30, 2024. (17) The first quarter 2024 dividend totaling $45.8 million was declared on February 28, 2024, and paid on April 9, 2024. NMNot meaningfulSchedules of Non-GAAP MeasuresEBITDA, EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Services Agreement, EBITDA margin and EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Services Agreement , marginEBITDA represents net cash flows provided by operating activities plus changes in operating assets and liabilities, cash interest expense and cash income tax expense. Management believes the most directly comparable measure to EBITDA calculated in accordance with generally accepted accounting principles in the United States, or GAAP, is net cash provided by operating activities. The Company also believes that EBITDA is a measure frequently used by securities analysts, investors, and other interested parties in their evaluation of issuers. EBITDA, as adjusted for Sprint acquisition costs and cash payments under the IP Transit Services Agreement with T-Mobile, represents EBITDA plus costs related to the Company’s acquisition of the Wireline Business and cash payments made to the Company under the IP Transit Agreement. EBITDA margin is defined as EBITDA divided by total service revenue. EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Agreement margin is defined as EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Agreement, divided by total service revenue.The Company believes that EBITDA, EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Services Agreement, EBITDA margin and EBITDA as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Services Agreement margin are useful measures of its ability to service debt, fund capital expenditures, pay dividends and expand its business. The company believes its EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Services Agreement, is a useful measure because it includes recurring cash flows stemming from the IP Transit Services Agreement that are of the same type as contracted payments under commercial contracts. The measurements are an integral part of the internal reporting and planning system used by management as a supplement to GAAP financial information. EBITDA, EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Agreement, EBITDA margin and EBITDA as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Agreement margin are not recognized terms under GAAP and accordingly, should not be viewed in isolation or as a substitute for the analysis of results as reported under GAAP, but rather as a supplemental measure to GAAP. For example, these measures are not intended to reflect the Company’s free cash flow, as they do not consider certain current or future cash requirements, such as capital expenditures, contractual commitments, and changes in working capital needs, interest expenses and debt service requirements. The Company’s calculations of these measures may also differ from the calculations performed by its competitors and other companies and as such, their utility as a comparative measure is limited. Field: Page; Sequence: 12 EBITDA, and EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under the IP Transit Services Agreement, are reconciled to net cash provided by operating activities in the table below."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 11 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 12 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in 000’s) – unaudited Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 Net cash provided by (used in) operating activities $35,821 $82,654 $(52,433) $(48,701) $19,219 $(22,171) Changes in operating assets and liabilities $1,435 $(90,373) $51,064 $36,288 $(34,640) $11,077 Cash interest expense and income tax expense 18,797 31,875 44,956 18,424 33,873 38,220 EBITDA $56,053 $24,156 $43,587 $6,011 $18,452 $27,126 PLUS: Sprint acquisition costs $400 $739 $351 $17,001 $9,037 $12,370 PLUS: Cash payments made to the Company under IP Transit Services Agreement - 29,167 87,500 87,500 87,500 66,667 EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under IP Transit Services Agreement $56,453 $54,062 $131,438 $110,512 $114,989 $106,163 EBITDA margin 36.5% 10.1% 15.8% 2.2% 6.9% 10.4% EBITDA, as adjusted for Sprint acquisition costs and cash payments made to the Company under IP Transit Services Agreement, margin 36.8% 22.5% 47.7% 40.6% 43.2% 40.8%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Constant currency revenue is reconciled to service revenue as reported in the tables below.Constant currency impact on revenue changes – sequential periods"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in 000’s) – unaudited Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 Service revenue, as reported – current period $153,588 $239,806 $275,429 $272,099 $266,168 $260,443 Impact of foreign currencies on service revenue (1,292) (417) 10 375 (304) 323 Service revenue - as adjusted for currency impact (1) $152,296 $239,389 $275,439 $272,474 $265,864 $260,766 Service revenue, as reported – prior sequential period $151,979 $153,588 $239,806 $275,429 $272,099 $266,168 Constant currency revenue increase (decrease) $317 $85,801 $35,633 $(2,955) $(6,235) $(5,402) Constant currency revenue percent increase (decrease) 0.2% 55.9% 14.9% -1.1% -2.3% -2.0%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)Service revenue, as adjusted for currency impact, is determined by translating the service revenue for the current period at the average foreign currency exchange rates for the prior sequential period. The Company believes that disclosing quarterly sequential revenue growth without the impact of foreign currencies on service revenue is a useful measure of sequential revenue growth. Service revenue, as adjusted for currency impact, is an integral part of the internal reporting and planning system used by management as a supplement to GAAP financial information. Field: Page; Sequence: 13 Constant currency impact on revenue changes – prior year periods"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 13 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in 000’s) – unaudited Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 Service revenue, as reported – current period $153,588 $239,806 $275,429 $272,099 $266,168 $260,443 Impact of foreign currencies on service revenue 1,553 (277) (1,768) (1,412) (362) 420 Service revenue - as adjusted for currency impact (2) $155,141 $239,529 $273,661 $270,687 $265,806 $260,863 Service revenue, as reported – prior year period 149,175 148,450 $150,000 $151,979 $153,588 $239,806 Constant currency revenue increase 5,966 91,079 $123,661 $118,708 $112,218 $21,057 Constant currency percent revenue increase 4.0% 61.4% 82.4% 78.1% 73.1% 8.8%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(2)Service revenue, as adjusted for currency impact, is determined by translating the service revenue for the current period at the average foreign currency exchange rates for the comparable prior year period. The Company believes that disclosing year over year revenue growth without the impact of foreign currencies on service revenue is a useful measure of revenue growth. Service revenue, as adjusted for currency impact, is an integral part of the internal reporting and planning system used by management as a supplement to GAAP financial information.Revenue on a constant currency basis and adjusted for the impact of excise taxes is reconciled to service revenue as reported in the tables below.Constant currency and excise tax impact on revenue changes – sequential periods"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in 000’s) – unaudited Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 Service revenue, as reported – current period $153,588 $239,806 $275,429 $272,099 $266,168 $260,443 Impact of foreign currencies on service revenue (1,292) (417) 10 375 (304) 323 Impact of excise taxes on service revenue (107) (6,847) (3,517) (5,871) (121) 1,367 Service revenue - as adjusted for currency and excise taxes impact (3) $152,189 $232,542 $271,922 $266,603 $265,743 $262,133 Service revenue, as reported – prior sequential period $151,979 $153,588 $239,806 $275,429 $272,099 $266,168 Constant currency and excise taxes revenue increase (decrease) $210 $78,954 $32,116 $(8,826) $(6,356) $(4,035) Constant currency and excise tax revenue percent increase (decrease) 0.1% 51.4% 13.4% -3.2% -2.3% -1.5%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(3)Service revenue, as adjusted for currency impact and the impact of excise taxes, is determined by translating the service revenue for the current period at the average foreign currency exchange rates for the prior sequential period and adjusting for the changes in excise taxes recorded as revenue between the periods presented. The Company believes that disclosing quarterly sequential revenue growth without the impact of foreign currencies and excise taxes on service revenue is a useful measure of sequential revenue growth. Service revenue, as adjusted for the impact of foreign currency and excise taxes, is an integral part of the internal reporting and planning system used by management as a supplement to GAAP financial information. Field: Page; Sequence: 14 Constant currency and excise tax impact on revenue changes – prior year periods"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 14 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in 000’s) – unaudited Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 Service revenue, as reported – current period $153,588 $239,806 $275,429 $272,099 $266,168 $260,443 Impact of foreign currencies on service revenue 1,553 (277) (1,768) (1,412) (362) 420 Impact of excise taxes on service revenue (451) (7,592) (10,439) (16,342) (16,356) (8,142) Service revenue - as adjusted for currency and excise taxes impact (4) $154,690 $231,937 $263,222 $254,345 $249,450 $252,721 Service revenue, as reported – prior year period $149,175 $148,450 $150,000 $151,979 $153,588 $239,806 Constant currency and excise taxes revenue increase $5,515 $83,487 $113,222 $102,366 $95,862 $12,915 Constant currency and excise tax percent revenue increase 3.7% 56.2% 75.5% 67.4% 62.4% 5.4%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(4)Service revenue, as adjusted for currency impact and the impact of excise taxes, is determined by translating the service revenue for the current period at the average foreign currency exchange rates for the prior year period and adjusting for the changes in excise taxes recorded as revenue between the periods presented. The Company believes that disclosing quarterly sequential revenue growth without the impact of foreign currencies and excise taxes on service revenue is a useful measure of sequential revenue growth. Service revenue, as adjusted for the impact of foreign currency and excise taxes, is an integral part of the internal reporting and planning system used by management as a supplement to GAAP financial information.Non-GAAP gross profit and non-GAAP gross marginNon-GAAP gross profit and non-GAAP gross margin are reconciled to GAAP gross profit and GAAP gross margin in the table below."
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in 000’s) – unaudited Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 Q2 2024 Service revenue total $153,588 $239,806 $275,429 $272,099 $266,168 $260,443 Minus - Network operations expense including equity-based compensation and depreciation and amortization expense 83,798 190,013 260,328 242,355 239,824 230,203 GAAP Gross Profit (5) $69,790 $49,793 $15,101 $29,744 $26,344 $30,240 Plus - Equity-based compensation – network operations expense 149 231 370 370 385 350 Plus – Depreciation and amortization expense $25,160 $52,511 $86,734 $67,805 $70,891 $74,036 Non-GAAP Gross Profit (6) $95,099 $102,535 $102,205 $97,919 $97,620 $104,626 GAAP Gross Margin (5) 45.4% 20.8% 5.5% 10.9% 9.9% 11.6% Non-GAAP Gross Margin (6) 61.9% 42.8% 37.1% 36.0% 36.7% 40.2%"
+    },
+    {
+      "type": "TextElement",
+      "text": "(5)GAAP gross profit is defined as total service revenue less network operations expense, depreciation and amortization and equity-based compensation included in network operations expense. GAAP gross margin is defined as GAAP gross profit divided by total service revenue. (6)Non-GAAP gross profit represents service revenue less network operations expense, excluding equity-based compensation and amounts shown separately (depreciation and amortization expense). Non-GAAP gross margin is defined as non-GAAP gross profit divided by total service revenue. Management believes that non-GAAP gross profit and non-GAAP gross margin are relevant measures for investors, as they are measures that management uses to measure the margin and amount available to the Company after network service costs, in essence, these are measures of the efficiency of the Company’s network. Field: Page; Sequence: 15 Gross and Net Leverage RatiosGross leverage ratio is defined as total debt divided by the trailing 12 months EBITDA, as adjusted for Sprint acquisition costs and cash payments under the IP Transit Services Agreement. Net leverage ratio is defined as total net debt (total debt minus cash and cash equivalents) divided by the last 12 months EBITDA, as adjusted for Sprint acquisition costs and cash payments under the IP Transit Services Agreement. Cogent’s gross leverage ratios and net leverage ratios are shown below."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 15 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "($ in 000’s) – unaudited As of March 31, 2023 As of June 30, 2023 As of September 30, 2023 As of December 31, 2023 As of March 31, 2024 As of June 30, 2024 Cash and cash equivalents & restricted cash $234,422 $243,953 $166,072 $113,781 $163,274 $426,241 Debt Capital (finance) leases – current portion 19,782 20,114 63,236 64,594 64,043 21,253 Capital (finance) leases – long term 300,600 311,405 419,941 419,921 453,473 405,176 Senior Secured 2026 Notes 500,000 500,000 500,000 500,000 500,000 500,000 Secured IPV4 Notes 206,000 Senior Unsecured 2027 Notes 450,000 450,000 450,000 450,000 450,000 750,000 Total debt 1,270,382 1,281,519 1,433,177 1,434,515 1,467,516 1,882,429 Total net debt 1,035,960 1,037,566 1,267,105 1,320,734 1,304,242 1,456,188 Trailing 12 months EBITDA, as adjusted for Sprint acquisition costs and cash payments from the IP Transit Services Agreement 232,169 227,774 298,984 352,465 411,001 463,102 Gross leverage ratio 5.47 5.63 4.79 4.07 3.57 4.06 Net leverage ratio 4.46 4.56 4.24 3.75 3.17 3.14"
+    },
+    {
+      "type": "TextElement",
+      "text": "Cogent’s SEC filings are available online via the Investor Relations section of www.cogentco.com or on the Securities and Exchange Commission’s website at www.sec.gov. Field: Page; Sequence: 16"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 16 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "COGENT COMMUNICATIONS HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "AS OF JUNE 30, 2024 AND DECEMBER 31, 2023"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(IN THOUSANDS, EXCEPT SHARE DATA)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​ June 30, December 31, ​ 2024 2023 ​ (Unaudited) ​ Assets ​ ​ Current assets: ​ ​ Cash and cash equivalents $384,419 $75,092 Restricted cash 41,822 38,689 Accounts receivable, net of allowance for credit losses of $6,382 and $3,677, respectively 111,676 135,475 Due from T-Mobile, IP Transit Services Agreement, current portion, net of discount of $19,992 and $24,898, respectively 80,008 179,269 Due from T-Mobile, Transition Services Agreement 3,862 4,514 Prepaid expenses and other current assets 67,688 80,588 Total current assets 689,475 513,627 Property and equipment: ​ ​ Property and equipment 3,103,518 2,947,376 Accumulated depreciation and amortization (1,522,908) (1,409,559) Total property and equipment, net 1,580,610 1,537,817 Right-of-use leased assets 332,065 361,587 IPv4 intangible assets 458,000 458,000 Other intangible assets, net 13,926 14,815 Deposits and other assets 26,455 23,438 Due from T-Mobile, IP Transit Services Agreement, net of discount of $19,558 and $27,916, respectively 222,108 263,750 Due from T-Mobile, Purchase Agreement, net of discount of $6,581 and $13,725, respectively 21,534 38,585 Total assets $3,344,173 $3,211,619 Liabilities and stockholders’ equity ​ ​ Current liabilities: ​ ​ Accounts payable $38,510 $48,356 Accrued and other current liabilities 189,131 120,523 Due to T-Mobile – Transition Services Agreement 2,286 66,908 Due to T-Mobile – Purchase Agreement — 4,981 Current maturities, operating lease liabilities 61,780 67,962 Finance lease obligations, current maturities 21,253 64,594 Total current liabilities 312,960 373,324 Senior secured 2026 notes, net of unamortized debt costs of $511 and $645, respectively, and discounts of $680 and $857, respectively 498,809 498,498 Senior unsecured 2027 notes, net of unamortized debt costs of $2,163 and $941, respectively, and discounts of $8,332 and $1,970, respectively 739,505 447,088 Secured IPv4 notes, net of debt costs of $7,323 198,677 — Operating lease liabilities, net of current maturities 309,055 330,095 Finance lease obligations, net of current maturities 405,176 419,921 Deferred income tax liabilities 406,335 471,498 Other long-term liabilities 58,133 61,639 Total liabilities 2,928,650 2,602,063 Commitments and contingencies: ​ ​ Stockholders’ equity: ​ ​ Common stock, $0.001 par value; 75,000,000 shares authorized; 48,990,760 and 48,608,569 shares issued and outstanding, respectively 49 49 Additional paid-in capital 610,905 606,755 Accumulated other comprehensive loss (21,141) (14,385) Accumulated (deficit) earnings (174,290) 17,137 Total stockholders’ equity 415,523 609,556 Total liabilities and stockholders’ equity $3,344,173 $3,211,619"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 17 Field: Split-Segment; Name: a2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 17 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "COGENT COMMUNICATIONS HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR THE THREE MONTHS ENDED JUNE 30, 2024 AND JUNE 30, 2023"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(IN THOUSANDS, EXCEPT SHARE AND PER SHARE DATA)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​ ​ ​ ​ Three Months Ended Three Months Ended ​ June 30, 2024 June 30, 2023 ​ (Unaudited) (Unaudited) Service revenue $260,443 $239,806 Operating expenses: ​ ​ Network operations (including $350 and $231 of equity-based compensation expense, respectively, exclusive of depreciation and amortization shown separately below) 156,167 137,502 Selling, general, and administrative (including $3,215 and $6,018 of equity-based compensation expense, respectively) 68,345 83,658 Acquisition costs – Sprint Business 12,370 739 Depreciation and amortization 74,036 52,511 Total operating expenses 310,918 274,410 Gain on lease termination 3,332 — Operating loss (47,143) (34,604) Interest expense, including change in valuation of interest rate swap agreement (29,541) (29,958) Gain on bargain purchase – Sprint Business 27,673 1,155,719 Interest income – IP Transit Services Agreement 5,934 7,669 Interest income – Purchase Agreement 402 506 Interest income and other, net 2,484 200 (Loss) income before income taxes (40,191) 1,099,532 Income tax benefit 7,853 24,331 Net (loss) income $(32,338) $1,123,863 ​ ​ ​ Comprehensive (loss) income: ​ ​ Net (loss) income $(32,338) $1,123,863 Foreign currency translation adjustment (1,722) 1,741 Comprehensive (loss) income $(34,060) $1,125,604 ​ ​ ​ Net (loss) income per common share: ​ ​ Basic net (loss) income per common share $(0.68) $23.84 Diluted net (loss) income per common share $(0.68) $23.65 Dividends declared per common share $0.975 $0.935 ​ ​ ​ Weighted-average common shares - basic 47,511,613 47,137,822 ​ ​ ​ Weighted-average common shares - diluted 47,511,613 47,526,207"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 18"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 18 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "COGENT COMMUNICATIONS HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR THE SIX MONTHS ENDED JUNE 30, 2024 AND JUNE 30, 2023"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(IN THOUSANDS, EXCEPT SHARE AND PER SHARE DATA)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​ Six Months Ended Six Months Ended ​ June 30, 2024 June 30, 2023 ​ (Unaudited) (Unaudited) Service revenue $526,613 $393,395 Operating expenses: ​ ​ Network operations (including $385 and $380 of equity-based compensation expense, respectively, exclusive of depreciation and amortization shown separately below) 324,752 196,140 Selling, general, and administrative (including $10,131 and $12,450 of equity-based compensation expense, respectively) 145,392 128,736 Acquisition costs – Sprint Business 21,407 1,139 Depreciation and amortization 144,930 77,669 Total operating expenses 636,481 403,684 Gain on lease termination 3,332 — Operating loss (106,536) (10,289) Interest expense, including change in valuation interest rate swap agreement (58,703) (47,116) Gain on bargain purchase – Sprint Business 22,202 1,155,719 Interest income – IP Transit Services Agreement 13,264 7,669 Interest income – Purchase Agreement (78) 506 Interest income and other, net 5,226 3,695 (Loss) income before income taxes (124,625) 1,110,184 Income tax benefit 26,980 19,827 Net (loss) income $(97,645) $1,130,011 ​ ​ ​ Comprehensive (loss) income: ​ ​ Net (loss) income $(97,645) $1,130,011 Foreign currency translation adjustment (6,756) 3,529 Comprehensive (loss) income $(104,401) $1,133,540 ​ ​ ​ Net (loss) income per common share: ​ ​ Basic net (loss) income per common share $(2.06) $23.97 Diluted net (loss) income per common share $(2.06) $23.79 Dividends declared per common share $1.940 $1.860 ​ ​ ​ Weighted-average common shares - basic 47,408,786 47,142,074 ​ ​ ​ Weighted-average common shares - diluted 47,408,786 47,508,334"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 19"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 19 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "COGENT COMMUNICATIONS HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR THE THREE MONTHS ENDED JUNE 30, 2024 AND JUNE 30, 2023"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(IN THOUSANDS)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​ Three Months Ended Three Months Ended ​ June 30, 2024 June 30, 2023 ​ (Unaudited) (Unaudited) Cash flows from operating activities: ​ ​ Net (loss) income $(32,338) $1,123,862 Adjustments to reconcile net (loss) income to net cash provided by operating activities: ​ ​ Depreciation and amortization 74,039 52,511 Amortization of debt costs and discounts 764 328 Amortization of discounts, due from T-Mobile, IP Transit Services & Purchase Agreements (6,336) (8,175) Equity-based compensation expense (net of amounts capitalized) 3,566 6,249 Gain on bargain purchase – Sprint Business (27,673) (1,155,719) Gains – lease terminations and other, net (3,332) 7 Deferred income taxes (10,485) (28,080) Changes in operating assets and liabilities: ​ ​ Accounts receivable (4,507) (4,058) Prepaid expenses and other current assets 12,010 (11,221) Due to T-Mobile – Transition Services Agreement (3,530) 118,777 Due from T-Mobile – Transition Services Agreement (8,619) (7,015) Unfavorable lease liabilities (1,392) (6,469) Accounts payable, accrued liabilities, change in swap valuation and other long-term liabilities (15,008) 1,560 Deposits and other assets 670 97 Net cash (used in) provided by operating activities (22,171) 82,654 Cash flows from investing activities: ​ ​ Cash payments - IP Transit Services Agreement – T-Mobile 66,667 29,167 Acquisition of Sprint Business, net of $47.1 million of cash acquired 7,989 (14,034) Purchases of property and equipment (48,767) (37,449) Net cash provided by (used in) investing activities 25,889 (22,316) Cash flows from financing activities: ​ ​ Dividends paid (93,304) (44,907) Purchases of common stock (7,968) — Net proceeds from issuance of senior unsecured 2027 Notes - net of discount of $6.8 million and debt costs of $1.4 million 291,879 — Net proceeds from issuance of secured IPv4 notes – net of debt costs of $7.6 million 198,420 Proceeds from exercises of stock options 40 240 Principal payments of finance lease obligations (18,896) (7,797) Settlement of finance lease – at a discount (114,576) — Net cash provided by (used in) financing activities 255,595 (52,464) Effect of exchange rates changes on cash 3,654 1,657 Net increase in cash, cash equivalents and restricted cash 262,967 9,531 Cash, cash equivalents and restricted cash, beginning of period 163,274 234,422 Cash, cash equivalents and restricted cash, end of period $426,241 $243,953"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 20"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 20 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "COGENT COMMUNICATIONS HOLDINGS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR THE SIX MONTHS ENDED JUNE 30, 2024 AND JUNE 30, 2023"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(IN THOUSANDS)"
+    },
+    {
+      "type": "TableElement",
+      "text": "​ Six Months Ended Six Months Ended ​ June 30, 2024 June 30, 2023 ​ (Unaudited) (Unaudited) Cash flows from operating activities: ​ ​ Net (loss) income $(97,645) $1,130,011 Adjustments to reconcile net (loss) income to net cash provided by operating activities: ​ ​ Depreciation and amortization 144,930 77,669 Amortization of debt costs and discounts 1,106 652 Amortization of discounts, due from T-Mobile, IP Transit Services & Purchase Agreements (13,186) (8,175) Equity-based compensation expense (net of amounts capitalized) 10,516 12,830 Gain on bargain purchase – Sprint Business (22,202) (1,155,719) Gains – lease terminations and other, net (3,332) (608) Deferred income taxes (43,554) (27,190) Changes in operating assets and liabilities: ​ ​ Accounts receivable 23,799 (4,918) Prepaid expenses and other current assets 12,900 (14,140) Due to T-Mobile – Transition Services Agreement (64,622) 118,777 Due from T-Mobile – Transition Services Agreement (11,671) (7,015) Unfavorable lease liabilities (3,843) (6,469) Accounts payable, accrued liabilities, change in swap valuation and other long-term liabilities 66,541 2,637 Deposits and other assets (2,688) 133 Net cash (used in) provided by operating activities (2,951) 118,475 Cash flows from investing activities: ​ ​ Cash payments - IP Transit Services Agreement – T-Mobile 154,167 29,167 Acquisition of Sprint Business, net of $47.1 million of cash acquired 12,323 (14,034) Purchases of property and equipment (89,650) (60,653) Net cash provided by (used in) investing activities 76,840 (45,520) Cash flows from financing activities: ​ ​ Dividends paid (93,782) (90,218) Purchases of common stock (7,968) — Net proceeds from issuance of senior unsecured 2027 Notes - net of discount of $6.8 million and debt costs of $1.4 million 291,879 — Net proceeds from issuance of secured IPv4 notes – net of debt costs of $7.6 million 198,420 Proceeds from exercises of stock options 204 385 Principal payments of finance lease obligations (42,131) (17,247) Settlement of finance lease – at a discount (114,576) — Net cash provided by (used in) financing activities 232,046 (107,080) Effect of exchange rates changes on cash 6,525 2,166 Net increase (decrease) in cash, cash equivalents and restricted cash 312,460 (31,959) Cash, cash equivalents and restricted cash, beginning of period 113,781 275,912 Cash, cash equivalents and restricted cash, end of period $426,241 $243,953 Supplemental disclosure of non-cash financing activities: ​ ​ Fair value of equipment acquired in leases $— $171 Finance lease obligations incurred $96,606 $42,639"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 21 Except for historical information and discussion contained herein, statements contained in this release constitute forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Such statements include, but are not limited to statements identified by words such as “believes,” “expects,” “anticipates,” “estimates,” “intends,” “plans,” “targets,” “projects” and similar expressions. The statements in this release are based upon the current beliefs and expectations of Cogent’s management and are subject to significant risks and uncertainties. Actual results may differ from those set forth in the forward-looking statements. Numerous factors could cause or contribute to such differences, including the impact of our acquisition of the Wireline Business, including our difficulties integrating our business with the acquired Wireline Business, which may result in the combined company not operating as effectively or efficiently as expected; transition services required to support the acquired Wireline Business and the related costs continuing for a longer period than expected; transition related costs associated with the acquisition; the COVID-19 pandemic and the related government policies; future economic instability in the global economy, including the risk of economic recession, recent bank failures and liquidity concerns at certain other banks or a contraction of the capital markets, which could affect spending on Internet services and our ability to engage in financing activities; the impact of changing foreign exchange rates (in particular the Euro to USD and Canadian dollar to USD exchange rates) on the translation of our non-USD denominated revenues, expenses, assets and liabilities; legal and operational difficulties in new markets; the imposition of a requirement that we contribute to the US Universal Service Fund on the basis of our Internet revenue; changes in government policy and/or regulation, including net neutrality rules by the United States Federal Communications Commission and in the area of data protection; cyber-attacks or security breaches of our network; increasing competition leading to lower prices for our services; our ability to attract new customers and to increase and maintain the volume of traffic on our network; the ability to maintain our Internet peering arrangements and right-of-way agreements on favorable terms; our reliance on a few equipment vendors, and the potential for hardware or software problems associated with such equipment; the dependence of our network on the quality and dependability of third-party fiber and right-of-way providers; our ability to retain certain customers that comprise a significant portion of our revenue base; the management of network failures and/or disruptions; our ability to make payments on our indebtedness as they become due and outcomes in litigation, risks associated with variable interest rates under our interest rate swap agreement, and outcomes in litigation as well as other risks discussed from time to time in our filings with the Securities and Exchange Commission, including, without limitation, our Annual Report on Form 10-K for the year ended December 31, 2023 and our Form 10-Q for the quarterly periods ended June 30, 2023, September 30, 2023, March 31, 2024 and June 30, 2024. Cogent undertakes no duty to update any forward-looking statement or any information contained in this press release or in other public disclosures at any time. Field: Page; Sequence: 22; Options: Last"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 21 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "###"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Page 22 of 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "",
+          "FOR IMMEDIATE RELEASE"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        5,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Cogent Contacts:",
+          ""
+        ],
+        [
+          "For Public Relations:",
+          "For Investor Relations:"
+        ],
+        [
+          "Jocelyn Johnson",
+          "John Chang"
+        ],
+        [
+          "+ 1 (202) 295-4299",
+          "+ 1 (202) 295-4212"
+        ],
+        [
+          "jajohnson@cogentco.com",
+          "investor.relations@cogentco.com"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Service revenue was $239.8 million for Q2 2023 and was $260.4 million for Q2 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "EBITDA margin was 6.9% for Q1 2024 and 10.4% for Q2 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "EBITDA, as adjusted for Sprint acquisition costs and cash received under the IP Transit Agreement with T-Mobile was $115.0 million for Q1 2024 and $106.2 million for Q2 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Gross margin – Non-GAAP - was 36.7% for Q1 2024 and 40.2% for Q2 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Gross margin was 9.9% for Q1 2024 and 11.6% for Q2 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Gross leverage ratio was 3.57 for Q1 2024 and was 4.06 for Q2 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Net leverage ratio was 3.17 for Q1 2024 and was 3.14 for Q2 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Cogent closed its issuance of $206.0 million of its 7.9% IPV4 Securitized Notes on May 2, 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "o",
+          "Cogent closed its issuance of $300.0 million of its 7.0% Unsecured Notes on June 11, 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Cogent purchased 153,322 shares of its common stock for $8.0 million in Q2 2024 under its buyback program."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 239.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue was $239.8 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " | · | Service revenue was $239.8 million for Q2 2023 and was $260.4 million for Q2 2024."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "68.870003",
+    "return_10d_pct": "10.0189",
+    "return_20d_pct": "1.8876",
+    "return_30d_pct": "3.5139",
+    "return_60d_pct": "15.3187",
+    "return_90d_pct": "23.9291"
+  },
+  "text_stats": {
+    "primary_text_len": 3701,
+    "exhibit_text_len": 58754,
+    "combined_text_len": 62457,
+    "semantic_text_len": 58804,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

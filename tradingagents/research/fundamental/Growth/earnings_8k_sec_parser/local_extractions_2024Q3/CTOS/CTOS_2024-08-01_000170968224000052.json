@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CTOS",
+    "cik": "1709682",
+    "event_date": "2024-08-01",
+    "event_accession": "0001709682-24-000052",
+    "primary_8k_doc": "ctos-20240801.htm",
+    "exhibit_docs": [
+      "ex991q2-2024pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTOS_000170968224000052_ctos-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CTOS_000170968224000052_ex991q2-2024pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CTOS",
+    "cik": "1709682",
+    "entity_name": "CUSTOM TRUCK ONE SOURCE, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "452163000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "13800000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3367797000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "53849000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-39948000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "3906000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.03052",
+    "operating_cash_flow_to_revenue": "0.008638",
+    "assets_to_revenue": "7.448192",
+    "financing_cash_flow_to_revenue": "0.119092",
+    "investing_cash_flow_to_revenue": "-0.088349"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $423.",
+      "sales of used rental equipment to our customers.",
+      "revenue was $423.",
+      "revenue decreased 15.",
+      "sales decreased 5.",
+      "sales of used equipment."
+    ],
+    "guidance_evidence": [
+      "Guidance KANSAS CITY, Mo, August 1, 2024 – (BUSINESS WIRE) – Custom Truck One Source, Inc.",
+      "OUTLOOK We are updating our full-year revenue and Adjusted EBITDA 1, 4 guidance for 2024.",
+      "guidance for the year, we continue to focus on generating positive free cash flow in 2024, but expect it to be lower than our previous target of generating more than $100 million of levered free cash flow 2, 4 .",
+      "outlook reflects the risks associated with some near-term challenges for our customers in the T&D sector, which we now expect could persist through the balance of the fiscal year.",
+      "expected rental revenue and rental asset sales during this quarter.",
+      "expected."
+    ],
+    "wave_or_demand_evidence": [
+      "demand from the utility end market • Gross profit of $89.",
+      "demand in our infrastructure, rail and telecom end markets, which all contributed to our TES segment performance.",
+      "backlog has returned to a more normalized level of just under six months, as OEM production and overall supply chain continue to improve,” McMonagle added.",
+      "customers.",
+      "customers, as well as our aftermarket repair service operations.",
+      "backlog (e) (as of period end) $ 478,244 $ 863,757 $ 478,244 $ 863,757 $ 537,292 (a) Ending OEC — Ending original equipment cost (“OEC”) is the original equipment cost of units at the end of the measurement period."
+    ],
+    "warning_or_risk_evidence": [
+      "delays contributed to both lower than expected rental revenue and rental asset sales during this quarter.",
+      "inventory levels.",
+      "inventory levels, and more normalized backlog levels continue to improve our ability to produce and deliver more units in 2024, albeit at a lower growth rate than previously expected.",
+      "delay purchase decisions influenced by both their expectation of lower interest rates to come and the uncertainty surrounding the upcoming election.",
+      "inventory through floor plan payables – non-trade less repayment of floor plan payables – non-trade, both of which are included in cash flow from financing activities in our Consolidated Statements of Cash Flows.",
+      "inventory and used equipment sold."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 423,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "4.220000",
+    "return_10d_pct": "-0.7109",
+    "return_20d_pct": "3.7915",
+    "return_30d_pct": "-8.0569",
+    "return_60d_pct": "-22.0379",
+    "return_90d_pct": "-3.0806"
+  },
+  "text_stats": {
+    "primary_text_len": 4250,
+    "exhibit_text_len": 41843,
+    "combined_text_len": 46095
+  }
+}

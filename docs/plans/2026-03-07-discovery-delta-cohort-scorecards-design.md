@@ -40,8 +40,8 @@ For each cohort:
 - `edge_vs_benchmark_5d`
 - `edge_vs_benchmark_20d`
 - `edge_vs_benchmark_3m`
-- `shortlist_conversion`
-- `deep_selection_conversion`
+- `candidate_list_conversion`
+- `fundamental_intake_conversion`
 
 ### Comparisons
 
@@ -60,7 +60,7 @@ Fast feedback path:
 
 - compute `5d` cohort return stats
 - compute benchmark-relative edge
-- compute shortlist and deep-selection conversion
+- compute candidate_list and fundamental-intake conversion
 
 ### `performance_tracker.py`
 
@@ -81,7 +81,7 @@ Inputs should be:
 
 - `discovery_delta.json`
 - Step 1 kept-universe symbols
-- shortlist symbols
+- candidate_list symbols
 - deep-selected symbols
 - forward return maps
 - benchmark return maps

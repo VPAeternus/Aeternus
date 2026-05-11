@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CMCO",
+    "cik": "1005229",
+    "event_date": "2024-07-31",
+    "event_accession": "0001005229-24-000231",
+    "primary_8k_doc": "cmco-20240731.htm",
+    "exhibit_docs": [
+      "exhibit991073124.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CMCO_000100522924000231_cmco-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CMCO_000100522924000231_exhibit991073124.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CMCO",
+    "cik": "1005229",
+    "entity_name": "COLUMBUS MCKINNON CORPORATION",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "906555000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-29",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "29660000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-29",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1685707000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-29",
+    "assets_form": "10-K",
+    "assets_period_end": "2022-03-31",
+    "financing_cash_flow_value": "420700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-29",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-554311000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-29",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "48881000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-29",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.032717",
+    "operating_cash_flow_to_revenue": "0.05392",
+    "assets_to_revenue": "1.859465",
+    "financing_cash_flow_to_revenue": "0.464065",
+    "investing_cash_flow_to_revenue": "-0.611448"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales increased 2% to $239.",
+      "net sales increased $4.",
+      "sales were up $0.",
+      "Gross margin increased 30 bps to 37.",
+      "Gross Margin 1 increased 110 bps to 38.",
+      "Net income of $8."
+    ],
+    "guidance_evidence": [
+      "guidance we provided last quarter.",
+      "Guidance July 31, 2024 First Quarter Fiscal 2025 Sales ($ in millions) Q1 FY25 Q1 FY24 Change % Change Net sales $ 239.",
+      "guidance assumes approximately $9 million of interest expense, $8 million of amortization, an effective tax rate of 25% and 29.",
+      "guidance reflects the expected effect of the consolidation of North American linear motion production into the new Monterrey, MX manufacturing center of excellence.",
+      "guidance for the fiscal year 2025, ending March 31, 2025: Metric FY25 Net sales Low-single digit growth year-over-year Adjusted EPS 4 Mid to high-single digit growth year-over-year Capital Expenditures $20 million to $30 million Net Leverage Ratio 4 ~2.",
+      "guidance assumes approximately $33 million of interest expense, $30 million of amortization, an effective tax rate of 25% and 29."
+    ],
+    "wave_or_demand_evidence": [
+      "Backlog increased 4% from the prior quarter with book-to-bill ratio of 1.",
+      "customer wins, growth in attractive vertical markets and an encouraging funnel of promising business opportunities.",
+      "Backlog $ 292.",
+      "backlog Expected to ship beyond 3 months $ 156.",
+      "backlog as % of total backlog 53.",
+      "aid David J."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory turns per year 3 (based on cost of products sold) 3.",
+      "inventory 3 121.",
+      "uncertainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant.",
+      "uncertainties and other factors that could cause the actual results, performance or achievements of the Company to differ materially from any future results, performance or achievements expressed or implied by the forward-looking statements.",
+      "uncertainties, you should not place undue reliance on these forward-looking statements.",
+      "loss (209) (543) (61."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 239.7,
+    "quarter_revenue_yoy_pct": 2,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "37.970001",
+    "return_10d_pct": "-14.6695",
+    "return_20d_pct": "-13.4053",
+    "return_30d_pct": "-13.8004",
+    "return_60d_pct": "-5.1883",
+    "return_90d_pct": "-15.3806"
+  },
+  "text_stats": {
+    "primary_text_len": 5551,
+    "exhibit_text_len": 30385,
+    "combined_text_len": 35938
+  }
+}

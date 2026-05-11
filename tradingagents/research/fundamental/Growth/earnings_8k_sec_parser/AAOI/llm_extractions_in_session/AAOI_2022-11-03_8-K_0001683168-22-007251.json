@@ -1,0 +1,61 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 56.7,
+    "revenue_yoy_pct": 6.379,
+    "revenue_qoq_pct": 8.413,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 61.0,
+    "revenue_low_millions": 58.0,
+    "revenue_high_millions": 64.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "positive"
+  },
+  "qualitative": {
+    "demand_signal": "revenue came in below our expectations, primarily due to a faster than expected decline in 40G revenue, we are encouraged by the continued demand in the CATV market and the stronger telecom market,” said Dr.",
+    "wave_signal": "(NASDAQ: AAOI), a leading provider of fiber-optic access network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its third quarter 2022 ended September 30, 2022.",
+    "margin_signal": "·GAAP gross margin was 17.",
+    "risk_signal": "“While our revenue came in below our expectations, primarily due to a faster than expected decline in 40G revenue, we are encouraged by the continued demand in the CATV market and the stronger telecom market,” said Dr.",
+    "customer_signal": "We continue to see good customer traction on 400G, with 400G revenue more than tripling compared to Q2, which we believe is the beginning of the anticipated ramp in this product family."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $56.7 million, compared $53.3 million in the third quarter of 2021 and $52.3 million in the second quarter of 2022."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $56.7 million, compared $53.3 million in the third quarter of 2021 and $52.3 million in the second quarter of 2022."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $56.7 million, compared $53.3 million in the third quarter of 2021 and $52.3 million in the second quarter of 2022."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $58 million to $64 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $58 million to $64 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $58 million to $64 million."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

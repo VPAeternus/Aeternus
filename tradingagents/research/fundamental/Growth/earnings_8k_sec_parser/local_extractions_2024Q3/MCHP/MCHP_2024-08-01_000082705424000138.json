@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MCHP",
+    "cik": "827054",
+    "event_date": "2024-08-01",
+    "event_accession": "0000827054-24-000138",
+    "primary_8k_doc": "mchp-20240801.htm",
+    "exhibit_docs": [
+      "exhibit991q1fy25.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MCHP_000082705424000138_mchp-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MCHP_000082705424000138_exhibit991q1fy25.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MCHP",
+    "cik": "827054",
+    "entity_name": "MICROCHIP TECHNOLOGY INCORPORATED",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "6820900000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "1285500000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "16370300000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-2327600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-477700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "2842700000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.188465",
+    "operating_cash_flow_to_revenue": "0.416763",
+    "assets_to_revenue": "2.400021",
+    "financing_cash_flow_to_revenue": "-0.341245",
+    "investing_cash_flow_to_revenue": "-0.070035"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $1.",
+      "net sales of $1,240 billion.",
+      "net sales of $2.",
+      "operating income of $219.",
+      "net income of $129.",
+      "EPS of $0."
+    ],
+    "guidance_evidence": [
+      "guidance provided on May 6, 2024 was net sales of $1,240 billion.",
+      "guidance provided on May 6, 2024 was for GAAP EPS of $0.",
+      "guidance provided on May 6, 2024 was for Non-GAAP EPS of $0.",
+      "guidance as we continued to navigate a challenging macro environment in combination with our customers focusing on reducing their inventory positions based on short lead times for our products,\" said Ganesh Moorthy, President and Chief Executive Officer.",
+      "guidance, as is typical in this high-turns environment, uncertain market conditions add complexity to forecasting.",
+      "Outlook: The following statements are based on current expectations."
+    ],
+    "wave_or_demand_evidence": [
+      "customers focusing on reducing their inventory positions based on short lead times for our products,\" said Ganesh Moorthy, President and Chief Executive Officer.",
+      "customers’ short-term focus on reducing inventory, we believe that our expanded portfolio, now spanning 8 to 64-bit processors including FPGAs as well as our analog portfolio, positions us well for sustainable, above-market growth across a diverse set of applications.",
+      "customers with short lead times.",
+      "orders remain crucial for meeting guidance, as is typical in this high-turns environment, uncertain market conditions add complexity to forecasting.",
+      "customers' innovation focus.",
+      "customer or distributor."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory positions based on short lead times for our products,\" said Ganesh Moorthy, President and Chief Executive Officer.",
+      "weaker than expected, resulting in an extended period over which the inventory correction is playing out.",
+      "inventory, we believe that our expanded portfolio, now spanning 8 to 64-bit processors including FPGAs as well as our analog portfolio, positions us well for sustainable, above-market growth across a diverse set of applications.",
+      "inventory levels exceeded our target range, which is reflective of broader challenging market conditions, we are confident that this inventory positions us well to service customers with short lead times.",
+      "inventory level along with our investment in capacity will allow us to cost-effectively respond when business conditions improve.",
+      "inventory and macro challenges, our design-in pipeline and momentum remains strong across markets, driven by our customers' innovation focus."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1241,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "79.449997",
+    "return_10d_pct": "-3.8137",
+    "return_20d_pct": "0.4154",
+    "return_30d_pct": "-3.8389",
+    "return_60d_pct": "-2.4670",
+    "return_90d_pct": "-7.6526"
+  },
+  "text_stats": {
+    "primary_text_len": 3666,
+    "exhibit_text_len": 34939,
+    "combined_text_len": 38607
+  }
+}

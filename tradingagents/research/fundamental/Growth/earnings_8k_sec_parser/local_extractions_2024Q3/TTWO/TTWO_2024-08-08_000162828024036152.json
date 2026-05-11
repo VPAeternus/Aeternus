@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TTWO",
+    "cik": "946581",
+    "event_date": "2024-08-08",
+    "event_accession": "0001628280-24-036152",
+    "primary_8k_doc": "ttwo-20240808.htm",
+    "exhibit_docs": [
+      "ttwo1q25earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TTWO_000162828024036152_ttwo-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TTWO_000162828024036152_ttwo1q25earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TTWO",
+    "cik": "946581",
+    "entity_name": "TAKE-TWO INTERACTIVE SOFTWARE, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3504800000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-22",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "418000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-22",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "15862100000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-22",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-256800000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-22",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "139200000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-22",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "258000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-22",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.119265",
+    "operating_cash_flow_to_revenue": "0.073613",
+    "assets_to_revenue": "4.525822",
+    "financing_cash_flow_to_revenue": "-0.073271",
+    "investing_cash_flow_to_revenue": "0.039717"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 4% to $1.",
+      "net income per share.",
+      "net income per share is expected to be 177.",
+      "GAAP net income (loss) excluding interest income (expense), provision for (benefit from) income taxes, depreciation expense, and amortization and impairment of acquired intangibles.",
+      "net income, as it removes the effect of certain non-cash expenses, debt-related charges, and income taxes.",
+      "Cash Flow approximately $(150) Operational metric Net Bookings $5,550 to $5,650 • Management reporting tax rate anticipated to be 18% • Share count used to calculate GAAP net loss per share is expected to be 174."
+    ],
+    "guidance_evidence": [
+      "guidance Company updates outlook for fiscal 2025 and reiterates Net Bookings outlook for fiscal year 2025 of $5.",
+      "outlook for the year of $5.",
+      "outlook may not foot to the totals, as the Company does not expect actual results for every component to be at the low end or high end of the outlook range simultaneously.",
+      "outlook for our future business and financial performance.",
+      "expected to be 174.",
+      "expected to be 177."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings, in line with guidance Company updates outlook for fiscal 2025 and reiterates Net Bookings outlook for fiscal year 2025 of $5.",
+      "Bookings outlook for the year of $5.",
+      "Bookings in Fiscal 2026 and 2027, which we believe will drive long-term shareholder value.",
+      "Bookings* grew 1% to $1.",
+      "Bookings from recurrent consumer spending** were flat and accounted for 83% of total Net Bookings.",
+      "Bookings were NBA® 2K24, Grand Theft Auto® Online and Grand Theft Auto V, Toon Blast™ , our hyper-casual mobile portfolio, Empires & Puzzles™, Match Factory!™ , Red Dead Redemption® 2 and Red Dead Online, Words With Friends™, and Merge Dragons!™."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of acquired intangibles.",
+      "charges, and income taxes.",
+      "preliminary basis; final data will be included in Take-Two’s Quarterly Report on Form 10−Q for the period ended June 30, 2024.",
+      "impairment of software development costs and licenses 85.",
+      "impairment of intangibles 182.",
+      "impairment of acquired intangibles (0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1340,
+    "quarter_revenue_yoy_pct": 4,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "142.139999",
+    "return_10d_pct": "5.8815",
+    "return_20d_pct": "12.9168",
+    "return_30d_pct": "9.9761",
+    "return_60d_pct": "7.5981",
+    "return_90d_pct": "26.0518"
+  },
+  "text_stats": {
+    "primary_text_len": 3895,
+    "exhibit_text_len": 27380,
+    "combined_text_len": 31277
+  }
+}

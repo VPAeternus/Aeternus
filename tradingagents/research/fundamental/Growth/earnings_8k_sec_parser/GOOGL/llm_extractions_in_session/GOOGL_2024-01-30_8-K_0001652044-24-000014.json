@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter and fiscal year ended December 31, 2023",
+    "period_end_date": "December 31, 2023"
+  },
+  "reported_results": {
+    "revenue_millions": 86310.0,
+    "revenue_yoy_pct": 13.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "•Google Cloud includes infrastructure and platform services, collaboration tools, and other services for enterprise customers.",
+    "wave_signal": "1Alphabet Announces Fourth Quarter and Fiscal Year 2023 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "over year1 %13 %10 %9 %Change in constant currency revenues year over year(1)7 %13 %14 %10 %Operating income$18,160 $23,697 $74,842 $84,293 Operating margin24 %27 %26 %27 %Other income (expense), net $(1,013)$715 $(3,514)$1,424 Net income$13,624 $20,687 $59,972 $73,795 Diluted EPS$1.",
+    "risk_signal": "riptions, platforms, and devices(1)8,796 10,794 Google Services total67,838 76,311 Google Cloud7,315 9,192 Other Bets226 657 Hedging gains (losses)669 150 Total revenues$76,048 $86,310 Total TAC$12,925 $13,986 Number of employees190,234 182,502 (1) Formerly “Google other.",
+    "customer_signal": "•Google Cloud includes infrastructure and platform services, collaboration tools, and other services for enterprise customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 76048 | | | | | $ | 86310 | | | | | $ | 282836 | | | | | $ | 307394 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 76048 | | | | | $ | 86310 | | | | | $ | 282836 | | | | | $ | 307394 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

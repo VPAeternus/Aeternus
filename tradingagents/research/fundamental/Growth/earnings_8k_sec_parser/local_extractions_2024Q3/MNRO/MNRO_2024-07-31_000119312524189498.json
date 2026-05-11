@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MNRO",
+    "cik": "876427",
+    "event_date": "2024-07-31",
+    "event_accession": "0001193125-24-189498",
+    "primary_8k_doc": "d284523d8k.htm",
+    "exhibit_docs": [
+      "d284523dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MNRO_000119312524189498_d284523d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MNRO_000119312524189498_d284523dex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MNRO",
+    "cik": "876427",
+    "entity_name": "MONRO, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1359328000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-28",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-26",
+    "net_income_value": "61568000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-28",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-26",
+    "assets_value": "1776877000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-28",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-25",
+    "financing_cash_flow_value": "-85970000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-28",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-26",
+    "investing_cash_flow_value": "-109801000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-28",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-26",
+    "operating_cash_flow_value": "173759000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-28",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-26",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.045293",
+    "operating_cash_flow_to_revenue": "0.127827",
+    "assets_to_revenue": "1.307173",
+    "financing_cash_flow_to_revenue": "-0.063244",
+    "investing_cash_flow_to_revenue": "-0.080776"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales decreased 9.",
+      "sales of 0.",
+      "sales decreased 6% for batteries, 8% for tires, 9% for alignments, 10% for maintenance services, 13% for brakes, and 15% for front end/shocks compared to the prior year period.",
+      "Gross Margin Expanded 220 Basis Points  First Quarter Diluted EPS of $.",
+      "EPS 1 of $.",
+      "EPS is a non-GAAP measure."
+    ],
+    "guidance_evidence": [
+      "guidance at this time but will provide perspective on its expectations for the fiscal second quarter as well as the full year of fiscal 2025 during its earnings conference call."
+    ],
+    "wave_or_demand_evidence": [
+      "customers the professionalism and high-quality service they expect from a national retailer, with the convenience and trust of a neighborhood garage.",
+      "customers back on the road safely.",
+      "air and tire services, today announced financial results for its first quarter ended June 29, 2024.",
+      "aintenance services, 13% for brakes, and 15% for front end/shocks compared to the prior year period.",
+      "ails regarding excluded items in the first quarters of fiscal 2025 and 2024.",
+      "aid Mike Broderick, President and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, corporate headquarters relocation costs, and items related to store closings.",
+      "decreased 10.",
+      "decreased 9.",
+      "decreased 6% for batteries, 8% for tires, 9% for alignments, 10% for maintenance services, 13% for brakes, and 15% for front end/shocks compared to the prior year period.",
+      "decrease on a dollar basis was principally due to lower store direct costs compared to the prior year period.",
+      "decrease in weighted average debt."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 97,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "30.950001",
+    "return_10d_pct": "-16.6721",
+    "return_20d_pct": "-11.8901",
+    "return_30d_pct": "-15.1858",
+    "return_60d_pct": "-6.7528",
+    "return_90d_pct": "-10.4039"
+  },
+  "text_stats": {
+    "primary_text_len": 3295,
+    "exhibit_text_len": 11439,
+    "combined_text_len": 14736
+  }
+}

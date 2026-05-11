@@ -1,0 +1,140 @@
+Reading additional input from stdin...
+2026-04-29T15:06:06.444496Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/aeternusholdings/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-04-29T15:06:06.444860Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/aeternusholdings/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+OpenAI Codex v0.124.0 (research preview)
+--------
+workdir: /Users/aeternusholdings/Documents/AeternusAutoResearch
+model: gpt-5.4-mini
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 019dd9c6-a04e-70d1-b22d-b1fc705964ba
+--------
+user
+You are reviewing SEC 8-K Item 2.02 / EX-99.1 earnings-release evidence packets for an investment research pipeline.
+
+Rules:
+- Use only evidence inside each packet.
+- Do not use stock price, future returns, analyst expectations, news, or outside knowledge.
+- Do not infer missing facts. If evidence is absent, score conservatively.
+- Return JSON only, matching schema: {"results": [ ... ]}.
+- Include one result for every input packet, same order.
+
+Scoring formula:
+narrative_delta_score =
+  causal_change
++ proof_alignment
++ durability
++ operating_leverage_quality
+- negative_revision_risk
+- story_vs_numbers_gap_penalty
+
+Field ranges:
+- causal_change: integer 0-3
+- proof_alignment: integer 0-3
+- durability: integer 0-2
+- operating_leverage_quality: integer 0-2
+- negative_revision_risk: integer 0-5
+- story_vs_numbers_gap_penalty: integer 0-3
+- narrative_delta_score: integer formula result, clipped only if below -5 or above 10
+- narrative_delta_bucket: inflecting if score >= 7, constructive if 3-6, neutral if 0-2, deteriorating if <0, unscorable only if evidence cannot be read
+- score_addition: inflecting +3, constructive +1, neutral 0, deteriorating -3, unscorable 0
+- hard override: if negative_revision_risk >= 4, score_addition must be -3
+- confidence: low, medium, or high
+
+Interpretation:
+- causal_change asks whether filing explains real business change, not just reports numbers.
+- proof_alignment asks whether hard numbers support the story.
+- durability asks whether change looks multi-quarter/structural.
+- operating_leverage_quality asks whether driver converts into margin/profit/cash economics.
+- negative_revision_risk asks whether future numbers may come down due to guidance cut, shortfall, demand break, liquidity issue, severe margin pressure, regulatory shock, or execution miss.
+- story_vs_numbers_gap_penalty asks whether narrative is ahead of or contradicted by numbers.
+
+Output each result with these exact keys:
+sample_id, quarter, ticker, event_date, causal_change, proof_alignment, durability, operating_leverage_quality, negative_revision_risk, story_vs_numbers_gap_penalty, narrative_delta_score, narrative_delta_bucket, score_addition, detected_driver_category, detected_driver_name, evidence_positive, evidence_risk, confidence, blocking_issues.
+
+Packets:
+[
+  {
+    "sample_id": "S000001",
+    "quarter": "2022Q4",
+    "ticker": "ABNB",
+    "event_date": "2022-11-01",
+    "revenue_bucket": "$2B-$10B",
+    "pre_llm_fundamental_bucket": "mixed",
+    "pre_llm_fundamental_score": "2",
+    "profitability_score": "-1",
+    "operating_cash_flow_score": "2",
+    "financing_dependence_score": "-1",
+    "evidence_snippets": [
+      "The year-over-year increase from Q3 2021 was entirely driven by price appreciation, which more than offset some negative impact from mix as urban destinations and other bookings that tend to have lower ADR rebounded, as well as the impact of foreign exchange.",
+      "18 Quarterly Summary 2021 2022 Q1 Q2 Q3 Q4 Q1 Q2 Q3 Nights and Experiences Booked 64.4M 83.1M 79.7M 73.4M 102.1M 103.7M 99.7M Y/Y 13% 197% 29% 59% 59% 25% 25% Gross Booking Value $10.3B $13.4B $11.9B $11.3B $17.2B $17.0B $15.6B Y/Y 52% 320% 48% 91% 67% 27% 31% Gross Booking Value per Night and Experience Booked $159.82 $161.45 $149.15 $153.61 $168.07 $163.74",
+      "and its consolidated subsidiaries (the \u0093Company\u0094), including its financial outlook for the fourth quarter of 2022; the other expectations described under \u0093Outlook\u0094 above; the Company\u0092s expectations regarding the impact of the COVID-19 pandemic on its business, travel trends, and the travel industry; the Company\u0092s expectations regarding travel trends and the",
+      "16 Adjusted EBITDA is defined as net income or loss adjusted for (i) provision for (benefit from) income taxes; (ii) interest income, interest expense, and other income (expense), net; (iii) depreciation and amortization; (iv) stock-based compensation expense and stock-settlement obligations related to the IPO; (v) acquisition-related impacts consisting of g",
+      "These limitations include the following: Adjusted EBITDA does not reflect interest income (expense) and other income (expense), net, which include loss on extinguishment of debt and unrealized and realized gains and losses on foreign currency exchange, investments, and financial instruments, including the warrants issued in connection with a term loan agreem",
+      "24 Reconciliations of Non-GAAP Financial Measures The following is a reconciliation of Adjusted EBITDA to the most comparable GAAP measure, net income (loss).",
+      "Adjusted EBITDA Reconciliation (in millions, except percentages) Three Months Ended Mar 31 Jun 30 Sept 30 Dec 31 Mar 31 Jun 30 Sept 30 2021 2021 2021 2021 2022 2022 2022 Revenue $886.9 $1,335.2 $2,237.5 $1,532.2 $1,508.9 $2,104.1 $2,884.5 Net income $(1,172.2) $(68.2) $833.9 $54.5 $(18.8) $378.8 $1,214.3 (loss) Adjusted to exclude the following: Provision fo",
+      "We expect Q4 2022 Adjusted EBITDA to be up meaningfully on a nominal basis from Q4 2021 and expect quarterly Adjusted EBITDA margin to be in-line to modestly higher than last year\u0092s margin of 22%.",
+      "We created this product because it allows us to highlight our unique inventory and point demand to where we have supply.",
+      "All recurring operating expense line-items (excluding the impact of stock-based compensation expense) except for sales and marketing, increased more slowly year-over-year than revenue, allowing for considerable margin expansion.3 Our hiring plan to modestly increase headcount this year is unchanged from the beginning of the year.",
+      "In some cases, forward-looking statements can be identified by terms such as \u0093may,\u0094 \u0093will,\u0094 \u0093appears,\u0094 \u0093should,\u0094 \u0093expects,\u0094 \u0093plans,\u0094 \u0093anticipates,\u0094 \u0093could,\u0094 \u0093outlook,\u0094 \u0093intends,\u0094 \u0093target,\u0094 \u0093projects,\u0094 \u0093contemplates,\u0094 \u0093believes,\u0094 \u0093estimates,\u0094 \u0093predicts,\u0094 \u0093potential,\u0094 or \u0093continue,\u0094 or the negative of these words or other similar terms or expressions that conc",
+      "Our non-GAAP financial measures include Adjusted EBITDA, Adjusted EBITDA Margin, Free Cash Flow, Free Cash Flow Margin, trailing twelve months (\u0093TTM\u0094) Free Cash Flow, TTM Free Cash Flow Margin, revenue change excluding the effect of changes in foreign exchange rates (\u0093ex-FX\u0094), GBV change ex-FX, net income (loss) change ex-FX, Adjusted EBITDA change ex-FX, an",
+      "Reconciliations of expected Adjusted EBITDA and Adjusted EBITDA margins to corresponding net income (loss) and net income (loss) margins have not been provided because of the unpredictability of certain of the items excluded from Adjusted EBITDA and because we cannot determine their probable significance.",
+      "The contingent consideration, which was in the form of equity, was valued as of the acquisition date and is marked-to-market at each reporting period based on factors including our stock price; Adjusted EBITDA does not reflect net changes to reserves for lodging taxes for which management believes it is probable that we may be held jointly liable with Hosts",
+      "Because of these limitations, you should consider Adjusted EBITDA and Adjusted EBITDA Margin alongside other financial performance measures, including net income (loss) and our other GAAP results.",
+      "In addition to the actual percentage change, we disclose the percentage change in our current period results for revenue, GBV, net income (loss), Adjusted EBITDA, and ADR from the corresponding prior period results by comparing results using constant currencies.",
+      "We present constant currency change rate information to provide a framework for assessing how our revenue, GBV, net income (loss), Adjusted EBITDA, and ADR performed excluding the effect of changes in foreign exchange rates.",
+      "We use the percentage change in constant currency revenues, GBV, net income (loss), Adjusted EBITDA, and ADR for financial and operational decision-making and as a means to evaluate period-to-period comparisons."
+    ]
+  },
+  {
+    "sample_id": "S000002",
+    "quarter": "2022Q4",
+    "ticker": "ACAD",
+    "event_date": "2022-11-02",
+    "revenue_bucket": "$100M-$500M",
+    "pre_llm_fundamental_bucket": "weak",
+    "pre_llm_fundamental_score": "-3",
+    "profitability_score": "-1",
+    "operating_cash_flow_score": "-1",
+    "financing_dependence_score": "0",
+    "evidence_snippets": [
+      "NUPLAZID delivered net sales of $130.7 million in the third quarter of 2022, driven by sequential demand growth of 2% and an acceleration of growth in the long-term care (LTC) channel, offset by a reduction of in-channel inventory of approximately $7 million.",
+      "Net sales for the quarter were driven by sequential demand growth of 2% and an acceleration of growth in the LTC channel, offset by a reduction of in-channel inventory of approximately $7 million.",
+      "\u2022 Continue to expect enrollment to complete in ADVANCE-2, a Phase 3 study evaluating pimavanserin for the negative symptoms of schizophrenia, around mid-year 2023.",
+      "2022 Financial Guidance \u2022 NUPLAZID net sales guidance is updated to $510 to $520 million from the previous range of $510 to $540 million.",
+      "\u2022 GAAP R&D guidance is updated to $345 to $355 million from the previous range of $340 to $360 million, which includes approximately $25 million of stock-based compensation expense.",
+      "\u2022 GAAP SG&A guidance is updated to $365 to $375 million from the previous range of $360 to $380 million, which includes approximately $45 million of stock-based compensation expense.",
+      "These statements include, but are not limited to, statements related to: the potential opportunity for future growth in sales of NUPLAZID; the timing of ongoing and future clinical studies for pimavanserin; the development and commercialization of trofinetide; and guidance for full-year 2022 NUPLAZID net sales for Parkinson\u2019s disease psychosis only and certa",
+      "\u201cOur third quarter results reflect continued growth in demand for NUPLAZID, driven by early signs of improvement in the long-term care channel,\u201d said Steve Davis, Chief Executive Officer.",
+      "Furthermore, we continued to advance our late and early-stage portfolio, including our Phase 3 program for pimavanserin for the treatment of the negative symptoms of schizophrenia and our Phase 1 ACP-204 program for neuropsychiatric indications.\u201d Company Updates \u2022 Trofinetide New Drug Application (NDA) for the treatment of Rett syndrome was accepted for fili",
+      "For the nine months ended September 30, 2022, Acadia reported net product sales of $380.7 million, an increase of approximately 8% as compared to $353.4 million reported for the nine months ended September 30, 2021.",
+      "The increase in research and development expenses during the quarter was primarily due to a $10 million milestone payment accrued to Neuren upon acceptance of the trofinetide NDA filing, as well as increased costs of manufacturing activities for trofinetide and the development of early-stage programs.",
+      "The increase was primarily due to the $60 million upfront payment made to Stoke Therapeutics for a license and collaboration agreement and the previously mentioned $10 million milestone as well as increased costs for trofinetide and early-stage programs.",
+      "Net Loss For the three months ended September 30, 2022, Acadia reported a net loss of $27.2 million, or $0.17 per common share, compared to a net loss of $14.5 million, or $0.09 per common share, for the same period in 2021.",
+      "For the nine months ended September 30, 2022, Acadia reported a net loss of $174.3 million, or $1.08 per common share, compared to a net loss of $124.8 million, or $0.78 per common share, for the same period in 2021.",
+      "The increase was mainly due to the upfront and milestone payments made for license and collaboration agreements in 2022.",
+      "Trofinetide has been shown to inhibit the production of inflammatory cytokines, inhibit the overactivation of microglia and astrocytes, and increase the amount of available IGF-1 that can bind to IGF-1 receptors.",
+      "CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (in thousands, except per share amounts) (Unaudited) Three Months Ended September 30, Nine Months Ended September 30, 2022 2021 2022 2021 Revenues Product sales, net $ 130,714 $ 131,612 $ 380,745 $ 353,387 Total revenues 130,714 131,612 380,745 353,387 Operating expenses Cost of product sales, license fees and",
+      "CONDENSED CONSOLIDATED BALANCE SHEETS (in thousands) September 30, 2022 December 31, 2021 (unaudited) Assets Cash, cash equivalents and investment securities $ 436,579 $ 520,706 Accounts receivable, net 55,733 64,366 Interest and other receivables 403 978 Inventory 5,844 7,881 Prepaid expenses 22,993 23,892 Total current assets 521,552 617,823 Property and e"
+    ]
+  }
+]
+
+
+Previous response failed validation. Return valid JSON only. Fix formula, bucket, and score_addition exactly.
+2026-04-29T15:06:06.679324Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer realm=\"OAuth\", resource_metadata=\"https://mcp.linear.app/.well-known/oauth-protected-resource\", error=\"invalid_token\", error_description=\"Missing or invalid access token\"" })
+2026-04-29T15:06:06.791787Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(TokenRefreshFailed("Server returned error response: invalid_grant: Invalid refresh token"))
+2026-04-29T15:06:07.896402Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/aeternusholdings/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-04-29T15:06:07.896733Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/aeternusholdings/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+hook: SessionStart
+hook: SessionStart Completed
+2026-04-29T15:06:09.178310Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: prompt must be at most 128 characters path=/Users/aeternusholdings/.codex/.tmp/plugins/plugins/build-ios-apps/.codex-plugin/plugin.json
+2026-04-29T15:06:09.178547Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=/Users/aeternusholdings/.codex/.tmp/plugins/plugins/plugin-eval/.codex-plugin/plugin.json
+codex
+{"results":[{"sample_id":"S000001","quarter":"2022Q4","ticker":"ABNB","event_date":"2022-11-01","causal_change":2,"proof_alignment":3,"durability":1,"operating_leverage_quality":2,"negative_revision_risk":1,"story_vs_numbers_gap_penalty":0,"narrative_delta_score":7,"narrative_delta_bucket":"inflecting","score_addition":3,"detected_driver_category":"demand_and_margin","detected_driver_name":"Pricing, mix, and operating leverage","evidence_positive":"Revenue, nights booked, GBV, and Adjusted EBITDA all rose; company says recurring operating expenses grew slower than revenue, enabling margin expansion.","evidence_risk":"Outlook language remains forward-looking; FX and mix effects still present, limiting certainty on persistence.","confidence":"high","blocking_issues":""},{"sample_id":"S000002","quarter":"2022Q4","ticker":"ACAD","event_date":"2022-11-02","causal_change":1,"proof_alignment":1,"durability":1,"operating_leverage_quality":0,"negative_revision_risk":4,"story_vs_numbers_gap_penalty":2,"narrative_delta_score":-3,"narrative_delta_bucket":"deteriorating","score_addition":-3,"detected_driver_category":"product_sales_and_guidance","detected_driver_name":"NUPLAZID demand with lowered sales guidance","evidence_positive":"NUPLAZID net sales were driven by 2% sequential demand growth and LTC channel improvement.","evidence_risk":"Full-year NUPLAZID net sales guidance was reduced; quarterly sales were essentially flat year over year and losses widened.","confidence":"high","blocking_issues":""}]}
+tokens used
+28,087
+2026-04-29T15:06:15.070909Z  WARN codex_rmcp_client::stdio_server_launcher: Failed to terminate MCP process group 91750: No such process (os error 3)

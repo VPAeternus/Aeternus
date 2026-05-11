@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LE",
+    "cik": "799288",
+    "event_date": "2024-09-05",
+    "event_accession": "0000950170-24-103728",
+    "primary_8k_doc": "le-20240905.htm",
+    "exhibit_docs": [
+      "le-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LE_000095017024103728_le-20240905.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LE_000095017024103728_le-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LE",
+    "cik": "799288",
+    "entity_name": "LANDS’ END, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "309558000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-05",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-28",
+    "net_income_value": "-1652000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-05",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-28",
+    "assets_value": "995194000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-05",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-28",
+    "financing_cash_flow_value": "-8418000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-05",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-28",
+    "investing_cash_flow_value": "-12384000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-05",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-28",
+    "operating_cash_flow_value": "-10755000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-05",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-28",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.005337",
+    "operating_cash_flow_to_revenue": "-0.034743",
+    "assets_to_revenue": "3.214887",
+    "financing_cash_flow_to_revenue": "-0.027194",
+    "investing_cash_flow_to_revenue": "-0.040005"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue decreased to $317.",
+      "revenue was $211.",
+      "revenue was $188.",
+      "revenue increased by mid-single digits year-over-year.",
+      "revenue increased 0.",
+      "revenue was $63."
+    ],
+    "guidance_evidence": [
+      "guidance DODGEVILLE, Wis.",
+      "Outlook Bernie McCracken, Chief Financial Officer, stated, “We are pleased with our performance during the quarter, which resulted in Net revenue and Adjusted EBITDA at the high end of our guidance range and strong growth in Gross Merchandise Value.",
+      "Guidance Adjusted EBITDA 13 Weeks Ended (in millions) November 1, 2024 Net (loss) income $ (1.",
+      "Guidance Adjusted Net (Loss) Income and Adjusted Diluted (Loss) Earnings per Share 13 Weeks Ended (in millions) November 1, 2024 Net (loss) income $ (1.",
+      "Guidance Adjusted EBITDA 52 Weeks Ended (in millions) January 31, 2025 Net income $ 5.",
+      "Guidance Adjusted Net Income and Adjusted Diluted Earnings per Share 52 Weeks Ended (in millions) January 31, 2025 Net income $ 5."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and further improving our supply chain and inventory position.",
+      "customers and shareholders.",
+      "customers through business-to-consumer and business-to-business channels, as well as the retail value of the merchandise sold through third party distribution channels.",
+      "customer acquisition, third party professional services and higher incentive related personnel costs.",
+      "customer acquisition increased mid-single digits.",
+      "aises full year profit guidance DODGEVILLE, Wis."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory Raises full year profit guidance DODGEVILLE, Wis.",
+      "inventory position.",
+      "inventory management resulting in increased gross profit from higher gross margins.",
+      "inventory and improved supply chain costs.",
+      "charge related to long-lived asset impairment and restructuring costs, compared to an Adjusted net loss of $7.",
+      "inventory management."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 317.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-06",
+    "entry_open": "14.240000",
+    "return_10d_pct": "6.5309",
+    "return_20d_pct": "18.2584",
+    "return_30d_pct": "17.2051",
+    "return_60d_pct": "14.1152",
+    "return_90d_pct": "-1.6854"
+  },
+  "text_stats": {
+    "primary_text_len": 3611,
+    "exhibit_text_len": 29159,
+    "combined_text_len": 32772
+  }
+}

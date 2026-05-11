@@ -12,6 +12,7 @@ from .discovery_reports import empty_discovery_delta, write_discovery_delta_repo
 from .manual_watchlist import list_active_ideas
 from .scout_compiler import run_scout_compiler_sidecar
 from .scout_quality import build_scout_quality_daily, persist_scout_quality_daily
+from .scout_ticker_summary import build_scout_ticker_summary, persist_scout_ticker_summary
 from .sources import scan_thirteenf_watchlist
 from .universe_filter import build_universe_filter_report, summarize_universe_filter
 
@@ -203,6 +204,30 @@ def run_discovery_stage(
         )
     except Exception:
         scout_audit = {}
+
+    try:
+        scout_ticker_summary = build_scout_ticker_summary(
+            as_of_date,
+            x_feed_merged=x_feed_merged,
+            scout_audit=scout_audit,
+            fvg_recall=fvg_recall_artifact,
+            fma_recall=fma_recall_artifact,
+        )
+        persist_scout_ticker_summary(scout_ticker_summary)
+    except Exception:
+        scout_ticker_summary = {
+            "date": as_of_date,
+            "contract": "DEALFLOW_SCOUT_TICKER_TOTAL_V1",
+            "scouts": {},
+            "scout_counts": {},
+            "total_mentions": 0,
+            "total_unique_tickers": 0,
+            "tickers": [],
+            "ticker_scouts": {},
+            "overlap": {},
+        }
+    pipeline._last_scout_ticker_summary = scout_ticker_summary
+
     try:
         universe_filter_report = build_universe_filter_report(
             as_of_date=as_of_date,
@@ -297,6 +322,10 @@ def run_discovery_stage(
         "manual_symbols": manual_symbols,
         "fvg_recall_symbols": fvg_recall_symbols,
         "fma_recall_symbols": fma_recall_symbols,
+        "scout_ticker_summary": scout_ticker_summary,
+        "scout_counts": dict(scout_ticker_summary.get("scout_counts", {}) or {}),
+        "total_unique_tickers": int(scout_ticker_summary.get("total_unique_tickers", 0) or 0),
+        "tickers": list(scout_ticker_summary.get("tickers", []) or []),
         "universe_filter": universe_filter_summary,
         "universe_filter_summary": universe_filter_summary,
         "discovery_delta": discovery_delta,

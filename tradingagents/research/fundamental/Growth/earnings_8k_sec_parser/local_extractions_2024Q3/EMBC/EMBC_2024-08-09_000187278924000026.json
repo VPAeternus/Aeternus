@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EMBC",
+    "cik": "0001872789",
+    "event_date": "2024-08-09",
+    "event_accession": "0001872789-24-000026",
+    "primary_8k_doc": "embc-20240809.htm",
+    "exhibit_docs": [
+      "q32024ex-991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EMBC_000187278924000026_embc-20240809.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EMBC_000187278924000026_q32024ex-991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EMBC",
+    "cik": "0001872789",
+    "entity_name": "EMBECTA CORP.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "552800000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "49200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1214400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-26800000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-10500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "47400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.089001",
+    "operating_cash_flow_to_revenue": "0.085745",
+    "assets_to_revenue": "2.196816",
+    "financing_cash_flow_to_revenue": "-0.04848",
+    "investing_cash_flow_to_revenue": "-0.018994"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was impacted by the expected timing of customer orders that had positively impacted our second quarter results,\" said Devdatt (Dev) Kurdikar, Chief Executive Officer of embecta.",
+      "Revenues of $272.",
+      "revenues decreased 6.",
+      "revenues decreased 2.",
+      "Revenues of $837.",
+      "revenues increased 2."
+    ],
+    "guidance_evidence": [
+      "outlook for the remainder of the year, we are once again tightening and raising our fiscal 2024 outlook for certain financial metrics.",
+      "Guidance: For fiscal year 2024, the Company now expects: Dollars in millions, except percentages and per share data Current Previous (1) Revenues $1,111 - $1,116 $1,111 - $1,116 As Reported (%) (0.",
+      "guidance was issued on May 9, 2024.",
+      "expected timing of customer orders that had positively impacted our second quarter results,\" said Devdatt (Dev) Kurdikar, Chief Executive Officer of embecta.",
+      "expects: Dollars in millions, except percentages and per share data Current Previous (1) Revenues $1,111 - $1,116 $1,111 - $1,116 As Reported (%) (0.",
+      "expected adjusted earnings per diluted share, expected adjusted EBITDA and our expected adjusted EBITDA margin as we are unable to predict with reasonable certainty, and without unreasonable effort the impact and timing of any one-time items."
+    ],
+    "wave_or_demand_evidence": [
+      "customer orders that had positively impacted our second quarter results,\" said Devdatt (Dev) Kurdikar, Chief Executive Officer of embecta.",
+      "customers, and changes in foreign exchange rates.",
+      "aid Devdatt (Dev) Kurdikar, Chief Executive Officer of embecta.",
+      "ainder of the year, we are once again tightening and raising our fiscal 2024 outlook for certain financial metrics.",
+      "network in China; now approximately 93% of our global revenue is operating on our systems and processes • Invest for growth ◦ Progressed the U.",
+      "ainty, and without unreasonable effort the impact and timing of any one-time items."
+    ],
+    "warning_or_risk_evidence": [
+      "decreased 6.",
+      "decreased 2.",
+      "decrease) As Reported Constant Currency 2024 2023 $ % % United States $ 143.",
+      "decreased by $13.",
+      "decrease in revenues was driven by $24.",
+      "decrease) As Reported Constant Currency 2024 2023 $ % % United States $ 439."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 272.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-12",
+    "entry_open": "15.350000",
+    "return_10d_pct": "-14.0717",
+    "return_20d_pct": "7.2313",
+    "return_30d_pct": "1.4332",
+    "return_60d_pct": "-16.4821",
+    "return_90d_pct": "2.7362"
+  },
+  "text_stats": {
+    "primary_text_len": 2834,
+    "exhibit_text_len": 32646,
+    "combined_text_len": 35482
+  }
+}

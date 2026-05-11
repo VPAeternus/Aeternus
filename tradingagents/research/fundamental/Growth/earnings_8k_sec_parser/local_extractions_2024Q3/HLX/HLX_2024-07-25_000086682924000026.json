@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HLX",
+    "cik": "866829",
+    "event_date": "2024-07-25",
+    "event_accession": "0000866829-24-000026",
+    "primary_8k_doc": "hlx-20240724x8k.htm",
+    "exhibit_docs": [
+      "hlx-20240724xex99d1.htm",
+      "hlx-20240724xex99d2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLX_000086682924000026_hlx-20240724x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLX_000086682924000026_hlx-20240724xex99d1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HLX_000086682924000026_hlx-20240724xex99d2.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HLX",
+    "cik": "866829",
+    "entity_name": "HELIX ENERGY SOLUTIONS GROUP, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "250084000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-5165000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2556036000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-9424000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-6300000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-5392000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.020653",
+    "operating_cash_flow_to_revenue": "-0.021561",
+    "assets_to_revenue": "10.22071",
+    "financing_cash_flow_to_revenue": "-0.037683",
+    "investing_cash_flow_to_revenue": "-0.025192"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues increased $8.",
+      "revenues were not recognized.",
+      "revenues increased $70.",
+      "revenues were deferred and not recognized.",
+      "revenues increased $30.",
+      "revenues was due to seasonally higher vessel, trenching and ROV activities compared to the prior quarter."
+    ],
+    "guidance_evidence": [
+      "Outlook (pg.",
+      "expected improvements in 2025 as we continue to focus on the execution of our Energy Transition strategy in this market.",
+      "expected credit losses, if any.",
+      "expected key drivers: Well Intervention • GOM – forecasted improved rates following completion of legacy commitment; Q4000 Nigeria campaign beginning September 2024 following estimated 60-day mobilization • North Sea – stable rates and lower utilization expected vs.",
+      "expected between $15 - $20 million • Expected seasonal impact on working capital Balance Sheet • Share repurchases in Q2 of approximately 0."
+    ],
+    "wave_or_demand_evidence": [
+      "aid transit and mobilization to New Zealand, a period during which revenues were deferred and not recognized.",
+      "aintenance during portions of the second quarter 2023.",
+      "air Value of Contingent Consideration ​ Change in fair value of contingent consideration of $10.",
+      "air value during the second quarter 2023 of the estimated earn-out that was paid in April 2024.",
+      "ailable capacity under our ABL facility on June 30, 2024, was $95.",
+      "ails are provided in the presentation for Helix’s quarterly teleconference to review its second quarter 2024 results (see the “For the Investor” page of Helix’s website, www."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment losses on goodwill and other long-lived assets are also added back if applicable.",
+      "charge on the SEC’s website at www.",
+      "charge on the SEC's website at www.",
+      "loss of $26.",
+      "loss in the first quarter 2024 included a pre-tax loss of approximately $20.",
+      "Loss) ​ $ 32,289 ​ $ 7,100 ​ $ (26,287) ​ $ 6,002 ​ $ 1,935 ​ Basic and Diluted Earnings (Loss) Per Share ​ $ 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 8.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "12.750000",
+    "return_10d_pct": "-20.5490",
+    "return_20d_pct": "-17.0980",
+    "return_30d_pct": "-11.6863",
+    "return_60d_pct": "-19.6078",
+    "return_90d_pct": "-27.4510"
+  },
+  "text_stats": {
+    "primary_text_len": 4166,
+    "exhibit_text_len": 55569,
+    "combined_text_len": 59737
+  }
+}

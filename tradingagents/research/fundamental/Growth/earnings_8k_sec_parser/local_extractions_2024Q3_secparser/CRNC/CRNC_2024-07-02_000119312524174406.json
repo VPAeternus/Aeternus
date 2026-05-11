@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CRNC",
+    "cik": "1768267",
+    "event_date": "2024-07-02",
+    "event_accession": "0001193125-24-174406",
+    "primary_8k_doc": "d860175d8k.htm",
+    "exhibit_docs": [
+      "d860175dex991.htm",
+      "crnc-ex99_1.htm",
+      "crnc-ex99_2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRNC_000119312524174406_d860175d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRNC_000119312524174406_d860175dex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRNC_000119312524174406_crnc-ex99_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRNC_000119312524174406_crnc-ex99_2.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CRNC",
+    "cik": "1768267",
+    "entity_name": "CERENCE INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "152051000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-28247000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1297590000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-5443000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "2226000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "4437000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.185773",
+    "operating_cash_flow_to_revenue": "0.029181",
+    "assets_to_revenue": "8.533913",
+    "financing_cash_flow_to_revenue": "-0.035797",
+    "investing_cash_flow_to_revenue": "0.01464"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "GAAP net income in the range of ($4) million to $2 million; and Adjusted EBITDA in the range of approximately $4.",
+      "GAAP net income guidance excludes potential goodwill impairment.",
+      "net income attributable to Cerence Inc."
+    ],
+    "guidance_evidence": [
+      "Guidance BURLINGTON, Mass.",
+      "Guidance The company notes that it is reaffirming its third quarter fiscal 2024 guidance previously announced in conjunction with its second quarter fiscal 2024 financial results on May 9, 2024.",
+      "guidance excludes acquisition-related costs, amortization of acquired intangible assets, stock-based compensation, restructuring and other costs.",
+      "guidance excludes potential goodwill impairment.",
+      "expects revenue in the range of $66 million to $72 million; GAAP net income in the range of ($4) million to $2 million; and Adjusted EBITDA in the range of approximately $4.",
+      "anticipates, projects, forecasts, expects, intends, continues, will."
+    ],
+    "wave_or_demand_evidence": [
+      "customer delivery as Chief Product Officer, Mr.",
+      "customer delivery and further positioning Cerence to meet the current and future needs of its customers.",
+      "customers and their drivers.",
+      "customer commitments, as well as the development of our next-generation AI platform.",
+      "customers.",
+      "AI for a world in motion, today announced that as part of its ongoing transformation efforts, Chief Product Officer Nils Schanz has been appointed to an expanded leadership role."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment.",
+      "impairment which remains subject to review.",
+      "impairment charges related to fixed and intangible assets and gains or losses on the sale of long-lived assets, if any.",
+      "charges (such as significant legal settlements) that affect the period-to-period comparability of our operating performance.",
+      "charges in operating plans.",
+      "charges (credits), net, losses from extinguishment of debt, and changes in indemnification assets corresponding with the release of pre-spin liabilities for uncertain tax positions."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d860175dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Cerence Announces Expanded Role for Chief Product Officer Nils Schanz  Schanz to Assume Chief Technology Officer Responsibilities  Company Reaffirms Third Quarter Fiscal 2024 Guidance BURLINGTON, Mass., July 2, 2024  Cerence Inc. (NASDAQ: CRNC), AI for a world in motion, today announced that as part of its ongoing transformation efforts, Chief Product Officer Nils Schanz has been appointed to an expanded leadership role. In addition to leading the companys core product strategy, portfolio and global customer delivery as Chief Product Officer, Mr. Schanz will assume the responsibilities of Chief Technology Officer following the departure of Iqbal Arshad, effective July 5, 2024. In this expanded role, Mr. Schanz will now lead Cerences global technology, engineering, and product development organization, creating enhanced alignment across innovation, product, and customer delivery and further positioning Cerence to meet the current and future needs of its customers. As Chief Product Officer, Nils has been a driving force behind our continued innovation across our core products and new generative AI portfolio. He was instrumental to launching Cerence Chat Pro, our uniquely intelligent, automotive-grade ChatGPT integration that has quickly been adopted by Volkswagen, Audi, and others, as well as generative AI-powered Cerence Car Knowledge, said Stefan Ortmanns, CEO, Cerence. Our product and technology teams already work closely together to create immersive, AI-powered experiences for our customers and their drivers. We believe that further aligning these teams will help us build on the progress made to deliver on our generative AI roadmap and customer commitments, as well as the development of our next-generation AI platform. Mr. Ortmanns added, On behalf of the Board and management team, I thank Iqbal for his significant contributions and leadership and wish him the best in his future endeavors. It is a privilege to take on this additional responsibility at an important time for the company, said Nils Schanz, Chief Product Officer, Cerence. Bringing our product and technology teams together reflects how weve already been operating as a company to seamlessly deliver for our customers. We have a strong team in place, and I look forward to continuing to advance our strategy and execute on our generative AI roadmap. Mr. Schanz joined Cerence in October 2022 following a 15-year tenure at Mercedes-Benz AG and Daimler, where he developed the highly regarded MBUX (Mercedes-Benz User Experience), the automakers intuitive, high-tech multimedia system, and launched other widely acclaimed innovations such as the award-winning MBUX Hyperscreen and the Voice Assistant Hey Mercedes. As Global Head of User Interaction & Voice Control, he led a cross-functional team with global responsibility for digital user interface and user experience. Mr. Schanz previously held a variety of positions at Daimler and Mercedes-Benz in R&D, Product Management, and Marketing. Third Quarter Fiscal 2024 Guidance The company notes that it is reaffirming its third quarter fiscal 2024 guidance previously announced in conjunction with its second quarter fiscal 2024 financial results on May 9, 2024. For reference, for the fiscal quarter ending June 30, 2024, the company expects revenue in the range of $66 million to $72 million; GAAP net income in the range of ($4) million to $2 million; and Adjusted EBITDA in the range of approximately $4.5 million to $10.5 million. The adjusted EBITDA guidance excludes acquisition-related costs, amortization of acquired intangible assets, stock-based compensation, restructuring and other costs. The GAAP net income guidance excludes potential goodwill impairment."
+    },
+    {
+      "type": "TextElement",
+      "text": "To learn more about Cerence, visit www.cerence.com, and follow the company on LinkedIn. About Cerence Inc. Cerence (NASDAQ: CRNC) is the global industry leader in creating unique, moving experiences for the mobility world. As an innovation partner to the worlds leading automakers and mobility OEMs, it is helping advance the future of connected mobility through intuitive, AI-powered interaction between humans and their vehicles, connecting consumers digital lives to their daily journeys no matter where they are. Cerences track record is built on more than 20 years of knowledge and 475 million cars shipped with Cerence technology. Whether its connected cars, autonomous driving, e-vehicles, or two-wheelers, Cerence is mapping the road ahead. For more information, visit www.cerence.com.Forward Looking Statements Statements in this press release regarding: Cerences future performance, results and financial condition, including third quarter fiscal 2024 guidance; strategy; transformation efforts; business, industry and market trends; innovation and new product offerings, including AI technology; and managements future expectations, estimates, assumptions, beliefs, goals, objectives, targets, plans or prospects constitute forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Any statements that are not statements of historical fact (including statements containing the words believes, plans, anticipates, projects, forecasts, expects, intends, continues, will. may, or estimates or similar expressions) should also be considered to be forward-looking statements. Although we believe forward-looking statements are based upon reasonable assumptions, such statements involve known and unknown risk, uncertainties and other factors, which may cause actual results or performance of the company to be materially different from any future results or performance expressed or implied by such forward-looking statements including but not limited to: the highly competitive and rapidly changing market in which we operate; adverse conditions in the automotive industry, the related supply chain and semiconductor shortage, or the global economy more generally; automotive production delays; changes in customer forecasts; the impacts of the COVID-19 pandemic on our and our customers businesses; the impact of the war in Ukraine, conflict between Israel and Hamas and attacks on commercial ships in the Red Sea by the Houthi groups on our and our customers businesses; our ability to control and successfully manage our expenses and cash position; escalating pricing pressures from our customers; the impact on our business of the transition to a lower level of fixed contracts, including the failure to achieve such a transition; our failure to win, renew or implement service contracts; the cancellation or postponement of existing contracts; the loss of business from any of our largest customers; effects of customer defaults; our inability to successfully introduce new products, applications and services; our strategies to increase cloud offerings and deploy generative AI and large language models (LLMs); the inability to expand into adjacent markets; the inability to recruit and retain qualified personnel; disruptions arising from transitions in management personnel; cybersecurity and data privacy incidents; fluctuating currency rates and interest rates; inflation; and the other factors discussed in our most recent Annual Report on Form 10-K, quarterly reports on Form 10-Q, and other filings with the Securities and Exchange Commission. We disclaim any obligation to update any forward-looking statements as a result of developments occurring after the date of this document."
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliations of GAAP Financial Measures to Non-GAAP Financial Measures"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited - in thousands, except per share data)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Q3 2024 Low High GAAP net (loss) income $ (4,000 ) $ 2,000 Stock-based compensation 7,700 7,700 Amortization of intangible assets 600 600 Restructuring and other costs, net 1,200 1,200 Goodwill impairment(1)   Depreciation 2,100 2,100 Total other expense, net (2,000 ) (2,000 ) (Benefit from) provision for income taxes (5,100 ) (5,100 ) Adjusted EBITDA $ 4,500 $ 10,500"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Does not include any potential impact of Goodwill impairment which remains subject to review. Discussion of Non-GAAP Financial Measures We believe that providing the non-GAAP information in addition to the GAAP presentation, allows investors to view the financial results in the way management views the operating results. We further believe that providing this information allows investors to not only better understand our financial performance, but more importantly, to evaluate the efficacy of the methodology and information used by management to evaluate and measure such performance. The non-GAAP information should not be considered superior to, or a substitute for, financial information prepared in accordance with GAAP. We utilize a number of different financial measures, both GAAP and non-GAAP, in analyzing and assessing the overall performance of the business, for making operating decisions and for forecasting and planning for future periods. While our management uses these non-GAAP financial measures as a tool to enhance their understanding of certain aspects of our financial performance, our management does not consider these measures to be a substitute for, or superior to, the information provided by GAAP financial statements. Consistent with this approach, we believe that disclosing non-GAAP financial measures to the readers of our financial statements provides such readers with useful supplemental data that, while not a substitute for GAAP financial statements, allows for greater transparency in the review of our financial and operational performance. Adjusted EBITDA Adjusted EBITDA is defined as net income attributable to Cerence Inc. before net income (loss) attributable to income tax (benefit) expense, other income (expense) items, net, depreciation and amortization expense, and excluding acquisition-related costs, amortization of acquired intangible assets, stock-based compensation, and restructuring and other costs, net or impairment charges related to fixed and intangible assets and gains or losses on the sale of long-lived assets, if any. From time to time we may exclude from Adjusted EBITDA the impact of events, gains, losses or other charges (such as significant legal settlements) that affect the period-to-period comparability of our operating performance. Other income (expense) items, net include interest expense, interest income, and other income (expense), net (as stated in our Condensed Consolidated Statement of Operations for the applicable period). Our management and Board of Directors use this financial measure to evaluate our operating performance. It is also a significant performance measure in our annual incentive compensation programs. Restructuring and other costs, net. Restructuring and other costs, net include restructuring expenses as well as other charges that are unusual in nature, are the result of unplanned events, and arise outside the ordinary course of our business such as employee severance costs, costs for consolidating duplicate facilities, third-party fees relating to the modification of our convertible debt, and the release of a pre-acquisition contingency."
+    },
+    {
+      "type": "TextElement",
+      "text": "Amortization of acquired intangible assets. We exclude the amortization of acquired intangible assets from non-GAAP expense and income measures. These amounts are inconsistent in amount and frequency and are significantly impacted by the timing and size of acquisitions. Providing a supplemental measure which excludes these charges allows management and investors to evaluate results as-if the acquired intangible assets had been developed internally rather than acquired and, therefore, provides a supplemental measure of performance in which our acquired intellectual property is treated in a comparable manner to our internally developed intellectual property. Although we exclude amortization of acquired intangible assets from our non-GAAP expenses, we believe that it is important for investors to understand that such intangible assets contribute to revenue generation. Amortization of intangible assets that relate to past acquisitions will recur in future periods until such intangible assets have been fully amortized. Future acquisitions may result in the amortization of additional intangible assets. Non-cash expenses. We provide non-GAAP information relative to the following non-cash expenses: (i) stock-based compensation; and (ii) non-cash interest. These items are further discussed as follows: (i) Stock-based compensation. Because of varying valuation methodologies, subjective assumptions and the variety of award types, we exclude stock-based compensation from our operating results. We evaluate performance both with and without these measures because compensation expense related to stock-based compensation is typically non-cash and awards granted are influenced by the Companys stock price and other factors such as volatility that are beyond our control. The expense related to stock-based awards is generally not controllable in the short-term and can vary significantly based on the timing, size and nature of awards granted. As such, we do not include such charges in operating plans. Stock-based compensation will continue in future periods. ii) Non-cash interest. We exclude non-cash interest because we believe that excluding this expense provides management, as well as other users of the financial statements, with a valuable perspective on the cash-based performance and health of the business, including the current near-term projected liquidity. Non-cash interest expense will continue in future periods. Other expenses. We exclude certain other expenses that result from unplanned events outside the ordinary course of continuing operations, in order to measure operating performance and current and future liquidity both with and without these expenses. By providing this information, we believe management and the users of the financial statements are better able to understand the financial results of what we consider to be our organic, continuing operations. Included in these expenses are items such as other charges (credits), net, losses from extinguishment of debt, and changes in indemnification assets corresponding with the release of pre-spin liabilities for uncertain tax positions."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Schanz to Assume Chief Technology Officer Responsibilities"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Company Reaffirms Third Quarter Fiscal 2024 Guidance"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        14,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Q3 2024",
+          "Q3 2024",
+          "Q3 2024",
+          "Q3 2024",
+          "Q3 2024",
+          "Q3 2024",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Low",
+          "Low",
+          "",
+          "",
+          "High",
+          "High",
+          ""
+        ],
+        [
+          "GAAP net (loss) income",
+          "",
+          "$",
+          "(4,000",
+          ")",
+          "",
+          "$",
+          "2000",
+          ""
+        ],
+        [
+          "Stock-based compensation",
+          "",
+          "",
+          "7700",
+          "",
+          "",
+          "",
+          "7700",
+          ""
+        ],
+        [
+          "Amortization of intangible assets",
+          "",
+          "",
+          "600",
+          "",
+          "",
+          "",
+          "600",
+          ""
+        ],
+        [
+          "Restructuring and other costs, net",
+          "",
+          "",
+          "1200",
+          "",
+          "",
+          "",
+          "1200",
+          ""
+        ],
+        [
+          "Goodwill impairment(1)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Depreciation",
+          "",
+          "",
+          "2100",
+          "",
+          "",
+          "",
+          "2100",
+          ""
+        ],
+        [
+          "Total other expense, net",
+          "",
+          "",
+          "(2,000",
+          ")",
+          "",
+          "",
+          "(2,000",
+          ")"
+        ],
+        [
+          "(Benefit from) provision for income taxes",
+          "",
+          "",
+          "(5,100",
+          ")",
+          "",
+          "",
+          "(5,100",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "4500",
+          "",
+          "",
+          "$",
+          "10500",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "(1)",
+          "Does not include any potential impact of Goodwill impairment which remains subject to review."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "(i)",
+          "Stock-based compensation. Because of varying valuation methodologies, subjective assumptions and the variety of award types, we exclude stock-based compensation from our operating results. We evaluate performance both with and without these measures because compensation expense related to stock-based compensation is typically non-cash and awards granted are influenced by the Companys stock price and other factors such as volatility that are beyond our control. The expense related to stock-based awards is generally not controllable in the short-term and can vary significantly based on the timing, size and nature of awards granted. As such, we do not include such charges in operating plans. Stock-based compensation will continue in future periods."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "ii)",
+          "Non-cash interest. We exclude non-cash interest because we believe that excluding this expense provides management, as well as other users of the financial statements, with a valuable perspective on the cash-based performance and health of the business, including the current near-term projected liquidity. Non-cash interest expense will continue in future periods."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 66.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 66.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue in the range of $66 million"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "expects revenue in the range of $66 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 1,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 0.0,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-03",
+    "entry_open": "3.010000",
+    "return_10d_pct": "3.3223",
+    "return_20d_pct": "6.9767",
+    "return_30d_pct": "-10.6312",
+    "return_60d_pct": "5.3156",
+    "return_90d_pct": "-1.3289"
+  },
+  "text_stats": {
+    "primary_text_len": 4291,
+    "exhibit_text_len": 14377,
+    "combined_text_len": 18670,
+    "semantic_text_len": 14375,
+    "table_count": 6,
+    "semantic_parse_status": "sec_parser"
+  }
+}

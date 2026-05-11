@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NOC",
+    "cik": "1133421",
+    "event_date": "2024-07-25",
+    "event_accession": "0001133421-24-000050",
+    "primary_8k_doc": "noc-20240725.htm",
+    "exhibit_docs": [
+      "noc-06302024xearningsrelea.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NOC_000113342124000050_noc-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NOC_000113342124000050_noc-06302024xearningsrelea.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NOC",
+    "cik": "1133421",
+    "entity_name": "NORTHROP GRUMMAN CORP /DE/",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "9301000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "842000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "46544000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "929000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-309000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-702000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.090528",
+    "operating_cash_flow_to_revenue": "-0.075476",
+    "assets_to_revenue": "5.004193",
+    "financing_cash_flow_to_revenue": "0.099882",
+    "investing_cash_flow_to_revenue": "-0.033222"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales increased 7 percent to $10.",
+      "sales increased $642 million, or 7 percent, due to higher sales at all four sectors, including 14 percent growth at Aeronautics Systems.",
+      "sales increased $368 million, or 14 percent.",
+      "Operating income increases 13 percent driven by strong performance and cost efficiencies • Diluted earnings per share increase 19 percent to $6.",
+      "EPS 1 guidance to $24.",
+      "operating income."
+    ],
+    "guidance_evidence": [
+      "guidance to $41.",
+      "guidance to $24.",
+      "guidance for the year.",
+      "guidance).",
+      "Guidance Financial guidance, as well as outlook, trends, expectations and other forward-looking statements provided by the company for 2024 and beyond, reflect the company's judgment based on the information available to the company at the time of this release.",
+      "guidance and outlook for 2024 and beyond do not reflect impacts on the company from, any potential continuing resolution, government shutdown, or application of spending limits or other spending cuts."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for our products and services.",
+      "demand and we have invested to create capacity and drive productivity to deliver differentiated capabilities for our customers,” said Kathy Warden, chair, chief executive officer and president.",
+      "orders for our products, and solid execution in our business, we are increasing our revenue and EPS guidance for the year.",
+      "Backlog Second quarter 2024 net awards totaled $15.",
+      "backlog totaled $83.",
+      "backlog by $0."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory.",
+      "delays or reductions in appropriations and/or for our programs, and U.",
+      "decreased to 10.",
+      "decreased $40 million, or 10 percent, due to a lower operating margin rate, partially offset by higher sales.",
+      "decreased to 13.",
+      "uncertainties that are difficult to predict."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 10200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "477.559998",
+    "return_10d_pct": "3.1556",
+    "return_20d_pct": "5.4737",
+    "return_30d_pct": "7.2117",
+    "return_60d_pct": "10.9515",
+    "return_90d_pct": "9.6574"
+  },
+  "text_stats": {
+    "primary_text_len": 3353,
+    "exhibit_text_len": 36890,
+    "combined_text_len": 40245
+  }
+}

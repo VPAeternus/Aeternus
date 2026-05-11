@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LOGI",
+    "cik": "1032975",
+    "event_date": "2024-07-23",
+    "event_accession": "0001032975-24-000042",
+    "primary_8k_doc": "logi-20240722.htm",
+    "exhibit_docs": [
+      "exhibit991q1fy25.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LOGI_000103297524000042_logi-20240722.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LOGI_000103297524000042_exhibit991q1fy25.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LOGI",
+    "cik": "1032975",
+    "entity_name": "LOGITECH INTERNATIONAL S.A.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5481101000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-16",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "644513000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-16",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "3560753000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-16",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-606819000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-16",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-107863000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-16",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "298318000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-16",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.117588",
+    "operating_cash_flow_to_revenue": "0.054427",
+    "assets_to_revenue": "0.649642",
+    "financing_cash_flow_to_revenue": "-0.110711",
+    "investing_cash_flow_to_revenue": "-0.019679"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales were $1.",
+      "GAAP operating income was $153 million, up 96 percent, compared to Q1 of the prior year.",
+      "Non-GAAP operating income was $182 million, up 67 percent, compared to Q1 of the prior year.",
+      "GAAP earnings per share (EPS) was $0.",
+      "Non-GAAP EPS was $1.",
+      "non-GAAP operating income."
+    ],
+    "guidance_evidence": [
+      "Outlook LAUSANNE, Switzerland, July 23, 2024 and SAN JOSE, Calif.",
+      "outlook for both net sales and non-GAAP operating income.",
+      "Outlook Logitech raised its full-year outlook for Fiscal Year 2025: Previous FY25 outlook New FY25 outlook Sales $4.",
+      "outlook and trends in its business.",
+      "outlook for non-GAAP operating income, most of these excluded amounts pertain to events that have not yet occurred and are not currently possible to estimate with a reasonable degree of accuracy.",
+      "outlook."
+    ],
+    "wave_or_demand_evidence": [
+      "aises FY 2025 Outlook LAUSANNE, Switzerland, July 23, 2024 and SAN JOSE, Calif.",
+      "aid Hanneke Faber, Logitech chief executive officer.",
+      "aised its full-year outlook for Fiscal Year 2025: Previous FY25 outlook New FY25 outlook Sales $4.",
+      "ailable on the Logitech corporate website at https://ir.",
+      "ailable there.",
+      "ailing the Company’s progress in terms of environmental and social sustainability."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, net, loss on investments, non-GAAP income tax adjustment, and other items detailed under “Supplemental Financial Information” after the tables below and posted to our website at https://ir.",
+      "preliminary financial results for the three months ended June 30, 2024, Fiscal Year 2025 outlook for sales and non-GAAP operating income, and related assumptions.",
+      "charges, net 386 3,511 Operating expenses - Non-GAAP $ 288,863 $ 270,945 % of net sales - GAAP 28.",
+      "charges, net 386 3,511 Operating income - Non-GAAP $ 182,435 $ 109,257 % of net sales - GAAP 14.",
+      "charges, net 386 3,511 Loss on investments 1,186 11,823 Non-GAAP income tax adjustment 2,670 (2,001) Net income - Non-GAAP $ 174,625 $ 103,401 Net income per share: Diluted - GAAP $ 0.",
+      "preliminary results for the three months ended June 30, 2024 are subject to adjustments, including subsequent events that may occur through the date of filing our Quarterly Report on Form 10-Q."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1100,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "90.849998",
+    "return_10d_pct": "-6.6043",
+    "return_20d_pct": "-3.4012",
+    "return_30d_pct": "1.5520",
+    "return_60d_pct": "-4.2928",
+    "return_90d_pct": "-7.5509"
+  },
+  "text_stats": {
+    "primary_text_len": 3519,
+    "exhibit_text_len": 23101,
+    "combined_text_len": 26622
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BE",
+    "cik": "1664703",
+    "event_date": "2024-08-08",
+    "event_accession": "0001628280-24-036108",
+    "primary_8k_doc": "be-20240808.htm",
+    "exhibit_docs": [
+      "ex991_q22024financialresul.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BE_000162828024036108_be-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BE_000162828024036108_ex991_q22024financialresul.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BE",
+    "cik": "1664703",
+    "entity_name": "BLOOM ENERGY CORPORATION",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "275191000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-74917000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2413677000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "306487000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-26574000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-314710000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.272236",
+    "operating_cash_flow_to_revenue": "-1.143606",
+    "assets_to_revenue": "8.770915",
+    "financing_cash_flow_to_revenue": "1.113725",
+    "investing_cash_flow_to_revenue": "-0.096566"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $335.",
+      "Revenue of $335.",
+      "revenue of $86.",
+      "Gross margin of 20.",
+      "Non-GAAP gross margin of 21.",
+      "EPS data Q2’24 Q1’24 Q2’23 Revenue 335,767 235,298 301,095 Cost of Revenue 267,245 197,222 244,745 Gross Profit 68,522 38,076 56,350 Gross Margin 20."
+    ],
+    "guidance_evidence": [
+      "guidance SAN JOSE, Calif.",
+      "guidance.",
+      "Outlook Bloom reaffirms outlook for the full-year 2024 : • Revenue: $1.",
+      "outlook for revenue and profitability.",
+      "expected to far exceed available supply through the grid.",
+      "forecasts of non-GAAP gross margin and non-GAAP operating profit (loss)."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for electricity is expected to far exceed available supply through the grid.",
+      "customer reaction to Bloom’s products; Bloom’s liquidity position; market demand for energy solutions; and Bloom’s 2024 outlook for revenue and profitability.",
+      "AI, to power the high-performance data center owned by Chirisa Technology Parks located in Volo, Illinois.",
+      "Power received municipal approval to enter into an agreement using Bloom fuel cells to power 20-megawatts of AWS data centers in Santa Clara, CA.",
+      "aid, “It is now widely understood that demand for electricity is expected to far exceed available supply through the grid.",
+      "ailed reconciliation of GAAP to Non-GAAP financial measures is provided at the end of this press release 2 Outlook Bloom reaffirms outlook for the full-year 2024 : • Revenue: $1."
+    ],
+    "warning_or_risk_evidence": [
+      "charge of their energy.",
+      "charges relating to stock-based compensation expense, restructuring (expense reversals) charges, and other charges.",
+      "charges relating to stock-based compensation expense, gain (loss) for non-controlling interest, loss (gain) on derivatives liabilities, restructuring (expense reversals) charges, loss on extinguishment of debt, and other charges.",
+      "charges and reversals, if any, are represented by severance expense, facility closure costs, and others.",
+      "loss of $23.",
+      "loss of $3."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 335.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "12.100000",
+    "return_10d_pct": "-2.5620",
+    "return_20d_pct": "-1.6529",
+    "return_30d_pct": "-19.4215",
+    "return_60d_pct": "-15.2893",
+    "return_90d_pct": "-11.8182"
+  },
+  "text_stats": {
+    "primary_text_len": 3808,
+    "exhibit_text_len": 33333,
+    "combined_text_len": 37143
+  }
+}

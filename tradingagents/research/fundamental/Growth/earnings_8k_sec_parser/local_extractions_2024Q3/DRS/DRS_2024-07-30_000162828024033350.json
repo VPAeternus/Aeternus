@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DRS",
+    "cik": "1833756",
+    "event_date": "2024-07-30",
+    "event_accession": "0001628280-24-033350",
+    "primary_8k_doc": "drs-20240730.htm",
+    "exhibit_docs": [
+      "q22024earningspressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DRS_000162828024033350_drs-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DRS_000162828024033350_q22024earningspressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DRS",
+    "cik": "1833756",
+    "entity_name": "Leonardo DRS, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "569000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "12000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3921000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "216000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-14000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-334000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.02109",
+    "operating_cash_flow_to_revenue": "-0.586995",
+    "assets_to_revenue": "6.891037",
+    "financing_cash_flow_to_revenue": "0.379613",
+    "investing_cash_flow_to_revenue": "-0.024605"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "EPS: $0.",
+      "Earnings Per Share (EPS) $0.",
+      "EPS $0.",
+      "EPS and adjusted diluted EPS were all higher as a result of strong operational performance, which outweighed a higher tax rate and expense compared to the prior year.",
+      "EPS, due to the inherent difficulty in forecasting and quantifying the adjustments that are necessary to calculate such non-GAAP measures without unreasonable effort.",
+      "earnings per share from common stock: Basic earnings per share $0."
+    ],
+    "guidance_evidence": [
+      "guidance across metrics ARLINGTON, Va.",
+      "guidance as specified in the table below: Measure Current 2024 Guidance Prior 2024 Guidance Revenue $3,075 million - $3,175 million $2,925 million - $3,025 million Adjusted EBITDA $375 million - $395 million $365 million - $390 million Tax Rate 20.",
+      "guidance,” “intends,” “plans,” “estimates,” “anticipates” or other comparable terms.",
+      "forecasting and quantifying the adjustments that are necessary to calculate such non-GAAP measures without unreasonable effort.",
+      "expects,” “may,” “will,” “shall,” “should,” “would,” “could,” “seeks,” “aims,” “strives,” “targets,” “projects,” “guidance,” “intends,” “plans,” “estimates,” “anticipates” or other comparable terms."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings: $941 million (book-to-bill ratio of 1.",
+      "Backlog: $7.",
+      "customer demand continues to propel our bookings and backlog growth.",
+      "demand along with an improving supply chain is unlocking revenue growth above our expectations.",
+      "customers and shareholders,” said Bill Lynn, Chairman and CEO of Leonardo DRS.",
+      "Bookings and Backlog (Dollars in millions) Three Months Ended Six Months Ended June 30, June 30, 2024 2023 2024 2023 Bookings $941 $698 $1,756 $1,447 Book-to-Bill 1."
+    ],
+    "warning_or_risk_evidence": [
+      "delays or reductions in appropriations for our programs and changes in U.",
+      "inventory; our inability to fully realize the value of our total estimated contract value or bookings; our ability to compete efficiently, including due to U.",
+      "uncertainties, many of which may be beyond our control.",
+      "losses we incur; future changes in U.",
+      "uncertainties inherent in our business and underlying any forward-looking statements.",
+      "decrease in cash and cash equivalents ($318) ($271) Cash and cash equivalents at beginning of year 467 306 Cash and cash equivalents at end of period $149 $35 8 Non-GAAP Financial Measures (Unaudited) In addition to the results reported in accordance with U."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 753,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "28.360001",
+    "return_10d_pct": "-3.3145",
+    "return_20d_pct": "-2.5741",
+    "return_30d_pct": "0.6347",
+    "return_60d_pct": "-0.4937",
+    "return_90d_pct": "0.1410"
+  },
+  "text_stats": {
+    "primary_text_len": 4118,
+    "exhibit_text_len": 26790,
+    "combined_text_len": 30910
+  }
+}

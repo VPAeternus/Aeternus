@@ -1,0 +1,940 @@
+{
+  "task": "Extract earnings facts from this SEC 8-K EX-99.1. Return only JSON matching schema.",
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "metadata": {
+    "ticker": "AAOI",
+    "company": "APPLIED OPTOELECTRONICS, INC.",
+    "form": "8-K",
+    "items": "2.02,9.01",
+    "accession": "0001683168-22-007251",
+    "sec_filing_date": "2022-11-03",
+    "sec_acceptance_datetime_utc": "2022-11-03T20:10:27.000Z",
+    "sec_report_date_event_date": "2022-11-03",
+    "primary_document": "applied_8k.htm",
+    "ex99_1_document": "applied_ex9901.htm",
+    "sec_filing_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316822007251/applied_8k.htm",
+    "ex99_1_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316822007251/applied_ex9901.htm",
+    "periodic_filing_form": "10-Q",
+    "periodic_filing_date": "2022-11-03"
+  },
+  "output_schema": {
+    "schema_version": "earnings_8k_llm_extraction_v1",
+    "source_method": "",
+    "reported_period": {
+      "period_text": "",
+      "period_end_date": ""
+    },
+    "reported_results": {
+      "revenue_millions": null,
+      "revenue_yoy_pct": null,
+      "revenue_qoq_pct": null,
+      "gross_margin_pct": null,
+      "non_gaap_gross_margin_pct": null,
+      "eps": null,
+      "non_gaap_eps": null
+    },
+    "forward_guidance": {
+      "revenue_millions_midpoint": null,
+      "revenue_low_millions": null,
+      "revenue_high_millions": null,
+      "revenue_growth_yoy_pct": null,
+      "gross_margin_pct": null,
+      "non_gaap_gross_margin_pct": null,
+      "guide_direction": ""
+    },
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "instructions": [
+    "Use only evidence present in the filing text or tables.",
+    "Do not infer Wall Street expectations or external estimates.",
+    "Normalize dollar values to millions.",
+    "If a value is absent, set it to null and list the field in missing_fields.",
+    "Every non-null numeric or qualitative field must be supported by a short evidence quote."
+  ],
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $56.",
+      "GAAP gross margin was 17.",
+      "Non-GAAP gross margin was 18.",
+      "Non-GAAP gross margin in the range of 17.",
+      "non-GAAP gross margin, non-GAAP net income (loss), and non-GAAP earnings per share to eliminate the impact of items that we do not consider indicative of our overall operating performance.",
+      "non-GAAP gross margin, we exclude stock-based compensation expense, expenses associated with discontinued products, and non-recurring (income) expenses, if any, from our GAAP gross margin."
+    ],
+    "guidance_evidence": [
+      "Outlook (+)For the fourth quarter of 2022, the company currently expects: ·Revenue in the range of $58 million to $64 million.",
+      "outlook for its fourth quarter of 2022 at 4:30 p.",
+      "outlook for the fourth quarter of 2022.",
+      "guidance to the appropriate GAAP financial measures because the GAAP measures are not readily determinable on a forward-looking basis.",
+      "guidance to the corresponding GAAP measures is not available without unreasonable effort.",
+      "expected decline in 40G revenue, we are encouraged by the continued demand in the CATV market and the stronger telecom market,” said Dr."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in the CATV market and the stronger telecom market,” said Dr.",
+      "backlog of CATV products.",
+      "customer traction on 400G, with 400G revenue more than tripling compared to Q2, which we believe is the beginning of the anticipated ramp in this product family.",
+      "customers in all four of these markets.",
+      "network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its third quarter 2022 ended September 30, 2022.",
+      "aid Dr."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, and loss (gain) from disposal of idle assets.",
+      "decline in 40G revenue, we are encouraged by the continued demand in the CATV market and the stronger telecom market,” said Dr.",
+      "loss was $15.",
+      "loss of $15.",
+      "loss of $14.",
+      "loss was $7."
+    ],
+    "edgartools_context": [
+      "{\"available\": true, \"filing_url\": \"https://www.sec.gov/Archives/edgar/data/1158114/0001683168-22-007251-index.html\", \"text_char_count\": 3922, \"attachments_preview\": \"Attachments Seq Document Description ─────────────────────────────────────────────────────────────────────────────── 1 applied_8k.htm CURRENT REPORT 2 applied_ex9901.htm PRESS RELEASE 3 aaoi-20221103.xsd XBRL SCHEMA FILE 4 aaoi-20221103_lab.xml XBRL LABEL FILE 5 aaoi-20221103_pre.xml XBRL PRESENTATION FILE 6 image_001.jpg GRAPHIC 7 R1.htm Cover 8 applied_8k_htm.xml IDEA: XBRL DOCUMENT 9 Financial_Report.xlsx IDEA: XBRL DOCUMENT 10 Show.js IDEA: XBRL DOCUMENT 11 report.css IDEA: XBRL DOCUMENT 12 FilingSummary.xml IDEA: XBRL DOCUMENT 14 MetaLinks.json IDEA: XBRL DOCUMENT 15 0001683168-22-007251-xb… IDEA: XBRL DOCUMENT\", \"exhibits_preview\": \"Attachments Seq Document Description ─────────────────────────────────────────────────────────────────────────────── 1 applied_8k.htm CURRENT REPORT 2 applied_ex9901.htm PRESS RELEASE\"}"
+    ]
+  },
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "GAAP revenue was $56.7 million, compared $53.3 million in the third quarter of 2021 and $52.3 million in the second quarter of 2022."
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "GAAP gross margin was 17.2 %, compared with 15.3% in the third quarter of 2021 and 16.5% in the second quarter of 2022. Non-GAAP gross margin was 18.0%, compared with 19.9% in the third quarter of 2021 and 16.7% in the second quarter of 2022."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "GAAP net loss was $15.6 million, or $0.56 per basic share, compared with net loss of $15.8 million, or $0.58 per basic share in the third quarter of 2021, and a net loss of $14.5 million, or $0.52 per basic share in the second quarter of 2022."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Non-GAAP net loss was $7.1 million, or $0.26 per basic share, compared with non-GAAP net loss of $5.3 million, or $0.20 per basic share in the third quarter of 2021, and a non-GAAP net loss of $7.6 million, or $0.28 per basic share in the second quarter of 2022."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        3,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Revenue in the range of $58 million to $64 million."
+        ],
+        [
+          "",
+          "·",
+          "Non-GAAP gross margin in the range of 17.5 % to 19.5 %."
+        ],
+        [
+          "",
+          "·",
+          "Non-GAAP net loss in the range of $8.1 million to $9.8 million, and non-GAAP loss per share in the range of $0.28 to $0.34 using approximately 28.7 million shares."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "1",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "We believe that elimination of items such as amortization of intangible assets, stock-based compensation expense, non-recurring revenue and expenses, losses from the disposal of idle assets, unrealized foreign exchange gain or loss, and depreciation on certain equipment undergoing reconfiguration is appropriate because treatment of these items may vary for reasons unrelated to our overall operating performance;"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "2",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        4,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "We believe that elimination of expenses associated with discontinued products, including depreciation and inventory obsolescence is appropriate because these expenses are not indicative of our ongoing operations;"
+        ],
+        [
+          "",
+          "•",
+          "We believe that estimating non-GAAP income taxes allows comparison with prior periods and provides additional information regarding the generation of potential future deferred tax assets;"
+        ],
+        [
+          "",
+          "•",
+          "We believe that non-GAAP measures provide better comparability with our past financial performance, period-to-period results and with our peer companies, many of which also use similar non-GAAP financial measures; and"
+        ],
+        [
+          "",
+          "•",
+          "We anticipate that investors and securities analysts will utilize non-GAAP measures as a supplement to GAAP measures to evaluate our overall operating performance."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "3",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        39,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "September 30, 2022",
+          "September 30, 2022",
+          "",
+          "",
+          "December 31, 2021",
+          "December 31, 2021",
+          ""
+        ],
+        [
+          "ASSETS",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "CURRENT ASSETS",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash, Cash Equivalents and Restricted Cash",
+          "",
+          "$",
+          "34575",
+          "",
+          "",
+          "$",
+          "41136",
+          ""
+        ],
+        [
+          "Accounts Receivable, Net",
+          "",
+          "",
+          "52823",
+          "",
+          "",
+          "",
+          "47944",
+          ""
+        ],
+        [
+          "Notes receivable",
+          "",
+          "",
+          "9",
+          "",
+          "",
+          "",
+          "8148",
+          ""
+        ],
+        [
+          "Inventories",
+          "",
+          "",
+          "94261",
+          "",
+          "",
+          "",
+          "92516",
+          ""
+        ],
+        [
+          "Prepaid Income Tax",
+          "",
+          "",
+          "–",
+          "",
+          "",
+          "",
+          "1",
+          ""
+        ],
+        [
+          "Prepaid Expenses and Other Current Assets",
+          "",
+          "",
+          "6132",
+          "",
+          "",
+          "",
+          "4334",
+          ""
+        ],
+        [
+          "Total Current Assets",
+          "",
+          "",
+          "187800",
+          "",
+          "",
+          "",
+          "194079",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Property, Plant And Equipment, Net",
+          "",
+          "",
+          "211586",
+          "",
+          "",
+          "",
+          "243035",
+          ""
+        ],
+        [
+          "Land Use Rights, Net",
+          "",
+          "",
+          "5168",
+          "",
+          "",
+          "",
+          "5856",
+          ""
+        ],
+        [
+          "Operating Right of Use Asset",
+          "",
+          "",
+          "5600",
+          "",
+          "",
+          "",
+          "7078",
+          ""
+        ],
+        [
+          "Financing Right of Use Asset",
+          "",
+          "",
+          "34",
+          "",
+          "",
+          "",
+          "57",
+          ""
+        ],
+        [
+          "Intangible Assets, Net",
+          "",
+          "",
+          "3740",
+          "",
+          "",
+          "",
+          "3836",
+          ""
+        ],
+        [
+          "Other Assets",
+          "",
+          "",
+          "415",
+          "",
+          "",
+          "",
+          "518",
+          ""
+        ],
+        [
+          "TOTAL ASSETS",
+          "",
+          "$",
+          "414343",
+          "",
+          "",
+          "$",
+          "454459",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LIABILITIES AND STOCKHOLDERS' EQUITY",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "CURRENT LIABILITIES",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Accounts Payable",
+          "",
+          "$",
+          "52311",
+          "",
+          "",
+          "$",
+          "34402",
+          ""
+        ],
+        [
+          "Bank Acceptance Payable",
+          "",
+          "",
+          "13760",
+          "",
+          "",
+          "",
+          "8198",
+          ""
+        ],
+        [
+          "Accrued Expenses",
+          "",
+          "",
+          "12444",
+          "",
+          "",
+          "",
+          "15587",
+          ""
+        ],
+        [
+          "Current Lease Liability-Operating",
+          "",
+          "",
+          "998",
+          "",
+          "",
+          "",
+          "1062",
+          ""
+        ],
+        [
+          "Current Lease Liability-Financing",
+          "",
+          "",
+          "19",
+          "",
+          "",
+          "",
+          "19",
+          ""
+        ],
+        [
+          "Current Portion of Notes Payable and Long Term Debt",
+          "",
+          "",
+          "51357",
+          "",
+          "",
+          "",
+          "49689",
+          ""
+        ],
+        [
+          "Total Current Liabilities",
+          "",
+          "",
+          "130889",
+          "",
+          "",
+          "",
+          "108957",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Notes Payable and Long Term Debt",
+          "",
+          "",
+          "–",
+          "",
+          "",
+          "",
+          "5000",
+          ""
+        ],
+        [
+          "Convertible Senior Notes",
+          "",
+          "",
+          "79298",
+          "",
+          "",
+          "",
+          "78680",
+          ""
+        ],
+        [
+          "Other Long-Term Liabilities",
+          "",
+          "",
+          "5618",
+          "",
+          "",
+          "",
+          "7252",
+          ""
+        ],
+        [
+          "TOTAL LIABILITIES",
+          "",
+          "",
+          "215805",
+          "",
+          "",
+          "",
+          "199889",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "STOCKHOLDERS' EQUITY",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "TOTAL STOCKHOLDERS' EQUITY",
+          "",
+          "",
+          "198538",
+          "",
+          "",
+          "",
+          "254570",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "TOTAL LIABILITIES AND STOCKHOLDERS' EQUITY",
+          "",
+          "$",
+          "414343",
+          "",
+          "",
+          "$",
+          "454459",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "4",
+          ""
+        ]
+      ]
+    }
+  ],
+  "semantic_elements": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "applied_ex9901.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRESS RELEASE"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Applied Optoelectronics Reports Third Quarter 2022 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "Sugar Land, Texas, November 3, 2022 – Applied Optoelectronics, Inc. (NASDAQ: AAOI), a leading provider of fiber-optic access network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its third quarter 2022 ended September 30, 2022.“While our revenue came in below our expectations, primarily due to a faster than expected decline in 40G revenue, we are encouraged by the continued demand in the CATV market and the stronger telecom market,” said Dr. Thompson Lin, Applied Optoelectronics Inc. Founder, President and Chief Executive Officer. “We generated the highest quarterly CATV revenue in the Company’s history in Q3, and we ended the quarter with a healthy backlog of CATV products. We continue to see good customer traction on 400G, with 400G revenue more than tripling compared to Q2, which we believe is the beginning of the anticipated ramp in this product family.”Third Quarter 2022 Financial Summary ·GAAP revenue was $56.7 million, compared $53.3 million in the third quarter of 2021 and $52.3 million in the second quarter of 2022. ·GAAP gross margin was 17.2 %, compared with 15.3% in the third quarter of 2021 and 16.5% in the second quarter of 2022. Non-GAAP gross margin was 18.0%, compared with 19.9% in the third quarter of 2021 and 16.7% in the second quarter of 2022. ·GAAP net loss was $15.6 million, or $0.56 per basic share, compared with net loss of $15.8 million, or $0.58 per basic share in the third quarter of 2021, and a net loss of $14.5 million, or $0.52 per basic share in the second quarter of 2022. ·Non-GAAP net loss was $7.1 million, or $0.26 per basic share, compared with non-GAAP net loss of $5.3 million, or $0.20 per basic share in the third quarter of 2021, and a non-GAAP net loss of $7.6 million, or $0.28 per basic share in the second quarter of 2022. A reconciliation between all GAAP and non-GAAP information referenced above is contained in the tables below. Please also refer to “Non-GAAP Financial Measures” below for a description of these non-GAAP financial measures.Fourth Quarter 2022 Business Outlook (+)For the fourth quarter of 2022, the company currently expects: ·Revenue in the range of $58 million to $64 million. ·Non-GAAP gross margin in the range of 17.5 % to 19.5 %. ·Non-GAAP net loss in the range of $8.1 million to $9.8 million, and non-GAAP loss per share in the range of $0.28 to $0.34 using approximately 28.7 million shares. (+) Please refer to the note below on forward-looking statements and the risks involved with such statements as well as the note on non-GAAP financial measures. Field: Page; Sequence: 1 Conference Call InformationThe company will host a conference call and webcast on November 3, 2022 to discuss its third quarter 2022 results and outlook for its fourth quarter of 2022 at 4:30 p.m. Eastern time / 3:30 p.m. Central time. The call can be accessed by dialing 844-890-1794 (domestic) or 412-717-9586 (international). A live audio webcast of the conference call along with supplemental financial information will also be accessible on the company's website at investors.ao-inc.com. Following the webcast, an archived version will be available on the website for one year. A telephonic replay of the call will be available one hour after the call and will be available until November 10, 2022, at 11:59 p.m. Eastern Time / 10:59 p.m. Central Time and may be accessed by dialing 877-344-7529 (domestic) or 412-317-0088 (international) and entering passcode 4473084.Forward-Looking InformationThis press release contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. In some cases, you can identify forward-looking statements by terminology such as \"believe,\" \"may,\" \"estimate,\" \"continue,\" \"anticipate,\" \"intend,\" \"should,\" \"could,\" \"would,\" \"target,\" \"seek,\" \"aim,\" \"predicts,\" \"think,\" \"objectives,\" \"optimistic,\" \"new,\" \"goal,\" \"strategy,\" \"potential,\" \"is likely,\" \"will,\" \"expect,\" \"plan\" \"project,\" \"permit\" or by other similar expressions that convey uncertainty of future events or outcomes. These statements include management’s beliefs and expectations related to our outlook for the fourth quarter of 2022. Such forward-looking statements reflect the views of management at the time such statements are made. These forward-looking statements involve risks and uncertainties, as well as assumptions and current expectations, which could cause the company's actual results to differ materially from those anticipated in such forward-looking statements. These risks and uncertainties include but are not limited to: the impact of the COVID-19 pandemic on our business and financial results; reduction in the size or quantity of customer orders; change in demand for the company's products due to industry conditions; changes in manufacturing operations; volatility in manufacturing costs; delays in shipments of products; disruptions in the supply chain; change in the rate of design wins or the rate of customer acceptance of new products; the company's reliance on a small number of customers for a substantial portion of its revenues; potential pricing pressure; a decline in demand for our customers' products or their rate of deployment of their products; general conditions in the internet datacenter, cable television (CATV) broadband, telecom, or fiber-to-the-home (FTTH) markets; changes in the world economy (particularly in the United States and China); changes in the regulation and taxation of international trade, including the imposition of tariffs; changes in currency exchange rates; the negative effects of seasonality; and other risks and uncertainties described more fully in the company's documents filed with or furnished to the Securities and Exchange Commission, including our Annual Report on Form 10-K for the year ended December 31, 2021. More information about these and other risks that may impact the company's business are set forth in the \"Risk Factors\" section of the company's quarterly and annual reports on file with the Securities and Exchange Commission. You should not rely on forward-looking statements as predictions of future events. All forward-looking statements in this press release are based upon information available to us as of the date hereof, and qualified in their entirety by this cautionary statement. Except as required by law, we assume no obligation to update forward-looking statements for any reason after the date of this press release to conform these statements to actual results or to changes in the company's expectations.Non-GAAP Financial MeasuresWe provide non-GAAP gross margin, non-GAAP net income (loss), and non-GAAP earnings per share to eliminate the impact of items that we do not consider indicative of our overall operating performance. To arrive at our non-GAAP gross margin, we exclude stock-based compensation expense, expenses associated with discontinued products, and non-recurring (income) expenses, if any, from our GAAP gross margin. To arrive at our non-GAAP net income (loss), we exclude all amortization of intangible assets, stock-based compensation expense, non-recurring expenses, unrealized foreign exchange loss (gain), losses from the disposal of idle assets, if any, non-GAAP tax benefit (expenses), and expenses associated with discontinued products, from our GAAP net income (loss). Included in our non-recurring expenses in Q3 2022 and Q3 2021 are certain non-recurring expenses related to extreme weather and pandemic events and non-recurring tax expenses or benefits (if any)., and employee severance expenses (if any). In computing our non-GAAP income tax benefit (expense), we have applied an estimate of our annual effective income tax rate and applied it to our net income before income taxes. Our non-GAAP diluted net loss per share is calculated by dividing our non-GAAP net loss by the fully diluted share count (for periods in which non-GAAP net income is positive) or basic share count (for periods in which our non-GAAP net income is negative). We believe that our non-GAAP measures are useful to investors in evaluating our operating performance for the following reasons: •We believe that elimination of items such as amortization of intangible assets, stock-based compensation expense, non-recurring revenue and expenses, losses from the disposal of idle assets, unrealized foreign exchange gain or loss, and depreciation on certain equipment undergoing reconfiguration is appropriate because treatment of these items may vary for reasons unrelated to our overall operating performance; Field: Page; Sequence: 2 •We believe that elimination of expenses associated with discontinued products, including depreciation and inventory obsolescence is appropriate because these expenses are not indicative of our ongoing operations; •We believe that estimating non-GAAP income taxes allows comparison with prior periods and provides additional information regarding the generation of potential future deferred tax assets; •We believe that non-GAAP measures provide better comparability with our past financial performance, period-to-period results and with our peer companies, many of which also use similar non-GAAP financial measures; and •We anticipate that investors and securities analysts will utilize non-GAAP measures as a supplement to GAAP measures to evaluate our overall operating performance.A reconciliation of our GAAP net income (loss) and GAAP earnings (loss) per share for Q3 2022 to our non-GAAP net income (loss) and earnings (loss) per share is provided below, together with corresponding reconciliations for Q3 2021.Non-GAAP measures should not be considered as an alternative to net income (loss), earnings (loss) per share, or any other measure of financial performance calculated and presented in accordance with GAAP. Our non-GAAP measures may not be comparable to similarly titled measures of other organizations because other organizations may not calculate such other non-GAAP measures in the same manner. We have not reconciled the non-GAAP measures included in our guidance to the appropriate GAAP financial measures because the GAAP measures are not readily determinable on a forward-looking basis. GAAP measures that impact our non-GAAP financial measures may include stock-based compensation expense, non-recurring expenses, amortization of intangible assets, unrealized exchange loss (gain), asset impairment charges, and loss (gain) from disposal of idle assets. These GAAP measures cannot be reasonably predicted and may directly impact our non-GAAP gross margin, our non-GAAP net income and our non-GAAP fully-diluted earnings per share, although changes with respect to certain of these measures may offset other changes. In addition, certain of these measures are out of our control. Accordingly, a reconciliation of the non-GAAP financial measure guidance to the corresponding GAAP measures is not available without unreasonable effort.About Applied OptoelectronicsApplied Optoelectronics Inc. (AOI) is a leading developer and manufacturer of advanced optical products, including components, modules and equipment. AOI's products are the building blocks for broadband fiber access networks around the world, where they are used in the internet datacenter, CATV broadband, telecom and FTTH markets. AOI supplies optical networking lasers, components and equipment to tier-1 customers in all four of these markets. In addition to its corporate headquarters, wafer fab and advanced engineering and production facilities in Sugar Land, TX, AOI has engineering and manufacturing facilities in Taipei, Taiwan and Ningbo, China. For additional information, visit www.ao-inc.com.Investor Relations Contacts:The Blueshirt Group, Investor RelationsLindsay Savarese+1-212-331-8417ir@ao-inc.comCassidy Fuller+1-415-217-4968ir@ao-inc.com Field: Page; Sequence: 3"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Applied Optoelectronics, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Preliminary Condensed Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "September 30, 2022 December 31, 2021 ASSETS CURRENT ASSETS Cash, Cash Equivalents and Restricted Cash $34,575 $41,136 Accounts Receivable, Net 52,823 47,944 Notes receivable 9 8,148 Inventories 94,261 92,516 Prepaid Income Tax – 1 Prepaid Expenses and Other Current Assets 6,132 4,334 Total Current Assets 187,800 194,079 Property, Plant And Equipment, Net 211,586 243,035 Land Use Rights, Net 5,168 5,856 Operating Right of Use Asset 5,600 7,078 Financing Right of Use Asset 34 57 Intangible Assets, Net 3,740 3,836 Other Assets 415 518 TOTAL ASSETS $414,343 $454,459 LIABILITIES AND STOCKHOLDERS' EQUITY CURRENT LIABILITIES Accounts Payable $52,311 $34,402 Bank Acceptance Payable 13,760 8,198 Accrued Expenses 12,444 15,587 Current Lease Liability-Operating 998 1,062 Current Lease Liability-Financing 19 19 Current Portion of Notes Payable and Long Term Debt 51,357 49,689 Total Current Liabilities 130,889 108,957 Notes Payable and Long Term Debt – 5,000 Convertible Senior Notes 79,298 78,680 Other Long-Term Liabilities 5,618 7,252 TOTAL LIABILITIES 215,805 199,889 STOCKHOLDERS' EQUITY TOTAL STOCKHOLDERS' EQUITY 198,538 254,570 TOTAL LIABILITIES AND STOCKHOLDERS' EQUITY $414,343 $454,459"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 4"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Applied Optoelectronics, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Preliminary Condensed Consolidated Statements of Operations"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended September 30, Nine Months Ended September 30, 2022 2021 2022 2021 Revenue CATV $31,260 $23,101 $79,953 $69,339 Datacenter 17,697 23,929 60,608 72,259 Telecom 6,821 5,148 18,362 12,959 FTTH – 62 124 784 Other 915 1,027 2,186 1,816 Total Revenue 56,693 53,267 161,233 157,157 Total Cost of Goods Sold 46,944 45,143 133,832 127,537 Total Gross Profit 9,749 8,124 27,401 29,620 Operating Expenses: Research and Development 9,206 10,149 27,021 31,990 Sales and Marketing 2,385 2,783 7,107 8,576 General and Administrative 11,654 10,645 33,908 32,195 Total Operating Expenses 23,245 23,577 68,036 72,761 Operating Loss (13,496) (15,453) (40,635) (43,141) Other Income (Expense): Interest Income 31 17 90 49 Interest Expense (1,621) (1,359) (4,431) (4,158) Other Income (541) 998 (1,171) 7,628 Total Other Expense: (2,131) (344) (5,512) 3,519 Net loss before Income Taxes (15,627) (15,797) (46,147) (39,622) Net loss $(15,627) $(15,797) $(46,147) $(39,622) Net loss per share attributable to common stockholders basic $(0.56) $(0.58) $(1.67) $(1.48) diluted $(0.56) $(0.58) $(1.67) $(1.48) Weighted-average shares used to compute net loss per share attributable to common stockholders basic 27,839 27,097 27,640 26,791 diluted 27,839 27,097 27,640 26,791"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 5"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Applied Optoelectronics, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Statements of Operations under GAAP and Non-GAAP"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended September 30, Nine Months Ended September 30, 2022 2021 2022 2021 GAAP total gross profit (a) $9,749 $8,124 $27,401 $29,620 Share-based compensation expense 121 222 371 689 Non-recurring expense 256 52 256 88 Expenses associated with discontinued products 56 2,220 57 5,970 Non-GAAP total gross profit (a) $10,182 $10,618 $28,085 $36,367 GAAP net loss $(15,627) $(15,797) $(46,147) $(39,622) Share-based compensation expense 2,627 3,130 7,243 8,922 Expenses associated with discontinued products 57 2,220 57 5,971 Non-cash expenses associated with discontinued products 1,209 1,235 3,479 3,662 Amortization of intangible assets 154 146 459 449 Non-recurring (income) expense 185 17 219 (5,727) Unrealized exchange loss (gain) 963 331 2,243 1,041 Non-GAAP tax benefit 3,300 3,427 9,845 10,365 Non-GAAP net loss $(7,132) $(5,291) $(22,602) $(14,939) GAAP diluted net loss per share $(0.56) $(0.58) $(1.67) $(1.48) Share-based compensation expense 0.09 0.12 0.26 0.33 Expenses associated with discontinued products – 0.08 – 0.22 Non-cash expenses associated with discontinued products 0.04 0.05 0.13 0.14 Amortization of intangible assets 0.01 0.01 0.02 0.02 Non-recurring (income) expense 0.01 – 0.01 (0.21) Unrealized exchange loss (gain) 0.03 0.01 0.08 0.04 Non-GAAP tax benefit 0.12 0.13 0.35 0.39 Non-GAAP diluted net loss per share $(0.26) $(0.20) $(0.82) $(0.56) Shares used to compute diluted loss per share 27,839 27,097 27,640 26,791 Shares used to compute diluted earnings per share 27,839 27,097 27,640 26,791"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) Provided for the purpose of calculating gross profit as a percentage of revenue (gross margin). Field: Page; Sequence: 6; Options: Last"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "semantic_text": "EX-99.1\n2\napplied_ex9901.htm\nPRESS RELEASE\nExhibit 99.1\nApplied Optoelectronics Reports Third Quarter 2022 Results\nSugar Land, Texas, November 3, 2022 – Applied Optoelectronics, Inc. (NASDAQ: AAOI), a leading provider of fiber-optic access network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its third quarter 2022 ended September 30, 2022.“While our revenue came in below our expectations, primarily due to a faster than expected decline in 40G revenue, we are encouraged by the continued demand in the CATV market and the stronger telecom market,” said Dr. Thompson Lin, Applied Optoelectronics Inc. Founder, President and Chief Executive Officer. “We generated the highest quarterly CATV revenue in the Company’s history in Q3, and we ended the quarter with a healthy backlog of CATV products. We continue to see good customer traction on 400G, with 400G revenue more than tripling compared to Q2, which we believe is the beginning of the anticipated ramp in this product family.”Third Quarter 2022 Financial Summary ·GAAP revenue was $56.7 million, compared $53.3 million in the third quarter of 2021 and $52.3 million in the second quarter of 2022. ·GAAP gross margin was 17.2 %, compared with 15.3% in the third quarter of 2021 and 16.5% in the second quarter of 2022. Non-GAAP gross margin was 18.0%, compared with 19.9% in the third quarter of 2021 and 16.7% in the second quarter of 2022. ·GAAP net loss was $15.6 million, or $0.56 per basic share, compared with net loss of $15.8 million, or $0.58 per basic share in the third quarter of 2021, and a net loss of $14.5 million, or $0.52 per basic share in the second quarter of 2022. ·Non-GAAP net loss was $7.1 million, or $0.26 per basic share, compared with non-GAAP net loss of $5.3 million, or $0.20 per basic share in the third quarter of 2021, and a non-GAAP net loss of $7.6 million, or $0.28 per basic share in the second quarter of 2022. A reconciliation between all GAAP and non-GAAP information referenced above is contained in the tables below. Please also refer to “Non-GAAP Financial Measures” below for a description of these non-GAAP financial measures.Fourth Quarter 2022 Business Outlook (+)For the fourth quarter of 2022, the company currently expects: ·Revenue in the range of $58 million to $64 million. ·Non-GAAP gross margin in the range of 17.5 % to 19.5 %. ·Non-GAAP net loss in the range of $8.1 million to $9.8 million, and non-GAAP loss per share in the range of $0.28 to $0.34 using approximately 28.7 million shares. (+) Please refer to the note below on forward-looking statements and the risks involved with such statements as well as the note on non-GAAP financial measures. Field: Page; Sequence: 1 Conference Call InformationThe company will host a conference call and webcast on November 3, 2022 to discuss its third quarter 2022 results and outlook for its fourth quarter of 2022 at 4:30 p.m. Eastern time / 3:30 p.m. Central time. The call can be accessed by dialing 844-890-1794 (domestic) or 412-717-9586 (international). A live audio webcast of the conference call along with supplemental financial information will also be accessible on the company's website at investors.ao-inc.com. Following the webcast, an archived version will be available on the website for one year. A telephonic replay of the call will be available one hour after the call and will be available until November 10, 2022, at 11:59 p.m. Eastern Time / 10:59 p.m. Central Time and may be accessed by dialing 877-344-7529 (domestic) or 412-317-0088 (international) and entering passcode 4473084.Forward-Looking InformationThis press release contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. In some cases, you can identify forward-looking statements by terminology such as \"believe,\" \"may,\" \"estimate,\" \"continue,\" \"anticipate,\" \"intend,\" \"should,\" \"could,\" \"would,\" \"target,\" \"seek,\" \"aim,\" \"predicts,\" \"think,\" \"objectives,\" \"optimistic,\" \"new,\" \"goal,\" \"strategy,\" \"potential,\" \"is likely,\" \"will,\" \"expect,\" \"plan\" \"project,\" \"permit\" or by other similar expressions that convey uncertainty of future events or outcomes. These statements include management’s beliefs and expectations related to our outlook for the fourth quarter of 2022. Such forward-looking statements reflect the views of management at the time such statements are made. These forward-looking statements involve risks and uncertainties, as well as assumptions and current expectations, which could cause the company's actual results to differ materially from those anticipated in such forward-looking statements. These risks and uncertainties include but are not limited to: the impact of the COVID-19 pandemic on our business and financial results; reduction in the size or quantity of customer orders; change in demand for the company's products due to industry conditions; changes in manufacturing operations; volatility in manufacturing costs; delays in shipments of products; disruptions in the supply chain; change in the rate of design wins or the rate of customer acceptance of new products; the company's reliance on a small number of customers for a substantial portion of its revenues; potential pricing pressure; a decline in demand for our customers' products or their rate of deployment of their products; general conditions in the internet datacenter, cable television (CATV) broadband, telecom, or fiber-to-the-home (FTTH) markets; changes in the world economy (particularly in the United States and China); changes in the regulation and taxation of international trade, including the imposition of tariffs; changes in currency exchange rates; the negative effects of seasonality; and other risks and uncertainties described more fully in the company's documents filed with or furnished to the Securities and Exchange Commission, including our Annual Report on Form 10-K for the year ended December 31, 2021. More information about these and other risks that may impact the company's business are set forth in the \"Risk Factors\" section of the company's quarterly and annual reports on file with the Securities and Exchange Commission. You should not rely on forward-looking statements as predictions of future events. All forward-looking statements in this press release are based upon information available to us as of the date hereof, and qualified in their entirety by this cautionary statement. Except as required by law, we assume no obligation to update forward-looking statements for any reason after the date of this press release to conform these statements to actual results or to changes in the company's expectations.Non-GAAP Financial MeasuresWe provide non-GAAP gross margin, non-GAAP net income (loss), and non-GAAP earnings per share to eliminate the impact of items that we do not consider indicative of our overall operating performance. To arrive at our non-GAAP gross margin, we exclude stock-based compensation expense, expenses associated with discontinued products, and non-recurring (income) expenses, if any, from our GAAP gross margin. To arrive at our non-GAAP net income (loss), we exclude all amortization of intangible assets, stock-based compensation expense, non-recurring expenses, unrealized foreign exchange loss (gain), losses from the disposal of idle assets, if any, non-GAAP tax benefit (expenses), and expenses associated with discontinued products, from our GAAP net income (loss). Included in our non-recurring expenses in Q3 2022 and Q3 2021 are certain non-recurring expenses related to extreme weather and pandemic events and non-recurring tax expenses or benefits (if any)., and employee severance expenses (if any). In computing our non-GAAP income tax benefit (expense), we have applied an estimate of our annual effective income tax rate and applied it to our net income before income taxes. Our non-GAAP diluted net loss per share is calculated by dividing our non-GAAP net loss by the fully diluted share count (for periods in which non-GAAP net income is positive) or basic share count (for periods in which our non-GAAP net income is negative). We believe that our non-GAAP measures are useful to investors in evaluating our operating performance for the following reasons: •We believe that elimination of items such as amortization of intangible assets, stock-based compensation expense, non-recurring revenue and expenses, losses from the disposal of idle assets, unrealized foreign exchange gain or loss, and depreciation on certain equipment undergoing reconfiguration is appropriate because treatment of these items may vary for reasons unrelated to our overall operating performance; Field: Page; Sequence: 2 •We believe that elimination of expenses associated with discontinued products, including depreciation and inventory obsolescence is appropriate because these expenses are not indicative of our ongoing operations; •We believe that estimating non-GAAP income taxes allows comparison with prior periods and provides additional information regarding the generation of potential future deferred tax assets; •We believe that non-GAAP measures provide better comparability with our past financial performance, period-to-period results and with our peer companies, many of which also use similar non-GAAP financial measures; and •We anticipate that investors and securities analysts will utilize non-GAAP measures as a supplement to GAAP measures to evaluate our overall operating performance.A reconciliation of our GAAP net income (loss) and GAAP earnings (loss) per share for Q3 2022 to our non-GAAP net income (loss) and earnings (loss) per share is provided below, together with corresponding reconciliations for Q3 2021.Non-GAAP measures should not be considered as an alternative to net income (loss), earnings (loss) per share, or any other measure of financial performance calculated and presented in accordance with GAAP. Our non-GAAP measures may not be comparable to similarly titled measures of other organizations because other organizations may not calculate such other non-GAAP measures in the same manner. We have not reconciled the non-GAAP measures included in our guidance to the appropriate GAAP financial measures because the GAAP measures are not readily determinable on a forward-looking basis. GAAP measures that impact our non-GAAP financial measures may include stock-based compensation expense, non-recurring expenses, amortization of intangible assets, unrealized exchange loss (gain), asset impairment charges, and loss (gain) from disposal of idle assets. These GAAP measures cannot be reasonably predicted and may directly impact our non-GAAP gross margin, our non-GAAP net income and our non-GAAP fully-diluted earnings per share, although changes with respect to certain of these measures may offset other changes. In addition, certain of these measures are out of our control. Accordingly, a reconciliation of the non-GAAP financial measure guidance to the corresponding GAAP measures is not available without unreasonable effort.About Applied OptoelectronicsApplied Optoelectronics Inc. (AOI) is a leading developer and manufacturer of advanced optical products, including components, modules and equipment. AOI's products are the building blocks for broadband fiber access networks around the world, where they are used in the internet datacenter, CATV broadband, telecom and FTTH markets. AOI supplies optical networking lasers, components and equipment to tier-1 customers in all four of these markets. In addition to its corporate headquarters, wafer fab and advanced engineering and production facilities in Sugar Land, TX, AOI has engineering and manufacturing facilities in Taipei, Taiwan and Ningbo, China. For additional information, visit www.ao-inc.com.Investor Relations Contacts:The Blueshirt Group, Investor RelationsLindsay Savarese+1-212-331-8417ir@ao-inc.comCassidy Fuller+1-415-217-4968ir@ao-inc.com Field: Page; Sequence: 3\n1\nField: /Page\n2\nField: /Page\n# # #\n3\nField: /Page\nApplied Optoelectronics, Inc.\nPreliminary Condensed Consolidated Balance Sheets\n(In thousands)\n(Unaudited)\nSeptember 30, 2022 December 31, 2021 ASSETS CURRENT ASSETS Cash, Cash Equivalents and Restricted Cash $34,575 $41,136 Accounts Receivable, Net 52,823 47,944 Notes receivable 9 8,148 Inventories 94,261 92,516 Prepaid Income Tax – 1 Prepaid Expenses and Other Current Assets 6,132 4,334 Total Current Assets 187,800 194,079 Property, Plant And Equipment, Net 211,586 243,035 Land Use Rights, Net 5,168 5,856 Operating Right of Use Asset 5,600 7,078 Financing Right of Use Asset 34 57 Intangible Assets, Net 3,740 3,836 Other Assets 415 518 TOTAL ASSETS $414,343 $454,459 LIABILITIES AND STOCKHOLDERS' EQUITY CURRENT LIABILITIES Accounts Payable $52,311 $34,402 Bank Acceptance Payable 13,760 8,198 Accrued Expenses 12,444 15,587 Current Lease Liability-Operating 998 1,062 Current Lease Liability-Financing 19 19 Current Portion of Notes Payable and Long Term Debt 51,357 49,689 Total Current Liabilities 130,889 108,957 Notes Payable and Long Term Debt – 5,000 Convertible Senior Notes 79,298 78,680 Other Long-Term Liabilities 5,618 7,252 TOTAL LIABILITIES 215,805 199,889 STOCKHOLDERS' EQUITY TOTAL STOCKHOLDERS' EQUITY 198,538 254,570 TOTAL LIABILITIES AND STOCKHOLDERS' EQUITY $414,343 $454,459\nField: Page; Sequence: 4\n4\nField: /Page\nApplied Optoelectronics, Inc.\nPreliminary Condensed Consolidated Statements of Operations\n(In thousands, except per share data)\n(Unaudited)\nThree Months Ended September 30, Nine Months Ended September 30, 2022 2021 2022 2021 Revenue CATV $31,260 $23,101 $79,953 $69,339 Datacenter 17,697 23,929 60,608 72,259 Telecom 6,821 5,148 18,362 12,959 FTTH – 62 124 784 Other 915 1,027 2,186 1,816 Total Revenue 56,693 53,267 161,233 157,157 Total Cost of Goods Sold 46,944 45,143 133,832 127,537 Total Gross Profit 9,749 8,124 27,401 29,620 Operating Expenses: Research and Development 9,206 10,149 27,021 31,990 Sales and Marketing 2,385 2,783 7,107 8,576 General and Administrative 11,654 10,645 33,908 32,195 Total Operating Expenses 23,245 23,577 68,036 72,761 Operating Loss (13,496) (15,453) (40,635) (43,141) Other Income (Expense): Interest Income 31 17 90 49 Interest Expense (1,621) (1,359) (4,431) (4,158) Other Income (541) 998 (1,171) 7,628 Total Other Expense: (2,131) (344) (5,512) 3,519 Net loss before Income Taxes (15,627) (15,797) (46,147) (39,622) Net loss $(15,627) $(15,797) $(46,147) $(39,622) Net loss per share attributable to common stockholders basic $(0.56) $(0.58) $(1.67) $(1.48) diluted $(0.56) $(0.58) $(1.67) $(1.48) Weighted-average shares used to compute net loss per share attributable to common stockholders basic 27,839 27,097 27,640 26,791 diluted 27,839 27,097 27,640 26,791\nField: Page; Sequence: 5\n5\nField: /Page\nApplied Optoelectronics, Inc.\nReconciliation of Statements of Operations under GAAP and Non-GAAP\n(In thousands, except per share data)\n(Unaudited)\nThree Months Ended September 30, Nine Months Ended September 30, 2022 2021 2022 2021 GAAP total gross profit (a) $9,749 $8,124 $27,401 $29,620 Share-based compensation expense 121 222 371 689 Non-recurring expense 256 52 256 88 Expenses associated with discontinued products 56 2,220 57 5,970 Non-GAAP total gross profit (a) $10,182 $10,618 $28,085 $36,367 GAAP net loss $(15,627) $(15,797) $(46,147) $(39,622) Share-based compensation expense 2,627 3,130 7,243 8,922 Expenses associated with discontinued products 57 2,220 57 5,971 Non-cash expenses associated with discontinued products 1,209 1,235 3,479 3,662 Amortization of intangible assets 154 146 459 449 Non-recurring (income) expense 185 17 219 (5,727) Unrealized exchange loss (gain) 963 331 2,243 1,041 Non-GAAP tax benefit 3,300 3,427 9,845 10,365 Non-GAAP net loss $(7,132) $(5,291) $(22,602) $(14,939) GAAP diluted net loss per share $(0.56) $(0.58) $(1.67) $(1.48) Share-based compensation expense 0.09 0.12 0.26 0.33 Expenses associated with discontinued products – 0.08 – 0.22 Non-cash expenses associated with discontinued products 0.04 0.05 0.13 0.14 Amortization of intangible assets 0.01 0.01 0.02 0.02 Non-recurring (income) expense 0.01 – 0.01 (0.21) Unrealized exchange loss (gain) 0.03 0.01 0.08 0.04 Non-GAAP tax benefit 0.12 0.13 0.35 0.39 Non-GAAP diluted net loss per share $(0.26) $(0.20) $(0.82) $(0.56) Shares used to compute diluted loss per share 27,839 27,097 27,640 26,791 Shares used to compute diluted earnings per share 27,839 27,097 27,640 26,791\n(a) Provided for the purpose of calculating gross profit as a percentage of revenue (gross margin). Field: Page; Sequence: 6; Options: Last\n6\nField: /Page"
+}

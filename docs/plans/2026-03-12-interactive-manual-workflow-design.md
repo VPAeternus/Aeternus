@@ -88,7 +88,7 @@ Discover:
 
 Collect:
 - print collector list before running
-- print shortlist/research queue/deep-selection counts after running
+- print candidate_list/fundamental review list/fundamental-intake counts after running
 
 Analyze:
 - print queue size and selected count

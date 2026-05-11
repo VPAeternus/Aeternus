@@ -19,8 +19,18 @@
     "tier_rule_version",
     "winner_90d_30pct"
   ],
-  "core_deterioration_review_count": 16,
-  "core_deterioration_strict_override_count": 11,
+  "core_deterioration_refill_shadow_no_leakage_statement": "Selection/refill uses PIT feature columns only; return labels are attached after selection is frozen for diagnostics.",
+  "core_deterioration_refill_shadow_outputs": {
+    "replacements": "core_deterioration_refill_shadow_replacements.csv",
+    "selected": "core_deterioration_refill_shadow_selected.csv",
+    "summary": "core_deterioration_refill_shadow_summary.csv"
+  },
+  "core_deterioration_refill_shadow_variants": {
+    "top15_v4_core_deterioration_refill_downgrade": "downgrade",
+    "top15_v4_core_deterioration_refill_strict": "strict"
+  },
+  "core_deterioration_review_count": 77,
+  "core_deterioration_strict_override_count": 9,
   "demote_review_low_priority_count": 0,
   "demote_review_priority_1_count": 99,
   "demote_review_priority_2_count": 233,
@@ -118,7 +128,10 @@
   "output_dir": "outputs/fundamental_backtest/high_conviction_top15_exception_sleeve",
   "output_hashes": {
     "README_ANALYSIS.md": "45370eb920c4f21bd3629f0208a244de6c7128677adad17844ab01df247b18dc",
-    "core_deterioration_review_queue.csv": "75daa5d533fd01762d1df006de0cf7d213dfc23d794478f6efc50c32841e31c9",
+    "core_deterioration_refill_shadow_replacements.csv": "b1e2f9d4351804cb07ced5f426fa556b7f396f08a93076ae257022c7158bbb9c",
+    "core_deterioration_refill_shadow_selected.csv": "1dc753b2f17842cfb831282dfe0c2d846c309767d65bb1e1bdf609f3e1a8e5bf",
+    "core_deterioration_refill_shadow_summary.csv": "d81feea596505f8aeaafa5e576ab7889b1e4907e17e3d9d8f5acaf6d3a1be39c",
+    "core_deterioration_review_queue.csv": "0adfdd73f5c7790b95e6f026376e49ba0d96cf4ef270669d9c04d3cf5e6925e6",
     "core_vs_exception_contribution.csv": "f90df5c6bc48802173fc461a522120771d115e5354df6f2f2eae9062d468b76d",
     "demote_review_low_priority.csv": "964b14da81416c0b5d81eb923597ed126e6360e352336258ee03e789006c7749",
     "demote_review_priority_1.csv": "0ce16972c0fa4c0013419bc7451e0e449976a769d85894f951306fbcaa7b2b9c",
@@ -298,7 +311,7 @@
     "theme_tailwind_score",
     "ticker"
   ],
-  "run_id": "top15-exception-cb275e1a-5b7b-404f-86ab-4bc8b0936024",
+  "run_id": "top15-exception-f83add57-0f44-4f0a-8319-882d0a0964d1",
   "runner_version": "fundamental_high_conviction_top15_exception_sleeve_backtest_v1",
   "target_actionable_research_routed_count": 6,
   "target_buy_underwriting_routed_count": 1,

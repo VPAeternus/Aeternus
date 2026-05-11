@@ -1,0 +1,20 @@
+metric,bucket,value
+rows,,21989
+hard_reject_count,,128
+missing_critical_llm_fields,,0
+rank_score_label,A+,25
+rank_score_label,A,258
+rank_score_label,B,406
+rank_score_label,C,519
+rank_score_label,D,554
+rank_score_label,Avoid / stale / low priority,14871
+rank_score_label,Stop / review,5356
+entry_score_0_100_bucket,Highest-priority entry research,120
+entry_score_0_100_bucket,High-priority entry research,487
+entry_score_0_100_bucket,"Good candidate, needs downstream confirmation",572
+entry_score_0_100_bucket,Watchlist / secondary research,755
+entry_score_0_100_bucket,Low priority unless theme override exists,20055
+monitoring_status,active,16286
+monitoring_status,early_stress,62
+monitoring_status,midpoint_stress,285
+monitoring_status,kill_review,5356

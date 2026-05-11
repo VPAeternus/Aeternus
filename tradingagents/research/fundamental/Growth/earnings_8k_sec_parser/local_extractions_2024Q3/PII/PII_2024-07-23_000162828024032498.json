@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PII",
+    "cik": "931015",
+    "event_date": "2024-07-23",
+    "event_accession": "0001628280-24-032498",
+    "primary_8k_doc": "pii-20240723.htm",
+    "exhibit_docs": [
+      "pii-q22024earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PII_000162828024032498_pii-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PII_000162828024032498_pii-q22024earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PII",
+    "cik": "931015",
+    "entity_name": "POLARIS INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2179700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-23",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "113400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-23",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5516300000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-23",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-41600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-23",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-89100000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-23",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "124200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-23",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.052026",
+    "operating_cash_flow_to_revenue": "0.05698",
+    "assets_to_revenue": "2.530761",
+    "financing_cash_flow_to_revenue": "-0.019085",
+    "investing_cash_flow_to_revenue": "-0.040877"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were $1,961 million, down 12 percent compared to last year.",
+      "sales were lower volume and net pricing driven by higher promotional spend partially offset by positive mix.",
+      "sales of $1,961 million, down 12 percent versus the second quarter of 2023.",
+      "sales of $1,677 million represented 86 percent of total Company sales and decreased 11 percent from $1,883 million in 2023.",
+      "sales of $284 million represented 14 percent of total Company sales and decreased 15 percent versus the second quarter of 2023.",
+      "Sales were driven by lower volume and net pricing driven by higher promotional spend, partially offset by increased Parts, Garments and Accessories (PG&A) sales."
+    ],
+    "guidance_evidence": [
+      "guidance.",
+      "guidance in this release, including the highlights above, include references to non-GAAP operating measures, which are identified by the word “adjusted” preceding the measure.",
+      "guidance to reflect the decision to cut shipments and our expectations that current industry challenges remain in place for the remainder of the year.",
+      "OUTLOOK The Company updated its 2024 sales outlook to be down 17 to 20 percent versus its previous outlook of down five to seven percent versus 2023.",
+      "outlook of down 10 to 15 percent.",
+      "guidance for adjusted earnings per share, in reliance on the unreasonable efforts exception provided under Item 10(e)(1)(i)(B) of Regulation S-K."
+    ],
+    "wave_or_demand_evidence": [
+      "Powersports retail sales for the quarter were down 8 percent versus last year driven by a decline in motorcycles and Marine; second quarter ORV retail was down 4 percent.",
+      "ainst key priorities, including manufacturing efficiency improvements and our pipeline of industry-leading innovation.",
+      "ail-driving efforts and adjusting our production forecasts to further cut back on dealer shipments.",
+      "ain in place for the remainder of the year.",
+      "powersports industry leader.",
+      "ail sales were down four percent."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory is a central priority, both through intentional retail-driving efforts and adjusting our production forecasts to further cut back on dealer shipments.",
+      "charges are significantly impacted by the timing, size, number and nature of the acquisitions the Company completes.",
+      "decline in motorcycles and Marine; second quarter ORV retail was down 4 percent.",
+      "challenging as our industry continued to contend with elevated interest rates, inflation, and an increasingly cautious dealer and consumer.",
+      "decreased 11 percent from $1,883 million in 2023.",
+      "decreased 15 percent versus the second quarter of 2023."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1961,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "77.010002",
+    "return_10d_pct": "3.6229",
+    "return_20d_pct": "5.9473",
+    "return_30d_pct": "12.3361",
+    "return_60d_pct": "7.3367",
+    "return_90d_pct": "-6.2200"
+  },
+  "text_stats": {
+    "primary_text_len": 3149,
+    "exhibit_text_len": 23248,
+    "combined_text_len": 26399
+  }
+}

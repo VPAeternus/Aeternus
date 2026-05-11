@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "IONS",
+    "cik": "874015",
+    "event_date": "2024-08-01",
+    "event_accession": "0001140361-24-035233",
+    "primary_8k_doc": "ef20033414_8k.htm",
+    "exhibit_docs": [
+      "ef20033414_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IONS_000114036124035233_ef20033414_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IONS_000114036124035233_ef20033414_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "IONS",
+    "cik": "874015",
+    "entity_name": "IONIS PHARMACEUTICALS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "130524000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-124323000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2990072000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "492087000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-325640000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-133992000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.952491",
+    "operating_cash_flow_to_revenue": "-1.02657",
+    "assets_to_revenue": "22.908216",
+    "financing_cash_flow_to_revenue": "3.770088",
+    "investing_cash_flow_to_revenue": "-2.494867"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of QALSODY, which Biogen launched in the U.",
+      "cash flows."
+    ],
+    "guidance_evidence": [
+      "guidance CARLSBAD, Calif.",
+      "guidance and the therapeutic and commercial potential of our commercial medicines, additional medicines in development and technologies.",
+      "expected this year Olezarsen PDUFA December 19, 2024 for FCS Positive Phase 3 donidalorsen data for HAE; preparing U.",
+      "projects to end 2024 with $1."
+    ],
+    "wave_or_demand_evidence": [
+      "AINUA TM U.",
+      "AINUA launch for hereditary ATTR polyneuropathy (ATTRv-PN) continues to progress well with AstraZeneca .",
+      "aid Brett P.",
+      "ained later in this release.",
+      "AINUA, olezarsen and donidalorsen, all of which have significant potential to help patients in need.",
+      "aid Elizabeth L."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss from operations $ (66 ) $ (91 ) $ (215 ) $ (204 ) Loss from operations on a non-GAAP basis $ (35 ) $ (64 ) $ (153 ) $ (150 ) (1) Reconciliation of GAAP to non-GAAP basis contained later in this release.",
+      "decrease in WAINUA joint development revenue, which decreased as development activities relating to ATTRv-PN wound down with the launch of WAINUA for this indication.",
+      "decreased in the second quarter and were essentially flat in the first half of 2024 compared to the same periods last year as several late-stage studies have ended.",
+      "decreased to $2.",
+      "decreased over the same period primarily due to the Company’s lower cash and short-term investments balance.",
+      "decrease in serum vitamin A levels."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 16,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "49.439999",
+    "return_10d_pct": "-4.8139",
+    "return_20d_pct": "-3.8430",
+    "return_30d_pct": "-4.3082",
+    "return_60d_pct": "-20.9749",
+    "return_90d_pct": "-22.3503"
+  },
+  "text_stats": {
+    "primary_text_len": 3999,
+    "exhibit_text_len": 21161,
+    "combined_text_len": 25162
+  }
+}

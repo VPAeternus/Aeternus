@@ -1,0 +1,55 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the second quarter ended June 30, 2025",
+    "period_end_date": "June 30, 2025"
+  },
+  "reported_results": {
+    "revenue_millions": 401.242,
+    "revenue_yoy_pct": 19.5001,
+    "revenue_qoq_pct": 23.0724,
+    "gross_margin_pct": 28.2,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "ur employees are executing well in a robust, rapidly changing environment, and we are excited to serve the power needs of a growing list of customers.",
+    "wave_signal": "1 Document created using Wdesk Copyright 2025 Workiva Document Bloom Energy Reports Second Quarter 2025 Financial Results •Third straight quarter of quarterly record revenue and profits •6th straight quarter of services profitability •Bloom plans to double factory capacity from 1GW to 2 GW by end of 2026 SAN JOSE, Calif.",
+    "margin_signal": "•Gross margin of 26.",
+    "risk_signal": "•Operating loss of $3.",
+    "customer_signal": "I am delighted to engage with our direct hyperscale partner, Oracle, with whom we can collaborate to optimize the watts to flops ratio."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | $ | 401242 | | $ | 326021 | | $ | 335767 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | $ | 401242 | | $ | 326021 | | $ | 335767 |"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | $ | 401242 | | $ | 326021 | | $ | 335767 |"
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "Gross Margin Gross Margin Gross Margin 28.2% 28.2% 28.2% 28.7% 28.7% 28.7% 21.8% 21.8% 21.8%"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

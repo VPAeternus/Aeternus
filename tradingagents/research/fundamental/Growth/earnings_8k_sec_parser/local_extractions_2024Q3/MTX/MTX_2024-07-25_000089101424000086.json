@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MTX",
+    "cik": "891014",
+    "event_date": "2024-07-25",
+    "event_accession": "0000891014-24-000086",
+    "primary_8k_doc": "form8k_0725.htm",
+    "exhibit_docs": [
+      "ex99_1.htm",
+      "ex99_2.htm",
+      "exhibit99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MTX_000089101424000086_form8k_0725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MTX_000089101424000086_ex99_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MTX_000089101424000086_ex99_2.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MTX_000089101424000086_exhibit99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MTX",
+    "cik": "891014",
+    "entity_name": "MINERALS TECHNOLOGIES INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "546100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-02",
+    "net_income_value": "37000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-02",
+    "assets_value": "3346600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-9200000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-02",
+    "investing_cash_flow_value": "-24700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-02",
+    "operating_cash_flow_value": "33700000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.067753",
+    "operating_cash_flow_to_revenue": "0.06171",
+    "assets_to_revenue": "6.128182",
+    "financing_cash_flow_to_revenue": "-0.016847",
+    "investing_cash_flow_to_revenue": "-0.04523"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales were $541 million, 1 percent higher versus the prior year on an underlying basis or down 2 percent as reported.",
+      "sales were $284 million in the second quarter, up 3 percent on an underlying basis.",
+      "sales were $127 million, up 1 percent from the prior year.",
+      "sales were $158 million and grew 4 percent on an underlying basis.",
+      "sales were $257 million in the second quarter, down 2 percent from the prior year.",
+      "sales were $185 million, up 1 percent from the prior year."
+    ],
+    "guidance_evidence": [
+      "expected and continues to offer broad-based long-term growth opportunities,” said Douglas T.",
+      "projects.",
+      "forecasts of future events such as new products, revenues and financial performance, and are not limited to describing historical or current facts.",
+      "expects,” “plans,” “intends,” “anticipates,” and other words and phrases of similar meaning.",
+      "forecasts in these statements.",
+      "expected credit loss may become fully deductible in a future period."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for our products and solutions across the majority of our markets highlights the value we deliver to our customers through our core technologies.",
+      "customers’ manufacturing processes and projects.",
+      "ainability Report NEW YORK, July 25, 2024 – Minerals Technologies Inc.",
+      "aid Douglas T.",
+      "airman and Chief Executive Officer.",
+      "ailable at the same location at approximately 10:30 a."
+    ],
+    "warning_or_risk_evidence": [
+      "charges of $6.",
+      "charges 120.",
+      "uncertainties, both known and unknown, as well as the inaccuracy of assumptions and estimates, can affect the realization of the expectations or forecasts in these statements.",
+      "uncertainties related to the voluntary petitions for relief under Chapter 11 of the U.",
+      "losses 30.",
+      "losses relating to the Company's committed line of credit to facilitate BMI Oldco Inc."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 541,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "87.180000",
+    "return_10d_pct": "-18.8575",
+    "return_20d_pct": "-14.8887",
+    "return_30d_pct": "-12.3537",
+    "return_60d_pct": "-14.0629",
+    "return_90d_pct": "-10.5758"
+  },
+  "text_stats": {
+    "primary_text_len": 3031,
+    "exhibit_text_len": 23154,
+    "combined_text_len": 26187
+  }
+}

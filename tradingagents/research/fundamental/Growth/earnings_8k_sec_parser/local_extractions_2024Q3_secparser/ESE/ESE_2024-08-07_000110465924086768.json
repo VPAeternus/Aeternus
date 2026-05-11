@@ -1,0 +1,724 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ESE",
+    "cik": "866706",
+    "event_date": "2024-08-07",
+    "event_accession": "0001104659-24-086768",
+    "primary_8k_doc": "tm2421020d1_8k.htm",
+    "exhibit_docs": [
+      "tm2421020d1_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ESE_000110465924086768_tm2421020d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ESE_000110465924086768_tm2421020d1_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ESE",
+    "cik": "866706",
+    "entity_name": "ESCO TECHNOLOGIES INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "434637000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "32605000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1683214000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-10719000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-34124000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-5461000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.075017",
+    "operating_cash_flow_to_revenue": "-0.012565",
+    "assets_to_revenue": "3.872689",
+    "financing_cash_flow_to_revenue": "-0.024662",
+    "investing_cash_flow_to_revenue": "-0.078511"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales increased $12.",
+      "sales increased $8.",
+      "Sales increased $11.",
+      "Sales increased $0.",
+      "sales increased by $0.",
+      "revenue offset by lower protection testing sales."
+    ],
+    "guidance_evidence": [
+      "Outlook – 2024Management’s expectation is for Q4 Adjusted EPS in the range of $1.",
+      "guidance in the range of $4.",
+      "outlook is based on sales in the range of $1.",
+      "expected, USG revenue growth moderated in Q3 after 13 percent growth in the first half of the year."
+    ],
+    "wave_or_demand_evidence": [
+      "Orders increase 46% to $312 million / Book-to-Bill of 1.",
+      "Orders increased $98.",
+      "backlog of $889 million.",
+      "orders, with strength across all three segments.",
+      "orders, continuing strength in aerospace and electric utility orders, and importantly a rebound in both Test and renewables orders.",
+      "Orders increased $65 million (79 percent) to $147 million in Q3 2024 compared to $82 million in Q3 2023."
+    ],
+    "warning_or_risk_evidence": [
+      "charges consisting mainly of: $0.",
+      "charges (primarily severance) within the A&D and USG segments.",
+      "charges consisting mainly of Corporate acquisition related costs.",
+      "charges consisting of: $0.",
+      "inventory step-up charges, $0.",
+      "charges (primarily severance) within the Test, A&D and USG segments, and $0."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "tm2421020d1_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "NEWS FROM"
+    },
+    {
+      "type": "TextElement",
+      "text": "For more information contact:Kate Lowrey - VP of Investor Relations(314) 213-7277 / klowrey@escotechnologies.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ESCO REPORTS THIRD QUARTER FISCAL 2024 RESULTS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "- Q3 Orders increase 46% to $312 million / Book-to-Bill of 1.20x –"
+    },
+    {
+      "type": "TitleElement",
+      "text": "- Q3 Sales increase 5% to $261 million -"
+    },
+    {
+      "type": "TitleElement",
+      "text": "- Q3 GAAP EPS increases 5% to $1.13 -"
+    },
+    {
+      "type": "TitleElement",
+      "text": "- Q3 Adjusted EPS increases 6% to $1.16 -"
+    },
+    {
+      "type": "TextElement",
+      "text": "ST. LOUIS, August 7, 2024 – ESCO Technologies Inc. (NYSE: ESE) (ESCO, or the Company) today reported its operating results for the third quarter ended June 30, 2024 (Q3 2024).Operating Highlights ●Q3 2024 Sales increased $12.1 million (5 percent) to $260.8 million compared to $248.7 million in Q3 2023. Q3 organic sales increased $8.7 million (4 percent) and the MPE acquisition contributed $3.4 million (1 percent) of revenue in the quarter. ●Q3 2024 GAAP EPS increased 5 percent to $1.13 per share compared to $1.08 per share in Q3 2023. Q3 2024 Adjusted EPS increased 6 percent to $1.16 per share compared to $1.09 per share in Q3 2023. ●Q3 2024 Entered Orders increased $98.4 million (46 percent) compared to the prior year period to $311.7 million (book-to-bill of 1.20x), resulting in record ending backlog of $889 million. ●Net cash provided by operating activities was $55 million YTD, an increase of $26 million compared to the prior year period. ●Net debt (total borrowings less cash on hand) was $110 million, resulting in a 0.73x leverage ratio and $571 million in liquidity as of June 30, 2024.Bryan Sayler, Chief Executive Officer and President, commented, “Q3 was highlighted by over $300 million in orders, with strength across all three segments. The increase was driven by large Navy orders, continuing strength in aerospace and electric utility orders, and importantly a rebound in both Test and renewables orders. Revenue grew 5 percent in the quarter and Adjusted EBITDA margin expanded by 60 basis points, driving a 6 percent increase in Adjusted EPS compared to the prior year quarter. Overall, it was a solid quarter as we continue to see favorable momentum across our aerospace, Navy and utility end markets.”Segment PerformanceAerospace & Defense (A&D) ●Sales increased $11.0 million (10.6 percent) to $114.5 million in Q3 2024 from $103.5 million in Q3 2023. Sales growth was driven by strength across Navy, commercial aerospace, and defense aerospace programs. ●Q3 2024 EBIT decreased $0.3 million to $21.4 million from $21.7 million in Q3 2023. Adjusted EBIT decreased $0.2 million in Q3 2024 to $21.5 million (18.7 percent margin) from $21.7 million (20.9 percent margin) in Q3 2023. Profitability in the quarter was negatively impacted by margin erosion on space development programs at VACCO. Additionally, unfavorable revenue mix and inflationary pressures were offset by leverage on higher volume and price increases. ●Entered Orders increased $65 million (79 percent) to $147 million in Q3 2024 compared to $82 million in Q3 2023. The increase was primarily driven by strength in Navy (Virginia Class Block V QARMS and Ejection System development), and a strong quarter for commercial and defense aerospace aftermarket orders. The orders in the quarter resulted in a segment book-to-bill of 1.28x and record ending backlog of $595 million.Utility Solutions Group (USG) ●Sales increased $0.3 million (0.3 percent) to $90.3 million in Q3 2024 from $90.0 million in Q3 2023. As expected, USG revenue growth moderated in Q3 after 13 percent growth in the first half of the year. Revenue grew sequentially and is up 8 percent Q3 YTD, which remains in line with our expectations for the year. Doble’s Q3 2024 sales increased by $0.4 million (0.5 percent), driven by higher services revenue offset by lower protection testing sales. NRG sales were flat compared to strong results in the prior year period. ●EBIT increased $1.8 million (9 percent) in Q3 2024 to $22.2 million from $20.4 million in Q3 2023. Adjusted EBIT increased $1.7 million in Q3 2024 to $22.2 million (24.6 percent margin) from $20.5 million (22.8 percent margin) in Q3 2023. Margin improvement was driven by mix related to increased services revenue and price increases, partially offset by inflationary pressures. ●Entered Orders increased $15 million (17 percent) to $100 million in Q3 2024. Doble orders increased $19 million (30 percent) on continuing strength in services and our lease pool business as utilities focus on keeping substations operational while coping with long lead times on new transformers. NRG’S orders were $19 million in the quarter. While down $4 million compared to the record prior year quarter, this represents the second highest orders quarter in NRG history and was in line with our expectations for a rebound in renewables orders as the market moves beyond last year’s elevated activity related to the initial Inflation Reduction Act spending. The segment book-to-bill was 1.11x in the quarter, resulting in ending backlog of $129 million.RF Test & Measurement (Test) ●Sales increased $0.8 million (1.3 percent) to $56.1 million in Q3 2024 from $55.3 million in Q3 2023. Organic sales decreased $2.6 million primarily related to lower wireless and US filters volume. This was more than offset by $3.4 million of revenue related to the MPE acquisition which was completed in Q1 2024. While Test’s revenues continue to be somewhat soft, they delivered significant sequential revenue growth of 19 percent in the quarter. ●EBIT and Adjusted EBIT both increased $0.7 million in Q3 2024 to $9.3 million (16.6 percent margin) from $8.6 million (15.6 percent margin) in Q3 2023. Margin improvement was driven by higher margin MPE content, cost reduction actions and price increases, partially offset by inflationary pressures and mix related to lower wireless and US filters volume. ●Entered Orders increased $19 million (41 percent) to $65 million in Q3 2024. The rebound in Test orders was primarily driven by the booking of a large industrial project and a strong quarter for US T&M orders. The segment book-to-bill was 1.16x in the quarter, resulting in ending backlog of $165 million.SM&P AcquisitionAs announced on July 8, 2024, ESCO has agreed to acquire the Signature Management & Power (SM&P) business of Ultra Maritime for a purchase price of $550 million. The required filings have been submitted and we are awaiting regulatory approval, with an anticipation of a Q1 fiscal 2025 closing. SM&P’s sole source product offerings will add significant scale to the ESCO Navy business, providing increased content on domestic Navy submarine and surface ship programs and expansion into vital UK and AUKUS navy platforms.Business Outlook – 2024Management’s expectation is for Q4 Adjusted EPS in the range of $1.38 to $1.48 (10 to 18 percent growth). This results in full year guidance in the range of $4.10 to $4.20 (11 to 14 percent growth), which represents ESCO’s third consecutive year of double-digit earnings growth. This outlook is based on sales in the range of $1.02 to $1.03 billion (7 to 8 percent annual growth) and excludes further profitability erosion on Space programs at VACCO, which could range from $5 to $7 million ($0.15 - $0.21) in Q4 2024.VACCO Space Business Strategic ReviewThe Company is undertaking a process to review strategic alternatives for the Space business at VACCO. These alternatives could include, among others, possible joint ventures, strategic partnerships, or a sale of the business. The intent is to optimize ESCO’s portfolio of businesses and create value for ESCO shareholders. This decision was made as part of our continual strategic portfolio analysis, which is focused on positioning the Company to serve high-growth markets that have high margin potential. As we undertake this review, the Company remains committed to executing on our current Space programs and serving the needs of our customers.There is no deadline or definitive timetable for completion of the strategic alternatives review process and there can be no assurance that this process will result in the Company pursuing a transaction or any other strategic outcome. ESCO does not intend to make any further public comment regarding the review of strategic alternatives for the Space business at VACCO until it has been completed or the Company determines that a disclosure is required or otherwise deemed appropriate.Share Repurchase ProgramDuring Q3 2024, the Company repurchased approximately 8,000 shares for $0.8 million.Dividend PaymentThe next quarterly cash dividend of $0.08 per share will be paid on October 16, 2024 to stockholders of record on October 2, 2024.Board of DirectorsEffective August 1, 2024, the Company’s Board of Directors approved the addition of two independent directors, Penelope M. Conner and David A. Campbell, which shall become effective upon the requisite approval by the Federal Energy Regulatory Commission of such positions and satisfaction of any and all other regulatory requirements.Ms. Conner was named to the Nominating and Corporate Governance Committee and Mr. Campbell was named to the Audit and Finance Committee of the Board of Directors, subject to and effective upon the commencement of their respective terms as directors.Penelope M. ConnerWith 38 years of experience in the electric and gas utility sector, since 2002 Ms. Conner has held executive positions with Eversource Energy (NYSE: ES), a utility holding company based in Medfield, Massachusetts, most recently (since 2021) as Eversource’s Executive Vice President, Customer Experience and Energy Strategy. She is currently responsible for ensuring that Eversource’s 4 million electric and gas customers experience high-quality customer service while driving Eversource’s energy strategy development and capital allocation throughout the enterprise. Prior to joining Eversource, Ms. Conner held positions of increasing responsibility from 1986 to 2002 at Tampa Electric Company and then Duke Energy Corporation, culminating in a position as Duke Energy’s General Manager for Process Integration.Ms. Conner graduated from North Carolina State University in 1986 with a Bachelor of Science degree in Industrial Engineering, summa cum laude. She is a registered professional engineer in North and South Carolina.David A. CampbellSince 2021 Mr. Campbell has been the President and Chief Executive Officer and a Board Member of Evergy, Inc. (NASDAQ: EVRG), a public utility holding company incorporated in 2017 and headquartered in Kansas City, Missouri. He previously held executive positions at a number of electric and integrated energy companies in Texas as well as at an independent energy resource and investment company, following nine years (four as a partner) in the Dallas office of McKinsey & Company, a leading global management consulting firm providing strategic and operational counsel to top management of diverse global corporations and institutions.Mr. Campbell holds degrees from Harvard Law School (J.D. degree magna cum laude, 1995), Oxford University (M.Phil. International Relations, 1992), and Yale University (B.A. summa cum laude with Distinction in History, 1990).Conference CallThe Company will host a conference call today, August 7, at 4:00 p.m. Central Time, to discuss the Company’s Q3 2024 results. A live audio webcast and an accompanying slide presentation will be available in the Investor Center of ESCO’s website. For those unable to participate, a webcast replay will be available after the call in the Investor Center of ESCO’s website.Forward-Looking StatementsStatements in this press release regarding Management’s intentions, expectations and guidance for fiscal 2024, including restructuring and cost reduction actions, sales, orders, revenues, margin, earnings, Adjusted EPS, and any other statements which are not strictly historical, are “forward-looking statements” within the meaning of the safe harbor provisions of the U.S. securities laws.Investors are cautioned that such statements are only predictions and speak only as of the date of this release, and the Company undertakes no duty to update them except as may be required by applicable laws or regulations. The Company’s actual results in the future may differ materially from those projected in the forward-looking statements due to risks and uncertainties that exist in the Company’s operations and business environment including but not limited to those described in Item 1A, “Risk Factors”, of the Company’s Annual Report on Form 10-K for the fiscal year ended September 30, 2023 and the following: the timing and outcome, if any, of the Company’s strategic alternatives review for the Space business at VACCO; the impacts of climate change and related regulation of greenhouse gases; the impacts of labor disputes, civil disorder, wars, elections, political changes, tariffs and trade disputes, terrorist activities, cyberattacks or natural disasters on the Company’s operations and those of the Company’s customers and suppliers; disruptions in manufacturing or delivery arrangements due to shortages or unavailability of materials or components or supply chain disruptions; inability to access work sites; the timing and content of future contract awards or customer orders; the timely appropriation, allocation and availability of Government funds; the termination for convenience of Government and other customer contracts or orders; weakening of economic conditions in served markets; the success of the Company’s competitors; changes in customer demands or customer insolvencies; competition; intellectual property rights; technical difficulties or data breaches; the availability of acquisitions; delivery delays or defaults by customers; performance issues with key customers, suppliers and subcontractors; material changes in the costs and availability of certain raw materials; material changes in the cost of credit; changes in laws and regulations including but not limited to changes in accounting standards and taxation; changes in interest, inflation and employment rates; costs relating to environmental matters arising from current or former facilities; uncertainty regarding the ultimate resolution of current disputes, claims, litigation or arbitration; and the integration and performance of acquired businesses.Non-GAAP Financial MeasuresThe financial measures EBIT, Adjusted EBIT, EBITDA, Adjusted EBITDA, and Adjusted EPS are presented in this press release. The Company defines “EBIT” as earnings before interest and taxes, “EBITDA” as earnings before interest, taxes, depreciation and amortization, “Adjusted EBIT” and “Adjusted EBITDA” as excluding the net impact of the items described in the attached Reconciliation of Non-GAAP Financial Measures, and “Adjusted EPS” as GAAP earnings per share excluding the net impact of the items described and reconciled in the attached Reconciliation of Non-GAAP Financial Measures.EBIT, Adjusted EBIT, EBITDA, Adjusted EBITDA, and Adjusted EPS are not recognized in accordance with U.S. generally accepted accounting principles (GAAP). However, Management believes EBIT, Adjusted EBIT, EBITDA, and Adjusted EBITDA are useful in assessing the operational profitability of the Company’s business segments because they exclude interest, taxes, depreciation, and amortization, which are generally accounted for across the entire Company on a consolidated basis. EBIT is also one of the measures used by Management in determining resource allocations within the Company as well as incentive compensation. The presentation of EBIT, Adjusted EBIT, EBITDA, Adjusted EBITDA, and Adjusted EPS provides important supplemental information to investors by facilitating comparisons with other companies, many of which use similar non-GAAP financial measures to supplement their GAAP results. The use of non-GAAP financial measures is not intended to replace any measures of performance determined in accordance with GAAP.ESCO is a global provider of highly engineered products and solutions serving diverse end-markets. It manufactures filtration and fluid control products for the aviation, Navy, space, and process markets worldwide and composite-based products and solutions for Navy, defense, and industrial customers. ESCO is an industry leader in designing and manufacturing RF test and measurement products and systems; and provides diagnostic instruments, software and services to industrial power users and the electric utility and renewable energy industries. Headquartered in St. Louis, Missouri, ESCO and its subsidiaries have offices and manufacturing facilities worldwide. For more information on ESCO and its subsidiaries, visit the Company’s website at www.escotechnologies.com."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Operations (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024 Three Months Ended June 30, 2023 Net Sales $260,783 248,749 Cost and Expenses: Cost of sales 157,435 147,274 Selling, general and administrative expenses 54,955 55,376 Amortization of intangible assets 8,145 7,132 Interest expense 3,335 2,495 Other expenses (income), net (259) 966 Total costs and expenses 223,611 213,243 Earnings before income taxes 37,172 35,506 Income tax expense 7,942 7,563 Net earnings $29,230 27,943 Earnings Per Share (EPS) Diluted - GAAP $1.13 1.08 Diluted - As Adjusted Basis $1.16(1) 1.09(2) Diluted average common shares O/S: 25,840 25,827"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)Q3 2024 Adjusted EPS excludes $0.03 per share of after-tax charges consisting mainly of: $0.02 of Corporate acquisition related costs and $0.01 of restructuring charges (primarily severance) within the A&D and USG segments. (2)Q3 2023 Adjusted EPS excludes $0.01 per share of after-tax charges consisting mainly of Corporate acquisition related costs."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Operations (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Nine Months Ended June 30, 2024 Nine Months Ended June 30, 2023 Net Sales $728,226 683,386 Cost and Expenses: Cost of sales 443,933 415,953 Selling, general and administrative expenses 164,020 160,555 Amortization of intangible assets 24,585 21,023 Interest expense 9,228 6,422 Other expenses (income), net 613 1,678 Total costs and expenses 642,379 605,631 Earnings before income taxes 85,847 77,755 Income tax expense 18,229 17,207 Net earnings $67,618 60,548 Earnings Per Share (EPS) Diluted - GAAP $2.62 2.34 Diluted - As Adjusted Basis $2.72(1) 2.45(2) Diluted average common shares O/S: 25,844 25,890"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1)YTD Q3 2024 Adjusted EPS excludes $0.10 per share of after-tax charges consisting of: $0.04 of MPE acquisition backlog and inventory step-up charges, $0.03 of restructuring charges (primarily severance) within the Test, A&D and USG segments, and $0.03 of Corporate acquisition related costs. (2)YTD Q3 2023 Adjusted EPS excludes $0.11 per share of after-tax charges consisting of: $0.06 of executive management transition costs at Corporate, $0.02 of CMT acquisition inventory step-up charges, $0.02 of restructuring charges within the A&D segment, and $0.01 of Corporate acquisition related costs."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Business Segment Information (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "GAAP As Adjusted Q3 2024 Q3 2023 Q3 2024 Q3 2023 Net Sales Aerospace & Defense $114,450 103,469 114,450 103,469 USG 90,277 89,966 90,277 89,966 Test 56,056 55,314 56,056 55,314 Totals $260,783 248,749 260,783 248,749 EBIT Aerospace & Defense $21,356 21,665 21,444 21,665 USG 22,155 20,351 22,230 20,481 Test 9,292 8,643 9,297 8,643 Corporate (12,296) (12,658) (11,566) (12,438) Consolidated EBIT 40,507 38,001 41,405 38,351 Less: Interest expense (3,335) (2,495) (3,335) (2,495) Less: Income tax expense (7,942) (7,563) (8,149) (7,643) Net earnings $29,230 27,943 29,921 28,213"
+    },
+    {
+      "type": "TextElement",
+      "text": "Note 1: Adjusted net earnings were $29.9 million in Q3 2024 which excludes $0.03 per share of after-tax charges consisting mainly of $0.02 of Corporate acquisition related costs and $0.01 of restructuring charges (primarily severance) within the A&D and USG segments.Note 2: Adjusted net earnings were $28.2 million in Q3 2023 which excludes $0.01 per share of after-tax charges consisting mainly of Corporate acquisition related costs.EBITDA Reconciliation to Net earnings:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Q3 2024 - Q3 2023 - Q3 2024 Q3 2023 As Adjusted As Adjusted Consolidated EBITDA $54,310 50,790 55,208 51,140 Less: Depr & Amort (13,803) (12,789) (13,803) (12,789) Consolidated EBIT 40,507 38,001 41,405 38,351 Less: Interest expense (3,335) (2,495) (3,335) (2,495) Less: Income tax expense (7,942) (7,563) (8,149) (7,643) Net earnings $29,230 27,943 29,921 28,213"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Business Segment Information (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "GAAP As Adjusted YTD YTD YTD YTD Q3 2024 Q3 2023 Q3 2024 Q3 2023 Net Sales Aerospace & Defense $323,884 285,434 323,884 285,434 USG 260,570 240,172 260,570 240,172 Test 143,772 157,780 143,772 157,780 Totals $728,226 683,386 728,226 683,386 EBIT Aerospace & Defense $61,396 52,996 61,747 53,995 USG 57,355 50,543 57,550 50,673 Test 16,614 21,280 17,095 21,280 Corporate (40,290) (40,642) (38,124) (38,129) Consolidated EBIT 95,075 84,177 98,268 87,819 Less: Interest expense (9,228) (6,422) (9,228) (6,422) Less: Income tax expense (18,229) (17,207) (18,963) (18,045) Net earnings $67,618 60,548 70,077 63,352"
+    },
+    {
+      "type": "TextElement",
+      "text": "Note 1: Adjusted net earnings were $70.1 million in YTD Q3 2024 which excludes $0.10 per share of after-tax charges consisting of $0.04 of MPE acquisition backlog and inventory step-up charges, $0.03 of restructuring charges (primarily severance) within the Test, A&D and USG segments, and $0.03 of Corporate acquisition related costs.Note 2: Adjusted net earnings were $63.4 million in YTD Q3 2023 which excludes $0.11 per share of after-tax charges consisting of $0.06 of executive management transition costs at Corporate, $0.02 of CMT acquisition inventory step-up charges, $0.02 of restructuring charges within the A&D segment, and $0.01 of Corporate acquisition related costs.EBITDA Reconciliation to Net earnings:"
+    },
+    {
+      "type": "TableElement",
+      "text": "YTD YTD YTD YTD Q3 2024 - Q3 2023 - Q3 2024 Q3 2023 As Adjusted As Adjusted Consolidated EBITDA $136,433 121,876 138,790 125,518 Less: Depr & Amort (41,358) (37,699) (40,522) (37,699) Consolidated EBIT 95,075 84,177 98,268 87,819 Less: Interest expense (9,228) (6,422) (9,228) (6,422) Less: Income tax expense (18,229) (17,207) (18,963) (18,045) Net earnings $67,618 60,548 70,077 63,352"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Balance Sheets (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 September 30, 2023 Assets Cash and cash equivalents $63,042 41,866 Accounts receivable, net 213,592 198,557 Contract assets 134,637 138,633 Inventories 219,312 184,067 Other current assets 22,312 17,972 Total current assets 652,895 581,095 Property, plant and equipment, net 164,749 155,484 Intangible assets, net 408,981 392,124 Goodwill 535,372 503,177 Operating lease assets 37,716 39,839 Other assets 11,342 11,495 $1,811,055 1,683,214 Liabilities and Shareholders' Equity Current maturities of long-term debt $20,000 20,000 Accounts payable 83,411 86,973 Contract liabilities 113,653 112,277 Other current liabilities 94,143 95,401 Total current liabilities 311,207 314,651 Deferred tax liabilities 77,570 75,531 Non-current operating lease liabilities 35,148 36,554 Other liabilities 40,444 43,336 Long-term debt 153,000 82,000 Shareholders' equity 1,193,686 1,131,142 $1,811,055 1,683,214"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated Statements of Cash Flows (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Nine Months Ended June 30, 2024 Nine Months Ended June 30, 2023 Cash flows from operating activities: Net earnings $67,618 60,548 Adjustments to reconcile net earnings to net cash provided (used) by operating activities: Depreciation and amortization 41,358 37,699 Stock compensation expense 6,369 7,007 Changes in assets and liabilities (53,839) (72,346) Effect of deferred taxes (6,052) (3,706) Net cash provided by operating activities 55,454 29,202 Cash flows from investing activities: Acquisition of business, net of cash acquired (56,383) (17,694) Capital expenditures (24,949) (16,993) Additions to capitalized software (8,556) (9,263) Net cash used by investing activities (89,888) (43,950) Cash flows from financing activities: Proceeds from long-term debt 193,000 88,000 Principal payments on long-term debt and short-term borrowings (122,000) (93,000) Dividends paid (6,185) (6,189) Purchases of common stock into treasury (7,998) (12,401) Other (1,516) (2,557) Net cash provided (used) by financing activities 55,301 (26,147) Effect of exchange rate changes on cash and cash equivalents 309 (777) Net increase (decrease) in cash and cash equivalents 21,176 (41,672) Cash and cash equivalents, beginning of period 41,866 97,724 Cash and cash equivalents, end of period $63,042 56,052"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Other Selected Financial Data (Unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Backlog And Entered Orders - Q3 2024 A&D USG Test Total Beginning Backlog - 4/1/24 $562,302 119,155 156,254 837,711 Entered Orders 146,890 100,012 64,829 311,731 Sales (114,450) (90,277) (56,056) (260,783) Ending Backlog - 6/30/24 $594,742 128,890 165,027 888,659 Backlog And Entered Orders - YTD Q3 2024 A&D USG Test Total Beginning Backlog - 10/1/23 $484,069 133,459 154,834 772,362 Entered Orders 434,557 256,001 153,965 844,523 Sales (323,884) (260,570) (143,772) (728,226) Ending Backlog - 6/30/24 $594,742 128,890 165,027 888,659"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ESCO TECHNOLOGIES INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Non-GAAP Financial Measures (Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "EPS – Adjusted Basis Reconciliation – Q3 2024 EPS – GAAP Basis – Q3 2024 $1.13 Adjustments (defined below) 0.03 EPS – As Adjusted Basis – Q3 2024 $1.16"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjustments exclude $0.03 per share consisting mainly of Corporate acquisition related costs and restructuring charges (primarily severance) in the third quarter of 2024. The $0.03 of EPS adjustments per share consists of $898K of pre-tax charges offset by $207K of tax benefit for net impact of $691K."
+    },
+    {
+      "type": "TableElement",
+      "text": "EPS – Adjusted Basis Reconciliation – YTD Q3 2024 EPS – GAAP Basis – YTD Q3 2024 $2.62 Adjustments (defined below) 0.10 EPS – As Adjusted Basis – YTD Q3 2024 $2.72"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjustments exclude $0.10 per share consisting of MPE acquisition backlog and inventory step-up charges, restructuring charges (primarily severance) within the Test, A&D and USG segments, and Corporate acquisition related costs.The $0.10 of EPS adjustments per share consists of $3,193K of pre-tax charges offset by $734K of tax benefit for net impact of $2,459K."
+    },
+    {
+      "type": "TableElement",
+      "text": "EPS – Adjusted Basis Reconciliation – Q3 2023 EPS – GAAP Basis – Q3 2023 $1.08 Adjustments (defined below) 0.01 EPS – As Adjusted Basis – Q3 2023 $1.09"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjustments exclude $0.01 per share consisting mainly of Corporate acquisition related costs in the third quarter of 2023.The $0.01 of EPS adjustments per share consists of $350K of pre-tax charges offset by $80K of tax benefit for net impact of $270K."
+    },
+    {
+      "type": "TableElement",
+      "text": "EPS – Adjusted Basis Reconciliation – YTD Q3 2023 EPS – GAAP Basis – YTD Q3 2023 $2.34 Adjustments (defined below) 0.11 EPS – As Adjusted Basis – YTD Q3 2023 $2.45"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjustments exclude $0.11 per share consisting of executive management transition costs at Corporate, CMT acquisition inventory step-up charges and restructuring charges within the A&D segment, and Corporate acquisition costs in the first nine months of 2023.The $0.11 of EPS adjustments per share consists of $3,642K of pre-tax charges offset by $838K of tax benefit for net impact of $2,804K. Field: Page; Sequence: 14; Options: Last"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "NEWS FROM",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Q3 2024 Sales increased $12.1 million (5 percent) to $260.8 million compared to $248.7 million in Q3 2023. Q3 organic sales increased $8.7 million (4 percent) and the MPE acquisition contributed $3.4 million (1 percent) of revenue in the quarter."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Q3 2024 GAAP EPS increased 5 percent to $1.13 per share compared to $1.08 per share in Q3 2023. Q3 2024 Adjusted EPS increased 6 percent to $1.16 per share compared to $1.09 per share in Q3 2023."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Q3 2024 Entered Orders increased $98.4 million (46 percent) compared to the prior year period to $311.7 million (book-to-bill of 1.20x), resulting in record ending backlog of $889 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Net cash provided by operating activities was $55 million YTD, an increase of $26 million compared to the prior year period."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Net debt (total borrowings less cash on hand) was $110 million, resulting in a 0.73x leverage ratio and $571 million in liquidity as of June 30, 2024."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Sales increased $11.0 million (10.6 percent) to $114.5 million in Q3 2024 from $103.5 million in Q3 2023. Sales growth was driven by strength across Navy, commercial aerospace, and defense aerospace programs."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Q3 2024 EBIT decreased $0.3 million to $21.4 million from $21.7 million in Q3 2023. Adjusted EBIT decreased $0.2 million in Q3 2024 to $21.5 million (18.7 percent margin) from $21.7 million (20.9 percent margin) in Q3 2023. Profitability in the quarter was negatively impacted by margin erosion on space development programs at VACCO. Additionally, unfavorable revenue mix and inflationary pressures were offset by leverage on higher volume and price increases."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Entered Orders increased $65 million (79 percent) to $147 million in Q3 2024 compared to $82 million in Q3 2023. The increase was primarily driven by strength in Navy (Virginia Class Block V QARMS and Ejection System development), and a strong quarter for commercial and defense aerospace aftermarket orders. The orders in the quarter resulted in a segment book-to-bill of 1.28x and record ending backlog of $595 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Sales increased $0.3 million (0.3 percent) to $90.3 million in Q3 2024 from $90.0 million in Q3 2023. As expected, USG revenue growth moderated in Q3 after 13 percent growth in the first half of the year. Revenue grew sequentially and is up 8 percent Q3 YTD, which remains in line with our expectations for the year. Doble’s Q3 2024 sales increased by $0.4 million (0.5 percent), driven by higher services revenue offset by lower protection testing sales. NRG sales were flat compared to strong results in the prior year period."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "EBIT increased $1.8 million (9 percent) in Q3 2024 to $22.2 million from $20.4 million in Q3 2023. Adjusted EBIT increased $1.7 million in Q3 2024 to $22.2 million (24.6 percent margin) from $20.5 million (22.8 percent margin) in Q3 2023. Margin improvement was driven by mix related to increased services revenue and price increases, partially offset by inflationary pressures."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "●",
+          "Entered Orders increased $15 million (17 percent) to $100 million in Q3 2024. Doble orders increased $19 million (30 percent) on continuing strength in services and our lease pool business as utilities focus on keeping substations operational while coping with long lead times on new transformers. NRG’S orders were $19 million in the quarter. While down $4 million compared to the record prior year quarter, this represents the second highest orders quarter in NRG history and was in line with our expectations for a rebound in renewables orders as the market moves beyond last year’s elevated activity related to the initial Inflation Reduction Act spending. The segment book-to-bill was 1.11x in the quarter, resulting in ending backlog of $129 million."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 261.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Sales increase 5% to $261 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " | ● | Q3 2024 Sales increased $12.1 million (5 percent) to $260.8 million compared to $248.7 million in Q3 2023. Q3 organic sales increased $8.7 million (4 percent) and the MPE acquisition contributed $3.4 million (1 percent) of revenue in the quarter."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "111.059998",
+    "return_10d_pct": "9.1572",
+    "return_20d_pct": "6.0688",
+    "return_30d_pct": "3.4846",
+    "return_60d_pct": "10.8590",
+    "return_90d_pct": "28.4441"
+  },
+  "text_stats": {
+    "primary_text_len": 13298,
+    "exhibit_text_len": 27858,
+    "combined_text_len": 41158,
+    "semantic_text_len": 28223,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

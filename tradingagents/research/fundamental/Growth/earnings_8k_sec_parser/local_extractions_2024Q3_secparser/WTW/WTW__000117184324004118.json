@@ -1,0 +1,923 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WTW",
+    "cik": "1140536",
+    "event_date": "",
+    "event_accession": "0001171843-24-004118",
+    "primary_8k_doc": "exh_991.htm",
+    "exhibit_docs": [
+      "exh_992.htm",
+      "f8k_072524.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTW_000117184324004118_exh_991.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTW_000117184324004118_exh_992.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTW_000117184324004118_f8k_072524.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WTW",
+    "cik": "1140536",
+    "entity_name": "WILLIS TOWERS WATSON PLC",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2244000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "203000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "29090000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-453000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-61000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "134000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.090463",
+    "operating_cash_flow_to_revenue": "0.059715",
+    "assets_to_revenue": "12.963458",
+    "financing_cash_flow_to_revenue": "-0.201872",
+    "investing_cash_flow_to_revenue": "-0.027184"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Operating Income/Margin, (4) Adjusted EBITDA/Margin, (5) Adjusted Net Income, (6) Adjusted Diluted Earnings Per Share, (7) Adjusted Income Before Taxes, (8) Adjusted Income Taxes/Tax Rate and (9) Free Cash Flow.",
+      "EPS and % 2023 2024 2023 2024 $4,403 $4,606 5% $2,159 $2,265 5% Revenue % change $427 $492 15% $142 $212 49% Income from Operations % change 9.",
+      "Net Income % change $2.",
+      "EPS 1 Q2 2024 Results Adjusted Operating Margin 1 Transformation Program $394 of run rate savings since inception Free Cash Flow 1 $2.",
+      "Operating income was $276 million in the quarter, an increase of 24% from the prior year.",
+      "Operating income of $202 million in the quarter increased by 39%."
+    ],
+    "guidance_evidence": [
+      "Outlook wtwco.",
+      "expected expenses; the risk that investment levels, including cash spending, to achieve additional transformation savings increase; the laws of Ireland being different from the laws of the U.",
+      "expected total one - time program costs Field: Page; Sequence: 11 Field: /Page Maintaining a Flexible Balance Sheet wtwco.",
+      "expected to be a minimal impact based on current spot rates Revenue Grow, Simplify, Transform: Focus on the execution on our strategy with a clear path to 2024 Financial Targets Revenue $9.",
+      "expected from both book - of - business settlements and interest income Adjusted Operating Margin 23."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for discretionary services.",
+      "ains ‘forward - looking statements’ within the meaning of Section 27A of the Securities Act of 1933, and Section 21E of the Securities Exchange Act of 1934, which are intended to be covered by the safe harbors created by those laws.",
+      "airment charges or write - off of receivables, are forward - looking statements.",
+      "ainties.",
+      "artificial intelligence; the risks relating to the transitional arrangements in effect subsequent to our previously - completed sale of Willis Re to Arthur J.",
+      "aintaining industry standards and meeting client preferences; changes and developments in the insurance industry or the U."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges or write - off of receivables, are forward - looking statements.",
+      "uncertainties.",
+      "uncertainties inherent in the forward - looking statements included in this document, our inclusion of this information is not a representation or guarantee by us that our objectives and plans will be achieved.",
+      "uncertainties and assumptions, the forward - looking events discussed in this document may not occur, and we caution you against unduly relying on these forward - looking statements.",
+      "headwinds • Headwind from incremental cash investment in Transformation Program 2022 7."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "exh_992.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "WT Earning 2024 Seco July 25, 2024 W s Release Supplemental Materials nd Quarter Financial Results wtwco.com © 2024 WTW. All rights reserved."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "wtwco.com © 2024 WTW. All rights reserved. WTW Forward - Looking Statements This document contains ‘forward - looking statements’ within the meaning of Section 27A of the Securities Act of 1933, and Section 21E of the Securities Exchange Act of 1934, which are intended to be covered by the safe harbors created by those laws. These forward - looking statements include information about possible or assumed future results of our operations. All statements, other than statements of historical facts, that address activities, events, or developments that we expect or anticipate may occur in the future, including such things as our outlook, plans and references to future performance, including our future financial and operating results (including our revenue, costs, or margins), short - term and long - term financial goals, plans, objectives, expectations and intentions, including with respect to organic revenue growth, free cash flow generation, adjusted net revenue, adjusted operating margin and adjusted earnings per share; future share repurchases; demand for our services and competitive strengths; existing and evolving business strategies including those related to acquisition and disposition activity; the benefits of new initiatives; the growth of our business and operations; the sustained health of our product, service, transaction, client, and talent assessment and management pipelines; our ability to successfully manage ongoing leadership, organizational, and technology changes, including investments in improving systems and processes, and in connection with our acquisition and divestiture activities; our ability to implement and realize anticipated benefits of any cost - savings initiatives including the multi - year operational Transformation program; the potential impact of natural or man - made disasters like health pandemics and other world crises; future capital expenditures; ongoing working capital efforts; the impact of changes to tax laws on our financial results; and our recognition of future impairment charges or write - off of receivables, are forward - looking statements. Also, when we use words such as ‘may’, ‘will’, ‘would’, ‘anticipate’, ‘believe’, ‘estimate’, ‘expect’, ‘intend’, ‘plan’, ‘continues’, ‘seek’, ‘target’, ‘goal’, ‘focus’, ‘probably’, or similar expressions, we are making forward - looking statements. Such statements are based upon the current beliefs and expectations of our management and are subject to significant risks and uncertainties. Actual results may differ from those set forth in the forward - looking statements. All forward - looking disclosure is speculative by its nature. There are important risks, uncertainties, events and factors that could cause our actual results or performance to differ materially from those in the forward - looking statements contained in this document, including the following: our ability to successfully establish, execute and achieve our global business strategy as it evolves; our ability to fully realize anticipated benefits of our growth strategy, including inorganic growth through acquisitions; our ability to make divestitures or acquisitions, including our ability to integrate or manage acquired businesses or de - integrate businesses to be disposed, as well as our ability to identify and successfully execute on opportunities for strategic collaboration; our ability to successfully manage ongoing organizational changes, including as part of our multi - year operational transformation program, investments in improving systems and processes, and in connection with our acquisition and divestiture activities and related to changes in leadership in any of our businesses; risks relating to changes in our management structures and in senior leadership; our ability to achieve our short - term and long - term financial goals, such as with respect to our cash flow generation, and the timing with respect to such achievement; the risks related to changes in general economic conditions, business and political conditions, changes in the financial markets, inflation, credit availability, increased interest rates and changes in trade policies; the risks to our short - term and long - term financial goals from any of the risks or uncertainties set forth herein; the risks relating to the adverse impacts of macroeconomic trends, including inflation, changes in interest rates and trade policies, as well as political events, war, such as the Russia - Ukraine and Israel - Hamas wars, and other international disputes, terrorism, natural disasters, public health issues and other business interruptions on the global economy and capital markets, which could have a material adverse effect on our business, financial condition, results of operations, and long - term goals; our ability to successfully hedge against fluctuations in foreign currency rates; the risks relating to the adverse impacts of natural or man - made disasters like health pandemics and other world health crises on the demand for our products and services, our cash flows and our business operations; material interruptions to or loss of our information processing capabilities, or failure to effectively maintain and upgrade our information technology resources and systems and related risks of cybersecurity breaches or incidents; our ability to comply with complex and evolving regulations related to data privacy, cybersecurity, and artificial intelligence; the risks relating to the transitional arrangements in effect subsequent to our previously - completed sale of Willis Re to Arthur J. Gallagher & Co.; significant competition that we face and the potential for loss of market share and/or profitability; the impact of seasonality and differences in timing of renewals and non - recurring revenue increases from disposals and book - of - business sales; the insufficiency of client data protection, potential breaches of information systems or insufficient safeguards against cybersecurity breaches or incidents; the risk of increased liability or new legal claims arising from our new and existing products and services, and expectations, intentions and outcomes relating to outstanding litigation; the risk of substantial negative outcomes on existing litigation or investigation matters; changes in the regulatory environment in which we operate, including, among other risks, the impacts of pending competition law and regulatory investigations; various claims, government inquiries or investigations or the potential for regulatory action; our ability to integrate direct - to - consumer sales and marketing solutions with our existing offerings and solutions; disasters or business continuity problems; our ability to successfully enhance our billing, collection and other working capital efforts, and thereby increase our free cash flow; our ability to properly identify and manage conflicts of interest; reputational damage, including from association with third parties; reliance on third - party service providers and suppliers; the loss of key employees or a large number of employees and rehiring rates; our ability to maintain our corporate culture; doing business internationally, including the impact of foreign currency exchange rates; compliance with extensive government regulation; the risk of sanctions imposed by governments, or changes to associated sanction regulations (such as sanctions imposed on Russia) and related counter - sanctions; our ability to effectively apply technology, data and analytics changes for internal operations, maintaining industry standards and meeting client preferences; changes and developments in the insurance industry or the U.S. healthcare system, including those related to Medicare, any legislative actions from the current U.S. Congress, the recent Final Rule from the Centers for Medicare & Medicaid Services for contract year 2025 and any judicial claims, rulings and appeals related thereto, and any other changes and developments in legal, regulatory, economic, business or operational conditions impacting our Medicare benefits businesses such as TRANZACT; the inability to protect our intellectual property rights, or the potential infringement upon the intellectual property rights of others; fluctuations in our pension assets and liabilities and related changes in pension income, including as a result of, related to, or derived from movements in the interest rate environment, investment returns, inflation, or changes in other assumptions that are used to estimate our benefit obligations and its effect on adjusted earnings per share; our capital structure, including indebtedness amounts, the limitations imposed by the covenants in the documents governing such indebtedness and the maintenance of the financial and disclosure controls and procedures of each; our ability to obtain financing on favorable terms or at all; adverse changes in our credit ratings; the impact of recent or potential changes to U.S. or foreign laws, and the enactment of additional, or the revision of existing, state, federal, and/or foreign laws and regulations, recent judicial decisions and development of case law, other regulations and any policy changes and legislative actions, including those that impact our effective tax rate; U.S. federal income tax consequences to U.S. persons owning at least 10% of our shares; changes in accounting principles, estimates or assumptions; our recognition of future impairment charges or write - off of receivables; risks relating to or arising from environmental, social and governance practices; fluctuation in revenue against our relatively fixed or higher than expected expenses; the risk that investment levels, including cash spending, to achieve additional transformation savings increase; the laws of Ireland being different from the laws of the U.S. and potentially affording less protections to the holders of our securities; and our holding company structure potentially preventing us from being able to receive dividends or other distributions in needed amounts from our subsidiaries. The foregoing list of factors is not exhaustive and new factors may emerge from time to time that could also affect actual performance and results. For more information, please see Part I, Item 1A in our Annual Report on Form 10 - K, and our subsequent filings with the SEC. Copies are available online at www.sec.gov or www.wtwco.com. Although we believe that the assumptions underlying our forward - looking statements are reasonable, any of these assumptions, and therefore also the forward - looking statements based on these assumptions, could themselves prove to be inaccurate. Given the significant uncertainties inherent in the forward - looking statements included in this document, our inclusion of this information is not a representation or guarantee by us that our objectives and plans will be achieved. Our forward - looking statements speak only as of the date made, and we will not update these forward - looking statements unless the securities laws require us to do so. With regard to these risks, uncertainties and assumptions, the forward - looking events discussed in this document may not occur, and we caution you against unduly relying on these forward - looking statements. 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "WTW Non - GAAP Measures wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 3 In order to assist readers of our consolidated financial statements in understanding the core operating results that WTW’s management uses to evaluate the business and for financial planning, we present the following non - GAAP measures: (1) Constant Currency Change, (2) Organic Change, (3) Adjusted Operating Income/Margin, (4) Adjusted EBITDA/Margin, (5) Adjusted Net Income, (6) Adjusted Diluted Earnings Per Share, (7) Adjusted Income Before Taxes, (8) Adjusted Income Taxes/Tax Rate and (9) Free Cash Flow. The Company believes that these measures are relevant and provide useful information widely used by analysts, investors and other interested parties in our industry to provide a baseline for evaluating and comparing our operating performance, and in the case of free cash flow, our liquidity results. Reconciliations of these measures are included in the accompanying appendix of these earning release supplemental materials. The Company does not reconcile its forward - looking non - GAAP financial measures to the corresponding U.S. GAAP measures, due to variability and difficulty in making accurate forecasts and projections and/or certain information not being ascertainable or accessible; and because not all of the information, such as foreign currency impacts necessary for a quantitative reconciliation of these forward - looking non - GAAP financial measures to the most directly comparable U.S. GAAP financial measure, is available to the Company without unreasonable efforts. For the same reasons, the Company is unable to address the probable significance of the unavailable information. The Company provides non - GAAP financial measures that it believes will be achieved, however it cannot accurately predict all of the components of the adjusted calculations and the U.S. GAAP measures may be materially different than the non - GAAP measures."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Organic revenue growth 1 of 6%, Adjusted Operating Margin 1 expansion of +240 bps and Adjusted Diluted EPS 1 growth of 24% in Q2 2024 Continued to make significant progress on strategic priorities with our specialization strategy, new talent and smart connections contributing to growth Realized $24 million of incremental annualized savings in Q2 2024, bringing the total to $394 million since the Transformation Program inception Continued to return capital to shareholders, with share repurchases of $200 million and dividends of $90 million in Q2 2024 Focused on delivering our 2024 financial targets Key Takeaways 1 Signifies Non - GAAP financial measures. See appendix for Non - GAAP reconciliations. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 4"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q2 2024 GAAP Financial Results Key figures wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 5 Six months ended June 30, Three months ended June 30, $USD million, except EPS and % 2023 2024 2023 2024 $4,403 $4,606 5% $2,159 $2,265 5% Revenue % change $427 $492 15% $142 $212 49% Income from Operations % change 9.7% 10.7% 100 bps 6.6% 9.4% 280 bps Operating Margin % change, basis points $302 $336 11% $96 $142 48% Net Income % change $2.77 $3.20 16% $0.88 $1.36 55% Diluted EPS % change $430 $431 - % Net Cash From Operating Activities % change"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q2 2024 Key Figures, Including Non - GAAP Financial Results Total Revenue +6% Q2 2024 Organic 1 +7% Q2 2023 Organic 1 Adjusted Diluted EPS 1 Q2 2024 Results Adjusted Operating Margin 1 Transformation Program $394 of run rate savings since inception Free Cash Flow 1 $2.3B Q2 2024 $2.55 Q2 2024 $2.05 Q2 2023 $361M YTD Q2 2024 +24% Q2 2024 17.0% +240 bps Q2 2024 Q2 2024 wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 6 14.6% Q2 2023 +$11M YTD Q2 - 24 v. YTD Q2 - 23 $350M YTD Q2 2023 1 Signifies Non - GAAP financial measures. See appendix for Non - GAAP reconciliations."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Financial Review wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 7"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q2 2024 Segment Highlights 1 • For the quarter, HWC had organic revenue growth 2 of 5%. – Health had organic revenue growth driven by increased project work in North America and strong client retention, new local appointments and the continued expansion of our Global Benefits Management client portfolio in International and Europe. – Wealth generated organic revenue growth from higher levels of Retirement work in North America and Europe and an increase in our Investments business due to capital market improvements and growth from our LifeSight solution. – Career had organic revenue growth from increased project work and product revenue in Employee Experience and Work & Rewards. – BD&O’s organic revenue growth was flat for the quarter as a result of growth in Outsourcing offset by moderated growth in Individual Marketplace. • Operating income was $276 million in the quarter, an increase of 24% from the prior year. Operating margin increased 360 bps from the prior year primarily from operating leverage and Transformation savings. Quarterly Segment Performance: Health, Wealth & Career Revenue ($M) $1,260 $1,215 Q2 - 24 Q2 - 23 Segment Operating Margin 1 21.9% 18.3% Q2 - 24 Q2 - 23 Q2 - 23 Q2 - 24 Organic Revenue Growth 2 4% 9% Health 5% 5% Wealth 4% 4% Career 7% 0% Benefits Delivery & Outsourcing (BD&O) 5% 5% Health, Wealth & Career 1 Includes Segment financial measures. See accompanying Earnings Release for Supplemental Segment Information. 2 Signifies Non - GAAP financial measure. See appendix for Non - GAAP reconciliations. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 8"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Q2 2024 Segment Highlights 1 • For the quarter, R&B had organic revenue growth of 10% 2 . – CRB generated organic revenue growth of 11% 2 primarily driven by higher levels of new business activity, strong client retention and renewal increases across all geographies. – ICT had flat organic revenue growth for the quarter primarily due tempered demand for discretionary services. • Operating income of $202 million in the quarter increased by 39%. • Operating margin improved by 450 bps due to operating leverage from strong revenue growth in CRB, Transformation savings and interest income. Quarterly Segment Performance: Risk & Broking Q2 - 24 Q2 - 23 $979 $900 Revenue ($M) Segment Operating Margin 1 20.6% 16.1% Q2 - 24 Q2 - 23 Q2 - 23 Q2 - 24 Organic Revenue Growth 2 7% 11% Corporate Risk & Broking (CRB) 3% 0% Insurance Consulting & Technology (ICT) 6% 10% Risk & Broking 1 Includes Segment financial measures. See accompanying Earnings Release for Supplemental Segment Information. 2 Signifies Non - GAAP financial measure. See appendix for Non - GAAP reconciliations. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 9"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Transformation Program: Savings wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 10 Projected Cumulative From Inception Q2 - 24 YTD ($ millions) $90 $18 Real Estate Rationalization $61 $19 Technology Modernization $243 $20 Process Optimization ~$450 $394 $57 Total Savings Projected to generate ~$450 million of annualized savings through 2024 Delivering on our financial commitments • Delivering ~ $450 million of run - rate savings to contribute ~450 bps of margin improvement , while investing for growth • Realized $24 million of incremental annualized savings during the quarter and $394 million of annualized savings since program inception • Cumulative run - rate savings of $394 million are primarily attributable to Process Optimization as we focus on building an infrastructure from which to drive further efficiencies"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Transformation Program: Costs to Achieve wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 11 Projected Cumulative From Inception Q2 - 24 YTD ($ millions) $198 $39 Real Estate Rationalization $267 $75 Technology Modernization $437 $112 Process Optimization ~$1,045 $902 $226 Total Restructuring / Transformation Costs ~$130 $113 $23 Total Capital Expenditures ~$1,175 ~90%/10% 2.4x $1,015 ~85%/15% $249 ~95%/5% Total Costs Incurred % Cash / % Non - Cash Cash Costs to Achieve / Savings • Incurred $89 million of restructuring / transformation related charges during the quarter • Incurred $12 million of capital expenditures during the quarter • The cumulative total investment (OpEx + CapEx) is $1,015 million representing ~86% of expected total one - time program costs"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Maintaining a Flexible Balance Sheet wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 12 1 Total Debt equals sum of current debt and long - term debt as shown on the Consolidated Balance Sheets. 2 Signifies Non - GAAP financial measure. See appendix for Non - GAAP reconciliations. Dec 31, 2023 June 30, 2024 ($ millions) 1,424 1,247 Cash and Cash Equivalents 5,217 5,307 Total Debt 1 9,593 9,415 Total Equity 2.1x 2.1x Debt to Adj. EBITDA 2 Trailing 12 - month Reinforcing our business fundamentals; safeguarding WTW’s financial strengths Disciplined capital management strategy Provides WTW with the financial flexibility to reinvest in our businesses, capitalize on market growth opportunities and support significant value creation for shareholders • Our capital structure provides a solid foundation of business strength and reinforces our ability to capture long - term growth • History of effectively managing our leverage with a commitment to maintaining our investment grade credit rating • Committed to a disciplined approach to managing outstanding debt and our leverage profile"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Executing Against a Balanced Capital Allocation Strategy Allocating capital to opportunities with the potential for highest return CASH RETURNED TO SHAREHOLDERS $ 11.0 B FY2016 to Q2 2024 MEANINGFUL DIVIDEND GROWTH + 8 % Cash dividend growth 8 years CAGR $709 $602 $1,627 $3,530 $1,000 $1,352 $277 2017 $374 2021 $369 2022 $3,899 $595 $396 $199 2016 $986 $908 $479 $150 $346 $306 $329 $346 2018 2019 2020 $2,001 Share repurchases Dividends $477 $301 $352 $176 2023 Q2 2024 0.82 0.84 0.88 2016 2017 2018 2019 2020 2021 2022 2023 2024 $0.48 $0.53 $0.60 $0.65 $0.71 $0.80 +8% Quarterly cash wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 13 dividend per share Capital Allocation Priorities • Reinvest in capabilities, businesses, and processes • Invest in innovation, technology, and new business • Return excess cash to shareholders through share repurchases and dividends to create long - term shareholder value • Strengthen balance sheet and liquidity • Sustain dividends and payout ratio • Business portfolio management • Pursue opportunistic M&A to strengthen capabilities Q2 2024 Highlights • Repurchased $200 million of shares during the quarter • Paid quarterly cash dividends of $90 million, $0.88 per common share"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Business Overview wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 14"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 14"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Delivering superior advice, broking and solutions in the areas of people, risk and capital We Have a Portfolio of Leading Businesses in Attractive Markets We have: A distinctive mix of complementary businesses • Accomplished and aspiring talent • Collaborative client - first culture • Sophisticated data and analytics • Powerful tools A strong balance sheet and significant financial flexibility ~37 M individuals use our platforms to access benefits and insurance wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 15"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 15"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Segment Overview: Health, Wealth & Career 1 Revenue ($M) Segment Operating Income ($M) Segment Operating Margin % Health, Wealth & Career: World - class portfolio of leading businesses providing advisory and consulting services within human capital, employee benefits and retirement verticals Benefits Delivery & Outsourcing provides medical exchange and outsourcing services to active employees and retirees across the group and individual markets as well as pension outsourcing Health provides advice, broking, solutions and software for employee benefit plans, HR organizations and management teams of our clients Wealth provides advice and management for retirement and investment asset owners using a sophisticated framework for managing risk Career provides compensation advisory services, employee experience software and platforms, and other career - related consulting services to our clients FY 2023 Revenue and Organic Growth Health 24% Wealth 30% Career 12% BD&O 34% +6% Organic +6% Organic $4,586 $4,895 $5,268 $5,287 $5,582 $1,149 $1,236 $1,346 $1,382 $1,565 25.0% 25.2% 2019 2020 2021 2022 2023 2019 2020 2021 2022 2023 2019 2020 2021 2022 2023 1 Includes Segment financial measures. See accompanying Earnings Release for Supplemental Segment Information. Segment results prior to 2022 were recast to reflect the realignment effective January 1, 2022. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 16 25.6% 26.1% 28.0% +6% Organic +5% Organic"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 16"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Segment Overview: Risk & Broking 1 Risk & Broking: Risk advisory and solutions business delivering innovative, integrated solutions tailored to client needs and underpinned by cutting edge data and analytics, technology and experienced risk thinkers Insurance Consulting and Technology provides advice and technology solutions to the insurance industry to help clients measure and manage risk and capita and improve performance Corporate Risk & Broking provides a broad range of risk advice insurance brokerage and consulting services to clients worldwide ranging from small businesses to multinational corporations Revenue ($M) FY 2023 Revenue and Organic Growth +7% Organic ICT 11% CRB 89% +10% Organic $3,382 2019 2020 2021 2022 2023 2019 2020 2021 2022 2023 2019 2020 2021 2022 2023 1 Includes Segment financial measures. See accompanying Earnings Release for Supplemental Segment Information. Segment results prior to 2022 were recast to reflect the realignment effective January 1, 2022. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 17 $3,316 $3,564 $3,460 $3,735 $650 $714 $734 Segment Operating Income ($M) $835 $813 19.8% 21.6% Segment Operating Margin % 23.4% 21.2% 21.8%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 17"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Value Creation Framework wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 18 1. Seek profitable growth through innovation in attractive markets 2. Target superior shareholder returns through buybacks and prudent investments 3. Defensive business model with historically lower volatility than other financial services subsectors 4. Accelerate operational transformation, resulting in meaningful margin improvements 5. Experienced, diverse management and global leadership team focused on achieving targets"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 18"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Strategy & Outlook wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 19"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 19"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "2024 Financial Targets 1 1 2024 Financial Targets reflect improvements based on our performance during the first half of 2024, both current and anticipated market conditions and the Company’s current beliefs and expectations as of July 25, 2024 and are subject to significant risks and uncertainties. Also includes Non - GAAP financial measures. We do not reconcile forward - looking Non - GAAP measures for reasons explained in the appendix. 2 Includes the impact of other items, including but not limited to share repurchases, interest expense and provision for income taxes. Share repurchases are subject to market conditions among other relevant factors. Capital allocation decisions will depend among other things on what we view as relative return opportunities at the time. $16.00 - $17.00 Adjusted Diluted EPS ~$1.65 - $2.65 2 $ 14.49 ~($0.14) Adjusted Operating Margin 23.0% - 23.5% 22.0% 100 - 150 basis points improvement, net of investments $9.5B $0.4B - $0.6B $9.9B+ Foreign exchange expected to be a minimal impact based on current spot rates Revenue Grow, Simplify, Transform: Focus on the execution on our strategy with a clear path to 2024 Financial Targets Revenue $9.9B+ Mid - single digit (MSD) organic revenue growth with no meaningful year - over - year impact expected from both book - of - business settlements and interest income Adjusted Operating Margin 23.0 - 23.5% Updated from 22.5% - 23.5% Margin expansion driven by improved operational efficiency and expense discipline in both HWC and R&B, net of investments Transformation Savings to deliver ~$450M of cumulative run - rate savings by year - end Adjusted Diluted EPS $16.00 - $17.00 Updated from $15.40 - $17.00 Increased adjusted operating income to contribute to strong EPS growth Expect approximately $88M in non - cash pension income , down from $109M in 2023 wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 20"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 20"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "2024 Financial Targets 1 Based on our performance during the first half of 2024 and both current and anticipated market conditions, the Company's full - year targets for 2024, as compared with those targets that have been previously provided, are as follows. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 21 Updated Previous $9.9+ billion* $9.9+ billion Revenue 23.0 - 23.5% 22.5 - 23.5% Adjusted Operating Margin $16.00 - $17.00 $15.40 - $17.00 Adjusted Diluted EPS ~$450 million ~$425 million Transformation Program Annual Cost Savings ~$1.175 billion ~$1.125 billion Transformation Program Costs to Achieve $88 million* $88 million Non - Cash Pension Income $0.10 $0.05 Foreign - Currency Headwind on Adjusted Diluted EPS *No update to previous targets 1 2024 Financial Targets reflect improvements based on our performance during the first half of 2024, both current and anticipated market conditions and the Company’s current beliefs and expectations as of July 25, 2024 and are subject to significant risks and uncertainties. Also includes Non - GAAP financial measures. We do not reconcile forward - looking Non - GAAP measures for reasons explained in the appendix."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 21"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Free Cash Flow Margin Expectations 1 • Adjusted operating margin expansion • Improvement in TRANZACT Free Cash Flow profile driven by maturation of the business and product mix • Non - recurrence of prior year headwinds • Headwind from incremental cash investment in Transformation Program 2022 7.6% 16%+ 12.6% Free Cash Flow Margin 2023 Long Term • Expect incremental improvement in 2024 Adjusted operating margin expansion Additional improvement in TRANZACT Free Cash Flow profile ; expected to be cash flow positive in the near term • Headwind from cash investment in 2024 in HWC & R&B for product development to support future growth Cash investment in Transformation will subside after 2024 Remain focused on other levers to improve Free Cash Flow, including improved working capital 2024 and Beyond: 1 Reflects the Company’s current beliefs and expectations as of July 25, 2024 and are subject to significant risks and uncertainties. Also includes Non - GAAP financial measures. Please see our financial presentation for the year and quarter ended December 31, 2023 for a reconciliation of Non - GAAP measures presented here. We do not reconcile forward - looking Non - GAAP measures for reasons explained in the appendix. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 22"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 22"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Appendix: Reconciliation of Non - GAAP Measures wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 23"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 23"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Constant Currency and Organic Revenue Change QTD (i) Components of revenue change may not add due to rounding. (ii) Interest income contributed 1% to organic change for total revenue for the three months ended June 30, 2024. Organic change for total revenue excluding this contribution was 5% for the three months ended June 30, 2024. Health, Wealth & Career 5% 0% 4% (1)% 3% $ 1,209 $ 1,251 Revenue excluding interest income 6 9 Interest income 5% 0% 4% (1)% 4% 1,215 1,260 Total Risk & Broking 8% 0% 8% (1)% 7% 885 950 Revenue excluding interest income 15 29 Interest income 10% 0% 10% (1)% 9% 900 979 Total 7% 0% 7% (1)% 6% $ 2,115 $ 2,239 Segment Revenue 30 20 Reimbursable expenses and other 14 6 Interest income 0% 6% (ii) 6% (1)% 5% $ 2,159 $ 2,265 Revenue Less: Currency Impact Less: Acquisitions/ Divestitures As reported, USD millions except % Components of Revenue Change (i) As Reported % Change Constant Currency Change Organic Change Three Months Ended June 30, 2024 2023 wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 24"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 24"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Constant Currency and Organic Revenue Change YTD (i) Components of revenue change may not add due to rounding. (ii) Interest income did not contribute to organic change for the six months ended June 30, 2024. Health, Wealth & Career 4% 0% 4% 0% 3% $ 2,491 $ 2,578 Revenue excluding interest income 11 18 Interest income 4% 0% 4% 0% 4% 2,502 2,596 Total Risk & Broking 7% 0% 7% 0% 7% 1,777 1,900 Revenue excluding interest income 27 57 Interest income 9% 0% 9% 0% 8% 1,804 1,957 Total 6% 0% 6% 0% 6% $ 4,306 $ 4,553 Segment Revenue 68 41 Reimbursable expenses and other 29 12 Interest income 0% 5% (ii) 5% 0% 5% $ 4,403 $ 4,606 Revenue Less: Currency Constant Currency Less: Acquisitions/ As reported, USD millions except % Components of Revenue Change (i) Six Months Ended June 30, As Reported 2024 2023 % Change Organic Impact Change Divestitures Change wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 25"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 25"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted Op Income and Margin, Adj. EBITDA and Margin QTD wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 26 As reported, USD millions except % Three Months Ended June 30, (i) Represents a provision related to potential litigation arising out of a structured insurance program originally placed for a client over 15 years ago. The program is of a type and complexity that was highly bespoke to the client and for that reason is unlikely to be exactly replicated elsewhere. Because of this, while we do not believe the potential litigation is material, we believe excluding this matter from adjusted results makes results more comparable from period to period and more representative of our core business operations. 2023 2024 6.6% 142 $ 9.4% 212 $ Income from operations and Operating margin Adjusted for certain items: 70 60 Amortization 10 3 Restructuring costs 93 97 Transaction and transformation — 13 Provision for specified litigation matter (i) 14.6% 315 $ 17.0% 385 $ Adjusted operating income and Adjusted operating income margin 2023 2024 4.4% 96 $ 6.3% $ 142 Net Income 24 26 Provision for income taxes 57 68 Interest expense 64 57 Depreciation 70 60 Amortization 10 3 Restructuring costs 93 97 Transaction and transformation — 13 Provision for specified litigation matter (i) (3) — Gain on disposal of operations 19.0% 20.6% $ 411 $ 466 Adjusted EBITDA and Adjusted EBITDA Margin Three Months Ended June 30,"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 26"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted Op Income and Margin, Adj. EBITDA and Margin YTD As reported, USD millions except % Six Months Ended June 30, 2023 2024 9.7% $ 427 10.7% $ 492 Income from operations and Operating margin Adjusted for certain items: 141 120 Amortization 13 21 Restructuring costs 152 222 Transaction and transformation — 13 Provision for specified litigation matter (i) 16.6% $ 733 18.8% $ 868 Adjusted operating income and Adjusted operating income margin 2023 2024 6.9% $ 302 7.3% $ 336 Net Income 74 74 Provision for income taxes 111 132 Interest expense 124 116 Depreciation 141 120 Amortization 13 21 Restructuring costs 152 222 Transaction and transformation — 13 Provision for specified litigation matter (i) (3) — Gain on disposal of operations 20.8% $ 914 22.4% $ 1,034 Adjusted EBITDA and Adjusted EBITDA Margin Six Months Ended June 30, (i) Represents a provision related to potential litigation arising out of a structured insurance program originally placed for a client over 15 years ago. The program is of a type and complexity that was highly bespoke to the client and for that reason is unlikely to be exactly replicated elsewhere. Because of this, while we do not believe the potential litigation is material, we believe excluding this matter from adjusted results makes results more comparable from period to period and more representative of our core business operations. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 27"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 27"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted Net Income and Adjusted Diluted EPS QTD As reported, USD millions except % (ii) (i) Represents a provision related to potential litigation arising out of a structured insurance program originally placed for a client over 15 years ago. The program is of a type and complexity that was highly bespoke to the client and for that reason is unlikely to be exactly replicated elsewhere. Because of this, while we do not believe the potential litigation is material, we believe excluding this matter from adjusted results makes results more comparable from period to period and more representative of our core business operations. The tax effect was calculated using an effective tax rate for each item. Three Months Ended June 30, 2024 2023 Net Income attributable to WTW $ 141 $ 94 Adjusted for certain items: 70 60 Amortization 10 3 Restructuring costs 93 97 Transaction and transformation — 13 Provision for specified litigation matter (i) (3) — Gain on disposal of operations (43) (44) Tax effect on certain items listed above (ii) (2) (7) Tax effect of significant adjustments $ 219 $ 263 Adjusted Net Income 107 103 Weighted - average ordinary shares, diluted $ 0.88 $ 1.36 Diluted Earnings Per Share Adjusted for certain items: (iii) 0.65 0.58 Amortization 0.09 0.03 Restructuring costs 0.87 0.94 Transaction and transformation — 0.13 Provision for specified litigation matter (i) (0.03) — Gain on disposal of operations (0.40) (0.43) Tax effect on certain items listed above (ii) (0.02) (0.07) Tax effect of significant adjustments $ 2.05 $ 2.55 Adjusted Diluted Earnings Per Share (iii) (iii) Per share values and totals may differ due to rounding. wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 28"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 28"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted Net Income and Adjusted Diluted EPS YTD As reported, USD millions except % (i) Represents a provision related to potential litigation arising out of a structured insurance program originally placed for a client over 15 years ago. The program is of a type and complexity that was highly bespoke to the client and for that reason is unlikely to be exactly replicated elsewhere. Because of this, while we do not believe the potential litigation is material, we believe excluding this matter from adjusted results makes results more comparable from period to period and more representative of our core business operations. (ii) The tax effect was calculated using an effective tax rate for each item. (iii) Per share values and totals may differ due to rounding. 2023 2024 $ 297 $ 331 Net Income attributable to WTW Adjusted for certain items: 141 120 Amortization 13 21 Restructuring costs 152 222 Transaction and transformation — 13 Provision for specified litigation matter (i) (3) — Gain on disposal of operations (77) (96) Tax effect on certain items listed above (ii) 2 (7) Tax effect of significant adjustments $ 525 $ 604 Adjusted Net Income 107 104 Weighted - average ordinary shares, diluted $ 2.77 $ 3.20 Diluted Earnings Per Share Adjusted for certain items: (iii) 1.31 1.16 Amortization 0.12 0.20 Restructuring costs 1.42 2.14 Transaction and transformation — 0.13 Provision for specified litigation matter (i) (0.03) — Gain on disposal of operations (0.72) (0.93) Tax effect on certain items listed above (ii) 0.02 (0.07) Tax effect of significant adjustments $ 4.89 $ 5.84 Adjusted Diluted Earnings Per Share (iii) Six Months Ended June 30, wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 29"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 29"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted Income Before Taxes & Adjusted Income Tax Rate QTD As reported, USD millions except % Three Months Ended March 31, 2023 2024 $ 120 $ 168 Income from continuing operations before income taxes Adjusted for certain items: 70 60 Amortization 10 3 Restructuring costs 93 97 Transaction and transformation — 13 Provision for specified litigation matter (i) (3) — Gain on disposal of operations $ 290 $ 341 Adjusted income before taxes $ 24 $ 26 Provision for income taxes 43 44 Tax effect on certain items listed above (ii) 2 7 Tax effect of significant adjustments $ 69 $ 77 Adjusted income taxes 19.8% 15.6% U.S. GAAP tax rate 23.7% 22.6% Adjusted income tax rate (i) Represents a provision related to potential litigation arising out of a structured insurance program originally placed for a client over 15 years ago. The program is of a type and complexity that was highly bespoke to the client and for that reason is unlikely to be exactly replicated elsewhere. Because of this, while we do not believe the potential litigation is material, we believe excluding this matter from adjusted results makes results more comparable from period to period and more representative of our core business operations. The tax effect was calculated using an effective tax rate for each item. (ii) wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 30"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 30"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted Income Before Taxes & Adjusted Income Tax Rate YTD and Free Cash Flow As reported, USD millions except % Six Months Ended March 31, 2023 2024 $ 376 $ 410 Income from continuing operations before income taxes Adjusted for certain items: 141 120 Amortization 13 21 Restructuring costs 152 222 Transaction and transformation — 13 Provision for specified litigation matter (i) (3) — Gain on disposal of operations $ 679 $ 786 Adjusted income before taxes $ 74 $ 74 Provision for income taxes 77 96 Tax effect on certain items listed above (ii) (2) 7 Tax effect of significant adjustments $ 149 $ 177 Adjusted income taxes 19.6% 18.1% U.S. GAAP tax rate 22.0% 22.5% Adjusted income tax rate Six Months Ended March 31, 2023 2024 $ 430 $ 431 Cash flows from operating activities (80) (70) Less: Additions to fixed assets and software for internal use $ 350 $ 361 Free Cash Flow (i) Represents a provision related to potential litigation arising out of a structured insurance program originally placed for a client over 15 years ago. The program is of a type and complexity that was highly bespoke to the client and for that reason is unlikely to be exactly replicated elsewhere. Because of this, while we do not believe the potential litigation is material, we believe excluding this matter from adjusted results makes results more comparable from period to period and more representative of our core business operations. The tax effect was calculated using an effective tax rate for each item. (ii) wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 31"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "Field: Page; Sequence: 31"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "About WTW At WTW (NASDAQ: WTW), we provide data - driven, insight - led solutions in the areas of people, risk and capital. Leveraging the global view and local expertise of our colleagues serving 140 countries and markets, we help organizations sharpen their strategy, enhance organizational resilience, motivate their workforce and maximize performance. Working shoulder to shoulder with our clients, we uncover opportunities for sustainable success — and provide perspective that moves you. Learn more at www.wtwco.com . wtwco.com © 2024 WTW. All rights reserved. See “WTW Forward - Looking Statements“ above for information about forward - looking statements and cautionary language, including how actual results may differ materially from those in the slide presentation. 32"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Rule-Page Field: /Rule-Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "xml version='1.0' encoding='ASCII'? Field: Set; Name: xdx; ID: xdx_02D_US%2DGAAP%2D2024 Field: Set; Name: xdx; ID: xdx_03D_WTW_wtwco.com_20240725 Field: Set; Name: xdx; ID: xdx_04E_20240725_20240725 Field: Set; Name: xdx; ID: xdx_059_edei%2D%2DAmendmentFlag_false Field: Set; Name: xdx; ID: xdx_055_edei%2D%2DEntityCentralIndexKey_0001140536 Field: Set; Name: xdx; ID: xdx_06B_USD_1_iso4217%2D%2DUSD Field: Set; Name: xdx; ID: xdx_062_Shares_2_xbrli%2D%2Dshares Field: Set; Name: xdx; ID: xdx_06D_USDPShares_3_iso4217%2D%2DUSD_xbrli%2D%2Dshares Willis Towers Watson PLC false 0001140536 0001140536 2024-07-25 2024-07-25 iso4217:USD xbrli:shares iso4217:USD xbrli:shares"
+    },
+    {
+      "type": "TitleElement",
+      "text": "UNITED STATES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECURITIES AND EXCHANGE COMMISSION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Washington, D.C. 20549"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FORM 8-K"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CURRENT REPORT"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Pursuant to Section 13 or 15(d)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "of the Securities Exchange Act of 1934"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Date of Report (Date of earliest event reported): July 25, 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Willis Towers Watson Public Limited Company"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Exact name of registrant as specified in its charter)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Ireland 001-16503 98-0352587 (State or other jurisdiction of incorporation) (Commission File Number) (IRS Employer Identification No.)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "c/o Willis Group Limited, 51 Lime Street, London, EC3M 7DQ, England"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Address, including Zip Code, of Principal Executive Offices)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Registrant’s telephone number, including area code: (011) (44)-(20)-3124-6000"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Not Applicable"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Former name or former address, if changed since last report)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Title of each class Trading Symbol(s) Name of each exchange on which registered Ordinary Shares, nominal value $0.000304635 per share WTW NASDAQ Global Select Market"
+    },
+    {
+      "type": "TextElement",
+      "text": "Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (17 CFR §230.405) or Rule 12b-2 of the Securities Exchange Act of 1934 (17 CFR §240.12b-2).Emerging growth company ☐If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐"
+    },
+    {
+      "type": "TopSectionTitle",
+      "text": "Item 2.02 Results of Operations and Financial Condition."
+    },
+    {
+      "type": "TextElement",
+      "text": "On July 25, 2024, Willis Towers Watson Public Limited Company (“WTW”) issued a press release announcing its financial results for the period ended June 30, 2024.A copy of WTW’s press release is attached hereto as Exhibit 99.1 to this Current Report on Form 8-K and is incorporated by reference herein. A reconciliation between certain non-GAAP financial measures and reported financial results is provided as an attachment to the press release. Item 7.01 Regulation FD. WTW also posted to the investor relations section of its website a slide presentation which it may refer to during its conference call to discuss the results. The slide presentation is attached hereto as Exhibit 99.2 to this Current Report on Form 8-K and is incorporated by reference herein.The information contained in Item 2.02 and Item 7.01 of this Current Report on Form 8-K (including Exhibits 99.1 and 99.2) is being furnished and shall not be deemed “filed” for the purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), or otherwise subject to the liabilities of that section. Such information shall not be incorporated by reference into any registration statement or other document pursuant to the Securities Act of 1933, as amended, or the Exchange Act, except as shall be expressly set forth by specific reference in any such filing. Item 9.01 Financial Statements and Exhibits. (d) ExhibitsThe following exhibits are furnished herewith:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Exhibit No. Description 99.1 Press release, dated July 25, 2024, announcing the financial results for the period ended June 30, 2024, for WTW. 99.2 Slide Presentation, supplementing the above press release. 104 Cover Page Interactive Data File (embedded within the Inline XBRL document)."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SIGNATURES"
+    },
+    {
+      "type": "TextElement",
+      "text": "Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized. WILLIS TOWERS WATSON PUBLIC LIMITED COMPANY Date: July 25, 2024 By: /s/ Andrew Krasner Name: Andrew Krasner Title: Chief Financial Officer Field: Set; Name: xdx; ID: xdx_08B_extensions eJxFjdEKgkAQRb/Afxj2OWq1IvAxqYgsQiR6XXKMJd2R2c3sk/rLViUaLgzDvWeuEBOxo62ukOG6zlLIsW4q5RAyLJHR3NAnkv0hBr8zvGvrWBk3nD8wIc+gZ5bTaK68MURbbbGIQa5m0cILZBhLCeejCHo/IVPqAo3TqgJlCjgzNazRKX6PH3LVkaH6PVRdkK0mE0M4laP9gUiGEZyoVS/ih4U0TUQwGSYQO6Zn41ObzqHpSdhUWPs6O9J/BV8Di0qH"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "Ireland",
+          "001-16503",
+          "98-0352587"
+        ],
+        [
+          "(State or other jurisdiction of incorporation)",
+          "(Commission File Number)",
+          "(IRS Employer Identification No.)"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "☐",
+          "Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "☐",
+          "Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "☐",
+          "Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "☐",
+          "Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        2,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "Title of each class",
+          "Trading Symbol(s)",
+          "Name of each exchange on which registered"
+        ],
+        [
+          "Ordinary Shares, nominal value $0.000304635 per share",
+          "WTW",
+          "NASDAQ Global Select Market"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Item 2.02",
+          "Results of Operations and Financial Condition."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Item 7.01",
+          "Regulation FD."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Item 9.01",
+          "Financial Statements and Exhibits."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        7,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "Exhibit No.",
+          "",
+          "Description"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "99.1",
+          "",
+          "Press release, dated July 25, 2024, announcing the financial results for the period ended June 30, 2024, for WTW."
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "99.2",
+          "",
+          "Slide Presentation, supplementing the above press release."
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "104",
+          "",
+          "Cover Page Interactive Data File (embedded within the Inline XBRL document)."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        6,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "WILLIS TOWERS WATSON PUBLIC LIMITED COMPANY",
+          "WILLIS TOWERS WATSON PUBLIC LIMITED COMPANY"
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "Date: July 25, 2024",
+          "",
+          ""
+        ],
+        [
+          "",
+          "By:",
+          "/s/ Andrew Krasner"
+        ],
+        [
+          "",
+          "Name:",
+          "Andrew Krasner"
+        ],
+        [
+          "",
+          "Title:",
+          "Chief Financial Officer"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 2244.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 48345,
+    "exhibit_text_len": 52440,
+    "combined_text_len": 100787,
+    "semantic_text_len": 54506,
+    "table_count": 11,
+    "semantic_parse_status": "sec_parser"
+  }
+}

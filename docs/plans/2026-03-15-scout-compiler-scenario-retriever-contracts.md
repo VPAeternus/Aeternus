@@ -223,7 +223,7 @@ Add tests that:
   - `scout_compiler_debug.json`
   - `akg_writeback_candidates.json`
 - the normal discovery summary remains unchanged
-- no universe size or shortlist logic is affected by sidecar compilation
+- no universe size or candidate_list logic is affected by sidecar compilation
 
 **Step 2: Run test to verify it fails**
 
@@ -297,7 +297,7 @@ Implement:
   - `coverage_precheck.json`
   - AKG
   - universe
-  - portfolio/queue/shortlist
+  - portfolio/queue/candidate_list
 - gap reporting with `wait_for_user = true`
 
 **Step 4: Run test to verify it passes**

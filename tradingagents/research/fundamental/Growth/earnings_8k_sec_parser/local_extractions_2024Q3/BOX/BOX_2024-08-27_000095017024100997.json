@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BOX",
+    "cik": "1372612",
+    "event_date": "2024-08-27",
+    "event_accession": "0000950170-24-100997",
+    "primary_8k_doc": "box-20240827.htm",
+    "exhibit_docs": [
+      "box-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BOX_000095017024100997_box-20240827.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BOX_000095017024100997_box-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BOX",
+    "cik": "1372612",
+    "entity_name": "Box, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "251898000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-30",
+    "net_income_value": "8350000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-30",
+    "assets_value": "1241163000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2024-01-31",
+    "financing_cash_flow_value": "-60921000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-30",
+    "investing_cash_flow_value": "-8782000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-30",
+    "operating_cash_flow_value": "124930000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.033148",
+    "operating_cash_flow_to_revenue": "0.495955",
+    "assets_to_revenue": "4.927244",
+    "financing_cash_flow_to_revenue": "-0.241848",
+    "investing_cash_flow_to_revenue": "-0.034863"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $270 Million, up 3% Year-Over-Year, up 6% in Constant Currency GAAP Operating Margin of 7.",
+      "GAAP Net Income Per Share of $0.",
+      "Non-GAAP Net Income Per Share of $0.",
+      "gross margin, operating margin, and EPS,” said Dylan Smith, co-founder and CFO of Box.",
+      "GAAP operating income in the second quarter of fiscal 2025 was $20.",
+      "GAAP operating income of $9."
+    ],
+    "guidance_evidence": [
+      "Outlook As a reminder, approximately one third of Box’s revenue is generated outside of the U.",
+      "guidance includes the expected impact of FX headwinds, assuming present foreign currency exchange rates.",
+      "guidance for the third quarter of fiscal year 2025 and full fiscal year 2025.",
+      "Guidance • Revenue is expected to be in the range of $274 million to $276 million, up 5% year-over-year, or 6% growth on a constant currency basis.",
+      "guidance includes an expected negative impact of $0.",
+      "Guidance • Revenue is expected to be in the range of $1."
+    ],
+    "wave_or_demand_evidence": [
+      "customers on Enterprise Plus plans.",
+      "customers now have access to unlimited Box AI queries directly in Slack.",
+      "customer speakers from leading organizations.",
+      "customer speakers.",
+      "customers, plus (2) subscription renewals and (3) expansion within existing customers, and represent amounts invoiced for all products and professional services.",
+      "backlog."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary financial results for the second quarter of fiscal year 2025, which ended July 31, 2024.",
+      "preliminary financial results set forth in this release are estimates based on information currently available to Box.",
+      "impairment, amortization of the cost of purchased intangibles is a static expense that is not typically affected by operations during any particular period.",
+      "headwinds, assuming present foreign currency exchange rates.",
+      "headwind to full fiscal year 2025 revenue growth, 80 basis points lower than our previous expectations.",
+      "headwind of 130 basis points, 30 basis points lower than our previous expectations."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 270,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 274,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-28",
+    "entry_open": "30.000000",
+    "return_10d_pct": "8.4333",
+    "return_20d_pct": "11.4333",
+    "return_30d_pct": "9.1667",
+    "return_60d_pct": "6.7000",
+    "return_90d_pct": "18.3667"
+  },
+  "text_stats": {
+    "primary_text_len": 3603,
+    "exhibit_text_len": 39332,
+    "combined_text_len": 42937
+  }
+}

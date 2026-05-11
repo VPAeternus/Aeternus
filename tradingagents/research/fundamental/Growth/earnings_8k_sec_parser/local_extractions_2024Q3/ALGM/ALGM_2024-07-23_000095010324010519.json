@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ALGM",
+    "cik": "866291",
+    "event_date": "2024-07-23",
+    "event_accession": "0000950103-24-010519",
+    "primary_8k_doc": "dp214872_8k.htm",
+    "exhibit_docs": [
+      "dp214872_ex9901.htm",
+      "algm-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGM_000095010324010519_dp214872_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGM_000095010324010519_dp214872_ex9901.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGM_000095010324010519_algm-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ALGM",
+    "cik": "866291",
+    "entity_name": "ALLEGRO MICROSYSTEMS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "768674000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-25",
+    "net_income_value": "119407000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-25",
+    "assets_value": "1181155000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-5307000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-25",
+    "investing_cash_flow_value": "-66271000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-25",
+    "operating_cash_flow_value": "156129000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-25",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.155342",
+    "operating_cash_flow_to_revenue": "0.203115",
+    "assets_to_revenue": "1.536614",
+    "financing_cash_flow_to_revenue": "-0.006904",
+    "investing_cash_flow_to_revenue": "-0.086215"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Gross Margin % 44.",
+      "non-GAAP Net Income, non-GAAP Basic and Diluted Earnings per Share, Free Cash Flow and Free Cash Flow Margin (collectively, the “Non-GAAP Financial Measures”).",
+      "gross margin, net income or any other performance measures derived in accordance with GAAP.",
+      "Non-GAAP Gross Margin Three-Month Period Ended June 28, 2024 (unaudited) (Dollars in thousands, except percentages) GAAP Gross Profit $ 74,500 +/-$1.",
+      "GAAP Gross Margin 44.",
+      "Non-GAAP Gross Margin (% of net sales) 48."
+    ],
+    "guidance_evidence": [
+      "expects that our final first quarter results will be within the ranges described above.",
+      "forecasts and make strategic decisions."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to manage orders to reduce inventory in the channel and return to more normalized business levels.",
+      "ain and subject to change as we finalize our results of operations for the fiscal quarter ended June 28, 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "Preliminary First Quarter 2025 Results Recent Developments Preliminary Financial Results for the First Quarter Ended June 28, 2024 While the financial closing and financial statement preparation process of Allegro MicroSystems, Inc.",
+      "preliminary financial results for the first quarter ended June 28, 2024: GAAP Non-GAAP Preliminary June 28, 2024 Results (unaudited) Preliminary June 28, 2024 Results (unaudited) (As of 7/23/2024) (As of 7/23/2024) Total Net Sales $167M +/- $1.",
+      "inventory in the channel and return to more normalized business levels.",
+      "preliminary financial results referred to herein are based on management’s preliminary, unaudited analysis of the Company’s financial performance as of the date hereof.",
+      "preliminary and inherently uncertain and subject to change as we finalize our results of operations for the fiscal quarter ended June 28, 2024.",
+      "preliminary estimates."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "25.790001",
+    "return_10d_pct": "-17.0221",
+    "return_20d_pct": "-9.7325",
+    "return_30d_pct": "-3.1020",
+    "return_60d_pct": "-14.3854",
+    "return_90d_pct": "-21.7138"
+  },
+  "text_stats": {
+    "primary_text_len": 24252,
+    "exhibit_text_len": 11371,
+    "combined_text_len": 35625
+  }
+}

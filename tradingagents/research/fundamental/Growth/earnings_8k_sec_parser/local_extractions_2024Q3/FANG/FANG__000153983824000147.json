@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FANG",
+    "cik": "1539838",
+    "event_date": "",
+    "event_accession": "0001539838-24-000147",
+    "primary_8k_doc": "diamondbackex991-8x5x24.htm",
+    "exhibit_docs": [
+      "diamondbackex992-8x5x24.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FANG_000153983824000147_diamondbackex991-8x5x24.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FANG_000153983824000147_diamondbackex992-8x5x24.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FANG",
+    "cik": "1539838",
+    "entity_name": "DIAMONDBACK ENERGY, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1925000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "712000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "29001000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-257000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1279000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1425000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.36987",
+    "operating_cash_flow_to_revenue": "0.74026",
+    "assets_to_revenue": "15.065455",
+    "financing_cash_flow_to_revenue": "-0.133506",
+    "investing_cash_flow_to_revenue": "-0.664416"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "cash flow.",
+      "Free Cash Flow accretion to our stockholders.",
+      "Free Cash Flow generation.",
+      "cash flow statement.",
+      "Free Cash Flow.",
+      "Free Cash Flow $841 million for the quarter."
+    ],
+    "guidance_evidence": [
+      "guidance and lowering our annual capex guidance.",
+      "guidance.",
+      "guidance range of 271 - 275 MBO/d.",
+      "guidance range of 271 - 275 MBO/d flat for the third quarter.",
+      "guidance range to 273 - 276 MBO/d to account for accelerated first half 2024 activity and positive well performance year to date.",
+      "guidance range of $580 - $620 million."
+    ],
+    "wave_or_demand_evidence": [
+      "ains on completions have allowed us to increase the per crew annual completion rate to nearly 100 wells per year, up from our original budget of 80 wells per year.",
+      "aising full year production guidance.",
+      "aintaining fourth quarter 2023 oil production levels and have kept our quarterly guidance range of 271 - 275 MBO/d flat for the third quarter.",
+      "aised our oil production guidance range to 273 - 276 MBO/d to account for accelerated first half 2024 activity and positive well performance year to date.",
+      "ained relatively flat quarter over quarter at $11.",
+      "aintain a leverage ratio of approximately 0."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory in the core of the Midland Basin, which, when combined with Diamondback’s cost structure, is set to generate significant long-term Free Cash Flow accretion to our stockholders.",
+      "charge on the SEC’s website at http://www.",
+      "impairments and future changes in working capital.",
+      "decreased as anticipated, and we are on track to be within our guidance range of $0.",
+      "loss on 30 year treasury locks executed prior to, and fully settled upon, pricing of the senior notes issued in April 2024, making Adjusted Free Cash Flow $841 million for the quarter.",
+      "decreased by approximately $600 million to $5."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 150,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 38871,
+    "exhibit_text_len": 15885,
+    "combined_text_len": 54758
+  }
+}

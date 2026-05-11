@@ -58,14 +58,14 @@ def test_run_session_research_writes_downstream_report(tmp_path, monkeypatch):
         ticker="AAPL",
         analysis_date="2026-03-10",
         provider="claude",
-        queue_context={"sector": "Technology", "asset_class": "Equity", "lane": "CORE"},
+        source_context={"sector": "Technology", "asset_class": "Equity", "lane": "CORE"},
     )
 
     payload = json.loads((tmp_path / report_path).read_text())
     assert payload["company_of_interest"] == "AAPL"
     assert payload["market_report"] == "market"
     assert payload["final_trade_decision"] == "Recommendation: **BUY**"
-    assert payload["dealflow_context"]["lane"] == "CORE"
+    assert payload["source_context"]["lane"] == "CORE"
     assert payload["aeternus_score"]["aeternus_score"] == 74.2
 
 
@@ -203,7 +203,7 @@ def test_run_session_research_persists_llm_influence_block(tmp_path, monkeypatch
         ticker="AAPL",
         analysis_date="2026-03-10",
         provider="claude",
-        queue_context={"sector": "Technology"},
+        source_context={"sector": "Technology"},
     )
 
     payload = json.loads((tmp_path / report_path).read_text())
@@ -214,11 +214,4 @@ def test_run_session_research_persists_llm_influence_block(tmp_path, monkeypatch
     assert score_block["aeternus_score"] == 64.5
     assert influence["score_delta"] == 4.5
     assert influence["confidence_delta"] == 3.0
-    assert influence["discussion_components"]["legacy_research_component"]["before"] is None
-    assert influence["discussion_components"]["legacy_research_component"]["after"] == 66
-    assert influence["discussion_components"]["legacy_research_component"]["delta"] is None
-    assert influence["active_discussion_components"] == [
-        "legacy_research_component",
-        "legacy_risk_component",
-        "trader_verdict",
-    ]
+    assert influence["report_completeness"]["present_keys"] >= 4

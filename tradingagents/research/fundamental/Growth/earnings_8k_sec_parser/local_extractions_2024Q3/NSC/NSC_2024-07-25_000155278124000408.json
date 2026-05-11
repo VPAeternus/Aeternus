@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NSC",
+    "cik": "702165",
+    "event_date": "2024-07-25",
+    "event_accession": "0001552781-24-000408",
+    "primary_8k_doc": "e24315_nsc-8k.htm",
+    "exhibit_docs": [
+      "e24315_ex99-1.htm",
+      "e24315_ex99-2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NSC_000155278124000408_e24315_nsc-8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NSC_000155278124000408_e24315_ex99-1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NSC_000155278124000408_e24315_ex99-2.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NSC",
+    "cik": "702165",
+    "entity_name": "NORFOLK SOUTHERN CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3132000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "466000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "41652000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-686000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-391000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1173000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.148787",
+    "operating_cash_flow_to_revenue": "0.374521",
+    "assets_to_revenue": "13.298851",
+    "financing_cash_flow_to_revenue": "-0.219029",
+    "investing_cash_flow_to_revenue": "-0.12484"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $3.",
+      "earnings per share were $3.",
+      "operating income was $1.",
+      "earnings per share.",
+      "earnings per share $ 3.",
+      "Net income $ 737 $ 356 $ 790 $ 822 Earnings per share – diluted $ 3."
+    ],
+    "guidance_evidence": [
+      "guidance ATLANTA, July 25, 2024 – Norfolk Southern Corporation (NYSE: NSC) announced Thursday its second quarter 2024 financial results.",
+      "guidance of a full year adjusted operating ratio of approximately 66%.",
+      "guidance, we are unable to predict or estimate with reasonable certainty the ultimate outcome of certain items required for the GAAP measure without unreasonable effort."
+    ],
+    "wave_or_demand_evidence": [
+      "customer-centric and operations-driven freight transportation network.",
+      "customers avoid approximately 15 million tons of yearly carbon emissions by shipping via rail.",
+      "ailway operations was $1.",
+      "ailway operating income was $1.",
+      "aid Norfolk Southern President and CEO Alan H.",
+      "ailway operating revenues of $3."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, and shareholder advisory costs from the proxy contest, railway operating income was $1.",
+      "charges, and shareholder advisory costs.",
+      "charges (68 ) Adjusted income from railway operations $ 1,063 Operating ratio 62.",
+      "charges 2.",
+      "charges, and shareholder advisory costs (0.",
+      "Charges During the first six months of 2024, the Company executed a voluntary and an involuntary separation program that resulted in a reduction of approximately 350 management employees."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3000,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "242.000000",
+    "return_10d_pct": "-0.9587",
+    "return_20d_pct": "-0.3512",
+    "return_30d_pct": "0.1529",
+    "return_60d_pct": "2.0372",
+    "return_90d_pct": "4.7190"
+  },
+  "text_stats": {
+    "primary_text_len": 3661,
+    "exhibit_text_len": 12686,
+    "combined_text_len": 16349
+  }
+}

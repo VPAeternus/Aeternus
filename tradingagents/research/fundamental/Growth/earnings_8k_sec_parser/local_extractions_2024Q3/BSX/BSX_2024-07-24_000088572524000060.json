@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BSX",
+    "cik": "885725",
+    "event_date": "2024-07-24",
+    "event_accession": "0000885725-24-000060",
+    "primary_8k_doc": "bsx-20240724.htm",
+    "exhibit_docs": [
+      "q22024earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BSX_000088572524000060_bsx-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BSX_000088572524000060_q22024earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BSX",
+    "cik": "885725",
+    "entity_name": "BOSTON SCIENTIFIC CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3389000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "314000000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "35136000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-69000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-484000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "190000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.092653",
+    "operating_cash_flow_to_revenue": "0.056064",
+    "assets_to_revenue": "10.36766",
+    "financing_cash_flow_to_revenue": "-0.02036",
+    "investing_cash_flow_to_revenue": "-0.142815"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $4.",
+      "GAAP net income attributable to Boston Scientific common stockholders of $324 million or $0.",
+      "EPS), compared to $261 million or $0.",
+      "EPS of $0.",
+      "GAAP net income attributable to Boston Scientific common stockholders of $0.",
+      "EPS on a GAAP basis in a range of $1."
+    ],
+    "guidance_evidence": [
+      "guidance range of 10.",
+      "guidance range of 10 to 12 percent, all compared to the prior year period.",
+      "guidance range of $0.",
+      "Guidance for Full Year and Third Quarter 2024 The company estimates net sales growth for the full year 2024, versus the prior year period, to be in range of approximately 13.",
+      "guidance excludes the impact of foreign currency fluctuations and net sales attributable to acquisitions and divestitures for which there are less than a full period of comparable net sales.",
+      "GUIDANCE RECONCILIATIONS (Unaudited) Net Sales Q3 2024 Estimate Full Year 2024 Estimate (Low) (High) (Low) (High) Reported growth 13."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Mike Mahoney, chairman and chief executive officer, Boston Scientific.",
+      "ain excited about our plans for the future, and I am incredibly grateful for the commitment and winning spirit of our employees around the world.",
+      "POWER™ Leadless Pacemaker.",
+      "ain with nearly one-third of patients 100% pain free after five years.",
+      "ain litigation-related net charges (credits), European Union Medical Device Regulation (EU MDR) implementation costs, debt extinguishment net charges, deferred tax expenses (benefits) and certain discrete tax items.",
+      "POWER Leadless Pacemaker is an investigational device and limited by U."
+    ],
+    "warning_or_risk_evidence": [
+      "charges (credits), certain litigation-related net charges (credits), European Union Medical Device Regulation (EU MDR) implementation costs, debt extinguishment net charges, deferred tax expenses (benefits) and certain discrete tax items.",
+      "charges (credits), of $2.",
+      "charges (credits), of $0.",
+      "impairment charges — (276) 276 — 276 243 — — 243 0.",
+      "charges (credits) 11 (37) 48 1 49 38 — — 38 0.",
+      "charges (credits) 30 (20) 50 — 50 44 — — 44 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4120,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "78.250000",
+    "return_10d_pct": "-6.7604",
+    "return_20d_pct": "-2.3387",
+    "return_30d_pct": "1.5591",
+    "return_60d_pct": "7.3482",
+    "return_90d_pct": "11.7572"
+  },
+  "text_stats": {
+    "primary_text_len": 3659,
+    "exhibit_text_len": 27676,
+    "combined_text_len": 31337
+  }
+}

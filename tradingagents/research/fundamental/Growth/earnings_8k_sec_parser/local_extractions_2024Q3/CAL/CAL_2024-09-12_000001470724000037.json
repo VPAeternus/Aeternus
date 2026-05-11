@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CAL",
+    "cik": "14707",
+    "event_date": "2024-09-12",
+    "event_accession": "0000014707-24-000037",
+    "primary_8k_doc": "cal-20240912x8k.htm",
+    "exhibit_docs": [
+      "cal-20240912xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CAL_000001470724000037_cal-20240912x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CAL_000001470724000037_cal-20240912xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CAL",
+    "cik": "14707",
+    "entity_name": "CALERES, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "632142000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2019-06-13",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2018-05-05",
+    "net_income_value": "34727000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-11",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-29",
+    "assets_value": "1818083000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-11",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-29",
+    "financing_cash_flow_value": "-28488000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-11",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-29",
+    "investing_cash_flow_value": "-6548000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-11",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-29",
+    "operating_cash_flow_value": "37497000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-11",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.054935",
+    "operating_cash_flow_to_revenue": "0.059317",
+    "assets_to_revenue": "2.876067",
+    "financing_cash_flow_to_revenue": "-0.045066",
+    "investing_cash_flow_to_revenue": "-0.010358"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $683.",
+      "sales increased 1.",
+      "Net sales were $683.",
+      "net sales increased 1.",
+      "net sales was 39.",
+      "gross margin rate to 45."
+    ],
+    "guidance_evidence": [
+      "Guidance ​ ST.",
+      "outlook of net sales to down low-single-digits percent versus previous guidance of flat to up 2 percent; ● Lowers fiscal 2024 outlook for earnings per diluted share to $3.",
+      "guidance of $4.",
+      "guidance for adjusted earnings per diluted share of $4.",
+      "guidance,” said Schmidt.",
+      "Outlook: Caleres is revising its fiscal 2024 financial outlook."
+    ],
+    "wave_or_demand_evidence": [
+      "demand; ● Improved second quarter consolidated gross margin rate to 45.",
+      "demand and back-to-school business came later than expected,” said Jay Schmidt, president and chief executive officer.",
+      "ain confident in our long-term vision, our second quarter results in both segments fell short of our potential.",
+      "aid Jay Schmidt, president and chief executive officer.",
+      "ained strong, driven by the Brand Portfolio.",
+      "ained market share in the strategically important Kids category."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory was flat to the second quarter 2023 in total; ● Borrowings under the asset-based revolving credit facility were $146.",
+      "charges and recoveries, which are non-GAAP financial measures, and the debt to EBITDA leverage ratio, which is a non-GAAP financial metric.",
+      "Charges/Other ​ to Caleres, ​ ​ Earnings ​ Charges/Other ​ to Caleres, ​ Earnings ($ thousands, except per share data) ​ Items ​ Inc.",
+      "Charges/other items: ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ Expense reduction initiatives ​ ​ — ​ ​ — ​ ​ — ​ ​ 1,647 ​ ​ 1,224 ​ ​ 0.",
+      "charges/other items ​ $ — ​ $ — ​ $ — ​ $ 1,647 ​ $ 1,224 ​ $ 0.",
+      "Charges/Other ​ to Caleres, ​ Earnings ​ Charges/Other ​ to Caleres, ​ Earnings ($ thousands, except per share data) ​ Items ​ Inc."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 683.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-13",
+    "entry_open": "30.510000",
+    "return_10d_pct": "5.5392",
+    "return_20d_pct": "2.2943",
+    "return_30d_pct": "6.6536",
+    "return_60d_pct": "4.3920",
+    "return_90d_pct": "-19.0429"
+  },
+  "text_stats": {
+    "primary_text_len": 3553,
+    "exhibit_text_len": 27331,
+    "combined_text_len": 30886
+  }
+}

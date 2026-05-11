@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "POR",
+    "cik": "784977",
+    "event_date": "2024-07-26",
+    "event_accession": "0000784977-24-000137",
+    "primary_8k_doc": "exh11-equitydistributionag.htm",
+    "exhibit_docs": [
+      "ex99120240630pressrelease.htm",
+      "exh992q22024earningsslid.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/POR_000078497724000137_exh11-equitydistributionag.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/POR_000078497724000137_ex99120240630pressrelease.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/POR_000078497724000137_exh992q22024earningsslid.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "POR",
+    "cik": "784977",
+    "entity_name": "PORTLAND GENERAL ELECTRIC COMPANY",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "748000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "74000000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "11208000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "162000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-276000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-39000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.09893",
+    "operating_cash_flow_to_revenue": "-0.052139",
+    "assets_to_revenue": "14.983957",
+    "financing_cash_flow_to_revenue": "0.216578",
+    "investing_cash_flow_to_revenue": "-0.368984"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues increased due to demand growth from semiconductor manufacturing and technology infrastructure customers and recovery of capital, operating and power costs.",
+      "revenues were partially offset by lower residential and commercial usage primarily driven by weather.",
+      "net income based on generally accepted accounting principles (GAAP) of $72 million, or $0.",
+      "GAAP net income of $39 million, or $0.",
+      "non-GAAP net income was $44 million, or $0.",
+      "EPS an d adjusted earnings guidance."
+    ],
+    "guidance_evidence": [
+      "guidance of $2.",
+      "Guidance PGE is reaffirming its estimate for full-year 2024 adjusted earnings guidance of $2.",
+      "guidance.",
+      "guidance to the most comparable GAAP financial measure without unreasonable effort.",
+      "Guidance $2.",
+      "projects, among others, are intended to alleviate congestion, improve regional adequacy and reliability, enable decarbonization, and support growing customer demand."
+    ],
+    "wave_or_demand_evidence": [
+      "demand growth, and solid power cost performance • Reaffirming 2024 adjusted earnings guidance of $2.",
+      "customer affordability and making thoughtful, high impact investments to harden and modernize our grid as we provide clean and reliable energy to our fellow Oregonians.",
+      "demand growth from semiconductor manufacturing and technology infrastructure customers and recovery of capital, operating and power costs.",
+      "customer demand.",
+      "customer experience In June 2024, PGE received the top national spot for utilities in the 2024 Forrester Customer Experience Index.",
+      "customer needs and improving system reliability and resilience in order to serve customers with safe, reliable and affordable energy."
+    ],
+    "warning_or_risk_evidence": [
+      "charge.",
+      "charge, second quarter 2023 non-GAAP net income was $44 million, or $0.",
+      "charge 7 0.",
+      "delays, legislative uncertainty, inflationary impacts, supply costs and supply chain constraints.",
+      "charge on the SEC’s website, www.",
+      "charge(2) - $0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 44,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-29",
+    "entry_open": "47.590000",
+    "return_10d_pct": "-2.1643",
+    "return_20d_pct": "-1.9962",
+    "return_30d_pct": "0.0420",
+    "return_60d_pct": "1.0506",
+    "return_90d_pct": "2.3324"
+  },
+  "text_stats": {
+    "primary_text_len": 175797,
+    "exhibit_text_len": 40001,
+    "combined_text_len": 215800
+  }
+}

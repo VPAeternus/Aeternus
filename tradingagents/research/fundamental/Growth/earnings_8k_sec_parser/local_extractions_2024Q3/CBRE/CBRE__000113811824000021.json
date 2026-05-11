@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CBRE",
+    "cik": "1138118",
+    "event_date": "",
+    "event_accession": "0001138118-24-000021",
+    "primary_8k_doc": "cbre-20240725.htm",
+    "exhibit_docs": [
+      "cbre-20240725x8kexx991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CBRE_000113811824000021_cbre-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CBRE_000113811824000021_cbre-20240725x8kexx991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CBRE",
+    "cik": "1138118",
+    "entity_name": "CBRE GROUP, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "7411000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "117000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "22548000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "761000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-115000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-745000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.015787",
+    "operating_cash_flow_to_revenue": "-0.100526",
+    "assets_to_revenue": "3.042504",
+    "financing_cash_flow_to_revenue": "0.102685",
+    "investing_cash_flow_to_revenue": "-0.015517"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 14%, bolstered by Turner & Townsend’s 18% growth • Advisory transaction revenue - leasing and capital markets - rose 5%, supported by growth of 13% in U.",
+      "revenue increased 16% (same local currency), fueled by the onboarding of the Brookfield 65 million sq.",
+      "revenue increased 18% (19% local currency), paced by strength in the Local business.",
+      "GAAP EPS down 34% to $0.",
+      "EPS down 2% to $0.",
+      "EPS outlook to a range of $4."
+    ],
+    "guidance_evidence": [
+      "outlook to a range of $4.",
+      "outlook, the company’s future growth momentum, operations and business outlook.",
+      "expected.",
+      "expected, asset sales activity was limited in the period."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Bob Sulentic, chair and chief executive officer of CBRE.",
+      "ain offset by weakness elsewhere in the region.",
+      "ain increased by double digits, led by the United States.",
+      "ain paced global activity with sales revenue up 3% (same local currency), led by double-digit growth in the United Kingdom, where property values have largely reset.",
+      "Power, Inc.",
+      "ailing 12-month basis, the third consecutive increase."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of our goodwill and intangible assets; and the performance of our equity investments in companies that we do not control.",
+      "charges.",
+      "impairments, costs associated with efficiency and cost-reduction initiatives, and charges related to indirect tax settlement.",
+      "charges related to indirect tax settlement.",
+      "charges that may obscure trends in the underlying performance of our business.",
+      "impairment charges of goodwill and intangibles created from such acquisitions, the effects of financings and income tax and the accounting effects of capital spending."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "",
+    "entry_open": "",
+    "return_10d_pct": "",
+    "return_20d_pct": "",
+    "return_30d_pct": "",
+    "return_60d_pct": "",
+    "return_90d_pct": ""
+  },
+  "text_stats": {
+    "primary_text_len": 3821,
+    "exhibit_text_len": 46316,
+    "combined_text_len": 50139
+  }
+}

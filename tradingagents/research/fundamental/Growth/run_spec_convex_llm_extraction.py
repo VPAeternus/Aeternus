@@ -7,16 +7,11 @@ import re
 import shutil
 import subprocess
 import tempfile
-import sys
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
-from src.features.theme_acceleration import THEME_ACCELERATION_FIELDS, normalized_theme_acceleration_fields
 DEFAULT_PACKETS = ROOT / "Growth" / "earnings_8k_sec_parser" / "llm_spec_convex_all_2022Q4_2023Q2_packets.jsonl"
 DEFAULT_OUTPUT_DIR = ROOT / "Growth" / "earnings_8k_sec_parser" / "llm_spec_convex_all_2022Q4_2023Q2_llm"
 DEFAULT_CONSOLIDATED = ROOT / "Growth" / "earnings_8k_sec_parser" / "llm_spec_convex_all_2022Q4_2023Q2_extractions.csv"
@@ -49,7 +44,6 @@ CSV_FIELDS = [
     "theme_driver_type",
     "theme_momentum",
     "theme_evidence",
-    *THEME_ACCELERATION_FIELDS,
     "theme_tailwind_score",
     "theme_driver_summary",
     "theme_evidence_summary",
@@ -118,13 +112,10 @@ Adaptive theme classification:
 - Identify any macro, sector, product, commodity, infrastructure, technology, or cycle-driven theme that could be causing a re-rating.
 - Do not force AI/data-center; AI is only one possible theme.
 - Return primary_theme, secondary_themes, theme_tags, theme_role, theme_confidence, theme_driver_type, theme_momentum, theme_evidence, theme_driver_summary, and theme_evidence_summary.
-- Theme acceleration: identify whether filing evidence shows the theme directly driving revenue/segment growth, guidance, margin improvement, customer wins, or capacity expansion.
-- Return filing_theme_growth_flag, filing_theme_guidance_flag, filing_theme_margin_flag, filing_theme_customer_win_flag, filing_theme_capacity_expansion_flag, and theme_acceleration_score. Use 1/0 flags only.
-- Require evidence snippets in theme_evidence; no evidence means all acceleration flags must be 0.
-- Set theme_tailwind_score and theme_acceleration_score to 0. Deterministic scoring computes final theme scores later.
+- Set theme_tailwind_score to 0. Deterministic scoring computes final theme score later.
 
 Output each result with these exact keys:
-sample_id, quarter, ticker, event_date, causal_change, proof_alignment, durability, operating_leverage_quality, negative_revision_risk, story_vs_numbers_gap_penalty, narrative_delta_score, narrative_delta_bucket, score_addition, detected_driver_category, detected_driver_name, evidence_positive, evidence_risk, confidence, blocking_issues, primary_theme, secondary_themes, theme_tags, theme_role, theme_confidence, theme_driver_type, theme_momentum, theme_evidence, filing_theme_growth_flag, filing_theme_guidance_flag, filing_theme_margin_flag, filing_theme_customer_win_flag, filing_theme_capacity_expansion_flag, theme_acceleration_score, theme_tailwind_score, theme_driver_summary, theme_evidence_summary.
+sample_id, quarter, ticker, event_date, causal_change, proof_alignment, durability, operating_leverage_quality, negative_revision_risk, story_vs_numbers_gap_penalty, narrative_delta_score, narrative_delta_bucket, score_addition, detected_driver_category, detected_driver_name, evidence_positive, evidence_risk, confidence, blocking_issues, primary_theme, secondary_themes, theme_tags, theme_role, theme_confidence, theme_driver_type, theme_momentum, theme_evidence, theme_tailwind_score, theme_driver_summary, theme_evidence_summary.
 
 Packets:
 {json.dumps(safe_packets, indent=2, ensure_ascii=True)}
@@ -232,7 +223,6 @@ def validate_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict[str
     theme_momentum = clean(payload.get("theme_momentum") or "unknown")
     if theme_momentum not in {"accelerating", "stable", "fading", "unknown"}:
         raise ValueError(f"invalid theme_momentum: {theme_momentum}")
-    acceleration = normalized_theme_acceleration_fields(payload)
     secondary = payload.get("secondary_themes") or []
     tags = payload.get("theme_tags") or []
     evidence = payload.get("theme_evidence") or []
@@ -264,7 +254,6 @@ def validate_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict[str
             "theme_driver_type": theme_driver_type,
             "theme_momentum": theme_momentum,
             "theme_evidence": json.dumps([clean(item) for item in evidence if clean(item)], ensure_ascii=True),
-            **acceleration,
             "theme_tailwind_score": optional_int_field(payload, "theme_tailwind_score", 0, 20),
             "theme_driver_summary": clean(payload.get("theme_driver_summary")),
             "theme_evidence_summary": clean(payload.get("theme_evidence_summary") or payload.get("theme_driver_summary")),
@@ -321,12 +310,6 @@ def result_schema() -> dict[str, Any]:
             "theme_driver_type": {"type": "string", "enum": ["revenue", "margin", "demand", "capacity", "pricing", "valuation", "none"]},
             "theme_momentum": {"type": "string", "enum": ["accelerating", "stable", "fading", "unknown"]},
             "theme_evidence": {"type": "array", "items": {"type": "string"}},
-            "filing_theme_growth_flag": {"type": "integer", "minimum": 0, "maximum": 1},
-            "filing_theme_guidance_flag": {"type": "integer", "minimum": 0, "maximum": 1},
-            "filing_theme_margin_flag": {"type": "integer", "minimum": 0, "maximum": 1},
-            "filing_theme_customer_win_flag": {"type": "integer", "minimum": 0, "maximum": 1},
-            "filing_theme_capacity_expansion_flag": {"type": "integer", "minimum": 0, "maximum": 1},
-            "theme_acceleration_score": {"type": "integer", "minimum": 0, "maximum": 15},
             "theme_tailwind_score": {"type": "integer", "minimum": 0, "maximum": 20},
             "theme_driver_summary": {"type": "string"},
             "theme_evidence_summary": {"type": "string"},

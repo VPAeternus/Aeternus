@@ -1,0 +1,889 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AMN",
+    "cik": "1142750",
+    "event_date": "2024-08-08",
+    "event_accession": "0000950142-24-002148",
+    "primary_8k_doc": "eh240517074_8k.htm",
+    "exhibit_docs": [
+      "eh240517074_ex9901.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMN_000095014224002148_eh240517074_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMN_000095014224002148_eh240517074_ex9901.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AMN",
+    "cik": "1142750",
+    "entity_name": "AMN HEALTHCARE SERVICES, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1126223000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "84110000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2924394000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-44457000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-32431000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "43434000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.074683",
+    "operating_cash_flow_to_revenue": "0.038566",
+    "assets_to_revenue": "2.596638",
+    "financing_cash_flow_to_revenue": "-0.039474",
+    "investing_cash_flow_to_revenue": "-0.028796"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $741 million; GAAP EPS of $0.",
+      "revenue was in line with expectations while earnings were better than expected, driven by expense management and beneficial discrete items.",
+      "revenue of $186 million, up 6% year over year and down 1% sequentially.",
+      "revenue was $143 million, 17% higher year over year, with growth coming from the MSDR acquisition, and 2% lower sequentially.",
+      "revenue was down by 17% year over year.",
+      "revenue was $112 million, a decrease of 11% year over year and less than 1% sequentially."
+    ],
+    "guidance_evidence": [
+      "Outlook 1 Field: /Page 2 Field: /Page 3 Field: /Page Metric Guidance* Consolidated revenue $660 - $680 million Gross margin 30.",
+      "Guidance percentage metrics are approximate.",
+      "Guidance Operating Margin to Guidance Adjusted EBITDA Margin” below.",
+      "outlook on Thursday, August 8, 2024 at 5:00 p.",
+      "Guidance Operating Margin to Guidance Adjusted EBITDA Margin (unaudited) Three Months Ended September 30, 2024 Low(18) High(18) Operating margin 2.",
+      "expected, driven by expense management and beneficial discrete items."
+    ],
+    "wave_or_demand_evidence": [
+      "orders improved again this quarter.",
+      "demand and supply factors that drive our long-term growth potential.",
+      "aid Cary Grace, President and Chief Executive Officer of AMN Healthcare.",
+      "ain this quarter.",
+      "ails.",
+      "ailable at the Company’s investor relations website."
+    ],
+    "warning_or_risk_evidence": [
+      "decrease from prior year and a 10% decrease from the prior quarter.",
+      "declined 17% year over year and was 11% lower than the prior quarter.",
+      "decline by 27% year over year and 1% quarter over quarter.",
+      "decrease of 11% year over year and less than 1% sequentially.",
+      "decrease in SG&A costs was driven primarily by lower employee compensation amid lower placement volumes.",
+      "decrease of 42%."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "eh240517074_ex9901.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "AMN HEALTHCARE ANNOUNCES SECOND QUARTER 2024 RESULTS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Quarterly revenue of $741 million;"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP EPS of $0.42 and adjusted EPS of $0.98"
+    },
+    {
+      "type": "TextElement",
+      "text": "DALLAS — AMN Healthcare Services, Inc. (NYSE: AMN), the leader and innovator in total talent solutions for healthcare organizations across the United States, today announced its second quarter 2024 financial results. Financial highlights are as follows:Dollars in millions, except per share amounts."
+    },
+    {
+      "type": "TableElement",
+      "text": "Q2 2024 % Change Q2 2023 YTD June 30, 2024 % Change YTD June 30, 2023 Revenue $740.7 (25%) $1,561.6 (26%) Gross profit $229.8 (30%) $487.3 (30%) Net income $16.2 (73%) $33.6 (77%) GAAP diluted EPS $0.42 (73%) $0.88 (75%) Adjusted diluted EPS* $0.98 (59%) $1.95 (60%) Adjusted EBITDA* $94.1 (42%) $191.8 (44%)"
+    },
+    {
+      "type": "TextElement",
+      "text": "* See “Non-GAAP Measures” below for a discussion of our use of non-GAAP items and the table entitled “Non-GAAP Reconciliation Tables” for a reconciliation of non-GAAP items.Business Highlights •Second quarter revenue was in line with expectations while earnings were better than expected, driven by expense management and beneficial discrete items. •Rollout of our ShiftWise Flex platform surpassed 50% of our vendor-neutral clients' spend on ShiftWise, and we successfully implemented our first MSP client migrations to Flex. •Technology and Workforce Solutions produced 41% of operating income from our three reported segments, led by 18% year-over-year revenue growth in language services. •Cash flow from operations was strong at $100 million in the second quarter, which allowed us to reduce debt by $80 million, bringing the year-to-date repayment to $115 million. •Our net leverage ratio at quarter end was 2.6:1. Field: Page; Sequence: 1 “In the second quarter, we made important progress in strengthening AMN's position with clients in every part of the market for total talent solutions in healthcare,” said Cary Grace, President and Chief Executive Officer of AMN Healthcare. “We have brought in impressive growth in our VMS sales pipeline spearheaded by ShiftWise Flex and our fill rates for third-party, direct and MSP orders improved again this quarter. The diversification of our solutions, with many higher-margin revenue sources beyond staffing, along with careful expense management, enabled us to generate profit margins above our expectations.”Ms. Grace continued, “Our largest clients continue to reduce their spend on contingent labor, though we see promising signs of improvement in the travel nurse market and are heartened to see positive movement in the demand and supply factors that drive our long-term growth potential.”Second Quarter 2024 ResultsConsolidated revenue for the quarter was $741 million, a 25% decrease from prior year and a 10% decrease from the prior quarter. Net income was $16 million (2.2% of revenue), or $0.42 per diluted share, compared with $61 million (6.1% of revenue), or $1.55 per diluted share, in the second quarter of 2023. Adjusted diluted EPS in the second quarter was $0.98 compared with $2.38 in the same quarter a year ago.Revenue for the Nurse and Allied Solutions segment was $442 million, lower by 36% year over year and down 15% from the prior quarter. Travel nurse staffing revenue dropped by 42% year over year and 17% sequentially. Allied division revenue declined 17% year over year and was 11% lower than the prior quarter.The Physician and Leadership Solutions segment reported revenue of $186 million, up 6% year over year and down 1% sequentially. Locum tenens revenue was $143 million, 17% higher year over year, with growth coming from the MSDR acquisition, and 2% lower sequentially. Interim leadership revenue was down by 17% year over year. Our physician and leadership search businesses saw revenue decline by 27% year over year and 1% quarter over quarter. Field: Page; Sequence: 2 Technology and Workforce Solutions segment revenue was $112 million, a decrease of 11% year over year and less than 1% sequentially. Language services revenue was $75 million in the quarter, 18% higher than the prior year and up 5% sequentially. Vendor management systems revenue was $28 million, 41% lower year over year and down 5% from the prior quarter.Consolidated gross margin was 31.0%, 230 basis points lower year over year and down 40 basis points sequentially. Gross margin dropped year over year primarily because of the growth of lower-margin locum tenens revenue and a lower nurse and allied staffing margin. That change was offset in part by a revenue mix shift toward higher-margin segments.Consolidated SG&A expenses were $149 million, or 20.1% of revenue, compared with $202 million, or 20.4% of revenue, in the same quarter last year. SG&A was $175 million, or 21.3% of revenue, in the previous quarter. The year-over-year decrease in SG&A costs was driven primarily by lower employee compensation amid lower placement volumes. Compared with the prior quarter, SG&A expenses included lower bonus and incentive compensation, reduced corporate headcount, a favorable adjustment to accrued professional liability insurance expense, seasonally lower payroll tax expense, and prudent expense management.Income from operations was $38 million with an operating margin of 5.1%, compared with $92 million and 9.2%, respectively, in the same quarter last year. Adjusted EBITDA was $94 million, a year-over-year decrease of 42%. Adjusted EBITDA margin was 12.7%, 360 basis points lower than the year-ago period.At June 30, 2024, cash and cash equivalents totaled $48 million. Cash flow from operations was $100 million for the second quarter, and capital expenditures were $27 million. The Company ended the quarter with total debt outstanding of $1.195 billion and a net leverage ratio of 2.6 to 1 as calculated under the terms of our credit agreement. Field: Page; Sequence: 3 Third Quarter 2024 Outlook"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "Metric Guidance* Consolidated revenue $660 - $680 million Gross margin 30.7% - 31.2% SG&A as percentage of revenue 22.0% -22.5% Operating margin 2.1% - 2.9% Adjusted EBITDA margin 10.6% - 11.1%"
+    },
+    {
+      "type": "TextElement",
+      "text": "*Note: Guidance percentage metrics are approximate. For a reconciliation of adjusted EBITDA margin, see the table entitled “Reconciliation of Guidance Operating Margin to Guidance Adjusted EBITDA Margin” below.Revenue in the third quarter of 2024 is expected to be 20-23% lower than the prior year and 8-10% lower sequentially. Nurse and Allied Solutions segment revenue is expected to be down 32-34% year over year. Physician and Leadership Solutions segment revenue is expected to grow 12-14% year over year. Technology and Workforce Solutions segment revenue is projected to be 10-12% lower year over year.Third quarter estimates for certain other financial items include depreciation of $20 million, depreciation in cost of revenue of $2 million, non-cash amortization expense of $22 million, share-based compensation expense of $6 million, integration and other expenses of $6 million, interest expense of $15 million, an adjusted tax rate of 27%, and 38.3 million diluted average shares outstanding. Field: Page; Sequence: 4 Conference Call on August 8, 2024AMN Healthcare Services, Inc. (NYSE: AMN) will host a conference call to discuss its second quarter 2024 financial results and third quarter 2024 outlook on Thursday, August 8, 2024 at 5:00 p.m. Eastern Time. A live webcast of the call can be accessed through AMN Healthcare’s website at http://ir.amnhealthcare.com. Interested parties may participate live via telephone by registering at this link. Registrants will receive confirmation and dial-in details. Following the conclusion of the call, a replay of the webcast will be available at the Company’s investor relations website.About AMN HealthcareAMN Healthcare is the leader and innovator in total talent solutions for healthcare organizations across the nation. The Company provides access to the most comprehensive network of quality healthcare professionals through its innovative recruitment strategies and breadth of career opportunities. With insights and expertise, AMN Healthcare helps providers optimize their workforce to successfully reduce complexity, increase efficiency and improve patient outcomes. AMN total talent solutions include direct staffing, vendor-neutral and managed services programs, clinical and interim healthcare leaders, temporary staffing, permanent placement, executive search, vendor management systems, recruitment process outsourcing, predictive modeling, language services, revenue cycle solutions, and other services. Clients include acute-care hospitals, community health centers and clinics, physician practice groups, retail and urgent care centers, home health facilities, schools and many other healthcare settings. AMN Healthcare is committed to fostering and maintaining a diverse team that reflects the communities we serve. Our commitment to the inclusion of many different backgrounds, experiences and perspectives enables our innovation and leadership in the healthcare services industry.The Company’s common stock is listed on the New York Stock Exchange under the symbol “AMN.” For more information about AMN Healthcare, visit www.amnhealthcare.com, where the Company posts news releases, investor presentations, webcasts, SEC filings and other material information. The Company also utilizes email alerts and Really Simple Syndication (“RSS”) as routine channels to supplement distribution of this information. To register for email alerts and RSS, visit http://ir.amnhealthcare.com. Field: Page; Sequence: 5 Non-GAAP MeasuresThis earnings release and the non-GAAP reconciliation tables included with the earnings release contain certain non-GAAP financial information, which the Company provides as additional information, and not as an alternative, to the Company’s condensed consolidated financial statements presented in accordance with GAAP. These non-GAAP financial measures include (1) adjusted EBITDA, (2) adjusted EBITDA margin, (3) adjusted net income, and (4) adjusted diluted EPS. The Company provides such non-GAAP financial measures because management believes that they are useful to both management and investors as a supplement, and not as a substitute, when evaluating the Company’s operating performance. Additionally, management believes that adjusted EBITDA, adjusted EBITDA margin, and adjusted diluted EPS serve as industry-wide financial measures. The Company uses adjusted EBITDA for making financial decisions, allocating resources and for determining certain incentive compensation objectives. The non-GAAP measures in this release are not in accordance with, or an alternative to, GAAP measures and may be different from non-GAAP measures, or may be calculated differently than other similarly titled non-GAAP measures, reported by other companies. They should not be used in isolation to evaluate the Company’s performance. A reconciliation of non-GAAP measures identified in this release, along with further detail about the use and limitations of certain of these non-GAAP measures, may be found below in the table entitled “Non-GAAP Reconciliation Tables” under the caption entitled “Reconciliation of Non-GAAP Items” and the footnotes thereto or on the Company’s website at https://ir.amnhealthcare.com/financials/quarterly-results. Additionally, from time to time, additional information regarding non-GAAP financial measures, including pro forma measures, may be made available on the Company’s website.Forward-Looking StatementsThis press release contains “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended. Forward-looking statements include, among others, statements concerning future demand and supply for contingent staffing and other services, wage and bill rates, the ability of our solutions to meet the needs of our markets and align with our clients, the competitive environment in nurse staffing, our ability to manage expenses, our long-term growth opportunities and sales pipeline, third quarter 2024 financial projections for consolidated and segment revenue, consolidated gross margin, operating margin, SG&A as a percent of revenue, Field: Page; Sequence: 6 adjusted EBITDA margin, depreciation expense, non-cash amortization expense, share-based compensation expense, integration and other expenses, interest expense, adjusted tax rate, and number of diluted shares outstanding. The Company bases these forward-looking statements on its current expectations, estimates and projections about future events and the industry in which it operates using information currently available to it. Actual results could differ materially from those discussed in, or implied by, these forward-looking statements. Forward-looking statements are also identified by words such as “believe,” \"project,\" “anticipate,” “expect,” “intend,” “plan,” “will,” “may,” “estimates,” variations of such words and other similar expressions. In addition, any statements that refer to expectations, projections or other characterizations of future events or circumstances are forward-looking statements.The targets and expectations noted in this release depend upon, among other factors, (i) the ability of our clients to increase the efficiency and effectiveness of their staffing management and recruiting efforts, through predictive analytics, online recruiting, internal travel agencies and float pools, telemedicine or otherwise and successfully hire and retain permanent staff, (ii) the duration and extent to which hospitals and other healthcare entities adjust their utilization of temporary nurses and allied healthcare professionals, physicians, healthcare leaders and other healthcare professionals and workforce technology applications as a result of the labor market or economic conditions, (iii) the magnitude and duration of the effects of the post-COVID-19 pandemic environment or any future pandemic or health crisis on demand and supply trends, our business, its financial condition and our results of operations, (iv) our ability to effectively address client demand by attracting and placing nurses and other clinicians, (v) our ability to recruit and retain sufficient quality healthcare professionals at reasonable costs, (vi) our ability to anticipate and quickly respond to changing marketplace conditions, such as alternative modes of healthcare delivery, reimbursement, or client needs and requirements, including implementing changes that will make our services more tech-enabled and integrated, (vii) our ability to manage the pricing impact that the labor market or consolidation of healthcare delivery organizations may have on our business, (viii) the effects of economic downturns, inflation or slow recoveries, which could result in less demand for our services, increased client initiatives designed to contain costs, including reevaluating their approach as it pertains to contingent labor and managed services programs, other solutions and providers, pricing pressures and negatively impact payments terms and collectability of accounts receivable, (ix) our ability to develop and evolve our current technology offerings and capabilities and implement new infrastructure and technology systems to optimize our operating results and manage our business effectively, (x) our ability and the expense to comply with extensive and complex federal and state laws and regulations related to the conduct of our operations, costs and payment for services and payment for referrals as well as laws regarding employment practices, (xi) our ability to consummate and Field: Page; Sequence: 7 effectively incorporate acquisitions into our business, (xii) the negative effects that intermediary organizations may have on our ability to secure new and profitable contracts, (xiii) the extent to which the Great Resignation or a future spike in the COVID-19 pandemic or other pandemic or health crisis may disrupt our operations due to the unavailability of our employees or healthcare professionals due to burnout, illness, risk of illness, quarantines, travel restrictions, mandatory vaccination requirements, or other factors that limit our existing or potential workforce and pool of candidates, (xiv) security breaches and cybersecurity incidents, including ransomware, that could compromise our information and systems, which could adversely affect our business operations and reputation and could subject us to substantial liabilities and (xv) the severity and duration of the impact the labor market, economic downturn or COVID-19 pandemic has on the financial condition and cash flow of many hospitals and healthcare systems such that it impairs their ability to make payments to us, timely or otherwise, for services rendered.For a discussion of additional risk factors and a more complete discussion of some of the cautionary statements noted above that could cause actual results to differ from those implied by the forward-looking statements contained in this press release, please refer to our most recent Annual Report on Form 10-K for the year ended December 31, 2023. Be advised that developments subsequent to this press release are likely to cause these statements to become outdated and the Company is under no obligation (and expressly disclaims any such obligation) to update or revise any forward-looking statements whether as a result of new information, future events, or otherwise.Contact:Randle ReeceSenior Director, Investor Relations & Strategy 866.861.3229 Field: Page; Sequence: 8"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AMN Healthcare Services, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Comprehensive Income"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share amounts)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, March 31, June 30, 2024 2023 2024 2024 2023 Revenue $740,685 $991,299 $820,878 $1,561,563 $2,117,522 Cost of revenue 510,858 661,018 563,372 1,074,230 1,418,395 Gross profit 229,827 330,281 257,506 487,333 699,127 Gross margin 31.0% 33.3% 31.4% 31.2% 33.0% Operating expenses: Selling, general and administrative (SG&A) 149,044 201,771 174,842 323,886 407,370 SG&A as a % of revenue 20.1% 20.4% 21.3% 20.7% 19.2% Depreciation and amortization (exclusive of depreciation included in cost of revenue) 43,101 36,847 42,719 85,820 74,424 Total operating expenses 192,145 238,618 217,561 409,706 481,794 Income from operations 37,682 91,663 39,945 77,627 217,333 Operating margin (1) 5.1% 9.2% 4.9% 5.0% 10.3% Interest expense, net, and other 15,715 12,175 16,628 32,343 22,434 Income before income taxes 21,967 79,488 23,317 45,284 194,899 Income tax expense 5,730 18,582 5,989 11,719 49,883 Net income $16,237 $60,906 $17,328 $33,565 $145,016 Net income as a % of revenue 2.2% 6.1% 2.1% 2.1% 6.8% Other comprehensive income: Unrealized gains on available-for-sale securities, net, and other 182 50 84 266 196 Other comprehensive income 182 50 84 266 196 Comprehensive income $16,419 $60,956 $17,412 $33,831 $145,212 Net income per common share: Basic $0.43 $1.56 $0.45 $0.88 $3.60 Diluted $0.42 $1.55 $0.45 $0.88 $3.58 Weighted average common shares outstanding: Basic 38,173 39,151 38,114 38,144 40,258 Diluted 38,234 39,341 38,197 38,218 40,454"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 9"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AMN Healthcare Services, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(dollars in thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 December 31, 2023 June 30, 2023 Assets Current assets: Cash and cash equivalents $48,038 $32,935 $7,013 Accounts receivable, net 508,913 623,488 579,926 Accounts receivable, subcontractor 81,296 117,703 168,231 Prepaid and other current assets 66,510 67,559 52,066 Total current assets 704,757 841,685 807,236 Restricted cash, cash equivalents and investments 71,749 68,845 71,564 Fixed assets, net 197,059 191,385 177,417 Other assets 256,951 236,796 219,781 Goodwill 1,116,307 1,111,549 935,779 Intangible assets, net 424,504 474,134 432,366 Total assets $2,771,327 $2,924,394 $2,644,143 Liabilities and stockholders’ equity Current liabilities: Accounts payable and accrued expenses $283,176 $343,847 $327,538 Accrued compensation and benefits 268,354 278,536 261,629 Other current liabilities 22,360 33,738 84,548 Total current liabilities 573,890 656,121 673,715 Revolving credit facility 345,000 460,000 190,000 Notes payable, net 845,280 844,688 844,097 Deferred income taxes, net 20,551 23,350 6,986 Other long-term liabilities 109,747 108,979 163,048 Total liabilities 1,894,468 2,093,138 1,877,846 Commitments and contingencies Stockholders’ equity: 876,859 831,256 766,297 Total liabilities and stockholders’ equity $2,771,327 $2,924,394 $2,644,143"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 10"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AMN Healthcare Services, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Summary Condensed Consolidated Statements of Cash Flows"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(dollars in thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, March 31, June 30, 2024 2023 2024 2024 2023 Net cash provided by operating activities $99,515 $197,667 $81,386 $180,901 $241,101 Net cash used in investing activities (22,332) (22,428) (21,399) (43,731) (54,859) Net cash used in financing activities (80,108) (203,287) (38,973) (119,081) (247,744) Net increase (decrease) in cash, cash equivalents and restricted cash (2,925) (28,048) 21,014 18,089 (61,502) Cash, cash equivalents and restricted cash at beginning of period 129,287 104,418 108,273 108,273 137,872 Cash, cash equivalents and restricted cash at end of period $126,362 $76,370 $129,287 $126,362 $76,370"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 11"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AMN Healthcare Services, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Reconciliation Tables"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(dollars in thousands, except per share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, March 31, June 30, 2024 2023 2024 2024 2023 Reconciliation of Non-GAAP Items: Net income $16,237 $60,906 $17,328 $33,565 $145,016 Income tax expense 5,730 18,582 5,989 11,719 49,883 Income before income taxes 21,967 79,488 23,317 45,284 194,899 Interest expense, net, and other 15,715 12,175 16,628 32,343 22,434 Income from operations 37,682 91,663 39,945 77,627 217,333 Depreciation and amortization 43,101 36,847 42,719 85,820 74,424 Depreciation (included in cost of revenue) (2) 1,637 1,387 1,798 3,435 2,644 Share-based compensation 6,357 4,818 7,739 14,096 15,136 Acquisition, integration, and other costs (3) 5,310 6,103 5,465 10,775 10,845 Legal settlement accrual changes (4) — 21,000 — — 21,000 Adjusted EBITDA (5) $94,087 $161,818 $97,666 $191,753 $341,382 Adjusted EBITDA margin (6) 12.7% 16.3% 11.9% 12.3% 16.1% Net income $16,237 $60,906 $17,328 $33,565 $145,016 Adjustments: Amortization of intangible assets 24,744 22,120 24,886 49,630 43,777 Acquisition, integration, and other costs (3) 5,310 6,103 5,465 10,775 10,845 Legal settlement accrual changes (4) — 21,000 — — 21,000 Cumulative effect of change in accounting principle (7) — — — — 2,974 Tax effect on above adjustments (7,814) (12,798) (7,891) (15,705) (20,435) Tax effect of COLI fair value changes (8) (910) (1,744) (2,734) (3,644) (3,551) Tax deficiencies (benefits) related to equity awards and ESPP (9) (235) (1,798) 174 (61) (2,480) Adjusted net income (10) $37,332 $93,789 $37,228 $74,560 $197,146 GAAP diluted net income per share (EPS) $0.42 $1.55 $0.45 $0.88 $3.58 Adjustments 0.56 0.83 0.52 1.07 1.29 Adjusted diluted EPS (11) $0.98 $2.38 $0.97 $1.95 $4.87"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 12"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AMN Healthcare Services, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Supplemental Segment Financial and Operating Data"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(dollars in thousands, except operating data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended Six Months Ended June 30, March 31, June 30, 2024 2023 2024 2024 2023 Revenue Nurse and allied solutions $442,399 $689,015 $519,297 $961,696 $1,513,495 Physician and leadership solutions 186,065 176,229 188,797 374,862 341,986 Technology and workforce solutions 112,221 126,055 112,784 225,005 262,041 $740,685 $991,299 $820,878 $1,561,563 $2,117,522 Segment operating income (12) Nurse and allied solutions $46,207 $102,993 $53,342 $99,549 $216,438 Physician and leadership solutions 21,661 26,456 22,222 43,883 51,556 Technology and workforce solutions 47,259 55,623 44,270 91,529 122,633 115,127 185,072 119,834 234,961 390,627 Unallocated corporate overhead (13) 21,040 23,254 22,168 43,208 49,245 Adjusted EBITDA (5) $94,087 $161,818 $97,666 $191,753 $341,382 Gross Margin Nurse and allied solutions 23.8% 26.7% 25.1% 24.5% 26.3% Physician and leadership solutions 30.5% 35.1% 31.6% 31.0% 35.2% Technology and workforce solutions 60.2% 66.7% 59.9% 60.0% 69.2% Operating Data: Nurse and allied solutions Average travelers on assignment (14) 10,302 13,597 11,524 10,913 14,359 Physician and leadership solutions Days filled (15) 56,244 49,976 56,849 113,093 96,876 Revenue per day filled (16) $2,538 $2,439 $2,555 $2,546 $2,360"
+    },
+    {
+      "type": "TextElement",
+      "text": "As of June 30, As of December 31, 2024 2023 2023 Leverage ratio (17) 2.6 1.5 2.2 Field: Page; Sequence: 13"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "AMN Healthcare Services, Inc."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Additional Supplemental Non-GAAP Disclosure"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of Guidance Operating Margin to Guidance"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Adjusted EBITDA Margin"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended September 30, 2024 Low(18) High(18) Operating margin 2.1% 2.9% Depreciation and amortization (total) 6.6% 6.4% EBITDA margin 8.7% 9.3% Share-based compensation 0.9% 0.9% Acquisition, integration, and other costs 0.9% 0.9% Adjusted EBITDA margin 10.6% 11.1%"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 14 (1)Operating margin represents income from operations divided by revenue. (2)A portion of depreciation expense for AMN Language Services is included in cost of revenue. We exclude the impact of depreciation included in cost of revenue from the calculation of adjusted EBITDA. (3)Acquisition, integration, and other costs include acquisition and integration costs, net changes in the fair value of contingent consideration liabilities for recently acquired companies, certain legal expenses, restructuring expenses and other costs associated with exit or disposal activities, and certain nonrecurring expenses, which we exclude from the calculation of adjusted EBITDA, adjusted net income, and adjusted diluted EPS because we believe that these expenses are not indicative of the Company’s operating performance. For the three and six months ended June 30, 2024, acquisition and integration costs were approximately $0.7 million and $1.5 million, respectively, expenses related to the closures of certain office leases were approximately $0.6 million and $1.1 million, respectively, certain legal expenses of approximately $2.1 million and $3.3 million, respectively, restructuring expenses and other costs associated with exit or disposal activities were approximately $2.0 million and $3.0 million, respectively, and other nonrecurring expenses were approximately $2.3 million and $4.3 million, respectively. Additionally, the aforementioned costs for the three and six months ended June 30, 2024 were partially offset by an immaterial out-of-period adjustment of $2.4 million related to acquisition-related costs incurred in connection with the acquisition of MSDR. For the three and six months ended June 30, 2023, acquisition and integration costs were approximately $1.0 million and $2.0 million, respectively, expenses related to the closures of certain office leases were approximately $0.9 million and $2.0 million, respectively, increases in contingent consideration liabilities for recently acquired companies were approximately $2.4 million, restructuring expenses and other costs associated with exit or disposal activities were approximately $1.7 million and $3.5 million, respectively, and other nonrecurring expenses were approximately $0.1 million and $(0.1) million, respectively. Additionally, acquisition, integration, and other costs for the six months ended June 30, 2023 included certain legal expenses of approximately $1.0 million. (4)During the three months ended June 30, 2023, the Company recorded an increase to its legal accrual for a wage and hour claim in connection with reaching an agreement to settle the matter in its entirety. Since the settlement is largely unrelated to the Company's operating performance, we excluded its impact in the calculations of adjusted EBITDA, adjusted net income, and adjusted diluted EPS. (5)Adjusted EBITDA represents net income plus interest expense (net of interest income) and other, income tax expense (benefit), depreciation and amortization, depreciation (included in cost of revenue), acquisition, integration, and other costs, restructuring expenses, certain legal expenses, and share-based compensation. Management believes that adjusted EBITDA provides an effective measure of the Company’s results, as it excludes certain items that management believes are not indicative of the Company’s operating performance. Adjusted EBITDA is not intended to represent cash flows for the period, nor has it been presented as an alternative to income from operations or net income as an indicator of operating performance. Although management believes that some of the items excluded from adjusted EBITDA are not indicative of the Company’s operating performance, these items do impact the statement of comprehensive income, and management therefore utilizes adjusted EBITDA as an operating performance measure in conjunction with GAAP measures such as net income. (6)Adjusted EBITDA margin represents adjusted EBITDA divided by revenue. (7)As a result of a change in accounting principle on January 1, 2023 related to forfeitures of share-based awards, the Company recognized the cumulative effect of the change in share-based compensation expense during the six months ended June 30, 2023. The cumulative effect of the change in accounting principle is immaterial to prior periods and, therefore, was recognized in the period of the change. Since the cumulative effect is unrelated to the Company’s operating performance for the six months ended June 30, 2023, we excluded its impact in the calculation of adjusted net income and adjusted diluted EPS. (8)The Company records net tax expense (benefit) related to the income tax treatment of the fair value changes in the cash surrender value of its company owned life insurance. Since this change in fair value is unrelated to the Company’s operating performance, we excluded the impact on adjusted net income and adjusted diluted EPS. (9)The consolidated effective tax rate is affected by the recording of tax benefits and tax deficiencies relating to equity awards vested during the period and tax benefits recognized for disqualifying dispositions related to our employee stock purchase plan (“ESPP”). The magnitude of the impact of tax benefits and tax deficiencies generated in the future related to equity awards and ESPP is dependent upon the Company’s future grants of share-based compensation, the Company’s future stock price on the date equity awards vest in relation to the fair value of the awards on the grant date, the Company’s future stock price on either the ESPP’s offering date or purchase date, whichever is lower, and the length of time the shares issued under the ESPP are held by Field: Page; Sequence: 15 employees. Since these tax benefits and tax deficiencies related to equity awards and ESPP are largely unrelated to our income before taxes and are unrepresentative of our normal effective tax rate, we excluded their impact in the calculation of adjusted net income and adjusted diluted EPS. (10)Adjusted net income represents GAAP net income excluding the impact of the (A) amortization of intangible assets, (B) acquisition, integration, and other costs, (C) certain legal expenses, (D) changes in fair value of equity investments and instruments, (E) deferred financing related costs, (F) cumulative effect of change in accounting principle, (G) tax effect, if any, of the foregoing adjustments, (H) excess tax benefits and tax deficiencies relating to equity awards vested and ESPP, (I) net tax expense (benefit) related to the income tax treatment of fair value changes in the cash surrender value of its company owned life insurance, and (J) restructuring tax benefits. Management included this non-GAAP measure to provide investors and prospective investors with an alternative method for assessing the Company’s operating results in a manner that is focused on its operating performance and to provide a more consistent basis for comparison between periods. However, investors and prospective investors should note that this non-GAAP measure involves judgment by management (in particular, judgment as to what is classified as a special item to be excluded in the calculation of adjusted net income). Although management believes the items in the calculation of adjusted net income are not indicative of the Company’s operating performance, these items do impact the statement of comprehensive income, and management therefore utilizes adjusted net income as an operating performance measure in conjunction with GAAP measures such as GAAP net income. (11)Adjusted diluted EPS represents adjusted net income divided by diluted weighted average common shares outstanding. Management included this non-GAAP measure to provide investors and prospective investors with an alternative method for assessing the Company’s operating results in a manner that is focused on its operating performance and to provide a more consistent basis for comparison between periods. However, investors and prospective investors should note that this non-GAAP measure involves judgment by management (in particular, judgment as to what is classified as a special item to be excluded in the calculation of adjusted net income). Although management believes the items in the calculation of adjusted net income are not indicative of the Company’s operating performance, these items do impact the statement of comprehensive income, and management therefore utilizes adjusted diluted EPS as an operating performance measure in conjunction with GAAP measures such as GAAP diluted EPS. (12)Segment operating income represents net income plus interest expense (net of interest income) and other, income tax expense (benefit), depreciation and amortization, depreciation (included in cost of revenue), unallocated corporate overhead, acquisition, integration, and other costs, legal settlement accrual changes, and share-based compensation. (13)Unallocated corporate overhead (as presented in the tables above) consists of unallocated corporate overhead (as reflected in our quarterly and annual financial statements filed with the SEC) less acquisition, integration, and other costs and legal settlement accrual changes. (14)Average travelers on assignment represents the average number of nurse and allied healthcare professionals on assignment during the period presented. (15)Days filled is calculated by dividing the locum tenens hours filled during the period by eight hours. (16)Revenue per day filled represents revenue of the Company’s locum tenens business divided by days filled for the period presented. (17)Leverage ratio represents the ratio of the consolidated funded indebtedness (as calculated per the Company’s credit agreement) at the end of the subject period to the consolidated adjusted EBITDA (as calculated per the Company’s credit agreement) for the 12-month period ended at the end of the subject period. (18)Guidance percentage metrics are approximate. Field: Page; Sequence: 16; Options: Last"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "14"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "15"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "16"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        7,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Q2 2024",
+          "Q2 2024",
+          "Q2 2024",
+          "",
+          "% Change Q2 2023",
+          "% Change Q2 2023",
+          "% Change Q2 2023",
+          "",
+          "YTD June 30, 2024",
+          "YTD June 30, 2024",
+          "YTD June 30, 2024",
+          "",
+          "% Change YTD June 30, 2023",
+          "% Change YTD June 30, 2023",
+          "% Change YTD June 30, 2023"
+        ],
+        [
+          "Revenue",
+          "",
+          "$",
+          "740.7",
+          "",
+          "",
+          "",
+          "(25",
+          "%)",
+          "",
+          "$",
+          "1561.6",
+          "",
+          "",
+          "",
+          "(26",
+          "%)"
+        ],
+        [
+          "Gross profit",
+          "",
+          "$",
+          "229.8",
+          "",
+          "",
+          "",
+          "(30",
+          "%)",
+          "",
+          "$",
+          "487.3",
+          "",
+          "",
+          "",
+          "(30",
+          "%)"
+        ],
+        [
+          "Net income",
+          "",
+          "$",
+          "16.2",
+          "",
+          "",
+          "",
+          "(73",
+          "%)",
+          "",
+          "$",
+          "33.6",
+          "",
+          "",
+          "",
+          "(77",
+          "%)"
+        ],
+        [
+          "GAAP diluted EPS",
+          "",
+          "$",
+          "0.42",
+          "",
+          "",
+          "",
+          "(73",
+          "%)",
+          "",
+          "$",
+          "0.88",
+          "",
+          "",
+          "",
+          "(75",
+          "%)"
+        ],
+        [
+          "Adjusted diluted EPS*",
+          "",
+          "$",
+          "0.98",
+          "",
+          "",
+          "",
+          "(59",
+          "%)",
+          "",
+          "$",
+          "1.95",
+          "",
+          "",
+          "",
+          "(60",
+          "%)"
+        ],
+        [
+          "Adjusted EBITDA*",
+          "",
+          "$",
+          "94.1",
+          "",
+          "",
+          "",
+          "(42",
+          "%)",
+          "",
+          "$",
+          "191.8",
+          "",
+          "",
+          "",
+          "(44",
+          "%)"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Second quarter revenue was in line with expectations while earnings were better than expected, driven by expense management and beneficial discrete items."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Rollout of our ShiftWise Flex platform surpassed 50% of our vendor-neutral clients' spend on ShiftWise, and we successfully implemented our first MSP client migrations to Flex."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Technology and Workforce Solutions produced 41% of operating income from our three reported segments, led by 18% year-over-year revenue growth in language services."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Cash flow from operations was strong at $100 million in the second quarter, which allowed us to reduce debt by $80 million, bringing the year-to-date repayment to $115 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Our net leverage ratio at quarter end was 2.6:1."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "1",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "2",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "3",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        6,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "Metric",
+          "",
+          "Guidance*"
+        ],
+        [
+          "Consolidated revenue",
+          "",
+          "$660 - $680 million"
+        ],
+        [
+          "Gross margin",
+          "",
+          "30.7% - 31.2%"
+        ],
+        [
+          "SG&A as percentage of revenue",
+          "",
+          "22.0% -22.5%"
+        ],
+        [
+          "Operating margin",
+          "",
+          "2.1% - 2.9%"
+        ],
+        [
+          "Adjusted EBITDA margin",
+          "",
+          "10.6% - 11.1%"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "4",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "5",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 741.0,
+    "quarter_revenue_yoy_pct": -3062.8,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 680.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue of $741 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Revenue |  | $ | 740.7 |  | "
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "Outlook 1 Field: /Page 2 Field: /Page 3 Field: /Page Metric Guidance* Consolidated revenue $660 - $680 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -3,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": -2,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": -8.2321,
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "61.029999",
+    "return_10d_pct": "-16.3035",
+    "return_20d_pct": "-13.2230",
+    "return_30d_pct": "-25.1188",
+    "return_60d_pct": "-36.3264",
+    "return_90d_pct": "-32.9510"
+  },
+  "text_stats": {
+    "primary_text_len": 3378,
+    "exhibit_text_len": 35206,
+    "combined_text_len": 38586,
+    "semantic_text_len": 35576,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

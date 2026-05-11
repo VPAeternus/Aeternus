@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SFIX",
+    "cik": "1576942",
+    "event_date": "2024-09-24",
+    "event_accession": "0001576942-24-000087",
+    "primary_8k_doc": "sfix-20240924.htm",
+    "exhibit_docs": [
+      "exhibit991-q424.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SFIX_000157694224000087_sfix-20240924.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SFIX_000157694224000087_exhibit991-q424.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SFIX",
+    "cik": "1576942",
+    "entity_name": "STITCH FIX, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1227782000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-05",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-29",
+    "net_income_value": "-143314000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-05",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-29",
+    "assets_value": "614478000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-05",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-07-29",
+    "financing_cash_flow_value": "-38885000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2023-09-20",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2021-07-31",
+    "investing_cash_flow_value": "39093000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2023-09-20",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2021-07-31",
+    "operating_cash_flow_value": "-15675000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2023-09-20",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2021-07-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.116726",
+    "operating_cash_flow_to_revenue": "-0.012767",
+    "assets_to_revenue": "0.500478",
+    "financing_cash_flow_to_revenue": "-0.031671",
+    "investing_cash_flow_to_revenue": "0.03184"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $319.",
+      "revenue of $1.",
+      "Gross margin of 44.",
+      "GAAP net income (loss).",
+      "gross margin, inventory levels, and advertising spend.",
+      "Gross margin 44."
+    ],
+    "guidance_evidence": [
+      "guidance on both the top and bottom line,” said Matt Baer, Chief Executive Officer, Stitch Fix.",
+      "Outlook Our financial outlook for the first quarter of fiscal 2025 ending November 2, 2024, is as follows: Q1 2025 Net Revenue $303 million - $310 million (17)% - (15)% YoY Adjusted EBITDA $5 million - $9 million 1.",
+      "outlook for fiscal year 2025 is as follows: Fiscal Year 2025 Net Revenue $1.",
+      "outlook to the corresponding GAAP measure is not available without unreasonable effort.",
+      "outlook.",
+      "forecast our future operating results; and other risks described in the filings we make with the SEC."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Matt Baer, Chief Executive Officer, Stitch Fix.",
+      "ainty and potential variability of restructuring and other one-time costs, net other income (expense), provision for income taxes, and stock-based compensation expense, which are reconciling items between Adjusted EBITDA and GAAP net income (loss).",
+      "ailable without unreasonable effort.",
+      "ailable for a limited time at https://investors.",
+      "ain forward-looking statements within the meaning of the federal securities laws.",
+      "ain, sourcing of materials and shipping of merchandise; our ability to forecast our future operating results; and other risks described in the filings we make with the SEC."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels, and advertising spend.",
+      "inventory levels and management; risks related to our supply chain, sourcing of materials and shipping of merchandise; our ability to forecast our future operating results; and other risks described in the filings we make with the SEC.",
+      "charges for the three and twelve months ended August 3, 2024, were $22.",
+      "impairment charge related to a portion of our corporate office space, recorded in selling, general, and administrative expenses in the consolidated statements of operations and comprehensive loss.",
+      "charges for the three and twelve months ended July 29, 2023, were $2.",
+      "decrease of 12."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 319.6,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-25",
+    "entry_open": "2.690000",
+    "return_10d_pct": "0.3717",
+    "return_20d_pct": "4.8327",
+    "return_30d_pct": "5.2045",
+    "return_60d_pct": "68.4015",
+    "return_90d_pct": "40.1487"
+  },
+  "text_stats": {
+    "primary_text_len": 3827,
+    "exhibit_text_len": 23486,
+    "combined_text_len": 27315
+  }
+}

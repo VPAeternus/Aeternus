@@ -85,7 +85,7 @@ The industry’s infrastructure is already adapted to this shape of work. That i
 
 The wedge is:
 
-**a capital allocation operating system that turns idea -> evidence -> shortlist -> deep research -> allocation -> execution -> learning into one measured loop**
+**a capital allocation operating system that turns idea -> evidence -> candidate_list -> deep research -> allocation -> execution -> learning into one measured loop**
 
 This is stronger than:
 

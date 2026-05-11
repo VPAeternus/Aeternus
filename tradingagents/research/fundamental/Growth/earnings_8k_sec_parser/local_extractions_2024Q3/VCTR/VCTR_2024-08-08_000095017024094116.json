@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "VCTR",
+    "cik": "1570827",
+    "event_date": "2024-08-08",
+    "event_accession": "0000950170-24-094116",
+    "primary_8k_doc": "vctr-20240808.htm",
+    "exhibit_docs": [
+      "vctr-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VCTR_000095017024094116_vctr-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/VCTR_000095017024094116_vctr-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "VCTR",
+    "cik": "1570827",
+    "entity_name": "Victory Capital Holdings, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "201320000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "49273000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2542616000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-62469000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1546000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "64156000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.24475",
+    "operating_cash_flow_to_revenue": "0.318677",
+    "assets_to_revenue": "12.629724",
+    "financing_cash_flow_to_revenue": "-0.310297",
+    "investing_cash_flow_to_revenue": "-0.007679"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue increased 1.",
+      "Earnings Per Share Second-Quarter Highlights • Total Client Assets of $173.",
+      "GAAP net income per diluted share of $1.",
+      "net income with tax benefit per diluted share of $1.",
+      "Net Income are not defined by GAAP and should not be regarded as an alternative to any measurement under GAAP.",
+      "Net income 74."
+    ],
+    "guidance_evidence": [
+      "outlook for Victory Capital’s or Amundi’s future business and financial performance.",
+      "expected results, performance or achievements expressed or implied by such forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "aid David Brown, Chairman and Chief Executive Officer.",
+      "aid in September.",
+      "ain GAAP and non-GAAP (“adjusted”) financial results.",
+      "ainst benchmarks by AUM as of June 30, 2024.",
+      "ailing Trailing Trailing Trailing 1-Year 3-Years 5-Years 10-Years 49% 60% 77% 79% Second Quarter 2024 Compared with First Quarter 2024 Revenue increased 1.",
+      "air value of consideration payable for acquisitions as well as a decrease in compensation related expenses."
+    ],
+    "warning_or_risk_evidence": [
+      "charge, copies of the proxy statement (when it is available) and other documents that are filed or will be filed with the SEC by the Company through the website maintained by the SEC at www.",
+      "decreased by $1.",
+      "decrease was due to net outflows of $1.",
+      "decrease in compensation related expenses.",
+      "decreased 6.",
+      "decrease in depreciation and amortization expense, partially offset by an increase in acquisition-related costs."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "48.000000",
+    "return_10d_pct": "9.5833",
+    "return_20d_pct": "11.1667",
+    "return_30d_pct": "8.4792",
+    "return_60d_pct": "18.7500",
+    "return_90d_pct": "32.3125"
+  },
+  "text_stats": {
+    "primary_text_len": 3531,
+    "exhibit_text_len": 42862,
+    "combined_text_len": 46395
+  }
+}

@@ -1,0 +1,1313 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ALGM",
+    "cik": "866291",
+    "event_date": "2024-07-23",
+    "event_accession": "0000950103-24-010519",
+    "primary_8k_doc": "dp214872_8k.htm",
+    "exhibit_docs": [
+      "dp214872_ex9901.htm",
+      "algm-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGM_000095010324010519_dp214872_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGM_000095010324010519_dp214872_ex9901.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGM_000095010324010519_algm-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ALGM",
+    "cik": "866291",
+    "entity_name": "ALLEGRO MICROSYSTEMS, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "768674000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-25",
+    "net_income_value": "119407000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-25",
+    "assets_value": "1181155000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-5307000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-25",
+    "investing_cash_flow_value": "-66271000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-25",
+    "operating_cash_flow_value": "156129000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-25",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.155342",
+    "operating_cash_flow_to_revenue": "0.203115",
+    "assets_to_revenue": "1.536614",
+    "financing_cash_flow_to_revenue": "-0.006904",
+    "investing_cash_flow_to_revenue": "-0.086215"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Gross Margin % 44.",
+      "non-GAAP Net Income, non-GAAP Basic Field: Page; Sequence: 1 Field: /Page and Diluted Earnings per Share, Free Cash Flow and Free Cash Flow Margin (collectively, the “Non-GAAP Financial Measures”).",
+      "gross margin, net income or any other performance measures derived in accordance with GAAP.",
+      "Non-GAAP Gross Margin Three-Month Period Ended June 28, 2024 (unaudited) (Dollars in thousands, except percentages) GAAP Gross Profit $74,500 +/-$1.",
+      "GAAP Gross Margin 44.",
+      "Non-GAAP Gross Margin (% of net sales) 48."
+    ],
+    "guidance_evidence": [
+      "expects that our final first quarter results will be within the ranges described above.",
+      "forecasts and make strategic decisions."
+    ],
+    "wave_or_demand_evidence": [
+      "customers to manage orders to reduce inventory in the channel and return to more normalized business levels.",
+      "ain and subject to change as we finalize our results of operations for the fiscal quarter ended June 28, 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "Preliminary First Quarter 2025 Results Recent DevelopmentsPreliminary Financial Results for the First Quarter Ended June 28, 2024While the financial closing and financial statement preparation process of Allegro MicroSystems, Inc.",
+      "preliminary financial results for the first quarter ended June 28, 2024: GAAP Non-GAAP Preliminary June 28, 2024 Results (unaudited) Preliminary June 28, 2024 Results (unaudited) (As of 7/23/2024) (As of 7/23/2024) Total Net Sales $167M +/- $1.",
+      "inventory in the channel and return to more normalized business levels.",
+      "preliminary financial results referred to herein are based on management’s preliminary, unaudited analysis of the Company’s financial performance as of the date hereof.",
+      "preliminary and inherently uncertain and subject to change as we finalize our results of operations for the fiscal quarter ended June 28, 2024.",
+      "preliminary estimates."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "4"
+    },
+    {
+      "type": "TextElement",
+      "text": "dp214872_ex9901.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Preliminary First Quarter 2025 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "Recent DevelopmentsPreliminary Financial Results for the First Quarter Ended June 28, 2024While the financial closing and financial statement preparation process of Allegro MicroSystems, Inc. (the “Company”, “our”, “us”, “we” or “Allegro”) is in its preliminary stages, Allegro currently expects the following unaudited preliminary financial results for the first quarter ended June 28, 2024:"
+    },
+    {
+      "type": "TableElement",
+      "text": "GAAP Non-GAAP Preliminary June 28, 2024 Results (unaudited) Preliminary June 28, 2024 Results (unaudited) (As of 7/23/2024) (As of 7/23/2024) Total Net Sales $167M +/- $1.0M $167M +/- $1.0M Gross Profit $ $74.5M +/- $1.0M $81.5M +/- $1.0M Gross Margin % 44.6% +/- 25 bps 48.8% +/- 25 bps Operating Expenses $ $85.5M +/- $0.5M $71.5M +/- $0.5M Net (Loss) Income Attributable to Allegro MicroSystems, Inc. ($17.7M) +/- $1.0M $6.0M +/- $1.0M Diluted Earnings (Loss) per Share ($0.10) - ($0.09) $0.02 -$0.03 Net Loss ($17.6M) +/- $1.0M NA Adjusted EBITDA NA $22.0M +/- $1.0M Operating Cash Flow $32.7M +/- $2.0M N/A Free Cash Flow NA $23.0M +/- $2.0M"
+    },
+    {
+      "type": "TextElement",
+      "text": "Gross profit decreased in the three-month period ended June 28, 2024 compared to the three-month period ended June 30, 2023 due to a decrease in net sales, as well as lower cost of goods sold primarily due to a reduction in production volume as well as product mix, offset by an increase in amortization of intangible assets in relation to the acquisition of Crocus Technology International Corp. In addition, the Company made progress during the three-month period ended June 28, 2024 in working closely with customers to manage orders to reduce inventory in the channel and return to more normalized business levels.Cash and cash equivalents was $184 million, inclusive of $11 million in restricted cash, at June 28, 2024.The Company currently expects that our final first quarter results will be within the ranges described above. The anticipated preliminary financial results referred to herein are based on management’s preliminary, unaudited analysis of the Company’s financial performance as of the date hereof. As of the date hereof, our results for the fiscal quarter ended June 28, 2024 have not been completed and Allegro has not completed its quarter end procedures for such periods. These estimates are preliminary and inherently uncertain and subject to change as we finalize our results of operations for the fiscal quarter ended June 28, 2024. During the course of our quarter-end review process, the Company may identify items that would require it to make adjustments, which may be material, to the information presented above. There can be no assurance that our final results for the fiscal quarter ended June 28, 2024 will not differ materially from these preliminary estimates. The preliminary estimates presented above should not be viewed as a substitute for condensed consolidated interim financial statements prepared in accordance with U.S. Generally Accepted Accounting Principles (“GAAP”). The above statements do not present all information necessary for an understanding of our results of operations for the fiscal quarter ending June 28, 2024. Accordingly, undue reliance should not be placed on these preliminary financial results. These preliminary financial results for the three months ended June 28, 2024 are not necessarily indicative of the results to be achieved for the full fiscal year or any future period.The preliminary financial data included herein has been prepared by, and is the responsibility of, the Company’s management. PricewaterhouseCoopers LLP has not audited, reviewed, examined, compiled, nor applied agreed-upon procedures with respect to the preliminary financial data. Accordingly, PricewaterhouseCoopers LLP does not express an opinion or any other form of assurance with respect thereto.Investor Non-GAAP Financial MeasuresIn addition to the measures presented in our consolidated financial statements, we regularly review other measures, defined as non-GAAP financial measures by the U.S Securities and Exchange Commission, to evaluate our business, measure our performance, identify trends, prepare financial forecasts and make strategic decisions. The key measures we consider are non-GAAP Gross Profit, non-GAAP Gross Margin, non-GAAP Operating Expenses, EBITDA, Adjusted EBITDA, Adjusted EBITDA margin, non-GAAP Net Income, non-GAAP Basic Field: Page; Sequence: 1 Field: /Page and Diluted Earnings per Share, Free Cash Flow and Free Cash Flow Margin (collectively, the “Non-GAAP Financial Measures”). These Non-GAAP Financial Measures provide supplemental information regarding our operating performance on a non-GAAP basis that excludes certain gains, losses and charges of a non-cash nature or that occur relatively infrequently and/or that management considers to be unrelated to our core operations, and in the case of non-GAAP Income Tax Provision, management believes that this non-GAAP measure of income taxes provides it with the ability to evaluate the non-GAAP Income Tax Provision across different reporting periods on a consistent basis, independent of special items and discrete items, which may vary in size and frequency. These Non-GAAP Financial Measures are used by both management and our Board of Directors, together with the comparable GAAP information, in evaluating our current performance and planning our future business activities.The Non-GAAP Financial Measures are supplemental measures of our performance that are neither required by, nor presented in accordance with, GAAP. The Non-GAAP Financial Measures used by us may be calculated differently from, and therefore may not be comparable to, similarly titled measures used by other companies, which could reduce the usefulness of our Non-GAAP Financial Measures as tools for comparison. These Non-GAAP Financial Measures should not be considered as substitutes for GAAP financial measures such as gross profit, gross margin, net income or any other performance measures derived in accordance with GAAP. Also, in the future we may incur expenses or charges such as those being adjusted in the calculation of these Non-GAAP Financial Measures. Our presentation of these Non-GAAP Financial Measures should not be construed as an inference that future results will be unaffected by unusual or nonrecurring items. These Non-GAAP Financial Measures exclude costs related to acquisition and related integration expenses, amortization of acquired intangible assets, stock-based compensation, restructuring actions, related party activities and other non-operational costs.Reconciliation of Preliminary Non-GAAP Gross Margin"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three-Month Period Ended June 28, 2024 (unaudited) (Dollars in thousands, except percentages) GAAP Gross Profit $74,500 +/-$1.0M GAAP Gross Margin 44.6% +/-25bps Non-GAAP adjustments Purchased intangible amortization 5,000 Restructuring costs 1,200 Stock-based compensation 600 Other costs(1) 200 Total Non-GAAP Adjustments $7,000 +/-$1.0M Non-GAAP Gross Profit $81,500 +/-$1.0M Non-GAAP Gross Margin (% of net sales) 48.8% +/-25bps"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Included in non-GAAP other costs are non-recurring charges that are individually immaterial for separate disclosure. Field: Page; Sequence: 2 Field: /Page Reconciliationof Preliminary Non-GAAP Operating Expenses"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three-Month Period Ended June 28, 2024 (unaudited) (Dollars in thousands) GAAP Operating Expenses $85,500 +/-$0.5M Research and Development Expenses GAAP Research and Development Expenses 45,000 Non-GAAP adjustments Transaction-related costs 1,000 Restructuring costs 200 Stock-based compensation 3,700 Non-GAAP Research and Development Expenses 40,100 +/-$0.5M Selling, General and Administrative Expenses GAAP Selling, General and Administrative Expenses 40,200 Non-GAAP adjustments Transaction-related costs 800 Purchased intangible amortization 500 Restructuring costs 1,000 Stock-based compensation 5,800 Other costs(1) 1,000 Non-GAAP Selling, General and Administrative Expenses 31,100 +/-$0.5M Total Non-GAAP Adjustments 14,000 +/-$0.5M Non-GAAP Operating Expenses $71,500 +/-$0.5M"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Included in non-GAAP other costs are non-recurring charges that are individually immaterial for separate disclosure such as project evaluation costs, which consist of costs incurred in connection with debt and equity financings or other non-recurring transactions.Reconciliation of Preliminary EBITDA and Preliminary Adjusted EBITDA"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three-Month Period Ended June 28, 2024 (unaudited) (Dollars in thousands, except percentages) GAAP Net Loss $(17,600) +/-$1.0M GAAP Net Loss Margin (% of net sales) (10.5)% +/-50bps Interest expense 5,500 Interest income (500) Income tax provision 1,500 Depreciation & amortization 16,500 EBITDA $5,400 +/-$1.0M Transaction-related costs 1,800 Restructuring costs 2,400 Stock-based compensation 10,100 Other costs(1) 2,300 Adjusted EBITDA $22,000 +/-$1.0M Adjusted EBITDA Margin (% of net sales) 13.2% +/-50bps"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) Included in non-GAAP other costs are non-recurring charges that are individually immaterial for separate disclosure such as project evaluation costs, which consist of costs incurred in connection with debt and equity financings or other non-recurring transactions and income (loss) in earnings of equity investments. Field: Page; Sequence: 3 Field: /Page Reconciliation of Preliminary Non-GAAP Net Income Attributable to Allegro MicroSystems, Inc. and Preliminary Non-GAAP Diluted Earnings per Share"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three-Month Period Ended June 28, 2024 (unaudited) (Dollars in thousands (except per share amounts) and share counts in millions) GAAP Net Loss Attributable to Allegro MicroSystems, Inc.(1) $(17,700) +/-$1.0M GAAP Diluted Loss per Share $(0.09) +/-$0.01 Transaction-related costs 1,800 Transaction-related interest 700 Purchased intangible amortization 5,400 Restructuring costs 2,400 Stock-based compensation 10,100 Other costs(2) 2,900 Total Non-GAAP Adjustments 23,300 +/-$1.0M Tax effect of adjustments to GAAP results(3) 400 Non-GAAP Net Income Attributable to Allegro MicroSystems, Inc. $6,000 +/-$1.0M Diluted weighted average common shares 194.7 Non-GAAP Diluted Earnings per Share $0.03 +/-$0.01"
+    },
+    {
+      "type": "TextElement",
+      "text": "(1) GAAP Net Loss Attributable to Allegro MicroSystems, Inc. represents GAAP Net Income adjusted for Net Income Attributable to non-controlling interests.(2) Included in non-GAAP other costs are non-recurring charges that are individually immaterial for separate disclosure such as project evaluation costs, which consist of costs incurred in connection with debt and equity financings or other non-recurring transactions and income (loss) in earnings of equity investments.(3) To calculate the tax effect of adjustments to GAAP results, the Company considers each Non-GAAP adjustment by tax jurisdiction and reverses all discrete items to calculate an annual Non-GAAP effective tax rate (“NG ETR”). This NG ETR is then applied to Non-GAAP Profit Before Tax to arrive at the tax effect of adjustments to GAAP results.Reconciliation of Preliminary Non-GAAP Free Cash Flow"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three-Month Period Ended June 28, 2024 (unaudited) (Dollars in thousands, except percentages) GAAP Operating Cash Flow $32,700 +/-$2.0M GAAP Operating Cash Flow % of net sales 19.6% +/-50bps Non-GAAP adjustments Purchases of property, plant and equipment (9,700) +/-$2.0M Non-GAAP Free Cash Flow $23,000 +/-$2.0M Non-GAAP Free Cash Flow Margin (% of net sales) 13.8% +/-50bps"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 4; Options: Last Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        13,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "GAAP",
+          "",
+          "Non-GAAP"
+        ],
+        [
+          "",
+          "",
+          "Preliminary June 28, 2024 Results (unaudited)",
+          "",
+          "Preliminary June 28, 2024 Results (unaudited)"
+        ],
+        [
+          "",
+          "",
+          "(As of 7/23/2024)",
+          "",
+          "(As of 7/23/2024)"
+        ],
+        [
+          "Total Net Sales",
+          "",
+          "$167M +/- $1.0M",
+          "",
+          "$167M +/- $1.0M"
+        ],
+        [
+          "Gross Profit $",
+          "",
+          "$74.5M +/- $1.0M",
+          "",
+          "$81.5M +/- $1.0M"
+        ],
+        [
+          "Gross Margin %",
+          "",
+          "44.6% +/- 25 bps",
+          "",
+          "48.8% +/- 25 bps"
+        ],
+        [
+          "Operating Expenses $",
+          "",
+          "$85.5M +/- $0.5M",
+          "",
+          "$71.5M +/- $0.5M"
+        ],
+        [
+          "Net (Loss) Income Attributable to Allegro MicroSystems, Inc.",
+          "",
+          "($17.7M) +/- $1.0M",
+          "",
+          "$6.0M +/- $1.0M"
+        ],
+        [
+          "Diluted Earnings (Loss) per Share",
+          "",
+          "($0.10) - ($0.09)",
+          "",
+          "$0.02 -$0.03"
+        ],
+        [
+          "Net Loss",
+          "",
+          "($17.6M) +/- $1.0M",
+          "",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "",
+          "",
+          "$22.0M +/- $1.0M"
+        ],
+        [
+          "Operating Cash Flow",
+          "",
+          "$32.7M +/- $2.0M",
+          "",
+          ""
+        ],
+        [
+          "Free Cash Flow",
+          "",
+          "",
+          "",
+          "$23.0M +/- $2.0M"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        14,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended"
+        ],
+        [
+          "",
+          "",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)"
+        ],
+        [
+          "",
+          "",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)"
+        ],
+        [
+          "GAAP Gross Profit",
+          "",
+          "$",
+          "74500",
+          "",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "GAAP Gross Margin",
+          "",
+          "",
+          "44.6",
+          "%",
+          "",
+          "",
+          "+/-25bps"
+        ],
+        [
+          "Non-GAAP adjustments",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Purchased intangible amortization",
+          "",
+          "",
+          "5000",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Restructuring costs",
+          "",
+          "",
+          "1200",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Stock-based compensation",
+          "",
+          "",
+          "600",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other costs(1)",
+          "",
+          "",
+          "200",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total Non-GAAP Adjustments",
+          "",
+          "$",
+          "7000",
+          "",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Gross Profit",
+          "",
+          "$",
+          "81500",
+          "",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "Non-GAAP Gross Margin (% of net sales)",
+          "",
+          "",
+          "48.8",
+          "%",
+          "",
+          "",
+          "+/-25bps"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "Reconciliation",
+          "of Preliminary Non-GAAP Operating Expenses"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        26,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended"
+        ],
+        [
+          "",
+          "",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)"
+        ],
+        [
+          "",
+          "",
+          "(Dollars in thousands)",
+          "(Dollars in thousands)",
+          "(Dollars in thousands)",
+          "(Dollars in thousands)",
+          "(Dollars in thousands)",
+          "(Dollars in thousands)"
+        ],
+        [
+          "GAAP Operating Expenses",
+          "",
+          "$",
+          "85500",
+          "",
+          "",
+          "",
+          "+/-$0.5M"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Research and Development Expenses",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP Research and Development Expenses",
+          "",
+          "",
+          "45000",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP adjustments",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Transaction-related costs",
+          "",
+          "",
+          "1000",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Restructuring costs",
+          "",
+          "",
+          "200",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Stock-based compensation",
+          "",
+          "",
+          "3700",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Research and Development Expenses",
+          "",
+          "",
+          "40100",
+          "",
+          "",
+          "",
+          "+/-$0.5M"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Selling, General and Administrative Expenses",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP Selling, General and Administrative Expenses",
+          "",
+          "",
+          "40200",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP adjustments",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Transaction-related costs",
+          "",
+          "",
+          "800",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Purchased intangible amortization",
+          "",
+          "",
+          "500",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Restructuring costs",
+          "",
+          "",
+          "1000",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Stock-based compensation",
+          "",
+          "",
+          "5800",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other costs(1)",
+          "",
+          "",
+          "1000",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Selling, General and Administrative Expenses",
+          "",
+          "",
+          "31100",
+          "",
+          "",
+          "",
+          "+/-$0.5M"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total Non-GAAP Adjustments",
+          "",
+          "",
+          "14000",
+          "",
+          "",
+          "",
+          "+/-$0.5M"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Operating Expenses",
+          "",
+          "$",
+          "71500",
+          "",
+          "",
+          "",
+          "+/-$0.5M"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        18,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended"
+        ],
+        [
+          "",
+          "",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)"
+        ],
+        [
+          "",
+          "",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)"
+        ],
+        [
+          "GAAP Net Loss",
+          "",
+          "$",
+          "(17,600",
+          ")",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "GAAP Net Loss Margin (% of net sales)",
+          "",
+          "",
+          "(10.5",
+          ")%",
+          "",
+          "",
+          "+/-50bps"
+        ],
+        [
+          "Interest expense",
+          "",
+          "",
+          "5500",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Interest income",
+          "",
+          "",
+          "(500",
+          ")",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Income tax provision",
+          "",
+          "",
+          "1500",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Depreciation & amortization",
+          "",
+          "",
+          "16500",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "EBITDA",
+          "",
+          "$",
+          "5400",
+          "",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Transaction-related costs",
+          "",
+          "",
+          "1800",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Restructuring costs",
+          "",
+          "",
+          "2400",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Stock-based compensation",
+          "",
+          "",
+          "10100",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other costs(1)",
+          "",
+          "",
+          "2300",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adjusted EBITDA",
+          "",
+          "$",
+          "22000",
+          "",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "Adjusted EBITDA Margin (% of net sales)",
+          "",
+          "",
+          "13.2",
+          "%",
+          "",
+          "",
+          "+/-50bps"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        18,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended"
+        ],
+        [
+          "",
+          "",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)"
+        ],
+        [
+          "",
+          "",
+          "(Dollars in thousands (except per share amounts) and share counts in millions)",
+          "(Dollars in thousands (except per share amounts) and share counts in millions)",
+          "(Dollars in thousands (except per share amounts) and share counts in millions)",
+          "(Dollars in thousands (except per share amounts) and share counts in millions)",
+          "(Dollars in thousands (except per share amounts) and share counts in millions)",
+          "(Dollars in thousands (except per share amounts) and share counts in millions)"
+        ],
+        [
+          "GAAP Net Loss Attributable to Allegro MicroSystems, Inc.(1)",
+          "",
+          "$",
+          "(17,700",
+          ")",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "GAAP Diluted Loss per Share",
+          "",
+          "$",
+          "(0.09",
+          ")",
+          "",
+          "",
+          "+/-$0.01"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Transaction-related costs",
+          "",
+          "",
+          "1800",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Transaction-related interest",
+          "",
+          "",
+          "700",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Purchased intangible amortization",
+          "",
+          "",
+          "5400",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Restructuring costs",
+          "",
+          "",
+          "2400",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Stock-based compensation",
+          "",
+          "",
+          "10100",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other costs(2)",
+          "",
+          "",
+          "2900",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total Non-GAAP Adjustments",
+          "",
+          "",
+          "23300",
+          "",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "Tax effect of adjustments to GAAP results(3)",
+          "",
+          "",
+          "400",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Net Income Attributable to Allegro MicroSystems, Inc.",
+          "",
+          "$",
+          "6000",
+          "",
+          "",
+          "",
+          "+/-$1.0M"
+        ],
+        [
+          "Diluted weighted average common shares",
+          "",
+          "",
+          "194.7",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Diluted Earnings per Share",
+          "",
+          "$",
+          "0.03",
+          "",
+          "",
+          "",
+          "+/-$0.01"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        10,
+        8
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended",
+          "Three-Month Period Ended"
+        ],
+        [
+          "",
+          "",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)",
+          "June 28, 2024 (unaudited)"
+        ],
+        [
+          "",
+          "",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)",
+          "(Dollars in thousands, except percentages)"
+        ],
+        [
+          "GAAP Operating Cash Flow",
+          "",
+          "$",
+          "32700",
+          "",
+          "",
+          "",
+          "+/-$2.0M"
+        ],
+        [
+          "GAAP Operating Cash Flow % of net sales",
+          "",
+          "",
+          "19.6",
+          "%",
+          "",
+          "",
+          "+/-50bps"
+        ],
+        [
+          "Non-GAAP adjustments",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Purchases of property, plant and equipment",
+          "",
+          "",
+          "(9,700",
+          ")",
+          "",
+          "",
+          "+/-$2.0M"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Free Cash Flow",
+          "",
+          "$",
+          "23000",
+          "",
+          "",
+          "",
+          "+/-$2.0M"
+        ],
+        [
+          "Non-GAAP Free Cash Flow Margin (% of net sales)",
+          "",
+          "",
+          "13.8",
+          "%",
+          "",
+          "",
+          "+/-50bps"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 167.0,
+    "quarter_revenue_yoy_pct": 0.0,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Total Net Sales |  | $167M +/- $1.0M |  | $167M +/- $1.0M"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Total Net Sales |  | $167M +/- $1.0M |  | $167M +/- $1.0M"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -3,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 3,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "25.790001",
+    "return_10d_pct": "-17.0221",
+    "return_20d_pct": "-9.7325",
+    "return_30d_pct": "-3.1020",
+    "return_60d_pct": "-14.3854",
+    "return_90d_pct": "-21.7138"
+  },
+  "text_stats": {
+    "primary_text_len": 24252,
+    "exhibit_text_len": 11371,
+    "combined_text_len": 35625,
+    "semantic_text_len": 11493,
+    "table_count": 7,
+    "semantic_parse_status": "sec_parser"
+  }
+}

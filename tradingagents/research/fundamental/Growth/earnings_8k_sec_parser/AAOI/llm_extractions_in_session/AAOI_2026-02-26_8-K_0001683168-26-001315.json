@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 134.3,
+    "revenue_yoy_pct": 33.8983,
+    "revenue_qoq_pct": 13.2378,
+    "gross_margin_pct": 31.2,
+    "non_gaap_gross_margin_pct": 31.4,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 157.5,
+    "revenue_low_millions": 150.0,
+    "revenue_high_millions": 165.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 30.0,
+    "guide_direction": "positive"
+  },
+  "qualitative": {
+    "demand_signal": "“Our results were driven by broad-based demand in both our CATV and datacenter businesses.",
+    "wave_signal": "(NASDAQ: AAOI) (“AOI”), a leading provider of advanced optical and HFC networking products that power the internet, today announced financial results for its fourth quarter and full year ended December 31, 2025.",
+    "margin_signal": "”“We generated significant revenue growth while expanding our gross margins this year,” said Dr.",
+    "risk_signal": "·GAAP net loss was $2.",
+    "customer_signal": "AOI supplies this critical infrastructure to tier-one customers across cloud computing, CATV broadband, telecom, and FTTH markets."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $134.3 million, compared with $100.3 million in the fourth quarter of 2024 and $118.6 million in the third quarter of 2025."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $134.3 million, compared with $100.3 million in the fourth quarter of 2024 and $118.6 million in the third quarter of 2025."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $134.3 million, compared with $100.3 million in the fourth quarter of 2024 and $118.6 million in the third quarter of 2025."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 31.2%, compared with 28.7% in the fourth quarter of 2024 and 28.0% in the third quarter of 2025. Non-GAAP gross margin was 31.4%, compared with 28.9% in the fourth quarter of 2024 and 31.0% in the third quarter of 2025."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 31.2%, compared with 28.7% in the fourth quarter of 2024 and 28.0% in the third quarter of 2025. Non-GAAP gross margin was 31.4%, compared with 28.9% in the fourth quarter of 2024 and 31.0% in the third quarter of 2025."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $150 million to $165 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $150 million to $165 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $150 million to $165 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 29% to 31%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

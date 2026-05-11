@@ -47,7 +47,7 @@ def build_evidence_pack(
         extra_benchmarks=extra_benchmarks,
     )
 
-    summaries = _collect_batch_summaries(
+    summaries = _collect_analysis_summaries(
         from_date=evidence_config["from_date"],
         to_date=evidence_config["to_date"],
     )
@@ -140,9 +140,7 @@ def build_evidence_pack(
     )
 
     # Live outcome analysis — bridge execution results to evidence.
-    live_outcome = build_live_outcome_report(
-        batch_analysis_dir=str(Path("eval_results") / "deal_flow"),
-    )
+    live_outcome = build_live_outcome_report()
 
     regime_slices = []
     for regime_slice in regime_report.get("regime_slices", []):
@@ -311,7 +309,7 @@ def build_evidence_walkforward(
         runtime_config.update(config)
 
     evidence_config = _build_run_config(from_date, to_date, runtime_config, extra_benchmarks=None)
-    summaries = _collect_batch_summaries(evidence_config["from_date"], evidence_config["to_date"])
+    summaries = _collect_analysis_summaries(evidence_config["from_date"], evidence_config["to_date"])
     daily_edges = _build_daily_edge_rows(summaries)
     report = build_walkforward_report(
         daily_rows=daily_edges,
@@ -339,7 +337,7 @@ def build_evidence_ablation(
         runtime_config.update(config)
 
     evidence_config = _build_run_config(from_date, to_date, runtime_config, extra_benchmarks=None)
-    summaries = _collect_batch_summaries(evidence_config["from_date"], evidence_config["to_date"])
+    summaries = _collect_analysis_summaries(evidence_config["from_date"], evidence_config["to_date"])
     items_by_date = _collect_items_by_date(summaries)
     report = build_ablation_report(
         items_by_date=items_by_date,
@@ -364,7 +362,7 @@ def build_evidence_telemetry(
         runtime_config.update(config)
 
     evidence_config = _build_run_config(from_date, to_date, runtime_config, extra_benchmarks=None)
-    summaries = _collect_batch_summaries(evidence_config["from_date"], evidence_config["to_date"])
+    summaries = _collect_analysis_summaries(evidence_config["from_date"], evidence_config["to_date"])
     items_by_date = _collect_items_by_date(summaries)
     ablation_report = build_ablation_report(
         items_by_date=items_by_date,
@@ -442,51 +440,14 @@ def _build_run_config(
         "walkforward_step_days": int(config.get("evidence_walkforward_step_days", 63)),
         "walkforward_fallback_train_days": int(config.get("evidence_walkforward_fallback_train_days", 252)),
         "walkforward_fallback_test_days": int(config.get("evidence_walkforward_fallback_test_days", 63)),
-        "deep_k": int(config.get("dealflow_deep_k", 8)),
+        "fundamental_handoff_limit": int(config.get("evidence_fundamental_handoff_limit", 0)),
         "slippage_bps": float(config.get("paper_execution_slippage_bps", 0.0)),
     }
 
 
-def _collect_batch_summaries(from_date: str, to_date: str) -> List[Dict[str, Any]]:
-    base = Path("eval_results") / "deal_flow"
-    out: List[Dict[str, Any]] = []
-    start = _parse_date(from_date)
-    end = _parse_date(to_date)
-    if start is None or end is None:
-        return out
-
-    for day_dir in sorted(base.iterdir()) if base.exists() else []:
-        if not day_dir.is_dir():
-            continue
-        day = _parse_date(day_dir.name)
-        if day is None or day < start or day > end:
-            continue
-
-        latest = day_dir / "batch_analyze_latest.json"
-        payload = _read_json(latest) if latest.exists() else {}
-        candidates = sorted(
-            day_dir.glob("batch_analyze_summary_*.json"),
-            key=lambda p: p.stat().st_mtime,
-            reverse=True,
-        )
-        if not payload or bool(payload.get("dry_run")):
-            payload = {}
-            for candidate in candidates:
-                candidate_payload = _read_json(candidate)
-                if not candidate_payload:
-                    continue
-                if bool(candidate_payload.get("dry_run")):
-                    continue
-                payload = candidate_payload
-                break
-        if not payload:
-            continue
-
-        payload = dict(payload)
-        payload["date"] = day_dir.name
-        out.append(payload)
-
-    return sorted(out, key=lambda row: str(row.get("date", "")))
+def _collect_analysis_summaries(from_date: str, to_date: str) -> List[Dict[str, Any]]:
+    del from_date, to_date
+    return []
 
 
 def _collect_items_by_date(summaries: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:

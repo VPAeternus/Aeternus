@@ -36,7 +36,6 @@ except ImportError:
             "social_momentum": social_momentum,
             "cashtag_momentum": subscores.get("cashtag_momentum", 50),
             "news_catalyst": subscores.get("news_catalyst", 50),
-            "deal_flow_score": ctx.get("deal_flow_score", 0),
             "evidence_count": evidence.get("evidence_count", 0),
             "freshness_hours": evidence.get("freshness_hours", 0),
             "direction": direction,
@@ -282,7 +281,6 @@ class TestDealflowBridge:
     def test_metrics_from_dealflow_basic(self):
         """Test _metrics_from_dealflow returns expected structure and values."""
         ctx = {
-            "deal_flow_score": 78,
             "subscores": {
                 "social_momentum": 72,
                 "cashtag_momentum": 65,
@@ -301,7 +299,6 @@ class TestDealflowBridge:
         assert "social_momentum" in metrics
         assert "cashtag_momentum" in metrics
         assert "news_catalyst" in metrics
-        assert "deal_flow_score" in metrics
         assert "evidence_count" in metrics
         assert "freshness_hours" in metrics
         assert "direction" in metrics
@@ -312,7 +309,6 @@ class TestDealflowBridge:
         assert metrics["social_momentum"] == 72
         assert metrics["cashtag_momentum"] == 65
         assert metrics["news_catalyst"] == 80
-        assert metrics["deal_flow_score"] == 78
         assert metrics["evidence_count"] == 15
         assert metrics["freshness_hours"] == 4.2
         assert metrics["direction"] == "BULLISH"  # 72 >= 60
@@ -334,7 +330,6 @@ class TestDealflowBridge:
             "sentiment_report": "Analyst report.",
             "fundamentals_report": "",
             "dealflow_context": {
-                "deal_flow_score": 78,
                 "subscores": {
                     "social_momentum": 72,
                     "cashtag_momentum": 65,
@@ -391,7 +386,6 @@ class TestDealflowBridge:
             "sentiment_report": "Report.",
             "fundamentals_report": "",
             "dealflow_context": {
-                "deal_flow_score": 78,
                 "subscores": {
                     "social_momentum": 72,
                     "cashtag_momentum": 65,

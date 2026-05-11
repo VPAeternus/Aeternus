@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LYV",
+    "cik": "1335258",
+    "event_date": "2024-07-30",
+    "event_accession": "0001335258-24-000123",
+    "primary_8k_doc": "lyv-20240730.htm",
+    "exhibit_docs": [
+      "lyv-2024q2xex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LYV_000133525824000123_lyv-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LYV_000133525824000123_lyv-2024q2xex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LYV",
+    "cik": "1335258",
+    "entity_name": "LIVE NATION ENTERTAINMENT, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3127390000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-3169000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "19074045000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "225701000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-59789000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1155848000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.001013",
+    "operating_cash_flow_to_revenue": "0.369589",
+    "assets_to_revenue": "6.09903",
+    "financing_cash_flow_to_revenue": "0.072169",
+    "investing_cash_flow_to_revenue": "-0.019118"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "operating income will be impacted negatively by one-time accruals, we are on track to deliver double-digit AOI growth for the year and look forward to a very busy 2025.",
+      "Operating income up 21% to $466 million • Adjusted operating income up 21% to $716 million • Record Q2 concerts adjusted operating income margin of 5.",
+      "operating income, and AOI for the full-year is expected to be immaterial, with a larger impact to net income • 2024 share count not expected to change materially from 2023 The company will webcast a teleconference today at 2:00 p.",
+      "Operating Income $ 465.",
+      "Operating Income (Loss) Concerts $ 270.",
+      "Operating Income $ 429."
+    ],
+    "guidance_evidence": [
+      "expected to be similar to 2023 levels • Q2 ended with $6.",
+      "expected to be immaterial, with a larger impact to net income • 2024 share count not expected to change materially from 2023 The company will webcast a teleconference today at 2:00 p.",
+      "expected; and expected 2024 share count."
+    ],
+    "wave_or_demand_evidence": [
+      "demand globally, with a growing variety of shows attracting both casual and diehard fans who are buying tickets at all price points, which speaks to the unique experience only live concerts can provide.",
+      "Demand Fuels Record Q2 (versus prior year, reported FX) • Revenue up 7% to over $6 billion • Operating income up 21% to $466 million • Adjusted operating income up 21% to $716 million • Record Q2 concerts adjusted operating income margin of 5.",
+      "ainment.",
+      "ailable on the Live Nation website.",
+      "ain financial statements at the end of this press release for reference.",
+      "ailable on the SEC’s website at sec."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment), loss (gain) on disposal of operating assets, and stock-based compensation expense.",
+      "Loss) Concerts $ 270.",
+      "Loss) Concerts $ 273.",
+      "loss contingencies 94.",
+      "loss contingencies 279.",
+      "loss (gain) on disposal of operating assets, and stock-based compensation expense."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 6000,
+    "quarter_revenue_yoy_pct": 7,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "93.989998",
+    "return_10d_pct": "-2.5428",
+    "return_20d_pct": "3.0322",
+    "return_30d_pct": "3.9153",
+    "return_60d_pct": "16.4911",
+    "return_90d_pct": "26.4071"
+  },
+  "text_stats": {
+    "primary_text_len": 3497,
+    "exhibit_text_len": 32017,
+    "combined_text_len": 35516
+  }
+}

@@ -1,0 +1,2464 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ECL",
+    "cik": "31462",
+    "event_date": "2024-07-30",
+    "event_accession": "0001558370-24-010319",
+    "primary_8k_doc": "ecl-20240730x8k.htm",
+    "exhibit_docs": [
+      "ecl-20240730xex99d1.htm",
+      "ecl-20240730xex99d2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECL_000155837024010319_ecl-20240730x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECL_000155837024010319_ecl-20240730xex99d1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECL_000155837024010319_ecl-20240730xex99d2.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ECL",
+    "cik": "31462",
+    "entity_name": "ECOLAB INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3571600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "233400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "21846600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-166400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-189400000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "198200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.065349",
+    "operating_cash_flow_to_revenue": "0.055493",
+    "assets_to_revenue": "6.116754",
+    "financing_cash_flow_to_revenue": "-0.04659",
+    "investing_cash_flow_to_revenue": "-0.053029"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales increased 3% and organic sales increased 4% when compared to the prior year.",
+      "sales were also stable versus last year, performance continued to improve sequentially as good new business offset soft but stable customer demand.",
+      "sales were stable as better growth in Life Sciences offset modestly lower Healthcare sales.",
+      "sales increased 9%, led by double-digit growth in food & beverage, restaurants, and food retail.",
+      "sales of $15 billion, employs more than 48,000 associates and operates in more than 170 countries around the world.",
+      "sales of product to ChampionX under this agreement are recorded in product and equipment sales in the Corporate segment along with the related cost of sales."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK: $6.",
+      "OUTLOOK ●2024: Increased full year 2024 adjusted diluted earnings per share range to $6.",
+      "Outlook 2024 Ecolab expects full year 2024 adjusted diluted earnings per share to improve further to the $6.",
+      "outlook 3 Good sales growth led by strong growth in Institutional & Specialty and Pest Elimination Strong double-digit OI growth with continued robust margin expansion Reported diluted EPS $1.",
+      "outlook: Increased adjusted diluted earnings per share range to $6.",
+      "outlook: Expect adjusted diluted EPS in the $1."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "customers’ business outcomes and operational performance while reducing their water and energy consumption.",
+      "customer value, unlock significant enterprise selling opportunities, and drive improved operational performance.",
+      "customer demand.",
+      "customers in 40 industries and more than 170 countries to deliver the best outcomes at the best possible operating performance by reducing water and energy usage, we know what best-in-class performance is and how to deliver it.",
+      "customers by realigning the functional work done in many countries into global centers of excellence."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and discrete tax items were $1.",
+      "charges, which were a net charge primarily related to restructuring and professional service fees associated with the sale of our global surgical solutions business.",
+      "charges and discrete tax items, the adjusted tax rate for the second quarter of 2024 was 19.",
+      "charges and discrete tax items, adjusted net income increased 35% versus the prior year.",
+      "charges​12.",
+      "charges for the second quarter of 2023 impacting operating expense were a net charge of $29 million primarily related to restructuring costs."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ecl-20240730xex99d1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Enhanced HTML document created with Toppan Merrill Bridge 10.6.125.0Created on: 7/29/2024 11:14:43 PM (UTC)HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\""
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "News Release"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​Investor Contact:Media Contact:Andrew Hedberg (651) 250-2185Nigel Glennie (651) 250-2576Cairn Clark (651) 250-2291​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ECOLAB DELIVERS CONTINUED STRONG PERFORMANCE IN THE SECOND QUARTER"
+    },
+    {
+      "type": "TitleElement",
+      "text": "REPORTED DILUTED EPS $1.71; ADJUSTED DILUTED EPS $1.68, +35%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "INCREASED 2024 ADJUSTED DILUTED EPS OUTLOOK: $6.50 - $6.70, +25% - 29%"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECOND QUARTER HIGHLIGHTS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "●Reported sales $4.0 billion, +3% versus last year, including a 1% headwind from unfavorable foreign currency exchange. Organic sales +4% as Institutional & Specialty segment sales growth normalized to a strong +7% as expected. The segment lapped last year’s very strong pricing delivery. Performance across the Pest Elimination, Industrial and Healthcare & Life Sciences segments all improved."
+    },
+    {
+      "type": "TitleElement",
+      "text": "●Reported operating income margin 16.5%. Organic operating income margin 17.0%, +360 bps as lower supply chain costs, value pricing, and volume growth more than offset growth-oriented investments in the business."
+    },
+    {
+      "type": "TitleElement",
+      "text": "●Reported diluted EPS $1.71, +49%. Adjusted diluted EPS, excluding special gains and charges and discrete tax items were $1.68, +35%."
+    },
+    {
+      "type": "TitleElement",
+      "text": "●Second quarter cash flow from operating activities $611 million; free cash flow increased to $414 million."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "OUTLOOK"
+    },
+    {
+      "type": "TitleElement",
+      "text": "●2024: Increased full year 2024 adjusted diluted earnings per share range to $6.50 - $6.70, +25% - 29%, from prior $6.40 - $6.70 range."
+    },
+    {
+      "type": "TitleElement",
+      "text": "●3Q 2024: Expect third quarter 2024 adjusted diluted earnings per share in the $1.75 - $1.85 range, +14% - 20%."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​​​​​Second Quarter Ended June 30​​Reported​​​​Adjusted​​​(unaudited)​Public Currency Rates​% ​Public Currency Rates​% (millions, except per share)​2024​2023​Change​2024​​2023​ChangeNet sales​$3,985.8​​$3,852.1​​3%​$3,985.8​​$3,852.1​​3%Operating income​656.9​​484.7​​36%​669.8​​513.8​​30%Net income attributable to Ecolab​490.9​​329.7​​49%​481.5​​355.8​​35%​​​​​​​​​​​​​​​​​​​Diluted earnings per share attributable to Ecolab​$1.71​​$1.15​​49%​$1.68​​$1.24​​35%​​​​​​​​​​​​​​​​​​​​​Organic​% ​​​​​​​​​​​2024​2023​Change​​​​​​​​​Net sales​$3,983.7​​$3,839.0​​4%​​​​​​​​​Operating income​677.0​​512.8​​32%​​​​​​​​​​​​​​​​​​​​​​​​​​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "TextElement",
+      "text": "ST. PAUL, Minn., July 30, 2024​CEO CommentChristophe Beck, Ecolab’s chairman and chief executive officer, said, “We delivered another quarter of strong performance consistent with our expectations. Our global team executed very well to drive continued good sales growth and exceptional organic operating income margin expansion. Organic sales growth remained in its expected 4-5% range as growth within our Institutional & Specialty segment normalized to a strong 7% as we lapped last year’s robust pricing delivery. Performance across the rest of our segments progressed further. Good new business wins were enabled by our breakthrough innovations and continued investments in sales firepower, digital technologies and service capabilities. Our strong value pricing was driven by continued total value delivery to customers. This great fundamental performance, along with moderately favorable delivered product costs, helped to deliver very strong operating income margin expansion and earnings per share growth. ​“Going forward, we expect to continue to outperform soft macroeconomic trends around the world as we focus on capturing additional market share by enhancing our customers’ business outcomes and operational performance while reducing their water and energy consumption. To further fuel our growth, we are excited to launch our One Ecolab initiative, which will further harness our leading digital technologies and global service capabilities to deliver best-in-class total customer value, unlock significant enterprise selling opportunities, and drive improved operational performance. With very strong first half results and great momentum heading into the second half, we are confident in delivering strong performance in 2024.”​Second Quarter 2024 Consolidated Results Ecolab’s second quarter reported sales increased 3% and organic sales increased 4% when compared to the prior year. ​Second quarter 2024 reported operating income increased 36% including the impact of special gains and charges, which were a net charge primarily related to restructuring and professional service fees associated with the sale of our global surgical solutions business. Organic operating income increased 32%, as lower supply chain costs, value pricing, and volume growth more than offset growth-oriented investments in the business.2"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reported other income in the second quarter of 2024 decreased slightly while reported interest expense was stable versus the prior year.The reported income tax rate for the second quarter of 2024 was 16.2% compared with the reported rate of 20.6% in the second quarter of 2023. Excluding special gains and charges and discrete tax items, the adjusted tax rate for the second quarter of 2024 was 19.5% compared with the adjusted tax rate of 19.9% in the second quarter of 2023.Reported net income increased 49% versus the prior year. Excluding the impact of special gains and charges and discrete tax items, adjusted net income increased 35% versus the prior year.Reported diluted earnings per share increased 49% versus the prior year. Adjusted diluted earnings per share increased 35% when compared against the second quarter of 2023. Currency translation had a $0.04 unfavorable impact on earnings per share in the second quarter of 2024. Ecolab repurchased approximately 1.4 million shares of its common stock during the second quarter of 2024."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second Quarter 2024 Segment Review"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​Global Industrial​​​​​​​​​​​​​​​​​​​​​​​​​(unaudited)​Second Quarter Ended June 30​​​​Organic(millions) 2024​2023​% Change % Change​​​​​​​​​​​​​Fixed currency​​​​​​​​​​​​Sales​$1,956.0​​$1,906.4​​3%​2%Operating income​311.9​​264.9​​18%​18%Operating income margin​15.9%​13.9%​​​​​​Organic operating income margin​16.1%​13.9%​​​​​​​​​​​​​​​​​​​Public currency​​​​​​​​​​​​Sales​$1,936.5​​$1,909.5​​1%​​​Operating income​306.7​​266.6​​15%​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Industrial segment includes Water, Food & Beverage, and Paper"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "Organic sales growth improved further to 2%, driven by accelerating Water sales growth. Water’s performance was led by strong growth in downstream and light water, where global high-tech continues to grow double-digits. As expected, stable Food & Beverage sales reflected good new business wins, which offset comparisons to last year’s very strong double-digit growth. While Paper sales were also stable versus last year, performance continued to improve sequentially as good new business offset soft but stable customer demand. Organic operating income increased 18% as lower delivered product costs and value pricing were partially offset by continued investments in the business."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​Global Institutional & Specialty​​​​​​​​​​​​​​​​​​​​​​​​​(unaudited)​Second Quarter Ended June 30​​​​Organic(millions) 2024​2023​% Change % Change​​​​​​​​​​​​​Fixed currency​​​​​​​​​​​​Sales​$1,372.7​​$1,273.7​​8%​7%Operating income​320.7​​213.4​​50%​50%Operating income margin​23.4%​16.8%​​​​​​Organic operating income margin​23.5%​16.8%​​​​​​​​​​​​​​​​​​​Public currency​​​​​​​​​​​​Sales​$1,363.9​​$1,272.2​​7%​​​Operating income​318.3​​213.0​​49%​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "As expected, organic sales growth normalized to a strong 7%, as the segment lapped last year’s double-digit growth. Both the Institutional and Specialty divisions drove robust sales gains, continuing to outperform market trends. Organic operating income increased 50% as strong sales growth and lower supply chain costs were partially offset by continued investments in the business."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​Global Healthcare & Life Sciences​​​​​​​​​​​​​​​​​​​​​​​​​(unaudited)​Second Quarter Ended June 30​​​​Organic(millions) 2024​2023​% Change % Change​​​​​​​​​​​​​Fixed currency​​​​​​​​​​​​Sales​$395.0​​$395.3​​0%​0%Operating income​33.7​​33.2​​2%​2%Operating income margin​8.5%​8.4%​​​​​​Organic operating income margin​8.5%​8.4%​​​​​​​​​​​​​​​​​​​Public currency​​​​​​​​​​​​Sales​$389.7​​$390.8​​0%​​​Operating income​32.5​​32.0​​2%​​​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Organic sales were stable as better growth in Life Sciences offset modestly lower Healthcare sales. Life Sciences’ improved performance was driven by good new business wins, which continued to overcome soft short-term industry trends. Modestly lower sales in Healthcare reflected strategic low margin business exits as we continue to execute Healthcare’s business transformation. Organic operating income increased 2% as value pricing overcame continued targeted investments in the business."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​Global Pest Elimination​​​​​​​​​​​​​​​​​​​​​​​​​(unaudited)​Second Quarter Ended June 30​​​​Organic(millions) 2024​2023​% Change % Change​​​​​​​​​​​​​Fixed currency​​​​​​​​​​​​Sales​$297.1​​$269.7​​10%​9%Operating income​62.2​​52.4​​19%​20%Operating income margin​20.9%​19.4%​​​​​​Organic operating income margin​21.3%​19.4%​​​​​​​​​​​​​​​​​​​Public currency​​​​​​​​​​​​Sales​$295.7​​$269.0​​10%​​​Operating income​61.9​​52.4​​18%​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Organic sales increased 9%, led by double-digit growth in food & beverage, restaurants, and food retail. Organic operating income increased 20% as strong sales growth more than offset continued investments in the business."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​Corporate​​​​​​​​​​​​​(unaudited)​Second Quarter Ended June 30(millions) 2024​2023​​​​​​​Public currency​​​​​​Sales​$ - ​​$10.6​​​​​​​​Corporate operating expense​​​​​​Nalco and Purolite amortization​49.6​​50.6​Special (gains) and charges​12.9​​29.1​Other ​ -​​ (0.4)​Total Corporate operating expense​$62.5​​$79.3​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second quarter of 2024 corporate segment includes:●amortization expense of $28 million related to the Nalco merger intangible assets and $22 million related to Purolite acquisition intangible assets●special gains and charges were a net charge of $13 million, primarily related to restructuring and professional service fees associated with the sale of our global surgical solutions businessSpecial gains and charges for the second quarter of 2023 impacting operating expense were a net charge of $29 million primarily related to restructuring costs."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "One Ecolab Initiative"
+    },
+    {
+      "type": "TextElement",
+      "text": "Ecolab is adding more fuel to its growth and margin expansion journey by launching One Ecolab. This initiative will leverage our vast and existing portfolio of digital technologies as well as new artificial intelligence solutions by harnessing the value of over 100,000 system connections and billions of proprietary data points. As we help millions of customers in 40 industries and more than 170 countries to deliver the best outcomes at the best possible operating performance by reducing water and energy usage, we know what best-in-class performance is and how to deliver it. This will help us deliver attractive growth by continuing to capture more share of our existing $55 billion cross-sell opportunity. At the same time, these new digital technologies will allow us to enhance the way we operate and serve our customers by realigning the functional work done in many countries into global centers of excellence. The resulting total annualized savings of approximately $140 million are expected to be realized by 2027. As part of this program, Ecolab expects to incur pre-tax charges of approximately $225 million by the end of 2027."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Business Outlook"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2024"
+    },
+    {
+      "type": "TextElement",
+      "text": "Ecolab expects full year 2024 adjusted diluted earnings per share to improve further to the $6.50 to $6.70 range, rising 25% to 29% compared with adjusted diluted earnings per share of $5.21 in 2023."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TextElement",
+      "text": "As previously discussed, this range includes an unfavorable impact in the second half of 2024 from the sale of Ecolab’s global surgical solutions business. The transaction is expected to close very soon, and the unfavorable impact to 2024 adjusted diluted earnings per share is now estimated to be $0.08 per share. This forecast assumes soft but stable macroeconomic demand and favorability from delivered product costs that eases through the third quarter of 2024, though the impact of global inflation remains hard to predict. ​Ecolab expects continued solid sales growth, driven by value pricing and new business gains. The company also expects to leverage this growth with attractive organic operating income margin expansion, driven by robust increases in gross margin. Good underlying productivity is expected to be offset in the short-term by growth-oriented investments in the business to fuel Ecolab’s long-term performance. With these investments, SG&A expense in the second half of the year is anticipated to be similar to first half levels. Ecolab expects quarterly adjusted diluted earnings per share growth to progressively normalize towards the company’s long-term 12-15% target as solid growth continues and impacts from delivered product costs are anticipated to normalize exiting 2024.​The company currently expects quantifiable special charges in 2024 to be approximately $0.25 per share, principally related to restructuring charges. This does not include the expected gain on the sale of the company’s global surgical solutions business. Other than the special gains and charges noted above, other such amounts are not currently quantifiable. ​2024 – Third Quarter Ecolab expects third quarter 2024 adjusted diluted earnings per share in the $1.75 to $1.85 range, rising 14% to 20% compared with adjusted diluted earnings per share of $1.54 a year ago.​The company currently expects quantifiable special charges in the third quarter of 2024 to be approximately $0.08 per share, principally related to restructuring charges. This does not include the expected gain on the sale of the company’s global surgical solutions business. Other than the special gains and charges noted above, other such amounts are not currently quantifiable. ​About EcolabA trusted partner for millions of customers, Ecolab (NYSE:ECL) is a global sustainability leader offering water, hygiene and infection prevention solutions and services that protect people and the 7resources vital to life. Building on a century of innovation, Ecolab has annual sales of $15 billion, employs more than 48,000 associates and operates in more than 170 countries around the world. The company delivers comprehensive science-based solutions, data-driven insights and world-class service to advance food safety, maintain clean and safe environments, and optimize water and energy use. Ecolab’s innovative solutions improve operational efficiencies and sustainability for customers in the food, healthcare, life sciences, hospitality and industrial markets. www.ecolab.com​Ecolab will host a live webcast to review the second quarter earnings announcement today at 1:00 p.m. Eastern Time. The webcast, along with related materials, will be available to the public on Ecolab's website at www.ecolab.com/investor. A replay of the webcast and related materials will be available at that site. ​Cautionary Statements Regarding Forward-Looking Information This news release contains certain statements relating to future events and our intentions, beliefs, expectations and predictions for the future which are forward-looking statements as that term is defined in the Private Securities Litigation Reform Act of 1995. Words or phrases such as “will likely result,” “are expected to,” “will continue,” “is anticipated,” “we believe,” “we expect,” “estimate,” “project,” “may,” “will,” “intend,” “plan,” “believe,” “target,” “forecast” (including the negative or variations thereof) or similar terminology used in connection with any discussion of future plans, actions or events generally identify forward-looking statements. These forward-looking statements include, but are not limited to, statements regarding macroeconomic conditions, delivered product costs, and demand; our financial and business performance and prospects, including sales, earnings, special charges, margins, pricing, productivity, investments and new business; the opportunities, savings and charges associated with the One Ecolab Initiative; and the expected timing, likelihood of completion and impact of the sale of the global surgical solutions business, including the timing, receipt and terms and conditions of any required governmental and regulatory clearance of the proposed transaction, the occurrence of any event, change or other circumstances that could give rise to the termination of the definitive agreement, the inability to consummate the proposed transaction due to the failure to satisfy other closing conditions, risks that the proposed transaction disrupts current operations and the amount of the costs, fees, expenses and charges related to the proposed transaction. These statements are based on the current expectations of management of the company. There are a number of risks and uncertainties that could cause actual results to differ materially from the forward-looking statements included in this news release. In particular, the 8ultimate results of any restructuring initiative depend on a number of factors, including the development of final plans, the impact of local regulatory requirements regarding employee terminations, the time necessary to develop and implement the restructuring initiatives and the level of success achieved through such actions in improving competitiveness, efficiency and effectiveness.​Additional risks and uncertainties that may affect operating results and business performance are set forth under Item 1A of our most recent Form 10-K, and our other public filings with the Securities and Exchange Commission (the \"SEC\"), and include the impact of economic factors such as the worldwide economy, interest rates, foreign currency risk, reduced sales and earnings in our international operations resulting from the weakening of local currencies versus the U.S. dollar, demand uncertainty, supply chain challenges and inflation; the vitality of the markets we serve; exposure to global economic, political and legal risks related to our international operations, including geopolitical instability and the escalation of armed conflicts; our ability to successfully execute organizational change and management transitions; information technology infrastructure failures or breaches in data security; difficulty in procuring raw materials or fluctuations in raw material costs; the occurrence of severe public health outbreaks not limited to COVID-19; our ability to acquire complementary businesses and to effectively integrate such businesses; our ability to execute key business initiatives; our ability to successfully compete with respect to value, innovation and customer support; pressure on operations from consolidation of customers or vendors; restraints on pricing flexibility due to contractual obligations and our ability to meet our contractual commitments; the costs and effects of complying with laws and regulations, including those relating to the environment, climate change standards, and to the manufacture, storage, distribution, sale and use of our products, as well as to the conduct of our business generally, including labor and employment and anti-corruption; potential chemical spill or release; our commitments, goals, targets, objectives and initiatives related to sustainability; potential to incur significant tax liabilities or indemnification liabilities relating to the separation and split-off of our ChampionX business; the occurrence of litigation or claims, including class action lawsuits; the loss or insolvency of a major customer or distributor; repeated or prolonged government and/or business shutdowns or similar events; acts of war or terrorism; natural or man-made disasters; water shortages; severe weather conditions; changes in tax laws and unanticipated tax liabilities; potential loss of deferred tax assets; our indebtedness, and any failure to comply with covenants that apply to our indebtedness; potential losses arising from the impairment of goodwill or other assets; and other uncertainties or risks reported from time to time in our reports to the SEC. In light of these risks, uncertainties, assumptions 9"
+    },
+    {
+      "type": "TextElement",
+      "text": "and factors, the forward-looking events discussed in this news release may not occur. We caution that undue reliance should not be placed on forward-looking statements, which speak only as of the date made. Ecolab does not undertake, and expressly disclaims, any duty to update any forward-looking statement whether as a result of new information, future events or changes in expectations, except as required by law."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Financial Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "This news release and certain of the accompanying tables include financial measures that have not been calculated in accordance with accounting principles generally accepted in the U.S. (“GAAP”). These non-GAAP financial measures include:•fixed currency sales•organic sales •adjusted cost of sales●adjusted gross profit•adjusted gross margin•fixed currency operating income•adjusted operating income •adjusted fixed currency operating income •adjusted fixed currency operating income margin •organic operating income•organic operating income margin●adjusted tax rate•adjusted net income attributable to Ecolab•adjusted diluted earnings per share•free cash flowWe provide these measures as additional information regarding our operating results. We use these non-GAAP measures internally to evaluate our performance and in making financial and operational decisions, including with respect to incentive compensation. We believe that our presentation of these measures provides investors with greater transparency with respect to our results of operations and that these measures are useful for period-to-period comparison of results.Our non-GAAP financial measures for adjusted cost of sales, adjusted gross margin, adjusted gross"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "TextElement",
+      "text": "profit and adjusted operating income exclude the impact of special (gains) and charges and our non-GAAP financial measures for adjusted tax rate, adjusted net income attributable to Ecolab and adjusted diluted earnings per share further exclude the impact of discrete tax items. We include items within special (gains) and charges and discrete tax items that we believe can significantly affect the period-over-period assessment of operating results and not necessarily reflect costs and/or income associated with historical trends and future results. After tax special (gains) and charges are derived by applying the applicable local jurisdictional tax rate to the corresponding pre-tax special (gains) and charges.​We evaluate the performance of our international operations based on fixed currency rates of foreign exchange, which eliminate the translation impact of exchange rate fluctuations on our international results. Fixed currency amounts included in this release are based on translation into U.S. dollars at the fixed foreign currency exchange rates established by management at the beginning of 2024. We also provide our segment results based on public currency rates for informational purposes. ​Our reportable segments do not include the impact of intangible asset amortization from the Nalco and Purolite transactions or the impact of special (gains) and charges as these are not allocated to the Company’s reportable segments.​Our non-GAAP financial measures for organic sales, organic operating income and organic operating income margin are at fixed currency and exclude the impact of special (gains) and charges, the results of our acquired businesses from the first twelve months post acquisition and the results of divested businesses from the twelve months prior to divestiture. In addition, as part of the separation, we also entered into an agreement with ChampionX to provide, receive or transfer certain products for a transitionary period. Transitionary period sales of product to ChampionX under this agreement are recorded in product and equipment sales in the Corporate segment along with the related cost of sales. The remaining sales to ChampionX are recorded in product and equipment sales in the Global Industrial segment along with the related cost of sales. These transactions are removed from the consolidated results as part of the calculation of the impact of acquisitions and divestitures.​We define free cash flow as net cash provided by operating activities less cash outlays for capital expenditures. It should not be inferred that the entire free cash flow amount is available for discretionary expenditures. It should not be considered a substitute for income or cash flow data 11"
+    },
+    {
+      "type": "TextElement",
+      "text": "prepared in accordance with U.S. GAAP and may not be comparable to similarly titled measures used by other companies. We believe free cash flow is meaningful to investors as it functions as a useful measure of performance and we use this measure as an indication of the strength of the Company and its ability to generate cash.These non-GAAP financial measures are not in accordance with, or an alternative to, GAAP and may be different from non-GAAP measures used by other companies. Investors should not rely on any single financial measure when evaluating our business. We recommend that investors view these measures in conjunction with the GAAP measures included in this news release. Reconciliations of our non-GAAP measures are included in the following \"Supplemental Non-GAAP Reconciliations\" and “Supplemental Diluted Earnings per Share Information” tables included in this news release.We do not provide reconciliations for non-GAAP estimates on a forward-looking basis (including those contained in this news release) when we are unable to provide a meaningful or accurate calculation or estimation of reconciling items and the information is not available without unreasonable effort. This is due to the inherent difficulty of forecasting the timing and amount of various items that have not yet occurred, are out of our control and/or cannot be reasonably predicted, and that would impact reported earnings per share and the reported tax rate, the most directly comparable forward-looking GAAP financial measures to adjusted earnings per share and the adjusted tax rate. For the same reasons, we are unable to address the probable significance of the unavailable information."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "###"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​(ECL-E)"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED STATEMENTS OF INCOME"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​Second Quarter Ended​​​Six Months Ended ​ ​​June 30​% ​June 30​% (millions, except per share)​2024 2023​Change 2024 2023 Change​​​​​​​​​​​​​​​Product and equipment sales​$3,173.1​$3,104.8​​​​$6,159.6​$5,981.1​​​Service and lease sales​812.7​747.3​​​​1,578.1​1,442.6​​​Net sales​3,985.8​3,852.1​3%​7,737.7​7,423.7​4%Product and equipment cost of sales​1,770.6​1,895.3​​​​3,449.8​3,693.6​​​Service and lease cost of sales​470.4​439.5​​​​919.3​846.4​​​Cost of sales (1)​2,241.0​2,334.8​(4)%​4,369.1​4,540.0​(4)%Selling, general and administrative expenses​1,075.7​1,011.6​6%​2,153.4​2,001.9​8%Special (gains) and charges (1)​12.2​21.0​​​​40.4​45.5 ​​​Operating income​656.9​484.7​36%​1,174.8​836.3​40%Other (income) expense​(12.6)​(14.4)​(13)%​(25.2)​(27.5)​(8)%Interest expense, net​78.8​77.8​1 %​150.4​152.0​(1)%Income before income taxes​590.7​421.3​40%​1,049.6​711.8​47%Provision for income taxes​95.7​86.6​11 %​138.0​139.0​(1)%Net income including noncontrolling interest​495.0​334.7​48%​911.6​572.8​59%Net income attributable to noncontrolling interest​4.1​5.0​​​​8.6​9.7​​​Net income attributable to Ecolab​$490.9 ​$329.7 ​49%​$903.0 ​$563.1 ​60%​​​​​​​​​​​​​​​Earnings attributable to Ecolab per common share​​​​​​​​​​​​Basic​$1.72 ​$1.16​48%​$3.17 ​$1.98​60%Diluted​$1.71 ​$1.15​49%​$3.14 ​$1.97​59%​​​​​​​​​​​​​​​Weighted-average common shares outstanding​​​​​​​​​​​​Basic​284.6​284.9​0%​285.2​284.8​0%Diluted​287.0​286.3​0%​287.4​286.1​0%​​​​​​​​​​​​​​​(1) Cost of sales and Special (gains) and charges in the Consolidated Statement of Income above include the following:​​​​​​​​​​​​​​​​​Second Quarter Ended​​​Six Months Ended ​ ​​June 30​​​​June 30​​​(millions)​2024​2023​​​​2024​2023​​​​​​​​​​​​​​​​​​Cost of sales​​​​​​​​​​​​​​Restructuring activities​$0.7​$8.1​​​​$2.3​$11.3​​​Subtotal (a)​ 0.7​ 8.1​​​​ 2.3​ 11.3​​​​​​​​​​​​​​​​​​Special (gains) and charges​​​​​​​​​​​​​​Restructuring activities​ 6.9​ 13.7​​​​ 25.0​ 26.3​​​Sale of global surgical solutions business​ 7.3​ -​​​​ 13.3​ -​​​Acquisition and integration activities​ 2.3​ 3.5​​​​ 4.8​ 8.5​​​Other​ (4.3)​ 3.8​​​​ (2.7)​ 10.7​​​Subtotal​ 12.2​ 21.0​​​​ 40.4​ 45.5​​​​​​​​​​​​​​​​​​Total special (gains) and charges​ $12.9​ $29.1​​​​ $42.7​ $56.8​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) Special charges of $0.7 million and $6.0 million in the second quarter of 2024 and 2023, respectively, and $2.3 million and $6.8 million for the first six months of 2024 and 2023, respectively, were recorded in product and equipment cost of sales. Special charges of $2.1 million and $4.5 million for the second quarter and first six months of 2023, respectively, were recorded in service and lease cost of sales."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "REPORTABLE SEGMENT INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​Second Quarter Ended June 30​​Fixed Currency Rates​Public Currency Rates​​​​​​%​​​​​%(millions)​2024 2023 Change 2024 2023 ChangeNet Sales​​​​​​​​​​​​​​Global Industrial​$1,956.0​$1,906.4​3%​$1,936.5​$1,909.5​1%Global Institutional & Specialty​1,372.7​1,273.7​8%​1,363.9​1,272.2​7%Global Healthcare & Life Sciences​395.0​395.3 ​0 %​389.7​390.8 ​0%Global Pest Elimination​297.1​269.7 ​10%​295.7​269.0 ​10%Corporate​ -​10.6 ​(100)%​ -​10.6 ​(100)%Subtotal at fixed currency rates​4,020.8​3,855.7​4%​3,985.8​3,852.1​3%Currency impact​ (35.0)​ (3.6)​*​​​​ -​*​Consolidated reported GAAP net sales​$3,985.8​$3,852.1​3%​$3,985.8​$3,852.1​3%​​​​​​​​​​​​​​​Operating Income (loss)​​​​​​​​​​​​​​Global Industrial​$311.9​$264.9​18%​$306.7​$266.6​15%Global Institutional & Specialty​ 320.7​213.4 ​50%​318.3​213.0 ​49%Global Healthcare & Life Sciences​33.7​33.2 ​2%​32.5​32.0 ​2%Global Pest Elimination​62.2​52.4 ​19%​61.9​52.4 ​18%Corporate​ (62.8)​(79.3)​*​​ (62.5)​(79.3)​*​Subtotal at fixed currency rates​665.7​484.6​37%​656.9​484.7​36%Currency impact​ (8.8)​ 0.1​*​​ -​ -​*​Consolidated reported GAAP operating income​$656.9​$484.7​36%​$656.9​$484.7​36%​​​​​​​​​​​​​​​​​Six Months Ended June 30​​Fixed Currency Rates​Public Currency Rates​​​​​​%​​​​​%(millions)​2024 2023 Change 2024 2023 ChangeNet Sales​​​​​​​​​​​​​​Global Industrial​$3,797.7​$3,714.6​2%​$3,775.7​$3,718.6​2%Global Institutional & Specialty​2,643.0​2,404.9​10%​2,630.6​2,401.0​10%Global Healthcare & Life Sciences​777.9​781.4​0%​769.6​770.5​0%Other​563.9​514.3​10%​561.8​512.4​10%Corporate​ -​21.3​(100)%​ -​21.2​(100)%Subtotal at fixed currency rates​7,782.5​7,436.5​5%​7,737.7​7,423.7​4%Currency impact​ (44.8)​(12.8)​*​​ -​​​*​Consolidated reported GAAP net sales​$7,737.7​$7,423.7​4%​$7,737.7​$7,423.7​4%​​​​​​​​​​​​​​​Operating Income (loss)​​​​​​​​​​​​​​Global Industrial​$576.9​$484.7​19%​$572.1​$487.9​17%Global Institutional & Specialty​ 568.7​343.5​66%​565.3​342.8​65%Global Healthcare & Life Sciences​70.7​68.6​3 %​68.8​65.7​5 %Other​111.0​96.9​15%​110.6​96.7​14%Corporate​ (142.6)​(156.7)​*​​ (142.0)​(156.8)​*​Subtotal at fixed currency rates​1,184.7​837.0​42%​1,174.8​836.3​40%Currency impact​ (9.9)​(0.7)​*​​ -​​​*​Consolidated reported GAAP operating income​$1,174.8​$836.3​40%​$1,174.8​$836.3​40%"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "* Not meaningful.As shown in the “Fixed Currency Rates” tables above, we evaluate the performance of our international operations based on fixed currency exchange rates, which eliminate the impact of exchange rate fluctuations on our international operations. Amounts shown in the “Public Currency Rates” tables above reflect amounts translated at actual public average rates of exchange prevailing during the corresponding period and are provided for informational purposes. The difference between the fixed currency exchange rates and the public currency exchange rates is reported as “Currency impact” in the “Fixed Currency Rates” tables above. The Corporate segment includes amortization from the Nalco and Purolite transactions intangible assets. The Corporate segment also includes special (gains) and charges reported on the Consolidated Statement of Income."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "14"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​June 30​December 31June 30(millions)​2024​20232023Assets​​​​​​​​​Current assets​​​​​​​​​Cash and cash equivalents​$384.0​​$919.5​​$554.2​Accounts receivable, net​2,876.3​​2,834.2​​2,780.1​Inventories​1,505.9​​1,497.2​​1,646.2​Assets held for sale​565.6​​ -​​ -​Other current assets​420.5​​393.2​​456.0​Total current assets​5,752.3​​5,644.1​​5,436.5​​​​​​​​​​​Property, plant and equipment, net​3,416.9​​3,474.6​​3,326.5​Goodwill​7,821.9​​8,148.2​​8,101.3​Other intangible assets, net​3,334.0​​3,493.5​​3,603.6​Operating lease assets​573.0​​ 553.5​​ 446.8​Other assets​563.7​​ 532.7​​ 541.5​Total assets​$21,461.8​​$21,846.6​​$21,456.2​​​​​​​​​​​Liabilities and Equity​​​​​​​​​Current liabilities​​​​​​​​​Short-term debt​$5.9​​$630.4​​$1,121.9​Accounts payable​1,690.7​​1,566.3​​1,476.8​Compensation and benefits​540.5​​655.5​​469.1​Income taxes​137.2​​158.7​​117.3​Liabilities held for sale​62.5​​ -​​ -​Other current liabilities​1,410.8​​1,334.9​​1,282.4​Total current liabilities​3,847.6​​4,345.8​​4,467.5​​​​​​​​​​​Long-term debt​7,538.8​​7,551.4​​7,499.6​Pension and postretirement benefits​627.1​​651.7​​660.8​Deferred income taxes​290.7​​418.2​​474.1​Operating lease liabilities​438.6​​ 425.5​​ 335.4​Other liabilities​411.1​​ 381.8​​ 438.3​Total liabilities​13,153.9​​13,774.4​​13,875.7​​​​​​​​​​​Equity​​​​​​​​​Common stock​367.1​​365.7​​365.3​Additional paid-in capital​7,002.1​​6,766.7​​6,684.1​Retained earnings​10,653.3​​10,075.4​​9,580.0​Accumulated other comprehensive loss​(1,899.4)​​(1,850.4)​​(1,761.8)​Treasury stock​(7,835.7)​​(7,312.7)​​(7,310.9)​Total Ecolab shareholders’ equity​8,287.4​​8,044.7​​7,556.7​Noncontrolling interest​20.5​​27.5​​23.8​Total equity​8,307.9​​8,072.2​​7,580.5​Total liabilities and equity​$21,461.8​​$21,846.6​​$21,456.2​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "15"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL NON-GAAP RECONCILIATIONS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​ Second Quarter Ended Six Months Ended ​​June 30​June 30​(millions, except percent and per share)​2024 2023​2024 2023​​​​​​​​​​​​​​​Net sales​​​​​​​​​​​​​Reported GAAP net sales​$3,985.8​​$3,852.1​​$7,737.7​​$7,423.7​​Effect of foreign currency translation​35.0 ​​3.6 ​​44.8 ​​12.8 ​​Non-GAAP fixed currency sales​4,020.8​​3,855.7​​7,782.5​​7,436.5​​Effect of acquisitions and divestitures​(37.1)​​(16.7)​​(81.2)​​(40.7)​​Non-GAAP organic sales​$3,983.7​​$3,839.0​​$7,701.3​​$7,395.8​​​​​​​​​​​​​​​​Cost of sales​​​​​​​​​​​​​Reported GAAP cost of sales​$2,241.0​​$2,334.8​​$4,369.1​​$4,540.0​​Special (gains) and charges​ 0.7​​8.1 ​​ 2.3​​11.3 ​​Non-GAAP adjusted cost of sales​$2,240.3​​$2,326.7​​$4,366.8​​$4,528.7​​​​​​​​​​​​​​​​Gross profit​​​​​​​​​​​​​Reported GAAP gross profit ​$1,744.8​​$1,517.3​​$3,368.6​​$2,883.7​​Special (gains) and charges​ 0.7​​ 8.1​​ 2.3​​ 11.3​​Non-GAAP adjusted gross profit​$1,745.5​​$1,525.4​​$3,370.9​​$2,895.0​​​​​​​​​​​​​​​​Gross margin​​​​​​​​​​​​​Reported GAAP gross margin​43.8%​39.4%​43.5%​38.8%​Non-GAAP adjusted gross margin​43.8%​39.6%​43.6%​39.0%​​​​​​​​​​​​​​​Operating income​​​​​​​​​​​​​Reported GAAP operating income​$656.9​​$484.7​​$1,174.8​​$836.3​​Special (gains) and charges at public currency rates​12.9 ​​29.1 ​​42.7 ​​56.8 ​​Non-GAAP adjusted operating income​669.8 ​​513.8​​1,217.5​​893.1​​Effect of foreign currency translation​8.7 ​​(0.1)​​9.9 ​​0.7 ​​Non-GAAP adjusted fixed currency operating income​678.5​​513.7​​1,227.4​​893.8​​Effect of acquisitions and divestitures​(1.5)​​ (0.9)​​(2.4)​​ (1.4)​​Non-GAAP organic operating income​$677.0​​$512.8​​$1,225.0​​$892.4​​​​​​​​​​​​​​​​Operating income margin​​​​​​​​​​​​​Reported GAAP operating income margin​16.5%​12.6%​15.2%​11.3%​Non-GAAP adjusted fixed currency operating income margin​16.9%​13.3%​15.8%​12.0%​Non-GAAP organic operating income margin​17.0%​13.4%​15.9%​12.1%​​​​​​​​​​​​​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "16"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL NON-GAAP RECONCILIATIONS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​ Second Quarter Ended Six Months Ended ​​​June 30​June 30​(millions, except percent and per share)​2024 2023​2024 2023​Net Income attributable to Ecolab​​​​​​​​​​​​​Reported GAAP net income attributable to Ecolab​$490.9​​$329.7​​$903.0​​$563.1​​Special (gains) and charges, after tax​0.9 ​​23.3 ​​24.0 ​​44.4 ​​Discrete tax net expense (benefit)​(10.3)​​2.8 ​​(58.5)​​(1.2)​​Non-GAAP adjusted net income attributable to Ecolab​$481.5​​$355.8​​$868.5​​$606.3​​​​​​​​​​​​​​​​Diluted EPS attributable to Ecolab​​​​​​​​​​​​​Reported GAAP diluted EPS​$1.71​​$1.15​​$3.14​​$1.97​​Special (gains) and charges, after tax​ -​​0.08 ​​0.08 ​​0.15 ​​Discrete tax net expense (benefit)​(0.03)​​0.01 ​​ (0.20)​​ -​​Non-GAAP adjusted diluted EPS​$1.68​​$1.24​​$3.02​​$2.12​​​​​​​​​​​​​​​​Provision for Income Taxes​​​​​​​​​​​​​Reported GAAP tax rate​16.2%​20.6 %​13.1%​19.5%​Special gains and charges​1.6 ​​ (0.1)​​1.2 ​​ 0.2​​Discrete tax items​1.7 ​​(0.6)​​5.4 ​​0.2 ​​Non-GAAP adjusted tax rate​19.5%​19.9%​19.7%​19.9%​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "17"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL NON-GAAP RECONCILIATIONS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​Second Quarter Ended June 30​​2024​2023(millions)​Fixed Currency​Impact of Acquisitions and Divestitures​Organic​Fixed Currency​Impact of Acquisitions and Divestitures​OrganicNet Sales​​​​​​​​​​​​Global Industrial​$1,956.0​($21.1)​$1,934.9​$1,906.4​($6.1)​$1,900.3Global Institutional & Specialty​1,372.7​ (13.9)​1,358.8​1,273.7​ -​1,273.7Global Healthcare & Life Sciences​395.0​ -​395.0​395.3​ -​395.3Global Pest Elimination​297.1​ (2.1)​295.0​269.7​ -​269.7Corporate​ -​ -​​​10.6​ (10.6)​ -Subtotal at fixed currency rates​4,020.8​ (37.1)​3,983.7​3,855.7​ (16.7)​3,839.0Currency impact​ (35.0)​​​​​ (3.6)​​​​Consolidated reported GAAP net sales​$3,985.8​​​​​$3,852.1​​​​​​​​​​​​​​​​​Operating Income (loss)​​​​​​​​​​​​Global Industrial​$311.9​($1.1)​$310.8​$264.9​($0.5)​$264.4Global Institutional & Specialty​320.7​ (1.0)​319.7​213.4​ -​213.4 Global Healthcare & Life Sciences​33.7​ -​33.7​33.2​ -​33.2 Global Pest Elimination​62.2​ 0.6​62.8​52.4​ -​52.4 Corporate​ (50.0)​ -​ (50.0)​ (50.2)​ (0.4)​(50.6)Subtotal at fixed currency rates​678.5​ (1.5)​677.0​513.7​ (0.9)​512.8Special (gains) and charges at fixed currency rates​12.8​​​​​29.1​​​​Reported OI at fixed currency rates​665.7​​​​​484.6​​​​Currency impact​ (8.8)​​​​​ 0.1​​​​Consolidated reported GAAP operating income​$656.9​​​​​$484.7​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​Six Months Ended June 30​​2024​2023(millions)​Fixed Currency​Impact of Acquisitions and Divestitures​Organic​Fixed Currency​Impact of Acquisitions and Divestitures​OrganicNet Sales​​​​​​​​​​​​Global Industrial​$3,797.7​($47.2)​$3,750.5​$3,714.6​($19.4)​$3,695.2Global Institutional & Specialty​2,643.0​ (31.9)​2,611.1​2,404.9​ -​2,404.9Global Healthcare & Life Sciences​777.9​ -​777.9​781.4​ -​781.4Global Pest Elimination​563.9​ (2.1)​561.8​514.3​ -​514.3Corporate​ -​ -​ -​21.3​ (21.3)​ -Subtotal at fixed currency rates​7,782.5​ (81.2)​7,701.3​7,436.5​ (40.7)​7,395.8Currency impact​ (44.8)​​​​​ (12.8)​​​​Consolidated reported GAAP net sales​$7,737.7​​​​​$7,423.7​​​​​​​​​​​​​​​​​Operating Income (loss)​​​​​​​​​​​​Global Industrial​$576.9​($1.1)​$575.8​$484.7​($0.7)​$484.0Global Institutional & Specialty​568.7​ (1.9)​566.8​343.5​ -​343.5Global Healthcare & Life Sciences​70.7​ -​70.7​68.6​ -​68.6Global Pest Elimination​111.0​ 0.6​111.6​96.9​ -​96.9Corporate​ (99.9)​ -​(99.9)​ (99.9)​ (0.7)​(100.6)Subtotal at fixed currency rates​1,227.4​ (2.4)​1,225.0​893.8​ (1.4)​892.4Special (gains) and charges at fixed currency rates​42.7​​​​​56.8​​​​Reported OI at fixed currency rates​1,184.7​​​​​837.0​​​​Currency impact​ (9.9)​​​​​ (0.7)​​​​Consolidated reported GAAP operating income​$1,174.8​​​​​$836.3​​​​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "18"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL NON-GAAP RECONCILIATIONS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​Selected Cash Flow items​Second Quarter Ended​Six Months Ended ​​June 30​June 30(millions)​2024​​2023​2024​​2023​​​​​​​​​​​Cash provided by operating activities​$611.1​​$573.4​$1,260.5​​$771.6 Less: Capital expenditures​ (196.9)​​ (172.0)​ (398.4)​​ (345.7)Free cash flow​$414.2​​$401.4​$862.1​​$425.9​​​​​​​​​​​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "19"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "ECOLAB INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "SUPPLEMENTAL DILUTED EARNINGS PER SHARE INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "The table below provides a reconciliation of diluted earnings per share, as reported, to the non-GAAP measure of adjusted diluted earnings per share."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​ First Second Six Third Nine Fourth ​​​Quarter​Quarter​Months​Quarter​Months​Quarter​Year​​​Ended​Ended​Ended​Ended​Ended​Ended​Ended​​​Mar. 31​June 30​June 30​Sept. 30​Sept. 30​Dec. 31​Dec. 31​​​2023​2023​2023​2023​2023​2023​2023​Diluted earnings per share, as reported (U.S. GAAP)​$0.82​$1.15​$1.97​$1.41​$3.38​$1.41​$4.79​Adjustments:​​​​​​​​​​​​​​​Special (gains) and charges (1)​0.07 ​0.08 ​0.15 ​0.12 ​0.27 ​0.11 ​0.38 ​Discrete tax expense (benefits) (2)​(0.01)​0.01 ​0.00 ​0.01 ​0.01 ​0.03 ​0.04 ​Adjusted diluted earnings per share (Non-GAAP)​$0.88​$1.24​$2.12​$1.54​$3.66​$1.55​$5.21​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TableElement",
+      "text": "​​​​​​​​​​​​​​​​​ First Second Six Third Nine Fourth ​​Quarter​Quarter​Months​Quarter​Months​Quarter​Year ​​Ended​Ended​Ended​Ended​Ended​Ended​Ended ​​Mar. 31​June 30​June 30​Sept. 30​Sept. 30​Dec. 31​Dec. 31 ​​2024​2024​2024​2024​2024​2024​2024 Diluted earnings per share, as reported (U.S. GAAP)​$1.43​$1.71 ​$3.14​​​​​​​​​Adjustments:​​​​​​​​​​​​​​​Special (gains) and charges (3)​0.08 ​0.00 ​0.08 ​​​​​​​​​Discrete tax expense (benefits) (4)​(0.17)​(0.03)​(0.20)​​​​​​​​​Adjusted diluted earnings per share (Non-GAAP)​$1.34​$1.68​$3.02​$0.00​$0.00​$0.00​$0.00​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "TextElement",
+      "text": "Per share amounts do not necessarily sum due to changes in shares outstanding and rounding.(1) Special (gains) and charges for 2023 includes charges of $21.1 million, $23.3 million, $34.2 million and $30.6 million, net of tax, in the first, second, third and fourth quarters, respectively. These charges were primarily related to restructuring charges, acquisition and integration charges and litigation and other charges.(2) Discrete tax expenses (benefits) for 2023 includes ($4.0) million, $2.8 million, $3.5 million and $8.9 million in the first, second, third and fourth quarters, respectively. These expenses (benefits) are primarily associated with stock compensation excess tax benefits and other discrete tax benefits.(3) Special (gains) and charges for 2024 includes charges of $23.1 million and $0.9 million, net of tax, in the first and second quarters, respectively. These charges were primarily related to restructuring and professional service fees associated with the sale of our global surgical solutions business. (4) Discrete tax (benefits) for 2024 includes ($48.2) million and ($10.3) million in the first and second quarters, respectively. These expenses (benefits) are primarily associated with transferring certain intangibles between affiliates, stock compensation excess tax benefits and other discrete tax benefits."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "​"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "20"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "ecl-20240730xex99d2.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.2"
+    },
+    {
+      "type": "ImageElement",
+      "text": "1 ECOLAB Second Quarter 2024 Supplemental"
+    },
+    {
+      "type": "ImageElement",
+      "text": "Cautionary statement Forward-Looking Information This communication contains forward looking statements as that term is defined in the Private Securities Litigation Reform Act of 1995. These forward-looking statements include, but are not limited to, statements regarding delivered product costs, and demand; our financial and business performance and prospects, including sales, earnings, margins, pricing, volume, productivity, new business, and investments; the opportunities, savings and charges associated with the One Ecolab Initiative; and the expected timing, likelihood of completion and impact of the sale of the global surgical solutions business, including the timing, receipt and terms and conditions of any required governmental and regulatory clearance of the proposed transaction, the occurrence of any event, change or other circumstances that could give rise to the termination of the definitive agreement, the inability to consummate the proposed transaction due to the failure to satisfy other closing conditions, risks that the proposed transaction disrupts current operations, and the amount of the costs, fees, expenses and charges related to the proposed transaction. These statements are based on the current expectations of management. There are a number of risks and uncertainties that could cause actual results to differ materially from the forward-looking statements included in this communication. In particular, the ultimate results of any restructuring initiative depend on a number of factors, including the development of final plans, the impact of local regulatory requirements regarding employee terminations, the time necessary to develop and implement the restructuring initiatives and the level of success achieved through such actions in improving competitiveness, efficiency and effectiveness. Additional risks and uncertainties are set forth under Item 1A of our most recent Form 10-K, and our other public filings with the Securities and Exchange Commission (“SEC”), and include the impact of economic factors such as the worldwide economy, interest rates, foreign currency risk, reduced sales and earnings in our international operations resulting from the weakening of local currencies versus the U.S. dollar, demand uncertainty, supply chain challenges and inflation; the vitality of the markets we serve; exposure to global economic, political and legal risks related to our international operations, including geopolitical instability and the escalation of armed conflicts; our ability to successfully execute organizational change and management transitions; information technology infrastructure failures or breaches in data security; difficulty in procuring raw materials or fluctuations in raw material costs; the occurrence of severe public health outbreaks not limited to COVID-19; our ability to acquire complementary businesses and to effectively integrate such businesses; and other uncertainties or risks reported from time to time in our reports to the SEC. In light of these risks, uncertainties and factors, the forward-looking events discussed in this communication may not occur. We caution that undue reliance should not be placed on forward-looking statements, which speak only as of the date made. Ecolab does not undertake, and expressly disclaims, any duty to update any forward-looking statement, except as required by law. Non-GAAP Financial Information This communication includes Company information that does not conform to generally accepted accounting principles (GAAP). Management believes that a presentation of this information is meaningful to investors because it provides insight with respect to ongoing operating results of the Company and allows investors to better evaluate the financial results of the Company. These measures should not be viewed as an alternative to GAAP measures of performance. Furthermore, these measures may not be consistent with similar measures provided by other companies. Reconciliations of our non-GAAP measures included within this presentation are included in the “Non-GAAP Financial Measures” section of this presentation."
+    },
+    {
+      "type": "ImageElement",
+      "text": "Continued strong performance, increased full-year outlook 3 Good sales growth led by strong growth in Institutional & Specialty and Pest Elimination Strong double-digit OI growth with continued robust margin expansion Reported diluted EPS $1.71; Adjusted diluted EPS $1.68, +35% Confident in delivering strong 2024 performance ▪ Reported sales +3%, including a 1% headwind from unfavorable foreign currency exchange ▪ Organic sales +4% as Institutional & Specialty segment growth normalized as expected to a strong +7%. The segment lapped last year’s robust pricing delivery. Performance across the rest of Ecolab’s segments improved. ▪ Reported OI +36%, Organic OI +32% ▪ Reported OI margin 16.5%. Organic OI margin 17.0%, +360 bps reflecting robust gross margin expansion, partially offset by growth-oriented investments in the business ▪ Strong performance driven by continued value pricing, volume growth, and lower supply chain costs ▪ 2024 outlook: Increased adjusted diluted earnings per share range to $6.50 - $6.70, +25% to +29%, from prior $6.40 - $6.70 range ▪ 3Q outlook: Expect adjusted diluted EPS in the $1.75 - $1.85 range, +14% to +20% versus last year ▪ Unchanged 12-15% earnings growth trajectory for 2025 and beyond ▪ One Ecolab will further leverage billions of proprietary data points to deliver best-in-class total customer value, unlock significant enterprise selling opportunities, and drive improved operational performance One Ecolab initiative will add more fuel to the company’s growth and margin expansion journey"
+    },
+    {
+      "type": "ImageElement",
+      "text": "2Q overview ▪ Good growth with reported sales +3% and organic sales +4% o Pricing +3%, reflected further value pricing on top of last year’s strong pricing o Volume +1%, as new business overcame soft macroeconomic demand ▪ Organic growth led by Institutional & Specialty, performance across all other segments improved o Industrial improved further to +2%, driven by accelerating Water sales growth o Institutional & Specialty normalized to a strong +7%, building on last year’s double-digit growth o Healthcare & Life Sciences stable, improvement led by better growth in Life Sciences o Pest Elimination +9% ▪ Reported diluted EPS $1.71 ▪ Adjusted diluted EPS $1.68, +35% o Strong growth reflected continued value pricing, volume growth, and lower supply chain costs Sales EPS 4"
+    },
+    {
+      "type": "ImageElement",
+      "text": "Expect strong 3Q and 2024 performance 3Q 2024 ▪ Ecolab expects third quarter 2024 adjusted diluted earnings per share in the $1.75 to $1.85 range, rising 14% to 20% compared with adjusted diluted earnings per share of $1.54 a year ago. ▪ This strong growth reflects good pricing, volume growth, and moderating benefits from lower delivered product costs. ▪ Ecolab expects full year 2024 adjusted diluted earnings per share to improve further to the $6.50 to $6.70 range, rising 25% to 29% versus last year. As previously discussed, this range includes an unfavorable impact in the second half of 2024 from the sale of Ecolab’s global surgical solutions business. The transaction is expected to close very soon, and the unfavorable impact to 2024 adjusted diluted earnings per share is now estimated to be $0.08 per share. ▪ Ecolab expects continued solid sales growth, driven by value pricing and new business gains. The company expects to leverage this growth with attractive organic operating income margin expansion, driven by robust increases in gross margin. Good underlying productivity is expected to be offset in the short-term by growth-oriented investments in the business to fuel Ecolab’s long-term performance. With these investments, SG&A expense in the second half of the year is anticipated to be similar to first half levels. Ecolab expects quarterly adjusted diluted earnings per share growth to progressively normalize towards the company’s long-term 12-15% target as solid growth continues and impacts from delivered product costs normalize exiting 2024. 5"
+    },
+    {
+      "type": "ImageElement",
+      "text": "2Q 2024 sales growth detail 6 Fixed Rate Organic % Change % Change Global Industrial Consolidated Water 5% 4% Volume 1% Food & Beverage 0% 0% Pricing 3% Paper -1% -1% Subtotal 4% Total Global Industrial 3% 2% Acq./Div. 1% Fixed currency growth 4% Global Institutional & Specialty Currency impact -1% Institutional 7% 7% Total 3% Specialty 10% 6% Total Global Institutional & Specialty 8% 7% Global Healthcare & Life Sciences Healthcare -3% -3% Life Sciences 4% 4% Total Global Healthcare & Life Sciences 0% 0% Total Global Pest Elimination 10% 9% Total 4% 4% % Change Amounts in the tables above may reflect rounding. Organic excludes sales to ChampionX post-separation."
+    },
+    {
+      "type": "ImageElement",
+      "text": "7 Sales +4% Water Sales 0% Food & Beverage All sales figures are organic unless otherwise noted Global Industrial Segment ▪ Improved Water growth reflected strong growth in downstream and strong gains in light water sales, which together overcame comparisons to last year’s very strong 10% growth. o Light water: Strong growth driven by continued double-digit growth in high-tech (data centers and microelectronics) and good growth in the food & beverage, transportation, and Institutional markets. o Heavy water: Sales were stable as good growth in primary metals was offset by modestly lower power sales. o Downstream: Strong sales growth reflected good performance across all segments. We continue to focus on innovative water treatment programs that help our customers improve their productivity and reliability while also achieving their sustainability goals. o Mining: Lower sales reflected comparisons to last year’s strong double-digit growth. Good underlying performance continues to benefit from our strategic shift toward water management and productivity enhancing programs for fertilizers and high-value metals. ▪ The impact of increasing water demand, its growing quality and availability issues, and the resulting rising costs continue to be a critical issue for our customers, and one that Ecolab is uniquely positioned to help them solve. Our innovative chemistry solutions, digital technologies, and service expertise help our customers significantly reduce water consumption and meet their sustainability objectives. Q3: Expect good sales growth driven by continued strong performance in light water. Q3: Anticipate modest sales growth as new business overcomes continued soft industry demand. ▪ As expected, sales were stable as good new business was offset by soft industry demand and comparisons to last year’s very strong 11% growth. ▪ Regionally, growth in IMEA, Asia Pacific, and Latin America was offset by softer sales in North America and Europe. ▪ We continue to benefit from our enterprise selling approach to customers, where we combine our industry-leading cleaning and sanitizing and water treatment capabilities to deliver significant customer value though improved product quality, food safety, water efficiency, and lower operating costs."
+    },
+    {
+      "type": "ImageElement",
+      "text": "8 Sales -1% Paper All sales figures are organic unless otherwise noted Global Industrial Segment Q3: Expecting modest sales growth driven by new business wins and stabilizing customer production rates. ▪ As expected, slightly lower sales reflected new business wins that were offset by soft but stabilizing customer production rates. ▪ Growth in tissue & towel was offset by slightly lower board & packaging sales. ▪ Regionally, good sales growth in Europe, IMEA, and Latin America was offset by modestly lower sales in North America and Asia Pacific."
+    },
+    {
+      "type": "ImageElement",
+      "text": "9 Sales +7% Institutional Sales +6% Specialty All sales figures are organic unless otherwise noted Global Institutional & Specialty Segment Q3: Expect good sales growth within foodservice, lodging, and long-term care to more than overcome comparisons to last year’s strong 10% growth. ▪ As expected, Institutional delivered strong sales growth, with solid performance across foodservice, lodging, and long-term care. These strong gains more than overcame comparisons to last year’s strong 12% growth. We are outperforming softer end-market trends, benefiting from our innovative products and service expertise that help customers improve their performance, optimize labor, and reduce total costs. ▪ Regionally, sales grew double-digits in Asia Pacific, North America delivered strong gains and Europe showed solid growth. ▪ We remain focused on capitalizing on our attractive long-term growth opportunities, maximizing service effectiveness, and leveraging investments in digital technology to deliver enhanced customer value and improved productivity. We expect these advantages, along with our innovative chemistry and digital programs which save customers time and money, will drive enhanced customer value and support further strong new business gains across both new and existing customers. Q3: Expect good sales growth that continues to outpace market trends. ▪ As expected, Specialty delivered good sales growth as the business continued to outperform market trends, and comparisons to last year’s very strong 15% growth. o Quick Service: Good sales growth continues to benefit from our ongoing product and program innovation that delivers leading food safety outcomes, labor optimization, and lower total operating costs.​ o Food Retail: Sales grew reflecting new business and program expansion. As a trusted global partner for food retailers, we continue to expand our competitive differentiation by helping customers improve their customer experience, protect their food, and improve their operational performance."
+    },
+    {
+      "type": "ImageElement",
+      "text": "10 Sales -3% Healthcare Sales +4% Life Sciences All sales figures are organic unless otherwise noted Global Healthcare & Life Sciences Segment Q3: Expect modestly lower sales reflecting continued low margin business exits. ▪ Modestly lower sales reflected strategic low margin business exits as we continue to execute Healthcare’s business transformation. ▪ We continue to take deliberate action to transform our Healthcare business. The announced sale of our global surgical solutions business will create a sharper strategic focus on our infection prevention and instrument reprocessing businesses to drive profitable long-term growth. ▪ Our new business efforts are focused on attractive long-term growth opportunities in the infection prevention and instrument reprocessing areas. Our leading product lines, ongoing innovation, and digital technologies make us uniquely positioned to help improve patient outcomes while also increasing operational efficiencies for our customers. ▪ Improved sales growth reflected good underlying business momentum across the Life Sciences business that more than offset ongoing soft near-term industry demand. ▪ The long-term growth opportunities for the Life Sciences industry are very attractive. We continue to invest and innovate to further expand our global capabilities and technical expertise across environmental hygiene and purification technologies to capitalize on this long-term growth opportunity. Q3: Expect continued growth as good business momentum more than offsets soft near-term industry demand."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        4,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Investor Contact:",
+          "Media Contact:",
+          "Media Contact:"
+        ],
+        [
+          "Andrew Hedberg (651) 250-2185",
+          "Nigel Glennie (651) 250-2576",
+          "Nigel Glennie (651) 250-2576"
+        ],
+        [
+          "Cairn Clark (651) 250-2291",
+          "​",
+          "​"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Reported sales $4.0 billion, +3% versus last year, including a 1% headwind from unfavorable foreign currency exchange. Organic sales +4% as Institutional & Specialty segment sales growth normalized to a strong +7% as expected. The segment lapped last year’s very strong pricing delivery. Performance across the Pest Elimination, Industrial and Healthcare & Life Sciences segments all improved."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Reported operating income margin 16.5%. Organic operating income margin 17.0%, +360 bps as lower supply chain costs, value pricing, and volume growth more than offset growth-oriented investments in the business."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Reported diluted EPS $1.71, +49%. Adjusted diluted EPS, excluding special gains and charges and discrete tax items were $1.68, +35%."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "Second quarter cash flow from operating activities $611 million; free cash flow increased to $414 million."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "2024: Increased full year 2024 adjusted diluted earnings per share range to $6.50 - $6.70, +25% - 29%, from prior $6.40 - $6.70 range."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "●",
+          "3Q 2024: Expect third quarter 2024 adjusted diluted earnings per share in the $1.75 - $1.85 range, +14% - 20%."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        16,
+        19
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30"
+        ],
+        [
+          "​",
+          "​",
+          "Reported",
+          "Reported",
+          "Reported",
+          "Reported",
+          "Reported",
+          "​",
+          "​",
+          "​",
+          "​",
+          "Adjusted",
+          "Adjusted",
+          "Adjusted",
+          "Adjusted",
+          "Adjusted",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "(unaudited)",
+          "​",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "​",
+          "%",
+          "%",
+          "​",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "Public Currency Rates",
+          "​",
+          "%",
+          "%"
+        ],
+        [
+          "(millions, except per share)",
+          "​",
+          "2024",
+          "2024",
+          "​",
+          "2023",
+          "2023",
+          "​",
+          "Change",
+          "Change",
+          "​",
+          "2024",
+          "​",
+          "​",
+          "2023",
+          "2023",
+          "​",
+          "Change",
+          "Change"
+        ],
+        [
+          "Net sales",
+          "​",
+          "$3,985.8",
+          "​",
+          "​",
+          "$3,852.1",
+          "​",
+          "​",
+          "3",
+          "%",
+          "​",
+          "$3,985.8",
+          "​",
+          "​",
+          "$3,852.1",
+          "​",
+          "​",
+          "3",
+          "%"
+        ],
+        [
+          "Operating income",
+          "​",
+          "656.9",
+          "​",
+          "​",
+          "484.7",
+          "​",
+          "​",
+          "36",
+          "%",
+          "​",
+          "669.8",
+          "​",
+          "​",
+          "513.8",
+          "​",
+          "​",
+          "30",
+          "%"
+        ],
+        [
+          "Net income attributable to Ecolab",
+          "​",
+          "490.9",
+          "​",
+          "​",
+          "329.7",
+          "​",
+          "​",
+          "49",
+          "%",
+          "​",
+          "481.5",
+          "​",
+          "​",
+          "355.8",
+          "​",
+          "​",
+          "35",
+          "%"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Diluted earnings per share attributable to Ecolab",
+          "​",
+          "$1.71",
+          "​",
+          "​",
+          "$1.15",
+          "​",
+          "​",
+          "49",
+          "%",
+          "​",
+          "$1.68",
+          "​",
+          "​",
+          "$1.24",
+          "​",
+          "​",
+          "35",
+          "%"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "Organic",
+          "Organic",
+          "Organic",
+          "Organic",
+          "Organic",
+          "​",
+          "%",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "2024",
+          "2024",
+          "​",
+          "2023",
+          "2023",
+          "​",
+          "Change",
+          "Change",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Net sales",
+          "​",
+          "$3,983.7",
+          "​",
+          "​",
+          "$3,839.0",
+          "​",
+          "​",
+          "4",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Operating income",
+          "​",
+          "677.0",
+          "​",
+          "​",
+          "512.8",
+          "​",
+          "​",
+          "32",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        15,
+        13
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Global Industrial",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "(unaudited)",
+          "​",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "​",
+          "​",
+          "​",
+          "​",
+          "Organic",
+          "Organic"
+        ],
+        [
+          "(millions)",
+          "",
+          "2024",
+          "2024",
+          "​",
+          "2023",
+          "2023",
+          "​",
+          "% Change",
+          "% Change",
+          "",
+          "% Change",
+          "% Change"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Fixed currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$1,956.0",
+          "​",
+          "​",
+          "$1,906.4",
+          "​",
+          "​",
+          "3",
+          "%",
+          "​",
+          "2",
+          "%"
+        ],
+        [
+          "Operating income",
+          "​",
+          "311.9",
+          "​",
+          "​",
+          "264.9",
+          "​",
+          "​",
+          "18",
+          "%",
+          "​",
+          "18",
+          "%"
+        ],
+        [
+          "Operating income margin",
+          "​",
+          "15.9",
+          "%",
+          "​",
+          "13.9",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Organic operating income margin",
+          "​",
+          "16.1",
+          "%",
+          "​",
+          "13.9",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Public currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$1,936.5",
+          "​",
+          "​",
+          "$1,909.5",
+          "​",
+          "​",
+          "1",
+          "%",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Operating income",
+          "​",
+          "306.7",
+          "​",
+          "​",
+          "266.6",
+          "​",
+          "​",
+          "15",
+          "%",
+          "​",
+          "​",
+          "​"
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        15,
+        13
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Global Institutional & Specialty",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "(unaudited)",
+          "​",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "​",
+          "​",
+          "​",
+          "​",
+          "Organic",
+          "Organic"
+        ],
+        [
+          "(millions)",
+          "",
+          "2024",
+          "2024",
+          "​",
+          "2023",
+          "2023",
+          "​",
+          "% Change",
+          "% Change",
+          "",
+          "% Change",
+          "% Change"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Fixed currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$1,372.7",
+          "​",
+          "​",
+          "$1,273.7",
+          "​",
+          "​",
+          "8",
+          "%",
+          "​",
+          "7",
+          "%"
+        ],
+        [
+          "Operating income",
+          "​",
+          "320.7",
+          "​",
+          "​",
+          "213.4",
+          "​",
+          "​",
+          "50",
+          "%",
+          "​",
+          "50",
+          "%"
+        ],
+        [
+          "Operating income margin",
+          "​",
+          "23.4",
+          "%",
+          "​",
+          "16.8",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Organic operating income margin",
+          "​",
+          "23.5",
+          "%",
+          "​",
+          "16.8",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Public currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$1,363.9",
+          "​",
+          "​",
+          "$1,272.2",
+          "​",
+          "​",
+          "7",
+          "%",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Operating income",
+          "​",
+          "318.3",
+          "​",
+          "​",
+          "213.0",
+          "​",
+          "​",
+          "49",
+          "%",
+          "​",
+          "​",
+          "​"
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        15,
+        13
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Global Healthcare & Life Sciences",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "(unaudited)",
+          "​",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "​",
+          "​",
+          "​",
+          "​",
+          "Organic",
+          "Organic"
+        ],
+        [
+          "(millions)",
+          "",
+          "2024",
+          "2024",
+          "​",
+          "2023",
+          "2023",
+          "​",
+          "% Change",
+          "% Change",
+          "",
+          "% Change",
+          "% Change"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Fixed currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$395.0",
+          "​",
+          "​",
+          "$395.3",
+          "​",
+          "​",
+          "0",
+          "%",
+          "​",
+          "0",
+          "%"
+        ],
+        [
+          "Operating income",
+          "​",
+          "33.7",
+          "​",
+          "​",
+          "33.2",
+          "​",
+          "​",
+          "2",
+          "%",
+          "​",
+          "2",
+          "%"
+        ],
+        [
+          "Operating income margin",
+          "​",
+          "8.5",
+          "%",
+          "​",
+          "8.4",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Organic operating income margin",
+          "​",
+          "8.5",
+          "%",
+          "​",
+          "8.4",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Public currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$389.7",
+          "​",
+          "​",
+          "$390.8",
+          "​",
+          "​",
+          "0",
+          "%",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Operating income",
+          "​",
+          "32.5",
+          "​",
+          "​",
+          "32.0",
+          "​",
+          "​",
+          "2",
+          "%",
+          "​",
+          "​",
+          "​"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        15,
+        13
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "rows": [
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Global Pest Elimination",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "(unaudited)",
+          "​",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "Second Quarter Ended June 30",
+          "​",
+          "​",
+          "​",
+          "​",
+          "Organic",
+          "Organic"
+        ],
+        [
+          "(millions)",
+          "",
+          "2024",
+          "2024",
+          "​",
+          "2023",
+          "2023",
+          "​",
+          "% Change",
+          "% Change",
+          "",
+          "% Change",
+          "% Change"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Fixed currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$297.1",
+          "​",
+          "​",
+          "$269.7",
+          "​",
+          "​",
+          "10",
+          "%",
+          "​",
+          "9",
+          "%"
+        ],
+        [
+          "Operating income",
+          "​",
+          "62.2",
+          "​",
+          "​",
+          "52.4",
+          "​",
+          "​",
+          "19",
+          "%",
+          "​",
+          "20",
+          "%"
+        ],
+        [
+          "Operating income margin",
+          "​",
+          "20.9",
+          "%",
+          "​",
+          "19.4",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Organic operating income margin",
+          "​",
+          "21.3",
+          "%",
+          "​",
+          "19.4",
+          "%",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Public currency",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Sales",
+          "​",
+          "$295.7",
+          "​",
+          "​",
+          "$269.0",
+          "​",
+          "​",
+          "10",
+          "%",
+          "​",
+          "​",
+          "​"
+        ],
+        [
+          "Operating income",
+          "​",
+          "61.9",
+          "​",
+          "​",
+          "52.4",
+          "​",
+          "​",
+          "18",
+          "%",
+          "​",
+          "​",
+          "​"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 4000.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "sales $4.0 billion"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "● | Reported sales $4.0 billion, +3% versus last year, including a 1% headwind from unfavorable foreign currency exchange. Organic sales +4% as Institutional & Specialty segment sales growth normalized to a strong +7% as expected. The segment lapped last year’s very strong pricing delivery. Performance across the Pest Elimination, Industrial and Healthcare & Life Sciences segments all improved."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 2,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "234.360001",
+    "return_10d_pct": "1.2289",
+    "return_20d_pct": "3.5032",
+    "return_30d_pct": "8.0304",
+    "return_60d_pct": "8.9478",
+    "return_90d_pct": "8.2779"
+  },
+  "text_stats": {
+    "primary_text_len": 4597,
+    "exhibit_text_len": 77966,
+    "combined_text_len": 82565,
+    "semantic_text_len": 73644,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GEHC",
+    "cik": "0001932393",
+    "event_date": "2024-07-31",
+    "event_accession": "0001932393-24-000043",
+    "primary_8k_doc": "gehc-20240731.htm",
+    "exhibit_docs": [
+      "release2q24earnings.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GEHC_000193239324000043_gehc-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GEHC_000193239324000043_release2q24earnings.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GEHC",
+    "cik": "0001932393",
+    "entity_name": "GE HEALTHCARE TECHNOLOGIES INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4707000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "372000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "32454000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "673000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-266000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "468000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.079031",
+    "operating_cash_flow_to_revenue": "0.099426",
+    "assets_to_revenue": "6.894837",
+    "financing_cash_flow_to_revenue": "0.142979",
+    "investing_cash_flow_to_revenue": "-0.056512"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues were flat ye ar-over-year; Organic revenue growth* was 1% • Net income margin was 8.",
+      "Revenues of $4.",
+      "Net income margin was 8.",
+      "earnings per share (EPS) were $0.",
+      "EPS* was $1.",
+      "Net income attributable to GE HealthCare was $428 million versus $418 million for the prior year, and Adjusted EBIT* was $742 million versus $711 million • Net income margin was 8."
+    ],
+    "guidance_evidence": [
+      "guidance for Organic revenue growth* and Adjusted EBIT margin* Chicago, IL – July 31, 2024 – GE HealthCare (Nasdaq: GEHC) today reported financial results for the second quarter ended June 30, 2024.",
+      "guidance of 15.",
+      "outlook o n a non-GAAP ba sis.",
+      "Outlook section below for more details.",
+      "guidance,” “outlook,” and similar expressions.",
+      "outlook; and the Company’s strategy, innovation, and investments."
+    ],
+    "wave_or_demand_evidence": [
+      "orders growth with particular strength in the U.",
+      "orders divided by Total revenues, was solid at 1.",
+      "orders increased 3% organically year-over-year.",
+      "demand for its products and services.",
+      "demand from customers for products and services.",
+      "orders; and (2) foreign currency exchange rate fluctuations in order to present orders on a constant currency basis."
+    ],
+    "warning_or_risk_evidence": [
+      "charges - net, Net (income) loss attributable to noncontrolling interests, Non-operating benefit (income) costs, Benefit (provision) for income taxes and certain tax related adjustments, and certain non-recurring and/or non-cash items.",
+      "charges associated with restructuring programs.",
+      "charges and other costs directly related to the transactions.",
+      "charges (benefits)(2) (0.",
+      "headwinds in the China market.",
+      "headwinds • Adjusted EBIT margin* in the range of 15."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4800,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "84.099998",
+    "return_10d_pct": "-2.0571",
+    "return_20d_pct": "0.4518",
+    "return_30d_pct": "0.8323",
+    "return_60d_pct": "11.5933",
+    "return_90d_pct": "3.6861"
+  },
+  "text_stats": {
+    "primary_text_len": 3484,
+    "exhibit_text_len": 32095,
+    "combined_text_len": 35581
+  }
+}

@@ -1,7 +1,7 @@
 """DealFlowScout -- autonomous deal flow sourcing agent.
 
 Runs the existing `aeternus source` pipeline on a daily schedule (pre-market).
-Publishes QUEUE_ITEM_ADDED signals for each new ticker added to the queue.
+Publishes a scout handoff signal after ticker collection.
 """
 from __future__ import annotations
 import datetime as dt
@@ -38,9 +38,8 @@ class DealFlowScoutAgent(BaseAutonomousAgent):
         summary = f"source pipeline exit={result.returncode}, date={trade_date}"
 
         if success:
-            # Signal ResearchAgent that new items are in the queue
             self.bus.publish(AgentSignal(
-                signal_type=SignalType.QUEUE_ITEM_ADDED,
+                signal_type=SignalType.SCOUT_HANDOFF_READY,
                 from_agent=self.name,
                 to_agent="ResearchAgent",
                 payload={"trade_date": trade_date, "top_k": self.top_k},

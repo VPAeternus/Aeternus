@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ENR",
+    "cik": "1632790",
+    "event_date": "2024-08-06",
+    "event_accession": "0001632790-24-000060",
+    "primary_8k_doc": "enr-20240806.htm",
+    "exhibit_docs": [
+      "enrpr6302024.htm",
+      "q324earningsslidesfinalf.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENR_000163279024000060_enr-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENR_000163279024000060_enrpr6302024.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENR_000163279024000060_q324earningsslidesfinalf.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ENR",
+    "cik": "1632790",
+    "entity_name": "ENERGIZER HOLDINGS, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1449200000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "89000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4509600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "-203400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-18000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "210200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.061413",
+    "operating_cash_flow_to_revenue": "0.145046",
+    "assets_to_revenue": "3.111786",
+    "financing_cash_flow_to_revenue": "-0.140353",
+    "investing_cash_flow_to_revenue": "-0.012421"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $701.",
+      "Net sales increased 1.",
+      "Net sales were within our guidance of up approximately 1%, while Project Momentum savings resulted in Adjusted gross margin and Adjusted earnings per share ahead of expectations.",
+      "Gross margin improved 160 basis points over prior year, up 270 basis points on an adjusted basis.",
+      "Earnings per share were $0.",
+      "Earnings per share and Adjusted EBITDA expected to be at the high end of the original range."
+    ],
+    "guidance_evidence": [
+      "outlook for Adjusted Earnings per share and Adjusted EBITDA expected to be at the high end of the original range.",
+      "guidance for the year.",
+      "Outlook and Assumptions for Fiscal Year 2024 (1) Our third quarter organic Net sales were within our guidance of up approximately 1%, while Project Momentum savings resulted in Adjusted gross margin and Adjusted earnings per share ahead of expectations.",
+      "outlook,\" or other similar words or phrases.",
+      "Outlook Fiscal Year 2024 Outlook (in millions, except per share data) Adjusted Net earnings Adjusted EPS Adjusted Net earnings Adjusted EPS Fiscal 2024 - GAAP Outlook $63 to $79 $0.",
+      "Outlook $81 to $87 $1."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "demand, supply, and operational challenges brought on by any disease outbreak, including epidemics, pandemics, or similar widespread public health concerns.",
+      "customers could significantly decrease our sales and profitability.",
+      "customer demand and our ability to manage production capacity.",
+      "customers, consumers and shareholders on environmental, social and governance (ESG) issues, including those related to sustainability and climate change, may have an adverse effect on our business, financial condition and results of operations and damage our reputation.",
+      "airment resulted in a loss per share of $0."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment resulted in a loss per share of $0.",
+      "impairment charge recorded on the Company's indefinite lived intangibles.",
+      "impairment of the reputation of our Company or our leading brands or failure of our marketing plans could have an adverse effect on our business.",
+      "impairment charges, which may be significant.",
+      "Impairment of intangible assets (2) 110.",
+      "Impairment of intangible assets for the three and nine months ended June 30, 2024 relates to the Company's Rayovac trade name impairment of $85."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 701.4,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "29.670000",
+    "return_10d_pct": "-1.2808",
+    "return_20d_pct": "8.9990",
+    "return_30d_pct": "4.9882",
+    "return_60d_pct": "6.6060",
+    "return_90d_pct": "11.3246"
+  },
+  "text_stats": {
+    "primary_text_len": 3267,
+    "exhibit_text_len": 62233,
+    "combined_text_len": 65502
+  }
+}

@@ -1,0 +1,880 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ARWR",
+    "cik": "879407",
+    "event_date": "2024-08-08",
+    "event_accession": "0001628280-24-036113",
+    "primary_8k_doc": "arwr-20240808.htm",
+    "exhibit_docs": [
+      "arwr-202408088kex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARWR_000162828024036113_arwr-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ARWR_000162828024036113_arwr-202408088kex991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ARWR",
+    "cik": "879407",
+    "entity_name": "ARROWHEAD PHARMACEUTICALS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "208813000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "7350000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "765552000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "251096000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-116759000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-107187000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.035199",
+    "operating_cash_flow_to_revenue": "-0.513316",
+    "assets_to_revenue": "3.666209",
+    "financing_cash_flow_to_revenue": "1.202492",
+    "investing_cash_flow_to_revenue": "-0.559156"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [
+      "forecast” or “continue” or the negative of these words or other variations thereof or comparable terminology are intended to identify such forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Christopher Anzalone, Ph.",
+      "Ai therapeutics.",
+      "ails Investors may access a live audio webcast on the Company's website at https://ir.",
+      "ailable approximately two hours after the conclusion of the call.",
+      "ailable at Arrowhead’s option, subject to mutual agreement between Sixth Street and Arrowhead, during the seven-year term of the agreement.",
+      "Ai Molecule (TRiMTM) platform, is designed to lower levels of lipoprotein(a), a genetically determined risk factor for cardiovascular disease."
+    ],
+    "warning_or_risk_evidence": [
+      "loss of fat mass◦Preservation of lean mass•Presented new interim clinical data on ARO-RAGE, an investigational RNAi-based medicine for the treatment of inflammatory lung diseases, such as asthma, at the American Thoracic Society (ATS) 2024 International Conference.",
+      "loss including noncontrolling interest(173,977)(104,125)Net loss attributable to noncontrolling interest, net of tax(3,184)(1,179)Net loss attributable to Arrowhead Pharmaceuticals, Inc.",
+      "loss per share attributable to Arrowhead Pharmaceuticals, Inc.",
+      "uncertainties described in our most recent Annual Report on Form 10-K, subsequent Quarterly Reports on Form 10-Q and other documents filed with the Securities and Exchange Commission from time to time."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "arwr-202408088kex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRESS RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "August 8, 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Arrowhead Pharmaceuticals Reports Fiscal 2024 Third Quarter Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "–Conference Call and Webcast Today, August 8, 2024 at 4:30 p.m. ET"
+    },
+    {
+      "type": "TextElement",
+      "text": "PASADENA, Calif., August 8, 2024 — Arrowhead Pharmaceuticals, Inc. (NASDAQ: ARWR) today announced financial results for its fiscal 2024 third quarter ended June 30, 2024. The Company is hosting a conference call today, August 8, 2024, at 4:30 p.m. ET to discuss the results.“Arrowhead had a very productive quarter with several high-profile presentations at medical and scientific congresses, as well as publications in high impact journals. Our clinical results have been strong and are receiving significant attention,” said Christopher Anzalone, Ph.D., President and CEO at Arrowhead. “Across our diverse pipeline, we continue to make good progress in later-stage clinical studies and are approaching commercialization of both our wholly owned and partnered RNAi therapeutics. We also made critical progress on the financial front with two separate inflows that strengthen our balance sheet following our strategic decision to focus our resources in cardiometabolic on plozasiran, our most near-term commercial opportunity with a potential launch in 2025, provided plozasiran receives regulatory approval in familial chylomicronemia syndrome.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Webcast and Conference Call and Details"
+    },
+    {
+      "type": "TextElement",
+      "text": "Investors may access a live audio webcast on the Company's website at https://ir.arrowheadpharma.com/events-and-presentations. A replay of the webcast will be available approximately two hours after the conclusion of the call.For analysts that wish to participate in the conference call, please register at https://register.vevent.com/register/BI3ff87234939a4106b58ec6d3e72eb33c. Once registered, you will receive the dial-in number and a personalized PIN code that will be required to access the call."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Selected Recent Financial Events"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Strengthened the balance sheet to immediately enhance the ability of plozasiran to advance towards launch in 2025, if approved, and to expand the possibilities to fund innovation and growth across Arrowhead’s robust and diverse pipeline of RNAi therapeutics. Two key balance sheet events were:◦Closed a strategic financing agreement with Sixth Street for significant, long-term, non-dilutive capital. The $500 million senior secured credit facility includes $400 million funded at close with an additional $100 million available at Arrowhead’s option, subject to mutual agreement between Sixth Street and Arrowhead, during the seven-year term of the agreement.◦Received a $50 million milestone payment from Royalty Pharma plc following the completion of enrollment of the Phase 3 OCEAN(a) - Outcomes Trial of olpasiran, being conducted by Amgen. Olpasiran, a small interfering RNA originally developed by Arrowhead using its proprietary Targeted RNAi Molecule (TRiMTM) platform, is designed to lower levels of lipoprotein(a), a genetically determined risk factor for cardiovascular disease."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Selected Recent R&D Events"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Reported successful topline results from the pivotal Phase 3 PALISADE study of investigational plozasiran in patients with familial chylomicronemia syndrome (FCS). Plozasiran is the company’s first investigational RNAi-based therapy to show clinical efficacy in a Phase 3 study. Topline results included the following:◦Plozasiran achieved statistically significant median reductions in triglycerides up to 80% and mean reductions in APOC3 up to 94% at month 10.◦In addition to meeting the primary endpoint, plozasiran met all key secondary endpoints and demonstrated statistical significance versus placebo.◦Plozasiran achieved a statistically significant reduction in incidence of acute pancreatitis versus placebo.◦Plozasiran demonstrated a favorable safety profile in the PALISADE study. The number of subjects reporting treatment emergent adverse event (AEs) were similar in plozasiran and placebo groups. Severe and serious AEs were less common with plozasiran than with placebo. The most common AEs reported were abdominal pain, COVID-19, nasopharyngitis, headache and nausea.•Additional data from the PALISADE study of plozasiran will be presented in a late-breaking oral prestation at the European Society of Cardiology (ESC) Congress 2024 which is being held on September 2, 2024, in London. Details on the ESC presentation are listed below:Title: A phase 3 study to evaluate the efficacy and safety of ARO-APOC3 in adults with familial chylomicronemia syndrome Date/Time: September 2, 2024, 11:48 a.m. BSTPresenter: Professor Gerald WattsSession: Small trials, trial updates, and other studies on lipid therapySession Type: Late Breaking Science•Initiated pivotal Phase 3 SHASTA-3 and SHASTA-4 studies of plozaisran in patients with severe hypertriglyceridemia. •Announced plans to advance plozasiran into a Phase 3 cardiovascular outcomes trial called CAPITAN.◦CAPITAN builds upon existing SUMMIT program of pivotal Phase 3 clinical studies of plozasiran including PALISADE in patients with FCS and the SHASTA studies in patients with severe hypertriglyceridemia.•Presented new Phase 2 data from the MUIR study of investigational plozasiran in patients with mixed hyperlipidemia and the from the ARCHES-2 study of investigational zodasiran in patients with mixed hyperlipidemia at the European Atherosclerosis Society (EAS) 92nd Congress. Both studies were simultaneously published both studies in the New England Journal of Medicine.◦Select MUIR results included the following:•By silencing Apolipoprotein C-III (APOC3), plozasiran significantly reduced triglycerides and atherogenic triglyceride rich lipoproteins and increased HDL, across all dose levels at Week 24 in patients with mixed dyslipidemia.•At week 24, representing trough effect after two quarterly doses, plozasiran treatment was associated with placebo adjusted reductions in triglycerides of -50%, -56%, and -62% (all p<0.001) at the 10, 25, and 50 mg doses, respectively. Fasting triglyceride levels were normalized (achieved levels below 150 mg/dL) in most patients (79-92%) randomized to a treatment arm. Commensurate reductions in APOC3 of -57%, -73%, and -79%, with strong positive correlations with changes in triglyceride levels were observed.•Changes in other atherogenic lipoprotein parameters were also observed. At week 24, for the quarterly doses of 10, 25, and 50 mg, the following placebo adjusted changes were observed: non-HDL-C levels -17%, -18%, and -24%; apoB levels -10%, -13%, and -19%; and remnant cholesterol levels -43%, -49%, and -48% with strong correlations with changes in triglyceride levels.•Plozasiran demonstrated a favorable safety profile in the MUIR study. The overall rates of occurrence of treatment-emergent adverse events (TEAEs) and discontinuations were similar for plozasiran and placebo throughout the 48 weeks of observation. Observed adverse events generally reflected the comorbidities and underlying conditions of the study population. TEAEs occurring in five or more patients were COVID-19, worsening glycemic control, upper respiratory tract infection, urinary tract infection, headache, and bronchitis.◦Select ARCHES-2 results included the following:•Zodasiran treatment was associated with dose-dependent placebo adjusted reductions in triglycerides, remnant cholesterol, LDL-C, ApoB, and Non-HDL-C across all dose levels in patients with mixed hyperlipidemia.•At week 24, representing trough effect, zodasiran treatment at 50, 100, and 200 mg on day 1 and week 12 was associated with placebo adjusted reductions in triglycerides of -51%, -57%, and -63% (all p<0.001) respectively. ANPTL3, the genetic target of zodasiran, was reduced compared with placebo by -54%, -70%, and -74%, and remnant cholesterol levels were reduced by -73%, -76%, and -82%, which strongly correlated with changes in triglyceride levels.•Changes in other atherogenic lipoprotein parameters were also observed across all three dose levels. At week 24, the following placebo adjusted changes were observed for the 200 mg dose: LDL-C -20%, ApoB -22%; Non-HDL-C -36%.•In a subset of patients with baseline liver fat fraction greater than 8%, dose-dependent liver fat reductions, measured by MRI-PDFF, were observed reaching -28% with the 200 mg dose compared with -2% with placebo.•Zodasiran demonstrated a favorable safety profile in patients with mixed hyperlipidemia in the ARCHES-2 study. Treatment-emergent adverse events (TEAEs) were generally balanced between treatment and placebo groups and generally reflected the comorbidities and underlying conditions of the study population. There were no clinically meaningful changes in laboratory safety evaluations, no changes in mean platelet counts, and modest changes in HbA1c.•Presented final data from the Phase 2 SHASTA-2 study of investigational plozasiran in patients with severe hypertriglyceridemia in a late-breaking oral presentation at the American College of Cardiology 73rd Annual Scientific Session & Expo and simultaneously published in the journal JAMA Cardiology. Key results included the following:◦Treatment with plozasiran led to dose-dependent placebo-adjusted reductions in triglycerides (primary endpoint) of -49% (P < 0.001), -53% (P < 0.001), and -57% (P < 0.001), driven by placebo-adjusted reductions in APOC3 of -68% (P < 0.001), -72% (P < 0.001), and -77% (P < 0.001) at week 24, after receiving two doses of 10 mg, 25 mg, and 50 mg plozasiran, respectively. Mean maximum, non-placebo adjusted reductions from baseline in triglycerides and APOC3 were up to 86% and 90% and typically occurred around week 16 or week 20.◦Among patients treated with plozasiran, 90.6% achieved a triglyceride level less than 500 mg/dL, the level associated with increased risk of acute pancreatitis, at week 24. In addition, 48.4% of patients achieved normal triglyceride levels of less than 150 mg/dL at week 24.◦Subjects treated with plozasiran also showed improvements in multiple atherogenic lipid and lipoprotein levels, including remnant cholesterol, HDL-cholesterol, and non-HDL cholesterol.◦Plozasiran demonstrated a favorable safety profile in the SHASTA-2 study. The adverse event and serious adverse event profile were similar across treatment groups. Observed adverse events generally reflected the comorbidities and underlying conditions of the study population.•Presented preclinical data on ARO-INHBE, an investigational RNAi-based medicine for the treatment of obesity and metabolic diseases, at the American Diabetes Association (ADA) 84th Scientific Sessions. In pharmacological studies in obese and diabetic mouse models, INHBE siRNA administration resulted in multiple promising findings, including the following:◦95% reduction in INHBE mRNA expression◦19% suppression of body weight compared to saline controls◦26% loss of fat mass◦Preservation of lean mass•Presented new interim clinical data on ARO-RAGE, an investigational RNAi-based medicine for the treatment of inflammatory lung diseases, such as asthma, at the American Thoracic Society (ATS) 2024 International Conference. Key results included the following:◦Single and multiple doses of ARO-RAGE in normal healthy volunteers led to dose dependent reductions in soluble RAGE (sRAGE) in both bronchoalveolar lavage fluid (BALF) and in serum.◦After two doses of ARO-RAGE in patients with mild to moderate asthma, serum sRAGE was reduced up to 88% with a mean maximum reduction up to 77%.◦Serum sRAGE was reduced in a dose-responsive manner with similar reductions observed in NHVs and patients with asthma at each dose level.◦Pharmacodynamic effects were long lasting, with a duration that appears to support once every two-month dosing.◦ARO-RAGE has shown a favorable safety profile to date, with no demonstrated pattern of effect on systemic safety labs and no demonstrated pattern of detrimental effect on lung function (FEV1, FVC, or DLCO) over time. There have been no serious adverse effects related to study drug and no treatment emergent adverse events leading to trial withdrawal or study drug discontinuation.•Arrowhead also presented preclinical data at ATS on two additional lung targeted programs:◦ARO-TSLP is designed to silence the epithelial cytokine thymic stromal lymphopoietin (TSLP), a genetically and clinically validated therapeutic target that activates multiple immune cell lineages to promote asthmatic inflammation.◦ARO-IAV is designed to silence expression of highly conserved influenza A viruses, including the highly pathogenic avian influenza virus (H5N1).•Launched the 2024 Summer Series of R&D webinars to highlight specific therapeutic areas in Arrowhead’s pipeline. Each event will feature presentations by Arrowhead team members and external key opinion leaders, who will discuss the respective disease areas and treatment landscapes. 2024 Summer Series Schedule:◦May 23, 2024 – Muscular▪Completed◦June 25, 2024 – Cardiometabolic▪Completed◦July 16, 2024 – Pulmonary▪Completed◦August 14, 2024 – Obesity/Metabolic▪New date planned◦September 25, 2024 – Central Nervous System"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Selected Fiscal 2024 Financial Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ARROWHEAD PHARMACEUTICALS, INC."
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONSOLIDATED CONDENSED FINANCIAL INFORMATION"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30,OPERATING SUMMARY20242023(Unaudited)Revenue$— $15,825 Operating Expenses:Research and development152,431 94,757 General and administrative expenses23,710 23,771 Total Operating Expenses176,141 118,528 Operating loss(176,141)(102,703)Total other income (expense)2,164 (680)Loss before income tax expense and noncontrolling interest(173,977)(103,383)Income tax expense— 742 Net loss including noncontrolling interest(173,977)(104,125)Net loss attributable to noncontrolling interest, net of tax(3,184)(1,179)Net loss attributable to Arrowhead Pharmaceuticals, Inc.$(170,793)$(102,946) Net loss per share attributable to Arrowhead Pharmaceuticals, Inc. - Diluted$(1.38)$(0.96)Weighted-average shares used in calculating - Diluted124,199 107,004"
+    },
+    {
+      "type": "TableElement",
+      "text": "FINANCIAL POSITION SUMMARYJune 30,2024September 30,2023(unaudited)Cash, cash equivalents and restricted cash$69,399 $110,891 Investments367,272 292,735 Total cash resources436,671 403,626 Other assets447,088 361,926 Total Assets$883,759 $765,552 Current deferred revenue$— $866 Other liabilities544,785 477,524 Total Liabilities$544,785 $478,390 Total Arrowhead Pharmaceuticals, Inc. Stockholders' Equity$330,547 $271,343 Noncontrolling Interest8,42715,819Total Noncontrolling Interest and Stockholders' Equity$338,974 $287,162 Total Liabilities, Noncontrolling Interest and Stockholders' Equity$883,759 $765,552 Shares Outstanding124,227 107,312"
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Arrowhead Pharmaceuticals"
+    },
+    {
+      "type": "TextElement",
+      "text": "Arrowhead Pharmaceuticals develops medicines that treat intractable diseases by silencing the genes that cause them. Using a broad portfolio of RNA chemistries and efficient modes of delivery, Arrowhead therapies trigger the RNA interference mechanism to induce rapid, deep, and durable knockdown of target genes. RNA interference, or RNAi, is a mechanism present in living cells that inhibits the expression of a specific gene, thereby affecting the production of a specific protein. Arrowhead’s RNAi-based therapeutics leverage this natural pathway of gene silencing.For more information, please visit www.arrowheadpharma.com, or follow us on X (formerly Twitter) at @ArrowheadPharma or on LinkedIn. To be added to the Company's email list and receive news directly, please visit http://ir.arrowheadpharma.com/email-alerts."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Safe Harbor Statement under the Private Securities Litigation Reform Act:"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "This news release contains forward-looking statements within the meaning of the \"safe harbor\" provisions of the Private Securities Litigation Reform Act of 1995. Any statements contained in this release except for historical information may be deemed to be forward-looking statements. Without limiting the generality of the foregoing, words such as “may,” “will,” “expect,” “believe,” “anticipate,” “hope,” “intend,” “plan,” “project,” “could,” “estimate,” “continue,” “target,” “forecast” or “continue” or the negative of these words or other variations thereof or comparable terminology are intended to identify such forward-looking statements. In addition, any statements that refer to projections of our future financial performance, trends in our business, expectations for our product pipeline or product candidates, including anticipated regulatory submissions and clinical program results, prospects or benefits of our collaborations with other companies, or other characterizations of future events or circumstances are forward-looking statements. These forward-looking statements include, but are not limited to, statements about the initiation, timing, progress and results of our preclinical studies and clinical trials, and our research and development programs; our expectations regarding the potential benefits of the partnership, licensing and/or collaboration arrangements and other strategic arrangements and transactions we have entered into or may enter into in the future; our beliefs and expectations regarding milestone, royalty or other payments that could be due to or from third parties under existing agreements; and our estimates regarding future revenues, research and development expenses, capital requirements and payments to third parties. These statements are based upon our current expectations and speak only as of the date hereof. Our actual results may differ materially and adversely from those expressed in any forward-looking statements as a result of numerous factors and uncertainties, including the impact of the ongoing COVID-19 pandemic on our business, the safety and efficacy of our product candidates, decisions of regulatory authorities and the timing thereof, the duration and impact of regulatory delays in our clinical programs, our ability to finance our operations, the likelihood and timing of the receipt of future milestone and licensing fees, the future success of our scientific studies, our ability to successfully develop and commercialize drug candidates, the timing for starting and completing clinical trials, rapid technological change in our markets, the enforcement of our intellectual property rights, and the other risks and uncertainties described in our most recent Annual Report on Form 10-K, subsequent Quarterly Reports on Form 10-Q and other documents filed with the Securities and Exchange Commission from time to time. We assume no obligation to update or revise forward-looking statements to reflect new events or circumstances."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Contacts:"
+    },
+    {
+      "type": "TextElement",
+      "text": "Arrowhead Pharmaceuticals, Inc.Vince Anzalone, CFA626-304-3400"
+    },
+    {
+      "type": "TitleElement",
+      "text": "ir@arrowheadpharma.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Investors:"
+    },
+    {
+      "type": "TextElement",
+      "text": "LifeSci Advisors, LLCBrian Ritchie212-915-2578"
+    },
+    {
+      "type": "TitleElement",
+      "text": "britchie@lifesciadvisors.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Media:"
+    },
+    {
+      "type": "TextElement",
+      "text": "LifeSci Communications, LLCKendy Guarinoni, Ph.D.724-910-9389"
+    },
+    {
+      "type": "TitleElement",
+      "text": "kguarinoni@lifescicomms.com"
+    },
+    {
+      "type": "TextElement",
+      "text": "Source: Arrowhead Pharmaceuticals, Inc."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        19,
+        12
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,",
+          "Three Months Ended June 30,"
+        ],
+        [
+          "OPERATING SUMMARY",
+          "OPERATING SUMMARY",
+          "OPERATING SUMMARY",
+          "2024",
+          "2024",
+          "2024",
+          "",
+          "",
+          "",
+          "2023",
+          "2023",
+          "2023"
+        ],
+        [
+          "",
+          "",
+          "",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)"
+        ],
+        [
+          "Revenue",
+          "Revenue",
+          "Revenue",
+          "$",
+          "—",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "15825",
+          ""
+        ],
+        [
+          "Operating Expenses:",
+          "Operating Expenses:",
+          "Operating Expenses:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Research and development",
+          "Research and development",
+          "Research and development",
+          "152431",
+          "152431",
+          "",
+          "",
+          "",
+          "",
+          "94757",
+          "94757",
+          ""
+        ],
+        [
+          "General and administrative expenses",
+          "General and administrative expenses",
+          "General and administrative expenses",
+          "23710",
+          "23710",
+          "",
+          "",
+          "",
+          "",
+          "23771",
+          "23771",
+          ""
+        ],
+        [
+          "Total Operating Expenses",
+          "Total Operating Expenses",
+          "Total Operating Expenses",
+          "176141",
+          "176141",
+          "",
+          "",
+          "",
+          "",
+          "118528",
+          "118528",
+          ""
+        ],
+        [
+          "Operating loss",
+          "Operating loss",
+          "Operating loss",
+          "(176,141)",
+          "(176,141)",
+          "",
+          "",
+          "",
+          "",
+          "(102,703)",
+          "(102,703)",
+          ""
+        ],
+        [
+          "Total other income (expense)",
+          "Total other income (expense)",
+          "Total other income (expense)",
+          "2164",
+          "2164",
+          "",
+          "",
+          "",
+          "",
+          "(680)",
+          "(680)",
+          ""
+        ],
+        [
+          "Loss before income tax expense and noncontrolling interest",
+          "Loss before income tax expense and noncontrolling interest",
+          "Loss before income tax expense and noncontrolling interest",
+          "(173,977)",
+          "(173,977)",
+          "",
+          "",
+          "",
+          "",
+          "(103,383)",
+          "(103,383)",
+          ""
+        ],
+        [
+          "Income tax expense",
+          "Income tax expense",
+          "Income tax expense",
+          "—",
+          "—",
+          "",
+          "",
+          "",
+          "",
+          "742",
+          "742",
+          ""
+        ],
+        [
+          "Net loss including noncontrolling interest",
+          "Net loss including noncontrolling interest",
+          "Net loss including noncontrolling interest",
+          "(173,977)",
+          "(173,977)",
+          "",
+          "",
+          "",
+          "",
+          "(104,125)",
+          "(104,125)",
+          ""
+        ],
+        [
+          "Net loss attributable to noncontrolling interest, net of tax",
+          "Net loss attributable to noncontrolling interest, net of tax",
+          "Net loss attributable to noncontrolling interest, net of tax",
+          "(3,184)",
+          "(3,184)",
+          "",
+          "",
+          "",
+          "",
+          "(1,179)",
+          "(1,179)",
+          ""
+        ],
+        [
+          "Net loss attributable to Arrowhead Pharmaceuticals, Inc.",
+          "Net loss attributable to Arrowhead Pharmaceuticals, Inc.",
+          "Net loss attributable to Arrowhead Pharmaceuticals, Inc.",
+          "$",
+          "(170,793)",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "(102,946)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net loss per share attributable to Arrowhead Pharmaceuticals, Inc. - Diluted",
+          "Net loss per share attributable to Arrowhead Pharmaceuticals, Inc. - Diluted",
+          "Net loss per share attributable to Arrowhead Pharmaceuticals, Inc. - Diluted",
+          "$",
+          "(1.38)",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "(0.96)",
+          ""
+        ],
+        [
+          "Weighted-average shares used in calculating - Diluted",
+          "Weighted-average shares used in calculating - Diluted",
+          "Weighted-average shares used in calculating - Diluted",
+          "124199",
+          "124199",
+          "",
+          "",
+          "",
+          "",
+          "107004",
+          "107004",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        19,
+        12
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "FINANCIAL POSITION SUMMARY",
+          "FINANCIAL POSITION SUMMARY",
+          "FINANCIAL POSITION SUMMARY",
+          "June 30, 2024",
+          "June 30, 2024",
+          "June 30, 2024",
+          "",
+          "",
+          "",
+          "September 30, 2023",
+          "September 30, 2023",
+          "September 30, 2023"
+        ],
+        [
+          "",
+          "",
+          "",
+          "(unaudited)",
+          "(unaudited)",
+          "(unaudited)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash, cash equivalents and restricted cash",
+          "Cash, cash equivalents and restricted cash",
+          "Cash, cash equivalents and restricted cash",
+          "$",
+          "69399",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "110891",
+          ""
+        ],
+        [
+          "Investments",
+          "Investments",
+          "Investments",
+          "367272",
+          "367272",
+          "",
+          "",
+          "",
+          "",
+          "292735",
+          "292735",
+          ""
+        ],
+        [
+          "Total cash resources",
+          "Total cash resources",
+          "Total cash resources",
+          "436671",
+          "436671",
+          "",
+          "",
+          "",
+          "",
+          "403626",
+          "403626",
+          ""
+        ],
+        [
+          "Other assets",
+          "Other assets",
+          "Other assets",
+          "447088",
+          "447088",
+          "",
+          "",
+          "",
+          "",
+          "361926",
+          "361926",
+          ""
+        ],
+        [
+          "Total Assets",
+          "Total Assets",
+          "Total Assets",
+          "$",
+          "883759",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "765552",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current deferred revenue",
+          "Current deferred revenue",
+          "Current deferred revenue",
+          "$",
+          "—",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "866",
+          ""
+        ],
+        [
+          "Other liabilities",
+          "Other liabilities",
+          "Other liabilities",
+          "544785",
+          "544785",
+          "",
+          "",
+          "",
+          "",
+          "477524",
+          "477524",
+          ""
+        ],
+        [
+          "Total Liabilities",
+          "Total Liabilities",
+          "Total Liabilities",
+          "$",
+          "544785",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "478390",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total Arrowhead Pharmaceuticals, Inc. Stockholders' Equity",
+          "Total Arrowhead Pharmaceuticals, Inc. Stockholders' Equity",
+          "Total Arrowhead Pharmaceuticals, Inc. Stockholders' Equity",
+          "$",
+          "330547",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "271343",
+          ""
+        ],
+        [
+          "Noncontrolling Interest",
+          "Noncontrolling Interest",
+          "Noncontrolling Interest",
+          "8427",
+          "8427",
+          "8427",
+          "",
+          "",
+          "",
+          "15819",
+          "15819",
+          "15819"
+        ],
+        [
+          "Total Noncontrolling Interest and Stockholders' Equity",
+          "Total Noncontrolling Interest and Stockholders' Equity",
+          "Total Noncontrolling Interest and Stockholders' Equity",
+          "$",
+          "338974",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "287162",
+          ""
+        ],
+        [
+          "Total Liabilities, Noncontrolling Interest and Stockholders' Equity",
+          "Total Liabilities, Noncontrolling Interest and Stockholders' Equity",
+          "Total Liabilities, Noncontrolling Interest and Stockholders' Equity",
+          "$",
+          "883759",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "765552",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Shares Outstanding",
+          "Shares Outstanding",
+          "Shares Outstanding",
+          "124227",
+          "124227",
+          "",
+          "",
+          "",
+          "",
+          "107312",
+          "107312",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 15.825,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue | Revenue | Revenue | $ | — | "
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Revenue | Revenue | Revenue | $ | — | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "25.000000",
+    "return_10d_pct": "-6.6000",
+    "return_20d_pct": "-3.6800",
+    "return_30d_pct": "-12.9600",
+    "return_60d_pct": "-27.9200",
+    "return_90d_pct": "-14.4400"
+  },
+  "text_stats": {
+    "primary_text_len": 3431,
+    "exhibit_text_len": 19158,
+    "combined_text_len": 22591,
+    "semantic_text_len": 19011,
+    "table_count": 2,
+    "semantic_parse_status": "sec_parser"
+  }
+}

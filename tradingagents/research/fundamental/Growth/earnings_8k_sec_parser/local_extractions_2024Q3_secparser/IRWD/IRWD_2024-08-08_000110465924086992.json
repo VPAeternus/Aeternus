@@ -1,0 +1,922 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "IRWD",
+    "cik": "1446847",
+    "event_date": "2024-08-08",
+    "event_accession": "0001104659-24-086992",
+    "primary_8k_doc": "tm2421104d1_8k.htm",
+    "exhibit_docs": [
+      "tm2421104d1_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IRWD_000110465924086992_tm2421104d1_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IRWD_000110465924086992_tm2421104d1_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "IRWD",
+    "cik": "1446847",
+    "entity_name": "IRONWOOD PHARMACEUTICALS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "104061000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "45714000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "471073000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "3981000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "80171000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.4393",
+    "operating_cash_flow_to_revenue": "0.770423",
+    "assets_to_revenue": "4.526893",
+    "financing_cash_flow_to_revenue": "0.038256",
+    "investing_cash_flow_to_revenue": "-0.000125"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales were $211.",
+      "sales of LINZESS in the U.",
+      "revenue was lower year-over-year, primarily due to the decrease in collaborative arrangements revenue.",
+      "sales of LINZESS as a percent of total LINZESS U.",
+      "sales of LINZESS $120,497 $180,332 $296,099 $355,488 Field: Rule-Page Field: /Rule-Page 1 Ironwood collaborates with AbbVie on the development and commercialization of linaclotide in North America.",
+      "Non-GAAP net income (loss)2,3 1,508 (1,041,325) Non-GAAP net income (loss) per share – basic2,3 0."
+    ],
+    "guidance_evidence": [
+      "guidance due to continued LINZESS pricing pressure associated with higher-than-expected Medicaid utilization trends – BOSTON, Mass.",
+      "Guidance.",
+      "guidance due to continued LINZESS pricing pressure as a result of higher-than-expected Medicaid utilization trends for FY 2024.",
+      "Guidance (May 9, 2024) Revised 2024 Guidance (August 8, 2024) U.",
+      "guidance, Ironwood has assumed it will not incur material expenses related to business development activities in 2024 and excludes any costs associated with potential CNP-104 option exercise.",
+      "guidance on GAAP net loss or a reconciliation of expected adjusted EBITDA to expected GAAP net loss because, without unreasonable efforts, it is unable to predict with reasonable certainty the non-GAAP adjustments used to calculate adjusted EBITDA."
+    ],
+    "wave_or_demand_evidence": [
+      "demand and new-to-brand growth remain robust, increasing 11% and 15% year-over-year in Q2, respectively.",
+      "demand is up, LINZESS continues to experience pricing headwinds driven by higher-than-expected Medicaid utilization trends.",
+      "Demand: Total LINZESS prescription demand in the second quarter of 2024 was 52 million LINZESS capsules, an 11% increase compared to the second quarter of 2023, per IQVIA.",
+      "demand growth, LINZESS U.",
+      "aid utilization trends – BOSTON, Mass.",
+      "aid Tom McCourt, chief executive officer of Ironwood Pharmaceuticals."
+    ],
+    "warning_or_risk_evidence": [
+      "charge of approximately $1.",
+      "charge of $1,090.",
+      "charge of ($1,090.",
+      "headwinds driven by higher-than-expected Medicaid utilization trends.",
+      "loss2,3 (860 ) (1,089,478 ) GAAP net loss attributable to Ironwood Pharmaceuticals, Inc.",
+      "loss – per share basic2,3 (0."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "tm2421104d1_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Ironwood Pharmaceuticals Reports Second Quarter 2024 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "– LINZESS® (Iinaclotide) EUTRx prescription demand growth of 11% year-over-year –"
+    },
+    {
+      "type": "TitleElement",
+      "text": "– Plans to pursue apraglutide rolling NDA review; expects to complete submission in the first quarter of 2025 –"
+    },
+    {
+      "type": "TitleElement",
+      "text": "– On track to deliver CNP-104 topline results in the third quarter of 2024 –"
+    },
+    {
+      "type": "TitleElement",
+      "text": "– Revises FY 2024 financial guidance due to continued LINZESS pricing pressure associated with higher-than-expected Medicaid utilization trends –"
+    },
+    {
+      "type": "TextElement",
+      "text": "BOSTON, Mass., August 8, 2024 — Ironwood Pharmaceuticals, Inc. (Nasdaq: IRWD), a GI-focused healthcare company, today reported its second quarter 2024 results and recent business performance.“We continued to make progress across our portfolio in the second quarter,” said Tom McCourt, chief executive officer of Ironwood Pharmaceuticals. “LINZESS prescription demand and new-to-brand growth remain robust, increasing 11% and 15% year-over-year in Q2, respectively. While demand is up, LINZESS continues to experience pricing headwinds driven by higher-than-expected Medicaid utilization trends. Even with continued LINZESS pricing pressure, we believe we are in a fortunate position with meaningful cash flow generation from LINZESS and a capital structure to support the continued execution of our strategic priorities. Beyond LINZESS, we have continued to receive positive feedback from physicians, key opinion leaders, and patient advocacy partners on apraglutide’s clinical profile. This positive feedback supports our belief that, if approved, apraglutide would be the drug of choice among physicians to treat adult patients with short bowel syndrome who are dependent on parenteral support, based on its demonstrated efficacy, tolerability and once-weekly dosing convenience. In addition, we look forward to providing an update on CNP-104 later this quarter, which will inform a decision on our option to acquire an exclusive license from COUR for CNP-104 in the U.S.” Field: Page; Sequence: 1 Second Quarter 2024 Financial Highlights1"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands, except for per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Q2 2024 Q2 2023 Total revenue2 $94,396 $107,382 Total costs and expenses3 69,419 1,190,521 GAAP net loss2,3 (860 ) (1,089,478 ) GAAP net loss attributable to Ironwood Pharmaceuticals, Inc.2,3 (860) (1,062,187) GAAP net loss – per share basic2,3 (0.01) (6.84) GAAP net loss – per share diluted2,3 (0.01) (6.84) Adjusted EBITDA2,3 27,909 (1,034,182) Non-GAAP net income (loss)2,3 1,508 (1,041,325) Non-GAAP net income (loss) per share – basic2,3 0.00 (6.71) Non-GAAP net income (loss) per share – diluted2,3 0.00 (6.71)"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Refer to the Reconciliation of GAAP Results to Non-GAAP Financial Measures table and to the Reconciliation of GAAP Net Loss to Adjusted EBITDA table at the end of this press release. Refer to Non-GAAP Financial Measures for additional information.2 Figures presented for the second quarter of 2024 include a $17.0 million adjustment to collaborative arrangements revenue, driven by a $30.0 million increase to collaborative arrangements revenue as a result of a gross-to-net change in estimate related to the year ended December 31, 2023, previously recorded by Ironwood in the first quarter of 2024, which was reflected in LINZESS U.S. net sales as reported by AbbVie in the second quarter of 2024. This was partially offset by a $13.0 million reduction to collaborative arrangements revenue in the second quarter of 2024, to reflect Ironwood’s estimate of LINZESS gross-to-net reserves as of June 30, 2024.3 Figures presented for the second quarter of 2023 include a one-time charge of approximately $1.1 billion related to acquired in-process research and development from the acquisition of VectivBio in the second quarter of 2023.Second Quarter 2024 Corporate Highlights"
+    },
+    {
+      "type": "TitleElement",
+      "text": "U.S. LINZESS"
+    },
+    {
+      "type": "TextElement",
+      "text": "·Prescription Demand: Total LINZESS prescription demand in the second quarter of 2024 was 52 million LINZESS capsules, an 11% increase compared to the second quarter of 2023, per IQVIA. ·U.S. Brand Collaboration: LINZESS U.S. net sales are provided to Ironwood by its U.S. partner, AbbVie Inc. (“AbbVie”). LINZESS U.S. net sales were $211.2 million in the second quarter of 2024, a 22% decrease compared to $269.7 million in the second quarter of 2023. Ironwood and AbbVie share equally in U.S. brand collaboration profits. Field: Page; Sequence: 2; Options: NewSection; Value: 2 –LINZESS U.S. net sales as reported by AbbVie in the second quarter of 2024 reflected the gross-to-net change in estimate related to the year ended December 31, 2023, which Ironwood previously accounted for in the first quarter of 2024 by recording a $30.0 million reduction to collaborative arrangements revenue. –LINZESS commercial margin, including the gross-to-net change in estimate, was 62% in the second quarter of 2024, compared to 71% in the second quarter of 2023. See the U.S. LINZESS Full Brand Collaboration table at the end of this press release. –Net profit for the LINZESS U.S. brand collaboration, net of commercial and research and development (“R&D”) expenses, and including the gross-to-net change in estimate, was $120.5 million in the second quarter of 2024, a decrease compared to $180.3 million in the second quarter of 2023. See the U.S. LINZESS Full Brand Collaboration table at the end of this press release. ·Collaboration Revenue to Ironwood: Ironwood recorded $91.4 million in collaboration revenue in the second quarter of 2024 related to sales of LINZESS in the U.S., compared to $104.8 million for the second quarter of 2023. Second quarter of 2024 collaboration revenue to Ironwood includes a $17.0 million adjustment, driven by a $30.0 million increase to collaborative arrangements revenue as a result of a gross-to-net change in estimate related to the year ended December 31, 2023, previously recorded by Ironwood in the first quarter of 2024, which was reflected in LINZESS U.S. net sales as reported by AbbVie in the second quarter of 2024. This was partially offset by a $13.0 million reduction to collaborative arrangements revenue in the second quarter of 2024, to reflect Ironwood’s estimate of LINZESS gross-to-net reserves as of June 30, 2024. See the U.S. LINZESS Commercial Collaboration table at the end of the press release.Pipeline UpdatesApraglutide ·Ironwood is advancing apraglutide, a next-generation, synthetic glucagon-like peptide-2 (“GLP-2”) analog for short bowel syndrome (“SBS”) patients dependent on parenteral support (“PS”), a severe chronic malabsorptive condition. Ironwood believes apraglutide has the potential to improve the standard of care for adult patients with SBS who are dependent on PS as the first and only GLP-2 with once-weekly administration, if approved. ·In May 2024, Ironwood presented late-breaking data during the 2024 Digestive Disease Week® (DDW) meeting from its pivotal Phase III clinical trial, STARS, which evaluated the efficacy and safety of once-weekly subcutaneous apraglutide in adult patients with short bowel syndrome with intestinal failure (“SBS-IF”). These findings build on the positive topline data that Ironwood previously announced in February 2024. Additional details from the late-breaking presentation can be found here. –Ironwood is working to submit a new drug application (“NDA”) to the U.S. Food and Drug Administration (“FDA”) and marketing applications to other regulatory agencies for apraglutide for the treatment of adult patients with SBS who are dependent on PS. Field: Page; Sequence: 3; Value: 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CNP-104"
+    },
+    {
+      "type": "TextElement",
+      "text": "·Ironwood has a collaboration and license option agreement with COUR Pharmaceuticals Development Company, Inc. (“COUR”). This agreement grants Ironwood an option to acquire an exclusive license to research, develop, manufacture and commercialize, in the U.S., products containing CNP-104 (“CNP-104”), a tolerizing immune modifying nanoparticle, for the treatment of primary biliary cholangitis (“PBC”), a rare autoimmune disease targeting the liver. If successful, CNP-104 has the potential to be the first approved disease modifying therapy for PBC. ·COUR is currently conducting a clinical study with CNP-104 evaluating the safety, tolerability, pharmacodynamic effects and efficacy of CNP-104 in PBC patients. Topline data is expected in the third quarter of 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "IW-3300"
+    },
+    {
+      "type": "TextElement",
+      "text": "·Ironwood is currently advancing IW-3300, a guanylate cyclase-C agonist being developed for the potential treatment of visceral pain conditions, such as interstitial cystitis / bladder pain syndrome (“IC/BPS”) and endometriosis. Ironwood is continuing the Phase II proof of concept study in IC/BPS.Second Quarter 2024 Financial Results ·Total Revenue. Total revenue in the second quarter of 2024 was $94.4 million, compared to $107.4 million in the second quarter of 2023. –As noted above, revenue was lower year-over-year, primarily due to the decrease in collaborative arrangements revenue. –Total revenue in the second quarter of 2024 consisted of $91.4 million associated with Ironwood’s share of the net profits from the sales of LINZESS in the U.S., and $3.0 million in royalties and other revenue. Total revenue in the second quarter of 2023 consisted of $104.8 million associated with Ironwood’s share of the net profits from the sales of LINZESS in the U.S. and $2.6 million in royalties and other revenue. ·Operating Expenses. Operating expenses in the second quarter of 2024 were $69.4 million, compared to $1,190.5 million in the second quarter of 2023, which included a one-time charge of $1,090.4 million of acquired in-process research and development (“IPR&D”) from the acquisition of VectivBio. –Operating expenses in the second quarter of 2024 consisted of $37.0 million in selling, general and administrative (“SG&A”) expenses, $30.4 million in R&D expenses and $2.1 million in restructuring expenses. Operating expenses in the second quarter of 2023 consisted of $52.5 million in SG&A expenses and $34.6 million in R&D expenses, $13.0 million in restructuring expenses and approximately $1.1 billion in acquired IPR&D from the acquisition of VectivBio. Field: Page; Sequence: 4; Value: 2 ·Interest Expense. Interest expense was $7.5 million in the second quarter of 2024, primarily in connection with Ironwood’s convertible senior notes and revolving credit facility. Interest expense was $1.8 million in the second quarter of 2023, in connection with Ironwood’s convertible senior notes and revolving credit facility. ·Interest and Investment Income. Interest and investment income was $1.4 million in the second quarter of 2024. Interest and investment income was $8.8 million in the second quarter of 2023. ·Income Tax Expense. Ironwood recorded $19.7 million of income tax expense in the second quarter of 2024, the majority of which was non-cash, as Ironwood continues to utilize net operating losses to offset taxable income for federal purposes and in many states. Ironwood recorded $13.3 million of income tax expense in the second quarter of 2023, the majority of which was non-cash, as Ironwood continued to utilize net operating losses to offset taxable income for federal purposes and in many states. ·GAAP Net Loss Attributable to Ironwood. GAAP net loss attributable to Ironwood was ($0.9) million, or ($0.01) per share (basic and diluted) in the second quarter of 2024, compared to GAAP net loss attributable to Ironwood of ($1,062.2) million, or ($6.84) per share (basic and diluted) in the second quarter of 2023, which included a one-time charge of ($1,090.4) million of acquired IPR&D from the acquisition of VectivBio. ·Non-GAAP Net Income (Loss). Non-GAAP net income was $1.5 million, or $0.00 per share (basic and diluted), in the second quarter of 2024, compared to non-GAAP net loss of ($1,041.3) million, or ($6.71) per share (basic and diluted), in the second quarter of 2023, which included a one-time charge of ($1,090.4) million of acquired IPR&D from the acquisition of VectivBio. –Non-GAAP net income (loss) excludes the impact of mark-to-market adjustments on the derivatives related to Ironwood’s 2022 Convertible Notes, amortization of acquired intangible assets, restructuring expenses and acquisition-related costs, all net of tax effect. See Non-GAAP Financial Measures below. ·Adjusted EBITDA. Adjusted EBITDA was $27.9 million in the second quarter of 2024, compared to ($1,034.2) million in the second quarter of 2023, which included a one-time charge of ($1,090.4) million of acquired IPR&D from the acquisition of VectivBio. –Adjusted EBITDA is calculated by subtracting mark-to-market adjustments on derivatives related to Ironwood’s 2022 Convertible Notes, restructuring expenses, net interest expense, income taxes, depreciation and amortization, and acquisition-related costs, from GAAP net loss. See Non-GAAP Financial Measures below. ·Cash Flow Highlights. Ironwood ended the second quarter of 2024 with $105.5 million of cash and cash equivalents, compared to $92.2 million of cash and cash equivalents at the end of 2023. –In the second quarter of 2024, Ironwood repaid the aggregate principal amount of the 2024 Convertible Notes of approximately $200.0 million upon maturity, using $50.0 million of cash on hand and drawing $150.0 million from its revolving credit facility. The outstanding principal balance on the revolving credit facility was $425.0 million as of June 30, 2024. Field: Page; Sequence: 5; Value: 2 –Ironwood generated $33.5 million in cash from operations in the second quarter of 2024, compared to $35.0 million in cash from operations in the second quarter of 2023. ·Ironwood 2024 Financial Guidance. Ironwood has revised its FY 2024 financial guidance due to continued LINZESS pricing pressure as a result of higher-than-expected Medicaid utilization trends for FY 2024. Ironwood now expects:"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TableElement",
+      "text": "Prior 2024 Guidance (May 9, 2024) Revised 2024 Guidance (August 8, 2024) U.S. LINZESS Net Sales Mid-single digits % decline 2 $900 - $950 million Total Revenue $405 - $425 million $350 - $375 million Adjusted EBITDA1 >$120 million Excludes potential CNP-104 option exercise >$75 million Excludes potential CNP-104 option exercise"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Adjusted EBITDA is calculated by subtracting restructuring expenses, net interest expense, income taxes, depreciation and amortization, and acquisition-related costs from GAAP net loss. For purposes of the 2024 guidance, Ironwood has assumed it will not incur material expenses related to business development activities in 2024 and excludes any costs associated with potential CNP-104 option exercise. Ironwood does not provide guidance on GAAP net loss or a reconciliation of expected adjusted EBITDA to expected GAAP net loss because, without unreasonable efforts, it is unable to predict with reasonable certainty the non-GAAP adjustments used to calculate adjusted EBITDA. These adjustments are uncertain, depend on various factors and could have a material impact on GAAP net loss for the guidance period. Management believes this non-GAAP information is useful for investors, taken in conjunction with Ironwood’s GAAP financial statements, because it provides greater transparency and period-over-period comparability with respect to Ironwood’s operating performance. These measures are also used by management to assess the performance of the business. Investors should consider these non-GAAP measures only as a supplement to, not as a substitute for or as superior to, measures of financial performance prepared in accordance with GAAP. In addition, these non-GAAP financial measures are unlikely to be comparable with non-GAAP information provided by other companies.2 2024 U.S. LINZESS Net Sales guidance presented as year-over-year change relative to 2023 U.S. LINZESS Net Sales as reported by AbbVie of $1,073.2 million.Non-GAAP Financial MeasuresIronwood presents non-GAAP net income (loss) and non-GAAP net income (loss) per share to exclude the impact, net of tax effects, of net gains and losses on derivatives related to Ironwood’s 2022 Convertible Notes that are required to be marked-to-market, amortization of acquired intangible assets, restructuring expenses, and acquisition-related costs. Non-GAAP adjustments are further detailed below: ·The gains and losses on the derivatives related to Ironwood’s 2022 Convertible Notes were highly variable, difficult to predict and of a size that could have a substantial impact on the company’s reported results of operations in any given period. ·Amortization of acquired intangible assets are non-cash expenses arising in connection with the acquisition of VectivBio and are considered to be non-recurring. ·Restructuring expenses are considered to be a non-recurring event as they are associated with distinct operational decisions. Restructuring expenses include costs associated with exit and disposal activities. ·Acquisition-related costs in connection with the acquisition of VectivBio are considered to be non-recurring and include direct and incremental costs associated with the acquisition and integration of VectivBio to the extent such costs were not classified as capitalizable transaction costs attributed to the cost of net assets acquired through acquisition accounting. Field: Page; Sequence: 6; Value: 2 Ironwood also presents adjusted EBITDA, a non-GAAP measure, as well as guidance on adjusted EBITDA. Adjusted EBITDA is calculated by subtracting mark-to-market adjustments on derivatives related to Ironwood’s 2022 Convertible Notes, restructuring expenses, net interest expense, income taxes, depreciation and amortization, and acquisition-related costs from GAAP net loss. The adjustments are made on a similar basis as described above related to non-GAAP net income (loss), as applicable.Management believes this non-GAAP information is useful for investors, taken in conjunction with Ironwood’s GAAP financial statements, because it provides greater transparency and period-over-period comparability with respect to Ironwood’s operating performance. These measures are also used by management to assess the performance of the business. Investors should consider these non-GAAP measures only as a supplement to, not as a substitute for or as superior to, measures of financial performance prepared in accordance with GAAP. In addition, these non-GAAP financial measures are unlikely to be comparable with non-GAAP information provided by other companies. For a reconciliation of non-GAAP net income (loss) and non-GAAP net income (loss) per share to GAAP net loss and GAAP net loss per share, respectively, and for a reconciliation of adjusted EBITDA to GAAP net loss, please refer to the tables at the end of this press release.Ironwood does not provide guidance on GAAP net loss or a reconciliation of expected adjusted EBITDA to expected GAAP net loss because, without unreasonable efforts, it is unable to predict with reasonable certainty the non-GAAP adjustments used to calculate adjusted EBITDA. These adjustments are uncertain, depend on various factors and could have a material impact on GAAP net loss for the guidance period.Conference Call InformationIronwood will host a conference call and webcast at 8:30 a.m. Eastern Time on Thursday, August 8, 2024 to discuss its second quarter 2024 results and recent business activities. Individuals interested in participating in the call should dial (888) 596-4144 (U.S. and Canada) or (646) 968-2525 (international) using conference ID number and event passcode 2530602. To access the webcast, please visit the Investors section of Ironwood’s website at www.ironwoodpharma.com. The call will be available for replay via telephone starting at approximately 11:30 a.m. Eastern Time on August 8, 2024, running through 11:59 p.m. Eastern Time on August 22, 2024. To listen to the replay, dial (800) 770-2030 (U.S. and Canada) or (609) 800-9909 (international) using conference ID number 2530602. The archived webcast will be available on Ironwood’s website for 1 year beginning approximately one hour after the call has completed.About Ironwood PharmaceuticalsIronwood Pharmaceuticals (Nasdaq: IRWD), an S&P SmallCap 600® company, is a leading gastrointestinal (GI) healthcare company on a mission to advance the treatment of GI diseases and redefine the standard of care for GI patients. We are pioneers in the development of LINZESS® (linaclotide), the U.S. branded prescription market leader for adults with irritable bowel syndrome with constipation (IBS-C) or chronic idiopathic constipation (CIC). LINZESS is also approved for the treatment of functional constipation in pediatric patients ages 6-17 years-old. Ironwood is also advancing apraglutide, a next-generation, long-acting synthetic GLP-2 analog being developed for rare gastrointestinal diseases, including short bowel syndrome with intestinal failure (SBS-IF) as well as several earlier stage assets. Building upon our history of GI innovation, we keep patients at the heart of our R&D and commercialization efforts to reduce the burden of GI diseases and address significant unmet needs. Field: Page; Sequence: 7; Value: 2 Founded in 1998, Ironwood Pharmaceuticals is headquartered in Boston, Massachusetts, with a site in Basel, Switzerland.We routinely post information that may be important to investors on our website at www.ironwoodpharma.com. In addition, follow us on X and on LinkedIn.About LINZESS (Linaclotide)LINZESS® is the #1 prescribed brand in the U.S. for the treatment of adult patients with irritable bowel syndrome with constipation (“IBS-C”) or chronic idiopathic constipation (“CIC”), based on IQVIA data.LINZESS is a once-daily capsule that helps relieve the abdominal pain, constipation, and overall abdominal symptoms of bloating, discomfort and pain associated with IBS-C, as well as the constipation, infrequent stools, hard stools, straining, and incomplete evacuation associated with CIC. LINZESS relieves constipation in children and adolescents aged 6 to 17 years with functional constipation. The recommended dose is 290 mcg for IBS-C patients and 145 mcg for CIC patients, with a 72 mcg dose approved for use in CIC depending on individual patient presentation or tolerability. In children with functional constipation aged 6 to 17 years, the recommended dose is 72 mcg.LINZESS is not a laxative; it is the first medicine approved by the FDA in a class called GC-C agonists. LINZESS contains a peptide called linaclotide that activates the GC-C receptor in the intestine. Activation of GC-C is thought to result in increased intestinal fluid secretion and accelerated transit and a decrease in the activity of pain-sensing nerves in the intestine. The clinical relevance of the effect on pain fibers, which is based on nonclinical studies, has not been established.In the United States, Ironwood and AbbVie co-develop and co-commercialize LINZESS for the treatment of adults with IBS-C or CIC. In Europe, AbbVie markets linaclotide under the brand name CONSTELLA® for the treatment of adults with moderate to severe IBS-C. In Japan, Ironwood's partner, Astellas, markets linaclotide under the brand name LINZESS for the treatment of adults with IBS-C or CIC. Ironwood also has partnered with AstraZeneca for development and commercialization of LINZESS in China, and with AbbVie for development and commercialization of linaclotide in all other territories worldwide.LINZESS Important Safety Information"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "INDICATIONS AND USAGE"
+    },
+    {
+      "type": "TextElement",
+      "text": "LINZESS® (linaclotide) is indicated for the treatment of both irritable bowel syndrome with constipation (IBS-C) and chronic idiopathic constipation (CIC) in adults and functional constipation (FC) in children and adolescents 6 to 17 years of age. It is not known if LINZESS is safe and effective in children with FC less than 6 years of age or in children with IBS-C less than 18 years of age. Field: Page; Sequence: 8; Value: 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "IMPORTANT SAFETY INFORMATION"
+    },
+    {
+      "type": "TextElement",
+      "text": "WARNING: RISK OF SERIOUS DEHYDRATION IN PEDIATRIC PATIENTS LESS THAN 2 YEARS OF AGE LINZESS is contraindicated in patients less than 2 years of age. In nonclinical studies in neonatal mice, administration of a single, clinically relevant adult oral dose of linaclotide caused deaths due to dehydration. Contraindications ·LINZESS is contraindicated in patients less than 2 years of age due to the risk of serious dehydration. ·LINZESS is contraindicated in patients with known or suspected mechanical gastrointestinal obstruction.Warnings and Precautions ·LINZESS is contraindicated in patients less than 2 years of age. In neonatal mice, linaclotide increased fluid secretion as a consequence of age-dependent elevated guanylate cyclase (GC-C) agonism, which was associated with increased mortality within the first 24 hours due to dehydration. There was no age dependent trend in GC-C intestinal expression in a clinical study of children 2 to less than 18 years of age; however, there are insufficient data available on GC-C intestinal expression in children less than 2 years of age to assess the risk of developing diarrhea and its potentially serious consequences in these patients.Diarrhea ·In adults, diarrhea was the most common adverse reaction in LINZESS-treated patients in the pooled IBS-C and CIC double-blind placebo-controlled trials. The incidence of diarrhea was similar in the IBS-C and CIC populations. Severe diarrhea was reported in 2% of 145 mcg and 290 mcg LINZESS-treated patients and in <1% of 72 mcg LINZESS-treated CIC patients. ·In children and adolescents 6 to 17 years of age, diarrhea was the most common adverse reaction in 72 mcg LINZESS-treated patients in the FC double-blind placebo-controlled trial. Severe diarrhea was reported in <1% of 72 mcg LINZESS treated patients. If severe diarrhea occurs, dosing should be suspended and the patient rehydrated.Common Adverse Reactions (incidence ≥2% and greater than placebo) ·In IBS-C or CIC adult patients: diarrhea, abdominal pain, flatulence, and abdominal distension. ·In FC pediatric patients: diarrhea.Please see full Prescribing Information including Boxed Warning: https://www.rxabbvie.com/pdf/linzess_pi.pdfLINZESS® and CONSTELLA® are registered trademarks of Ironwood Pharmaceuticals, Inc. Any other trademarks referred to in this press release are the property of their respective owners. All rights reserved. Field: Page; Sequence: 9; Value: 2 Forward-Looking StatementsThis press release contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Investors are cautioned not to place undue reliance on these forward-looking statements, including statements about Ironwood’s ability to execute on its mission; Ironwood’s strategy, business, financial position and operations; Ironwood’s ability to drive growth and profitability; the commercial potential of LINZESS; our financial performance and results, and guidance and expectations related thereto; LINZESS prescription demand growth, LINZESS U.S. net sales growth, total revenue and adjusted EBITDA in 2024; our plan to pursue apraglutide rolling NDA review and the expected timing to complete submission; our belief that our cash flow position supports the continued execution of strategic priorities; our belief that if apraglutide is approved, it would be the drug of choice among physicians to treat adult patients with SBS who are dependent on PS, based on its demonstrated efficacy, tolerability and once-weekly dosing convenience; our plan to submit an NDA and marketing applications to other regulatory agencies for apraglutide; apraglutide's potential, if approved, to be the first and only once-weekly GLP-2 analog for adult SBS patients who are dependent on PS; the timing of topline data for CNP-104, which will inform a decision on our option to acquire an exclusive license from COUR, and that, if successful, CNP-104 has the potential to be the first approved disease modifying therapy for PBC. These forward-looking statements speak only as of the date of this press release, and Ironwood undertakes no obligation to update these forward-looking statements. Each forward-looking statement is subject to risks and uncertainties that could cause actual results to differ materially from those expressed or implied in such statement. Applicable risks and uncertainties include those related to the effectiveness of development and commercialization efforts by us and our partners; preclinical and clinical development, manufacturing and formulation development of linaclotide, apraglutide, CNP-104, IW-3300, and our other product candidates; the risk of uncertainty relating to pricing and reimbursement policies in the U.S., which, if not favorable for our products, could hinder or prevent our products’ commercial success; the risk that clinical programs and studies, including for linaclotide pediatric programs, apraglutide, CNP-104 and IW-3300, may not progress or develop as anticipated, including that studies are delayed or discontinued for any reason, such as safety, tolerability, enrollment, manufacturing, economic or other reasons; the risk that findings from our completed nonclinical studies and clinical trials may not be replicated in later trials and earlier-stage clinical trials may not be predictive of the results we may obtain in later-stage clinical trials or of the likelihood of regulatory approval; the risk that apraglutide will not be approved by the FDA or other regulatory agencies; the risk of competition or that new products may emerge that provide different or better alternatives for treatment of the conditions that our products are approved to treat; the risk that we are unable to execute on our strategy to in-license externally developed products or product candidates; the risk that we are unable to successfully partner with other companies to develop and commercialize products or product candidates; the risk that healthcare reform and other governmental and private payor initiatives may have an adverse effect upon or prevent our products’ or product candidates’ commercial success; the efficacy, safety and tolerability of linaclotide and our product candidates; the risk that the commercial and therapeutic opportunities for LINZESS, apraglutide or our other product candidates are not as we expect; decisions by regulatory and judicial authorities; the risk we may never get additional patent protection for linaclotide, apraglutide and other product candidates, that patents for linaclotide, apraglutide or other products may not provide adequate protection from competition, or that we are not able to successfully protect such patents; the risk that we are unable to manage our expenses or cash use, or are unable to commercialize our products as expected; the risk that the development of any of our linaclotide pediatric programs, apraglutide, CNP-104 and/or IW-3300 is not successful or that any of our product candidates does not receive regulatory approval or is not successfully commercialized; outcomes in legal proceedings to protect or enforce the patents relating to our products and product candidates, including abbreviated new drug application litigation; the risk that financial and operating results may differ from our projections; developments in the intellectual property landscape; challenges from and rights of competitors or potential competitors; the risk that our planned investments do not have the anticipated effect on our company revenues; developments in accounting guidance or practice; Ironwood’s or AbbVie’s accounting practices, including reporting and settlement practices as between Ironwood and AbbVie; the risk that our indebtedness could adversely affect our financial condition or restrict our future operations; and the risks listed under the heading “Risk Factors” and elsewhere in our Annual Report on Form 10-K for the year ended December 31, 2023, and in our subsequent Securities and Exchange Commission filings.Investors: Greg Martini, 617-374-5230 gmartini@ironwoodpharma.comMatt Roache, 617-621-8395 mroache@ironwoodpharma.comMedia: Beth Calitri, 978-417-2031 bcalitri@ironwoodpharma.com Field: Page; Sequence: 10; Value: 2 Field: Split-Segment; Name: 001"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Balance Sheets"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "June 30, 2024 December 31, 2023 Assets Cash and cash equivalents $105,524 $92,154 Accounts receivable, net 58,108 129,122 Prepaid expenses and other current assets 14,548 12,012 Total current assets 178,180 233,288 Property and equipment, net 5,068 5,585 Operating lease right-of-use assets 11,823 12,586 Intangible assets, net 3,273 3,682 Deferred tax assets 193,019 212,324 Other assets 4,257 3,608 Total assets $395,620 $471,073 Liabilities and stockholders’ equity Accounts payable $3,227 $7,830 Accrued research and development costs 6,720 21,331 Accrued expenses and other current liabilities 32,406 44,254 Current portion of operating lease liabilities 3,157 3,126 Current portion on convertible senior notes - 199,560 Total current liabilities 45,510 276,101 Operating lease liabilities, net of current portion 13,452 14,543 Convertible senior notes, net of current portion 198,647 198,309 Revolving credit facility 425,000 300,000 Other liabilities 34,738 28,415 Total stockholders’ deficit (321,727) (346,295) Total liabilities and stockholders’ deficit $395,620 $471,073"
+    },
+    {
+      "type": "TextElement",
+      "text": "Field: Page; Sequence: 11; Value: 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Condensed Consolidated Statements of Income (Loss)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share amounts)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 Total revenues1 $94,396 $107,382 $169,273 $211,443 Collaborative arrangements revenue1 94,396 107,382 169,273 211,443 Costs and expenses: Research and development 30,388 34,577 56,203 47,424 Selling, general and administrative 36,964 52,484 74,569 83,601 Restructuring 2,067 13,011 2,504 13,011 Acquired in-process research and development - 1,090,449 - 1,090,449 Total costs and expenses2 69,419 1,190,521 133,276 1,234,485 Income (loss) from operations 24,977 (1,083,139) 35,997 (1,023,042) Other income (expense): Interest expense and other financing costs (7,470) (1,840) (14,701) (3,367) Interest and investment income 1,369 8,757 2,538 16,029 Gain on derivatives - - - 19 Other income (expense), net (6,101) 6,917 (12,163) 12,681 Income (loss) before income taxes 18,876 (1,076,222) 23,834 (1,010,361) Income tax expense (19,736) (13,256) (28,856) (33,403) GAAP net loss1,2 (860) (1,089,478) (5,022) (1,043,764) Less: GAAP net loss attributable to noncontrolling interests - (27,291) - (27,291) GAAP net loss attributable to Ironwood Pharmaceuticals, Inc. $(860) $(1,062,187) $(5,022) $(1,016,473) GAAP net loss per share—basic $(0.01) $(6.84) $(0.03) $(6.56) GAAP net loss per share—diluted $(0.01) $(6.84) $(0.03) $(6.56)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: Rule-Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Rule-Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Figures presented for the three and six months ended June 30, 2024 include a $17.0 million increase and $13.0 million reduction to collaborative arrangement revenues, respectively, as a result of an adjustment recorded for Ironwood’s estimate of LINZESS gross-to-net reserves as of June 30, 2024.2 Figures presented for the three and six months ended June 30, 2023 include a one-time charge of approximately $1.1 billion related to acquired IPR&D from the acquisition of VectivBio in the second quarter of 2023. Field: Page; Sequence: 12; Value: 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP Results to Non-GAAP Financial Measures"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands, except per share amounts) (unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "A reconciliation between net income (loss) on a GAAP basis and on a non-GAAP basis is as follows:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 GAAP net loss1,2 $(860) $(1,089,478) $(5,022) $(1,043,764) Adjustments: Mark-to-market adjustments on the derivatives related to convertible notes, net - - - (19) Amortization of acquired intangible assets 204 4 409 4 Restructuring expenses 2,067 13,011 2,504 13,011 Acquisition-related costs 359 35,681 1,146 35,681 Tax effect of adjustments (262) (543) (461) (543) Non-GAAP net income (loss)1,2 $1,508 $(1,041,325) $(1,424) $(995,630)"
+    },
+    {
+      "type": "TextElement",
+      "text": "A reconciliation between basic and diluted net income (loss) per share on a GAAP basis and on a non-GAAP basis is as follows:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 GAAP net loss attributable to Ironwood Pharmaceuticals, Inc. per share – basic and diluted $(0.01) $(6.84) $(0.03) $(6.56) Plus: Net income (loss) per share attributable to noncontrolling interests - (0.18) - (0.18) Adjustments to GAAP net income (loss) per share (as detailed above) 0.01 0.31 0.02 0.31 Non-GAAP net income (loss) per share– basic and diluted $0.00 $(6.71) $(0.01) $(6.43) Weighted average number of common shares used to calculate net loss per share — basic and diluted 159,014 155,367 158,357 154,912"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: Rule-Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Rule-Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Figures presented for the three and six months ended June 30, 2024 include a $17.0 million increase and $13.0 million reduction to collaborative arrangement revenues, respectively, as a result of an adjustment recorded for Ironwood’s estimate of LINZESS gross-to-net reserves as of June 30, 2024.2 Figures presented for the three and six months ended June 30, 2023, include a one-time charge of approximately $1.1 billion related to acquired IPR&D from the acquisition of VectivBio in the second quarter of 2023. Field: Page; Sequence: 13; Value: 2 Field: Split-Segment; Name: 002"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "13"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Reconciliation of GAAP Net Loss to Adjusted EBITDA"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TextElement",
+      "text": "A reconciliation of GAAP net loss to adjusted EBITDA:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June, Six Months Ended June 30, 2024 2023 2024 2023 GAAP net loss1,2 $(860) $(1,089,478) $(5,022) $(1,043,764) Adjustments: Mark-to-market adjustments on the derivatives related to convertible notes, net - - - (19) Restructuring expenses 2,067 13,011 2,504 13,011 Interest expense 7,470 1,840 14,701 3,367 Interest and investment income (1,369) (8,757) (2,538) (16,029) Income tax expense 19,736 13,256 28,856 33,403 Depreciation and amortization 506 265 1,019 551 Acquisition-related costs 359 35,681 1,146 35,681 Adjusted EBITDA1,2 $27,909 $(1,034,182) $40,666 $(973,799)"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: Rule-Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Rule-Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Figures presented for the three and six months ended June 30, 2024 include a $17.0 million increase and $13.0 million reduction to collaborative arrangement revenues, respectively, as a result of an adjustment recorded for Ironwood’s estimate of LINZESS gross-to-net reserves as of June 30, 2024.2 Figures presented for the three and six months ended June 30, 2023, include a one-time charge of approximately $1.1 billion related to acquired IPR&D from the acquisition of VectivBio in the second quarter of 2023. Field: Page; Sequence: 14; Value: 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "14"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "U.S. LINZESS Commercial Collaboration1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Revenue/Expense Calculation"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 LINZESS U.S. net sales as reported by AbbVie2 $211,183 $269,686 $467,783 $519,900 AbbVie & Ironwood commercial costs, expenses and other discounts3 80,950 78,998 154,312 145,406 Commercial profit on sales of LINZESS $130,233 $190,688 $313,471 $374,494 Commercial Margin4 62% 71% 67% 72% Ironwood’s share of net profit 65,117 95,344 156,736 187,247 Reimbursement for Ironwood’s commercial expenses 9,298 9,407 19,394 19,135 Adjustment for Ironwood’s estimate of LINZESS gross-to-net reserves 17,000 - (13,000) - Ironwood’s U.S. collaborative arrangements revenue5 $91,415 $104,751 $163,130 $206,382"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: Rule-Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Rule-Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Ironwood collaborates with AbbVie on the development and commercialization of linaclotide in North America. Under the terms of the collaboration agreement, Ironwood receives 50% of the net profits and bears 50% of the net losses from the commercial sale of LINZESS in the U.S. The purpose of this table is to present calculations of Ironwood’s share of net profit (loss) generated from the sales of LINZESS in the U.S. and Ironwood’s collaboration revenue/expense; however, the table does not present the research and development expenses related to LINZESS in the U.S. that are shared equally between the parties under the collaboration agreement. Please refer to the table at the end of this press release for net profit for the U.S. LINZESS brand collaboration with AbbVie.2 LINZESS net sales are recognized using AbbVie’s revenue recognition accounting policies and reporting conventions. As a result, certain rebates and discounts are classified as LINZESS U.S. commercial costs, expenses and other discounts within Ironwood’s calculation of collaborative arrangements revenue.3 Includes certain discounts recognized and cost of goods sold incurred by AbbVie; also includes commercial costs incurred by AbbVie and Ironwood that are attributable to the cost-sharing arrangement between the parties.4 Commercial margin is defined as commercial profit on sales of LINZESS as a percent of total LINZESS U.S. net sales.5 Figures presented for the three and six months ended June 30, 2024 include a $17.0 million increase and $13.0 million reduction to collaborative arrangement revenues, respectively, as a result of an adjustment recorded for Ironwood’s estimate of LINZESS gross-to-net reserves as of June 30, 2024. Field: Page; Sequence: 15; Value: 2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "15"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "US LINZESS Full Brand Collaboration1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Revenue/Expense Calculation"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, Six Months Ended June 30, 2024 2023 2024 2023 LINZESS U.S. net sales as reported by AbbVie2 $211,183 $269,686 $467,783 $519,900 AbbVie & Ironwood commercial costs, expenses and other discounts3 80,950 78,998 154,312 145,406 AbbVie & Ironwood R&D Expenses4 9,736 10,356 17,372 19,006 Total net profit on sales of LINZESS $120,497 $180,332 $296,099 $355,488"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: Rule-Page"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Rule-Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Ironwood collaborates with AbbVie on the development and commercialization of linaclotide in North America. Under the terms of the collaboration agreement, Ironwood receives 50% of the net profits and bears 50% of the net losses from the commercial sale of LINZESS in the U.S. The purpose of this table is to present calculations of the total net profit (loss) generated from the sales of LINZESS in the U.S., including the commercial costs and expenses and the research and development expenses related to LINZESS in the U.S. that are shared equally between the parties under the collaboration agreement.2 LINZESS net sales are recognized using AbbVie’s revenue recognition accounting policies and reporting conventions. As a result, certain rebates and discounts are classified as LINZESS U.S. commercial costs, expenses and other discounts within Ironwood’s calculation of collaborative arrangements revenue.3 Includes certain discounts recognized and cost of goods sold incurred by AbbVie; also includes commercial costs incurred by AbbVie and Ironwood that are attributable to the cost-sharing arrangement between the parties.4 Expenses related to LINZESS in the U.S. are shared equally between Ironwood and AbbVie under the collaboration agreement. Field: Page; Sequence: 16; Options: Last"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "16"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "Field: /Page"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        1
+      ],
+      "columns": [
+        "0"
+      ],
+      "rows": [
+        [
+          "FOR IMMEDIATE RELEASE"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        11,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Q2 2024",
+          "Q2 2024",
+          "",
+          "",
+          "Q2 2023",
+          "Q2 2023",
+          ""
+        ],
+        [
+          "Total revenue2",
+          "",
+          "$",
+          "94396",
+          "",
+          "",
+          "$",
+          "107382",
+          ""
+        ],
+        [
+          "Total costs and expenses3",
+          "",
+          "",
+          "69419",
+          "",
+          "",
+          "",
+          "1190521",
+          ""
+        ],
+        [
+          "GAAP net loss2,3",
+          "",
+          "",
+          "(860",
+          ")",
+          "",
+          "",
+          "(1,089,478",
+          ")"
+        ],
+        [
+          "GAAP net loss attributable to Ironwood Pharmaceuticals, Inc.2,3",
+          "",
+          "",
+          "(860",
+          ")",
+          "",
+          "",
+          "(1,062,187",
+          ")"
+        ],
+        [
+          "GAAP net loss – per share basic2,3",
+          "",
+          "",
+          "(0.01",
+          ")",
+          "",
+          "",
+          "(6.84",
+          ")"
+        ],
+        [
+          "GAAP net loss – per share diluted2,3",
+          "",
+          "",
+          "(0.01",
+          ")",
+          "",
+          "",
+          "(6.84",
+          ")"
+        ],
+        [
+          "Adjusted EBITDA2,3",
+          "",
+          "",
+          "27909",
+          "",
+          "",
+          "",
+          "(1,034,182",
+          ")"
+        ],
+        [
+          "Non-GAAP net income (loss)2,3",
+          "",
+          "",
+          "1508",
+          "",
+          "",
+          "",
+          "(1,041,325",
+          ")"
+        ],
+        [
+          "Non-GAAP net income (loss) per share – basic2,3",
+          "",
+          "",
+          "0.00",
+          "",
+          "",
+          "",
+          "(6.71",
+          ")"
+        ],
+        [
+          "Non-GAAP net income (loss) per share – diluted2,3",
+          "",
+          "",
+          "0.00",
+          "",
+          "",
+          "",
+          "(6.71",
+          ")"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Prescription Demand: Total LINZESS prescription demand in the second quarter of 2024 was 52 million LINZESS capsules, an 11% increase compared to the second quarter of 2023, per IQVIA."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "U.S. Brand Collaboration: LINZESS U.S. net sales are provided to Ironwood by its U.S. partner, AbbVie Inc. (“AbbVie”). LINZESS U.S. net sales were $211.2 million in the second quarter of 2024, a 22% decrease compared to $269.7 million in the second quarter of 2023. Ironwood and AbbVie share equally in U.S. brand collaboration profits."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "–",
+          "LINZESS U.S. net sales as reported by AbbVie in the second quarter of 2024 reflected the gross-to-net change in estimate related to the year ended December 31, 2023, which Ironwood previously accounted for in the first quarter of 2024 by recording a $30.0 million reduction to collaborative arrangements revenue."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "–",
+          "LINZESS commercial margin, including the gross-to-net change in estimate, was 62% in the second quarter of 2024, compared to 71% in the second quarter of 2023. See the U.S. LINZESS Full Brand Collaboration table at the end of this press release."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "–",
+          "Net profit for the LINZESS U.S. brand collaboration, net of commercial and research and development (“R&D”) expenses, and including the gross-to-net change in estimate, was $120.5 million in the second quarter of 2024, a decrease compared to $180.3 million in the second quarter of 2023. See the U.S. LINZESS Full Brand Collaboration table at the end of this press release."
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Collaboration Revenue to Ironwood: Ironwood recorded $91.4 million in collaboration revenue in the second quarter of 2024 related to sales of LINZESS in the U.S., compared to $104.8 million for the second quarter of 2023. Second quarter of 2024 collaboration revenue to Ironwood includes a $17.0 million adjustment, driven by a $30.0 million increase to collaborative arrangements revenue as a result of a gross-to-net change in estimate related to the year ended December 31, 2023, previously recorded by Ironwood in the first quarter of 2024, which was reflected in LINZESS U.S. net sales as reported by AbbVie in the second quarter of 2024. This was partially offset by a $13.0 million reduction to collaborative arrangements revenue in the second quarter of 2024, to reflect Ironwood’s estimate of LINZESS gross-to-net reserves as of June 30, 2024. See the U.S. LINZESS Commercial Collaboration table at the end of the press release."
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Ironwood is advancing apraglutide, a next-generation, synthetic glucagon-like peptide-2 (“GLP-2”) analog for short bowel syndrome (“SBS”) patients dependent on parenteral support (“PS”), a severe chronic malabsorptive condition. Ironwood believes apraglutide has the potential to improve the standard of care for adult patients with SBS who are dependent on PS as the first and only GLP-2 with once-weekly administration, if approved."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "In May 2024, Ironwood presented late-breaking data during the 2024 Digestive Disease Week® (DDW) meeting from its pivotal Phase III clinical trial, STARS, which evaluated the efficacy and safety of once-weekly subcutaneous apraglutide in adult patients with short bowel syndrome with intestinal failure (“SBS-IF”). These findings build on the positive topline data that Ironwood previously announced in February 2024. Additional details from the late-breaking presentation can be found here."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "–",
+          "Ironwood is working to submit a new drug application (“NDA”) to the U.S. Food and Drug Administration (“FDA”) and marketing applications to other regulatory agencies for apraglutide for the treatment of adult patients with SBS who are dependent on PS."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "·",
+          "Ironwood has a collaboration and license option agreement with COUR Pharmaceuticals Development Company, Inc. (“COUR”). This agreement grants Ironwood an option to acquire an exclusive license to research, develop, manufacture and commercialize, in the U.S., products containing CNP-104 (“CNP-104”), a tolerizing immune modifying nanoparticle, for the treatment of primary biliary cholangitis (“PBC”), a rare autoimmune disease targeting the liver. If successful, CNP-104 has the potential to be the first approved disease modifying therapy for PBC."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 30.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenue, driven by a $30.0 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " | · | U.S. Brand Collaboration: LINZESS U.S. net sales are provided to Ironwood by its U.S. partner, AbbVie Inc. (“AbbVie”). LINZESS U.S. net sales were $211.2 million in the second quarter of 2024, a 22% decrease compared to $269.7 million in the second quarter of 2023. Ironwood and AbbVie share equally in U.S. brand collaboration profits."
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "4.130000",
+    "return_10d_pct": "15.2542",
+    "return_20d_pct": "23.7288",
+    "return_30d_pct": "-3.6320",
+    "return_60d_pct": "0.4843",
+    "return_90d_pct": "12.8329"
+  },
+  "text_stats": {
+    "primary_text_len": 3479,
+    "exhibit_text_len": 42560,
+    "combined_text_len": 46041,
+    "semantic_text_len": 43318,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

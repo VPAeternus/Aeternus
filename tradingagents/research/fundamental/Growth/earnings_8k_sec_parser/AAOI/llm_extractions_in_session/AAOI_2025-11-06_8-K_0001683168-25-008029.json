@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 118.6,
+    "revenue_yoy_pct": 81.9018,
+    "revenue_qoq_pct": 15.1456,
+    "gross_margin_pct": 28.0,
+    "non_gaap_gross_margin_pct": 31.0,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 132.5,
+    "revenue_low_millions": 125.0,
+    "revenue_high_millions": 140.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 30.0,
+    "guide_direction": "positive"
+  },
+  "qualitative": {
+    "demand_signal": "“We continued to see strong demand in our CATV business, driven by the continued ramp in orders for our 1.",
+    "wave_signal": "(NASDAQ: AAOI) (“AOI”), a leading provider of advanced optical and HFC networking products that power the internet, today announced financial results for its third quarter ended September 30, 2025.",
+    "margin_signal": "“We successfully delivered revenue, gross margin, and non-GAAP EPS in line with our expectations,” said Dr.",
+    "risk_signal": "“Exceptionally strong demand in our CATV business more than offset our datacenter revenue, which came in a touch below our expectations, largely due to the timing of certain shipments at quarter end due to various shipping and receiving delays.",
+    "customer_signal": "the appeal of our amplifiers and QuantumLinkTM software is broad-based, which was evident by the continued momentum we saw with our largest customer as well as new customers during the quarter, and which led to the highest quarterly CATV revenue in our Company’s history."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $118.6 million, compared with $65.2 million in the third quarter of 2024 and $103.0 million in the second quarter of 2025."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $118.6 million, compared with $65.2 million in the third quarter of 2024 and $103.0 million in the second quarter of 2025."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $118.6 million, compared with $65.2 million in the third quarter of 2024 and $103.0 million in the second quarter of 2025."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 28.0%, compared with 24.4% in the third quarter of 2024 and 30.3% in the second quarter of 2025. Non-GAAP gross margin was 31.0%, compared with 25.0% in the third quarter of 2024 and 30.4% in the second quarter of 2025."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 28.0%, compared with 24.4% in the third quarter of 2024 and 30.3% in the second quarter of 2025. Non-GAAP gross margin was 31.0%, compared with 25.0% in the third quarter of 2024 and 30.4% in the second quarter of 2025."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $125 million to $140 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $125 million to $140 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $125 million to $140 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 29% to 31%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

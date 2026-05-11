@@ -25,8 +25,8 @@ We are building a Python investigation backend with a chat-style entrypoint. Eac
 - discovery artifacts
 - universe filter
 - collect outputs
-- shortlist / research queue
-- deep-selection and hindsight helpers
+- candidate_list / fundamental review list
+- fundamental-intake and hindsight helpers
 - AKG context when useful
 
 ## Why We Are Not Copying MiroFish Chat Literally
@@ -161,8 +161,8 @@ Initial stage checkers:
 - Event Cards
 - universe filter
 - collect
-- shortlist
-- deep selection
+- candidate_list
+- fundamental intake
 
 ### 4. `gap_detector.py`
 
@@ -201,8 +201,8 @@ Example shape:
     "event_cards",
     "universe_filter",
     "collect",
-    "shortlist",
-    "deep_selection"
+    "candidate_list",
+    "fundamental_intake"
   ],
   "required_dimensions": [
     "social",
@@ -249,8 +249,8 @@ Primary sources:
 - `discovery_delta.json`
 - `universe_filter.json`
 - scored-candidate / collect artifacts
-- shortlist artifacts
-- research queue artifacts
+- candidate_list artifacts
+- fundamental review list artifacts
 - hindsight / why-missed helpers
 - AKG context when available and cheap
 

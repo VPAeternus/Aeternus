@@ -106,6 +106,55 @@ def test_run_browser_passes_iterates_requested_range_and_ingests_each_pass():
     assert summary["failed_passes"] == []
 
 
+def test_run_browser_passes_regenerates_prompt_after_each_ingest():
+    from tradingagents.dealflow.sources.x_feed_browser_runner import run_browser_passes
+
+    ingest_calls = []
+
+    def _prompts(as_of_date: str):
+        suffix = "with-context" if ingest_calls else "pre-context"
+        return [
+            (1, "Pass 1", "prompt-1"),
+            (2, "Pass 2", f"prompt-2-{suffix}"),
+            (3, "Blindspot", f"prompt-3-{suffix}"),
+        ]
+
+    class FakeSession:
+        def __init__(self):
+            self.submitted_prompts = []
+
+        def open_fresh_chat(self):
+            pass
+
+        def wait_until_chat_ready(self, timeout_seconds: int = 30, poll_interval_seconds: float = 1.0) -> str:
+            return "[7]<div contenteditable=true />"
+
+        def ensure_expert(self):
+            pass
+
+        def submit_prompt(self, prompt: str):
+            self.submitted_prompts.append(prompt)
+
+        def wait_for_response_text(self, timeout_seconds: int = 300) -> str:
+            return json.dumps({"trending": [{"ticker": "MSFT"}]})
+
+    def _ingest(as_of_date: str, raw_text: str, pass_num: int, dry_run: bool = False):
+        ingest_calls.append(pass_num)
+        return {"pass_num": pass_num, "tickers_parsed": 1, "tickers_merged": len(ingest_calls)}
+
+    session = FakeSession()
+    run_browser_passes(
+        "2026-05-11",
+        start_pass=2,
+        end_pass=3,
+        session=session,
+        prompt_provider=_prompts,
+        ingest_func=_ingest,
+    )
+
+    assert session.submitted_prompts == ["prompt-2-pre-context", "prompt-3-with-context"]
+
+
 def test_run_browser_passes_rejects_invalid_pass_range():
     from tradingagents.dealflow.sources.x_feed_browser_runner import run_browser_passes
 

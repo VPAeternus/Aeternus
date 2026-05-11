@@ -109,9 +109,9 @@ def evaluate_underwriting_gates(row: dict[str, Any], rules: dict[str, Any] | Non
     elif score >= cfg["entry_score_buy_threshold"]:
         decision = "approved_buy"
     elif force_pm_underwriting or rm_review:
-        decision = "research_queue"
+        decision = "fundamental_review"
     elif score >= cfg["entry_score_research_threshold"]:
-        decision = "research_queue"
+        decision = "fundamental_review"
     else:
         decision = "watchlist"
 

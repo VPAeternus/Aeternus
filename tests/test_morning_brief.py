@@ -151,35 +151,24 @@ class TestMorningBrief:
             assert len(risk["concentration_flags"]) > 0
             assert "LARGE" in str(risk["concentration_flags"])
 
-    def test_brief_top_signals_from_queue(self):
-        """Test that top signals are loaded from latest research queue."""
+    def test_brief_top_signals_from_scout_handoff(self):
+        """Test that top signals are loaded from latest scout handoff."""
         with TemporaryDirectory() as tmpdir:
-            queue_dir = Path(tmpdir) / "2026-03-01"
-            queue_dir.mkdir()
+            handoff_dir = Path(tmpdir) / "2026-03-01"
+            handoff_dir.mkdir()
 
-            queue_data = {
+            handoff_data = {
                 "date": "2026-03-01",
-                "items": [
-                    {
-                        "symbol": "AAPL",
-                        "deal_flow_score": 85.5,
-                        "lane": "CORE",
-                    },
-                    {
-                        "symbol": "MSFT",
-                        "deal_flow_score": 75.2,
-                        "lane": "CORE",
-                    },
-                    {
-                        "symbol": "GOOGL",
-                        "deal_flow_score": 65.1,
-                        "lane": "HEDGE",
-                    },
-                ],
+                "tickers": ["AAPL", "MSFT", "GOOGL"],
+                "metadata_by_ticker": {
+                    "AAPL": {"scouts": ["x_manual"]},
+                    "MSFT": {"scouts": ["x_manual"]},
+                    "GOOGL": {"scouts": ["macro"]},
+                },
             }
 
-            queue_path = queue_dir / "research_queue.json"
-            queue_path.write_text(json.dumps(queue_data))
+            handoff_path = handoff_dir / "final_dealflow_tickers.json"
+            handoff_path.write_text(json.dumps(handoff_data))
 
             brief = build_morning_brief(
                 positions_path="/nonexistent",
@@ -190,7 +179,7 @@ class TestMorningBrief:
 
             # Check deal flow section
             deal_flow = brief["deal_flow"]
-            assert deal_flow["latest_queue_date"] == "2026-03-01"
+            assert deal_flow["latest_handoff_date"] == "2026-03-01"
             assert len(deal_flow["top_signals"]) == 3
             assert deal_flow["top_signals"][0]["symbol"] == "AAPL"
-            assert deal_flow["top_signals"][0]["score"] == 85.5
+            assert deal_flow["top_signals"][0]["score"] is None

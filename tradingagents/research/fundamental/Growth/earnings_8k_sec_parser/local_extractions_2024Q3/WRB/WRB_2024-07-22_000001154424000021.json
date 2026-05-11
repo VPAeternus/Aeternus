@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WRB",
+    "cik": "11544",
+    "event_date": "2024-07-22",
+    "event_accession": "0000011544-24-000021",
+    "primary_8k_doc": "wrb-20240722.htm",
+    "exhibit_docs": [
+      "wrb63020248-kex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WRB_000001154424000021_wrb-20240722.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WRB_000001154424000021_wrb63020248-kex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WRB",
+    "cik": "11544",
+    "entity_name": "BERKLEY W R CORP",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2895004000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "294126000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "37111830000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-295726000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-359430000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "445323000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.101598",
+    "operating_cash_flow_to_revenue": "0.153825",
+    "assets_to_revenue": "12.819267",
+    "financing_cash_flow_to_revenue": "-0.10215",
+    "investing_cash_flow_to_revenue": "-0.124155"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net income to common stockholders 371,909 356,308 814,380 650,434 Net income per diluted share (1) 0.",
+      "Operating income (2) 418,114 310,862 841,344 586,531 Operating income per diluted share (1) 1.",
+      "Operating income is a non-GAAP financial measure defined by the Company as net income excluding after-tax net investment gains (losses) and related expenses.",
+      "net income and operating income, respectively, expressed on an annualized basis as a percentage of beginning of year common stockholders’ equity.",
+      "Net Income before noncontrolling interests 371,885 355,724 813,920 651,453 Noncontrolling interest 24 584 460 (1,019) Net income to common stockholders $ 371,909 $ 356,308 $ 814,380 $ 650,434 Net income per share (1): Basic $ 0.",
+      "Operating income is a non-GAAP financial measure defined by the Company as net income excluding after-tax net investment gains (losses)."
+    ],
+    "guidance_evidence": [
+      "outlook for the industry and for our performance for the year 2024 and beyond, are based upon the Company’s historical performance and on current plans, estimates and expectations.",
+      "expects to continue to deliver outstanding returns to our shareholders for the remainder of 2024 and beyond."
+    ],
+    "wave_or_demand_evidence": [
+      "ains (losses) and related expenses.",
+      "ained favorable in many areas of our business, fueling growth in net premiums written of 11.",
+      "ain higher than the current yield of our fixed-maturity securities for the foreseeable future.",
+      "ain well-positioned for further investment income growth.",
+      "ainder of 2024 and beyond.",
+      "ailable on the Company's website approximately two hours after the end of the conference call."
+    ],
+    "warning_or_risk_evidence": [
+      "losses) and related expenses.",
+      "losses of 3.",
+      "loss ratio points was 88.",
+      "loss ratio points of catastrophe losses.",
+      "uncertainties could cause our actual results for the year 2024 and beyond to differ materially from those expressed in any forward-looking statement we make.",
+      "Loss ratio 64."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-23",
+    "entry_open": "53.500000",
+    "return_10d_pct": "3.1402",
+    "return_20d_pct": "6.8411",
+    "return_30d_pct": "8.3738",
+    "return_60d_pct": "7.3645",
+    "return_90d_pct": "14.0748"
+  },
+  "text_stats": {
+    "primary_text_len": 4033,
+    "exhibit_text_len": 19781,
+    "combined_text_len": 23816
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SSP",
+    "cik": "832428",
+    "event_date": "2024-08-09",
+    "event_accession": "0000832428-24-000033",
+    "primary_8k_doc": "ssp-20240808.htm",
+    "exhibit_docs": [
+      "ssp-20240809ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SSP_000083242824000033_ssp-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SSP_000083242824000033_ssp-20240809ex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SSP",
+    "cik": "832428",
+    "entity_name": "THE E.W. SCRIPPS COMPANY",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "527778000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-18540000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5410120000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-8857000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-7921000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "15227000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.035128",
+    "operating_cash_flow_to_revenue": "0.028851",
+    "assets_to_revenue": "10.250749",
+    "financing_cash_flow_to_revenue": "-0.016782",
+    "investing_cash_flow_to_revenue": "-0.015008"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $574 million, a decrease of 1.",
+      "Revenue was $365 million, up 3.",
+      "revenue decreased 6.",
+      "revenue was $28.",
+      "revenue was $194 million, compared to $195 million in the prior-year quarter.",
+      "Revenue was $209 million, down 9."
+    ],
+    "guidance_evidence": [
+      "outlook is being driven largely by U.",
+      "outlook led us to once again raise our expectations for 2024 presidential election-year revenue.",
+      "outlook.",
+      "outlook,” “guidance,” and similar references to future periods.",
+      "expected at $28 million, driving 40 percent growth in the first half of the year over the same period of 2020 and creating some local core advertising displacement.",
+      "expected operating results and future financial condition."
+    ],
+    "wave_or_demand_evidence": [
+      "network.",
+      "air, on cable and on most major streaming/FAST platform services.",
+      "networks in 2017.",
+      "Networks’ national advertising upfront sales season is winding down with volume increases in the low single digit percent range over last year, driven largely by the success of the company’s women’s sports strategy.",
+      "ain raise our expectations for 2024 presidential election-year revenue.",
+      "ains robust for the U."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charge for Scripps Networks of $686 million as well as an $8 million restructuring charge, increasing the loss attributable to shareholders by $8.",
+      "charge, decreasing the loss attributable to shareholders by 11 cents per share.",
+      "impairment charge for Scripps Networks of $686 million as well as a $24.",
+      "charge, increasing the loss attributable to shareholders by $8.",
+      "impairment charges, divested operating units, restructuring activities, investment results and certain other items that are included in net income (loss) determined in accordance with accounting principles generally accepted in the United States of America.",
+      "impairment of goodwill, loss (gain) on business and asset disposals, acquisition and integration costs, restructuring charges and certain other miscellaneous items."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 290,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-12",
+    "entry_open": "1.744361",
+    "return_10d_pct": "-12.9310",
+    "return_20d_pct": "-19.3966",
+    "return_30d_pct": "-23.2759",
+    "return_60d_pct": "18.9655",
+    "return_90d_pct": "-1.7241"
+  },
+  "text_stats": {
+    "primary_text_len": 3027,
+    "exhibit_text_len": 25195,
+    "combined_text_len": 28224
+  }
+}

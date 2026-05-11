@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CVLT",
+    "cik": "1169561",
+    "event_date": "2024-07-30",
+    "event_accession": "0001169561-24-000077",
+    "primary_8k_doc": "cvlt-20240730.htm",
+    "exhibit_docs": [
+      "q1fy25pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CVLT_000116956124000077_cvlt-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CVLT_000116956124000077_q1fy25pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CVLT",
+    "cik": "1169561",
+    "entity_name": "Commvault Systems, Inc",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "769591000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-13",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "33624000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-13",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "782574000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-13",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-276088000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-13",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-24444000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-13",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "177180000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-13",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.043691",
+    "operating_cash_flow_to_revenue": "0.230226",
+    "assets_to_revenue": "1.01687",
+    "financing_cash_flow_to_revenue": "-0.358746",
+    "investing_cash_flow_to_revenue": "-0.031762"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues were $224.",
+      "revenue was $124.",
+      "Non-GAAP Net Income 2 • GAAP net income was $18.",
+      "Non-GAAP net income 2 was $38.",
+      "Net income $ 18,527 $ 12,629 Net income per common share: Basic $ 0.",
+      "Non-GAAP net income $ 38,402 $ 32,527 GAAP diluted earnings per share $ 0."
+    ],
+    "guidance_evidence": [
+      "guidance on a GAAP basis as certain financial information, the probable significance of which cannot be determined, is not available and cannot be reasonably estimated.",
+      "expected to be between 20% and 21% • Free cash flow 2 is expected to be at least $200 million The above statements are based on the incorporation of actual first quarter results and current targets.",
+      "anticipates that in any given period its non-GAAP tax rate may be either higher or lower than the GAAP tax rate as evidenced by historical fluctuations.",
+      "expected to recur, primarily perpetual licenses and most professional services.",
+      "forecast of future revenue."
+    ],
+    "wave_or_demand_evidence": [
+      "aid Sanjay Mirchandani, Commvault’s President and CEO.",
+      "ained on the last page of this Press Release.",
+      "ail below.",
+      "ailable following the call.",
+      "ainties, such as competitive factors, difficulties and delays inherent in the development, manufacturing, marketing and sale of software products and related services, general economic conditions, outcome of litigation and others.",
+      "ainties affecting Commvault's business, see \"Item 1A."
+    ],
+    "warning_or_risk_evidence": [
+      "charge,\" said Sanjay Mirchandani, Commvault’s President and CEO.",
+      "delays inherent in the development, manufacturing, marketing and sale of software products and related services, general economic conditions, outcome of litigation and others.",
+      "charges and additional Federal Insurance Contribution Act (FICA) and related payroll tax expense incurred by Commvault when employees exercise in-the-money stock options or vest in restricted stock awards.",
+      "charges related to such equity compensation plans.",
+      "charges associated with restricted stock units granted and our Employee Stock Purchase Plan, exclusive of stock-based compensation expense related to Commvault's restructuring activities described below in Note 6.",
+      "charges relate primarily to severance and related costs associated with headcount reductions and stock-based compensation related to modifications of existing unvested awards granted to certain employees impacted by the restructuring plan."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 224.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 218,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "153.559998",
+    "return_10d_pct": "-2.8979",
+    "return_20d_pct": "-2.2271",
+    "return_30d_pct": "1.1982",
+    "return_60d_pct": "0.1889",
+    "return_90d_pct": "10.5692"
+  },
+  "text_stats": {
+    "primary_text_len": 3101,
+    "exhibit_text_len": 24847,
+    "combined_text_len": 27950
+  }
+}

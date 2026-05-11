@@ -40,7 +40,7 @@ class DealFlowScheduler:
         now_utc = self._normalize_now(now)
         now_local = now_utc.astimezone(self._timezone())
         run_date = as_of_date or now_local.date().isoformat()
-        top_k_value = int(top_k or self.config.get("dealflow_top_k", 20))
+        top_k_value = int(top_k or 1)
         # --- Geopolitical scouts (daily, free) ---
         _scout_interval_hours = 24.0
         for _scout_key, _scout_fn_path in [
@@ -140,13 +140,13 @@ class DealFlowScheduler:
             config=self.config,
             now=now_utc,
         )
-        shortlist, research_queue, normalized_signals, event_state = self.pipeline.run(
+        scout_summary, _, normalized_signals, event_state = self.pipeline.run(
             as_of_date=run_date,
             trigger=trigger,
             top_k=top_k_value,
         )
         triage_resolution = resolve_intents_for_run(
-            active_run_id=str(shortlist.get("run_id") or ""),
+            active_run_id=str(scout_summary.get("run_id") or ""),
             run_started_at_utc=run_started_at_utc,
             consumption_prices={},
             price_source_latency_ms=0.0,
@@ -167,9 +167,10 @@ class DealFlowScheduler:
 
         state["last_run_ts"] = now_utc.isoformat()
         state["last_run_trigger"] = trigger
-        state["last_run_id"] = shortlist.get("run_id")
+        state["last_run_id"] = scout_summary.get("run_id")
         state["last_signal_count"] = len(normalized_signals)
-        state["last_event_reasons"] = shortlist.get("event_reasons", [])
+        state["last_event_reasons"] = scout_summary.get("event_reasons", [])
+        state["last_total_unique_tickers"] = int(scout_summary.get("total_unique_tickers", 0) or 0)
         state["last_x_budget_policy"] = {
             "action": x_budget_policy.get("action"),
             "horizon_used": x_budget_policy.get("horizon_used"),
@@ -190,7 +191,7 @@ class DealFlowScheduler:
                 config=self.config,
                 now=now_utc,
             ),
-            queue_run_id_target=str(shortlist.get("run_id") or ""),
+            queue_run_id_target=str(scout_summary.get("run_id") or ""),
             config=self.config,
             now=now_utc,
         )
@@ -200,14 +201,13 @@ class DealFlowScheduler:
             "trigger": trigger,
             "reason": reason,
             "date": run_date,
-            "run_id": shortlist.get("run_id"),
-            "shortlist_size": len(shortlist.get("candidates", [])),
-            "selected_for_deep": len(research_queue.get("selected_queue_ids", [])),
+            "run_id": scout_summary.get("run_id"),
+            "total_unique_tickers": int(scout_summary.get("total_unique_tickers", 0) or 0),
+            "scout_counts": dict(scout_summary.get("scout_counts", {}) or {}),
             "signal_count": len(normalized_signals),
             "event_trigger": event_state,
             "state_path": str(self.state_path),
-            "shortlist": shortlist,
-            "research_queue": research_queue,
+            "scout_ticker_summary": scout_summary,
             "x_budget_policy": x_budget_policy,
             "x_budget_policy_path": str(policy_path),
             "triage_resolution": triage_resolution,

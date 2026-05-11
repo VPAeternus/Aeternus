@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "UPBD",
+    "cik": "933036",
+    "event_date": "2024-08-01",
+    "event_accession": "0000933036-24-000133",
+    "primary_8k_doc": "upbd-20240801.htm",
+    "exhibit_docs": [
+      "ex-991xupbd2024q2pressrele.htm",
+      "ex-992upbd2024q2earnings.htm",
+      "ex-993upbd2024q2investor.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UPBD_000093303624000133_upbd-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UPBD_000093303624000133_ex-991xupbd2024q2pressrele.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UPBD_000093303624000133_ex-992upbd2024q2earnings.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/UPBD_000093303624000133_ex-993upbd2024q2investor.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "UPBD",
+    "cik": "933036",
+    "entity_name": "Upbound Group, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1016061000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "47330000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2721430000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-69408000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-9570000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "105417000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.046582",
+    "operating_cash_flow_to_revenue": "0.103751",
+    "assets_to_revenue": "2.678412",
+    "financing_cash_flow_to_revenue": "-0.068311",
+    "investing_cash_flow_to_revenue": "-0.009419"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $1,077 million GAAP Diluted EPS $0.",
+      "revenues of $1,076.",
+      "Revenues of $552.",
+      "revenue increased 18.",
+      "sales increased 22.",
+      "sales increased 2."
+    ],
+    "guidance_evidence": [
+      "outlook uncertain, our business is durable and our earnings are resilient.",
+      "Outlook The Company is updating its initial guidance, last shared during our Q1 earnings call on May 2, 2024, for its 2024 fiscal year.",
+      "guidance and other operational matters on the morning of Thursday, August 1, 2024, at 9:00 a.",
+      "Guidance Initial Full Year 2024 Guidance Consolidated Guidance1 (8/1/2024) (2/22/2024)4 Revenues ($B) $4.",
+      "guidance we provided last quarter,” noted Fahmi Karam, CFO.",
+      "guidance above and the Company's related conference call contain forward-looking statements that involve risks and uncertainties."
+    ],
+    "wave_or_demand_evidence": [
+      "customer experiences and conversions,” noted Upbound CEO Mitch Fadel.",
+      "customers with flexible solutions to help them get the products they need for their homes and lives,” concluded Mr.",
+      "customer accounts from closed stores or acquisitions.",
+      "customers who are past due.",
+      "customers through a transaction that occurs within a defined period, net of estimated cancellations as of the measurement date.",
+      "ail channels, including over 2,300 company branded retail units across the United States, Mexico and Puerto Rico."
+    ],
+    "warning_or_risk_evidence": [
+      "charges we view as extraordinary, unusual or non-recurring in nature or which we believe do not reflect our core business activities, and are reported as Other Gains and Charges in our Consolidated Statements of Operations.",
+      "Impairments0.",
+      "charge-off (LCO) rate of 7.",
+      "charge-offs (LCO) were 9.",
+      "charge-offs (LCO) were 4.",
+      "inventory sales."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-991xupbd2024q2pressrele.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document created using Wdesk Copyright 2024 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "UPBOUND GROUP, INC. REPORTS SECOND QUARTER 2024 RESULTS"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Total Revenue of $1,077 million"
+    },
+    {
+      "type": "TitleElement",
+      "text": "GAAP Diluted EPS $0.61, Non-GAAP Diluted EPS1 $1.04"
+    },
+    {
+      "type": "TitleElement",
+      "text": "For Immediate Release:"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "__________________________________________________________"
+    },
+    {
+      "type": "TextElement",
+      "text": "Plano, Texas, August 1, 2024 - Upbound Group, Inc. (the \"Company\" or \"Upbound\") (NASDAQ:UPBD) today announced results for the quarter ended June 30, 2024. The earnings release, financial tables and related materials can be found on the Company's investor relations website at https://investor.upbound.com. Today at 9 a.m. ET, Mitch Fadel, Chief Executive Officer, and Fahmi Karam, Chief Financial Officer, will host a conference call to review the financial results of the second quarter. Interested parties can access a live webcast of the conference call via this link (webcast link) or through the Company's investor relations website."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Upbound Group, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Upbound Group, Inc. (NASDAQ: UPBD) is an omni-channel platform company committed to elevating financial opportunity for all through innovative, inclusive, and technology-driven financial solutions that address the evolving needs and aspirations of consumers. The Company’s customer-facing operating units include industry-leading brands such as Rent-A-Center® and Acima® that facilitate consumer transactions across a wide range of store-based and digital retail channels, including over 2,300 company branded retail units across the United States, Mexico and Puerto Rico. Upbound Group, Inc. is headquartered in Plano, Texas. For additional information about the Company, please visit our website Upbound.com."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Financial Measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "This release and the Company's related conference call contain certain financial information determined by methods other than in accordance with U.S. Generally Accepted Accounting Principles (GAAP), including (1) Non-GAAP diluted earnings per share (net earnings or loss, as adjusted for special items (as defined below), net of taxes, divided by the number of shares of our common stock on a fully diluted basis) and (2) other non-GAAP financial measures explained in the Company’s other quarterly earnings disclosures. “Special items” refers to certain gains and charges we view as extraordinary, unusual or non-recurring in nature or which we believe do not reflect our core business activities, and are reported as Other Gains and Charges in our Consolidated Statements of Operations. For the periods presented herein, these special items are described in the quantitative reconciliation table included below in this release. Because of the inherent uncertainty related to these special items, management does not believe it is able to provide a meaningful forecast of the comparable GAAP measures or reconciliation to any forecasted GAAP measure without unreasonable effort. These non-GAAP measures are additional tools intended to assist our management in comparing our performance on a more consistent basis for purposes of business decision-making by removing the impact of certain items management believes do not directly reflect our core 1 Non-GAAP financial measure. Refer to definitions and reconciliations included in this release."
+    },
+    {
+      "type": "TitleElement",
+      "text": "1"
+    },
+    {
+      "type": "TextElement",
+      "text": "operations. These measures are intended to assist management in evaluating operating performance and liquidity, comparing performance and liquidity across periods, planning and forecasting future business operations, helping determine levels of operating and capital investments and identifying and assessing additional trends potentially impacting our Company that may not be shown solely by comparisons of GAAP measures. Consolidated Adjusted EBITDA is also used as part of our incentive compensation program for our executive officers and others. We believe these non-GAAP financial measures also provide supplemental information that is useful to investors, analysts and other external users of our consolidated financial statements in understanding our financial results and evaluating our performance and liquidity from period to period. However, non-GAAP financial measures have inherent limitations and are not substitutes for, or superior to, GAAP financial measures, and they should be read together with our consolidated financial statements prepared in accordance with GAAP. Further, because non-GAAP financial measures are not standardized, it may not be possible to compare such measures to the non-GAAP financial measures presented by other companies, even if they have the same or similar names."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 1 - Reconciliation of diluted earnings per share to Non-GAAP diluted earnings per share"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three Months Ended June 30, 2024Diluted Earnings Per ShareGAAP Results$0.61 Plus: Debt refinancing fees0.08 Plus: Special Items(1)Acima acquired assets depreciation and amortization0.21 Asset Impairments0.07 Accelerated software depreciation0.03 Accelerated stock compensation0.02 Legal settlement reserve0.01 Other0.01 Non-GAAP Adjusted Results$1.04 (1) Additional details of Special items are included in Table 5 (Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share) of the second quarter 2024 earnings release dated August 1, 2024, which can be found on the Company's investor relations website as noted above."
+    },
+    {
+      "type": "TitleElement",
+      "text": "2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc ex-992upbd2024q2earnings"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Total Revenue CEO Commentary “Upbound’s second quarter results reflect our priorities of delivering strong financial metrics in the near term while positioning our business for long-term, sustainable growth. At Acima, we achieved another quarter of approximately 20% GMV growth, while adding new clients and capabilities to help maintain our trajectory into the future. Rent-A-Center drove growth in its lease portfolio value and same store sales metrics, and enhanced its digital channels to improve customer experiences and conversions,” noted Upbound CEO Mitch Fadel. “While the operating environment remains challenging and the outlook uncertain, our business is durable and our earnings are resilient. Our omni-channel model is differentiated and we’ve invested strategically to position the business for future growth and success. Given our strong first half, and our confidence in our operating levers, we’re raising the midpoint of our full year 2024 targets for revenue, Adjusted EBITDA, and non-GAAP diluted EPS. “Across the first half of the year, Upbound showcased what it does best: deliver outstanding service and value to our consumers and retail partners. We will continue to focus on providing our financially underserved customers with flexible solutions to help them get the products they need for their homes and lives,” concluded Mr. Fadel. Growth Momentum Continues: Revenue, Acima GMV, and Rent-A-Center U.S. Same Store Sales Increase Y/Y Upbound Group, Inc. Earnings Release August 1, 2024 Second Quarter 2024 Results & Key Metrics Second Quarter Consolidated Results • Consolidated revenues of $1,076.5 million increased 9.9% year-over- year, driven by both higher rentals and fees revenue and higher merchandise sales revenue. • GAAP operating profit of $80.7 million, after $24.9 million of pre-tax costs relating to special items described below, compared to $84.0 million of GAAP operating profit, after $27.8 million of pre-tax costs relating to special items, in the prior year period. Second quarter 2024 GAAP operating profit margin was 7.5%, compared to 8.6% in the prior year period. • Consolidated lease charge-off (LCO) rate of 7.2%, a 30 bps increase from the prior year period and 20 bps lower sequentially. • Net earnings on a GAAP basis of $33.9 million, compared to a $45.6 million loss in the prior year period driven primarily by the prior year tax impact associated with the vesting of restricted stock awards issued in connection with the Acima acquisition. Net profit margin of 3.2% increased 790 bps year-over-year. • Adjusted EBITDA1 decreased 4.6% year-over-year to $124.5 million, with higher Acima segment Adjusted EBITDA offset by lower Rent-A- Center segment Adjusted EBITDA and higher Corporate costs. • Adjusted EBITDA margin1 of 11.6% decreased 170 basis points compared to the prior year period, due to year-over-year decreases in Adjusted EBITDA margin1 at both Acima and Rent-A-Center. Adjusted EBITDA margin1 improved 160 basis points sequentially due to a 310 basis point sequential improvement in Acima Adjusted EBITDA margin1. • GAAP diluted earnings per share was $0.61, compared to GAAP diluted loss per share of $(0.83) in the prior year period. • Non-GAAP diluted earnings per share1, which excludes the impact of special items described below, was $1.04 for the second quarter of 2024, compared to $1.11 in the prior year period. Raises Midpoint of Full Year 2024 Targets for Revenue, Adjusted EBITDA, and Non-GAAP Diluted EPS 1 (1)Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this release. $1,077M Total Revenue GAAP Diluted EPS $0.61 Non-GAAP Diluted EPS1 Net Earnings $34M Adjusted EBITDA1 $1.04$125M"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Acima Segment Second Quarter Results • GMV increased 21.0% year-over-year, improving from a 19.9% increase in the first quarter of 2024. Growth in GMV was primarily due to an increase in retail partner locations, retail partner productivity, and our expanding direct-to-consumer offerings. • Revenues of $552.8 million increased 19.0% year- over-year, driven by increases in both rentals and fees revenue and merchandise sales revenue. • Rentals and fees revenue increased 18.2% year-over- year and merchandise sales increased 22.0% year- over-year. • Gross margin decreased 190 bps year-over-year due to a growing portfolio where revenue lags GMV production, merchandise sales representing a larger percentage of revenue, and the conversion of ANOW locations to the Acima platform. • Lease charge-offs (LCO) were 9.6%, flat sequentially and up 70 bps year-over-year, primarily due to the back book of the legacy Acceptance Now business, which has converted to Acima’s underwriting platform. • Operating profit and net earnings on a GAAP basis were $70.0 million with a margin of 12.7%, compared to $63.1 million and 13.6% in the prior year period. • Adjusted EBITDA was $81.3 million with a margin of 14.7%, compared to $64.9 million and 11.6% in the prior quarter. The sequential increase in Adjusted EBITDA and the 310 bps increase in Adjusted EBITDA margin was primarily attributable to higher gross margins. Adjusted EBITDA increased 4.5% year-over- year, while Adjusted EBITDA margin decreased 210 bps compared to the prior year period. • Retail partner locations with at least one funded lease in the quarter increased approximately 9.8% year- over-year in Q2. Rent-A-Center Segment Second Quarter Results • Same-store-sales increased 2.6% year-over-year, improving from a 0.8% increase in the first quarter of 2024 and a 4.9% decrease in the second quarter of 2023. • Same-store lease portfolio value increased 1.4% year-over-year. • Revenues of $474.9 million increased 1.9% year- over-year, improving from a 0.2% increase for the first quarter of 2024, driven by an increase in both rentals and fees revenue and merchandise sales revenue. • Rentals and fees revenue increased 2.1% year- over-year. Merchandise sales revenue increased 1.6% year-over-year. • Lease charge-offs (LCO) were 4.2% of revenue, improving 30 bps y/y and 50 bps sequentially. • Operating profit and net earnings on a GAAP basis were $67.0 million with a margin of 14.1%, compared to $78.9 million and 16.9% in the prior year period. • Adjusted EBITDA was $77.6 million with a margin of 16.3% in the second quarter, compared to $83.5 million and 17.9% in the prior year period. The year-over-year decrease in Adjusted EBITDA and Adjusted EBITDA margin was due primarily to elevated labor benefits costs, delivery costs, and store technology investments. • As of June 30, 2024, the Rent-A-Center segment owned and operated 1,784 locations, 52 fewer locations than the end of the prior quarter due to store count optimization efforts. Segment Highlights 2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Segment Highlights (continued) Franchising Segment Second Quarter Results • Revenues of $27.9 million decreased 7.3% year-over-year due to lower inventory sales. • Segment net earnings, on a GAAP basis, and Adjusted EBITDA were $4.5 million and $4.6 million, respectively. • As of June 30, 2024, the company had 419 franchised locations. Mexico Segment Second Quarter Results • Revenues of $20.9 million increased 9.7% year-over-year on a constant currency basis. • Segment net earnings, on a GAAP basis, and Adjusted EBITDA were approximately $1.6 million and $1.9 million, respectively. • As of June 30, 2024, the Mexico segment owned and operated 131 locations. Corporate Segment Second Quarter Results • GAAP operating expenses decreased 2.8% year- over-year, primarily due to the prior year vesting of restricted stock awards issued in connection with the Acima acquisition. 3"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Full Year 2024 Financial Outlook The Company is updating its initial guidance, last shared during our Q1 earnings call on May 2, 2024, for its 2024 fiscal year. Due to the inherent uncertainty related to the special items identified in the tables below, management does not believe it is able to provide a meaningful forecast of the comparable GAAP measures or reconciliation to any forecasted GAAP measure without unreasonable effort. The actual amount of these items during 2024 may have a significant impact on our future GAAP results. Conference Call and Webcast Information Upbound Group, Inc. will host a conference call to discuss the second quarter results, guidance and other operational matters on the morning of Thursday, August 1, 2024, at 9:00 a.m. ET. For a live webcast of the call, visit https://investor.upbound.com. Certain financial and other statistical information that will be discussed during the conference call will also be provided on the same website. Table 1 Revised Full Year 2024 Guidance Initial Full Year 2024 Guidance Consolidated Guidance1 (8/1/2024) (2/22/2024)4 Revenues ($B) $4.10 - $4.30 $4.00 - $4.20 Adj. EBITDA Excluding SBC ($M)2 $465 - $485 $455 - $485 Non-GAAP Diluted Earnings Per Share2,3 $3.65 - $4.00 $3.55 - $4.00 Free Cash Flow ($M)2 $100 - $130 $100 - $130 1. Consolidated includes Acima, Rent-A-Center, Mexico, Franchising and Corporate Segments. 2. Non-GAAP financial measure. See descriptions below in this release. 3. Non-GAAP diluted earnings per share excludes the impact of incremental depreciation and amortization related to the estimated fair value of acquired Acima assets and stock compensation expense associated with the Acima Acquisition equity consideration, which was subject to vesting conditions. 4. Reaffirmed on May 2, 2024. CFO Commentary “We are pleased to deliver another quarter of strong performance across our segments, with topline growth at Acima and Rent-A-Center plus a notable improvement in Acima’s margin profile compared to the first quarter. Through our investments in technology and process re-engineering, we will work to drive down costs and realize the benefits of our scale. Collectively, these efforts yielded a non-GAAP EPS of $1.04, at the top end of the guidance we provided last quarter,” noted Fahmi Karam, CFO. “Looking ahead, our delinquency rates at the end of the second quarter give us confidence that our underwriting and account management strategies are fundamentally sound and able to adapt to this dynamic environment. Acima’s past due rates improved year-over-year and sequentially, and Rent-A-Center realized a sequential improvement. By prudently managing the loss rates, we can deliver sustainable growth while producing acceptable risk-adjusted returns. “During the second quarter, we refinanced our term loan and captured more than 60 bps of annual interest savings, while also extending our ABL revolver through 2029. The Company maintains a strong financial position and ended the quarter with liquidity of nearly $500 million, net debt of $1.3 billion and net leverage of 2.8x, up slightly due to an increase in working capital needs to support GMV growth at Acima. Securing our liquidity for another five years and lowering the cost of our long-term debt position us to support our capital allocation priorities going forward,” concluded Mr. Karam. 4"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Table 2 Q2 2024 Q2 2023 Q1 2024Metrics ($'s Millions - except per share) Consolidated Revenue $ 1,076.5 $ 979.2 $ 1,096.0 Revenue Y/Y % Change 9.9 % (8.6) % 7.9 % GAAP Operating Profit $ 80.7 $ 84.0 $ 61.8 Net Earnings (Loss) $ 33.9 $ (45.6) $ 27.7 Net Profit Margin 3.2 % (4.7) % 2.5 % Adj. EBITDA (1) $ 124.5 $ 130.6 $ 109.1 Adj. EBITDA Margin (1) 11.6 % 13.3 % 10.0 % Lease Charge-Off Rate (5) 7.2 % 6.9 % 7.4 % GAAP Operating Expenses as % of Total Revenue 41.9 % 43.1 % 42.6 % GAAP Diluted EPS $ 0.61 $ (0.83) $ 0.50 Non-GAAP Diluted EPS (1) $ 1.04 $ 1.11 $ 0.79 On-Rent Rental Merchandise, Net $ 1,064.9 $ 949.4 $ 1,056.4 Operating Cash Flow $ 15.0 $ 36.5 $ 45.4 Free Cash Flow (1) $ 0.6 $ 24.7 $ 33.6 Rent-A-Center Segment Lease Portfolio - Monthly Value (as of period end) (2) $ 139.7 $ 139.3 $ 139.3 Same Store Lease Portfolio Value (Y/Y % Change - as of period end) (3) 1.4 % (4.6) % 0.0 % Same Store Sales (Y/Y % Change) (4) 2.6 % (4.9) % 0.8 % Revenue $ 474.9 $ 466.2 $ 485.8 Revenue Y/Y % Change 1.9 % (4.9) % 0.2 % GAAP Operating Profit/GAAP Net Earnings $ 67.0 $ 78.9 $ 74.8 Net Profit Margin 14.1 % 16.9 % 15.4 % Adj. EBITDA (1) $ 77.6 $ 83.5 $ 80.4 Adj. EBITDA Margin (1) 16.3 % 17.9 % 16.6 % On-Rent Rental Merchandise, Net $ 433.6 $ 430.6 $ 454.0 Lease-Charge Off Rate (5) 4.2 % 4.5 % 4.7 % 30+ Day Past Due Rate (6) 2.7 % 2.6 % 3.1 % Corporate Owned Store Count (U.S. & PR - as of period end) 1,784 1,843 1,836 Acima Segment GMV (7) $ 450.1 $ 372.1 $ 417.6 GMV (Y/Y % Change) (7) 21.0 % (5.8) % 19.9 % Revenue $ 552.8 $ 464.4 $ 561.3 Revenue Y/Y % Change 19.0 % (12.4) % 16.0 % GAAP Operating Profit/GAAP Net Earnings $ 70.0 $ 63.1 $ 51.9 Net Profit Margin 12.7 % 13.6 % 9.2 % Adj. EBITDA (1) $ 81.3 $ 77.8 $ 64.9 Adj. EBITDA Margin (1) 14.7 % 16.8 % 11.6 % On-Rent Rental Merchandise, Net $ 608.6 $ 496.0 $ 577.9 Lease Charge-Off Rate (5) 9.6 % 8.9 % 9.6 % 60+ Day Past Due Rate (8) 12.1 % 12.9 % 13.0 % Financial Highlights *Please see footnotes on the following page. Key Metrics 5"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Financial Highlights (continued) (1) Non-GAAP financial measure. Refer to the explanations and reconciliations elsewhere in this release. (2) Lease Portfolio Value: Represents the aggregate dollar value of the expected monthly rental income associated with current active lease agreements from our Rent- A-Center stores and e-commerce platform at the end of any given period. (3) Same Store Lease Portfolio Value: Represents the aggregate dollar value of the expected monthly rental income associated with current active lease agreements from our e-commerce platform and Rent-A-Center stores that were operated by us for 13 months or more at the end of any given period. The Company excludes from the same store base any store that receives a certain level of customer accounts from closed stores or acquisitions. The receiving store will be eligible for inclusion in the same store base in the 30th full month following account transfer. (4) Same Store Sales (SSS): Same store sales generally represents revenue earned in Rent-A-Center stores that were operated by us for 13 months or more and are reported on a constant currency basis as a percentage of total revenue earned in stores of the segment during the indicated period. The Company excludes from the same store sales base any store that receives a certain level of customer accounts from closed stores or acquisitions. The receiving store will be eligible for inclusion in the same store sales base in the 30th full month following account transfer. (5) Lease Charge-Offs (LCOs) (previously referred to as “skip / stolen losses”): Represents charge-offs of the net book value of unrecoverable on-rent merchandise with lease-to-own customers who are past due. This is typically expressed as a percentage of revenues for the applicable period. For the Rent-A-Center segment, LCOs exclude Get It Now and Home Choice locations. (6) 30+ Days Past Due Rate: Defined as the average number of accounts 30+ days past due as a % of total open leases. (7) Gross Merchandise Volume (GMV): The Company defines Gross Merchandise Volume as the retail value in U.S. dollars of merchandise acquired by the Acima segment that is leased to customers through a transaction that occurs within a defined period, net of estimated cancellations as of the measurement date. (8) 60+ Days Past Due Rate: Defined as the average number of accounts 60+ days past due as a % of total open leases. 6"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "About Upbound Group, Inc Upbound Group, Inc. (NASDAQ: UPBD) is an omni-channel platform company committed to elevating financial opportunity for all through innovative, inclusive, and technology-driven financial solutions that address the evolving needs and aspirations of consumers. The Company’s customer-facing operating units include industry-leading brands such as Rent-A-Center® and Acima® that facilitate consumer transactions across a wide range of store-based and digital retail channels, including over 2,300 company branded retail units across the United States, Mexico and Puerto Rico. Upbound Group, Inc. is headquartered in Plano, Texas. For additional information about the Company, please visit our website Upbound.com. Investor Contact Upbound Group, Inc. Jeff Chesnut SVP Strategy & Corporate Development 972-801-1108 jeff.chesnut@upbound.com 7"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Forward Looking Statements This press release, and the guidance above and the Company's related conference call contain forward-looking statements that involve risks and uncertainties. These statements are made under the \"safe harbor\" provisions of the U.S. Private Securities Litigation Reform Act of 1995. Such forward- looking statements generally can be identified by the use of forward-looking terminology such as \"may,\" \"will,\" \"expect,\" \"intend,\" \"could,\" \"estimate,\" \"predict,\" \"continue,\" \"maintain,\" \"should,\" \"anticipate,\" \"believe,\" or “confident,” or the negative thereof or variations thereon or similar terminology and including, among others, statements concerning (i) the Company's guidance for 2024 and future outlook, (ii) the impact of ongoing challenging macroeconomic conditions on the Company's business operations, financial performance, and prospects, (iii) the future business prospects and financial performance of the Company, (iv) the Company’s growth strategies, (v) the Company's expectations, plans and strategy relating to its capital structure and capital allocation, including any share repurchases under the Company's share repurchase program, and (vi) other statements that are not historical facts. However, there can be no assurance that such expectations will occur. The Company's actual future performance could differ materially and adversely from such statements. Factors that could cause or contribute to these differences include, but are not limited to: (1) the general strength of the economy and other economic conditions affecting consumer preferences and spending, including the availability of credit to the Company's target consumers and to other consumers, impacts from continued inflation, central bank monetary policy initiatives to address inflation concerns and a possible recession or slowdown in economic growth; (2) factors affecting the disposable income available to the Company's current and potential customers; (3) changes in the unemployment rate; (4) capital market conditions, including changes in interest rates and availability of funding sources for the Company; (5) changes in the Company's credit ratings; (6) difficulties encountered in improving the financial and operational performance of the Company's business segments; (7) risks associated with pricing, value proposition and other changes and strategies being deployed in the Company's businesses; (8) the Company's ability to continue to effectively execute its strategic initiatives, including mitigating risks associated with any potential mergers and acquisitions, or refranchising opportunities; (9) the Company's ability to identify potential acquisition candidates, complete acquisitions and successfully integrate acquired companies; (10) failure to manage the Company's operating labor and non-labor operating expenses, including merchandise losses; (11) disruptions caused by the operation of the Company's information management systems or disruptions in the systems of the Company's host retailers; (12) risks related to the Company's virtual lease-to-own business, including the Company's ability to continue to develop and successfully implement the necessary technologies; (13) the Company's ability to achieve the benefits expected from its integrated virtual and staffed retail partner offering and to successfully grow this business segment; (14) exposure to potential operating margin degradation due to the higher cost of merchandise and higher merchandise losses in the Company's Acima segment compared to our Rent-A-Center segment; (15) the Company's transition to more readily scalable “cloud-based” solutions; (16) the Company's ability to develop and successfully implement digital or E-commerce capabilities, including mobile applications; (17) the Company's ability to protect its proprietary intellectual property; (18) the Company's ability or that of the Company's host retailers to protect the integrity and security of customer, employee, supplier and host retailer information, which may be adversely affected by hacking, computer viruses, or similar disruptions; (19) impairment of the Company's goodwill or other intangible assets; (20) disruptions in the Company's supply chain; (21) limitations of, or disruptions in, the Company's distribution network; (22) rapid inflation or deflation in the prices of the Company's products and other related costs; (23) allegations of product safety and quality control issues, including recalls; (24) the Company's ability to execute, as well as, the effectiveness of store consolidations, including the Company's ability to retain the revenue from customer accounts merged into another store location as a result of a store consolidation; (25) the Company's available cash flow and its ability to generate sufficient cash flow to continue paying dividends; (26) increased competition from traditional competitors, virtual lease-to-own competitors, online retailers, Buy-Now-Pay-Later and other fintech companies and other competitors, including subprime lenders; (27) the Company's ability to identify and successfully market products and services that appeal to its current and future targeted customer segments and to accurately estimate the size of the total addressable market; (28) consumer preferences and perceptions of the Company's brands; (29) the Company’s ability to effectively provide consumers with additional products and services beyond lease-to-own, including through third party partnerships; (30) the Company's ability to retain the revenue associated with acquired customer accounts and enhance the performance of acquired stores; (31) the Company's ability to enter into new rental or lease purchase agreements and collect on existing rental or lease purchase agreements; (32) impacts from the enforcement of existing laws and regulations and the enactment of new laws and regulations adversely affecting the Company's business, including any legislative or other regulatory enforcement efforts that seek to re-characterize store-based or virtual lease-to-own transactions as credit sales and to apply consumer credit laws and regulations to the Company's business; (33) the Company's compliance with applicable statutes or regulations governing its businesses; (34) changes in tariff policies; (35) adverse changes in the economic conditions of the industries, countries or markets that the Company serves; (36) information technology and data security costs; (37) the impact of any breaches in data security or other disturbances to the Company's information technology and other networks (38) changes in estimates relating to self-insurance liabilities and income tax and litigation reserves; (39) changes in the Company's effective tax rate; (40) fluctuations in foreign currency exchange rates; (41) the Company's ability to maintain an effective system of internal controls; (42) litigation or administrative proceedings to which the Company is or may be a party to from time to time; and (43) the other risks detailed from time to time in the Company's SEC reports, including but not limited to, its Annual Report on Form 10-K for the year ended December 31, 2023, and in its subsequent Quarterly Reports on Form 10-Q and Current Reports on Form 8-K. You are cautioned not to place undue reliance on these forward-looking statements, which speak only as of the date of this press release. Except as required by law, the Company is not obligated to publicly release any revisions to these forward-looking statements to reflect the events or circumstances after the date hereof or to reflect the occurrence of unanticipated events. 8"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Upbound Group, Inc. and Subsidiaries CONSOLIDATED STATEMENTS OF OPERATIONS - UNAUDITED Table 3 Three Months Ended June 30, (in thousands, except per share data) 2024 2023 Revenues Rentals and fees $ 885,977 $ 807,556 Merchandise sales 146,239 124,703 Installment sales 15,225 15,900 Franchise merchandise sales 21,082 22,869 Royalty income and fees 6,113 6,587 Other 1,874 1,548 Total revenues 1,076,510 979,163 Cost of revenues Cost of rentals and fees 338,554 291,696 Cost of merchandise sold 179,372 152,682 Cost of installment sales 5,512 5,638 Franchise cost of merchandise sold 21,113 22,921 Total cost of revenues 544,551 472,937 Gross profit 531,959 506,226 Operating expenses Operating labor 156,181 151,901 Non-labor operating expenses 203,945 181,101 General and administrative expenses 53,638 48,810 Depreciation and amortization 12,618 12,597 Other gains and charges 24,922 27,786 Total operating expenses 451,304 422,195 Operating profit 80,655 84,031 Debt refinancing charges 6,604 — Interest expense 28,371 28,246 Interest income (753) (1,015) Earnings before income taxes 46,433 56,800 Income tax expense 12,484 102,418 Net earnings (loss) $ 33,949 $ (45,618) Basic weighted average shares 54,650 55,242 Basic earnings (loss) per common share $ 0.62 $ (0.83) Diluted weighted average shares 55,842 55,242 Diluted earnings (loss) per common share $ 0.61 $ (0.83) REVENUES BY SEGMENT Acima $ 552,794 $ 464,358 Rent-A-Center 474,903 466,191 Mexico 20,868 18,454 Franchising 27,945 30,160 Total revenues $ 1,076,510 $ 979,163 9"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Upbound Group, Inc. and Subsidiaries SELECTED BALANCE SHEETS HIGHLIGHTS - UNAUDITED Table 4 June 30, (In thousands) 2024 2023 Cash and cash equivalents $ 82,515 $ 86,801 Receivables, net 115,150 98,794 Prepaid expenses and other assets 52,037 41,138 Rental merchandise, net On rent 1,064,942 949,377 Held for rent 128,915 120,359 Operating lease right-of-use assets 275,321 295,281 Goodwill 289,750 289,750 Total assets 2,620,279 2,585,924 Operating lease liabilities $ 283,813 $ 298,905 Senior debt, net 874,787 798,874 Senior notes, net 440,900 438,930 Total liabilities 2,023,978 1,960,331 Total stockholders’ equity 596,301 625,593 10"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Non-GAAP Financial Measures This release and the Company's related conference call contain certain financial information determined by methods other than in accordance with U.S. Generally Accepted Accounting Principles (GAAP), including (1) Non-GAAP diluted earnings per share (net earnings or loss, as adjusted for special items (as defined below), net of taxes, divided by the number of shares of our common stock on a fully diluted basis), (2) Adjusted EBITDA (net earnings before interest, taxes, stock-based compensation, depreciation and amortization, as adjusted for special items) on a consolidated and segment basis, (3) Free Cash Flow (net cash provided by operating activities less capital expenditures), and (4) Adjusted EBITDA margin (Adjusted EBITDA divided by total revenue) on a consolidated and segment basis. “Special items” refers to certain gains and charges we view as extraordinary, unusual or non-recurring in nature or which we believe do not reflect our core business activities. Special items are reported as Other Gains and Charges in our Consolidated Statements of Operations. For the periods presented herein, these special items are described in the quantitative reconciliation tables included below in this release. Because of the inherent uncertainty related to these special items, management does not believe it is able to provide a meaningful forecast of the comparable GAAP measures or reconciliation to any forecasted GAAP measure without unreasonable effort. These non-GAAP measures are additional tools intended to assist our management in comparing our performance on a more consistent basis for purposes of business decision-making by removing the impact of certain items management believes do not directly reflect our core operations. These measures are intended to assist management in evaluating operating performance and liquidity, comparing performance and liquidity across periods, planning and forecasting future business operations, helping determine levels of operating and capital investments and identifying and assessing additional trends potentially impacting our Company that may not be shown solely by comparisons of GAAP measures. Consolidated Adjusted EBITDA is also used as part of our incentive compensation program for our executive officers and others. We believe these non-GAAP financial measures also provide supplemental information that is useful to investors, analysts and other external users of our consolidated financial statements in understanding our financial results and evaluating our performance and liquidity from period to period. However, non-GAAP financial measures have inherent limitations and are not substitutes for, or superior to, GAAP financial measures, and they should be read together with our consolidated financial statements prepared in accordance with GAAP. Further, because non-GAAP financial measures are not standardized, it may not be possible to compare such measures to the non-GAAP financial measures presented by other companies, even if they have the same or similar names. 11"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share Table 5 Three Months Ended June 30, 2024 (In thousands) Gross Profit Operating Profit Earnings Before Income Tax Tax Expense Net Earnings Diluted Earnings per Share GAAP Results $ 531,959 $ 80,655 $ 46,433 $ 12,484 $ 33,949 $ 0.61 Plus: Debt refinancing charges — — 6,604 1,883 4,721 0.08 Plus: Special Items(1) Acima acquired assets depreciation and amortization(2) — 14,900 14,900 3,195 11,705 0.21 Asset impairments(3) — 5,382 5,382 1,494 3,888 0.07 Accelerated software depreciation(4) — 1,534 1,534 145 1,389 0.03 Accelerated stock compensation(5) — 1,733 1,733 494 1,239 0.02 Legal settlement reserve — 700 700 200 500 0.01 Other(6) — 673 673 193 480 0.01 Discrete income tax items — — — (6) 6 — Non-GAAP Adjusted Results $ 531,959 $ 105,577 $ 77,959 $ 20,082 $ 57,877 $ 1.04 (1) Special items are reported as Other Gains and Charges in the Company’s Consolidated Statements of Operations included in Table 3 of this earnings release. (2) Includes amortization expense of approximately $10.9 million related to the total fair value of acquired intangible assets and incremental depreciation expense of approximately $4.0 million related to the fair value of acquired software assets. (3) Includes lease impairments of approximately $5.3 million and fixed asset impairments of approximately $0.1 million. (4) Represents incremental depreciation expense related to the acceleration of the remaining useful life of the point-of-sale system used by our Rent-A-Center lease-to-own stores, due to the transition to a new internally developed point-of-sale system expected to be fully deployed in the third quarter of 2024. (5) Represents accelerated stock compensation expense related to our letter agreement with the Company’s Chief Executive Officer. (6) Includes shutdown and holding expenses related to store closures of $0.4 million. Table 6 Three Months Ended June 30, 2023 (In thousands) Gross Profit Operating Profit Earnings Before Income Tax Tax Expense Net (Loss) Earnings Diluted (Loss) Earnings per Share GAAP Results $ 506,226 $ 84,031 $ 56,800 $ 102,418 $ (45,618) $ (0.83) Plus: Special Items(1) Acima equity consideration vesting(2) — 9,276 9,276 (87,807) 97,083 1.71 Acima acquired assets depreciation and amortization(3) — 18,233 18,233 6,800 11,433 0.20 Legal settlements — 277 277 105 172 — Discrete income tax items — — — 53 (53) — Other(4) — — — — — 0.03 Non-GAAP Adjusted Results $ 506,226 $ 111,817 $ 84,586 $ 21,569 $ 63,017 $ 1.11 (1) Special items are reported as Other Gains and Charges in the Company’s Consolidated Statements of Operations included in Table 3 of this earnings release. (2) Represents stock compensation expense related to common stock issued to Acima Holdings employees under restricted stock agreements as part of the acquisition proceeds subject to vesting restrictions. (3) Includes amortization expense of approximately $14.3 million related to the total fair value of acquired intangible assets and incremental depreciation expense of approximately $3.9 million. (4) Represents the dilutive impact of unvested stock awards included in the calculation of Non-GAAP Earnings per Share but excluded from the calculation of GAAP Earnings per Share, due to the GAAP net loss incurred for the three months ended June 30, 2023. 12"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Earnings (Loss) to Adjusted EBITDA (Consolidated and by Segment) Table 7 Three Months Ended June 30, 2024 (in thousands) Acima Rent-A- Center Mexico Franchising Corporate Consolidated Net earnings (loss) $ 69,991 $ 67,033 $ 1,559 $ 4,529 $ (109,163) $ 33,949 Plus: Interest expense, net — — — — 27,618 27,618 Plus: Income tax expense — — — — 12,484 12,484 Plus: Debt financing charges — — — — 6,604 6,604 Operating profit (loss) 69,991 67,033 1,559 4,529 (62,457) 80,655 Plus: Depreciation and amortization 382 4,780 388 36 7,032 12,618 Plus: Stock-based compensation — — — — 6,315 6,315 Plus: Special Items(1) Acima acquired assets depreciation and amortization(2) 10,929 — — — 3,971 14,900 Asset impairments(3) — 5,382 — — — 5,382 Accelerated software depreciation(4) — — — — 1,534 1,534 Accelerated stock compensation(5) — — — — 1,733 1,733 Legal settlement reserve — — — — 700 700 Other(6) — 436 — — 237 673 Adjusted EBITDA $ 81,302 $ 77,631 $ 1,947 $ 4,565 $ (40,935) $ 124,510 (1) Special items are reported as Other Gains and Charges in the Company’s Consolidated Statements of Operations included in Table 3 of this earnings release. (2) Includes amortization expense of approximately $10.9 million related to the total fair value of acquired intangible assets and incremental depreciation expense of approximately $4.0 million. (3) Includes fixed asset impairments of approximately $5.3 million and lease impairments of approximately $0.1 million. (4) Represents incremental depreciation expense related to the acceleration of the remaining useful life of the point-of-sale system used by our Rent-A-Center lease-to-own stores, due to the transition to a new internally developed point-of-sale system expected to be fully deployed in the third quarter of 2024. (5) Represents accelerated stock compensation expense related to our letter agreement with the Company’s Chief Executive Officer. (6) Includes shutdown and holding expenses related to store closures of $0.4 million. Table 8 Three Months Ended June 30, 2023 (in thousands) Acima Rent-A- Center Mexico Franchising Corporate Consolidated Net earnings (loss) $ 63,109 $ 78,914 $ 1,298 $ 4,979 $ (193,918) $ (45,618) Plus: Interest expense, net — — — — 27,231 27,231 Plus: Income tax expense — — — — 102,418 102,418 Operating profit (loss) 63,109 78,914 1,298 4,979 (64,269) 84,031 Plus: Depreciation and amortization 416 4,573 293 36 7,279 12,597 Plus: Stock-based compensation — — — — 6,148 6,148 Plus: Special Items(1) Acima acquired assets depreciation and amortization(2) 14,262 — — — 3,971 18,233 Acima equity consideration vesting(3) — — — — 9,276 9,276 Legal settlements — — — — 277 277 Adjusted EBITDA $ 77,787 $ 83,487 $ 1,591 $ 5,015 $ (37,318) $ 130,562 (1) Special items are reported as Other Gains and Charges in the Company’s Consolidated Statements of Operations included in Table 3 of this earnings release. (2) Includes amortization expense of approximately $14.3 million related to the total fair value of acquired intangible assets and incremental depreciation expense of approximately $3.9 million. (3) Represents stock compensation expense related to common stock issued to Acima Holdings employees under restricted stock agreements as part of the acquisition proceeds subject to vesting restrictions. 13"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-992upbd2024q2earnings014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Cash Provided by Operating Activities to Free Cash Flow Table 9 Three Months Ended June 30, Six Months Ended June 30, (in thousands) 2024 2023 2024 2023 Net cash provided by operating activities $ 15,040 $ 36,543 $ 60,461 $ 141,960 Purchase of property assets (14,427) (11,860) (26,244) (21,394) Free cash flow $ 613 $ 24,683 $ 34,217 $ 120,566 14"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "4"
+    },
+    {
+      "type": "TextElement",
+      "text": "ex-993upbd2024q2investor.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc ex-993upbd2024q2investor"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Second Quarter Earnings Review August 1, 2024 ™"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Disclosures 2 Forward-Looking Statements This communication contains forward-looking statements within the meaning of the U.S. Private Securities Litigation Reform Act of 1995, including, among others, statements regarding our goals, plans and projections with respect to our operations, financial position and business strategy. Such forward-looking statements generally can be identified by the use of forward-looking terminology such as \"may,\" \"will,\" \"expect,\" \"intend,\" \"could,\" \"estimate,\" \"predict,\" \"continue,\" “maintain,” \"should,\" \"anticipate,\" \"believe,\" or “confident,” or the negative thereof or variations thereon or similar terminology. Such forward-looking statements are based on particular assumptions that our management has made in light of its experience and its perception of expected future developments and other factors that it believes are appropriate under the circumstances, and are subject to various risks and uncertainties. Factors that could cause or contribute to material and adverse differences between actual and anticipated results include, but are not limited to, (1) the general strength of the economy and other economic conditions affecting consumer preferences and spending, including the availability of credit to the Company's target consumers and to other consumers, impacts from continued inflation, central bank monetary policy initiatives to address inflation concerns and a possible recession or slowdown in economic growth, and (2) the other risks detailed from time to time in the reports filed by us with the Securities and Exchange Commission, including our Annual Report on Form 10-K for the year ended December 31, 2023, as well as subsequent Quarterly Reports on Form 10-Q or Current Reports on Form 8-K. You are cautioned not to place undue reliance on forward-looking statements, which speak only as of the date of this communication. Except as required by law, we are not obligated to, and do not undertake to, publicly release any revisions to these forward-looking statements to reflect any events or circumstances after the date hereof or to reflect the occurrence of unanticipated events. Use of Non-GAAP Financial Measures This communication contains certain financial information determined by methods other than in accordance with U.S. Generally Accepted Accounting Principles (GAAP), including (1) Non-GAAP diluted earnings per share (net earnings or loss, as adjusted for special items (as defined below), net of taxes, divided by the number of shares of our common stock on a fully diluted basis), (2) Adjusted EBITDA (net earnings before interest, taxes, stock-based compensation, depreciation and amortization, as adjusted for special items) on a consolidated and segment basis, (3) Free Cash Flow (net cash provided by operating activities less capital expenditures), and (4) Adjusted EBITDA margin (Adjusted EBITDA divided by total revenue) on a consolidated and segment basis. “Special items” refers to certain gains and charges we view as extraordinary, unusual or non-recurring in nature or which we believe do not reflect our core business activities. For the periods presented herein, these special items are described in the quantitative reconciliation tables included in the appendix of this presentation. Because of the inherent uncertainty related to these special items, management does not believe it is able to provide a meaningful forecast of the comparable GAAP measures or reconciliation to any forecasted GAAP measure without unreasonable effort. These non-GAAP measures are additional tools intended to assist our management in comparing our performance on a more consistent basis for purposes of business decision-making by removing the impact of certain items management believes do not directly reflect our core operations. These measures are intended to assist management in evaluating operating performance and liquidity, comparing performance and liquidity across periods, planning and forecasting future business operations, helping determine levels of operating and capital investments and identifying and assessing additional trends potentially impacting our Company that may not be shown solely by comparisons of GAAP measures. Consolidated Adjusted EBITDA is also used as part of our incentive compensation program for our executive officers and others. We believe these non-GAAP financial measures also provide supplemental information that is useful to investors, analysts and other external users of our consolidated financial statements in understanding our financial results and evaluating our performance and liquidity from period to period. However, non-GAAP financial measures have inherent limitations and are not substitutes for, or superior to, GAAP financial measures, and they should be read together with our consolidated financial statements prepared in accordance with GAAP. Further, because non-GAAP financial measures are not standardized, it may not be possible to compare such measures to the non-GAAP financial measures presented by other companies, even if they have the same or similar names. Note that all sources in this presentation are from Company reports and Company estimates unless otherwise noted."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Acima GMV3 growth (+21% y/y) continues, with signs of trade-down increasing • Sequential improvement in consolidated loss rate and delinquencies for both segments • Improved flow through of GMV/Revenue results in sequential improvement in Acima’s margin profile – Adjusted EBITDA margin2 +310 bps • Another quarter of RAC SSS growth; also consolidated select locations to optimize retail footprint • Extended $550 million revolver and reduced interest expense on Term Loan • Due to strong first half of 2024, raising midpoint of full year 2024 targets for revenue, Adjusted EBITDA2, and non-GAAP diluted EPS2 Q2 Consolidated Highlights 3 $1,076.5 million Consolidated Revenue +9.9% y/y $33.9 million Net Income +$79.5 million y/y $0.61 GAAP Diluted EPS +$1.44 y/y 7.2% Lease Charge-Off Rate1 -20 bps sequentially $124.5 million Adjusted EBITDA2 -4.6% y/y $1.04 Non-GAAP Diluted EPS2 -$0.07 y/y 1 Lease Charge-Offs (LCOs) (previously referred to as “skip / stolen losses”): Represents charge-offs of the net book value of unrecoverable on-rent merchandise with lease-to-own customers who are past due. This is typically expressed as a percentage of revenues for the applicable period. For the Rent-A-Center segment, LCOs exclude Get-It-Now and Home Choice locations. 2 Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this presentation. 3 The Company defines Gross Merchandise Volume (GMV) as the retail value in U.S. dollars of merchandise acquired by the Acima segment that is leased to customers through a transaction that occurs within a defined period, net of estimated cancellations as of the measurement date."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 Business Segment Highlights Acima • GMV increased over 20% y/y in Q2, following nearly 20% GMV growth in each of the two preceding quarters • Q2 2024 +21.0% y/y, improved from +19.9% y/y in Q1 2024 • Revenues +19.0% y/y, improved from +16.0% y/y in Q1 2024 • Lease charge-offs and delinquencies remain within expected ranges, with lease charge-offs of 9.6% of revenue in Q2, 70 bps higher year-over-year • Acima segment lease charge-offs remained flat sequentially • Delinquencies improved approximately 80 bps y/y and 90 bps sequentially • Net profit margin of 12.7% • Adjusted EBITDA margin3 of 14.7%, a 310 bps improvement sequentially and a 210 bps decrease y/y Rent-A-Center • Second consecutive quarter of y/y revenue growth • Q2 2024 +1.9% y/y vs. +0.2% y/y in Q1 2024 • Same store sales1 increased 2.6%, an improvement from a 4.9% decrease in Q2 2023 and a 0.8% increase in Q1 2024 • Same-store lease portfolio value2 increased 1.4% y/y • Delinquency rates improved 40 bps sequentially and lease charge-offs were slightly better than expectations • Q2 2024 lease charge-offs were 4.2% of revenue, improving 30 bps y/y and 50 bps sequentially • Net profit margin of 14.1% • Adjusted EBITDA margin3 of 16.3%, a 160 bps decrease y/y and a 30 bps decrease sequentially 1 Same Store Sales (SSS): Same store sales generally represents revenue earned in Rent-A-Center stores that were operated by us for 13 months or more and are reported on a constant currency basis as a percentage of total revenue earned in stores of the segment during the indicated period. The Company excludes from the same store sales base any store that receives a certain level of customer accounts from closed stores or acquisitions. The receiving store will be eligible for inclusion in the same store sales base in the 30th full month following account transfer. 2 Same Store Lease Portfolio Value: Represents the aggregate dollar value of the expected monthly rental income associated with current active lease agreements from our e-commerce platform and Rent-A-Center stores that were operated by us for 13 months or more at the end of any given period. The Company excludes from the same store base any store that receives a certain level of customer accounts from closed stores or acquisitions. The receiving store will be eligible for inclusion in the same store base in the 30th full month following account transfer. 3 Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this presentation. 4"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2024 Strategic Priorities 5 Grow Market Share Expand our retail partnerships and direct to consumer solutions Increase Retention Enhance our product offerings and experience to drive increased engagement and lifetime value for retailers and customers Elevate Digital Capabilities Continuously develop technologies that facilitate seamless interactions between our retail partners and customers Operational Synergies Improve business efficiency through optimization of processes, talent, and technology across all brands Enhance Value Proposition Introduce new product categories and customer-centric programs Enhance Productivity Leverage technology to improve processes and grow our business efficiently Optimize Digital Customer Experience Deliver digital solutions that improve the omni-channel experience for our customers Expand Offerings & Financial Access Evaluate new products that provide greater financial access and opportunity for consumers and retailers Efficient Capital Returns Prudently allocate capital across our businesses and initiatives to balance sustainable growth and shareholder returns"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 Consolidated Financial Highlights Q2 2024 $’s millions Actual % of Total Revenue Acima $552.8 51.4% Rent-A-Center $474.9 44.1% Mexico $20.9 1.9% Franchising $27.9 2.6% Total Revenue $1,076.5 100.0% Q2 2024 Financial Results • Revenue: $1,076.5 million, +9.9% y/y • Operating profit: $80.7 million, -$3.3 million y/y • Net earnings: $33.9 million, +$79.5 million y/y • Net profit margin: 3.2%, +790 bps y/y • Adjusted EBITDA1: $124.5 million, -4.6% y/y • Adjusted EBITDA margin1: 11.6%, -170 bps y/y • Diluted EPS: $0.61 compared to diluted loss per share of $(0.83) in Q2 2023 • Non-GAAP Diluted EPS1: $1.04 compared to $1.11 in Q2 2023 • Net Cash Provided by Operating Activities: $15.0 million compared to $36.5 million in Q2 2023 • Free Cash Flow1: $0.6 million compared to $24.7 million in Q2 2023 • Cash dividend of $0.37 per share (1) Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this presentation. (2) Corporate Net Earnings includes Company interest and taxes. 6 Net Earnings Net Profit Margin Adj EBITDA(1) Adj EBITDA(1) Margin Acima $70.0 12.7% $81.3 14.7% Rent-A-Center $67.0 14.1% $77.6 16.3% Mexico $1.6 7.5% $1.9 9.3% Franchising $4.5 16.2% $4.6 16.3% Corporate2 $(109.2) N/A ($47.2) N/A Addback: Stock-Based Compensation $6.3 Consolidated $33.9 3.2% $124.5 11.6%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "• GMV increased 21.0% y/y and improved sequentially from 19.9% in Q1 2024, led by y/y growth in application volume resulting from expanding retail partner network and existing partner penetration • GMV increased approximately 15% on a two-year stacked basis • Q2 revenues of $552.8 million, +19.0% y/y, driven by an 18.2% y/y increase in rentals and fees revenue, in addition to a 22.0% y/y increase in merchandise sales revenue • Lease charge-offs 9.6% of revenue, flat sequentially and +70 bps y/y, due primarily to the back book of the legacy Acceptance Now business, which has converted to Acima’s underwriting platform • Operating profit and net earnings on a GAAP basis were $70.0 million with a margin of 12.7% • Adjusted EBITDA of $81.3 million, with a margin1 of 14.7%, +310 bps sequentially, and -210 bps y/y due to lower gross margins Acima GMV Trend ($M) Acima LCO and Past Due Rates2 Trends Acima Q2 Highlights Financial Results 1 Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this presentation. 2 Defined as the average accounts 60+ days past due as a percentage of total open leases. 60+ past due rates normalized to exclude large retailers that are no longer on Acima’s platform 7"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Rent-A-Center Portfolio3,4 ($M) and Same Store Sales Trends Rent-A-Center LCO and Past Due Rates2,3 Trends Rent-A-Center Q2 Highlights Financial Results • Revenue of $474.9 million, +1.9% y/y driven primarily by a 2.1% y/y increase in rentals and fees revenue, in addition to a 1.6% y/y increase in merchandise sales • Same store sales increased 2.6% y/y, which improved 180 bps from Q1 2024 • Lease charge-offs 4.2% of revenue, 30 bps lower y/y and 50 bps lower sequentially • Operating profit and net earnings on a GAAP basis were $67.0 million with a margin of 14.1% • Adjusted EBITDA margin1 was 16.3%, down approximately 160 bps y/y due primarily to elevated labor benefits costs, delivery costs, and store technology investments Note: Same store sales - Same store sales generally represents revenue earned in Rent-A-Center stores that were operated by us for 13 months or more and are reported on a constant currency basis as a percentage of total revenue earned in stores of the segment during the indicated period. The Company excludes from the same store sales base any store that receives a certain level of customer accounts from closed stores or acquisitions. The receiving store will be eligible for inclusion in the same store sales base in the 30th full month following account transfer. 1 Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this presentation. 2 Past due rate is defined as the average accounts 30+ days past due as a percentage of total open leases. 3 Portfolio Value and Past Due charts exclude Get-it-Now and Home Choice branded stores. 4 Lease Portfolio Value: Represents the aggregate dollar value of the expected monthly rental income associated with current active lease agreements from our Rent-A-Center stores and e-commerce platform at the end of any given period. 8"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Full Year 2024 Guidance 9 Raises Midpoint of Full Year 2024 Targets for Revenue, Adjusted EBITDA2, and Non-GAAP Diluted EPS2 1. Consolidated includes Acima, Rent-A-Center, Mexico, Franchising and Corporate Segments. 2. Non-GAAP financial measure. See descriptions elsewhere in this presentation. 3. Non-GAAP diluted earnings per share excludes the impact of incremental depreciation and amortization related to the estimated fair value of acquired Acima assets and stock compensation expense associated with the Acima Acquisition equity consideration, which was subject to vesting conditions. 4. Reaffirmed on May 2, 2024. Revised Full Year 2024 Guidance Initial Full Year 2024 Guidance Consolidated Guidance1 (8/1/2024) (2/22/2024)4 Revenues ($B) $4.10 - $4.30 $4.00 - $4.20 Adj. EBITDA Excluding SBC ($M)2 $465 - $485 $455 - $485 Non-GAAP Diluted Earnings Per Share2,3 $3.65 - $4.00 $3.55 - $4.00 Free Cash Flow ($M)2 $100 - $130 $100 - $130 GMV/Portfolio Growth Revenue Growth Disciplined Underwriting Earnings Growth Capital Allocation Priorities"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Capital Allocation & Financial Position Capital Allocation • Distributed quarterly dividend of $0.37 per share, or $1.48 annualized • Focused on reaching long-term target leverage ratio of 1.5x from a combination of Adjusted EBITDA growth and debt reduction • Net leverage1 increased to 2.8x at the end of Q2 2024 from 2.7x at the end of Q1 2024 • Net debt of $1.3 billion • Total liquidity of nearly $500 million • $550 million ABL revolver extended to 2029 • $800+ million Term Loan credit spread reduced by 50 bps and removed credit spread adjustment of 11-43 bps (depending on benchmark index) Balance Sheet & Liquidity ($’s millions) As of 06/30/24 Liquidity $493.2 Cash (unrestricted) $72.6 Revolving Credit Availability $420.6 Total Debt $1,335.7 Net Leverage Ratio (LTM)1 2.8x Interest Coverage Ratio (LTM) 3.2x Dividend Payout Ratio (LTM) 41.4% 10 1 Net debt to Adjusted EBITDA ratio is defined as outstanding debt less cash divided by trailing twelve months Adjusted EBITDA, which is a Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this presentation."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "DRAFTKey Takeaways 11 Resilient business model across macroeconomic scenarios • Differentiated offerings and balanced approach in brick and mortar, staffed and virtual channels • Enables adaptability for constantly evolving consumer landscape and uncertain macro conditions; potential trade-down benefit as lenders tighten • Over 35,000 Acima retail partner locations, both online and in-store • Optimized RAC store count, consolidating 50+ stores Strong Q2 results • Y/Y revenue growth at both Acima and RAC • Three consecutive quarters of 19%+ GMV growth at Acima • Continued growth in same store lease portfolio value and same store sales at RAC • 310 bps sequential improvement in Acima EBITDA margin1 • Due to strong first half of 2024, raising midpoint of full year 2024 targets for revenue, adjusted EBITDA1, and non-GAAP diluted EPS1 Compelling fundamentals support growth trajectory • Industry leader with large underserved market • Annual Free Cash Flow1 supports investments into new technology, markets, and adjacencies to power future growth • Beyond reinvesting in the business, capital allocation is focused on dividends and debt reduction supplemented with opportunistic buyback program Risk management & disciplined underwriting • RAC lease charge-offs (LCO) improved 30 bps y/y • Acima losses within expected ranges, flat sequentially, with improvement expected as ANOW back book winds down • Delinquency rates improving at Acima, stable at RAC • Leverage best practices in risk management across the business segments and remain disciplined in challenging operating environment 1 Non-GAAP financial measure. Refer to definitions and reconciliations elsewhere in this presentation."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Appendix"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Earnings to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share 13 Three Months Ended June 30, 2024 (In thousands) Gross Profit Operating Profit Earnings Before Income Tax Tax Expense Net Earnings Diluted Earnings per Share GAAP Results $ 531,959 $ 80,655 $ 46,433 $ 12,484 $ 33,949 $ 0.61 Plus: Debt refinancing charges — — 6,604 1,883 4,721 0.08 Plus: Special Items(1) Acima acquired assets depreciation and amortization(2) — 14,900 14,900 3,195 11,705 0.21 Asset impairments(3) — 5,382 5,382 1,494 3,888 0.07 Accelerated software depreciation(4) — 1,534 1,534 145 1,389 0.03 Accelerated stock compensation(5) — 1,733 1,733 494 1,239 0.02 Legal settlement reserve — 700 700 200 500 0.01 Other(6) — 673 673 193 480 0.01 Discrete income tax items — — — (6) 6 — Non-GAAP Adjusted Results $ 531,959 $ 105,577 $ 77,959 $ 20,082 $ 57,877 $ 1.04 (1) Special items are reported as Other Gains and Charges in the Supplemental Segment Performance Details - GAAP included on page 18 of this presentation. (2) Includes amortization expense of approximately $10.9 million related to the total fair value of acquired intangible assets and incremental depreciation expense of approximately $4.0 million related to the fair value of acquired software assets. (3) Includes lease impairments of approximately $5.3 million and fixed asset impairments of approximately $0.1 million. (4) Represents incremental depreciation expense related to the acceleration of the remaining useful life of the point-of-sale system used by our Rent-A-Center lease-to-own stores, due to the transition to a new internally developed point-of-sale system expected to be fully deployed in the third quarter of 2024. (5) Represents accelerated stock compensation expense related to our letter agreement with the Company’s Chief Executive Officer. (6) Includes shutdown and holding expenses related to store closures of $0.4 million."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net (Loss) Earnings to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share Three Months Ended June 30, 2023 (In thousands) Gross Profit Operating Profit Earnings Before Income Tax Tax Expense Net (Loss) Earnings Diluted (Loss) Earnings per Share GAAP Results $ 506,226 $ 84,031 $ 56,800 $ 102,418 $ (45,618) $ (0.83) Plus: Special Items(1) Acima equity consideration vesting(2) — 9,276 9,276 (87,807) 97,083 1.71 Acima acquired assets depreciation and amortization(3) — 18,233 18,233 6,800 11,433 0.20 Legal settlements — 277 277 105 172 — Discrete income tax items — — — 53 (53) — Other(4) — — — — — 0.03 Non-GAAP Adjusted Results $ 506,226 $ 111,817 $ 84,586 $ 21,569 $ 63,017 $ 1.11 (1) Special items are reported as Other Gains and Charges in the Supplemental Segment Performance Details - GAAP included on page 18 of this presentation. (2) Represents stock compensation expense related to common stock issued to Acima Holdings employees under restricted stock agreements as part of the acquisition proceeds subject to vesting restrictions. (3) Includes amortization expense of approximately $14.3 million related to the total fair value of acquired intangible assets and incremental depreciation expense of approximately $3.9 million. (4) Represents the dilutive impact of unvested stock awards included in the calculation of Non-GAAP Earnings per Share but excluded from the calculation of GAAP Earnings per Share, due to the GAAP net loss incurred for the three months ended June 30, 2023. 14"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor015.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Earnings (Loss) to Adjusted EBITDA (Consolidated and by Segment) Three Months Ended June 30, 2024 (in thousands) Acima Rent-A-Center Mexico Franchising Corporate Consolidated Net earnings (loss) $ 69,991 $ 67,033 $ 1,559 $ 4,529 $ (109,163) $ 33,949 Plus: Interest expense, net — — — — 27,618 27,618 Plus: Income tax expense — — — — 12,484 12,484 Plus: Debt financing charges — — — — 6,604 6,604 Operating profit (loss) 69,991 67,033 1,559 4,529 (62,457) 80,655 Plus: Depreciation and amortization 382 4,780 388 36 7,032 12,618 Plus: Stock-based compensation — — — — 6,315 6,315 Plus: Special Items(1) Acima acquired assets depreciation and amortization(2) 10,929 — — — 3,971 14,900 Asset impairments(3) — 5,382 — — — 5,382 Accelerated software depreciation(4) — — — — 1,534 1,534 Accelerated stock compensation(5) — — — — 1,733 1,733 Legal settlement reserve — — — — 700 700 Other(6) — 436 — — 237 673 Adjusted EBITDA $ 81,302 $ 77,631 $ 1,947 $ 4,565 $ (40,935) $ 124,510 (1) Special items are reported as Other Gains and Charges in the Supplemental Segment Performance Details - GAAP included on page 18 of this presentation. (2) Includes amortization expense of approximately $10.9 million related to the total fair value of acquired intangible assets and incremental depreciation expense of approximately $4.0 million. (3) Includes fixed asset impairments of approximately $5.3 million and lease impairments of approximately $0.1 million. (4) Represents incremental depreciation expense related to the acceleration of the remaining useful life of the point-of-sale system used by our Rent-A-Center lease-to-own stores, due to the transition to a new internally developed point-of-sale system expected to be fully deployed in the third quarter of 2024. (5) Represents accelerated stock compensation expense related to our letter agreement with the Company’s Chief Executive Officer. (6) Includes shutdown and holding expenses related to store closures of $0.4 million. 15"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor016.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Earnings (Loss) to Adjusted EBITDA (Consolidated and by Segment) Three Months Ended June 30, 2023 (in thousands) Acima Rent-A-Center Mexico Franchising Corporate Consolidated Net earnings (loss) $ 63,109 $ 78,914 $ 1,298 $ 4,979 $ (193,918) $ (45,618) Plus: Interest expense, net — — — — 27,231 27,231 Plus: Income tax expense — — — — 102,418 102,418 Operating profit (loss) 63,109 78,914 1,298 4,979 (64,269) 84,031 Plus: Depreciation and amortization 416 4,573 293 36 7,279 12,597 Plus: Stock-based compensation — — — — 6,148 6,148 Plus: Special Items(1) Acima acquired assets depreciation and amortization(2) 14,262 — — — 3,971 18,233 Acima equity consideration vesting(3) — — — — 9,276 9,276 Legal settlements — — — — 277 277 Adjusted EBITDA $ 77,787 $ 83,487 $ 1,591 $ 5,015 $ (37,318) $ 130,562 (1) Special items are reported as Other Gains and Charges in the Supplemental Segment Performance Details - GAAP included on page 18 of this presentation. (2) Includes amortization of approximately $14.3 million related to the total fair value of acquired intangible assets and incremental depreciation of approximately $3.9 million. (3) Represents stock compensation expense related to common stock issued to Acima Holdings employees under restricted stock agreements as part of the acquisition proceeds subject to vesting restrictions. 16"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor017.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Cash Provided by Operating Activities to Free Cash Flow Three Months Ended June 30, Six Months Ended June 30, (in thousands) 2024 2023 2024 2023 Net cash provided by operating activities $ 15,040 $ 36,543 $ 60,461 $ 141,960 Purchase of property assets (14,427) (11,860) (26,244) (21,394) Free cash flow $ 613 $ 24,683 $ 34,217 $ 120,566 17"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor018.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Segment Performance Details – GAAP 18 Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Revenue Rentals and fees $ 368.6 $ 421.6 $ 17.4 $ — $ — $ 807.6 Merchandise sales 95.5 28.3 0.9 — — 124.7 Installment sales — 15.9 — — — 15.9 Franchise merchandising sales — — — 22.9 — 22.9 Franchise and royalty fees — — — 6.6 — 6.6 Other 0.3 0.4 0.2 0.6 — 1.5 Total revenue $ 464.4 $ 466.2 $ 18.5 $ 30.1 $ — $ 979.2 Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Cost of revenues Cost of rentals and fees $ 177.8 $ 109.1 $ 4.8 $ — $ — $ 291.7 Cost of merchandise sold 126.8 25.3 0.6 — — 152.7 Cost of installment sales — 5.6 — — — 5.6 Cost of franchise merchandise sold — — — 22.9 — 22.9 Total cost of revenues $ 304.6 $ 140.0 $ 5.4 $ 22.9 $ — $ 472.9 Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Operating expenses Operating labor expense $ 25.4 $ 122.2 $ 4.3 $ — $ — $ 151.9 Non-labor operating expenses 56.3 117.8 5.8 1.2 — 181.1 General and administrative expenses 0.2 2.6 1.4 1.1 43.5 48.8 Depreciation and amortization 0.4 4.6 0.3 — 7.3 12.6 Other gains and charges 14.3 — — — 13.5 27.8 Total operating expenses $ 96.6 $ 247.2 $ 11.7 $ 2.3 $ 64.3 $ 422.2 Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Capital expenditures $ — $ 2.8 $ 0.7 $ — $ 8.4 $ 11.9 Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Revenue Rentals and fees $ 435.8 $ 430.6 $ 19.6 $ — $ — $ 886.0 Merchandise sales 116.5 28.7 1.0 — — 146.2 Installment sales — 15.2 — — — 15.2 Franchise merchandising sales — — — 21.1 — 21.1 Franchise and royalty fees — — — 6.1 — 6.1 Other 0.5 0.4 0.3 0.8 — 1.9 Total revenue $ 552.8 $ 474.9 $ 20.9 $ 27.9 $ — $ 1,076.5 Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Cost of revenues Cost of rentals and fees $ 220.5 $ 112.9 $ 5.2 $ — $ — $ 338.6 Cost of merchandise sold 152.7 26.0 0.7 — — 179.4 Cost of installment sales — 5.5 — — — 5.5 Cost of franchise merchandise sold — — — 21.1 — 21.1 Total cost of revenues $ 373.2 $ 144.4 $ 5.9 $ 21.1 $ — $ 544.6 Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Operating expenses Operating labor expense $ 26.6 $ 124.8 $ 4.8 $ — $ — $ 156.2 Non-labor operating expenses 71.3 125.4 5.9 1.4 — 203.9 General and administrative expenses 0.4 2.7 2.4 0.9 47.3 53.6 Depreciation and amortization 0.4 4.8 0.4 — 7.0 12.6 Other gains and charges 10.9 5.8 — — 8.2 24.9 Total operating expenses $ 109.6 $ 263.5 $ 13.5 $ 2.3 $ 62.5 $ 451.3 Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Capital expenditures $ 1.0 $ 6.3 $ 0.7 $ — $ 6.5 $ 14.4"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor019.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Supplemental Segment Performance Details – Including Non-GAAP Adjustments 19 Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Revenue Rentals and fees $ 368.6 $ 421.6 $ 17.4 $ — $ — $ 807.6 Merchandise sales 95.5 28.3 0.9 — — 124.7 Installment sales — 15.9 — — — 15.9 Franchise merchandising sales — — — 22.9 — 22.9 Franchise and royalty fees — — — 6.6 — 6.6 Other 0.3 0.4 0.2 0.6 — 1.5 Total revenue $ 464.4 $ 466.2 $ 18.5 $ 30.1 $ — $ 979.2 Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Cost of revenues Cost of rentals and fees $ 177.8 $ 109.1 $ 4.8 $ — $ — $ 291.7 Cost of merchandise sold 126.8 25.3 0.6 — — 152.7 Cost of installment sales — 5.6 — — — 5.6 Cost of franchise merchandise sold — — — 22.9 — 22.9 Total cost of revenues $ 304.6 $ 140.0 $ 5.4 $ 22.9 $ — $ 472.9 Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Operating expenses Operating labor expense $ 25.4 $ 122.2 $ 4.3 $ — $ — $ 151.9 Non-labor operating expenses 56.3 117.8 5.8 1.2 — 181.1 General and administrative expenses 0.2 2.6 1.4 1.1 43.5 48.8 Depreciation and amortization 0.4 4.6 0.3 — 7.3 12.6 Other gains and charges(1) — — — — — — Total operating expenses $ 82.3 $ 247.2 $ 11.7 $ 2.3 $ 50.8 $ 394.4 (1)For purposes of disclosing non-GAAP operating expenses we exclude Other gains and charges. Additional details of Other gains and charges are included as special item adjustments in the reconciliation tables on pages 14 and 16 of this presentation. Three Months Ended June 30, 2023 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Capital expenditures $ — $ 2.8 $ 0.7 $ — $ 8.4 $ 11.9 Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Revenue Rentals and fees $ 435.8 $ 430.6 $ 19.6 $ — $ — $ 886.0 Merchandise sales 116.5 28.7 1.0 — — 146.2 Installment sales — 15.2 — — — 15.2 Franchise merchandising sales — — — 21.1 — 21.1 Franchise and royalty fees — — — 6.1 — 6.1 Other 0.5 0.4 0.3 0.8 — 1.9 Total revenue $ 552.8 $ 474.9 $ 20.9 $ 27.9 $ — $ 1,076.5 Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Cost of revenues Cost of rentals and fees $ 220.5 $ 112.9 $ 5.2 $ — $ — $ 338.6 Cost of merchandise sold 152.7 26.0 0.7 — — 179.4 Cost of installment sales — 5.5 — — — 5.5 Cost of franchise merchandise sold — — — 21.1 — 21.1 Total cost of revenues $ 373.2 $ 144.4 $ 5.9 $ 21.1 $ — $ 544.6 Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Operating expenses Operating labor expense $ 26.6 $ 124.8 $ 4.8 $ — $ — $ 156.2 Non-labor operating expenses 71.3 125.4 5.9 1.4 — 203.9 General and administrative expenses 0.4 2.7 2.4 0.9 47.3 53.6 Depreciation and amortization 0.4 4.8 0.4 — 7.0 12.6 Other gains and charges(1) — — — — — — Total operating expenses $ 98.7 $ 257.7 $ 13.5 $ 2.3 $ 54.3 $ 426.4 (1)For purposes of disclosing non-GAAP operating expenses we exclude Other gains and charges. Additional details of Other gains and charges are included as special item adjustments in the reconciliation tables on pages 13 and 15 of this presentation. Three Months Ended June 30, 2024 (in millions) Acima Rent-A- Center Mexico Franchise Corporate Consolidated Capital expenditures $ 1.0 $ 6.3 $ 0.7 $ — $ 6.5 $ 14.4"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "ex-993upbd2024q2investor020.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 Q1 2024 (in millions) Total Debt $ 1,335.7 $ 1,311.9 Less: Cash (unrestricted) 72.6 74.9 Net Debt 1,263.1 1,237.0 Adjusted EBITDA(1) Q2 2023 130.6 Q3 2023 106.0 106.0 Q4 2023 107.6 107.6 Q1 2024 109.1 109.1 Q2 2024 124.5 TTM Adjusted EBITDA $ 447.2 $ 453.3 Consolidated Total Leverage Ratio 2.8 x 2.7 x (1) Additional details of Adjusted EBITDA are included in the Reconciliation of Net Earnings to Adjusted EBITDA (Consolidated and by Segment) tables of our quarterly investor presentations, for their respective periods, which can be found on the Company's investor relations website. Reconciliation of Consolidated Total Leverage Ratio"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        13,
+        6
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Three Months Ended June 30, 2024",
+          "Three Months Ended June 30, 2024",
+          "Three Months Ended June 30, 2024",
+          "Diluted Earnings Per Share",
+          "Diluted Earnings Per Share",
+          "Diluted Earnings Per Share"
+        ],
+        [
+          "GAAP Results",
+          "GAAP Results",
+          "GAAP Results",
+          "$",
+          "0.61",
+          ""
+        ],
+        [
+          "Plus: Debt refinancing fees",
+          "Plus: Debt refinancing fees",
+          "Plus: Debt refinancing fees",
+          "0.08",
+          "0.08",
+          ""
+        ],
+        [
+          "Plus: Special Items(1)",
+          "Plus: Special Items(1)",
+          "Plus: Special Items(1)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Acima acquired assets depreciation and amortization",
+          "Acima acquired assets depreciation and amortization",
+          "Acima acquired assets depreciation and amortization",
+          "0.21",
+          "0.21",
+          ""
+        ],
+        [
+          "Asset Impairments",
+          "Asset Impairments",
+          "Asset Impairments",
+          "0.07",
+          "0.07",
+          ""
+        ],
+        [
+          "Accelerated software depreciation",
+          "Accelerated software depreciation",
+          "Accelerated software depreciation",
+          "0.03",
+          "0.03",
+          ""
+        ],
+        [
+          "Accelerated stock compensation",
+          "Accelerated stock compensation",
+          "Accelerated stock compensation",
+          "0.02",
+          "0.02",
+          ""
+        ],
+        [
+          "Legal settlement reserve",
+          "Legal settlement reserve",
+          "Legal settlement reserve",
+          "0.01",
+          "0.01",
+          ""
+        ],
+        [
+          "Other",
+          "Other",
+          "Other",
+          "0.01",
+          "0.01",
+          ""
+        ],
+        [
+          "Non-GAAP Adjusted Results",
+          "Non-GAAP Adjusted Results",
+          "Non-GAAP Adjusted Results",
+          "$",
+          "1.04",
+          ""
+        ],
+        [
+          "(1) Additional details of Special items are included in Table 5 (Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share) of the second quarter 2024 earnings release dated August 1, 2024, which can be found on the Company's investor relations website as noted above.",
+          "(1) Additional details of Special items are included in Table 5 (Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share) of the second quarter 2024 earnings release dated August 1, 2024, which can be found on the Company's investor relations website as noted above.",
+          "(1) Additional details of Special items are included in Table 5 (Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share) of the second quarter 2024 earnings release dated August 1, 2024, which can be found on the Company's investor relations website as noted above.",
+          "(1) Additional details of Special items are included in Table 5 (Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share) of the second quarter 2024 earnings release dated August 1, 2024, which can be found on the Company's investor relations website as noted above.",
+          "(1) Additional details of Special items are included in Table 5 (Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share) of the second quarter 2024 earnings release dated August 1, 2024, which can be found on the Company's investor relations website as noted above.",
+          "(1) Additional details of Special items are included in Table 5 (Reconciliation of Net Earnings (Loss) to Net Earnings Excluding Special Items and Non-GAAP Diluted Earnings Per Share) of the second quarter 2024 earnings release dated August 1, 2024, which can be found on the Company's investor relations website as noted above."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 1077.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue of $1,077 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "34.599998",
+    "return_10d_pct": "-9.7688",
+    "return_20d_pct": "-9.1040",
+    "return_30d_pct": "-4.4798",
+    "return_60d_pct": "-13.9306",
+    "return_90d_pct": "-15.4913"
+  },
+  "text_stats": {
+    "primary_text_len": 4059,
+    "exhibit_text_len": 74905,
+    "combined_text_len": 78966,
+    "semantic_text_len": 76091,
+    "table_count": 1,
+    "semantic_parse_status": "sec_parser"
+  }
+}

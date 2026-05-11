@@ -1,0 +1,51 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "second quarter ended June 30, 2022",
+    "period_end_date": "June 30, 2022"
+  },
+  "reported_results": {
+    "revenue_millions": 243.236,
+    "revenue_yoy_pct": 6.463,
+    "revenue_qoq_pct": 20.9895,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "occurs upon transfer of control to our customers, which depending on the contract terms is when the system is shipped and delivered to our customers, when the system is shipped and delivered and is physically ready for startup and commissioning, or when the system is shipped and delivered and is turned on and producing power.",
+    "wave_signal": "Commenting on second quarter results, KR Sridhar, founder, chairman, and CEO of Bloom Energy said, “Bloom Energy is continuing to innovate, execute and deliver value in a multitude of energy transformation market segments.",
+    "margin_signal": "and Loss Statements ($000)Q222Q122Q221Revenue243,236201,039228,470Cost of Revenue245,206173,102191,126Gross Profit (loss)(1,970)27,93737,344Gross Margin %(0.",
+    "risk_signal": "”Summary of Key Financial Metrics Preliminary Summary GAAP Profit and Loss Statements ($000)Q222Q122Q221Revenue243,236201,039228,470Cost of Revenue245,206173,102191,126Gross Profit (loss)(1,970)27,93737,344Gross Margin %(0.",
+    "customer_signal": "occurs upon transfer of control to our customers, which depending on the contract terms is when the system is shipped and delivered to our customers, when the system is shipped and delivered and is physically ready for startup and commissioning, or when the system is shipped and delivered and is turned on and producing power."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | 243236 | 243236 | 243236 | 201039 | 201039 | 201039 | 228470 | 228470 | 228470"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | 243236 | 243236 | 243236 | 201039 | 201039 | 201039 | 228470 | 228470 | 228470"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | 243236 | 243236 | 243236 | 201039 | 201039 | 201039 | 228470 | 228470 | 228470"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

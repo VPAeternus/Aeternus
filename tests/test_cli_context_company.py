@@ -27,8 +27,7 @@ def test_context_company_json_returns_backend_payload():
         "akg": {"found": True, "display_name": "Apple Inc"},
         "analysis": {"found": False},
         "dealflow": {
-            "research_queue": {"found": False},
-            "shortlist": {"found": False},
+            "scout_handoff": {"found": False},
         },
         "portfolio": {"found": False},
         "x_feed": {"found": False},

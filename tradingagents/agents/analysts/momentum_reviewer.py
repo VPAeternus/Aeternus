@@ -164,7 +164,6 @@ def create_momentum_reviewer(deep_thinking_llm):
             )
             sections.append(
                 f"## Deal Flow Signals\n"
-                f"Deal Flow Score: {dealflow_ctx.get('deal_flow_score', 'N/A')}/100\n"
                 f"Subscores:\n{sub_lines}\n"
                 f"Why Now: {dealflow_ctx.get('why_now', 'N/A')}"
             )

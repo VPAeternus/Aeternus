@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MBC",
+    "cik": "0001941365",
+    "event_date": "2024-08-06",
+    "event_accession": "0001941365-24-000094",
+    "primary_8k_doc": "mbc-20240806.htm",
+    "exhibit_docs": [
+      "ex99-1xq22024pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MBC_000194136524000094_mbc-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MBC_000194136524000094_ex99-1xq22024pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MBC",
+    "cik": "0001941365",
+    "entity_name": "MasterBrand, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "676700000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-26",
+    "net_income_value": "35000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-26",
+    "assets_value": "2381700000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-42700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-26",
+    "investing_cash_flow_value": "-2700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-26",
+    "operating_cash_flow_value": "62100000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-26",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.051722",
+    "operating_cash_flow_to_revenue": "0.091769",
+    "assets_to_revenue": "3.51958",
+    "financing_cash_flow_to_revenue": "-0.0631",
+    "investing_cash_flow_to_revenue": "-0.00399"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales decreased 2.",
+      "Net sales were $676.",
+      "Net income was $45.",
+      "net income margin of 6.",
+      "earnings per share was $0.",
+      "earnings per share 1 was $0."
+    ],
+    "guidance_evidence": [
+      "outlook following the closing of Supreme Cabinetry Brands acquisition BEACHWOOD, Ohio.",
+      "Outlook For full year 2024, the Company has increased its outlook following the closing of the Supreme Cabinetry Brands acquisition.",
+      "outlook.",
+      "expects to deliver $28 million of annual run-rate cost synergies by the end of year three, and anticipates commercial synergies across the combined Company’s complementary channels and product lines.",
+      "expected to be accretive to adjusted EBITDA margin 1 and to adjusted diluted earnings per share 1 in 2024, exclusive of acquisition-related charges.",
+      "expects organic net sales performance to be in line to slightly better than the underlying market demand, as new products and channel specific offerings gain traction."
+    ],
+    "wave_or_demand_evidence": [
+      "demand, as new products and channel specific offerings gain traction.",
+      "demand remained mixed,” said Andi Simon, Executive Vice President and Chief Financial Officer.",
+      "demand will trend towards the lower end of our original range for the legacy MasterBrand business.",
+      "customers and other persons to the Acquisition; and ◦ Other statements contained in this Press Release regarding items that are not historical facts or that involve predictions.",
+      "aid Dave Banyard, President and Chief Executive Officer.",
+      "ain the result of our associates’ dedication to The MasterBrand Way and their execution on our strategy."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory build release.",
+      "charges in the second quarter of 2024, due to transaction costs, were $4.",
+      "charges.",
+      "charges, which are excluded from adjusted EBITDA, adjusted EBITDA margin, adjusted net income, adjusted net income margin, and adjusted diluted EPS.",
+      "delays in obtaining, anticipated benefits of the acquisition of Supreme Cabinetry Brands, Inc.",
+      "charges 2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 676.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "15.410000",
+    "return_10d_pct": "2.0766",
+    "return_20d_pct": "1.2330",
+    "return_30d_pct": "2.5957",
+    "return_60d_pct": "14.4711",
+    "return_90d_pct": "19.2083"
+  },
+  "text_stats": {
+    "primary_text_len": 3551,
+    "exhibit_text_len": 29174,
+    "combined_text_len": 32727
+  }
+}

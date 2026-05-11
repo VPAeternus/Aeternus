@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RXO",
+    "cik": "0001929561",
+    "event_date": "2024-08-07",
+    "event_accession": "0001929561-24-000098",
+    "primary_8k_doc": "rxo-20240807.htm",
+    "exhibit_docs": [
+      "earningspresentation-q22.htm",
+      "rxo2024q2pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RXO_000192956124000098_rxo-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RXO_000192956124000098_earningspresentation-q22.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RXO_000192956124000098_rxo2024q2pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RXO",
+    "cik": "0001929561",
+    "entity_name": "RXO, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1010000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "0",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1825000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-8000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-12000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "42000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.0",
+    "operating_cash_flow_to_revenue": "0.041584",
+    "assets_to_revenue": "1.806931",
+    "financing_cash_flow_to_revenue": "-0.007921",
+    "investing_cash_flow_to_revenue": "-0.011881"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $930 million for the second quarter, compared to $963 million in the second quarter of 2023.",
+      "net income and adjusted diluted earnings per share (“adjusted diluted EPS”).",
+      "net income and adjusted diluted EPS include adjustments for transaction and integration costs, as well as restructuring costs and other adjustments as set forth in the attached tables.",
+      "Gross margin $ and % 1 See the “Non-GAAP financial measures” section.",
+      "gross margin of 14.",
+      "Gross margin 23."
+    ],
+    "guidance_evidence": [
+      "outlook and 2024 assumptions.",
+      "outlook,\" \"target,” or the negative of these terms or other comparable terms.",
+      "Outlook RXO expects third-quarter 2024 companywide adjusted EBITDA to be between $28 million and $34 million.",
+      "outlook and acquisition of Coyote Logistics.",
+      "forecast,\" \"goal,\" \"outlook,\" \"target,” or the negative of these terms or other comparable terms.",
+      "expected future developments, as well as other factors we believe are appropriate in the circumstances."
+    ],
+    "wave_or_demand_evidence": [
+      "customer and carrier representatives.",
+      "ained in this presentation to the most directly comparable measure under GAAP, which are set forth in the financial tables attached to this presentation.",
+      "aid for transaction, integration, restructuring and other costs.",
+      "ailing twelve months adjusted EBITDA.",
+      "ailable without unreasonable effort due to the variability and complexity of the reconciling items described above that we exclude from this non-GAAP measure.",
+      "ain assumptions and analyses made by us in light of our experience and our perception of historical trends, current conditions and expected future developments, as well as other factors we believe are appropriate in the circumstances."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties and assumptions that may cause actual results, levels of activity, performance, or achievements to be materially different from any future results, levels of activity, performance or achievements expressed or implied by such forward-looking statements.",
+      "decline of 2% y/y • Solid profitability; gross margin of 14.",
+      "loss).",
+      "declined low-single digit % y/y when adjusted for length of haul, mix and change in fuel prices – Low-single digit % decline improved vs.",
+      "loss) 2 4$ 10$ -$ 23$ Adjusted diluted earnings (loss) per share 2 0.",
+      "loss) to adjusted net income (loss) and adjusted diluted earnings (loss) per share Six Months Ended June 30,Three Months Ended June 30, 19 1 See the “Non-GAAP financial measures” section."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 930,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "29.660000",
+    "return_10d_pct": "-1.1463",
+    "return_20d_pct": "-3.6750",
+    "return_30d_pct": "-8.1929",
+    "return_60d_pct": "-8.2940",
+    "return_90d_pct": "7.5523"
+  },
+  "text_stats": {
+    "primary_text_len": 3853,
+    "exhibit_text_len": 43542,
+    "combined_text_len": 47397
+  }
+}

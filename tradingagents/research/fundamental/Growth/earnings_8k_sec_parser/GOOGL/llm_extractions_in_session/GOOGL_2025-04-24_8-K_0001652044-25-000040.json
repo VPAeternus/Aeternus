@@ -1,0 +1,47 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the quarter ended March 31, 2025",
+    "period_end_date": "March 31, 2025"
+  },
+  "reported_results": {
+    "revenue_millions": 90234.0,
+    "revenue_yoy_pct": 12.0,
+    "revenue_qoq_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "2 billion reflecting robust momentum across the business, with Google Search & other, YouTube ads, Google subscriptions, platforms, and devices, and Google Cloud each delivering double-digit growth rates.",
+    "wave_signal": "1Alphabet Announces First Quarter 2025 ResultsMOUNTAIN VIEW, Calif.",
+    "margin_signal": "•Total operating income increased 20% and operating margin expanded by 2 percentage points to 34%.",
+    "risk_signal": "2,177 Other Bets(1,020)$(1,226)Alphabet-level activities(1)(2,305)$(3,027)Total income from operations$25,472 $30,606 (1)In addition to the costs included in Alphabet-level activities, hedging gains (losses) related to revenue were $72 million and $260 million for the three months ended March 31, 2024 and 2025, respectively.",
+    "customer_signal": "•Google Cloud includes infrastructure and platform services, applications, and other services for enterprise customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenues | Revenues | Revenues | $ | 80539 | | | | | $ | 90234 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenues | Revenues | Revenues | $ | 80539 | | | | | $ | 90234 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

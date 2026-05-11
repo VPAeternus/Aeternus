@@ -103,7 +103,7 @@ def build_portfolio_plan(
     enforce_whole_shares: bool = False,
     ledger_base_dir: Optional[Path] = None,
 ) -> Dict[str, Any]:
-    """Create deterministic order intents from analyze-batch outcomes."""
+    """Create deterministic order intents from post-fundamental outcomes."""
     run_date = str(batch_summary.get("date", ""))
     run_id = str(batch_summary.get("run_id", ""))
     plan_id = str(uuid.uuid4())
@@ -3039,5 +3039,4 @@ def _count_rejected_reasons(rows: List[Dict[str, Any]]) -> Dict[str, int]:
         reason = str(row.get("reason", "UNKNOWN")).upper()
         counts[reason] = counts.get(reason, 0) + 1
     return counts
-
 

@@ -1,0 +1,1619 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SAIA",
+    "cik": "1177702",
+    "event_date": "2024-07-26",
+    "event_accession": "0000950170-24-086727",
+    "primary_8k_doc": "saia-20240726.htm",
+    "exhibit_docs": [
+      "saia-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SAIA_000095017024086727_saia-20240726.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SAIA_000095017024086727_saia-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SAIA",
+    "cik": "1177702",
+    "entity_name": "SAIA, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "660535000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-26",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "76097000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-26",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2583565000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-26",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-12180000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-26",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-128055000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-26",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "119270000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-26",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.115205",
+    "operating_cash_flow_to_revenue": "0.180566",
+    "assets_to_revenue": "3.911322",
+    "financing_cash_flow_to_revenue": "-0.01844",
+    "investing_cash_flow_to_revenue": "-0.193866"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue was $823.",
+      "earnings per share for the quarter were $3.",
+      "Operating income was $137.",
+      "earnings per share $3."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "customer acceptance of these facilities, as well as the 23 other terminals opened in the last three years.",
+      "customers in new markets.",
+      "customer service and quality create long-term value for customers, and a value creating opportunity for Saia shareholders,” concluded Holzgrefe.",
+      "customers and develop relationships with new customers in new and established markets.",
+      "customers clearly see the value in our service and support our growth initiatives.",
+      "customers a wide range of less-than-truckload, non-asset truckload, expedited and logistics services."
+    ],
+    "warning_or_risk_evidence": [
+      "charge revenue, increased 8.",
+      "charge revenue, increased 1.",
+      "charge $21.",
+      "charge $290.",
+      "uncertain, we believe our operating trends support the continued execution of our long-term growth strategy.",
+      "uncertainties and assumptions that could cause actual results to differ materially from those described in any forward-looking statements."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "saia-ex99_1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Saia Reports Second Quarter Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "JOHNS CREEK, GA – July 26, 2024 – Saia, Inc. (Nasdaq: SAIA), a leading transportation provider offering national less-than-truckload (LTL), non-asset truckload, expedited and logistics services, today reported second quarter 2024 financial results. Diluted earnings per share for the quarter were $3.83 compared to $3.42 in the second quarter of 2023.Highlights from the second quarter operating results were as follows:"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Second Quarter 2024 Compared to Second Quarter 2023 Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Revenue was $823.2 million, an 18.5% increase •Operating income was $137.6 million, a 14.4% increase•Operating ratio of 83.3% compared to 82.7%•LTL shipments per workday increased 18.1%•LTL tonnage per workday increased 9.7%•LTL revenue per hundredweight, excluding fuel surcharge revenue, increased 8.7%•LTL revenue per shipment, excluding fuel surcharge revenue, increased 1.0%Saia President and CEO, Fritz Holzgrefe, commented on the quarter stating, “During the quarter, we successfully opened six new terminals and relocated two others in new and established markets, while maintaining our high service standards. Successfully opening and relocating terminals required investments in employee hiring, training and other costs that come in advance of opening and revenue generation. We are pleased to see the continued customer acceptance of these facilities, as well as the 23 other terminals opened in the last three years. We are excited about the opening of our new Stockton, California and Davenport, Iowa terminals earlier this week, and as we move through the rest of 2024, we plan to continue executing on our opening timeline, with the potential to open an additional 10 to 13 new terminals this year.” “Disruptions in the LTL market that commenced in 2023 and our continued long-term investments in our network have resulted in share gains, including in some markets that we traditionally have not participated in, introducing both new challenges and opportunities. Most notably, the mix of business that we are handling post-disruption is more retail in nature and tends to be lighter weighted. This, coupled with a softer macroeconomic environment, has been a drag on revenue per bill and on our operating ratio. Our growth and expansion efforts over the past several years have positioned us to grow market share and Saia, Inc. Second Quarter 2024 ResultsPage 2 provide service for our customers in new markets. We expect over the coming quarters to maintain high service levels as we continue to develop these markets, and we have doubled down on our quality focus by increasing our training investment in our new team members. We know that customer service and quality create long-term value for customers, and a value creating opportunity for Saia shareholders,” concluded Holzgrefe. Executive Vice President and CFO, Matt Batteh, noted that, “While the freight backdrop and macroeconomic conditions remain uncertain, we believe our operating trends support the continued execution of our long-term growth strategy. With each new terminal opening, we better position ourselves to provide further value to our existing customers and develop relationships with new customers in new and established markets. We believe our performance over the last several years has positioned us for this record investment in the business, and our customers clearly see the value in our service and support our growth initiatives.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Financial Position and Capital Expenditures"
+    },
+    {
+      "type": "TextElement",
+      "text": "We ended the second quarter of 2024 with $11.2 million of cash on hand and total debt of $176.7 million, which compares to $235.0 million of cash on hand and total debt of $21.4 million at June 30, 2023.Net capital expenditures were $681.3 million during the first six months of 2024, compared to $226.5 million in net capital expenditures during the first six months of 2023. Capital expenditures through the second quarter include $235.7 million to secure properties as part of the Yellow Corporation auction process. In 2024, we anticipate that net capital expenditures will be approximately $1 billion, subject to ongoing evaluation of market conditions."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call"
+    },
+    {
+      "type": "TextElement",
+      "text": "Management will hold a conference call to discuss quarterly results today at 10:00 a.m. Eastern Time. To participate in the call, please dial 1-800-715-9871 or 1-646-307-1963 referencing conference ID #4962445. Callers should dial in five to ten minutes in advance of the conference call. This call will be webcast live via the Company website at www.saia.com/about-us/investor-relations/financial-releases. A replay of the call will be offered two hours after the completion of the call through August 25, 2024 at 11:59 P.M. Eastern Time. The replay will be available by dialing 1-800-770-2030 or 1-609-800-9909 referencing conference ID #4962445.Saia, Inc. (NASDAQ: SAIA) offers customers a wide range of less-than-truckload, non-asset truckload, expedited and logistics services. With headquarters in Georgia, Saia LTL Freight operates 202 terminals with national service. For more information on Saia, Inc. visit the Investor Relations section at www.saia.com/about-us/investor-relations.Saia, Inc. Second Quarter 2024 ResultsPage 3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Cautionary Note Regarding Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Securities and Exchange Commission encourages companies to disclose forward-looking information so that investors can better understand the future prospects of a company and make informed investment decisions. This news release may contain these types of statements, which are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.Words such as “anticipate,” “estimate,” “expect,” “project,” “intend,” “may,” “plan,” “predict,” “believe,” “should,” \"potential\" and similar words or expressions are intended to identify forward-looking statements. Investors should not place undue reliance on forward-looking statements and the Company undertakes no obligation to publicly update or revise any forward-looking statements, except as required by law. All forward-looking statements reflect the present expectation of future events of our management as of the date of this news release and are subject to a number of important factors, risks, uncertainties and assumptions that could cause actual results to differ materially from those described in any forward-looking statements. These factors, risks, uncertainties and assumptions include, but are not limited to, (1) general economic conditions including downturns or inflationary periods in the business cycle; (2) operation within a highly competitive industry and the adverse impact from downward pricing pressures, including in connection with fuel surcharges, and other factors; (3) industry-wide external factors largely out of our control; (4) cost and availability of qualified drivers, dock workers, mechanics and other employees, purchased transportation and fuel; (5) inflationary increases in operating expenses and corresponding reductions of profitability; (6) cost and availability of diesel fuel and fuel surcharges; (7) cost and availability of insurance coverage and claims expenses and other expense volatility, including for personal injury, cargo loss and damage, workers’ compensation, employment and group health plan claims; (8) failure to successfully execute the strategy to expand our service geography; (9) unexpected liabilities resulting from the acquisition of real estate assets; (10) costs and liabilities from the disruption in or failure of our technology or equipment essential to our operations, including as a result of cyber incidents, security breaches, malware or ransomware attacks; (11) failure to keep pace with technological developments; (12) liabilities and costs arising from the use of artificial intelligence; (13) labor relations, including the adverse impact should a portion of our workforce become unionized; (14) cost, availability and resale value of real property and revenue equipment; (15) supply chain disruption and delays on new equipment delivery; (16) capacity and highway infrastructure constraints; (17) risks arising from international business operations and relationships; (18) seasonal factors, harsh weather and disasters caused by climate change; (19) economic declines in the geographic regions or industries in which our customers operate; (20) the creditworthiness of our customers and their ability to pay for services; (21) our need for capital and uncertainty of the credit markets; (22) the possibility of defaults under our debt agreements, including violation of financial covenants; (23) inaccuracies and changes to estimates and assumptions used in preparing our financial statements; (24) failure to operate and grow acquired businesses in a manner that support the value allocated to acquired businesses; (25) dependence on key employees; (26) employee turnover from changes to compensation and benefits or market factors; (27) increased costs of healthcare benefits; (28) damage to our reputation from adverse publicity, including from the use of or impact from social media; (29) failure to make future acquisitions or to achieve acquisition synergies; (30) the effect of litigation and class action lawsuits arising from the operation of our business, including the possibility of claims or judgments in excess of our insurance coverages or that result in increases in the cost of insurance coverage or that preclude us from obtaining adequate insurance coverage in the future; (31) the potential of higher corporate taxes and new regulations, including with respect to climate change, employment and labor law, healthcare and securities regulation; (32) the effect of governmental regulations, including hours of service and licensing compliance for drivers, engine Saia, Inc. Second Quarter 2024 ResultsPage 4 emissions, the Compliance, Safety, Accountability (CSA) initiative, regulations of the Food and Drug Administration and Homeland Security, and healthcare and environmental regulations; (33) unforeseen costs from new and existing data privacy laws; (34) costs from new and existing laws regarding how to classify workers; (35) changes in accounting and financial standards or practices; (36) widespread outbreak of an illness or any other communicable disease; (37) international conflicts and geopolitical instability; (38) increasing investor and customer sensitivity to social and sustainability issues, including climate change; (39) provisions in our governing documents and Delaware law that may have anti-takeover effects; (40) issuances of equity that would dilute stock ownership; (41) weakness, disruption or loss of confidence in financial or credit markets; and (42) other financial, operational and legal risks and uncertainties detailed from time to time in the Company’s SEC filings.As a result of these and other factors, no assurance can be given as to our future results and achievements. Accordingly, a forward-looking statement is neither a prediction nor a guarantee of future events or circumstances and those future events or circumstances may not occur. You should not place undue reliance on the forward-looking statements, which speak only as of the date of this news release. We are under no obligation, and we expressly disclaim any obligation, to update or alter any forward-looking statements, whether as a result of new information, future events or otherwise, except as otherwise required by law."
+    },
+    {
+      "type": "EmptyElement",
+      "text": "# # #"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONTACT: Saia, Inc."
+    },
+    {
+      "type": "TextElement",
+      "text": "Matthew BattehExecutive Vice President and Chief Financial OfficerInvestors@saia.com"
+    },
+    {
+      "type": "TableElement",
+      "text": "Saia, Inc. and Subsidiaries Condensed Consolidated Balance Sheets (Amounts in thousands) (Unaudited) June 30, 2024 December 31, 2023 Assets Current Assets: Cash and cash equivalents $11,169 $296,215 Accounts receivable, net 375,868 311,742 Prepaid expenses and other 59,024 40,737 Total current assets 446,061 648,694 Property and Equipment: Cost 3,535,457 2,881,800 Less: accumulated depreciation 1,194,231 1,118,492 Net property and equipment 2,341,226 1,763,308 Operating Lease Right-of-Use Assets 127,441 118,734 Other Assets 42,394 52,829 Total assets $2,957,122 $2,583,565 Liabilities and Stockholders' Equity Current Liabilities: Accounts payable $155,590 $141,877 Wages, vacation and employees' benefits 62,614 75,514 Other current liabilities 75,985 68,735 Current portion of long-term debt 7,577 10,173 Current portion of operating lease liability 26,062 25,757 Total current liabilities 327,828 322,056 Other Liabilities: Long-term debt, less current portion 169,098 6,315 Operating lease liability, less current portion 97,480 96,462 Deferred income taxes 159,925 155,841 Claims, insurance and other 66,705 61,397 Total other liabilities 493,208 320,015 Stockholders' Equity: Common stock 27 27 Additional paid-in capital 287,611 285,092 Deferred compensation trust (6,820) (5,679) Retained earnings 1,855,268 1,662,054 Total stockholders' equity 2,136,086 1,941,494 Total liabilities and stockholders' equity $2,957,122 $2,583,565"
+    },
+    {
+      "type": "TableElement",
+      "text": "Saia, Inc. and Subsidiaries Consolidated Statements of Operations For the Quarters and Six Months Ended June 30, 2024 and 2023 (Amounts in thousands, except per share data) (Unaudited) Second Quarter Six Months 2024 2023 2024 2023 Operating Revenue $823,244 $694,622 $1,578,019 $1,355,157 Operating Expenses: Salaries, wages and employees' benefits 372,240 311,888 713,953 610,844 Purchased transportation 61,047 49,771 113,554 96,498 Fuel, operating expenses and supplies 160,877 133,490 317,202 275,115 Operating taxes and licenses 19,693 17,457 39,459 34,522 Claims and insurance 18,828 16,956 36,291 31,015 Depreciation and amortization 52,536 44,658 101,385 87,538 Other operating, net 430 147 670 227 Total operating expenses 685,651 574,367 1,322,514 1,135,759 Operating Income 137,593 120,255 255,505 219,398 Nonoperating (Income) Expenses: Interest expense 2,412 458 2,954 1,146 Interest income (110) (487) (865) (627) Other, net (326) (990) (1,114) (1,493) Nonoperating (income) expenses, net 1,976 (1,019) 975 (974) Income Before Income Taxes 135,617 121,274 254,530 220,372 Income Tax Provision 33,098 29,955 61,316 52,956 Net Income $102,519 $91,319 $193,214 $167,416 Weighted average common shares outstanding - basic 26,691 26,634 26,682 26,617 Weighted average common shares outstanding - diluted 26,802 26,736 26,798 26,722 Basic earnings per share $3.84 $3.43 $7.24 $6.29 Diluted earnings per share $3.83 $3.42 $7.21 $6.27"
+    },
+    {
+      "type": "TableElement",
+      "text": "Saia, Inc. and Subsidiaries Condensed Consolidated Statements of Cash Flows For the six months ended June 30, 2024 and 2023 (Amounts in thousands) (Unaudited) Six Months 2024 2023 Operating Activities: Net cash provided by operating activities $237,242 $291,405 Net cash provided by operating activities 237,242 291,405 Investing Activities: Acquisition of property and equipment (681,919) (227,022) Proceeds from disposal of property and equipment 643 529 Other 4,999 – Net cash used in investing activities (676,277) (226,493) Financing Activities: Borrowing of revolving credit facility, net 67,000 – Borrowing of private shelf agreement 100,000 – Proceeds from stock option exercises 1,993 2,250 Shares withheld for taxes (7,968) (8,928) Other financing activity (7,036) (10,627) Net cash provided by (used in) financing activities 153,989 (17,305) Net (Decrease) Increase in Cash and Cash Equivalents (285,046) 47,607 Cash and Cash Equivalents, beginning of period 296,215 187,390 Cash and Cash Equivalents, end of period $11,169 $234,997"
+    },
+    {
+      "type": "TableElement",
+      "text": "Saia, Inc. and Subsidiaries Financial Information For the Quarters Ended June 30, 2024 and 2023 (Unaudited) Second Quarter Second Quarter % Amount/Workday % 2024 2023 Change 2024 2023 Change Workdays 64 64 Operating ratio 83.3% 82.7% LTL tonnage (1) 1,559 1,421 9.7 24.36 22.20 9.7 LTL shipments (1) 2,327 1,970 18.1 36.36 30.78 18.1 LTL revenue/cwt. $25.75 $23.85 8.0 LTL revenue/cwt., excluding fuel surcharge $21.69 $19.96 8.7 LTL revenue/shipment $345.07 $344.08 0.3 LTL revenue/shipment, excluding fuel surcharge $290.72 $287.90 1.0 LTL pounds/shipment 1,340 1,443 (7.1) LTL length of haul (2) 888 892 (0.4) (1) In thousands. (2) In miles. Note: LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy."
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        49,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries"
+        ],
+        [
+          "Condensed Consolidated Balance Sheets",
+          "Condensed Consolidated Balance Sheets",
+          "Condensed Consolidated Balance Sheets",
+          "Condensed Consolidated Balance Sheets",
+          "Condensed Consolidated Balance Sheets"
+        ],
+        [
+          "(Amounts in thousands)",
+          "(Amounts in thousands)",
+          "(Amounts in thousands)",
+          "(Amounts in thousands)",
+          "(Amounts in thousands)"
+        ],
+        [
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "June 30, 2024",
+          "",
+          "December 31, 2023"
+        ],
+        [
+          "Assets",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current Assets:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash and cash equivalents",
+          "",
+          "$11,169",
+          "",
+          "$296,215"
+        ],
+        [
+          "Accounts receivable, net",
+          "",
+          "375868",
+          "",
+          "311742"
+        ],
+        [
+          "Prepaid expenses and other",
+          "",
+          "59024",
+          "",
+          "40737"
+        ],
+        [
+          "Total current assets",
+          "",
+          "446061",
+          "",
+          "648694"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Property and Equipment:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cost",
+          "",
+          "3535457",
+          "",
+          "2881800"
+        ],
+        [
+          "Less: accumulated depreciation",
+          "",
+          "1194231",
+          "",
+          "1118492"
+        ],
+        [
+          "Net property and equipment",
+          "",
+          "2341226",
+          "",
+          "1763308"
+        ],
+        [
+          "Operating Lease Right-of-Use Assets",
+          "",
+          "127441",
+          "",
+          "118734"
+        ],
+        [
+          "Other Assets",
+          "",
+          "42394",
+          "",
+          "52829"
+        ],
+        [
+          "Total assets",
+          "",
+          "$2,957,122",
+          "",
+          "$2,583,565"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Liabilities and Stockholders' Equity",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current Liabilities:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Accounts payable",
+          "",
+          "$155,590",
+          "",
+          "$141,877"
+        ],
+        [
+          "Wages, vacation and employees' benefits",
+          "",
+          "62614",
+          "",
+          "75514"
+        ],
+        [
+          "Other current liabilities",
+          "",
+          "75985",
+          "",
+          "68735"
+        ],
+        [
+          "Current portion of long-term debt",
+          "",
+          "7577",
+          "",
+          "10173"
+        ],
+        [
+          "Current portion of operating lease liability",
+          "",
+          "26062",
+          "",
+          "25757"
+        ],
+        [
+          "Total current liabilities",
+          "",
+          "327828",
+          "",
+          "322056"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other Liabilities:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Long-term debt, less current portion",
+          "",
+          "169098",
+          "",
+          "6315"
+        ],
+        [
+          "Operating lease liability, less current portion",
+          "",
+          "97480",
+          "",
+          "96462"
+        ],
+        [
+          "Deferred income taxes",
+          "",
+          "159925",
+          "",
+          "155841"
+        ],
+        [
+          "Claims, insurance and other",
+          "",
+          "66705",
+          "",
+          "61397"
+        ],
+        [
+          "Total other liabilities",
+          "",
+          "493208",
+          "",
+          "320015"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        42,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries"
+        ],
+        [
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations",
+          "Consolidated Statements of Operations"
+        ],
+        [
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023",
+          "For the Quarters and Six Months Ended June 30, 2024 and 2023"
+        ],
+        [
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)",
+          "(Amounts in thousands, except per share data)"
+        ],
+        [
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "",
+          "Six Months",
+          "Six Months",
+          "Six Months"
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "2024",
+          "",
+          "2023"
+        ],
+        [
+          "Operating Revenue",
+          "",
+          "$823,244",
+          "",
+          "$694,622",
+          "",
+          "$1,578,019",
+          "",
+          "$1,355,157"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating Expenses:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Salaries, wages and employees' benefits",
+          "",
+          "372240",
+          "",
+          "311888",
+          "",
+          "713953",
+          "",
+          "610844"
+        ],
+        [
+          "Purchased transportation",
+          "",
+          "61047",
+          "",
+          "49771",
+          "",
+          "113554",
+          "",
+          "96498"
+        ],
+        [
+          "Fuel, operating expenses and supplies",
+          "",
+          "160877",
+          "",
+          "133490",
+          "",
+          "317202",
+          "",
+          "275115"
+        ],
+        [
+          "Operating taxes and licenses",
+          "",
+          "19693",
+          "",
+          "17457",
+          "",
+          "39459",
+          "",
+          "34522"
+        ],
+        [
+          "Claims and insurance",
+          "",
+          "18828",
+          "",
+          "16956",
+          "",
+          "36291",
+          "",
+          "31015"
+        ],
+        [
+          "Depreciation and amortization",
+          "",
+          "52536",
+          "",
+          "44658",
+          "",
+          "101385",
+          "",
+          "87538"
+        ],
+        [
+          "Other operating, net",
+          "",
+          "430",
+          "",
+          "147",
+          "",
+          "670",
+          "",
+          "227"
+        ],
+        [
+          "Total operating expenses",
+          "",
+          "685651",
+          "",
+          "574367",
+          "",
+          "1322514",
+          "",
+          "1135759"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating Income",
+          "",
+          "137593",
+          "",
+          "120255",
+          "",
+          "255505",
+          "",
+          "219398"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Nonoperating (Income) Expenses:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Interest expense",
+          "",
+          "2412",
+          "",
+          "458",
+          "",
+          "2954",
+          "",
+          "1146"
+        ],
+        [
+          "Interest income",
+          "",
+          "(110)",
+          "",
+          "(487)",
+          "",
+          "(865)",
+          "",
+          "(627)"
+        ],
+        [
+          "Other, net",
+          "",
+          "(326)",
+          "",
+          "(990)",
+          "",
+          "(1,114)",
+          "",
+          "(1,493)"
+        ],
+        [
+          "Nonoperating (income) expenses, net",
+          "",
+          "1976",
+          "",
+          "(1,019)",
+          "",
+          "975",
+          "",
+          "(974)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Income Before Income Taxes",
+          "",
+          "135617",
+          "",
+          "121274",
+          "",
+          "254530",
+          "",
+          "220372"
+        ],
+        [
+          "Income Tax Provision",
+          "",
+          "33098",
+          "",
+          "29955",
+          "",
+          "61316",
+          "",
+          "52956"
+        ],
+        [
+          "Net Income",
+          "",
+          "$102,519",
+          "",
+          "$91,319",
+          "",
+          "$193,214",
+          "",
+          "$167,416"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Weighted average common shares outstanding - basic",
+          "",
+          "26691",
+          "",
+          "26634",
+          "",
+          "26682",
+          "",
+          "26617"
+        ],
+        [
+          "Weighted average common shares outstanding - diluted",
+          "",
+          "26802",
+          "",
+          "26736",
+          "",
+          "26798",
+          "",
+          "26722"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic earnings per share",
+          "",
+          "$3.84",
+          "",
+          "$3.43",
+          "",
+          "$7.24",
+          "",
+          "$6.29"
+        ],
+        [
+          "Diluted earnings per share",
+          "",
+          "$3.83",
+          "",
+          "$3.42",
+          "",
+          "$7.21",
+          "",
+          "$6.27"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        29,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries"
+        ],
+        [
+          "Condensed Consolidated Statements of Cash Flows",
+          "Condensed Consolidated Statements of Cash Flows",
+          "Condensed Consolidated Statements of Cash Flows",
+          "Condensed Consolidated Statements of Cash Flows",
+          "Condensed Consolidated Statements of Cash Flows"
+        ],
+        [
+          "For the six months ended June 30, 2024 and 2023",
+          "For the six months ended June 30, 2024 and 2023",
+          "For the six months ended June 30, 2024 and 2023",
+          "For the six months ended June 30, 2024 and 2023",
+          "For the six months ended June 30, 2024 and 2023"
+        ],
+        [
+          "(Amounts in thousands)",
+          "(Amounts in thousands)",
+          "(Amounts in thousands)",
+          "(Amounts in thousands)",
+          "(Amounts in thousands)"
+        ],
+        [
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)"
+        ],
+        [
+          "",
+          "",
+          "Six Months",
+          "Six Months",
+          "Six Months"
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "",
+          "2023"
+        ],
+        [
+          "Operating Activities:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net cash provided by operating activities",
+          "",
+          "$237,242",
+          "",
+          "$291,405"
+        ],
+        [
+          "Net cash provided by operating activities",
+          "",
+          "237242",
+          "",
+          "291405"
+        ],
+        [
+          "Investing Activities:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Acquisition of property and equipment",
+          "",
+          "(681,919)",
+          "",
+          "(227,022)"
+        ],
+        [
+          "Proceeds from disposal of property and equipment",
+          "",
+          "643",
+          "",
+          "529"
+        ],
+        [
+          "Other",
+          "",
+          "4999",
+          "",
+          "–"
+        ],
+        [
+          "Net cash used in investing activities",
+          "",
+          "(676,277)",
+          "",
+          "(226,493)"
+        ],
+        [
+          "Financing Activities:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Borrowing of revolving credit facility, net",
+          "",
+          "67000",
+          "",
+          "–"
+        ],
+        [
+          "Borrowing of private shelf agreement",
+          "",
+          "100000",
+          "",
+          "–"
+        ],
+        [
+          "Proceeds from stock option exercises",
+          "",
+          "1993",
+          "",
+          "2250"
+        ],
+        [
+          "Shares withheld for taxes",
+          "",
+          "(7,968)",
+          "",
+          "(8,928)"
+        ],
+        [
+          "Other financing activity",
+          "",
+          "(7,036)",
+          "",
+          "(10,627)"
+        ],
+        [
+          "Net cash provided by (used in) financing activities",
+          "",
+          "153989",
+          "",
+          "(17,305)"
+        ],
+        [
+          "Net (Decrease) Increase in Cash and Cash Equivalents",
+          "",
+          "(285,046)",
+          "",
+          "47607"
+        ],
+        [
+          "Cash and Cash Equivalents, beginning of period",
+          "",
+          "296215",
+          "",
+          "187390"
+        ],
+        [
+          "Cash and Cash Equivalents, end of period",
+          "",
+          "$11,169",
+          "",
+          "$234,997"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        25,
+        13
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries",
+          "Saia, Inc. and Subsidiaries"
+        ],
+        [
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information",
+          "Financial Information"
+        ],
+        [
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023",
+          "For the Quarters Ended June 30, 2024 and 2023"
+        ],
+        [
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)",
+          "(Unaudited)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Second Quarter",
+          "Second Quarter",
+          "Second Quarter",
+          "",
+          "%",
+          "",
+          "Amount/Workday",
+          "Amount/Workday",
+          "Amount/Workday",
+          "",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "Change",
+          "",
+          "2024",
+          "",
+          "2023",
+          "",
+          "Change"
+        ],
+        [
+          "Workdays",
+          "Workdays",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "64",
+          "",
+          "64",
+          "",
+          ""
+        ],
+        [
+          "Operating ratio",
+          "Operating ratio",
+          "83.3%",
+          "",
+          "82.7%",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LTL tonnage (1)",
+          "LTL tonnage (1)",
+          "1559",
+          "",
+          "1421",
+          "",
+          "9.7",
+          "",
+          "24.36",
+          "",
+          "22.20",
+          "",
+          "9.7"
+        ],
+        [
+          "LTL shipments (1)",
+          "LTL shipments (1)",
+          "2327",
+          "",
+          "1970",
+          "",
+          "18.1",
+          "",
+          "36.36",
+          "",
+          "30.78",
+          "",
+          "18.1"
+        ],
+        [
+          "LTL revenue/cwt.",
+          "LTL revenue/cwt.",
+          "$25.75",
+          "",
+          "$23.85",
+          "",
+          "8.0",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LTL revenue/cwt., excluding fuel surcharge",
+          "LTL revenue/cwt., excluding fuel surcharge",
+          "$21.69",
+          "",
+          "$19.96",
+          "",
+          "8.7",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LTL revenue/shipment",
+          "LTL revenue/shipment",
+          "$345.07",
+          "",
+          "$344.08",
+          "",
+          "0.3",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LTL revenue/shipment, excluding fuel surcharge",
+          "LTL revenue/shipment, excluding fuel surcharge",
+          "$290.72",
+          "",
+          "$287.90",
+          "",
+          "1.0",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LTL pounds/shipment",
+          "LTL pounds/shipment",
+          "1340",
+          "",
+          "1443",
+          "",
+          "(7.1)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LTL length of haul (2)",
+          "LTL length of haul (2)",
+          "888",
+          "",
+          "892",
+          "",
+          "(0.4)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(1)",
+          "In thousands.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(2)",
+          "In miles.",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Note:",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy.",
+          "LTL operating statistics exclude transportation and logistics services where pricing is generally not determined by weight. The LTL operating statistics also exclude the adjustment required for financial statement purposes in accordance with the Company's revenue recognition policy."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 823.2,
+    "quarter_revenue_yoy_pct": 18.5168,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Revenue was $823.2 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": "Operating Revenue |  | $823,244 |  | $694,622 | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 1,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-29",
+    "entry_open": "397.329987",
+    "return_10d_pct": "-3.1762",
+    "return_20d_pct": "-1.9077",
+    "return_30d_pct": "-6.5412",
+    "return_60d_pct": "9.3851",
+    "return_90d_pct": "20.6503"
+  },
+  "text_stats": {
+    "primary_text_len": 3286,
+    "exhibit_text_len": 16548,
+    "combined_text_len": 19836,
+    "semantic_text_len": 16522,
+    "table_count": 4,
+    "semantic_parse_status": "sec_parser"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ETR",
+    "cik": "65984",
+    "event_date": "2024-08-01",
+    "event_accession": "0000065984-24-000090",
+    "primary_8k_doc": "etr-20240801.htm",
+    "exhibit_docs": [
+      "earningsrelease2q24_ex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ETR_000006598424000090_etr-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ETR_000006598424000090_earningsrelease2q24_ex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ETR",
+    "cik": "65984",
+    "entity_name": "Entergy Corporation",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2981059000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "312299000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "59703396000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "2070396000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1283591000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "959543000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.104761",
+    "operating_cash_flow_to_revenue": "0.32188",
+    "assets_to_revenue": "20.027579",
+    "financing_cash_flow_to_revenue": "0.694517",
+    "investing_cash_flow_to_revenue": "-0.430582"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales increased 2.",
+      "sales was the biggest contributor with 5.",
+      "earnings per share of 23 cents on an as-reported basis and $1.",
+      "Earnings per share guidance Entergy affirmed its 2024 adjusted EPS guidance range of $7.",
+      "earnings per share.",
+      "earnings per share for, among other things, financial planning and analysis; reporting financial results to the board of directors, employees, stockholders, analysts, and investors; and internal evaluation of financial performance."
+    ],
+    "guidance_evidence": [
+      "guidance and outlooks affirmed NEW ORLEANS – Entergy Corporation (NYSE: ETR) reported second quarter 2024 earnings per share of 23 cents on an as-reported basis and $1.",
+      "guidance Entergy affirmed its 2024 adjusted EPS guidance range of $7.",
+      "guidance with regard to the non-GAAP measure of adjusted earnings per share.",
+      "guidance to guidance presented on a GAAP basis because it cannot predict and quantify with a reasonable degree of confidence all of the adjustments that may occur during the period.",
+      "outlooks; industrial load growth outlooks; statements regarding its climate transition and resilience plans, goals, beliefs, or expectations; and other statements of Entergy’s plans, beliefs, or expectations included in this news release.",
+      "projects."
+    ],
+    "wave_or_demand_evidence": [
+      "customer, and regulatory fronts,” said Drew Marsh, Entergy Chair and Chief Executive Officer.",
+      "customer credits, including increasing customer sharing of tax benefits, to resolve several open matters; the agreement is subject to LPSC approval.",
+      "customers through our operating companies in Arkansas, Louisiana, Mississippi, and Texas.",
+      "customer sharing of tax benefits as a result of the 2016–2018 IRS audit resolution - - - (0.",
+      "customer sharing - - - - 0.",
+      "customer receipts."
+    ],
+    "warning_or_risk_evidence": [
+      "charge recognized as a result of a group annuity contract purchased in May 2024 to settle certain pension liabilities, also referred to as the pension lift out (considered an adjustment and excluded from adjusted earnings).",
+      "charges related to outstanding regulatory complaints and significant income tax items.",
+      "charges (credits) – net (0.",
+      "impairments, and related charges - - - - - - Decommissioning (0.",
+      "impairments, and related charges (0.",
+      "charge for $(79 million) ($(57 million) after tax) recorded by E-NO to provide for sharing additional income tax benefits from the 2016–2018 IRS audit resolution with customers (considered an adjustment and excluded from adjusted earnings)."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "61.320000",
+    "return_10d_pct": "-4.1748",
+    "return_20d_pct": "-3.1311",
+    "return_30d_pct": "-0.3751",
+    "return_60d_pct": "8.4067",
+    "return_90d_pct": "26.2068"
+  },
+  "text_stats": {
+    "primary_text_len": 6472,
+    "exhibit_text_len": 76024,
+    "combined_text_len": 82498
+  }
+}

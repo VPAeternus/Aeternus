@@ -28,7 +28,7 @@ Purpose:
 - Score them.
 - Assign tiers/subtiers.
 - Compute entry score.
-- Send names to research queue immediately.
+- Send names to fundamental review list immediately.
 - Make buy / starter / watchlist / pass decision.
 
 This is where new investment decisions happen.
@@ -1323,7 +1323,7 @@ if LLM is missing:
     research_priority = "repricing_momentum_watch"
 
 elif repricing_momentum_priority:
-    candidate_state = "research_queue"
+    candidate_state = "fundamental_review"
 
 elif repricing_momentum_extension:
     candidate_state = "active_watchlist"
@@ -1332,7 +1332,7 @@ elif repricing_momentum_extension:
 Use:
 
 - Any RM candidate routes to at least research/watchlist handling.
-- RM priority routes directly to research queue.
+- RM priority routes directly to fundamental review list.
 - Weaker RM extension routes to active watchlist.
 
 Live rule:
@@ -1631,7 +1631,7 @@ Use:
 
 - Force PM underwriting / buy-decision review.
 - Does not mean automatic buy.
-- Routes to `research_queue` unless blocked by hard underwriting gates.
+- Routes to `fundamental_review` unless blocked by hard underwriting gates.
 
 RM-specific risk controls:
 
@@ -1892,7 +1892,7 @@ Filter:
 
 ```text
 entry_score_0_100 >= 70
-AND candidate_state in ["new_signal", "research_queue", "watchlist"]
+AND candidate_state in ["new_signal", "fundamental_review", "watchlist"]
 AND monitoring_status != "kill_review"
 ```
 
@@ -1960,7 +1960,7 @@ Exception:
 Filter:
 
 ```text
-candidate_state in ["new_signal", "research_queue", "watchlist"]
+candidate_state in ["new_signal", "fundamental_review", "watchlist"]
 AND entry_score_0_100 >= 75
 AND post_llm_candidate_flag = 1
 AND causal_change = 3
@@ -2067,13 +2067,13 @@ Purpose:
 Create a file like:
 
 ```text
-weekly_new_entry_research_queue_YYYYMMDD.csv
+weekly_new_entry_fundamental_review_YYYYMMDD.csv
 ```
 
 Filter:
 
 ```text
-candidate_state in ["new_signal", "research_queue", "watchlist"]
+candidate_state in ["new_signal", "fundamental_review", "watchlist"]
 AND entry_score_0_100 >= 60
 AND monitoring_status != "kill_review"
 ```
@@ -2269,7 +2269,7 @@ candidate_state = "new_signal"
 
 Routing rule:
 
-- If score is high enough, immediately route the name into the new-entry research queue.
+- If score is high enough, immediately route the name into the new-entry fundamental review list.
 
 ### Active Holding Refresh
 
@@ -2308,7 +2308,7 @@ Candidate states:
 
 - `new_signal`
 - `llm_pending`
-- `research_queue`
+- `fundamental_review`
 - `watchlist`
 - `approved_buy`
 - `starter_position`
@@ -2342,15 +2342,15 @@ monitoring_status = kill_review
 State transitions:
 
 ```text
-new_signal -> research_queue
+new_signal -> fundamental_review
 new_signal -> llm_pending
-llm_pending -> research_queue
+llm_pending -> fundamental_review
 llm_pending -> manually_rejected
 
-research_queue -> approved_buy
-research_queue -> starter_position
-research_queue -> watchlist
-research_queue -> manually_rejected
+fundamental_review -> approved_buy
+fundamental_review -> starter_position
+fundamental_review -> watchlist
+fundamental_review -> manually_rejected
 
 approved_buy -> active_position
 starter_position -> active_position
@@ -2359,7 +2359,7 @@ watchlist -> active_watchlist
 active_position -> exited
 active_position -> refreshed_by_new_quarter
 
-active_watchlist -> research_queue
+active_watchlist -> fundamental_review
 active_watchlist -> expired
 
 expired -> refreshed_by_new_quarter
@@ -2377,18 +2377,18 @@ Rule:
 Generate:
 
 - `outputs/daily/YYYYMMDD_new_candidates.csv`
-- `outputs/daily/YYYYMMDD_new_entry_research_queue.csv`
+- `outputs/daily/YYYYMMDD_new_entry_fundamental_review.csv`
 - `outputs/daily/YYYYMMDD_top_active_positions.csv`
 - `outputs/daily/YYYYMMDD_kill_review.csv`
 - `outputs/daily/YYYYMMDD_score_changes.csv`
 - `outputs/daily/YYYYMMDD_buy_decision_candidates.csv`
-- `outputs/daily/YYYYMMDD_aging_high_score_candidates.csv`
+- `outputs/daily/YYYYMMDD_aging_high_scoring_candidates.csv`
 
 ### Weekly Outputs
 
 Generate:
 
-- `outputs/weekly/YYYYMMDD_new_entry_research_queue.csv`
+- `outputs/weekly/YYYYMMDD_new_entry_fundamental_review.csv`
 - `outputs/weekly/YYYYMMDD_active_monitoring_queue.csv`
 - `outputs/weekly/YYYYMMDD_candidate_dashboard.csv`
 - `outputs/weekly/YYYYMMDD_risk_review.csv`
@@ -2436,7 +2436,7 @@ A simple dashboard should show:
 Start with fresh or unowned candidates:
 
 ```text
-candidate_state in ["new_signal", "research_queue", "watchlist"]
+candidate_state in ["new_signal", "fundamental_review", "watchlist"]
 AND entry_score_0_100 >= 70
 AND monitoring_status != "kill_review"
 ```
@@ -2467,10 +2467,10 @@ This queue is for hold/add/reduce decisions, not initial entry.
 
 ### Weekly
 
-Use this as the main new-entry research queue:
+Use this as the main new-entry fundamental review list:
 
 ```text
-candidate_state in ["new_signal", "research_queue", "watchlist"]
+candidate_state in ["new_signal", "fundamental_review", "watchlist"]
 AND entry_score_0_100 >= 60
 AND monitoring_status != "kill_review"
 ```
@@ -2597,12 +2597,12 @@ Most important tests:
 
 - Tier columns match rules.
 - `entry_score` never uses return columns.
-- New-entry research queue uses `entry_score`, not monitoring score.
+- New-entry fundamental review list uses `entry_score`, not monitoring score.
 - Monitoring score uses return columns only after candidate is live.
 - `tradable_date` is after all required filings.
 - `kill_review` caps active monitoring score.
 - `not_scored` rows never enter tiers.
-- Fresh candidates can enter research queue immediately.
+- Fresh candidates can enter fundamental review list immediately.
 - LLM missing blocks subtiers and full buy but keeps the candidate visible.
 - Pipeline A cannot read return columns or the `candidate_monitoring` table.
 - Candidate state and monitoring status remain separate.
@@ -2657,7 +2657,7 @@ Decision:
 
 ```text
 entry_score >= 75 -> immediate investment underwriting
-entry_score 65-74 -> research queue / possible starter
+entry_score 65-74 -> fundamental review list / possible starter
 entry_score 50-64 -> watchlist
 entry_score < 50  -> low priority
 ```
@@ -2733,11 +2733,11 @@ Event-driven:
 - Assign tiers.
 - Run LLM extraction.
 - Compute entry score.
-- Send to research queue immediately.
+- Send to fundamental review list immediately.
 
 Weekly:
 
-- Produce new-entry research queue.
+- Produce new-entry fundamental review list.
 - Produce active monitoring queue.
 - Review risk.
 - Monitor model drift.

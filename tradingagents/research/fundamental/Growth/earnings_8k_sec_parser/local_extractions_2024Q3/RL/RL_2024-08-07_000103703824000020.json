@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RL",
+    "cik": "1037038",
+    "event_date": "2024-08-07",
+    "event_accession": "0001037038-24-000020",
+    "primary_8k_doc": "rl-20240807.htm",
+    "exhibit_docs": [
+      "rl-20240629ex991xpressrele.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RL_000103703824000020_rl-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RL_000103703824000020_rl-20240629ex991xpressrele.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RL",
+    "cik": "1037038",
+    "entity_name": "Ralph Lauren Corporation",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "6218500000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-23",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-02",
+    "net_income_value": "600100000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-23",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-02",
+    "assets_value": "6789500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-23",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "-665700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-23",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-02",
+    "investing_cash_flow_value": "-717900000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-23",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-02",
+    "operating_cash_flow_value": "715900000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-23",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-02",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.096502",
+    "operating_cash_flow_to_revenue": "0.115124",
+    "assets_to_revenue": "1.091823",
+    "financing_cash_flow_to_revenue": "-0.107052",
+    "investing_cash_flow_to_revenue": "-0.115446"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 1% to $1.",
+      "revenue decreased 13%, in-line with our outlook, driven by receipt timing shifts and a reduction in excess product sales to the off-price wholesale channel, as planned.",
+      "revenue increased 5% to prior year on both a reported and constant currency basis, with stronger re-order trends more than offsetting negative impacts from previously disclosed timing receipt shifts.",
+      "gross margin was 70.",
+      "gross margin was also 70.",
+      "Gross margin expansion was driven by favorable product, channel and geographic mix shifts, lower cotton costs and AUR growth across all regions."
+    ],
+    "guidance_evidence": [
+      "Outlook, with Brand Elevation and Expense Discipline More than Offsetting Investments in Marketing and Ecosystem Expansion • Maintained Healthy Balance Sheet Including $1.",
+      "outlook, driven by receipt timing shifts and a reduction in excess product sales to the off-price wholesale channel, as planned.",
+      "Outlook The Company's outlook is based on its best assessment of the current geopolitical and macroeconomic environment, including inflationary pressures, other consumer spending-related headwinds and foreign currency volatility, among others.",
+      "guidance excludes any potential restructuring-related and other net charges that may be incurred in future periods, as described in the \"Non-U.",
+      "outlook,\" \"estimate,\" \"ensure,\" \"commit,\" \"expect,\" \"project,\" \"believe,\" \"envision,\" \"goal,\" \"target,\" \"can,\" \"will,\" and similar words or phrases.",
+      "guidance excludes any potential restructuring-related and other charges that may be incurred in future periods."
+    ],
+    "wave_or_demand_evidence": [
+      "customer acquisition and loyalty with 1.",
+      "customers, suppliers, vendors, and lenders, including potential business disruptions related to the Russia-Ukraine and Israel-Hamas wars, militant attacks on cargo vessels in the Red Sea, civil and political unrest, diplomatic tensions between the U.",
+      "ail Comps Across All Regions • Adjusted Gross and Operating Margin Expansion Exceeded Our Outlook, with Brand Elevation and Expense Discipline More than Offsetting Investments in Marketing and Ecosystem Expansion • Maintained Healthy Balance Sheet Including $1.",
+      "aid Ralph Lauren, Executive Chairman and Chief Creative Officer.",
+      "aid Patrice Louvet, President and Chief Executive Officer.",
+      "powerful combination of our brand strength and diverse growth drivers – together with our culture of agility and operating discipline – gives us confidence that our long-term strategy will continue to deliver even through these dynamic times."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, for the first quarter of Fiscal 2025.",
+      "charges for the first quarter of Fiscal 2024.",
+      "Inventory at the end of the first quarter of Fiscal 2025 was $1.",
+      "charges that may be incurred in future periods, as described in the \"Non-U.",
+      "charges or barriers to trade, including those resulting from trade developments between the U.",
+      "charges, net (7."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1500,
+    "quarter_revenue_yoy_pct": 1,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "161.960007",
+    "return_10d_pct": "3.1180",
+    "return_20d_pct": "4.6369",
+    "return_30d_pct": "7.2425",
+    "return_60d_pct": "20.7397",
+    "return_90d_pct": "28.4515"
+  },
+  "text_stats": {
+    "primary_text_len": 3546,
+    "exhibit_text_len": 41302,
+    "combined_text_len": 44850
+  }
+}

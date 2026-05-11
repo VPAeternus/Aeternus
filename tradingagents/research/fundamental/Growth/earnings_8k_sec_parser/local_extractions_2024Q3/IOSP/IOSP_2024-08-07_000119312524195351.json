@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "IOSP",
+    "cik": "1054905",
+    "event_date": "2024-08-07",
+    "event_accession": "0001193125-24-195351",
+    "primary_8k_doc": "d803992d8k.htm",
+    "exhibit_docs": [
+      "d803992dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IOSP_000119312524195351_d803992d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/IOSP_000119312524195351_d803992dex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "IOSP",
+    "cik": "1054905",
+    "entity_name": "INNOSPEC INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "509600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "33200000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1707400000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-22000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "21800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.065149",
+    "operating_cash_flow_to_revenue": "0.042779",
+    "assets_to_revenue": "3.350471",
+    "financing_cash_flow_to_revenue": "0.000785",
+    "investing_cash_flow_to_revenue": "-0.043171"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "operating income up double digits with margin expansion As expected, Oilfield Services results impacted by lower production chemical activity Debt-free balance sheet with over $240 million in net cash GAAP EPS $1.",
+      "non-GAAP EPS $1.",
+      "Net income for the quarter was $31.",
+      "non-GAAP EPS in the second quarter was $1.",
+      "net income excluding special items and related per-share amounts together with net cash, are non-GAAP financial measures that are defined and reconciled with GAAP results herein and in the schedules below.",
+      "Net income Diluted EPS Income before income taxes Net income Diluted EPS Reported GAAP amounts $ 43."
+    ],
+    "guidance_evidence": [
+      "outlook in Oilfield Services are clearly below our targeted range, our team remains intensely focused on leveraging our leading customer service and technology to build a stronger medium to long-term business.",
+      "expected, Oilfield Services results impacted by lower production chemical activity Debt-free balance sheet with over $240 million in net cash GAAP EPS $1.",
+      "expected on significant production chemical headwinds.",
+      "expected against a broad set of technology-led growth opportunities in these businesses.",
+      "anticipates, may, could, believes, feels, plans, intends or similar words or expressions, for example) which relate to earnings, growth potential, operating performance, events or developments that we expect or anticipate will or may occur in the future."
+    ],
+    "wave_or_demand_evidence": [
+      "Demand for our mild and natural personal care technologies continued to drive growth in operating income.",
+      "customer service and technology to build a stronger medium to long-term business.",
+      "customers in the Personal Care, Home Care, Agrochemical, Mining and Industrial markets.",
+      "aid its semi-annual dividend of 76 cents per common share.",
+      "air value of contingent consideration 0.",
+      "ains) 0."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker sales mix.",
+      "decrease of 9 percent from $480.",
+      "losses/(gains) 0.",
+      "declined as expected on significant production chemical headwinds.",
+      "loss in Brazil in the second quarter of 2023, prior year gross margins were 32.",
+      "decreased by 11."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 435,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "107.930000",
+    "return_10d_pct": "2.4182",
+    "return_20d_pct": "4.5770",
+    "return_30d_pct": "-1.4824",
+    "return_60d_pct": "2.9371",
+    "return_90d_pct": "15.7232"
+  },
+  "text_stats": {
+    "primary_text_len": 2910,
+    "exhibit_text_len": 17913,
+    "combined_text_len": 20825
+  }
+}

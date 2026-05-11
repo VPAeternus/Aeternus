@@ -11,8 +11,8 @@ _STAGE_ORDER = [
     "universe_gate_edge",
     "universe_gate_haystack",
     "evidence_gate",
-    "shortlist_cut",
-    "deep_selection_cut",
+    "scout_handoff",
+    "fundamental_intake",
     "portfolio_inclusion_cut",
 ]
 

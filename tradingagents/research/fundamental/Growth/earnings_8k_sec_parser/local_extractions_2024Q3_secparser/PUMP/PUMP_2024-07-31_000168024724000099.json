@@ -1,0 +1,573 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PUMP",
+    "cik": "1680247",
+    "event_date": "2024-07-31",
+    "event_accession": "0001680247-24-000099",
+    "primary_8k_doc": "pump-20240731.htm",
+    "exhibit_docs": [
+      "a2q24earningscallscript.htm",
+      "a2q24investorpresentatio.htm",
+      "a6aearningsreleasesecond.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PUMP_000168024724000099_pump-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PUMP_000168024724000099_a2q24earningscallscript.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PUMP_000168024724000099_a2q24investorpresentatio.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PUMP_000168024724000099_a6aearningsreleasesecond.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PUMP",
+    "cik": "1680247",
+    "entity_name": "ProPetro Holding Corp.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "423570000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "28733000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1480312000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-3379000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-113750000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "73060000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.067835",
+    "operating_cash_flow_to_revenue": "0.172486",
+    "assets_to_revenue": "3.494846",
+    "financing_cash_flow_to_revenue": "-0.007977",
+    "investing_cash_flow_to_revenue": "-0.268551"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues decreased 12% versus the first quarter to $357 million, net loss was $4 million, and Adjusted EBITDA decreased 29% sequentially to $66 million.",
+      "revenue of $357 million decreased 12% compared to the prior quarter.",
+      "Revenue was $357 million, compared to $406 million for the first quarter of 2024.",
+      "revenue was largely attributable to customer delays, pricing pressures particularly on our Tier II diesel assets, and weather impact in our hydraulic fracturing and wireline businesses during the quarter.",
+      "net income (loss) plus (i) interest expense, (ii) income tax expense (benefit), and (iii) depreciation and amortization.",
+      "NET INCOME (LOSS) EARNINGS PER SHARE(1) ADJUSTED EBITDA(2)(3) CASH FLOW FROM OPERATIONS FREE CASH FLOW(2) TOTAL LIQUIDITY(4) 2Q24 $357 $(4) -$0."
+    ],
+    "guidance_evidence": [
+      "outlook.",
+      "guidance range we had provided.",
+      "guidance of $200 million to $250 million for 2024 capital expenditures down to a range between $175 million to $200 million.",
+      "guidance represents a 40% reduction compared to last year's capital spend of $310 million.",
+      "Guidance The Company is now reducing our full-year 2024 capital expenditure guidance to be between $175 million to $200 million, down from our prior guidance of $200 million to $250 million.",
+      "Outlook Mr."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, partners and shareholders.",
+      "Demand for our next-generation gas burning assets is strong, and our transition towards a more efficient service offering that will remain relevant in our competitive market is progressing uninterrupted by market headwinds.",
+      "customer value, and ultimately, superior shareholder returns.",
+      "demand trends and customer preferences we’re seeing in the market.",
+      "customers creating efficiencies tied to integrated services and higher equipment utilization.",
+      "customers."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker quarter sequentially in our wireline business due to shifting customer schedules, and also saw significant weather impact as we had several uncharacteristically strong storms push through the Permian during May and June.",
+      "weaker financial results sequentially, the Company delivered a fifth consecutive quarter of impressive free cash flow, achieving $48 million, which represents a 17% sequential improvement over the first quarter.",
+      "delays and pricing pressures predominantly on our Tier II diesel frac fleets, capital spending remained low driving a fifth consecutive quarter of strong free cash flow.",
+      "delays, pricing pressures particularly on our Tier II diesel assets, and weather impact in our hydraulic fracturing and wireline businesses during the quarter.",
+      "uncertainties, many of which are beyond our control.",
+      "uncertainties can cause actual results to differ materially from our current expectations."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "4"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc a2q24earningscallscript"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Operator Opening: Good day, and welcome to the ProPetro Holding Corp. Second Quarter 2024 Conference Call. Please note, this event is being recorded. I would now like to turn the call over to Matt Augustine, Director of Corporate Development and Investor Relations for ProPetro Holding Corp. Please go ahead. Matt Augustine - Director of Corporate Development and Investor Relations: Thank you and good morning. We appreciate your participation in today’s call. With me today is Chief Executive Officer, Sam Sledge; Chief Financial Officer, David Schorlemer; and President & Chief Operating Officer, Adam Munoz. This morning, we released our earnings results for the second quarter of 2024. Please note that any comments we make on today’s call regarding projections or our expectations for future events are forward-looking statements covered by the Private Securities Litigation Reform Act. Forward-looking statements are subject to several risks and uncertainties, many of which are beyond our control. These risks and uncertainties can cause actual results to differ materially from our current expectations. We advise listeners to review our earnings release and risk factors discussed in our filings with the SEC. Also, during today’s call we will reference certain non-GAAP financial measures. Reconciliations of these non-GAAP measures to the most directly comparable GAAP measures are included in our earnings release. Finally, after our prepared remarks, we will hold a question-and-answer session. With that, I would like to turn the call over to Sam. Sam Sledge - Chief Executive Officer: Thanks, Matt and good morning, everyone. As we have communicated previously, 2024 is a prove-it year for ProPetro and I’m pleased to report that we are delivering. In the second quarter of 2024, we demonstrated the effectiveness and resilience of our strategy. We have proven that despite a softer market environment, ProPetro can deliver and is delivering meaningful value for our customers, partners and shareholders. David will walk you through our financial results in a moment, but first, I’d like to share some important business highlights from the second quarter. Despite unexpected activity disruptions during the quarter, our focus on industrializing our business and prudent dynamic capital allocation has helped ProPetro deliver resilient free cash flow generation. We expect our strong free cash flow to continue, thanks to the investments we’ve made and the strategic decisions we’ve taken to position our business for sustainable, long-term value creation. Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 1 EXHIBIT 99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Underpinning our strategy and our confidence are three core principles, which you have heard us discuss previously. I’ll walk through each and share details on our progress. First, our Company is set up to drive cash flow generation. We’ve made meaningful investments through our fleet recapitalization and are now reaping the rewards. Demand for our next-generation gas burning assets is strong, and our transition towards a more efficient service offering that will remain relevant in our competitive market is progressing uninterrupted by market headwinds. We ended the second quarter with seven Tier IV DGB dual-fuel fleets with each bringing industry-leading diesel displacement. The rollout of our FORCESM electric fleet offering is well underway and the results we’ve seen so far make us highly confident that we’re on the right path to deliver enhanced customer value, and ultimately, superior shareholder returns. This quarter, we deployed our third FORCESM electric frac fleet. This is the first FORCESM electric fleet we deployed with ExxonMobil as part of our three-year contract with the second fleet expected to be deployed in the next few months. The agreement includes the deployment of two FORCESM electric hydraulic fracturing fleets, wireline, and pumpdown services in 2024, with an option for a third FORCESM fleet with integrated wireline and pumpdown services to commence operations in early 2025. Our three-year contract with ExxonMobil was a major milestone and in addition to our other contracted electric equipment is a glimpse of ProPetro's future. Moreover, we will continue to allocate capital to our FORCESM electric offering and away from conventional diesel equipment, following the demand trends and customer preferences we’re seeing in the market. On that note, we have placed an order for our fifth FORCESM electric fleet and we expect it to be in the field under contract in 2024. In addition to electrification, we are evolving our business and capitalizing on our strengths in other ways as well: – We have been executing committed contracts that help position ProPetro to deliver through-cycle returns. – We continue to work closely with our customers creating efficiencies tied to integrated services and higher equipment utilization. – We are cultivating an incredibly talented and committed workforce, and our progress and success to date are made possible by our first-class operating team in the field. – All resulting in a business that has a more durable and resilient future earnings profile. Putting all these factors together, we are proud to deliver valuable, more efficient and flexible services while reducing risk and costs for our customers. We are very confident that our business is poised for continued growth and success, all made possible by our team here at ProPetro. Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 2 EXHIBIT 99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Moving now to M&A, which has been, and will continue to be, an important strategic driver for our Company. Our disciplined and opportunistic approach to deploying capital towards value accretive acquisitions remains a fundamental strength at ProPetro. Our Silvertip acquisition continues to be a strong tailwind for our earnings and free cash flow generation, as does our acquisition of Par Five cementing which is now fully integrated into our legacy cementing business. This quarter, we were pleased to complete the acquisition of AquaPropSM, an innovative provider of cost-effective wet sand solutions. This acquisition is yet another example of our commitment to enhancing innovation and integration through thoughtful capital allocation. The addition of AquaPropSM is aimed squarely at further industrializing our operations with the ultimate goal of bringing more value to our customers and ProPetro through removing unnecessary equipment off location. Furthermore, it builds on our reputation of delivering best- in-class integrated completions services desired by operators in the Permian Basin. We will stay disciplined and opportunistic in our pursuit of accretive M&A opportunities at valuations that make sense. Indeed, ProPetro’s stable and robust cash generation results allows us to advance our fleet transition and participate in accretive M&A all while maintaining a strong balance sheet. Importantly, it also provides optionality to return capital to shareholders. On that note, and as we announced last quarter, our Board approved an increase in and extension of our share repurchase program through May 31, 2025 with an additional $100 million authorized for a total of $200 million. Since the inception of our plan in May 2023, ProPetro has repurchased approximately 10% of outstanding common shares. David will add more on this in a minute, but let me just say that our actions on this front confirm our Board and management’s confidence in ProPetro’s continued earnings growth and free cash flow generation. Returning capital to shareholders will continue to be among our top priorities. The successes I just laid out and the initiatives we are pursuing showcase ProPetro's strength. Despite some turbulence in the market, our strong performance is why we believe ProPetro shares are a unique investment opportunity, and that the investment thesis is apparent in the discrepancy between our equity value and the strong financial performance evident in our results. Yes, the second quarter was challenging. Rig counts continued to move lower and pricing across our conventional diesel assets became more competitive. We experienced a weaker quarter sequentially in our wireline business due to shifting customer schedules, and also saw significant weather impact as we had several uncharacteristically strong storms push through the Permian during May and June. Yet, our premium service offerings -- coupled with our Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 3 EXHIBIT 99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "operational excellence, robust and blue-chip customer base and superior service -- proved to be resilient as our dual-fuel and electric equipment remained highly utilized. We are also pleased to report another quarter of lower capex relative to our original budget, which will further support free cash flow and our capital allocation plan moving through the remainder of 2024 and beyond. We are confident in our ability to deliver strong financial results through the balance of this year and into 2025. Turning now to our market outlook. While ProPetro is of course not immune from the macro pressures facing our industry, we continue to take decisive action – building out our high quality service offerings and maintenance of our strong balance sheet – designed to deliver meaningful free cash flow generation. We remain optimistic about the strength of North American land oilfield services potential over the next several years, and are confident that our industrialized model, geographic focus in the Permian Basin, and the disciplined execution of our strategy will pay off despite the slow-to-no growth environment that exists today. Lastly, and maybe most importantly, our pursuit of operational excellence allows us to effectively service our strong, blue-chip and Permian focused customer base, and is supported by our proven electric technology, which garners committed contracts. Our balance sheet is healthy and we have ample liquidity to be opportunistic in our capital allocation decisions. In sum, our evolving industrial model has proven to be effective, and we look forward to achieving even greater success. We expect to continue elevating ProPetro, as well as our entire industry, for years to come. I’ll now turn the call over to David to discuss our second quarter financial results. David. David Schorlemer - Chief Financial Officer: Thanks, Sam and good morning, everyone. As Sam mentioned, despite broader market headwinds, we generated strong returns and continued to execute on our strategy. With our significant capital spend of the last few years behind us, we have transitioned to focus on higher free cash flows and consistent earnings. And today, we have results that evidence the turnaround we've discussed in prior quarters. In the second quarter, revenues decreased 12% versus the first quarter to $357 million, net loss was $4 million, and Adjusted EBITDA decreased 29% sequentially to $66 million. The decreases across our second quarter financial metrics were mostly attributable to unexpected activity disruptions and softness across our conventional diesel equipment and wireline offerings, as well as significant weather impacts in the Permian Basin. Additionally, we incurred an operating lease expense related to our electric fleets of $12 million for the quarter as compared to $9 million in the prior quarter. Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 4 EXHIBIT 99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Our effective frac fleet utilization for the second quarter was 15.5 fleets, which was above the guidance range we had provided. Thanks to efficiencies exceeding our expectations from previous years, we are shifting away from reporting on fleet utilization based on days worked. Instead, we'll focus on guiding and reporting the number of active frac fleets, which we believe better represents asset utilization in our hydraulic fracturing business. During the second quarter, 14 hydraulic fracturing fleets were active and we expect to run approximately 14 active fleets in the third quarter of 2024. Moving to our capital program, net cash used in investing activities during the second quarter of 2024 was $57 million of which $21 million was related to the acquisition of AquaPropSM. As we shared last quarter, our supply chain and operations teams are scrutinizing our capital spend more than ever and we’re also conducting supply chain assessments to maximize returns from our vendor relationships. I’m pleased to share that the work they are doing is already driving favorable results. And here's where the story we've discussed in recent quarters gets very interesting and encouraging. As Sam mentioned, despite a challenging environment and weaker financial results sequentially, the Company delivered a fifth consecutive quarter of impressive free cash flow, achieving $48 million, which represents a 17% sequential improvement over the first quarter. If we exclude cash used for acquisition consideration for AquaPropSM of $21 million in the second quarter, Free Cash Flow adjusted for Acquisition Consideration was $69 million bringing total year-to-date Free Cash Flow adjusted for Acquisition Consideration to $110 million which represents a 69% conversion ratio of Adjusted EBITDA to Free Cash Flow adjusted for Acquisition Consideration. This is the dramatic change we've been working to produce through dedication and diligent strategic execution. Our entire organization has been involved in this transformation and there remains work yet to be done. As we continue to demonstrate, the inflection point we reached in reduced capital spend is a strong tailwind for cash generation and is a testament to the success of our fleet transition and optimization of our business. Accordingly, we are now reducing our prior guidance of $200 million to $250 million for 2024 capital expenditures down to a range between $175 million to $200 million. Using the midpoint, the new guidance represents a 40% reduction compared to last year's capital spend of $310 million. ProPetro’s cash and liquidity position also remain strong. As of June 30, 2024, total cash was $67 million and our borrowings under the ABL Credit Facility were $45 million. Total liquidity at the end of the quarter was $145 million, including cash and $78 million of available capacity under the ABL Credit Facility. Moreover, the transformation of our fleet to more FORCESM electric fleets will drive an even greater decline in associated maintenance capital spend, resulting in increased free cash flow and more durable profitability, particularly with the multi-year contractual coverage we are seeing for these fleets. In the remainder of 2024, we anticipate further validation of our strategy Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 5 EXHIBIT 99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "and a demonstration of the earnings enhancement resulting from our investments in the business. As Sam shared earlier, ProPetro’s improved cash generation profile allows us to pursue our fleet transition while also participating in accretive M&A and maintaining a strong balance sheet. Importantly, it also provides optionality to return capital to shareholders. In the second quarter, we remained active in our share repurchase program retiring another 2.5 million shares. Since the inception of the program, we have retired approximately 11.3 million shares, which equates to nearly 10% of shares outstanding as of the inception of the program in May 2023. This translates to the return of nearly $100 million to shareholders. We will continue to opportunistically execute share repurchases under the increased and extended $200 million repurchase program authorized by our Board in April 2024. We also believe that our strategy will continue to deliver and afford us the flexibility to stay dynamic, selective, and opportunistic in our capital allocation approach. Each of the core principles Sam discussed plays a critical role in our success. We look forward to delivering for all of our stakeholders as we pursue our ongoing electric fleet conversion, organic and continued inorganic growth, and the disciplined pursuit of increased shareholder value. In fact, in just the first half of this year, we've allocated 61% of our Free Cash Flow adjusted for Acquisition Consideration to higher-priority capital allocations with $45 million in share repurchases and $21 million toward targeted acquisitions that we expect to accelerate cash flows further. ProPetro's foundation upon which our strategy is built could not be more solid with our strong balance sheet, refreshed asset base, and operational excellence positioning us for the long term. Our strategy is carefully crafted to drive success in the slow-to-no-growth environment in which we are operating today. Without question, a consolidated industry and even more activity- disciplined Permian customer base presents challenges. ProPetro is up to that challenge and we are thriving. The crux of our strategy is that it benefits not only ProPetro but also our customers by delivering the very best commercial and industrial solutions for their completions programs. We believe that is a winning strategy to drive durable earnings and cash flows. With that, I will turn it back to Sam. Sam Sledge - Chief Executive Officer: Thank you, David. To build on what David just said, and before turning to Q&A, I’d like to reinforce ProPetro’s compelling investment thesis and the recent actions we have taken to sustain meaningful cash flow generation and limit our capital spend, further accelerating our true earnings growth trajectory. Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 6 EXHIBIT 99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "We remain confident in our strategy and the future of our Company. Despite the headwinds and the slow-to-no-growth environment evident in the energy services space we operate in, our company is uniquely and favorably positioned. We have been successful in transforming our fleet, pursuing accretive M&A and executing on share buy backs, all while maintaining a healthy balance sheet and liquidity profile. The results you are seeing today are just the beginning. We will continue to build on our progress long into the future. Despite what you may be hearing across the oilfield services space, demand remains strong for our services. Our next generation fleet, operational excellence, and strong, blue-chip, Permian customer base will sustain the momentum we have. I’d also be remiss to not mention that the demand for our FORCESM electric fleets outpace our current supply. Moving forward, you will continue to see us capitalize on these positive trends. We are clear eyed about the market pressures that persist, but also about the assets we have to navigate the turbulence. Our best-in-class commercial architecture supports our strategy and positions ProPetro to continue delivering strong free cash flow generation for the remainder of 2024 and beyond. Finally, I couldn’t be prouder to lead the incredible ProPetro team, it is because of their dedication that we are able to confidently present and execute this roadmap. To the whole ProPetro team – I thank you for your commitment, it is what gives our leadership conviction that we have the right strategy and remain the leader in the Permian basin. With that, operator, I’ll ask that we now open the line for questions. Closing Remarks by Sam Sledge - Chief Executive Officer: Thank you for joining us on today’s call. We hope you join us for our next quarterly earnings call. Have a great day. End of Call Forward-Looking Statements: Except for historical information contained herein, the statements and information in this news release and discussion in the scripted remarks described above are forward-looking statements that are made pursuant to the Safe Harbor Provisions of the Private Securities Litigation Reform Act of 1995. Statements that are predictive in nature, that depend upon or refer to future events or conditions or that include the words “may,” “could,” \"confident\", “plan,” “project,” “budget,” \"design,\" “predict,” “pursue,” “target,” “seek,” “objective,” “believe,” “expect,” “anticipate,” “intend,” “estimate,” “will,” “should,” and other expressions that are predictions of, or indicate, future events and trends or that do not relate to historical matters generally identify forward-looking statements. Our forward-looking statements include, among other matters, statements about the supply of and demand for hydrocarbons, industry trends and activity levels, our business strategy, projected financial results and future financial performance, Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 7 EXHIBIT 99.3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24earningscallscript008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "expected fleet utilization, sustainability efforts, the future performance of newly improved technology, expected capital expenditures, the impact of such expenditures on our performance and capital programs, our fleet conversion strategy and our share repurchase program. A forward-looking statement may include a statement of the assumptions or bases underlying the forward-looking statement. We believe that we have chosen these assumptions or bases in good faith and that they are reasonable. Although forward-looking statements reflect our good faith beliefs at the time they are made, forward-looking statements are subject to a number of risks and uncertainties that may cause actual events and results to differ materially from the forward-looking statements. Such risks and uncertainties include the volatility of oil prices, the global macroeconomic uncertainty related to the conflict in the Israel-Gaza region and continued hostilities in the Middle East, including rising tensions with Iran, and the Russia-Ukraine war, general economic conditions, including the impact of continued inflation, central bank policy actions, bank failures, and the risk of a global recession, and other factors described in the Company's Annual Report on Form 10-K and Quarterly Reports on Form 10-Q, particularly the “Risk Factors” sections of such filings, and other filings with the Securities and Exchange Commission (the “SEC”). In addition, the Company may be subject to currently unforeseen risks that may have a materially adverse impact on it. Accordingly, no assurances can be given that the actual events and results will not be materially different than the anticipated results described in the forward- looking statements. Readers are cautioned not to place undue reliance on such forward- looking statements and are urged to carefully review and consider the various disclosures made in the Company’s Annual Report on Form 10-K, Quarterly Reports on Form 10-Q and other filings made with the SEC from time to time that disclose risks and uncertainties that may affect the Company’s business. The forward-looking statements in this news release are made as of the date of this news release. ProPetro does not undertake, and expressly disclaims, any duty to publicly update these statements, whether as a result of new information, new developments or otherwise, except to the extent that disclosure is required by law. Investor Contacts: David Schorlemer Chief Financial Officer david.schorlemer@propetroservices.com 432-227-0864 Matt Augustine Director, Corporate Development and Investor Relations matt.augustine@propetroservices.com 432-219-7620 Second Quarter 2024 Earnings Call Scripted Remarks July 31, 2024, 8:00 am CT 8 EXHIBIT 99.3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "a2q24investorpresentatio.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc a2q24investorpresentatio"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Investor Presentation July 31, 2024 EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 2 Forward-Looking Statements Except for historical information contained herein, the statements and information in this presentation, including the oral statements made in connection herewith, are forward- looking statements that are made pursuant to the Safe Harbor Provisions of the Private Securities Litigation Reform Act of 1995. Statements that are predictive in nature, that depend upon or refer to future events or conditions or that include the words “may,” “confident,” “could,” “plan,” “project,” “budget,” “design,” “predict,” “pursue,” “target,” “seek,” “objective,” “believe,” “expect,” “anticipate,” “intend,” “estimate,” “will,” “should” and other expressions that are predictions of, or indicate, future events and trends or that do not relate to historical matters generally identify forward-looking statements. Our forward-looking statements include, among other matters, statements about the supply of and demand for hydrocarbons, industry trends and activity, our business strategy, projected financial results and future financial performance, expected fleet utilization, sustainability efforts, the future performance of newly improved technology, expected capital expenditures, the impact of such expenditures on our performance and capital programs, our fleet conversion strategy and our share repurchase program. A forward-looking statement may include a statement of the assumptions or bases underlying the forward-looking statement. We believe that we have chosen these assumptions or bases in good faith and that they are reasonable. Although forward-looking statements reflect our good faith beliefs at the time they are made, forward-looking statements are subject to a number of risks and uncertainties that may cause actual events and results to differ materially from the forward-looking statements. Such risks and uncertainties include the volatility of oil prices, the global macroeconomic uncertainty related to the conflict in the Israel-Gaza region and continued hostilities in the Middle East, including rising tensions with Iran, and the Russia- Ukraine war, general economic conditions, including impact of continued inflation, central bank policy actions, bank failures and the risk of a global recession and other factors described in our Annual Report on Form 10-K and Quarterly Reports on Form 10-Q, particularly the “Risk Factors” sections of such filings, and other filings with the Securities and Exchange Commission (the “SEC”). In addition, we may be subject to currently unforeseen risks that may have a materially adverse impact on us. Accordingly, no assurances can be given that the actual events and results will not be materially different from the anticipated results described in the forward-looking statements. Readers are cautioned not to place undue reliance on such forward-looking statements and are urged to carefully review and consider the various disclosures made in our Annual Report on Form 10-K, Quarterly Reports on Form 10-Q, and other filings made with the SEC from time to time that disclose risks and uncertainties that may affect our business. The forward-looking statements in this presentation are made as of the date of this presentation. We do not undertake, and expressly disclaim, any duty to publicly update these statements, whether as a result of new information, new developments, or otherwise, except to the extent that disclosure is required by law. This presentation contains certain measures that are not determined in accordance with GAAP. For a definition of these measures and a reconciliation to the most directly comparable GAAP measure on a historical basis, please see the reconciliations on slide 3. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 3 This presentation references \"Adjusted EBITDA,\" \"Free Cash Flow\" and \"Free Cash Flow adjusted for Acquisition Consideration,\" which are not financial measures presented in accordance with GAAP. We define EBITDA as net income (loss) plus (i) interest expense, (ii) income tax expense (benefit), and (iii) depreciation and amortization. We define Adjusted EBITDA as EBITDA plus (i) loss (gain) on disposal of assets, (ii) stock-based compensation, (iii) other expense (income), (iv) other unusual or nonrecurring (income) expenses such as costs related to asset acquisitions, insurance recoveries, one-time professional fees and legal settlements and (v) retention bonus and severance expense. We define Free Cash Flow as net cash provided by operating activities less net cash used in investing activities. We define Free Cash Flow adjusted for Acquisition Consideration as Free Cash Flow excluding net cash paid as consideration for business acquisitions. We believe the presentation of these non-GAAP financial measures provides useful information to investors in assessing our financial condition and results of operations. Net income (loss) is the GAAP measure most directly comparable to Adjusted EBITDA, and net cash from operating activities is the GAAP measure most directly comparable to Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration. Non-GAAP financial measures should not be considered as alternatives to the most directly comparable GAAP financial measures. Non-GAAP financial measures have important limitations as analytical tools because they exclude some, but not all, items that affect the most directly comparable GAAP financial measures. You should not consider Adjusted EBITDA, Free Cash Flow, or Free Cash Flow adjusted for Acquisition Consideration in isolation or as a substitute for an analysis of our results as reported under GAAP. Because Adjusted EBITDA, Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration may be defined differently by other companies in our industry, our definitions of these non-GAAP financial measures may not be comparable to similarly titled measures of other companies, thereby diminishing their utility. Non-GAAP Reconciliations Three Months Ended (in thousands) June 30, 2024 March 31, 2024 Net (loss) income $(3,660) $19,930 Depreciation and amortization 57,522 52,206 Interest expense 1,965 2,029 Income tax expense 3,565 9,758 Loss on disposal of assets 3,277 6,458 Stock-based compensation 4,618 3,742 Other income, net (2,403) (1,405) Other general and administrative expenses, net 1,113 59 Retention bonus and severance expense 65 618 Adjusted EBITDA $66,062 $93,395 Three Months Ended Six Months Ended (in thousands) June 30, 2024 March 31, 2024 June 30,2024 June 30,2023 Net Cash provided by Operating Activities $104,941 $74,822 $179,763 $187,014 Net Cash used in Investing Activities (57,076) (33,847) (90,923) (221,731) Free Cash Flow $47,865 $40,975 $88,840 $(34,717) Acquisition Consideration 21,038 -- 21,038 -- Free Cash Flow adjusted for Acquisition Consideration $68,903 $40,975 $109,878 $(34,717) EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 4© 2024 ProPetro Holding Corp. All Rights Reserved. 4 (1) Exclusive of operating and finance leases. Increasing free cash flows from reduced capex and targeted M&A Over $1 billion invested with a refreshed asset base, new technology, and diversified service offering Discounted valuation multiple relative to peers with no net debt (1) Pure play exposure in the world’s leading basin for hydrocarbon production Superior field performance for blue-chip E&P customers FORCESM electric hydraulic fracturing fleets with four fleets under contract ProPetro’s Investment Thesis EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 5 CCC Company Snapshot Premium oilfield services leader in the Permian Basin providing complementary completions services in Hydraulic Fracturing, Cementing, and Wireline to leading upstream oil and gas producers 5 NYSE PUMP 2Q24 Revenue $357 million 2Q24 Adjusted EBITDA (1) $66 million 2Q24 Free Cash Flow (1) $48 million Headquartered in Midland, Texas (1) Adjusted EBITDA and Free Cash Flow are non-GAAP financial measures; see the reconciliations on the “Non-GAAP Reconciliations” slide. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 66 Premium Completions Services 2024e REVENUE MIX BY SERVICE LINE Hydraulic Fracturing Cementing Wireline NOTE: “e” indicates management estimate. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 7 Recent Highlights & Our Strategy 7 ✓ Free Cash Flow adjusted for Acquisition Consideration for the quarter increased 68% sequentially to $69 million and is $110 million year-to-date ✓ Repurchased and retired 2.5 million shares during the quarter and 11.3 million shares or 10% of shares outstanding since May 2023 ✓ Completed AquaPropSM wet sand solutions acquisition in May 2024 ✓ Four FORCESM electric frac fleets are now under contract with three FORCESM fleets operating currently ✓ Placed an order for our fifth FORCESM electric frac fleet to be delivered and deployed in 2024 ✓ Investments made in 2021-2023 are expected to drive significant returns beginning in 2024 ✓ Strong liquidity with no net debt (1) and no debt maturities until 2028 Fleet transition Opportunistic strategic transactions Optimize and industrialize Strong financial foundation Innovative technologies Generate more durable earnings and increase free cash flow (1) Exclusive of operating and finance leases. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 8 (in millions except %’s and per share data) TOTAL REVENUE NET INCOME (LOSS) EARNINGS PER SHARE(1) ADJUSTED EBITDA(2)(3) CASH FLOW FROM OPERATIONS FREE CASH FLOW(2) TOTAL LIQUIDITY(4) 2Q24 $357 $(4) -$0.03 $66 $105 $48 $145 1Q24 $406 $20 $0.18 $93 $75 $41 $202 -12% -$24 -$0.21 -29% +$30 +$7 -$57 Consistently strong cash flows from operations 2Q24 FCF inclusive of $21 million of acquisition consideration for AquaPropSM ~$97 million worth of shares repurchased since May ’23 (11.3 million shares retired or 10% of shares outstanding) A Strategy Yielding Results While customer delays, pricing pressures - particularly on our Tier II diesel assets - and unfavorable weather impacted quarterly financial results, the Company delivered increasing free cash flow that benefited from low capital expenditures and a favorable working capital position. Financial Highlights: Cash Flows Gaining Momentum (1) Earnings per share metrics are calculated using a fully diluted share count of 109 million and 106 million for 1Q24 and 2Q24, respectively. (2) Adjusted EBITDA and Free Cash Flow are non-GAAP financial measures; see the reconciliations on the “Non-GAAP Reconciliation” slide. (3) Inclusive of operating lease expense related to FORCESM fleets of $9 million and $12 million for 1Q24 and 2Q24, respectively. (4) Inclusive of cash and available capacity (availability) under our revolving credit facility as of the period end. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 9 $(50) $- $50 $100 $150 $200 Full Year 2022 Full Year 2023 Year-to-Date June 30, 2024 (i n m il li o n s ) Free Cash Flow Free Cash Flow adjusted for Acquisition Consideration Free Cash Flow and Recent Acquisitions Completed NOTE: Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration are non-GAAP financial measures; see the reconciliation to Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration on the “Non- GAAP Reconciliation” slide. A Paradigm Shift in Free Cash Flow Performance Share Repurchases $45 AquaPropSM acquisition $21 Completed acquisitions during these years EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 1010 Investing in Our Future OVER $1 BILLION INVESTED SINCE 2022 2022 Capex $365 2022, 2023, & 2024 Acquisitions $209 2023 Capex $310 2023 Leased Electric Fleets $180 • Transformation of our frac fleet to Next-Generation Tier IV DGB dual- fuel and FORCESM electric to create the youngest and most desirable fleet in the industry • Acquired high EBITDA to free cash flow conversion businesses (in millions) NOTE: Capex represents actual incurred; acquisitions include Silvertip in 2022, Par Five in 2023, and AquaPropSM in 2024; 2023 Leased Electric Fleets represents management estimate of equipment cost for FORCESM fleets one through four. 10 EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 11 • Tier IV DGB dual-fuel fleets that use natural gas • FORCESM electric-powered frac fleets with four fleets now under contract • Lower capital intensity with higher operating efficiency • Customers are willing to pay a premium for fuel savings and lower emissions Our New Next-Generation Fleet Transformation – Dual-Fuel and FORCESM Electric • One of the youngest and most desirable fleets in the industry with Tier IV DGB dual-fuel and electric technology • Using natural gas can result in annualized savings of $10 million to $20+ million due to the diesel/natural gas cost differences • Our fleets represent residual natural gas takeaway capacity for our customers TRANSFORMATION OF OUR FLEET DUAL-FUEL AND ELECTRIC FLEETS 0 2 4 6 8 10 12 14 16 18 2021 2022 2023 2024e Fleet Configuration Tier II Diesel Tier IV Dual-Fuel --- Electric > 2.5 Years < 2.5 Years Fleet Age (1H24) 11 NOTE: “e” indicates management estimate. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 12 ✓ Consuming natural gas vs. diesel to reduce costs and lower emissions for customers ✓ Fleets utilizing Compressed Natural Gas (CNG) are delivering 60-70% natural gas substitution rates ✓ Seven Tier IV DGB Dual-Fuel fleets Tier IV DGB Dual-Fuel Fleet Performance 0% 20% 40% 60% 80% 1Q23 2Q23 3Q23 4Q23 1Q24 2Q24 Tier IV DGB Natural Gas Substitution Rates (1) (1) Represents the substitution rate of gallons of diesel displaced in the ProPetro fleet. Calculated as (natural gas consumption * 7.8) / (diesel displaced + diesel consumed). EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 13 ✓ Three FORCESM fleets operating with a fourth to be deployed by September 2024 ✓ Ordered a fifth FORCESM fleet to be deployed in 2024 ✓ High equipment reliability, proven performance, and lower capital intensity ✓ Power source agnostic – powered by natural gas generators or electric grid power ✓ Lower emissions, quiet operations, and smaller operational footprint ✓ Significant fuel savings and ~100% diesel displacement ✓ Contracts supporting deployments of each fleet FORCESM Electric-powered Hydraulic Fracturing Fleet Update EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 1414 Highly complementary completions service offerings Substantial free cash flow generation with ~80%+ EBITDA-to-Cash Flow Conversion Rate(1) Reduces future capital spending burden Complementary cultures, operating philosophy, and geographic focus Horizontal integration and service diversification Recent Acquisitions and Strategic Rationale (1) Management forecast. Such data is illustrative and should not be relied upon as an indication of future financial performance or the operating results. Wireline business acquired in 2022 Cementing business acquired in 2023 Wet Sand Solutions business acquired in 2024 EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio015.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 15 Our Integrated Completions Service Offering In an industrialized operating environment, ProPetro is now advantaged with our acquired accretive services that enhance commercial leverage and operational efficiencies. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio016.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 1616 Capital Returns: Conviction in Our Strategy 16 $200 MILLION SHARE REPURCHASE PROGRAM Repurchased $97 Remaining $103 $- $50 $100 $150 $200 (in millions) • Increased plan by $100 million on April 24, 2024, and extended plan to May 2025 (1) • Repurchase highlights: - Retired 11.3 million shares or 10% of shares outstanding since inception through June 30, 2024 - Purchased at an average cost per share of $8.61 since inception - Repurchased and retired 100% of the number of shares issued in the Silvertip acquisition at a discount with continued strong FCF generation (1) Share repurchases will be dependent on working capital requirements, liquidity, market conditions, share price, and other factors. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio017.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 17 0.0 x 2.0 x 4.0 x 6.0 x 8.0 x 10.0 x 12.0 x 14.0 x ENTERPRISE VALUE TO 2024E EBITDA Oilfield Services Valuation: Return Metrics Compared ProPetro as well as our direct peers in the pressure pumping space continue to be valued at a discount relative to other oilfield service companies. Source: Bloomberg as of July 30, 2024. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio018.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 18 0% 100% 200% 300% 2014 2016 2018 2020 2022 2024 In d ic e s P ri c e N o rm a li ze d OIH Index IXI Index Transforming to an Industrialized Model: Valuation Indices Comparison ✓ Improved capital discipline and industry consolidation ✓ Increasing deployment of industrial technologies and processes and emerging contracting environment ✓ Greater / improved focus on cash flow generation (FCFPS) ✓ Capacity constrained / attrition ✓ Low-growth / sustainable operating model × Excess and undisciplined capital availability and resulting overbuild × History of capital destruction under obsolete EBITDA growth model × Bias against hydrocarbons × Amplitude of industry cycles × Resulting flight of capital and investors Dislocation of OFS Stocks Reason for Multiple Rerate for OFS Stocks NOTE: OIH is the VanEck Oil Services ETF; IXI is the Industrial Select Sector Index. FCFPS is defined as free cash flow per share. OFS is a reference to Oil Field Services. Bloomberg as of July 30, 2024 OIL SERVICES INDEX (OIH) VS. INDUSTRIAL SECTOR INDEX (IXI) An industrialized model deserves a valuation rerate. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio019.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 19 Booming global economy Higher relative refining capacity Limited shareholder and corporate pressure for Environmental and other ESG- related causes Robust capital markets and associated capital access Industry Evolving for a Sustainable Future CURRENT INDUSTRY DYNAMICS Oil supply is expected to remain suppressed due to insufficient capital spending, ongoing geo-political conflicts, and OPEC+ remaining disciplined. Energy demand has largely rebounded from pandemic-related impacts, although not fully in certain areas of the globe (e.g., China). Strong balance sheets and capital discipline are the new normal for oil and gas production and service companies. Capital markets largely avoid oil and gas as private equity groups are chasing “transition energy” and debt markets are effectively closed. The hydrocarbon industry is here to stay even though the use of alternative energy is increasing, hydrocarbons have proven their critical value to global prosperity and energy security. ProPetro is well-positioned to take advantage of the long-term industry dynamics through improved fundamentals, access to the attractive Permian Basin, consistent execution, and capital discipline. PRE-COVID PANDEMIC INDUSTRY DYNAMICS EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio020.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 20 PERMIAN BASIN ~86,000 square miles U.S. CRUDE OIL PRODUCTION FORECAST (MB/D) LEADS THE WORLD IN OIL AND NATURAL GAS PRODUCTION • The Permian is one of the most prolific areas for hydrocarbon production globally and is renowned for its vast reserves of oil and natural gas, as well as its high level of activity and production efficiency. • We are strategically located in and levered to the Permian Basin with ~98% of our revenue coming from this region, providing a more sustainable and resilient demand for our services. Permian Basin: The Land of Reliable Energy Midland, Texas Corporate Headquarters and primary operating facilities Source: Energy Aspects, May 2024. NOTE: Additional service centers are located in New Mexico and Utah. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio021.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 21 Customer focused; Team driven Dedicated and efficient customer base harnessing the potential of the resource-rich Permian Basin Transitioning to a young, efficient, more capital-light fleet powered by natural gas and electricity Relied upon by premier customers with proven results year- after-year Disciplined capital allocation and asset deployment strategy Reducing emissions and investing in longer-lived assets Diversified customer base including the largest Permian operators Who We Are and Where We Are Going EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio022.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 22© 2024 ProPetro Holding Corp. All Rights Reserved. 22 Proven Success in the Most Challenging Environment: Unrivaled Premium Completions Services COMPLETION-RELATED SERVICES Consistent with ProPetro’s Hydraulic Fracturing, Cementing, and Wireline services HYDRAULIC FRACTURING ProPetro’s premier service line delivering industry-leading performance SPECIAL APPLICATIONS Customized treatments and complex jobs for customers that put their trust in ProPetro for reliable completions services Source: EnergyPoint Research Inc. https://www.propetroservices.com/our-services EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio023.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 23 Check out our latest ProPetro ProEnergy ProPeople Sustainability Report on our website Commitment to Our People, Our Community, and Our Environment OPTIMIZED OPERATIONS AND FLEET TRANSITION Innovation • Strategic investments in dual-fuel and electric- powered fleets, remote engineering operations, logistics, and maintenance systems Get the job done efficiently • Minimizing idle time, spills, and avoiding duplicative work Optimizing fuel consumption • Integrating cleaner-burning natural gas • Investing in Tier IV DGB dual-fuel and our FORCESM electric-powered equipment to displace diesel ENVIRONMENTAL SAFETY PEOPLE FOCUSED ON OUR TEAM • Education and tuition reimbursement to engage and advance our employees • ProPetro employees created the Positive United Morale Partners (the P.U.M.P. Committee) to drive community engagement for those in need COMMITTED TO AN ACCIDENT-FREE WORKPLACE • Strong training and development culture • Dedicated heavy haul driving team to reduce hazards on the roads in our community • Recognized with safety awards and leadership in the Permian Basin 23 EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio024.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 24 Capital Allocation Framework: Strategy Meets Opportunity OPTIMIZE OPERATIONS Enhancing operational efficiency by focusing resources on the most relevant technologies, tools, and best practices FLEET TRANSITION With an industrializing sector, transitioning our fleet to natural gas-burning and electric offerings, which command higher demand and relative pricing DISCIPLINED GROWTH Prudently assessing value-enhancing investment opportunities to make ProPetro stronger — including opportunities to enhance scale, expand margins, and accelerate free cash flow Designed to improve free cash flow and value-distribution… …while maintaining a strong balance sheet. EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio025.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 25 Our Leadership: Committed to Shareholder Value Creation PHILLIP A. GOBE Chairman of the Board ANTHONY BEST Lead Independent Director, Audit Committee Chair MICHELE VION Independent Director, Compensation Committee Chair SPENCER D. ARMOUR III Independent Director JACK B. MOORE Independent Director, Nominating & Corporate Governance Committee Chair G. LARRY LAWRENCE Independent Director MARK BERG Independent Director Board of DirectorsCompany Management ADAM MUÑOZ President and Chief Operating Officer DAVID SCHORLEMER Chief Financial Officer JODY MITCHELL General Counsel SAM SLEDGE Chief Executive Officer & Director MARY RICCIARDELLO Independent Director CELINA DAVILA Chief Accounting Officer SHELBY FIETZ Chief Commercial Officer ALEX VOLKOV Director EXHIBIT 99.2"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "a2q24investorpresentatio026.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "© 2024 ProPetro Holding Corp. All Rights Reserved. 26 Investor Contacts INVESTOR RELATIONS DAVID SCHORLEMER Chief Financial Officer david.schorlemer@propetroservices.com 432.277.0864 MATT AUGUSTINE Director, Corporate Development and Investor Relations matt.augustine@propetroservices.com 432.219.7620 CORPORATE HEADQUARTERS 303 W Wall St., Suite 102 Midland, TX 79701 432.688.0012 www.propetroservices.com EXHIBIT 99.2"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc a6aearningsreleasesecond"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "ProPetro Reports Financial Results for the Second Quarter of 2024 MIDLAND, Texas, July 31, 2024, (Business Wire) – ProPetro Holding Corp. (\"ProPetro\" or \"the Company\") (NYSE: PUMP) today announced financial and operational results for the second quarter of 2024. Second Quarter 2024 Results and Highlights • Total revenue of $357 million decreased 12% compared to the prior quarter. • Net loss was $4 million ($0.03 loss per diluted share) as compared to net income of $20 million in the prior quarter ($0.18 income per diluted share). • Adjusted EBITDA(1) of $66 million was 19% of revenue and decreased 29% compared to the prior quarter. • Net cash provided by operating activities was $105 million with Free Cash Flow(2) of $48 million. • Year-to-date net cash provided by operating activities, Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration(2) were $180 million, $89 million, and $110 million, respectively. • Four FORCESM electric hydraulic fracturing fleets are now under contract to leading customers with three FORCESM electric fleets currently operating. • Placed an order for our fifth FORCESM electric fleet to be delivered and deployed in 2024. • Effective frac fleet utilization was 15.5 fleets compared to 15.0 fleets in the prior quarter. • Acquired Aqua Prop LLC (\"AquaPropSM\"), an innovative provider of cost-effective wet sand solutions. • Repurchased and retired 2.5 million shares during the quarter with total repurchases of 11.3 million shares representing approximately 10% of outstanding shares since plan inception in May 2023. (1) Adjusted EBITDA is a non-GAAP financial measure and is described and reconciled to net income (loss) in the table under “Non-GAAP Financial Measures.” (2) Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration are non-GAAP financial measures and are described and reconciled to net cash from operating activities in the table under “Non-GAAP Financial Measures.\" Management Comments Sam Sledge, Chief Executive Officer, commented, \"In the second quarter of 2024, despite industry challenges, ProPetro's strategic focus on industrializing our business and creating long term value remains strong. We continue to generate strong free cash flow, showcasing the effectiveness of our strategy. Our ongoing transition from diesel equipment to FORCESM electric equipment remains on track, bolstering our competitive edge both commercially and operationally. Our recent acquisitions, including AquaPropSM, highlight our disciplined approach to value accretive M&A and in the face of a challenging energy services landscape, ProPetro's strategic initiatives are delivering. Our transformational efforts, including fleet optimization, share repurchases, and opportunistic acquisitions, have bolstered our financial resilience and positioned us favorably amidst industry headwinds. Demand for our bifurcated services remains strong, underscored by our commitment to operational excellence and the deployment of innovative technologies like our FORCESM electric equipment. With a clear focus on industrialization and disciplined capital allocation, we are confident in our ability to sustain strong free cash flow and drive long-term value for our stakeholders.\" David Schorlemer, Chief Financial Officer, said, \"Our second quarter results reflect a remarkable turnaround unfolding at ProPetro, one of reliable free cash flow generation. While revenues and profitability were impacted by some customer delays and pricing pressures predominantly on our Tier II diesel frac fleets, capital spending remained low driving a fifth consecutive quarter of strong free cash flow. Another key aspect of our strategy has been selective M&A to complement our existing businesses and drive incremental free cash flow per share. Since acquiring Silvertip, we have repurchased and retired more than 100% of the number of shares issued to Silvertip shareholders during the acquisition. Additionally, we are continuing to benefit from the high EBITDA to free cash flow conversion of this EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "segment. We expect our disciplined investments and consistent operations to continue to drive more durable free cash flow today and in the future.\" Second Quarter 2024 Financial Summary Revenue was $357 million, compared to $406 million for the first quarter of 2024. The 12% decrease in revenue was largely attributable to customer delays, pricing pressures particularly on our Tier II diesel assets, and weather impact in our hydraulic fracturing and wireline businesses during the quarter. Cost of services, excluding depreciation and amortization of approximately $56 million relating to cost of services, decreased to $266 million from $289 million during the first quarter of 2024. General and administrative expense of $31 million increased from $28 million in the first quarter of 2024. G&A expense excluding nonrecurring and noncash items (stock-based compensation, transaction expense, and other items) of $6 million, was $25 million, or 7% of revenue. Net loss totaled $4 million, or $0.03 per diluted share, compared to net income of $20 million, or $0.18 per diluted share, for the first quarter of 2024. Adjusted EBITDA decreased to $66 million from $93 million in the first quarter of 2024 primarily related to decreased revenues noted above. Net cash provided by operating activities was $105 million as compared to $75 million in the prior quarter. Free Cash Flow was approximately $48 million as compared to Free Cash Flow of approximately $41 million in the prior quarter. Share Repurchase Program On April 24, 2024, the Company announced a $100 million increase to its share repurchase program increasing it to a total of $200 million while extending the plan to May 2025. During the quarter, the Company repurchased and retired 2.5 million shares for $23 million. Since inception, the Company has acquired and retired 11.3 million shares representing approximately 10% of its outstanding shares as of the date of plan inception. Liquidity and Capital Spending As of June 30, 2024, total cash was $67 million and our borrowings under the ABL Credit Facility were $45 million. Total liquidity at the end of the second quarter of 2024 was $145 million including cash and $78 million of available capacity under the ABL Credit Facility. Capital expenditures during the second quarter of 2024 were primarily related to maintenance and support equipment for our FORCESM electric hydraulic fracturing fleet deployments. Net cash used in investing activities during the second quarter of 2024 was $57 million of which $21 million was related to the acquisition of AquaPropSM. Guidance The Company is now reducing our full-year 2024 capital expenditure guidance to be between $175 million to $200 million, down from our prior guidance of $200 million to $250 million. Our effective frac fleet utilization for the second quarter was 15.5 fleets, which was above the guidance range we had provided. Thanks to efficiencies exceeding our expectations from previous years, we are shifting away from reporting on fleet utilization based on days worked. Instead, we'll focus on guiding and reporting the number of active frac fleets, which we believe better represents asset utilization in our hydraulic fracturing business. During the second quarter, 14 hydraulic fracturing fleets were active and we expect to run approximately 14 active frac fleets in the third quarter of 2024. EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Outlook Mr. Sledge added, “Looking ahead, we expect the second half of the year to play out similarly to the first half. Our bifurcated fleet offering paired with a first class operating team is contributing to industry-leading efficiencies and high customer satisfaction. The demand for our FORCESM electric equipment continues to outstrip our current supply and that demand coupled with the continued integration of our recent acquisitions should support even more resilient earnings as we progress through the balance of this year and beyond. Additionally, with our strong balance sheet and steady free cash flow generation, we continue to make excellent progress on all our strategic priorities, and we will continue to evaluate opportunities to further enhance financial returns and the overall competitiveness of our offering.” Mr. Sledge concluded, “Our strategy is designed to navigate the current market environment and drive long-term value. With a focus on operational excellence, advanced technology adoption, and a sound financial footing, ProPetro has minimized the volatility present in past cycles and is well-prepared to capitalize on the opportunities ahead.\" Conference Call Information The Company will host a conference call at 8:00 AM Central Time on Wednesday, July 31, 2024, to discuss financial and operating results for the second quarter of 2024. The call will also be webcast on ProPetro’s website at www.propetroservices.com. To access the conference call, U.S. callers may dial toll free 1-844-340-9046 and international callers may dial 1-412-858-5205. Please call ten minutes ahead of the scheduled start time to ensure a proper connection. A replay of the conference call will be available for one week following the call and can be accessed toll free by dialing 1-877-344-7529 for U.S. callers, 1-855-669-9658 for Canadian callers, as well as 1-412-317-0088 for international callers. The access code for the replay is 9918646. The Company has also posted the scripted remarks on its website. About ProPetro ProPetro Holding Corp. is a Midland, Texas-based provider of premium completion services to leading upstream oil and gas companies engaged in the exploration and production of North American unconventional oil and natural gas resources. We help bring reliable energy to the world. For more information visit www.propetroservices.com. Forward-Looking Statements Except for historical information contained herein, the statements and information in this news release and discussion in the scripted remarks described above are forward-looking statements that are made pursuant to the Safe Harbor Provisions of the Private Securities Litigation Reform Act of 1995. Statements that are predictive in nature, that depend upon or refer to future events or conditions or that include the words “may,” “could,” \"confident,\" “plan,” “project,” “budget,” \"design,\" “predict,” “pursue,” “target,” “seek,” “objective,” “believe,” “expect,” “anticipate,” “intend,” “estimate,” “will,” “should,” and other expressions that are predictions of, or indicate, future events and trends or that do not relate to historical matters generally identify forward-looking statements. Our forward-looking statements include, among other matters, statements about the supply of and demand for hydrocarbons, industry trends and activity levels, our business strategy, projected financial results and future financial performance, expected fleet utilization, sustainability efforts, the future performance of newly improved technology, expected capital expenditures, the impact of such expenditures on our performance and capital programs, our fleet conversion strategy and our share repurchase program. A forward-looking statement may include a statement of the assumptions or bases underlying the forward-looking statement. We believe that we have chosen these assumptions or bases in good faith and that they are reasonable. Although forward-looking statements reflect our good faith beliefs at the time they are made, forward- looking statements are subject to a number of risks and uncertainties that may cause actual events and EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "results to differ materially from the forward-looking statements. Such risks and uncertainties include the volatility of oil prices, the global macroeconomic uncertainty related to the conflict in the Israel-Gaza region and continued hostilities in the Middle East, including rising tensions with Iran, and the Russia- Ukraine war, general economic conditions, including the impact of continued inflation, central bank policy actions, bank failures, and the risk of a global recession, and other factors described in the Company's Annual Report on Form 10-K and Quarterly Reports on Form 10-Q, particularly the “Risk Factors” sections of such filings, and other filings with the Securities and Exchange Commission (the “SEC”). In addition, the Company may be subject to currently unforeseen risks that may have a materially adverse impact on it. Accordingly, no assurances can be given that the actual events and results will not be materially different than the anticipated results described in the forward-looking statements. Readers are cautioned not to place undue reliance on such forward-looking statements and are urged to carefully review and consider the various disclosures made in the Company’s Annual Report on Form 10-K, Quarterly Reports on Form 10-Q and other filings made with the SEC from time to time that disclose risks and uncertainties that may affect the Company’s business. The forward-looking statements in this news release are made as of the date of this news release. ProPetro does not undertake, and expressly disclaims, any duty to publicly update these statements, whether as a result of new information, new developments or otherwise, except to the extent that disclosure is required by law. Investor Contacts: David Schorlemer Chief Financial Officer david.schorlemer@propetroservices.com 432-227-0864 Matt Augustine Director, Corporate Development and Investor Relations matt.augustine@propetroservices.com 432-219-7620 ### EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "PROPETRO HOLDING CORP. CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (In thousands, except per share data) (Unaudited) Three Months Ended June 30, 2024 March 31, 2024 June 30, 2023 REVENUE - Service revenue $ 357,021 $ 405,843 $ 435,249 COSTS AND EXPENSES Cost of services (exclusive of depreciation and amortization) 265,845 288,641 297,791 General and administrative (inclusive of stock- based compensation) 30,910 28,226 29,021 Depreciation and amortization 57,522 52,206 41,118 Loss on disposal of assets 3,277 6,458 14,836 Total costs and expenses 357,554 375,531 382,766 OPERATING (LOSS) INCOME (533) 30,312 52,483 OTHER (EXPENSE) INCOME: Interest expense (1,965) (2,029) (1,180) Other income (expense), net 2,403 1,405 72 Total other (expense) income, net 438 (624) (1,108) INCOME (LOSS) BEFORE INCOME TAXES (95) 29,688 51,375 INCOME TAX BENEFIT (EXPENSE) (3,565) (9,758) (12,118) NET (LOSS) INCOME $ (3,660) $ 19,930 $ 39,257 NET (LOSS) INCOME PER COMMON SHARE: Basic $ (0.03) $ 0.18 $ 0.34 Diluted $ (0.03) $ 0.18 $ 0.34 WEIGHTED AVERAGE COMMON SHARES OUTSTANDING: Basic 106,303 108,540 114,737 Diluted 106,303 108,989 114,796 NOTE: Certain reclassifications to loss on disposal of assets and depreciation and amortization have been made to the statement of operations and the statement of cash flows for the periods prior to 2024 to conform to the current period presentation. EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "PROPETRO HOLDING CORP. CONDENSED CONSOLIDATED BALANCE SHEETS (In thousands, except share data) (Unaudited) June 30, 2024 December 31, 2023 ASSETS CURRENT ASSETS: Cash and cash equivalents $ 66,886 $ 33,354 Accounts receivable - net of allowance for credit losses of $236 and $236, respectively 220,699 237,012 Inventories 18,742 17,705 Prepaid expenses 11,870 14,640 Short-term investment, net 7,797 7,745 Other current assets 1,153 353 Total current assets 327,147 310,809 PROPERTY AND EQUIPMENT - net of accumulated depreciation 923,213 967,116 OPERATING LEASE RIGHT-OF-USE ASSETS 125,546 78,583 FINANCE LEASE RIGHT-OF-USE ASSETS 40,411 47,449 OTHER NONCURRENT ASSETS: Goodwill 26,754 23,624 Intangible assets - net of amortization 67,384 50,615 Other noncurrent assets 1,872 2,116 Total other noncurrent assets 96,010 76,355 TOTAL ASSETS $ 1,512,327 $ 1,480,312 LIABILITIES AND SHAREHOLDERS’ EQUITY CURRENT LIABILITIES: Accounts payable $ 158,907 $ 161,441 Accrued and other current liabilities 87,663 75,616 Operating lease liabilities 30,349 17,029 Finance lease liabilities 18,625 17,063 Total current liabilities 295,544 271,149 DEFERRED INCOME TAXES 103,462 93,105 LONG-TERM DEBT 45,000 45,000 NONCURRENT OPERATING LEASE LIABILITIES 58,560 38,600 NONCURRENT FINANCE LEASE LIABILITIES 23,013 30,886 OTHER LONG-TERM LIABILITIES 10,900 3,180 Total liabilities 536,479 481,920 COMMITMENTS AND CONTINGENCIES SHAREHOLDERS’ EQUITY: Preferred stock, $0.001 par value, 30,000,000 shares authorized, none issued, respectively — — Common stock, $0.001 par value, 200,000,000 shares authorized, 104,524,320 and 109,483,281 shares issued, respectively 105 109 Additional paid-in capital 890,439 929,249 Retained earnings 85,304 69,034 Total shareholders’ equity 975,848 998,392 TOTAL LIABILITIES AND SHAREHOLDERS’ EQUITY $ 1,512,327 $ 1,480,312 EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "PROPETRO HOLDING CORP. CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (In thousands) (Unaudited) Six Months Ended June 30, 2024 2023 CASH FLOWS FROM OPERATING ACTIVITIES: Net income $ 16,270 $ 67,990 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 109,728 79,389 Deferred income tax expense 10,357 18,897 Amortization of deferred debt issuance costs 217 140 Stock-based compensation 8,360 7,294 Loss on disposal of assets 9,735 49,443 Unrealized (gain) loss on short-term investment (52) 3,846 Changes in operating assets and liabilities, net of effects of business acquisition: Accounts receivable 26,641 (35,178) Other current assets (568) (983) Inventories (1,036) (6,792) Prepaid expenses 2,797 (144) Accounts payable (5,254) (3,160) Accrued and other current liabilities 2,568 6,272 Net cash provided by operating activities 179,763 187,014 CASH FLOWS FROM INVESTING ACTIVITIES: Capital expenditures (71,805) (223,775) Business acquisition, net of cash acquired (21,038) — Proceeds from sale of assets 1,920 2,044 Net cash used in investing activities (90,923) (221,731) CASH FLOWS FROM FINANCING ACTIVITIES: Proceeds from borrowings — 30,000 Payment of debt issuance costs — (1,179) Payments on finance lease obligations (8,542) — Tax withholdings paid for net settlement of equity awards (1,270) (3,383) Share repurchases (45,496) (17,470) Net cash (used in) provided by financing activities (55,308) 7,968 NET INCREASE (DECREASE) IN CASH, CASH EQUIVALENTS AND RESTRICTED CASH 33,532 (26,749) CASH, CASH EQUIVALENTS AND RESTRICTED CASH - Beginning of period 33,354 88,862 CASH, CASH EQUIVALENTS AND RESTRICTED CASH - End of period $ 66,886 $ 62,113 EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reportable Segment Information Three Months Ended June 30, 2024 (in thousands) Hydraulic Fracturing Wireline All Other Reconciling Items Total Service revenue $ 271,628 $ 49,202 $ 36,277 $ (86) $ 357,021 Adjusted EBITDA $ 63,623 $ 10,793 $ 6,583 $ (14,937) $ 66,062 Depreciation and amortization $ 50,082 $ 5,129 $ 2,279 $ 32 $ 57,522 Operating lease expense on FORCESM fleets (1) $ 11,533 $ — $ — $ — $ 11,533 Capital expenditures incurred $ 25,631 $ 1,943 $ 4,376 $ — $ 31,950 Three Months Ended March 31, 2024 (in thousands) Hydraulic Fracturing Wireline All Other Reconciling Items Total Service revenue $ 309,300 $ 60,805 $ 35,738 $ — $ 405,843 Adjusted EBITDA $ 86,119 $ 16,786 $ 4,861 $ (14,371) $ 93,395 Depreciation and amortization $ 44,995 $ 4,915 $ 2,271 $ 25 $ 52,206 Operating lease expense on FORCESM fleets (1) $ 8,592 $ — $ — $ — $ 8,592 Capital expenditures incurred $ 35,988 $ 2,386 $ 1,466 $ — $ 39,840 (1) Represents lease cost related to operating leases on our FORCESM electric-powered hydraulic fracturing fleets. This cost is recorded within cost of services in our condensed consolidated statements of operations. Non-GAAP Financial Measures Adjusted EBITDA, Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration are not financial measures presented in accordance with GAAP. We define EBITDA as net income (loss) plus (i) interest expense, (ii) income tax expense (benefit) and (iii) depreciation and amortization. We define Adjusted EBITDA as EBITDA plus (i) loss (gain) on disposal of assets, (ii) stock-based compensation, (iii) other expense (income), (iv) other unusual or nonrecurring (income) expenses such as costs related to asset acquisitions, insurance recoveries, one-time professional fees and legal settlements and (v) retention bonus and severance expense. We define Free Cash Flow as net cash provided by operating activities less net cash used in investing activities. We define Free Cash Flow adjusted for Acquisition Consideration as Free Cash Flow excluding net cash paid as consideration for business acquisitions. We believe that the presentation of these non-GAAP financial measures provide useful information to investors in assessing our financial condition and results of operations. Net income (loss) is the GAAP measure most directly comparable to Adjusted EBITDA, and net cash from operating activities is the GAAP measure most directly comparable to Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration. Non-GAAP financial measures should not be considered as alternatives to the most directly comparable GAAP financial measures. Non-GAAP financial measures have important limitations as analytical tools because they exclude some, but not all, items that affect the most directly comparable GAAP financial measures. You should not consider Adjusted EBITDA, Free Cash Flow or Free Cash Flow adjusted for Acquisition Consideration in isolation or as a substitute for an analysis of our results as reported under GAAP. Because Adjusted EBITDA, Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration may be defined differently by other companies in our industry, our definitions of these non-GAAP financial measures may not be comparable to similarly titled measures of other companies, thereby diminishing their utility. EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Net Income to Adjusted EBITDA Three Months Ended (in thousands) June 30, 2024 March 31, 2024 Net (loss) income $ (3,660) $ 19,930 Depreciation and amortization 57,522 52,206 Interest expense 1,965 2,029 Income tax expense 3,565 9,758 Loss on disposal of assets 3,277 6,458 Stock-based compensation 4,618 3,742 Other income, net (1) (2,403) (1,405) Other general and administrative expense, net 1,113 59 Retention bonus and severance expense 65 618 Adjusted EBITDA $ 66,062 $ 93,395 (1) Other income for the three months ended June 30, 2024 is primarily comprised of tax refunds of $1.7 million and a $0.7 unrealized gain on short-term investment. Other income for the three months ended March 31, 2024 includes insurance reimbursements of $2.0 million, partially offset by $0.6 million unrealized loss on short-term investment. EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "a6aearningsreleasesecond010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Reconciliation of Cash Flows from Operating Activities to Free Cash Flow and Free Cash Flow adjusted for Acquisition Consideration Three Months Ended Six Months Ended (in thousands) June 30, 2024 March 31, 2024 June 30, 2024 June 30, 2023 Net Cash provided by Operating $ 104,941 $ 74,822 $ 179,763 $ 187,014 Net Cash used in Investing Activities (57,076) (33,847) (90,923) (221,731) Free Cash Flow 47,865 40,975 88,840 (34,717) Acquisition Consideration 21,038 — 21,038 — Free Cash Flow adjusted for Acquisition Consideration $ 68,903 $ 40,975 $ 109,878 $ (34,717) EXHIBIT 99.1"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 357.0,
+    "quarter_revenue_yoy_pct": -12.0,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "revenues decreased 12% versus the first quarter to $357 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": -2,
+    "earnings_score_bucket": "avoid",
+    "guidance_torque": 0,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": "",
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "9.550000",
+    "return_10d_pct": "-12.5654",
+    "return_20d_pct": "-16.1257",
+    "return_30d_pct": "-20.6283",
+    "return_60d_pct": "-19.7906",
+    "return_90d_pct": "-24.5026"
+  },
+  "text_stats": {
+    "primary_text_len": 4021,
+    "exhibit_text_len": 71442,
+    "combined_text_len": 75465,
+    "semantic_text_len": 72942,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

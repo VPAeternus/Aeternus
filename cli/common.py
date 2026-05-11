@@ -1160,7 +1160,6 @@ def _resolve_noninteractive_provider() -> str:
 def _build_noninteractive_selections(
     ticker: str,
     analysis_date: str,
-    queue_item: Optional[Dict[str, Any]] = None,
     analyst_provider: Optional[str] = None,
     post_analyst_provider: Optional[str] = None,
 ) -> Dict[str, Any]:
@@ -1198,7 +1197,7 @@ def _build_noninteractive_selections(
         and not os.getenv("AETERNUS_DEEP_MODEL")
         and not os.getenv("TRADINGAGENTS_DEEP_MODEL")
     ):
-        # Non-interactive queue/batch runs favor deterministic completion speed.
+        # Non-interactive runs favor deterministic completion speed.
         deep_model = quick_model
 
     selections = {
@@ -1219,32 +1218,11 @@ def _build_noninteractive_selections(
         "post_analyst_provider": selected_post_provider,
     }
     if provider == "xai":
-        # Prevent expensive multi-vendor news fan-out in non-interactive queue/batch runs.
+        # Prevent expensive multi-vendor news fan-out in non-interactive runs.
         selections["tool_vendors_override"] = {
             "get_news": "xai",
             "get_global_news": "xai",
             "get_fundamentals": "xai",
-        }
-    if queue_item:
-        selections["queue_context"] = {
-            "queue_id": queue_item.get("queue_id"),
-            "sector": queue_item.get("sector"),
-            "lane": queue_item.get("lane"),
-            "deal_flow_score": queue_item.get("deal_flow_score"),
-            "momentum_score": queue_item.get("momentum_score"),
-            "asymmetry_score": queue_item.get("asymmetry_score"),
-            "research_playbook": queue_item.get("research_playbook"),
-            "subscores": queue_item.get("subscores", {}),
-            "thesis_tags": queue_item.get("thesis_tags", []),
-            "risk_tags": queue_item.get("risk_tags", []),
-            "evidence": queue_item.get("evidence", {}),
-            "why_now": queue_item.get("why_now", ""),
-            "source": queue_item.get("source", ""),
-            "source_detail": queue_item.get("source_detail", ""),
-            "causal_source_ticker":     queue_item.get("causal_source_ticker", ""),
-            "causal_event_type":        queue_item.get("causal_event_type", ""),
-            "causal_hop_distance":      queue_item.get("causal_hop_distance", 0),
-            "causal_alpha_window_days": queue_item.get("causal_alpha_window_days", 0),
         }
     return selections
 
@@ -1314,14 +1292,12 @@ def _apply_run_profile_overrides(base_config: Dict[str, Any], run_profile: str) 
         config["dealflow_dynamic_universe_max_extra_symbols"] = max(
             as_int("dealflow_dynamic_universe_max_extra_symbols", 60), 120
         )
-        config["dealflow_social_max_symbol_calls"] = max(as_int("dealflow_social_max_symbol_calls", 35), 50)
         config["dealflow_x_enrich_top_posts"] = max(as_int("dealflow_x_enrich_top_posts", 20), 30)
     else:
         config["dealflow_x_max_api_calls_per_run"] = max(0, min(as_int("dealflow_x_max_api_calls_per_run", 8), 1))
         config["dealflow_dynamic_universe_max_extra_symbols"] = max(
             8, min(as_int("dealflow_dynamic_universe_max_extra_symbols", 60), 15)
         )
-        config["dealflow_social_max_symbol_calls"] = max(4, min(as_int("dealflow_social_max_symbol_calls", 35), 8))
         config["dealflow_x_enrich_top_posts"] = max(2, min(as_int("dealflow_x_enrich_top_posts", 20), 5))
 
     config["dealflow_run_profile"] = run_profile
@@ -1343,167 +1319,14 @@ def _to_float(value: Any) -> float:
         return 0.0
 
 
-def _load_research_queue(date: Optional[str] = None) -> Tuple[Dict[str, Any], Path]:
-    base = _dealflow_base_dir()
-    if date:
-        path = base / date / "research_queue.json"
-        if not path.exists():
-            raise FileNotFoundError(f"Queue artifact not found: {path}")
-        return _read_json(path), path
-
-    latest = base / "latest_research_queue.json"
-    if latest.exists():
-        return _read_json(latest), latest
-
-    dated_paths = sorted(base.glob("*/research_queue.json"))
-    if not dated_paths:
-        raise FileNotFoundError(
-            "No deal-flow research queue found. Run `aeternus source` first."
-        )
-
-    path = dated_paths[-1]
-    return _read_json(path), path
-
-
-def _find_queue_item(
-    queue_id: str,
-    date: Optional[str] = None,
-) -> Tuple[Dict[str, Any], Dict[str, Any], Path]:
-    if date:
-        queue_data, queue_path = _load_research_queue(date)
-        for item in queue_data.get("items", []):
-            if item.get("queue_id") == queue_id:
-                return item, queue_data, queue_path
-        raise ValueError(f"Queue ID not found in {queue_path}: {queue_id}")
-
-    queue_data, queue_path = _load_research_queue(None)
-    for item in queue_data.get("items", []):
-        if item.get("queue_id") == queue_id:
-            return item, queue_data, queue_path
-
-    for candidate_path in sorted(_dealflow_base_dir().glob("*/research_queue.json"), reverse=True):
-        data = _read_json(candidate_path)
-        for item in data.get("items", []):
-            if item.get("queue_id") == queue_id:
-                return item, data, candidate_path
-
-    raise ValueError(f"Queue ID not found in deal-flow artifacts: {queue_id}")
-
-
-def _render_shortlist_table(shortlist: Dict[str, Any]) -> None:
-    table = Table(title=f"Deal Flow Shortlist ({shortlist.get('date', 'N/A')})")
-    table.add_column("Rank", justify="right")
-    table.add_column("Symbol", style="cyan")
-    table.add_column("Lane", style="yellow")
-    table.add_column("Source", style="blue")
-    table.add_column("Asset", style="green")
-    table.add_column("Sector", style="magenta")
-    table.add_column("Core", justify="right")
-    table.add_column("Asymm", justify="right")
-    table.add_column("Freshness(h)", justify="right")
-    table.add_column("Reason", style="white")
-
-    for candidate in shortlist.get("candidates", []):
-        table.add_row(
-            str(candidate.get("rank", "")),
-            str(candidate.get("symbol", "N/A")),
-            str(candidate.get("lane", "CORE")),
-            str(candidate.get("source_detail") or candidate.get("source", "AUTO")),
-            str(candidate.get("asset_class", "N/A")),
-            str(candidate.get("sector", "N/A")),
-            f"{float(candidate.get('core_score', candidate.get('deal_flow_score', 0.0))):.2f}",
-            f"{float(candidate.get('asymmetry_score', 0.0)):.2f}",
-            f"{float(candidate.get('freshness_hours', 0.0)):.1f}",
-            str(candidate.get("reason", "")),
-        )
-
-    console.print(table)
-
-
-def _render_queue_table(queue_data: Dict[str, Any], title_suffix: str = "") -> None:
-    title = "Research Queue"
-    if title_suffix:
-        title = f"{title} {title_suffix}"
-
-    table = Table(title=title)
-    table.add_column("Queue ID", style="cyan")
-    table.add_column("Symbol", style="green")
-    table.add_column("Lane", style="yellow")
-    table.add_column("Source", style="blue")
-    table.add_column("Asset", style="magenta")
-    table.add_column("Sector", style="blue")
-    table.add_column("DealFlow", justify="right")
-    table.add_column("Momentum", justify="right")
-    table.add_column("Playbook", style="white")
-    table.add_column("Triage", justify="right")
-    table.add_column("Deep", justify="center")
-
-    for item in queue_data.get("items", []):
-        table.add_row(
-            str(item.get("queue_id", "N/A")),
-            str(item.get("symbol", "N/A")),
-            str(item.get("lane", "CORE")),
-            str(item.get("source_detail") or item.get("source", "AUTO")),
-            str(item.get("asset_class", "N/A")),
-            str(item.get("sector", "N/A")),
-            f"{float(item.get('deal_flow_score', 0.0)):.2f}",
-            f"{float(item.get('momentum_score', 0.0)):.2f}",
-            str(item.get("research_playbook", "N/A")),
-            f"{float(item.get('triage_score', 0.0)):.2f}",
-            "yes" if item.get("selected_for_deep") else "no",
-        )
-
-    console.print(table)
-
-
-def _render_batch_results_table(summary: Dict[str, Any]) -> None:
-    table = Table(title=f"Batch Analyze Results ({summary.get('date', 'N/A')})")
-    table.add_column("#", justify="right")
-    table.add_column("Queue ID", style="cyan")
-    table.add_column("Symbol", style="green")
-    table.add_column("Mode", style="blue")
-    table.add_column("Lane", style="yellow")
-    table.add_column("Playbook", style="magenta")
-    table.add_column("Recommendation", style="blue")
-    table.add_column("Status", justify="center")
-    table.add_column("Exit", justify="right")
-    table.add_column("Reason", style="white")
-
-    for idx, item in enumerate(summary.get("items", []), start=1):
-        status = str(item.get("status", "UNKNOWN"))
-        if _is_success_status(status):
-            status_style = "green"
-        elif status == "SKIPPED":
-            status_style = "yellow"
-        else:
-            status_style = "red"
-        table.add_row(
-            str(idx),
-            str(item.get("queue_id", "N/A")),
-            str(item.get("symbol", "N/A")),
-            str(item.get("analysis_mode", "DEEP")),
-            str(item.get("lane", "N/A")),
-            str(item.get("research_playbook", "N/A")),
-            str(item.get("recommendation", "N/A")),
-            f"[{status_style}]{status}[/{status_style}]",
-            str(item.get("return_code", "N/A")),
-            str(item.get("reason", "")),
-        )
-
-    console.print(table)
-
-
-def _persist_batch_summary(queue_date: str, summary: Dict[str, Any]) -> Path:
-    base = _dealflow_base_dir() / queue_date
-    base.mkdir(parents=True, exist_ok=True)
-    stamp = datetime.datetime.now().strftime("%H%M%S")
-    path = base / f"batch_analyze_summary_{stamp}.json"
-    payload = dict(summary)
-    payload["summary_path"] = str(path)
-    path.write_text(json_lib.dumps(payload, indent=2))
-    latest = base / "batch_analyze_latest.json"
-    latest.write_text(json_lib.dumps(payload, indent=2))
-    return path
+def _load_analysis_summary(summary_path: Path) -> Tuple[Dict[str, Any], Path]:
+    path = Path(summary_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Analysis summary not found: {path}")
+    payload = _read_json(path)
+    if not isinstance(payload, dict):
+        raise ValueError(f"Analysis summary must be a JSON object: {path}")
+    return payload, path
 
 
 def _results_base_dir() -> Path:
@@ -1520,59 +1343,6 @@ def _paper_execution_base_dir() -> Path:
 
 def _live_execution_base_dir() -> Path:
     return Path("eval_results") / "live_execution"
-
-
-def _load_batch_summary(
-    queue_date: Optional[str] = None,
-    summary_path: Optional[Path] = None,
-) -> Tuple[Dict[str, Any], Path]:
-    def _resolve_latest_for_date(base: Path, date_str: str) -> Tuple[Dict[str, Any], Path]:
-        dated_latest = base / str(date_str) / "batch_analyze_latest.json"
-        candidates = sorted((base / str(date_str)).glob("batch_analyze_summary_*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
-        if dated_latest.exists():
-            latest_payload = _read_json(dated_latest)
-            if not bool(latest_payload.get("dry_run")):
-                return latest_payload, dated_latest
-        for candidate in candidates:
-            payload = _read_json(candidate)
-            if not bool(payload.get("dry_run")):
-                return payload, candidate
-        if dated_latest.exists():
-            return _read_json(dated_latest), dated_latest
-        raise FileNotFoundError(
-            f"Batch summary not found for date {date_str}: {dated_latest}"
-        )
-
-    if summary_path is not None:
-        path = Path(summary_path)
-        if not path.exists():
-            raise FileNotFoundError(f"Batch summary not found: {path}")
-        return _read_json(path), path
-
-    base = _dealflow_base_dir()
-    if queue_date:
-        return _resolve_latest_for_date(base, str(queue_date))
-
-    dated_paths = sorted(base.glob("*/batch_analyze_latest.json"))
-    if not dated_paths:
-        raise FileNotFoundError(
-            "No batch summary found. Run `aeternus analyze-batch` first."
-        )
-
-    # Prefer newest non-dry-run artifact across all dates.
-    dated_dirs = sorted(
-        [p.parent for p in dated_paths],
-        key=lambda p: p.stat().st_mtime,
-        reverse=True,
-    )
-    for dated_dir in dated_dirs:
-        try:
-            return _resolve_latest_for_date(base, dated_dir.name)
-        except FileNotFoundError:
-            continue
-
-    latest = max(dated_paths, key=lambda path: path.stat().st_mtime)
-    return _read_json(latest), latest
 
 
 def _persist_portfolio_plan(plan: Dict[str, Any]) -> Path:
@@ -4344,8 +4114,6 @@ def _render_discovery_delta_cohort_scorecards(report: Dict[str, Any]) -> None:
     metric_table.add_column("5d", justify="right")
     metric_table.add_column("20d", justify="right")
     metric_table.add_column("3m", justify="right")
-    metric_table.add_column("Shortlist", justify="right")
-    metric_table.add_column("Deep", justify="right")
 
     for cohort_name in ("scout_only", "technical_only", "multi_channel"):
         row = dict(cohorts.get(cohort_name) or {})
@@ -4355,8 +4123,6 @@ def _render_discovery_delta_cohort_scorecards(report: Dict[str, Any]) -> None:
             _fmt_pct(row.get("mean_return_5d")),
             _fmt_pct(row.get("mean_return_20d")),
             _fmt_pct(row.get("mean_return_3m")),
-            _fmt_pct(row.get("shortlist_conversion")),
-            _fmt_pct(row.get("deep_selection_conversion")),
         )
 
     metric_table.add_row(
@@ -4365,8 +4131,6 @@ def _render_discovery_delta_cohort_scorecards(report: Dict[str, Any]) -> None:
         _fmt_pct(baseline.get("mean_return_5d")),
         _fmt_pct(baseline.get("mean_return_20d")),
         _fmt_pct(baseline.get("mean_return_3m")),
-        _fmt_pct(baseline.get("shortlist_conversion")),
-        _fmt_pct(baseline.get("deep_selection_conversion")),
     )
     console.print(metric_table)
 
@@ -4396,46 +4160,6 @@ def _render_discovery_delta_cohort_scorecards(report: Dict[str, Any]) -> None:
     console.print(comparison_table)
 
 
-def _render_evidence_integrity_summary(report: Dict[str, Any]) -> None:
-    payload = dict(report or {})
-    class_counts = dict(payload.get("class_counts") or {})
-    top_sparse = list(payload.get("top_sparse_but_interesting") or [])
-    top_degraded = list(payload.get("top_data_degraded") or [])
-    if not class_counts and not top_sparse and not top_degraded:
-        return
-
-    console.print("[bold green]Evidence Integrity[/bold green]")
-
-    class_table = Table(title="Integrity Classes")
-    class_table.add_column("Class", style="cyan")
-    class_table.add_column("Count", justify="right")
-    for class_name in ("CONFIRMED", "SPARSE_BUT_INTERESTING", "DATA_DEGRADED", "LOW_SIGNAL"):
-        class_table.add_row(class_name, str(int(class_counts.get(class_name, 0) or 0)))
-    console.print(class_table)
-
-    if top_sparse:
-        sparse_table = Table(title="Top Sparse But Interesting")
-        sparse_table.add_column("Symbol", style="cyan", no_wrap=True)
-        sparse_table.add_column("Asymmetry", justify="right")
-        for row in top_sparse[:10]:
-            sparse_table.add_row(
-                str(row.get("symbol", "")),
-                str(round(float(row.get("asymmetry_score", 0.0) or 0.0), 2)),
-            )
-        console.print(sparse_table)
-
-    if top_degraded:
-        degraded_table = Table(title="Top Data Degraded")
-        degraded_table.add_column("Symbol", style="cyan", no_wrap=True)
-        degraded_table.add_column("Degradation", justify="right")
-        for row in top_degraded[:10]:
-            degraded_table.add_row(
-                str(row.get("symbol", "")),
-                str(round(float(row.get("degradation_score", 0.0) or 0.0), 2)),
-            )
-        console.print(degraded_table)
-
-
 def _render_fundamental_shadow_summary(report: Dict[str, Any]) -> None:
     payload = dict(report or {})
     coverage = dict(payload.get("coverage_summary") or {})
@@ -4451,8 +4175,7 @@ def _render_fundamental_shadow_summary(report: Dict[str, Any]) -> None:
         "[cyan]Coverage:[/cyan] "
         f"signals={int(coverage.get('signal_count', 0) or 0)} "
         f"ok={int(coverage.get('ok_count', 0) or 0)} "
-        f"shortlist_overlap={int(coverage.get('shortlist_overlap_count', 0) or 0)} "
-        f"deep_overlap={int(coverage.get('selected_for_deep_overlap_count', 0) or 0)}"
+        f"handoff_overlap={int(coverage.get('handoff_overlap_count', 0) or 0)}"
     )
     if top_signals:
         labels = ", ".join(
@@ -4460,82 +4183,6 @@ def _render_fundamental_shadow_summary(report: Dict[str, Any]) -> None:
             for row in top_signals[:5]
         )
         console.print(f"[cyan]Top shadow names:[/cyan] {labels}")
-
-
-def _render_evidence_integrity_cohort_scorecards(report: Dict[str, Any]) -> None:
-    payload = dict(report or {})
-    cohorts = dict(payload.get("cohorts") or {})
-    baseline = dict(payload.get("step2_baseline") or {})
-    comparisons = dict(payload.get("comparisons") or {})
-    if not cohorts:
-        return
-
-    def _fmt_pct(value: Any) -> str:
-        if value is None:
-            return "—"
-        pct = float(value) * 100.0
-        color = "green" if pct > 0 else ("red" if pct < 0 else "yellow")
-        return f"[{color}]{pct:+.2f}%[/{color}]"
-
-    console.print("[bold green]Evidence Integrity Cohort Scorecards[/bold green]")
-
-    metric_table = Table(title="Evidence Integrity Cohort Performance")
-    metric_table.add_column("Cohort", style="cyan")
-    metric_table.add_column("Count", justify="right")
-    metric_table.add_column("5d", justify="right")
-    metric_table.add_column("20d", justify="right")
-    metric_table.add_column("3m", justify="right")
-    metric_table.add_column("Shortlist", justify="right")
-    metric_table.add_column("Deep", justify="right")
-
-    for cohort_name in ("CONFIRMED", "SPARSE_BUT_INTERESTING", "DATA_DEGRADED", "LOW_SIGNAL"):
-        row = dict(cohorts.get(cohort_name) or {})
-        metric_table.add_row(
-            cohort_name,
-            str(int(row.get("count", 0) or 0)),
-            _fmt_pct(row.get("mean_return_5d")),
-            _fmt_pct(row.get("mean_return_20d")),
-            _fmt_pct(row.get("mean_return_3m")),
-            _fmt_pct(row.get("shortlist_conversion")),
-            _fmt_pct(row.get("deep_selection_conversion")),
-        )
-
-    metric_table.add_row(
-        "step2_baseline",
-        str(int(baseline.get("count", 0) or 0)),
-        _fmt_pct(baseline.get("mean_return_5d")),
-        _fmt_pct(baseline.get("mean_return_20d")),
-        _fmt_pct(baseline.get("mean_return_3m")),
-        _fmt_pct(baseline.get("shortlist_conversion")),
-        _fmt_pct(baseline.get("deep_selection_conversion")),
-    )
-    console.print(metric_table)
-
-    comparison_table = Table(title="Evidence Integrity Cohort Deltas")
-    comparison_table.add_column("Cohort", style="cyan")
-    comparison_table.add_column("Vs Step2 5d", justify="right")
-    comparison_table.add_column("Vs Step2 20d", justify="right")
-    comparison_table.add_column("Vs Step2 3m", justify="right")
-    comparison_table.add_column("Vs Peers 5d", justify="right")
-    comparison_table.add_column("Vs Peers 20d", justify="right")
-    comparison_table.add_column("Vs Peers 3m", justify="right")
-
-    vs_baseline = dict(comparisons.get("vs_step2_baseline") or {})
-    vs_peers = dict(comparisons.get("vs_other_cohorts") or {})
-    for cohort_name in ("CONFIRMED", "SPARSE_BUT_INTERESTING", "DATA_DEGRADED", "LOW_SIGNAL"):
-        baseline_row = dict(vs_baseline.get(cohort_name) or {})
-        peer_row = dict(vs_peers.get(cohort_name) or {})
-        comparison_table.add_row(
-            cohort_name,
-            _fmt_pct(baseline_row.get("mean_return_5d_delta")),
-            _fmt_pct(baseline_row.get("mean_return_20d_delta")),
-            _fmt_pct(baseline_row.get("mean_return_3m_delta")),
-            _fmt_pct(peer_row.get("mean_return_5d_delta")),
-            _fmt_pct(peer_row.get("mean_return_20d_delta")),
-            _fmt_pct(peer_row.get("mean_return_3m_delta")),
-        )
-    console.print(comparison_table)
-
 
 # Export all names (including private helpers) for submodule use
 __all__ = [k for k in vars().keys() if not k.startswith('__')]

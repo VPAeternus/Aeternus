@@ -1,7 +1,13 @@
 import json
 from datetime import datetime
 
-from tradingagents.graph.hedging import AdaptiveHedgeEngine, BEAR_BASE_HEDGE_PCT, S7_BOOST_PCT, MAX_HEDGE_PCT
+from tradingagents.graph.hedging import (
+    AdaptiveHedgeEngine,
+    BEAR_BASE_HEDGE_PCT,
+    S7_BOOST_PCT,
+    S7_ONLY_HEDGE_PCT,
+    MAX_HEDGE_PCT,
+)
 
 
 def _portfolio(
@@ -64,12 +70,37 @@ def test_bull_high_vix_still_zero_hedge(tmp_path):
     assert signal["mode"] == "BULL"
 
 
-# ── Bear regime: 85% base hedge ──────────────────────────────────────────────
-
-def test_bear_regime_base_hedge(tmp_path):
+def test_default_s7_only_policy_has_no_plain_bear_hedge(tmp_path):
     engine = AdaptiveHedgeEngine(
         state_path=str(tmp_path / "hedge_state.json"),
         orders_path=str(tmp_path / "hedge_orders.json"),
+    )
+    p = _portfolio()
+    signal = engine.compute_hedge_signal(p, _market(spy_close=80.0), s7_active=False)
+    assert signal["bear_trigger_active"] is True
+    assert signal["target_hedge_pct_pre_hysteresis"] == 0.0
+    assert signal["mode"] == "S7_STANDBY"
+
+
+def test_default_s7_only_policy_targets_100_pct_when_s7_active(tmp_path):
+    engine = AdaptiveHedgeEngine(
+        state_path=str(tmp_path / "hedge_state.json"),
+        orders_path=str(tmp_path / "hedge_orders.json"),
+    )
+    p = _portfolio()
+    signal = engine.compute_hedge_signal(p, _market(spy_close=80.0), s7_active=True)
+    assert signal["target_hedge_pct_pre_hysteresis"] == 100.0
+    assert signal["s7_boost_pct"] == 100.0
+    assert signal["mode"] == "S7_HEDGE"
+
+
+# ── Bear regime: configurable policy ─────────────────────────────────────────
+
+def test_legacy_bear_base_policy_still_available_for_ab_test(tmp_path):
+    engine = AdaptiveHedgeEngine(
+        state_path=str(tmp_path / "hedge_state.json"),
+        orders_path=str(tmp_path / "hedge_orders.json"),
+        hedge_policy="bear_base",
     )
     p = _portfolio()
     # spy_close=80 < spy_sma200=90 → bear
@@ -79,10 +110,22 @@ def test_bear_regime_base_hedge(tmp_path):
     assert signal["mode"] == "BEAR"
 
 
-def test_bear_stress_regime(tmp_path):
+def test_env_can_select_legacy_policy_for_ab_test(tmp_path, monkeypatch):
+    monkeypatch.setenv("AETERNUS_HEDGE_POLICY", "bear_base")
     engine = AdaptiveHedgeEngine(
         state_path=str(tmp_path / "hedge_state.json"),
         orders_path=str(tmp_path / "hedge_orders.json"),
+    )
+    signal = engine.compute_hedge_signal(_portfolio(), _market(spy_close=80.0))
+    assert signal["target_hedge_pct_pre_hysteresis"] == BEAR_BASE_HEDGE_PCT
+    assert signal["mode"] == "BEAR"
+
+
+def test_legacy_bear_stress_regime(tmp_path):
+    engine = AdaptiveHedgeEngine(
+        state_path=str(tmp_path / "hedge_state.json"),
+        orders_path=str(tmp_path / "hedge_orders.json"),
+        hedge_policy="bear_base",
     )
     p = _portfolio()
     signal = engine.compute_hedge_signal(p, _market(spy_close=80.0, vix=30.0))
@@ -90,19 +133,18 @@ def test_bear_stress_regime(tmp_path):
     assert signal["target_hedge_pct_pre_hysteresis"] == BEAR_BASE_HEDGE_PCT
 
 
-# ── S7 boost: 85% + 75% = 150% ──────────────────────────────────────────────
+# ── S7 hedge: 100% default ───────────────────────────────────────────────────
 
-def test_s7_boost_increases_hedge(tmp_path):
+def test_s7_only_policy_uses_100_pct_s7_hedge(tmp_path):
     engine = AdaptiveHedgeEngine(
         state_path=str(tmp_path / "hedge_state.json"),
         orders_path=str(tmp_path / "hedge_orders.json"),
     )
     p = _portfolio()
     signal = engine.compute_hedge_signal(p, _market(spy_close=80.0), s7_active=True)
-    assert signal["s7_boost_pct"] == S7_BOOST_PCT
-    expected = min(MAX_HEDGE_PCT, BEAR_BASE_HEDGE_PCT + S7_BOOST_PCT)
-    assert signal["target_hedge_pct_pre_hysteresis"] == expected
-    assert signal["mode"] == "BEAR_S7_BOOST"
+    assert signal["s7_boost_pct"] == S7_ONLY_HEDGE_PCT
+    assert signal["target_hedge_pct_pre_hysteresis"] == S7_ONLY_HEDGE_PCT
+    assert signal["mode"] == "S7_HEDGE"
 
 
 def test_s7_no_boost_in_bull(tmp_path):
@@ -119,10 +161,11 @@ def test_s7_no_boost_in_bull(tmp_path):
 
 # ── Crash trigger: 150% cap ──────────────────────────────────────────────────
 
-def test_crash_trigger_activates(tmp_path):
+def test_legacy_crash_trigger_activates(tmp_path):
     engine = AdaptiveHedgeEngine(
         state_path=str(tmp_path / "hedge_state.json"),
         orders_path=str(tmp_path / "hedge_orders.json"),
+        hedge_policy="bear_base",
     )
     p = _portfolio(beta=1.2, var=3.5, drawdown=6.0)
     signal = engine.compute_hedge_signal(
@@ -134,10 +177,11 @@ def test_crash_trigger_activates(tmp_path):
     assert signal["target_hedge_pct_pre_hysteresis"] == MAX_HEDGE_PCT
 
 
-def test_crash_trigger_blocked_when_one_condition_fails(tmp_path):
+def test_legacy_crash_trigger_blocked_when_one_condition_fails(tmp_path):
     engine = AdaptiveHedgeEngine(
         state_path=str(tmp_path / "hedge_state.json"),
         orders_path=str(tmp_path / "hedge_orders.json"),
+        hedge_policy="bear_base",
     )
     # drawdown=4.0 < 5.0 threshold → crash blocked
     p = _portfolio(beta=1.2, var=3.5, drawdown=4.0)
@@ -267,15 +311,16 @@ def test_cooldown_blocks_same_day_non_emergency(tmp_path):
     assert decision["action"] == "NO_CHANGE"
 
 
-def test_evaluate_persists_state_and_order(tmp_path):
+def test_legacy_evaluate_persists_state_and_order(tmp_path):
     state_path = tmp_path / "hedge_state.json"
     orders_path = tmp_path / "hedge_orders.json"
     engine = AdaptiveHedgeEngine(
         state_path=str(state_path),
         orders_path=str(orders_path),
+        hedge_policy="bear_base",
     )
 
-    # Bear regime → should execute 85% hedge
+    # Legacy bear-base mode → should execute 85% hedge
     p = _portfolio(current=0.0, gross=1000.0, tech=40.0)
     signal, decision, order = engine.evaluate(p, _market(spy_close=80.0, vix=26.0))
 
@@ -290,7 +335,7 @@ def test_evaluate_persists_state_and_order(tmp_path):
     assert len(orders) == 1
 
 
-def test_evaluate_with_s7_boost(tmp_path):
+def test_evaluate_with_s7_hedge(tmp_path):
     state_path = tmp_path / "hedge_state.json"
     orders_path = tmp_path / "hedge_orders.json"
     engine = AdaptiveHedgeEngine(
@@ -301,15 +346,15 @@ def test_evaluate_with_s7_boost(tmp_path):
     p = _portfolio(current=0.0, gross=1000.0, tech=60.0)
     signal, decision, order = engine.evaluate(p, _market(spy_close=80.0), s7_active=True)
 
-    expected = min(MAX_HEDGE_PCT, BEAR_BASE_HEDGE_PCT + S7_BOOST_PCT)
-    assert signal["target_hedge_pct_pre_hysteresis"] == expected
-    assert signal["mode"] == "BEAR_S7_BOOST"
+    assert signal["target_hedge_pct_pre_hysteresis"] == S7_ONLY_HEDGE_PCT
+    assert signal["mode"] == "S7_HEDGE"
     assert decision["status"] == "EXECUTED"
     assert order is not None
 
 
 def test_constants_match_backtest_config():
-    """Verify constants match the backtested optimal configuration."""
+    """Verify constants match default S7-only policy and legacy A/B policy."""
+    assert S7_ONLY_HEDGE_PCT == 100.0
     assert BEAR_BASE_HEDGE_PCT == 85.0
     assert S7_BOOST_PCT == 75.0
     assert MAX_HEDGE_PCT == 150.0

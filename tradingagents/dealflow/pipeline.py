@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import datetime as dt
-import json
-from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -14,43 +12,8 @@ import yfinance as yf
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.context import get_event_state
 
-from .collect_artifacts import write_collect_artifacts
-from .collect_ledger import write_collect_ledger_rows
 from .collect_stage import run_collect_stage
-from .connector_runtime import (
-    build_connector_health_entry,
-    collect_connector_signals,
-    run_connector_with_timeout,
-    summarize_connector_health,
-)
-from .contribution_reports import (
-    aggregate_contributions,
-    average_nested,
-    build_family_contribution_report,
-    core_contributions,
-)
-from .contracts import DealFlowShortlist, EventTriggerResult, ResearchQueue, ResearchQueueItem
-from .manual_merge_policy import apply_manual_merge_policy
-from .manual_watchlist import list_active_ideas, validate_symbol_liquidity
-from .negative_constraints import check_symbol_theme_suppression
-from .ranking import rank_candidates
-from .research_queue_builder import build_research_queue
-from .scoring import detect_needles, score_candidates
-from .sources import (
-    collect_price_momentum_signals,
-    collect_sector_rotation_signals,
-    collect_smart_money_signals,
-    collect_social_news_signals,
-    collect_insider_cluster_signals,
-    scan_breakout_discovery,
-    scan_thirteenf_watchlist,
-)
-from .akg_universe import (
-    build_universe_from_akg,
-    get_last_universe_ledger,
-    get_last_universe_tier_map,
-)
-from .akg_writeback import writeback_scores_to_akg, writeback_signals_to_akg
+from .contracts import EventTriggerResult
 from .discovery_stage import run_discovery_stage
 from .recall_channels import (
     build_fma_recall_channel,
@@ -94,36 +57,6 @@ def _coerce_liquidity_score(raw: Any) -> Optional[float]:
     return value
 
 
-def _coerce_float(raw: Any) -> Optional[float]:
-    if raw is None:
-        return None
-    try:
-        value = float(raw)
-    except (TypeError, ValueError):
-        return None
-    if pd.isna(value):
-        return None
-    return value
-
-
-def _load_json_file(path: Path) -> Any:
-    try:
-        return json.loads(path.read_text())
-    except Exception:
-        return None
-
-
-def _load_open_position_symbols() -> List[str]:
-    payload = _load_json_file(Path("eval_results") / "paper_execution" / "positions.json") or {}
-    open_positions = dict(payload.get("open_positions", {}) or {})
-    return sorted(
-        str(symbol or "").upper().strip()
-        for symbol, row in open_positions.items()
-        if str(symbol or "").strip() and isinstance(row, dict)
-    )
-
-
-
 class DealFlowPipeline:
     def __init__(self, config: Optional[Dict] = None):
         self.config = config or DEFAULT_CONFIG
@@ -133,7 +66,7 @@ class DealFlowPipeline:
         as_of_date: str,
         trigger: str,
         top_k: int,
-    ) -> Tuple[DealFlowShortlist, ResearchQueue, List[dict], EventTriggerResult]:
+    ) -> Tuple[Dict[str, Any], Dict[str, Any], List[dict], EventTriggerResult]:
         self.discover(as_of_date=as_of_date, trigger=trigger)
         return self.collect(as_of_date=as_of_date, trigger=trigger, top_k=top_k)
 
@@ -206,7 +139,7 @@ class DealFlowPipeline:
         return build_fma_recall_channel(as_of_date, self.config)
 
     # ------------------------------------------------------------------
-    # Stage 2: Collection — connectors, scoring, ranking, persist
+    # Stage 2: Collection — persist scout-only ticker totals
     # ------------------------------------------------------------------
 
     def collect(
@@ -214,8 +147,8 @@ class DealFlowPipeline:
         as_of_date: str,
         trigger: str,
         top_k: int,
-    ) -> Tuple[DealFlowShortlist, ResearchQueue, List[dict], EventTriggerResult]:
-        """Run collectors, score, rank, persist. Returns same tuple as run()."""
+    ) -> Tuple[Dict[str, Any], Dict[str, Any], List[dict], EventTriggerResult]:
+        """Persist scout-only ticker totals. Returns same tuple as run()."""
         return run_collect_stage(
             self,
             as_of_date=as_of_date,
@@ -223,166 +156,11 @@ class DealFlowPipeline:
             top_k=top_k,
             akg_available=_AKG_AVAILABLE,
             akg_cls=_AKG,
-            deps={
-                "build_universe_from_akg": build_universe_from_akg,
-                "get_last_universe_ledger": get_last_universe_ledger,
-                "list_active_ideas": list_active_ideas,
-                "collect_social_news_signals": collect_social_news_signals,
-                "collect_price_momentum_signals": collect_price_momentum_signals,
-                "collect_sector_rotation_signals": collect_sector_rotation_signals,
-                "collect_insider_cluster_signals": collect_insider_cluster_signals,
-                "score_candidates": score_candidates,
-                "rank_candidates": rank_candidates,
-            },
+            deps={},
         )
-
-    def _collect_connector_signals(self, name: str, collector, *args, **kwargs) -> Tuple[List[Dict], Dict[str, Any]]:
-        return collect_connector_signals(
-            name,
-            collector,
-            *args,
-            timeout_seconds=float(self.config.get("dealflow_connector_timeout_seconds", 45.0)),
-            max_attempts=max(1, int(self.config.get("dealflow_connector_max_attempts", 2))),
-            **kwargs,
-        )
-
-    def _run_connector_with_timeout(
-        self,
-        collector,
-        timeout_seconds: float,
-        args: tuple,
-        kwargs: Dict[str, Any],
-    ):
-        return run_connector_with_timeout(
-            collector,
-            timeout_seconds=timeout_seconds,
-            args=args,
-            kwargs=kwargs,
-        )
-
-    def _build_connector_health_entry(
-        self,
-        connector_name: str,
-        signals: List[Dict],
-        latency_ms: float,
-        error_message: str = "",
-        status_override: Optional[str] = None,
-        metadata: Optional[Dict[str, Any]] = None,
-    ) -> Dict[str, Any]:
-        return build_connector_health_entry(
-            connector_name=connector_name,
-            signals=signals,
-            latency_ms=latency_ms,
-            error_message=error_message,
-            status_override=status_override,
-            metadata=metadata,
-        )
-
-    def _summarize_connector_health(self, connector_health: List[Dict[str, Any]]) -> Dict[str, Any]:
-        return summarize_connector_health(connector_health)
-
-    def _build_family_contribution_report(self, shortlist: DealFlowShortlist) -> Dict[str, Any]:
-        return build_family_contribution_report(
-            shortlist,
-            core_contributions_fn=self._core_contributions,
-            aggregate_contributions_fn=self._aggregate_contributions,
-        )
-
-    def _aggregate_contributions(self, rows: List[Dict[str, Any]], lane: Optional[str]) -> Dict[str, Any]:
-        return aggregate_contributions(rows, lane)
-
-    def _average_nested(self, rows: List[Dict[str, Any]], field: str) -> Dict[str, float]:
-        return average_nested(rows, field)
-
-    def _core_contributions(self, subscores: Dict[str, float]) -> Dict[str, float]:
-        return core_contributions(subscores)
 
     def evaluate_event_trigger(self, as_of_date: str) -> EventTriggerResult:
         return self._evaluate_event_trigger(as_of_date)
-
-    def _build_research_queue(
-        self,
-        shortlist: DealFlowShortlist,
-        ledger_base_dir: Optional[Path] = None,
-    ) -> ResearchQueue:
-        force_queue = getattr(self, "_iv_force_queue", None) or []
-        if not force_queue:
-            try:
-                fq_date = str(shortlist.get("run_id", "")).split("-", 3)
-                if len(fq_date) >= 3:
-                    fq_path = Path("eval_results") / "deal_flow" / "-".join(fq_date[:3]) / "iv_force_queue.json"
-                    if fq_path.is_file():
-                        force_queue = json.loads(fq_path.read_text())
-            except Exception:
-                force_queue = []
-        return build_research_queue(
-            shortlist=shortlist,
-            config=self.config,
-            ledger_base_dir=ledger_base_dir,
-            triage_score_fn=self._triage_score,
-            thesis_tags_fn=self._thesis_tags,
-            normalize_sector=self._normalized_sector_label,
-            suppressor=check_symbol_theme_suppression,
-            synthesize_candidate=self._synthesize_manual_candidate,
-            force_queue=force_queue,
-        )
-
-    def _build_momentum_board(self, shortlist: DealFlowShortlist) -> Dict[str, object]:
-        momentum_rows = [
-            {
-                "symbol": c.get("symbol"),
-                "lane": c.get("lane"),
-                "momentum_score": c.get("momentum_score"),
-                "asymmetry_score": c.get("asymmetry_score"),
-                "risk_tags": c.get("risk_tags", []),
-                "trend_tags": c.get("trend_tags", []),
-            }
-            for c in shortlist.get("candidates", [])
-            if c.get("lane") == "MOMENTUM"
-        ]
-        momentum_rows.sort(key=lambda c: -float(c.get("asymmetry_score", 0.0)))
-        return {
-            "run_id": shortlist.get("run_id"),
-            "date": shortlist.get("date"),
-            "count": len(momentum_rows),
-            "rows": momentum_rows,
-        }
-
-    def _triage_score(self, candidate: Dict) -> float:
-        subs = candidate.get("subscores", {})
-        lane = str(candidate.get("lane", "CORE"))
-        core = float(candidate.get("core_score", candidate.get("deal_flow_score", 0.0)))
-        momentum = float(candidate.get("momentum_score", 0.0))
-        asymmetry = float(candidate.get("asymmetry_score", 0.0))
-        news = float(subs.get("news_catalyst", 50.0))
-        macro = float(subs.get("macro_regime_fit", 50.0))
-        freshness = float(candidate.get("freshness_hours", 9999.0))
-
-        freshness_bonus = max(0.0, 10.0 - min(10.0, freshness / 12.0))
-        if lane == "MOMENTUM":
-            return 0.40 * momentum + 0.30 * asymmetry + 0.20 * news + 0.10 * macro + freshness_bonus
-        return 0.55 * core + 0.25 * news + 0.20 * macro + freshness_bonus
-
-    def _thesis_tags(self, candidate: Dict) -> List[str]:
-        subs = candidate.get("subscores", {})
-        tags: List[str] = []
-
-        if float(subs.get("social_momentum", 0.0)) >= 70.0:
-            tags.append("social-momentum")
-        if float(subs.get("price_momentum", 0.0)) >= 70.0:
-            tags.append("price-momentum")
-        if float(subs.get("macro_regime_fit", 0.0)) >= 65.0:
-            tags.append("macro-tailwind")
-        if float(subs.get("news_catalyst", 0.0)) >= 70.0:
-            tags.append("news-catalyst")
-        if candidate.get("asset_class") in {"ETF", "CommodityProxy"}:
-            tags.append("macro-hedge")
-        if candidate.get("lane") == "MOMENTUM":
-            tags.append("asymmetric-upside")
-
-        if not tags:
-            tags.append("balanced")
-        return tags
 
     def _resolve_universe_ledger(
         self,
@@ -431,138 +209,6 @@ class DealFlowPipeline:
             symbols.append(symbol)
         return symbols
 
-    def _build_deep_selection_drop_metadata(
-        self,
-        *,
-        items: List[ResearchQueueItem],
-        selected_id_set: set[str],
-        suppressed_queue_ids: set[str],
-        deep_selection_rule_snapshot: Dict[str, Any],
-    ) -> Dict[str, Dict[str, Any]]:
-        metadata: Dict[str, Dict[str, Any]] = {}
-
-        eligible = [
-            item for item in items
-            if str(item.get("queue_id", "")).strip() and item.get("queue_id") not in suppressed_queue_ids
-        ]
-        eligible.sort(
-            key=lambda row: (
-                -float(row.get("triage_score", 0.0)),
-                self._normalize_symbol(row.get("symbol", "")),
-            )
-        )
-        rank_by_queue_id = {
-            str(item.get("queue_id")): idx
-            for idx, item in enumerate(eligible, start=1)
-            if str(item.get("queue_id", "")).strip()
-        }
-        final_deep_k = int(deep_selection_rule_snapshot.get("final_deep_k", 0) or 0)
-
-        for item in items:
-            queue_id = str(item.get("queue_id", "")).strip()
-            if not queue_id or queue_id in selected_id_set:
-                continue
-            symbol = self._normalize_symbol(item.get("symbol", ""))
-            if not symbol:
-                continue
-            lane = str(item.get("lane", "")).upper().strip()
-            triage_score = _coerce_float(item.get("triage_score"))
-            rank = rank_by_queue_id.get(queue_id)
-
-            if queue_id in suppressed_queue_ids:
-                reason_code = "NEGATIVE_CONSTRAINT_SUPPRESSED"
-                reason_text = "Operator negative constraints suppressed deep-selection eligibility."
-                threshold = {"constraint_pass_required": True}
-                observed_value = {
-                    "suppressed": True,
-                    "lane": lane,
-                    "triage_score": triage_score,
-                }
-                delta_to_pass = 1
-            elif rank is not None and final_deep_k > 0 and rank > final_deep_k:
-                reason_code = "TRIAGE_RANK_BELOW_DEEP_CUT"
-                reason_text = "Triage rank was below final deep-selection cutoff."
-                threshold = {"final_deep_k": final_deep_k}
-                observed_value = {
-                    "triage_rank": int(rank),
-                    "triage_score": triage_score,
-                    "lane": lane,
-                }
-                delta_to_pass = int(rank) - final_deep_k
-            elif rank is not None:
-                reason_code = "DEEP_SELECTION_POLICY_EXCLUSION"
-                reason_text = "Symbol was not selected after deep-selection quota/policy balancing."
-                threshold = dict(deep_selection_rule_snapshot)
-                observed_value = {
-                    "triage_rank": int(rank),
-                    "triage_score": triage_score,
-                    "lane": lane,
-                }
-                delta_to_pass = 1
-            else:
-                reason_code = "DEEP_SELECTION_RANK_UNAVAILABLE"
-                reason_text = "Deep-selection rank could not be resolved for this queue item."
-                threshold = dict(deep_selection_rule_snapshot)
-                observed_value = {
-                    "triage_score": triage_score,
-                    "lane": lane,
-                }
-                delta_to_pass = 1
-
-            metadata[symbol] = {
-                "reason_code": reason_code,
-                "reason_text": reason_text,
-                "threshold": threshold,
-                "observed_value": observed_value,
-                "delta_to_pass": delta_to_pass,
-            }
-        return metadata
-
-    def _persist(
-        self,
-        as_of_date: str,
-        normalized_signals: List[Dict],
-        shortlist: DealFlowShortlist,
-        research_queue: ResearchQueue,
-        cashtag_events: List[Dict],
-        momentum_board: Dict[str, object],
-        connector_health: List[Dict[str, Any]],
-        family_contribution_report: Dict[str, Any],
-        manual_merge: Dict[str, Any],
-        all_scored_candidates: Optional[List[Dict]] = None,
-    ) -> None:
-        base = Path("eval_results") / "deal_flow" / as_of_date
-        base.mkdir(parents=True, exist_ok=True)
-        universe_ledger = self._resolve_universe_ledger(
-            getattr(self, "_last_universe", []),
-            getattr(self, "_last_universe_ledger", {}),
-        )
-        write_collect_ledger_rows(
-            base_dir=base,
-            as_of_date=as_of_date,
-            shortlist=shortlist,
-            all_scored_candidates=list(all_scored_candidates or []),
-            universe_ledger=universe_ledger,
-            min_signal_families=int(self.config.get("dealflow_min_signal_families", 3)),
-            min_evidence_count=5,
-            universe_tier_map=dict(getattr(self, "_last_universe_tier_map", {}) or {}),
-            core_quota=int(self.config.get("dealflow_core_quota", 18)),
-            momentum_quota=int(self.config.get("dealflow_momentum_quota", 12)),
-        )
-
-        write_collect_artifacts(
-            as_of_date=as_of_date,
-            normalized_signals=normalized_signals,
-            shortlist=shortlist,
-            research_queue=research_queue,
-            cashtag_events=cashtag_events,
-            momentum_board=momentum_board,
-            connector_health=connector_health,
-            family_contribution_report=family_contribution_report,
-            manual_merge=manual_merge,
-            all_scored_candidates=all_scored_candidates,
-        )
-
     def _evaluate_event_trigger(self, as_of_date: str) -> EventTriggerResult:
         payload = get_event_state(
             as_of_date=as_of_date,
@@ -596,215 +242,11 @@ class DealFlowPipeline:
         except Exception:
             return None, None
 
-    def _apply_manual_merge_policy(
-        self,
-        ranked_auto: List[Dict[str, Any]],
-        candidates: List[Dict[str, Any]],
-        manual_ideas: List[Dict[str, Any]],
-        top_k: int,
-    ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
-        return apply_manual_merge_policy(
-            ranked_auto=ranked_auto,
-            candidates=candidates,
-            manual_ideas=manual_ideas,
-            top_k=top_k,
-            config=self.config,
-            synthesize_manual_candidate=self._synthesize_manual_candidate,
-            validate_liquidity=validate_symbol_liquidity,
-        )
-
-    def _mark_manual_reinforced(
-        self,
-        shortlist: List[Dict[str, Any]],
-        symbol: str,
-        note: str,
-        priority: int,
-    ) -> None:
-        target = symbol.upper().strip()
-        for row in shortlist:
-            row_symbol = str(row.get("symbol", "")).upper().strip()
-            if row_symbol != target:
-                continue
-            row["source"] = "MANUAL"
-            row["source_detail"] = "MANUAL_REINFORCED"
-            row["manual_note"] = note
-            row["manual_priority"] = int(max(priority, int(row.get("manual_priority", 0) or 0)))
-            tags = list(row.get("risk_tags", []))
-            if "Manual watchlist" not in tags:
-                tags.append("Manual watchlist")
-            if "Manual reinforced" not in tags:
-                tags.append("Manual reinforced")
-            row["risk_tags"] = tags
-            return
-
-    def _respects_diversification_caps(
-        self,
-        shortlist: List[Dict[str, Any]],
-        candidate: Dict[str, Any],
-        replace_idx: Optional[int],
-        max_sector_count: int,
-        max_asset_class_count: int,
-    ) -> bool:
-        trial: List[Dict[str, Any]] = []
-        for idx, row in enumerate(shortlist):
-            if replace_idx is not None and idx == replace_idx:
-                continue
-            trial.append(row)
-        trial.append(candidate)
-
-        sector_counts: Dict[str, int] = {}
-        asset_counts: Dict[str, int] = {}
-        for row in trial:
-            sector = str(row.get("sector", "Unknown"))
-            asset = str(row.get("asset_class", "Unknown"))
-            sector_counts[sector] = sector_counts.get(sector, 0) + 1
-            asset_counts[asset] = asset_counts.get(asset, 0) + 1
-            if sector_counts[sector] > max_sector_count:
-                return False
-            if asset_counts[asset] > max_asset_class_count:
-                return False
-        return True
-
-    def _find_lowest_auto_index(self, shortlist: List[Dict[str, Any]]) -> Optional[int]:
-        candidates: List[Tuple[int, float]] = []
-        for idx, row in enumerate(shortlist):
-            source = str(row.get("source", "AUTO")).upper()
-            if source != "AUTO":
-                continue
-            candidates.append((idx, self._candidate_rank_score(row)))
-        if not candidates:
-            return None
-        return min(candidates, key=lambda row: row[1])[0]
-
-    def _candidate_rank_score(self, candidate: Dict[str, Any]) -> float:
-        lane = str(candidate.get("lane", "CORE")).upper()
-        if lane == "MOMENTUM":
-            return float(candidate.get("asymmetry_score", candidate.get("deal_flow_score", 0.0)))
-        return float(candidate.get("core_score", candidate.get("deal_flow_score", 0.0)))
-
-    def _manual_candidate_rank_score(self, candidate: Dict[str, Any], lane_preference: str) -> float:
-        lane = str(lane_preference or "").upper()
-        if lane == "MOMENTUM":
-            return float(candidate.get("asymmetry_score", candidate.get("momentum_score", 0.0)))
-        if lane == "CORE":
-            return float(candidate.get("core_score", candidate.get("deal_flow_score", 0.0)))
-        return self._candidate_rank_score(candidate)
-
-    def _manual_decision_row(
-        self,
-        symbol: str,
-        action: str,
-        reason: str,
-        priority: int,
-        lane_preference: str,
-        note: str,
-        lane: str = "CORE",
-    ) -> Dict[str, Any]:
-        return {
-            "symbol": symbol,
-            "action": action,
-            "reason": reason,
-            "priority": int(priority),
-            "lane_preference": lane_preference if lane_preference in {"CORE", "MOMENTUM"} else "CORE",
-            "note": note,
-            "lane": lane if lane in {"CORE", "MOMENTUM"} else "CORE",
-            "selected_rank": None,
-        }
-
-    def _infer_source_detail(self, candidate: Dict[str, Any], explicit_tags: Optional[set[str]] = None) -> str:
-        source = str(candidate.get("source", "AUTO")).upper()
-        if source == "MANUAL":
-            return str(candidate.get("source_detail", "MANUAL_WATCHLIST"))
-
-        subs = candidate.get("subscores", {}) if isinstance(candidate.get("subscores", {}), dict) else {}
-        ranked = sorted(subs.items(), key=lambda kv: -float(kv[1]))
-        labels: List[str] = list(sorted(explicit_tags or set()))
-        for family, _ in ranked[:4]:
-            if family in {"social_momentum", "news_catalyst"}:
-                labels.append("WEB_NEWS")
-            elif family == "smart_money":
-                labels.append("SEC_CONGRESS")
-            elif family == "price_momentum":
-                labels.append("PRICE_ACTION")
-            elif family == "macro_regime_fit":
-                labels.append("MACRO")
-        deduped: List[str] = []
-        for label in labels:
-            if label not in deduped:
-                deduped.append(label)
-        return "+".join(deduped[:3]) if deduped else "AUTO_MODEL"
-
-    def _build_symbol_source_tags(self, signals: List[Dict[str, Any]]) -> Dict[str, set[str]]:
-        symbol_tags: Dict[str, set[str]] = {}
-        for signal in signals:
-            if str(signal.get("source_status", "")).upper() != "OK":
-                continue
-            symbol = str(signal.get("symbol", "")).upper().strip()
-            if not symbol:
-                continue
-            source_name = str(signal.get("source_name", "")).lower()
-            tags = symbol_tags.setdefault(symbol, set())
-            if "x_api" in source_name or "xai" in source_name or "cashtag" in source_name:
-                tags.add("X_FEED")
-            if "sec13f" in source_name or "congress" in source_name or "smart" in source_name:
-                tags.add("SEC_CONGRESS")
-            if "insider" in source_name:
-                tags.add("INSIDER")
-            if "google" in source_name or "news" in source_name:
-                tags.add("WEB_NEWS")
-        return symbol_tags
-
     def _watchlist_path(self) -> Path:
         configured = str(self.config.get("dealflow_manual_watchlist_path", "")).strip()
         if configured:
             return Path(configured)
         return Path("eval_results") / "deal_flow" / "manual_watchlist.json"
-
-    def _synthesize_manual_candidate(self, symbol: str, lane_preference: str) -> Dict[str, Any]:
-        lane = "MOMENTUM" if str(lane_preference).upper() == "MOMENTUM" else "CORE"
-        normalized_symbol = self._normalize_symbol(symbol)
-        inferred_asset_class = "Equity"
-        inferred_sector = "Unclassified Equity"
-        try:
-            from tradingagents.graph.knowledge_graph import AeternusKnowledgeGraph
-            _akg = AeternusKnowledgeGraph.load()
-            if normalized_symbol in _akg._nodes:
-                node = _akg._nodes[normalized_symbol]
-                inferred_asset_class = node.get("asset_class") or "Equity"
-                inferred_sector = node.get("sector_gics") or "Unclassified Equity"
-        except Exception:
-            pass
-        if not inferred_sector or inferred_sector == "Unclassified Equity":
-            baseline_sector = {"TSLA": "Consumer Discretionary"}.get(normalized_symbol)
-            if baseline_sector:
-                inferred_sector = baseline_sector
-            elif inferred_asset_class == "CommodityProxy":
-                inferred_sector = "Commodities"
-            elif inferred_asset_class == "ETF":
-                inferred_sector = "ETF"
-        return {
-            "symbol": normalized_symbol,
-            "asset_class": inferred_asset_class,
-            "sector": self._normalized_sector_label(inferred_sector),
-            "liquidity_score": 50.0,
-            "subscores": {},
-            "deal_flow_score": 50.0,
-            "core_score": 50.0,
-            "momentum_score": 50.0,
-            "asymmetry_score": 50.0,
-            "active_families": 0,
-            "evidence_count": 0,
-            "freshness_hours": 9999.0,
-            "status": "ACTIVE",
-            "risk_tags": ["Manual override (no auto coverage)"],
-            "trend_tags": [],
-            "lane": lane,
-            "source": "MANUAL",
-            "source_detail": "MANUAL_WATCHLIST",
-            "manual_note": "",
-            "manual_priority": 0,
-            "reason": "Manual watchlist override.",
-        }
 
     @staticmethod
     def _normalize_symbol(symbol: str) -> str:

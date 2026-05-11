@@ -39,7 +39,7 @@ Rating bands:
 
 ## Deliverables (Program-Level)
 
-1. Deterministic daily deal-flow shortlist (Top-20) with auditable evidence.
+1. Deterministic daily deal-flow candidate_list (Top-20) with auditable evidence.
 2. Two-pass research pipeline (triage then deep-research 6-8 names).
 3. Traceable recommendation -> portfolio decision -> execution event chain.
 4. Risk overlay with adaptive hedging and explicit rebalance controls.

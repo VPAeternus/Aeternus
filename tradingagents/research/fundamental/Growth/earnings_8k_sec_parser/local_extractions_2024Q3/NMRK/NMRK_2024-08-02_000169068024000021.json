@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NMRK",
+    "cik": "1690680",
+    "event_date": "2024-08-02",
+    "event_accession": "0001690680-24-000021",
+    "primary_8k_doc": "nmrk-20240802.htm",
+    "exhibit_docs": [
+      "nmrkex991080224.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NMRK_000169068024000021_nmrk-20240802.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NMRK_000169068024000021_nmrkex991080224.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NMRK",
+    "cik": "1690680",
+    "entity_name": "NEWMARK GROUP, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "520799000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-10350000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4471575000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "498651000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-118059000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-398840000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.019873",
+    "operating_cash_flow_to_revenue": "-0.765823",
+    "assets_to_revenue": "8.58599",
+    "financing_cash_flow_to_revenue": "0.957473",
+    "investing_cash_flow_to_revenue": "-0.226688"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $(0.",
+      "revenues of approximately $2.",
+      "GAAP net income (loss) for fully diluted shares 20.",
+      "GAAP net income (loss) per fully diluted share 0.",
+      "Earnings per share (\"Adjusted EPS\") 0.",
+      "GAAP net income per fully diluted share and 22."
+    ],
+    "guidance_evidence": [
+      "guidance, as well as our 2026 target of generating 50% Adjusted EBITDA growth over the next two years.",
+      "guidance.",
+      "Outlook for Certain GAAP and Non-GAAP Items” for a discussion of why it is difficult to forecast certain GAAP results without unreasonable effort.",
+      "OUTLOOK FOR 2024 9 Metric FY 2023 Actual Expected YoY Change (Except for Tax Rate) Total Revenues (millions) $2,470.",
+      "outlook for total revenues, Adjusted EBITDA, Adjusted EPS, and the Adjusted Earnings tax rate.",
+      "outlook: (i) See the \"Consolidated Share Count\", including the related footnote, for more background on the Company's updated share count guidance."
+    ],
+    "wave_or_demand_evidence": [
+      "ain confident in our 2024 full year guidance, as well as our 2026 target of generating 50% Adjusted EBITDA growth over the next two years.",
+      "ained herein, and on any long term targets mentioned, please see the section of this document titled \"Other Useful Information\".",
+      "ain GAAP and Non-GAAP Items” for a discussion of why it is difficult to forecast certain GAAP results without unreasonable effort.",
+      "ain gained considerable market share, as Fees from commercial mortgage origination, net, increased by 14.",
+      "ails on these and other industry statistics.",
+      "ain other expenses are recorded beginning in the first applicable quarter, while the relevant professionals may not reach full productivity until their second or third years with the Company."
+    ],
+    "warning_or_risk_evidence": [
+      "preliminary data from MSCI.",
+      "preliminary 2024 MSCI lending data, Newmark Research estimates that overall U.",
+      "charges with respect to grants of exchangeability generally move in the same direction as the Company's stock price.",
+      "delays in joining the live call.",
+      "preliminary unless otherwise noted.",
+      "charges related to resolutions of litigation, disputes, investigations, or enforcement matters that are generally non-recurring, exceptional, or unusual, or similar items that that management believes do not best reflect Newmark’s underlying operating performance."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 630,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "11.180000",
+    "return_10d_pct": "12.8801",
+    "return_20d_pct": "23.1664",
+    "return_30d_pct": "24.5975",
+    "return_60d_pct": "33.6315",
+    "return_90d_pct": "31.0376"
+  },
+  "text_stats": {
+    "primary_text_len": 5362,
+    "exhibit_text_len": 78816,
+    "combined_text_len": 84180
+  }
+}

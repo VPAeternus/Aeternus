@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AMD",
+    "cik": "2488",
+    "event_date": "2024-07-30",
+    "event_accession": "0000002488-24-000121",
+    "primary_8k_doc": "amd-20240730.htm",
+    "exhibit_docs": [
+      "amdq224earningsslides.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMD_000000248824000121_amd-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AMD_000000248824000121_amdq224earningsslides.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AMD",
+    "cik": "2488",
+    "entity_name": "ADVANCED MICRO DEVICES, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5353000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "-139000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "67885000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-30",
+    "financing_cash_flow_value": "-259000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-1237000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "486000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.025967",
+    "operating_cash_flow_to_revenue": "0.09079",
+    "assets_to_revenue": "12.681674",
+    "financing_cash_flow_to_revenue": "-0.048384",
+    "investing_cash_flow_to_revenue": "-0.231085"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $5.",
+      "non-GAAP operating income, non-GAAP operating margin, non-GAAP net income and non-GAAP diluted earnings per share.",
+      "gross margin, operating expenses and tax rate.",
+      "GROSS MARGIN Q2 2024 1.",
+      "non-GAAP gross margin primarily driven by higher Data Center revenue 50% 53% Q2 2023 Q2 2024 amdq224earningsslides010.",
+      "OPERATING INCOME (LOSS) Q2 2024 1."
+    ],
+    "guidance_evidence": [
+      "outlook such as gross margin, operating expenses and tax rate.",
+      "OUTLOOK – NON-GAAP1 1.",
+      "outlook statements and non-GAAP measures are based on current expectations as of July 30, 2024, and assumptions and beliefs that involve numerous risks and uncertainties.",
+      "outlook statements as a result of new information, future events or otherwise, except as may be required by law.",
+      "outlook typically include stock-based compensation, amortization of acquired intangible assets, income tax provision, and other non-recurring items such as impairment charges and acquisition-related costs.",
+      "expects,\" \"believes,\" \"plans,\" \"intends,\" \"projects\" and other terms with similar meaning."
+    ],
+    "wave_or_demand_evidence": [
+      "Customer & Partner Ecosystem Data Center and AI Growth Strong Financial Foundation Leadership Product Portfolio OUR JOURNEY amdq224earningsslides004.",
+      "customers continuing to normalize their inventory levels Operating Income $345 Million vs.",
+      "ains forward-looking statements concerning Advanced Micro Devices, Inc.",
+      "Data Center and AI leadership; and AMD’s ability to drive long-term shareholder returns, which are made pursuant to the Safe Harbor provisions of the Private Securities Litigation Reform Act of 1995.",
+      "ainties that could cause actual results to differ materially from current expectations.",
+      "ainties, many of which are difficult to predict and generally beyond AMD's control, that could cause actual results and other future events to differ materially from those expressed in, or implied or projected by, the forward-looking information and statements."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of the combined company’s assets; political, legal and economic risks and natural disasters; future impairments of technology license purchases; AMD’s ability to attract and retain qualified personnel; and AMD’s stock price volatility.",
+      "inventory levels Operating Income $345 Million vs.",
+      "impairment charges and acquisition-related costs.",
+      "inventory, certain compensation charges, contract termination and workforce rebalancing charges.",
+      "Inventory loss at contract manufacturer is related to an incident at a third-party contract manufacturing facility.",
+      "Inventory loss at contract manufacturer (2) – – – – 65 0."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "3"
+    },
+    {
+      "type": "TextElement",
+      "text": "amdq224earningsslides.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.2"
+    },
+    {
+      "type": "TextElement",
+      "text": "Document generated by Workiva Inc amdq224earningsslides"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides001.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "AMD FINANCIAL RESULTS Second Quarter 2024 July 30, 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides002.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "2 Q2 2024 FINANCIAL RESULTS – JULY 30, 20242 CAUTIONARY STATEMENT This presentation contains forward-looking statements concerning Advanced Micro Devices, Inc. (AMD), such as the features, functionality, performance, availability, timing and expected benefits of AMD products; AMD being uniquely positioned in AI; AMD’s expected third quarter 2024 financial outlook, including revenue, non-GAAP gross margin, non-GAAP operating expenses, non-GAAP tax rate and diluted share count; AMD’s large and compelling TAM; AMD’s ability to expand Data Center and AI leadership; and AMD’s ability to drive long-term shareholder returns, which are made pursuant to the Safe Harbor provisions of the Private Securities Litigation Reform Act of 1995. Forward-looking statements are commonly identified by words such as \"would,\" \"may,\" \"expects,\" \"believes,\" \"plans,\" \"intends,\" \"projects\" and other terms with similar meaning. Investors are cautioned that the forward-looking statements in this presentation are based on current beliefs, assumptions and expectations, speak only as of the date of this presentation and involve risks and uncertainties that could cause actual results to differ materially from current expectations. Such statements are subject to certain known and unknown risks and uncertainties, many of which are difficult to predict and generally beyond AMD's control, that could cause actual results and other future events to differ materially from those expressed in, or implied or projected by, the forward-looking information and statements. Material factors that could cause actual results to differ materially from current expectations include, without limitation, the following: Intel Corporation’s dominance of the microprocessor market and its aggressive business practices; Nvidia’s dominance in the graphics processing unit market and its aggressive business practices; the cyclical nature of the semiconductor industry; market conditions of the industries in which AMD products are sold; loss of a significant customer; competitive markets in which AMD’s products are sold; economic and market uncertainty; quarterly and seasonal sales patterns; AMD's ability to adequately protect its technology or other intellectual property; unfavorable currency exchange rate fluctuations; ability of third party manufacturers to manufacture AMD's products on a timely basis in sufficient quantities and using competitive technologies; availability of essential equipment, materials, substrates or manufacturing processes; ability to achieve expected manufacturing yields for AMD’s products; AMD's ability to introduce products on a timely basis with expected features and performance levels; AMD's ability to generate revenue from its semi-custom SoC products; potential security vulnerabilities; potential security incidents including IT outages, data loss, data breaches and cyberattacks; uncertainties involving the ordering and shipment of AMD’s products; AMD’s reliance on third-party intellectual property to design and introduce new products; AMD's reliance on third- party companies for design, manufacture and supply of motherboards, software, memory and other computer platform components; AMD's reliance on Microsoft and other software vendors' support to design and develop software to run on AMD’s products; AMD’s reliance on third-party distributors and add-in-board partners; impact of modification or interruption of AMD’s internal business processes and information systems; compatibility of AMD’s products with some or all industry-standard software and hardware; costs related to defective products; efficiency of AMD's supply chain; AMD's ability to rely on third party supply-chain logistics functions; AMD’s ability to effectively control sales of its products on the gray market; long-term impact of climate change on AMD’s business; impact of government actions and regulations such as export regulations, tariffs and trade protection measures; AMD’s ability to realize its deferred tax assets; potential tax liabilities; current and future claims and litigation; impact of environmental laws, conflict minerals related provisions and other laws or regulations; evolving expectations from governments, investors, customers and other stakeholders regarding corporate responsibility matters; issues related to the responsible use of AI; restrictions imposed by agreements governing AMD’s notes, the guarantees of Xilinx’s notes and the revolving credit agreement; impact of acquisitions, joint ventures and/or investments on AMD’s business and AMD’s ability to integrate acquired businesses; impact of any impairment of the combined company’s assets; political, legal and economic risks and natural disasters; future impairments of technology license purchases; AMD’s ability to attract and retain qualified personnel; and AMD’s stock price volatility. Investors are urged to review in detail the risks and uncertainties in AMD’s Securities and Exchange Commission filings, including but not limited to AMD’s most recent reports on Forms 10-K and 10-Q. NON-GAAP FINANCIAL MEASURES In this presentation, in addition to GAAP financial results, AMD has provided non-GAAP financial measures including non-GAAP gross profit and margin, non-GAAP operating expenses, non-GAAP operating expenses/revenue %, non-GAAP operating income, non-GAAP operating margin, non-GAAP net income and non-GAAP diluted earnings per share. AMD uses a normalized tax rate in its computation of the non-GAAP income tax provision to provide better consistency across the reporting periods. For fiscal 2024, AMD uses a projected non-GAAP tax rate of 13%, which excludes the tax impact of pre-tax non-GAAP adjustments. AMD is providing these financial measures because it believes this non-GAAP presentation makes it easier for investors to compare its operating results for current and historical periods and also because AMD believes it assists investors in comparing AMD’s performance across reporting periods on a consistent basis by excluding items that it does not believe are indicative of its core operating performance. The non-GAAP financial measures disclosed in this presentation should be viewed in addition to and not as a substitute for or superior to AMD’s reported results prepared in accordance with GAAP and should be read only in conjunction with AMD’s Consolidated Financial Statements prepared in accordance with GAAP. These non-GAAP financial measures referenced are reconciled to their most directly comparable GAAP financial measures in the Appendices at the end of this presentation. This presentation also contains forward-looking non-GAAP measures concerning AMD’s financial outlook such as gross margin, operating expenses and tax rate. These forward-looking non-GAAP measures are based on current expectations as of July 30, 2024, and assumptions and beliefs that involve numerous risks and uncertainties. AMD undertakes no intent or obligation to publicly update or revise its forward-looking statements made in this presentation except as may be required by law."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides003.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "3 Q2 2024 FINANCIAL RESULTS – JULY 30, 20243 Expanding Customer & Partner Ecosystem Data Center and AI Growth Strong Financial Foundation Leadership Product Portfolio OUR JOURNEY"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides004.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "4 Q2 2024 FINANCIAL RESULTS – JULY 30, 20244 TECHNOLOGY LEADERSHIP Software Enablement Open, proven software optimized for performance across heterogenous solutions Data Center Leadership Delivering innovation in AI, cloud, enterprise and accelerated computing Advanced Technology Accelerating innovation in silicon architecture, advanced packaging, and software Broad IP Portfolio Executing leadership CPU, GPU, NPU, DPU, FPGA, Adaptive SoC and AI products"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides005.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "5 Q2 2024 FINANCIAL RESULTS – JULY 30, 20245 END-TO-END COMPUTE INFRASTRUCTURE Embedded Leadership FPGAs, Adaptive SoCs and SoMs, and embedded CPUs and GPUs for a broad set of markets Gaming Top-to-bottom desktop and notebook GPUs, game console and semi-custom SoCs Client Powerful and efficient CPUs and APUs for notebook and desktop PCs and commercial workstations Data Center Broad portfolio of data center and AI solutions with server CPUs, GPUs, FPGAs, DPUs and Adaptive SoCs"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides006.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "6 ADVANCING END-TO-END AI INFRASTRUCTURE AMD IS UNIQUELY POSITIONED IN AI Single chip intelligence at the edge for all embedded markets Embedded Broad ecosystem of OEM and solution partners Enterprise World’s first data center APU for HPC and AI HPC Leadership accelerator for generative AI, LLMs and inferencing Cloud The world’s most powerful NPU for next-gen AI PC experiences PC AMD Versal AI Edge AMD Zynq MPSoC AMD Instinct MI300 Accelerators 4th Gen AMD EPYC Processors AMD Instinct MI300A Accelerators AMD Instinct MI300X Accelerators AMD Ryzen AI 300 Series Mobile Processors See endnotes STX-04 and GD-220c Q2 2024 FINANCIAL RESULTS – JULY 30, 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides007.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "7 AI AND HIGH-PERFORMANCE LEADERSHIP Announced at Computex 2024 AMD Ryzen AI 300 SeriesAMD Ryzen 9000 Series 5th Gen AMD EPYCAMD Instinct Accelerators Versal AI Edge Gen 2 BROAD PORTFOLIO OF TRAINING AND INFERENCE COMPUTE ENGINES Powerful desktop processors for gaming and content creation Highly performant single chip adaptive solution for edge AI Leadership performance and efficiency Annual cadence of leadership AI accelerators Industry-leading TOPs for Copilot+ AI PCs Q2 2024 FINANCIAL RESULTS – JULY 30, 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides008.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 20248 REVENUE Q2 2024 ▪ Revenue of $5.8 billion increased 9% y/y ▪ Revenue growth in Data Center and Client segments partially offset by lower revenue in Gaming and Embedded segments $5.4B $5.8B Q2 2023 Q2 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides009.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 20249 GROSS MARGIN Q2 2024 1. See Appendices for GAAP to Non-GAAP reconciliation Non-GAAP1 46% 49% Q2 2023 Q2 2024 GAAP Increase in both GAAP and non-GAAP gross margin primarily driven by higher Data Center revenue 50% 53% Q2 2023 Q2 2024"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides010.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 202410 Q2 2023 Q2 2024 $(0.02)B $0.27B OPERATING INCOME (LOSS) Q2 2024 1. See Appendices for GAAP to Non-GAAP reconciliation GAAP Non-GAAP1 $1.07B $1.26B Q2 2023 Q2 2024 ▪ Increase driven by higher revenue and gross margin and lower amortization of acquisition-related intangible assets, partially offset by increased operating expenses ▪ Increase driven by higher revenue and gross margin, partially offset by increased operating expenses"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides011.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 202411 $0.58 $0.69 Q2 2023 Q2 2024 EARNINGS PER SHARE Q2 2024 1. See Appendices for GAAP to Non-GAAP reconciliation GAAP Non-GAAP1 ▪ GAAP net income of $265 million ▪ GAAP EPS of $0.16 primarily driven by higher revenue and gross margin and lower amortization of acquisition-related intangible assets, partially offset by increased operating expenses $0.02 $0.16 Q2 2023 Q2 2024 ▪ Non-GAAP net income of $1.1 billion ▪ Non-GAAP EPS of $0.69, up 19%, primarily driven by higher revenue and gross margin, partially offset by increased operating expenses"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides012.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "12 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 $ in millions, except per share data and % Q2’24 Q2’23 Y/Y Q1’24 Q/Q Revenue $5,835 $5,359 Up 9% $5,473 Up 7% Gross Profit $2,864 $2,443 Up 17% $2,560 Up 12% Gross Margin 49% 46% Up 3 ppts 47% Up 2 ppts Operating Expenses $2,605 $2,471 Up 5% $2,537 Up 3% Operating Expense/Revenue % 45% 46% Down 1 ppt 46% Down 1 ppt Operating Income (Loss) $269 $(20) Up 1,445% $36 Up 647% Operating Margin 5% 0% Up 5 ppts 1% Up 4 ppts Net Income $265 $27 Up 881% $123 Up 115% Earnings Per Share $0.16 $0.02 Up 700% $0.07 Up 129% Q2 2024 SUMMARY P&L | GAAP"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides013.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "13 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 $ in millions, except per share data and % Q2’24 Q2’23 Y/Y Q1’24 Q/Q Revenue $5,835 $5,359 Up 9% $5,473 Up 7% Gross Profit $3,101 $2,665 Up 16% $2,861 Up 8% Gross Margin 53% 50% Up 3 ppts 52% Up 1 ppt Operating Expenses $1,847 $1,605 Up 15% $1,741 Up 6% Operating Expense/Revenue % 32% 30% Up 2 ppts 32% Flat Operating Income $1,264 $1,068 Up 18% $1,133 Up 12% Operating Margin 22% 20% Up 2 ppts 21% Up 1 ppt Net Income $1,126 $948 Up 19% $1,013 Up 11% Earnings Per Share $0.69 $0.58 Up 19% $0.62 Up 11% Q2 2024 SUMMARY P&L | NON-GAAP 1 1. See Appendices for GAAP to Non-GAAP reconciliation"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides014.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "14 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 Q2 2024 SUMMARY BALANCE SHEET ITEMS ($ in millions) Q2’24 Q1’24 Q/Q Cash, Cash Equivalents and Short-term Investments $5,340 $6,035 Down 12% Accounts Receivable, Net $5,749 $5,038 Up 14% Inventories $4,991 $4,652 Up 7% Total Debt $1,719 $2,468 Down 30%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides015.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "15 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 Q2 2024 SEGMENT RESULTS ($ in millions) Q2’24 Q2’23 Y/Y Q1’24 Q/Q Data Center Net Revenue $2,834 $1,321 Up 115% $2,337 Up 21% Operating Income $743 $147 Up 405% $541 Up 37% Client Net Revenue $1,492 $998 Up 49% $1,368 Up 9% Operating Income (Loss) $89 $(69) Up 229% $86 Up 3% Gaming Net Revenue $648 $1,581 Down 59% $922 Down 30% Operating Income $ 77 $225 Down 66% $151 Down 49% Embedded Net Revenue $861 $1,459 Down 41% $846 Up 2% Operating Income $345 $757 Down 54% $342 Up 1%"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides016.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 202416 DATA CENTER SEGMENT Q2 2024 Strategic Highlights $1.3B $2.8B Q2 2023 Q2 2024 11% 26% Q2 2023 Q2 2024 Revenue Operating Margin Revenue $2.8 Billion Up 115% y/y Operating Income $743 Million vs. $147 Million a year ago Primarily due to operating leverage driven by higher revenue Driven primarily by steep ramp of AMD Instinct GPU shipments and strong growth in 4th Gen AMD EPYC CPU sales ▪ Unveiled expanded AMD Instinct accelerator roadmap bringing an annual cadence of AI leadership performance and memory capabilities. ▪ Microsoft announced general availability of Azure ND MI300X V5 instances, providing leading price/ performance for GPT workloads. ▪ Previewed “Turin” 5th Gen AMD EPYC processors, powered by “Zen 5” core architecture, with availability in 2H’24. ▪ Announced Ultra Accelerator Link promoter group to advance open standards-based AI networking infrastructure systems."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides017.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 202417 CLIENT SEGMENT Q2 2024 ▪ Announced AMD Ryzen AI 300 Series processors, the 3rd Gen AMD processor for AI PCs, with industry-leading 50 TOPs of AI processing power for Windows Copilot+ PCs. ▪ Announced AMD Ryzen 9000 Series processors based on “Zen 5” architecture, delivering leadership performance in gaming, productivity and content creation. ▪ Unveiled AMD Ryzen PRO 8040 Series and 8000 Series mobile and desktop processors with cutting-edge performance, manageability and security features for today’s enterprises. Strategic Highlights $1.0B $1.5B Q2 2023 Q2 2024 (7)% 6% Q2 2023 Q2 2024 Revenue Operating Margin Revenue $1.5 Billion Up 49% y/y Primarily driven by higher AMD Ryzen processor sales Operating Income $89 Million vs. $69 Million Loss a year ago Driven by higher revenue, partially offset by higher operating expenses"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides018.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 202418 14% 12% Q2 2023 Q2 2024 GAMING SEGMENT Q2 2024 ▪ Launched Radeon PRO W7900 Dual Slot GPU for high-performance AI workstations. ▪ Expanded AMD ROCm 6.1.3 software support to enhance AI development and deployment with select AMD Radeon desktop GPUs. ▪ Launched production version of Radeon Anti-Lag 2 with AMD Software delivering enhanced responsive experiences by minimizing input-lag for low-latency gaming. Strategic Highlights$1.6B $0.6B Q2 2023 Q2 2024 Revenue Operating Margin Revenue $648 Million Down 59% y/y Operating Income $77 Million vs. $225 Million a year ago Primarily due to lower revenuePrimarily due to lower semi-custom revenue"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides019.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "Q2 2024 FINANCIAL RESULTS – JULY 30, 202419 EMBEDDED SEGMENT Q2 2024 ▪ Announced AlveoTM V80 accelerators delivering leadership capabilities in memory intensive workloads. ▪ Entered early access on next generation edge AI solutions with more than 30 key partners on second Gen Versal adaptive SoCs. Strategic Highlights $0.9B Q2 2023 Q2 2024 52% 40% Q2 2023 Q2 2024 Revenue Operating Margin Revenue $861 Million Down 41% y/y Primarily due to customers continuing to normalize their inventory levels Operating Income $345 Million vs. $757 Million a year ago $1.5B Primarily due to lower revenue"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides020.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "20 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 ($ in millions) Q3’24 Revenue ~$6.7 Billion, +/- $300 Million Gross Margin ~53.5% Operating Expenses ~$1.9 Billion Effective Tax Rate ~13% of pre-tax income Diluted Share Count² ~1.64 Billion shares FINANCIAL OUTLOOK – NON-GAAP1 1. 1. See Cautionary Statement on Slide 2. These forward-looking outlook statements and non-GAAP measures are based on current expectations as of July 30, 2024, and assumptions and beliefs that involve numerous risks and uncertainties. AMD undertakes no intent or obligation to publicly update or revise its outlook statements as a result of new information, future events or otherwise, except as may be required by law. All items, except revenue, are on a non-GAAP basis. Adjustments to arrive at the GAAP financial outlook typically include stock-based compensation, amortization of acquired intangible assets, income tax provision, and other non-recurring items such as impairment charges and acquisition-related costs. The timing and impact of such adjustments are dependent on future events that are typically uncertain or outside of AMD's control, therefore, a reconciliation to equivalent GAAP measures is not practicable at this time. 2. 2. Refer to Diluted Share Count overview in the Appendices"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides021.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "21 Q2 2024 FINANCIAL RESULTS – JULY 30, 202421 Data Center Segment Revenue $2.8B Up 115% y/y Gross Margin 49% Non-GAAP Gross Margin 53% EPS $0.16 Non-GAAP EPS $0.69 Revenue $5.8B Up 9% y/y Q2 2024 SUMMARY 1 RECORD DATA CENTER SEGMENT REVENUE DRIVEN BY AMD INSTINCT GPUS AND 4TH GEN AMD EPYC CPUS 1. See Appendices for GAAP to Non-GAAP reconciliation"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides022.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "22 Q2 2024 FINANCIAL RESULTS – JULY 30, 20242 CORPORATE RESPONSIBILITY AT AMD Governance Integrating corporate responsibility and governance across product design, supply chain, operations and external engagement Social Fostering a culture of diversity, belonging and inclusion, partnering with suppliers and positively impacting our communities Environmental Advancing environmental solutions in our products, supply chain and operations, while accelerating energy efficiency for IT users"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides023.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "23 Q2 2024 FINANCIAL RESULTS – JULY 30, 202423 Large and Compelling TAM World-Class Execution and Focus Technology Leadership Expanding Data Center and AI Leadership Strong Balance Sheet OUR MOMENTUM DRIVING LONG-TERM SHAREHOLDER RETURNS"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides024.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "24 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 RECONCILIATION OF GAAP TO NON-GAAP GROSS PROFIT AND GROSS MARGIN ($ in millions, except %) (Unaudited) Q2’24 Q2’23 Q1’24 GAAP gross profit $2,864 $2,443 $2,560 GAAP gross margin 49% 46% 47% Stock-based compensation 5 10 6 Amortization of acquisition-related intangibles 231 212 230 Acquisition-related and other costs (1) 1 - - Inventory loss at contract manufacturer (2) - - 65 Non-GAAP gross profit $3,101 $2,665 $2,861 Non-GAAP gross margin 53% 50% 52% RECONCILIATION OF GAAP TO NON-GAAP OPERATING EXPENSES ($ in millions, except %) (Unaudited) Q2’24 Q2’23 Q1’24 GAAP operating expenses $2,605 $2,471 $2,537 GAAP operating expenses/revenue % 45% 46% 46% Stock-based compensation 341 338 365 Amortization of acquisition-related intangibles 372 481 392 Acquisition-related and other costs (1) 45 47 39 Non-GAAP operating expenses $1,847 $1,605 $1,741 Non-GAAP operating expenses/revenue % 32% 30% 32% APPENDICES (1) Acquisition-related and other costs primarily comprised of transaction costs, purchase price adjustments for inventory, certain compensation charges, contract termination and workforce rebalancing charges. (2) Inventory loss at contract manufacturer is related to an incident at a third-party contract manufacturing facility."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides025.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "25 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 APPENDICES RECONCILIATION OF GAAP OPERATING INCOME (LOSS) TO NON-GAAP OPERATING INCOME ($ in millions, except %) (Unaudited) Q2’24 Q2’23 Q1’24 GAAP operating income (loss) $ 269 $ (20) $ 36 GAAP operating margin 5% 0% 1% Stock-based compensation 346 348 371 Amortization of acquisition-related intangibles 603 693 622 Acquisition-related and other costs (1) 46 47 39 Inventory loss at contract manufacturer (2) - - 65 Non-GAAP operating income $ 1,264 $ 1,068 $ 1,133 Non-GAAP operating margin 22% 20% 21% (1) Acquisition-related and other costs primarily comprised of transaction costs, purchase price adjustments for inventory, certain compensation charges, contract termination and workforce rebalancing charges. (2) Inventory loss at contract manufacturer is related to an incident at a third-party contract manufacturing facility."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides026.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "26 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 RECONCILIATION OF GAAP TO NON-GAAP NET INCOME / EARNINGS PER SHARE (1) Acquisition-related and other costs primarily comprised of transaction costs, purchase price adjustments for inventory, certain compensation charges, contract termination and workforce rebalancing charges. (2) Inventory loss at contract manufacturer is related to an incident at a third-party contract manufacturing facility. APPENDICES (Millions, except per share data) (Unaudited) Q2’24 Q2’23 Q1’24 GAAP net income / earnings per share $ 265 $ 0.16 $ 27 $ 0.02 $ 123 $ 0.07 (Gains) losses on equity investments, net – – 3 – 3 – Stock-based compensation 346 0.21 348 0.21 371 0.23 Equity income in investee (7) – (6) – (7) – Amortization of acquisition-related intangibles 603 0.37 693 0.42 622 0.38 Acquisition-related and other costs (1) 46 0.03 47 0.03 39 0.02 Inventory loss at contract manufacturer (2) – – – – 65 0.04 Income tax provision (127) (0.08) (164) (0.10) (203) (0.12) Non-GAAP net income / earnings per share $1,126 $ 0.69 $ 948 $ 0.58 $1,013 $ 0.62 Shares used in earnings per share calculation Shares used in per share calculation (GAAP and Non-GAAP) 1,637 1,627 1,639"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides027.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "27 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 Shares (millions) (1) Q2’24 Q3’24 Actual Estimate Basic shares 1,618 1,622 Dilutive impact from employee equity grants (2) 19 16 Diluted shares 1,637 1,638 APPENDICES SHARE COUNT OVERVIEW The table above provides actual share count for Q2’24 and an estimate of share count to use when calculating GAAP and non-GAAP diluted earnings per share for Q3’24. (1) Share counts are weighted average shares. (2) The dilutive impact of employee equity grants is based on the Treasury Stock method and is dependent upon the average stock price during the period. The Q2’24 average stock price was $160.87. The Q2’24 average stock price of $160.87 was assumed for Q3’24 average stock price estimates."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides028.jpg"
+    },
+    {
+      "type": "TextElement",
+      "text": "28 Q2 2024 FINANCIAL RESULTS – JULY 30, 2024 ENDNOTES STX-04: Based on AMD product specifications and competitive products announced as of May 2024. AMD Ryzen AI 300 Series processors’ NPU offer up to 50 peak TOPS. AI PC is defined as a laptop PC with a processor that includes a neural processing unit (NPU). STX-04. GD-220c: Ryzen AI is defined as the combination of a dedicated AI engine, AMD Radeon graphics engine, and Ryzen processor cores that enable AI capabilities. OEM and ISV enablement is required, and certain AI features may not yet be optimized for Ryzen AI processors. Ryzen AI is compatible with: (a) AMD Ryzen 7040 and 8040 Series processors except Ryzen 5 7540U, Ryzen 5 8540U, Ryzen 3 7440U, and Ryzen 3 8440U processors; (b) AMD Ryzen AI 300 Series processors, and (c) all AMD Ryzen 8000G Series desktop processors except the Ryzen 5 8500G/GE and Ryzen 3 8300G/GE. Please check with your system manufacturer for feature availability prior to purchase. GD- 220c."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "amdq224earningsslides029.jpg"
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 5800.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "REVENUE Q2 2024 ▪ Revenue of $5.8 billion"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 2,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "150.729996",
+    "return_10d_pct": "-9.2616",
+    "return_20d_pct": "3.7617",
+    "return_30d_pct": "-1.4397",
+    "return_60d_pct": "8.8569",
+    "return_90d_pct": "10.2966"
+  },
+  "text_stats": {
+    "primary_text_len": 5629,
+    "exhibit_text_len": 23684,
+    "combined_text_len": 29315,
+    "semantic_text_len": 24559,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

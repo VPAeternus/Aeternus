@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NTAP",
+    "cik": "1002047",
+    "event_date": "2024-08-28",
+    "event_accession": "0000950170-24-101383",
+    "primary_8k_doc": "ntap-20240822.htm",
+    "exhibit_docs": [
+      "ntap-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NTAP_000095017024101383_ntap-20240822.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NTAP_000095017024101383_ntap-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NTAP",
+    "cik": "1002047",
+    "entity_name": "NetApp, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "6318000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-10",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-29",
+    "net_income_value": "937000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-10",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-29",
+    "assets_value": "9818000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-10",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-28",
+    "financing_cash_flow_value": "-1017000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-10",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-29",
+    "investing_cash_flow_value": "-561000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-10",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-29",
+    "operating_cash_flow_value": "1211000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-10",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.148306",
+    "operating_cash_flow_to_revenue": "0.191675",
+    "assets_to_revenue": "1.553973",
+    "financing_cash_flow_to_revenue": "-0.160969",
+    "investing_cash_flow_to_revenue": "-0.088794"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $1.",
+      "GAAP net income per share 3 of $1.",
+      "non-GAAP net income per share 2 of $1.",
+      "EPS.",
+      "Net income: GAAP net income of $248 million, compared to $149 million in the first quarter of fiscal year 2024; non-GAAP net income of $330 million, compared to $249 million in the first quarter of fiscal year 2024.",
+      "Earnings per share: GAAP net income per share of $1."
+    ],
+    "guidance_evidence": [
+      "Outlook The Company provided the following financial guidance for the second quarter of fiscal year 2025: Net revenues are expected to be in the range of: $1.",
+      "Outlook The Company provided the following update to financial guidance for the full fiscal year 2025: Net revenues are expected to be in the range of: $6.",
+      "guidance for customers on how to implement RAG-enabled workflows that bring proprietary data stored on Amazon FSx for NetApp ONTAP into their GenAI data pipelines.",
+      "guidance, our overall future prospects, our ability to capitalize on momentum from our business results, our ability to address new market opportunities, extend our leadership position in existing markets, and deliver increasing value for our stakeholders.",
+      "GUIDANCE TO NON-GAAP EXPRESSED AS EARNINGS PER SHARE SECOND QUARTER FISCAL 2025 Second Quarter Fiscal 2025 GAAP Guidance - Net Income Per Share $1.",
+      "Guidance - Net Income Per Share $1."
+    ],
+    "wave_or_demand_evidence": [
+      "customer benefits of the highly differentiated NetApp intelligent data infrastructure platform, and our disciplined management of the business,” said George Kurian, chief executive officer.",
+      "demanding IT workloads, including GenAI, VMware, and enterprise databases.",
+      "customer data against advanced cyberthreats.",
+      "customers to include private enterprise data stored on Azure NetApp Files in their retrieval-augmented generation (RAG) workflows in a secure, programmatic manner.",
+      "customers on how to implement RAG-enabled workflows that bring proprietary data stored on Amazon FSx for NetApp ONTAP into their GenAI data pipelines.",
+      "Customer & Partner Momentum • Microsoft recognized Capgemini and NetApp with a 2024 Microsoft Partner of the Year Award in the “Migration to Azure” category for the companies’ work in moving a large retail customer in Asia to Azure, including Azure NetApp Files."
+    ],
+    "warning_or_risk_evidence": [
+      "charges to assess the appropriate level of various operating expenses to assist in budgeting, planning and forecasting future periods and in measuring operational performance.",
+      "charges or benefits related to litigation settlements.",
+      "charges and benefits, when significant, because it does not believe they are reflective of ongoing business and operating results.",
+      "charges.",
+      "charges consist of restructuring charges that are incurred based on the particular facts and circumstances of restructuring decisions, including employment and contractual settlement terms, and other related charges, and can vary in size and frequency.",
+      "impairments."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1540,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 1565,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": 70,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-29",
+    "entry_open": "125.080002",
+    "return_10d_pct": "-8.3786",
+    "return_20d_pct": "-4.5811",
+    "return_30d_pct": "-1.2552",
+    "return_60d_pct": "-3.7336",
+    "return_90d_pct": "-2.1186"
+  },
+  "text_stats": {
+    "primary_text_len": 4279,
+    "exhibit_text_len": 42678,
+    "combined_text_len": 46959
+  }
+}

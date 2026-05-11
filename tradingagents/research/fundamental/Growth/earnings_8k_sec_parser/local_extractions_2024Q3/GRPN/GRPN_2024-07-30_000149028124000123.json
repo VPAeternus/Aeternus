@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "GRPN",
+    "cik": "1490281",
+    "event_date": "2024-07-30",
+    "event_accession": "0001490281-24-000123",
+    "primary_8k_doc": "grpn-20240730.htm",
+    "exhibit_docs": [
+      "a2024q28-kxexhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GRPN_000149028124000123_grpn-20240730.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/GRPN_000149028124000123_a2024q28-kxexhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "GRPN",
+    "cik": "1490281",
+    "entity_name": "Groupon, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "121611000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-29147000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "570956000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-29197000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-9013000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-76320000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.239674",
+    "operating_cash_flow_to_revenue": "-0.627575",
+    "assets_to_revenue": "4.694937",
+    "financing_cash_flow_to_revenue": "-0.240085",
+    "investing_cash_flow_to_revenue": "-0.074113"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue was $124.",
+      "revenue was $114.",
+      "revenue was $98.",
+      "revenue was $91.",
+      "revenue was $26.",
+      "revenue was $22."
+    ],
+    "guidance_evidence": [
+      "guidance • Global revenu e of $124.",
+      "forecasting the timing or amount of various items that would impact the most directly comparable forward-looking U."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for our Local category, partially offset by a decline in demand for our Goods category.",
+      "customers were 10.",
+      "demand for our Local, Goods, and Travel categories.",
+      "customers were 5.",
+      "customer purchases of goods and services.",
+      "customer refunds, order discounts and sales and related taxes."
+    ],
+    "warning_or_risk_evidence": [
+      "charge, the reports that the company files or furnishes with the SEC, corporate governance information (including Groupon’s Global Code of Conduct), and select press releases and social media postings.",
+      "charges and credits.",
+      "charges and credits included charges related to our 2020 and 2022 restructuring plans, gain on sale of assets and foreign VAT assessments.",
+      "charges and credits from Adjusted EBITDA because we believe that excluding those items provides meaningful supplemental information about our core operating performance and facilitates comparisons with our historical results.",
+      "charges and credits, including items that are unusual in nature or infrequently occurring.",
+      "charges and credits, including restructuring charges, strategic advisor costs, gain on sale of assets and foreign VAT assessments."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 15,
+    "quarter_revenue_yoy_pct": 7,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "14.770000",
+    "return_10d_pct": "-17.9418",
+    "return_20d_pct": "-7.9215",
+    "return_30d_pct": "-6.0934",
+    "return_60d_pct": "-33.7847",
+    "return_90d_pct": "-28.5714"
+  },
+  "text_stats": {
+    "primary_text_len": 3167,
+    "exhibit_text_len": 36288,
+    "combined_text_len": 39457
+  }
+}

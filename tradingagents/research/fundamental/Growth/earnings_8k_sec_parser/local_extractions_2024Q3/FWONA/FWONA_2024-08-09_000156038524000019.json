@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FWONA",
+    "cik": "1560385",
+    "event_date": "2024-08-09",
+    "event_accession": "0001560385-24-000019",
+    "primary_8k_doc": "lmca-20240808x8k.htm",
+    "exhibit_docs": [
+      "lmca-20240808xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FWONA_000156038524000019_lmca-20240808x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FWONA_000156038524000019_lmca-20240808xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FWONA",
+    "cik": "1560385",
+    "entity_name": "LIBERTY MEDIA CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2556000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "15000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "41168000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-257000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-415000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "661000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.005869",
+    "operating_cash_flow_to_revenue": "0.258607",
+    "assets_to_revenue": "16.106416",
+    "financing_cash_flow_to_revenue": "-0.100548",
+    "investing_cash_flow_to_revenue": "-0.162363"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $2.",
+      "revenue of $443 million ◾ Net income of $316 million; diluted EPS of $0.",
+      "revenue was relatively flat in the second quarter as fees from the additional races were offset by the different mix of events compared to the prior year period.",
+      "revenue increased in the second quarter primarily due to higher hospitality, freight, travel, technical services and F2 and F3 income driven by the additional races held in the current period.",
+      "revenue increased in the second quarter due to the Quint acquisition and $6 million of rental income related to the Las Vegas Grand Prix Plaza.",
+      "Net income of $316 million; diluted EPS of $0."
+    ],
+    "guidance_evidence": [
+      "guidance o Liberty Media’s ownership of SiriusXM was 83.",
+      "expected to close on September 9 th .",
+      "projects of $10 million, severance and other related costs of $5 million and a cost-method investment impairment of $2 million."
+    ],
+    "wave_or_demand_evidence": [
+      "demand hasn’t slowed as indicators point to another record year ahead.",
+      "air value of Live Nation investment was $6.",
+      "aid Greg Maffei, Liberty Media President and CEO.",
+      "ained through its website and filings with the Securities and Exchange Commission.",
+      "ail on SiriusXM’s financial results for the second quarter, please see SiriusXM’s earnings release posted to its Investor Relations website.",
+      "aid Stefano Domenicali, Formula 1 President and CEO."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges.",
+      "impairments, primarily related to vacated office space.",
+      "impairments primarily related to terminated software projects of $10 million, severance and other related costs of $5 million and a cost-method investment impairment of $2 million.",
+      "charges discussed below.",
+      "impairment, restructuring and acquisition costs, (iv) legal settlements/reserves and (v) other significant operating expense (income) that do not relate to the on-going 15 ​ performance of SiriusXM’s business.",
+      "charges for depreciation expense."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2180,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-12",
+    "entry_open": "67.370003",
+    "return_10d_pct": "4.1265",
+    "return_20d_pct": "3.5179",
+    "return_30d_pct": "2.9538",
+    "return_60d_pct": "7.6147",
+    "return_90d_pct": "11.7857"
+  },
+  "text_stats": {
+    "primary_text_len": 4446,
+    "exhibit_text_len": 42860,
+    "combined_text_len": 47308
+  }
+}

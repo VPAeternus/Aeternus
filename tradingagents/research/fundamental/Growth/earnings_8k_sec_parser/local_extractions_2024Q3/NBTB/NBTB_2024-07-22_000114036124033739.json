@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NBTB",
+    "cik": "790359",
+    "event_date": "2024-07-22",
+    "event_accession": "0001140361-24-033739",
+    "primary_8k_doc": "ef20032759_8k.htm",
+    "exhibit_docs": [
+      "ef20032759_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NBTB_000114036124033739_ef20032759_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NBTB_000114036124033739_ef20032759_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NBTB",
+    "cik": "790359",
+    "entity_name": "NBT Bancorp Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "151011000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-02-29",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2021-12-31",
+    "net_income_value": "33658000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "13309040000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "86158000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-75560000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "21847000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.222884",
+    "operating_cash_flow_to_revenue": "0.144672",
+    "assets_to_revenue": "88.132917",
+    "financing_cash_flow_to_revenue": "0.570541",
+    "investing_cash_flow_to_revenue": "-0.500361"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues decreased $0.",
+      "net income and diluted earnings per share for the three and six months ended June 30, 2024.",
+      "Net income for the three months ended June 30, 2024 was $32.",
+      "earnings per share 1 , a non-GAAP measure, which excludes acquisition expenses and securities gains (losses), net of tax, was $0.",
+      "Net Income ◾ Net income of $32.",
+      "earnings per share of $0."
+    ],
+    "guidance_evidence": [
+      "expected duration of the portfolio, and a specific reserve related to a commercial relationship placed on nonaccrual in the fourth quarter of 2023.",
+      "forecasts,” “projects,” “will,” “can,” “would,” “should,” “could,” “may,” or other similar terms.",
+      "expected costs or difficulties related to the integration of new products and lines of business; and (20) the Company’s success at managing the risks involved in the foregoing items."
+    ],
+    "wave_or_demand_evidence": [
+      "demand deposit accounts.",
+      "Demand deposits 3,340,257 3,409,209 Other liabilities 296,747 262,951 Stockholders' equity 1,436,477 1,203,886 Total liabilities and stockholders' equity $ 13,380,744 $ 11,782,990 Net interest income (FTE) 1 $ 193,664 $ 184,948 Interest rate spread 2.",
+      "ains (losses), net of tax, was $0.",
+      "aid NBT President and CEO Scott A.",
+      "ains (losses) Loans and Credit Quality ◾ Period end total loans of $9.",
+      "ains (losses), was $43."
+    ],
+    "warning_or_risk_evidence": [
+      "charge-offs to average loans was 0.",
+      "charge-offs to total average loans for the second quarter of 2024 was 15 bps compared to 19 bps in the prior quarter.",
+      "charge-offs for the portfolios in a planned run-off status represented the majority of total net charge-offs for the quarter.",
+      "charge-offs to average loans 3 0.",
+      "charge-offs $ 3,699 $ 4,679 $ 5,327 $ 4,204 $ 3,456 2024 2023 2nd Q 1st Q 4th Q 3rd Q 2nd Q Allowance for loan losses as a percentage of loans by segment Commercial & industrial 0.",
+      "losses), net of tax, was $0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 0.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-23",
+    "entry_open": "45.919998",
+    "return_10d_pct": "-0.7186",
+    "return_20d_pct": "-4.4207",
+    "return_30d_pct": "1.1977",
+    "return_60d_pct": "-1.9599",
+    "return_90d_pct": "-4.2683"
+  },
+  "text_stats": {
+    "primary_text_len": 3190,
+    "exhibit_text_len": 39477,
+    "combined_text_len": 42669
+  }
+}

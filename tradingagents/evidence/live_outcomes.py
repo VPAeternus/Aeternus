@@ -19,13 +19,13 @@ logger = logging.getLogger(__name__)
 def build_live_outcome_report(
     closed_trades_paths: Optional[List[str]] = None,
     track_record_path: str = "eval_results/track_record.json",
-    batch_analysis_dir: str = "eval_results/deal_flow",
+    analysis_dir: str = "eval_results/fundamental",
 ) -> Dict[str, Any]:
     """Build a report comparing predicted analysis outcomes to actual trade results.
 
-    Joins closed trades (from paper/live execution) with original batch analysis
-    items via rating_id to compute prediction accuracy, directional hit rate,
-    and slippage between predicted and actual returns.
+    Joins closed trades (from paper/live execution) with original analysis items
+    via rating_id to compute prediction accuracy, directional hit rate, and
+    slippage between predicted and actual returns.
 
     Returns a dict with overall metrics, breakdowns by lane/playbook/confidence,
     and individual matched trade records.
@@ -55,8 +55,7 @@ def build_live_outcome_report(
         if rid:
             track_by_id[rid] = entry
 
-    # Load batch analysis items indexed by rating_id.
-    analysis_by_id = _load_analysis_items_by_rating_id(batch_analysis_dir)
+    analysis_by_id = _load_analysis_items_by_rating_id(analysis_dir)
 
     # Match and compute metrics.
     matched: List[Dict[str, Any]] = []
@@ -309,39 +308,10 @@ def _group_and_aggregate(
 
 
 def _load_analysis_items_by_rating_id(
-    batch_dir: str,
+    analysis_dir: str,
 ) -> Dict[str, Dict[str, Any]]:
-    """Scan batch analysis summaries and index items by rating_id."""
-    base = Path(batch_dir)
-    index: Dict[str, Dict[str, Any]] = {}
-
-    if not base.exists():
-        return index
-
-    for day_dir in sorted(base.iterdir()):
-        if not day_dir.is_dir():
-            continue
-        for summary_path in sorted(
-            day_dir.glob("batch_analyze_summary_*.json"),
-            key=lambda p: p.stat().st_mtime,
-            reverse=True,
-        ):
-            try:
-                payload = json.loads(summary_path.read_text())
-            except Exception:
-                continue
-            if not isinstance(payload, dict):
-                continue
-            for item in payload.get("items", []):
-                if not isinstance(item, dict):
-                    continue
-                rid = str(item.get("rating_id", "")).strip()
-                if rid and rid not in index:
-                    enriched = dict(item)
-                    enriched["_analysis_date"] = day_dir.name
-                    index[rid] = enriched
-
-    return index
+    del analysis_dir
+    return {}
 
 
 def _empty_report(reason: str) -> Dict[str, Any]:

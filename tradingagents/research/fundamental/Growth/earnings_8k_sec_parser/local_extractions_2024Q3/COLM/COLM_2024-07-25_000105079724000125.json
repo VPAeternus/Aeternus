@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "COLM",
+    "cik": "1050797",
+    "event_date": "2024-07-25",
+    "event_accession": "0001050797-24-000125",
+    "primary_8k_doc": "colm-20240725.htm",
+    "exhibit_docs": [
+      "colmfy24q2exhibit991.htm",
+      "ex992cfocommentaryq22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COLM_000105079724000125_colm-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COLM_000105079724000125_colmfy24q2exhibit991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/COLM_000105079724000125_ex992cfocommentaryq22024.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "COLM",
+    "cik": "1050797",
+    "entity_name": "COLUMBIA SPORTSWEAR COMPANY",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "820593000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "46202000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2888974000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-35561000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-12-31",
+    "investing_cash_flow_value": "-111680000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-12-31",
+    "operating_cash_flow_value": "78002000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-12-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.056303",
+    "operating_cash_flow_to_revenue": "0.095056",
+    "assets_to_revenue": "3.520593",
+    "financing_cash_flow_to_revenue": "-0.043336",
+    "investing_cash_flow_to_revenue": "-0.136097"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales decreased 8 percent (7 percent constant-currency) to $570.",
+      "Net sales of $3.",
+      "Net sales decreased 7 percent (6 percent constant-currency) to $1,340.",
+      "net sales was flat compared to the comparable period in 2023.",
+      "net sales of $3.",
+      "net sales of 40."
+    ],
+    "guidance_evidence": [
+      "Outlook Second Quarter 2024 Highlights • Net sales decreased 8 percent (7 percent constant-currency) to $570.",
+      "Outlook The following forward-looking statements reflect our expectations as of July 25, 2024 and are subject to significant risks and business uncertainties, including those factors described under “Forward-Looking Statements” below.",
+      "outlook details can be found in the Full Year 2024 Financial Outlook section below and the CFO Commentary and Financial Review presentation.",
+      "outlook and remain on track to generate over $350 million in operating cash flow.",
+      "Outlook (Additional financial outlook details can be found in the CFO Commentary and Financial Review presentation.",
+      "Outlook • Net sales are expected to be $927 to $959 million, representing a decline of 6 to 3 percent from $985."
+    ],
+    "wave_or_demand_evidence": [
+      "demand.",
+      "demand and reduce inventory in the U.",
+      "demand creation expenses, partially offset by higher direct-to-consumer (\"DTC\") expenses.",
+      "ainties, including those factors described under “Forward-Looking Statements” below.",
+      "ails can be found in the Full Year 2024 Financial Outlook section below and the CFO Commentary and Financial Review presentation.",
+      "airman, President and Chief Executive Officer Tim Boyle commented, “Second quarter results were generally in line with expectations."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory reduction, rationalizing expenses through our Profit Improvement Program, and developing actionable strategies to reinvigorate long-term profitable growth.",
+      "inventory in the U.",
+      "inventory production, as well as unfavorable foreign currency translation impacts.",
+      "decreased 8 percent (7 percent constant-currency) to $570.",
+      "Loss from operations of $23.",
+      "loss per share of $(0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 570.2,
+    "quarter_revenue_yoy_pct": -8,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 959,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": 2,
+    "earnings_score_bucket": "low",
+    "guidance_torque": 3,
+    "earnings_torque": -1,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": 68.1866,
+    "score_status": "scored",
+    "score_missing_fields": []
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "77.449997",
+    "return_10d_pct": "0.9813",
+    "return_20d_pct": "3.1892",
+    "return_30d_pct": "7.6307",
+    "return_60d_pct": "3.0342",
+    "return_90d_pct": "-0.8651"
+  },
+  "text_stats": {
+    "primary_text_len": 4057,
+    "exhibit_text_len": 28571,
+    "combined_text_len": 32630
+  }
+}

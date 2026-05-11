@@ -1,0 +1,51 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the fourth quarter and the full year ended December 31, 2024",
+    "period_end_date": "December 31, 2024"
+  },
+  "reported_results": {
+    "revenue_millions": 572.393,
+    "revenue_yoy_pct": 60.3715,
+    "revenue_qoq_pct": 73.243,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "We expect our commercial momentum to continue into 2025 and beyond.",
+    "wave_signal": "KR Sridhar, Founder, Chairman, and CEO of Bloom Energy said, “We are the solution of choice for powering AI, whether that’s large data centers that need reliable power now, or businesses that are going to use AI for productivity gains.",
+    "margin_signal": "•Gross margin of 38.",
+    "risk_signal": "8 million compared to operating loss of $208.",
+    "customer_signal": "These forward-looking statements include, but are not limited to, Bloom’s expectations regarding: innovation and solutions; customer reaction to Bloom’s products; Bloom’s liquidity position; market demand for energy solutions; and Bloom’s 2025 outlook for revenue and profitability."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | $ | 572393 | | $ | 330399 | | $ | 356917 | | $ | 1473856 | | $ | 1333470 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | $ | 572393 | | $ | 330399 | | $ | 356917 | | $ | 1473856 | | $ | 1333470 |"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | $ | 572393 | | $ | 330399 | | $ | 356917 | | $ | 1473856 | | $ | 1333470 |"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

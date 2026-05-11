@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AVNT",
+    "cik": "1122976",
+    "event_date": "2024-08-06",
+    "event_accession": "0001122976-24-000053",
+    "primary_8k_doc": "avnt-20240806.htm",
+    "exhibit_docs": [
+      "avnt-20240630xnewsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVNT_000112297624000053_avnt-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AVNT_000112297624000053_avnt-20240630xnewsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AVNT",
+    "cik": "1122976",
+    "entity_name": "Avient Corporation",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "845700000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "19900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5968500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-25600000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-22200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.023531",
+    "operating_cash_flow_to_revenue": "-0.02625",
+    "assets_to_revenue": "7.057467",
+    "financing_cash_flow_to_revenue": "-0.030271",
+    "investing_cash_flow_to_revenue": "-0.015372"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of $849.",
+      "GAAP EPS from continuing operations of $0.",
+      "EPS of $0.",
+      "EPS guidance range to $2.",
+      "GAAP earnings per share (EPS) from continuing operations was $0.",
+      "GAAP EPS includes $0."
+    ],
+    "guidance_evidence": [
+      "guidance of $0.",
+      "guidance range to $2.",
+      "guidance of $2.",
+      "Outlook \"Looking ahead to the third quarter, we expect adjusted EPS of $0.",
+      "outlook for the second half of the year remains largely unchanged from our previous outlook in May, so we are updating our full-year guidance to reflect the strong second quarter results.",
+      "guidance for adjusted EBITDA is now $515 million to $540 million, from our previous range of $510 million to $535 million."
+    ],
+    "wave_or_demand_evidence": [
+      "demand trends, as well as winning new specifications and gaining share in markets supported by secular trends.",
+      "demand outlook for the second half of the year remains largely unchanged from our previous outlook in May, so we are updating our full-year guidance to reflect the strong second quarter results.",
+      "customers' challenges to enable a sustainable world.",
+      "customers to achieve their sustainability goals, ultimately creating value for our shareholders,\" explained Ms.",
+      "customer challenges into opportunities, bringing new products to life for a better world.",
+      "ainable materials solutions, today announced its second quarter 2024 results."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties, any of which could cause actual results to differ materially from those expressed in or implied by the forward-looking statements.",
+      "Loss from discontinued operations, net of income taxes — — — (0.",
+      "loss) per share attributable to Avient common shareholders - Basic: Continuing operations $ 0.",
+      "loss) per share attributable to Avient common shareholders - Diluted: Continuing operations $ 0.",
+      "loss) 0.",
+      "uncertain tax position reserves and the establishment, reversal or changes to valuation allowances."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 850,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "45.980000",
+    "return_10d_pct": "1.5441",
+    "return_20d_pct": "5.5024",
+    "return_30d_pct": "-1.8269",
+    "return_60d_pct": "6.4158",
+    "return_90d_pct": "4.8064"
+  },
+  "text_stats": {
+    "primary_text_len": 2718,
+    "exhibit_text_len": 26769,
+    "combined_text_len": 29489
+  }
+}

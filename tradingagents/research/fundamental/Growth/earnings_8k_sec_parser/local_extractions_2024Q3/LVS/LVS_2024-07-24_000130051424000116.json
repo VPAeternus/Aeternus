@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LVS",
+    "cik": "1300514",
+    "event_date": "2024-07-24",
+    "event_accession": "0001300514-24-000116",
+    "primary_8k_doc": "lvs-20240724.htm",
+    "exhibit_docs": [
+      "lvs_ex991x06302024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LVS_000130051424000116_lvs-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LVS_000130051424000116_lvs_ex991x06302024.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LVS",
+    "cik": "1300514",
+    "entity_name": "LAS VEGAS SANDS CORP.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2120000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-19",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "147000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-19",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "21778000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-19",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-36000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-19",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-182000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-19",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "441000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-19",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.06934",
+    "operating_cash_flow_to_revenue": "0.208019",
+    "assets_to_revenue": "10.272642",
+    "financing_cash_flow_to_revenue": "-0.016981",
+    "investing_cash_flow_to_revenue": "-0.085849"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $2.",
+      "revenue was $2.",
+      "Net Income of $424 million • Consolidated Adjusted Property EBITDA of $1.",
+      "Operating income was $591 million, compared to $537 million in the prior year quarter.",
+      "Net income in the second quarter of 2024 was $424 million, compared to $368 million in the second quarter of 2023.",
+      "Net income for SCL was $246 million, compared to $187 million in the second quarter of 2023."
+    ],
+    "guidance_evidence": [
+      "anticipates,” “believes,” “estimates,” “expects,” “intends,” “plans,” “positions,” “remains,” “seeks,” “will” and similar expressions, as they relate to our company or management, are intended to identify forward-looking statements.",
+      "expected Rolling Chip win percentage of 3."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, gaming taxes and bad debt expense that would have been incurred or avoided.",
+      "ain enthusiastic about our opportunities to deliver industry-leading growth in both markets in the years ahead, as we execute our substantial capital investment programs in both Macao and Singapore,” said Robert G.",
+      "airman and chief executive officer.",
+      "ains well below the levels reached prior to the pandemic.",
+      "ain delivered strong financial and operating performance.",
+      "aining amount authorized under our share repurchase program is $645 million."
+    ],
+    "warning_or_risk_evidence": [
+      "restrictions on the export of the renminbi; and other risks and uncertainties detailed in Annual Reports on Form 10-K and Quarterly Reports on Form 10-Q filed by Las Vegas Sands Corp.",
+      "impairment of assets, gain or loss on modification or early retirement of debt, other income or expense and certain nonrecurring corporate expenses, net of income tax.",
+      "impairment of assets, interest, other income or expense, gain or loss on modification or early retirement of debt and income taxes.",
+      "impairment of assets 0.",
+      "uncertainties detailed in Annual Reports on Form 10-K and Quarterly Reports on Form 10-Q filed by Las Vegas Sands Corp.",
+      "loss),” “adjusted earnings (loss) per diluted share,” and “consolidated adjusted property EBITDA,” which have directly comparable GAAP financial measures."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2760,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "39.619999",
+    "return_10d_pct": "-4.4422",
+    "return_20d_pct": "-0.3029",
+    "return_30d_pct": "2.3473",
+    "return_60d_pct": "6.3352",
+    "return_90d_pct": "28.8238"
+  },
+  "text_stats": {
+    "primary_text_len": 3935,
+    "exhibit_text_len": 33152,
+    "combined_text_len": 37089
+  }
+}

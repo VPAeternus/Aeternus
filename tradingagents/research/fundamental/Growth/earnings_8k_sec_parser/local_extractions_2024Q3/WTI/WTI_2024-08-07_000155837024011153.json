@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WTI",
+    "cik": "1288403",
+    "event_date": "2024-08-07",
+    "event_accession": "0001558370-24-011153",
+    "primary_8k_doc": "wti-20240806x8k.htm",
+    "exhibit_docs": [
+      "wti-20240806xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTI_000155837024011153_wti-20240806x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WTI_000155837024011153_wti-20240806xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WTI",
+    "cik": "1288403",
+    "entity_name": "W&T Offshore, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "131725000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "26005000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1114005000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-294089000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-13314000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "23435000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.197419",
+    "operating_cash_flow_to_revenue": "0.177909",
+    "assets_to_revenue": "8.457051",
+    "financing_cash_flow_to_revenue": "-2.232598",
+    "investing_cash_flow_to_revenue": "-0.101074"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $140.",
+      "revenue was approximately 13% higher than $126.",
+      "net income, as an indication of operating performance or cash flows from operating activities or as a measure of liquidity.",
+      "Free Cash Flow, Net Debt and PV-10, which are described and reconciled to the most comparable GAAP financial measures below in the accompanying tables under “Non-GAAP Information.",
+      "Free Cash Flow of $18.",
+      "Free Cash Flow; ● Reported net loss of $15."
+    ],
+    "guidance_evidence": [
+      "guidance; ● Incurred lease operating expenses (“LOE”) of $74.",
+      "guidance range; ● Generated net cash from operating activities of $37.",
+      "guidance range, LOE was below the bottom end of our guidance range and more importantly, we increased our cash on hand by 30% while decreasing net debt by 9% compared to March 1 ​ ​ ​ 31, 2024.",
+      "guidance and virtually flat compared with 35.",
+      "guidance range.",
+      "Guidance The guidance for the third quarter and full year 2024 in the table below represents the Company’s current expectations."
+    ],
+    "wave_or_demand_evidence": [
+      "aintain a low leverage profile with Net Debt to trailing twelve months (“TTM”) Adjusted EBITDA of 1.",
+      "aid third consecutive quarterly dividend of $0.",
+      "AI”), and a present value of those SEC proved reserves discounted at 10% (“PV-10”) of $1.",
+      "air and Chief Executive Officer, commented, “ We remain committed to executing our strategic vision focused on free cash flow generation, maintaining solid production and maximizing margins while increasing proved reserves and PV-10.",
+      "AI shows a meaningful increase in reserves and PV-10 value, which demonstrates the resiliency and strength of our asset base.",
+      "ainder of 2024 and into 2025."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss, Adjusted EBITDA, Free Cash Flow, Net Debt and PV-10, which are described and reconciled to the most comparable GAAP financial measures below in the accompanying tables under “Non-GAAP Information.",
+      "loss of $15.",
+      "Loss totaled $8.",
+      "loss on outstanding derivative contracts, non-ARO plugging and abandonment (“P&A”) costs and related tax effect; ● Posted Adjusted EBITDA of $45.",
+      "decrease of 9%, at June 30, 2024 compared to the first quarter of 2024; ● Continued to maintain a low leverage profile with Net Debt to trailing twelve months (“TTM”) Adjusted EBITDA of 1.",
+      "decreases were partially offset by increased production from wells acquired in both January 2024 and September 2023."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 142.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "2.230000",
+    "return_10d_pct": "2.6906",
+    "return_20d_pct": "1.7937",
+    "return_30d_pct": "-8.9686",
+    "return_60d_pct": "25.1121",
+    "return_90d_pct": "8.5202"
+  },
+  "text_stats": {
+    "primary_text_len": 3565,
+    "exhibit_text_len": 45231,
+    "combined_text_len": 48798
+  }
+}

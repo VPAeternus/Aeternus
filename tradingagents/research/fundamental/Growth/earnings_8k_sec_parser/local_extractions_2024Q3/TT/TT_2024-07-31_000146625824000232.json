@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TT",
+    "cik": "1466258",
+    "event_date": "2024-07-31",
+    "event_accession": "0001466258-24-000232",
+    "primary_8k_doc": "tt-20240731.htm",
+    "exhibit_docs": [
+      "exhibit991-q22024earningsr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TT_000146625824000232_tt-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TT_000146625824000232_exhibit991-q22024earningsr.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TT",
+    "cik": "1466258",
+    "entity_name": "Trane Technologies plc",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3665800000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "307100000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "19391900000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-459200000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-91000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "8500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.083774",
+    "operating_cash_flow_to_revenue": "0.002319",
+    "assets_to_revenue": "5.28995",
+    "financing_cash_flow_to_revenue": "-0.125266",
+    "investing_cash_flow_to_revenue": "-0.024824"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenues of $5.",
+      "revenues were both up 13 percent.",
+      "revenues were both up 16 percent.",
+      "revenues were up 4 percent, including approximately 1 percentage point related to acquisitions offset by 2 percentage points of negative foreign exchange impact.",
+      "revenues were up 5 percent.",
+      "revenues were down 6 percent, including approximately 3 percentage points of negative foreign exchange impact."
+    ],
+    "guidance_evidence": [
+      "Guidance Highlights (second-quarter 2024 versus second-quarter 2023, unless otherwise noted): l Reported revenues of $5.",
+      "outlook, we are raising our full-year revenue and adjusted EPS guidance well above the high end of our prior range.",
+      "Guidance • The Company expects full-year reported and organic revenue growth of approximately 10 percent; reported revenue growth includes approximately 1 percentage point of M&A offset by approximately 1 percentage point of negative foreign exchange.",
+      "guidance is included in the Company's second-quarter earnings presentation found at www.",
+      "expects to continue to pay a competitive and growing dividend and to deploy 100 percent of excess cash to shareholders over time.",
+      "expects full-year reported and organic revenue growth of approximately 10 percent; reported revenue growth includes approximately 1 percentage point of M&A offset by approximately 1 percentage point of negative foreign exchange."
+    ],
+    "wave_or_demand_evidence": [
+      "Bookings* up 19 percent, led by Americas Commercial HVAC, up 21 percent * This news release contains non-GAAP financial measures.",
+      "Bookings $5,340 $4,495 19% 19% Net Revenues $5,307 $4,705 13% 13% GAAP Operating Income $1,034 $885 17% GAAP Operating Margin 19.",
+      "Customers continue to choose our sustainable solutions, demonstrated by our exceptional bookings growth and backlog - giving us good visibility for 2024 and into 2025.",
+      "bookings of $5.",
+      "Backlog of $7.",
+      "backlog for 2025 and beyond, with $1 billion added in the second quarter."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment of equity investment and the net of tax impacts of restructuring costs, transformation costs, a non-cash adjustment for contingent consideration and merger and acquisition related costs.",
+      "impairment of equity investment.",
+      "inventory step-up and backlog amortization (COGS & SG&A) 7.",
+      "Impairment of equity investment (OIOE) 52.",
+      "inventory step-up and backlog amortization of $1.",
+      "impairment of an equity investment in 2023."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 5300,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "338.769989",
+    "return_10d_pct": "-1.7357",
+    "return_20d_pct": "3.8049",
+    "return_30d_pct": "2.1873",
+    "return_60d_pct": "14.7475",
+    "return_90d_pct": "10.8481"
+  },
+  "text_stats": {
+    "primary_text_len": 3860,
+    "exhibit_text_len": 32435,
+    "combined_text_len": 36297
+  }
+}

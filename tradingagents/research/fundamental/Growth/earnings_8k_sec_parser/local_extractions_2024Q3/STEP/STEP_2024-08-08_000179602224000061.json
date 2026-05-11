@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "STEP",
+    "cik": "1796022",
+    "event_date": "2024-08-08",
+    "event_accession": "0001796022-24-000061",
+    "primary_8k_doc": "step-20240808.htm",
+    "exhibit_docs": [
+      "stepfy2025q1earningspressr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/STEP_000179602224000061_step-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/STEP_000179602224000061_stepfy2025q1earningspressr.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "STEP",
+    "cik": "1796022",
+    "entity_name": "STEPSTONE GROUP INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1365525000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-24",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "193885000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-24",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "3497403000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-24",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-70439000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-24",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-210241000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-24",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "214281000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-24",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.141986",
+    "operating_cash_flow_to_revenue": "0.156922",
+    "assets_to_revenue": "2.561215",
+    "financing_cash_flow_to_revenue": "-0.051584",
+    "investing_cash_flow_to_revenue": "-0.153963"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "EPSTONE GROUP REPORTS FIRST QUARTER FISCAL YEAR 2025 RESULTS NEW YORK, August 8, 2024 – StepStone Group Inc.",
+      "epStone issued a full detailed presentation of its first quarter fiscal 2025 results, which can be accessed by visiting the Company’s website at https://shareholders.",
+      "epstonegroup.",
+      "epStone StepStone Group Inc.",
+      "epStone was responsible for approximately $701 billion of total capital, including $169 billion of assets under management.",
+      "epStone partners with its clients to develop and build private markets portfolios designed to meet their specific objectives across the private equity, infrastructure, private debt and real estate asset classes."
+    ],
+    "guidance_evidence": [],
+    "wave_or_demand_evidence": [
+      "ailed presentation of its first quarter fiscal 2025 results, which can be accessed by visiting the Company’s website at https://shareholders.",
+      "ailable on the Shareholders section of the Company’s website at https://shareholders.",
+      "ailable on the Shareholders section of the Company’s website approximately two hours after the conclusion of the event.",
+      "ail confirmation with the details.",
+      "ain.",
+      "ainties and assumptions."
+    ],
+    "warning_or_risk_evidence": [
+      "charges associated with acquisitions and corporate transactions, and (g) certain other items that we believe are not indicative of our core operating performance (as listed in the table below).",
+      "charges associated with acquisitions and corporate transactions, and (e) certain other items that we believe are not indicative of our core operating performance (as listed in the table below).",
+      "uncertain.",
+      "uncertainties and assumptions.",
+      "uncertainties described in greater detail under the “Risk Factors” section of our annual report on Form 10-K filed with the U.",
+      "loss) 49,446 59,251 (23,419) 82,542 48,045 (3) % Net income (loss) per share of Class A common stock: Basic $ 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "46.070000",
+    "return_10d_pct": "16.6052",
+    "return_20d_pct": "17.2346",
+    "return_30d_pct": "15.1509",
+    "return_60d_pct": "30.0412",
+    "return_90d_pct": "40.7641"
+  },
+  "text_stats": {
+    "primary_text_len": 3390,
+    "exhibit_text_len": 44673,
+    "combined_text_len": 48065
+  }
+}

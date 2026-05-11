@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "JRVR",
+    "cik": "1620459",
+    "event_date": "2024-08-05",
+    "event_accession": "0001620459-24-000107",
+    "primary_8k_doc": "jrvr-20240805.htm",
+    "exhibit_docs": [
+      "a2q24jrvrpressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/JRVR_000162045924000107_jrvr-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/JRVR_000162045924000107_a2q24jrvrpressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "JRVR",
+    "cik": "1620459",
+    "entity_name": "JAMES RIVER GROUP HOLDINGS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "191734000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "9608000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5317250000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-8805000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "17126000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "19452000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.050111",
+    "operating_cash_flow_to_revenue": "0.101453",
+    "assets_to_revenue": "27.732431",
+    "financing_cash_flow_to_revenue": "-0.045923",
+    "investing_cash_flow_to_revenue": "0.089322"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net income from continuing operations available to common shareholders $ 11,853 $ 0.",
+      "Net income available to common shareholders 5,000 $ 0.",
+      "operating income 1 12,664 $ 0.",
+      "Net income from continuing operations available to common shareholders was $11.",
+      "operating income 1 of $12.",
+      "operating income, tangible common equity per share and adjusted net operating return on tangible common equity are non-GAAP financial measures."
+    ],
+    "guidance_evidence": [
+      "guidance or similar words.",
+      "expects to recognize a reduction in pre-tax income of approximately $44."
+    ],
+    "wave_or_demand_evidence": [
+      "demand or maintain adequate collateral to mitigate such risks; inadequacy of premiums we charge to compensate us for our losses incurred; changes in laws or government regulation, including tax or insurance law and regulations; changes in U.",
+      "ailable to common shareholders $ 11,853 $ 0.",
+      "ailable to common shareholders 5,000 $ 0.",
+      "ailable to common shareholders was $11.",
+      "ain favorable amid accelerating submission growth and a strong rate environment during the second quarter as we continue to re-profile segments of our portfolio.",
+      "aid per share during the second quarter of 2024."
+    ],
+    "warning_or_risk_evidence": [
+      "charge to compensate us for our losses incurred; changes in laws or government regulation, including tax or insurance law and regulations; changes in U.",
+      "loss) income from discontinued operations (6,853) $ (0.",
+      "loss portfolio transfers (\"LPTs\").",
+      "decline of 27.",
+      "decline in net written premium.",
+      "declined 12."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "7.370000",
+    "return_10d_pct": "3.5278",
+    "return_20d_pct": "-0.1357",
+    "return_30d_pct": "-5.8345",
+    "return_60d_pct": "-13.9756",
+    "return_90d_pct": "-17.7748"
+  },
+  "text_stats": {
+    "primary_text_len": 3739,
+    "exhibit_text_len": 36435,
+    "combined_text_len": 40176
+  }
+}

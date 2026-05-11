@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 54.4,
+    "revenue_yoy_pct": 4.0153,
+    "revenue_qoq_pct": 2.0638,
+    "gross_margin_pct": 14.9,
+    "non_gaap_gross_margin_pct": 17.6,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 52.5,
+    "revenue_low_millions": 51.0,
+    "revenue_high_millions": 54.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 16.5,
+    "guide_direction": "negative"
+  },
+  "qualitative": {
+    "demand_signal": "“This quarter saw continued elevated demand in our CATV market, which we believe will continue to remain favorable into 2023, improved conditions in the datacenter market and ongoing volatility in the telecom market,” said Dr.",
+    "wave_signal": "(NASDAQ: AAOI), a leading provider of fiber-optic access network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its fourth quarter and full year ended December 31, 2021.",
+    "margin_signal": "”“For the fourth quarter, our revenue and non-GAAP EPS came in in-line with our expectations but our gross margin came in below our expectations due to an unfavorable product mix coupled with unanticipated supply chain and logistics costs,” said Stefan Murry, Chief Financial Officer and Chief Strategy Officer.",
+    "risk_signal": "”“For the fourth quarter, our revenue and non-GAAP EPS came in in-line with our expectations but our gross margin came in below our expectations due to an unfavorable product mix coupled with unanticipated supply chain and logistics costs,” said Stefan Murry, Chief Financial Officer and Chief Strategy Officer.",
+    "customer_signal": "“We are very pleased to report that we have also received our first volume orders for 400G products, from two different datacenter customers."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $54.4 million, compared with $52.3 million in the fourth quarter of 2020 and $53.3 million in the third quarter of 2021."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $54.4 million, compared with $52.3 million in the fourth quarter of 2020 and $53.3 million in the third quarter of 2021."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $54.4 million, compared with $52.3 million in the fourth quarter of 2020 and $53.3 million in the third quarter of 2021."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 14.9%, compared with 21.6% in the fourth quarter of 2020 and 15.3% in the third quarter of 2021. Non-GAAP gross margin was 17.6%, compared with 27.5% in the fourth quarter of 2020 and 19.9% in the third quarter of 2021."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 14.9%, compared with 21.6% in the fourth quarter of 2020 and 15.3% in the third quarter of 2021. Non-GAAP gross margin was 17.6%, compared with 27.5% in the fourth quarter of 2020 and 19.9% in the third quarter of 2021."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $51 million to $54 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $51 million to $54 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $51 million to $54 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 15.5% to 17.5%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

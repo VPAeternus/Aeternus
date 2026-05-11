@@ -1,0 +1,2744 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SWBI",
+    "cik": "1092796",
+    "event_date": "2024-09-05",
+    "event_accession": "0001193125-24-214184",
+    "primary_8k_doc": "d889907d8k.htm",
+    "exhibit_docs": [
+      "d889907dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SWBI_000119312524214184_d889907d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SWBI_000119312524214184_d889907dex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SWBI",
+    "cik": "1092796",
+    "entity_name": "Smith & Wesson Brands, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "864126000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-06-20",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-04-30",
+    "net_income_value": "194494000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-06-20",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-04-30",
+    "assets_value": "541294000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-06-20",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-04-30",
+    "financing_cash_flow_value": "-105987000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-06-20",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-04-30",
+    "investing_cash_flow_value": "-24116000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-06-20",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-04-30",
+    "operating_cash_flow_value": "137814000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-06-20",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-04-30",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.225076",
+    "operating_cash_flow_to_revenue": "0.159484",
+    "assets_to_revenue": "0.626406",
+    "financing_cash_flow_to_revenue": "-0.122652",
+    "investing_cash_flow_to_revenue": "-0.027908"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net Sales of $88.",
+      "Net sales were $88.",
+      "Gross Margin of 27.",
+      "Non-GAAP Gross Margin of 28.",
+      "Gross margin was 27.",
+      "net income of $3."
+    ],
+    "guidance_evidence": [
+      "expected, but we started to see an increase in orders in August."
+    ],
+    "wave_or_demand_evidence": [
+      "demand has already begun to rebound as we enter the busy fall season.",
+      "demand season now upon us, we expect to more than offset these temporary headwinds during the balance of the fiscal year, and continue to expect top- and bottom-line growth for the full year.",
+      "Demand during the summer was slower than we expected, but we started to see an increase in orders in August.",
+      "demand for our products; the state of the U.",
+      "orders from our backlog; and other risks detailed from time to time in our reports filed with the Securities and Exchange Commission, including our Annual Report on Form 10-K for the fiscal year ended April 30, 2024.",
+      "ailed reconciliation, see the schedules that follow in this release."
+    ],
+    "warning_or_risk_evidence": [
+      "Loss of $0.",
+      "decrease of $25.",
+      "loss was $2.",
+      "loss was $1.",
+      "headwinds during the balance of the fiscal year, and continue to expect top- and bottom-line growth for the full year.",
+      "uncertainties, and other factors that could cause actual results to differ materially from those reflected by such forward-looking statements."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d889907dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Smith & Wesson Brands, Inc. Reports First Quarter Fiscal 2025 Financial Results - Q1 Net Sales of $88.3 Million - Q1 Gross Margin of 27.4%; Q1 Non-GAAP Gross Margin of 28.7% - Q1 Net Loss of $0.05/Share; Q1 Adjusted Net Loss of $0.02/Share - Q1 Adjusted EBITDAS Margin of 11.2% - Board of Directors Authorized New $50 Million Stock Repurchase Program MARYVILLE, Tenn., September 5, 2024  Smith & Wesson Brands, Inc. (NASDAQ Global Select: SWBI), a U.S.-based leader in firearm manufacturing and design, today announced financial results for the first quarter fiscal 2025, ended July 31, 2024. First Quarter Fiscal 2025 Financial Highlights  Net sales were $88.3 million, a decrease of $25.9 million, or 22.7%, from the comparable quarter last year.  Gross margin was 27.4% compared with 26.6% in the comparable quarter last year.  GAAP net loss was $2.1 million, or $0.05 per share, compared with net income of $3.1 million, or $0.07 per diluted share, for the comparable quarter last year.  Non-GAAP net loss was $1.0 million, or $0.02 per share, compared with non-GAAP net income of $6.1 million, or $0.13 per diluted share, for the comparable quarter last year. GAAP to non-GAAP adjustments for income include costs related to the relocation. For a detailed reconciliation, see the schedules that follow in this release.  Non-GAAP Adjusted EBITDAS was $9.9 million, or 11.2% of net sales, compared with $17.5 million, or 15.3% of net sales, for the comparable quarter last year. Mark Smith, President and Chief Executive Officer, commented, Overall firearms demand during our first fiscal quarter was softer than we anticipated, but our results once again proved the resiliency of our flexible manufacturing model, which allows us to adapt quickly to any market conditions and still deliver on bottom-line profitability targets. Importantly, while the usual summer seasonality was more pronounced this year, demand has already begun to rebound as we enter the busy fall season. We have also been pleased with the response to the launch of our next generation Bodyguard 2.0 conceal carry pistol late in the first quarter, which is already outperforming expectations. As we look forward to new capacity coming online for our popular new products, a strong pipeline of innovation, and the typically busy firearm demand season now upon us, we expect to more than offset these temporary headwinds during the balance of the fiscal year, and continue to expect top- and bottom-line growth for the full year. Deana McPherson, Executive Vice President and Chief Financial Officer, commented, Demand during the summer was slower than we expected, but we started to see an increase in orders in August. We expect our second fiscal quarter sales to grow significantly over the first quarter and we remain confident that our full year revenue will be up mid-to-high single digits compared to fiscal 2024. Our board of directors has approved a new $50 million share repurchase program that positions us to opportunistically repurchase shares for another twelve months. Consistent with our capital allocation strategy, our board of directors has authorized a $0.13 per share quarterly dividend, which will be paid to stockholders of record on September 19, 2024 with payment to be made on October 3, 2024."
+    },
+    {
+      "type": "TextElement",
+      "text": "Conference Call and Webcast The company will host a conference call and webcast on September 5, 2024 to discuss its first quarter fiscal 2025 financial and operational results. Speakers on the conference call will include Mark Smith, President and Chief Executive Officer, and Deana McPherson, Executive Vice President and Chief Financial Officer. The conference call may include forward-looking statements. The conference call and webcast will begin at 5:00 p.m. Eastern Time (2:00 p.m. Pacific Time). Interested parties in North America are invited to participate by dialing 1-877-704-4453. Interested parties from outside North America are invited to participate by dialing 1-201-389-0920. Participants should dial in at least 10 minutes prior to the start of the call. The conference call audio webcast can also be accessed live on the companys website at www.smith-wesson.com, under the Investor Relations section. Additional Details about the New Stock Repurchase Program Our board of directors has approved a new stock repurchase program, pursuant to which purchases may be made from September 20, 2024 through September 20, 2025. The amount and timing of any repurchases will depend on a number of factors, including price, trading volume, general market conditions, legal requirements, and other factors. The repurchases may be made on the open market, in block trades, or in privately negotiated transactions. Any shares of common stock repurchased under the program will be considered issued but not outstanding shares of the companys common stock. Reconciliation of U.S. GAAP to Non-GAAP Financial Measures In this press release, certain non-GAAP financial measures, including non-GAAP net income, Adjusted EBITDAS, and free cash flow are presented. From time-to-time, we consider and use these supplemental measures of operating performance in order to provide the reader with an improved understanding of underlying performance trends. We believe it is useful for us and the reader to review, as applicable, both (1) GAAP measures that include (i) interest expense, (ii) income tax expense, (iii) depreciation and amortization, (iv) stock-based compensation expense, (v) spin related stock-based compensation, (vi) Relocation expense, and (vii) the tax effect of non-GAAP adjustments; and (2) the non-GAAP measures that exclude such information. We present these non-GAAP measures because we consider them an important supplemental measure of our performance. Our definition of these adjusted financial measures may differ from similarly named measures used by others. We believe these measures facilitate operating performance comparisons from period to period by eliminating potential differences caused by the existence and timing of certain expense items that would not otherwise be apparent on a GAAP basis. These non-GAAP measures have limitations as an analytical tool and should not be considered in isolation or as a substitute for our GAAP measures. The principal limitations of these measures are that they do not reflect our actual expenses and may thus have the effect of inflating its financial measures on a GAAP basis. About Smith & Wesson Brands, Inc. Smith & Wesson Brands, Inc. (NASDAQ Global Select: SWBI) is a U.S.-based leader in firearm manufacturing and design, delivering a broad portfolio of quality handgun, long gun, and suppressor products to the global consumer and professional markets under the iconic Smith & Wesson® and Gemtech® brands. The company also provides manufacturing services including forging, machining, and precision plastic injection molding services. For more information call (800) 331-0852 or visit www.smith-wesson.com. Safe Harbor Statement Certain statements contained in this press release may be deemed to be forward-looking statements under federal securities laws, and we intend that such forward-looking statements be subject to the safe-harbor created thereby. Such forward-looking statements include, among others, (i) that our flexible manufacturing model allows us to adapt quickly to any market conditions and still deliver on bottom-line profitability targets; (ii) our expectation that new capacity coming online for our popular new products, a strong pipeline of innovation, and the typically busy firearm demand season now upon us, will more than offset certain temporary headwinds during the balance of the fiscal year; (iii) our expectation that our top and bottom line results will grow for the full year; (iv) our expectation that our second fiscal quarter sales will grow significantly over the first quarter; (v) that we remain confident that our full year revenue will be up mid-to-high single digits compared to fiscal 2024; (vi) our belief that the amount and timing of any repurchases under the new stock repurchase program will depend on a number of factors, including price, trading volume, general market conditions, legal requirements, and other factors; and (vii) our expectations regarding the manner of the repurchases, if any. We caution that these statements are qualified by important risks, uncertainties, and other factors that could cause actual results to differ materially from those reflected by such forward-looking statements. Such factors include, among others, economic, social, political, legislative, and regulatory factors; the results of the 2024 elections; the potential for increased regulation of firearms and firearm-related products; actions of social activists that could have an adverse effect on our business; the impact of lawsuits; the demand for our products; the state of the U.S. economy in general and the firearm industry in particular; general economic conditions and consumer spending patterns; our competitive environment; the supply, availability and costs of raw materials and components; our anticipated growth and growth opportunities; our strategies; our ability to maintain and enhance brand recognition and reputation; our ability to effectively manage and execute the Relocation; our ability to introduce new products; the success of new products; the potential for cancellation of orders from our backlog; and other risks detailed from time to time in our reports filed with the Securities and Exchange Commission, including our Annual Report on Form 10-K for the fiscal year ended April 30, 2024. Contact: investorrelations@smith-wesson.com (413) 747-3448"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "SMITH & WESSON BRANDS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS"
+    },
+    {
+      "type": "TableElement",
+      "text": "As of: July 31, 2024 April 30, 2024 (In thousands, except par value and share data) ASSETS Current assets: Cash and cash equivalents $ 35,515 $ 60,839 Accounts receivable, net of allowances for credit losses of $5 on July 31, 2024 and $0 on April 30, 2024 47,762 59,071 Inventories 189,814 160,500 Prepaid expenses and other current assets 9,040 4,973 Income tax receivable 3,183 2,495 Total current assets 285,314 287,878 Property, plant, and equipment, net 248,765 252,633 Intangibles, net 2,526 2,598 Goodwill 19,024 19,024 Deferred income taxes 7,249 7,249 Other assets 8,390 8,614 Total assets $ 571,268 $ 577,996 LIABILITIES AND STOCKHOLDERS EQUITY Current liabilities: Accounts payable $ 29,453 $ 41,831 Accrued expenses and deferred revenue 27,887 26,811 Accrued payroll and incentives 12,308 17,147 Accrued profit sharing 9,098 9,098 Accrued warranty 1,743 1,813 Total current liabilities 80,489 96,700 Notes and loans payable 69,903 39,880 Finance lease payable, net of current portion 34,994 35,404 Other non-current liabilities 7,896 7,852 Total liabilities 193,282 179,836 Commitments and contingencies Stockholders equity: Preferred stock, $0.001 par value, 20,000,000 shares authorized, no shares issued or outstanding   Common stock, $0.001 par value, 100,000,000 shares authorized, 75,551,848 issued and 44,847,258 shares outstanding on July 31, 2024 and 75,395,490 shares issued and 45,561,569 shares outstanding on April 30, 2024 76 75 Additional paid-in capital 290,790 289,994 Retained earnings 532,647 540,660 Accumulated other comprehensive income 73 73 Treasury stock, at cost (30,704,590 shares on July 31, 2024 and 29,833,921 shares on April 30, 2024) (445,600 ) (432,642 ) Total stockholders equity 377,986 398,160 Total liabilities and stockholders equity $ 571,268 $ 577,996"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "SMITH & WESSON BRANDS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS"
+    },
+    {
+      "type": "TableElement",
+      "text": "For the Three Months Ended July 31, 2024 2023 (In thousands, except per share data) Net sales $ 88,334 $ 114,243 Cost of sales 64,142 83,842 Gross profit 24,192 30,401 Operating expenses: Research and development 2,515 1,799 Selling, marketing, and distribution 9,837 10,040 General and administrative 13,702 14,213 Total operating expenses 26,054 26,052 Operating (loss)/income (1,862 ) 4,349 Other (expense)/income, net: Other (expense)/income, net (6 ) 47 Interest (expense)/income, net (732 ) 153 Total other (expense)/income, net (738 ) 200 (Loss)/income from operations before income taxes (2,600 ) 4,549 Income tax (benefit)/expense (494 ) 1,431 Net (loss)/income $ (2,106 ) $ 3,118 Net (loss)/income per share: Basic - net (loss)/income $ (0.05 ) $ 0.07 Diluted - net (loss)/income $ (0.05 ) $ 0.07 Weighted average number of common shares outstanding: Basic 45,321 46,103 Diluted 45,321 46,551"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "SMITH & WESSON BRANDS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS"
+    },
+    {
+      "type": "TableElement",
+      "text": "For the Three Months Ended July 31, 2024 2023 (In thousands) Cash flows from operating activities: Net (loss)/income $ (2,106 ) $ 3,118 Adjustments to reconcile net (loss)/income to net cash (used in)/provided by operating activities: Depreciation and amortization 8,048 9,253 (Gain)/loss on sale/disposition of assets (58 ) 3 Provision for losses/(recoveries) on notes and accounts receivable 5 (6 ) Stock-based compensation expense 1,854 1,276 Changes in operating assets and liabilities: Accounts receivable 11,305 26,995 Inventories (29,315 ) 6,363 Prepaid expenses and other current assets (4,066 ) (3,825 ) Income taxes (688 ) 915 Accounts payable (11,740 ) (1,838 ) Accrued payroll and incentives (4,839 ) 1,551 Accrued profit sharing  768 Accrued expenses and deferred revenue 586 (4,135 ) Accrued warranty (70 ) 83 Other assets 224 75 Other non-current liabilities 45 34 Net cash (used in)/provided by operating activities (30,815 ) 40,630 Cash flows from investing activities: Payments to acquire patents and software (21 ) (33 ) Proceeds from sale of property and equipment 58 23 Payments to acquire property and equipment (4,702 ) (32,057 ) Net cash used in investing activities (4,665 ) (32,067 ) Cash flows from financing activities: Proceeds from loans and notes payable 30,000  Payments on finance lease obligation (44 ) (338 ) Payments to acquire treasury stock (12,856 )  Dividend distribution (5,886 ) (5,536 ) Payment of employee withholding tax related to restricted stock units (1,058 ) (766 ) Net cash provided by/(used in) financing activities 10,156 (6,640 ) Net (decrease)/increase in cash and cash equivalents (25,324 ) 1,923 Cash and cash equivalents, beginning of period 60,839 53,556 Cash and cash equivalents, end of period $ 35,515 $ 55,479 Supplemental disclosure of cash flow information Cash paid for: Interest, net of amounts capitalized $ 1,313 $ 525 Income taxes $ 361 $ 494"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "SMITH & WESSON BRANDS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF GAAP FINANCIAL MEASURES TO NON-GAAP FINANCIAL MEASURES"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Dollars in thousands, except per share data)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "For the Three Months Ended July 31, 2024 July 31, 2023 $ % of Sales $ % of Sales GAAP net sales $ 88,334 100.0 % $ 114,243 100.0 % Relocation (1,659 ) -1.9 %  0.0 % Non-GAAP net sales $ 86,675 98.1 % $ 114,243 100.0 % GAAP gross profit $ 24,192 27.4 % $ 30,401 26.6 % Relocation expenses 1,182 1.3 % 903 0.8 % Non-GAAP gross profit $ 25,374 28.7 % $ 31,304 27.4 % GAAP operating expenses $ 26,054 29.5 % $ 26,052 22.8 % Spin related stock-based compensation  0.0 % (4 ) 0.0 % Relocation expenses (125 ) -0.1 % (3,009 ) -2.6 % Non-GAAP operating expenses $ 25,929 29.4 % $ 23,039 20.2 % GAAP operating (loss)/income $ (1,862 ) -2.1 % $ 4,349 3.8 % Spin related stock-based compensation  0.0 % 4 0.0 % Relocation expenses 1,307 1.5 % 3,912 3.4 % Non-GAAP operating (loss)/income $ (555 ) -0.6 % $ 8,265 7.2 % GAAP net (loss)/income $ (2,106 ) -2.4 % $ 3,118 2.7 % Spin related stock-based compensation  0.0 % 4 0.0 % Relocation expenses 1,307 1.5 % 3,912 3.4 % Tax effect of non-GAAP adjustments (248 ) -0.3 % (967 ) -0.8 % Non-GAAP net (loss)/income $ (1,047 ) -1.2 % $ 6,067 5.3 % GAAP net (loss)/income per share - diluted $ (0.05 ) $ 0.07 Relocation expenses 0.03 0.08 Tax effect of non-GAAP adjustments (0.01 ) (0.02 ) Non-GAAP net (loss)/income per share - diluted $ (0.02 )(a) $ 0.13"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) Non-GAAP net income per share does not foot due to rounding."
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "SMITH & WESSON BRANDS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF GAAP INCOME FROM OPERATIONS TO NON-GAAP ADJUSTED EBITDAS"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(in thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "For the Three Months Ended July 31, 2024 July 31, 2023 GAAP net (loss)/income $ (2,106 ) $ 3,118 Interest expense 1,447 555 Income tax expense (494 ) 1,431 Depreciation and amortization 8,025 9,231 Stock-based compensation expense 1,854 1,276 Relocation expense 1,175 1,918 Non-GAAP Adjusted EBITDAS $ 9,901 $ 17,529 Non-GAAP Adjusted EBITDAS Margin 11.2 % 15.3 %"
+    },
+    {
+      "type": "PageHeaderElement",
+      "text": "SMITH & WESSON BRANDS, INC. AND SUBSIDIARIES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "RECONCILIATION OF NET CASH PROVIDED BY OPERATING ACTIVITIES TO FREE CASH FLOW"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In thousands)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Unaudited)"
+    },
+    {
+      "type": "TableElement",
+      "text": "For the Three Months Ended July 31, 2024 July 31, 2023 Net cash (used in)/provided by operating activities $ (30,815 ) $ 40,630 Payments to acquire property and equipment (4,702 ) (32,057 ) Free cash flow $ (35,517 ) $ 8,574"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        2,
+        5
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "- Q1 Net Sales of $88.3 Million - Q1 Gross Margin of 27.4%; Q1 Non-GAAP Gross Margin of 28.7% - Q1 Net Loss of $0.05/Share; Q1 Adjusted Net Loss of $0.02/Share - Q1 Adjusted EBITDAS Margin of 11.2% - Board of Directors Authorized New $50 Million Stock Repurchase Program",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Net sales were $88.3 million, a decrease of $25.9 million, or 22.7%, from the comparable quarter last year."
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Gross margin was 27.4% compared with 26.6% in the comparable quarter last year."
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "GAAP net loss was $2.1 million, or $0.05 per share, compared with net income of $3.1 million, or $0.07 per diluted share, for the comparable quarter last year."
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Non-GAAP net loss was $1.0 million, or $0.02 per share, compared with non-GAAP net income of $6.1 million, or $0.13 per diluted share, for the comparable quarter last year. GAAP to non-GAAP adjustments for income include costs related to the relocation. For a detailed reconciliation, see the schedules that follow in this release."
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Non-GAAP Adjusted EBITDAS was $9.9 million, or 11.2% of net sales, compared with $17.5 million, or 15.3% of net sales, for the comparable quarter last year."
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        50,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "As of:",
+          "As of:",
+          "As of:",
+          "As of:",
+          "As of:",
+          "As of:",
+          ""
+        ],
+        [
+          "",
+          "",
+          "July 31, 2024",
+          "July 31, 2024",
+          "",
+          "",
+          "April 30, 2024",
+          "April 30, 2024",
+          ""
+        ],
+        [
+          "",
+          "",
+          "(In thousands, except par value and share data)",
+          "(In thousands, except par value and share data)",
+          "(In thousands, except par value and share data)",
+          "(In thousands, except par value and share data)",
+          "(In thousands, except par value and share data)",
+          "(In thousands, except par value and share data)",
+          ""
+        ],
+        [
+          "ASSETS",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current assets:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash and cash equivalents",
+          "",
+          "$",
+          "35515",
+          "",
+          "",
+          "$",
+          "60839",
+          ""
+        ],
+        [
+          "Accounts receivable, net of allowances for credit losses of $5 on July 31, 2024 and $0 on April 30, 2024",
+          "",
+          "",
+          "47762",
+          "",
+          "",
+          "",
+          "59071",
+          ""
+        ],
+        [
+          "Inventories",
+          "",
+          "",
+          "189814",
+          "",
+          "",
+          "",
+          "160500",
+          ""
+        ],
+        [
+          "Prepaid expenses and other current assets",
+          "",
+          "",
+          "9040",
+          "",
+          "",
+          "",
+          "4973",
+          ""
+        ],
+        [
+          "Income tax receivable",
+          "",
+          "",
+          "3183",
+          "",
+          "",
+          "",
+          "2495",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total current assets",
+          "",
+          "",
+          "285314",
+          "",
+          "",
+          "",
+          "287878",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Property, plant, and equipment, net",
+          "",
+          "",
+          "248765",
+          "",
+          "",
+          "",
+          "252633",
+          ""
+        ],
+        [
+          "Intangibles, net",
+          "",
+          "",
+          "2526",
+          "",
+          "",
+          "",
+          "2598",
+          ""
+        ],
+        [
+          "Goodwill",
+          "",
+          "",
+          "19024",
+          "",
+          "",
+          "",
+          "19024",
+          ""
+        ],
+        [
+          "Deferred income taxes",
+          "",
+          "",
+          "7249",
+          "",
+          "",
+          "",
+          "7249",
+          ""
+        ],
+        [
+          "Other assets",
+          "",
+          "",
+          "8390",
+          "",
+          "",
+          "",
+          "8614",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total assets",
+          "",
+          "$",
+          "571268",
+          "",
+          "",
+          "$",
+          "577996",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LIABILITIES AND STOCKHOLDERS EQUITY",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current liabilities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Accounts payable",
+          "",
+          "$",
+          "29453",
+          "",
+          "",
+          "$",
+          "41831",
+          ""
+        ],
+        [
+          "Accrued expenses and deferred revenue",
+          "",
+          "",
+          "27887",
+          "",
+          "",
+          "",
+          "26811",
+          ""
+        ],
+        [
+          "Accrued payroll and incentives",
+          "",
+          "",
+          "12308",
+          "",
+          "",
+          "",
+          "17147",
+          ""
+        ],
+        [
+          "Accrued profit sharing",
+          "",
+          "",
+          "9098",
+          "",
+          "",
+          "",
+          "9098",
+          ""
+        ],
+        [
+          "Accrued warranty",
+          "",
+          "",
+          "1743",
+          "",
+          "",
+          "",
+          "1813",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total current liabilities",
+          "",
+          "",
+          "80489",
+          "",
+          "",
+          "",
+          "96700",
+          ""
+        ],
+        [
+          "Notes and loans payable",
+          "",
+          "",
+          "69903",
+          "",
+          "",
+          "",
+          "39880",
+          ""
+        ],
+        [
+          "Finance lease payable, net of current portion",
+          "",
+          "",
+          "34994",
+          "",
+          "",
+          "",
+          "35404",
+          ""
+        ],
+        [
+          "Other non-current liabilities",
+          "",
+          "",
+          "7896",
+          "",
+          "",
+          "",
+          "7852",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total liabilities",
+          "",
+          "",
+          "193282",
+          "",
+          "",
+          "",
+          "179836",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Commitments and contingencies",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Stockholders equity:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Preferred stock, $0.001 par value, 20,000,000 shares authorized, no shares issued or outstanding",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        39,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "",
+          "",
+          "(In thousands, except per share data)",
+          "(In thousands, except per share data)",
+          "(In thousands, except per share data)",
+          "(In thousands, except per share data)",
+          "(In thousands, except per share data)",
+          "(In thousands, except per share data)",
+          ""
+        ],
+        [
+          "Net sales",
+          "",
+          "$",
+          "88334",
+          "",
+          "",
+          "$",
+          "114243",
+          ""
+        ],
+        [
+          "Cost of sales",
+          "",
+          "",
+          "64142",
+          "",
+          "",
+          "",
+          "83842",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Gross profit",
+          "",
+          "",
+          "24192",
+          "",
+          "",
+          "",
+          "30401",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating expenses:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Research and development",
+          "",
+          "",
+          "2515",
+          "",
+          "",
+          "",
+          "1799",
+          ""
+        ],
+        [
+          "Selling, marketing, and distribution",
+          "",
+          "",
+          "9837",
+          "",
+          "",
+          "",
+          "10040",
+          ""
+        ],
+        [
+          "General and administrative",
+          "",
+          "",
+          "13702",
+          "",
+          "",
+          "",
+          "14213",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total operating expenses",
+          "",
+          "",
+          "26054",
+          "",
+          "",
+          "",
+          "26052",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Operating (loss)/income",
+          "",
+          "",
+          "(1,862",
+          ")",
+          "",
+          "",
+          "4349",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other (expense)/income, net:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Other (expense)/income, net",
+          "",
+          "",
+          "(6",
+          ")",
+          "",
+          "",
+          "47",
+          ""
+        ],
+        [
+          "Interest (expense)/income, net",
+          "",
+          "",
+          "(732",
+          ")",
+          "",
+          "",
+          "153",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total other (expense)/income, net",
+          "",
+          "",
+          "(738",
+          ")",
+          "",
+          "",
+          "200",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(Loss)/income from operations before income taxes",
+          "",
+          "",
+          "(2,600",
+          ")",
+          "",
+          "",
+          "4549",
+          ""
+        ],
+        [
+          "Income tax (benefit)/expense",
+          "",
+          "",
+          "(494",
+          ")",
+          "",
+          "",
+          "1431",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net (loss)/income",
+          "",
+          "$",
+          "(2,106",
+          ")",
+          "",
+          "$",
+          "3118",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net (loss)/income per share:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic - net (loss)/income",
+          "",
+          "$",
+          "(0.05",
+          ")",
+          "",
+          "$",
+          "0.07",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Diluted - net (loss)/income",
+          "",
+          "$",
+          "(0.05",
+          ")",
+          "",
+          "$",
+          "0.07",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Weighted average number of common shares outstanding:",
+          "Weighted average number of common shares outstanding:",
+          "Weighted average number of common shares outstanding:",
+          "Weighted average number of common shares outstanding:",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Basic",
+          "",
+          "",
+          "45321",
+          "",
+          "",
+          "",
+          "46103",
+          ""
+        ],
+        [
+          "Diluted",
+          "",
+          "",
+          "45321",
+          "",
+          "",
+          "",
+          "46551",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        51,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          "For the Three Months Ended July 31,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "",
+          "",
+          "(In thousands)",
+          "(In thousands)",
+          "(In thousands)",
+          "(In thousands)",
+          "(In thousands)",
+          "(In thousands)",
+          ""
+        ],
+        [
+          "Cash flows from operating activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net (loss)/income",
+          "",
+          "$",
+          "(2,106",
+          ")",
+          "",
+          "$",
+          "3118",
+          ""
+        ],
+        [
+          "Adjustments to reconcile net (loss)/income to net cash (used in)/provided by operating activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Depreciation and amortization",
+          "",
+          "",
+          "8048",
+          "",
+          "",
+          "",
+          "9253",
+          ""
+        ],
+        [
+          "(Gain)/loss on sale/disposition of assets",
+          "",
+          "",
+          "(58",
+          ")",
+          "",
+          "",
+          "3",
+          ""
+        ],
+        [
+          "Provision for losses/(recoveries) on notes and accounts receivable",
+          "",
+          "",
+          "5",
+          "",
+          "",
+          "",
+          "(6",
+          ")"
+        ],
+        [
+          "Stock-based compensation expense",
+          "",
+          "",
+          "1854",
+          "",
+          "",
+          "",
+          "1276",
+          ""
+        ],
+        [
+          "Changes in operating assets and liabilities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Accounts receivable",
+          "",
+          "",
+          "11305",
+          "",
+          "",
+          "",
+          "26995",
+          ""
+        ],
+        [
+          "Inventories",
+          "",
+          "",
+          "(29,315",
+          ")",
+          "",
+          "",
+          "6363",
+          ""
+        ],
+        [
+          "Prepaid expenses and other current assets",
+          "",
+          "",
+          "(4,066",
+          ")",
+          "",
+          "",
+          "(3,825",
+          ")"
+        ],
+        [
+          "Income taxes",
+          "",
+          "",
+          "(688",
+          ")",
+          "",
+          "",
+          "915",
+          ""
+        ],
+        [
+          "Accounts payable",
+          "",
+          "",
+          "(11,740",
+          ")",
+          "",
+          "",
+          "(1,838",
+          ")"
+        ],
+        [
+          "Accrued payroll and incentives",
+          "",
+          "",
+          "(4,839",
+          ")",
+          "",
+          "",
+          "1551",
+          ""
+        ],
+        [
+          "Accrued profit sharing",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "768",
+          ""
+        ],
+        [
+          "Accrued expenses and deferred revenue",
+          "",
+          "",
+          "586",
+          "",
+          "",
+          "",
+          "(4,135",
+          ")"
+        ],
+        [
+          "Accrued warranty",
+          "",
+          "",
+          "(70",
+          ")",
+          "",
+          "",
+          "83",
+          ""
+        ],
+        [
+          "Other assets",
+          "",
+          "",
+          "224",
+          "",
+          "",
+          "",
+          "75",
+          ""
+        ],
+        [
+          "Other non-current liabilities",
+          "",
+          "",
+          "45",
+          "",
+          "",
+          "",
+          "34",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net cash (used in)/provided by operating activities",
+          "",
+          "",
+          "(30,815",
+          ")",
+          "",
+          "",
+          "40630",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash flows from investing activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Payments to acquire patents and software",
+          "",
+          "",
+          "(21",
+          ")",
+          "",
+          "",
+          "(33",
+          ")"
+        ],
+        [
+          "Proceeds from sale of property and equipment",
+          "",
+          "",
+          "58",
+          "",
+          "",
+          "",
+          "23",
+          ""
+        ],
+        [
+          "Payments to acquire property and equipment",
+          "",
+          "",
+          "(4,702",
+          ")",
+          "",
+          "",
+          "(32,057",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net cash used in investing activities",
+          "",
+          "",
+          "(4,665",
+          ")",
+          "",
+          "",
+          "(32,067",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cash flows from financing activities:",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Proceeds from loans and notes payable",
+          "",
+          "",
+          "30000",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Payments on finance lease obligation",
+          "",
+          "",
+          "(44",
+          ")",
+          "",
+          "",
+          "(338",
+          ")"
+        ],
+        [
+          "Payments to acquire treasury stock",
+          "",
+          "",
+          "(12,856",
+          ")",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Dividend distribution",
+          "",
+          "",
+          "(5,886",
+          ")",
+          "",
+          "",
+          "(5,536",
+          ")"
+        ],
+        [
+          "Payment of employee withholding tax related to restricted stock units",
+          "",
+          "",
+          "(1,058",
+          ")",
+          "",
+          "",
+          "(766",
+          ")"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        39,
+        17
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          ""
+        ],
+        [
+          "",
+          "",
+          "July 31, 2024",
+          "July 31, 2024",
+          "July 31, 2024",
+          "July 31, 2024",
+          "July 31, 2024",
+          "July 31, 2024",
+          "",
+          "",
+          "July 31, 2023",
+          "July 31, 2023",
+          "July 31, 2023",
+          "July 31, 2023",
+          "July 31, 2023",
+          "July 31, 2023",
+          ""
+        ],
+        [
+          "",
+          "",
+          "$",
+          "$",
+          "",
+          "",
+          "% of Sales",
+          "% of Sales",
+          "",
+          "",
+          "$",
+          "$",
+          "",
+          "",
+          "% of Sales",
+          "% of Sales",
+          ""
+        ],
+        [
+          "GAAP net sales",
+          "",
+          "$",
+          "88334",
+          "",
+          "",
+          "",
+          "100.0",
+          "%",
+          "",
+          "$",
+          "114243",
+          "",
+          "",
+          "",
+          "100.0",
+          "%"
+        ],
+        [
+          "Relocation",
+          "",
+          "",
+          "(1,659",
+          ")",
+          "",
+          "",
+          "-1.9",
+          "%",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "0.0",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP net sales",
+          "",
+          "$",
+          "86675",
+          "",
+          "",
+          "",
+          "98.1",
+          "%",
+          "",
+          "$",
+          "114243",
+          "",
+          "",
+          "",
+          "100.0",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP gross profit",
+          "",
+          "$",
+          "24192",
+          "",
+          "",
+          "",
+          "27.4",
+          "%",
+          "",
+          "$",
+          "30401",
+          "",
+          "",
+          "",
+          "26.6",
+          "%"
+        ],
+        [
+          "Relocation expenses",
+          "",
+          "",
+          "1182",
+          "",
+          "",
+          "",
+          "1.3",
+          "%",
+          "",
+          "",
+          "903",
+          "",
+          "",
+          "",
+          "0.8",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP gross profit",
+          "",
+          "$",
+          "25374",
+          "",
+          "",
+          "",
+          "28.7",
+          "%",
+          "",
+          "$",
+          "31304",
+          "",
+          "",
+          "",
+          "27.4",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP operating expenses",
+          "",
+          "$",
+          "26054",
+          "",
+          "",
+          "",
+          "29.5",
+          "%",
+          "",
+          "$",
+          "26052",
+          "",
+          "",
+          "",
+          "22.8",
+          "%"
+        ],
+        [
+          "Spin related stock-based compensation",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "0.0",
+          "%",
+          "",
+          "",
+          "(4",
+          ")",
+          "",
+          "",
+          "0.0",
+          "%"
+        ],
+        [
+          "Relocation expenses",
+          "",
+          "",
+          "(125",
+          ")",
+          "",
+          "",
+          "-0.1",
+          "%",
+          "",
+          "",
+          "(3,009",
+          ")",
+          "",
+          "",
+          "-2.6",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP operating expenses",
+          "",
+          "$",
+          "25929",
+          "",
+          "",
+          "",
+          "29.4",
+          "%",
+          "",
+          "$",
+          "23039",
+          "",
+          "",
+          "",
+          "20.2",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP operating (loss)/income",
+          "",
+          "$",
+          "(1,862",
+          ")",
+          "",
+          "",
+          "-2.1",
+          "%",
+          "",
+          "$",
+          "4349",
+          "",
+          "",
+          "",
+          "3.8",
+          "%"
+        ],
+        [
+          "Spin related stock-based compensation",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "0.0",
+          "%",
+          "",
+          "",
+          "4",
+          "",
+          "",
+          "",
+          "0.0",
+          "%"
+        ],
+        [
+          "Relocation expenses",
+          "",
+          "",
+          "1307",
+          "",
+          "",
+          "",
+          "1.5",
+          "%",
+          "",
+          "",
+          "3912",
+          "",
+          "",
+          "",
+          "3.4",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP operating (loss)/income",
+          "",
+          "$",
+          "(555",
+          ")",
+          "",
+          "",
+          "-0.6",
+          "%",
+          "",
+          "$",
+          "8265",
+          "",
+          "",
+          "",
+          "7.2",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP net (loss)/income",
+          "",
+          "$",
+          "(2,106",
+          ")",
+          "",
+          "",
+          "-2.4",
+          "%",
+          "",
+          "$",
+          "3118",
+          "",
+          "",
+          "",
+          "2.7",
+          "%"
+        ],
+        [
+          "Spin related stock-based compensation",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "0.0",
+          "%",
+          "",
+          "",
+          "4",
+          "",
+          "",
+          "",
+          "0.0",
+          "%"
+        ],
+        [
+          "Relocation expenses",
+          "",
+          "",
+          "1307",
+          "",
+          "",
+          "",
+          "1.5",
+          "%",
+          "",
+          "",
+          "3912",
+          "",
+          "",
+          "",
+          "3.4",
+          "%"
+        ],
+        [
+          "Tax effect of non-GAAP adjustments",
+          "",
+          "",
+          "(248",
+          ")",
+          "",
+          "",
+          "-0.3",
+          "%",
+          "",
+          "",
+          "(967",
+          ")",
+          "",
+          "",
+          "-0.8",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP net (loss)/income",
+          "",
+          "$",
+          "(1,047",
+          ")",
+          "",
+          "",
+          "-1.2",
+          "%",
+          "",
+          "$",
+          "6067",
+          "",
+          "",
+          "",
+          "5.3",
+          "%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP net (loss)/income per share - diluted",
+          "",
+          "$",
+          "(0.05",
+          ")",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "0.07",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Relocation expenses",
+          "",
+          "",
+          "0.03",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "0.08",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Tax effect of non-GAAP adjustments",
+          "",
+          "",
+          "(0.01",
+          ")",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(0.02",
+          ")",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP net (loss)/income per share - diluted",
+          "",
+          "$",
+          "(0.02",
+          ")(a)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "$",
+          "0.13",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "(a)",
+          "Non-GAAP net income per share does not foot due to rounding."
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        13,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          "For the Three Months Ended",
+          ""
+        ],
+        [
+          "",
+          "",
+          "July 31, 2024",
+          "July 31, 2024",
+          "",
+          "",
+          "July 31, 2023",
+          "July 31, 2023",
+          ""
+        ],
+        [
+          "GAAP net (loss)/income",
+          "",
+          "$",
+          "(2,106",
+          ")",
+          "",
+          "$",
+          "3118",
+          ""
+        ],
+        [
+          "Interest expense",
+          "",
+          "",
+          "1447",
+          "",
+          "",
+          "",
+          "555",
+          ""
+        ],
+        [
+          "Income tax expense",
+          "",
+          "",
+          "(494",
+          ")",
+          "",
+          "",
+          "1431",
+          ""
+        ],
+        [
+          "Depreciation and amortization",
+          "",
+          "",
+          "8025",
+          "",
+          "",
+          "",
+          "9231",
+          ""
+        ],
+        [
+          "Stock-based compensation expense",
+          "",
+          "",
+          "1854",
+          "",
+          "",
+          "",
+          "1276",
+          ""
+        ],
+        [
+          "Relocation expense",
+          "",
+          "",
+          "1175",
+          "",
+          "",
+          "",
+          "1918",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Adjusted EBITDAS",
+          "",
+          "$",
+          "9901",
+          "",
+          "",
+          "$",
+          "17529",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Non-GAAP Adjusted EBITDAS Margin",
+          "",
+          "",
+          "11.2",
+          "%",
+          "",
+          "",
+          "15.3",
+          "%"
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 88.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net Sales of $88.3 Million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " |  | - Q1 Net Sales of $88.3 Million - Q1 Gross Margin of 27.4%; Q1 Non-GAAP Gross Margin of 28.7% - Q1 Net Loss of $0.05/Share; Q1 Adjusted Net Loss of $0.02/Share - Q1 Adjusted EBITDAS Margin of 11.2% - Board of Directors Authorized New $50 Million Stock Repurchase Program |  | "
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-06",
+    "entry_open": "13.400000",
+    "return_10d_pct": "-1.1940",
+    "return_20d_pct": "-3.2090",
+    "return_30d_pct": "-3.0597",
+    "return_60d_pct": "4.6269",
+    "return_90d_pct": "1.7164"
+  },
+  "text_stats": {
+    "primary_text_len": 3615,
+    "exhibit_text_len": 17091,
+    "combined_text_len": 20708,
+    "semantic_text_len": 17086,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

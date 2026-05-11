@@ -28,7 +28,7 @@ You will receive:
 
 Based on this data, produce adjustments in THREE categories:
 
-1. signal_weight_deltas: Additive changes to deal flow scoring weights.
+1. signal_weight_deltas: Additive changes to post-research scoring weights.
    Keys must be from: social_momentum, price_momentum, macro_regime_fit, news_catalyst,
    smart_money, liquidity_tradability, sector_rotation, breakout_discovery.
    Values are floats (e.g., +5.0, -3.0). Conservative adjustments preferred.
@@ -39,7 +39,7 @@ Based on this data, produce adjustments in THREE categories:
 
 3. sector_overrides: Sector-level score multiplier deltas.
    Keys are sector names (e.g., "Technology", "Energy"). Values are floats in [-0.20, +0.20]
-   applied as additive bonus/penalty to deal flow core_score.
+   applied as additive bonus/penalty after research scoring exists.
 
 RULES:
 - Be conservative. Small adjustments (±2-5 for weights, ±0.3-0.5 for confidence) are preferred.

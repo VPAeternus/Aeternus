@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TIPT",
+    "cik": "1393726",
+    "event_date": "2024-07-31",
+    "event_accession": "0001393726-24-000081",
+    "primary_8k_doc": "tipt-20240731.htm",
+    "exhibit_docs": [
+      "ex99-2investorpresentati.htm",
+      "ex991er-06302024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TIPT_000139372624000081_tipt-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TIPT_000139372624000081_ex99-2investorpresentati.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TIPT_000139372624000081_ex991er-06302024.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TIPT",
+    "cik": "1393726",
+    "entity_name": "Tiptree Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "381625000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-01",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-1062000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-01",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "5139313000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-01",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "78302000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-01",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-247523000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-01",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "43046000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-01",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.002783",
+    "operating_cash_flow_to_revenue": "0.112797",
+    "assets_to_revenue": "13.466919",
+    "financing_cash_flow_to_revenue": "0.20518",
+    "investing_cash_flow_to_revenue": "-0.648603"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $1.",
+      "Revenues increased 35% • Growth in net earned premiums and service fees • Improvement in investment portfolio book yield to 4.",
+      "revenues of 34% and adjusted net income of 40%.",
+      "Revenues of $546.",
+      "revenues increased 33.",
+      "revenues of $1."
+    ],
+    "guidance_evidence": [
+      "Outlook Continued Shareholder Value Creation 11 ($ in millions) Adjusted Net Income1 Adj ROAE%1 13.",
+      "forecast with respect to Tiptree, its subsidiaries or any of its affiliates or any other purpose.",
+      "forecast in the forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "aimers LIMITATIONS ON THE USE OF INFORMATION This presentation has been prepared by Tiptree Inc.",
+      "ain operating subsidiaries that are not wholly owned.",
+      "ained herein and no such party shall have any liability for such information.",
+      "ainties and contingencies, many of which are beyond Tiptree's control, which may cause actual results, performance, or achievements to differ materially from anticipated results, performance, or achievements.",
+      "ainties and other factors, many of which are beyond our control, are difficult to predict and could cause actual results to differ materially from those expressed or forecast in the forward-looking statements.",
+      "ainties, you should not place undue reliance on these forward-looking statements."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties and contingencies, many of which are beyond Tiptree's control, which may cause actual results, performance, or achievements to differ materially from anticipated results, performance, or achievements.",
+      "uncertainties and other factors, many of which are beyond our control, are difficult to predict and could cause actual results to differ materially from those expressed or forecast in the forward-looking statements.",
+      "uncertainties, you should not place undue reliance on these forward-looking statements.",
+      "loss) $6.",
+      "loss) $30.",
+      "losses) – P&L $(4."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1045,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "20.090000",
+    "return_10d_pct": "-8.9597",
+    "return_20d_pct": "-6.2718",
+    "return_30d_pct": "-3.3848",
+    "return_60d_pct": "-2.5884",
+    "return_90d_pct": "-1.8417"
+  },
+  "text_stats": {
+    "primary_text_len": 4283,
+    "exhibit_text_len": 55691,
+    "combined_text_len": 59976
+  }
+}

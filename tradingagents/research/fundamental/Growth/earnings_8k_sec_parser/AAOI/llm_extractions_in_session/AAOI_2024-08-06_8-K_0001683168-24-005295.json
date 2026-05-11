@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 43.3,
+    "revenue_yoy_pct": 4.0865,
+    "revenue_qoq_pct": 6.3882,
+    "gross_margin_pct": 22.1,
+    "non_gaap_gross_margin_pct": 22.5,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 63.0,
+    "revenue_low_millions": 60.0,
+    "revenue_high_millions": 66.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 25.0,
+    "guide_direction": "positive"
+  },
+  "qualitative": {
+    "demand_signal": "Notably, we are pleased to announce that we’ve begun to receive orders for 400G products from another large hyperscale customer, and we are very excited about this new customer interaction.",
+    "wave_signal": "(NASDAQ: AAOI), a leading provider of fiber-optic access network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its second quarter ended June 30, 2024.",
+    "margin_signal": "While our non-GAAP gross margin came in below our expectations, primarily due to product mix, our non-GAAP loss per share was favorable compared to our expectations,” said Dr.",
+    "risk_signal": "While our non-GAAP gross margin came in below our expectations, primarily due to product mix, our non-GAAP loss per share was favorable compared to our expectations,” said Dr.",
+    "customer_signal": "Notably, we are pleased to announce that we’ve begun to receive orders for 400G products from another large hyperscale customer, and we are very excited about this new customer interaction."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $43.3 million, compared with $41.6 million in the second quarter of 2023 and $40.7 million in the first quarter of 2024."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $43.3 million, compared with $41.6 million in the second quarter of 2023 and $40.7 million in the first quarter of 2024."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $43.3 million, compared with $41.6 million in the second quarter of 2023 and $40.7 million in the first quarter of 2024."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 22.1%, compared with 19.0% in the second quarter of 2023 and 18.7% in the first quarter of 2024. Non-GAAP gross margin was 22.5%, compared with 24.8% in the second quarter of 2023 and 18.9% in the first quarter of 2024."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 22.1%, compared with 19.0% in the second quarter of 2023 and 18.7% in the first quarter of 2024. Non-GAAP gross margin was 22.5%, compared with 24.8% in the second quarter of 2023 and 18.9% in the first quarter of 2024."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $60 million to $66 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $60 million to $66 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $60 million to $66 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 24% to 26%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

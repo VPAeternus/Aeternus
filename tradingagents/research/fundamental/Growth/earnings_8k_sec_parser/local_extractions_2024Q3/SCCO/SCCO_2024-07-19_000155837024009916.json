@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "SCCO",
+    "cik": "1001838",
+    "event_date": "2024-07-19",
+    "event_accession": "0001558370-24-009916",
+    "primary_8k_doc": "R2.htm",
+    "exhibit_docs": [
+      "scco-20240719xex99d1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SCCO_000155837024009916_R2.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/SCCO_000155837024009916_scco-20240719xex99d1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "SCCO",
+    "cik": "1001838",
+    "entity_name": "SOUTHERN COPPER CORP/",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2793900000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "815900000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "17323300000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-774700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-170400000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1185200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.292029",
+    "operating_cash_flow_to_revenue": "0.42421",
+    "assets_to_revenue": "6.200401",
+    "financing_cash_flow_to_revenue": "-0.277283",
+    "investing_cash_flow_to_revenue": "-0.06099"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales were $3,118.",
+      "net sales were higher than in 2023 due to an increase in the sales volume for copper (+4.",
+      "net income was $950.",
+      "net income margin in 2Q24 stood at 30.",
+      "net income was 23.",
+      "net income this quarter."
+    ],
+    "guidance_evidence": [
+      "projects in Peru and in the Buenavista Zinc, Pilares, El Pilar and El Arco projects in Mexico.",
+      "forecast includes several infrastructure investments, including key investments to bolster the competitiveness of the El Arco project.",
+      "expected to begin operating in 2031.",
+      "expected contribution of by-products is generally a significant factor used by the copper industry in determining whether to move forward with the development of a new mining project."
+    ],
+    "wave_or_demand_evidence": [
+      "ainly the result of a 35.",
+      "ainly by higher operating costs related to sales volumes, G&A and exploration expenses.",
+      "ainly by an increase in production at our Peruvian operations due to higher ore grades.",
+      "ainly driven by new production of 13,653 tons over the period at the Buenavista zinc concentrator.",
+      "airman of the Board, commenting on the Company ´ s progress and current circumstances, said: “On July 1, 2024, the Company officially resumed activities at the T í a Mar í a project.",
+      "aign for 40,000 meters to gather additional information on the characteristics of the Los Chancas deposit."
+    ],
+    "warning_or_risk_evidence": [
+      "charges net of sales premiums (9.",
+      "charges (16.",
+      "Inventory change (10.",
+      "decrease of 18.",
+      "decrease of 29% compared to the $1.",
+      "decrease of 2."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 3118.3,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-22",
+    "entry_open": "100.450691",
+    "return_10d_pct": "-2.7957",
+    "return_20d_pct": "-4.1255",
+    "return_30d_pct": "-0.3219",
+    "return_60d_pct": "-0.9909",
+    "return_90d_pct": "7.4096"
+  },
+  "text_stats": {
+    "primary_text_len": 2419,
+    "exhibit_text_len": 30213,
+    "combined_text_len": 32634
+  }
+}

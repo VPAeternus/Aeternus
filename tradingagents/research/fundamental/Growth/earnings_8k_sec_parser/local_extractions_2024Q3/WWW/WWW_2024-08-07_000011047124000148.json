@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WWW",
+    "cik": "110471",
+    "event_date": "2024-08-07",
+    "event_accession": "0000110471-24-000148",
+    "primary_8k_doc": "www-20240807.htm",
+    "exhibit_docs": [
+      "earningsrelease2024-q2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WWW_000011047124000148_www-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WWW_000011047124000148_earningsrelease2024-q2.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WWW",
+    "cik": "110471",
+    "entity_name": "WOLVERINE WORLD WIDE, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "599400000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "19000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-04-01",
+    "assets_value": "2416700000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-04-01",
+    "financing_cash_flow_value": "8700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "74500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "-97800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.031698",
+    "operating_cash_flow_to_revenue": "-0.163163",
+    "assets_to_revenue": "4.031865",
+    "financing_cash_flow_to_revenue": "0.014515",
+    "investing_cash_flow_to_revenue": "0.124291"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales of end-of-life inventory, less promotional eCommerce sales and favorable distribution channel mix.",
+      "gross margin, and we’re beginning to see proof points of an inflection to growth – driven by stronger product pipelines and improved demand creation.",
+      "Gross Margin 43.",
+      "Earnings Per Share $0.",
+      "Gross margin improved significantly due to lower supply chain costs, lower sales of end-of-life inventory, less promotional eCommerce sales and favorable distribution channel mix.",
+      "eps we are taking will position the business for long-term growth and value creation for shareholders."
+    ],
+    "guidance_evidence": [
+      "GUIDANCE Raises mid-point of guidance range for fiscal year 2024 revenue and earnings ROCKFORD, Mich.",
+      "outlook of approximately $1.",
+      "outlook.",
+      "outlook of approximately 5.",
+      "outlook of 18.",
+      "outlook for diluted earnings per share in the range of $0."
+    ],
+    "wave_or_demand_evidence": [
+      "demand creation.",
+      "aises mid-point of guidance range for fiscal year 2024 revenue and earnings ROCKFORD, Mich.",
+      "aid Chris Hufnagel, President and Chief Executive Officer of Wolverine Worldwide.",
+      "ained growth in the future and, ultimately, to deliver better performance and greater returns for our shareholders.",
+      "ain costs, lower sales of end-of-life inventory, less promotional eCommerce sales and favorable distribution channel mix.",
+      "aid Taryn Miller, Chief Financial Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory levels, while meaningfully expanding our gross margin, and we’re beginning to see proof points of an inflection to growth – driven by stronger product pipelines and improved demand creation.",
+      "inventory, less promotional eCommerce sales and favorable distribution channel mix.",
+      "Inventory at the end of the quarter was $297.",
+      "Inventory to decline by at least $75 million at year end compared to the prior year end, unchanged from previous guidance.",
+      "impairment of long-lived assets and reorganization costs.",
+      "Impairment of long-lived assets 3."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "13.380000",
+    "return_10d_pct": "-2.9148",
+    "return_20d_pct": "1.6442",
+    "return_30d_pct": "5.3812",
+    "return_60d_pct": "28.8490",
+    "return_90d_pct": "19.9552"
+  },
+  "text_stats": {
+    "primary_text_len": 3485,
+    "exhibit_text_len": 34782,
+    "combined_text_len": 38269
+  }
+}

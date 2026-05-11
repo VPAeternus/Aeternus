@@ -11,11 +11,11 @@ def test_build_stage_snapshot_paths_are_deterministic(tmp_path: Path):
     kept_path, dropped_path = build_stage_snapshot_paths(
         base_dir=tmp_path,
         lane="shared",
-        stage_id="shortlist_cut",
+        stage_id="scout_handoff",
     )
 
-    assert kept_path == tmp_path / "hypothesis_ledger" / "shared" / "shortlist_cut.kept.json"
-    assert dropped_path == tmp_path / "hypothesis_ledger" / "shared" / "shortlist_cut.dropped.json"
+    assert kept_path == tmp_path / "hypothesis_ledger" / "shared" / "scout_handoff.kept.json"
+    assert dropped_path == tmp_path / "hypothesis_ledger" / "shared" / "scout_handoff.dropped.json"
 
 
 def test_make_ledger_row_sets_counts_and_writes_snapshots(tmp_path: Path):
@@ -23,7 +23,7 @@ def test_make_ledger_row_sets_counts_and_writes_snapshots(tmp_path: Path):
         run_id="2026-03-06-123000-manual",
         source_date="2026-03-06",
         lane="shared",
-        stage_id="shortlist_cut",
+        stage_id="scout_handoff",
         rule_snapshot={"top_k": 30},
         kept_symbols=["AAPL", "NVDA"],
         dropped_symbols=["MU"],
@@ -42,7 +42,7 @@ def test_make_ledger_row_sets_counts_and_writes_snapshots(tmp_path: Path):
     assert row["run_id"] == "2026-03-06-123000-manual"
     assert row["source_date"] == "2026-03-06"
     assert row["lane"] == "shared"
-    assert row["stage_id"] == "shortlist_cut"
+    assert row["stage_id"] == "scout_handoff"
     assert row["input_count"] == 3
     assert row["kept_count"] == 2
     assert row["dropped_count"] == 1

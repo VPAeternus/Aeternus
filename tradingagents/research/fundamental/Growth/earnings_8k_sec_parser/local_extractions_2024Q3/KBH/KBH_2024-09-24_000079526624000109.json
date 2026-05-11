@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "KBH",
+    "cik": "795266",
+    "event_date": "2024-09-24",
+    "event_accession": "0000795266-24-000109",
+    "primary_8k_doc": "kbh-20240924.htm",
+    "exhibit_docs": [
+      "exh991kbh-earningsrelease0.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KBH_000079526624000109_kbh-20240924.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/KBH_000079526624000109_exh991kbh-earningsrelease0.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "KBH",
+    "cik": "795266",
+    "entity_name": "KB HOME",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1384314000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-05",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-02-28",
+    "net_income_value": "125500000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-05",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-02-28",
+    "assets_value": "6648362000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-05",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-11-30",
+    "financing_cash_flow_value": "-146327000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-05",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-02-28",
+    "investing_cash_flow_value": "-16961000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-05",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-02-28",
+    "operating_cash_flow_value": "93917000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-05",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-02-28",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.090659",
+    "operating_cash_flow_to_revenue": "0.067844",
+    "assets_to_revenue": "4.80264",
+    "financing_cash_flow_to_revenue": "-0.105704",
+    "investing_cash_flow_to_revenue": "-0.012252"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues Increased 10% to $1.",
+      "revenues were 9.",
+      "Revenues increased 4% to $4.",
+      "revenues of approximately 10.",
+      "Earnings Per Share Up 13% to $2.",
+      "earnings per share,” said Jeffrey Mezger, Chairman and Chief Executive Officer."
+    ],
+    "guidance_evidence": [
+      "Guidance The Company is providing the following guidance for its 2024 full year: • Housing revenues in the range of $6.",
+      "guidance for its 2024 fourth quarter on its conference call today.",
+      "guidance and interpretations issued with respect thereto, such as Internal Revenue Service guidance regarding heightened qualification requirements for federal tax credits for building energy-efficient homes; changes in U.",
+      "expected results are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+      "forecasted in forward-looking statements due to a number of factors."
+    ],
+    "wave_or_demand_evidence": [
+      "orders were flat with the year ago quarter.",
+      "demand across the quarter, with softening in late June through July, as buyers continued to evaluate elevated mortgage interest rates, and general economic concerns were rising.",
+      "orders improved.",
+      "demand for our affordably priced personalized homes, and the ongoing positive trend we are experiencing so far in our 2024 fourth quarter.",
+      "Backlog and Net Orders (comparisons on a year-over-year basis, except as noted) • Net orders for the quarter were essentially the same at 3,085.",
+      "orders."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory-related charges of $1.",
+      "inventory-related charges, the housing gross profit margin was 20.",
+      "inventory-related charges.",
+      "Inventory-related charges (a) 1,177 631 3,685 10,207 Adjusted housing gross profits $ 361,593 $ 338,846 $ 1,037,210 $ 1,015,426 Housing gross profit margin 20.",
+      "inventory impairment and land option contract abandonment charges associated with housing operations.",
+      "inventory impairment and land option contract abandonment charges (as applicable) recorded during a given period, by housing revenues."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1750,
+    "quarter_revenue_yoy_pct": 10,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-25",
+    "entry_open": "83.199997",
+    "return_10d_pct": "-3.8822",
+    "return_20d_pct": "-0.9135",
+    "return_30d_pct": "-6.1899",
+    "return_60d_pct": "2.1995",
+    "return_90d_pct": "-20.1923"
+  },
+  "text_stats": {
+    "primary_text_len": 3698,
+    "exhibit_text_len": 25259,
+    "combined_text_len": 28959
+  }
+}

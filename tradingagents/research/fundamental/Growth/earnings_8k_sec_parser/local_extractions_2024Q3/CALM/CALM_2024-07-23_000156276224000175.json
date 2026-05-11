@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CALM",
+    "cik": "16160",
+    "event_date": "2024-07-23",
+    "event_accession": "0001562762-24-000175",
+    "primary_8k_doc": "calm8k20240723.htm",
+    "exhibit_docs": [
+      "exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CALM_000156276224000175_calm8k20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CALM_000156276224000175_exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CALM",
+    "cik": "16160",
+    "entity_name": "Cal-Maine Foods, Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2457537000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-02-25",
+    "net_income_value": "647093000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-02-25",
+    "assets_value": "1954525000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-03",
+    "financing_cash_flow_value": "-146359000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-02-25",
+    "investing_cash_flow_value": "-397620000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-02-25",
+    "operating_cash_flow_value": "706509000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-02-25",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.26331",
+    "operating_cash_flow_to_revenue": "0.287487",
+    "assets_to_revenue": "0.795319",
+    "financing_cash_flow_to_revenue": "-0.059555",
+    "investing_cash_flow_to_revenue": "-0.161796"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net sales of $640.",
+      "net sales of $2.",
+      "net sales were $640.",
+      "Sales of conventional eggs totaled 180.",
+      "net income of $113.",
+      "net income of $277."
+    ],
+    "guidance_evidence": [
+      "Outlook Outbreaks of HPAI have continued to occur in U.",
+      "expected to be completed before calendar year end.",
+      "projects and to consider acquisitions that complement our operations and support our growth initiatives."
+    ],
+    "wave_or_demand_evidence": [
+      "demands of our valued customers.",
+      "customer demand.",
+      "customers.",
+      "demand for shell eggs will remain strong as consumers continue to look for more affordable protein options.",
+      "demand and supporting the nation’s food supply with a differentiated product mix.",
+      "demand trends."
+    ],
+    "warning_or_risk_evidence": [
+      "challenging period for Cal-Maine Foods and our industry.",
+      "decline in sales revenue for the fourth quarter of fiscal 2024 was primarily due to lower sales volumes due directly to having 13 weeks in the fourth quarter of fiscal 2024 compared to 14 weeks in the prior-year period.",
+      "decrease Cal-Maine Foods Reports Fourth Quarter and Fiscal 2024 Results Page 2 July 23, 2024 -MORE- in the net average selling prices for specialty eggs, compared to fiscal 2023, which saw record-high prices primarily due to egg supply constraints resulting from HPAI.",
+      "decline of 7.",
+      "uncertain external forces including weather patterns and global supply chain disruptions, price volatility could remain,” said Bowman.",
+      "challenging environment as well as respond to new market opportunities."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 640.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "64.120003",
+    "return_10d_pct": "7.2364",
+    "return_20d_pct": "9.4198",
+    "return_30d_pct": "11.4317",
+    "return_60d_pct": "16.3599",
+    "return_90d_pct": "38.1160"
+  },
+  "text_stats": {
+    "primary_text_len": 3764,
+    "exhibit_text_len": 15829,
+    "combined_text_len": 19595
+  }
+}

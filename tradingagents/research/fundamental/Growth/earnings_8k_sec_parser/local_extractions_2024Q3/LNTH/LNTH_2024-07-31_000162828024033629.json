@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "LNTH",
+    "cik": "1521036",
+    "event_date": "2024-07-31",
+    "event_accession": "0001628280-24-033629",
+    "primary_8k_doc": "lnth-20240731.htm",
+    "exhibit_docs": [
+      "exhibit991q22024earningspr.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LNTH_000162828024033629_lnth-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/LNTH_000162828024033629_exhibit991q22024earningspr.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "LNTH",
+    "cik": "1521036",
+    "entity_name": "LANTHEUS HOLDINGS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "300784000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-2807000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1651149000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-8669000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-44513000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "108500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.009332",
+    "operating_cash_flow_to_revenue": "0.360724",
+    "assets_to_revenue": "5.489484",
+    "financing_cash_flow_to_revenue": "-0.028821",
+    "investing_cash_flow_to_revenue": "-0.14799"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $394.",
+      "revenue increased 22.",
+      "Sales of PYLARIFY were $273.",
+      "Sales of DEFINITY were $78.",
+      "earnings per share of $0.",
+      "earnings per share of $1."
+    ],
+    "guidance_evidence": [
+      "guidance and updates fully diluted earnings per share guidance driven by strategic transactions BEDFORD, Mass.",
+      "Guidance Guidance Issued July 31, 2024 Guidance Issued May 2, 2024 FY 2024 Revenue $1.",
+      "guidance,” “may,” “plan,” “potential,” “predict,” “progress,” “should,” “target,” “will,” “would” and other similar terms.",
+      "guidance for the fiscal year 2024 and are based upon current plans, estimates and expectations that are subject to risks and uncertainties that could cause actual results to materially differ from those described in the forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and expansion of the PSMA PET imaging market.",
+      "aintains full year 2024 revenue guidance and updates fully diluted earnings per share guidance driven by strategic transactions BEDFORD, Mass.",
+      "aid Brian Markison, Chief Executive Officer of Lantheus.",
+      "ain an attractive financial profile by driving strong performance from our commercial products, advancing our R&D pipeline and executing strategically impactful business development.",
+      "air, referred to as 68Ga-RM2 (now LNTH-2401), and 177Lu-RM2 (now LNTH-2402).",
+      "air, Lantheus can now potentially reach more prostate cancer patients including those for whom PSMA-targeted therapy may not be appropriate."
+    ],
+    "warning_or_risk_evidence": [
+      "charges.",
+      "Impairment of long-lived assets — 0.",
+      "Impairment of long-lived assets — 5,998 — 138,050 ARO Acceleration and other related costs — 577 — 725 Other 679 59 1,468 684 Adjusted operating income $ 171,116 $ 150,066 $ 326,408 $ 292,068 Adjusted operating income, as a percentage of revenues 43.",
+      "decreased to $102.",
+      "decreased to $0.",
+      "uncertain, depend on various factors, and could be material to results computed in accordance with GAAP."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 394.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "104.839996",
+    "return_10d_pct": "-7.8024",
+    "return_20d_pct": "-3.4529",
+    "return_30d_pct": "0.5628",
+    "return_60d_pct": "4.6833",
+    "return_90d_pct": "4.3304"
+  },
+  "text_stats": {
+    "primary_text_len": 3888,
+    "exhibit_text_len": 21731,
+    "combined_text_len": 25621
+  }
+}

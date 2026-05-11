@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CRSR",
+    "cik": "1743759",
+    "event_date": "2024-07-18",
+    "event_accession": "0000950170-24-084571",
+    "primary_8k_doc": "crsr-20240718.htm",
+    "exhibit_docs": [
+      "crsr-ex99_1.htm",
+      "crsr-ex99_1.htm",
+      "crsr-ex99_2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRSR_000095017024084571_crsr-20240718.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRSR_000095017024084571_crsr-ex99_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRSR_000095017024084571_crsr-ex99_1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CRSR_000095017024084571_crsr-ex99_2.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CRSR",
+    "cik": "1743759",
+    "entity_name": "Corsair Gaming, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "353964000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-2012000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1357463000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-9886000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-4677000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "41826000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.005684",
+    "operating_cash_flow_to_revenue": "0.118165",
+    "assets_to_revenue": "3.835031",
+    "financing_cash_flow_to_revenue": "-0.027929",
+    "investing_cash_flow_to_revenue": "-0.013213"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [
+      "outlook until our next quarterly results announcement.",
+      "outlook after the Nasdaq close on Thursday, August 1, 2024, with its management hosting a conference call to discuss results at 2:00 p.",
+      "expects preliminary unaudited revenue to be approximately $261 million for the second quarter ended June 30, 2024.",
+      "expected as we are seeing consumers waiting for new GPUs to be launched at year-end."
+    ],
+    "wave_or_demand_evidence": [
+      "air Gaming to Report Q2 2024 Financial Results on August 1; Provides Preliminary Q2 2024 Results MILPITAS, CA, July 18, 2024 – Corsair Gaming, Inc.",
+      "air, stated, “The market for high-end self-built gaming PCs continues to be softer than expected as we are seeing consumers waiting for new GPUs to be launched at year-end.",
+      "ain grew by 20% year-over-year, for the third consecutive quarter with good margin growth year-over-year.",
+      "ainties and assumptions discussed below, actual results may differ materially.",
+      "air will release its second quarter 2024 results and financial outlook after the Nasdaq close on Thursday, August 1, 2024, with its management hosting a conference call to discuss results at 2:00 p.",
+      "air’s Investor Relations website at https://ir."
+    ],
+    "warning_or_risk_evidence": [
+      "Preliminary Q2 2024 Results MILPITAS, CA, July 18, 2024 – Corsair Gaming, Inc.",
+      "preliminary unaudited revenue to be approximately $261 million for the second quarter ended June 30, 2024.",
+      "inventory has generally been reduced for our products, and so during Q2 we sold into the channel substantially less than was sold out to consumers.",
+      "preliminary unaudited revenue; its expectations regarding market trends and its performance for the second half of 2024; and its ability to successfully close and integrate acquisitions.",
+      "preliminary unaudited results for the quarter ended June 30, 2024 are also not necessarily indicative of our operating results for any future periods.",
+      "uncertainties and assumptions discussed below, actual results may differ materially."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 261,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-19",
+    "entry_open": "8.840000",
+    "return_10d_pct": "-5.6561",
+    "return_20d_pct": "-27.0362",
+    "return_30d_pct": "-25.9050",
+    "return_60d_pct": "-25.6787",
+    "return_90d_pct": "-23.6425"
+  },
+  "text_stats": {
+    "primary_text_len": 3787,
+    "exhibit_text_len": 14282,
+    "combined_text_len": 18071
+  }
+}

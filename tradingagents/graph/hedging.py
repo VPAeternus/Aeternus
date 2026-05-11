@@ -1,19 +1,19 @@
-"""Adaptive hedging engine — bear-only SMA200 regime hedge with S7 boost.
+"""Adaptive hedging engine — default S7-only hedge overlay.
 
 Architecture:
-  Bull (SPY > SMA200): 0% hedge. V3 Index Overlay manages long exposure.
-  Bear (SPY < SMA200): 85% short SPY base hedge.
-  Bear + S7 signal:    150% short SPY (85% base + 75% S7 boost, capped at 150%).
-  Crash trigger:       150% (net short).
+  Bull (SPY > SMA200): 0% hedge.
+  Bear without S7:     0% hedge by default; no plain SPY regime hedge.
+  Bear + S7 signal:    100% short SPY/QQQ hedge target.
 
-Backtest (QQQ 2006-2026, 0% neutral, 85% bear, +75% S7 boost):
-  CAGR 24.7% | Sharpe 1.470 | MaxDD -17.0% | $100K → $8.5M
-  GFC: +7.8% | COVID: +14.9% | 2022: -12.1% | Tariffs: -7.3%
+A/B testing:
+  Set ``AETERNUS_HEDGE_POLICY=bear_base`` or pass ``hedge_policy="bear_base"``
+  to restore the legacy 85% bear / 150% S7/crash policy for comparison.
 """
 
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -27,9 +27,30 @@ from .contracts import (
 )
 
 # ── Hedge sizing constants ────────────────────────────────────────────────────
-BEAR_BASE_HEDGE_PCT = 85.0       # Short SPY at 85% of gross when SPY < SMA200
-S7_BOOST_PCT = 75.0              # Additional short on S7a/S7b signal days
-MAX_HEDGE_PCT = 150.0            # Cap — never exceed 150% short
+HEDGE_POLICY_S7_ONLY = "s7_only"
+HEDGE_POLICY_BEAR_BASE = "bear_base"
+
+
+def _env_float(name: str, default: float) -> float:
+    try:
+        return float(os.getenv(name, str(default)))
+    except (TypeError, ValueError):
+        return float(default)
+
+
+DEFAULT_HEDGE_POLICY = HEDGE_POLICY_S7_ONLY
+S7_ONLY_HEDGE_PCT = 100.0
+BEAR_BASE_HEDGE_PCT = _env_float("AETERNUS_BEAR_BASE_HEDGE_PCT", 85.0)  # Legacy A/B mode only
+S7_BOOST_PCT = _env_float("AETERNUS_S7_BOOST_PCT", 75.0)                # Legacy A/B mode only
+MAX_HEDGE_PCT = 150.0                                                   # Absolute short cap
+
+
+def _normalize_hedge_policy(value: str | None) -> str:
+    raw = value if value is not None else os.getenv("AETERNUS_HEDGE_POLICY", DEFAULT_HEDGE_POLICY)
+    text = str(raw).strip().lower()
+    if text in {HEDGE_POLICY_S7_ONLY, HEDGE_POLICY_BEAR_BASE}:
+        return text
+    return HEDGE_POLICY_S7_ONLY
 
 
 def _clamp(value: float, lo: float, hi: float) -> float:
@@ -214,20 +235,25 @@ def build_portfolio_risk_snapshot(
 
 
 class AdaptiveHedgeEngine:
-    """Bear-only hedge engine: 0% in bull, 85% base in bear, 150% on S7 signal days.
+    """S7-only hedge engine by default, with legacy bear-base mode for A/B tests.
 
-    The SMA200 crossover is the single gate. Above SMA200, V3 Index Overlay
-    manages long exposure — no hedge needed. Below SMA200, short SPY at 85%
-    of gross, boosted to 150% when S7a/S7b weak-regime signals fire.
+    Default policy removes the plain SPY<SMA200 85% hedge. It only hedges when
+    S7a/S7b is active, targeting 100% short exposure. Legacy ``bear_base`` mode
+    is retained explicitly for A/B comparison before deletion.
     """
 
     def __init__(
         self,
         state_path: str = "eval_results/hedge_state.json",
         orders_path: str = "eval_results/hedge_orders.json",
+        hedge_policy: str | None = None,
+        s7_hedge_pct: float | None = None,
     ):
         self.state_path = Path(state_path)
         self.orders_path = Path(orders_path)
+        self.hedge_policy = _normalize_hedge_policy(hedge_policy)
+        default_s7_pct = _env_float("AETERNUS_S7_HEDGE_PCT", S7_ONLY_HEDGE_PCT)
+        self.s7_hedge_pct = _clamp(float(default_s7_pct if s7_hedge_pct is None else s7_hedge_pct), 0.0, MAX_HEDGE_PCT)
         if not self.state_path.exists():
             _save_json(
                 self.state_path,
@@ -313,7 +339,31 @@ class AdaptiveHedgeEngine:
                 "data_sufficient": True,
             }
 
-        # ── Bear regime: 85% base + optional S7 boost ──
+        # ── Default policy: S7-only, no plain bear-regime hedge ──
+        if self.hedge_policy == HEDGE_POLICY_S7_ONLY:
+            regime = _classify_market_regime(spy_close, spy_sma200, vix_close, False)
+            target = self.s7_hedge_pct if s7_active else 0.0
+            mode = "S7_HEDGE" if s7_active else "S7_STANDBY"
+            return {
+                "base_hedge_pct": 0.0,
+                "s7_boost_pct": float(target),
+                "bear_trigger_active": True,
+                "crash_trigger_active": False,
+                "target_hedge_pct_pre_hysteresis": float(target),
+                "mode": mode,
+                "market_regime": regime,
+                "hedge_policy": self.hedge_policy,
+                "s7_active": bool(s7_active),
+                "risk_metrics": {
+                    "portfolio_beta_60d": float(beta),
+                    "var_95_1d_pct_nav": float(var95),
+                    "drawdown_20d_pct": float(drawdown),
+                    "vix_close": float(vix_close),
+                },
+                "data_sufficient": True,
+            }
+
+        # ── Legacy A/B policy: 85% base + optional S7/crash boost ──
         sma200_slope_pct_5d = ((spy_sma200 - spy_sma200_5d_ago) / spy_sma200_5d_ago) * 100.0
         crash_trigger_active = all([
             sma200_slope_pct_5d < -0.10,
@@ -342,6 +392,8 @@ class AdaptiveHedgeEngine:
             "target_hedge_pct_pre_hysteresis": float(target),
             "mode": mode,
             "market_regime": regime,
+            "hedge_policy": self.hedge_policy,
+            "s7_active": bool(s7_active),
             "risk_metrics": {
                 "portfolio_beta_60d": float(beta),
                 "var_95_1d_pct_nav": float(var95),

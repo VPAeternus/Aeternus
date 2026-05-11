@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AGYS",
+    "cik": "78749",
+    "event_date": "2024-07-22",
+    "event_accession": "0000950170-24-085249",
+    "primary_8k_doc": "agys-20240722.htm",
+    "exhibit_docs": [
+      "agys-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AGYS_000095017024085249_agys-20240722.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AGYS_000095017024085249_agys-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AGYS",
+    "cik": "78749",
+    "entity_name": "AGILYSYS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "162636000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-22",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "6478000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-22",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "243036000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-22",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-4901000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-22",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-25679000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-22",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "28475000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-22",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.039831",
+    "operating_cash_flow_to_revenue": "0.175084",
+    "assets_to_revenue": "1.494355",
+    "financing_cash_flow_to_revenue": "-0.030135",
+    "investing_cash_flow_to_revenue": "-0.157892"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "REVENUE OF $63.",
+      "revenue increased 13.",
+      "revenue of $56.",
+      "revenue increased 32.",
+      "EPS of $0.",
+      "Gross margin was 62."
+    ],
+    "guidance_evidence": [
+      "Outlook The Company expects full year fiscal 2025 revenue to be $275 million to $280 million, including higher than 27% year-over-year subscription revenue growth.",
+      "guidance for the 2025 fiscal year.",
+      "expects full year fiscal 2025 revenue to be $275 million to $280 million, including higher than 27% year-over-year subscription revenue growth.",
+      "expected to be 16% of revenue for the full fiscal year."
+    ],
+    "wave_or_demand_evidence": [
+      "customers increasingly preferring subscription licenses over one-time perpetual licenses and lesser hardware revenue.",
+      "Customers around the world use Agilysys Property Management Systems (PMS), Point-of-Sale (POS) solutions and Food & Beverage Inventory and Procurement (I&P) systems to consistently delight guests, retain staff and grow margins.",
+      "aintenance charges) was a record $38.",
+      "aining consistent with the high sales levels we have seen in recent quarters.",
+      "aintain and improve on the good business momentum we are seeing now,\" he concluded.",
+      "ail confirmation with a personalized PIN will be provided along with further access details."
+    ],
+    "warning_or_risk_evidence": [
+      "charges) was a record $38.",
+      "charges.",
+      "charges, and legal settlements, less the related income tax effect of these adjustments, as applicable, and tax events and defines adjusted earnings per share as adjusted net income divided by basic and diluted weighted average shares outstanding.",
+      "Inventory and Procurement (I&P) systems to consistently delight guests, retain staff and grow margins.",
+      "charges relating to i) share-based compensation, ii) other (gains) and charges, net, iii) other non-operating expense (income), and iv) legal settlements AGILYSYS, INC.",
+      "uncertainties, risks and changes in circumstances that are difficult to predict and many of which are outside of our control."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 56.1,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-23",
+    "entry_open": "105.000000",
+    "return_10d_pct": "0.6190",
+    "return_20d_pct": "4.4000",
+    "return_30d_pct": "3.5429",
+    "return_60d_pct": "2.4190",
+    "return_90d_pct": "11.8476"
+  },
+  "text_stats": {
+    "primary_text_len": 3479,
+    "exhibit_text_len": 18057,
+    "combined_text_len": 21538
+  }
+}

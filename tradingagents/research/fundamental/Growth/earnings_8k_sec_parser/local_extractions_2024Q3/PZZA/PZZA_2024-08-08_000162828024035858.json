@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PZZA",
+    "cik": "901491",
+    "event_date": "2024-08-08",
+    "event_accession": "0001628280-24-035858",
+    "primary_8k_doc": "pzza-20240808.htm",
+    "exhibit_docs": [
+      "pzza-63024xpressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PZZA_000162828024035858_pzza-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PZZA_000162828024035858_pzza-63024xpressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PZZA",
+    "cik": "901491",
+    "entity_name": "PAPA JOHN’S INTERNATIONAL, INC.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "527049000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-26",
+    "net_income_value": "22376000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-26",
+    "assets_value": "875005000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-23212000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-26",
+    "investing_cash_flow_value": "-18275000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-26",
+    "operating_cash_flow_value": "40788000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-26",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.042455",
+    "operating_cash_flow_to_revenue": "0.077389",
+    "assets_to_revenue": "1.660197",
+    "financing_cash_flow_to_revenue": "-0.044041",
+    "investing_cash_flow_to_revenue": "-0.034674"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were $1.",
+      "revenues of $508 million were down 1% compared with a year ago driven by lower revenues in our North America commissary segment primarily due to a combination of lower volume and commodity prices.",
+      "revenues of $507.",
+      "revenues were largely attributable to an $8.",
+      "Operating income of $28 million decreased 19% compared with the second quarter of 2023, while Adjusted operating income (c) of $38 million increased 4% on improved restaurant-level margins and continued focus on cost discipline.",
+      "operating income, helping to offset our softer sales in the second quarter."
+    ],
+    "guidance_evidence": [
+      "outlook”, “plan,” “project,” or similar words identify forward-looking statements that we intend to be included within the safe harbor protections provided by the federal securities laws.",
+      "forecast,” “outlook”, “plan,” “project,” or similar words identify forward-looking statements that we intend to be included within the safe harbor protections provided by the federal securities laws."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and team members, while also ensuring the restaurant economic model is strong.",
+      "demand for our core product — pizza, remained solid despite facing a highly promotional QSR environment and a more value-conscious consumer.",
+      "demand, adoption of new accounting standards, and other financial and operational measures.",
+      "demand.",
+      "ailing twelve month net unit growth.",
+      "aid Todd Penegor, President and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charge related to fixed and intangible assets related to certain Domestic restaurants.",
+      "impairment charges related to store closures in the UK, combined with severance and other related costs.",
+      "decrease compared with the prior year second quarter, driven by lower North America comparable sales partially offset by trailing twelve month net unit growth.",
+      "decreased 19% compared with the second quarter of 2023, while Adjusted operating income (c) of $38 million increased 4% on improved restaurant-level margins and continued focus on cost discipline.",
+      "decreased $6.",
+      "decrease in North America commissary revenues reflecting a combination of lower transaction volumes and commodity prices."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1200,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "43.209999",
+    "return_10d_pct": "7.5446",
+    "return_20d_pct": "8.9794",
+    "return_30d_pct": "9.7200",
+    "return_60d_pct": "13.5154",
+    "return_90d_pct": "28.5119"
+  },
+  "text_stats": {
+    "primary_text_len": 3087,
+    "exhibit_text_len": 28568,
+    "combined_text_len": 31657
+  }
+}

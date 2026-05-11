@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RDNW",
+    "cik": "1596961",
+    "event_date": "2024-08-07",
+    "event_accession": "0001596961-24-000077",
+    "primary_8k_doc": "rmbl-20240807.htm",
+    "exhibit_docs": [
+      "a2024q2earningsrelease-ex9.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RDNW_000159696124000077_rmbl-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RDNW_000159696124000077_a2024q2earningsrelease-ex9.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RDNW",
+    "cik": "1596961",
+    "entity_name": "RideNow Group, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "334400000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-16900000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "926300000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "0",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-5700000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "9000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.050538",
+    "operating_cash_flow_to_revenue": "0.026914",
+    "assets_to_revenue": "2.770036",
+    "financing_cash_flow_to_revenue": "0.0",
+    "investing_cash_flow_to_revenue": "-0.017045"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $336.",
+      "Operating Income $ 15.",
+      "Operating income 15.",
+      "cash flows for the first half of 2024 totaled $29.",
+      "Free Cash Flow (1) for the first half of 2024 was $28.",
+      "free cash flow during the first half of 2024, and we expect to continue to deliver positive free cash flow in the back half of 2024."
+    ],
+    "guidance_evidence": [
+      "expects,\" \"projects,\" \"will,\" \"may,\" \"anticipates,\" \"believes,\" \"should,\" \"intends,\" \"estimates,\" and other words of similar meaning."
+    ],
+    "wave_or_demand_evidence": [
+      "Powersports Houston, a dedicated pre-owned vehicle dealership \"Our second quarter performance reflects the strength of our powersports dealership group as we continue to progress on our turnaround.",
+      "powersports industry, as we navigate a high interest environment, a cautious consumer, and inflated new major unit inventories.",
+      "ain laser focused on achieving our Vision 2026 goals and creating per-share value,\" stated Mike Kennedy, RumbleOn's CEO.",
+      "ail Sales: New Powersports 12,004 13,126 (8.",
+      "Powersports 4,796 6,137 (21.",
+      "Powersports Segment Second Quarter $ in millions, except per unit 2024 2023 YOY Change Unit Sales (#) Retail New 12,004 13,126 (8."
+    ],
+    "warning_or_risk_evidence": [
+      "Inventory 347.",
+      "charge for loan receivable assets — 6.",
+      "Inventory (0.",
+      "charges and expenses are not considered a part of our core business operations and are not necessarily an indicator of ongoing, future company performance.",
+      "charges — 4.",
+      "charges and expenses are not considered a part of our core business operations and are not necessarily an indicator of the ongoing run rate of our SG&A."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 336.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "3.600000",
+    "return_10d_pct": "10.0000",
+    "return_20d_pct": "26.2500",
+    "return_30d_pct": "9.1667",
+    "return_60d_pct": "34.7222",
+    "return_90d_pct": "56.6667"
+  },
+  "text_stats": {
+    "primary_text_len": 3305,
+    "exhibit_text_len": 23319,
+    "combined_text_len": 26626
+  }
+}

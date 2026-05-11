@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 52.2,
+    "revenue_yoy_pct": 5.0302,
+    "revenue_qoq_pct": -4.0441,
+    "gross_margin_pct": 17.3,
+    "non_gaap_gross_margin_pct": 17.5,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 57.5,
+    "revenue_low_millions": 56.0,
+    "revenue_high_millions": 59.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 17.25,
+    "guide_direction": "positive"
+  },
+  "qualitative": {
+    "demand_signal": "1 Applied Optoelectronics Reports First Quarter 2022 Results Selected as a supplier of 400G products by a major hyperscale datacenter customer Sugar Land, Texas, May 5, 2022 – Applied Optoelectronics, Inc.",
+    "wave_signal": "1 Applied Optoelectronics Reports First Quarter 2022 Results Selected as a supplier of 400G products by a major hyperscale datacenter customer Sugar Land, Texas, May 5, 2022 – Applied Optoelectronics, Inc.",
+    "margin_signal": "“Market conditions met our expectations during the quarter and revenue, non-GAAP EPS and gross margin were all in-line with our guidance” said Dr.",
+    "risk_signal": "·GAAP net loss was $16.",
+    "customer_signal": "1 Applied Optoelectronics Reports First Quarter 2022 Results Selected as a supplier of 400G products by a major hyperscale datacenter customer Sugar Land, Texas, May 5, 2022 – Applied Optoelectronics, Inc."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· GAAP revenue was $52.2 million, compared $49.7 million in the first quarter of 2021 and $54.4 million in the fourth quarter of 2021."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· GAAP revenue was $52.2 million, compared $49.7 million in the first quarter of 2021 and $54.4 million in the fourth quarter of 2021."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· GAAP revenue was $52.2 million, compared $49.7 million in the first quarter of 2021 and $54.4 million in the fourth quarter of 2021."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 17.3%, compared with 21.6% in the first quarter of 2021 and 14.9% in the fourth quarter of 2021. Non-GAAP gross margin was 17.5%, compared with 24.6% in the first quarter of 2021 and 17.6% in the fourth quarter of 2021."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 17.3%, compared with 21.6% in the first quarter of 2021 and 14.9% in the fourth quarter of 2021. Non-GAAP gross margin was 17.5%, compared with 24.6% in the first quarter of 2021 and 17.6% in the fourth quarter of 2021."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $56 million to $59 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $56 million to $59 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $56 million to $59 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 16.5% to 18%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

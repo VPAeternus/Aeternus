@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CARR",
+    "cik": "1783180",
+    "event_date": "2024-07-25",
+    "event_accession": "0001783180-24-000075",
+    "primary_8k_doc": "carr-20240725.htm",
+    "exhibit_docs": [
+      "a99-q22024earningsexhibit.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CARR_000178318024000075_carr-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CARR_000178318024000075_a99-q22024earningsexhibit.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CARR",
+    "cik": "1783180",
+    "entity_name": "CARRIER GLOBAL CORPORATION",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5273000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "387000000",
+    "net_income_fact_name": "ProfitLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "32822000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-213000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-100000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "120000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.073393",
+    "operating_cash_flow_to_revenue": "0.022757",
+    "assets_to_revenue": "6.22454",
+    "financing_cash_flow_to_revenue": "-0.040394",
+    "investing_cash_flow_to_revenue": "-0.018965"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $6.",
+      "sales of $6.",
+      "sales were up about mid-single digits.",
+      "sales were up 1% organically driven by over 30% growth in container, mostly offset by North America truck and trailer and commercial refrigeration.",
+      "sales were up 3% organically in the quarter.",
+      "GAAP EPS of $2."
+    ],
+    "guidance_evidence": [
+      "guidance range • Closed two of four business exit transactions; remaining two on-track • Expect to repurchase about $1 billion worth of shares in the second half of 2024 PALM BEACH GARDENS, Fla .",
+      "guidance.",
+      "Guidance** Carrier updated the following guidance for 2024, which now includes Commercial Refrigeration for nine-months.",
+      "Guidance Prior Guidance Sales ~$25.",
+      "guidance,\" \"outlook,\" \"confident,\" \"scenario\" and other words of similar meaning in connection with a discussion of future operating or financial performance.",
+      "expected tax payments on the gains from the announced business exits, restructuring, and transaction-related costs ~$0."
+    ],
+    "wave_or_demand_evidence": [
+      "orders growth as we continue to outperform in our markets.",
+      "customer at the center of everything we do.",
+      "Orders are contractual commitments with customers to provide specified goods or services for an agreed upon price and may not be subject to penalty if cancelled.",
+      "backlog.",
+      "aining two on-track • Expect to repurchase about $1 billion worth of shares in the second half of 2024 PALM BEACH GARDENS, Fla .",
+      "aid Carrier Chairman & CEO David Gitlin."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory and backlog.",
+      "decline in EMEA Residential and Light Commercial HVAC.",
+      "declines driven by residential light commercial in China, partially offset by Southeast Asia which was up double-digits.",
+      "uncertainties and other factors that may cause actual results to differ materially from those expressed or implied in the forward-looking statements.",
+      "losses, the ultimate outcome of pending litigation, fluctuations in foreign currency exchange rates, the impact and timing of potential acquisitions and divestitures, future restructuring costs, and other structural changes or their probable significance."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 6700,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "65.800003",
+    "return_10d_pct": "-3.4195",
+    "return_20d_pct": "3.9514",
+    "return_30d_pct": "8.9666",
+    "return_60d_pct": "22.2036",
+    "return_90d_pct": "10.7903"
+  },
+  "text_stats": {
+    "primary_text_len": 3898,
+    "exhibit_text_len": 29381,
+    "combined_text_len": 33281
+  }
+}

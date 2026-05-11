@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PLTR",
+    "cik": "1321655",
+    "event_date": "2024-08-05",
+    "event_accession": "0001321655-24-000133",
+    "primary_8k_doc": "pltr-20240805.htm",
+    "exhibit_docs": [
+      "a2024q2ex991pressrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLTR_000132165524000133_pltr-20240805.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PLTR_000132165524000133_a2024q2ex991pressrelease.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PLTR",
+    "cik": "1321655",
+    "entity_name": "Palantir Technologies Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "525186000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "16802000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4522425000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "25983000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-1554591000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "187376000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.031992",
+    "operating_cash_flow_to_revenue": "0.35678",
+    "assets_to_revenue": "8.611092",
+    "financing_cash_flow_to_revenue": "0.049474",
+    "investing_cash_flow_to_revenue": "-2.960077"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of between $697 - $701 million.",
+      "GAAP EPS of $0.",
+      "GAAP earnings per share (“EPS”) grew 500% year-over-year to $0.",
+      "EPS grew 80% year-over-year to $0.",
+      "Net Income Attributable to Common Stockholders $ 134,126 20 % Adjusted Net Income Attributable to Common Stockholders $ 221,408 Adjusted EBITDA $ 261,623 39 % GAAP EPS, Diluted $ 0.",
+      "EPS, Diluted $ 0."
+    ],
+    "guidance_evidence": [
+      "Guidance; Record GAAP EPS of $0.",
+      "Outlook For Q3 2024, we expect: • Revenue of between $697 - $701 million.",
+      "guidance to between $2.",
+      "guidance to in excess of $672 million, representing a growth rate of at least 47%.",
+      "guidance to between $966 - $974 million.",
+      "outlook."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and partners; issues raised by the use of artificial intelligence in our platforms; and any breach or access to our or customer or third-party data.",
+      "customers and no termination of contracts.",
+      "customers’ financial condition, including the consideration of such customers’ ability and intention to pay, and whether such contracts continue to meet the criteria for revenue recognition, among other factors.",
+      "customers, and represent non-cancelable contracted revenue that has not yet been recognized, which includes deferred revenue and, in certain instances, amounts that will be invoiced.",
+      "Customers , to not disclose remaining performance obligations for contracts with original terms of twelve months or less.",
+      "aises Full Year Revenue Guidance; Record GAAP EPS of $0."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties, many of which involve factors or circumstances that are beyond our control.",
+      "decrease in our cash balances for a given period.",
+      "uncertainty regarding, and the potential variability of, reconciling items that may be incurred in the future, such as stock-based compensation and related employer payroll taxes, the effect of which may be significant.",
+      "loss) attributable to noncontrolling interests 1,444 (255) 1,985 2,094 Net income attributable to common stockholders $ 134,126 $ 28,127 $ 239,656 $ 44,929 Net earnings per share attributable to common stockholders, basic $ 0.",
+      "loss), net (4,935) 801 Accumulated deficit (5,409,957) (5,649,613) Total stockholders’ equity 4,050,524 3,475,561 Noncontrolling interests 87,282 85,404 Total equity 4,137,806 3,560,965 Total liabilities and equity $ 5,191,880 $ 4,522,425 Palantir Technologies Inc."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 678,
+    "quarter_revenue_yoy_pct": 27,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-06",
+    "entry_open": "27.049999",
+    "return_10d_pct": "18.5952",
+    "return_20d_pct": "14.0481",
+    "return_30d_pct": "11.4972",
+    "return_60d_pct": "43.7708",
+    "return_90d_pct": "53.0869"
+  },
+  "text_stats": {
+    "primary_text_len": 4560,
+    "exhibit_text_len": 23067,
+    "combined_text_len": 27629
+  }
+}

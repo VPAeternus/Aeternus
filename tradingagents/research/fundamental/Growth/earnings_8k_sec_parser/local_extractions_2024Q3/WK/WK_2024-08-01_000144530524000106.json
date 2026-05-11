@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "WK",
+    "cik": "1445305",
+    "event_date": "2024-08-01",
+    "event_accession": "0001445305-24-000106",
+    "primary_8k_doc": "wk-20240801.htm",
+    "exhibit_docs": [
+      "q22024exhibit991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WK_000144530524000106_wk-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/WK_000144530524000106_q22024exhibit991.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "WK",
+    "cik": "1445305",
+    "entity_name": "WORKIVA INC",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "150189000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-46150000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1218860000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-349000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-50474000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "5563000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.307279",
+    "operating_cash_flow_to_revenue": "0.03704",
+    "assets_to_revenue": "8.115508",
+    "financing_cash_flow_to_revenue": "-0.002324",
+    "investing_cash_flow_to_revenue": "-0.33607"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $17 million, down 8% from the second quarter of 2023.",
+      "revenue was 109%.",
+      "GAAP gross margin was 76.",
+      "non-GAAP gross margin was 78.",
+      "Non-GAAP Net Income: Non-GAAP net income for the second quarter of 2024 was $9 million compared with net income of $1 million in the prior year's second quarter.",
+      "Non-GAAP net income per basic share and diluted share was $0."
+    ],
+    "guidance_evidence": [
+      "guidance range to $727 million to $729 million.",
+      "Outlook As of August 1, 2024, Workiva is providing guidance as follows: Third Quarter 2024 Guidance : • Total revenue is expected to be in the range of $182 million to $183 million.",
+      "Guidance: • Total revenue is expected to be in the range of $727 million to $729 million.",
+      "outlook for the third quarter and full year 2024, and an update to the Company's long term financial model.",
+      "guidance has been provided in Table II at the end of this press release.",
+      "outlook,\" \"guidance\" or the negative of those terms or other comparable terminology."
+    ],
+    "wave_or_demand_evidence": [
+      "Customers with Annual Contract Value Over $300K • Announced inaugural $100 million share repurchase program NEW YORK - August 1, 2024 – Workiva Inc.",
+      "demand across our entire solution portfolio\" said Julie Iskow, President & Chief Executive Officer.",
+      "demand was driven by a number of multi-solution and large contract platform deals.",
+      "Customers: Workiva had 6,147 customers as of June 30, 2024, a net increase of 287 customers from June 30, 2023.",
+      "customers.",
+      "customers with an annual contract value (“ACV”) of more than $100,000, up 20% from 1,470 customers at June 30, 2023."
+    ],
+    "warning_or_risk_evidence": [
+      "loss from operations for the second quarter of 2024 was $23 million, relatively flat compared to the same quarter in the prior year.",
+      "loss from operations of $1 million in the second quarter of 2023.",
+      "Loss: GAAP net loss for the second quarter of 2024 was $18 million compared with a net loss of $21 million for the prior year's second quarter.",
+      "loss per basic and diluted share was $0.",
+      "loss per basic and diluted share of $0.",
+      "loss from operations is expected to be in the range of $22 million to $21 million."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 178,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 182,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "69.570000",
+    "return_10d_pct": "4.9447",
+    "return_20d_pct": "11.3267",
+    "return_30d_pct": "7.5320",
+    "return_60d_pct": "10.5074",
+    "return_90d_pct": "14.6471"
+  },
+  "text_stats": {
+    "primary_text_len": 3587,
+    "exhibit_text_len": 24990,
+    "combined_text_len": 28579
+  }
+}

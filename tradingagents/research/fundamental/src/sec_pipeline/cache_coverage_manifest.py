@@ -9,7 +9,7 @@ from typing import Any
 
 ROOT = Path('/Users/aeternusholdings/Documents/Aeternus')
 OUT = ROOT / 'eval_results/fundamental/2026-05-07_full'
-TICKERS_JSON = OUT / 'final_dealflow_research_queue_sec_eligible.json'
+TICKERS_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
 UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
 SEC_CACHE = Path('/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec')
 LIVE = SEC_CACHE / 'live_sec'
@@ -23,7 +23,7 @@ def configure(*, out: Path | str | None = None, live: Path | str | None = None) 
     if live is not None:
         LIVE = Path(live)
         SEC_CACHE = LIVE.parent
-    TICKERS_JSON = OUT / 'final_dealflow_research_queue_sec_eligible.json'
+    TICKERS_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
     UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
 
 

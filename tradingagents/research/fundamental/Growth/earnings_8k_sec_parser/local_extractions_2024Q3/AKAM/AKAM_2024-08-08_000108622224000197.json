@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "AKAM",
+    "cik": "1086222",
+    "event_date": "2024-08-08",
+    "event_accession": "0001086222-24-000197",
+    "primary_8k_doc": "akam-20240808.htm",
+    "exhibit_docs": [
+      "exhibit991-q22024.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AKAM_000108622224000197_akam-20240808.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/AKAM_000108622224000197_exhibit991-q22024.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "AKAM",
+    "cik": "1086222",
+    "entity_name": "Akamai Technologies, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "600293000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2018-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2017-03-31",
+    "net_income_value": "97106000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "9900037000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-357289000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-119888000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "233499000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.161764",
+    "operating_cash_flow_to_revenue": "0.388975",
+    "assets_to_revenue": "16.492008",
+    "financing_cash_flow_to_revenue": "-0.595191",
+    "investing_cash_flow_to_revenue": "-0.199716"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue was $980 million, a 5% increase over second quarter 2023 revenue of $936 million and a 6% increase when adjusted for foreign exchange.",
+      "revenue was $329 million, down 13% year-over-year and down 12% when adjusted for foreign exchange* • Compute revenue was $151 million, up 23% year-over-year and up 24% when adjusted for foreign exchange* Revenue by geography: • U.",
+      "revenue was $471 million, up 3% year-over-year and up 5% when adjusted for foreign exchange* Income from operations: GAAP income from operations was $148 million, a 1% decrease from second quarter 2023.",
+      "sales of intellectual property related to acquisitions), if any.",
+      "GAAP net income per diluted share of $0.",
+      "non-GAAP net income per diluted share* of $1."
+    ],
+    "guidance_evidence": [
+      "guidance is provided on a non-GAAP basis and cannot be reconciled to the closest GAAP measures without unreasonable effort because of the unpredictability of the amounts and timing of events affecting the items Akamai excludes from non-GAAP measures.",
+      "guidance are difficult to predict and a reconciliation or a range of results could lead to disclosure that would be imprecise or potentially misleading.",
+      "guidance and future GAAP results.",
+      "forecasting purposes, to measure executive compensation and to evaluate Akamai's financial performance.",
+      "expected future operating expenses.",
+      "expects they will continue to be impacted, by fluctuations in foreign currency exchange rates."
+    ],
+    "wave_or_demand_evidence": [
+      "ai Technologies Akamai Technologies 646-320-4107 857-227-4491 gsorice@akamai.",
+      "ai.",
+      "ai Technologies, Inc.",
+      "cloud company that powers and protects life online, today reported financial results for the second quarter ended June 30, 2024.",
+      "ai delivered solid results in the second quarter highlighted by our strong bottom-line performance and continued strength in our security and cloud computing solutions, which now represent approximately two-thirds of total revenue,\" said Dr.",
+      "ai's Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "charge 0.",
+      "charge – Akamai has incurred restructuring charges from programs that have significantly changed either the scope of the business undertaken by the Company or the manner in which that business is conducted.",
+      "impairments of long-lived assets that will no longer be used in operations (including right-of-use assets, other facility-related property and equipment and internal-use software) and termination fees for any contracts cancelled as part of these programs.",
+      "charges do not necessarily provide meaningful insight into the fundamentals of current or past operations of its business.",
+      "impairment of certain investments.",
+      "impairments."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 980,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-09",
+    "entry_open": "98.010002",
+    "return_10d_pct": "3.7139",
+    "return_20d_pct": "3.6629",
+    "return_30d_pct": "-2.9997",
+    "return_60d_pct": "3.3874",
+    "return_90d_pct": "6.5197"
+  },
+  "text_stats": {
+    "primary_text_len": 3406,
+    "exhibit_text_len": 37247,
+    "combined_text_len": 40655
+  }
+}

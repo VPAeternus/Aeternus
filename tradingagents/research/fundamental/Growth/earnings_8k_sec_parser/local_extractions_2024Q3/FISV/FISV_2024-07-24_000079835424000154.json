@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "FISV",
+    "cik": "798354",
+    "event_date": "2024-07-24",
+    "event_accession": "0000798354-24-000154",
+    "primary_8k_doc": "fisv-20240724.htm",
+    "exhibit_docs": [
+      "fiq224earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FISV_000079835424000154_fisv-20240724.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/FISV_000079835424000154_fiq224earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "FISV",
+    "cik": "798354",
+    "entity_name": "FISERV INC",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "4547000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "563000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "90890000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-1149000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-314000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "1130000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.123818",
+    "operating_cash_flow_to_revenue": "0.248516",
+    "assets_to_revenue": "19.989004",
+    "financing_cash_flow_to_revenue": "-0.252694",
+    "investing_cash_flow_to_revenue": "-0.069057"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 7% to $4.",
+      "EPS increased 18% both in the quarter and year to date; Company affirms 2024 organic revenue growth outlook of 15% to 17% and raises adjusted EPS outlook to $8.",
+      "GAAP earnings per share was $1.",
+      "earnings per share , ” said Frank Bisignano, Chairman, President and Chief Executive Officer of Fiserv.",
+      "earnings per share increased 18% to $2.",
+      "earnings per share outlook to $8."
+    ],
+    "guidance_evidence": [
+      "outlook of 15% to 17% and raises adjusted EPS outlook to $8.",
+      "Outlook for 2024 Fiserv continues to expect organic revenue growth of 15% to 17% and raises adjusted earnings per share outlook to $8.",
+      "outlook,” said Bisignano.",
+      "outlook measures.",
+      "outlook, objectives or goals are also forward-looking statements.",
+      "outlook for 2024 excludes the impact of foreign currency fluctuations, acquisitions, dispositions and the impact of the company's postage reimbursements."
+    ],
+    "wave_or_demand_evidence": [
+      "customer relationships, software/technology and trade names.",
+      "aises adjusted EPS outlook to $8.",
+      "ain delivered strong performance across the business with 18% growth in both organic revenue and adjusted earnings per share , ” said Frank Bisignano, Chairman, President and Chief Executive Officer of Fiserv.",
+      "aises adjusted earnings per share outlook to $8.",
+      "aising our full year 2024 adjusted earnings per share outlook,” said Bisignano.",
+      "ainable growth and profitability given the strength of our client franchise and continued wins in the marketplace."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges; severance costs; net charges associated with debt financing activities; merger and integration costs; gains or losses from the sale of businesses, certain assets or investments; and certain discrete tax benefits and expenses.",
+      "impairment charges; non-cash pension plan termination charges; merger and integration costs; severance costs; gains or losses from the sale of businesses, certain assets and investments; and certain discrete tax benefits and expenses.",
+      "losses from the sale of businesses, certain assets or investments; and certain discrete tax benefits and expenses.",
+      "uncertainties that may cause actual results to differ materially from those contemplated by such forward-looking statements.",
+      "loss on sale of businesses and other assets — — — 4 Canadian tax law change 4 — 27 — 27 Tax impact of adjustments 5 (88) (109) (183) (217) Adjusted net income $ 1,245 $ 1,119 $ 2,361 $ 2,115 GAAP earnings per share attributable to Fiserv - diluted $ 1.",
+      "loss on sale of businesses and other assets — — — 0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 5110,
+    "quarter_revenue_yoy_pct": 7,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "161.600006",
+    "return_10d_pct": "-4.2265",
+    "return_20d_pct": "1.5037",
+    "return_30d_pct": "5.1052",
+    "return_60d_pct": "10.9592",
+    "return_90d_pct": "25.2228"
+  },
+  "text_stats": {
+    "primary_text_len": 3605,
+    "exhibit_text_len": 34880,
+    "combined_text_len": 38487
+  }
+}

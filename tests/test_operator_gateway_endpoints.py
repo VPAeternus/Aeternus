@@ -108,9 +108,27 @@ def _seed_allocator_intent(
     )
 
 
-def _write_research_queue(tmp_path: Path, payload: dict):
-    path = tmp_path / "deal_flow" / "latest_research_queue.json"
-    write_json_locked(path, payload)
+def _write_scout_handoff(tmp_path: Path, payload: dict):
+    path = tmp_path / "deal_flow" / "latest_final_dealflow_tickers.json"
+    if "tickers" in payload:
+        handoff = payload
+    else:
+        items = payload.get("items", []) if isinstance(payload.get("items"), list) else []
+        tickers = [str(item.get("symbol") or item.get("ticker") or "").upper() for item in items]
+        tickers = [symbol for symbol in tickers if symbol]
+        handoff = {
+            "run_id": payload.get("run_id", ""),
+            "date": payload.get("date", ""),
+            "tickers": tickers,
+            "metadata_by_ticker": {
+                symbol: {
+                    "scouts": item.get("scouts") or ["test_scout"],
+                    "mention_count": item.get("mention_count", 1),
+                }
+                for symbol, item in zip(tickers, items)
+            },
+        }
+    write_json_locked(path, handoff)
     return path
 
 
@@ -122,7 +140,7 @@ def _write_analysis_report(tmp_path: Path, symbol: str, date: str, payload: dict
 
 def _seed_x_feed_ready(tmp_path: Path, as_of_date: str):
     raw_dir = tmp_path / "x_feed" / as_of_date / "raw"
-    for pass_num in range(1, 16):
+    for pass_num in range(1, 17):
         write_json_locked(raw_dir / f"pass_{pass_num:02d}.json", {"trending": []})
     write_json_locked(tmp_path / "x_feed" / as_of_date / "merged.json", {"NVDA": {"ticker": "NVDA"}})
 
@@ -248,11 +266,8 @@ def test_dealflow_read_endpoint_returns_snapshot_and_candidates(tmp_path: Path):
                 "queue_id": f"{today}-070000-manual:NVDA",
                 "symbol": "NVDA",
                 "lane": "MOMENTUM",
-                "deal_flow_score": 78.3,
-                "triage_score": 72.1,
                 "why_now": "High-conviction breakout driven by strong trend and catalysts.",
                 "risk_tags": ["Earnings approaching", "High IV"],
-                "selected_for_deep": True,
                 "research_playbook": "MOMENTUM_BREAKOUT",
                 "evidence": {
                     "active_families": 3,
@@ -262,7 +277,7 @@ def test_dealflow_read_endpoint_returns_snapshot_and_candidates(tmp_path: Path):
             }
         ],
     }
-    _write_research_queue(tmp_path, queue_payload)
+    _write_scout_handoff(tmp_path, queue_payload)
     client = TestClient(create_app(config))
     response = client.get("/ops/dealflow")
     assert response.status_code == 200
@@ -283,25 +298,19 @@ def test_dealflow_limit_query_returns_truncated_candidate_list(tmp_path: Path):
                 "queue_id": "2026-02-08-070000-manual:NVDA",
                 "symbol": "NVDA",
                 "lane": "MOMENTUM",
-                "deal_flow_score": 78.3,
-                "triage_score": 72.1,
                 "why_now": "High-conviction breakout driven by strong trend and catalysts.",
-                "selected_for_deep": True,
                 "research_playbook": "MOMENTUM_BREAKOUT",
             },
             {
                 "queue_id": "2026-02-08-070000-manual:AAPL",
                 "symbol": "AAPL",
                 "lane": "CORE",
-                "deal_flow_score": 66.0,
-                "triage_score": 64.0,
                 "why_now": "Quality setup with stable trend.",
-                "selected_for_deep": False,
                 "research_playbook": "QUALITY",
             },
         ],
     }
-    _write_research_queue(tmp_path, queue_payload)
+    _write_scout_handoff(tmp_path, queue_payload)
     client = TestClient(create_app(config))
     response = client.get("/ops/dealflow?limit=1")
     assert response.status_code == 200
@@ -325,7 +334,7 @@ def test_candidate_detail_fail_soft_on_missing_columns(tmp_path: Path):
             }
         ],
     }
-    _write_research_queue(tmp_path, queue_payload)
+    _write_scout_handoff(tmp_path, queue_payload)
     _write_analysis_report(
         tmp_path,
         "TSLA",
@@ -342,7 +351,7 @@ def test_candidate_detail_fail_soft_on_missing_columns(tmp_path: Path):
     payload = response.json()
     assert payload["snapshot"]["validity"] == "VALID"
     assert payload["candidate"]["symbol"] == "TSLA"
-    assert payload["candidate"]["thesis_summary"] == "Data Unavailable"
+    assert payload["candidate"]["thesis_summary"] == "Scout handoff: test_scout"
     assert payload["analysis"]["recommendation"] == "HOLD"
 
 
@@ -353,7 +362,7 @@ def test_dealflow_snapshot_marked_stale_for_old_artifact_date(tmp_path: Path):
         "date": "2026-02-06",
         "items": [],
     }
-    _write_research_queue(tmp_path, queue_payload)
+    _write_scout_handoff(tmp_path, queue_payload)
     client = TestClient(create_app(config))
     response = client.get("/ops/dealflow")
     assert response.status_code == 200
@@ -367,7 +376,7 @@ def test_bootstrap_includes_schedule_feed_and_alerts(tmp_path: Path):
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=180)
     today = now.date().isoformat()
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{today}-090000-manual",
@@ -377,10 +386,7 @@ def test_bootstrap_includes_schedule_feed_and_alerts(tmp_path: Path):
                     "queue_id": f"{today}-090000-manual:AAPL",
                     "symbol": "AAPL",
                     "lane": "CORE",
-                    "deal_flow_score": 65.0,
-                    "triage_score": 61.0,
                     "why_now": "High quality with stable macro setup.",
-                    "selected_for_deep": False,
                     "research_playbook": "QUALITY",
                 }
             ],
@@ -408,7 +414,7 @@ def test_bootstrap_includes_portfolio_drift_when_allocations_available(tmp_path:
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=180)
     today = now.date().isoformat()
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{today}-090000-manual",
@@ -442,7 +448,7 @@ def test_drift_impact_detects_non_model_exposure(tmp_path: Path):
     config = _config(tmp_path)
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=180)
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{now.date().isoformat()}-090000-manual",
@@ -481,7 +487,7 @@ def test_drift_sensitivity_settings_update_affects_bootstrap_status(tmp_path: Pa
     config = _config(tmp_path)
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=180)
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{now.date().isoformat()}-090000-manual",
@@ -524,7 +530,7 @@ def test_bootstrap_flags_snapshot_stale_and_pending_created(tmp_path: Path):
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=240)
     stale_date = (now.date() - dt.timedelta(days=2)).isoformat()
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{stale_date}-090000-manual",
@@ -534,10 +540,7 @@ def test_bootstrap_flags_snapshot_stale_and_pending_created(tmp_path: Path):
                     "queue_id": f"{stale_date}-090000-manual:TSLA",
                     "symbol": "TSLA",
                     "lane": "MOMENTUM",
-                    "deal_flow_score": 81.0,
-                    "triage_score": 79.0,
                     "why_now": "Momentum continuation setup.",
-                    "selected_for_deep": True,
                     "research_playbook": "MOMENTUM_BREAKOUT",
                 }
             ],
@@ -576,7 +579,7 @@ def test_bootstrap_includes_allocator_pending_funding_alert(tmp_path: Path):
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=240)
     today = now.date().isoformat()
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{today}-090000-manual",
@@ -626,7 +629,7 @@ def test_bootstrap_returns_304_when_etag_matches(tmp_path: Path):
     config = _config(tmp_path)
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=180)
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{now.date().isoformat()}-090000-manual",
@@ -645,12 +648,12 @@ def test_bootstrap_returns_304_when_etag_matches(tmp_path: Path):
     assert second.headers.get("etag") == etag
 
 
-def test_bootstrap_etag_changes_when_queue_changes(tmp_path: Path):
+def test_bootstrap_etag_changes_when_handoff_changes(tmp_path: Path):
     config = _config(tmp_path)
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=180)
     today = now.date().isoformat()
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{today}-090000-manual",
@@ -663,7 +666,7 @@ def test_bootstrap_etag_changes_when_queue_changes(tmp_path: Path):
     etag = first.headers.get("etag")
     assert etag
 
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{today}-090000-manual",
@@ -673,10 +676,7 @@ def test_bootstrap_etag_changes_when_queue_changes(tmp_path: Path):
                     "queue_id": f"{today}-090000-manual:AAPL",
                     "symbol": "AAPL",
                     "lane": "CORE",
-                    "deal_flow_score": 65.0,
-                    "triage_score": 64.0,
                     "why_now": "Quality setup with stable trend.",
-                    "selected_for_deep": False,
                     "research_playbook": "QUALITY",
                 }
             ],
@@ -703,7 +703,7 @@ def test_gateway_enforces_api_key_when_enabled(tmp_path: Path):
     config["operator_gateway_api_key"] = "test-secret"
     now = dt.datetime.now(dt.timezone.utc)
     _write_heartbeat(config, now=now, engine_offset_s=0.0, next_run_s=180)
-    _write_research_queue(
+    _write_scout_handoff(
         tmp_path,
         {
             "run_id": f"{now.date().isoformat()}-090000-manual",
@@ -1026,12 +1026,12 @@ def test_mission_control_endpoint_returns_end_to_end_stages(tmp_path: Path):
         ],
     )
     write_json_locked(
-        date_dir / "shortlist_top20.json",
-        {"candidates": [{"symbol": "NVDA"}], "event_triggered": False},
+        date_dir / "scout_ticker_summary.json",
+        {"date": as_of_date, "total_mentions": 1, "unique_ticker_count": 1},
     )
     write_json_locked(
-        date_dir / "research_queue.json",
-        {"items": [{"symbol": "NVDA"}]},
+        date_dir / "final_dealflow_tickers.json",
+        {"run_id": f"{as_of_date}-manual", "date": as_of_date, "tickers": ["NVDA"]},
     )
     write_json_locked(
         date_dir / "learning_status.json",
@@ -1098,7 +1098,7 @@ def test_scout_inventory_contains_manual_and_auto_scouts(tmp_path: Path):
     payload = response.json()
     scout_ids = {row["scout_id"] for row in payload["scouts"]}
     assert payload["as_of_date"] == as_of_date
-    assert {"x_feed_manual", "macro_prompt", "earnings_options_prompt", "scenario_compiler"}.issubset(scout_ids)
+    assert {"x_feed_manual", "earnings_options_prompt", "scenario_compiler"}.issubset(scout_ids)
 
 
 def test_scout_prompt_endpoint_supports_x_feed_pass_selection(tmp_path: Path):
@@ -1118,63 +1118,3 @@ def test_unknown_scout_returns_404(tmp_path: Path):
     response = client.get("/ops/scouts/not_a_real_scout?date=2026-03-11")
     assert response.status_code == 404
 
-
-def test_macro_scout_ingest_writes_cache_to_configured_dealflow_root(tmp_path: Path):
-    config = _config(tmp_path)
-    as_of_date = "2026-03-11"
-    dimensions = {
-        name: {
-            "signal": "stable",
-            "current_value": "n/a",
-            "trend": "flat",
-            "rationale": "integration test payload",
-            "sources_cited": ["test"],
-        }
-        for name in (
-            "fed_funds_and_guidance",
-            "inflation_trajectory",
-            "yield_curve_shape",
-            "usd_strength",
-            "credit_conditions",
-            "commodity_cycle",
-            "labor_market",
-            "fiscal_regulatory",
-        )
-    }
-    sectors = {
-        name: {"score": 55, "rationale": "integration test"}
-        for name in (
-            "Technology",
-            "Healthcare",
-            "Financials",
-            "Energy",
-            "Industrials",
-            "Consumer Discretionary",
-            "Consumer Staples",
-            "Materials",
-            "Communication Services",
-            "Real Estate",
-            "Utilities",
-        )
-    }
-    raw_payload = {
-        "regime": "mid_cycle",
-        "summary": "Macro is balanced.",
-        "sources_cited": ["test"],
-        "dimensions": dimensions,
-        "sectors": sectors,
-    }
-
-    client = TestClient(create_app(config))
-    response = client.post(
-        "/ops/scouts/macro_prompt/ingest",
-        json={
-            "as_of_date": as_of_date,
-            "raw_payload": json.dumps(raw_payload),
-        },
-    )
-    assert response.status_code == 200
-    payload = response.json()
-    assert payload["status"] == "SAVED"
-    cache_path = tmp_path / "deal_flow" / f"macro_cache_{as_of_date}.json"
-    assert cache_path.exists()

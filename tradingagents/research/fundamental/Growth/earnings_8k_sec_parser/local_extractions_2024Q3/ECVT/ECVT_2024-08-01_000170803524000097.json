@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ECVT",
+    "cik": "1708035",
+    "event_date": "2024-08-01",
+    "event_accession": "0001708035-24-000097",
+    "primary_8k_doc": "ecvt-20240801.htm",
+    "exhibit_docs": [
+      "ex991-ecvt2q24earningsrele.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECVT_000170803524000097_ecvt-20240801.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECVT_000170803524000097_ex991-ecvt2q24earningsrele.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ECVT",
+    "cik": "1708035",
+    "entity_name": "Ecovyst Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "160874000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-03",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-1471000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-03",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1837751000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-03",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-33570000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-03",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-18698000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-03",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "4114000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-03",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.009144",
+    "operating_cash_flow_to_revenue": "0.025573",
+    "assets_to_revenue": "11.423543",
+    "financing_cash_flow_to_revenue": "-0.208673",
+    "investing_cash_flow_to_revenue": "-0.116228"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $182.",
+      "sales of advanced silicas increased compared to the second quarter of 2023.",
+      "sales of catalyst materials used in sustainable fuel production and emission control applications.",
+      "sales of virgin sulfuric acid increased compared to the second quarter of 2023.",
+      "sales were $153.",
+      "sales of niche custom catalysts and functionalized silicas."
+    ],
+    "guidance_evidence": [
+      "guidance.",
+      "guidance to reflect anticipated softening of demand in sustainable fuel production and emission control end uses and more cautious outlook for industrial demand for virgin sulfuric acid for the balance of 2024.",
+      "Outlook “For the second half of 2024 we expect demand for regeneration services, treatment services and catalyst activation to remain positive.",
+      "outlook given evolving industry trends in 2024.",
+      "guidance for full-year 2024 Adjusted EBITDA to a range of $230 million to $245 million.",
+      "guidance for third quarter 2024 is as follows: ▪ Q3 2024 Adjusted EBITDA 1 of $58 million to $65 million ▪ Q3 2024 Adjusted Net Income 1 of $14 million to $21 million, with Adjusted Diluted Income per share of $0."
+    ],
+    "wave_or_demand_evidence": [
+      "demand in sustainable fuel production and emission control end uses and more cautious outlook for industrial demand for virgin sulfuric acid for the balance of 2024.",
+      "demand for our regeneration services and positive demand fundamentals resulting in higher sales volume for virgin sulfuric acid compared to the second quarter of 2023.",
+      "demand in Ecoservices and Advanced Silicas.",
+      "demand for higher-octane premium fuels used in high compression, more fuel-efficient engines have contributed to high utilization rates for our customers’ alkylation units.",
+      "demand for our regeneration services and we expect that refinery utilization will remain high in the second half of 2024.",
+      "demand in a wide range of industrial applications."
+    ],
+    "warning_or_risk_evidence": [
+      "weaker spot market demand for virgin acid.",
+      "delay in implementation of Euro7 for heavy-duty diesel vehicles has also impacted sales, with sales of heavy-duty vehicles expected to be down 15% to 20% year-over-year.",
+      "charges and costs.",
+      "shortfall recorded as a discrete item.",
+      "decreased primarily due to lower sales of catalyst materials used in sustainable fuel production and emission control applications.",
+      "headwinds in the second half of 2024 that could lead to lower industrial demand and a weaker spot market demand for virgin acid."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 182.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-02",
+    "entry_open": "7.630000",
+    "return_10d_pct": "-13.3683",
+    "return_20d_pct": "-12.3198",
+    "return_30d_pct": "-10.2228",
+    "return_60d_pct": "-11.7955",
+    "return_90d_pct": "-12.7130"
+  },
+  "text_stats": {
+    "primary_text_len": 3493,
+    "exhibit_text_len": 40294,
+    "combined_text_len": 43789
+  }
+}

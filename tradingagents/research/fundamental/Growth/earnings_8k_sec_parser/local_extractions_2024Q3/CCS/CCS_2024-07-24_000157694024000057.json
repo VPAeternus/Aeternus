@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "CCS",
+    "cik": "1576940",
+    "event_date": "2024-07-24",
+    "event_accession": "0001576940-24-000057",
+    "primary_8k_doc": "ccs-20240722x8k.htm",
+    "exhibit_docs": [
+      "ccs-20240722xex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CCS_000157694024000057_ccs-20240722x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/CCS_000157694024000057_ccs-20240722xex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "CCS",
+    "cik": "1576940",
+    "entity_name": "Century Communities, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "752990000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "33311000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4139362000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-58282000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-20936000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "191334000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.044238",
+    "operating_cash_flow_to_revenue": "0.254099",
+    "assets_to_revenue": "5.497234",
+    "financing_cash_flow_to_revenue": "-0.077401",
+    "investing_cash_flow_to_revenue": "-0.027804"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues of $1.",
+      "revenues of $1.",
+      "revenues were $1.",
+      "revenues was 12.",
+      "Net Income Increased 63% YoY to $83.",
+      "Net income of $83."
+    ],
+    "guidance_evidence": [
+      "Guidance for Home Sales Revenues and Deliveries - - Second Quarter Net Income Increased 63% YoY to $83.",
+      "guidance for home deliveries to be in the range of 10,700 to 11,300 homes and our home sales revenues to be in the range of $4.",
+      "guidance” and “outlook” and other similar expressions that predict or indicate future events or trends or that are not statements of historical matters.",
+      "guidance for 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "demand for affordable new homes in the second quarter, with our net new contracts of 2,780 homes increasing by 20% versus the prior year quarter,” said Dale Francescon, Chairman and Co-Chief Executive Officer.",
+      "backlog, representing $754.",
+      "backlog dollar value.",
+      "orders, deliveries and community count through the first half of the year, we have increased our full year 2024 guidance for home deliveries to be in the range of 10,700 to 11,300 homes and our home sales revenues to be in the range of $4.",
+      "customers with A HOME FOR EVERY DREAM®.",
+      "Backlog ﻿ (dollars in thousands) ﻿ ﻿ ﻿ As of June 30, ﻿ 2024 2023 % Change ﻿ Homes Dollar Value Average Sales Price Homes Dollar Value Average Sales Price Homes Dollar Value Average Sales Price West 313 $ 213,931 $ 683."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory of 78,097 increased by 35% over the prior year with the higher lot count driven by gains in our controlled lots, which accounted for 58% of our total lots at the end of the second quarter.",
+      "inventory impairment, was $ 85.",
+      "inventory impairment and purchase accounting, was 24.",
+      "Inventory ﻿ ﻿ ﻿ ﻿ As of June 30, ﻿ 2024 2023 % Change ﻿ ﻿ Owned Controlled Total Owned Controlled Total Owned Controlled Total ﻿ West 4,434 3,665 8,099 4,207 1,867 6,074 5.",
+      "inventory, if applicable, and (vi) impairment on other investments, if applicable, less adjusted income tax expense, calculated using our estimated annual effective tax rate after discrete items for the applicable period.",
+      "inventory impairment , indebtedness , and acquisitions have on homebuilding gross margin and permits the Company’s stockholders to make better comparisons with the Company’s competitors, who adjust gross margins in a similar fashion."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 83.7,
+    "quarter_revenue_yoy_pct": 63,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-25",
+    "entry_open": "96.620003",
+    "return_10d_pct": "-4.2331",
+    "return_20d_pct": "-5.0300",
+    "return_30d_pct": "5.6717",
+    "return_60d_pct": "6.5721",
+    "return_90d_pct": "-5.3095"
+  },
+  "text_stats": {
+    "primary_text_len": 7599,
+    "exhibit_text_len": 27610,
+    "combined_text_len": 35211
+  }
+}

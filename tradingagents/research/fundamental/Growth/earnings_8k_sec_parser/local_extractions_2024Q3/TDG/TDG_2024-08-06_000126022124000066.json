@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TDG",
+    "cik": "1260221",
+    "event_date": "2024-08-06",
+    "event_accession": "0001260221-24-000066",
+    "primary_8k_doc": "tdg-20240806.htm",
+    "exhibit_docs": [
+      "exhibit991tdg2024q3earning.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TDG_000126022124000066_tdg-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TDG_000126022124000066_exhibit991tdg2024q3earning.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TDG",
+    "cik": "1260221",
+    "entity_name": "TransDigm Group Incorporated",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2989000000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-07",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-04-01",
+    "net_income_value": "228000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-07",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-12-31",
+    "assets_value": "19970000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-07",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "1068000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-07",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-04-01",
+    "investing_cash_flow_value": "-76000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-07",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-04-01",
+    "operating_cash_flow_value": "507000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-07",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-04-01",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.07628",
+    "operating_cash_flow_to_revenue": "0.169622",
+    "assets_to_revenue": "6.681164",
+    "financing_cash_flow_to_revenue": "0.35731",
+    "investing_cash_flow_to_revenue": "-0.025427"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $2,046 million, up 17% from $1,744 million in the prior year's quarter; • Net income of $461 million, up 31% from the prior year's quarter; • Earnings per share of $7.",
+      "net sales was 14.",
+      "Net income of $461 million, up 31% from the prior year's quarter; • Earnings per share of $7.",
+      "earnings per share of $9.",
+      "Net income for the quarter increased $109 million, or 31.",
+      "net income primarily reflects the increase in net sales described above and the application of our value-driven operating strategy."
+    ],
+    "guidance_evidence": [
+      "guidance to reflect TransDigm's continued strong performance as well as to include the recent acquisitions of SEI Industries, the CPI Electron Device Business and Raptor Scientific.",
+      "Outlook Mr.",
+      "guidance primarily to reflect our strong third quarter results and current expectations for the remainder of the fiscal year, as well as to include the recent acquisitions of SEI Industries, the CPI Electron Device Business and Raptor Scientific.",
+      "guidance for fiscal 2024 and to see further progression in our primary end markets.",
+      "guidance to be as follows: • Net sales are anticipated to be in the range of $7,870 million to $7,930 million compared with $6,585 million in fiscal 2023, an increase of 20.",
+      "guidance); • Net income is anticipated to be in the range of $1,632 million to $1,678 million compared with $1,299 million in fiscal 2023, an increase of 27."
+    ],
+    "wave_or_demand_evidence": [
+      "customers; the United States (“U.",
+      "backlog amortization 2 2 5 4 Tax adjustment (1) (38) (25) (108) (67) Adjusted net income $ 521 $ 414 $ 1,396 $ 1,017 Adjusted diluted earnings per share under the two-class method $ 9.",
+      "aircraft components, today reported results for the third quarter ended June 29, 2024.",
+      "ain focused on our operating strategy, value drivers and effectively managing our cost structure.",
+      "Power Industries (\"CPI\").",
+      "ainder of the fiscal year, as well as to include the recent acquisitions of SEI Industries, the CPI Electron Device Business and Raptor Scientific."
+    ],
+    "warning_or_risk_evidence": [
+      "charges incurred in connection with TransDigm Group's stock incentive or deferred compensation plans, foreign currency gains and losses, acquisition-integration costs, acquisition transaction-related expenses, and refinancing costs.",
+      "losses, acquisition-integration costs, acquisition transaction-related expenses, and refinancing costs.",
+      "uncertainties that could cause TransDigm Group’s actual results to differ materially from those expressed or implied in any forward-looking statements made by, or on behalf of, TransDigm Group.",
+      "losses, payroll withholding taxes related to dividend equivalent payments and stock option exercises, non-service related pension costs, deferred compensation payments and other miscellaneous (income) expense."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2046,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "1250.920044",
+    "return_10d_pct": "4.5822",
+    "return_20d_pct": "6.0204",
+    "return_30d_pct": "3.4575",
+    "return_60d_pct": "8.4442",
+    "return_90d_pct": "6.9293"
+  },
+  "text_stats": {
+    "primary_text_len": 4222,
+    "exhibit_text_len": 30773,
+    "combined_text_len": 34997
+  }
+}

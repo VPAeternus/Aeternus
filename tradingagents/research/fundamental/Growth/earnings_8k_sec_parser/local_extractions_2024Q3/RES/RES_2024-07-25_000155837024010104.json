@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "RES",
+    "cik": "742278",
+    "event_date": "2024-07-25",
+    "event_accession": "0001558370-24-010104",
+    "primary_8k_doc": "res-20240725x8k.htm",
+    "exhibit_docs": [
+      "res-20240725xex99.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RES_000155837024010104_res-20240725x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/RES_000155837024010104_res-20240725xex99.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "RES",
+    "cik": "742278",
+    "entity_name": "RPC, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "436334000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2019-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2018-03-31",
+    "net_income_value": "71524000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1187830000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "-20028000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-61015000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "132523000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.16392",
+    "operating_cash_flow_to_revenue": "0.303719",
+    "assets_to_revenue": "2.722295",
+    "financing_cash_flow_to_revenue": "-0.045901",
+    "investing_cash_flow_to_revenue": "-0.139836"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenues decreased 4% sequentially to $364.",
+      "Revenues were $364.",
+      "revenues decreased primarily due to lower asset utilization in a highly competitive marketplace, with softness in the Company’s spot and semi-dedicated customer base.",
+      "Revenues were $341.",
+      "Revenues were $22.",
+      "net income, adjusted earnings per share (diluted), EBITDA and adjusted EBITDA, adjusted EBITDA margin, and free cash flow are reconciled to the most comparable GAAP measures in the appendices of this earnings release."
+    ],
+    "guidance_evidence": [
+      "expected include the following: the price of oil and natural gas and overall performance of the U.",
+      "forecasts, estimates, and expectations are contained in RPC’s Form 10-K for the year ended December 31, 2023."
+    ],
+    "wave_or_demand_evidence": [
+      "demand and margin improvement across most of the Company’s key service lines, while pressure pumping challenges persisted ● The Company remained debt-free and paid $8.",
+      "demand from E&P customers.",
+      "customer base.",
+      "customer’s well.",
+      "customer use or services to assist customer operations, including rental tools, and pipe inspection services and storage.",
+      "ailable in the tables at the end of this earnings release."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, before taxes ​ ​ — ​ ​ — ​ ​ 0.",
+      "charges ​ ​ — ​ ​ — ​ ​ 0.",
+      "decreased 4% sequentially to $364.",
+      "headwind has been exacerbated by frac fleets from gassy basins moving into the Permian over the past year and efficiency gains that are consistently adding pump hour capacity to the industry.",
+      "declined 17%, while all other service lines combined increased 8%.",
+      "decreased primarily due to lower asset utilization in a highly competitive marketplace, with softness in the Company’s spot and semi-dedicated customer base."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 364.2,
+    "quarter_revenue_yoy_pct": -4,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "6.920000",
+    "return_10d_pct": "-5.6358",
+    "return_20d_pct": "-9.2486",
+    "return_30d_pct": "-6.7919",
+    "return_60d_pct": "-3.9017",
+    "return_90d_pct": "-13.2948"
+  },
+  "text_stats": {
+    "primary_text_len": 2873,
+    "exhibit_text_len": 24115,
+    "combined_text_len": 26990
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MNRO",
+    "cik": "876427",
+    "event_date": "2024-07-31",
+    "event_accession": "0001193125-24-189498",
+    "primary_8k_doc": "d284523d8k.htm",
+    "exhibit_docs": [
+      "d284523dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MNRO_000119312524189498_d284523d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MNRO_000119312524189498_d284523dex991.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MNRO",
+    "cik": "876427",
+    "entity_name": "MONRO, INC.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1359328000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-28",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-26",
+    "net_income_value": "61568000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-28",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-26",
+    "assets_value": "1776877000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-28",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-25",
+    "financing_cash_flow_value": "-85970000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-28",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-26",
+    "investing_cash_flow_value": "-109801000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-28",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-26",
+    "operating_cash_flow_value": "173759000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-28",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-26",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.045293",
+    "operating_cash_flow_to_revenue": "0.127827",
+    "assets_to_revenue": "1.307173",
+    "financing_cash_flow_to_revenue": "-0.063244",
+    "investing_cash_flow_to_revenue": "-0.080776"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales decreased 9.",
+      "sales of 0.",
+      "sales decreased 6% for batteries, 8% for tires, 9% for alignments, 10% for maintenance services, 13% for brakes, and 15% for front end/shocks compared to the prior year period.",
+      "Gross Margin Expanded 220 Basis Points  First Quarter Diluted EPS of $.",
+      "EPS1 of $.",
+      "EPS is a non-GAAP measure."
+    ],
+    "guidance_evidence": [
+      "guidance at this time but will provide perspective on its expectations for the fiscal second quarter as well as the full year of fiscal 2025 during its earnings conference call."
+    ],
+    "wave_or_demand_evidence": [
+      "customers the professionalism and high-quality service they expect from a national retailer, with the convenience and trust of a neighborhood garage.",
+      "customers back on the road safely.",
+      "air and tire services, today announced financial results for its first quarter ended June 29, 2024.",
+      "aintenance services, 13% for brakes, and 15% for front end/shocks compared to the prior year period.",
+      "ails regarding excluded items in the first quarters of fiscal 2025 and 2024.",
+      "aid Mike Broderick, President and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment charges, corporate headquarters relocation costs, and items related to store closings.",
+      "decreased 10.",
+      "decreased 9.",
+      "decreased 6% for batteries, 8% for tires, 9% for alignments, 10% for maintenance services, 13% for brakes, and 15% for front end/shocks compared to the prior year period.",
+      "decrease on a dollar basis was principally due to lower store direct costs compared to the prior year period.",
+      "decrease in weighted average debt."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "d284523dex991.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "ImageElement",
+      "text": "200 Holleder Parkway, Rochester, New York 14615"
+    },
+    {
+      "type": "TextElement",
+      "text": "CONTACT: Investors and Media: Felix Veksler Senior Director, Investor Relations ir@monro.com"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "MONRO, INC. ANNOUNCES FIRST QUARTER FISCAL 2025 FINANCIAL RESULTS"
+    },
+    {
+      "type": "TextElement",
+      "text": " First Quarter Gross Margin Expanded 220 Basis Points  First Quarter Diluted EPS of $.19; Adjusted Diluted EPS1 of $.22  Generated Cash from Operating Activities of $26 Million  Distributed First Quarter Fiscal 2025 Cash Dividend of $.28 per Share  Released Fourth Annual Environmental, Social & Governance (ESG) Report ROCHESTER, N.Y.  July 31, 2024  Monro, Inc. (Nasdaq: MNRO), a leading provider of automotive undercar repair and tire services, today announced financial results for its first quarter ended June 29, 2024. First Quarter Results Sales for the first quarter of the fiscal year ending March 29, 2025 (fiscal 2025) decreased 10.3% to $293.2 million, as compared to $327.0 million for the first quarter of the fiscal year ended March 30, 2024 (fiscal 2024). Comparable store sales decreased 9.9%, as compared to an increase in comparable store sales of 0.5% in the prior year period. Comparable store sales decreased 6% for batteries, 8% for tires, 9% for alignments, 10% for maintenance services, 13% for brakes, and 15% for front end/shocks compared to the prior year period. Please refer to the Comparable Store Sales section below for a discussion of how the Company defines comparable store sales. Gross margin increased 220 basis points compared to the prior year period, primarily resulting from lower technician labor costs as a percentage of sales and lower material costs as a percentage of sales, which were partially offset by higher fixed occupancy costs as a percentage of sales. 1 Adjusted diluted EPS is a non-GAAP measure. Please refer to the Non-GAAP Financial Measures section below for a discussion of this non-GAAP measure."
+    },
+    {
+      "type": "TextElement",
+      "text": "Total operating expenses for the first quarter of fiscal 2025 were $95.9 million, or 32.7% of sales, as compared to $97.0 million, or 29.7% of sales in the prior year period. The decrease on a dollar basis was principally due to lower store direct costs compared to the prior year period. Operating income for the first quarter of fiscal 2025 was $13.2 million, or 4.5% of sales, as compared to $17.3 million, or 5.3% of sales in the prior year period. Interest expense was $5.1 million for the first quarter of fiscal 2025, as compared to $5.2 million for the first quarter of fiscal 2024, principally due to a decrease in weighted average debt. Income tax expense in the first quarter of fiscal 2025 was $2.3 million, or an effective tax rate of 28.5%, compared to $3.4 million, or an effective tax rate of 27.6% in the prior year period. Net income for the first quarter of fiscal 2025 was $5.9 million, as compared to $8.8 million in the same period of the prior year. Diluted earnings per share for the first quarter of fiscal 2025 was $.19. This compares to $.28 in the first quarter of fiscal 2024. Adjusted diluted earnings per share, a non-GAAP measure, for the first quarter of fiscal 2025 was $.22. This compares to adjusted diluted earnings per share of $.31 in the first quarter of fiscal 2024. Please refer to the reconciliation of adjusted diluted earnings per share in the table below for details regarding excluded items in the first quarters of fiscal 2025 and 2024. Please refer to the Non-GAAP Financial Measures section below for a discussion of this non-GAAP measure. During the first quarter of fiscal 2025, the Company closed 4 stores. Monro ended the quarter with 1,284 company-operated stores and 51 franchised locations. We drove a significant acceleration in our comparable store sales trends as the first quarter progressed. Importantly, we turned the corner in our tire category with a return to growth in units in the month of June, as we continued to leverage the strength of our manufacturer-funded promotions. The combination of our ConfiDrive digital courtesy inspection process, service coupon and oil change offer allowed us to drive growth in both battery units and sales dollars in the month of June as well as an improvement in our higher-margin service categories as the quarter progressed. Our gross margin expansion in the quarter represents another major step toward restoring our gross margins back to pre-COVID levels, said Mike Broderick, President and Chief Executive Officer. Broderick continued, We are confident that we have begun to see our recently implemented initiatives take hold and this will enable us to achieve our second quarter objectives. Strong Financial Position During the first quarter of fiscal 2025, the Company generated operating cash flow of $26 million. As of June 29, 2024, the Company had total liquidity of $477 million. First Quarter Fiscal 2025 Cash Dividend On June 18, 2024, the Company paid a cash dividend for the first quarter of fiscal 2025 of $.28 per share. Environmental, Social & Governance (ESG) Monro recently released its fourth annual ESG Report, which covers fiscal year 2024. The report highlights the actions Monro is taking every day to create an inclusive and thriving culture for its teammates, deliver world class service for its guests, positively impact the communities where it operates, and make sustainable decisions for the environment. The report is available on the Companys corporate website at corporate.monro.com/esg/default.aspx. Company Expectations Monro is not providing fiscal 2025 financial guidance at this time but will provide perspective on its expectations for the fiscal second quarter as well as the full year of fiscal 2025 during its earnings conference call. Earnings Conference Call and Webcast The Company will host a conference call and audio webcast on Wednesday, July 31, 2024 at 8:30 a.m. Eastern Time. The conference call may be accessed by dialing 1-833-470-1428 and using the required access code of 425992. A replay will be available approximately two hours after the recording through Wednesday, August 14, 2024 and can be accessed by dialing 1-866-813-9403 and using the required access code of 179581. A replay can also be accessed via audio webcast at the Investors section of the Companys website, located at corporate.monro.com/investors. About Monro, Inc. Monro, Inc. (NASDAQ: MNRO) is one of the nations leading automotive service and tire providers, delivering best-in-class auto care to communities across the country, from oil changes, tires and parts installation, to the most complex vehicle repairs. With a growing market share and a focus on sustainable growth, the Company generated almost $1.3 billion in sales in fiscal 2024 and continues to expand its national presence through strategic acquisitions and the opening of newly constructed stores. Across approximately 1,300 stores and 9,000 service bays nationwide, Monro brings customers the professionalism and high-quality service they expect from a national retailer, with the convenience and trust of a neighborhood garage. Monros highly trained teammates and certified technicians bring together hands-on experience and state-of-the-art technology to diagnose and address automotive needs every day to get customers back on the road safely. For more information, please visit corporate.monro.com. Cautionary Note Regarding Forward-Looking Statements The statements contained in this press release that are not historical facts may contain statements of future expectations and other forward-looking statements made pursuant to the Safe Harbor provisions of the Private Securities Litigation Reform Act of 1995. Forward-looking statements can be identified by such words and phrases as expect, estimate, intend, may, anticipate, believe, could, focus, will, and other similar words or phrases. Forward-looking statements are subject to risks, uncertainties and other important factors that could cause actual results to differ materially from those expressed. These factors include, but are not necessarily limited to product demand, advances in automotive technologies including adoption of electric vehicle technology, our dependence on third parties for certain inventory, dependence on and competition within the primary markets in which the Companys stores are located, the effect of general business or economic and geopolitical conditions on the Companys business, including consumer spending levels, inflation, and unemployment, seasonality, our ability to service our debt obligations and comply with the terms of our credit agreement, changes in the U.S. trade environment, including the impact of tariffs on products imported from China, the impact of competitive services and pricing, product development, parts supply restraints or difficulties, the impact of weather trends and natural disasters, industry regulation, risks relating to leverage and debt service (including sensitivity to fluctuations in interest rates), continued availability of capital resources and financing, risks relating to protection of customer and employee personal data, risks relating to litigation, risks relating to integration of acquired businesses and other factors set forth elsewhere herein and in the Companys Securities and Exchange Commission filings, including the Companys annual report on Form 10-K for the fiscal year ended March 30, 2024. Except as required by law, the Company does not undertake and specifically disclaims any obligation to update any forward-looking statement to reflect the occurrence of anticipated or unanticipated events or circumstances after the date of such statements. Non-GAAP Financial Measures In addition to reporting diluted earnings per share (EPS), which is a generally accepted accounting principles (GAAP) measure, this press release includes adjusted diluted EPS, which is a non-GAAP financial measure. The Company has included a reconciliation from adjusted diluted EPS to its most directly comparable GAAP measure, diluted EPS. Management views this non-GAAP financial measure as a way to better assess comparability between periods because management believes the non-GAAP financial measure shows the Companys core business operations while excluding certain non-recurring items such as costs related to shareholder matters from the Companys equity capital structure recapitalization, transition costs related to the Companys back-office optimization, store impairment charges, corporate headquarters relocation costs, and items related to store closings. This non-GAAP financial measure is not intended to represent, and should not be considered more meaningful than, or as an alternative to, its most directly comparable GAAP measure. This non-GAAP financial measure may be different from similarly titled non-GAAP financial measures used by other companies. Comparable Store Sales The Company defines comparable store sales as sales for locations that have been opened or owned at least one full fiscal year. The Company believes this period is generally required for new store sales levels to begin to normalize. Management uses comparable store sales to assess the operating performance of the Companys stores and believes the metric is useful to investors because the Companys overall results are dependent upon the results of its stores. Source: Monro, Inc. MNRO-Fin ###"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        3,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "200 Holleder Parkway, Rochester, New York 14615"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        5,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "CONTACT:",
+          "",
+          "Investors and Media: Felix Veksler"
+        ],
+        [
+          "",
+          "",
+          "Senior Director, Investor Relations"
+        ],
+        [
+          "",
+          "",
+          "ir@monro.com"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "First Quarter Gross Margin Expanded 220 Basis Points"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "First Quarter Diluted EPS of $.19; Adjusted Diluted EPS1 of $.22"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Generated Cash from Operating Activities of $26 Million"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Distributed First Quarter Fiscal 2025 Cash Dividend of $.28 per Share"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        4
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Released Fourth Annual Environmental, Social & Governance (ESG) Report"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "1",
+          "Adjusted diluted EPS is a non-GAAP measure. Please refer to the Non-GAAP Financial Measures section below for a discussion of this non-GAAP measure."
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 97.0,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "sales, as compared to $97.0 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "30.950001",
+    "return_10d_pct": "-16.6721",
+    "return_20d_pct": "-11.8901",
+    "return_30d_pct": "-15.1858",
+    "return_60d_pct": "-6.7528",
+    "return_90d_pct": "-10.4039"
+  },
+  "text_stats": {
+    "primary_text_len": 3295,
+    "exhibit_text_len": 11439,
+    "combined_text_len": 14736,
+    "semantic_text_len": 11435,
+    "table_count": 8,
+    "semantic_parse_status": "sec_parser"
+  }
+}

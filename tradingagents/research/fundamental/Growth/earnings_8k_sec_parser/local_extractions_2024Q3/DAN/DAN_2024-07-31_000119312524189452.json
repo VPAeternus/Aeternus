@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "DAN",
+    "cik": "26780",
+    "event_date": "2024-07-31",
+    "event_accession": "0001193125-24-189452",
+    "primary_8k_doc": "d788827d8k.htm",
+    "exhibit_docs": [
+      "d788827dex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DAN_000119312524189452_d788827d8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/DAN_000119312524189452_d788827dex991.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "DAN",
+    "cik": "26780",
+    "entity_name": "DANA Inc",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2644000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "28000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "7965000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "255000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-118000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-170000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.01059",
+    "operating_cash_flow_to_revenue": "-0.064297",
+    "assets_to_revenue": "3.012481",
+    "financing_cash_flow_to_revenue": "0.096445",
+    "investing_cash_flow_to_revenue": "-0.044629"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Sales of $2.",
+      "Sales of $10.",
+      "sales of $10.",
+      "sales offset by investment in new program development Adjusted EBITDA § Announced divestiture of non- ~$145M core hydraulics business.",
+      "Net income of $16 million  Adjusted EBITDA of $ 244 million, an increase of $1 million over last year  Adjusted EBITDA margin of 8.",
+      "Net income attributable to Dana was $16 million, or $0."
+    ],
+    "guidance_evidence": [
+      "Guidance  Sales of $2.",
+      "guidance increased to $100 million MAUMEE, Ohio, July 31, 2024  Dana Incorporated (NYSE: DAN) today announced financial results for the second quarter of 2024.",
+      "guidance for Adjusted EBITDA, while raising profit margin and again increasing the free-cash-flow range, said Timothy Kraus, Senior Vice President and Chief Financial Officer.",
+      "outlook to the most comparable GAAP measures of net income (loss) and diluted EPS.",
+      "guidance.",
+      "outlook Lower EV Sales § Company-wide efficiency ~$925M +$80M improvements drive higher ~2% ± $50M Adjusted EBITDA margins § YOY free cash flow +10 bps +60 bps improvement driven by higher ~8."
+    ],
+    "wave_or_demand_evidence": [
+      "demand volatility as we support internal combustion, hybrid, and electric-vehicle propulsion technologies across all mobility markets.",
+      "demand for electric vehicles and in some of our traditional markets, Dana is maintaining guidance for Adjusted EBITDA, while raising profit margin and again increasing the free-cash-flow range, said Timothy Kraus, Senior Vice President and Chief Financial Officer.",
+      "demand, and lower capital requirements will drive higher free cash flow.",
+      "customer order Adjusted EBITDA 244 243 1 467 447 20 patterns drove higher profitability Margin 8.",
+      "aises Full-Year Free Cash Flow Guidance  Sales of $2.",
+      "aid James Kamsickas, Chairman and Chief Executive Officer."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment, etc.",
+      "charges, amortization expense and other adjustments not related to our core operations (as used in adjusted EBITDA), net of any associated income tax effects.",
+      "impairments and certain income tax adjustments.",
+      "loss on debt extinguishment, pension settlements, divestitures, impairment, etc.",
+      "loss) before income taxes, net income (loss) or other results reported in accordance with GAAP.",
+      "loss) attributable to the parent company, excluding any discrete income tax items, restructuring charges, amortization expense and other adjustments not related to our core operations (as used in adjusted EBITDA), net of any associated income tax effects."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 2740,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "12.860000",
+    "return_10d_pct": "-21.1509",
+    "return_20d_pct": "-15.4743",
+    "return_30d_pct": "-15.4743",
+    "return_60d_pct": "-17.8849",
+    "return_90d_pct": "-34.7589"
+  },
+  "text_stats": {
+    "primary_text_len": 3208,
+    "exhibit_text_len": 47749,
+    "combined_text_len": 50959
+  }
+}

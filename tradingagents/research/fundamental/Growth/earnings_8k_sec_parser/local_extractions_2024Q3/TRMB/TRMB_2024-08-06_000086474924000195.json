@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "TRMB",
+    "cik": "864749",
+    "event_date": "2024-08-06",
+    "event_accession": "0000864749-24-000195",
+    "primary_8k_doc": "trmb-20240806.htm",
+    "exhibit_docs": [
+      "a2024q2-8kex991.htm",
+      "ex991pressrelease2024-09x15.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TRMB_000086474924000195_trmb-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TRMB_000086474924000195_a2024q2-8kex991.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/TRMB_000086474924000195_ex991pressrelease2024-09x15.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "TRMB",
+    "cik": "864749",
+    "entity_name": "Trimble Inc.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3659400000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-02-26",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2021-12-31",
+    "net_income_value": "492700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-02-26",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2021-12-31",
+    "assets_value": "7269000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-02-26",
+    "assets_form": "10-K",
+    "assets_period_end": "2022-12-30",
+    "financing_cash_flow_value": "-447700000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-02-26",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2021-12-31",
+    "investing_cash_flow_value": "-203500000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-02-26",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2021-12-31",
+    "operating_cash_flow_value": "750500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-02-26",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2021-12-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.13464",
+    "operating_cash_flow_to_revenue": "0.205088",
+    "assets_to_revenue": "1.986391",
+    "financing_cash_flow_to_revenue": "-0.122342",
+    "investing_cash_flow_to_revenue": "-0.05561"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $870.",
+      "gross margin, demonstrating continuing business transformation and favorable mix shift • Raising full year guidance for revenue and earnings per share WESTMINSTER, Colo.",
+      "GAAP operating income was $61.",
+      "non-GAAP operating income was $194.",
+      "GAAP net income was $1,316.",
+      "non-GAAP net income was $151."
+    ],
+    "guidance_evidence": [
+      "guidance for revenue and earnings per share WESTMINSTER, Colo.",
+      "guidance.",
+      "guidance, and we are excited to see Trimble innovation continue to transform the way the world works.",
+      "Guidance For the full-year 2024, Trimble expects to report revenue between $3,590 million and $3,670 million, GAAP earnings per share of $6.",
+      "guidance assumes a tax rate of 24.",
+      "guidance assumes a tax rate of 17."
+    ],
+    "wave_or_demand_evidence": [
+      "customer productivity.",
+      "customers' productivity, quality, safety, transparency and sustainability.",
+      "customers, effectively integrate new acquisitions or consummate divestitures in a timely manner, or get the benefits it is expecting from its joint ventures, including with AGCO.",
+      "customer relationships already developed.",
+      "aising full year guidance for revenue and earnings per share WESTMINSTER, Colo.",
+      "aid Rob Painter, Trimble's president and chief executive officer."
+    ],
+    "warning_or_risk_evidence": [
+      "charges not expected to recur; and (ii) transactions that are not meaningful in comparison to our past operating performance or not reflective of ongoing financial results.",
+      "charges and benefits such as net deferred tax impacts resulting from the non-U.",
+      "charges, including foreign currency exchange rate gains/losses related to an acquisition, divestiture gains/losses, and strategic investment gains/losses.",
+      "charges and benefits such as (i) deferred tax impacts from tax amortization relating to a non-U.",
+      "uncertainties.",
+      "loss (270."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 870.8,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "52.060001",
+    "return_10d_pct": "7.3569",
+    "return_20d_pct": "8.7207",
+    "return_30d_pct": "4.0146",
+    "return_60d_pct": "18.1521",
+    "return_90d_pct": "18.3634"
+  },
+  "text_stats": {
+    "primary_text_len": 9594,
+    "exhibit_text_len": 26435,
+    "combined_text_len": 36031
+  }
+}

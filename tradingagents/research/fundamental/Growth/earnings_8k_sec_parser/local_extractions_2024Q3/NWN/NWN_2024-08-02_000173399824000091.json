@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "NWN",
+    "cik": "1733998",
+    "event_date": "2024-08-02",
+    "event_accession": "0001733998-24-000091",
+    "primary_8k_doc": "nwn-20240802.htm",
+    "exhibit_docs": [
+      "a2024q2ex991pressreleasedo.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NWN_000173399824000091_nwn-20240802.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/NWN_000173399824000091_a2024q2ex991pressreleasedo.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "NWN",
+    "cik": "1733998",
+    "entity_name": "NORTHWEST NATURAL HOLDING COMPANY",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "462423000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-06",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "71671000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-06",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4592096000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-06",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "11187000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-06",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-73018000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-06",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "176861000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-06",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.15499",
+    "operating_cash_flow_to_revenue": "0.382466",
+    "assets_to_revenue": "9.93051",
+    "financing_cash_flow_to_revenue": "0.024192",
+    "investing_cash_flow_to_revenue": "-0.157903"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "net income of $1.",
+      "net income of $61.",
+      "net income of $72.",
+      "earnings per share growth rate target of 4% to 6% from 2022 through 2027.",
+      "earnings per share were $2.",
+      "net income decreased $4."
+    ],
+    "guidance_evidence": [
+      "guidance in the range of $2.",
+      "GUIDANCE AND LONG-TERM TARGETS NW Natural Holdings reaffirmed its long-term earnings per share growth rate target of 4% to 6% compounded annually from 2022 through 2027.",
+      "guidance is not in line with that goal primarily due to regulatory lag from our natural gas distribution segment mainly as a result of two factors.",
+      "guidance assumes continued customer growth, average weather conditions, and no significant changes in prevailing regulatory policies, mechanisms, or outcomes, or significant local, state or federal laws, legislation or regulations.",
+      "expected to be effective on Nov.",
+      "expects the timing of the 2024 quarterly distribution of consolidated earnings per share to be the following: • Third quarter to be a loss in the range of -$0."
+    ],
+    "wave_or_demand_evidence": [
+      "customers and a strong pipeline of growth opportunities • Reaffirmed 2024 earnings guidance in the range of $2.",
+      "customer growth and lower operations and maintenance expense from cost savings initiatives.",
+      "customers across Oregon, Idaho and California.",
+      "customers in Oregon and southwest Washington.",
+      "customers, the North Mist gas storage expansion, and renewable natural gas development and procurement for the utility.",
+      "customer growth and the amortization of deferrals."
+    ],
+    "warning_or_risk_evidence": [
+      "loss of $2.",
+      "decreased $4.",
+      "decreased $11.",
+      "loss): Natural Gas Distribution segment $ (2,987) $ (0.",
+      "decreased $2.",
+      "decreased $3."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-05",
+    "entry_open": "39.330002",
+    "return_10d_pct": "-1.7544",
+    "return_20d_pct": "2.4155",
+    "return_30d_pct": "0.9662",
+    "return_60d_pct": "0.4831",
+    "return_90d_pct": "-2.3138"
+  },
+  "text_stats": {
+    "primary_text_len": 10150,
+    "exhibit_text_len": 28652,
+    "combined_text_len": 38804
+  }
+}

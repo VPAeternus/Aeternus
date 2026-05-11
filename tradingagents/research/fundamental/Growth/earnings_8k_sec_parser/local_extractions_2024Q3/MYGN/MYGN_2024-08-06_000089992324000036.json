@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MYGN",
+    "cik": "899923",
+    "event_date": "2024-08-06",
+    "event_accession": "0000899923-24-000036",
+    "primary_8k_doc": "mygn-20240806.htm",
+    "exhibit_docs": [
+      "mygn-xq224earningsreleasex.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MYGN_000089992324000036_mygn-20240806.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MYGN_000089992324000036_mygn-xq224earningsreleasex.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MYGN",
+    "cik": "899923",
+    "entity_name": "MYRIAD GENETICS, INC.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "181200000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-54700000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "1146500000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-4900000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "34600000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-33200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.301876",
+    "operating_cash_flow_to_revenue": "-0.183223",
+    "assets_to_revenue": "6.327263",
+    "financing_cash_flow_to_revenue": "-0.027042",
+    "investing_cash_flow_to_revenue": "0.190949"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $82.",
+      "revenue of $32.",
+      "revenue of $86.",
+      "revenue was $43.",
+      "GAAP earnings per share improved to $(0.",
+      "earnings per share improved to $0."
+    ],
+    "guidance_evidence": [
+      "Guidance and Long-Term Revenue Growth Target to 12% Highlights • Second quarter revenue grew 15% year-over-year to $212 million, driven by Prenatal (25%), Pharmacogenomics (22%), and Hereditary Cancer (19%).",
+      "guidance with full year revenue moving to a range of $835 - $845 million, or an annual growth rate of between 11% and 12%, and increasing adjusted earnings per share (EPS) to a range of $0.",
+      "guidance on business performance for the full-year 2024.",
+      "Guidance\" for a full explanation.",
+      "guidance*: (in millions, except per share amounts) PRIOR FY 2024 CURRENT FY 2024 Expected Year-Over-Year Change Revenue $820 - $840 $835 - $845 11% - 12% Gross margin % 69.",
+      "guidance are provided in accordance with accounting principles generally accepted in the United States (GAAP) and using certain non-GAAP financial measures."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, as we accelerate electronic medical record (EMR) integrations for new customers and make meaningful progress in our Labs of the Future initiative.",
+      "aises 2024 Financial Guidance and Long-Term Revenue Growth Target to 12% Highlights • Second quarter revenue grew 15% year-over-year to $212 million, driven by Prenatal (25%), Pharmacogenomics (22%), and Hereditary Cancer (19%).",
+      "aised its previously issued financial guidance on business performance for the full-year 2024.",
+      "ainability of our organic growth and gives us the confidence to raise our long-term revenue growth target to 12%,” said Paul J.",
+      "ains in prenatal testing.",
+      "ain optimistic about the evolution of our product portfolio as we continue to publish additional clinical validation studies and launch new products."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and loss contingencies, costs related to acquisitions/divestitures and the related amortization, impairment and related charges, and other adjustments.",
+      "impairment of long-lived assets, and share-based compensation expense, and one-time expenses such as expenses from real estate optimization initiatives, transformation initiatives, legal settlements, and divestitures and acquisitions.",
+      "impairment charges 11.",
+      "Inventory 26.",
+      "impairment charges (11.",
+      "charges, net of insurance reimbursement (0."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 212,
+    "quarter_revenue_yoy_pct": 15,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-07",
+    "entry_open": "28.549999",
+    "return_10d_pct": "-1.0158",
+    "return_20d_pct": "-3.6778",
+    "return_30d_pct": "-5.5342",
+    "return_60d_pct": "-8.4413",
+    "return_90d_pct": "-38.3187"
+  },
+  "text_stats": {
+    "primary_text_len": 9340,
+    "exhibit_text_len": 35455,
+    "combined_text_len": 44797
+  }
+}

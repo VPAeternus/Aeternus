@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "BKR",
+    "cik": "1701605",
+    "event_date": "2024-07-25",
+    "event_accession": "0001701605-24-000109",
+    "primary_8k_doc": "bkr-20240725.htm",
+    "exhibit_docs": [
+      "earningsreleaseex991063020.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKR_000170160524000109_bkr-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/BKR_000170160524000109_earningsreleaseex991063020.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "BKR",
+    "cik": "1701605",
+    "entity_name": "Baker Hughes Co",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "5716000000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "576000000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "36945000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-250000000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-229000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "461000000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.10077",
+    "operating_cash_flow_to_revenue": "0.080651",
+    "assets_to_revenue": "6.463436",
+    "financing_cash_flow_to_revenue": "-0.043737",
+    "investing_cash_flow_to_revenue": "-0.040063"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $7.",
+      "revenue of $4,011 million for the second quarter was up 6% sequentially, and up 3% year-over-year.",
+      "revenue was $1,023 million, up 3% sequentially.",
+      "revenue was $2,988 million, an increase of 7% sequentially, driven by volume growth in the Middle East/Asia and Europe/CIS/Sub-Saharan Africa regions.",
+      "revenue of $3,128 million for the quarter increased $691 million, or 28% year-over-year.",
+      "Net income attributable to the Company of $579 million."
+    ],
+    "guidance_evidence": [
+      "guidance by 5% and are confident in our ability to drive margins structurally higher over the coming years,\" said Lorenzo Simonelli, Baker Hughes Chairman and Chief Executive Officer.",
+      "outlook and the results reported in today's earnings announcement.",
+      "outlook and business plans; the business plans of our customers; oil and natural gas market conditions; cost and availability of resources; economic, legal and regulatory conditions, and other matters are only our forecasts regarding these matters.",
+      "expected to support Jubarte incremental field development and increase oil production while reducing operating costs.",
+      "expected to drive optimization and efficiencies.",
+      "expected to enhance gas operations and power CO 2 capture to reduce the carbon intensity at the customer's LNG facility."
+    ],
+    "wave_or_demand_evidence": [
+      "Orders of $7.",
+      "orders.",
+      "orders during the quarter that included a large SONATRACH award for gas-boosting in Algeria's Hassi R'Mel gas field.",
+      "bookings in the Company's history and again underscores the breadth and versatility of our IET portfolio.",
+      "orders, also a record for the Company.",
+      "customers in other regions."
+    ],
+    "warning_or_risk_evidence": [
+      "impairment & other (14) (7) (102) (95 %) 87 % Operating income 833 653 514 28 % 62 % Adjusted operating income* 847 660 631 28 % 34 % Depreciation & amortization 283 283 276 — % 3 % Adjusted EBITDA* $ 1,130 $ 943 $ 907 20 % 25 % * Non-GAAP measure.",
+      "impairment — — 15 Total operating income adjustments 14 7 117 Adjusted operating income (non-GAAP) $ 847 $ 660 $ 631 Table 1a reconciles operating income, which is the directly comparable financial result determined in accordance with GAAP, to adjusted operating income.",
+      "loss on changes in fair value for certain equity investments.",
+      "uncertainties that could cause actual results to differ materially from our forward-looking statements.",
+      "declines in credit availability may have on worldwide economic growth and demand for hydrocarbons; foreign currency exchange fluctuations and changes in the capital markets in locations where we operate; and the impact of government disruptions and sanctions."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 7100,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "36.320000",
+    "return_10d_pct": "-4.9835",
+    "return_20d_pct": "-3.4141",
+    "return_30d_pct": "-2.4504",
+    "return_60d_pct": "0.0551",
+    "return_90d_pct": "1.2665"
+  },
+  "text_stats": {
+    "primary_text_len": 5405,
+    "exhibit_text_len": 32490,
+    "combined_text_len": 37897
+  }
+}

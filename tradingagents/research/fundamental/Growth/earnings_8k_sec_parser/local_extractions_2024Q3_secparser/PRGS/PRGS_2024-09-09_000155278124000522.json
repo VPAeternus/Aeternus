@@ -1,0 +1,290 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "PRGS",
+    "cik": "876167",
+    "event_date": "2024-09-09",
+    "event_accession": "0001552781-24-000522",
+    "primary_8k_doc": "e24386_e99-1.htm",
+    "exhibit_docs": [
+      "e24386_prgs-8k.htm",
+      "exhibit991-q32024earningsr.htm",
+      "prgs-20240924.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PRGS_000155278124000522_e24386_e99-1.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PRGS_000155278124000522_e24386_prgs-8k.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PRGS_000155278124000522_exhibit991-q32024earningsr.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/PRGS_000155278124000522_prgs-20240924.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "PRGS",
+    "cik": "876167",
+    "entity_name": "PROGRESS SOFTWARE CORP /MA",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "164226000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-08",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-02-28",
+    "net_income_value": "23674000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-08",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-02-28",
+    "assets_value": "1602783000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-08",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-11-30",
+    "financing_cash_flow_value": "174798000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-08",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-02-28",
+    "investing_cash_flow_value": "-371068000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-08",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-02-28",
+    "operating_cash_flow_value": "46767000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-08",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-02-28",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.144155",
+    "operating_cash_flow_to_revenue": "0.284772",
+    "assets_to_revenue": "9.759618",
+    "financing_cash_flow_to_revenue": "1.064375",
+    "investing_cash_flow_to_revenue": "-2.259496"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [],
+    "guidance_evidence": [
+      "guidance for the third quarter of 2024."
+    ],
+    "wave_or_demand_evidence": [
+      "Cloud Software Group, Inc.",
+      "ain of the liabilities that collectively comprise ShareFile, a business unit of the Seller, that provides leading collaboration software for document-centric use cases (“ShareFile”).",
+      "aid for with a combination of cash and an existing revolving credit facility.",
+      "aiver of certain customary conditions, including, among other things, the expiration or termination of the applicable waiting period under the Hart-Scott Rodino Antitrust Improvements Act of 1976, as amended.",
+      "ains representations and warranties that the parties made to each other as of specific dates.",
+      "ailable on the Investor Relations page of Progress’ website."
+    ],
+    "warning_or_risk_evidence": [
+      "uncertainties as to whether anticipated synergies will be realized; and uncertainties as to whether ShareFile’s business will be successfully integrated with Progress' business.",
+      "uncertainties associated with Progress' business, please refer to Progress' filings with the Securities and Exchange Commission, including its Annual Report on Form 10-K for the fiscal year ended November 30, 2023."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TextElement",
+      "text": "false 0000876167 PROGRESS SOFTWARE CORP /MA 0000876167 2024-09-09 2024-09-09 iso4217:USD xbrli:shares iso4217:USD xbrli:shares"
+    },
+    {
+      "type": "TitleElement",
+      "text": "UNITED STATES"
+    },
+    {
+      "type": "TitleElement",
+      "text": "SECURITIES AND EXCHANGE COMMISSION"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Washington, D.C. 20549"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FORM 8-K"
+    },
+    {
+      "type": "TitleElement",
+      "text": "CURRENT REPORT"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Pursuant to Section 13 OR 15(d) of the Securities Exchange Act of 1934"
+    },
+    {
+      "type": "TitleElement",
+      "text": "September 9, 2024"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Date of Report (Date of earliest event reported)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Progress Software Corporation"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PROGRESS SOFTWARE CORP /MA"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Exact name of registrant as specified in its charter)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Delaware 0-19417 04-2746201 (State or other jurisdiction of incorporation or organization) (Commission file number) (I.R.S. Employer Identification No.)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "15 Wayside Road, Suite 400"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Burlington, Massachusetts 01803"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Address of principal executive offices, including zip code)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "(781) 280-4000"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Registrant’s telephone number, including area code)"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Not applicable"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(Former name or former address, if changed since last report)"
+    },
+    {
+      "type": "TextElement",
+      "text": "Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:"
+    },
+    {
+      "type": "TableElement",
+      "text": "☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))"
+    },
+    {
+      "type": "TextElement",
+      "text": "Securities registered pursuant to Section 12(b) of the Act:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, $0.01 par value per share PRGS The Nasdaq Stock Market LLC"
+    },
+    {
+      "type": "TextElement",
+      "text": "Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).Emerging growth company ☐If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐ Field: Page; Sequence: 1 Field: /Page"
+    },
+    {
+      "type": "TopSectionTitle",
+      "text": "Item 1.01. Entry into a Material Definitive Agreement."
+    },
+    {
+      "type": "TextElement",
+      "text": "On September 9, 2024, Progress Software Corporation (“Progress”) entered into an Asset Purchase Agreement (the “Purchase Agreement”) with Cloud Software Group, Inc., a Delaware corporation (the “Seller”), pursuant to which Progress has agreed to acquire substantially all of the assets and assume certain of the liabilities that collectively comprise ShareFile, a business unit of the Seller, that provides leading collaboration software for document-centric use cases (“ShareFile”). The transactions contemplated by the Purchase Agreement are collectively referred to as the “Transaction”.At the closing of the Transaction (the “Closing”), Progress will acquire ShareFile for an aggregate purchase price of approximately $875 million, subject to a $25 million working capital credit (the “Purchase Price”). The Purchase Price will be paid for with a combination of cash and an existing revolving credit facility.Each of Progress and the Seller have made customary representations, warranties and covenants in connection with the Transaction. The obligations of Progress and the Seller to consummate the Transaction are subject to the satisfaction or waiver of certain customary conditions, including, among other things, the expiration or termination of the applicable waiting period under the Hart-Scott Rodino Antitrust Improvements Act of 1976, as amended. There is no financing condition to consummate the Transaction. The Purchase Agreement also provides each of Progress and the Seller with customary termination rights.The foregoing descriptions of the Purchase Agreement and the Transaction do not purport to be complete and are qualified in their entirety by reference to the Purchase Agreement, a copy of which is filed with this Current Report on Form 8-K as Exhibit 2.1 and is incorporated herein by reference.The Purchase Agreement contains representations and warranties that the parties made to each other as of specific dates. The assertions embodied in those representations and warranties were made solely for purposes of the Purchase Agreement and may be subject to important qualifications and limitations agreed to by the parties in connection with negotiating the terms of the Purchase Agreement. In addition, such representations and warranties: (i) may not be accurate or complete as of any specified date; (ii) are modified and qualified in important part by the underlying disclosure schedules; (iii) may be subject to a contractual standard of materiality different from those generally applicable to investors; or (iv) may have been used for the purpose of allocating risk among the parties to the Purchase Agreement, rather than establishing matters as facts. Moreover, information concerning the subject matter of the representations and warranties may change after the date of the Purchase Agreement, which subsequent information may or may not be fully reflected in Progress’s public disclosures. For the foregoing reasons, the representations and warranties should not be relied upon as statements of factual information."
+    },
+    {
+      "type": "TextElement",
+      "text": "Item 2.02. Results of Operations and Financial Condition."
+    },
+    {
+      "type": "TextElement",
+      "text": "On September 9, 2024, Progress issued a press release (the “Press Release”), which provided an update on its previously issued guidance for the third quarter of 2024. Progress will discuss full financial results of its third quarter on a conference call on September 24, 2024. The Press Release is being furnished with this Current Report on Form 8-K as Exhibit 99.1 and is incorporated herein by reference.The information set forth in or incorporated by reference into this Item 2.02, including Exhibit 99.1, shall not be deemed to be “filed” for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), or otherwise subject to the liability of that section, and shall not be incorporated by reference into any registration statement or other document filed under the Securities Act of 1933, as amended (the “Securities Act”), or the Exchange Act, except as shall be expressly set forth by specific reference in such filing. Field: Page; Sequence: 1 Field: /Page"
+    },
+    {
+      "type": "TextElement",
+      "text": "Item 7.01. Regulation FD Disclosure."
+    },
+    {
+      "type": "TextElement",
+      "text": "The Press Release also announced the execution of the Purchase Agreement and Progress’ plans to suspend its quarterly cash dividend. The Press Release is being furnished with this Current Report on Form 8-K as Exhibit 99.1 and is incorporated herein by reference.Furnished herewith as Exhibit 99.2 and incorporated into this Item 7.01 by reference is an investor presentation that will be used by Progress in connection with an investor call taking place on September 9, 2024, at 8:00 a.m. Eastern time. An audio recording of the investor call and a copy of the investor presentation will be made available on the Investor Relations page of Progress’ website.The information set forth in or incorporated by reference into this Item 7.01, including Exhibits 99.1 and 99.2, shall not be deemed to be “filed” for purposes of Section 18 of the Exchange Act, or otherwise subject to the liability of that section, and shall not be incorporated by reference into any registration statement or other document filed under the Securities Act, or the Exchange Act, except as shall be expressly set forth by specific reference in such filing.Note Regarding Forward-Looking StatementsThis Current Report on Form 8-K contains statements that are “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended. Progress has identified some of these forward-looking statements with words like “believe,” “may,” “could,” “would,” “might,” “should,” “expect,” “intend,” “plan,” “target,” “anticipate” and “continue,” the negative of these words, other terms of similar meaning or the use of future dates. Forward-looking statements in this Current Report include, but are not limited to, statements regarding Progress’ ability to consummate the Transaction. Risks, uncertainties and other important factors that could cause actual results to differ from those expressed or implied in the forward looking statements include: Progress’ ability to close the Transaction, the expected time of closing or the expected benefits therefore; uncertainties as to the effects of disruption from the acquisition of ShareFile making it more difficult to maintain relationships with employees, licensees, other business partners or governmental entities; other business effects, including the effects of industry, economic or political conditions outside of Progress’ or ShareFile’s control; transaction costs; actual or contingent liabilities; uncertainties as to whether anticipated synergies will be realized; and uncertainties as to whether ShareFile’s business will be successfully integrated with Progress' business. For further information regarding risks and uncertainties associated with Progress' business, please refer to Progress' filings with the Securities and Exchange Commission, including its Annual Report on Form 10-K for the fiscal year ended November 30, 2023. Progress undertakes no obligation to update any forward-looking statements, which speak only as of the date of this Current Report on Form 8-K."
+    },
+    {
+      "type": "TextElement",
+      "text": "Item 9.01. Financial Statements and Exhibits."
+    },
+    {
+      "type": "TextElement",
+      "text": "(d) Exhibits."
+    },
+    {
+      "type": "TableElement",
+      "text": "Exhibit No. Description 2.1 Asset Purchase Agreement, dated as of September 9, 2024, by and between Cloud Software Group, Inc. and Progress Software Corporation* 99.1 Press Release, dated September 9, 2024 99.2 Investor Presentation, dated September 9, 2024 104 Cover Page Interactive Data file (embedded within the Inline XBRL document)"
+    },
+    {
+      "type": "TextElement",
+      "text": "* The schedules to the Purchase Agreement have been omitted from this filing pursuant to Item 601(a)(5) of Regulation S-K. Registrant will furnish copies of such schedules to the Securities and Exchange Commission upon request by the Commission. Field: Page; Sequence: 5 Field: /Page"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Signatures"
+    },
+    {
+      "type": "TextElement",
+      "text": "Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized. Date: September 9, 2024 Progress Software Corporation By: /s/ YUFAN STEPHANIE WANG YuFan Stephanie Wang Chief Legal Officer and Secretary Field: Set; Name: xdx; ID: xdx_08B_extensions eJxFjd0KgkAQhZ/Adxj2OlKXvMjLxCSyCJHodskxlnRHZre/R+ot25RoGBiGc75zhJiJgta6Q4bTqiqhxn7olEOosEVGc0bvyDbbFPyt8KKtY2Xc+P7AjDyDnknmUiovjNa7ttikECVhtAzlAmKZygQOOxF89YxMqxs0TqsOlGngwDSwRqf4NSXU6kmG+tdYdUS2mkwK8Tya5DfIKJawp7t6EF8tlGUmgtk4gSiYboN35U+H5ktC3mHv6+xE/zf4AAirSpA="
+    }
+  ],
+  "tables": [],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 164.226,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": 0,
+    "earnings_torque": 0,
+    "segment_wave_torque": 0,
+    "margin_quality": 0,
+    "warning_penalty": 0,
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-09-10",
+    "entry_open": "56.540001",
+    "return_10d_pct": "1.8571",
+    "return_20d_pct": "19.1546",
+    "return_30d_pct": "15.3520",
+    "return_60d_pct": "20.7641",
+    "return_90d_pct": "21.5246"
+  },
+  "text_stats": {
+    "primary_text_len": 8833,
+    "exhibit_text_len": 10499,
+    "combined_text_len": 19334,
+    "semantic_text_len": 10856,
+    "table_count": 0,
+    "semantic_parse_status": "sec_parser"
+  }
+}

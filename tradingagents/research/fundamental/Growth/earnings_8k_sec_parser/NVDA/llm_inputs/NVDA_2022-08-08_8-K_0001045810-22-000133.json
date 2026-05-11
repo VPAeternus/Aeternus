@@ -1,0 +1,711 @@
+{
+  "task": "Extract earnings facts from this SEC 8-K EX-99.1. Return only JSON matching schema.",
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "metadata": {
+    "ticker": "NVDA",
+    "company": "NVIDIA CORP",
+    "form": "8-K",
+    "items": "2.02,9.01",
+    "accession": "0001045810-22-000133",
+    "sec_filing_date": "2022-08-08",
+    "sec_acceptance_datetime_utc": "2022-08-08T09:16:50.000Z",
+    "sec_report_date_event_date": "2022-08-08",
+    "primary_document": "nvda-20220808.htm",
+    "ex99_1_document": "pressrelease.htm",
+    "sec_filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000133/nvda-20220808.htm",
+    "ex99_1_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000133/pressrelease.htm",
+    "periodic_filing_form": "10-Q",
+    "periodic_filing_date": "2022-08-31"
+  },
+  "output_schema": {
+    "schema_version": "earnings_8k_llm_extraction_v1",
+    "source_method": "",
+    "reported_period": {
+      "period_text": "",
+      "period_end_date": ""
+    },
+    "reported_results": {
+      "revenue_millions": null,
+      "revenue_yoy_pct": null,
+      "revenue_qoq_pct": null,
+      "gross_margin_pct": null,
+      "non_gaap_gross_margin_pct": null,
+      "eps": null,
+      "non_gaap_eps": null
+    },
+    "forward_guidance": {
+      "revenue_millions_midpoint": null,
+      "revenue_low_millions": null,
+      "revenue_high_millions": null,
+      "revenue_growth_yoy_pct": null,
+      "gross_margin_pct": null,
+      "non_gaap_gross_margin_pct": null,
+      "guide_direction": ""
+    },
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "instructions": [
+    "Use only evidence present in the filing text or tables.",
+    "Do not infer Wall Street expectations or external estimates.",
+    "Normalize dollar values to millions.",
+    "If a value is absent, set it to null and list the field in missing_fields.",
+    "Every non-null numeric or qualitative field must be supported by a short evidence quote."
+  ],
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $6.",
+      "revenue was $2.",
+      "revenue was $3.",
+      "gross margin profile is intact.",
+      "Gross margin - GAAPGross margin - non-GAAP65.",
+      "non-GAAP gross margin, operating expenses, other income and expense, and income tax expense."
+    ],
+    "guidance_evidence": [
+      "outlook of $8.",
+      "outlook primarily driven by weaker Gaming revenue•Management to discuss financial results and outlook on Aug.",
+      "Outlook1Q2 FY23 Preliminary ResultsRevenue$8.",
+      "expected to be approximately $6.",
+      "forecasted Gaming revenue.",
+      "expected to persist into the third quarter."
+    ],
+    "wave_or_demand_evidence": [
+      "demand.",
+      "Data Center revenue was $3.",
+      "Data Center revenue, though a record, was somewhat short of the company’s expectations, as it was impacted by supply chain disruptions.",
+      "aid Jensen Huang, founder and CEO of NVIDIA.",
+      "ain focused on the once-in-a-generation opportunity to reinvent computing for the era of AI,” he said.",
+      "ainty,” said Colette Kress, EVP and CFO of NVIDIA."
+    ],
+    "warning_or_risk_evidence": [
+      "Preliminary Financial Results for Second Quarter Fiscal 2023 •Preliminary second quarter revenue of $6.",
+      "Shortfall versus outlook primarily driven by weaker Gaming revenue•Management to discuss financial results and outlook on Aug.",
+      "preliminary financial results for the second quarter ended July 31, 2022.",
+      "weaker than forecasted Gaming revenue.",
+      "shortfall relative to the May revenue outlook of $8.",
+      "charges, primarily for inventory and related reserves, based on revised expectations of future demand."
+    ],
+    "edgartools_context": [
+      "{\"available\": true, \"filing_url\": \"https://www.sec.gov/Archives/edgar/data/1045810/0001045810-22-000133-index.html\", \"text_char_count\": 3940, \"attachments_preview\": \"Attachments Seq Document Description ─────────────────────────────────────────────────────────────────────────────── 1 nvda-20220808.htm FORM 8-K 2 pressrelease.htm PRESS RELEASE 3 nvda-20220808.xsd XBRL TAXONOMY EXTENSION SCHEMA DOCUMENT 4 nvda-20220808_lab.xml XBRL TAXONOMY EXTENSION LABEL LINKBASE DOCUME 5 nvda-20220808_pre.xml XBRL TAXONOMY EXTENSION PRESENTATION LINKBASE 6 R1.htm Document and Entity Information 7 nvda-20220808_htm.xml IDEA: XBRL DOCUMENT 8 Financial_Report.xlsx IDEA: XBRL DOCUMENT 9 Show.js IDEA: XBRL DOCUMENT 10 report.css IDEA: XBRL DOCUMENT 11 FilingSummary.xml IDEA: XBRL DOCUMENT 13 MetaLinks.json IDEA: XBRL DOCUMENT 14 0001045810-22-000133-xb… IDEA: XBRL DOCUMENT\", \"exhibits_preview\": \"Attachments Seq Document Description ─────────────────────────────────────────────────────────────────────────────── 1 nvda-20220808.htm FORM 8-K 2 pressrelease.htm PRESS RELEASE\"}"
+    ]
+  },
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        7,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Q2 FY23 Outlook1",
+          "Q2 FY23 Outlook1",
+          "Q2 FY23 Outlook1",
+          "Q2 FY23 Preliminary Results",
+          "Q2 FY23 Preliminary Results",
+          "Q2 FY23 Preliminary Results"
+        ],
+        [
+          "Revenue",
+          "Revenue",
+          "Revenue",
+          "$8.10 billion, plus or minus 2%",
+          "$8.10 billion, plus or minus 2%",
+          "$8.10 billion, plus or minus 2%",
+          "$6.70 billion",
+          "$6.70 billion",
+          "$6.70 billion"
+        ],
+        [
+          "Gross margin - GAAP Gross margin - non-GAAP",
+          "Gross margin - GAAP Gross margin - non-GAAP",
+          "Gross margin - GAAP Gross margin - non-GAAP",
+          "65.1%, plus or minus 50 bps 67.1%, plus or minus 50 bps",
+          "65.1%, plus or minus 50 bps 67.1%, plus or minus 50 bps",
+          "65.1%, plus or minus 50 bps 67.1%, plus or minus 50 bps",
+          "43.7%, plus or minus 50 bps 46.1%, plus or minus 50 bps",
+          "43.7%, plus or minus 50 bps 46.1%, plus or minus 50 bps",
+          "43.7%, plus or minus 50 bps 46.1%, plus or minus 50 bps"
+        ],
+        [
+          "Operating expenses - GAAP Operating expenses - non-GAAP",
+          "Operating expenses - GAAP Operating expenses - non-GAAP",
+          "Operating expenses - GAAP Operating expenses - non-GAAP",
+          "$2.46 billion $1.75 billion",
+          "$2.46 billion $1.75 billion",
+          "$2.46 billion $1.75 billion",
+          "$2.42 billion $1.75 billion",
+          "$2.42 billion $1.75 billion",
+          "$2.42 billion $1.75 billion"
+        ],
+        [
+          "GAAP and non-GAAP other income and expense",
+          "GAAP and non-GAAP other income and expense",
+          "GAAP and non-GAAP other income and expense",
+          "$40 million expense",
+          "$40 million expense",
+          "$40 million expense",
+          "$24 million and $16 million expense, respectively",
+          "$24 million and $16 million expense, respectively",
+          "$24 million and $16 million expense, respectively"
+        ],
+        [
+          "GAAP and non-GAAP tax rate",
+          "GAAP and non-GAAP tax rate",
+          "GAAP and non-GAAP tax rate",
+          "12.5%, plus or minus 1%, excluding discrete items",
+          "12.5%, plus or minus 1%, excluding discrete items",
+          "12.5%, plus or minus 1%, excluding discrete items",
+          "-35% GAAP (benefit) and 2% non-GAAP, including discrete items",
+          "-35% GAAP (benefit) and 2% non-GAAP, including discrete items",
+          "-35% GAAP (benefit) and 2% non-GAAP, including discrete items"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        8,
+        12
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Revenue by Market Platform($ in billions)",
+          "Revenue by Market Platform($ in billions)",
+          "Revenue by Market Platform($ in billions)",
+          "Q2 FY23 Preliminary Results",
+          "Q2 FY23 Preliminary Results",
+          "Q2 FY23 Preliminary Results",
+          "Q/Q",
+          "Q/Q",
+          "Q/Q",
+          "Y/Y",
+          "Y/Y",
+          "Y/Y"
+        ],
+        [
+          "Gaming",
+          "Gaming",
+          "Gaming",
+          "$2.04",
+          "$2.04",
+          "$2.04",
+          "Down 44%",
+          "Down 44%",
+          "Down 44%",
+          "Down 33%",
+          "Down 33%",
+          "Down 33%"
+        ],
+        [
+          "Data Center",
+          "Data Center",
+          "Data Center",
+          "3.81",
+          "3.81",
+          "3.81",
+          "Up 1%",
+          "Up 1%",
+          "Up 1%",
+          "Up 61%",
+          "Up 61%",
+          "Up 61%"
+        ],
+        [
+          "Professional Visualization",
+          "Professional Visualization",
+          "Professional Visualization",
+          "0.50",
+          "0.50",
+          "0.50",
+          "Down 20%",
+          "Down 20%",
+          "Down 20%",
+          "Down 4%",
+          "Down 4%",
+          "Down 4%"
+        ],
+        [
+          "Automotive",
+          "Automotive",
+          "Automotive",
+          "0.22",
+          "0.22",
+          "0.22",
+          "Up 59%",
+          "Up 59%",
+          "Up 59%",
+          "Up 45%",
+          "Up 45%",
+          "Up 45%"
+        ],
+        [
+          "OEM and Other",
+          "OEM and Other",
+          "OEM and Other",
+          "0.13",
+          "0.13",
+          "0.13",
+          "Down 12%",
+          "Down 12%",
+          "Down 12%",
+          "Down 66%",
+          "Down 66%",
+          "Down 66%"
+        ],
+        [
+          "Total",
+          "Total",
+          "Total",
+          "$6.70",
+          "$6.70",
+          "$6.70",
+          "Down 19%",
+          "Down 19%",
+          "Down 19%",
+          "Up 3%",
+          "Up 3%",
+          "Up 3%"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        17,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Reconciliation of GAAP to non-GAAP Financial Measures ($ in millions)",
+          "Reconciliation of GAAP to non-GAAP Financial Measures ($ in millions)",
+          "Reconciliation of GAAP to non-GAAP Financial Measures ($ in millions)",
+          "Reconciliation of GAAP to non-GAAP Financial Measures ($ in millions)",
+          "Reconciliation of GAAP to non-GAAP Financial Measures ($ in millions)",
+          "Reconciliation of GAAP to non-GAAP Financial Measures ($ in millions)",
+          "Q2 FY23 Preliminary Results",
+          "Q2 FY23 Preliminary Results",
+          "Q2 FY23 Preliminary Results"
+        ],
+        [
+          "GAAP gross margin",
+          "GAAP gross margin",
+          "GAAP gross margin",
+          "GAAP gross margin",
+          "GAAP gross margin",
+          "GAAP gross margin",
+          "43.7%",
+          "43.7%",
+          "43.7%"
+        ],
+        [
+          "Stock-based compensation expense, acquisition-related costs, and other costs",
+          "Stock-based compensation expense, acquisition-related costs, and other costs",
+          "Stock-based compensation expense, acquisition-related costs, and other costs",
+          "Stock-based compensation expense, acquisition-related costs, and other costs",
+          "Stock-based compensation expense, acquisition-related costs, and other costs",
+          "Stock-based compensation expense, acquisition-related costs, and other costs",
+          "2.4",
+          "2.4",
+          "2.4"
+        ],
+        [
+          "Non-GAAP gross margin",
+          "Non-GAAP gross margin",
+          "Non-GAAP gross margin",
+          "Non-GAAP gross margin",
+          "Non-GAAP gross margin",
+          "Non-GAAP gross margin",
+          "46.1%",
+          "46.1%",
+          "46.1%"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP operating expenses",
+          "GAAP operating expenses",
+          "GAAP operating expenses",
+          "GAAP operating expenses",
+          "GAAP operating expenses",
+          "GAAP operating expenses",
+          "$2,416",
+          "$2,416",
+          "$2,416"
+        ],
+        [
+          "Stock-based compensation expense and acquisition-related costs",
+          "Stock-based compensation expense and acquisition-related costs",
+          "Stock-based compensation expense and acquisition-related costs",
+          "Stock-based compensation expense and acquisition-related costs",
+          "Stock-based compensation expense and acquisition-related costs",
+          "Stock-based compensation expense and acquisition-related costs",
+          "(667)",
+          "(667)",
+          "(667)"
+        ],
+        [
+          "Non-GAAP operating expenses",
+          "Non-GAAP operating expenses",
+          "Non-GAAP operating expenses",
+          "Non-GAAP operating expenses",
+          "Non-GAAP operating expenses",
+          "Non-GAAP operating expenses",
+          "$1,749",
+          "$1,749",
+          "$1,749"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP other expense, net",
+          "GAAP other expense, net",
+          "GAAP other expense, net",
+          "GAAP other expense, net",
+          "GAAP other expense, net",
+          "GAAP other expense, net",
+          "$24",
+          "$24",
+          "$24"
+        ],
+        [
+          "Losses from non-affiliated investments and other costs",
+          "Losses from non-affiliated investments and other costs",
+          "Losses from non-affiliated investments and other costs",
+          "Losses from non-affiliated investments and other costs",
+          "Losses from non-affiliated investments and other costs",
+          "Losses from non-affiliated investments and other costs",
+          "(8)",
+          "(8)",
+          "(8)"
+        ],
+        [
+          "Non-GAAP other expense, net",
+          "Non-GAAP other expense, net",
+          "Non-GAAP other expense, net",
+          "Non-GAAP other expense, net",
+          "Non-GAAP other expense, net",
+          "Non-GAAP other expense, net",
+          "$16",
+          "$16",
+          "$16"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GAAP tax rate (benefit)",
+          "GAAP tax rate (benefit)",
+          "GAAP tax rate (benefit)",
+          "GAAP tax rate (benefit)",
+          "GAAP tax rate (benefit)",
+          "GAAP tax rate (benefit)",
+          "(35%)",
+          "(35%)",
+          "(35%)"
+        ],
+        [
+          "Tax impact of non-GAAP adjustments",
+          "Tax impact of non-GAAP adjustments",
+          "Tax impact of non-GAAP adjustments",
+          "Tax impact of non-GAAP adjustments",
+          "Tax impact of non-GAAP adjustments",
+          "Tax impact of non-GAAP adjustments",
+          "37",
+          "37",
+          "37"
+        ],
+        [
+          "Non-GAAP tax rate",
+          "Non-GAAP tax rate",
+          "Non-GAAP tax rate",
+          "Non-GAAP tax rate",
+          "Non-GAAP tax rate",
+          "Non-GAAP tax rate",
+          "2%",
+          "2%",
+          "2%"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        5,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Simona Jankowski",
+          "Simona Jankowski",
+          "Simona Jankowski",
+          "",
+          "",
+          "",
+          "Robert Sherbin",
+          "Robert Sherbin",
+          "Robert Sherbin"
+        ],
+        [
+          "Investor Relations",
+          "Investor Relations",
+          "Investor Relations",
+          "",
+          "",
+          "",
+          "Corporate Communications",
+          "Corporate Communications",
+          "Corporate Communications"
+        ],
+        [
+          "NVIDIA Corporation",
+          "NVIDIA Corporation",
+          "NVIDIA Corporation",
+          "",
+          "",
+          "",
+          "NVIDIA Corporation",
+          "NVIDIA Corporation",
+          "NVIDIA Corporation"
+        ],
+        [
+          "sjankowski@nvidia.com",
+          "sjankowski@nvidia.com",
+          "sjankowski@nvidia.com",
+          "",
+          "",
+          "",
+          "rsherbin@nvidia.com",
+          "rsherbin@nvidia.com",
+          "rsherbin@nvidia.com"
+        ]
+      ]
+    }
+  ],
+  "semantic_elements": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "pressrelease.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "PRESS RELEASE"
+    },
+    {
+      "type": "TextElement",
+      "text": "html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\" Document created using Wdesk Copyright 2022 Workiva Document"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE:"
+    },
+    {
+      "type": "TitleElement",
+      "text": "NVIDIA Announces Preliminary Financial Results for Second Quarter Fiscal 2023"
+    },
+    {
+      "type": "TextElement",
+      "text": "•Preliminary second quarter revenue of $6.70 billion versus outlook of $8.10 billion•Shortfall versus outlook primarily driven by weaker Gaming revenue•Management to discuss financial results and outlook on Aug. 24 earnings callSANTA CLARA, Calif.-Aug. 8, 2022- NVIDIA (NASDAQ: NVDA) today announced selected preliminary financial results for the second quarter ended July 31, 2022.Second quarter revenue is expected to be approximately $6.70 billion, down 19% sequentially and up 3% from the prior year, primarily reflecting weaker than forecasted Gaming revenue. Gaming revenue was $2.04 billion, down 44% sequentially and down 33% from the prior year. Data Center revenue was $3.81 billion, up 1% sequentially and up 61% from the prior year.The shortfall relative to the May revenue outlook of $8.10 billion was primarily attributable to lower sell-in of Gaming products reflecting a reduction in channel partner sales likely due to macroeconomic headwinds. In addition to reducing sell-in, the company implemented pricing programs with channel partners to reflect challenging market conditions that are expected to persist into the third quarter. Data Center revenue, though a record, was somewhat short of the company’s expectations, as it was impacted by supply chain disruptions.Second quarter results are expected to include approximately $1.32 billion of charges, primarily for inventory and related reserves, based on revised expectations of future demand. “Our gaming product sell-through projections declined significantly as the quarter progressed,” said Jensen Huang, founder and CEO of NVIDIA. “As we expect the macroeconomic conditions affecting sell-through to continue, we took actions with our Gaming partners to adjust channel prices and inventory. “NVIDIA has excellent products and position driving large and growing markets. As we navigate these challenges, we remain focused on the once-in-a-generation opportunity to reinvent computing for the era of AI,” he said.“The significant charges incurred in the quarter reflect previous long-term purchase commitments we made during a time of severe component shortages and our current expectation of ongoing macroeconomic uncertainty,” said Colette Kress, EVP and CFO of NVIDIA.“We believe our long-term gross margin profile is intact. We have slowed operating expense growth, balancing investments for long-term growth while managing near-term profitability. We plan to continue stock buybacks as we foresee strong cash generation and future growth,” she said."
+    },
+    {
+      "type": "TableElement",
+      "text": "Q2 FY23 Outlook1Q2 FY23 Preliminary ResultsRevenue$8.10 billion, plus or minus 2%$6.70 billionGross margin - GAAPGross margin - non-GAAP65.1%, plus or minus 50 bps67.1%, plus or minus 50 bps43.7%, plus or minus 50 bps46.1%, plus or minus 50 bpsOperating expenses - GAAPOperating expenses - non-GAAP$2.46 billion$1.75 billion$2.42 billion$1.75 billionGAAP and non-GAAP other income and expense$40 million expense$24 million and $16 million expense, respectivelyGAAP and non-GAAP tax rate12.5%, plus or minus 1%, excluding discrete items-35% GAAP (benefit) and 2% non-GAAP, including discrete items"
+    },
+    {
+      "type": "TextElement",
+      "text": "1 Announced in May 2022 in connection with the company’s press release announcing its financial results for first quarter fiscal 2023."
+    },
+    {
+      "type": "TableElement",
+      "text": "Revenue by Market Platform($ in billions)Q2 FY23 Preliminary ResultsQ/QY/YGaming$2.04Down 44%Down 33%Data Center3.81Up 1%Up 61%Professional Visualization0.50Down 20%Down 4%Automotive0.22Up 59%Up 45%OEM and Other0.13Down 12%Down 66%Total$6.70Down 19%Up 3%"
+    },
+    {
+      "type": "TextElement",
+      "text": "The preliminary results for the second quarter ended July 31, 2022, are an estimate, based on information available to management as of the date of this release, and are subject to further changes upon completion of the company’s standard quarter and year-end closing procedures. This update does not present all necessary information for an understanding of NVIDIA’s financial condition as of the date of this release, or its results of operations for the second quarter. As NVIDIA completes its quarter-end financial close process and finalizes its financial statements for the quarter, it will be required to make significant judgments in a number of areas. It is possible that NVIDIA may identify items that require it to make adjustments to the preliminary financial information set forth above and those changes could be material. NVIDIA does not intend to update such financial information prior to release of its final second quarter financial statement information, which is currently scheduled for Aug. 24, 2022."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call and Webcast Information"
+    },
+    {
+      "type": "TextElement",
+      "text": "NVIDIA will host a conference call on Wednesday, Aug. 24, at 2 p.m. PT (5 p.m. ET), to discuss its financial results for the second quarter of fiscal year 2023.The call will be webcast live (in listen-only mode) on investor.nvidia.com. The company’s prepared remarks will be followed by a question-and-answer session, which will be limited to questions from financial analysts and institutional investors. Ahead of the call, NVIDIA will provide written commentary on its second-quarter results from its CFO, Colette Kress. This material will be posted to investor.nvidia.com immediately after the company’s results are publicly announced at approximately 1:20 p.m. PT.The webcast will be recorded and available for replay until the company’s conference call to discuss financial results for its third quarter of fiscal year 2023."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "In addition to U.S. GAAP financial measures, this press release includes preliminary estimates of non-GAAP measures of certain components of financial performance. These preliminary estimates of non-GAAP measures include non-GAAP gross margin, operating expenses, other income and expense, and income tax expense.These non-GAAP financial measures exclude stock-based compensation expense, acquisition-related and other costs, gains or losses from non-affiliated investments, interest expense related to amortization of debt discount and the associated tax impact of these items, where applicable.A preliminary updated reconciliation of GAAP to non-GAAP gross margin, operating expenses, other income and expenses and tax rate is as follows:"
+    },
+    {
+      "type": "TableElement",
+      "text": "Reconciliation of GAAP to non-GAAP Financial Measures ($ in millions)Q2 FY23Preliminary ResultsGAAP gross margin43.7%Stock-based compensation expense, acquisition-related costs, and other costs2.4Non-GAAP gross margin46.1%GAAP operating expenses$2,416Stock-based compensation expense and acquisition-related costs(667)Non-GAAP operating expenses$1,749GAAP other expense, net$24Losses from non-affiliated investments and other costs(8)Non-GAAP other expense, net$16GAAP tax rate (benefit)(35%)Tax impact of non-GAAP adjustments37Non-GAAP tax rate2%"
+    },
+    {
+      "type": "TextElement",
+      "text": "NVIDIA believes the presentation of its non-GAAP financial measures enhances the user’s overall understanding of the company’s financial performance. The presentation of the company’s non-GAAP financial measures is not meant to be considered in isolation or as a substitute for the company’s financial results prepared in accordance with GAAP, and the company’s non-GAAP measures may be different from non-GAAP measures used by other companies."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About NVIDIA"
+    },
+    {
+      "type": "TextElement",
+      "text": "Since its founding in 1993, NVIDIA (NASDAQ: NVDA) has been a pioneer in accelerated computing. The company’s invention of the GPU in 1999 sparked the growth of the PC gaming market, redefined computer graphics and ignited the era of modern AI. NVIDIA is now a full-stack computing company with data-center-scale offerings that are reshaping industry. More information at https://nvidianews.nvidia.com/.For further information, contact:"
+    },
+    {
+      "type": "EmptyElement",
+      "text": "###"
+    },
+    {
+      "type": "TableElement",
+      "text": "Simona JankowskiRobert SherbinInvestor RelationsCorporate CommunicationsNVIDIA CorporationNVIDIA Corporationsjankowski@nvidia.comrsherbin@nvidia.com"
+    },
+    {
+      "type": "TextElement",
+      "text": "Certain statements in this press release including, but not limited to, statements as to: NVIDIA’s preliminary results for the second quarter of fiscal 2023; our excellent products and position driving large and growing markets; challenging market conditions expected to persist into the third quarter; our expectation that the macroeconomic conditions affecting sell-through will continue; our focus on the once-in-a-generation opportunity to reinvent computing for the era of AI; our belief that our long-term gross margin profile is intact; slowing operating expense growth, balancing investments for long-term growth while managing near-term profitability; our plan to continue stock buybacks; our belief in our strong cash generation abilities and future growth; and NVIDIA’s quarter-end financial close process and preparation of financial statements for the quarter are forward-looking statements that are subject to risks and uncertainties that could cause results to be materially different than expectations. Important factors that could cause actual results to differ materially include: global economic conditions; our reliance on third parties to manufacture, assemble, package and test our products; the impact of technological development and competition; development of new products and technologies or enhancements to our existing product and technologies; market acceptance of our products or our partners’ products; design, manufacturing or software defects; changes in consumer preferences or demands; changes in industry standards and interfaces; unexpected loss of performance of our products or technologies when integrated into systems; as well as other factors detailed from time to time in the most recent reports NVIDIA files with the Securities and Exchange Commission, or SEC, including, but not limited to, its annual report on Form 10-K and quarterly reports on Form 10-Q. Copies of reports filed with the SEC are posted on the company’s website and are available from NVIDIA without charge. These forward-looking statements are not guarantees of future performance and speak only as of the date hereof, and, except as required by law, NVIDIA disclaims any obligation to update these forward-looking statements to reflect future events or circumstances. © 2022 NVIDIA Corporation. All rights reserved. NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and/or other countries. Other company and product names may be trademarks of the respective companies with which they are associated. Features, pricing, availability, and specifications are subject to change without notice."
+    }
+  ],
+  "semantic_text": "EX-99.1\n2\npressrelease.htm\nPRESS RELEASE\nhtml PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\" Document created using Wdesk Copyright 2022 Workiva Document\nFOR IMMEDIATE RELEASE:\nNVIDIA Announces Preliminary Financial Results for Second Quarter Fiscal 2023\n•Preliminary second quarter revenue of $6.70 billion versus outlook of $8.10 billion•Shortfall versus outlook primarily driven by weaker Gaming revenue•Management to discuss financial results and outlook on Aug. 24 earnings callSANTA CLARA, Calif.-Aug. 8, 2022- NVIDIA (NASDAQ: NVDA) today announced selected preliminary financial results for the second quarter ended July 31, 2022.Second quarter revenue is expected to be approximately $6.70 billion, down 19% sequentially and up 3% from the prior year, primarily reflecting weaker than forecasted Gaming revenue. Gaming revenue was $2.04 billion, down 44% sequentially and down 33% from the prior year. Data Center revenue was $3.81 billion, up 1% sequentially and up 61% from the prior year.The shortfall relative to the May revenue outlook of $8.10 billion was primarily attributable to lower sell-in of Gaming products reflecting a reduction in channel partner sales likely due to macroeconomic headwinds. In addition to reducing sell-in, the company implemented pricing programs with channel partners to reflect challenging market conditions that are expected to persist into the third quarter. Data Center revenue, though a record, was somewhat short of the company’s expectations, as it was impacted by supply chain disruptions.Second quarter results are expected to include approximately $1.32 billion of charges, primarily for inventory and related reserves, based on revised expectations of future demand. “Our gaming product sell-through projections declined significantly as the quarter progressed,” said Jensen Huang, founder and CEO of NVIDIA. “As we expect the macroeconomic conditions affecting sell-through to continue, we took actions with our Gaming partners to adjust channel prices and inventory. “NVIDIA has excellent products and position driving large and growing markets. As we navigate these challenges, we remain focused on the once-in-a-generation opportunity to reinvent computing for the era of AI,” he said.“The significant charges incurred in the quarter reflect previous long-term purchase commitments we made during a time of severe component shortages and our current expectation of ongoing macroeconomic uncertainty,” said Colette Kress, EVP and CFO of NVIDIA.“We believe our long-term gross margin profile is intact. We have slowed operating expense growth, balancing investments for long-term growth while managing near-term profitability. We plan to continue stock buybacks as we foresee strong cash generation and future growth,” she said.\nQ2 FY23 Outlook1Q2 FY23 Preliminary ResultsRevenue$8.10 billion, plus or minus 2%$6.70 billionGross margin - GAAPGross margin - non-GAAP65.1%, plus or minus 50 bps67.1%, plus or minus 50 bps43.7%, plus or minus 50 bps46.1%, plus or minus 50 bpsOperating expenses - GAAPOperating expenses - non-GAAP$2.46 billion$1.75 billion$2.42 billion$1.75 billionGAAP and non-GAAP other income and expense$40 million expense$24 million and $16 million expense, respectivelyGAAP and non-GAAP tax rate12.5%, plus or minus 1%, excluding discrete items-35% GAAP (benefit) and 2% non-GAAP, including discrete items\n1 Announced in May 2022 in connection with the company’s press release announcing its financial results for first quarter fiscal 2023.\nRevenue by Market Platform($ in billions)Q2 FY23 Preliminary ResultsQ/QY/YGaming$2.04Down 44%Down 33%Data Center3.81Up 1%Up 61%Professional Visualization0.50Down 20%Down 4%Automotive0.22Up 59%Up 45%OEM and Other0.13Down 12%Down 66%Total$6.70Down 19%Up 3%\nThe preliminary results for the second quarter ended July 31, 2022, are an estimate, based on information available to management as of the date of this release, and are subject to further changes upon completion of the company’s standard quarter and year-end closing procedures. This update does not present all necessary information for an understanding of NVIDIA’s financial condition as of the date of this release, or its results of operations for the second quarter. As NVIDIA completes its quarter-end financial close process and finalizes its financial statements for the quarter, it will be required to make significant judgments in a number of areas. It is possible that NVIDIA may identify items that require it to make adjustments to the preliminary financial information set forth above and those changes could be material. NVIDIA does not intend to update such financial information prior to release of its final second quarter financial statement information, which is currently scheduled for Aug. 24, 2022.\nConference Call and Webcast Information\nNVIDIA will host a conference call on Wednesday, Aug. 24, at 2 p.m. PT (5 p.m. ET), to discuss its financial results for the second quarter of fiscal year 2023.The call will be webcast live (in listen-only mode) on investor.nvidia.com. The company’s prepared remarks will be followed by a question-and-answer session, which will be limited to questions from financial analysts and institutional investors. Ahead of the call, NVIDIA will provide written commentary on its second-quarter results from its CFO, Colette Kress. This material will be posted to investor.nvidia.com immediately after the company’s results are publicly announced at approximately 1:20 p.m. PT.The webcast will be recorded and available for replay until the company’s conference call to discuss financial results for its third quarter of fiscal year 2023.\nNon-GAAP Measures\nIn addition to U.S. GAAP financial measures, this press release includes preliminary estimates of non-GAAP measures of certain components of financial performance. These preliminary estimates of non-GAAP measures include non-GAAP gross margin, operating expenses, other income and expense, and income tax expense.These non-GAAP financial measures exclude stock-based compensation expense, acquisition-related and other costs, gains or losses from non-affiliated investments, interest expense related to amortization of debt discount and the associated tax impact of these items, where applicable.A preliminary updated reconciliation of GAAP to non-GAAP gross margin, operating expenses, other income and expenses and tax rate is as follows:\nReconciliation of GAAP to non-GAAP Financial Measures ($ in millions)Q2 FY23Preliminary ResultsGAAP gross margin43.7%Stock-based compensation expense, acquisition-related costs, and other costs2.4Non-GAAP gross margin46.1%GAAP operating expenses$2,416Stock-based compensation expense and acquisition-related costs(667)Non-GAAP operating expenses$1,749GAAP other expense, net$24Losses from non-affiliated investments and other costs(8)Non-GAAP other expense, net$16GAAP tax rate (benefit)(35%)Tax impact of non-GAAP adjustments37Non-GAAP tax rate2%\nNVIDIA believes the presentation of its non-GAAP financial measures enhances the user’s overall understanding of the company’s financial performance. The presentation of the company’s non-GAAP financial measures is not meant to be considered in isolation or as a substitute for the company’s financial results prepared in accordance with GAAP, and the company’s non-GAAP measures may be different from non-GAAP measures used by other companies.\nAbout NVIDIA\nSince its founding in 1993, NVIDIA (NASDAQ: NVDA) has been a pioneer in accelerated computing. The company’s invention of the GPU in 1999 sparked the growth of the PC gaming market, redefined computer graphics and ignited the era of modern AI. NVIDIA is now a full-stack computing company with data-center-scale offerings that are reshaping industry. More information at https://nvidianews.nvidia.com/.For further information, contact:\n###\nSimona JankowskiRobert SherbinInvestor RelationsCorporate CommunicationsNVIDIA CorporationNVIDIA Corporationsjankowski@nvidia.comrsherbin@nvidia.com\nCertain statements in this press release including, but not limited to, statements as to: NVIDIA’s preliminary results for the second quarter of fiscal 2023; our excellent products and position driving large and growing markets; challenging market conditions expected to persist into the third quarter; our expectation that the macroeconomic conditions affecting sell-through will continue; our focus on the once-in-a-generation opportunity to reinvent computing for the era of AI; our belief that our long-term gross margin profile is intact; slowing operating expense growth, balancing investments for long-term growth while managing near-term profitability; our plan to continue stock buybacks; our belief in our strong cash generation abilities and future growth; and NVIDIA’s quarter-end financial close process and preparation of financial statements for the quarter are forward-looking statements that are subject to risks and uncertainties that could cause results to be materially different than expectations. Important factors that could cause actual results to differ materially include: global economic conditions; our reliance on third parties to manufacture, assemble, package and test our products; the impact of technological development and competition; development of new products and technologies or enhancements to our existing product and technologies; market acceptance of our products or our partners’ products; design, manufacturing or software defects; changes in consumer preferences or demands; changes in industry standards and interfaces; unexpected loss of performance of our products or technologies when integrated into systems; as well as other factors detailed from time to time in the most recent reports NVIDIA files with the Securities and Exchange Commission, or SEC, including, but not limited to, its annual report on Form 10-K and quarterly reports on Form 10-Q. Copies of reports filed with the SEC are posted on the company’s website and are available from NVIDIA without charge. These forward-looking statements are not guarantees of future performance and speak only as of the date hereof, and, except as required by law, NVIDIA disclaims any obligation to update these forward-looking statements to reflect future events or circumstances. © 2022 NVIDIA Corporation. All rights reserved. NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and/or other countries. Other company and product names may be trademarks of the respective companies with which they are associated. Features, pricing, availability, and specifications are subject to change without notice."
+}

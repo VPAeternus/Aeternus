@@ -101,7 +101,7 @@ Watchlist items currently flow like this:
 2. watchlist stores normalized active records
 3. discovery loads active watchlist items
 4. symbols are added to `manual_symbols_set`
-5. pipeline continues through normal shortlist / queue / research selection
+5. pipeline continues through normal candidate_list / queue / research selection
 
 That means:
 - watchlist feeds the pipeline

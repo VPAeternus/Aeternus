@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HZO",
+    "cik": "1057060",
+    "event_date": "2024-07-25",
+    "event_accession": "0000950170-24-086310",
+    "primary_8k_doc": "hzo-20240725.htm",
+    "exhibit_docs": [
+      "hzo-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HZO_000095017024086310_hzo-20240725.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HZO_000095017024086310_hzo-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$1B-$2B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HZO",
+    "cik": "1057060",
+    "entity_name": "MarineMax, Inc.",
+    "revenue_bucket": "$1B-$2B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "1078267000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-25",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "49725000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-25",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "2421305000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-25",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-09-30",
+    "financing_cash_flow_value": "748852000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-25",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-524246000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-25",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "-250522000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-25",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.046116",
+    "operating_cash_flow_to_revenue": "-0.232338",
+    "assets_to_revenue": "2.245552",
+    "financing_cash_flow_to_revenue": "0.694496",
+    "investing_cash_flow_to_revenue": "-0.486193"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Revenue of $757.",
+      "revenue of $757.",
+      "revenue increased 4%, reflecting higher new and used boat revenue as well as other areas of the Company’s Retail Operations segment, which includes marina, parts, finance and insurance, Super Yachts Group and Charter.",
+      "Gross Margin of 32.",
+      "Net income of $31.",
+      "EPS of $1."
+    ],
+    "guidance_evidence": [
+      "Guidance ~ ~ Hosts Earnings Conference Call at 10:00 a.",
+      "Guidance Based on results to date, current business conditions, retail trends and other factors, the Company reaffirms its fiscal year 2024 Adjusted net income 1,3 , guidance range of $2.",
+      "guidance range of $155 million to $190 million.",
+      "guidance.",
+      "expected annualized cost savings of the Company’s cost-cutting initiatives, anticipated operating efficiency resulting from the formation of the SuperYacht Division, and the Company’s fiscal 2024 guidance.",
+      "forecasts, risks, uncertainties, and assumptions that may cause actual results to differ materially from expectations as of the date of this release."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, and others from our retail dealership operations, migrated to increasingly larger yachts.",
+      "demanded specialized services, which our SYD companies are exceptionally well-positioned to provide.",
+      "customer experience, we provide financing and insurance services as well as leading digital technology products that connect boaters to a network of preferred marinas, dealers, and marine professionals through Boatyard and Boatzon.",
+      "ail headwinds in the third quarter, our team executed well, delivering 5% top-line growth,” stated Chief Executive Officer and President Brett McGill.",
+      "ail boat margins industry-wide.",
+      "aid."
+    ],
+    "warning_or_risk_evidence": [
+      "inventory compared with the third quarter of fiscal 2023.",
+      "headwinds in the third quarter, our team executed well, delivering 5% top-line growth,” stated Chief Executive Officer and President Brett McGill.",
+      "challenging operating environment underscores the importance of our value-creation strategy, which focuses on expanding our high-margin, less cyclical revenue streams.",
+      "decreased 1.",
+      "decreased 180 basis points from 33.",
+      "challenging retail operating conditions."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 757.7,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-26",
+    "entry_open": "37.500000",
+    "return_10d_pct": "-19.6267",
+    "return_20d_pct": "-19.2000",
+    "return_30d_pct": "-13.8400",
+    "return_60d_pct": "-3.4133",
+    "return_90d_pct": "-22.9067"
+  },
+  "text_stats": {
+    "primary_text_len": 3703,
+    "exhibit_text_len": 17952,
+    "combined_text_len": 21657
+  }
+}

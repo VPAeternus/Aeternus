@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ECL",
+    "cik": "31462",
+    "event_date": "2024-07-30",
+    "event_accession": "0001558370-24-010319",
+    "primary_8k_doc": "ecl-20240730x8k.htm",
+    "exhibit_docs": [
+      "ecl-20240730xex99d1.htm",
+      "ecl-20240730xex99d2.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECL_000155837024010319_ecl-20240730x8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECL_000155837024010319_ecl-20240730xex99d1.htm.txt",
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ECL_000155837024010319_ecl-20240730xex99d2.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ECL",
+    "cik": "31462",
+    "entity_name": "ECOLAB INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3571600000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-02",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "233400000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-02",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "21846600000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-02",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-166400000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-02",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-189400000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-02",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "198200000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-02",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.065349",
+    "operating_cash_flow_to_revenue": "0.055493",
+    "assets_to_revenue": "6.116754",
+    "financing_cash_flow_to_revenue": "-0.04659",
+    "investing_cash_flow_to_revenue": "-0.053029"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales increased 3% and organic sales increased 4% when compared to the prior year.",
+      "sales were also stable versus last year, performance continued to improve sequentially as good new business offset soft but stable customer demand.",
+      "sales were stable as better growth in Life Sciences offset modestly lower Healthcare sales.",
+      "sales increased 9%, led by double-digit growth in food & beverage, restaurants, and food retail.",
+      "sales of $15 billion, employs more than 48,000 associates and operates in more than 170 countries around the world.",
+      "sales of product to ChampionX under this agreement are recorded in product and equipment sales in the Corporate segment along with the related cost of sales."
+    ],
+    "guidance_evidence": [
+      "OUTLOOK: $6.",
+      "OUTLOOK ● 2024: Increased full year 2024 adjusted diluted earnings per share range to $6.",
+      "Outlook 2024 Ecolab expects full year 2024 adjusted diluted earnings per share to improve further to the $6.",
+      "outlook 3 Good sales growth led by strong growth in Institutional & Specialty and Pest Elimination Strong double-digit OI growth with continued robust margin expansion Reported diluted EPS $1.",
+      "outlook: Increased adjusted diluted earnings per share range to $6.",
+      "outlook: Expect adjusted diluted EPS in the $1."
+    ],
+    "wave_or_demand_evidence": [
+      "customers.",
+      "customers’ business outcomes and operational performance while reducing their water and energy consumption.",
+      "customer value, unlock significant enterprise selling opportunities, and drive improved operational performance.",
+      "customer demand.",
+      "customers in 40 industries and more than 170 countries to deliver the best outcomes at the best possible operating performance by reducing water and energy usage, we know what best-in-class performance is and how to deliver it.",
+      "customers by realigning the functional work done in many countries into global centers of excellence."
+    ],
+    "warning_or_risk_evidence": [
+      "charges and discrete tax items were $1.",
+      "charges, which were a net charge primarily related to restructuring and professional service fees associated with the sale of our global surgical solutions business.",
+      "charges and discrete tax items, the adjusted tax rate for the second quarter of 2024 was 19.",
+      "charges and discrete tax items, adjusted net income increased 35% versus the prior year.",
+      "charges ​ 12.",
+      "charges for the second quarter of 2023 impacting operating expense were a net charge of $29 million primarily related to restructuring costs."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 4000,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "234.360001",
+    "return_10d_pct": "1.2289",
+    "return_20d_pct": "3.5032",
+    "return_30d_pct": "8.0304",
+    "return_60d_pct": "8.9478",
+    "return_90d_pct": "8.2779"
+  },
+  "text_stats": {
+    "primary_text_len": 4597,
+    "exhibit_text_len": 77966,
+    "combined_text_len": 82565
+  }
+}

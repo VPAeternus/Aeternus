@@ -70,7 +70,6 @@ def test_run_analysis_uses_codex_bridge_path(tmp_path, monkeypatch):
     artifact_dir.mkdir(parents=True, exist_ok=True)
     for name, report in (
         ("market", "market report"),
-        ("social", "social report"),
         ("news", "news report"),
         ("fundamentals", "fundamentals report"),
     ):
@@ -99,7 +98,6 @@ def test_run_analysis_uses_codex_bridge_path(tmp_path, monkeypatch):
             yield {
                 "messages": [],
                 "market_report": init_state["market_report"],
-                "sentiment_report": init_state["sentiment_report"],
                 "news_report": init_state["news_report"],
                 "fundamentals_report": init_state["fundamentals_report"],
                 "final_trade_decision": "BUY AAPL",
@@ -166,7 +164,6 @@ def test_run_analysis_uses_codex_bridge_path(tmp_path, monkeypatch):
             "complete": True,
             "artifacts": {
                 "market": str(artifact_dir / "market.json"),
-                "social": str(artifact_dir / "social.json"),
                 "news": str(artifact_dir / "news.json"),
                 "fundamentals": str(artifact_dir / "fundamentals.json"),
             },
@@ -177,7 +174,6 @@ def test_run_analysis_uses_codex_bridge_path(tmp_path, monkeypatch):
 
     analysts = [
         SimpleNamespace(value="market"),
-        SimpleNamespace(value="social"),
         SimpleNamespace(value="news"),
         SimpleNamespace(value="fundamentals"),
     ]
@@ -346,7 +342,7 @@ def test_run_ticker_bundle_supports_claude_provider(tmp_path, monkeypatch):
 
     assert bundle["provider"] == "claude"
     assert bundle["complete"] is True
-    assert sorted(bundle["artifacts"].keys()) == ["fundamentals", "market", "news", "social"]
+    assert sorted(bundle["artifacts"].keys()) == ["fundamentals", "market", "news"]
 
 
 def test_run_ticker_bundle_manual_provider_uses_readiness(tmp_path, monkeypatch):
@@ -469,7 +465,7 @@ def test_run_session_engine_analysis_appends_track_record_with_recommendation(
         {
             "ticker": "AAPL",
             "analysis_date": "2026-03-10",
-            "queue_context": {"lane": "CORE"},
+            "source_context": {"lane": "CORE"},
         }
     )
 

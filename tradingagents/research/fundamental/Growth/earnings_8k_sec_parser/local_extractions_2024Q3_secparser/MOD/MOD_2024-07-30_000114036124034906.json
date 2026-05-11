@@ -1,0 +1,928 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "MOD",
+    "cik": "67347",
+    "event_date": "2024-07-30",
+    "event_accession": "0001140361-24-034906",
+    "primary_8k_doc": "ef20033260_8k.htm",
+    "exhibit_docs": [
+      "ef20033260_ex99-1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MOD_000114036124034906_ef20033260_8k.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/MOD_000114036124034906_ef20033260_ex99-1.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "MOD",
+    "cik": "67347",
+    "entity_name": "Modine Manufacturing Company",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "2050100000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-22",
+    "revenue_form": "10-K",
+    "revenue_period_end": "2022-03-31",
+    "net_income_value": "85200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-22",
+    "net_income_form": "10-K",
+    "net_income_period_end": "2022-03-31",
+    "assets_value": "1565900000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-22",
+    "assets_form": "10-K",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "39200000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-22",
+    "financing_cash_flow_form": "10-K",
+    "financing_cash_flow_period_end": "2022-03-31",
+    "investing_cash_flow_value": "-51000000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-22",
+    "investing_cash_flow_form": "10-K",
+    "investing_cash_flow_period_end": "2022-03-31",
+    "operating_cash_flow_value": "11500000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-22",
+    "operating_cash_flow_form": "10-K",
+    "operating_cash_flow_period_end": "2022-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.041559",
+    "operating_cash_flow_to_revenue": "0.005609",
+    "assets_to_revenue": "0.763816",
+    "financing_cash_flow_to_revenue": "0.019121",
+    "investing_cash_flow_to_revenue": "-0.024877"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "Net sales of $661.",
+      "sales increased 4 percent • Operating income of $74.",
+      "Net sales increased 6 percent to $661.",
+      "sales increased 4 percent compared with the prior year.",
+      "sales were $357.",
+      "sales increased 10 percent."
+    ],
+    "guidance_evidence": [
+      "outlook Racine, WI – July 30, 2024 – Modine (NYSE: MOD), a diversified global leader in thermal management technology and solutions, today reported financial results for the quarter ended June 30, 2024.",
+      "Outlook: • Net sales growth between 6 percent to 11 percent • Adjusted EBITDA of $375 million to $395 million, an increase of 19 percent to 26 percent over the prior year • Adjusted earnings per share of $3.",
+      "Outlook “Given our outperformance this quarter, we are increasing our revenue and earnings outlooks for fiscal 2025,” added Brinker.",
+      "outlook, Modine provides its updated outlook for fiscal 2025: 2 Fiscal 2025 Current Outlook Net Sales +6 percent to 11 percent Adjusted EBITDA $375 to $395 million Adjusted EPS $3.",
+      "guidance includes adjusted EBITDA and adjusted earnings per share, as defined above, which are non-GAAP financial measures.",
+      "guidance includes the Company’s estimates for interest expense of approximately $28 to $30 million, a provision for income taxes of approximately $69 to $74 million, and depreciation and amortization expense of approximately $78 to $82 million."
+    ],
+    "wave_or_demand_evidence": [
+      "customers, partially offset by higher sales to commercial vehicle customers.",
+      "customer deposits associated with sales contracts with long inventory lead times and higher payments for incentive compensation as compared to the prior year.",
+      "customers need, where they need them.",
+      "demand for our products and the markets we serve from regulatory and/or policy changes that have been or may be implemented in the U.",
+      "backlog intangible assets, which the Company will adjust for to calculate adjusted earnings per share, estimates of these expenses and gains for the remainder of fiscal 2025 are not available due to the low visibility and unpredictability of these items.",
+      "backlog intangible asset, which will be substantially amortized by the end of fiscal 2025."
+    ],
+    "warning_or_risk_evidence": [
+      "charges totaling $2.",
+      "charges.",
+      "charges, and depreciation and amortization expense, was $100.",
+      "inventory lead times and higher payments for incentive compensation as compared to the prior year.",
+      "charges during the quarter ended June 30, 2024 totaled $10.",
+      "impairment charges and certain other items."
+    ]
+  },
+  "semantic_rows": [
+    {
+      "type": "TitleElement",
+      "text": "EX-99.1"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TextElement",
+      "text": "ef20033260_ex99-1.htm"
+    },
+    {
+      "type": "TitleElement",
+      "text": "EXHIBIT 99.1"
+    },
+    {
+      "type": "TextElement",
+      "text": "Licensed to: Summit Financial Document created using Broadridge PROfile 24.6.1.5240 Copyright 1995 - 2024 Broadridge PROfilePageNumberReset%Num%1%%%"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Exhibit 99.1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "NEWS RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "FOR IMMEDIATE RELEASE"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Modine Reports First Quarter Fiscal 2025 Results"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Strong growth in data centers and continued margin improvement provided a strong start to fiscal 2025, leading to an upward revision to full-year earnings outlook"
+    },
+    {
+      "type": "TextElement",
+      "text": "Racine, WI – July 30, 2024 – Modine (NYSE: MOD), a diversified global leader in thermal management technology and solutions, today reported financial results for the quarter ended June 30, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "First Quarter Highlights:"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Net sales of $661.5 million increased 6 percent from the prior year, organic sales increased 4 percent • Operating income of $74.4 million increased 12 percent from the prior year • Adjusted EBITDA of $100.9 million increased $20.5 million, or 25 percent, from the prior year • Earnings per share of $0.88 increased $0.03, or 4 percent, from the prior year • Adjusted earnings per share of $1.04 increased $0.19, or 22 percent, from the prior year"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Revised Fiscal 2025 Outlook:"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Net sales growth between 6 percent to 11 percent • Adjusted EBITDA of $375 million to $395 million, an increase of 19 percent to 26 percent over the prior year • Adjusted earnings per share of $3.65 to $3.95 “Our first quarter results were among the best in the company’s history, clearly benefiting from our actions to transform Modine and drive sustainable earnings growth and margin improvement,” said Modine President and Chief Executive Officer, Neil D. Brinker. “The steps we’ve taken to both diversify and improve our business portfolio are producing significant benefits, as revenue growth in data centers and other key markets are more than offsetting the impact of market declines or exits in select other parts of the business. We continue to identify and execute incremental opportunities to apply 80/20 principles throughout the organization to improve our sales mix and produce earnings and margin improvements.”"
+    },
+    {
+      "type": "TitleElement",
+      "text": "First Quarter Financial Results"
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales increased 6 percent to $661.5 million, compared with $622.4 million in the prior year. Organic sales increased 4 percent compared with the prior year.Gross profit increased 27 percent to $162.6 million and gross margin improved by 400 basis points to 24.6 percent, primarily due to the benefits from ongoing 80/20 initiatives, higher average selling prices, lower material costs and favorable sales mix.Selling, general and administrative (“SG&A”) expenses increased $21.4 million to $82.8 million. The increase was primarily due to higher compensation-related expenses, including higher incentive compensation driven by improved financial results and incremental expenses from the recently-acquired Scott Springfield Mfg. Inc. business. In addition, SG&A expenses in the first quarter of fiscal 2025 included $4.6 million of incremental amortization expense related to acquired intangible assets.Operating income was $74.4 million, compared to $66.5 million in the prior year, an increase of 12 percent. The increase was driven by higher gross profit as compared to the prior year, partially offset by higher SG&A and restructuring expenses. The Company recorded $5.4 million of restructuring expenses during the first quarter of fiscal 2025, primarily for severance-related expenses associated with the closure of a technical service center in Europe. In addition, the Company recorded acquisition and integration costs and environmental charges totaling $2.0 million. During the first quarter of fiscal 2024, the Company recorded $0.2 million of environmental charges. Adjusted EBITDA, which excludes restructuring expenses, certain other charges, and depreciation and amortization expense, was $100.9 million, an increase of $20.5 million, or 25 percent, compared with $80.4 million in the prior year.Earnings per share was $0.88, compared with $0.85 in the prior year. Adjusted earnings per share was $1.04, compared with adjusted earnings per share of $0.85 in the prior year. This improvement of $0.19, or 22 percent, was primarily driven by higher gross profit."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "1"
+    },
+    {
+      "type": "TitleElement",
+      "text": "First Quarter Segment Review"
+    },
+    {
+      "type": "TextElement",
+      "text": "• Climate Solutions segment sales were $357.3 million, compared with $286.7 million one year ago, an increase of 25 percent, including $41.1 million of sales from acquired businesses. Organic sales increased 10 percent. This increase was driven by higher sales of data center cooling products, which were partially offset by lower sales of heat transfer products. The segment reported gross margin of 28.2 percent, which was 180 basis points higher than the prior year, primarily due to favorable sales mix. The segment reported operating income of $59.8 million, a 23 percent increase from the prior year. Adjusted EBITDA was $71.9 million, an increase of $17.2 million, or 31 percent, from the prior year. • Performance Technologies segment sales were $309.0 million, compared with $343.1 million one year ago, a decrease of 10 percent. Excluding the impact of divestitures, which was $24.3 million in the quarter, organic sales decreased 1 percent. This decrease primarily resulted from lower sales to off-highway and automotive customers, partially offset by higher sales to commercial vehicle customers. The segment reported gross margin of 20.6 percent, up 550 basis points from the prior year, primarily due to higher average selling prices and lower material costs. The segment reported operating income of $31.5 million, a $3.9 million improvement compared to the prior year, primarily due to higher gross profit partially offset by higher SG&A and restructuring expenses as compared to the prior year. Adjusted EBITDA was $43.7 million, an increase of $8.7 million, or 25 percent, from the prior year."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Balance Sheet & Liquidity"
+    },
+    {
+      "type": "TextElement",
+      "text": "Net cash provided by operating activities for the quarter ended June 30, 2024 was $40.5 million, a decrease of $1.2 million compared to the prior year. Free cash flow for the quarter ended June 30, 2024 was $13.7 million, a decrease of $12.9 million from the prior year, as the impact of higher operating earnings in the current year were more than offset by unfavorable net changes in working capital and higher capital expenditures, as compared with the prior year. The unfavorable changes in working capital include a decrease in customer deposits associated with sales contracts with long inventory lead times and higher payments for incentive compensation as compared to the prior year. Cash payments for restructuring activities, acquisition and integration costs, and environmental charges during the quarter ended June 30, 2024 totaled $10.9 million, an $8.2 million increase from the prior year.Total debt was $435.9 million as of June 30, 2024. Cash and cash equivalents at June 30, 2024 were $72.9 million. Net debt was $363.0 million as of June 30, 2024, a decrease of $8.5 million from the end of fiscal 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Outlook"
+    },
+    {
+      "type": "TextElement",
+      "text": "“Given our outperformance this quarter, we are increasing our revenue and earnings outlooks for fiscal 2025,” added Brinker. “Our business momentum in our high-growth, high-margin areas – including data centers and stationary power generation – remains strong and should help offset some further softness in the automotive, agriculture and construction equipment markets. As a result, we expect favorable sales mix will continue to support our improved earnings profile as we drive long-term value for our stakeholders.”Based on current exchange rates and market outlook, Modine provides its updated outlook for fiscal 2025:"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "2"
+    },
+    {
+      "type": "TableElement",
+      "text": "Fiscal 2025 Current Outlook Net Sales +6 percent to 11 percent Adjusted EBITDA $375 to $395 million Adjusted EPS $3.65 to $3.95"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Conference Call and Webcast"
+    },
+    {
+      "type": "TextElement",
+      "text": "Modine will conduct a conference call and live webcast, with a slide presentation, on Wednesday, July 31, 2024 at 10:00 a.m. Central Time (11:00 a.m. Eastern Time) to discuss its first quarter financial results. The webcast and accompanying slides will be available on the Investor Relations section of the Modine website at www.modine.com. Participants are encouraged to log on to the webcast and conference call about ten minutes prior to the start of the event. A replay of the audio and slides will be available on the Investor Relations section of the Modine website at www.modine.com on or after July 31, 2024. A call-in replay will be available through midnight on August 7, 2024 at 877-660-6853, (international replay 201-612-7415); Conference ID# 13747283. The Company will post a transcript of the call on its website on or after August 2, 2024."
+    },
+    {
+      "type": "TitleElement",
+      "text": "About Modine"
+    },
+    {
+      "type": "TextElement",
+      "text": "At Modine, we are Engineering a Cleaner, Healthier World™. Building on more than 100 years of excellence in thermal management, we provide trusted systems and solutions that improve air quality and conserve natural resources. More than 11,000 employees are at work in every corner of the globe, delivering the solutions our customers need, where they need them. Our Climate Solutions and Performance Technologies segments support our purpose by improving air quality, reducing energy and water consumption, lowering harmful emissions and enabling cleaner running vehicles and environmentally friendly refrigerants. Modine is a global company headquartered in Racine, Wisconsin (U.S.), with operations in North America, South America, Europe and Asia. For more information about Modine, visit www.modine.com."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "3"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-Looking Statements"
+    },
+    {
+      "type": "TextElement",
+      "text": "This press release contains statements, including information about future financial performance and market conditions, accompanied by phrases such as “believes,” “estimates,” “expects,” “plans,” “anticipates,” “intends,” “projects,” and other similar “forward-looking” statements, as defined in the Private Securities Litigation Reform Act of 1995. Modine's actual results, performance or achievements may differ materially from those expressed or implied in these statements because of certain risks and uncertainties, including, but not limited to those described under “Risk Factors” in Item 1A of Part I of the Company's Annual Report on Form 10-K for the year ended March 31, 2024 and under Forward-Looking Statements in Item 7 of Part II of that same report. Other risks and uncertainties include, but are not limited to, the following: the impact of potential adverse developments or disruptions in the global economy and financial markets, including impacts related to inflation, energy costs, supply chain challenges or supplier constraints, logistical disruptions, tariffs, sanctions and other trade issues or cross-border trade restrictions; the impact of other economic, social and political conditions, changes and challenges in the markets where we operate and compete, including foreign currency exchange rate fluctuations, increases in interest rates or tightening of the credit markets, recession or recovery therefrom, restrictions associated with importing and exporting and foreign ownership, public health crises, and the general uncertainties, including the impact on demand for our products and the markets we serve from regulatory and/or policy changes that have been or may be implemented in the U.S. or abroad, including those related to tax and trade, climate change, public health threats, and military conflicts, including the current conflicts in Ukraine and in the Middle East and heightened tensions in the Red Sea; the overall health and pricing focus of our customers; our ability to successfully realize anticipated benefits, including improved profit margins and cash flow, from our strategic initiatives and our application of 80/20 principles across our businesses; our ability to be at the forefront of technological advances and the impacts of any changes in the adoption rate of technologies that we expect to drive sales growth; our ability to accelerate growth organically and through acquisitions and successfully integrate acquired businesses; our ability to effectively and efficiently manage our operations in response to sales volume changes, including maintaining adequate production capacity to meet demand in our growing businesses while also completing restructuring activities and realizing benefits thereof; our ability to fund our global liquidity requirements efficiently and comply with the financial covenants in our credit agreements; operational inefficiencies as a result of product or program launches, unexpected volume increases or decreases, product transfers and warranty claims; the impact on Modine of any significant increases in commodity prices, particularly aluminum, copper, steel and stainless steel (nickel) and other purchased components and related costs, and our ability to adjust product pricing in response to any such increases; our ability to recruit and maintain talent in managerial, leadership, operational and administrative functions and to mitigate increased labor costs; our ability to protect our proprietary information and intellectual property from theft or attack; the impact of any substantial disruption or material breach of our information technology (“IT”) systems; the impact of a material weakness identified in our internal controls related to IT system access in Europe on our financial reporting process; costs and other effects of environmental investigation, remediation or litigation and the increasing emphasis on environmental, social and corporate governance matters; our ability to realize the benefits of deferred tax assets; and other risks and uncertainties identified in our public filings with the U.S. Securities and Exchange Commission. Forward-looking statements are as of the date of this press release, and we do not assume any obligation to update any forward-looking statements."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Non-GAAP Financial Disclosures"
+    },
+    {
+      "type": "TextElement",
+      "text": "Adjusted EBITDA, adjusted EBITDA margin, adjusted earnings per share, net debt, free cash flow, organic sales and organic sales growth (which are defined below) as used in this press release are not measures that are defined in generally accepted accounting principles (GAAP). These non-GAAP measures are used by management as performance measures to evaluate the Company’s overall financial performance and liquidity. These measures are not, and should not be viewed as, substitutes for the applicable GAAP measures, and may be different from similarly-titled measures used by other companies."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Definition – Adjusted EBITDA and adjusted EBITDA margin"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company defines adjusted EBITDA as net earnings excluding interest expense, the provision or benefit for income taxes, depreciation and amortization expenses, other income and expense, restructuring expenses, acquisition and integration costs, and certain other gains or charges. Adjusted EBITDA margin represents adjusted EBITDA as a percentage of net sales. The Company believes that adjusted EBITDA and adjusted EBITDA margin provide relevant measures of profitability and earnings power. The Company views these financial metrics as being useful in assessing operating performance from period to period by excluding certain items that it believes are not representative of its core business. Adjusted EBITDA, when calculated for the business segments, is defined as operating income excluding depreciation and amortization expenses, restructuring expenses, and certain other gains or charges."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Definition – Adjusted earnings per share"
+    },
+    {
+      "type": "TextElement",
+      "text": "Diluted earnings per share plus restructuring expenses, acquisition and integration costs, and excluding changes in income tax valuation allowances and certain other gains or charges. Adjusted earnings per share is an overall performance measure, not including costs associated with restructuring and acquisitions and certain other gains or charges."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Definition – Net debt"
+    },
+    {
+      "type": "TextElement",
+      "text": "The sum of debt due within one year and long-term debt, less cash and cash equivalents. Net debt is an indicator of the Company's debt position after considering on-hand cash balances."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "4"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Definition – Free cash flow"
+    },
+    {
+      "type": "TextElement",
+      "text": "Free cash flow represents net cash provided by operating activities less expenditures for property, plant and equipment. Free cash flow presents cash generated from operations during the period that is available for strategic capital decisions."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Definition – Organic sales and organic sales growth"
+    },
+    {
+      "type": "TextElement",
+      "text": "Net sales and net sales growth can be impacted by acquisitions, dispositions, and foreign currency exchange rate fluctuations. The Company defines organic sales as external net sales excluding the impact of acquisitions and the effects of foreign currency exchange rate fluctuations. Organic sales growth represents the percentage change of organic sales compared to prior year external net sales, excluding the impact of dispositions. The effect of exchange rate changes is calculated by using the same foreign currency exchange rates as those used to translate financial data for the prior period. The Company adjusts for acquisitions and dispositions by excluding net sales in the current and prior periods, respectively, for which there are no comparable sales in the reported periods. These sales growth measures provide a more consistent indication of our performance, without the effects of foreign currency exchange rate fluctuations or acquisitions and dispositions."
+    },
+    {
+      "type": "TitleElement",
+      "text": "Forward-looking non-GAAP financial measures"
+    },
+    {
+      "type": "TextElement",
+      "text": "The Company’s fiscal 2025 guidance includes adjusted EBITDA and adjusted earnings per share, as defined above, which are non-GAAP financial measures. The full-year fiscal 2025 guidance includes the Company’s estimates for interest expense of approximately $28 to $30 million, a provision for income taxes of approximately $69 to $74 million, and depreciation and amortization expense of approximately $78 to $82 million. The non-GAAP financial measures also exclude certain cash and non-cash expenses or gains. These expenses and gains may be significant and include items such as restructuring expenses (including severance and equipment transfer costs), acquisition and integration costs, impairment charges and certain other items. These expenses for the first three months of fiscal 2025 are presented on page 9. Beyond approximately $8.0 million of incremental amortization expense expected to be recorded in the Climate Solutions segment for acquired order backlog intangible assets, which the Company will adjust for to calculate adjusted earnings per share, estimates of these expenses and gains for the remainder of fiscal 2025 are not available due to the low visibility and unpredictability of these items."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "5"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Modine Manufacturing Company"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Consolidated statements of operations (unaudited)"
+    },
+    {
+      "type": "SupplementaryText",
+      "text": "(In millions, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 2023 Net sales $ 661.5 $ 622.4 Cost of sales 498.9 494.5 Gross profit 162.6 127.9 Selling, general & administrative expenses 82.8 61.4 Restructuring expenses 5.4 - Operating income 74.4 66.5 Interest expense (7.5 ) (5.9 ) Other expense – net (0.3 ) (0.6 ) Earnings before income taxes 66.6 60.0 Provision for income taxes (18.8 ) (14.7 ) Net earnings 47.8 45.3 Net earnings attributable to noncontrolling interest (0.5 ) (0.5 ) Net earnings attributable to Modine $ 47.3 $ 44.8 Net earnings per share attributable to Modine shareholders – diluted $ 0.88 $ 0.85 Weighted-average shares outstanding – diluted 53.9 53.0"
+    },
+    {
+      "type": "TableElement",
+      "text": "Condensed consolidated balance sheets (unaudited) (In millions) June 30, 2024 March 31, 2024 Assets Cash and cash equivalents $ 72.9 $ 60.1 Trade receivables 438.1 422.9 Inventories 350.0 357.9 Other current assets 52.8 53.1 Total current assets 913.8 894.0 Property, plant and equipment – net 363.7 365.7 Intangible assets – net 170.7 188.3 Goodwill 237.4 230.9 Deferred income taxes 67.0 75.1 Other noncurrent assets 113.8 97.5 Total assets $ 1,866.4 $ 1,851.5 Liabilities and shareholders' equity Debt due within one year $ 30.2 $ 31.7 Accounts payable 274.3 283.4 Other current liabilities 203.8 230.7 Total current liabilities 508.3 545.8 Long-term debt 405.7 399.9 Other noncurrent liabilities 156.1 150.3 Total liabilities 1,070.1 1,096.0 Total equity 796.3 755.5 Total liabilities & equity $ 1,866.4 $ 1,851.5"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "6"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Modine Manufacturing Company Condensed consolidated statements of cash flows (unaudited) (In millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 2023 Cash flows from operating activities: Net earnings $ 47.8 $ 45.3 Adjustments to reconcile net earnings to net cash provided by operating activities: Depreciation and amortization 19.1 13.7 Stock-based compensation expense 4.2 1.5 Deferred income taxes 6.1 3.1 Other – net 1.5 1.4 Changes in operating assets and liabilities: Trade accounts receivable (18.1 ) (2.7 ) Inventories 6.0 (7.9 ) Accounts payable 6.5 (9.5 ) Other assets and liabilities (32.6 ) (3.2 ) Net cash provided by operating activities 40.5 41.7 Cash flows from investing activities: Expenditures for property, plant and equipment (26.8 ) (15.1 ) Other – net 0.3 (3.3 ) Net cash used for investing activities (26.5 ) (18.4 ) Cash flows from financing activities: Net increase in debt 4.5 4.5 Other – net (4.5 ) (0.8 ) Net cash provided by financing activities - 3.7 Effect of exchange rate changes on cash (1.1 ) (0.2 ) Net increase in cash, cash equivalents and restricted cash 12.9 26.8 Cash, cash equivalents and restricted cash - beginning of period 60.3 67.2 Cash, cash equivalents and restricted cash - end of period $ 73.2 $ 94.0"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "7"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Modine Manufacturing Company Segment operating results (unaudited) (In millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 2023 Net sales: Climate Solutions $ 357.3 $ 286.7 Performance Technologies 309.0 343.1 Segment total 666.3 629.8 Corporate and eliminations (4.8 ) (7.4 ) Net sales $ 661.5 $ 622.4"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 2023 Gross profit: $'s % of sales $'s % of sales Climate Solutions $ 100.8 28.2 % $ 75.8 26.4 % Performance Technologies 63.5 20.6 % 51.9 15.1 % Segment total 164.3 24.7 % 127.7 20.3 % Corporate and eliminations (1.7 ) - 0.2 - Gross profit $ 162.6 24.6 % $ 127.9 20.6 %"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 2023 Operating income: Climate Solutions $ 59.8 $ 48.6 Performance Technologies 31.5 27.6 Segment total 91.3 76.2 Corporate and eliminations (16.9 ) (9.7 ) Operating income $ 74.4 $ 66.5"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "8"
+    },
+    {
+      "type": "TextElement",
+      "text": "Modine Manufacturing Company Adjusted financial results (unaudited) (In millions, except per share amounts)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 2023 Net earnings $ 47.8 $ 45.3 Interest expense 7.5 5.9 Provision for income taxes 18.8 14.7 Depreciation and amortization expense 19.1 13.7 Other expense – net 0.3 0.6 Restructuring expenses (a) 5.4 - Acquisition and integration costs (b) 1.9 - Environmental charges (c) 0.1 0.2 Adjusted EBITDA $ 100.9 $ 80.4 Net earnings per share attributable to Modine shareholders - diluted $ 0.88 $ 0.85 Restructuring expenses (a) 0.09 - Acquisition and integration costs (b) 0.07 - Adjusted earnings per share $ 1.04 $ 0.85"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) Restructuring expenses primarily consist of employee severance expenses related to targeted headcount reductions in the Performance Technologies segment, including those associated with the closure of a technical service center in Europe, and equipment transfer costs. The tax benefit related to restructuring expenses during the first quarter of fiscal 2025 was $0.4 million. (b) On March 1, 2024, the Company acquired Scott Springfield Manufacturing, a leading provider of air handling units for the data center, telecommunications, healthcare, and aerospace markets. The adjustment in the first quarter of fiscal 2025 includes $1.6 million recorded at Corporate for the impact of an inventory purchase accounting adjustment. The Company wrote up acquired inventory to its estimated fair value and charged the write-up to cost of sales as the underlying inventory was sold. The fiscal 2025 costs also include fees for accounting and legal professional services and incremental costs directly associated with integration activities. In addition, for purposes of calculating adjusted EPS, the Company also adjusted for $2.7 million of incremental amortization expense recorded in the Climate Solutions segment during the first quarter of fiscal 2025 associated with the acquired order backlog intangible asset, which will be substantially amortized by the end of fiscal 2025.The tax benefit related to the acquisition related costs and adjustments for fiscal 2025 was $1.0 million. (c) Environmental charges, including related legal costs, are recorded as SG&A expenses at Corporate and relate to previously-owned facilities."
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "9"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Modine Manufacturing Company Segment adjusted financial results (unaudited) (In millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 Three months ended June 30, 2023 Climate Solutions Performance Technologies Corporate and eliminations Total Climate Solutions Performance Technologies Corporate and eliminations Total Operating income $ 59.8 $ 31.5 $ (16.9 ) $ 74.4 $ 48.6 $ 27.6 $ (9.7 ) $ 66.5 Depreciation and amortization expense 11.9 7.0 0.2 19.1 6.1 7.4 0.2 13.7 Restructuring expenses (a) 0.2 5.2 - 5.4 - - - - Acquisition and integration costs (a) - - 1.9 1.9 - - - - Environmental charges (a) - - 0.1 0.1 - - 0.2 0.2 Adjusted EBITDA $ 71.9 $ 43.7 $ (14.7 ) $ 100.9 $ 54.7 $ 35.0 $ (9.3 ) $ 80.4 Net sales $ 357.3 $ 309.0 $ (4.8 ) $ 661.5 $ 286.7 $ 343.1 $ (7.4 ) $ 622.4 Adjusted EBITDA margin 20.1 % 14.1 % 15.3 % 19.1 % 10.2 % 12.9 %"
+    },
+    {
+      "type": "TextElement",
+      "text": "(a) See the Adjusted EBITDA reconciliation on the previous page for information on restructuring expenses and other adjustments."
+    },
+    {
+      "type": "TableElement",
+      "text": "Net debt (unaudited) (In millions) June 30, 2024 March 31, 2024 Debt due within one year $ 30.2 $ 31.7 Long-term debt 405.7 399.9 Total debt 435.9 431.6 Less: cash and cash equivalents 72.9 60.1 Net debt $ 363.0 $ 371.5"
+    },
+    {
+      "type": "TableElement",
+      "text": "Free cash flow (unaudited) (In millions) Three months ended June 30, 2024 2023 Net cash provided by operating activities $ 40.5 $ 41.7 Expenditures for property, plant and equipment (26.8 ) (15.1 ) Free cash flow $ 13.7 $ 26.6"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "10"
+    },
+    {
+      "type": "TitleElement",
+      "text": "Modine Manufacturing Company Organic sales and organic sales growth (unaudited) (In millions)"
+    },
+    {
+      "type": "TableElement",
+      "text": "Three months ended June 30, 2024 Three months ended June 30, 2023 External Sales Effect of Exchange Rate Changes Effect of Acquisitions Organic Sales External Sales Effect of Dispositions Sales Excluding Dispositions Organic Sales Growth Net sales: Climate Solutions $ 357.2 $ 0.7 $ (41.1 ) $ 316.8 $ 286.7 $ - $ 286.7 10 % Performance Technologies 304.3 3.4 - 307.7 335.7 (24.3 ) 311.4 -1 % Net Sales $ 661.5 $ 4.1 $ (41.1 ) $ 624.5 $ 622.4 $ (24.3 ) $ 598.1 4 %"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "11"
+    },
+    {
+      "type": "TextElement",
+      "text": "SOURCE: Modine Kathleen Powers(262) 636-1687kathleen.t.powers@modine.com"
+    },
+    {
+      "type": "PageNumberElement",
+      "text": "12"
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Net sales of $661.5 million increased 6 percent from the prior year, organic sales increased 4 percent"
+        ]
+      ]
+    },
+    {
+      "table_index": 1,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Operating income of $74.4 million increased 12 percent from the prior year"
+        ]
+      ]
+    },
+    {
+      "table_index": 2,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted EBITDA of $100.9 million increased $20.5 million, or 25 percent, from the prior year"
+        ]
+      ]
+    },
+    {
+      "table_index": 3,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Earnings per share of $0.88 increased $0.03, or 4 percent, from the prior year"
+        ]
+      ]
+    },
+    {
+      "table_index": 4,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted earnings per share of $1.04 increased $0.19, or 22 percent, from the prior year"
+        ]
+      ]
+    },
+    {
+      "table_index": 5,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Net sales growth between 6 percent to 11 percent"
+        ]
+      ]
+    },
+    {
+      "table_index": 6,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted EBITDA of $375 million to $395 million, an increase of 19 percent to 26 percent over the prior year"
+        ]
+      ]
+    },
+    {
+      "table_index": 7,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Adjusted earnings per share of $3.65 to $3.95"
+        ]
+      ]
+    },
+    {
+      "table_index": 8,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Climate Solutions segment sales were $357.3 million, compared with $286.7 million one year ago, an increase of 25 percent, including $41.1 million of sales from acquired businesses. Organic sales increased 10 percent. This increase was driven by higher sales of data center cooling products, which were partially offset by lower sales of heat transfer products. The segment reported gross margin of 28.2 percent, which was 180 basis points higher than the prior year, primarily due to favorable sales mix. The segment reported operating income of $59.8 million, a 23 percent increase from the prior year. Adjusted EBITDA was $71.9 million, an increase of $17.2 million, or 31 percent, from the prior year."
+        ]
+      ]
+    },
+    {
+      "table_index": 9,
+      "shape": [
+        1,
+        3
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "",
+          "•",
+          "Performance Technologies segment sales were $309.0 million, compared with $343.1 million one year ago, a decrease of 10 percent. Excluding the impact of divestitures, which was $24.3 million in the quarter, organic sales decreased 1 percent. This decrease primarily resulted from lower sales to off-highway and automotive customers, partially offset by higher sales to commercial vehicle customers. The segment reported gross margin of 20.6 percent, up 550 basis points from the prior year, primarily due to higher average selling prices and lower material costs. The segment reported operating income of $31.5 million, a $3.9 million improvement compared to the prior year, primarily due to higher gross profit partially offset by higher SG&A and restructuring expenses as compared to the prior year. Adjusted EBITDA was $43.7 million, an increase of $8.7 million, or 25 percent, from the prior year."
+        ]
+      ]
+    },
+    {
+      "table_index": 10,
+      "shape": [
+        4,
+        2
+      ],
+      "columns": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "Fiscal 2025",
+          "Current Outlook"
+        ],
+        [
+          "Net Sales",
+          "+6 percent to 11 percent"
+        ],
+        [
+          "Adjusted EBITDA",
+          "$375 to $395 million"
+        ],
+        [
+          "Adjusted EPS",
+          "$3.65 to $3.95"
+        ]
+      ]
+    },
+    {
+      "table_index": 11,
+      "shape": [
+        19,
+        9
+      ],
+      "columns": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Three months ended June 30,",
+          "Three months ended June 30,",
+          "Three months ended June 30,",
+          "Three months ended June 30,",
+          "Three months ended June 30,",
+          "Three months ended June 30,",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2024",
+          "2024",
+          "",
+          "",
+          "2023",
+          "2023",
+          ""
+        ],
+        [
+          "Net sales",
+          "",
+          "$",
+          "661.5",
+          "",
+          "",
+          "$",
+          "622.4",
+          ""
+        ],
+        [
+          "Cost of sales",
+          "",
+          "",
+          "498.9",
+          "",
+          "",
+          "",
+          "494.5",
+          ""
+        ],
+        [
+          "Gross profit",
+          "",
+          "",
+          "162.6",
+          "",
+          "",
+          "",
+          "127.9",
+          ""
+        ],
+        [
+          "Selling, general & administrative expenses",
+          "",
+          "",
+          "82.8",
+          "",
+          "",
+          "",
+          "61.4",
+          ""
+        ],
+        [
+          "Restructuring expenses",
+          "",
+          "",
+          "5.4",
+          "",
+          "",
+          "",
+          "-",
+          ""
+        ],
+        [
+          "Operating income",
+          "",
+          "",
+          "74.4",
+          "",
+          "",
+          "",
+          "66.5",
+          ""
+        ],
+        [
+          "Interest expense",
+          "",
+          "",
+          "(7.5",
+          ")",
+          "",
+          "",
+          "(5.9",
+          ")"
+        ],
+        [
+          "Other expense – net",
+          "",
+          "",
+          "(0.3",
+          ")",
+          "",
+          "",
+          "(0.6",
+          ")"
+        ],
+        [
+          "Earnings before income taxes",
+          "",
+          "",
+          "66.6",
+          "",
+          "",
+          "",
+          "60.0",
+          ""
+        ],
+        [
+          "Provision for income taxes",
+          "",
+          "",
+          "(18.8",
+          ")",
+          "",
+          "",
+          "(14.7",
+          ")"
+        ],
+        [
+          "Net earnings",
+          "",
+          "",
+          "47.8",
+          "",
+          "",
+          "",
+          "45.3",
+          ""
+        ],
+        [
+          "Net earnings attributable to noncontrolling interest",
+          "",
+          "",
+          "(0.5",
+          ")",
+          "",
+          "",
+          "(0.5",
+          ")"
+        ],
+        [
+          "Net earnings attributable to Modine",
+          "",
+          "$",
+          "47.3",
+          "",
+          "",
+          "$",
+          "44.8",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Net earnings per share attributable to Modine shareholders – diluted",
+          "",
+          "$",
+          "0.88",
+          "",
+          "",
+          "$",
+          "0.85",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Weighted-average shares outstanding – diluted",
+          "",
+          "",
+          "53.9",
+          "",
+          "",
+          "",
+          "53.0",
+          ""
+        ]
+      ]
+    }
+  ],
+  "financial_extracts": {
+    "source_method": "sec_parser_table_xbrl",
+    "quarter_revenue_millions": 661.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 375.0,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {},
+    "evidence": [
+      {
+        "field": "reported_results.revenue_millions",
+        "quote": "Net sales of $661.5 million"
+      },
+      {
+        "field": "reported_results.revenue_yoy_pct",
+        "quote": " | • | Net sales of $661.5 million increased 6 percent from the prior year, organic sales increased 4 percent"
+      },
+      {
+        "field": "forward_guidance.revenue_millions_midpoint",
+        "quote": "Outlook: • Net sales growth between 6 percent to 11 percent • Adjusted EBITDA of $375 million"
+      }
+    ],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": -2,
+    "earnings_torque": 0,
+    "segment_wave_torque": 1,
+    "margin_quality": 0,
+    "warning_penalty": 1,
+    "guidance_vs_current_pct": -43.3107,
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-31",
+    "entry_open": "103.000000",
+    "return_10d_pct": "-1.8738",
+    "return_20d_pct": "4.9709",
+    "return_30d_pct": "18.0097",
+    "return_60d_pct": "28.9223",
+    "return_90d_pct": "26.5146"
+  },
+  "text_stats": {
+    "primary_text_len": 3868,
+    "exhibit_text_len": 26391,
+    "combined_text_len": 30261,
+    "semantic_text_len": 26529,
+    "table_count": 12,
+    "semantic_parse_status": "sec_parser"
+  }
+}

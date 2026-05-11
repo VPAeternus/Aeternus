@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "EAT",
+    "cik": "703351",
+    "event_date": "2024-08-14",
+    "event_accession": "0000703351-24-000027",
+    "primary_8k_doc": "eat-20240814.htm",
+    "exhibit_docs": [
+      "fy24q4ex991-earningsrelease.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EAT_000070335124000027_eat-20240814.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/EAT_000070335124000027_fy24q4ex991-earningsrelease.htm.txt"
+    ],
+    "revenue_bucket": "$2B-$10B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "EAT",
+    "cik": "703351",
+    "entity_name": "BRINKER INTERNATIONAL, INC.",
+    "revenue_bucket": "$2B-$10B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "3057700000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-30",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-29",
+    "net_income_value": "-30200000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-30",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2022-09-28",
+    "assets_value": "2487000000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-30",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-06-28",
+    "financing_cash_flow_value": "-67200000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-30",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-29",
+    "investing_cash_flow_value": "-133300000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-30",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-29",
+    "operating_cash_flow_value": "200800000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-30",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-29",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.009877",
+    "operating_cash_flow_to_revenue": "0.06567",
+    "assets_to_revenue": "0.813356",
+    "financing_cash_flow_to_revenue": "-0.021977",
+    "investing_cash_flow_to_revenue": "-0.043595"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "sales were $1,196.",
+      "sales increased 13.",
+      "sales of 14.",
+      "sales increased primarily due to favorable comparable restaurant sales driven by increased menu pricing, higher traffic, and favorable menu item mix.",
+      "sales of $230.",
+      "sales increased primarily due to favorable comparable restaurant sales driven by increased menu pricing and favorable menu item mix, partially offset by lower traffic."
+    ],
+    "guidance_evidence": [
+      "GUIDANCE DALLAS (August 14, 2024) – Brinker International, Inc.",
+      "guidance for fiscal 2025.",
+      "Guidance We are providing the following guidance for fiscal 2025 based on our current outlook: • Total revenues are expected to be in the range of $4.",
+      "expected to be in the range of $4.",
+      "expected to be in the range of 45 million - 47 million; and • Capital expenditures are expected to be in the range of $195 million - $215 million.",
+      "forecast special items without unreasonable effort."
+    ],
+    "wave_or_demand_evidence": [
+      "airs and maintenance expense.",
+      "ainst our strategy to deliver profitable, sustainable growth.",
+      "aintaining record high guest metrics,” said Kevin Hochman, Chief Executive Officer and President of Brinker International.",
+      "ails.",
+      "ains) and charges.",
+      "airs and maintenance, advertising, and manager salaries and bonus expense."
+    ],
+    "warning_or_risk_evidence": [
+      "charges.",
+      "charges (1) 23.",
+      "charges included in the Consolidated Statements of Comprehensive Income (Unaudited) included (in millions): Thirteen Week Periods Ended Fifty-Two Week Periods Ended June 26, 2024 June 28, 2023 June 26, 2024 June 28, 2023 Enterprise system implementation costs $ 6.",
+      "impairment charges 12.",
+      "charges 5.",
+      "charges $ 23."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 1196.5,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 4550,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-15",
+    "entry_open": "65.750000",
+    "return_10d_pct": "8.2738",
+    "return_20d_pct": "9.4601",
+    "return_30d_pct": "9.9011",
+    "return_60d_pct": "33.3840",
+    "return_90d_pct": "80.4563"
+  },
+  "text_stats": {
+    "primary_text_len": 3389,
+    "exhibit_text_len": 25157,
+    "combined_text_len": 28548
+  }
+}

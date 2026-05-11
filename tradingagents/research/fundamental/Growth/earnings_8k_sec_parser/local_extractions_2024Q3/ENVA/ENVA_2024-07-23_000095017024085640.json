@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ENVA",
+    "cik": "1529864",
+    "event_date": "2024-07-23",
+    "event_accession": "0000950170-24-085640",
+    "primary_8k_doc": "enva-20240723.htm",
+    "exhibit_docs": [
+      "enva-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENVA_000095017024085640_enva-20240723.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ENVA_000095017024085640_enva-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$100M-$500M"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ENVA",
+    "cik": "1529864",
+    "entity_name": "Enova International, Inc.",
+    "revenue_bucket": "$100M-$500M",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "483256000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-04-24",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "50923000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-04-24",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3846992000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-04-24",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-03-31",
+    "financing_cash_flow_value": "33555000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-04-24",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-205429000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-04-24",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "282016000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-04-24",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.105375",
+    "operating_cash_flow_to_revenue": "0.583575",
+    "assets_to_revenue": "7.960567",
+    "financing_cash_flow_to_revenue": "0.069435",
+    "investing_cash_flow_to_revenue": "-0.425094"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue increased 26% from the second quarter of 2023 to $628 million • Diluted earnings per share and adjusted earnings per share increased 29% and 28% from the second quarter of 2023 to $1.",
+      "revenue of $628 million in the second quarter of 2024 increased 26% from $499 million in the second quarter of 2023.",
+      "earnings per share and adjusted earnings per share increased 29% and 28% from the second quarter of 2023 to $1.",
+      "Net income of $54 million, or $1.",
+      "earnings per share, or, collectively, the Adjusted Earnings Measures, which are non-GAAP measures.",
+      "Net income $ 53,911 $ 48,145 $ 102,339 $ 99,068 Earnings Per Share Earnings per common share: Basic $ 2."
+    ],
+    "guidance_evidence": [
+      "forecasts of future events and reflect the views and assumptions of Enova's senior management with respect to the business, financial condition and prospects of Enova as of the date of this release and are not guarantees of future performance.",
+      "expects,\" \"anticipates\" and similar expressions or variations as they relate to Enova or its management are intended to identify forward-looking statements."
+    ],
+    "wave_or_demand_evidence": [
+      "demand, stable credit and cost-effective access to capital while our diversified product offerings, scalable operating model, world-class risk management capabilities and solid balance sheet continue to enable our consistent and differentiated financial performance.",
+      "customers with over $56 billion in loans and financing.",
+      "powered by machine learning and world-class analytics, today announced financial results for the second quarter ended June 30, 2024.",
+      "aid David Fisher, Enova’s CEO.",
+      "aid Steve Cunningham, CFO of Enova.",
+      "ain confident in our ability to generate meaningful financial results this year and beyond and our ability to return significant capital to shareholders through share repurchases."
+    ],
+    "warning_or_risk_evidence": [
+      "Charge-offs: Charge-offs (net of recoveries) $ 268,386 $ 214,970 $ 53,416 Charge-offs (net of recoveries) as a % of average loan and finance receivable balance (d) 7.",
+      "uncertainties indicated in Enova's filings with the Securities and Exchange Commission (\"SEC\"), including our annual report on Form 10-K, quarterly reports on Forms 10-Q and current reports on Forms 8-K.",
+      "uncertainties are beyond the ability of Enova to control, and, in many cases, Enova cannot predict all of the risks and uncertainties that could cause its actual results to differ materially from those indicated by the forward-looking statements.",
+      "losses and the opportunity for revenue performance of the loans and finance receivable portfolio on an aggregate basis.",
+      "losses, taxes and stock-based compensation.",
+      "loss, certain transaction-related costs and a discrete regulatory settlement shown below are useful to investors in order to allow them to compare our financial results during the periods shown without the effect of the expense items."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 628,
+    "quarter_revenue_yoy_pct": 26,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-07-24",
+    "entry_open": "75.360001",
+    "return_10d_pct": "-0.6104",
+    "return_20d_pct": "6.0244",
+    "return_30d_pct": "13.9729",
+    "return_60d_pct": "11.3986",
+    "return_90d_pct": "19.2542"
+  },
+  "text_stats": {
+    "primary_text_len": 3535,
+    "exhibit_text_len": 20177,
+    "combined_text_len": 23714
+  }
+}

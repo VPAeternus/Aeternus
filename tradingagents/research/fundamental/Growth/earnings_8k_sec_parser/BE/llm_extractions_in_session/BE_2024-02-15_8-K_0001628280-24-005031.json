@@ -1,0 +1,55 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "the fourth quarter and the full year ended December 31, 2023",
+    "period_end_date": "December 31, 2023"
+  },
+  "reported_results": {
+    "revenue_millions": 356.917,
+    "revenue_yoy_pct": -22.8416,
+    "revenue_qoq_pct": -10.8305,
+    "gross_margin_pct": 27.4,
+    "non_gaap_gross_margin_pct": null,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": null,
+    "revenue_low_millions": null,
+    "revenue_high_millions": null,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": null,
+    "guide_direction": "not_provided"
+  },
+  "qualitative": {
+    "demand_signal": "We look forward to building on this momentum in 2024 and beyond.",
+    "wave_signal": "“At Bloom Energy, our relentless focus on operational excellence and innovation helped us achieve a year of record revenue in 2023,” said KR Sridhar, Founder, Chairman and CEO of Bloom Energy.",
+    "margin_signal": "•Gross margin of 25.",
+    "risk_signal": "5 million compared to operating loss of $40.",
+    "customer_signal": "These forward-looking statements include, but are not limited to, Bloom’s expectations regarding: innovation and solutions; customer reaction to Bloom’s products; Bloom’s liquidity position; market demand for energy solutions; and Bloom’s 2024 outlook for revenue and profitability."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "Revenue | Revenue | Revenue | 356917 | 356917 | | 400268 | 400268 | | 462577 | 462577 | | 1333470 | 1333470 | | 1199125 | 1199125 |"
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "Revenue | Revenue | Revenue | 356917 | 356917 | | 400268 | 400268 | | 462577 | 462577 | | 1333470 | 1333470 | | 1199125 | 1199125 |"
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "Revenue | Revenue | Revenue | 356917 | 356917 | | 400268 | 400268 | | 462577 | 462577 | | 1333470 | 1333470 | | 1199125 | 1199125 |"
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "Gross Margin Gross Margin Gross Margin 27.4% 27.4% 27.4% 31.6% 31.6% 31.6% 30.4% 30.4% 30.4% 25.8% 25.8% 25.8% 23.0% 23.0% 23.0%"
+    }
+  ],
+  "missing_fields": [
+    "forward_guidance.revenue_millions_midpoint"
+  ],
+  "confidence": 0.65
+}

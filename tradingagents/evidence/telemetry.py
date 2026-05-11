@@ -673,10 +673,10 @@ def _delta(lhs: Optional[float], rhs: Optional[float]) -> Optional[float]:
 
 
 def _load_x_scope_for_date(base_dir: Path, date_key: str) -> Dict[str, Any]:
-    shortlist_path = base_dir / str(date_key) / "shortlist_top20.json"
-    shortlist_payload = _read_json(shortlist_path)
-    if isinstance(shortlist_payload, dict):
-        x_scope = shortlist_payload.get("x_scope_summary")
+    scout_path = base_dir / str(date_key) / "scout_ticker_summary.json"
+    scout_payload = _read_json(scout_path)
+    if isinstance(scout_payload, dict):
+        x_scope = scout_payload.get("x_scope_summary")
         if isinstance(x_scope, dict):
             return _normalized_x_scope(x_scope)
 

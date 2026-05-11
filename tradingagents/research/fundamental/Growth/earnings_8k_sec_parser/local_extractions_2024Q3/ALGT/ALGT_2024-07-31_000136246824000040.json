@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "ALGT",
+    "cik": "1362468",
+    "event_date": "2024-07-31",
+    "event_accession": "0001362468-24-000040",
+    "primary_8k_doc": "algt-20240731.htm",
+    "exhibit_docs": [
+      "a2024q28-kex991.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGT_000136246824000040_algt-20240731.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/ALGT_000136246824000040_a2024q28-kex991.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "ALGT",
+    "cik": "1362468",
+    "entity_name": "Allegiant Travel Co",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "649687000",
+    "revenue_fact_name": "Revenues",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-09",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "56149000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-09",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "4869410000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-09",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "-11877000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-09",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-114239000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-09",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "215400000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-09",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "0.086425",
+    "operating_cash_flow_to_revenue": "0.331544",
+    "assets_to_revenue": "7.495009",
+    "financing_cash_flow_to_revenue": "-0.018281",
+    "investing_cash_flow_to_revenue": "-0.175837"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue of $666.",
+      "revenue of $17.",
+      "revenues of $16.",
+      "earnings per share of $0.",
+      "earnings per share, excluding special charges, of $1.",
+      "earnings per share, excluding special charges, of $2."
+    ],
+    "guidance_evidence": [
+      "Guidance, subject to revision Certain forward-looking financial information in the following tables is not presented in accordance with accounting principles generally accepted in the U.",
+      "guidance System ASMs - year over year change ~1.",
+      "guidance Consolidated earnings (loss) per share, excluding special charges (3) ($2.",
+      "guidance,” \"anticipate,\" \"intend,\" \"plan,\" \"estimate\", “project”, “hope” or similar expressions.",
+      "expected growth profile maintains this non-competitive landscape.",
+      "expected to be accomplished with roughly the same number of aircraft and same size infrastructure, which should have the dual benefit of increased revenues and lower unit costs."
+    ],
+    "wave_or_demand_evidence": [
+      "demand trends across our airline business remained strong during the quarter and notably, ancillary outperformed.",
+      "demand periods, the addition of our Boeing aircraft, the optimization of Navitaire and the benefits from Prospect Advisors should position us for a much-improved 2025 and beyond.",
+      "customers with the people, places and experiences that matter most.",
+      "airline only diluted earnings per share, excluding special charges, of $2.",
+      "Airline special charges (3) 20.",
+      "Airline only Three Months Ended June 30, Percent Change (2) (unaudited) (in millions, except per share amounts) 2024 2023 YoY Airline operating revenue $ 649."
+    ],
+    "warning_or_risk_evidence": [
+      "charges, of $1.",
+      "charges, of $2.",
+      "charges, net of recoveries (3) (2.",
+      "charges (3) 20.",
+      "charges net of recoveries (1)(3) 32.",
+      "charges net of recoveries (1)(3) 1."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": null,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": null,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_millions",
+      "quarter_revenue_yoy_pct",
+      "guidance_revenue_millions"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-01",
+    "entry_open": "56.070000",
+    "return_10d_pct": "-34.7780",
+    "return_20d_pct": "-26.6631",
+    "return_30d_pct": "-26.7701",
+    "return_60d_pct": "-1.8013",
+    "return_90d_pct": "12.2882"
+  },
+  "text_stats": {
+    "primary_text_len": 7320,
+    "exhibit_text_len": 45528,
+    "combined_text_len": 52850
+  }
+}

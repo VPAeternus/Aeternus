@@ -19,7 +19,6 @@ SOURCE_FILES = [
 ]
 INPUT_NAMES = [
     "dealflow_universe.csv",
-    "final_dealflow_research_queue_sec_eligible.json",
     "final_dealflow_tickers_sec_eligible.json",
     "final_dealflow_tickers_sec_eligible.txt",
 ]

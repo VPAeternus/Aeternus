@@ -1,0 +1,73 @@
+{
+  "schema_version": "earnings_8k_llm_extraction_v1",
+  "source_method": "in_session_llm_json",
+  "reported_period": {
+    "period_text": "",
+    "period_end_date": ""
+  },
+  "reported_results": {
+    "revenue_millions": 53.3,
+    "revenue_yoy_pct": -30.4178,
+    "revenue_qoq_pct": -1.6605,
+    "gross_margin_pct": 15.3,
+    "non_gaap_gross_margin_pct": 19.9,
+    "eps": null,
+    "non_gaap_eps": null
+  },
+  "forward_guidance": {
+    "revenue_millions_midpoint": 53.0,
+    "revenue_low_millions": 51.0,
+    "revenue_high_millions": 55.0,
+    "revenue_growth_yoy_pct": null,
+    "gross_margin_pct": null,
+    "non_gaap_gross_margin_pct": 19.25,
+    "guide_direction": "negative"
+  },
+  "qualitative": {
+    "demand_signal": "“Demand trends played out largely as we expected in the third quarter,” said Dr.",
+    "wave_signal": "(NASDAQ: AAOI), a leading provider of fiber-optic access network products for the internet datacenter, cable broadband, telecom and fiber-to-the-home (FTTH) markets, today announced financial results for its third quarter 2021 ended September 30, 2021.",
+    "margin_signal": "·GAAP gross margin was 15.",
+    "risk_signal": "·GAAP net loss was $15.",
+    "customer_signal": "“We are encouraged by the continued strength we are seeing in our CATV business and the sequential uptick in datacom, as well as nine design wins across our business in the quarter."
+  },
+  "evidence": [
+    {
+      "field": "reported_results.revenue_millions",
+      "quote": "· Total revenue was $53.3 million, compared with $76.6 million in the third quarter of 2020 and $54.2 million in the second quarter of 2021."
+    },
+    {
+      "field": "reported_results.revenue_yoy_pct",
+      "quote": "· Total revenue was $53.3 million, compared with $76.6 million in the third quarter of 2020 and $54.2 million in the second quarter of 2021."
+    },
+    {
+      "field": "reported_results.revenue_qoq_pct",
+      "quote": "· Total revenue was $53.3 million, compared with $76.6 million in the third quarter of 2020 and $54.2 million in the second quarter of 2021."
+    },
+    {
+      "field": "reported_results.gross_margin_pct",
+      "quote": "· GAAP gross margin was 15.3%, compared with 25.0% in the third quarter of 2020 and 19.9% in the second quarter of 2021. Non-GAAP gross margin was 19.9%, compared with 27.4% in the third quarter of 2020 and 25.0% in the second quarter of 2021."
+    },
+    {
+      "field": "reported_results.non_gaap_gross_margin_pct",
+      "quote": "· GAAP gross margin was 15.3%, compared with 25.0% in the third quarter of 2020 and 19.9% in the second quarter of 2021. Non-GAAP gross margin was 19.9%, compared with 27.4% in the third quarter of 2020 and 25.0% in the second quarter of 2021."
+    },
+    {
+      "field": "forward_guidance.revenue_low_millions",
+      "quote": "· Revenue in the range of $51 million to $55 million."
+    },
+    {
+      "field": "forward_guidance.revenue_high_millions",
+      "quote": "· Revenue in the range of $51 million to $55 million."
+    },
+    {
+      "field": "forward_guidance.revenue_millions_midpoint",
+      "quote": "· Revenue in the range of $51 million to $55 million."
+    },
+    {
+      "field": "forward_guidance.non_gaap_gross_margin_pct",
+      "quote": "· Non-GAAP gross margin in the range of 18.5% to 20.0%."
+    }
+  ],
+  "missing_fields": [],
+  "confidence": 0.88
+}

@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "quarter": "2024Q3",
+    "ticker": "HUBS",
+    "cik": "1404655",
+    "event_date": "2024-08-07",
+    "event_accession": "0000950170-24-092811",
+    "primary_8k_doc": "hubs-20240807.htm",
+    "exhibit_docs": [
+      "hubs-ex99_1.htm"
+    ],
+    "primary_text_path": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HUBS_000095017024092811_hubs-20240807.htm.txt",
+    "exhibit_text_paths": [
+      "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text/HUBS_000095017024092811_hubs-ex99_1.htm.txt"
+    ],
+    "revenue_bucket": "$500M-$1B"
+  },
+  "xbrl": {
+    "quarter": "2024Q3",
+    "asof_date": "2024-07-01",
+    "ticker": "HUBS",
+    "cik": "1404655",
+    "entity_name": "HubSpot, Inc.",
+    "revenue_bucket": "$500M-$1B",
+    "revenue_filter_keep_under_10b": "True",
+    "revenue_value": "501620000",
+    "revenue_fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "revenue_unit": "USD",
+    "revenue_filed": "2024-05-10",
+    "revenue_form": "10-Q",
+    "revenue_period_end": "2023-03-31",
+    "net_income_value": "-36720000",
+    "net_income_fact_name": "NetIncomeLoss",
+    "net_income_unit": "USD",
+    "net_income_filed": "2024-05-10",
+    "net_income_form": "10-Q",
+    "net_income_period_end": "2023-03-31",
+    "assets_value": "3071392000",
+    "assets_fact_name": "Assets",
+    "assets_unit": "USD",
+    "assets_filed": "2024-05-10",
+    "assets_form": "10-Q",
+    "assets_period_end": "2023-12-31",
+    "financing_cash_flow_value": "10056000",
+    "financing_cash_flow_fact_name": "NetCashProvidedByUsedInFinancingActivities",
+    "financing_cash_flow_unit": "USD",
+    "financing_cash_flow_filed": "2024-05-10",
+    "financing_cash_flow_form": "10-Q",
+    "financing_cash_flow_period_end": "2023-03-31",
+    "investing_cash_flow_value": "-98711000",
+    "investing_cash_flow_fact_name": "NetCashProvidedByUsedInInvestingActivities",
+    "investing_cash_flow_unit": "USD",
+    "investing_cash_flow_filed": "2024-05-10",
+    "investing_cash_flow_form": "10-Q",
+    "investing_cash_flow_period_end": "2023-03-31",
+    "operating_cash_flow_value": "81070000",
+    "operating_cash_flow_fact_name": "NetCashProvidedByUsedInOperatingActivities",
+    "operating_cash_flow_unit": "USD",
+    "operating_cash_flow_filed": "2024-05-10",
+    "operating_cash_flow_form": "10-Q",
+    "operating_cash_flow_period_end": "2023-03-31",
+    "universal_feature_set": "through_ocf",
+    "universal_feature_complete": "True",
+    "universal_feature_complete_through_eps": "",
+    "missing_universal_features": "",
+    "net_income_margin": "-0.073203",
+    "operating_cash_flow_to_revenue": "0.161616",
+    "assets_to_revenue": "6.122946",
+    "financing_cash_flow_to_revenue": "0.020047",
+    "investing_cash_flow_to_revenue": "-0.196784"
+  },
+  "evidence_buckets": {
+    "numeric_evidence": [
+      "revenue was $637.",
+      "revenue was $623.",
+      "revenue was $13.",
+      "Operating Income (Loss) ● GAAP operating margin was (3.",
+      "Non-GAAP operating income was $109.",
+      "Net Income (Loss) ● GAAP net loss was ($14."
+    ],
+    "guidance_evidence": [
+      "Outlook Based on information available as of August 7, 2024, HubSpot is issuing guidance for the third quarter of 2024 and full year 2024 as indicated below.",
+      "outlook.",
+      "expected to be in the range of $646.",
+      "expected to have a neutral impact to third quarter 2024 revenue growth (1) .",
+      "expected to be in the range of $107.",
+      "expected to be in the range of $1."
+    ],
+    "wave_or_demand_evidence": [
+      "customer platform for scaling companies, today announced financial results for the second quarter ended June 30, 2024.",
+      "Customers to 228,054 at June 30, 2024, up 23% from June 30, 2023.",
+      "Customer was $11,215 during the second quarter of 2024, down 2% compared to the second quarter of 2023.",
+      "customers consolidating on HubSpot and the momentum we have in becoming the customer platform of choice for scaling companies.",
+      "customers, innovating our platform, and prioritizing strong Page | 1 execution.",
+      "customer platform that helps businesses connect and grow better."
+    ],
+    "warning_or_risk_evidence": [
+      "charges 1,077 63,880 1,859 92,450 Non-GAAP operating income $ 109,315 $ 76,565 $ 201,880 $ 145,967 GAAP operating margin (3.",
+      "charges 950-1,100 3,800-4,400 Income tax effects of non-GAAP items (22,795)-(23,058) (82,578)-(83,328) Non-GAAP net income range $100,800-$101,850 $408,200-$411,200 GAAP net income per basic and diluted share ($0.",
+      "charges, and income tax effects of non-GAAP items assume, among other things, the occurrence of no additional acquisitions, and no further revisions to stock-based compensation and related expenses.",
+      "charges.",
+      "charges paid from operating cash flow.",
+      "impairment losses on strategic investments, gain or loss on equity method investment, restructuring charges and account for the income tax effects of the exclusion of these non-GAAP items."
+    ]
+  },
+  "financial_extracts": {
+    "source_method": "regex_fallback",
+    "quarter_revenue_millions": 637.2,
+    "quarter_revenue_yoy_pct": null,
+    "quarter_revenue_qoq_pct": null,
+    "guidance_revenue_millions": 646,
+    "guidance_revenue_low_millions": null,
+    "guidance_revenue_high_millions": null,
+    "guidance_gross_margin_pct": null,
+    "qualitative": {
+      "demand_signal": "",
+      "wave_signal": "",
+      "margin_signal": "",
+      "risk_signal": "",
+      "customer_signal": ""
+    },
+    "evidence": [],
+    "missing_fields": [],
+    "confidence": 0
+  },
+  "earnings_score": {
+    "earnings_score": "",
+    "earnings_score_bucket": "not_scored",
+    "guidance_torque": "",
+    "earnings_torque": "",
+    "segment_wave_torque": "",
+    "margin_quality": "",
+    "warning_penalty": "",
+    "guidance_vs_current_pct": "",
+    "score_status": "missing_required_data",
+    "score_missing_fields": [
+      "quarter_revenue_yoy_pct"
+    ]
+  },
+  "returns": {
+    "tradable_date": "2024-08-08",
+    "entry_open": "490.000000",
+    "return_10d_pct": "1.4816",
+    "return_20d_pct": "0.6510",
+    "return_30d_pct": "0.9204",
+    "return_60d_pct": "6.5490",
+    "return_90d_pct": "21.9980"
+  },
+  "text_stats": {
+    "primary_text_len": 3403,
+    "exhibit_text_len": 35739,
+    "combined_text_len": 39144
+  }
+}
