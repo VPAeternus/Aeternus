@@ -781,6 +781,10 @@ def format_portfolio_risk_hedge_markdown(
     hedge_signal = hedge_signal or {}
     hedge_decision = hedge_decision or {}
 
+    hedge_gate_symbol = hedge_signal.get("hedge_gate_symbol")
+    hedge_gate_display = f"{hedge_gate_symbol} < SMA200" if hedge_gate_symbol else "N/A"
+    s7_source_display = hedge_signal.get("s7_source_symbol", "N/A")
+
     lines = [
         heading,
         "",
@@ -807,6 +811,10 @@ def format_portfolio_risk_hedge_markdown(
                 f"| SPY SMA20 | {_format_number(market_regime.get('spy_sma20'))} |",
                 f"| SPY SMA200 | {_format_number(market_regime.get('spy_sma200'))} |",
                 f"| SPY Deviation % | {_format_number(market_regime.get('spy_deviation_pct'))}% |",
+                f"| QQQ Close | {_format_number(market_regime.get('qqq_close'))} |",
+                f"| QQQ SMA20 | {_format_number(market_regime.get('qqq_sma20'))} |",
+                f"| QQQ SMA200 | {_format_number(market_regime.get('qqq_sma200'))} |",
+                f"| QQQ Deviation % | {_format_number(market_regime.get('qqq_deviation_pct'))}% |",
                 f"| VIX Close | {_format_number(market_regime.get('vix_close'))} |",
             ]
         )
@@ -819,6 +827,8 @@ def format_portfolio_risk_hedge_markdown(
             "|---|---|",
             f"| Regime | {hedge_signal.get('market_regime', 'UNKNOWN')} |",
             f"| Mode | {hedge_signal.get('mode', 'BULL')} |",
+            f"| Hedge Gate | {hedge_gate_display} |",
+            f"| S7 Source | {s7_source_display} |",
             f"| Action | {hedge_decision.get('action', 'NO_CHANGE')} |",
             f"| Instrument | {hedge_decision.get('instrument', 'SPY')} |",
             f"| Target Hedge % | {_format_number(hedge_decision.get('final_target_hedge_pct'))}% |",

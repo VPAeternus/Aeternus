@@ -1,9 +1,9 @@
-"""Adaptive hedging engine — default S7-only hedge overlay.
+"""Adaptive hedging engine — default QQQ-gated SPY S7 hedge overlay.
 
 Architecture:
-  Bull (SPY > SMA200): 0% hedge.
-  Bear without S7:     0% hedge by default; no plain SPY regime hedge.
-  Bear + S7 signal:    100% short SPY/QQQ hedge target.
+  Bull gate (QQQ > SMA200): 0% hedge.
+  Bear gate without SPY S7: 0% hedge by default; no plain SPY regime hedge.
+  QQQ bear gate + SPY S7:   100% short SPY/QQQ hedge target.
 
 A/B testing:
   Set ``AETERNUS_HEDGE_POLICY=bear_base`` or pass ``hedge_policy="bear_base"``
@@ -235,11 +235,12 @@ def build_portfolio_risk_snapshot(
 
 
 class AdaptiveHedgeEngine:
-    """S7-only hedge engine by default, with legacy bear-base mode for A/B tests.
+    """QQQ-gated SPY S7 hedge engine by default, with legacy bear-base mode for A/B tests.
 
     Default policy removes the plain SPY<SMA200 85% hedge. It only hedges when
-    S7a/S7b is active, targeting 100% short exposure. Legacy ``bear_base`` mode
-    is retained explicitly for A/B comparison before deletion.
+    QQQ is below its SMA200 and SPY S7a/S7b is active, targeting 100% short
+    exposure. Legacy ``bear_base`` mode is retained explicitly for A/B comparison
+    before deletion.
     """
 
     def __init__(
@@ -299,7 +300,17 @@ class AdaptiveHedgeEngine:
         spy_sma200_5d_ago = float(market_snapshot["spy_sma200_5d_ago"])
         vix_close = float(market_snapshot["vix_close"])
 
-        if spy_sma200 == 0.0 or spy_sma200_5d_ago == 0.0:
+        hedge_gate_symbol = "QQQ" if self.hedge_policy == HEDGE_POLICY_S7_ONLY else "SPY"
+        if hedge_gate_symbol == "QQQ":
+            gate_close = float(market_snapshot.get("qqq_close", 0.0) or 0.0)
+            gate_sma200 = float(market_snapshot.get("qqq_sma200", 0.0) or 0.0)
+            gate_sma200_5d_ago = float(market_snapshot.get("qqq_sma200_5d_ago", 0.0) or 0.0)
+        else:
+            gate_close = spy_close
+            gate_sma200 = spy_sma200
+            gate_sma200_5d_ago = spy_sma200_5d_ago
+
+        if spy_sma200 == 0.0 or spy_sma200_5d_ago == 0.0 or gate_sma200 == 0.0 or gate_sma200_5d_ago == 0.0:
             return {
                 "base_hedge_pct": 0.0,
                 "s7_boost_pct": 0.0,
@@ -308,6 +319,10 @@ class AdaptiveHedgeEngine:
                 "target_hedge_pct_pre_hysteresis": 0.0,
                 "mode": "BULL",
                 "market_regime": "UNKNOWN",
+                "hedge_policy": self.hedge_policy,
+                "hedge_gate_symbol": hedge_gate_symbol,
+                "s7_source_symbol": "SPY",
+                "s7_active": bool(s7_active),
                 "risk_metrics": {
                     "portfolio_beta_60d": float(beta),
                     "var_95_1d_pct_nav": float(var95),
@@ -317,11 +332,11 @@ class AdaptiveHedgeEngine:
                 "data_sufficient": False,
             }
 
-        bear_trigger_active = spy_close < spy_sma200
+        bear_trigger_active = gate_close < gate_sma200
 
-        # ── Bull regime: 0% hedge ──
+        # ── Bull gate: 0% hedge ──
         if not bear_trigger_active:
-            regime = _classify_market_regime(spy_close, spy_sma200, vix_close, False)
+            regime = _classify_market_regime(gate_close, gate_sma200, vix_close, False)
             return {
                 "base_hedge_pct": 0.0,
                 "s7_boost_pct": 0.0,
@@ -330,6 +345,10 @@ class AdaptiveHedgeEngine:
                 "target_hedge_pct_pre_hysteresis": 0.0,
                 "mode": "BULL",
                 "market_regime": regime,
+                "hedge_policy": self.hedge_policy,
+                "hedge_gate_symbol": hedge_gate_symbol,
+                "s7_source_symbol": "SPY",
+                "s7_active": bool(s7_active),
                 "risk_metrics": {
                     "portfolio_beta_60d": float(beta),
                     "var_95_1d_pct_nav": float(var95),
@@ -339,9 +358,9 @@ class AdaptiveHedgeEngine:
                 "data_sufficient": True,
             }
 
-        # ── Default policy: S7-only, no plain bear-regime hedge ──
+        # ── Default policy: QQQ gate + SPY S7, no plain bear-regime hedge ──
         if self.hedge_policy == HEDGE_POLICY_S7_ONLY:
-            regime = _classify_market_regime(spy_close, spy_sma200, vix_close, False)
+            regime = _classify_market_regime(gate_close, gate_sma200, vix_close, False)
             target = self.s7_hedge_pct if s7_active else 0.0
             mode = "S7_HEDGE" if s7_active else "S7_STANDBY"
             return {
@@ -353,6 +372,8 @@ class AdaptiveHedgeEngine:
                 "mode": mode,
                 "market_regime": regime,
                 "hedge_policy": self.hedge_policy,
+                "hedge_gate_symbol": hedge_gate_symbol,
+                "s7_source_symbol": "SPY",
                 "s7_active": bool(s7_active),
                 "risk_metrics": {
                     "portfolio_beta_60d": float(beta),
@@ -393,6 +414,8 @@ class AdaptiveHedgeEngine:
             "mode": mode,
             "market_regime": regime,
             "hedge_policy": self.hedge_policy,
+            "hedge_gate_symbol": hedge_gate_symbol,
+            "s7_source_symbol": "SPY",
             "s7_active": bool(s7_active),
             "risk_metrics": {
                 "portfolio_beta_60d": float(beta),

@@ -2,6 +2,11 @@
 
 from typing import Literal, Optional, TypedDict
 
+try:
+    from typing import NotRequired
+except ImportError:  # Python 3.10 compatibility
+    from typing_extensions import NotRequired
+
 
 class PortfolioRiskSnapshot(TypedDict):
     timestamp: str
@@ -21,6 +26,11 @@ class MarketRegimeSnapshot(TypedDict):
     spy_sma200: float
     spy_sma200_5d_ago: float
     spy_deviation_pct: float
+    qqq_close: float
+    qqq_sma20: float
+    qqq_sma200: float
+    qqq_sma200_5d_ago: float
+    qqq_deviation_pct: float
     vix_close: float
 
 
@@ -33,6 +43,10 @@ class HedgeSignal(TypedDict):
     mode: Literal["BULL", "S7_STANDBY", "S7_HEDGE", "BEAR", "BEAR_S7_BOOST", "CRASH"]
     market_regime: str
     risk_metrics: dict
+    hedge_policy: NotRequired[str]
+    hedge_gate_symbol: NotRequired[Literal["SPY", "QQQ"]]
+    s7_source_symbol: NotRequired[Literal["SPY"]]
+    s7_active: NotRequired[bool]
 
 
 class HedgeDecision(TypedDict):
