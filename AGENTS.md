@@ -37,6 +37,7 @@ Build the Aeternus Investment Intelligence Platform - a next-generation research
 
 ### Code Changes
 - Follow `KARPATHY_GUIDELINES.md` (simplicity, surgical, goal-driven)
+- Hard rule: keep the codebase clean. No tmp files, no dead code, no dead files. Stay organized at all times. No unnecessary folders, subfolders, or files.
 - Run tests before committing: `python -m pytest tests/ -v`
 - Match existing code style
 
