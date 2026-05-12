@@ -4,6 +4,18 @@
 
 ---
 
+## Fundamental Scoring Input Contract
+
+Permanent contract: `docs/research/fundamental_scoring_input_contract.md` defines required data sources for correct daily fundamental scoring. Use it before judging readiness or final publish. Key rule: required base-score rows need quarterly filing text, Companyfacts/XBRL financials, filing/signal date, and entry price. Official Tier 1-4 LLM / Top 10 + Plus 5 eligibility requires fresh earnings evidence: press release exhibit or primary earnings 8-K. Main LLM extraction packets must include only press-release/8-K evidence, not 10-Q/10-K text. Quarterly filing alone is not enough for high-conviction LLM selection. Daily SEC orchestration must loop fetch/coverage until the fetch queue is empty, because one pass can reveal the next required layer. For `2026Q2` final selection, `2026Q1` prior-quarter context is required for QoQ fields used by HP/RM/shadow-refill logic. Never make the user remember these rules; check the contract before readiness claims.
+
+## Persistent Communication Preference
+
+- Use operator/plain-English language first, especially in live step-by-step workflows.
+- Do not lead with CLI flags, file internals, implementation jargon, or technical mechanics unless the user asks for exact commands.
+- Next-step answers should use this default shape: "Next step in plain English:" followed by 1-3 short bullets with business action and reason.
+- Use user-facing terms: "main list" not "current universe", "comparison data" not "context names", "ready for LLM" not "eligible packets".
+- Next-step answers should say: action, why it matters, expected result. Keep command syntax out of the main answer unless explicitly requested.
+
 ## Project Identity
 
 **Name**: Aeternus Platform  

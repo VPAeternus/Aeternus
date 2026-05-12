@@ -104,3 +104,35 @@ def test_orchestrator_diagnostic_mode_with_skip_llm_false_does_not_require_post_
     assert result.summary["stopped"] == "publish_skipped"
     assert any(g.gate_number == 8 and g.status == GateStatus.SKIPPED for g in result.gates)
     assert not (cfg.output_root / "high_conviction_top15.csv").exists()
+
+
+def test_orchestrator_repeats_sec_fetch_until_queue_drains(tmp_path):
+    master = tmp_path / "master.json"; _write_master(master, count=1)
+    live = tmp_path / "live_sec"; (live / "companyfacts").mkdir(parents=True)
+    (live / "companyfacts" / "CIK0000000001.json").write_text(json.dumps(_companyfacts_payload()))
+    calls = {"coverage": 0, "fetch": 0}
+
+    def fake_coverage(*, out_root, universe_csv, eligible_json, quarter, live_sec_root):
+        calls["coverage"] += 1
+        manifest = out_root / f"sec_coverage_manifest_{quarter}.csv"
+        rows = [{"ticker": "T0", "quarter": quarter, "coverage_status": "CACHED_READY", "missing_inputs": "", "earnings_8k_accession": "1", "earnings_8k_filing_date": "2026-05-08", "earnings_8k_primary_document": "8k.htm", "earnings_exhibit_document": "ex99.htm", "periodic_accession": "2", "periodic_form": "10-Q", "periodic_filing_date": "2026-05-08", "periodic_primary_document": "10q.htm"}]
+        manifest.parent.mkdir(parents=True, exist_ok=True)
+        with manifest.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+        queue_by_call = {1: 2, 2: 1}
+        return {"ticker_count": 1, "status_counts": {"CACHED_READY": 1}, "missing_input_counts": {}, "fetch_queue_count": queue_by_call.get(calls["coverage"], 0), "blocked_tickers": [], "outputs": {"manifest_csv": str(manifest)}}
+
+    def fake_fetch(*, out_root, live_sec_root):
+        calls["fetch"] += 1
+        return {"status": "complete", "pass": calls["fetch"]}
+
+    def fake_prices(tickers, *, start, end):
+        return [{"ticker": "T0", "date": "2026-05-11", "open": 20, "close": 20}]
+
+    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode="diagnostic-only", output_root=tmp_path / "run", master_universe_path=master, handoff_path=None, sec_live_root=live, skip_fetch=False, skip_llm=True, min_broad_universe_count=1)
+    result = run_daily_fundamental(cfg, services=DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage, run_fetch_once=fake_fetch))
+    gate4 = next(g for g in result.gates if g.gate_number == 4)
+    assert gate4.status == GateStatus.PASS
+    assert gate4.summary["fetch_pass_count"] == 2
+    assert gate4.summary["final_fetch_queue_count"] == 0
+    assert calls["fetch"] == 2

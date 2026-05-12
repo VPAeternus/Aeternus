@@ -46,9 +46,15 @@ Build the Aeternus Investment Intelligence Platform - a next-generation research
 - Be concise but complete
 
 ### Communication
-- If blocked, document in WORKING.md blockers section
-- If decision needed, list options clearly
-- If uncertain, ask rather than assume
+- For fundamental scoring work, follow `docs/research/fundamental_scoring_input_contract.md` before judging readiness or final publish. Never make the user re-explain SEC evidence, fresh earnings 8-K/press-release, fetch-loop, score-input quarantine, or prior-quarter requirements.
+- Speak in operator language first, not implementation language.
+- For step-by-step live workflows, use this default shape: "Next step in plain English:" followed by 1-3 short bullets with business action and reason.
+- Do not lead with flags, command syntax, file internals, or jargon unless the user asks for the exact command.
+- Replace vague technical labels with user-facing terms: "main list" not "current universe", "comparison data" not "context names", "ready for LLM" not "eligible packets".
+- Keep next steps plain-English and short: what we are doing, why it matters, what success/failure means.
+- If blocked, document in WORKING.md blockers section.
+- If decision needed, list options clearly.
+- If uncertain, ask rather than assume.
 
 ---
 

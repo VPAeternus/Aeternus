@@ -44,6 +44,7 @@ class DailyRunConfig:
     llm_output_dir: Path | None = None
     llm_output_csv: Path | None = None
     min_broad_universe_count: int = 1000
+    max_sec_fetch_passes: int = 5
 
     @property
     def run_mode(self) -> RunMode:

@@ -223,6 +223,23 @@ def fetch_item(index: int, item: dict[str, Any]) -> dict[str, Any]:
     return {'ok': True, 'cached': False, 'index': index, 'key': key, 'item': item, 'bytes': len(payload)}
 
 
+def item_cache_complete(item: dict[str, Any]) -> bool:
+    try:
+        path = cache_path(item)
+        if not path.exists():
+            return False
+        validate_payload(path, path.read_bytes())
+        if item.get('kind') == 'complete_submission':
+            for doc in item.get('documents', []) or []:
+                doc_path = LIVE / str(doc.get('cache_key', '')).strip('/')
+                if not doc_path.exists():
+                    return False
+                validate_payload(doc_path, doc_path.read_bytes())
+        return True
+    except Exception:
+        return False
+
+
 def load_items() -> list[dict[str, Any]]:
     queue = json.loads(QUEUE_PATH.read_text(encoding='utf-8'))
     eligible = eligible_tickers()
@@ -266,7 +283,7 @@ def main() -> None:
         'workers': MAX_WORKERS,
         'max_requests_per_second': MAX_REQUESTS_PER_SECOND,
     }
-    pending = [(idx, item) for idx, item in enumerate(items, start=1) if str(item['cache_key']) not in done]
+    pending = [(idx, item) for idx, item in enumerate(items, start=1) if str(item['cache_key']) not in done or not item_cache_complete(item)]
     errors: list[dict[str, Any]] = []
     completed_since_checkpoint = 0
     last_index = 0

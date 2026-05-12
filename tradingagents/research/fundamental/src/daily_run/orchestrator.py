@@ -16,7 +16,7 @@ from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_f
 from .finalize import build_final_scores, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
 from .models import DailyRunConfig, DailyRunState, GateResult, GateStatus, RunMode, StopGateError
-from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage
+from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, split_score_ready_rows
 from .universe import build_combined_universe, validate_universe_gate
 
 
@@ -76,7 +76,7 @@ def _write_final_report(state: DailyRunState, summary: dict[str, Any]) -> Path:
         f"4. scout append count: `{universe.get('scout_count', '')}`",
         f"5. invalid/rerouted tickers: `{coverage.get('blocked_tickers', [])}`",
         f"6. pre-LLM scorable count: `{pre.get('pre_llm_scored', '')}`",
-        f"7. price/trade-date coverage: entry ready `{price.get('entry_open_ready', '')}`, missing `{price.get('missing_entry_open', '')}`",
+        f"7. price/trade-date coverage: entry ready `{price.get('entry_open_ready', '')}`, missing `{price.get('missing_entry_open', '')}`, score-ready `{price.get('score_input_ready', '')}`, score-data quarantine `{price.get('score_input_quarantine_count', '')}`",
         f"8. Tier 0/1/2/3/4 counts: `{ {k: v for k, v in tier.items() if k.startswith('tier_')} }`",
         f"9. LLM-eligible count: `{tier.get('llm_eligible_count', '')}`",
         f"10. LLM packet count: `{llm.get('packet_count', '')}`",
@@ -87,7 +87,7 @@ def _write_final_report(state: DailyRunState, summary: dict[str, Any]) -> Path:
         f"15. Top10 + Plus5 tickers: selected count `{publish.get('top15_selected_count', '')}`",
         f"16. shadow refill result: selected count `{publish.get('shadow_selected_count', '')}`",
         f"17. stop gates encountered: `{[g.gate_number for g in state.gates if g.status == GateStatus.HARD_STOP]}`",
-        f"18. quarantined rows by reason: price `{price.get('missing_entry_open', '')}`, LLM `{tier.get('llm_quarantine_count', '')}`, empty evidence `{llm.get('empty_evidence_count', '')}`",
+        f"18. quarantined rows by reason: price `{price.get('missing_entry_open', '')}`, score data `{price.get('score_input_quarantine_count', '')}`, LLM `{tier.get('llm_quarantine_count', '')}`, empty evidence `{llm.get('empty_evidence_count', '')}`",
         f"19. files produced: `{state.artifacts}`",
         f"20. output status: `{'final' if summary.get('final') else 'diagnostic_or_stopped'}`",
         "",
@@ -157,12 +157,20 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
 
         if not config.skip_fetch and coverage_summary["fetch_queue_count"]:
             fetcher = services.run_fetch_once or run_sec_fetch_once
-            before_fetch_queue = coverage_summary["fetch_queue_count"]
-            fetch_manifest = fetcher(out_root=config.output_root, live_sec_root=live_root)
-            coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=config.master_universe_path, quarter=config.quarter, live_sec_root=live_root)
-            companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
-            coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
-            _record(state, GateResult(4, "Fetch and materialization", GateStatus.PASS, {"initial_fetch_queue_count": before_fetch_queue, "post_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_manifest": fetch_manifest}, coverage_summary.get("outputs", {})))
+            fetch_passes: list[dict[str, Any]] = []
+            initial_fetch_queue = coverage_summary["fetch_queue_count"]
+            pass_number = 0
+            while coverage_summary["fetch_queue_count"] and pass_number < max(1, int(config.max_sec_fetch_passes)):
+                pass_number += 1
+                before_fetch_queue = coverage_summary["fetch_queue_count"]
+                fetch_manifest = fetcher(out_root=config.output_root, live_sec_root=live_root)
+                coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=config.master_universe_path, quarter=config.quarter, live_sec_root=live_root)
+                companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
+                coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
+                fetch_passes.append({"pass": pass_number, "initial_fetch_queue_count": before_fetch_queue, "post_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_manifest": fetch_manifest})
+            gate_status = GateStatus.HARD_STOP if coverage_summary["fetch_queue_count"] else GateStatus.PASS
+            reason = "fetch_queue_remaining_after_max_passes" if coverage_summary["fetch_queue_count"] else "fetch_queue_drained"
+            _record(state, GateResult(4, "Fetch and materialization", gate_status, {"initial_fetch_queue_count": initial_fetch_queue, "final_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_pass_count": len(fetch_passes), "max_sec_fetch_passes": config.max_sec_fetch_passes, "reason": reason, "fetch_passes": fetch_passes}, coverage_summary.get("outputs", {})))
         else:
             _record(state, GateResult(4, "Fetch and materialization", GateStatus.PASS, {"fetch_queue_count": coverage_summary["fetch_queue_count"], "reason": "no_fetchable_queue_or_skip_fetch"}, {}))
 
@@ -179,11 +187,13 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             pre_with_dates.append({**row, **cov, "tradable_date": row.get("tradable_date") or derive_tradable_date_from_coverage(cov)})
         priced_rows, price_quarantine, price_summary = attach_entry_prices(pre_with_dates, as_of=config.as_of, price_provider=services.price_provider)
         price_ready_rows = [r for r in priced_rows if r.get("entry_open")]
+        score_ready_rows, score_input_quarantine, score_input_summary = split_score_ready_rows(price_ready_rows)
         price_q_path = config.output_root / "entry_price_quarantine.csv"; write_csv(price_q_path, price_quarantine)
+        score_q_path = config.output_root / "score_input_quarantine.csv"; write_csv(score_q_path, score_input_quarantine)
         price_status = GateStatus.HARD_STOP if config.run_mode == RunMode.BROAD_MASTER_FINAL and price_quarantine else GateStatus.PASS
-        _record(state, GateResult(6, "Trade date, price, and entry-open", price_status, {**price_summary, "tier_input_rows": len(price_ready_rows), "reason": "missing_entry_open" if price_quarantine else ""}, {"entry_price_quarantine": str(price_q_path)}))
+        _record(state, GateResult(6, "Trade date, price, and entry-open", price_status, {**price_summary, **score_input_summary, "tier_input_rows": len(score_ready_rows), "reason": "missing_entry_open" if price_quarantine else ""}, {"entry_price_quarantine": str(price_q_path), "score_input_quarantine": str(score_q_path)}))
 
-        tiered_rows, tier_summary = assign_daily_tiers(price_ready_rows)
+        tiered_rows, tier_summary = assign_daily_tiers(score_ready_rows)
         eligible_rows, llm_quarantine, eligibility_summary = build_llm_eligibility(tiered_rows, coverage_rows)
         write_csv(config.output_root / "tier_classification.csv", tiered_rows); write_csv(config.output_root / "llm_eligibility.csv", eligible_rows); write_csv(config.output_root / "llm_quarantine.csv", llm_quarantine)
         _record(state, GateResult(7, "Tier 0-4 and LLM eligibility", GateStatus.PASS, {**tier_summary, **eligibility_summary}, {"tier_classification": str(config.output_root / "tier_classification.csv"), "llm_eligibility": str(config.output_root / "llm_eligibility.csv")}))
@@ -218,7 +228,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows)
         final_path = config.output_root / f"fundamental_final_scores_{config.as_of}.csv"
         final_artifacts = write_final_scores_csv(final_path, final_rows, final_summary)
-        _record(state, validate_broad_final_scores(final_rows=final_rows, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=len(price_quarantine), run_mode=config.run_mode, artifacts=final_artifacts))
+        _record(state, validate_broad_final_scores(final_rows=final_rows, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=len(price_quarantine) + len(score_input_quarantine), run_mode=config.run_mode, artifacts=final_artifacts))
 
         if config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.skip_llm:
             publish_gate = (services.publish or publish_top15_and_shadow)(scores_csv=final_path, output_root=config.output_root, as_of=config.as_of, broad_universe_count=len(universe.rows), coverage_manifest=coverage_csv if coverage_csv.exists() else None)

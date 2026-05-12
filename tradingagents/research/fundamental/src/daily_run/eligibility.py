@@ -43,6 +43,9 @@ def build_llm_eligibility(
         if str(cov.get("coverage_status", "")).upper() != "CACHED_READY":
             quarantine.append({**row, **cov, "llm_quarantine_reason": "llm_evidence_missing"})
             continue
+        if not str(cov.get("earnings_8k_accession", "")).strip() or not str(cov.get("earnings_8k_primary_document", "")).strip():
+            quarantine.append({**row, **cov, "llm_quarantine_reason": "missing_earnings_8k_or_press_release"})
+            continue
         eligible.append({**row, **cov, "llm_eligible": 1})
     summary = {
         "tiered_count": len(tiered_rows),

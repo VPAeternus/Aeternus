@@ -195,7 +195,7 @@ def main() -> None:
             exhibit_doc = ''
 
             if not selected_8k:
-                missing.append('8k_item_202_metadata')
+                notes.append('no_item_2_02_8k_using_periodic_only')
             else:
                 acc = selected_8k['accession']; compact = acc.replace('-', '')
                 primary = selected_8k.get('primary_document', '')
@@ -206,8 +206,11 @@ def main() -> None:
                     exhibit_doc = docs[0] if docs else ''
                 else:
                     exhibit_doc = ''
+                    missing.append('archive_index')
+                    notes.append('archive_index_missing_for_direct_earnings_exhibit_check')
+                    queue_items.append({'kind': 'archive_index', 'ticker': ticker, 'cik': cik, 'accession': acc, 'cache_key': f'archive_indexes/{cik10}/{compact}.json'})
                 if not exhibit_doc:
-                    missing.append('earnings_exhibit_metadata')
+                    notes.append('earnings_exhibit_not_identified_using_primary_8k_or_periodic')
                 docs_to_materialize = []
                 if primary and not doc_path(ticker, acc, primary).exists():
                     missing.append('primary_8k_document')
@@ -233,7 +236,7 @@ def main() -> None:
             uniq_missing = sorted(set(missing))
             if not uniq_missing:
                 status = 'CACHED_READY'
-            elif any(x in uniq_missing for x in ['submissions', '8k_item_202_metadata', '10q_10k_metadata', 'earnings_exhibit_metadata']):
+            elif any(x in uniq_missing for x in ['submissions', '10q_10k_metadata']):
                 status = 'BLOCKED_METADATA_OR_ISSUER_REALITY'
             else:
                 status = 'NEEDS_FETCH'
@@ -258,7 +261,8 @@ def main() -> None:
 
     seen = set(); deduped = []
     for item in fetch_queue:
-        key = (item.get('kind'), item.get('cache_key'), item.get('accession'), item.get('document'))
+        doc_keys = tuple(sorted(str(doc.get('cache_key', '')) for doc in item.get('documents', []) or []))
+        key = (item.get('kind'), item.get('cache_key'), item.get('accession'), item.get('document'), doc_keys)
         if key in seen: continue
         seen.add(key); deduped.append(item)
 

@@ -75,6 +75,28 @@ def build_pre_llm_from_companyfacts_cache(
     return scored, summary
 
 
+def split_score_ready_rows(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    ready: list[dict[str, Any]] = []
+    quarantine: list[dict[str, Any]] = []
+    for row in rows:
+        reasons: list[str] = []
+        if not row.get("tradable_date"):
+            reasons.append("missing_tradable_date")
+        if not row.get("entry_open"):
+            reasons.append("missing_entry_open")
+        if not row.get("periodic_accession") or not row.get("periodic_primary_document"):
+            reasons.append("missing_quarterly_filing")
+        if str(row.get("pre_llm_fundamental_bucket", "")).strip() == "not_scored" or not str(row.get("pre_llm_fundamental_score", "")).strip():
+            reasons.append("missing_fundamental_score_inputs")
+        if not row.get("revenue_bucket"):
+            reasons.append("missing_revenue_bucket")
+        if reasons:
+            quarantine.append({**row, "score_input_quarantine_reason": ";".join(sorted(set(reasons)))})
+        else:
+            ready.append(row)
+    return ready, quarantine, {"score_input_ready": len(ready), "score_input_quarantine_count": len(quarantine)}
+
+
 def attach_entry_prices(
     rows: list[dict[str, Any]],
     *,
@@ -84,19 +106,34 @@ def attach_entry_prices(
     needs = [row for row in rows if row.get("ticker") and row.get("tradable_date") and not row.get("entry_open")]
     tickers = sorted({str(row["ticker"]).upper() for row in needs})
     dates = [str(row["tradable_date"]) for row in needs]
-    price_rows = price_provider(tickers, start=min(dates), end=as_of) if tickers and dates else []
-    open_by_key = {
-        (str(item.get("ticker", "")).upper(), str(item.get("date", ""))): item.get("open", "")
-        for item in price_rows
-    }
+    # Yahoo-style providers treat end as exclusive; request one extra calendar day so as_of opens are available.
+    end_exclusive = (date.fromisoformat(as_of) + timedelta(days=1)).isoformat()
+    price_rows = price_provider(tickers, start=min(dates), end=end_exclusive) if tickers and dates else []
+    rows_by_ticker: dict[str, list[dict[str, Any]]] = {}
+    for item in price_rows:
+        ticker = str(item.get("ticker", "")).upper()
+        if ticker:
+            rows_by_ticker.setdefault(ticker, []).append(item)
+    for ticker_rows in rows_by_ticker.values():
+        ticker_rows.sort(key=lambda item: str(item.get("date", "")))
     output: list[dict[str, Any]] = []
     quarantine: list[dict[str, Any]] = []
     for row in rows:
         out = dict(row)
         if out.get("tradable_date") and not out.get("entry_open"):
-            value = open_by_key.get((str(out.get("ticker", "")).upper(), str(out.get("tradable_date", ""))))
-            if value not in {None, ""}:
-                out["entry_open"] = value
+            ticker = str(out.get("ticker", "")).upper()
+            tradable_date = str(out.get("tradable_date", ""))
+            match = next(
+                (
+                    item for item in rows_by_ticker.get(ticker, [])
+                    if tradable_date <= str(item.get("date", "")) <= as_of
+                    and item.get("open") not in {None, ""}
+                ),
+                None,
+            )
+            if match is not None:
+                out["entry_open"] = match.get("open")
+                out["entry_open_date"] = match.get("date", tradable_date)
                 out["entry_open_source"] = "price_provider_open"
         if not out.get("entry_open"):
             quarantine.append({"ticker": out.get("ticker", ""), "quarter": out.get("quarter", ""), "quarantine_reason": "missing_entry_open"})
