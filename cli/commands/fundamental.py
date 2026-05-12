@@ -34,7 +34,7 @@ def _print_top10_table(rows: list[dict]) -> None:
 
 def _print_top15_table(rows: list[dict], title: str = "Fundamental High-Conviction Top 15") -> None:
     table = Table(title=title)
-    table.add_column("Sleeve")
+    table.add_column("Slot")
     table.add_column("Rank", justify="right")
     table.add_column("Ticker", style="bold green")
     table.add_column("Treatment")
@@ -42,7 +42,7 @@ def _print_top15_table(rows: list[dict], title: str = "Fundamental High-Convicti
     table.add_column("Exception", justify="right")
     for idx, row in enumerate(rows, start=1):
         table.add_row(
-            str(row.get("selected_sleeve", "")),
+            str(row.get("top15_bucket") or row.get("selected_sleeve", "")),
             str(row.get("selected_sleeve_rank") or row.get("selection_rank") or idx),
             str(row.get("ticker", "")),
             str(row.get("portfolio_treatment", "")),
@@ -402,6 +402,123 @@ def _write_subagent_llm_job(*, out_root: Path, packets_path: Path, output_dir: P
     }
     job_path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return job_path
+
+
+@app.command("fundamental-run-today")
+def fundamental_run_today(
+    date: str = typer.Option("", "--date", help="Run date YYYY-MM-DD; defaults to today"),
+    quarter: str = typer.Option("", "--quarter", help="Fundamental quarter, e.g. 2026Q2; defaults from date"),
+    mode: str = typer.Option(..., "--mode", help="Run mode: broad-master-final|scout-smoke|diagnostic-only"),
+    master_universe: str = typer.Option("", "--master-universe", help="Broad master universe JSON path"),
+    handoff: str = typer.Option("", "--handoff", help="Daily scout handoff JSON path"),
+    output_root: str = typer.Option("", "--output-root", help="Output root; defaults to eval_results/fundamental/<date>_<quarter>_daily"),
+    sec_live_root: str = typer.Option("", "--sec-live-root", help="SEC live cache root"),
+    skip_fetch: bool = typer.Option(False, "--skip-fetch", help="Skip SEC fetch/materialization"),
+    skip_llm: bool = typer.Option(False, "--skip-llm", help="Build packets but skip LLM/publish final"),
+    llm_mode: str = typer.Option("subagent", "--llm-mode", help="LLM mode for orchestrator: skip|subagent|external|in-session|post-file"),
+    post_llm: str = typer.Option("", "--post-llm", help="Existing post_llm_scores.csv for --llm-mode post-file"),
+    llm_model: str = typer.Option("gpt-5.5", "--llm-model", help="Model for external/in-session LLM extraction"),
+    llm_reasoning_effort: str = typer.Option("high", "--llm-reasoning-effort", help="Reasoning effort for LLM extraction"),
+    llm_batch_size: int = typer.Option(8, "--llm-batch-size", min=1, help="Packets per LLM batch"),
+    llm_output_dir: str = typer.Option("", "--llm-output-dir", help="LLM batch output dir; defaults under output root"),
+    llm_output_csv: str = typer.Option("", "--llm-output-csv", help="LLM consolidated CSV; defaults under output root"),
+    min_broad_universe_count: int = typer.Option(1000, "--min-broad-universe-count", help="Minimum broad universe count in final mode"),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Run the gated daily fundamental framework from broad master universe."""
+    from tradingagents.research.fundamental.src.daily_run.models import DailyRunConfig
+    from tradingagents.research.fundamental.src.daily_run.orchestrator import DailyRunServices, run_daily_fundamental
+    from tradingagents.research.fundamental.src.pipeline.dealflow_adapter import current_quarter
+
+    run_date = date.strip() or _dt.date.today().isoformat()
+    run_quarter = quarter.strip() or current_quarter(_dt.date.fromisoformat(run_date))
+    out = Path(output_root.strip()) if output_root.strip() else Path("eval_results") / "fundamental" / f"{run_date}_{run_quarter}_daily"
+    master_path = Path(master_universe.strip()) if master_universe.strip() else out / "final_dealflow_tickers_sec_eligible.json"
+    handoff_path = Path(handoff.strip()) if handoff.strip() else Path("eval_results") / "deal_flow" / run_date / "final_dealflow_tickers.json"
+    sec_root = Path(sec_live_root.strip()) if sec_live_root.strip() else None
+    llm_mode_value = llm_mode.strip().lower().replace("_", "-")
+    valid_llm_modes = {"skip", "subagent", "external", "in-session", "post-file"}
+    if llm_mode_value not in valid_llm_modes:
+        console.print(f"[red]--llm-mode must be one of: {', '.join(sorted(valid_llm_modes))}[/red]")
+        raise typer.Exit(1)
+    effective_skip_llm = bool(skip_llm or llm_mode_value == "skip")
+    post_llm_path = Path(post_llm.strip()) if post_llm.strip() else None
+    llm_dir = Path(llm_output_dir.strip()) if llm_output_dir.strip() else out / "llm_batches"
+    llm_csv = Path(llm_output_csv.strip()) if llm_output_csv.strip() else out / "post_llm_scores.csv"
+
+    def _daily_run_llm_service(*, packets_path: Path, output_root: Path, config: DailyRunConfig) -> Path | None:
+        if llm_mode_value == "post-file":
+            if post_llm_path is None or not post_llm_path.exists() or post_llm_path.stat().st_size == 0:
+                raise RuntimeError("--llm-mode post-file requires a non-empty --post-llm CSV")
+            return post_llm_path
+        if llm_mode_value == "subagent":
+            _write_subagent_llm_job(
+                out_root=output_root,
+                packets_path=packets_path,
+                output_dir=llm_dir,
+                output_csv=llm_csv,
+                lake_root=output_root / "lake",
+                as_of=run_date,
+                model=llm_model,
+                reasoning_effort=llm_reasoning_effort,
+                batch_size=llm_batch_size,
+            )
+            return None
+        fundamental_root = Path("tradingagents") / "research" / "fundamental"
+        if llm_mode_value == "in-session":
+            return _run_in_session_llm(
+                packets_path=packets_path,
+                output_dir=llm_dir,
+                output_csv=llm_csv,
+                lake_root=output_root / "lake",
+                as_of=run_date,
+                model=llm_model,
+                reasoning_effort=llm_reasoning_effort,
+                batch_size=llm_batch_size,
+            )
+        return _run_external_llm(
+            packets_path=packets_path,
+            output_dir=llm_dir,
+            output_csv=llm_csv,
+            lake_root=output_root / "lake",
+            as_of=run_date,
+            model=llm_model,
+            reasoning_effort=llm_reasoning_effort,
+            batch_size=llm_batch_size,
+            fundamental_root=fundamental_root,
+        )
+
+    try:
+        cfg = DailyRunConfig(
+            as_of=run_date,
+            quarter=run_quarter,
+            mode=mode,
+            output_root=out,
+            master_universe_path=master_path,
+            handoff_path=handoff_path if handoff_path.exists() else None,
+            sec_live_root=sec_root,
+            skip_fetch=skip_fetch,
+            skip_llm=effective_skip_llm,
+            llm_mode=llm_mode_value,
+            llm_model=llm_model,
+            llm_reasoning_effort=llm_reasoning_effort,
+            llm_batch_size=llm_batch_size,
+            post_llm_path=post_llm_path,
+            llm_output_dir=llm_dir,
+            llm_output_csv=llm_csv,
+            min_broad_universe_count=min_broad_universe_count,
+        )
+        services = DailyRunServices(run_llm=None if effective_skip_llm else _daily_run_llm_service)
+        result = run_daily_fundamental(cfg, services=services)
+    except Exception as exc:  # noqa: BLE001
+        console.print(f"[red]fundamental-run-today failed:[/red] {exc}")
+        raise typer.Exit(1)
+    if format.strip().lower() == "json":
+        console.print(json.dumps(result.summary, indent=2, sort_keys=True, default=str))
+    else:
+        console.print(f"[green]Daily fundamental run[/green] final={result.summary.get('final')} stopped={result.summary.get('stopped')} manifest={out / 'run_manifest.json'}")
+    if mode.strip().lower() == "broad-master-final" and any(gate.status.value == "hard_stop" for gate in result.gates):
+        raise typer.Exit(2)
 
 
 @app.command("fundamental")

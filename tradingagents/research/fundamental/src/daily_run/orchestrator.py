@@ -1,0 +1,230 @@
+from __future__ import annotations
+
+import csv
+import json
+import shutil
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Callable
+from uuid import uuid4
+
+from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_root
+
+from .artifacts import write_csv, write_json_atomic, write_text_atomic
+from .coverage import coverage_gate_result, load_raw_documents_from_coverage, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
+from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_filtered_llm_packets
+from .finalize import build_final_scores, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
+from .llm_validation import validate_post_llm_csv
+from .models import DailyRunConfig, DailyRunState, GateResult, GateStatus, RunMode, StopGateError
+from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage
+from .universe import build_combined_universe, validate_universe_gate
+
+
+def _null_price_provider(tickers, *, start, end):
+    return []
+
+try:
+    from tradingagents.research.fundamental.src.ingest.prices import fetch_yahoo_ohlcv as _default_price_provider
+except Exception:
+    _default_price_provider = _null_price_provider
+
+
+@dataclass
+class DailyRunServices:
+    price_provider: Callable[..., list[dict[str, Any]]] = _default_price_provider
+    run_coverage: Callable[..., dict[str, Any]] | None = None
+    run_fetch_once: Callable[..., dict[str, Any]] | None = None
+    run_llm: Callable[..., Path | None] | None = None
+    publish: Callable[..., GateResult] | None = None
+
+
+@dataclass
+class DailyRunResult:
+    gates: list[GateResult]
+    summary: dict[str, Any]
+    artifacts: dict[str, str]
+
+
+def _source_hash(path: Path | None) -> str:
+    if path is None or not path.exists(): return ""
+    import hashlib
+    h = hashlib.sha256(); h.update(path.read_bytes()); return h.hexdigest()
+
+
+def _record(state: DailyRunState, result: GateResult) -> None:
+    state.record(result)
+    write_json_atomic(state.config.output_root / "gates" / f"gate_{result.gate_number:02d}.json", {"gate_number": result.gate_number, "gate_name": result.gate_name, "status": result.status.value, "summary": result.summary, "artifacts": result.artifacts})
+    result.raise_if_hard_stop()
+
+
+def _write_final_report(state: DailyRunState, summary: dict[str, Any]) -> Path:
+    by_gate = {gate.gate_number: gate for gate in state.gates}
+    universe = by_gate.get(2).summary if by_gate.get(2) else {}
+    coverage = by_gate.get(3).summary if by_gate.get(3) else {}
+    pre = by_gate.get(5).summary if by_gate.get(5) else {}
+    price = by_gate.get(6).summary if by_gate.get(6) else {}
+    tier = by_gate.get(7).summary if by_gate.get(7) else {}
+    llm = by_gate.get(8).summary if by_gate.get(8) else {}
+    final_gate = by_gate.get(9).summary if by_gate.get(9) else {}
+    publish = by_gate.get(10).summary if by_gate.get(10) else {}
+    lines = [
+        "# Daily Fundamental Run Report",
+        "",
+        f"1. run mode: `{summary.get('mode', '')}`",
+        f"2. as-of date and quarter: `{summary.get('as_of', '')}` / `{summary.get('quarter', '')}`",
+        f"3. master universe count: `{universe.get('row_count', universe.get('combined_count', ''))}`",
+        f"4. scout append count: `{universe.get('scout_count', '')}`",
+        f"5. invalid/rerouted tickers: `{coverage.get('blocked_tickers', [])}`",
+        f"6. pre-LLM scorable count: `{pre.get('pre_llm_scored', '')}`",
+        f"7. price/trade-date coverage: entry ready `{price.get('entry_open_ready', '')}`, missing `{price.get('missing_entry_open', '')}`",
+        f"8. Tier 0/1/2/3/4 counts: `{ {k: v for k, v in tier.items() if k.startswith('tier_')} }`",
+        f"9. LLM-eligible count: `{tier.get('llm_eligible_count', '')}`",
+        f"10. LLM packet count: `{llm.get('packet_count', '')}`",
+        f"11. post-LLM completed count: `{llm.get('completed_count', '')}`",
+        f"12. final score row count: `{final_gate.get('final_score_rows', '')}`",
+        f"13. HP bucket counts: see `{state.artifacts.get('final_scores_csv', '')}`",
+        f"14. RM bucket counts: see `{state.artifacts.get('final_scores_csv', '')}`",
+        f"15. Top10 + Plus5 tickers: selected count `{publish.get('top15_selected_count', '')}`",
+        f"16. shadow refill result: selected count `{publish.get('shadow_selected_count', '')}`",
+        f"17. stop gates encountered: `{[g.gate_number for g in state.gates if g.status == GateStatus.HARD_STOP]}`",
+        f"18. quarantined rows by reason: price `{price.get('missing_entry_open', '')}`, LLM `{tier.get('llm_quarantine_count', '')}`, empty evidence `{llm.get('empty_evidence_count', '')}`",
+        f"19. files produced: `{state.artifacts}`",
+        f"20. output status: `{'final' if summary.get('final') else 'diagnostic_or_stopped'}`",
+        "",
+    ]
+    report_path = state.config.output_root / "daily_fundamental_run_report.md"
+    write_text_atomic(report_path, "\n".join(lines))
+    return report_path
+
+
+def _finish(state: DailyRunState, *, final: bool, stopped: str = "") -> DailyRunResult:
+    summary = {"run_id": state.run_id, "as_of": state.config.as_of, "quarter": state.config.quarter, "mode": state.config.run_mode.value, "final": final, "stopped": stopped, "gate_statuses": [{"gate": g.gate_number, "name": g.gate_name, "status": g.status.value} for g in state.gates], "artifacts": state.artifacts}
+    report_path = _write_final_report(state, summary)
+    state.artifacts["daily_fundamental_run_report"] = str(report_path)
+    summary["artifacts"] = state.artifacts
+    write_json_atomic(state.config.output_root / "run_manifest.json", summary)
+    return DailyRunResult(state.gates, summary, state.artifacts)
+
+
+def _read_csv(path: Path) -> list[dict[str, Any]]:
+    if not path or not path.exists() or path.stat().st_size == 0: return []
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
+def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | None = None) -> DailyRunResult:
+    services = services or DailyRunServices()
+    existing_manifest = config.output_root / "run_manifest.json"
+    if existing_manifest.exists():
+        try:
+            prior = json.loads(existing_manifest.read_text(encoding="utf-8"))
+        except Exception:
+            prior = {}
+        if prior.get("final") is True:
+            blocked = {"reason": "output_root_contains_prior_final_run", "existing_manifest": str(existing_manifest)}
+            blocked_path = config.output_root / f"rerun_blocked_{uuid4().hex[:8]}.json"
+            write_json_atomic(blocked_path, blocked)
+            gate = GateResult(1, "Run identity and immutable snapshot", GateStatus.HARD_STOP, blocked, {"rerun_blocked_manifest": str(blocked_path)})
+            return DailyRunResult([gate], {"final": False, "stopped": str(blocked), "artifacts": gate.artifacts}, gate.artifacts)
+
+    config.output_root.mkdir(parents=True, exist_ok=True)
+    state = DailyRunState(config=config, run_id=f"daily_{uuid4().hex[:12]}")
+    try:
+        snapshots: dict[str, str] = {}
+        snapshot_dir = config.output_root / "snapshots"
+        for name, path in {"master_universe": config.master_universe_path, "handoff": config.handoff_path}.items():
+            if path and path.exists():
+                target = snapshot_dir / f"{name}{path.suffix or '.snapshot'}"
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(path, target)
+                snapshots[name] = str(target)
+        identity = {"run_id": state.run_id, "as_of": config.as_of, "quarter": config.quarter, "mode": config.run_mode.value, "source_hashes": {"master_universe": _source_hash(config.master_universe_path), "handoff": _source_hash(config.handoff_path)}, "snapshots": snapshots}
+        identity_path = config.output_root / "run_identity.json"; write_json_atomic(identity_path, identity)
+        _record(state, GateResult(1, "Run identity and immutable snapshot", GateStatus.PASS, identity, {"run_identity": str(identity_path), **{f"snapshot_{k}": v for k, v in snapshots.items()}}))
+
+        if config.master_universe_path is None or not config.master_universe_path.exists():
+            _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_master_universe_path"}, {}))
+        universe_csv = config.output_root / f"master_fundamental_universe_{config.quarter}.csv"
+        universe = build_combined_universe(master_universe_path=config.master_universe_path, handoff_path=config.handoff_path, quarter=config.quarter, output_csv=universe_csv)
+        _record(state, validate_universe_gate(universe.rows, run_mode=config.run_mode, scout_count=int(universe.summary.get("scout_count", 0)), min_broad_universe_count=config.min_broad_universe_count, artifacts=universe.artifacts))
+
+        live_root = config.sec_live_root or sec_cache_root("live_sec")
+        coverage_runner = services.run_coverage or run_sec_coverage_manifest
+        coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=config.master_universe_path, quarter=config.quarter, live_sec_root=live_root)
+        companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
+        coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
+        _record(state, coverage_gate_result(coverage_summary, artifact_paths=coverage_summary.get("outputs", {})))
+
+        if not config.skip_fetch and coverage_summary["fetch_queue_count"]:
+            fetcher = services.run_fetch_once or run_sec_fetch_once
+            before_fetch_queue = coverage_summary["fetch_queue_count"]
+            fetch_manifest = fetcher(out_root=config.output_root, live_sec_root=live_root)
+            coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=config.master_universe_path, quarter=config.quarter, live_sec_root=live_root)
+            companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
+            coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
+            _record(state, GateResult(4, "Fetch and materialization", GateStatus.PASS, {"initial_fetch_queue_count": before_fetch_queue, "post_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_manifest": fetch_manifest}, coverage_summary.get("outputs", {})))
+        else:
+            _record(state, GateResult(4, "Fetch and materialization", GateStatus.PASS, {"fetch_queue_count": coverage_summary["fetch_queue_count"], "reason": "no_fetchable_queue_or_skip_fetch"}, {}))
+
+        pre_rows, pre_summary = build_pre_llm_from_companyfacts_cache(universe_rows=universe.rows, companyfacts_root=live_root / "companyfacts", quarter=config.quarter)
+        pre_path = config.output_root / "pre_llm_scores.csv"; write_csv(pre_path, pre_rows)
+        _record(state, GateResult(5, "Pre-LLM scoring readiness", GateStatus.PASS, pre_summary, {"pre_llm_scores": str(pre_path)}))
+
+        coverage_csv = Path(coverage_raw.get("outputs", {}).get("manifest_csv", config.output_root / f"sec_coverage_manifest_{config.quarter}.csv"))
+        coverage_rows = _read_csv(coverage_csv)
+        coverage_by_key = {(r.get("ticker", "").upper(), r.get("quarter", "")): r for r in coverage_rows}
+        pre_with_dates = []
+        for row in pre_rows:
+            cov = coverage_by_key.get((row.get("ticker", "").upper(), row.get("quarter", "")), {})
+            pre_with_dates.append({**row, **cov, "tradable_date": row.get("tradable_date") or derive_tradable_date_from_coverage(cov)})
+        priced_rows, price_quarantine, price_summary = attach_entry_prices(pre_with_dates, as_of=config.as_of, price_provider=services.price_provider)
+        price_ready_rows = [r for r in priced_rows if r.get("entry_open")]
+        price_q_path = config.output_root / "entry_price_quarantine.csv"; write_csv(price_q_path, price_quarantine)
+        price_status = GateStatus.HARD_STOP if config.run_mode == RunMode.BROAD_MASTER_FINAL and price_quarantine else GateStatus.PASS
+        _record(state, GateResult(6, "Trade date, price, and entry-open", price_status, {**price_summary, "tier_input_rows": len(price_ready_rows), "reason": "missing_entry_open" if price_quarantine else ""}, {"entry_price_quarantine": str(price_q_path)}))
+
+        tiered_rows, tier_summary = assign_daily_tiers(price_ready_rows)
+        eligible_rows, llm_quarantine, eligibility_summary = build_llm_eligibility(tiered_rows, coverage_rows)
+        write_csv(config.output_root / "tier_classification.csv", tiered_rows); write_csv(config.output_root / "llm_eligibility.csv", eligible_rows); write_csv(config.output_root / "llm_quarantine.csv", llm_quarantine)
+        _record(state, GateResult(7, "Tier 0-4 and LLM eligibility", GateStatus.PASS, {**tier_summary, **eligibility_summary}, {"tier_classification": str(config.output_root / "tier_classification.csv"), "llm_eligibility": str(config.output_root / "llm_eligibility.csv")}))
+
+        raw_docs = load_raw_documents_from_coverage(coverage_csv, live_root)
+        packets, empty_q, packet_summary = build_tier_filtered_llm_packets(eligible_rows, raw_docs, broad_universe_count=len(universe.rows))
+        packet_path = config.output_root / "lake" / "artifacts" / f"{config.quarter}_llm_packets.jsonl"
+        write_text_atomic(packet_path, "\n".join(json.dumps(p, sort_keys=True) for p in packets))
+        empty_q_path = config.output_root / "llm_empty_evidence_quarantine.csv"; write_csv(empty_q_path, empty_q)
+        post_llm_path: Path | None = None
+        if packet_summary["empty_evidence_count"]:
+            _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {**packet_summary, "reason": "eligible_rows_missing_non_empty_evidence"}, {"llm_packets": str(packet_path), "llm_empty_evidence_quarantine": str(empty_q_path)}))
+        if packet_summary["packet_count"] != packet_summary["eligible_count"]:
+            _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {**packet_summary, "reason": "packet_count_mismatch"}, {"llm_packets": str(packet_path)}))
+        if config.skip_llm or config.run_mode == RunMode.DIAGNOSTIC_ONLY:
+            _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.SKIPPED, {**packet_summary, "reason": "skip_llm_or_diagnostic"}, {"llm_packets": str(packet_path), "llm_empty_evidence_quarantine": str(empty_q_path)}))
+        else:
+            if config.llm_mode == "post-file" and config.post_llm_path is not None:
+                post_llm_path = config.post_llm_path
+            else:
+                post_llm_path = services.run_llm(packets_path=packet_path, output_root=config.output_root, config=config) if services.run_llm else None
+            if post_llm_path is None:
+                reason = "llm_subagent_job_written_rerun_post_file" if config.llm_mode == "subagent" else "llm_runner_not_configured"
+                artifacts = {"llm_packets": str(packet_path)}
+                job_path = config.output_root / "llm_subagent_job.json"
+                if job_path.exists():
+                    artifacts["llm_subagent_job"] = str(job_path)
+                _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {"reason": reason}, artifacts))
+            _record(state, validate_post_llm_csv(post_llm_path, expected_sample_ids={p["sample_id"] for p in packets}))
+
+        post_rows = _read_csv(post_llm_path) if post_llm_path else []
+        final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows)
+        final_path = config.output_root / f"fundamental_final_scores_{config.as_of}.csv"
+        final_artifacts = write_final_scores_csv(final_path, final_rows, final_summary)
+        _record(state, validate_broad_final_scores(final_rows=final_rows, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=len(price_quarantine), run_mode=config.run_mode, artifacts=final_artifacts))
+
+        if config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.skip_llm:
+            publish_gate = (services.publish or publish_top15_and_shadow)(scores_csv=final_path, output_root=config.output_root, as_of=config.as_of, broad_universe_count=len(universe.rows), coverage_manifest=coverage_csv if coverage_csv.exists() else None)
+            _record(state, publish_gate)
+            return _finish(state, final=True)
+        _record(state, GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.SKIPPED, {"reason": "not_broad_final_or_skip_llm"}, {}))
+        return _finish(state, final=False, stopped="publish_skipped")
+    except StopGateError as exc:
+        return _finish(state, final=False, stopped=str(exc))

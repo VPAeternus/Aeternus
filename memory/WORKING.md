@@ -1,5 +1,13 @@
 # Current Session State
 
+**Current note:** Implemented and Oracle-approved the gated fundamental daily orchestrator from `docs/superpowers/plans/2026-05-12-fundamental-daily-orchestrator.md`. Added `daily_run` package, `fundamental-run-today` CLI, focused tests, and command docs note. Key guards: prior final output overwrite block + snapshots, broad-final scout/small-universe hard stop, SEC coverage rerun after fetch, companyfacts pre-LLM without earnings exhibits, entry_open quarantine + broad-final stop, Tier 1-4 non-empty-evidence LLM packets, exact post-LLM sample/required-field validation, broad final row/quarantine reconciliation, post-file LLM support, diagnostic skip of LLM/publish without undefined post_llm_path, and `daily_fundamental_run_report.md`. Verification: focused daily suite `29 passed, 2 warnings`; related regression suite `61 passed, 2 warnings`. Final Oracle gpt5.5-high QAQC: ✅ Approved. Last updated 2026-05-12T08:38:46-04:00.
+
+**Current note:** Documented the required 10-gate automation contract for the request "run the fundamental framework for today" in `docs/research/fundamental_daily_run_gate_sequence.md`. The gates are: run identity/snapshot, universe construction/drift, filing/companyfacts coverage, fetch/materialization, pre-LLM readiness, trade-date/entry-price, Tier 0-4/LLM eligibility, LLM packet/extraction validation, final scoring + HP/RM, and Top10 + Plus5 + shadow publish. Also linked it from `docs/research/fundamental_daily_universe_llm_funnel_contract.md`. Last updated 2026-05-12T06:23:04-04:00.
+
+**Current note:** Ran the fast SEC fetch path for the 2026Q2 broad master universe in isolated output `eval_results/fundamental/2026-05-11_2026Q2_master_sec_fetch` using a reconstructed `master_fundamental_universe_2026Q2.csv` (`1,276` rows). Initial regenerated queue had only `11` fetchable/materializable items; all were cached existing, then iterative materialization cleared duplicate same-CIK preferred-share queue items (`BHFAN/BHFAO/BHFAP`). Final `sec_coverage_summary.json`: `fetch_queue_count=0`, `CACHED_READY=76`, `BLOCKED_METADATA_OR_ISSUER_REALITY=1200`, missing inputs `earnings_exhibit_metadata=1015`, `8k_item_202_metadata=185`, `10q_10k_metadata=3`; blockers remain `NOK/SILC/TSEM`. Conclusion: pure fast fetch is complete; remaining gaps require metadata/exhibit discovery/parser/routing work, not more SEC download waiting. Last updated 2026-05-11T20:57:23-04:00.
+
+**Current note:** Documented the corrected fundamental daily universe + LLM funnel contract at `docs/research/fundamental_daily_universe_llm_funnel_contract.md`. Key rule: Top15 must select from the broad persistent ~1,200+ universe after appending daily scouts; LLM extraction must run only on Tier 1–4 pre-LLM candidates, not all 1,200+; then merge post-LLM back into full scores, compute HP buckets, RM buckets, and run Top10 + Plus5 + shadow refill. The 2026-05-11 162-row run is now explicitly documented as scout-only smoke, not final daily Top15. Last updated 2026-05-11T20:36:05-04:00.
+
 **Current note:** Fundamental CLI LLM wiring fixed in `cli/commands/fundamental.py`. Added `--llm-mode skip|post-file|in-session|external|subagent`, `--post-llm`, LLM model/batch/output options, in-session runner, external subprocess runner for existing `run_llm_extraction.py`, subagent job-handoff manifest, non-empty post-LLM/packet/raw-doc guards, automatic final scores CSV/summary export, and fatal exit if export missing. Legacy `--run-llm` now maps to in-session when `--llm-mode` is not set. Caveat: subagent mode writes `llm_subagent_job.json` and exits; it does not auto-launch a Pi subagent. Verification: `py_compile`, CLI help exposes LLM options, focused CLI tests `8 passed, 2 warnings`. Last updated 2026-05-11T18:29:44-04:00.
 
 **Current note:** Completed remaining non-LLM 2026Q2 SEC/fundamental run steps for `eval_results/fundamental/2026-05-11_2026Q2_sec`. SEC doc fetch was already complete (`3,185/3,185`, no errors). Ran fundamental pipeline with SEC cache + price fetch: lake outputs include universe `162`, filing events `160`, raw docs `480`, pre-LLM scores `162`, candidate scores `162`, investment decisions `162`, research memos `162`, price rows `9,408`. Exported `fundamental_final_scores_2026-05-11.csv` (`162` rows). Ran Top10, Top15, and right-tail queues; outputs are valid but empty because no rows met thresholds under the no-post-LLM scoring state. LLM extraction was not run: current CLI does not execute LLM directly; `--run-llm` requires an external `post_llm_path`, and no API keys were visible in env. Last updated 2026-05-11T17:43:27-04:00.
@@ -83,6 +91,18 @@
 ---
 
 ## Completed Today
+
+- Daily X-feed Grok automation ran for `2026-05-12`:
+  - completed passes `1-16`
+  - target model used: `Grok 4.3 (beta)`
+  - final readiness: `ready=True`, finalized manifest exists
+  - raw archives: 16
+  - merged symbols: 42
+  - Theme Emergence Graph: 42 tickers, 24 multi-ticker themes, 261 edges
+  - edge types: `account_mentions_ticker`, `ticker_linked_to_theme`, `ticker_co_mentioned`
+  - low-yield valid passes: `8`, `14`, `15`
+  - pass `16`, `Blindspot & Unmapped Ticker Audit`, added `NOK`, `OKLO`, `MP`, `SE`
+  - operational note: pass timeouts on `1`, `5`, and `12` were recoverable from completed Grok page text after explicitly rebinding Chrome to the Grok tab; future automation should bind to a known Grok tab URL before page-text extraction/submission
 
 - Daily X-feed Grok automation ran for `2026-05-11`:
   - completed passes `1-16`
@@ -2809,6 +2829,7 @@
 - Explicit risk: S7 detection failure/data unavailable means default `0%` hedge; legacy crash escalation is disabled in default S7-only mode.
 - CLI/backtest check: live `hedge-evaluate` currently returns `BULL`, target `0%`, `NO_POSITIONS`; simulated Bear/S7 CLI wrapper returns `S7_HEDGE`, target `100%`, `QQQ`, `INCREASE_HEDGE`; PIT close-to-close S7-only 2006-01-03→2026-05-08 on QQQ hedge returns `+3178.6%` total, `18.74%` CAGR, `-31.8%` max DD vs QQQ B&H `+1628.4%`, `15.06%` CAGR, `-53.6%` max DD.
 - QQQ SMA200 trigger variant: pure gate change `QQQ < SMA200 + SPY S7` with QQQ hedge improved to `+3447.3%`, `19.21%` CAGR, `-31.8%` max DD; full QQQ trigger `QQQ < SMA200 + QQQ S7` returned `+3123.5%`, `18.65%` CAGR, `-33.0%` max DD. This separates gate change from S7 source change.
+- Finalized default hedge trigger as `QQQ < QQQ_SMA200` gate + SPY S7 source. `MarketRegimeProvider` now includes QQQ fields; hedge signal exposes `hedge_gate_symbol="QQQ"` and `s7_source_symbol="SPY"`; legacy `bear_base` remains SPY-gated. Verification: targeted hedge/market/CLI/paper/portfolio tests `75 passed, 2 warnings`; py_compile passed; live CLI smoke returned QQQ fields with gate `QQQ`, source `SPY`; scenario smoke returned `S7_HEDGE 100% QQQ EXECUTED`.
 
 
 ## Current dealflow state - scout-only handoff

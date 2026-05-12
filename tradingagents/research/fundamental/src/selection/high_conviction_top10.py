@@ -113,6 +113,20 @@ class CoreDeteriorationRefillConfig:
     block_deterioration_from_exceptions: bool = True
 
 
+def _apply_top15_plain_english_labels(row: dict[str, Any], *, bucket: str, shadow: bool = False) -> None:
+    """Add operator-facing labels that preserve the Top10 + 5 + shadow-refill mental model."""
+    if bucket == "top10_core":
+        row["top15_bucket"] = "Top 10 core"
+        row["top15_bucket_order"] = 1
+        row["top15_role"] = "primary_buy_underwriting_candidate" if not shadow else "shadow_refill_top10_core_candidate"
+    else:
+        row["top15_bucket"] = "Plus 5 exception"
+        row["top15_bucket_order"] = 2
+        row["top15_role"] = "right_tail_research_or_starter_candidate" if not shadow else "shadow_refill_plus5_exception_candidate"
+    row["top15_model"] = "Top 10 + Plus 5 + Shadow Refill"
+    row["shadow_refill_status"] = "shadow_refill_review_only_not_official" if shadow else "official_top15_selection"
+
+
 def normalize_config(config: Mapping[str, Any] | None) -> dict[str, Any]:
     base = asdict(HighConvictionConfig())
     if config:
@@ -292,6 +306,7 @@ def select_high_conviction_top15_exception_sleeve(
         row["selected_sleeve"] = "core"
         row["selected_sleeve_rank"] = rank
         row["portfolio_treatment"] = "core_buy_underwriting"
+        _apply_top15_plain_english_labels(row, bucket="top10_core")
         row.setdefault("right_tail_exception_score", "")
         row.setdefault("right_tail_exception_reason_codes", [])
         row.setdefault("right_tail_exception_warning_codes", [])
@@ -408,9 +423,10 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         row["selected_sleeve"] = "core"
         row["selected_sleeve_rank"] = rank
         row["selection_rank"] = rank
-        row["portfolio_treatment"] = "shadow_core_review_not_official"
+        row["portfolio_treatment"] = "top10_core_shadow_refill_review_not_official"
         row["core_deterioration_refill_shadow"] = 1
         row["core_refill_source"] = "original_top10" if int(row.get("core_candidate_rank") or 0) <= cfg.core_n else "next_ranked_core_candidate"
+        _apply_top15_plain_english_labels(row, bucket="top10_core", shadow=True)
         row.setdefault("right_tail_exception_score", "")
         row.setdefault("right_tail_exception_reason_codes", [])
         row.setdefault("right_tail_exception_warning_codes", [])
@@ -423,7 +439,8 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
     )
     exceptions = [_strip_shadow_artifact_outcome_fields(row) for row in exceptions]
     for row in exceptions:
-        row["portfolio_treatment"] = "shadow_exception_review_not_official"
+        row["portfolio_treatment"] = "plus5_exception_shadow_refill_review_not_official"
+        _apply_top15_plain_english_labels(row, bucket="plus5_exception", shadow=True)
     selected = core_rows + exceptions
     for row in selected:
         row["operating_setting"] = TOP15_REFILL_SHADOW_SETTING
@@ -815,6 +832,7 @@ def _select_exception_sleeve(
         row["selected_sleeve"] = "right_tail_exception"
         row["selected_sleeve_rank"] = rank
         row["portfolio_treatment"] = "exception_research_or_starter_underwriting"
+        _apply_top15_plain_english_labels(row, bucket="plus5_exception")
         row["right_tail_exception_warning_codes"] = warnings
     if sum(1 for r in selected if _single_rm_signal_bucket(r)) < min(2, len([c for c in candidates if _single_rm_signal_bucket(c)])):
         warnings.append("MIN_SINGLE_RM_PRIORITY_NOT_FILLED")

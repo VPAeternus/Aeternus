@@ -93,6 +93,8 @@ def test_top15_selects_10_core_plus_5_exceptions():
     assert result["summary"]["core_count"] == 10
     assert result["summary"]["exception_count"] == 5
     assert len(result["selected_rows"]) == 15
+    assert {r["top15_bucket"] for r in result["core_rows"]} == {"Top 10 core"}
+    assert {r["top15_bucket"] for r in result["exception_rows"]} == {"Plus 5 exception"}
 
 
 def test_exception_candidate_requires_rm_or_hp_or_theme_or_akg_signal():
@@ -490,10 +492,14 @@ def test_top15_refill_shadow_outputs_full_top15_with_replacement_and_exception()
     assert "BAD" not in selected_tickers
     assert "NEXT" in core_tickers
     assert set(exception_tickers) == {f"GOOD{i}" for i in range(5)}
+    assert all(r["top15_bucket"] == "Top 10 core" for r in result["core_rows"])
+    assert all(r["shadow_refill_status"] == "shadow_refill_review_only_not_official" for r in result["core_rows"])
     assert all("shadow" in str(r["portfolio_treatment"]) for r in result["core_rows"])
     assert all("not_official" in str(r["portfolio_treatment"]) for r in result["core_rows"])
     assert all("buy_underwriting" not in str(r["portfolio_treatment"]) for r in result["core_rows"])
     assert all(r["portfolio_treatment"] != "core_buy_underwriting" for r in result["core_rows"])
+    assert all(r["top15_bucket"] == "Plus 5 exception" for r in result["exception_rows"])
+    assert all(r["shadow_refill_status"] == "shadow_refill_review_only_not_official" for r in result["exception_rows"])
     assert all("shadow" in str(r["portfolio_treatment"]) for r in result["exception_rows"])
     assert all("not_official" in str(r["portfolio_treatment"]) for r in result["exception_rows"])
     assert all("buy_underwriting" not in str(r["portfolio_treatment"]) for r in result["exception_rows"])
