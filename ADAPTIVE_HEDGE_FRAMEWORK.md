@@ -1,22 +1,23 @@
 # Adaptive Hedge Framework
 
 **Status:** Active  
-**Current default:** S7-only, 100% hedge target
+**Current default:** QQQ gate + SPY S7, 100% hedge target
 
 ## Current production rule
 
-The hedge engine no longer applies a plain `SPY < SMA200` regime hedge by default.
+The hedge engine no longer applies a plain `SPY < SMA200` regime hedge by default. Default hedge activation now uses a `QQQ < QQQ_SMA200` gate plus SPY S7a/S7b.
 
 Default policy:
 
 | Condition | Hedge target | Notes |
 |---|---:|---|
-| `SPY >= SMA200` | `0%` | Bull / no hedge |
-| `SPY < SMA200`, no S7 | `0%` | Plain bear-regime hedge disabled |
-| `SPY < SMA200`, S7a or S7b active | `100%` | Short hedge overlay |
+| `QQQ >= QQQ_SMA200` | `0%` | Hedge gate off |
+| `QQQ < QQQ_SMA200`, SPY S7 inactive | `0%` | Plain bear-regime hedge disabled |
+| `QQQ < QQQ_SMA200`, SPY S7a or S7b active | `100%` | Short hedge overlay |
 
 Execution model:
 
+- `hedge_signal.market_regime` is the hedge-gate regime; under default policy it describes QQQ vs QQQ SMA200, not SPY.
 - Signal is known after close.
 - Hedge fill is modeled at the same close for backtests unless otherwise specified.
 - Hedge P&L begins on the next close-to-close return window.
@@ -40,9 +41,10 @@ S7b / RTH:
 Live hedge use:
 
 - S7 is not a standalone production order stream.
-- S7 only determines whether the portfolio hedge target should be `100%`.
+- SPY S7 determines whether a QQQ-gated hedge target should be `100%`.
+- If QQQ is above SMA200, SPY S7 is ignored and default policy holds `0%`.
 - If S7 detection fails or data is unavailable, `_detect_s7_active()` returns `False`; default policy then holds `0%` hedge.
-- The default S7-only policy also disables the legacy crash-trigger escalation; use `bear_base` only for A/B comparison.
+- The default QQQ-gate/S7-only policy also disables the legacy crash-trigger escalation; use `bear_base` only for A/B comparison.
 
 ## Instrument selection
 

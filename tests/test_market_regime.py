@@ -20,9 +20,13 @@ def test_market_regime_snapshot_success():
     spy_values = [100.0 + (i * 0.5) for i in range(260)]
     vix_values = [17.0 + ((i % 5) * 0.1) for i in range(260)]
 
+    qqq_values = [90.0 + (i * 0.6) for i in range(260)]
+
     def downloader(symbol, period, interval, progress):
         if symbol == "SPY":
             return _mk_df(spy_values)
+        if symbol == "QQQ":
+            return _mk_df(qqq_values)
         if symbol == "^VIX":
             return _mk_df(vix_values)
         raise AssertionError("Unexpected symbol")
@@ -35,7 +39,13 @@ def test_market_regime_snapshot_success():
     assert snapshot["spy_sma20"] > 0
     assert snapshot["spy_sma200"] > 0
     assert snapshot["spy_sma200_5d_ago"] > 0
+    assert snapshot["qqq_close"] > 0
+    assert snapshot["qqq_sma20"] > 0
+    assert snapshot["qqq_sma200"] > 0
+    assert snapshot["qqq_sma200_5d_ago"] > 0
     assert snapshot["vix_close"] > 0
 
     expected_dev = ((snapshot["spy_close"] - snapshot["spy_sma20"]) / snapshot["spy_sma20"]) * 100.0
     assert abs(snapshot["spy_deviation_pct"] - expected_dev) < 1e-9
+    expected_qqq_dev = ((snapshot["qqq_close"] - snapshot["qqq_sma20"]) / snapshot["qqq_sma20"]) * 100.0
+    assert abs(snapshot["qqq_deviation_pct"] - expected_qqq_dev) < 1e-9

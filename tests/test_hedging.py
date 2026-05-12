@@ -30,7 +30,18 @@ def _portfolio(
     }
 
 
-def _market(spy_close, spy_sma200=90.0, spy_sma200_5d_ago=89.0, vix=17.0):
+def _market(
+    spy_close,
+    spy_sma200=90.0,
+    spy_sma200_5d_ago=89.0,
+    vix=17.0,
+    qqq_close=None,
+    qqq_sma200=None,
+    qqq_sma200_5d_ago=None,
+):
+    qqq_close = spy_close if qqq_close is None else qqq_close
+    qqq_sma200 = spy_sma200 if qqq_sma200 is None else qqq_sma200
+    qqq_sma200_5d_ago = spy_sma200_5d_ago if qqq_sma200_5d_ago is None else qqq_sma200_5d_ago
     return {
         "timestamp": datetime.now().isoformat(),
         "spy_close": spy_close,
@@ -38,6 +49,11 @@ def _market(spy_close, spy_sma200=90.0, spy_sma200_5d_ago=89.0, vix=17.0):
         "spy_sma200": spy_sma200,
         "spy_sma200_5d_ago": spy_sma200_5d_ago,
         "spy_deviation_pct": 0.0,
+        "qqq_close": qqq_close,
+        "qqq_sma20": 100.0,
+        "qqq_sma200": qqq_sma200,
+        "qqq_sma200_5d_ago": qqq_sma200_5d_ago,
+        "qqq_deviation_pct": 0.0,
         "vix_close": vix,
     }
 
@@ -92,6 +108,34 @@ def test_default_s7_only_policy_targets_100_pct_when_s7_active(tmp_path):
     assert signal["target_hedge_pct_pre_hysteresis"] == 100.0
     assert signal["s7_boost_pct"] == 100.0
     assert signal["mode"] == "S7_HEDGE"
+    assert signal["hedge_gate_symbol"] == "QQQ"
+    assert signal["s7_source_symbol"] == "SPY"
+
+
+def test_default_s7_only_policy_uses_qqq_gate_not_spy_gate(tmp_path):
+    engine = AdaptiveHedgeEngine(
+        state_path=str(tmp_path / "hedge_state.json"),
+        orders_path=str(tmp_path / "hedge_orders.json"),
+    )
+    p = _portfolio()
+
+    spy_bear_qqq_bull = engine.compute_hedge_signal(
+        p,
+        _market(spy_close=80.0, spy_sma200=90.0, qqq_close=100.0, qqq_sma200=90.0),
+        s7_active=True,
+    )
+    assert spy_bear_qqq_bull["bear_trigger_active"] is False
+    assert spy_bear_qqq_bull["target_hedge_pct_pre_hysteresis"] == 0.0
+    assert spy_bear_qqq_bull["mode"] == "BULL"
+
+    spy_bull_qqq_bear = engine.compute_hedge_signal(
+        p,
+        _market(spy_close=100.0, spy_sma200=90.0, qqq_close=80.0, qqq_sma200=90.0),
+        s7_active=True,
+    )
+    assert spy_bull_qqq_bear["bear_trigger_active"] is True
+    assert spy_bull_qqq_bear["target_hedge_pct_pre_hysteresis"] == S7_ONLY_HEDGE_PCT
+    assert spy_bull_qqq_bear["mode"] == "S7_HEDGE"
 
 
 # ── Bear regime: configurable policy ─────────────────────────────────────────

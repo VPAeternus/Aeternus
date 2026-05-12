@@ -337,7 +337,7 @@ aeternus execution-sync --broker alpaca --mode alpaca-paper --once --manage-open
 aeternus execution-readiness --broker alpaca --mode alpaca-paper --format table
 
 # Run one deterministic hedge evaluation cycle
-# Default hedge policy is S7-only: 100% hedge only when SPY S7a/b is active.
+# Default hedge policy is QQQ-gated S7-only: 100% hedge only when QQQ < SMA200 and SPY S7a/b is active.
 # A/B legacy mode: AETERNUS_HEDGE_POLICY=bear_base aeternus hedge-evaluate --format table
 aeternus hedge-evaluate --format table
 
