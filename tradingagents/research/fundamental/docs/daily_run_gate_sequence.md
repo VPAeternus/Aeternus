@@ -4,7 +4,7 @@
 
 Use:
 
-`python -m cli.main fundamental-run-today --mode broad-master-final --date <YYYY-MM-DD> --quarter <YYYYQ#> --master-universe <path>`
+`python -m cli.main fundamental-run-today --mode broad-master-final --date <YYYY-MM-DD> --quarter <YYYYQ#> --master-universe <path> --prior-final-scores <prior-quarter-comparison-csv>`
 
 The legacy `fundamental` command remains scout-smoke/backward-compatible. It is not the official broad daily final run.
 
@@ -58,7 +58,7 @@ Create a traceable daily run before touching data. Prevent accidental reuse of s
 - daily scout/dealflow ticker source
 - SEC/cache root
 - price cache/source
-- prior completed run, if available
+- prior-quarter comparison data / final scores CSV
 
 ## Required checks
 
@@ -473,7 +473,7 @@ Merge LLM output back into the broad universe, then compute final scores, HP buc
 - broad pre-LLM scores
 - Tier 0-4 classification
 - post-LLM scores for eligible Tier 1-4 rows
-- prior quarter scores
+- prior-quarter comparison data / final scores CSV
 - price/repricing metrics
 - theme/tailwind data
 
@@ -486,6 +486,8 @@ Merge LLM output back into the broad universe, then compute final scores, HP buc
 - RM buckets are computed after repricing/final score fields.
 - hard reject reasons are explicit.
 - every row has final score label or quarantine status.
+- official broad-final runs load prior-quarter comparison data.
+- every LLM-complete final row has `entry_qoq_pct`, `score_change`, and `prior_pre_llm_fundamental_score` before publish.
 
 ## Stop conditions
 
@@ -495,6 +497,8 @@ Stop final publishing if:
 - HP/RM fields are missing from final scores.
 - post-LLM merge duplicates rows.
 - hard rejects are not separated from low scores.
+- prior-quarter comparison data is missing, duplicated by ticker/quarter, or for the wrong quarter.
+- LLM-complete rows are missing QoQ comparison fields.
 
 ## Output artifacts
 

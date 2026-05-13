@@ -55,6 +55,7 @@ def build_signal_tables(
     *,
     as_of: str,
     post_llm_rows: list[dict[str, Any]] | None = None,
+    prior_rows: list[dict[str, Any]] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     rows = _merge_by_key(rows, post_llm_rows or [])
     bases: list[dict[str, Any]] = []
@@ -99,7 +100,8 @@ def build_signal_tables(
         expanded_rows = [{key: value for key, value in row.items() if key != "__input_order"} for row in expanded_rows]
     else:
         expanded_rows = []
-    prior_by_key = {_row_key(row): row for row in expanded_rows}
+    prior_by_key = {_row_key(row): row for row in (prior_rows or [])}
+    prior_by_key.update({_row_key(row): row for row in expanded_rows})
     for base in expanded_rows:
         tiers = assign_tiers(base)
         merged = {**base, **tiers}
@@ -134,8 +136,9 @@ def build_signal_rows(
     *,
     as_of: str,
     post_llm_rows: list[dict[str, Any]] | None = None,
+    prior_rows: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
-    return build_signal_tables(rows, as_of=as_of, post_llm_rows=post_llm_rows)[0]
+    return build_signal_tables(rows, as_of=as_of, post_llm_rows=post_llm_rows, prior_rows=prior_rows)[0]
 
 
 def parse_args() -> argparse.Namespace:

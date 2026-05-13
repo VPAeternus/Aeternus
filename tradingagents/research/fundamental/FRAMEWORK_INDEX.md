@@ -90,6 +90,6 @@ Legacy archives:
 - LLM does not run on all 1,200+ names.
 - Tier 1-4 LLM requires fresh earnings 8-K or press-release evidence.
 - 10-Q/10-K alone supports base scoring, not official high-conviction LLM selection.
-- Prior-quarter comparison data is required for final Top 10 + Plus 5 + shadow refill.
+- Prior-quarter comparison data is required for final Top 10 + Plus 5 + shadow refill; use `--prior-final-scores` for official daily runs.
 - Final scores plus explicit quarantines must reconcile to broad universe count before publish.
 - Stable final filenames only; run/date/quarter goes in folder path.

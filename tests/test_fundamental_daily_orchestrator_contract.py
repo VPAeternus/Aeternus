@@ -28,8 +28,15 @@ def _companyfacts_payload():
     }
 
 
+def _write_prior_context(path, tickers=("T0", "T1", "T2", "T3", "T4"), quarter="2026Q1"):
+    rows = [{"ticker": ticker, "quarter": quarter, "entry_open": "10", "entry_qoq_pct": "5", "pre_llm_fundamental_score": "1", "score_addition": "10"} for ticker in tickers]
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+
+
 def _fake_orchestrator_fixture(tmp_path, mode="broad-master-final", skip_llm=False, fake_llm=None):
     master = tmp_path / "master.json"; _write_master(master, count=5)
+    prior = tmp_path / "prior_scores.csv"; _write_prior_context(prior)
     live = tmp_path / "live_sec"; (live / "companyfacts").mkdir(parents=True)
     for i in range(5):
         (live / "companyfacts" / f"CIK{str(i + 1).zfill(10)}.json").write_text(json.dumps(_companyfacts_payload()))
@@ -57,11 +64,11 @@ def _fake_orchestrator_fixture(tmp_path, mode="broad-master-final", skip_llm=Fal
         with out.open("w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
         return out
-    def fake_publish(*, scores_csv, output_root, as_of, broad_universe_count, coverage_manifest):
+    def fake_publish(*, scores_csv, output_root, as_of, broad_universe_count, explicit_invalid_quarantine_count=0, coverage_manifest=None):
         import pandas as pd
-        assert len(pd.read_csv(scores_csv)) == broad_universe_count == 5
+        assert len(pd.read_csv(scores_csv)) + explicit_invalid_quarantine_count == broad_universe_count == 5
         return GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.PASS, {"input_rows": 5}, {"scores_csv": str(scores_csv)})
-    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode=mode, output_root=tmp_path / "run", master_universe_path=master, handoff_path=None, sec_live_root=live, skip_llm=skip_llm, min_broad_universe_count=5)
+    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode=mode, output_root=tmp_path / "run", master_universe_path=master, handoff_path=None, sec_live_root=live, skip_llm=skip_llm, prior_context_path=prior, min_broad_universe_count=5)
     return cfg, DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage, run_llm=fake_llm or default_llm, publish=fake_publish)
 
 
@@ -85,14 +92,57 @@ def test_orchestrator_broad_final_hard_stops_on_scout_only_universe(tmp_path):
     assert not (cfg.output_root / "high_conviction_top15.csv").exists()
 
 
-def test_orchestrator_final_mode_preserves_broad_rows_and_filters_llm(tmp_path):
+def test_orchestrator_final_mode_preserves_broad_rows_filters_llm_and_requires_qoq(tmp_path):
     cfg, services = _fake_orchestrator_fixture(tmp_path)
     result = run_daily_fundamental(cfg, services=services)
     assert result.summary["final"] is True
     assert result.gates[-1].gate_number == 10
     assert result.gates[-1].status == GateStatus.PASS
+    gate9 = next(g for g in result.gates if g.gate_number == 9)
+    assert gate9.summary["prior_context_loaded"] is True
+    assert gate9.summary["llm_complete_qoq_missing_rows"] == 0
+    assert gate9.summary["llm_complete_rows"] == 2
     assert (cfg.output_root / "fundamental_final_scores_2026-05-12.csv").exists()
     assert (cfg.output_root / "lake" / "artifacts" / "2026Q2_llm_packets.jsonl").exists()
+
+
+def test_orchestrator_final_mode_hard_stops_without_prior_qoq_context(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    cfg = DailyRunConfig(**{**cfg.__dict__, "prior_context_path": None})
+    result = run_daily_fundamental(cfg, services=services)
+    assert result.summary["final"] is False
+    assert result.gates[-1].gate_number == 9
+    assert result.gates[-1].status == GateStatus.HARD_STOP
+    assert result.gates[-1].summary["reason"] == "missing_prior_final_scores"
+    assert not (cfg.output_root / "high_conviction_top15.csv").exists()
+
+
+def test_orchestrator_final_mode_hard_stops_on_wrong_prior_quarter(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    wrong_prior = tmp_path / "wrong_prior.csv"; _write_prior_context(wrong_prior, quarter="2025Q4")
+    cfg = DailyRunConfig(**{**cfg.__dict__, "prior_context_path": wrong_prior})
+    result = run_daily_fundamental(cfg, services=services)
+    assert result.summary["final"] is False
+    assert result.gates[-1].gate_number == 9
+    assert result.gates[-1].status == GateStatus.HARD_STOP
+    assert result.gates[-1].summary["reason"] == "no_rows_for_expected_prior_quarter"
+
+
+def test_orchestrator_final_mode_hard_stops_on_duplicate_prior_rows(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    dup_prior = tmp_path / "dup_prior.csv"
+    rows = [
+        {"ticker": "T1", "quarter": "2026Q1", "entry_open": "10", "pre_llm_fundamental_score": "1"},
+        {"ticker": "T1", "quarter": "2026Q1", "entry_open": "11", "pre_llm_fundamental_score": "2"},
+    ]
+    with dup_prior.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+    cfg = DailyRunConfig(**{**cfg.__dict__, "prior_context_path": dup_prior})
+    result = run_daily_fundamental(cfg, services=services)
+    assert result.summary["final"] is False
+    assert result.gates[-1].gate_number == 9
+    assert result.gates[-1].status == GateStatus.HARD_STOP
+    assert result.gates[-1].summary["reason"] == "duplicate_prior_ticker_quarter_rows"
 
 
 def test_orchestrator_diagnostic_mode_with_skip_llm_false_does_not_require_post_llm_path(tmp_path):

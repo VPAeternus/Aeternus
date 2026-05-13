@@ -17,12 +17,30 @@ def test_build_final_scores_preserves_broad_rows_when_post_llm_is_subset():
     assert "rm_buy_review_flag" in rows[0]
 
 
+def _valid_prior_summary():
+    return {"prior_context_loaded": True, "expected_prior_context_rows": 4, "prior_duplicate_key_count": 0}
+
+
 def test_validate_broad_final_scores_hard_stops_on_unreconciled_row_loss():
-    gate = validate_broad_final_scores(final_rows=[{"ticker": f"S{i}"} for i in range(162)], broad_universe_count=1276, explicit_invalid_quarantine_count=3, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={})
+    gate = validate_broad_final_scores(final_rows=[{"ticker": f"S{i}"} for i in range(162)], broad_universe_count=1276, explicit_invalid_quarantine_count=3, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={}, prior_context_summary=_valid_prior_summary())
     assert gate.status == GateStatus.HARD_STOP
     assert gate.summary["reason"] == "final_scores_plus_quarantine_do_not_reconcile_to_broad_universe"
 
 
 def test_validate_broad_final_scores_passes_when_rows_plus_explicit_quarantine_reconcile():
-    gate = validate_broad_final_scores(final_rows=[{"ticker": f"T{i}"} for i in range(4)], broad_universe_count=5, explicit_invalid_quarantine_count=1, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={})
+    gate = validate_broad_final_scores(final_rows=[{"ticker": f"T{i}"} for i in range(4)], broad_universe_count=5, explicit_invalid_quarantine_count=1, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={}, prior_context_summary=_valid_prior_summary())
     assert gate.status == GateStatus.PASS
+
+
+def test_validate_broad_final_scores_hard_stops_without_prior_context():
+    gate = validate_broad_final_scores(final_rows=[{"ticker": "T0"}], broad_universe_count=1, explicit_invalid_quarantine_count=0, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={})
+    assert gate.status == GateStatus.HARD_STOP
+    assert gate.summary["reason"] == "missing_prior_final_scores"
+
+
+def test_validate_broad_final_scores_hard_stops_when_llm_complete_qoq_missing():
+    rows = [{"ticker": "AAA", "llm_status": "complete", "entry_qoq_pct": "", "score_change": "1", "prior_pre_llm_fundamental_score": "3"}]
+    gate = validate_broad_final_scores(final_rows=rows, broad_universe_count=1, explicit_invalid_quarantine_count=0, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={}, prior_context_summary=_valid_prior_summary())
+    assert gate.status == GateStatus.HARD_STOP
+    assert gate.summary["reason"] == "llm_complete_rows_missing_qoq_context"
+    assert gate.summary["llm_complete_qoq_missing_tickers"] == ["AAA"]

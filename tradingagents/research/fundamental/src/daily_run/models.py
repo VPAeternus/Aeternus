@@ -41,6 +41,7 @@ class DailyRunConfig:
     llm_reasoning_effort: str = "high"
     llm_batch_size: int = 8
     post_llm_path: Path | None = None
+    prior_context_path: Path | None = None
     llm_output_dir: Path | None = None
     llm_output_csv: Path | None = None
     min_broad_universe_count: int = 1000

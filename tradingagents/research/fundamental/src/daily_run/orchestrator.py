@@ -13,7 +13,7 @@ from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_
 from .artifacts import write_csv, write_json_atomic, write_text_atomic
 from .coverage import coverage_gate_result, load_raw_documents_from_coverage, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
 from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_filtered_llm_packets
-from .finalize import build_final_scores, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
+from .finalize import build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
 from .models import DailyRunConfig, DailyRunState, GateResult, GateStatus, RunMode, StopGateError
 from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, split_score_ready_rows
@@ -225,13 +225,16 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             _record(state, validate_post_llm_csv(post_llm_path, expected_sample_ids={p["sample_id"] for p in packets}))
 
         post_rows = _read_csv(post_llm_path) if post_llm_path else []
-        final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows)
+        prior_rows, prior_summary = load_prior_context(config.prior_context_path, current_quarter=config.quarter)
+        final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows, prior_context_rows=prior_rows)
+        final_summary = {**final_summary, **prior_summary}
         final_path = config.output_root / f"fundamental_final_scores_{config.as_of}.csv"
         final_artifacts = write_final_scores_csv(final_path, final_rows, final_summary)
-        _record(state, validate_broad_final_scores(final_rows=final_rows, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=len(price_quarantine) + len(score_input_quarantine), run_mode=config.run_mode, artifacts=final_artifacts))
+        explicit_invalid_quarantine_count = len(price_quarantine) + len(score_input_quarantine)
+        _record(state, validate_broad_final_scores(final_rows=final_rows, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=explicit_invalid_quarantine_count, run_mode=config.run_mode, artifacts=final_artifacts, prior_context_summary=prior_summary))
 
         if config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.skip_llm:
-            publish_gate = (services.publish or publish_top15_and_shadow)(scores_csv=final_path, output_root=config.output_root, as_of=config.as_of, broad_universe_count=len(universe.rows), coverage_manifest=coverage_csv if coverage_csv.exists() else None)
+            publish_gate = (services.publish or publish_top15_and_shadow)(scores_csv=final_path, output_root=config.output_root, as_of=config.as_of, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=explicit_invalid_quarantine_count, coverage_manifest=coverage_csv if coverage_csv.exists() else None)
             _record(state, publish_gate)
             return _finish(state, final=True)
         _record(state, GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.SKIPPED, {"reason": "not_broad_final_or_skip_llm"}, {}))

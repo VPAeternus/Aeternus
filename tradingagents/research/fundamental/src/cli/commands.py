@@ -423,6 +423,7 @@ def fundamental_run_today(
     skip_llm: bool = typer.Option(False, "--skip-llm", help="Build packets but skip LLM/publish final"),
     llm_mode: str = typer.Option("subagent", "--llm-mode", help="LLM mode for orchestrator: skip|subagent|external|in-session|post-file"),
     post_llm: str = typer.Option("", "--post-llm", help="Existing post_llm_scores.csv for --llm-mode post-file"),
+    prior_final_scores: str = typer.Option("", "--prior-final-scores", help="Prior-quarter comparison data CSV required for official QoQ publish"),
     llm_model: str = typer.Option("gpt-5.5", "--llm-model", help="Model for external/in-session LLM extraction"),
     llm_reasoning_effort: str = typer.Option("high", "--llm-reasoning-effort", help="Reasoning effort for LLM extraction"),
     llm_batch_size: int = typer.Option(8, "--llm-batch-size", min=1, help="Packets per LLM batch"),
@@ -449,6 +450,7 @@ def fundamental_run_today(
         raise typer.Exit(1)
     effective_skip_llm = bool(skip_llm or llm_mode_value == "skip")
     post_llm_path = Path(post_llm.strip()) if post_llm.strip() else None
+    prior_context_path = Path(prior_final_scores.strip()) if prior_final_scores.strip() else None
     llm_dir = Path(llm_output_dir.strip()) if llm_output_dir.strip() else out / "llm_batches"
     llm_csv = Path(llm_output_csv.strip()) if llm_output_csv.strip() else out / "post_llm_scores.csv"
 
@@ -510,6 +512,7 @@ def fundamental_run_today(
             llm_reasoning_effort=llm_reasoning_effort,
             llm_batch_size=llm_batch_size,
             post_llm_path=post_llm_path,
+            prior_context_path=prior_context_path,
             llm_output_dir=llm_dir,
             llm_output_csv=llm_csv,
             min_broad_universe_count=min_broad_universe_count,

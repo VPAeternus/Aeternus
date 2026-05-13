@@ -122,6 +122,7 @@ Before claiming a daily fundamental run is final, verify:
 4. LLM packet count equals Tier 1–4 count.
 5. Final scores row count equals broad universe count, not LLM packet count.
 6. Top15 input path is the broad final scores CSV.
+7. Official Top15 publish requires prior-quarter comparison data: every LLM-complete row must have `entry_qoq_pct`, `score_change`, and `prior_pre_llm_fundamental_score`.
 7. Output labels show `Top 10 core`, `Plus 5 exception`, and `shadow refill` clearly.
 
 If any check fails, do not call the CSV final.
