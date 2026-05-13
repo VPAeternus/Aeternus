@@ -39,13 +39,12 @@ def _seed_manifest_inputs(tmp_path: Path, *, ticker: str, cik: str, submission: 
         path = live / "documents" / f"{ticker}_{accession.replace('-', '')}_{doc}"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("<html>usable filing text</html>", encoding="utf-8")
-    manifest.configure(out=out, live=live)
-    manifest.QUARTERS = ["2026Q2"]
+    manifest.configure(out=out, live=live, quarters=["2026Q2"])
     return out
 
 
-def _read_single_manifest_row(out: Path) -> dict:
-    with (out / "sec_coverage_manifest_2021Q4_2026Q1.csv").open(newline="", encoding="utf-8") as handle:
+def _read_single_manifest_row(out: Path, slug: str = "2026Q2") -> dict:
+    with (out / f"sec_coverage_manifest_{slug}.csv").open(newline="", encoding="utf-8") as handle:
         return next(csv.DictReader(handle))
 
 

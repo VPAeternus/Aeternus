@@ -8,30 +8,34 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
-from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+from tradingagents.research.fundamental.src.sec_pipeline.config import SecPipelineConfig
 
-OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
-LIVE = SEC_CACHE_ROOT / 'live_sec'
+_CONFIG = SecPipelineConfig()
+OUT = _CONFIG.out
+LIVE = _CONFIG.live
 STATE_DB = OUT / 'sec_incremental_state.sqlite'
-MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
-QUEUE_JSON = OUT / 'sec_fetch_queue_resumable.json'
-ELIGIBLE_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
-UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
+MANIFEST_CSV = _CONFIG.coverage_manifest_csv
+QUEUE_JSON = _CONFIG.fetch_queue_json
+ELIGIBLE_JSON = _CONFIG.tickers_json
+UNIVERSE_CSV = _CONFIG.universe_csv
 PARSER_VERSION = 'sec-delta-v2-wrapper-aware-complete-submission-object-gated'
 
 
-def configure(*, out: Path | str | None = None, live: Path | str | None = None) -> None:
-    global OUT, LIVE, STATE_DB, MANIFEST_CSV, QUEUE_JSON, ELIGIBLE_JSON, UNIVERSE_CSV
-    if out is not None:
-        OUT = Path(out)
-    if live is not None:
-        LIVE = Path(live)
+def configure(*, out: Path | str | None = None, live: Path | str | None = None, quarters: list[str] | tuple[str, ...] | None = None, window_slug: str | None = None) -> None:
+    global _CONFIG, OUT, LIVE, STATE_DB, MANIFEST_CSV, QUEUE_JSON, ELIGIBLE_JSON, UNIVERSE_CSV
+    _CONFIG = SecPipelineConfig(
+        out=Path(out) if out is not None else _CONFIG.out,
+        live=Path(live) if live is not None else _CONFIG.live,
+        quarters=tuple(quarters) if quarters is not None else _CONFIG.quarters,
+        window_slug=window_slug or "",
+    )
+    OUT = _CONFIG.out
+    LIVE = _CONFIG.live
     STATE_DB = OUT / 'sec_incremental_state.sqlite'
-    MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
-    QUEUE_JSON = OUT / 'sec_fetch_queue_resumable.json'
-    ELIGIBLE_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
-    UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
+    MANIFEST_CSV = _CONFIG.coverage_manifest_csv
+    QUEUE_JSON = _CONFIG.fetch_queue_json
+    ELIGIBLE_JSON = _CONFIG.tickers_json
+    UNIVERSE_CSV = _CONFIG.universe_csv
 
 
 def now_iso() -> str:

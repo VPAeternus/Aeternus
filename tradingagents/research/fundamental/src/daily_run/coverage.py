@@ -30,7 +30,7 @@ def run_sec_coverage_manifest(*, out_root: Path, universe_csv: Path, eligible_js
     target = out_root / "final_dealflow_tickers_sec_eligible.json"
     if eligible_json.resolve() != target.resolve():
         shutil.copy2(eligible_json, target)
-    manifest.configure(out=out_root, live=live_sec_root); manifest.QUARTERS = [quarter]; manifest.UNIVERSE_CSV = universe_csv; manifest.TICKERS_JSON = target; manifest.main()
+    manifest.configure(out=out_root, live=live_sec_root, quarters=[quarter]); manifest.UNIVERSE_CSV = universe_csv; manifest.TICKERS_JSON = target; manifest.main()
     summary_path = out_root / "sec_coverage_summary.json"
     return json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.exists() else {"ticker_count": 0, "status_counts": {}, "missing_input_counts": {}, "fetch_queue_count": 0, "outputs": {}}
 

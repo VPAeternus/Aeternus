@@ -15,12 +15,12 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
-from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+from tradingagents.research.fundamental.src.sec_pipeline.config import SecPipelineConfig
 
-OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
-LIVE = SEC_CACHE_ROOT / 'live_sec'
-MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
+_CONFIG = SecPipelineConfig()
+OUT = _CONFIG.out
+LIVE = _CONFIG.live
+MANIFEST_CSV = _CONFIG.coverage_manifest_csv
 VALIDATION_JSON = OUT / 'sec_complete_submission_validation.json'
 VALIDATION_CSV = OUT / 'sec_complete_submission_validation_rows.csv'
 COMPLETE_DIR = LIVE / 'complete_submissions'
@@ -34,13 +34,17 @@ _rate_lock = threading.Lock()
 _next_request_at = 0.0
 
 
-def configure(*, out: Path | str | None = None, live: Path | str | None = None) -> None:
-    global OUT, LIVE, MANIFEST_CSV, VALIDATION_JSON, VALIDATION_CSV, COMPLETE_DIR
-    if out is not None:
-        OUT = Path(out)
-    if live is not None:
-        LIVE = Path(live)
-    MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
+def configure(*, out: Path | str | None = None, live: Path | str | None = None, quarters: list[str] | tuple[str, ...] | None = None, window_slug: str | None = None) -> None:
+    global _CONFIG, OUT, LIVE, MANIFEST_CSV, VALIDATION_JSON, VALIDATION_CSV, COMPLETE_DIR
+    _CONFIG = SecPipelineConfig(
+        out=Path(out) if out is not None else _CONFIG.out,
+        live=Path(live) if live is not None else _CONFIG.live,
+        quarters=tuple(quarters) if quarters is not None else _CONFIG.quarters,
+        window_slug=window_slug or "",
+    )
+    OUT = _CONFIG.out
+    LIVE = _CONFIG.live
+    MANIFEST_CSV = _CONFIG.coverage_manifest_csv
     VALIDATION_JSON = OUT / 'sec_complete_submission_validation.json'
     VALIDATION_CSV = OUT / 'sec_complete_submission_validation_rows.csv'
     COMPLETE_DIR = LIVE / 'complete_submissions'

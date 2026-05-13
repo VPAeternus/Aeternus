@@ -13,15 +13,15 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
-from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+from tradingagents.research.fundamental.src.sec_pipeline.config import SecPipelineConfig
 
-OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
-QUEUE_PATH = OUT / 'sec_fetch_queue_resumable.json'
-ELIGIBLE_PATH = OUT / 'final_dealflow_tickers_sec_eligible.json'
-PROGRESS_PATH = OUT / 'sec_download_progress.json'
-DOWNLOAD_MANIFEST_PATH = OUT / 'sec_download_manifest_2021Q4_2026Q1.json'
-LIVE = SEC_CACHE_ROOT / 'live_sec'
+_CONFIG = SecPipelineConfig()
+OUT = _CONFIG.out
+QUEUE_PATH = _CONFIG.fetch_queue_json
+ELIGIBLE_PATH = _CONFIG.tickers_json
+PROGRESS_PATH = _CONFIG.download_progress_json
+DOWNLOAD_MANIFEST_PATH = _CONFIG.download_manifest_json
+LIVE = _CONFIG.live
 SEC_ARCHIVE_BASE = 'https://www.sec.gov/Archives/edgar/data'
 SEC_SUBMISSIONS_BASE = 'https://data.sec.gov/submissions'
 USER_AGENT = 'AeternusAutoResearch/1.0 contact@aeternus.local'
@@ -35,16 +35,20 @@ _rate_lock = threading.Lock()
 _next_request_at = 0.0
 
 
-def configure(*, out: Path | str | None = None, live: Path | str | None = None) -> None:
-    global OUT, QUEUE_PATH, ELIGIBLE_PATH, PROGRESS_PATH, DOWNLOAD_MANIFEST_PATH, LIVE
-    if out is not None:
-        OUT = Path(out)
-    if live is not None:
-        LIVE = Path(live)
-    QUEUE_PATH = OUT / 'sec_fetch_queue_resumable.json'
-    ELIGIBLE_PATH = OUT / 'final_dealflow_tickers_sec_eligible.json'
-    PROGRESS_PATH = OUT / 'sec_download_progress.json'
-    DOWNLOAD_MANIFEST_PATH = OUT / 'sec_download_manifest_2021Q4_2026Q1.json'
+def configure(*, out: Path | str | None = None, live: Path | str | None = None, quarters: list[str] | tuple[str, ...] | None = None, window_slug: str | None = None) -> None:
+    global _CONFIG, OUT, QUEUE_PATH, ELIGIBLE_PATH, PROGRESS_PATH, DOWNLOAD_MANIFEST_PATH, LIVE
+    _CONFIG = SecPipelineConfig(
+        out=Path(out) if out is not None else _CONFIG.out,
+        live=Path(live) if live is not None else _CONFIG.live,
+        quarters=tuple(quarters) if quarters is not None else _CONFIG.quarters,
+        window_slug=window_slug or "",
+    )
+    OUT = _CONFIG.out
+    QUEUE_PATH = _CONFIG.fetch_queue_json
+    ELIGIBLE_PATH = _CONFIG.tickers_json
+    PROGRESS_PATH = _CONFIG.download_progress_json
+    DOWNLOAD_MANIFEST_PATH = _CONFIG.download_manifest_json
+    LIVE = _CONFIG.live
 
 
 def now_iso() -> str:

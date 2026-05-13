@@ -7,26 +7,31 @@ from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
-from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
-from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+from tradingagents.research.fundamental.src.sec_pipeline.config import DEFAULT_QUARTERS, SecPipelineConfig
 
-OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
-TICKERS_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
-UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
-SEC_CACHE = SEC_CACHE_ROOT
-LIVE = SEC_CACHE / 'live_sec'
-QUARTERS = ['2021Q4'] + [f'{y}Q{q}' for y in range(2022, 2026) for q in range(1, 5)] + ['2026Q1']
+_CONFIG = SecPipelineConfig()
+OUT = _CONFIG.out
+TICKERS_JSON = _CONFIG.tickers_json
+UNIVERSE_CSV = _CONFIG.universe_csv
+SEC_CACHE = _CONFIG.sec_cache
+LIVE = _CONFIG.live
+QUARTERS = list(_CONFIG.quarters)
 
 
-def configure(*, out: Path | str | None = None, live: Path | str | None = None) -> None:
-    global OUT, TICKERS_JSON, UNIVERSE_CSV, SEC_CACHE, LIVE
-    if out is not None:
-        OUT = Path(out)
-    if live is not None:
-        LIVE = Path(live)
-        SEC_CACHE = LIVE.parent
-    TICKERS_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
-    UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
+def configure(*, out: Path | str | None = None, live: Path | str | None = None, quarters: list[str] | tuple[str, ...] | None = None, window_slug: str | None = None) -> None:
+    global _CONFIG, OUT, TICKERS_JSON, UNIVERSE_CSV, SEC_CACHE, LIVE, QUARTERS
+    _CONFIG = SecPipelineConfig(
+        out=Path(out) if out is not None else _CONFIG.out,
+        live=Path(live) if live is not None else _CONFIG.live,
+        quarters=tuple(quarters) if quarters is not None else tuple(QUARTERS or DEFAULT_QUARTERS),
+        window_slug=window_slug or "",
+    )
+    OUT = _CONFIG.out
+    TICKERS_JSON = _CONFIG.tickers_json
+    UNIVERSE_CSV = _CONFIG.universe_csv
+    SEC_CACHE = _CONFIG.sec_cache
+    LIVE = _CONFIG.live
+    QUARTERS = list(_CONFIG.quarters)
 
 
 def q_bounds(q: str) -> tuple[date, date]:
@@ -268,13 +273,13 @@ def main() -> None:
         if key in seen: continue
         seen.add(key); deduped.append(item)
 
-    manifest_csv = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
+    manifest_csv = _CONFIG.coverage_manifest_csv
     with manifest_csv.open('w', newline='', encoding='utf-8') as f:
         fieldnames = ['ticker','quarter','cik','company_title','coverage_status','missing_inputs','notes','earnings_8k_accession','earnings_8k_filing_date','earnings_8k_primary_document','earnings_exhibit_document','periodic_accession','periodic_form','periodic_filing_date','periodic_primary_document']
         w = csv.DictWriter(f, fieldnames=fieldnames); w.writeheader(); w.writerows(rows)
-    queue_path = OUT / 'sec_fetch_queue_resumable.json'
+    queue_path = _CONFIG.fetch_queue_json
     queue_path.write_text(json.dumps({'cache_root': str(SEC_CACHE), 'live_cache_root': str(LIVE), 'quarters': QUARTERS, 'count': len(deduped), 'items': deduped}, indent=2), encoding='utf-8')
-    blockers_path = OUT / 'sec_coverage_blockers.json'
+    blockers_path = _CONFIG.coverage_blockers_json
     blockers_path.write_text(json.dumps(blockers, indent=2, sort_keys=True), encoding='utf-8')
     status_counts = Counter(r['coverage_status'] for r in rows)
     missing_counts = Counter(x for r in rows for x in str(r.get('missing_inputs','')).split(';') if x)
@@ -290,7 +295,7 @@ def main() -> None:
         'blocked_tickers': sorted({b['ticker'] for b in blockers}),
         'outputs': {'manifest_csv': str(manifest_csv), 'fetch_queue': str(queue_path), 'blockers': str(blockers_path)},
     }
-    (OUT / 'sec_coverage_summary.json').write_text(json.dumps(summary, indent=2, sort_keys=True), encoding='utf-8')
+    _CONFIG.coverage_summary_json.write_text(json.dumps(summary, indent=2, sort_keys=True), encoding='utf-8')
     print(json.dumps(summary, indent=2, sort_keys=True))
 
 if __name__ == '__main__':

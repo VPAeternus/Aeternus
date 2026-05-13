@@ -6,7 +6,7 @@ import sqlite3
 from collections import Counter
 from pathlib import Path
 
-from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+from tradingagents.research.fundamental.src.sec_pipeline.config import DEFAULT_QUARTERS, SecPipelineConfig
 
 try:
     from . import cache_coverage_manifest, incremental_state as state
@@ -14,14 +14,15 @@ except ImportError:  # direct script execution
     import cache_coverage_manifest  # type: ignore
     import incremental_state as state  # type: ignore
 
-OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
+_CONFIG = SecPipelineConfig()
+OUT = _CONFIG.out
 STATE_DB = OUT / 'sec_incremental_state.sqlite'
 DELTA_CSV = OUT / 'sec_daily_delta_coverage_manifest.csv'
 DELTA_SUMMARY = OUT / 'sec_daily_delta_summary.json'
 DELTA_QUEUE = OUT / 'sec_daily_delta_fetch_queue.json'
 CURRENT_LIVE: Path | str | None = None
 PARSER_VERSION = state.PARSER_VERSION
-QUARTERS = ['2021Q4'] + [f'{y}Q{q}' for y in range(2022, 2026) for q in range(1, 5)] + ['2026Q1']
+QUARTERS = list(DEFAULT_QUARTERS)
 
 FIELDNAMES = [
     'ticker','quarter','cik','company_title','coverage_status','missing_inputs','notes',
@@ -30,13 +31,19 @@ FIELDNAMES = [
 ]
 
 
-def configure(*, out: Path | str | None = None, live: Path | str | None = None) -> None:
-    global OUT, STATE_DB, DELTA_CSV, DELTA_SUMMARY, DELTA_QUEUE, CURRENT_LIVE
-    if out is not None:
-        OUT = Path(out)
-    CURRENT_LIVE = live
-    state.configure(out=OUT, live=live)
-    cache_coverage_manifest.configure(out=OUT, live=live)
+def configure(*, out: Path | str | None = None, live: Path | str | None = None, quarters: list[str] | tuple[str, ...] | None = None, window_slug: str | None = None) -> None:
+    global _CONFIG, OUT, STATE_DB, DELTA_CSV, DELTA_SUMMARY, DELTA_QUEUE, CURRENT_LIVE, QUARTERS
+    _CONFIG = SecPipelineConfig(
+        out=Path(out) if out is not None else _CONFIG.out,
+        live=Path(live) if live is not None else _CONFIG.live,
+        quarters=tuple(quarters) if quarters is not None else tuple(QUARTERS or DEFAULT_QUARTERS),
+        window_slug=window_slug or "",
+    )
+    OUT = _CONFIG.out
+    CURRENT_LIVE = _CONFIG.live
+    QUARTERS = list(_CONFIG.quarters)
+    state.configure(out=OUT, live=CURRENT_LIVE, quarters=QUARTERS)
+    cache_coverage_manifest.configure(out=OUT, live=CURRENT_LIVE, quarters=QUARTERS)
     STATE_DB = OUT / 'sec_incremental_state.sqlite'
     DELTA_CSV = OUT / 'sec_daily_delta_coverage_manifest.csv'
     DELTA_SUMMARY = OUT / 'sec_daily_delta_summary.json'
@@ -95,7 +102,7 @@ def main() -> None:
     reused, recompute = reusable_tickers(conn)
 
     if recompute:
-        cache_coverage_manifest.configure(out=OUT, live=CURRENT_LIVE)
+        cache_coverage_manifest.configure(out=OUT, live=CURRENT_LIVE, quarters=QUARTERS)
         cache_coverage_manifest.main()
         state.main()
         conn = sqlite3.connect(STATE_DB)
@@ -118,7 +125,7 @@ def main() -> None:
         'row_count': row_count,
         'status_counts': dict(statuses),
         'fetch_queue_count': 0,
-        'quality_policy': 'Reuse only when submissions fingerprint, parser version, 18 coverage rows, and cached object validation all pass. Otherwise recompute/fallback.',
+        'quality_policy': f'Reuse only when submissions fingerprint, parser version, {len(QUARTERS)} coverage rows, and cached object validation all pass. Otherwise recompute/fallback.',
         'outputs': {'manifest_csv': str(DELTA_CSV), 'fetch_queue': str(DELTA_QUEUE), 'state_db': str(STATE_DB)},
     }
     DELTA_SUMMARY.write_text(json.dumps(summary, indent=2, sort_keys=True), encoding='utf-8')
