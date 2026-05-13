@@ -297,6 +297,100 @@ def fundamental_right_tail_queues(
             console.print(f"[green]Target audit[/green] {paths['target_miss_rescue_audit']}")
 
 
+@app.command("fundamental-build-complete-panel")
+def fundamental_build_complete_panel(
+    run_root: str = typer.Option(..., "--run-root", help="Daily run root containing final scores and selector artifacts"),
+    quarter: str = typer.Option(..., "--quarter", help="Fundamental quarter, e.g. 2026Q2"),
+    date: str = typer.Option(..., "--date", help="Panel as-of date YYYY-MM-DD"),
+    output_root: str = typer.Option(..., "--output-root", help="Output root for complete panel artifacts"),
+    prior_panel: str = typer.Option("", "--prior-panel", help="Optional prior canonical complete panel CSV"),
+    allow_missing_financials: bool = typer.Option(
+        False,
+        "--allow-missing-financials/--strict-financials",
+        help="Allow companyfacts-missing financial fields; strict by default",
+    ),
+    run_selectors: bool = typer.Option(
+        True,
+        "--run-selectors/--use-existing-selectors",
+        help="Auto-run selectors if artifacts are absent, or require existing selector CSVs",
+    ),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Build canonical complete panel from pre-LLM rows through Top-15 annotations."""
+    from tradingagents.research.fundamental.src.panel.exporter import build_complete_panel
+
+    fmt = format.strip().lower()
+    if fmt not in {"table", "json"}:
+        console.print("[red]--format must be table or json[/red]")
+        raise typer.Exit(1)
+
+    run_path = Path(run_root)
+    if not run_path.is_dir():
+        console.print(f"[red]run root must exist and be a directory: {run_path}[/red]")
+        raise typer.Exit(1)
+
+    try:
+        as_of = _dt.date.fromisoformat(date.strip())
+    except ValueError:
+        console.print("[red]--date must be YYYY-MM-DD[/red]")
+        raise typer.Exit(1)
+
+    prior_path = Path(prior_panel) if prior_panel.strip() else None
+    if prior_path is not None and not prior_path.is_file():
+        console.print(f"[red]prior panel must exist and be a file: {prior_path}[/red]")
+        raise typer.Exit(1)
+
+    if not run_selectors:
+        missing_selectors = [
+            name
+            for name in (
+                "high_conviction_top15.csv",
+                "high_conviction_top15_core_deterioration_refill_shadow.csv",
+            )
+            if not (run_path / name).is_file()
+        ]
+        if missing_selectors:
+            console.print(
+                "[red]selector CSVs missing for --use-existing-selectors:[/red] "
+                + ", ".join(missing_selectors)
+            )
+            raise typer.Exit(1)
+
+    try:
+        result = build_complete_panel(
+            run_root=run_path,
+            output_root=Path(output_root),
+            quarter=quarter.strip(),
+            as_of=as_of.isoformat(),
+            prior_panel_path=prior_path,
+            allow_missing_financials=allow_missing_financials,
+        )
+    except Exception as exc:  # noqa: BLE001
+        console.print(f"[red]complete panel build failed:[/red] {exc}")
+        raise typer.Exit(1)
+
+    validation = result.get("validation") or {}
+    if fmt == "json":
+        typer.echo(json.dumps(result, indent=2, sort_keys=True))
+    else:
+        console.print(f"[green]Complete panel[/green] {result.get('csv_path')}")
+        console.print(f"manifest={result.get('manifest_path')}")
+        console.print(f"columns={result.get('columns_path')}")
+        console.print(f"validation={result.get('validation_path')}")
+        console.print(
+            "rows={rows} top15_selected={top15} shadow_selected={shadow}".format(
+                rows=validation.get("row_count", 0),
+                top15=validation.get("top15_selected_count", 0),
+                shadow=validation.get("shadow_selected_count", 0),
+            )
+        )
+        for error in validation.get("errors") or []:
+            console.print(f"[red]validation error[/red] {json.dumps(error, sort_keys=True)}")
+
+    if validation.get("passed") is not True:
+        raise typer.Exit(1)
+
+
 def _export_final_scores(lake_root: Path, out_root: Path, run_date: str) -> Path | None:
     try:
         import pandas as pd
@@ -434,6 +528,8 @@ def fundamental_run_today(
     llm_output_dir: str = typer.Option("", "--llm-output-dir", help="LLM batch output dir; defaults under output root"),
     llm_output_csv: str = typer.Option("", "--llm-output-csv", help="LLM consolidated CSV; defaults under output root"),
     min_broad_universe_count: int = typer.Option(1000, "--min-broad-universe-count", help="Minimum broad universe count in final mode"),
+    emit_complete_panel: bool = typer.Option(False, "--emit-complete-panel/--no-emit-complete-panel", help="Emit canonical complete panel after final publish"),
+    complete_panel_output_root: str = typer.Option("", "--complete-panel-output-root", help="Complete panel output root; defaults under daily output root"),
     format: str = typer.Option("table", "--format", help="Output format: table|json"),
 ):
     """Run the gated daily fundamental framework from broad master universe."""
@@ -457,6 +553,7 @@ def fundamental_run_today(
     prior_context_path = Path(prior_final_scores.strip()) if prior_final_scores.strip() else None
     llm_dir = Path(llm_output_dir.strip()) if llm_output_dir.strip() else out / "llm_batches"
     llm_csv = Path(llm_output_csv.strip()) if llm_output_csv.strip() else out / "post_llm_scores.csv"
+    panel_root = Path(complete_panel_output_root.strip()) if complete_panel_output_root.strip() else None
 
     def _daily_run_llm_service(*, packets_path: Path, output_root: Path, config: DailyRunConfig) -> Path | None:
         if llm_mode_value == "post-file":
@@ -520,6 +617,8 @@ def fundamental_run_today(
             llm_output_dir=llm_dir,
             llm_output_csv=llm_csv,
             min_broad_universe_count=min_broad_universe_count,
+            emit_complete_panel=emit_complete_panel,
+            complete_panel_output_root=panel_root,
         )
         services = DailyRunServices(run_llm=None if effective_skip_llm else _daily_run_llm_service)
         result = run_daily_fundamental(cfg, services=services)
