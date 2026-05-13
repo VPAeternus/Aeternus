@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import to_float
+from tradingagents.research.fundamental.src.features.common import to_float
 
 
 REVENUE_BUCKETS = {"<$100M", "$100M-$500M", "$500M-$1B", "$1B-$2B", "$2B-$10B"}

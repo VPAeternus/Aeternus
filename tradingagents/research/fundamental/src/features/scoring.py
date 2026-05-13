@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import clamp, clean, flag, prior_quarter, to_float, to_int
-from src.features.hp_subtiers import HP_LABELS
-from src.features.post_llm_scores import REQUIRED_LLM_FIELDS
-from src.features.themes import assign_theme_tailwind_score, detect_candidate_themes
-from src.features.underwriting import rm_buy_review_flag
+from tradingagents.research.fundamental.src.features.common import clamp, clean, flag, prior_quarter, to_float, to_int
+from tradingagents.research.fundamental.src.features.hp_subtiers import HP_LABELS
+from tradingagents.research.fundamental.src.features.post_llm_scores import REQUIRED_LLM_FIELDS
+from tradingagents.research.fundamental.src.features.themes import assign_theme_tailwind_score, detect_candidate_themes
+from tradingagents.research.fundamental.src.features.underwriting import rm_buy_review_flag
 
 
 ENTRY_SCORE_FORBIDDEN_COLUMNS = {

@@ -3,8 +3,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from src.reporting.weekly_report import write_weekly_reports
-from src.storage import read_table
+from tradingagents.research.fundamental.src.reporting.weekly_report import write_weekly_reports
+from tradingagents.research.fundamental.src.storage import read_table
 
 
 def parse_args() -> argparse.Namespace:

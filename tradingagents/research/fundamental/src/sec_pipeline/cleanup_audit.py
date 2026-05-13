@@ -123,15 +123,11 @@ def write_reproducibility_manifest(root: Path, run_dir: Path, live_cache_root: s
 def wrapper_text(module: str, run_dir: Path, live_cache_root: str) -> str:
     return f'''from __future__ import annotations
 
-import sys
 from pathlib import Path
 
 RUN_DIR = Path(__file__).resolve().parent
-FUNDAMENTAL_ROOT = RUN_DIR.parents[3] / "tradingagents" / "research" / "fundamental"
-if str(FUNDAMENTAL_ROOT) not in sys.path:
-    sys.path.insert(0, str(FUNDAMENTAL_ROOT))
 
-from src.sec_pipeline import {module} as pipeline
+from tradingagents.research.fundamental.src.sec_pipeline import {module} as pipeline
 
 
 def main() -> None:

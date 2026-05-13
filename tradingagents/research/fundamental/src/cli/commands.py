@@ -367,7 +367,11 @@ def _run_external_llm(
     script = fundamental_root / "src" / "pipeline" / "run_llm_extraction.py"
     env = os.environ.copy()
     existing = env.get("PYTHONPATH", "")
-    env["PYTHONPATH"] = str(fundamental_root.resolve()) + (os.pathsep + existing if existing else "")
+    repo_root = fundamental_root.resolve().parents[2]
+    pythonpath_entries = [str(repo_root), str(fundamental_root.resolve())]
+    if existing:
+        pythonpath_entries.append(existing)
+    env["PYTHONPATH"] = os.pathsep.join(pythonpath_entries)
     cmd = [
         _sys.executable,
         str(script),
@@ -549,10 +553,6 @@ def fundamental(
     llm_output_csv: str = typer.Option("", "--llm-output-csv", help="LLM consolidated CSV; defaults under output root"),
 ):
     """Run the fundamental framework from dealflow scout ticker handoff."""
-    framework_root = Path("tradingagents") / "research" / "fundamental"
-    if str(framework_root.resolve()) not in _sys.path:
-        _sys.path.insert(0, str(framework_root.resolve()))
-
     from tradingagents.research.fundamental.src.pipeline.dealflow_adapter import build_dealflow_universe_csv, current_quarter
     from tradingagents.research.fundamental.src.pipeline.run_quarter import run_quarter_pipeline
 

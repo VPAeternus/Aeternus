@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import clean, flag, to_float
-from src.features.hp_subtiers import HP_LABELS, hp_bool_from_row
-from src.features.pre_llm_scores import REVENUE_BUCKETS
-from src.features.repricing_momentum import RM_LABELS, rm_bool_from_row
+from tradingagents.research.fundamental.src.features.common import clean, flag, to_float
+from tradingagents.research.fundamental.src.features.hp_subtiers import HP_LABELS, hp_bool_from_row
+from tradingagents.research.fundamental.src.features.pre_llm_scores import REVENUE_BUCKETS
+from tradingagents.research.fundamental.src.features.repricing_momentum import RM_LABELS, rm_bool_from_row
 
 
 TIER_LABELS = {

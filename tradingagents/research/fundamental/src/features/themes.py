@@ -8,7 +8,7 @@ from typing import Any
 import pandas as pd
 import yaml
 
-from src.features.common import clean, flag, to_float
+from tradingagents.research.fundamental.src.features.common import clean, flag, to_float
 
 try:
     from tradingagents.dealflow.theme_aliases import canonicalize_theme_id, load_theme_aliases, match_theme_aliases

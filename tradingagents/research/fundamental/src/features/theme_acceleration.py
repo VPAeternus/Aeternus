@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import clean
+from tradingagents.research.fundamental.src.features.common import clean
 
 
 THEME_ACCELERATION_FLAG_FIELDS = [

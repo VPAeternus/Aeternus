@@ -5,7 +5,7 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-from src.features.common import clean, flag, to_float
+from tradingagents.research.fundamental.src.features.common import clean, flag, to_float
 
 
 REVENUE_LARGE = ">$10B"

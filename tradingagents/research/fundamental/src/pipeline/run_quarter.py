@@ -5,11 +5,11 @@ import json
 from pathlib import Path
 from typing import Any
 
-from src.features.llm_packets import build_llm_packets
-from src.features.investment_decisions import build_investment_decision
-from src.features.positions import build_position_row
-from src.features.pre_llm_scores import build_pre_llm_rows
-from src.ingest.filings import (
+from tradingagents.research.fundamental.src.features.llm_packets import build_llm_packets
+from tradingagents.research.fundamental.src.features.investment_decisions import build_investment_decision
+from tradingagents.research.fundamental.src.features.positions import build_position_row
+from tradingagents.research.fundamental.src.features.pre_llm_scores import build_pre_llm_rows
+from tradingagents.research.fundamental.src.ingest.filings import (
     SecClient,
     discover_required_filings,
     fetch_required_documents,
@@ -17,11 +17,11 @@ from src.ingest.filings import (
     quarter_bounds,
     recent_filings,
 )
-from src.ingest.prices import compute_return_checkpoints, fetch_yahoo_ohlcv
-from src.ingest.xbrl import companyfacts_to_pre_llm_input
-from src.reporting.investment_memo import build_memo_row
-from src.pipeline.run_on_new_filing import build_signal_tables
-from src.storage import add_run_lineage, make_pipeline_run_id, read_rows, read_table, source_file_hash, write_table
+from tradingagents.research.fundamental.src.ingest.prices import compute_return_checkpoints, fetch_yahoo_ohlcv
+from tradingagents.research.fundamental.src.ingest.xbrl import companyfacts_to_pre_llm_input
+from tradingagents.research.fundamental.src.reporting.investment_memo import build_memo_row
+from tradingagents.research.fundamental.src.pipeline.run_on_new_filing import build_signal_tables
+from tradingagents.research.fundamental.src.storage import add_run_lineage, make_pipeline_run_id, read_rows, read_table, source_file_hash, write_table
 
 
 def _prior_quarter(quarter: str) -> str:

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import clamp, to_float
-from src.features.scoring import score_label
+from tradingagents.research.fundamental.src.features.common import clamp, to_float
+from tradingagents.research.fundamental.src.features.scoring import score_label
 
 
 CHECKPOINT_COLUMNS = ["return_10d_pct", "return_20d_pct", "return_30d_pct", "return_60d_pct"]

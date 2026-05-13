@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import clean, flag, to_float
+from tradingagents.research.fundamental.src.features.common import clean, flag, to_float
 
 
 DEFAULT_DECISION_RULES = {

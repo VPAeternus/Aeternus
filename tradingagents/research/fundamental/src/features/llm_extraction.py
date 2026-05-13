@@ -9,8 +9,8 @@ import tempfile
 from pathlib import Path
 from typing import Any, Callable
 
-from src.features.common import clean
-from src.features.theme_acceleration import THEME_ACCELERATION_FIELDS, normalized_theme_acceleration_fields
+from tradingagents.research.fundamental.src.features.common import clean
+from tradingagents.research.fundamental.src.features.theme_acceleration import THEME_ACCELERATION_FIELDS, normalized_theme_acceleration_fields
 
 
 CSV_FIELDS = [

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import to_float
+from tradingagents.research.fundamental.src.features.common import to_float
 
 
 def build_position_row(decision: dict[str, Any], current_price: float | None = None) -> dict[str, Any]:

@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import Any, Callable
 from urllib.request import Request, urlopen
 
-from src.config.cache_paths import sec_cache_root
-from src.ingest.documents import classify_doc_quality, html_to_text
+from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_root
+from tradingagents.research.fundamental.src.ingest.documents import classify_doc_quality, html_to_text
 
 
 SEC_ARCHIVE_BASE = "https://www.sec.gov/Archives/edgar/data"

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.features.common import clean, to_float
+from tradingagents.research.fundamental.src.features.common import clean, to_float
 
 
 NARRATIVE_RANK = {"deteriorating": 0, "neutral": 1, "constructive": 2, "inflecting": 3}
