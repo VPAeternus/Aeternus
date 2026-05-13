@@ -57,6 +57,47 @@ def _record(state: DailyRunState, result: GateResult) -> None:
     result.raise_if_hard_stop()
 
 
+def _copy_if_exists(source: str | Path | None, target: Path) -> str:
+    if not source:
+        return ""
+    src = Path(source)
+    if not src.exists() or src.is_dir():
+        return ""
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, target)
+    return str(target)
+
+
+def _write_operator_final_bundle(state: DailyRunState, publish_gate: GateResult) -> dict[str, str]:
+    """Mirror only operator-facing publish files into output_root/final/.
+
+    Root artifacts remain for compatibility; final/ is the clean review surface.
+    """
+    final_dir = state.config.output_root / "final"
+    artifacts: dict[str, str] = {}
+    copied = _copy_if_exists(state.artifacts.get("final_scores_csv"), final_dir / "fundamental_final_scores.csv")
+    if copied:
+        artifacts["operator_final_scores_csv"] = copied
+    for key, filename in {
+        "top15_csv": "high_conviction_top15.csv",
+        "top15_json": "high_conviction_top15.json",
+        "top15_recommendation_md": "high_conviction_top15_daily_recommendation.md",
+    }.items():
+        copied = _copy_if_exists(state.artifacts.get(key), final_dir / filename)
+        if copied:
+            artifacts[f"operator_{key}"] = copied
+    guard_source = state.artifacts.get("publish_guard_summary") or state.artifacts.get("publish_guard_summary_json")
+    copied = _copy_if_exists(guard_source, final_dir / "publish_guard_summary.json")
+    if copied:
+        artifacts["operator_publish_guard_summary_json"] = copied
+    else:
+        guard_path = final_dir / "publish_guard_summary.json"
+        write_json_atomic(guard_path, {"gate": publish_gate.gate_number, "status": publish_gate.status.value, **publish_gate.summary})
+        artifacts["operator_publish_guard_summary_json"] = str(guard_path)
+    state.artifacts.update(artifacts)
+    return artifacts
+
+
 def _write_final_report(state: DailyRunState, summary: dict[str, Any]) -> Path:
     by_gate = {gate.gate_number: gate for gate in state.gates}
     universe = by_gate.get(2).summary if by_gate.get(2) else {}
@@ -236,6 +277,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         if config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.skip_llm:
             publish_gate = (services.publish or publish_top15_and_shadow)(scores_csv=final_path, output_root=config.output_root, as_of=config.as_of, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=explicit_invalid_quarantine_count, coverage_manifest=coverage_csv if coverage_csv.exists() else None)
             _record(state, publish_gate)
+            _write_operator_final_bundle(state, publish_gate)
             return _finish(state, final=True)
         _record(state, GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.SKIPPED, {"reason": "not_broad_final_or_skip_llm"}, {}))
         return _finish(state, final=False, stopped="publish_skipped")

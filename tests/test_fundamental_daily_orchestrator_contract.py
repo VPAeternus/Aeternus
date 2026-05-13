@@ -67,7 +67,19 @@ def _fake_orchestrator_fixture(tmp_path, mode="broad-master-final", skip_llm=Fal
     def fake_publish(*, scores_csv, output_root, as_of, broad_universe_count, explicit_invalid_quarantine_count=0, coverage_manifest=None):
         import pandas as pd
         assert len(pd.read_csv(scores_csv)) + explicit_invalid_quarantine_count == broad_universe_count == 5
-        return GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.PASS, {"input_rows": 5}, {"scores_csv": str(scores_csv)})
+        top15_csv = output_root / "high_conviction_top15.csv"
+        top15_json = output_root / "high_conviction_top15.json"
+        top15_md = output_root / "high_conviction_top15_daily_recommendation.md"
+        top15_csv.write_text("ticker,top15_bucket\nT1,Top 10 core\n", encoding="utf-8")
+        top15_json.write_text(json.dumps({"selected_rows": [{"ticker": "T1"}]}), encoding="utf-8")
+        top15_md.write_text("# Top 10 + Plus 5\n", encoding="utf-8")
+        return GateResult(
+            10,
+            "Top10 + Plus5 + shadow refill publish",
+            GateStatus.PASS,
+            {"input_rows": 5},
+            {"scores_csv": str(scores_csv), "top15_csv": str(top15_csv), "top15_json": str(top15_json), "top15_recommendation_md": str(top15_md)},
+        )
     cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode=mode, output_root=tmp_path / "run", master_universe_path=master, handoff_path=None, sec_live_root=live, skip_llm=skip_llm, prior_context_path=prior, min_broad_universe_count=5)
     return cfg, DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage, run_llm=fake_llm or default_llm, publish=fake_publish)
 
@@ -104,6 +116,14 @@ def test_orchestrator_final_mode_preserves_broad_rows_filters_llm_and_requires_q
     assert gate9.summary["llm_complete_rows"] == 2
     assert (cfg.output_root / "fundamental_final_scores_2026-05-12.csv").exists()
     assert (cfg.output_root / "lake" / "artifacts" / "2026Q2_llm_packets.jsonl").exists()
+    final_dir = cfg.output_root / "final"
+    assert (final_dir / "fundamental_final_scores.csv").exists()
+    assert (final_dir / "high_conviction_top15.csv").read_text(encoding="utf-8").startswith("ticker,top15_bucket")
+    assert (final_dir / "high_conviction_top15.json").exists()
+    assert (final_dir / "high_conviction_top15_daily_recommendation.md").exists()
+    guard = json.loads((final_dir / "publish_guard_summary.json").read_text(encoding="utf-8"))
+    assert guard["status"] == "pass"
+    assert result.artifacts["operator_final_scores_csv"] == str(final_dir / "fundamental_final_scores.csv")
 
 
 def test_orchestrator_final_mode_hard_stops_without_prior_qoq_context(tmp_path):
