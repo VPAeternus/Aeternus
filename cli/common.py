@@ -84,6 +84,7 @@ from tradingagents.graph.paper_execution import (
     refresh_positions_market_snapshot,
     reconcile_live_execution,
     submit_alpaca_order,
+    suppress_v3_residual_order,
 )
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.dealflow import DealFlowPipeline, DealFlowScheduler

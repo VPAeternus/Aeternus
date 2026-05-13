@@ -17,6 +17,7 @@ from tradingagents.graph.paper_execution import (
     fetch_alpaca_positions_snapshot,
     refresh_positions_market_snapshot,
     reconcile_live_execution,
+    suppress_v3_residual_order,
 )
 from tradingagents.graph.track_record import TrackRecord
 
@@ -598,6 +599,27 @@ def test_build_portfolio_plan_uses_market_price_fallback_when_report_price_missi
     # Verify QQQ residual order exists
     qqq_orders = [o for o in plan["orders"] if o["symbol"] == "QQQ"]
     assert len(qqq_orders) == 1
+
+
+def test_suppress_v3_residual_order_parks_cash():
+    plan = {
+        "v3_residual_usd": 75000.0,
+        "v3_sizing_usd": 75000.0,
+        "v3_cash_reserve_usd": 0.0,
+        "orders": [
+            {"symbol": "AAPL", "dominant_signal_family": "news_catalyst"},
+            {"symbol": "QQQ", "dominant_signal_family": "v3_benchmark", "target_notional_usd": 75000.0},
+        ],
+    }
+
+    removed = suppress_v3_residual_order(plan, "S7 hedge active")
+
+    assert removed["symbol"] == "QQQ"
+    assert [o["symbol"] for o in plan["orders"]] == ["AAPL"]
+    assert plan["v3_sizing_usd"] == 0.0
+    assert plan["v3_cash_reserve_usd"] == 75000.0
+    assert plan["v3_suppressed"] is True
+    assert plan["v3_suppression_reason"] == "S7 hedge active"
 
 
 def test_build_portfolio_plan_enforces_whole_shares_when_requested(tmp_path):

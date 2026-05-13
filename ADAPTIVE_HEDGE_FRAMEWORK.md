@@ -46,6 +46,33 @@ Live hedge use:
 - If S7 detection fails or data is unavailable, `_detect_s7_active()` returns `False`; default policy then holds `0%` hedge.
 - The default QQQ-gate/S7-only policy also disables the legacy crash-trigger escalation; use `bear_base` only for A/B comparison.
 
+## V3 conflict rule
+
+The V3 index overlay remains independent, but QQQ overnight long exposure is suppressed when the default hedge trigger is active:
+
+- `QQQ < QQQ_SMA200`
+- SPY S7a or S7b active
+
+When this conflict fires, `momentum-scan --tickers QQQ --json` reports:
+
+- `overnight_raw=true`
+- `overnight=false`
+- `overnight_suppressed_by_s7_hedge=true`
+
+Portfolio plans also remove the V3 residual QQQ/TQQQ order and park that residual as cash when the hedge cycle returns `S7_HEDGE`.
+
+Observed QQQ V3 suppression impact, no slippage:
+
+| Window | Metric basis | No suppression | With S7 suppression | QQQ B&H |
+|---|---|---:|---:|---:|
+| 1999-03-10 → 2026-05-12 | official 1-share points | `+887.28` | `+961.28` | `+656.18` |
+| 1999-03-10 → 2026-05-12 | return on start price | `+1737.64%` | `+1882.56%` | `+1285.05%` |
+| 2006-01-03 → 2026-05-12 | official 1-share points | `+733.38` | `+803.38` | `+665.93` |
+| 2006-01-03 → 2026-05-12 | return on start price | `+1775.30%` | `+1944.75%` | `+1612.03%` |
+| 2006-01-03 → 2026-05-12 | compounded CAGR | `13.99%` | `15.26%` | `15.00%` |
+
+Suppressed overnight days: `213` since 1999, `123` since 2006. Suppression removed `-74.00` QQQ overnight points since 1999 and `-70.00` since 2006.
+
 ## Instrument selection
 
 The hedge order instrument is chosen by portfolio concentration:

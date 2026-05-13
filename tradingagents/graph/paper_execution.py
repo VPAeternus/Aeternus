@@ -394,6 +394,39 @@ def build_portfolio_plan(
     }
 
 
+def suppress_v3_residual_order(plan: Dict[str, Any], reason: str) -> Optional[Dict[str, Any]]:
+    """Remove the V3 residual index order from a plan and park residual as cash."""
+    if not isinstance(plan, dict):
+        return None
+
+    orders = plan.get("orders")
+    if not isinstance(orders, list):
+        return None
+
+    removed = None
+    kept = []
+    for order in orders:
+        if (
+            removed is None
+            and isinstance(order, dict)
+            and str(order.get("dominant_signal_family", "")).lower() == "v3_benchmark"
+        ):
+            removed = order
+            continue
+        kept.append(order)
+
+    if removed is None:
+        return None
+
+    plan["orders"] = kept
+    residual_usd = float(plan.get("v3_residual_usd", 0.0) or 0.0)
+    plan["v3_sizing_usd"] = 0.0
+    plan["v3_cash_reserve_usd"] = round(residual_usd, 2)
+    plan["v3_suppressed"] = True
+    plan["v3_suppression_reason"] = str(reason)
+    return removed
+
+
 def build_hedge_order_intent(
     plan_id: str,
     run_date: str,

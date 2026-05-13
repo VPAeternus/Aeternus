@@ -66,12 +66,18 @@ class IndexOverlayEngine:
             prev = df.iloc[-2]
             regime_series = self._compute_accel_regime(df)
             prev_regime = regime_series.iloc[-2]
+            s7_hedge_conflict = self._s7_hedge_conflict_active(t, df)
+            overnight = bool(legs["overnight"] and not s7_hedge_conflict)
 
             return {
                 "ticker": t,
                 "date": str(prev.get("date", ""))[:10],
                 "rth": legs["rth"],
-                "overnight": legs["overnight"],
+                "overnight": overnight,
+                "overnight_raw": bool(legs["overnight"]),
+                "overnight_suppressed_by_s7_hedge": bool(s7_hedge_conflict and legs["overnight"]),
+                "hedge_gate_symbol": "QQQ" if t == "QQQ" else None,
+                "s7_source_symbol": "SPY" if t == "QQQ" else None,
                 "active_leg": active_leg,
                 "leg1": legs["leg1"],
                 "leg2": legs["leg2"],
@@ -147,6 +153,45 @@ class IndexOverlayEngine:
             regime[i] = current
 
         return pd.Series(regime, index=df.index, name="regime")
+
+    def _s7_hedge_conflict_active(self, ticker: str, qqq_df: pd.DataFrame) -> bool:
+        """Return True when default QQQ-gated SPY S7 hedge conflicts with QQQ overnight long.
+
+        Uses the same completed signal bar as get_signal(): iloc[-2]. If SPY data is
+        unavailable or dates cannot be aligned, fail open and do not suppress V3.
+        """
+        if ticker.upper() != "QQQ" or qqq_df is None or len(qqq_df) < 2:
+            return False
+
+        try:
+            signal_bar = qqq_df.iloc[-2]
+            qqq_close = float(signal_bar.get("close", np.nan))
+            qqq_sma200 = float(signal_bar.get("sma200", np.nan))
+            if np.isnan(qqq_close) or np.isnan(qqq_sma200) or qqq_sma200 == 0.0:
+                return False
+            if qqq_close >= qqq_sma200:
+                return False
+
+            from . import data_engine, phase_engine  # lazy import avoids cycles
+
+            spy = data_engine.load("SPY")
+            if spy is None or len(spy) < 2 or "date" not in spy.columns or "date" not in qqq_df.columns:
+                return False
+
+            signal_date = pd.to_datetime(signal_bar.get("date")).normalize()
+            spy_dates = pd.to_datetime(spy["date"]).dt.normalize()
+            matches = spy.index[spy_dates == signal_date]
+            if len(matches) == 0:
+                return False
+            spy_i = int(matches[-1])
+            if spy_i < 0 or spy_i >= len(spy):
+                return False
+
+            spy_s7a = bool(phase_engine.should_short_overnight(spy, pd.Series(dtype=object), spy_i, "SPY"))
+            spy_s7b = bool(phase_engine.is_weak_regime_rth(spy, pd.Series(dtype=object), spy_i))
+            return spy_s7a or spy_s7b
+        except Exception:
+            return False
 
     def _check_legs(self, df: pd.DataFrame) -> Dict[str, bool]:
         """

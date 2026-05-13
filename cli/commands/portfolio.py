@@ -154,6 +154,12 @@ def portfolio_plan(
                 hedge_decision=hedge_decision,
                 enforce_whole_shares=use_whole_shares,
             )
+            suppressed_v3_order = None
+            if hedge_signal.get("mode") == "S7_HEDGE":
+                suppressed_v3_order = suppress_v3_residual_order(
+                    plan,
+                    "Suppressed V3 overnight long because QQQ-gated SPY S7 hedge is active.",
+                )
             if isinstance(hedge_order, dict):
                 plan.setdefault("orders", []).append(hedge_order)
             hedge_context.update(
@@ -163,6 +169,8 @@ def portfolio_plan(
                     "signal": hedge_signal,
                     "decision": hedge_decision,
                     "order_added": bool(hedge_order),
+                    "v3_order_suppressed": bool(suppressed_v3_order),
+                    "suppressed_v3_order": suppressed_v3_order or {},
                 }
             )
         except Exception as exc:

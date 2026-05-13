@@ -455,6 +455,41 @@ class TestIndexOverlayEngine:
         
         # Under normal conditions, overnight should be True
         assert signal["overnight"] is True
+
+    def test_qqq_overnight_suppressed_when_s7_hedge_conflicts(self):
+        """QQQ overnight long is suppressed when QQQ gate + SPY S7 hedge is active."""
+        qqq = _make_price_df(n=600, trend="up", vix_level=18.0)
+        spy = _make_price_df(n=600, trend="up", vix_level=22.0)
+        signal_idx = len(qqq) - 2
+
+        # QQQ hedge gate active: QQQ close below SMA200.
+        qqq.loc[signal_idx, "close"] = 80.0
+        qqq.loc[signal_idx, "sma200"] = 90.0
+
+        # SPY S7 active: close > SMA3 and below SMA20/SMA50/SMA200, VIX in S7a band.
+        spy.loc[signal_idx, "date"] = qqq.loc[signal_idx, "date"]
+        spy.loc[signal_idx, "close"] = 80.0
+        spy.loc[signal_idx, "sma3"] = 79.0
+        spy.loc[signal_idx, "sma20"] = 90.0
+        spy.loc[signal_idx, "sma50"] = 95.0
+        spy.loc[signal_idx, "sma200"] = 100.0
+        spy.loc[signal_idx, "vix"] = 22.0
+
+        mock_data_engine = MagicMock()
+        mock_data_engine.load = MagicMock(side_effect=lambda ticker: spy if ticker == "SPY" else qqq)
+        sys.modules["tradingagents.phase_engine.data_engine"] = mock_data_engine
+        import tradingagents.phase_engine as phase_engine_pkg
+        phase_engine_pkg.data_engine = mock_data_engine
+
+        from tradingagents.phase_engine.index_overlay import IndexOverlayEngine
+        engine = IndexOverlayEngine()
+        signal = engine.get_signal("QQQ", df=qqq)
+
+        assert signal["overnight_raw"] is True
+        assert signal["overnight"] is False
+        assert signal["overnight_suppressed_by_s7_hedge"] is True
+        assert signal["hedge_gate_symbol"] == "QQQ"
+        assert signal["s7_source_symbol"] == "SPY"
     
     def test_get_signals_filters_to_index_tickers(self):
         """Test get_signals only returns signals for index tickers."""
