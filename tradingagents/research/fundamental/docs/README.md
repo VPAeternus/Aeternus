@@ -12,5 +12,6 @@ Read in this order:
 6. `daily_universe_llm_funnel_contract.md`
 7. `top10_observed_backtest_analysis.md`
 8. `top15_exception_sleeve_observed_backtest_analysis.md`
+9. `top10_plus5_shadow_refill_rules.md`
 
 Do not create duplicate copies under `/docs/research/`. If repo-wide docs need to reference this framework, link back to this folder.

@@ -17,7 +17,7 @@ Related contract: `tradingagents/research/fundamental/docs/daily_universe_llm_fu
 
 ## Non-negotiable rule
 
-The daily framework must start from the broad persistent master universe, append daily scout names, score the broad universe, run LLM only on Tier 1-4 candidates, then publish Top10 + Plus5 + shadow refill from the broad final scores.
+The daily framework must start from the broad persistent master universe, append daily scout names, score the broad universe, run LLM only on LLM-required candidates, then publish Top10 + Plus5 + shadow refill from the broad final scores.
 
 Daily scout names are not the universe. They are append/update inputs.
 
@@ -376,7 +376,8 @@ Assign deterministic Tier 0-4 categories before LLM. This is the main cost-contr
 - revenue buckets
 - entry open prices
 - trade dates
-- HP/RM preconditions if already available
+- prior-quarter comparison context where available
+- HP/RM preconditions
 
 ## Tier logic requirement
 
@@ -388,24 +389,26 @@ Tier assignment must be deterministic and pre-LLM:
 - Tier 3: revised dislocation feed.
 - Tier 4: ultra-distressed tag, not production by itself.
 
-Only Tier 1-4 rows are LLM eligible by default.
+LLM eligibility must follow the scoring contract: Tier 1-4 rows, HP production/research extension rows, and repricing-momentum extension rows are LLM-required.
 
-Tier 0 rows remain in the broad scored universe but do not receive default LLM packets.
+Prior-quarter context must be applied before this gate for official broad-final runs so RM-only candidates can compute `entry_qoq_pct` and `repricing_momentum_extension` before LLM eligibility. Gate 9 still validates the prior context and hard-stops official publish when it is missing, duplicated, or wrong-quarter.
+
+Tier 0 rows remain in the broad scored universe unless they also carry an LLM-required HP or repricing extension.
 
 ## Required checks
 
 - every scored row receives explicit Tier fields or an explicit quarantine reason.
-- LLM eligibility count equals count of Tier 1-4 rows that also have required evidence docs.
+- LLM eligibility count equals count of LLM-required rows that also have required evidence docs.
 - Tier 0 rows are not silently dropped.
-- Tier 1-4 rows missing LLM docs are quarantined as `llm_evidence_missing`, not sent to LLM.
+- LLM-required rows missing LLM docs are quarantined as `llm_evidence_missing`, not sent to LLM.
 
 ## Stop conditions
 
 Stop LLM stage if:
 
-- LLM packet count does not equal eligible Tier 1-4 evidence-ready count.
+- LLM packet count does not equal eligible LLM-required evidence-ready count.
 - packet count equals the full broad universe without explicit full-universe approval.
-- Tier 0 rows are included in default LLM packets.
+- non-required Tier 0 rows are included in default LLM packets.
 
 ## Output artifacts
 

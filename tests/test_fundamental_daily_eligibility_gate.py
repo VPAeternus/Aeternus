@@ -23,7 +23,31 @@ def test_llm_eligibility_excludes_tier_zero_and_requires_cached_ready_with_earni
     eligible, quarantine, summary = build_llm_eligibility(tiered, coverage)
     assert [row["ticker"] for row in eligible] == ["T1"]
     assert {row["ticker"] for row in quarantine} == {"T0", "MISS", "NO8K"}
+    assert next(row for row in quarantine if row["ticker"] == "T0")["llm_quarantine_reason"] == "not_llm_required"
     assert next(row for row in quarantine if row["ticker"] == "NO8K")["llm_quarantine_reason"] == "missing_earnings_8k_or_press_release"
+    assert summary["llm_eligible_count"] == 1
+
+
+def test_llm_eligibility_includes_hp_candidates_that_require_llm():
+    tiered, _ = assign_daily_tiers([_row("HP3", 150, score=9, revenue_bucket=">$10B")])
+    assert tiered[0]["hp3_large_quality_theme_exception"]
+    assert tiered[0]["hp_production_extension"]
+    assert tiered[0]["hp_research_extension"]
+    assert not tiered[0].get("tier_1_bucket")
+
+    coverage = [
+        {
+            "ticker": "HP3",
+            "quarter": "2026Q2",
+            "coverage_status": "CACHED_READY",
+            "earnings_8k_accession": "1",
+            "earnings_8k_primary_document": "8k.htm",
+        }
+    ]
+    eligible, quarantine, summary = build_llm_eligibility(tiered, coverage)
+
+    assert [row["ticker"] for row in eligible] == ["HP3"]
+    assert quarantine == []
     assert summary["llm_eligible_count"] == 1
 
 
