@@ -1,7 +1,7 @@
 # Implementation Plan: High-Conviction Top-15 With Right-Tail Exception Sleeve
 
 **Status:** implementation request  
-**Intended GitHub path:** `docs/research/fundamental_top15_exception_sleeve_implementation_plan.md`  
+**Intended GitHub path:** `tradingagents/research/fundamental/docs/top15_exception_sleeve_implementation_plan.md`  
 **Scope label:** High-Conviction Top-15 observed-data extension / exception-sleeve test  
 **Do not claim:** full live AKG+macro production-v2 validation until AKG/theme acceleration and macro fields are PIT-populated or forward-validated.
 
@@ -314,7 +314,7 @@ Preserve old behavior if exception sleeve is disabled.
 Modify:
 
 ```text
-cli/commands/fundamental.py
+tradingagents/research/fundamental/src/cli/commands.py
 ```
 
 Keep existing `fundamental-top10` working unchanged.
@@ -369,13 +369,13 @@ tradingagents/research/fundamental/backtests/high_conviction_top15_exception_sle
 Inputs:
 
 ```text
-outputs/fundamental_backtest/pit_fundamental_panel.csv
+tradingagents/research/fundamental/runs/backtests/pit_fundamental_panel.csv
 ```
 
 Outputs:
 
 ```text
-outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/
+tradingagents/research/fundamental/runs/backtests/high_conviction_top15_exception_sleeve/
     selected_names_by_quarter_top15.csv
     strategy_summary_top15.csv
     strategy_by_quarter_top15.csv
@@ -408,8 +408,8 @@ scripts/analyze_fundamental_top15_exception_sleeve.py
 Outputs:
 
 ```text
-docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md
-outputs/fundamental_backtest/analysis_top15_exception/
+tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md
+tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/
 ```
 
 ---
@@ -569,14 +569,14 @@ test_selection_forbidden_columns_excluded
 Update or add:
 
 ```text
-docs/research/fundamental_top15_exception_sleeve_implementation_plan.md
-docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md
+tradingagents/research/fundamental/docs/top15_exception_sleeve_implementation_plan.md
+tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md
 ```
 
 Update:
 
 ```text
-docs/research/fundamental_top10_observed_backtest_analysis.md
+tradingagents/research/fundamental/docs/top10_observed_backtest_analysis.md
 ```
 
 Add a section:
@@ -601,8 +601,8 @@ Daily Top-15:
 
 ```bash
 python3 -m cli.main fundamental-top15 \
-  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
-  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --scores-csv tradingagents/research/fundamental/runs/YYYY-MM-DD/selection/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root tradingagents/research/fundamental/runs/YYYY-MM-DD/selection \
   --date YYYY-MM-DD \
   --core-n 10 \
   --exception-slots 5 \
@@ -613,18 +613,18 @@ Backtest:
 
 ```bash
 python3 -m tradingagents.research.fundamental.backtests.high_conviction_top15_exception_sleeve \
-  --pit-panel outputs/fundamental_backtest/pit_fundamental_panel.csv \
-  --prior-selected outputs/fundamental_backtest/high_conviction_top10/selected_names_by_quarter.csv \
-  --out-dir outputs/fundamental_backtest/high_conviction_top15_exception_sleeve
+  --pit-panel tradingagents/research/fundamental/runs/backtests/pit_fundamental_panel.csv \
+  --prior-selected tradingagents/research/fundamental/runs/backtests/high_conviction_top10/selected_names_by_quarter.csv \
+  --out-dir tradingagents/research/fundamental/runs/backtests/high_conviction_top15_exception_sleeve
 ```
 
 Analysis:
 
 ```bash
 python3 scripts/analyze_fundamental_top15_exception_sleeve.py \
-  --bundle-dir outputs/fundamental_backtest/high_conviction_top15_exception_sleeve \
-  --prior-analysis-dir outputs/fundamental_backtest/analysis \
-  --out-dir outputs/fundamental_backtest/analysis_top15_exception
+  --bundle-dir tradingagents/research/fundamental/runs/backtests/high_conviction_top15_exception_sleeve \
+  --prior-analysis-dir tradingagents/research/fundamental/runs/backtests/analysis \
+  --out-dir tradingagents/research/fundamental/runs/backtests/analysis_top15_exception
 ```
 
 ---
@@ -644,10 +644,10 @@ analysis commit:
 Expected tracked outputs:
 
 ```text
-docs/research/fundamental_top15_exception_sleeve_implementation_plan.md
-docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md
-outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/
-outputs/fundamental_backtest/analysis_top15_exception/
+tradingagents/research/fundamental/docs/top15_exception_sleeve_implementation_plan.md
+tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md
+tradingagents/research/fundamental/runs/backtests/high_conviction_top15_exception_sleeve/
+tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/
 ```
 
 Run verification:

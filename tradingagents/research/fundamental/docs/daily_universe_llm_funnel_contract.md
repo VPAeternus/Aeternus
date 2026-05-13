@@ -2,7 +2,7 @@
 
 This document is the operating contract for daily fundamental scoring. Do not run Top15 from only the daily scout tickers unless explicitly doing a narrow scout-only smoke test.
 
-Detailed daily gate sequence: `docs/research/fundamental_daily_run_gate_sequence.md`.
+Detailed daily gate sequence: `tradingagents/research/fundamental/docs/daily_run_gate_sequence.md`.
 
 ## Non-negotiable bottom line
 

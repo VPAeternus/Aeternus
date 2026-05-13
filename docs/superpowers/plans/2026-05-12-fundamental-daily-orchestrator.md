@@ -52,9 +52,9 @@ Implement the daily orchestrator in small gate files with explicit artifacts, ha
 
 ## Existing context to read first
 
-- `docs/research/fundamental_daily_run_gate_sequence.md`
-- `docs/research/fundamental_daily_universe_llm_funnel_contract.md`
-- `cli/commands/fundamental.py`
+- `tradingagents/research/fundamental/docs/daily_run_gate_sequence.md`
+- `tradingagents/research/fundamental/docs/daily_universe_llm_funnel_contract.md`
+- `tradingagents/research/fundamental/src/cli/commands.py`
 - `tradingagents/research/fundamental/src/pipeline/dealflow_adapter.py`
 - `tradingagents/research/fundamental/src/sec_pipeline/cache_coverage_manifest.py`
 - `tradingagents/research/fundamental/src/sec_pipeline/cache_download_queue.py`
@@ -125,11 +125,11 @@ Create tests:
 
 Modify:
 
-- `cli/commands/fundamental.py`
+- `tradingagents/research/fundamental/src/cli/commands.py`
   - Add new command `fundamental-run-today`. Keep existing `fundamental` command backward-compatible as scout-smoke legacy.
   - Command naming decision: use flat `fundamental-run-today` in this implementation because the current Typer app already has a flat `fundamental` command; a nested `fundamental run-today` group would require a separate backward-compatibility refactor.
 
-- `docs/research/fundamental_daily_run_gate_sequence.md`
+- `tradingagents/research/fundamental/docs/daily_run_gate_sequence.md`
   - Add implemented command name and produced artifacts after implementation.
 
 Do not modify scoring formulas unless a failing test proves the formula violates the gate contract.
@@ -2143,7 +2143,7 @@ git commit -m "feat: wire fundamental daily run gates"
 
 **Files:**
 
-- Modify: `cli/commands/fundamental.py`
+- Modify: `tradingagents/research/fundamental/src/cli/commands.py`
 - Test: `tests/test_cli_fundamental_run_today.py`
 
 - [ ] **Step 1: Write failing CLI tests**
@@ -2209,7 +2209,7 @@ Expected: FAIL because command does not exist.
 
 - [ ] **Step 3: Add CLI command without breaking existing `fundamental`**
 
-Append in `cli/commands/fundamental.py` after existing `fundamental` command:
+Append in `tradingagents/research/fundamental/src/cli/commands.py` after existing `fundamental` command:
 
 ```python
 @app.command("fundamental-run-today")
@@ -2277,7 +2277,7 @@ Expected: PASS.
 - [ ] **Step 5: Commit**
 
 ```bash
-git add cli/commands/fundamental.py tests/test_cli_fundamental_run_today.py
+git add tradingagents/research/fundamental/src/cli/commands.py tests/test_cli_fundamental_run_today.py
 git commit -m "feat: add gated fundamental daily CLI"
 ```
 
@@ -2287,13 +2287,13 @@ git commit -m "feat: add gated fundamental daily CLI"
 
 **Files:**
 
-- Modify: `docs/research/fundamental_daily_run_gate_sequence.md`
-- Modify: `docs/research/fundamental_daily_universe_llm_funnel_contract.md`
+- Modify: `tradingagents/research/fundamental/docs/daily_run_gate_sequence.md`
+- Modify: `tradingagents/research/fundamental/docs/daily_universe_llm_funnel_contract.md`
 - Optional update after implementation: `memory/WORKING.md`, `memory/YYYY-MM-DD.md`
 
 - [ ] **Step 1: Update the gate sequence docs**
 
-Add a short implementation note to `docs/research/fundamental_daily_run_gate_sequence.md`:
+Add a short implementation note to `tradingagents/research/fundamental/docs/daily_run_gate_sequence.md`:
 
 ```markdown
 ## Implemented command
@@ -2377,7 +2377,7 @@ Expected:
 - [ ] **Step 6: Commit docs**
 
 ```bash
-git add docs/research/fundamental_daily_run_gate_sequence.md docs/research/fundamental_daily_universe_llm_funnel_contract.md
+git add tradingagents/research/fundamental/docs/daily_run_gate_sequence.md tradingagents/research/fundamental/docs/daily_universe_llm_funnel_contract.md
 git commit -m "docs: document gated fundamental daily command"
 ```
 

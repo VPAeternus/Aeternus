@@ -7,11 +7,13 @@ from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
-ROOT = Path('/Users/aeternusholdings/Documents/Aeternus')
-OUT = ROOT / 'eval_results/fundamental/2026-05-07_full'
+from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
+from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+
+OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
 TICKERS_JSON = OUT / 'final_dealflow_tickers_sec_eligible.json'
 UNIVERSE_CSV = OUT / 'dealflow_universe.csv'
-SEC_CACHE = Path('/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec')
+SEC_CACHE = SEC_CACHE_ROOT
 LIVE = SEC_CACHE / 'live_sec'
 QUARTERS = ['2021Q4'] + [f'{y}Q{q}' for y in range(2022, 2026) for q in range(1, 5)] + ['2026Q1']
 

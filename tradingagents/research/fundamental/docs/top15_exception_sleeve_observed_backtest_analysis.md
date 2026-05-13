@@ -157,8 +157,8 @@ Daily command:
 
 ```bash
 python3 -m cli.main fundamental-top15-refill-shadow \
-  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
-  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --scores-csv tradingagents/research/fundamental/runs/YYYY-MM-DD/selection/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root tradingagents/research/fundamental/runs/YYYY-MM-DD/selection \
   --date YYYY-MM-DD \
   --mode strict
 ```
@@ -202,22 +202,22 @@ Current interpretation:
 
 ## Companion outputs
 
-- `outputs/fundamental_backtest/analysis_top15_exception/variant_comparison.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/adoption_criteria_check.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/target_right_tail_capture.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/exception_sleeve_drivers.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/core_vs_exception_summary.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/left_tail_penalty_comparison.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/missed_right_tail_after_top15.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_review_queue.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/right_tail_queue_summary.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/v4_rescue_variant_summary.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_selected.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_replacements.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_summary.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/demote_review_priority_1.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_queue.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/thin_signal_watchlist_top100.csv`
-- `outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/variant_comparison.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/adoption_criteria_check.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/target_right_tail_capture.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/exception_sleeve_drivers.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/core_vs_exception_summary.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/left_tail_penalty_comparison.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/missed_right_tail_after_top15.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/core_deterioration_review_queue.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/right_tail_queue_summary.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/target_visibility_metrics.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/target_miss_rescue_audit.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/v4_rescue_variant_summary.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/core_deterioration_refill_shadow_selected.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/core_deterioration_refill_shadow_replacements.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/core_deterioration_refill_shadow_summary.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/demote_review_priority_1.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/thin_signal_watchlist_queue.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/thin_signal_watchlist_top100.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/analysis_manifest.json`

@@ -6,13 +6,15 @@ import sqlite3
 from collections import Counter
 from pathlib import Path
 
+from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+
 try:
     from . import cache_coverage_manifest, incremental_state as state
 except ImportError:  # direct script execution
     import cache_coverage_manifest  # type: ignore
     import incremental_state as state  # type: ignore
 
-OUT = Path('/Users/aeternusholdings/Documents/Aeternus/eval_results/fundamental/2026-05-07_full')
+OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
 STATE_DB = OUT / 'sec_incremental_state.sqlite'
 DELTA_CSV = OUT / 'sec_daily_delta_coverage_manifest.csv'
 DELTA_SUMMARY = OUT / 'sec_daily_delta_summary.json'

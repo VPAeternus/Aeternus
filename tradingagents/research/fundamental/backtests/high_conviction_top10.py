@@ -17,9 +17,14 @@ from typing import Any, Mapping, Sequence
 from uuid import uuid4
 
 from tradingagents.research.fundamental.backtests.pit_panel import SELECTION_FEATURE_COLUMNS
+from tradingagents.research.fundamental.src.config.paths import default_backtest_output_root
 
 RUNNER_VERSION = "fundamental_high_conviction_top10_backtest_task3_v1"
-DEFAULT_OUTPUT_DIR = Path("outputs/fundamental_backtest/high_conviction_top10")
+DEFAULT_OUTPUT_DIR_NAME = "high_conviction_top10"
+
+
+def default_output_dir() -> Path:
+    return default_backtest_output_root() / DEFAULT_OUTPUT_DIR_NAME
 REQUIRED_HEADERS = {"ticker", "quarter", "tradable_date", "entry_open", "entry_score_0_100", "eligible_for_backtest"}
 LABEL_COLUMNS = ["return_10d_pct", "return_20d_pct", "return_30d_pct", "return_60d_pct", "return_90d_pct"]
 OUTCOME_COLUMNS = set(LABEL_COLUMNS) | {"winner_90d_30pct", "loser_90d_minus30pct"}
@@ -313,14 +318,14 @@ def _bucket_summaries(picks: Sequence[Mapping[str, Any]]) -> tuple[list[dict[str
     return theme_rows, contrib_rows
 
 
-def run_high_conviction_top10_backtest(pit_panel_csv: str | Path, output_dir: str | Path = DEFAULT_OUTPUT_DIR, run_id: str | None = None) -> dict[str, Any]:
+def run_high_conviction_top10_backtest(pit_panel_csv: str | Path, output_dir: str | Path | None = None, run_id: str | None = None) -> dict[str, Any]:
     panel_path = Path(pit_panel_csv)
     rows, headers = _read_csv(panel_path)
     _validate_unique_ticker_quarter(rows)
     feature_cols = _feature_columns(headers)
     decorative_cols = _decorative_columns(headers)
     groups = _eligible_groups(rows)
-    out = Path(output_dir)
+    out = Path(output_dir) if output_dir is not None else default_output_dir()
     out.mkdir(parents=True, exist_ok=True)
     backtest_run_id = run_id or f"high-conviction-top10-{uuid4()}"
 
@@ -411,7 +416,7 @@ Labels/outcomes are diagnostic only. Selection never receives forward returns, w
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run high-conviction Top-10 backtest variants over PIT panel")
     parser.add_argument("pit_panel_csv", help="Path to PIT panel CSV")
-    parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
+    parser.add_argument("--output-dir", default=None)
     parser.add_argument("--run-id", default=None)
     args = parser.parse_args(argv)
     try:
@@ -419,7 +424,8 @@ def main(argv: list[str] | None = None) -> int:
     except (ValueError, OSError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
-    print(json.dumps({"pick_count": manifest["pick_count"], "quarter_count": manifest["quarter_count"], "output_dir": args.output_dir}, sort_keys=True))
+    output_dir = str(Path(args.output_dir) if args.output_dir is not None else default_output_dir())
+    print(json.dumps({"pick_count": manifest["pick_count"], "quarter_count": manifest["quarter_count"], "output_dir": output_dir}, sort_keys=True))
     return 0
 
 

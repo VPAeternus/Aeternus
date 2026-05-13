@@ -15,8 +15,11 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-OUT = Path('/Users/aeternusholdings/Documents/Aeternus/eval_results/fundamental/2026-05-07_full')
-LIVE = Path('/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/live_sec')
+from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
+from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+
+OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
+LIVE = SEC_CACHE_ROOT / 'live_sec'
 MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
 VALIDATION_JSON = OUT / 'sec_complete_submission_validation.json'
 VALIDATION_CSV = OUT / 'sec_complete_submission_validation_rows.csv'

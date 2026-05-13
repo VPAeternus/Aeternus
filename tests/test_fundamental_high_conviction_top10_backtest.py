@@ -386,13 +386,14 @@ def test_missing_required_panel_headers_fail_fast(tmp_path):
 def test_main_default_output_dir_contract(tmp_path, monkeypatch, capsys):
     panel = tmp_path / "pit_panel.csv"
     _write_csv(panel, _panel_rows(10))
-    monkeypatch.chdir(tmp_path)
+    framework_root = tmp_path / "fundamental"
+    monkeypatch.setenv("AETERNUS_FUNDAMENTAL_ROOT", str(framework_root))
 
     assert main([str(panel)]) == 0
 
     captured = capsys.readouterr()
-    default_out = tmp_path / "outputs" / "fundamental_backtest" / "high_conviction_top10"
-    assert json.loads(captured.out)["output_dir"] == "outputs/fundamental_backtest/high_conviction_top10"
+    default_out = framework_root / "runs" / "backtests" / "high_conviction_top10"
+    assert json.loads(captured.out)["output_dir"] == str(default_out)
     assert {p.name for p in default_out.iterdir()} == REQUIRED_OUTPUTS
 
 

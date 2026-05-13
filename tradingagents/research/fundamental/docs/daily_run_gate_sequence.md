@@ -13,7 +13,7 @@ This is the required operating contract for the request: **"run the fundamental 
 
 A daily run is not a single scoring script. It is a gated production workflow. Each gate must produce an artifact, a count summary, and either a pass/fail status or an explicit quarantine list. If any hard gate fails, do not publish Top10 + Plus5 + shadow refill as final.
 
-Related contract: `docs/research/fundamental_daily_universe_llm_funnel_contract.md`.
+Related contract: `tradingagents/research/fundamental/docs/daily_universe_llm_funnel_contract.md`.
 
 ## Non-negotiable rule
 

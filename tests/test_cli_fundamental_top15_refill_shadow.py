@@ -114,13 +114,14 @@ def test_fundamental_top15_refill_shadow_cli_rejects_invalid_date(tmp_path):
 
 def test_fundamental_top15_refill_shadow_cli_default_output_root(tmp_path, monkeypatch):
     scores = tmp_path / "scores.csv"
+    framework_root = tmp_path / "fundamental"
     _write_scores(scores)
-    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("AETERNUS_FUNDAMENTAL_ROOT", str(framework_root))
 
     result = _invoke_shadow(scores, "--date", "2026-05-11")
 
     assert result.exit_code == 0, result.output
-    out = tmp_path / "eval_results" / "fundamental" / "2026-05-11"
+    out = framework_root / "runs" / "2026-05-11" / "selection"
     assert (out / "high_conviction_top15_core_deterioration_refill_shadow.csv").exists()
     assert (out / "core_deterioration_refill_shadow_replacements.csv").exists()
 

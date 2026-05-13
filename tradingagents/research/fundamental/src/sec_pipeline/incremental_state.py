@@ -8,10 +8,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-DEFAULT_OUT = Path('/Users/aeternusholdings/Documents/Aeternus/eval_results/fundamental/2026-05-07_full')
-DEFAULT_LIVE = Path('/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/live_sec')
-OUT = DEFAULT_OUT
-LIVE = DEFAULT_LIVE
+from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
+from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+
+OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
+LIVE = SEC_CACHE_ROOT / 'live_sec'
 STATE_DB = OUT / 'sec_incremental_state.sqlite'
 MANIFEST_CSV = OUT / 'sec_coverage_manifest_2021Q4_2026Q1.csv'
 QUEUE_JSON = OUT / 'sec_fetch_queue_resumable.json'

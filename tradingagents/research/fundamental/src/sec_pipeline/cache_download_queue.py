@@ -13,14 +13,15 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-DEFAULT_ROOT = Path('/Users/aeternusholdings/Documents/Aeternus')
-ROOT = DEFAULT_ROOT
-OUT = ROOT / 'eval_results/fundamental/2026-05-07_full'
+from tradingagents.research.fundamental.src.config.cache_paths import SEC_CACHE_ROOT
+from tradingagents.research.fundamental.src.config.paths import FUNDAMENTAL_RUNS_ROOT
+
+OUT = FUNDAMENTAL_RUNS_ROOT / 'manual' / 'sec_pipeline'
 QUEUE_PATH = OUT / 'sec_fetch_queue_resumable.json'
 ELIGIBLE_PATH = OUT / 'final_dealflow_tickers_sec_eligible.json'
 PROGRESS_PATH = OUT / 'sec_download_progress.json'
 DOWNLOAD_MANIFEST_PATH = OUT / 'sec_download_manifest_2021Q4_2026Q1.json'
-LIVE = Path('/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/live_sec')
+LIVE = SEC_CACHE_ROOT / 'live_sec'
 SEC_ARCHIVE_BASE = 'https://www.sec.gov/Archives/edgar/data'
 SEC_SUBMISSIONS_BASE = 'https://data.sec.gov/submissions'
 USER_AGENT = 'AeternusAutoResearch/1.0 contact@aeternus.local'

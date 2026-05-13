@@ -363,7 +363,7 @@ def test_top15_analysis_emits_core_deterioration_refill_shadow_tables(tmp_path):
     ]
     analysis_out = tmp_path / "analysis"
     report = tmp_path / "report.md"
-    analysis_manifest = run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+    analysis_manifest = run(out_bundle, tmp_path / "prior_analysis", analysis_out, report)
 
     for name in shadow_names:
         path = analysis_out / name
@@ -389,7 +389,7 @@ def test_top15_analysis_emits_empty_refill_shadow_tables_for_older_bundles(tmp_p
         (out_bundle / name).unlink()
     analysis_out = tmp_path / "analysis_missing_shadow"
     report = tmp_path / "report_missing_shadow.md"
-    analysis_manifest = run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+    analysis_manifest = run(out_bundle, tmp_path / "prior_analysis", analysis_out, report)
 
     for name in shadow_names:
         path = analysis_out / name
@@ -479,7 +479,7 @@ def test_top15_analysis_emits_queue_visibility_tables(tmp_path):
     out_bundle, _ = _fixture(tmp_path)
     analysis_out = tmp_path / "analysis"
     report = tmp_path / "report.md"
-    run(out_bundle, Path("outputs/fundamental_backtest/analysis"), analysis_out, report)
+    run(out_bundle, tmp_path / "prior_analysis", analysis_out, report)
 
     assert (analysis_out / "right_tail_queue_summary.csv").exists()
     assert (analysis_out / "target_visibility_metrics.csv").exists()

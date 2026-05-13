@@ -124,7 +124,7 @@ Responsibility: analyst report and companion tables.
 
 Copy/write shadow tables and add report section.
 
-### Modify: `cli/commands/fundamental.py`
+### Modify: `tradingagents/research/fundamental/src/cli/commands.py`
 Responsibility: CLI surface.
 
 Add separate opt-in command: `fundamental-top15-refill-shadow`.
@@ -1642,7 +1642,7 @@ git commit -m "analysis: add top15 refill shadow review"
 ## Task 8: Add Opt-In Daily CLI Command
 
 **Files:**
-- Modify: `cli/commands/fundamental.py`
+- Modify: `tradingagents/research/fundamental/src/cli/commands.py`
 - Create: `tests/test_cli_fundamental_top15_refill_shadow.py`
 
 - [ ] **Step 1: Write failing CLI test**
@@ -1715,7 +1715,7 @@ Expected: FAIL because command does not exist.
 
 - [ ] **Step 3: Add CLI command**
 
-Add after `fundamental_top15()` in `cli/commands/fundamental.py`:
+Add after `fundamental_top15()` in `tradingagents/research/fundamental/src/cli/commands.py`:
 
 ```python
 @app.command("fundamental-top15-refill-shadow")
@@ -1776,7 +1776,7 @@ Expected: PASS.
 - [ ] **Step 5: Commit**
 
 ```bash
-git add cli/commands/fundamental.py tests/test_cli_fundamental_top15_refill_shadow.py
+git add tradingagents/research/fundamental/src/cli/commands.py tests/test_cli_fundamental_top15_refill_shadow.py
 git commit -m "feat: add top15 refill shadow cli"
 ```
 
@@ -1792,7 +1792,7 @@ git commit -m "feat: add top15 refill shadow cli"
   - `outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/core_deterioration_refill_shadow_replacements.csv`
   - `outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/core_deterioration_refill_shadow_summary.csv`
   - `outputs/fundamental_backtest/analysis_top15_exception/*shadow*.csv`
-  - `docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md`
+  - `tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md`
 
 - [ ] **Step 1: Regenerate Top-15 backtest bundle**
 
@@ -1812,7 +1812,7 @@ Expected: exits 0 and prints JSON with `eligible_row_count`, `output_dir`, `quar
   --bundle-dir outputs/fundamental_backtest/high_conviction_top15_exception_sleeve \
   --prior-analysis-dir outputs/fundamental_backtest/analysis \
   --out-dir outputs/fundamental_backtest/analysis_top15_exception \
-  --report docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md
+  --report tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md
 ```
 
 Expected: exits 0 and prints JSON with `output_count` and report path.
@@ -1864,7 +1864,7 @@ git add \
   outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_replacements.csv \
   outputs/fundamental_backtest/analysis_top15_exception/core_deterioration_refill_shadow_summary.csv \
   outputs/fundamental_backtest/analysis_top15_exception/analysis_manifest.json \
-  docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md
+  tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md
 
 git commit -m "data: add top15 refill shadow artifacts"
 ```

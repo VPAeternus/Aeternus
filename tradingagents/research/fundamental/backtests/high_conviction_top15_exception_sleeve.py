@@ -48,9 +48,14 @@ from tradingagents.research.fundamental.src.selection.right_tail_queues import (
     rank_thin_signal_watchlist,
     split_demote_review_priority,
 )
+from tradingagents.research.fundamental.src.config.paths import default_backtest_output_root
 
 RUNNER_VERSION = "fundamental_high_conviction_top15_exception_sleeve_backtest_v1"
-DEFAULT_OUTPUT_DIR = Path("outputs/fundamental_backtest/high_conviction_top15_exception_sleeve")
+DEFAULT_OUTPUT_DIR_NAME = "high_conviction_top15_exception_sleeve"
+
+
+def default_output_dir() -> Path:
+    return default_backtest_output_root() / DEFAULT_OUTPUT_DIR_NAME
 TARGET_RIGHT_TAIL_EVENTS = {
     "CRNC": "2024Q4",
     "CVNA": "2023Q2",
@@ -420,8 +425,9 @@ def _refill_shadow_summary_rows(selected_rows: Sequence[Mapping[str, Any]], quar
     return rows
 
 
-def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, prior_selected: str | Path, out_dir: str | Path = DEFAULT_OUTPUT_DIR, run_id: str | None = None) -> dict[str, Any]:
-    panel_path, prior_path, out = Path(pit_panel), Path(prior_selected), Path(out_dir)
+def run_high_conviction_top15_exception_sleeve_backtest(pit_panel: str | Path, prior_selected: str | Path, out_dir: str | Path | None = None, run_id: str | None = None) -> dict[str, Any]:
+    panel_path, prior_path = Path(pit_panel), Path(prior_selected)
+    out = Path(out_dir) if out_dir is not None else default_output_dir()
     rows, headers = _read_csv(panel_path); _validate_unique_ticker_quarter(rows)
     baseline = _baseline_rows(prior_path)
     groups = _eligible_groups(rows); feature_cols = _feature_columns(headers)
@@ -666,14 +672,15 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run Top-15 exception-sleeve backtest")
     parser.add_argument("--pit-panel", required=True)
     parser.add_argument("--prior-selected", required=True)
-    parser.add_argument("--out-dir", default=str(DEFAULT_OUTPUT_DIR))
+    parser.add_argument("--out-dir", default=None)
     parser.add_argument("--run-id", default=None)
     args = parser.parse_args(argv)
     try:
         manifest = run_high_conviction_top15_exception_sleeve_backtest(args.pit_panel, args.prior_selected, args.out_dir, args.run_id)
     except (ValueError, OSError) as exc:
         print(f"error: {exc}", file=sys.stderr); return 2
-    print(json.dumps({"quarter_count": manifest["quarter_count"], "eligible_row_count": manifest["eligible_row_count"], "output_dir": args.out_dir}, sort_keys=True))
+    output_dir = str(Path(args.out_dir) if args.out_dir is not None else default_output_dir())
+    print(json.dumps({"quarter_count": manifest["quarter_count"], "eligible_row_count": manifest["eligible_row_count"], "output_dir": output_dir}, sort_keys=True))
     return 0
 
 

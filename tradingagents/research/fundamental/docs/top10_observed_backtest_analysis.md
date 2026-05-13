@@ -121,7 +121,7 @@ These rows are mechanical exclusions, not proof of why the stock moved or proof 
 | 2x_to_5x | not_variant_eligible | 74 |
 | 5x_to_10x | not_variant_eligible | 2 |
 
-See `outputs/fundamental_backtest/analysis/missed_right_tail_mechanical_exclusions.csv` for ticker-level rows.
+See `tradingagents/research/fundamental/runs/backtests/analysis/missed_right_tail_mechanical_exclusions.csv` for ticker-level rows.
 
 ## Live-use recommendation from observed data
 
@@ -146,17 +146,17 @@ After the dealflow framework has finalized the day's ticker handoff and the fund
 
 ```bash
 python3 -m cli.main fundamental-top10 \
-  --scores-csv eval_results/fundamental/YYYY-MM-DD/fundamental_final_scores_YYYY-MM-DD.csv \
-  --output-root eval_results/fundamental/YYYY-MM-DD \
+  --scores-csv tradingagents/research/fundamental/runs/YYYY-MM-DD/selection/fundamental_final_scores_YYYY-MM-DD.csv \
+  --output-root tradingagents/research/fundamental/runs/YYYY-MM-DD/selection \
   --date YYYY-MM-DD \
   --top-n 10
 ```
 
 Daily outputs:
 
-- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10.csv`
-- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10.json`
-- `eval_results/fundamental/YYYY-MM-DD/high_conviction_top10_daily_recommendation.md`
+- `tradingagents/research/fundamental/runs/YYYY-MM-DD/selection/high_conviction_top10.csv`
+- `tradingagents/research/fundamental/runs/YYYY-MM-DD/selection/high_conviction_top10.json`
+- `tradingagents/research/fundamental/runs/YYYY-MM-DD/selection/high_conviction_top10_daily_recommendation.md`
 
 The daily recommendation artifact carries the observed-data v2 label, portfolio max positions = 10, single-RM-signal priority, RM 2+/HP caution flags, manual macro permission caveat, and AKG/T5 forward-validation caveat.
 
@@ -166,10 +166,10 @@ The next observed-data extension is the Top-15 right-tail exception sleeve: 10 c
 
 Implementation/analysis artifacts:
 
-- `docs/research/fundamental_top15_exception_sleeve_implementation_plan.md`
-- `docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md`
-- `outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/`
-- `outputs/fundamental_backtest/analysis_top15_exception/`
+- `tradingagents/research/fundamental/docs/top15_exception_sleeve_implementation_plan.md`
+- `tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md`
+- `tradingagents/research/fundamental/runs/backtests/high_conviction_top15_exception_sleeve/`
+- `tradingagents/research/fundamental/runs/backtests/analysis_top15_exception/`
 
 ## Future validation required before claiming full v2
 
@@ -177,13 +177,13 @@ Before claiming full live AKG+macro production v2 validation, populate or forwar
 
 ## Companion outputs
 
-- `outputs/fundamental_backtest/analysis/field_availability_audit.csv`
-- `outputs/fundamental_backtest/analysis/variant_interpretation_matrix.csv`
-- `outputs/fundamental_backtest/analysis/rm1_vs_rm2plus_drivers.csv` (legacy filename; rows use `rm_signal_bucket`, where `1` means one RM-related signal active, not necessarily the literal RM1 rule)
-- `outputs/fundamental_backtest/analysis/hp_bucket_tail_risk_analysis.csv`
-- `outputs/fundamental_backtest/analysis/variant_overlap_delta_by_quarter.csv`
-- `outputs/fundamental_backtest/analysis/top_winners_losers_repeat_ticker_contribution.csv`
-- `outputs/fundamental_backtest/analysis/2025Q1_drawdown_attribution.csv`
-- `outputs/fundamental_backtest/analysis/missed_right_tail_mechanical_exclusions.csv`
-- `outputs/fundamental_backtest/analysis/qa_leakage_verification.json`
-- `outputs/fundamental_backtest/analysis/analysis_manifest.json`
+- `tradingagents/research/fundamental/runs/backtests/analysis/field_availability_audit.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis/variant_interpretation_matrix.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis/rm1_vs_rm2plus_drivers.csv` (legacy filename; rows use `rm_signal_bucket`, where `1` means one RM-related signal active, not necessarily the literal RM1 rule)
+- `tradingagents/research/fundamental/runs/backtests/analysis/hp_bucket_tail_risk_analysis.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis/variant_overlap_delta_by_quarter.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis/top_winners_losers_repeat_ticker_contribution.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis/2025Q1_drawdown_attribution.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis/missed_right_tail_mechanical_exclusions.csv`
+- `tradingagents/research/fundamental/runs/backtests/analysis/qa_leakage_verification.json`
+- `tradingagents/research/fundamental/runs/backtests/analysis/analysis_manifest.json`

@@ -1,93 +1,51 @@
 # Fundamental Framework
 
-Standalone fundamental stock-screening and underwriting framework.
+Canonical home for the Aeternus fundamental research framework.
 
-## Dealflow handoff
+Point an LLM reviewer at this folder first. It contains the production code, CLI implementation, operating contracts, output contract, and test map for the framework.
 
-Dealflow sends a prioritized ticker queue. The fundamental framework converts that queue into a universe CSV, resolves SEC CIKs, fetches required filings, computes fundamental scores, and writes score/decision artifacts.
+## Read first
 
-Default CLI path:
+1. `FRAMEWORK_INDEX.md` — map of critical code, commands, docs, tests, and artifacts.
+2. `ARCHITECTURE.md` — subsystem boundaries and dependency direction.
+3. `ARTIFACTS.md` — stable output filenames, run-folder layout, and retention rules.
+4. `docs/scoring_input_contract.md` — non-negotiable data requirements before scoring/LLM/final publish.
+5. `docs/daily_run_gate_sequence.md` — official daily run gate sequence.
+6. `docs/daily_universe_llm_funnel_contract.md` — broad-universe + tier-filtered LLM funnel.
 
-```bash
-python -m cli.main fundamental --date YYYY-MM-DD
-```
+## Runtime entrypoints
 
-Main outputs are written under:
+Root CLI remains `python -m cli.main ...` for operator convenience. The fundamental command implementation lives here:
 
-```text
-eval_results/fundamental/<date>/lake/
-```
+- `src/cli/commands.py`
 
-Key tables:
+Root adapter:
 
-- `universe.parquet` — dealflow tickers, CIKs, and provenance metadata
-- `filing_events.parquet` — selected SEC 8-K / exhibit / 10-Q or 10-K metadata
-- `raw_documents.parquet` — fetched document text and quality flags
-- `pre_llm_scores.parquet` — pre-LLM fundamental score and bucket
-- `candidate_scores.parquet` — entry score, gate results, and decision fields
-- `investment_decisions.parquet` — PM-underwriting-ready decision rows
-- `research_memos.parquet` — memo-ready summaries
+- `/cli/commands/fundamental.py` — thin compatibility wrapper only.
 
-## Required SEC documents
+Primary commands:
 
-For each ticker and quarter, the framework looks for:
+- `python -m cli.main fundamental-run-today --mode broad-master-final ...`
+- `python -m cli.main fundamental-top15 --scores-csv ...`
+- `python -m cli.main fundamental-top15-refill-shadow --scores-csv ...`
 
-1. Earnings 8-K
-   - form `8-K` or `8-K/A`
-   - includes Item `2.02`
-   - filed inside the target quarter
+## Canonical output root
 
-2. Earnings exhibit
-   - selected from the 8-K archive index
-   - prefers HTML exhibit names containing terms like `ex99`, `press`, `release`, `earn`, `result`, `shareholder`, `letter`, `cfo`, or `pr`
+New fundamental CLI defaults write generated run artifacts under:
 
-3. Periodic filing
-   - latest `10-Q` or `10-K` filed on/before quarter end
+`tradingagents/research/fundamental/runs/<date>/<quarter>/<workflow>/`
 
-Fetched document types:
+`runs/` is git-ignored except `.gitkeep`. Generated outputs are operational artifacts, not source files.
 
-- `primary_8k`
-- `earnings_exhibit`
-- `periodic_10q_10k`
+## Production code layout
 
-## Buy/pass/starter decision
-
-Buy/pass/starter decision = **Stage 5A underwriting**, after `entry_score_0_100`.
-
-Core logic:
-
-- `entry_score >= 75` → buy underwriting queue
-- `entry_score 65-74` → fundamental review list / possible starter
-- `entry_score 50-64` → watchlist
-- `<50` → pass / low priority
-
-Score alone is not enough.
-
-Buy needs gates pass:
-
-- catalyst clear: why now
-- price still ok vs signal price
-- valuation upside/downside ok
-- liquidity ok
-- LLM causal support strong
-- revision/demote risk acceptable
-- macro/theme allowed
-- invalidation trigger defined
-
-Starter = score decent but uncertainty remains:
-
-- `65-74`, or
-- `>=75` but price moved too far / thesis needs confirmation / risk elevated
-
-Pass = fail gate:
-
-- kill_review
-- expired signal
-- no catalyst
-- weak LLM causal support
-- high negative revision risk
-- liquidity bad
-- price already chased
-- undefined invalidation trigger
-
-Current framework creates **eligibility/rank**. Final buy/starter/pass = PM underwriting layer, not automatic.
+- `src/daily_run/` — gated daily orchestration.
+- `src/sec_pipeline/` — SEC coverage/fetch/materialization.
+- `src/features/` — pre/post LLM features and scoring packets.
+- `src/selection/` — Top 10 + Plus 5 + shadow refill selection.
+- `src/pipeline/` — quarter/dealflow pipeline adapters.
+- `src/ingest/` — CIK, filings, prices, XBRL ingestion.
+- `src/config/` — cache and canonical path config.
+- `backtests/` — PIT/backtest generators with framework-local default output roots.
+- `scripts/` — fundamental analysis/report generators; root `/scripts/` files are wrappers only.
+- `Growth/` — research/backtest legacy workspace; not the daily-run source of truth.

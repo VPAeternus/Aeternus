@@ -74,7 +74,7 @@ Do not:
 - `tradingagents/research/fundamental/src/features/post_llm_scores.py`
   - Default new demote fields safely for old rows.
 
-- `cli/commands/fundamental.py`
+- `tradingagents/research/fundamental/src/cli/commands.py`
   - Add `fundamental-right-tail-queues` command.
 
 - `tradingagents/research/fundamental/backtests/high_conviction_top15_exception_sleeve.py`
@@ -84,7 +84,7 @@ Do not:
   - Add queue visibility analysis and target metric tables.
 
 - `docs/research/aeternus-daily-pipeline-debug-runbook.md`
-- `docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md`
+- `tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md`
 - generated output folders under `outputs/fundamental_backtest/`
 
 ---
@@ -704,7 +704,7 @@ git commit -m "feat: route right-tail visibility queues"
 ## Task 5: Daily CLI command
 
 **Files:**
-- Modify: `cli/commands/fundamental.py`
+- Modify: `tradingagents/research/fundamental/src/cli/commands.py`
 - Test: `tests/test_cli_fundamental_right_tail_queues.py`
 
 - [ ] **Step 1: Write failing CLI tests**
@@ -766,7 +766,7 @@ Expected: FAIL because command missing.
 
 - [ ] **Step 3: Add CLI command**
 
-Modify `cli/commands/fundamental.py`:
+Modify `tradingagents/research/fundamental/src/cli/commands.py`:
 
 ```python
 @app.command("fundamental-right-tail-queues")
@@ -824,7 +824,7 @@ Expected: PASS.
 - [ ] **Step 5: Commit**
 
 ```bash
-git add cli/commands/fundamental.py tests/test_cli_fundamental_right_tail_queues.py
+git add tradingagents/research/fundamental/src/cli/commands.py tests/test_cli_fundamental_right_tail_queues.py
 git commit -m "feat: add right-tail queue daily cli"
 ```
 
@@ -1068,7 +1068,7 @@ git commit -m "feat: add right-tail visibility backtest outputs"
 
 **Files:**
 - Modify: `scripts/analyze_fundamental_top15_exception_sleeve.py`
-- Generated: `docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md`
+- Generated: `tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md`
 - Generated: `outputs/fundamental_backtest/analysis_top15_exception/`
 
 - [ ] **Step 1: Write failing analysis test**
@@ -1161,7 +1161,7 @@ PY
 ```bash
 git add scripts/analyze_fundamental_top15_exception_sleeve.py \
   tests/test_high_conviction_top15_backtest.py \
-  docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md \
+  tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md \
   outputs/fundamental_backtest/analysis_top15_exception
 git commit -m "analysis: add right-tail visibility review"
 ```
@@ -1172,7 +1172,7 @@ git commit -m "analysis: add right-tail visibility review"
 
 **Files:**
 - Modify: `docs/research/aeternus-daily-pipeline-debug-runbook.md`
-- Modify: `docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md`
+- Modify: `tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md`
 - Optional: `memory/2026-05-09.md`, `memory/WORKING.md`
 
 - [ ] **Step 1: Update daily runbook**
@@ -1239,7 +1239,7 @@ Record:
 
 ```bash
 git add docs/research/aeternus-daily-pipeline-debug-runbook.md \
-  docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md \
+  tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md \
   memory/2026-05-09.md memory/WORKING.md
 git commit -m "docs: document right-tail visibility workflow"
 ```
@@ -1329,7 +1329,7 @@ Expected: only unrelated pre-existing dirty files remain, or clean if isolated.
 ```bash
 git add outputs/fundamental_backtest/high_conviction_top15_exception_sleeve \
   outputs/fundamental_backtest/analysis_top15_exception \
-  docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md
+  tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md
 git commit -m "data: refresh right-tail visibility artifacts"
 ```
 
@@ -1382,5 +1382,5 @@ outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/v4_rescue_va
 outputs/fundamental_backtest/analysis_top15_exception/right_tail_queue_summary.csv
 outputs/fundamental_backtest/analysis_top15_exception/target_visibility_metrics.csv
 outputs/fundamental_backtest/analysis_top15_exception/target_miss_rescue_audit.csv
-docs/research/fundamental_top15_exception_sleeve_observed_backtest_analysis.md
+tradingagents/research/fundamental/docs/top15_exception_sleeve_observed_backtest_analysis.md
 ```

@@ -16,6 +16,8 @@ from pathlib import Path
 from typing import Any, Iterable
 from uuid import uuid4
 
+from tradingagents.research.fundamental.src.config.paths import default_backtest_output_root
+
 PANEL_VERSION = "fundamental_pit_panel_v1"
 SCHEMA_VERSION = "fundamental_pit_schema_v1"
 
@@ -120,7 +122,10 @@ FORBIDDEN_SELECTION_COLUMNS = set(OUTCOME_LABEL_COLUMNS) | {
 
 REQUIRED_ELIGIBILITY_COLUMNS = ["ticker", "quarter", "tradable_date", "entry_open"]
 REQUIRED_INPUT_HEADERS = REQUIRED_ELIGIBILITY_COLUMNS
-DEFAULT_OUTPUT_DIR = Path("outputs/fundamental_backtest")
+
+
+def default_output_dir() -> Path:
+    return default_backtest_output_root()
 
 
 def _assert_schema_guardrails() -> None:
@@ -211,7 +216,7 @@ def _schema(columns: Iterable[str], missing: dict[str, list[str]]) -> dict[str, 
 
 def build_pit_panel(
     input_csvs: Iterable[str | Path],
-    output_dir: str | Path = DEFAULT_OUTPUT_DIR,
+    output_dir: str | Path | None = None,
     as_of_date: str | date | None = None,
     pipeline_run_id: str | None = None,
 ) -> dict[str, Any]:
@@ -221,7 +226,7 @@ def build_pit_panel(
     if not paths:
         raise ValueError("At least one input CSV is required")
 
-    out = Path(output_dir)
+    out = Path(output_dir) if output_dir is not None else default_output_dir()
     out.mkdir(parents=True, exist_ok=True)
     run_id = pipeline_run_id or f"pit-{uuid4()}"
     cutoff = _parse_required_as_of_date(as_of_date)
@@ -317,7 +322,7 @@ Guardrails:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Build PIT fundamental backtest panel")
     parser.add_argument("input_csvs", nargs="+", help="Final-score/candidate-score CSV path(s)")
-    parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
+    parser.add_argument("--output-dir", default=None)
     parser.add_argument("--as-of-date", default=None, help="Run/as-of date for future-date anomaly checks")
     parser.add_argument("--pipeline-run-id", default=None)
     args = parser.parse_args(argv)
@@ -326,7 +331,8 @@ def main(argv: list[str] | None = None) -> int:
     except ValueError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
-    print(json.dumps({"row_count": manifest["row_count"], "output_dir": args.output_dir}, sort_keys=True))
+    output_dir = str(Path(args.output_dir) if args.output_dir is not None else default_output_dir())
+    print(json.dumps({"row_count": manifest["row_count"], "output_dir": output_dir}, sort_keys=True))
     return 0
 
 

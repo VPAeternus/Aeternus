@@ -7,6 +7,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+from ..config.paths import default_legacy_run_root
 from ..ingest.cik import resolve_ciks_for_tickers
 
 
@@ -74,9 +75,7 @@ def build_dealflow_universe_csv(
 ) -> dict[str, Any]:
     handoff_path = handoff_path or default_handoff_path(as_of_date)
     quarter = quarter or current_quarter(date.fromisoformat(as_of_date))
-    output_path = output_path or (
-        Path("eval_results") / "fundamental" / as_of_date / "dealflow_universe.csv"
-    )
+    output_path = output_path or (default_legacy_run_root(as_of_date, quarter) / "dealflow_universe.csv")
     payload = read_final_handoff(handoff_path)
     rows = final_handoff_to_universe_rows(
         payload,
