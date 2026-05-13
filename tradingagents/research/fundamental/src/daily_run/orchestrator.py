@@ -18,6 +18,7 @@ from .llm_validation import validate_post_llm_csv
 from .models import DailyRunConfig, DailyRunState, GateResult, GateStatus, RunMode, StopGateError
 from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, split_score_ready_rows
 from .universe import build_combined_universe, validate_universe_gate
+from ..panel.exporter import build_complete_panel
 
 
 def _null_price_provider(tickers, *, start, end):
@@ -136,6 +137,63 @@ def _write_final_report(state: DailyRunState, summary: dict[str, Any]) -> Path:
     report_path = state.config.output_root / "daily_fundamental_run_report.md"
     write_text_atomic(report_path, "\n".join(lines))
     return report_path
+
+
+def _emit_complete_panel(state: DailyRunState) -> None:
+    output_root = state.config.complete_panel_output_root or state.config.output_root / "complete_panel"
+    try:
+        result = build_complete_panel(
+            run_root=state.config.output_root,
+            output_root=output_root,
+            quarter=state.config.quarter,
+            as_of=state.config.as_of,
+            allow_missing_financials=True,
+        )
+    except Exception as exc:  # noqa: BLE001
+        _record(
+            state,
+            GateResult(
+                11,
+                "Complete panel emission",
+                GateStatus.HARD_STOP,
+                {"reason": "complete_panel_build_failed", "errors": [{"message": str(exc)}]},
+                {},
+            ),
+        )
+        return
+    validation = result.get("validation") or {}
+    artifacts = {
+        "complete_panel_csv": str(result.get("csv_path", "")),
+        "complete_panel_manifest": str(result.get("manifest_path", "")),
+        "complete_panel_columns": str(result.get("columns_path", "")),
+        "complete_panel_validation": str(result.get("validation_path", "")),
+    }
+    if validation.get("passed") is not True:
+        _record(
+            state,
+            GateResult(
+                11,
+                "Complete panel emission",
+                GateStatus.HARD_STOP,
+                {
+                    "reason": "complete_panel_validation_failed",
+                    "errors": validation.get("errors") or [],
+                    "validation": validation,
+                },
+                artifacts,
+            ),
+        )
+        return
+    _record(
+        state,
+        GateResult(
+            11,
+            "Complete panel emission",
+            GateStatus.PASS,
+            {"validation": validation},
+            artifacts,
+        ),
+    )
 
 
 def _finish(state: DailyRunState, *, final: bool, stopped: str = "") -> DailyRunResult:
@@ -293,6 +351,8 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             publish_gate = (services.publish or publish_top15_and_shadow)(scores_csv=final_path, output_root=config.output_root, as_of=config.as_of, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=explicit_invalid_quarantine_count, coverage_manifest=coverage_csv if coverage_csv.exists() else None)
             _record(state, publish_gate)
             _write_operator_final_bundle(state, publish_gate)
+            if config.emit_complete_panel:
+                _emit_complete_panel(state)
             return _finish(state, final=True)
         _record(state, GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.SKIPPED, {"reason": "not_broad_final_or_skip_llm"}, {}))
         return _finish(state, final=False, stopped="publish_skipped")

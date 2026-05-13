@@ -46,6 +46,8 @@ class DailyRunConfig:
     llm_output_csv: Path | None = None
     min_broad_universe_count: int = 1000
     max_sec_fetch_passes: int = 5
+    emit_complete_panel: bool = False
+    complete_panel_output_root: Path | None = None
 
     @property
     def run_mode(self) -> RunMode:

@@ -121,6 +121,7 @@ def test_orchestrator_broad_final_hard_stops_on_scout_only_universe(tmp_path):
 
 def test_orchestrator_final_mode_preserves_broad_rows_filters_llm_and_requires_qoq(tmp_path):
     cfg, services = _fake_orchestrator_fixture(tmp_path)
+    assert cfg.emit_complete_panel is False
     result = run_daily_fundamental(cfg, services=services)
     assert result.summary["final"] is True
     assert result.gates[-1].gate_number == 10
@@ -139,6 +140,22 @@ def test_orchestrator_final_mode_preserves_broad_rows_filters_llm_and_requires_q
     guard = json.loads((final_dir / "publish_guard_summary.json").read_text(encoding="utf-8"))
     assert guard["status"] == "pass"
     assert result.artifacts["operator_final_scores_csv"] == str(final_dir / "fundamental_final_scores.csv")
+    assert "complete_panel_csv" not in result.artifacts
+
+
+def test_orchestrator_emits_complete_panel_after_publish_when_requested(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    panel_root = tmp_path / "panel"
+    cfg = DailyRunConfig(**{**cfg.__dict__, "emit_complete_panel": True, "complete_panel_output_root": panel_root})
+    result = run_daily_fundamental(cfg, services=services)
+    assert result.summary["final"] is True
+    assert result.gates[-1].gate_number == 11
+    assert result.gates[-1].status == GateStatus.PASS
+    assert "complete_panel_csv" in result.artifacts
+    assert "complete_panel_manifest" in result.artifacts
+    assert "complete_panel_columns" in result.artifacts
+    assert "complete_panel_validation" in result.artifacts
+    assert panel_root.exists()
 
 
 def test_orchestrator_final_mode_hard_stops_without_prior_qoq_context(tmp_path):

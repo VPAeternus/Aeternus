@@ -6,13 +6,20 @@ runner = CliRunner()
 
 
 def test_fundamental_run_today_help_exposes_gate_options():
-    result = runner.invoke(app, ["fundamental-run-today", "--help"])
+    result = runner.invoke(app, ["fundamental-run-today", "--help"], env={"COLUMNS": "240"})
     assert result.exit_code == 0
     assert "--mode" in result.output
     assert "--master-universe" in result.output
     assert "--skip-llm" in result.output
     assert "--llm-model" in result.output
     assert "llm-reasoning" in result.output
+
+
+def test_fundamental_run_today_help_exposes_complete_panel_options():
+    result = runner.invoke(app, ["fundamental-run-today", "--help"], env={"COLUMNS": "240"})
+    assert result.exit_code == 0
+    assert "--emit-complete-panel" in result.output
+    assert "--complete-panel-output-root" in result.output
 
 
 def test_fundamental_run_today_rejects_missing_mode(tmp_path):
