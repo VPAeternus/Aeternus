@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -20,20 +21,55 @@ def _ticker(value: Any) -> str:
     return str(value or "").upper().replace(".", "-").strip()
 
 
+def _master_row(item: Mapping[str, Any], *, quarter: str, source_name: str) -> dict[str, Any] | None:
+    ticker = _ticker(item.get("symbol") or item.get("ticker"))
+    if not ticker:
+        return None
+    return {
+        "ticker": ticker, "symbol": ticker, "cik": str(item.get("cik", "")).strip(),
+        "company_title": str(item.get("company_title", item.get("title", ""))).strip(),
+        "cik_status": str(item.get("cik_status") or "resolved").strip(), "quarter": quarter,
+        "master_universe_source": source_name, "dealflow_source_stage": "master_fundamental_universe", "scouts_json": "[]",
+    }
+
+
+def _load_master_json_rows(path: Path, quarter: str) -> list[dict[str, Any]]:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"master universe JSON is malformed: {path}") from exc
+    if isinstance(payload, list):
+        items = payload
+    elif isinstance(payload, dict) and isinstance(payload.get("items"), list):
+        items = payload["items"]
+    else:
+        raise ValueError("master universe JSON must be a list or an object with an items list")
+    rows = [_master_row(item, quarter=quarter, source_name=path.name) for item in items if isinstance(item, Mapping)]
+    return [row for row in rows if row is not None]
+
+
+def _load_master_csv_rows(path: Path, quarter: str) -> list[dict[str, Any]]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle)
+        fields = {str(field or "").strip() for field in (reader.fieldnames or [])}
+        if not ({"ticker", "symbol"} & fields):
+            raise ValueError("master universe CSV must include ticker or symbol column")
+        if "cik" not in fields:
+            raise ValueError("master universe CSV must include cik column")
+        rows = [_master_row(row, quarter=quarter, source_name=path.name) for row in reader]
+    return [row for row in rows if row is not None]
+
+
 def _load_master_rows(path: Path, quarter: str) -> list[dict[str, Any]]:
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    items = payload.get("items", payload if isinstance(payload, list) else [])
-    rows = []
-    for item in items:
-        ticker = _ticker(item.get("symbol") or item.get("ticker"))
-        if not ticker:
-            continue
-        rows.append({
-            "ticker": ticker, "symbol": ticker, "cik": str(item.get("cik", "")).strip(),
-            "company_title": str(item.get("company_title", item.get("title", ""))).strip(),
-            "cik_status": str(item.get("cik_status") or "resolved").strip(), "quarter": quarter,
-            "master_universe_source": path.name, "dealflow_source_stage": "master_fundamental_universe", "scouts_json": "[]",
-        })
+    suffix = path.suffix.lower()
+    if suffix == ".csv":
+        rows = _load_master_csv_rows(path, quarter)
+    elif suffix in {".json", ""}:
+        rows = _load_master_json_rows(path, quarter)
+    else:
+        raise ValueError("master universe must be JSON (.json) or compatibility CSV (.csv)")
+    if not rows:
+        raise ValueError("master universe contains no valid ticker rows")
     return rows
 
 

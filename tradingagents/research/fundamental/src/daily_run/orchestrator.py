@@ -186,7 +186,10 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         if config.master_universe_path is None or not config.master_universe_path.exists():
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_master_universe_path"}, {}))
         universe_csv = config.output_root / f"master_fundamental_universe_{config.quarter}.csv"
-        universe = build_combined_universe(master_universe_path=config.master_universe_path, handoff_path=config.handoff_path, quarter=config.quarter, output_csv=universe_csv)
+        try:
+            universe = build_combined_universe(master_universe_path=config.master_universe_path, handoff_path=config.handoff_path, quarter=config.quarter, output_csv=universe_csv)
+        except ValueError as exc:
+            _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "invalid_master_universe_format", "error": str(exc)}, {}))
         _record(state, validate_universe_gate(universe.rows, run_mode=config.run_mode, scout_count=int(universe.summary.get("scout_count", 0)), min_broad_universe_count=config.min_broad_universe_count, artifacts=universe.artifacts))
 
         live_root = config.sec_live_root or sec_cache_root("live_sec")

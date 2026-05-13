@@ -16,6 +16,8 @@ LLM extraction must not run on the full 1,200+ universe by default. LLM extracti
 
 1. Start from the persistent master fundamental universe.
    - Expected size: ~1,200+ tickers.
+   - Canonical input format: JSON list or JSON object with `items`; each item needs `ticker` or `symbol`, `cik`, and company title metadata.
+   - Compatibility input: CSV with `ticker` or `symbol` plus `cik`.
    - Current example artifact: `final_dealflow_tickers_sec_eligible.json` had `1,276` tickers.
 
 2. Append daily scout tickers into the master universe.

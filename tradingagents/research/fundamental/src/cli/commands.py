@@ -415,7 +415,7 @@ def fundamental_run_today(
     date: str = typer.Option("", "--date", help="Run date YYYY-MM-DD; defaults to today"),
     quarter: str = typer.Option("", "--quarter", help="Fundamental quarter, e.g. 2026Q2; defaults from date"),
     mode: str = typer.Option(..., "--mode", help="Run mode: broad-master-final|scout-smoke|diagnostic-only"),
-    master_universe: str = typer.Option("", "--master-universe", help="Broad master universe JSON path"),
+    master_universe: str = typer.Option("", "--master-universe", help="Broad master universe path; canonical JSON with items, CSV accepted for compatibility"),
     handoff: str = typer.Option("", "--handoff", help="Daily scout handoff JSON path"),
     output_root: str = typer.Option("", "--output-root", help="Output root; defaults to tradingagents/research/fundamental/runs/<date>/<quarter>/daily"),
     sec_live_root: str = typer.Option("", "--sec-live-root", help="SEC live cache root"),

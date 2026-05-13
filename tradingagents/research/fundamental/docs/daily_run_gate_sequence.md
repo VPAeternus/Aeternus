@@ -94,13 +94,15 @@ Build the correct combined universe: persistent master universe plus daily scout
 
 ## Inputs
 
-- persistent master universe
+- persistent master universe; canonical format is JSON with an `items` list (`ticker` or `symbol`, `cik`, `company_title`/`title`, optional `cik_status`)
+- compatibility CSV master universe with `ticker` or `symbol`, `cik`, and optional `company_title`/`title`/`cik_status`
 - daily scout ticker list
 - CIK/company metadata source
 - prior master universe snapshot
 
 ## Required checks
 
+- reject unsupported/malformed master-universe files with a clear Gate 2 hard stop.
 - normalize tickers to uppercase.
 - dedupe by ticker.
 - preserve CIK and company title.
