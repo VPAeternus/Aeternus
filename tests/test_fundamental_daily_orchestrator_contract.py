@@ -28,6 +28,21 @@ def _companyfacts_payload():
     }
 
 
+def _weak_companyfacts_payload():
+    return {
+        "facts": {
+            "us-gaap": {
+                "Revenues": {"units": {"USD": [{"end": "2026-03-31", "val": 500_000_000}]}},
+                "NetIncomeLoss": {"units": {"USD": [{"end": "2026-03-31", "val": -100_000_000}]}},
+                "Assets": {"units": {"USD": [{"end": "2026-03-31", "val": 1_000_000_000}]}},
+                "NetCashProvidedByUsedInOperatingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -50_000_000}]}},
+                "NetCashProvidedByUsedInInvestingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -50_000_000}]}},
+                "NetCashProvidedByUsedInFinancingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": 100_000_000}]}},
+            }
+        }
+    }
+
+
 def _write_prior_context(path, tickers=("T0", "T1", "T2", "T3", "T4"), quarter="2026Q1"):
     rows = [{"ticker": ticker, "quarter": quarter, "entry_open": "10", "entry_qoq_pct": "5", "pre_llm_fundamental_score": "1", "score_addition": "10"} for ticker in tickers]
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -135,6 +150,68 @@ def test_orchestrator_final_mode_hard_stops_without_prior_qoq_context(tmp_path):
     assert result.gates[-1].status == GateStatus.HARD_STOP
     assert result.gates[-1].summary["reason"] == "missing_prior_final_scores"
     assert not (cfg.output_root / "high_conviction_top15.csv").exists()
+
+
+def test_orchestrator_uses_prior_qoq_before_llm_eligibility_for_rm_only_candidate(tmp_path):
+    master = tmp_path / "master.json"
+    master.write_text(
+        json.dumps(
+            {
+                "items": [
+                    {"symbol": "RMX", "cik": "1", "company_title": "RMX Inc"},
+                    {"symbol": "SAFE", "cik": "2", "company_title": "Safe Inc"},
+                ]
+            }
+        )
+    )
+    prior = tmp_path / "prior_scores.csv"
+    rows = [
+        {"ticker": "RMX", "quarter": "2026Q1", "entry_open": "10", "entry_qoq_pct": "0", "pre_llm_fundamental_score": "-3"},
+        {"ticker": "SAFE", "quarter": "2026Q1", "entry_open": "30", "entry_qoq_pct": "0", "pre_llm_fundamental_score": "8"},
+    ]
+    with prior.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+    live = tmp_path / "live_sec"; (live / "companyfacts").mkdir(parents=True)
+    (live / "companyfacts" / "CIK0000000001.json").write_text(json.dumps(_weak_companyfacts_payload()))
+    (live / "companyfacts" / "CIK0000000002.json").write_text(json.dumps(_companyfacts_payload()))
+
+    def fake_coverage(*, out_root, universe_csv, eligible_json, quarter, live_sec_root):
+        manifest = out_root / f"sec_coverage_manifest_{quarter}.csv"
+        coverage_rows = []
+        for ticker in ["RMX", "SAFE"]:
+            coverage_rows.append({"ticker": ticker, "quarter": quarter, "coverage_status": "CACHED_READY", "missing_inputs": "", "earnings_8k_accession": f"00000000-{ticker}", "earnings_8k_filing_date": "2026-05-08", "earnings_8k_primary_document": "8k.htm", "earnings_exhibit_document": "ex99.htm", "periodic_accession": f"00000000-{ticker}Q", "periodic_form": "10-Q", "periodic_filing_date": "2026-05-08", "periodic_primary_document": "10q.htm"})
+        with manifest.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(coverage_rows[0])); writer.writeheader(); writer.writerows(coverage_rows)
+        for ticker in ["RMX", "SAFE"]:
+            for accession, doc in [(f"00000000-{ticker}", "8k.htm"), (f"00000000-{ticker}", "ex99.htm"), (f"00000000-{ticker}Q", "10q.htm")]:
+                path = live / "documents" / f"{ticker}_{accession.replace('-', '')}_{doc}"
+                path.parent.mkdir(parents=True, exist_ok=True); path.write_text("<html>Management described repricing recovery and operating leverage.</html>")
+        return {"ticker_count": 2, "status_counts": {"CACHED_READY": 2}, "missing_input_counts": {}, "fetch_queue_count": 0, "blocked_tickers": [], "outputs": {"manifest_csv": str(manifest)}}
+
+    def fake_prices(tickers, *, start, end):
+        opens = {"RMX": 20, "SAFE": 30}
+        return [{"ticker": t, "date": "2026-05-11", "open": opens[t], "close": opens[t]} for t in tickers]
+
+    def fake_llm(*, packets_path, output_root, config):
+        packets = [json.loads(line) for line in packets_path.read_text().splitlines() if line.strip()]
+        assert [p["ticker"] for p in packets] == ["RMX"]
+        out = output_root / "post_llm_scores.csv"
+        rows = [{"sample_id": "RMX_2026Q2", "ticker": "RMX", "quarter": "2026Q2", "post_llm_candidate_flag": "1", "post_llm_high_priority_flag": "1", "post_llm_demote_flag": "0", "causal_change": "3", "negative_revision_risk": "1", "narrative_delta_bucket": "constructive", "operating_leverage_quality": "1", "durability": "1", "proof_alignment": "2"}]
+        with out.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+        return out
+
+    def fake_publish(**kwargs):
+        return GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.PASS, {"input_rows": 2}, {})
+
+    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode="broad-master-final", output_root=tmp_path / "run", master_universe_path=master, handoff_path=None, sec_live_root=live, skip_llm=False, prior_context_path=prior, min_broad_universe_count=2)
+    result = run_daily_fundamental(cfg, services=DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage, run_llm=fake_llm, publish=fake_publish))
+
+    assert result.summary["final"] is True
+    with (cfg.output_root / "llm_eligibility.csv").open(newline="", encoding="utf-8") as handle:
+        eligible = list(csv.DictReader(handle))
+    assert [row["ticker"] for row in eligible] == ["RMX"]
+    assert eligible[0]["repricing_momentum_extension"]
 
 
 def test_orchestrator_final_mode_hard_stops_on_wrong_prior_quarter(tmp_path):

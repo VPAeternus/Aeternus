@@ -10,7 +10,7 @@ Top15 must be selected from the broad persistent fundamental universe, not only 
 
 Daily scouts are an append/update source into the master universe. They are not the full universe.
 
-LLM extraction must not run on the full 1,200+ universe by default. LLM extraction runs only on Tier 1–4 candidates after the pre-LLM filter.
+LLM extraction must not run on the full 1,200+ universe by default. LLM extraction runs only on LLM-required candidates after the pre-LLM filter: Tier 1–4, HP production/research extension, and repricing-momentum extension.
 
 ## Correct daily sequence
 
@@ -36,14 +36,16 @@ LLM extraction must not run on the full 1,200+ universe by default. LLM extracti
    - Compute pre-LLM score/bucket.
    - Attach filing/document status.
    - Attach entry/tradable date and price data where required for scoring.
+   - Load prior-quarter context before tier/LLM eligibility so RM-only candidates can compute `entry_qoq_pct`.
 
-5. Apply Tier 0–4 filter before LLM.
+5. Apply the LLM-required filter before LLM.
    - Tier 0: no LLM by default; archive/low-priority/insufficient evidence.
    - Tier 1–4: LLM eligible.
-   - LLM packets are created only for Tier 1–4.
+   - HP production/research extension and repricing-momentum extension rows are also LLM eligible.
+   - LLM packets are created only for LLM-required rows.
    - Never create LLM packets for all 1,200+ tickers by default.
 
-6. Run LLM extraction only on Tier 1–4 packets.
+6. Run LLM extraction only on LLM-required packets.
    - Output must be one standard `post_llm_scores.csv`.
    - Validate one row per expected LLM packet/sample_id.
    - Resume batch files when interrupted.
@@ -55,13 +57,13 @@ LLM extraction must not run on the full 1,200+ universe by default. LLM extracti
 
 8. Compute HP buckets.
    - HP buckets are high-priority structural/quality/repricing groups.
-   - HP is applied after pre-LLM + post-LLM evidence is available.
-   - HP is not a replacement for the Tier 0–4 LLM gate.
+   - HP production/research extension rows must receive LLM extraction before final publish when fresh earnings evidence exists.
+   - HP is not allowed to bypass LLM-required evidence.
 
 9. Compute RM buckets.
    - RM buckets represent re-rating momentum/right-tail exception signals.
    - RM bucket logic feeds exception sleeve eligibility and priority.
-   - RM is applied after HP/post-LLM/final score fields are available.
+   - RM eligibility uses prior-quarter `entry_qoq_pct` before LLM packet selection, then RM fields are recomputed in final scoring after post-LLM merge.
 
 10. Run Top10 + Plus5 + shadow refill.
     - Top10 core: primary buy-underwriting candidates.

@@ -13,7 +13,7 @@ from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_
 from .artifacts import write_csv, write_json_atomic, write_text_atomic
 from .coverage import coverage_gate_result, load_raw_documents_from_coverage, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
 from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_filtered_llm_packets
-from .finalize import build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
+from .finalize import add_qoq_context, build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
 from .models import DailyRunConfig, DailyRunState, GateResult, GateStatus, RunMode, StopGateError
 from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, split_score_ready_rows
@@ -237,10 +237,23 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         price_status = GateStatus.HARD_STOP if config.run_mode == RunMode.BROAD_MASTER_FINAL and price_quarantine else GateStatus.PASS
         _record(state, GateResult(6, "Trade date, price, and entry-open", price_status, {**price_summary, **score_input_summary, "tier_input_rows": len(score_ready_rows), "reason": "missing_entry_open" if price_quarantine else ""}, {"entry_price_quarantine": str(price_q_path), "score_input_quarantine": str(score_q_path)}))
 
-        tiered_rows, tier_summary = assign_daily_tiers(score_ready_rows)
+        prior_rows, prior_summary = load_prior_context(config.prior_context_path, current_quarter=config.quarter)
+        tier_input_rows = score_ready_rows
+        pre_tier_qoq_summary: dict[str, Any] = {
+            "pre_tier_qoq_context_loaded": bool(prior_summary.get("prior_context_loaded")),
+            "pre_tier_qoq_context_match_rows": 0,
+        }
+        if prior_summary.get("prior_context_loaded") and not prior_summary.get("prior_duplicate_key_count") and prior_summary.get("expected_prior_context_rows"):
+            tier_input_rows, qoq_summary = add_qoq_context(score_ready_rows, prior_rows)
+            pre_tier_qoq_summary.update({
+                "pre_tier_qoq_context_match_rows": qoq_summary.get("qoq_context_match_rows", 0),
+                "pre_tier_qoq_context_input_rows": qoq_summary.get("qoq_context_input_rows", len(score_ready_rows)),
+            })
+
+        tiered_rows, tier_summary = assign_daily_tiers(tier_input_rows)
         eligible_rows, llm_quarantine, eligibility_summary = build_llm_eligibility(tiered_rows, coverage_rows)
         write_csv(config.output_root / "tier_classification.csv", tiered_rows); write_csv(config.output_root / "llm_eligibility.csv", eligible_rows); write_csv(config.output_root / "llm_quarantine.csv", llm_quarantine)
-        _record(state, GateResult(7, "Tier 0-4 and LLM eligibility", GateStatus.PASS, {**tier_summary, **eligibility_summary}, {"tier_classification": str(config.output_root / "tier_classification.csv"), "llm_eligibility": str(config.output_root / "llm_eligibility.csv")}))
+        _record(state, GateResult(7, "Tier 0-4 and LLM eligibility", GateStatus.PASS, {**tier_summary, **eligibility_summary, **pre_tier_qoq_summary}, {"tier_classification": str(config.output_root / "tier_classification.csv"), "llm_eligibility": str(config.output_root / "llm_eligibility.csv")}))
 
         raw_docs = load_raw_documents_from_coverage(coverage_csv, live_root)
         packets, empty_q, packet_summary = build_tier_filtered_llm_packets(eligible_rows, raw_docs, broad_universe_count=len(universe.rows))
@@ -269,7 +282,6 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             _record(state, validate_post_llm_csv(post_llm_path, expected_sample_ids={p["sample_id"] for p in packets}))
 
         post_rows = _read_csv(post_llm_path) if post_llm_path else []
-        prior_rows, prior_summary = load_prior_context(config.prior_context_path, current_quarter=config.quarter)
         final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows, prior_context_rows=prior_rows)
         final_summary = {**final_summary, **prior_summary}
         final_path = config.output_root / f"fundamental_final_scores_{config.as_of}.csv"

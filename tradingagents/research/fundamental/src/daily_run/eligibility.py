@@ -4,6 +4,7 @@ from collections import Counter
 from typing import Any
 
 from tradingagents.research.fundamental.src.features.llm_packets import build_llm_packets
+from tradingagents.research.fundamental.src.features.post_llm_scores import needs_llm
 from tradingagents.research.fundamental.src.features.tiers import assign_tiers
 
 
@@ -11,8 +12,8 @@ def _key(row: dict[str, Any]) -> tuple[str, str]:
     return str(row.get("ticker", "")).upper(), str(row.get("quarter", ""))
 
 
-def _has_tier_1_to_4(row: dict[str, Any]) -> bool:
-    return any(str(row.get(col, "")).strip() for col in ["tier_1_bucket", "tier_2_bucket", "tier_3_bucket", "tier_4_bucket"])
+def _requires_llm(row: dict[str, Any]) -> bool:
+    return needs_llm(row)
 
 
 def assign_daily_tiers(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
@@ -37,8 +38,8 @@ def build_llm_eligibility(
     quarantine: list[dict[str, Any]] = []
     for row in tiered_rows:
         cov = coverage.get(_key(row), {})
-        if not _has_tier_1_to_4(row):
-            quarantine.append({**row, "llm_quarantine_reason": "tier0_or_not_tier_1_to_4"})
+        if not _requires_llm(row):
+            quarantine.append({**row, "llm_quarantine_reason": "not_llm_required"})
             continue
         if str(cov.get("coverage_status", "")).upper() != "CACHED_READY":
             quarantine.append({**row, **cov, "llm_quarantine_reason": "llm_evidence_missing"})
