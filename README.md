@@ -472,6 +472,10 @@ aeternus phase-backtest --ticker AAPL
 # Show current Wyckoff phase classification for each ticker
 aeternus phase-status
 
+# Single daily QQQ action report: V3, S7 hedge, CCWyckoff, return buckets
+aeternus qqq-daily --format table
+aeternus qqq-daily --format json
+
 # Scan momentum signals across universe
 aeternus momentum-scan
 aeternus momentum-scan --tickers AAPL MSFT NVDA

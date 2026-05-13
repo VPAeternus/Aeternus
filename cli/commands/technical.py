@@ -695,6 +695,97 @@ def phase_status() -> None:
     console.print(table)
 
 
+@app.command("qqq-daily")
+def qqq_daily(
+    as_of: Optional[str] = typer.Option(None, "--as-of", help="Signal date cutoff, YYYY-MM-DD. Default: latest common QQQ/SPY bar."),
+    format: str = typer.Option("table", help="Output format: table or json"),
+) -> None:
+    """Single daily QQQ action report: V3, S7 hedge, and CCWyckoff buckets."""
+    import json as _json
+    from tradingagents.phase_engine.qqq_daily import build_qqq_daily_report
+
+    output_format = str(format or "table").lower().strip()
+    if output_format not in {"table", "json"}:
+        console.print("[red]Error: format must be table or json[/red]")
+        raise typer.Exit(1)
+
+    report = build_qqq_daily_report(as_of=as_of)
+    if output_format == "json":
+        typer.echo(_json.dumps(report, indent=2, default=str))
+        return
+
+    action_table = Table(title=f"QQQ Daily Plan — as of {report['as_of']}", box=box.ROUNDED)
+    action_table.add_column("Bucket", style="cyan")
+    action_table.add_column("Action", style="bold white")
+    action_table.add_column("Detail", style="white")
+
+    v3 = report["v3"]
+    hedge = report["s7_hedge"]
+    cc = report["ccwyckoff"]
+    actions = report["actions"]
+    action_table.add_row("RTH", actions["rth"], f"V3 rth={v3['rth']} leg={v3.get('active_leg') or '—'}")
+    action_table.add_row(
+        "Overnight",
+        actions["overnight"],
+        f"raw={v3['overnight_raw']} suppressed={v3['overnight_suppressed_by_s7_hedge']}",
+    )
+    action_table.add_row(
+        "S7 Hedge",
+        actions["hedge"],
+        f"QQQ gate={hedge['qqq_gate']} SPY S7={hedge['spy_s7_active']} (S7a={hedge['spy_s7a']} S7b={hedge['spy_s7b']})",
+    )
+    action_table.add_row("Covered Call", actions["covered_call"], f"bucket={cc.get('bucket') or '—'} signal={cc.get('signal') or '—'}")
+    console.print(action_table)
+
+    v3_ret = report["returns"]["v3"]
+    v3_table = Table(title="V3 QQQ Return Buckets", box=box.ROUNDED)
+    v3_table.add_column("Variant", style="cyan")
+    v3_table.add_column("Points", justify="right")
+    v3_table.add_column("Return on Start", justify="right")
+    for label, key in [
+        ("No S7 suppression", "no_suppression"),
+        ("With S7 suppression", "with_suppression"),
+        ("QQQ buy-hold", "buy_hold"),
+    ]:
+        row = v3_ret[key]
+        v3_table.add_row(label, f"{float(row['points']):+.2f}", f"{float(row['return_on_start_pct']):+.2f}%")
+    v3_table.caption = (
+        f"Window {v3_ret['date_start']} → {v3_ret['date_end']} | "
+        f"suppressed nights={v3_ret['suppressed_overnight_days']} | "
+        f"removed ON pts={float(v3_ret['removed_overnight_points']):+.2f}"
+    )
+    console.print(v3_table)
+
+    cc_returns = report["returns"]["ccwyckoff"]
+    cc_table = Table(title="CCWyckoff QQQ RTH Buckets", box=box.ROUNDED)
+    cc_table.add_column("Bucket", style="cyan")
+    cc_table.add_column("Signal", style="white")
+    cc_table.add_column("Trades", justify="right")
+    cc_table.add_column("Return", justify="right")
+    cc_table.add_column("Points", justify="right")
+    cc_table.add_column("Win%", justify="right")
+    for signal in ["rth_avoid", "markup_fade", "markdown_crush", "weak_regime_rth"]:
+        row = cc_returns["buckets"][signal]
+        cc_table.add_row(
+            str(row["bucket"]),
+            signal,
+            str(row["trades"]),
+            f"{float(row['return_pct']):+.2f}%",
+            f"{float(row['points']):+.2f}",
+            f"{float(row['win_rate_pct']):.2f}%",
+        )
+    all_row = cc_returns["all"]
+    cc_table.add_row(
+        "ALL",
+        "all_ccwyckoff_rth",
+        str(all_row["trades"]),
+        f"{float(all_row['return_pct']):+.2f}%",
+        f"{float(all_row['points']):+.2f}",
+        f"{float(all_row['win_rate_pct']):.2f}%",
+    )
+    console.print(cc_table)
+
+
 @app.command("momentum-scan")
 def momentum_scan(
     tickers: Optional[List[str]] = typer.Option(
