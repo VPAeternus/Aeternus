@@ -657,6 +657,8 @@ def fundamental_run_today(
     mode: str = typer.Option(..., "--mode", help="Run mode: broad-master-final|scout-smoke|diagnostic-only"),
     master_universe: str = typer.Option("", "--master-universe", help="Broad master universe path; canonical JSON with items, CSV accepted for compatibility"),
     handoff: str = typer.Option("", "--handoff", help="Daily scout handoff JSON path"),
+    allow_missing_handoff: bool = typer.Option(False, "--allow-missing-handoff", help="Allow broad-final or scout-smoke to run without a daily handoff"),
+    allow_date_quarter_mismatch: bool = typer.Option(False, "--allow-date-quarter-mismatch", help="Allow as-of date and quarter to differ in broad-final mode"),
     output_root: str = typer.Option("", "--output-root", help="Output root; defaults to tradingagents/research/fundamental/runs/<date>/<quarter>/daily"),
     sec_live_root: str = typer.Option("", "--sec-live-root", help="SEC live cache root"),
     skip_fetch: bool = typer.Option(False, "--skip-fetch", help="Skip SEC fetch/materialization"),
@@ -690,6 +692,7 @@ def fundamental_run_today(
     out = Path(output_root.strip()) if output_root.strip() else default_daily_run_root(run_date, run_quarter)
     master_path = Path(master_universe.strip()) if master_universe.strip() else None
     handoff_path = Path(handoff.strip()) if handoff.strip() else Path("eval_results") / "deal_flow" / run_date / "final_dealflow_tickers.json"
+    handoff_path_value = handoff_path if handoff.strip() or handoff_path.exists() or allow_missing_handoff else None
     sec_root = Path(sec_live_root.strip()) if sec_live_root.strip() else None
     llm_mode_value = llm_mode.strip().lower().replace("_", "-")
     valid_llm_modes = {"skip", "subagent", "external", "in-session", "post-file"}
@@ -754,7 +757,7 @@ def fundamental_run_today(
             mode=mode,
             output_root=out,
             master_universe_path=master_path,
-            handoff_path=handoff_path if handoff_path.exists() else None,
+            handoff_path=handoff_path_value,
             sec_live_root=sec_root,
             skip_fetch=skip_fetch,
             skip_llm=effective_skip_llm,
@@ -775,6 +778,8 @@ def fundamental_run_today(
             review_min_adv60=review_min_adv60,
             review_price_cache_path=review_price_cache_path,
             review_allow_live_price_fetch=allow_live_review_price_fetch,
+            allow_missing_handoff=allow_missing_handoff,
+            allow_date_quarter_mismatch=allow_date_quarter_mismatch,
         )
         services = DailyRunServices(run_llm=None if effective_skip_llm else _daily_run_llm_service)
         result = run_daily_fundamental(cfg, services=services)

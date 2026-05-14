@@ -31,6 +31,7 @@ from .review_list_filter import (
 from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, split_score_ready_rows
 from .universe import build_combined_universe, validate_universe_gate
 from ..panel.exporter import build_complete_panel
+from ..pipeline.dealflow_adapter import current_quarter
 
 
 def _null_price_provider(tickers, *, start, end):
@@ -359,6 +360,8 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
     config.output_root.mkdir(parents=True, exist_ok=True)
     state = DailyRunState(config=config, run_id=f"daily_{uuid4().hex[:12]}")
     try:
+        expected_quarter = current_quarter(date.fromisoformat(config.as_of))
+        date_quarter_mismatch = expected_quarter != config.quarter
         snapshots: dict[str, str] = {}
         snapshot_dir = config.output_root / "snapshots"
         for name, path in {"master_universe": config.master_universe_path, "handoff": config.handoff_path}.items():
@@ -369,7 +372,10 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                 snapshots[name] = str(target)
         identity = {"run_id": state.run_id, "as_of": config.as_of, "quarter": config.quarter, "mode": config.run_mode.value, "source_hashes": {"master_universe": _source_hash(config.master_universe_path), "handoff": _source_hash(config.handoff_path), "sec_ticker_map": _source_hash(config.sec_ticker_map_path or sec_cache_root("sec_company_tickers.json")) if config.build_review_list_from_sec else ""}, "snapshots": snapshots}
         identity_path = config.output_root / "run_identity.json"; write_json_atomic(identity_path, identity)
-        _record(state, GateResult(1, "Run identity and immutable snapshot", GateStatus.PASS, identity, {"run_identity": str(identity_path), **{f"snapshot_{k}": v for k, v in snapshots.items()}}))
+        if date_quarter_mismatch and config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.allow_date_quarter_mismatch:
+            _record(state, GateResult(1, "Run identity and immutable snapshot", GateStatus.HARD_STOP, {"reason": "date_quarter_mismatch", "expected_quarter": expected_quarter, "provided_quarter": config.quarter, "as_of": config.as_of}, {"run_identity": str(identity_path), **{f"snapshot_{k}": v for k, v in snapshots.items()}}))
+        else:
+            _record(state, GateResult(1, "Run identity and immutable snapshot", GateStatus.PASS, identity, {"run_identity": str(identity_path), **{f"snapshot_{k}": v for k, v in snapshots.items()}}))
 
         live_root = config.sec_live_root or sec_cache_root("live_sec")
         coverage_runner = services.run_coverage or run_sec_coverage_manifest
@@ -394,13 +400,21 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             active_master_universe_path = materialize_master_universe(output_root=config.output_root)
         if not active_master_universe_path.exists():
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_master_universe_path"}, {}))
+        handoff_missing = active_handoff_path is None or not Path(active_handoff_path).exists()
+        if config.run_mode == RunMode.BROAD_MASTER_FINAL and handoff_missing and not config.allow_missing_handoff:
+            _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_daily_handoff", "handoff_missing": True, "handoff_policy": "required_for_broad_final"}, {}))
+        if config.run_mode == RunMode.SCOUT_SMOKE and handoff_missing and not config.allow_missing_handoff:
+            _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_daily_handoff", "handoff_missing": True, "handoff_policy": "required_for_scout_smoke_unless_allowed"}, {}))
         universe_csv = config.output_root / f"master_fundamental_universe_{config.quarter}.csv"
         try:
-            universe = build_combined_universe(master_universe_path=active_master_universe_path, handoff_path=active_handoff_path, quarter=config.quarter, output_csv=universe_csv)
+            universe = build_combined_universe(master_universe_path=active_master_universe_path, handoff_path=active_handoff_path if not handoff_missing else None, quarter=config.quarter, output_csv=universe_csv)
         except ValueError as exc:
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "invalid_master_universe_format", "error": str(exc)}, {}))
         universe.artifacts.update(review_filter_artifacts)
         universe_gate = validate_universe_gate(universe.rows, run_mode=config.run_mode, scout_count=int(universe.summary.get("scout_count", 0)), min_broad_universe_count=config.min_broad_universe_count, artifacts=universe.artifacts)
+        if handoff_missing:
+            universe_gate.summary["handoff_missing"] = True
+            universe_gate.summary["handoff_policy"] = "allowed_missing" if config.allow_missing_handoff or config.run_mode == RunMode.DIAGNOSTIC_ONLY else "present"
         if review_filter_summary:
             universe_gate.summary["review_list_filter"] = review_filter_summary
         _record(state, universe_gate)

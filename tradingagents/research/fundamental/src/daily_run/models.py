@@ -56,6 +56,8 @@ class DailyRunConfig:
     review_price_batch_size: int = 200
     review_price_cache_path: Path | None = None
     review_allow_live_price_fetch: bool = True
+    allow_missing_handoff: bool = False
+    allow_date_quarter_mismatch: bool = False
 
     @property
     def run_mode(self) -> RunMode:
