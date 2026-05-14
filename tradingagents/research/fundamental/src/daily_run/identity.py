@@ -107,7 +107,8 @@ def _resolved_from_payload(canonical: str, payload: Mapping[str, Any], *, status
         "fund_or_special_case",
         "ticker_or_name_unresolved",
     }:
-        return _unresolved(canonical, negative_status, _clean_text(payload.get("rejection_reason")))
+        reason = _clean_text(payload.get("rejection_reason")) or _default_negative_reason(negative_status)
+        return _unresolved(canonical, negative_status, reason)
 
     sec_ticker = _normalize_external_ticker(payload.get("sec_ticker") or payload.get("ticker") or payload.get("symbol") or canonical)
     yahoo_ticker = _normalize_external_ticker(payload.get("yahoo_ticker") or payload.get("ticker") or payload.get("symbol") or canonical)
@@ -153,6 +154,15 @@ def _unresolved(ticker: str, status: str, reason: str) -> IdentityResolution:
         identity_status=status,
         rejection_reason=reason,
     )
+
+
+def _default_negative_reason(status: str) -> str:
+    return {
+        "no_sec_filer_found": "no SEC filer found",
+        "foreign_or_no_us_sec_filing": "foreign issuer or no US SEC filing",
+        "fund_or_special_case": "fund or special case",
+        "ticker_or_name_unresolved": "ticker or name unresolved",
+    }.get(status, "identity unresolved")
 
 
 def _alias_reason(canonical: str, *, sec_ticker: str, yahoo_ticker: str, source_label: str) -> str:

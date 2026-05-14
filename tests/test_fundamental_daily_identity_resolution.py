@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from tradingagents.research.fundamental.src.daily_run.identity import (
     SEC_COMPANY_TICKERS_EXCHANGE_URL,
     SEC_COMPANY_TICKERS_MF_URL,
@@ -112,18 +114,28 @@ def test_sec_direct_search_called_only_after_local_and_cache_fallbacks_fail():
     assert result.cik == "999999"
 
 
-def test_direct_negative_status_is_preserved_with_reason():
+@pytest.mark.parametrize(
+    ("identity_status", "rejection_reason", "expected_reason"),
+    [
+        ("no_sec_filer_found", "no filer record", "no filer record"),
+        ("foreign_or_no_us_sec_filing", "", "foreign issuer or no US SEC filing"),
+        ("fund_or_special_case", None, "fund or special case"),
+        ("ticker_or_name_unresolved", "unresolved", "unresolved"),
+    ],
+)
+def test_direct_negative_status_is_preserved_with_reason(identity_status, rejection_reason, expected_reason):
     result = resolve_ticker_identity(
         "MISSING",
         sec_direct_lookup=lambda symbol: {
             "ticker": symbol,
-            "identity_status": "foreign_or_no_us_sec_filing",
-            "rejection_reason": "foreign issuer",
+            "identity_status": identity_status,
+            "rejection_reason": rejection_reason,
         },
     )
 
-    assert result.identity_status == "foreign_or_no_us_sec_filing"
-    assert result.rejection_reason == "foreign issuer"
+    assert result.identity_status == identity_status
+    assert result.rejection_reason == expected_reason
+    assert result.rejection_reason.strip()
     assert result.cik == ""
     assert result.company_title == ""
 
