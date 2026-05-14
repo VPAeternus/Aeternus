@@ -688,7 +688,7 @@ def fundamental_run_today(
     run_date = date.strip() or _dt.date.today().isoformat()
     run_quarter = quarter.strip() or current_quarter(_dt.date.fromisoformat(run_date))
     out = Path(output_root.strip()) if output_root.strip() else default_daily_run_root(run_date, run_quarter)
-    master_path = Path(master_universe.strip()) if master_universe.strip() else (None if build_review_list_from_sec else out / "final_dealflow_tickers_sec_eligible.json")
+    master_path = Path(master_universe.strip()) if master_universe.strip() else None
     handoff_path = Path(handoff.strip()) if handoff.strip() else Path("eval_results") / "deal_flow" / run_date / "final_dealflow_tickers.json"
     sec_root = Path(sec_live_root.strip()) if sec_live_root.strip() else None
     llm_mode_value = llm_mode.strip().lower().replace("_", "-")

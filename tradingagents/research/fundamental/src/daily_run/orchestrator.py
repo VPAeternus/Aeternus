@@ -16,6 +16,7 @@ from .coverage import coverage_gate_result, load_raw_documents_from_coverage, no
 from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_filtered_llm_packets
 from .finalize import add_qoq_context, build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
+from .master_source import materialize_master_universe
 from .models import DailyRunConfig, DailyRunState, GateResult, GateStatus, RunMode, StopGateError
 from .review_list_filter import (
     _companyfacts_ready,
@@ -393,6 +394,8 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
 
         if active_master_universe_path is None or not active_master_universe_path.exists():
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_master_universe_path"}, {}))
+        if active_master_universe_path is None:
+            active_master_universe_path = materialize_master_universe(output_root=config.output_root)
         universe_csv = config.output_root / f"master_fundamental_universe_{config.quarter}.csv"
         try:
             universe = build_combined_universe(master_universe_path=active_master_universe_path, handoff_path=active_handoff_path, quarter=config.quarter, output_csv=universe_csv)
