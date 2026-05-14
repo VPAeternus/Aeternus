@@ -6,6 +6,7 @@ from tradingagents.research.fundamental.src.daily_run.identity import (
     SEC_COMPANY_TICKERS_EXCHANGE_URL,
     SEC_COMPANY_TICKERS_MF_URL,
     SEC_COMPANY_TICKERS_URL,
+    load_sec_ticker_rows,
     resolve_ticker_identity,
 )
 
@@ -75,10 +76,68 @@ def test_share_class_alias_keeps_canonical_ticker_plus_sec_yahoo_mapping():
     )
 
     assert result.identity_status == "resolved_from_sec_ticker_map"
-    assert result.ticker == "BRK.B"
+    assert result.ticker == "BRK-B"
     assert result.sec_ticker == "BRK-B"
     assert result.yahoo_ticker == "BRK-B"
-    assert "sec_ticker=BRK-B" in result.symbol_alias_reason
+    assert result.symbol_alias_reason == ""
+
+
+def test_clean_match_keeps_empty_symbol_alias_reason():
+    result = resolve_ticker_identity(
+        "AAPL",
+        local_sec_ticker_rows=[{"ticker": "AAPL", "cik": "320193", "company_title": "Apple Inc."}],
+    )
+
+    assert result.identity_status == "resolved_from_sec_ticker_map"
+    assert result.symbol_alias_reason == ""
+
+
+def test_master_row_resolution_skips_later_direct_lookup():
+    calls: list[str] = []
+
+    def direct_lookup(symbol: str):
+        calls.append(symbol)
+        return {"ticker": symbol, "cik": "999999", "company_title": "Direct Lookup Co."}
+
+    result = resolve_ticker_identity(
+        "BRK.B",
+        master_row={"ticker": "BRK-B", "cik": "1067983", "company_title": "Berkshire Hathaway Inc."},
+        sec_direct_lookup=direct_lookup,
+    )
+
+    assert calls == []
+    assert result.identity_status == "resolved_from_master"
+    assert result.sec_ticker == "BRK-B"
+    assert result.symbol_alias_reason == ""
+
+
+def test_sec_ticker_rows_load_from_numeric_key_dict_and_fields_data_array():
+    numeric_payload = {
+        "0": {"ticker": "AAPL", "cik_str": "320193", "title": "Apple Inc."},
+        "1": "skip-me",
+    }
+    fields_payload = {
+        "fields": ["ticker", "cik", "company_title"],
+        "data": [["BRK.B", "1067983", "Berkshire Hathaway Inc."], ["IGNORE"], "skip-me"],
+    }
+
+    numeric_rows = load_sec_ticker_rows(numeric_payload)
+    fields_rows = load_sec_ticker_rows(fields_payload)
+
+    assert numeric_rows == [{"ticker": "AAPL", "cik_str": "320193", "title": "Apple Inc."}]
+    assert fields_rows == [{"ticker": "BRK.B", "cik": "1067983", "company_title": "Berkshire Hathaway Inc."}]
+
+
+def test_canonical_ticker_normalizes_dot_and_slash_for_lookup():
+    result = resolve_ticker_identity(
+        "BRK.B",
+        local_sec_ticker_rows=[{"ticker": "BRK/B", "cik": "1067983", "company_title": "Berkshire Hathaway Inc."}],
+    )
+
+    assert result.identity_status == "resolved_from_sec_ticker_map"
+    assert result.sec_ticker == "BRK-B"
+    assert result.ticker == "BRK-B"
+    assert result.symbol_alias_reason == ""
 
 
 def test_refreshed_official_sec_ticker_map_resolves_stale_local_miss():

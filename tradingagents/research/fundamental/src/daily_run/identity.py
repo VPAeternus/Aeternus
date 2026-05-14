@@ -86,7 +86,7 @@ def _resolve_from_row(row: Mapping[str, Any] | None, canonical: str, *, status: 
     if not row:
         return None
     row_ticker = _canonical_ticker(_clean_text(row.get("ticker") or row.get("symbol") or row.get("sec_ticker") or row.get("yahoo_ticker")))
-    if row_ticker and row_ticker not in {canonical, _dot_dash_alias(canonical)}:
+    if row_ticker and row_ticker not in {_ticker_alias(canonical)}:
         return None
     return _resolved_from_payload(canonical, row, status=status, source_label=source_label)
 
@@ -131,11 +131,12 @@ def _resolved(
     source_label: str,
     alias_reason: str | None = None,
 ) -> IdentityResolution:
+    alias_reason = alias_reason or _alias_reason(canonical, sec_ticker=sec_ticker or canonical, yahoo_ticker=yahoo_ticker or canonical, source_label=source_label)
     return IdentityResolution(
         ticker=canonical,
         sec_ticker=sec_ticker or canonical,
         yahoo_ticker=yahoo_ticker or canonical,
-        symbol_alias_reason=alias_reason or _alias_reason(canonical, sec_ticker=sec_ticker or canonical, yahoo_ticker=yahoo_ticker or canonical, source_label=source_label),
+        symbol_alias_reason=alias_reason,
         cik=cik,
         company_title=company_title,
         identity_status=status,
@@ -172,21 +173,42 @@ def _alias_reason(canonical: str, *, sec_ticker: str, yahoo_ticker: str, source_
     if yahoo_ticker and yahoo_ticker != canonical and yahoo_ticker != sec_ticker:
         aliases.append(f"yahoo_ticker={yahoo_ticker}")
     if not aliases:
-        return source_label
+        return ""
     return f"{source_label}; " + ", ".join(aliases)
 
 
 def _canonical_ticker(value: Any) -> str:
-    return _clean_text(value).upper()
+    return _clean_text(value).upper().replace(".", "-").replace("/", "-")
 
 
 def _normalize_external_ticker(value: Any) -> str:
-    return _clean_text(value).upper().replace(".", "-")
+    return _clean_text(value).upper().replace(".", "-").replace("/", "-")
 
 
 def _clean_text(value: Any) -> str:
     return "" if value is None else str(value).strip()
 
 
-def _dot_dash_alias(value: str) -> str:
+def _ticker_alias(value: str) -> str:
     return value.replace(".", "-").replace("/", "-")
+
+
+def load_sec_ticker_rows(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, dict) and isinstance(payload.get("fields"), list) and isinstance(payload.get("data"), list):
+        fields = [str(field or "").strip() for field in payload.get("fields", [])]
+        rows: list[dict[str, Any]] = []
+        for item in payload.get("data", []):
+            if not isinstance(item, list) or len(item) != len(fields):
+                continue
+            row = {fields[idx]: item[idx] for idx in range(min(len(fields), len(item))) if fields[idx]}
+            if isinstance(row, dict):
+                rows.append(row)
+        return rows
+    if isinstance(payload, dict) and isinstance(payload.get("items"), list):
+        payload = payload["items"]
+    if isinstance(payload, dict):
+        rows = [row for row in payload.values() if isinstance(row, Mapping)]
+        return [dict(row) for row in rows]
+    if isinstance(payload, list):
+        return [dict(row) for row in payload if isinstance(row, Mapping)]
+    return []
