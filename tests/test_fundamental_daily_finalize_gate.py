@@ -1,4 +1,4 @@
-from tradingagents.research.fundamental.src.daily_run.finalize import build_final_scores, validate_broad_final_scores
+from tradingagents.research.fundamental.src.daily_run.finalize import build_final_scores, publish_top15_and_shadow, validate_broad_final_scores
 from tradingagents.research.fundamental.src.daily_run.models import GateStatus, RunMode
 
 
@@ -44,3 +44,36 @@ def test_validate_broad_final_scores_hard_stops_when_llm_complete_qoq_missing():
     assert gate.status == GateStatus.HARD_STOP
     assert gate.summary["reason"] == "llm_complete_rows_missing_qoq_context"
     assert gate.summary["llm_complete_qoq_missing_tickers"] == ["AAA"]
+
+
+def test_publish_passes_coverage_gating_to_top15_and_shadow(tmp_path, monkeypatch):
+    from tradingagents.research.fundamental.src.selection import high_conviction_top10
+
+    scores = tmp_path / "scores.csv"
+    scores.write_text("ticker,quarter\nAAA,2026Q2\n", encoding="utf-8")
+    coverage = tmp_path / "coverage.csv"
+    coverage.write_text("ticker,quarter,coverage_status\nAAA,2026Q2,CACHED_READY\n", encoding="utf-8")
+    seen = {}
+
+    def fake_top15(scores_csv, output_root, config, coverage_manifest=None):
+        seen["top15"] = config
+        return {"selected_rows": [{"ticker": "AAA"}], "output_paths": {}}
+
+    def fake_shadow(scores_csv, output_root, config, coverage_manifest=None):
+        seen["shadow"] = config
+        return {"selected_rows": [{"ticker": "AAA"}], "output_paths": {}}
+
+    monkeypatch.setattr(high_conviction_top10, "select_top15_from_csv", fake_top15)
+    monkeypatch.setattr(high_conviction_top10, "select_top15_core_deterioration_refill_shadow_from_csv", fake_shadow)
+
+    gate = publish_top15_and_shadow(
+        scores_csv=scores,
+        output_root=tmp_path,
+        as_of="2026-05-12",
+        broad_universe_count=1,
+        coverage_manifest=coverage,
+    )
+
+    assert gate.status == GateStatus.PASS
+    assert seen["top15"]["coverage_gating"] is True
+    assert seen["shadow"]["coverage_gating"] is True

@@ -18,6 +18,14 @@ class ConvictionMilestone(BaseModel):
     action: Literal["HOLD", "ADD", "TRIM", "EXIT"]
 
 
+class DissentRecord(BaseModel):
+    """Captures significant disagreement between review participants."""
+    dissenter_role: str
+    dissent_topic: str
+    dissent_strength: int = Field(ge=1, le=5)
+    resolution: str
+
+
 class ScenarioOutcome(BaseModel):
     """Bull/base/bear scenario with probability and target."""
     label: Literal["BULL", "BASE", "BEAR"]
@@ -37,3 +45,25 @@ class TraderVerdict(BaseModel):
     milestones: List[ConvictionMilestone] = Field(default_factory=list)
     position_size_pct: float = Field(ge=0.0, le=1.0, default=0.05)
 
+
+class InvestmentVerdict(BaseModel):
+    """Structured output from the Research Manager."""
+    decision: Literal["BUY", "SELL", "HOLD"]
+    conviction: int = Field(ge=1, le=5)
+    reasoning: str = Field(description="Full investment plan text")
+    bull_strength: int = Field(ge=1, le=5, description="How strong was the bull case")
+    bear_strength: int = Field(ge=1, le=5, description="How strong was the bear case")
+
+
+class RiskVerdict(BaseModel):
+    """Structured output from the Risk Judge."""
+    decision: Literal["BUY", "SELL", "HOLD"]
+    conviction: int = Field(ge=1, le=5)
+    hedge_directive: Literal["INCREASE_HEDGE", "DECREASE_HEDGE", "NO_CHANGE"]
+    hedge_instrument: Optional[str] = None
+    max_position_pct: float = Field(ge=0.0, le=1.0, default=0.05)
+    reasoning: str = Field(description="Full risk assessment text")
+    dissent_records: List[DissentRecord] = Field(default_factory=list)
+    invalidation_conditions: List[InvalidationCondition] = Field(default_factory=list)
+    drawdown_mode: bool = Field(default=False)
+    re_entry_conditions: List[str] = Field(default_factory=list)

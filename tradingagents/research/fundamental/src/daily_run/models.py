@@ -48,6 +48,19 @@ class DailyRunConfig:
     max_sec_fetch_passes: int = 5
     emit_complete_panel: bool = False
     complete_panel_output_root: Path | None = None
+    build_review_list_from_sec: bool = False
+    sec_ticker_map_path: Path | None = None
+    review_min_close: float = 2.0
+    review_min_adv60: float = 500_000.0
+    review_price_lookback_days: int = 120
+    review_price_batch_size: int = 200
+    review_price_cache_path: Path | None = None
+    review_allow_live_price_fetch: bool = True
+    allow_missing_handoff: bool = False
+    allow_date_quarter_mismatch: bool = False
+    master_additions_ledger_path: Path | None = None
+    identity_complete_panel_path: Path | None = None
+    identity_refreshed_sec_ticker_map_path: Path | None = None
 
     @property
     def run_mode(self) -> RunMode:

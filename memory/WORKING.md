@@ -1,5 +1,9 @@
 # Current Session State
 
+**Current note:** Task 1 cleanup for the fundamental daily orchestrator is complete in worktree `feature/fundamental-daily-main-orchestration`. Default no-`--master-universe` path now materializes the active master universe after Gate 1 finalized-output check and before Gate 2 missing-path validation; explicit `--master-universe` still wins. `master_source.py` now raises clear `ValueError`s for malformed additions JSONL with ledger path and line number, and malformed start JSON shapes include the start path. Verification: `python3 -m pytest tests/test_cli_fundamental_run_today.py tests/test_fundamental_daily_master_source.py tests/test_fundamental_daily_universe_contract.py -q` -> `19 passed`. Last updated 2026-05-14T16:19:07-04:00.
+
+**Current note:** Task 2 daily input guardrails are complete in worktree `feature/fundamental-daily-main-orchestration`. `fundamental-run-today` now exposes `--allow-missing-handoff` and `--allow-date-quarter-mismatch`; broad-final hard-stops when the daily handoff is missing or the date/quarter do not match unless explicitly allowed; diagnostic-only reports `handoff_missing`; scout-smoke requires a handoff unless explicitly allowed. Verification: `python3 -m pytest tests/test_cli_fundamental_run_today.py tests/test_fundamental_daily_orchestrator_contract.py -q` -> `22 passed`. Last updated 2026-05-14T16:45:00-04:00.
+
 **Current note:** Completed the consolidated fundamental complete-panel implementation on branch `feature/fundamental-consolidated-pipeline`. Canonical producer now lives under `tradingagents/research/fundamental/src/panel/` with schema `fundamental_complete_panel_v1`, SEC/companyfacts financial population, normalization/provenance, Top15/shadow annotations, validation, exporter sidecars, standalone `fundamental-build-complete-panel`, and daily Gate 11 via `fundamental-run-today --emit-complete-panel`. Final QA blocker fixed: exporter now passes `FORBIDDEN_SELECTION_COLUMNS` into validation so selector metadata using outcome/forward-return fields such as `return_90d_pct` hard-fails with `forbidden_selection_column`. Legacy `Growth/` remains reference-only; raw Growth/combined CSV direct `--prior-panel` use is rejected via `prior_panel_not_canonical`. Final verification: full target suite `117 passed, 2 warnings`; py_compile passed for touched production modules; final read-only subagent QA approved the leakage fix. Last updated 2026-05-13T13:09:17-04:00.
 
 **Current note:** Implemented Task 11 documentation for the consolidated fundamental complete panel pipeline. Added/expanded `tradingagents/research/fundamental/docs/complete_candidate_panel_contract.md` with operator contract for `fundamental_complete_panel_v1`, canonical producer `tradingagents.research.fundamental.src.panel.exporter.build_complete_panel`, standalone command `fundamental-build-complete-panel`, daily integration `fundamental-run-today --emit-complete-panel`, optional `--complete-panel-output-root`, output convention `fundamental_complete_prellm_to_top15_<quarter>.csv` plus `_manifest.json`, `_columns.json`, and `_validation.json`, Gate 11 path keys, validation gates, allowed missing reasons, Top10+Plus5+shadow refill relationship, and legacy `Growth/` status. `Growth/` combined CSVs are historical/reference only and raw direct `--prior-panel` use is rejected via `prior_panel_not_canonical`; migration must be explicit. Linked the contract from the fundamental docs README. Verification: doc/CLI/schema fact check via `rg` and `sed`; no tests run because this was docs-only. Last updated 2026-05-13T12:38:00-04:00.
@@ -2921,3 +2925,16 @@
   - compile: `cli`, `tradingagents`, and `tests` passed
   - primary removed-identifier grep passed clean for retired pre-fundamental scoring artifacts outside ignored generated/vendor/cache outputs
 - Caveat: repository still has unrelated pre-existing dirty/untracked outputs and fundamental/parser files; they were not reverted.
+
+## Current fundamental daily orchestration state - 2026-05-14
+
+- Implemented remaining main daily orchestration fixes directly in worktree `feature/fundamental-daily-main-orchestration`.
+- New daily dealflow tickers are resolved before Gate 2; unresolved names are written to `dealflow_identity_rejections.csv` and stay out of scoring.
+- Current-quarter master JSON now contains the full combined daily list and is passed into later SEC coverage steps.
+- Price lookup is cache-first, fetches only missing names, and writes fetched prices to run/shared caches.
+- Shared SEC companyfacts and raw document caches are recovered inside the daily run before scoring/LLM packet hard-stops.
+- Daily run writes `daily_ticker_status.csv` with one row per ticker and plain rejection/status reasons.
+- Top10 + Plus5 + shadow publish receives coverage gating when coverage manifest exists.
+- Broad-final Gate 7 now hard-stops if any LLM-required row still has missing evidence after recovery.
+- Persistent master additions ledger now saves only new dealflow tickers that actually appear in final scored rows after successful publish.
+- Verification: full daily/review/CLI/architecture suite `114 passed, 2 warnings`; touched daily-run modules compile; `git diff --check` passed; final `codex review --uncommitted` found no actionable defects.
