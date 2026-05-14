@@ -100,8 +100,11 @@ def test_fundamental_run_today_does_not_materialize_after_final_run_block(tmp_pa
     out = tmp_path / "run"
     out.mkdir()
     (out / "run_manifest.json").write_text(json.dumps({"final": True}), encoding="utf-8")
+    before = sorted(p.relative_to(out).as_posix() for p in out.rglob("*") if p.is_file())
 
     result = runner.invoke(app, ["fundamental-run-today", "--mode", "diagnostic-only", "--date", "2026-05-12", "--quarter", "2026Q2", "--output-root", str(out), "--skip-fetch", "--skip-llm", "--min-broad-universe-count", "1", "--format", "json"])
 
     assert result.exit_code == 0, result.output
     assert not (out / "master_fundamental_universe_2021Q4_active.json").exists()
+    after = sorted(p.relative_to(out).as_posix() for p in out.rglob("*") if p.is_file())
+    assert after == before

@@ -353,9 +353,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             prior = {}
         if prior.get("final") is True:
             blocked = {"reason": "output_root_contains_prior_final_run", "existing_manifest": str(existing_manifest)}
-            blocked_path = config.output_root / f"rerun_blocked_{uuid4().hex[:8]}.json"
-            write_json_atomic(blocked_path, blocked)
-            gate = GateResult(1, "Run identity and immutable snapshot", GateStatus.HARD_STOP, blocked, {"rerun_blocked_manifest": str(blocked_path)})
+            gate = GateResult(1, "Run identity and immutable snapshot", GateStatus.HARD_STOP, blocked, {})
             return DailyRunResult([gate], {"final": False, "stopped": str(blocked), "artifacts": gate.artifacts}, gate.artifacts)
 
     config.output_root.mkdir(parents=True, exist_ok=True)
