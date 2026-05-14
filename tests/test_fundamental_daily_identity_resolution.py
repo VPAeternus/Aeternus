@@ -11,7 +11,7 @@ from tradingagents.research.fundamental.src.daily_run.identity import (
 def test_sec_map_hit_resolves_cik_name():
     result = resolve_ticker_identity(
         "AAPL",
-        local_sec_ticker_rows=[{"ticker": "AAPL", "cik": "320193", "company_title": "Apple Inc."}],
+        local_sec_ticker_rows=[{"ticker": "AAPL", "cik_str": "320193", "title": "Apple Inc."}],
     )
 
     assert result.identity_status == "resolved_from_sec_ticker_map"
@@ -40,6 +40,30 @@ def test_sec_map_miss_falls_back_to_sec_facts():
     assert result.identity_status == "resolved_from_sec_facts"
     assert result.cik == "1743748"
     assert result.company_title == "Confluent, Inc."
+
+
+def test_blank_sec_map_row_falls_through_to_later_valid_source():
+    result = resolve_ticker_identity(
+        "AAPL",
+        local_sec_ticker_rows=[{"ticker": "AAPL", "cik": "", "company_title": ""}],
+        refreshed_sec_ticker_rows=[{"ticker": "AAPL", "cik_str": "320193", "title": "Apple Inc."}],
+    )
+
+    assert result.identity_status == "resolved_from_refreshed_sec_ticker_map"
+    assert result.cik == "320193"
+    assert result.company_title == "Apple Inc."
+
+
+def test_blank_sec_facts_row_does_not_resolve():
+    result = resolve_ticker_identity(
+        "CFLT",
+        local_sec_facts={"CFLT": {"cik": "", "entityName": ""}},
+    )
+
+    assert result.identity_status == "ticker_or_name_unresolved"
+    assert result.rejection_reason == "no local SEC identity match and SEC direct lookup returned nothing"
+    assert result.cik == ""
+    assert result.company_title == ""
 
 
 def test_share_class_alias_keeps_canonical_ticker_plus_sec_yahoo_mapping():
@@ -86,6 +110,34 @@ def test_sec_direct_search_called_only_after_local_and_cache_fallbacks_fail():
     assert calls == ["MISSING"]
     assert result.identity_status == "resolved_from_sec_direct"
     assert result.cik == "999999"
+
+
+def test_direct_negative_status_is_preserved_with_reason():
+    result = resolve_ticker_identity(
+        "MISSING",
+        sec_direct_lookup=lambda symbol: {
+            "ticker": symbol,
+            "identity_status": "foreign_or_no_us_sec_filing",
+            "rejection_reason": "foreign issuer",
+        },
+    )
+
+    assert result.identity_status == "foreign_or_no_us_sec_filing"
+    assert result.rejection_reason == "foreign issuer"
+    assert result.cik == ""
+    assert result.company_title == ""
+
+
+def test_direct_blank_positive_payload_does_not_resolve():
+    result = resolve_ticker_identity(
+        "MISSING",
+        sec_direct_lookup=lambda symbol: {"ticker": symbol, "cik": "", "company_title": ""},
+    )
+
+    assert result.identity_status == "ticker_or_name_unresolved"
+    assert result.rejection_reason == "no local SEC identity match and SEC direct lookup returned nothing"
+    assert result.cik == ""
+    assert result.company_title == ""
 
 
 def test_unresolved_ticker_returns_clear_plain_reason():

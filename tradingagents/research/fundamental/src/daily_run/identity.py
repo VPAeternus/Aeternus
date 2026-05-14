@@ -68,24 +68,16 @@ def resolve_ticker_identity(
 
     facts_row = (local_sec_facts or {}).get(canonical) or (local_sec_facts or {}).get(canonical.replace(".", "-"))
     if facts_row:
-        cik = _clean_text(facts_row.get("cik"))
-        company_title = _clean_text(facts_row.get("company_title") or facts_row.get("entityName") or facts_row.get("title"))
-        sec_ticker = _normalize_external_ticker(facts_row.get("sec_ticker") or facts_row.get("ticker") or canonical)
-        yahoo_ticker = _normalize_external_ticker(facts_row.get("yahoo_ticker") or facts_row.get("ticker") or canonical)
-        return _resolved(
-            canonical,
-            sec_ticker=sec_ticker,
-            yahoo_ticker=yahoo_ticker,
-            company_title=company_title,
-            cik=cik,
-            status="resolved_from_sec_facts",
-            source_label="local SEC facts",
-        )
+        resolved = _resolved_from_payload(canonical, facts_row, status="resolved_from_sec_facts", source_label="local SEC facts")
+        if resolved:
+            return resolved
 
     if sec_direct_lookup is not None:
         direct = sec_direct_lookup(canonical)
         if direct:
-            return _resolved_from_payload(canonical, direct, status="resolved_from_sec_direct", source_label="SEC direct lookup/search")
+            resolved = _resolved_from_payload(canonical, direct, status="resolved_from_sec_direct", source_label="SEC direct lookup/search")
+            if resolved:
+                return resolved
 
     return _unresolved(canonical, "ticker_or_name_unresolved", "no local SEC identity match and SEC direct lookup returned nothing")
 
@@ -107,11 +99,22 @@ def _resolve_from_rows(rows: Iterable[Mapping[str, Any]], canonical: str, *, sta
     return None
 
 
-def _resolved_from_payload(canonical: str, payload: Mapping[str, Any], *, status: str, source_label: str) -> IdentityResolution:
+def _resolved_from_payload(canonical: str, payload: Mapping[str, Any], *, status: str, source_label: str) -> IdentityResolution | None:
+    negative_status = _clean_text(payload.get("identity_status"))
+    if negative_status in {
+        "no_sec_filer_found",
+        "foreign_or_no_us_sec_filing",
+        "fund_or_special_case",
+        "ticker_or_name_unresolved",
+    }:
+        return _unresolved(canonical, negative_status, _clean_text(payload.get("rejection_reason")))
+
     sec_ticker = _normalize_external_ticker(payload.get("sec_ticker") or payload.get("ticker") or payload.get("symbol") or canonical)
     yahoo_ticker = _normalize_external_ticker(payload.get("yahoo_ticker") or payload.get("ticker") or payload.get("symbol") or canonical)
     cik = _clean_text(payload.get("cik") or payload.get("cik_str"))
     company_title = _clean_text(payload.get("company_title") or payload.get("title") or payload.get("entityName"))
+    if not cik or not company_title:
+        return None
     alias_reason = _alias_reason(canonical, sec_ticker=sec_ticker, yahoo_ticker=yahoo_ticker, source_label=source_label)
     return _resolved(canonical, sec_ticker=sec_ticker, yahoo_ticker=yahoo_ticker, company_title=company_title, cik=cik, status=status, source_label=source_label, alias_reason=alias_reason)
 
