@@ -39,7 +39,7 @@ def _load_start_rows(start_path: Path = START_FILE) -> list[dict[str, Any]]:
     elif isinstance(payload, list):
         items = payload
     else:
-        raise ValueError("start universe JSON must be a list or an object with an items list")
+        raise ValueError(f"start universe JSON must be a list or an object with an items list: {start_path}")
     rows = [_coerce_row(item) for item in items if isinstance(item, Mapping)]
     return [row for row in rows if row is not None]
 
@@ -48,11 +48,14 @@ def _load_additions_rows(additions_path: Path = ADDITIONS_LEDGER) -> list[dict[s
     if not additions_path.exists():
         return []
     rows: list[dict[str, Any]] = []
-    for raw in additions_path.read_text(encoding="utf-8").splitlines():
+    for line_number, raw in enumerate(additions_path.read_text(encoding="utf-8").splitlines(), start=1):
         line = raw.strip()
         if not line:
             continue
-        payload = json.loads(line)
+        try:
+            payload = json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"additions ledger JSONL is malformed: {additions_path} line {line_number}") from exc
         if isinstance(payload, Mapping):
             row = _coerce_row(payload)
             if row is not None:

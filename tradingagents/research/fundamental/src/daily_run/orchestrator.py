@@ -392,10 +392,10 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             if int(review_filter_summary.get("kept_count", 0)) <= 0:
                 _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "review_list_filter_kept_zero", **review_filter_summary}, review_filter_artifacts))
 
-        if active_master_universe_path is None or not active_master_universe_path.exists():
-            _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_master_universe_path"}, {}))
         if active_master_universe_path is None:
             active_master_universe_path = materialize_master_universe(output_root=config.output_root)
+        if not active_master_universe_path.exists():
+            _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_master_universe_path"}, {}))
         universe_csv = config.output_root / f"master_fundamental_universe_{config.quarter}.csv"
         try:
             universe = build_combined_universe(master_universe_path=active_master_universe_path, handoff_path=active_handoff_path, quarter=config.quarter, output_csv=universe_csv)

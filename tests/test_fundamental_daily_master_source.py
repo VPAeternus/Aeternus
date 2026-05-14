@@ -71,3 +71,18 @@ def test_master_source_malformed_start_file_is_clear(tmp_path):
         assert "malformed" in str(exc)
     else:
         raise AssertionError("expected ValueError")
+
+
+def test_master_source_malformed_additions_file_is_clear(tmp_path):
+    start = tmp_path / "start.json"
+    start.write_text(json.dumps({"items": [{"ticker": "aaa", "cik": "1"}]}), encoding="utf-8")
+    additions = tmp_path / "bad.jsonl"
+    additions.write_text('{"ticker":"bbb"}\n{', encoding="utf-8")
+
+    try:
+        load_master_universe_rows(start_path=start, additions_path=additions)
+    except ValueError as exc:
+        assert str(additions) in str(exc)
+        assert "line 2" in str(exc)
+    else:
+        raise AssertionError("expected ValueError")
