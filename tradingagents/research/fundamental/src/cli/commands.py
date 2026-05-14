@@ -391,6 +391,148 @@ def fundamental_build_complete_panel(
         raise typer.Exit(1)
 
 
+@app.command("fundamental-llm-backfill")
+def fundamental_llm_backfill(
+    panel_csv: str = typer.Option(
+        "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv",
+        "--panel-csv",
+        help="Complete panel CSV to scan",
+    ),
+    start_quarter: str = typer.Option("2021Q4", "--start-quarter", help="Inclusive start quarter, YYYYQ#"),
+    end_quarter: str = typer.Option("2026Q2", "--end-quarter", help="Inclusive end quarter, YYYYQ#"),
+    output_root: str = typer.Option("", "--output-root", help="Output root; defaults to eval_results/fundamental/llm_backfill_<start>_<end>"),
+    llm_mode: str = typer.Option("prepare", "--llm-mode", help="LLM mode: prepare|subagent|in-session|external|post-file"),
+    post_llm: str = typer.Option("", "--post-llm", help="Existing post_llm_scores.csv for --llm-mode post-file"),
+    llm_model: str = typer.Option("gpt-5.5", "--llm-model", help="Model for in-session/external/subagent LLM extraction"),
+    llm_reasoning_effort: str = typer.Option("high", "--llm-reasoning-effort", help="Reasoning effort for LLM extraction"),
+    llm_batch_size: int = typer.Option(8, "--llm-batch-size", min=1, help="Packets per LLM batch"),
+    llm_output_dir: str = typer.Option("", "--llm-output-dir", help="LLM batch output dir; defaults under output root"),
+    llm_output_csv: str = typer.Option("", "--llm-output-csv", help="LLM consolidated CSV; defaults under output root"),
+    sec_text_root: str = typer.Option(
+        "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/sec_docs_text",
+        "--sec-text-root",
+        help="Root containing SEC text files used to build evidence packets",
+    ),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Prepare historical LLM backfill artifacts and optionally trigger existing LLM modes."""
+    from tradingagents.research.fundamental.src.panel.llm_backfill import prepare_historical_llm_backfill, validate_historical_post_llm_csv
+
+    fmt = format.strip().lower()
+    if fmt not in {"table", "json"}:
+        console.print("[red]--format must be table or json[/red]")
+        raise typer.Exit(1)
+    mode_value = llm_mode.strip().lower().replace("_", "-")
+    valid_modes = {"prepare", "subagent", "in-session", "external", "post-file"}
+    if mode_value not in valid_modes:
+        console.print(f"[red]--llm-mode must be one of: {', '.join(sorted(valid_modes))}[/red]")
+        raise typer.Exit(1)
+
+    out_root = output_root.strip() or None
+    try:
+        result = prepare_historical_llm_backfill(
+            panel_csv=Path(panel_csv),
+            start_quarter=start_quarter,
+            end_quarter=end_quarter,
+            output_root=Path(out_root) if out_root is not None else None,
+            sec_text_root=Path(sec_text_root),
+        )
+    except Exception as exc:  # noqa: BLE001
+        console.print(f"[red]historical LLM backfill prep failed:[/red] {exc}")
+        raise typer.Exit(1)
+
+    result["llm_mode"] = mode_value
+    result["llm_triggered"] = False
+    output_path = Path(result["output_root"])
+    packets_path = output_path / result["output_paths"]["evidence_packets_jsonl"]
+    llm_dir = Path(llm_output_dir.strip()) if llm_output_dir.strip() else output_path / "llm_batches"
+    llm_csv = Path(llm_output_csv.strip()) if llm_output_csv.strip() else output_path / "post_llm_scores.csv"
+    lake_root = output_path / "lake"
+    as_of = _dt.date.today().isoformat()
+
+    if mode_value != "prepare" and int(result["summary"].get("evidence_packet_count", 0) or 0) == 0:
+        console.print("[red]No runnable evidence packets found; non-prepare LLM mode cannot run.[/red]")
+        raise typer.Exit(1)
+
+    if mode_value == "prepare":
+        result["next_step"] = "Prepared artifacts only. Use --llm-mode subagent, in-session, external, or post-file after evidence packets exist."
+    elif mode_value == "subagent":
+        job_path = _write_subagent_llm_job(
+            out_root=output_path,
+            packets_path=packets_path,
+            output_dir=llm_dir,
+            output_csv=llm_csv,
+            lake_root=lake_root,
+            as_of=as_of,
+            model=llm_model,
+            reasoning_effort=llm_reasoning_effort,
+            batch_size=llm_batch_size,
+        )
+        result["subagent_job_path"] = str(job_path)
+        result["llm_triggered"] = False
+        result["next_step"] = f"Subagent job written. Run job, then validate with --llm-mode post-file --post-llm {llm_csv}."
+    elif mode_value == "post-file":
+        post_llm_path = Path(post_llm.strip()) if post_llm.strip() else None
+        if post_llm_path is None:
+            console.print("[red]--llm-mode post-file requires --post-llm[/red]")
+            raise typer.Exit(1)
+        validation = validate_historical_post_llm_csv(post_llm_path, packets_path)
+        result["post_file_validation"] = validation
+        result["llm_triggered"] = False
+        result["next_step"] = "Post-file validated only. Merge into historical panel remains a separate step."
+        if validation["status"] != "pass":
+            if fmt == "json":
+                typer.echo(json.dumps(result, indent=2, sort_keys=True, default=str))
+            else:
+                console.print(f"[red]post-file validation failed[/red] {json.dumps(validation['summary'], sort_keys=True)}")
+            raise typer.Exit(1)
+    else:
+        fundamental_root = Path("tradingagents") / "research" / "fundamental"
+        if mode_value == "in-session":
+            post_llm_path = _run_in_session_llm(
+                packets_path=packets_path,
+                output_dir=llm_dir,
+                output_csv=llm_csv,
+                lake_root=lake_root,
+                as_of=as_of,
+                model=llm_model,
+                reasoning_effort=llm_reasoning_effort,
+                batch_size=llm_batch_size,
+            )
+        else:
+            post_llm_path = _run_external_llm(
+                packets_path=packets_path,
+                output_dir=llm_dir,
+                output_csv=llm_csv,
+                lake_root=lake_root,
+                as_of=as_of,
+                model=llm_model,
+                reasoning_effort=llm_reasoning_effort,
+                batch_size=llm_batch_size,
+                fundamental_root=fundamental_root,
+            )
+        result["llm_triggered"] = True
+        result["post_llm_output_csv"] = str(post_llm_path)
+        result["next_step"] = "LLM extraction finished. Merge into historical panel remains a separate step."
+
+    if fmt == "json":
+        typer.echo(json.dumps(result, indent=2, sort_keys=True, default=str))
+        return
+
+    summary = result["summary"]
+    console.print("[green]Historical LLM backfill manifest prepared[/green]")
+    console.print(f"range={summary['start_quarter']}..{summary['end_quarter']}")
+    console.print(
+        f"missing_required={summary['missing_required_count']} "
+        f"evidence_packets={summary['evidence_packet_count']} "
+        f"evidence_missing={summary['evidence_missing_count']} "
+        f"unique_tickers={summary['unique_missing_tickers']}"
+    )
+    console.print(f"output_root={result['output_root']}")
+    console.print(f"llm_mode={mode_value} llm_triggered={result['llm_triggered']}")
+    console.print(str(result["next_step"]))
+
+
 def _export_final_scores(lake_root: Path, out_root: Path, run_date: str) -> Path | None:
     try:
         import pandas as pd
@@ -530,6 +672,12 @@ def fundamental_run_today(
     min_broad_universe_count: int = typer.Option(1000, "--min-broad-universe-count", help="Minimum broad universe count in final mode"),
     emit_complete_panel: bool = typer.Option(False, "--emit-complete-panel/--no-emit-complete-panel", help="Emit canonical complete panel after final publish"),
     complete_panel_output_root: str = typer.Option("", "--complete-panel-output-root", help="Complete panel output root; defaults under daily output root"),
+    build_review_list_from_sec: bool = typer.Option(False, "--build-review-list-from-sec/--no-build-review-list-from-sec", help="Build the review stock list from the SEC ticker map before scoring"),
+    sec_ticker_map: str = typer.Option("", "--sec-ticker-map", help="SEC company ticker map JSON; defaults to cache/sec/sec_company_tickers.json"),
+    review_min_close: float = typer.Option(2.0, "--review-min-close", help="Minimum raw close for SEC-built review list"),
+    review_min_adv60: float = typer.Option(500_000.0, "--review-min-adv60", help="Minimum 60-day average share volume for SEC-built review list"),
+    review_price_cache: str = typer.Option("", "--review-price-cache", help="Cached price parquet file or folder; defaults to ~/.cache/autoresearch_fundamentals"),
+    allow_live_review_price_fetch: bool = typer.Option(True, "--allow-live-review-price-fetch/--no-allow-live-review-price-fetch", help="Allow Yahoo downloads for review-list names missing cached prices"),
     format: str = typer.Option("table", "--format", help="Output format: table|json"),
 ):
     """Run the gated daily fundamental framework from broad master universe."""
@@ -540,7 +688,7 @@ def fundamental_run_today(
     run_date = date.strip() or _dt.date.today().isoformat()
     run_quarter = quarter.strip() or current_quarter(_dt.date.fromisoformat(run_date))
     out = Path(output_root.strip()) if output_root.strip() else default_daily_run_root(run_date, run_quarter)
-    master_path = Path(master_universe.strip()) if master_universe.strip() else out / "final_dealflow_tickers_sec_eligible.json"
+    master_path = Path(master_universe.strip()) if master_universe.strip() else (None if build_review_list_from_sec else out / "final_dealflow_tickers_sec_eligible.json")
     handoff_path = Path(handoff.strip()) if handoff.strip() else Path("eval_results") / "deal_flow" / run_date / "final_dealflow_tickers.json"
     sec_root = Path(sec_live_root.strip()) if sec_live_root.strip() else None
     llm_mode_value = llm_mode.strip().lower().replace("_", "-")
@@ -554,6 +702,8 @@ def fundamental_run_today(
     llm_dir = Path(llm_output_dir.strip()) if llm_output_dir.strip() else out / "llm_batches"
     llm_csv = Path(llm_output_csv.strip()) if llm_output_csv.strip() else out / "post_llm_scores.csv"
     panel_root = Path(complete_panel_output_root.strip()) if complete_panel_output_root.strip() else None
+    sec_ticker_map_path = Path(sec_ticker_map.strip()) if sec_ticker_map.strip() else None
+    review_price_cache_path = Path(review_price_cache.strip()) if review_price_cache.strip() else None
 
     def _daily_run_llm_service(*, packets_path: Path, output_root: Path, config: DailyRunConfig) -> Path | None:
         if llm_mode_value == "post-file":
@@ -619,6 +769,12 @@ def fundamental_run_today(
             min_broad_universe_count=min_broad_universe_count,
             emit_complete_panel=emit_complete_panel,
             complete_panel_output_root=panel_root,
+            build_review_list_from_sec=build_review_list_from_sec,
+            sec_ticker_map_path=sec_ticker_map_path,
+            review_min_close=review_min_close,
+            review_min_adv60=review_min_adv60,
+            review_price_cache_path=review_price_cache_path,
+            review_allow_live_price_fetch=allow_live_review_price_fetch,
         )
         services = DailyRunServices(run_llm=None if effective_skip_llm else _daily_run_llm_service)
         result = run_daily_fundamental(cfg, services=services)

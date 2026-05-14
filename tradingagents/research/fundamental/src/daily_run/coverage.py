@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import csv
+import contextlib
+import io
 import json
 import shutil
 from pathlib import Path
@@ -30,14 +32,18 @@ def run_sec_coverage_manifest(*, out_root: Path, universe_csv: Path, eligible_js
     target = out_root / "final_dealflow_tickers_sec_eligible.json"
     if eligible_json.resolve() != target.resolve():
         shutil.copy2(eligible_json, target)
-    manifest.configure(out=out_root, live=live_sec_root, quarters=[quarter]); manifest.UNIVERSE_CSV = universe_csv; manifest.TICKERS_JSON = target; manifest.main()
+    manifest.configure(out=out_root, live=live_sec_root, quarters=[quarter]); manifest.UNIVERSE_CSV = universe_csv; manifest.TICKERS_JSON = target
+    with contextlib.redirect_stdout(io.StringIO()):
+        manifest.main()
     summary_path = out_root / "sec_coverage_summary.json"
     return json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.exists() else {"ticker_count": 0, "status_counts": {}, "missing_input_counts": {}, "fetch_queue_count": 0, "outputs": {}}
 
 
 def run_sec_fetch_once(*, out_root: Path, live_sec_root: Path) -> dict[str, Any]:
     from tradingagents.research.fundamental.src.sec_pipeline import cache_download_queue as download
-    download.configure(out=out_root, live=live_sec_root); download.DOWNLOAD_MANIFEST_PATH = out_root / "sec_download_manifest_daily_run.json"; download.main()
+    download.configure(out=out_root, live=live_sec_root); download.DOWNLOAD_MANIFEST_PATH = out_root / "sec_download_manifest_daily_run.json"
+    with contextlib.redirect_stdout(io.StringIO()):
+        download.main()
     return json.loads(download.DOWNLOAD_MANIFEST_PATH.read_text(encoding="utf-8"))
 
 

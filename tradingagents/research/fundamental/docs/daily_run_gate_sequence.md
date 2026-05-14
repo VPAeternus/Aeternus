@@ -1,5 +1,36 @@
 # Fundamental Daily Run Gate Sequence
 
+## Plain Daily Run Steps
+
+This is the daily operator flow. It must happen inside `fundamental-run-today`.
+Do not create a second independent pipeline.
+
+1. Start from the master start list: 2021Q4 SEC-evidence tickers.
+2. Add today's dealflow tickers.
+3. For new dealflow names, resolve ticker to company ID, company name, and CIK.
+4. If the local SEC ticker map misses, check trusted panel data, SEC facts, then SEC directly.
+5. Mark source clearly: master start, existing master, today's dealflow add, or rejected.
+6. Remove only names that truly cannot be tied to SEC filings or tradable price data.
+7. Check SEC cache for earnings 8-K, press-release exhibit, 10-Q/10-K, and company facts.
+8. If SEC evidence is missing, fetch it now and save it to cache.
+9. Check Yahoo price cache.
+10. If price data is missing, fetch it now and save it to cache.
+11. Calculate pre-LLM score.
+12. Assign Tier 0-4, HP, and RM flags.
+13. Decide which rows need LLM.
+14. Build LLM packets.
+15. If packets cannot be built, recover/fetch evidence inside the daily run before stopping.
+16. Run or queue LLM extraction.
+17. Validate LLM output.
+18. Calculate post-LLM score.
+19. Calculate final score.
+20. Select Top 10 Core.
+21. Select Plus 5 Exception.
+22. Run shadow refill review.
+23. Emit final CSVs, Top15 files, shadow files, and clear rejection/status files.
+
+Key rule: LLM evidence recovery happens inside the daily run before final scoring. No separate recovery pipeline.
+
 ## Implemented command
 
 Use:
@@ -17,9 +48,23 @@ Related contract: `tradingagents/research/fundamental/docs/daily_universe_llm_fu
 
 ## Non-negotiable rule
 
-The daily framework must start from the broad persistent master universe, append daily scout names, score the broad universe, run LLM only on LLM-required candidates, then publish Top10 + Plus5 + shadow refill from the broad final scores.
+The daily framework must start from the broad persistent master universe. The current starting file is:
+
+`tradingagents/research/fundamental/data/master_fundamental_universe_start_2021Q4.json`
+
+Current count: `1,251` tickers, all with CIK/company title after fallback.
+
+The daily master source is the start file plus the append-only additions ledger when it exists:
+
+`tradingagents/research/fundamental/data/master_fundamental_universe_additions.jsonl`
+
+The immutable start file is not edited by daily runs. Resolved new dealflow names go to the additions ledger after identity and SEC filer verification pass.
+
+The run then appends today's scout/dealflow names, scores the broad universe, runs LLM only on LLM-required candidates, then publishes Top10 + Plus5 + shadow refill from the broad final scores.
 
 Daily scout names are not the universe. They are append/update inputs.
+
+If LLM work is queued instead of completed, the run is pending, not final. Final publish requires validated post-LLM rows.
 
 ## Required run modes
 

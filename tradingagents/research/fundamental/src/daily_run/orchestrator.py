@@ -4,11 +4,12 @@ import csv
 import json
 import shutil
 from dataclasses import dataclass
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any, Callable
 from uuid import uuid4
 
-from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_root
+from tradingagents.research.fundamental.src.config.cache_paths import market_cache_root, sec_cache_root
 
 from .artifacts import write_csv, write_json_atomic, write_text_atomic
 from .coverage import coverage_gate_result, load_raw_documents_from_coverage, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
@@ -16,6 +17,16 @@ from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_f
 from .finalize import add_qoq_context, build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
 from .models import DailyRunConfig, DailyRunState, GateResult, GateStatus, RunMode, StopGateError
+from .review_list_filter import (
+    _companyfacts_ready,
+    _coverage_reason,
+    fetch_review_price_rows,
+    filter_review_list_rows,
+    load_cached_review_price_rows,
+    load_sec_ticker_map_rows,
+    store_review_price_rows,
+    write_sec_universe_inputs,
+)
 from .scoring_inputs import attach_entry_prices, build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, split_score_ready_rows
 from .universe import build_combined_universe, validate_universe_gate
 from ..panel.exporter import build_complete_panel
@@ -211,8 +222,128 @@ def _read_csv(path: Path) -> list[dict[str, Any]]:
         return list(csv.DictReader(handle))
 
 
+def _build_review_list_from_sec_map(
+    *,
+    config: DailyRunConfig,
+    coverage_runner: Callable[..., dict[str, Any]],
+    fetch_runner: Callable[..., dict[str, Any]],
+    price_provider: Callable[..., list[dict[str, Any]]],
+    live_root: Path,
+) -> tuple[Path, dict[str, Any], dict[str, str]]:
+    sec_map_path = config.sec_ticker_map_path or sec_cache_root("sec_company_tickers.json")
+    candidate_rows = load_sec_ticker_map_rows(sec_map_path, quarter=config.quarter)
+    input_artifacts = write_sec_universe_inputs(candidate_rows, output_root=config.output_root, quarter=config.quarter)
+    sec_universe_csv = Path(input_artifacts["sec_universe_csv"])
+    sec_universe_json = Path(input_artifacts["sec_universe_json"])
+    coverage_raw = coverage_runner(
+        out_root=config.output_root,
+        universe_csv=sec_universe_csv,
+        eligible_json=sec_universe_json,
+        quarter=config.quarter,
+        live_sec_root=live_root,
+    )
+    sec_fetch_passes: list[dict[str, Any]] = []
+    if not config.skip_fetch and int(coverage_raw.get("fetch_queue_count") or 0):
+        pass_number = 0
+        while int(coverage_raw.get("fetch_queue_count") or 0) and pass_number < max(1, int(config.max_sec_fetch_passes)):
+            pass_number += 1
+            before_count = int(coverage_raw.get("fetch_queue_count") or 0)
+            fetch_manifest = fetch_runner(out_root=config.output_root, live_sec_root=live_root)
+            coverage_raw = coverage_runner(
+                out_root=config.output_root,
+                universe_csv=sec_universe_csv,
+                eligible_json=sec_universe_json,
+                quarter=config.quarter,
+                live_sec_root=live_root,
+            )
+            sec_fetch_passes.append(
+                {
+                    "pass": pass_number,
+                    "initial_fetch_queue_count": before_count,
+                    "post_fetch_queue_count": int(coverage_raw.get("fetch_queue_count") or 0),
+                    "fetch_manifest": fetch_manifest,
+                }
+            )
+    coverage_csv = Path(coverage_raw.get("outputs", {}).get("manifest_csv", config.output_root / f"sec_coverage_manifest_{config.quarter}.csv"))
+    coverage_rows = _read_csv(coverage_csv)
+    as_of_date = date.fromisoformat(config.as_of)
+    start = (as_of_date - timedelta(days=max(60, int(config.review_price_lookback_days)))).isoformat()
+    end = (as_of_date + timedelta(days=1)).isoformat()
+    coverage_by_ticker = {str(row.get("ticker", "")).upper(): row for row in coverage_rows}
+    price_needed_tickers = [
+        str(row["ticker"]).upper()
+        for row in candidate_rows
+        if not _coverage_reason(coverage_by_ticker.get(str(row.get("ticker", "")).upper()))
+        and _companyfacts_ready(row, companyfacts_root=live_root / "companyfacts", quarter=config.quarter)
+    ]
+    cache_path = config.review_price_cache_path or market_cache_root()
+    price_rows = load_cached_review_price_rows([cache_path], tickers=price_needed_tickers, start=start, end=end)
+    cached_tickers = {str(row.get("ticker", "")).upper() for row in price_rows}
+    missing_tickers = [ticker for ticker in price_needed_tickers if ticker not in cached_tickers]
+    live_price_rows: list[dict[str, Any]] = []
+    price_cache_artifacts: dict[str, str] = {}
+    if missing_tickers and config.review_allow_live_price_fetch:
+        live_price_rows = fetch_review_price_rows(
+            missing_tickers,
+            start=start,
+            end=end,
+            price_provider=price_provider,
+            batch_size=config.review_price_batch_size,
+        )
+        if live_price_rows:
+            price_rows.extend(live_price_rows)
+            run_cache_path = store_review_price_rows(live_price_rows, output_root=config.output_root, quarter=config.quarter, as_of=config.as_of)
+            shared_cache_path = store_review_price_rows(live_price_rows, output_root=market_cache_root(), quarter=config.quarter, as_of=config.as_of)
+            price_cache_artifacts = {
+                "review_live_price_run_cache": str(run_cache_path),
+                "review_live_price_shared_cache": str(shared_cache_path),
+            }
+    result = filter_review_list_rows(
+        candidate_rows=candidate_rows,
+        coverage_rows=coverage_rows,
+        price_rows=price_rows,
+        companyfacts_root=live_root / "companyfacts",
+        quarter=config.quarter,
+        as_of=config.as_of,
+        output_root=config.output_root,
+        min_close=float(config.review_min_close),
+        min_adv60=float(config.review_min_adv60),
+        sec_fetch_attempted=not config.skip_fetch,
+        price_fetch_attempted=bool(config.review_allow_live_price_fetch),
+    )
+    artifacts = {**input_artifacts, **result.artifacts, **price_cache_artifacts, "review_list_sec_coverage_manifest": str(coverage_csv)}
+    summary = {
+        **result.summary,
+        "sec_ticker_map_path": str(sec_map_path),
+        "price_start": start,
+        "price_end_exclusive": end,
+        "review_price_cache_path": str(cache_path),
+        "price_needed_ticker_count": len(price_needed_tickers),
+        "cached_price_ticker_count": len(cached_tickers),
+        "missing_cached_price_ticker_count": len(missing_tickers),
+        "live_price_fetch_count": len(live_price_rows),
+        "live_price_fetch_allowed": bool(config.review_allow_live_price_fetch),
+        "sec_fetch_pass_count": len(sec_fetch_passes),
+        "final_sec_fetch_queue_count": int(coverage_raw.get("fetch_queue_count") or 0),
+        "sec_fetch_passes": sec_fetch_passes,
+    }
+    return Path(result.artifacts["review_stock_list_json"]), summary, artifacts
+
+
+def _cached_review_price_provider(config: DailyRunConfig) -> Callable[..., list[dict[str, Any]]]:
+    cache_path = config.review_price_cache_path or market_cache_root()
+
+    def provider(tickers, *, start, end):
+        return load_cached_review_price_rows([cache_path], tickers=[str(ticker).upper() for ticker in tickers], start=start, end=end)
+
+    return provider
+
+
 def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | None = None) -> DailyRunResult:
     services = services or DailyRunServices()
+    run_price_provider = services.price_provider
+    if config.build_review_list_from_sec and not config.review_allow_live_price_fetch:
+        run_price_provider = _cached_review_price_provider(config)
     existing_manifest = config.output_root / "run_manifest.json"
     if existing_manifest.exists():
         try:
@@ -237,22 +368,43 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(path, target)
                 snapshots[name] = str(target)
-        identity = {"run_id": state.run_id, "as_of": config.as_of, "quarter": config.quarter, "mode": config.run_mode.value, "source_hashes": {"master_universe": _source_hash(config.master_universe_path), "handoff": _source_hash(config.handoff_path)}, "snapshots": snapshots}
+        identity = {"run_id": state.run_id, "as_of": config.as_of, "quarter": config.quarter, "mode": config.run_mode.value, "source_hashes": {"master_universe": _source_hash(config.master_universe_path), "handoff": _source_hash(config.handoff_path), "sec_ticker_map": _source_hash(config.sec_ticker_map_path or sec_cache_root("sec_company_tickers.json")) if config.build_review_list_from_sec else ""}, "snapshots": snapshots}
         identity_path = config.output_root / "run_identity.json"; write_json_atomic(identity_path, identity)
         _record(state, GateResult(1, "Run identity and immutable snapshot", GateStatus.PASS, identity, {"run_identity": str(identity_path), **{f"snapshot_{k}": v for k, v in snapshots.items()}}))
 
-        if config.master_universe_path is None or not config.master_universe_path.exists():
+        live_root = config.sec_live_root or sec_cache_root("live_sec")
+        coverage_runner = services.run_coverage or run_sec_coverage_manifest
+        active_master_universe_path = config.master_universe_path
+        active_handoff_path = config.handoff_path
+        review_filter_summary: dict[str, Any] = {}
+        review_filter_artifacts: dict[str, str] = {}
+        if config.build_review_list_from_sec:
+            active_master_universe_path, review_filter_summary, review_filter_artifacts = _build_review_list_from_sec_map(
+                config=config,
+                coverage_runner=coverage_runner,
+                fetch_runner=services.run_fetch_once or run_sec_fetch_once,
+                price_provider=run_price_provider,
+                live_root=live_root,
+            )
+            active_handoff_path = None
+            state.artifacts.update(review_filter_artifacts)
+            if int(review_filter_summary.get("kept_count", 0)) <= 0:
+                _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "review_list_filter_kept_zero", **review_filter_summary}, review_filter_artifacts))
+
+        if active_master_universe_path is None or not active_master_universe_path.exists():
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_master_universe_path"}, {}))
         universe_csv = config.output_root / f"master_fundamental_universe_{config.quarter}.csv"
         try:
-            universe = build_combined_universe(master_universe_path=config.master_universe_path, handoff_path=config.handoff_path, quarter=config.quarter, output_csv=universe_csv)
+            universe = build_combined_universe(master_universe_path=active_master_universe_path, handoff_path=active_handoff_path, quarter=config.quarter, output_csv=universe_csv)
         except ValueError as exc:
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "invalid_master_universe_format", "error": str(exc)}, {}))
-        _record(state, validate_universe_gate(universe.rows, run_mode=config.run_mode, scout_count=int(universe.summary.get("scout_count", 0)), min_broad_universe_count=config.min_broad_universe_count, artifacts=universe.artifacts))
+        universe.artifacts.update(review_filter_artifacts)
+        universe_gate = validate_universe_gate(universe.rows, run_mode=config.run_mode, scout_count=int(universe.summary.get("scout_count", 0)), min_broad_universe_count=config.min_broad_universe_count, artifacts=universe.artifacts)
+        if review_filter_summary:
+            universe_gate.summary["review_list_filter"] = review_filter_summary
+        _record(state, universe_gate)
 
-        live_root = config.sec_live_root or sec_cache_root("live_sec")
-        coverage_runner = services.run_coverage or run_sec_coverage_manifest
-        coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=config.master_universe_path, quarter=config.quarter, live_sec_root=live_root)
+        coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=active_master_universe_path, quarter=config.quarter, live_sec_root=live_root)
         companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
         coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
         _record(state, coverage_gate_result(coverage_summary, artifact_paths=coverage_summary.get("outputs", {})))
@@ -266,7 +418,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                 pass_number += 1
                 before_fetch_queue = coverage_summary["fetch_queue_count"]
                 fetch_manifest = fetcher(out_root=config.output_root, live_sec_root=live_root)
-                coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=config.master_universe_path, quarter=config.quarter, live_sec_root=live_root)
+                coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=active_master_universe_path, quarter=config.quarter, live_sec_root=live_root)
                 companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
                 coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
                 fetch_passes.append({"pass": pass_number, "initial_fetch_queue_count": before_fetch_queue, "post_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_manifest": fetch_manifest})
@@ -287,7 +439,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         for row in pre_rows:
             cov = coverage_by_key.get((row.get("ticker", "").upper(), row.get("quarter", "")), {})
             pre_with_dates.append({**row, **cov, "tradable_date": row.get("tradable_date") or derive_tradable_date_from_coverage(cov)})
-        priced_rows, price_quarantine, price_summary = attach_entry_prices(pre_with_dates, as_of=config.as_of, price_provider=services.price_provider)
+        priced_rows, price_quarantine, price_summary = attach_entry_prices(pre_with_dates, as_of=config.as_of, price_provider=run_price_provider)
         price_ready_rows = [r for r in priced_rows if r.get("entry_open")]
         score_ready_rows, score_input_quarantine, score_input_summary = split_score_ready_rows(price_ready_rows)
         price_q_path = config.output_root / "entry_price_quarantine.csv"; write_csv(price_q_path, price_quarantine)
