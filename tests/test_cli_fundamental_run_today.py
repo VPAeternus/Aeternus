@@ -10,6 +10,8 @@ def test_fundamental_run_today_help_exposes_gate_options():
     assert result.exit_code == 0
     assert "--mode" in result.output
     assert "--master-universe" in result.output
+    assert "--allow-missing-handoff" in result.output
+    assert "--allow-date-quarter-mismatch" in result.output
     assert "--skip-llm" in result.output
     assert "--llm-model" in result.output
     assert "llm-reasoning" in result.output
@@ -35,3 +37,13 @@ def test_fundamental_run_today_diagnostic_writes_manifest(tmp_path):
     result = runner.invoke(app, ["fundamental-run-today", "--mode", "diagnostic-only", "--date", "2026-05-12", "--quarter", "2026Q2", "--master-universe", str(master), "--output-root", str(out), "--skip-fetch", "--skip-llm", "--min-broad-universe-count", "1", "--format", "json"])
     assert result.exit_code == 0, result.output
     assert (out / "run_manifest.json").exists()
+
+
+def test_fundamental_run_today_broad_final_hard_stops_without_expected_handoff(tmp_path):
+    master = tmp_path / "master.json"
+    master.write_text(json.dumps({"items": [{"symbol": "AAA", "cik": "1", "company_title": "AAA Inc"}]}))
+    out = tmp_path / "run"
+    result = runner.invoke(app, ["fundamental-run-today", "--mode", "broad-master-final", "--date", "2026-05-12", "--quarter", "2026Q2", "--master-universe", str(master), "--output-root", str(out), "--skip-fetch", "--skip-llm", "--min-broad-universe-count", "1", "--format", "json"])
+    assert result.exit_code != 0
+    assert "handoff" in result.output.lower()
+    assert "missing" in result.output.lower()

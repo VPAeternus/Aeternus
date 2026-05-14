@@ -51,6 +51,7 @@ def _write_prior_context(path, tickers=("T0", "T1", "T2", "T3", "T4"), quarter="
 
 def _fake_orchestrator_fixture(tmp_path, mode="broad-master-final", skip_llm=False, fake_llm=None):
     master = tmp_path / "master.json"; _write_master(master, count=5)
+    handoff = tmp_path / "handoff.json"; handoff.write_text(json.dumps({"tickers": [], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
     prior = tmp_path / "prior_scores.csv"; _write_prior_context(prior)
     live = tmp_path / "live_sec"; (live / "companyfacts").mkdir(parents=True)
     for i in range(5):
@@ -95,7 +96,7 @@ def _fake_orchestrator_fixture(tmp_path, mode="broad-master-final", skip_llm=Fal
             {"input_rows": 5},
             {"scores_csv": str(scores_csv), "top15_csv": str(top15_csv), "top15_json": str(top15_json), "top15_recommendation_md": str(top15_md)},
         )
-    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode=mode, output_root=tmp_path / "run", master_universe_path=master, handoff_path=None, sec_live_root=live, skip_llm=skip_llm, prior_context_path=prior, min_broad_universe_count=5)
+    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode=mode, output_root=tmp_path / "run", master_universe_path=master, handoff_path=handoff, sec_live_root=live, skip_llm=skip_llm, prior_context_path=prior, min_broad_universe_count=5)
     return cfg, DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage, run_llm=fake_llm or default_llm, publish=fake_publish)
 
 
@@ -107,6 +108,36 @@ def test_orchestrator_diagnostic_writes_manifest_and_stops_before_publish_when_s
     assert (cfg.output_root / "run_manifest.json").exists()
     assert result.summary["final"] is False
     assert any(g.gate_number == 1 for g in result.gates)
+
+
+def test_orchestrator_broad_final_hard_stops_when_handoff_missing(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    cfg = DailyRunConfig(**{**cfg.__dict__, "mode": "broad-master-final", "handoff_path": None})
+    result = run_daily_fundamental(cfg, services=services)
+    assert result.summary["final"] is False
+    assert result.gates[-1].gate_number == 2
+    assert result.gates[-1].status == GateStatus.HARD_STOP
+    assert result.gates[-1].summary["reason"] == "missing_daily_handoff"
+
+
+def test_orchestrator_diagnostic_only_reports_missing_handoff_plainly(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path, mode="diagnostic-only", skip_llm=True)
+    cfg = DailyRunConfig(**{**cfg.__dict__, "handoff_path": None})
+    result = run_daily_fundamental(cfg, services=services)
+    gate2 = next(g for g in result.gates if g.gate_number == 2)
+    assert gate2.status == GateStatus.PASS
+    assert gate2.summary["handoff_missing"] is True
+    assert gate2.summary["handoff_policy"] == "allowed_missing"
+
+
+def test_orchestrator_scout_smoke_hard_stops_without_handoff_or_override(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path, mode="scout-smoke", skip_llm=True)
+    cfg = DailyRunConfig(**{**cfg.__dict__, "handoff_path": None})
+    result = run_daily_fundamental(cfg, services=services)
+    assert result.summary["final"] is False
+    assert result.gates[-1].gate_number == 2
+    assert result.gates[-1].status == GateStatus.HARD_STOP
+    assert result.gates[-1].summary["reason"] == "missing_daily_handoff"
 
 
 def test_orchestrator_broad_final_hard_stops_on_scout_only_universe(tmp_path):
@@ -189,6 +220,7 @@ def test_orchestrator_uses_prior_qoq_before_llm_eligibility_for_rm_only_candidat
     with prior.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
     live = tmp_path / "live_sec"; (live / "companyfacts").mkdir(parents=True)
+    handoff = tmp_path / "handoff.json"; handoff.write_text(json.dumps({"tickers": [], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
     (live / "companyfacts" / "CIK0000000001.json").write_text(json.dumps(_weak_companyfacts_payload()))
     (live / "companyfacts" / "CIK0000000002.json").write_text(json.dumps(_companyfacts_payload()))
 
@@ -221,7 +253,7 @@ def test_orchestrator_uses_prior_qoq_before_llm_eligibility_for_rm_only_candidat
     def fake_publish(**kwargs):
         return GateResult(10, "Top10 + Plus5 + shadow refill publish", GateStatus.PASS, {"input_rows": 2}, {})
 
-    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode="broad-master-final", output_root=tmp_path / "run", master_universe_path=master, handoff_path=None, sec_live_root=live, skip_llm=False, prior_context_path=prior, min_broad_universe_count=2)
+    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode="broad-master-final", output_root=tmp_path / "run", master_universe_path=master, handoff_path=handoff, sec_live_root=live, skip_llm=False, prior_context_path=prior, min_broad_universe_count=2)
     result = run_daily_fundamental(cfg, services=DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage, run_llm=fake_llm, publish=fake_publish))
 
     assert result.summary["final"] is True
@@ -240,6 +272,16 @@ def test_orchestrator_final_mode_hard_stops_on_wrong_prior_quarter(tmp_path):
     assert result.gates[-1].gate_number == 9
     assert result.gates[-1].status == GateStatus.HARD_STOP
     assert result.gates[-1].summary["reason"] == "no_rows_for_expected_prior_quarter"
+
+
+def test_orchestrator_broad_final_hard_stops_on_date_quarter_mismatch(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    cfg = DailyRunConfig(**{**cfg.__dict__, "quarter": "2026Q3"})
+    result = run_daily_fundamental(cfg, services=services)
+    assert result.summary["final"] is False
+    assert result.gates[-1].gate_number == 1
+    assert result.gates[-1].status == GateStatus.HARD_STOP
+    assert result.gates[-1].summary["reason"] == "date_quarter_mismatch"
 
 
 def test_orchestrator_final_mode_hard_stops_on_duplicate_prior_rows(tmp_path):
