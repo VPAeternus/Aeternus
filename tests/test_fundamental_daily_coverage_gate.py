@@ -1,4 +1,4 @@
-from tradingagents.research.fundamental.src.daily_run.coverage import classify_coverage_summary, normalize_coverage_summary, should_continue_fetch
+from tradingagents.research.fundamental.src.daily_run.coverage import classify_coverage_summary, load_raw_documents_from_coverage, normalize_coverage_summary, should_continue_fetch
 from tradingagents.research.fundamental.src.daily_run.models import GateStatus
 
 
@@ -26,3 +26,35 @@ def test_normalize_coverage_summary_has_stable_contract():
     assert summary["companyfacts_ready_count"] == 1276
     assert summary["llm_doc_ready_count"] == 76
     assert summary["outputs"] == {"manifest_csv": "manifest.csv"}
+
+
+def test_load_raw_documents_searches_shared_sec_cache(tmp_path):
+    import csv
+
+    live = tmp_path / "live_sec"
+    shared = tmp_path / "sec_docs_text"
+    shared.mkdir()
+    manifest = tmp_path / "manifest.csv"
+    rows = [
+        {
+            "ticker": "AAA",
+            "quarter": "2026Q2",
+            "coverage_status": "CACHED_READY",
+            "earnings_8k_accession": "00000000-AAA",
+            "earnings_8k_primary_document": "8k.htm",
+            "earnings_exhibit_document": "ex99.htm",
+            "periodic_accession": "00000000-AAAQ",
+            "periodic_primary_document": "10q.htm",
+        }
+    ]
+    with manifest.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    for file_name in ["AAA_00000000AAA_8k.htm", "AAA_00000000AAA_ex99.htm", "AAA_00000000AAAQ_10q.htm"]:
+        (shared / file_name).write_text("<html>Revenue and margin improved.</html>")
+
+    docs = load_raw_documents_from_coverage(manifest, live, extra_document_roots=[shared])
+
+    assert {doc["document_type"] for doc in docs} == {"primary_8k", "earnings_exhibit", "periodic_10q_10k"}
+    assert (live / "documents" / "AAA_00000000AAA_ex99.htm").exists()

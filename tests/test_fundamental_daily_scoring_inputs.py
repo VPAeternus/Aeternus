@@ -1,5 +1,5 @@
 import json
-from tradingagents.research.fundamental.src.daily_run.scoring_inputs import build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage
+from tradingagents.research.fundamental.src.daily_run.scoring_inputs import build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, materialize_companyfacts_fallbacks
 
 
 def _companyfacts_payload():
@@ -14,6 +14,30 @@ def test_build_pre_llm_from_companyfacts_does_not_require_earnings_exhibit(tmp_p
     assert summary["pre_llm_scored"] == 1
     assert rows[0]["pre_llm_fundamental_bucket"] in {"strong", "good", "mixed", "weak"}
     assert rows[0]["revenue_bucket"] == "$1B-$2B"
+
+
+def test_companyfacts_fallback_materializes_shared_cache_before_scoring(tmp_path):
+    facts_root = tmp_path / "live" / "companyfacts"
+    fallback_root = tmp_path / "shared_sec"
+    fallback_root.mkdir()
+    (fallback_root / "facts_AAA.json").write_text(json.dumps(_companyfacts_payload()))
+
+    summary = materialize_companyfacts_fallbacks(
+        universe_rows=[{"ticker": "AAA", "cik": "1"}],
+        companyfacts_root=facts_root,
+        fallback_root=fallback_root,
+    )
+    rows, score_summary = build_pre_llm_from_companyfacts_cache(
+        universe_rows=[{"ticker": "AAA", "cik": "1", "quarter": "2026Q2"}],
+        companyfacts_root=facts_root,
+        fallback_root=fallback_root,
+        quarter="2026Q2",
+    )
+
+    assert summary["companyfacts_fallback_copied_count"] == 1
+    assert (facts_root / "CIK0000000001.json").exists()
+    assert score_summary["companyfacts_cached"] == 1
+    assert rows[0]["pre_llm_fundamental_bucket"] != "not_scored"
 
 
 def test_derive_tradable_date_uses_next_trading_day_after_latest_filing_date():

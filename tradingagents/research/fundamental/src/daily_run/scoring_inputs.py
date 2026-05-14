@@ -1,12 +1,16 @@
 from __future__ import annotations
 
 import json
+import inspect
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any, Callable
 
+from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_root
 from tradingagents.research.fundamental.src.features.pre_llm_scores import build_pre_llm_rows
 from tradingagents.research.fundamental.src.ingest.xbrl import companyfacts_to_pre_llm_input
+
+from .artifacts import write_text_atomic
 
 
 def _cik10(value: Any) -> str:
@@ -33,6 +37,11 @@ def _next_weekday(value: date) -> date:
     return current
 
 
+def _fallback_facts_path(ticker: str, fallback_root: Path | None) -> Path:
+    root = fallback_root or sec_cache_root()
+    return root / f"facts_{ticker}.json"
+
+
 def derive_tradable_date_from_coverage(row: dict[str, Any]) -> str:
     dates = [_parse_date(row.get("earnings_8k_filing_date")), _parse_date(row.get("periodic_filing_date"))]
     valid = [item for item in dates if item is not None]
@@ -41,19 +50,60 @@ def derive_tradable_date_from_coverage(row: dict[str, Any]) -> str:
     return _next_weekday(max(valid)).isoformat()
 
 
+def materialize_companyfacts_fallbacks(
+    *,
+    universe_rows: list[dict[str, Any]],
+    companyfacts_root: Path,
+    fallback_root: Path | None = None,
+) -> dict[str, Any]:
+    companyfacts_root.mkdir(parents=True, exist_ok=True)
+    copied: list[str] = []
+    missing: list[str] = []
+    for row in universe_rows:
+        ticker = str(row.get("ticker") or row.get("symbol") or "").upper()
+        cik10 = _cik10(row.get("cik"))
+        if not ticker or not cik10:
+            continue
+        live_path = companyfacts_root / f"CIK{cik10}.json"
+        if live_path.exists():
+            continue
+        fallback_path = _fallback_facts_path(ticker, fallback_root)
+        if not fallback_path.exists():
+            missing.append(ticker)
+            continue
+        payload = fallback_path.read_text(encoding="utf-8")
+        write_text_atomic(live_path, payload)
+        copied.append(ticker)
+    return {
+        "companyfacts_fallback_copied_count": len(copied),
+        "companyfacts_fallback_missing_count": len(missing),
+        "companyfacts_fallback_copied_tickers": copied[:50],
+        "companyfacts_fallback_missing_tickers": missing[:50],
+        "companyfacts_fallback_root": str(fallback_root or sec_cache_root()),
+    }
+
+
 def build_pre_llm_from_companyfacts_cache(
     *,
     universe_rows: list[dict[str, Any]],
     companyfacts_root: Path,
     quarter: str,
+    fallback_root: Path | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     input_rows: list[dict[str, Any]] = []
     cached = 0
+    fallback_cached = 0
     for row in universe_rows:
         ticker = str(row.get("ticker") or row.get("symbol") or "").upper()
         cik10 = _cik10(row.get("cik"))
         facts_path = companyfacts_root / f"CIK{cik10}.json" if cik10 else None
         facts_input: dict[str, Any] = {"ticker": ticker, "quarter": quarter}
+        if facts_path and not facts_path.exists() and ticker:
+            fallback_path = _fallback_facts_path(ticker, fallback_root)
+            if fallback_path.exists():
+                companyfacts_root.mkdir(parents=True, exist_ok=True)
+                write_text_atomic(facts_path, fallback_path.read_text(encoding="utf-8"))
+                fallback_cached += 1
         if facts_path and facts_path.exists():
             cached += 1
             facts_input.update(
@@ -69,6 +119,7 @@ def build_pre_llm_from_companyfacts_cache(
     summary = {
         "universe_rows": len(universe_rows),
         "companyfacts_cached": cached,
+        "companyfacts_fallback_cached": fallback_cached,
         "pre_llm_scored": sum(1 for row in scored if row.get("pre_llm_fundamental_bucket") != "not_scored"),
         "pre_llm_not_scored": sum(1 for row in scored if row.get("pre_llm_fundamental_bucket") == "not_scored"),
     }
@@ -106,9 +157,21 @@ def attach_entry_prices(
     needs = [row for row in rows if row.get("ticker") and row.get("tradable_date") and not row.get("entry_open")]
     tickers = sorted({str(row["ticker"]).upper() for row in needs})
     dates = [str(row["tradable_date"]) for row in needs]
+    required_start_by_ticker: dict[str, str] = {}
+    for row in needs:
+        ticker = str(row["ticker"]).upper()
+        tradable_date = str(row["tradable_date"])
+        if ticker not in required_start_by_ticker or tradable_date < required_start_by_ticker[ticker]:
+            required_start_by_ticker[ticker] = tradable_date
     # Yahoo-style providers treat end as exclusive; request one extra calendar day so as_of opens are available.
     end_exclusive = (date.fromisoformat(as_of) + timedelta(days=1)).isoformat()
-    price_rows = price_provider(tickers, start=min(dates), end=end_exclusive) if tickers and dates else []
+    if tickers and dates:
+        kwargs = {"start": min(dates), "end": end_exclusive}
+        if _accepts_required_start_by_ticker(price_provider):
+            kwargs["required_start_by_ticker"] = required_start_by_ticker
+        price_rows = price_provider(tickers, **kwargs)
+    else:
+        price_rows = []
     rows_by_ticker: dict[str, list[dict[str, Any]]] = {}
     for item in price_rows:
         ticker = str(item.get("ticker", "")).upper()
@@ -140,3 +203,14 @@ def attach_entry_prices(
         output.append(out)
     summary = {"rows": len(rows), "entry_open_ready": len(rows) - len(quarantine), "missing_entry_open": len(quarantine)}
     return output, quarantine, summary
+
+
+def _accepts_required_start_by_ticker(price_provider: Callable[..., list[dict[str, Any]]]) -> bool:
+    try:
+        parameters = inspect.signature(price_provider).parameters.values()
+    except (TypeError, ValueError):
+        return False
+    return any(
+        parameter.kind == inspect.Parameter.VAR_KEYWORD or parameter.name == "required_start_by_ticker"
+        for parameter in parameters
+    )

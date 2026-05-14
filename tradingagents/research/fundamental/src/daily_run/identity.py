@@ -40,9 +40,9 @@ def resolve_ticker_identity(
     ticker: str,
     *,
     master_row: Mapping[str, Any] | None = None,
-    local_sec_ticker_rows: Iterable[Mapping[str, Any]] | None = None,
-    refreshed_sec_ticker_rows: Iterable[Mapping[str, Any]] | None = None,
-    complete_panel_rows: Iterable[Mapping[str, Any]] | None = None,
+    local_sec_ticker_rows: Any = None,
+    refreshed_sec_ticker_rows: Any = None,
+    complete_panel_rows: Any = None,
     local_sec_facts: Mapping[str, Mapping[str, Any]] | None = None,
     sec_direct_lookup: IdentityLookup | None = None,
 ) -> IdentityResolution:
@@ -73,7 +73,10 @@ def resolve_ticker_identity(
             return resolved
 
     if sec_direct_lookup is not None:
-        direct = sec_direct_lookup(canonical)
+        try:
+            direct = sec_direct_lookup(canonical)
+        except Exception as exc:  # noqa: BLE001 - identity lookup failure should reject one ticker, not crash the run.
+            return _unresolved(canonical, "ticker_or_name_unresolved", f"SEC direct lookup failed: {exc}")
         if direct:
             resolved = _resolved_from_payload(canonical, direct, status="resolved_from_sec_direct", source_label="SEC direct lookup/search")
             if resolved:
@@ -91,8 +94,8 @@ def _resolve_from_row(row: Mapping[str, Any] | None, canonical: str, *, status: 
     return _resolved_from_payload(canonical, row, status=status, source_label=source_label)
 
 
-def _resolve_from_rows(rows: Iterable[Mapping[str, Any]], canonical: str, *, status: str, source_label: str) -> IdentityResolution | None:
-    for row in rows:
+def _resolve_from_rows(rows: Any, canonical: str, *, status: str, source_label: str) -> IdentityResolution | None:
+    for row in load_sec_ticker_rows(rows):
         resolved = _resolve_from_row(row, canonical, status=status, source_label=source_label)
         if resolved:
             return resolved
@@ -113,7 +116,12 @@ def _resolved_from_payload(canonical: str, payload: Mapping[str, Any], *, status
     sec_ticker = _normalize_external_ticker(payload.get("sec_ticker") or payload.get("ticker") or payload.get("symbol") or canonical)
     yahoo_ticker = _normalize_external_ticker(payload.get("yahoo_ticker") or payload.get("ticker") or payload.get("symbol") or canonical)
     cik = _clean_text(payload.get("cik") or payload.get("cik_str"))
-    company_title = _clean_text(payload.get("company_title") or payload.get("title") or payload.get("entityName"))
+    company_title = _clean_text(
+        payload.get("company_title")
+        or payload.get("title")
+        or payload.get("entityName")
+        or payload.get("name")
+    )
     if not cik or not company_title:
         return None
     alias_reason = _alias_reason(canonical, sec_ticker=sec_ticker, yahoo_ticker=yahoo_ticker, source_label=source_label)

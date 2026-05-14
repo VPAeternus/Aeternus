@@ -128,6 +128,34 @@ def test_sec_ticker_rows_load_from_numeric_key_dict_and_fields_data_array():
     assert fields_rows == [{"ticker": "BRK.B", "cik": "1067983", "company_title": "Berkshire Hathaway Inc."}]
 
 
+def test_sec_exchange_fields_data_name_resolves_company_title():
+    result = resolve_ticker_identity(
+        "AAPL",
+        refreshed_sec_ticker_rows={
+            "fields": ["ticker", "cik", "name"],
+            "data": [["AAPL", 320193, "Apple Inc."]],
+        },
+    )
+
+    assert result.identity_status == "resolved_from_refreshed_sec_ticker_map"
+    assert result.cik == "320193"
+    assert result.company_title == "Apple Inc."
+
+
+def test_raw_numeric_sec_payload_can_be_passed_directly_to_resolver():
+    result = resolve_ticker_identity(
+        "AAPL",
+        local_sec_ticker_rows={
+            "0": {"ticker": "AAPL", "cik_str": "320193", "title": "Apple Inc."},
+            "1": "skip-me",
+        },
+    )
+
+    assert result.identity_status == "resolved_from_sec_ticker_map"
+    assert result.cik == "320193"
+    assert result.company_title == "Apple Inc."
+
+
 def test_canonical_ticker_normalizes_dot_and_slash_for_lookup():
     result = resolve_ticker_identity(
         "BRK.B",
@@ -209,6 +237,17 @@ def test_direct_blank_positive_payload_does_not_resolve():
     assert result.rejection_reason == "no local SEC identity match and SEC direct lookup returned nothing"
     assert result.cik == ""
     assert result.company_title == ""
+
+
+def test_direct_lookup_exception_returns_clear_unresolved_reason():
+    def broken_lookup(symbol):
+        raise RuntimeError("SEC unavailable")
+
+    result = resolve_ticker_identity("MISSING", sec_direct_lookup=broken_lookup)
+
+    assert result.identity_status == "ticker_or_name_unresolved"
+    assert result.rejection_reason == "SEC direct lookup failed: SEC unavailable"
+    assert result.cik == ""
 
 
 def test_unresolved_ticker_returns_clear_plain_reason():

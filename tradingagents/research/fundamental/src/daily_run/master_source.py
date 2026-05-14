@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any, Mapping
 
-from .artifacts import write_json_atomic
+from .artifacts import write_json_atomic, write_text_atomic
 
 
 START_FILE = Path("tradingagents/research/fundamental/data/master_fundamental_universe_start_2021Q4.json")
@@ -78,3 +78,13 @@ def materialize_master_universe(*, output_root: Path, start_path: Path = START_F
     out_path = output_root / "master_fundamental_universe_2021Q4_active.json"
     write_json_atomic(out_path, {"items": rows, "source": start_path.name, "additions_source": additions_path.name if additions_path.exists() else "", "count": len(rows)})
     return out_path
+
+
+def append_master_additions(rows: list[Mapping[str, Any]], *, additions_path: Path = ADDITIONS_LEDGER) -> Path:
+    existing = additions_path.read_text(encoding="utf-8") if additions_path.exists() else ""
+    lines = [existing.rstrip("\n")] if existing.strip() else []
+    for row in rows:
+        coerced = _coerce_row(row)
+        if coerced is not None:
+            lines.append(json.dumps(coerced, sort_keys=True, default=str))
+    return write_text_atomic(additions_path, "\n".join(line for line in lines if line) + ("\n" if lines else ""))

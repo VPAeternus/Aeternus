@@ -4,7 +4,7 @@
 
 **Goal:** Make `fundamental-run-today` perform the full daily process from the master 2021Q4 SEC-evidence start list through Top 10 + Plus 5 + shadow refill, including automatic evidence/price checks and LLM evidence recovery inside the daily run.
 
-**Architecture:** Do not create a new pipeline. Keep `tradingagents/research/fundamental/src/daily_run/orchestrator.py` as the main daily orchestrator. Add small helper modules under `tradingagents/research/fundamental/src/daily_run/` for identity resolution, price cache writeback, and LLM evidence recovery, then call them from existing gates.
+**Architecture:** Do not create a new pipeline. Keep `tradingagents/research/fundamental/src/daily_run/orchestrator.py` as the main daily orchestrator. Add small helper modules under `tradingagents/research/fundamental/src/daily_run/` for identity resolution, price cache writeback, and daily status output. Keep LLM evidence recovery inside the existing orchestrator gates so there is one daily control path.
 
 **Tech Stack:** Python 3.x, Typer, pytest, existing `daily_run`, `sec_pipeline`, `ingest`, `features`, `panel`, and `selection` modules, local SEC cache, local Yahoo price cache.
 
@@ -272,7 +272,7 @@ Create:
   - Cache-first Yahoo price loading and writeback for the main daily price path.
   - Batch fetch missing rows and save successful batches immediately.
 
-- `tradingagents/research/fundamental/src/daily_run/llm_evidence_recovery.py`
+- `tradingagents/research/fundamental/src/daily_run/orchestrator.py`
   - Recover/fetch/materialize evidence for LLM-required rows inside the daily run.
   - Input includes both Gate 7 LLM quarantine rows and Gate 8 empty-packet rows.
 
@@ -284,7 +284,6 @@ Tests:
 - `tests/test_fundamental_daily_master_source.py`
 - `tests/test_fundamental_daily_identity_resolution.py`
 - `tests/test_fundamental_daily_price_cache.py`
-- `tests/test_fundamental_daily_llm_evidence_recovery.py`
 - `tests/test_fundamental_daily_status.py`
 - Extend `tests/test_cli_fundamental_run_today.py`
 - Extend `tests/test_fundamental_daily_orchestrator_contract.py`
@@ -565,13 +564,13 @@ Expected: pass.
 
 ---
 
-## Task 6: Add LLM Evidence Recovery Helper Inside Daily Run
+## Task 6: Add LLM Evidence Recovery Inside Daily Run
 
 **Files:**
 
-- Create: `tradingagents/research/fundamental/src/daily_run/llm_evidence_recovery.py`
+- Modify: `tradingagents/research/fundamental/src/daily_run/orchestrator.py`
 - Modify: `tradingagents/research/fundamental/src/daily_run/coverage.py`
-- Test: `tests/test_fundamental_daily_llm_evidence_recovery.py`
+- Test: `tests/test_fundamental_daily_orchestrator_contract.py`
 
 - [ ] **Step 1: Write failing tests**
 
@@ -589,11 +588,11 @@ Cases:
 
 Run:
 
-`python3 -m pytest tests/test_fundamental_daily_llm_evidence_recovery.py -q`
+`python3 -m pytest tests/test_fundamental_daily_orchestrator_contract.py -q`
 
-Expected: fail because helper does not exist.
+Expected: fail until Gate 7 recovery and Gate 8 empty-packet recovery are wired.
 
-- [ ] **Step 3: Implement helper**
+- [ ] **Step 3: Implement recovery logic**
 
 Input:
 
@@ -817,7 +816,7 @@ Expected: pass.
 
 Run:
 
-`python3 -m pytest tests/test_cli_fundamental_run_today.py tests/test_fundamental_daily_master_source.py tests/test_fundamental_daily_identity_resolution.py tests/test_fundamental_daily_price_cache.py tests/test_fundamental_daily_llm_evidence_recovery.py tests/test_fundamental_daily_status.py tests/test_fundamental_daily_universe_gate.py tests/test_fundamental_daily_orchestrator_contract.py -q`
+`python3 -m pytest tests/test_cli_fundamental_run_today.py tests/test_fundamental_daily_master_source.py tests/test_fundamental_daily_identity_resolution.py tests/test_fundamental_daily_price_cache.py tests/test_fundamental_daily_status.py tests/test_fundamental_daily_universe_gate.py tests/test_fundamental_daily_orchestrator_contract.py -q`
 
 Expected: pass.
 
@@ -833,7 +832,7 @@ Expected: pass.
 
 Run:
 
-`python3 -m py_compile tradingagents/research/fundamental/src/daily_run/identity.py tradingagents/research/fundamental/src/daily_run/price_cache.py tradingagents/research/fundamental/src/daily_run/llm_evidence_recovery.py tradingagents/research/fundamental/src/daily_run/orchestrator.py tradingagents/research/fundamental/src/cli/commands.py`
+`python3 -m py_compile tradingagents/research/fundamental/src/daily_run/identity.py tradingagents/research/fundamental/src/daily_run/price_cache.py tradingagents/research/fundamental/src/daily_run/orchestrator.py tradingagents/research/fundamental/src/cli/commands.py`
 
 Expected: pass.
 
@@ -892,3 +891,20 @@ Expected:
 - LLM-required rows get evidence recovery inside the daily run before Gate 8 hard-stop.
 - Top 10 + Plus 5 + shadow refill are published only from broad final scores.
 - Every rejected or blocked ticker has a plain reason in a status file.
+
+## Implementation Completion Note - 2026-05-14
+
+- Done: new dealflow tickers are resolved before Gate 2 and unresolved new names are rejected before scoring.
+- Done: the current-quarter master JSON is the full combined daily list, not only additions, and later SEC steps use that combined JSON.
+- Done: daily price lookup is cache-first, live fetches only missing tickers, and fetched rows are saved to run/shared caches.
+- Done: companyfacts fallback copies shared `facts_TICKER.json` into the live daily companyfacts folder before coverage/scoring.
+- Done: LLM evidence recovery is inside the daily run; it uses SEC raw document caches, materializes recovered docs to the live folder, and only calls SEC fetch when a queue exists or a fetch service is provided.
+- Done: Gate 8 now retries packet build after empty-evidence packet recovery before hard-stopping.
+- Done: Gate 7 now hard-stops broad-final runs if LLM-required rows still have missing evidence after recovery.
+- Done: the daily run writes `daily_ticker_status.csv` with plain status/reason columns.
+- Done: Top10 + Plus5 + shadow publish receives coverage gating when a coverage manifest exists.
+- Done: default identity resolution now checks trusted panel fallback and supports SEC direct lookup before rejecting a new dealflow ticker.
+- Done: daily price cache logic now treats stale/partial cached rows as incomplete for the required entry-date window and fetches the missing range when live fetch is allowed.
+- Done: resolved dealflow additions are written to the persistent additions ledger only after the ticker appears in final scored rows.
+- Verification: `python3 -m pytest tests/test_fundamental_daily_*.py tests/test_fundamental_review_list_filter.py tests/test_cli_fundamental_run_today.py tests/test_fundamental_architecture_contract.py tests/test_fundamental_no_growth_output_ownership.py -q` -> 114 passed.
+- Verification: `python3 -m py_compile` on touched daily-run modules -> passed.

@@ -2925,3 +2925,16 @@
   - compile: `cli`, `tradingagents`, and `tests` passed
   - primary removed-identifier grep passed clean for retired pre-fundamental scoring artifacts outside ignored generated/vendor/cache outputs
 - Caveat: repository still has unrelated pre-existing dirty/untracked outputs and fundamental/parser files; they were not reverted.
+
+## Current fundamental daily orchestration state - 2026-05-14
+
+- Implemented remaining main daily orchestration fixes directly in worktree `feature/fundamental-daily-main-orchestration`.
+- New daily dealflow tickers are resolved before Gate 2; unresolved names are written to `dealflow_identity_rejections.csv` and stay out of scoring.
+- Current-quarter master JSON now contains the full combined daily list and is passed into later SEC coverage steps.
+- Price lookup is cache-first, fetches only missing names, and writes fetched prices to run/shared caches.
+- Shared SEC companyfacts and raw document caches are recovered inside the daily run before scoring/LLM packet hard-stops.
+- Daily run writes `daily_ticker_status.csv` with one row per ticker and plain rejection/status reasons.
+- Top10 + Plus5 + shadow publish receives coverage gating when coverage manifest exists.
+- Broad-final Gate 7 now hard-stops if any LLM-required row still has missing evidence after recovery.
+- Persistent master additions ledger now saves only new dealflow tickers that actually appear in final scored rows after successful publish.
+- Verification: full daily/review/CLI/architecture suite `114 passed, 2 warnings`; touched daily-run modules compile; `git diff --check` passed; final `codex review --uncommitted` found no actionable defects.

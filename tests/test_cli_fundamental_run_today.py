@@ -53,7 +53,7 @@ def test_fundamental_run_today_defaults_to_start_plus_additions(monkeypatch, tmp
         out.write_text(json.dumps({"items": [{"ticker": "AAA"}]}), encoding="utf-8")
         return out
 
-    def fake_build_combined_universe(*, master_universe_path, handoff_path, quarter, output_csv):
+    def fake_build_combined_universe(*, master_universe_path, handoff_path, quarter, output_csv, **kwargs):
         output_csv.write_text("ticker,quarter\nAAA,2026Q2\n", encoding="utf-8")
         return type(
             "Universe",
