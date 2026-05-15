@@ -57,6 +57,7 @@ class DailyRunConfig:
     review_price_cache_path: Path | None = None
     review_allow_live_price_fetch: bool = True
     allow_missing_handoff: bool = False
+    dealflow_backlog_days: int = 7
     allow_date_quarter_mismatch: bool = False
     master_additions_ledger_path: Path | None = None
     identity_complete_panel_path: Path | None = None

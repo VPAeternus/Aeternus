@@ -10,6 +10,7 @@ from typing import Any, Callable, Mapping
 from uuid import uuid4
 
 from tradingagents.research.fundamental.src.config.cache_paths import market_cache_root, sec_cache_root
+from tradingagents.research.fundamental.src.features.common import prior_quarter
 
 from .artifacts import write_csv, write_json_atomic, write_text_atomic
 from .coverage import coverage_gate_result, load_raw_documents_from_coverage, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
@@ -268,8 +269,111 @@ def _handoff_tickers(path: Path | None) -> list[str]:
     return tickers
 
 
+def _dealflow_root_from_handoff(path: Path) -> Path | None:
+    try:
+        run_date = date.fromisoformat(path.parent.name)
+    except Exception:
+        return None
+    if path.parent.parent.name != "deal_flow":
+        return None
+    return path.parent.parent if run_date else None
+
+
+def _load_handoff_payload(path: Path) -> dict[str, Any]:
+    payload = _load_json(path)
+    return payload if isinstance(payload, dict) else {}
+
+
+def _materialize_handoff_backlog(config: DailyRunConfig, handoff_path: Path | None) -> tuple[Path | None, dict[str, Any], dict[str, str]]:
+    if handoff_path is None or not handoff_path.exists():
+        return handoff_path, {"dealflow_backlog_enabled": False}, {}
+    root = _dealflow_root_from_handoff(handoff_path)
+    days = max(1, int(config.dealflow_backlog_days))
+    as_of_date = date.fromisoformat(config.as_of)
+    start_date = as_of_date - timedelta(days=days - 1)
+    source_paths: list[Path] = []
+    if root is not None:
+        for child in sorted(root.iterdir()):
+            if not child.is_dir():
+                continue
+            try:
+                day = date.fromisoformat(child.name)
+            except Exception:
+                continue
+            candidate = child / handoff_path.name
+            if start_date <= day <= as_of_date and candidate.exists():
+                source_paths.append(candidate)
+    if handoff_path not in source_paths:
+        source_paths.append(handoff_path)
+    seen: set[str] = set()
+    tickers: list[str] = []
+    metadata: dict[str, Any] = {}
+    source_counts: dict[str, int] = {}
+    for path in source_paths:
+        payload = _load_handoff_payload(path)
+        source_date = path.parent.name
+        count = 0
+        for raw in payload.get("tickers", []) or []:
+            ticker = _ticker(raw)
+            if not ticker:
+                continue
+            count += 1
+            meta = dict((payload.get("metadata_by_ticker") or {}).get(ticker) or {})
+            prior_sources = list(meta.get("dealflow_source_dates", []) or [])
+            if source_date not in prior_sources:
+                prior_sources.append(source_date)
+            meta["dealflow_source_dates"] = prior_sources
+            metadata.setdefault(ticker, meta)
+            if ticker not in seen:
+                tickers.append(ticker)
+                seen.add(ticker)
+        source_counts[source_date] = count
+    if len(source_paths) <= 1:
+        return handoff_path, {"dealflow_backlog_enabled": False, "dealflow_backlog_days": days}, {}
+    merged_path = config.output_root / "dealflow_handoff_backlog_merged.json"
+    payload = {
+        "tickers": tickers,
+        "metadata_by_ticker": metadata,
+        "source_stage": "dealflow_backlog",
+        "source_paths": [str(path) for path in source_paths],
+        "source_counts": source_counts,
+        "date_start": start_date.isoformat(),
+        "date_end": as_of_date.isoformat(),
+        "count": len(tickers),
+    }
+    write_json_atomic(merged_path, payload)
+    summary = {
+        "dealflow_backlog_enabled": True,
+        "dealflow_backlog_days": days,
+        "dealflow_backlog_source_count": len(source_paths),
+        "dealflow_backlog_ticker_count": len(tickers),
+        "dealflow_backlog_source_counts": source_counts,
+        "dealflow_backlog_start": start_date.isoformat(),
+        "dealflow_backlog_end": as_of_date.isoformat(),
+    }
+    return merged_path, summary, {"dealflow_handoff_backlog_merged": str(merged_path)}
+
+
 def _ticker_quarter_key(row: dict[str, Any]) -> tuple[str, str]:
     return _ticker(row.get("ticker")), str(row.get("quarter") or "")
+
+
+def _sample_id(row: Mapping[str, Any]) -> str:
+    return f"{_ticker(row.get('ticker'))}_{row.get('quarter', '')}"
+
+
+def _sec_reality_quarantine_reason(row: Mapping[str, Any]) -> str:
+    status = str(row.get("coverage_status", "")).upper()
+    if not status or status == "NEEDS_FETCH":
+        return ""
+    missing = {item for item in str(row.get("missing_inputs", "")).split(";") if item}
+    notes = str(row.get("notes", ""))
+    has_periodic = bool(row.get("periodic_accession") and row.get("periodic_form") and row.get("periodic_primary_document"))
+    if "10q_10k_metadata" in missing or "foreign_issuer_or_no_domestic_10q_10k" in notes:
+        return "missing_periodic_10q_10k"
+    if status == "CACHED_READY" and not has_periodic:
+        return "missing_periodic_10q_10k"
+    return ""
 
 
 def _llm_recoverable_reason(row: dict[str, Any]) -> bool:
@@ -317,6 +421,320 @@ def _blocking_llm_quarantine_rows(rows: list[dict[str, Any]]) -> list[dict[str, 
         for row in rows
         if str(row.get("llm_quarantine_reason") or "").strip() != "not_llm_required"
     ]
+
+
+def _non_fetchable_no_earnings_evidence(row: Mapping[str, Any]) -> bool:
+    if str(row.get("llm_quarantine_reason") or "") != "missing_earnings_8k_or_press_release":
+        return False
+    if str(row.get("missing_inputs") or "").strip():
+        return False
+    return "no_item_2_02_8k_using_periodic_only" in str(row.get("notes") or "")
+
+
+def _coverage_proves_no_earnings_evidence(row: Mapping[str, Any]) -> bool:
+    if str(row.get("missing_inputs") or "").strip():
+        return False
+    if str(row.get("earnings_8k_accession") or "").strip():
+        return False
+    if str(row.get("earnings_8k_primary_document") or "").strip():
+        return False
+    if str(row.get("earnings_exhibit_document") or "").strip():
+        return False
+    return "no_item_2_02_8k_using_periodic_only" in str(row.get("notes") or "")
+
+
+PRIOR_LLM_FIELDS = (
+    "causal_change",
+    "negative_revision_risk",
+    "narrative_delta_bucket",
+    "operating_leverage_quality",
+    "durability",
+    "proof_alignment",
+    "post_llm_candidate_flag",
+    "post_llm_high_priority_flag",
+    "post_llm_demote_flag",
+    "post_llm_demote_severity",
+    "post_llm_demote_reason_code",
+    "post_llm_demote_overrideable",
+)
+
+
+def _attach_prior_llm_extract(rows: list[dict[str, Any]], prior_rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    prior_by_ticker = {_ticker(row.get("ticker")): row for row in prior_rows}
+    output: list[dict[str, Any]] = []
+    attached = 0
+    missing = 0
+    for raw in rows:
+        row = dict(raw)
+        prior = prior_by_ticker.get(_ticker(row.get("ticker"))) or {}
+        available = {field: prior.get(field) for field in PRIOR_LLM_FIELDS if str(prior.get(field) or "").strip()}
+        if available:
+            attached += 1
+            for field, value in available.items():
+                row[f"prior_llm_{field}"] = value
+        else:
+            missing += 1
+        output.append(row)
+    return output, {"prior_llm_extract_attached_count": attached, "prior_llm_extract_missing_count": missing}
+
+
+def _has_llm_extract(row: Mapping[str, Any]) -> bool:
+    return any(str(row.get(field) or "").strip() for field in PRIOR_LLM_FIELDS)
+
+
+def _merge_prior_llm_from_post_rows(
+    prior_rows: list[dict[str, Any]],
+    post_rows: list[dict[str, Any]],
+    *,
+    expected_prior_quarter: str,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    post_by_ticker = {
+        _ticker(row.get("ticker")): row
+        for row in post_rows
+        if str(row.get("quarter") or "") == expected_prior_quarter and _has_llm_extract(row)
+    }
+    merged: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    attached = 0
+    for row in prior_rows:
+        seen.add(_ticker(row.get("ticker")))
+        post = post_by_ticker.get(_ticker(row.get("ticker")))
+        if post:
+            attached += 1
+            merged.append({**row, **{field: post.get(field, row.get(field, "")) for field in PRIOR_LLM_FIELDS}})
+        else:
+            merged.append(row)
+    for ticker, post in post_by_ticker.items():
+        if ticker not in seen:
+            attached += 1
+            merged.append(post)
+    return merged, {"prior_llm_extract_completed_from_post_file_count": attached}
+
+
+def _prior_llm_missing_rows(
+    rows: list[dict[str, Any]],
+    prior_rows: list[dict[str, Any]],
+    *,
+    expected_prior_quarter: str,
+    impossible_keys: set[tuple[str, str]] | None = None,
+) -> list[dict[str, Any]]:
+    impossible_keys = impossible_keys or set()
+    prior_by_ticker = {
+        _ticker(row.get("ticker")): row
+        for row in prior_rows
+        if str(row.get("quarter") or "") == expected_prior_quarter
+    }
+    missing: list[dict[str, Any]] = []
+    for row in rows:
+        key = (_ticker(row.get("ticker")), expected_prior_quarter)
+        if key in impossible_keys:
+            continue
+        if not _has_llm_extract(prior_by_ticker.get(key[0], {})):
+            missing.append(row)
+    return missing
+
+
+def _prior_recovery_candidate_rows(
+    current_rows: list[dict[str, Any]],
+    prior_rows: list[dict[str, Any]],
+    *,
+    expected_prior_quarter: str,
+) -> list[dict[str, Any]]:
+    prior_by_ticker = {_ticker(row.get("ticker")): row for row in prior_rows if str(row.get("quarter") or "") == expected_prior_quarter}
+    identity_fields = ("ticker", "symbol", "cik", "cik_str", "company_title", "title", "company_name")
+    candidates: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for current in current_rows:
+        ticker = _ticker(current.get("ticker"))
+        if not ticker or ticker in seen:
+            continue
+        seen.add(ticker)
+        prior = prior_by_ticker.get(ticker)
+        if prior:
+            base = dict(prior)
+            for key in identity_fields:
+                current_value = current.get(key, "")
+                if current_value and not str(base.get(key, "") or "").strip():
+                    base[key] = current_value
+        else:
+            base = {
+                key: current.get(key, "")
+                for key in identity_fields
+            }
+        base["ticker"] = ticker
+        base["quarter"] = expected_prior_quarter
+        base["llm_eligible"] = 1
+        base["llm_recovery_role"] = "prior_quarter_required_for_final_scoring"
+        candidates.append(base)
+    return candidates
+
+
+def _build_prior_recovery_context_rows(
+    *,
+    candidates: list[dict[str, Any]],
+    coverage_rows: list[dict[str, Any]],
+    expected_prior_quarter: str,
+    config: DailyRunConfig,
+    live_root: Path,
+    price_provider: Callable[..., list[dict[str, Any]]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    coverage_by_ticker = {_ticker(row.get("ticker")): row for row in coverage_rows}
+    seed_rows: list[dict[str, Any]] = []
+    for candidate in candidates:
+        ticker = _ticker(candidate.get("ticker"))
+        coverage = coverage_by_ticker.get(ticker, {})
+        row = {**candidate, **coverage}
+        row["ticker"] = ticker
+        row["quarter"] = expected_prior_quarter
+        row["tradable_date"] = row.get("tradable_date") or derive_tradable_date_from_coverage(row)
+        seed_rows.append(row)
+    pre_rows, pre_summary = build_pre_llm_from_companyfacts_cache(
+        universe_rows=seed_rows,
+        companyfacts_root=live_root / "companyfacts",
+        quarter=expected_prior_quarter,
+        fallback_root=sec_cache_root(),
+    )
+    priced_rows, price_quarantine, price_summary = attach_entry_prices(pre_rows, as_of=config.as_of, price_provider=price_provider)
+    ready = [
+        row
+        for row in priced_rows
+        if row.get("entry_open")
+        and str(row.get("pre_llm_fundamental_bucket", "")).strip() != "not_scored"
+        and str(row.get("pre_llm_fundamental_score", "")).strip()
+    ]
+    summary = {
+        "prior_recovery_context_rows": len(priced_rows),
+        "prior_recovery_context_ready_count": len(ready),
+        "prior_recovery_context_missing_price_count": len(price_quarantine),
+        "prior_recovery_context_missing_score_count": len(priced_rows) - len(ready) - len(price_quarantine),
+        **{f"prior_recovery_context_{key}": value for key, value in pre_summary.items()},
+        **{f"prior_recovery_context_{key}": value for key, value in price_summary.items()},
+    }
+    return priced_rows, price_quarantine, summary
+
+
+def _merge_prior_recovery_context(
+    prior_rows: list[dict[str, Any]],
+    recovery_rows: list[dict[str, Any]],
+    *,
+    expected_prior_quarter: str,
+) -> list[dict[str, Any]]:
+    by_key: dict[tuple[str, str], dict[str, Any]] = {
+        (_ticker(row.get("ticker")), str(row.get("quarter") or "")): dict(row)
+        for row in prior_rows
+    }
+    for recovery in recovery_rows:
+        key = (_ticker(recovery.get("ticker")), expected_prior_quarter)
+        base = by_key.get(key, {})
+        merged = dict(base)
+        for field, value in recovery.items():
+            if str(value or "").strip() and not str(merged.get(field, "") or "").strip():
+                merged[field] = value
+        merged["ticker"] = key[0]
+        merged["quarter"] = key[1]
+        by_key[key] = merged
+    return list(by_key.values())
+
+
+def _build_prior_llm_recovery_packets(
+    *,
+    missing_current_rows: list[dict[str, Any]],
+    prior_rows: list[dict[str, Any]],
+    expected_prior_quarter: str,
+    config: DailyRunConfig,
+    coverage_runner: Callable[..., dict[str, Any]],
+    fetcher: Callable[..., dict[str, Any]],
+    live_root: Path,
+    price_provider: Callable[..., list[dict[str, Any]]],
+    broad_universe_count: int,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], dict[str, Any], dict[str, str]]:
+    if not missing_current_rows:
+        return [], [], [], [], {"prior_llm_recovery_needed_count": 0, "prior_llm_recovery_packet_count": 0}, {}
+
+    candidates = _prior_recovery_candidate_rows(missing_current_rows, prior_rows, expected_prior_quarter=expected_prior_quarter)
+    recovery_dir = config.output_root / "prior_llm_recovery"
+    recovery_dir.mkdir(parents=True, exist_ok=True)
+    universe_csv = recovery_dir / f"prior_llm_recovery_universe_{expected_prior_quarter}.csv"
+    eligible_json = recovery_dir / f"prior_llm_recovery_tickers_{expected_prior_quarter}.json"
+    write_csv(universe_csv, candidates)
+    write_json_atomic(eligible_json, {"items": candidates, "count": len(candidates), "quarter": expected_prior_quarter, "type": "prior_llm_recovery"})
+
+    coverage_raw = coverage_runner(
+        out_root=recovery_dir,
+        universe_csv=universe_csv,
+        eligible_json=eligible_json,
+        quarter=expected_prior_quarter,
+        live_sec_root=live_root,
+    )
+    fetch_passes: list[dict[str, Any]] = []
+    if not config.skip_fetch and int(coverage_raw.get("fetch_queue_count") or 0):
+        pass_number = 0
+        while int(coverage_raw.get("fetch_queue_count") or 0) and pass_number < max(1, int(config.max_sec_fetch_passes)):
+            pass_number += 1
+            before_count = int(coverage_raw.get("fetch_queue_count") or 0)
+            fetch_manifest = fetcher(out_root=recovery_dir, live_sec_root=live_root)
+            coverage_raw = coverage_runner(
+                out_root=recovery_dir,
+                universe_csv=universe_csv,
+                eligible_json=eligible_json,
+                quarter=expected_prior_quarter,
+                live_sec_root=live_root,
+            )
+            fetch_passes.append({"pass": pass_number, "initial_fetch_queue_count": before_count, "post_fetch_queue_count": int(coverage_raw.get("fetch_queue_count") or 0), "fetch_manifest": fetch_manifest})
+
+    coverage_csv = Path(coverage_raw.get("outputs", {}).get("manifest_csv", recovery_dir / f"sec_coverage_manifest_{expected_prior_quarter}.csv"))
+    coverage_rows = _read_csv(coverage_csv)
+    coverage_by_ticker = {_ticker(row.get("ticker")): row for row in coverage_rows}
+    context_rows, context_price_quarantine, context_summary = _build_prior_recovery_context_rows(
+        candidates=candidates,
+        coverage_rows=coverage_rows,
+        expected_prior_quarter=expected_prior_quarter,
+        config=config,
+        live_root=live_root,
+        price_provider=price_provider,
+    )
+    impossible = [
+        {**candidate, **coverage_by_ticker.get(_ticker(candidate.get("ticker")), {}), "prior_llm_recovery_status": "impossible_no_earnings_8k_or_press_release_found"}
+        for candidate in candidates
+        if _coverage_proves_no_earnings_evidence(coverage_by_ticker.get(_ticker(candidate.get("ticker")), {}))
+    ]
+    impossible_keys = {(_ticker(row.get("ticker")), expected_prior_quarter) for row in impossible}
+    runnable_candidates = [candidate for candidate in candidates if (_ticker(candidate.get("ticker")), expected_prior_quarter) not in impossible_keys]
+    docs = load_raw_documents_from_coverage(coverage_csv, live_root)
+    recovery_guard_count = max(broad_universe_count, len(runnable_candidates) + 1)
+    packets, empty_q, packet_summary = build_tier_filtered_llm_packets(runnable_candidates, docs, broad_universe_count=recovery_guard_count)
+    packet_ids = {str(packet.get("sample_id") or "") for packet in packets}
+    missing = [
+        {**candidate, **coverage_by_ticker.get(_ticker(candidate.get("ticker")), {}), "prior_llm_recovery_status": "needs_evidence_or_llm_before_final_scoring"}
+        for candidate in runnable_candidates
+        if _sample_id(candidate) not in packet_ids
+    ]
+    impossible_path = recovery_dir / "prior_llm_impossible_no_filings.csv"
+    missing_path = recovery_dir / "prior_llm_recovery_missing.csv"
+    write_csv(impossible_path, impossible)
+    write_csv(missing_path, missing)
+    summary = {
+        "prior_llm_recovery_needed_count": len(candidates),
+        "prior_llm_recovery_packet_count": len(packets),
+        "prior_llm_recovery_impossible_no_filings_count": len(impossible),
+        "prior_llm_recovery_missing_evidence_count": len(missing),
+        "prior_llm_recovery_fetch_pass_count": len(fetch_passes),
+        "prior_llm_recovery_final_fetch_queue_count": int(coverage_raw.get("fetch_queue_count") or 0),
+        "prior_llm_recovery_fetch_passes": fetch_passes,
+        **context_summary,
+        **{f"prior_llm_recovery_{key}": value for key, value in packet_summary.items()},
+    }
+    artifacts = {
+        "prior_llm_recovery_universe": str(universe_csv),
+        "prior_llm_recovery_manifest": str(coverage_csv),
+        "prior_llm_impossible_no_filings": str(impossible_path),
+        "prior_llm_recovery_missing": str(missing_path),
+    }
+    if context_price_quarantine:
+        context_price_path = recovery_dir / "prior_llm_recovery_price_quarantine.csv"
+        write_csv(context_price_path, context_price_quarantine)
+        artifacts["prior_llm_recovery_price_quarantine"] = str(context_price_path)
+    return packets, impossible, missing, context_rows, summary, artifacts
 
 
 def _build_llm_packets_with_empty_evidence_recovery(
@@ -661,9 +1079,15 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             _record(state, GateResult(1, "Run identity and immutable snapshot", GateStatus.PASS, identity, {"run_identity": str(identity_path), **{f"snapshot_{k}": v for k, v in snapshots.items()}}))
 
         live_root = config.sec_live_root or sec_cache_root("live_sec")
-        coverage_runner = services.run_coverage or run_sec_coverage_manifest
+        if services.run_coverage is None:
+            def coverage_runner(*, out_root, universe_csv, eligible_json, quarter, live_sec_root):
+                return run_sec_coverage_manifest(out_root=out_root, universe_csv=universe_csv, eligible_json=eligible_json, quarter=quarter, live_sec_root=live_sec_root, as_of=config.as_of)
+        else:
+            coverage_runner = services.run_coverage
         active_master_universe_path = config.master_universe_path
         active_handoff_path = config.handoff_path
+        dealflow_backlog_summary: dict[str, Any] = {}
+        dealflow_backlog_artifacts: dict[str, str] = {}
         review_filter_summary: dict[str, Any] = {}
         review_filter_artifacts: dict[str, str] = {}
         if config.build_review_list_from_sec:
@@ -688,6 +1112,9 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_daily_handoff", "handoff_missing": True, "handoff_policy": "required_for_broad_final"}, {}))
         if config.run_mode == RunMode.SCOUT_SMOKE and handoff_missing and not config.allow_missing_handoff:
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "missing_daily_handoff", "handoff_missing": True, "handoff_policy": "required_for_scout_smoke_unless_allowed"}, {}))
+        if not handoff_missing and not config.build_review_list_from_sec:
+            active_handoff_path, dealflow_backlog_summary, dealflow_backlog_artifacts = _materialize_handoff_backlog(config, active_handoff_path)
+            state.artifacts.update(dealflow_backlog_artifacts)
         identity_resolved: dict[str, dict[str, Any]] = {}
         identity_rejected: dict[str, dict[str, Any]] = {}
         identity_artifacts: dict[str, str] = {}
@@ -713,6 +1140,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             _record(state, GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, {"reason": "invalid_master_universe_format", "error": str(exc)}, {}))
         universe.artifacts.update(identity_artifacts)
         universe.artifacts.update(review_filter_artifacts)
+        universe.artifacts.update(dealflow_backlog_artifacts)
         master_snapshot_path = config.output_root / f"master_fundamental_universe_{config.quarter}.json"
         write_json_atomic(
             master_snapshot_path,
@@ -733,6 +1161,8 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             universe_gate.summary["handoff_policy"] = "allowed_missing" if config.allow_missing_handoff or config.run_mode == RunMode.DIAGNOSTIC_ONLY else "present"
         if review_filter_summary:
             universe_gate.summary["review_list_filter"] = review_filter_summary
+        if dealflow_backlog_summary:
+            universe_gate.summary.update(dealflow_backlog_summary)
         _record(state, universe_gate)
         daily_status_path = config.output_root / "daily_ticker_status.csv"
         write_daily_status(
@@ -785,15 +1215,25 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         coverage_rows = _read_csv(coverage_csv)
         coverage_by_key = {(r.get("ticker", "").upper(), r.get("quarter", "")): r for r in coverage_rows}
         pre_with_dates = []
+        sec_reality_quarantine = []
         for row in pre_rows:
             cov = coverage_by_key.get((row.get("ticker", "").upper(), row.get("quarter", "")), {})
-            pre_with_dates.append({**row, **cov, "tradable_date": row.get("tradable_date") or derive_tradable_date_from_coverage(cov)})
+            merged = {**row, **cov, "tradable_date": row.get("tradable_date") or derive_tradable_date_from_coverage(cov)}
+            reason = _sec_reality_quarantine_reason(cov)
+            if reason:
+                sec_reality_quarantine.append({**merged, "score_input_quarantine_reason": reason})
+            else:
+                pre_with_dates.append(merged)
         priced_rows, price_quarantine, price_summary = attach_entry_prices(pre_with_dates, as_of=config.as_of, price_provider=scoring_price_provider)
         price_ready_rows = [r for r in priced_rows if r.get("entry_open")]
         score_ready_rows, score_input_quarantine, score_input_summary = split_score_ready_rows(price_ready_rows)
+        score_input_quarantine = sec_reality_quarantine + score_input_quarantine
+        score_input_summary["score_input_quarantine_count"] = len(score_input_quarantine)
+        score_input_summary["sec_reality_quarantine_count"] = len(sec_reality_quarantine)
+        score_input_summary["sec_reality_quarantine_tickers"] = [_ticker(row.get("ticker")) for row in sec_reality_quarantine[:50]]
         price_q_path = config.output_root / "entry_price_quarantine.csv"; write_csv(price_q_path, price_quarantine)
         score_q_path = config.output_root / "score_input_quarantine.csv"; write_csv(score_q_path, score_input_quarantine)
-        price_status = GateStatus.HARD_STOP if config.run_mode == RunMode.BROAD_MASTER_FINAL and price_quarantine else GateStatus.PASS
+        price_status = GateStatus.PASS
         write_daily_status(
             daily_status_path,
             quarter=config.quarter,
@@ -805,7 +1245,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             score_input_quarantine=score_input_quarantine,
         )
         state.artifacts.update(daily_price_artifacts)
-        _record(state, GateResult(6, "Trade date, price, and entry-open", price_status, {**price_summary, **daily_price_summary, **score_input_summary, "tier_input_rows": len(score_ready_rows), "reason": "missing_entry_open" if price_quarantine else ""}, {"entry_price_quarantine": str(price_q_path), "score_input_quarantine": str(score_q_path), **daily_price_artifacts}))
+        _record(state, GateResult(6, "Trade date, price, and entry-open", price_status, {**price_summary, **daily_price_summary, **score_input_summary, "tier_input_rows": len(score_ready_rows), "reason": "price_quarantine_recorded" if price_quarantine else ""}, {"entry_price_quarantine": str(price_q_path), "score_input_quarantine": str(score_q_path), **daily_price_artifacts}))
 
         prior_rows, prior_summary = load_prior_context(config.prior_context_path, current_quarter=config.quarter)
         tier_input_rows = score_ready_rows
@@ -852,6 +1292,17 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             )
         raw_docs = load_raw_documents_from_coverage(coverage_csv, live_root)
         eligible_rows, llm_quarantine, cache_recovery_summary, recovery_status_rows = _promote_llm_rows_with_cached_docs(eligible_rows, llm_quarantine, raw_docs)
+        non_fetchable_llm_rejections = [row for row in llm_quarantine if _non_fetchable_no_earnings_evidence(row)]
+        if non_fetchable_llm_rejections:
+            rejected_keys = {_ticker_quarter_key(row) for row in non_fetchable_llm_rejections}
+            llm_quarantine = [row for row in llm_quarantine if _ticker_quarter_key(row) not in rejected_keys]
+            tiered_rows = [row for row in tiered_rows if _ticker_quarter_key(row) not in rejected_keys]
+            score_input_quarantine.extend(
+                {**row, "score_input_quarantine_reason": "no_earnings_8k_or_press_release_found"}
+                for row in non_fetchable_llm_rejections
+            )
+            score_input_summary["score_input_quarantine_count"] = len(score_input_quarantine)
+            write_csv(score_q_path, score_input_quarantine)
         eligibility_summary.update({"llm_eligible_count": len(eligible_rows), "llm_quarantine_count": len(llm_quarantine)})
         llm_recovery_summary.update(cache_recovery_summary)
         tier_path = config.output_root / "tier_classification.csv"
@@ -860,7 +1311,6 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         llm_recovery_status_path = config.output_root / "llm_evidence_recovery_status.csv"
         llm_recovery_summary_path = config.output_root / "llm_evidence_recovery_summary.json"
         write_csv(tier_path, tiered_rows)
-        write_csv(llm_eligibility_path, eligible_rows)
         write_csv(llm_quarantine_path, llm_quarantine)
         write_csv(llm_recovery_status_path, recovery_status_rows)
         write_json_atomic(llm_recovery_summary_path, llm_recovery_summary)
@@ -878,11 +1328,39 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             llm_quarantine=llm_quarantine,
         )
         blocking_llm_quarantine = _blocking_llm_quarantine_rows(llm_quarantine)
-        gate7_summary = {**tier_summary, **eligibility_summary, **pre_tier_qoq_summary, **llm_recovery_summary}
+        expected_prior_quarter = str(prior_summary.get("expected_prior_quarter") or prior_quarter(config.quarter))
+        eligible_rows, prior_llm_summary = _attach_prior_llm_extract(eligible_rows, prior_rows)
+        prior_context_valid = bool(prior_summary.get("prior_context_loaded")) and not prior_summary.get("prior_duplicate_key_count") and bool(prior_summary.get("expected_prior_context_rows"))
+        prior_missing_for_recovery = _prior_llm_missing_rows(eligible_rows, prior_rows, expected_prior_quarter=expected_prior_quarter) if prior_context_valid else []
+        prior_recovery_packets: list[dict[str, Any]] = []
+        prior_recovery_impossible: list[dict[str, Any]] = []
+        prior_recovery_missing: list[dict[str, Any]] = []
+        prior_recovery_context_rows: list[dict[str, Any]] = []
+        prior_recovery_summary: dict[str, Any] = {"prior_llm_recovery_needed_count": len(prior_missing_for_recovery), "prior_llm_recovery_packet_count": 0}
+        prior_recovery_artifacts: dict[str, str] = {}
+        if prior_missing_for_recovery and not blocking_llm_quarantine:
+            prior_recovery_packets, prior_recovery_impossible, prior_recovery_missing, prior_recovery_context_rows, prior_recovery_summary, prior_recovery_artifacts = _build_prior_llm_recovery_packets(
+                missing_current_rows=prior_missing_for_recovery,
+                prior_rows=prior_rows,
+                expected_prior_quarter=expected_prior_quarter,
+                config=config,
+                coverage_runner=coverage_runner,
+                fetcher=services.run_fetch_once or run_sec_fetch_once,
+                live_root=live_root,
+                price_provider=scoring_price_provider,
+                broad_universe_count=len(universe.rows),
+            )
+            llm_recovery_artifacts.update(prior_recovery_artifacts)
+        prior_llm_impossible_keys = {(_ticker(row.get("ticker")), expected_prior_quarter) for row in prior_recovery_impossible}
+        write_csv(llm_eligibility_path, eligible_rows)
+        gate7_summary = {**tier_summary, **eligibility_summary, **pre_tier_qoq_summary, **llm_recovery_summary, **prior_llm_summary}
+        gate7_summary.update(prior_recovery_summary)
         gate7_summary.update(
             {
                 "llm_required_quarantine_count": len(blocking_llm_quarantine),
                 "llm_required_quarantine_tickers": sorted({_ticker(row.get("ticker")) for row in blocking_llm_quarantine})[:50],
+                "non_fetchable_llm_evidence_rejection_count": len(non_fetchable_llm_rejections),
+                "non_fetchable_llm_evidence_rejection_tickers": sorted({_ticker(row.get("ticker")) for row in non_fetchable_llm_rejections})[:50],
             }
         )
         gate7_status = GateStatus.PASS
@@ -897,6 +1375,20 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             coverage_csv=coverage_csv,
             live_root=live_root,
             broad_universe_count=len(universe.rows),
+        )
+        current_packet_count = int(packet_summary.get("packet_count") or 0)
+        current_eligible_count = int(packet_summary.get("eligible_count") or 0)
+        packets = [*packets, *prior_recovery_packets]
+        packet_summary.update(
+            {
+                "current_packet_count": current_packet_count,
+                "current_eligible_count": current_eligible_count,
+                "prior_llm_recovery_packet_count": len(prior_recovery_packets),
+                "prior_llm_recovery_missing_evidence_count": len(prior_recovery_missing),
+                "prior_llm_recovery_impossible_no_filings_count": len(prior_recovery_impossible),
+                "packet_count": len(packets),
+                "eligible_count": current_eligible_count + len(prior_recovery_packets),
+            }
         )
         packet_path = config.output_root / "lake" / "artifacts" / f"{config.quarter}_llm_packets.jsonl"
         write_text_atomic(packet_path, "\n".join(json.dumps(p, sort_keys=True) for p in packets))
@@ -918,8 +1410,10 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         post_llm_path: Path | None = None
         if packet_summary["empty_evidence_count"]:
             _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {**packet_summary, "reason": "eligible_rows_missing_non_empty_evidence"}, {"llm_packets": str(packet_path), "llm_empty_evidence_quarantine": str(empty_q_path)}))
-        if packet_summary["packet_count"] != packet_summary["eligible_count"]:
+        if current_packet_count != current_eligible_count:
             _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {**packet_summary, "reason": "packet_count_mismatch"}, {"llm_packets": str(packet_path)}))
+        if prior_recovery_missing and config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.skip_llm:
+            _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {**packet_summary, "reason": "prior_llm_recovery_missing_evidence", "prior_llm_recovery_missing_tickers": sorted({_ticker(row.get("ticker")) for row in prior_recovery_missing})[:50]}, {"llm_packets": str(packet_path), "llm_empty_evidence_quarantine": str(empty_q_path), **prior_recovery_artifacts}))
         if config.skip_llm or config.run_mode == RunMode.DIAGNOSTIC_ONLY:
             _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.SKIPPED, {**packet_summary, "reason": "skip_llm_or_diagnostic"}, {"llm_packets": str(packet_path), "llm_empty_evidence_quarantine": str(empty_q_path)}))
         else:
@@ -940,8 +1434,40 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             _record(state, validation_gate)
 
         post_rows = _read_csv(post_llm_path) if post_llm_path else []
-        final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows, prior_context_rows=prior_rows)
-        final_summary = {**final_summary, **prior_summary}
+        prior_rows_with_recovery_context = _merge_prior_recovery_context(
+            prior_rows,
+            prior_recovery_context_rows,
+            expected_prior_quarter=expected_prior_quarter,
+        )
+        prior_rows_for_final, prior_post_summary = _merge_prior_llm_from_post_rows(prior_rows_with_recovery_context, post_rows, expected_prior_quarter=expected_prior_quarter)
+        final_prior_missing = _prior_llm_missing_rows(
+            eligible_rows,
+            prior_rows_for_final,
+            expected_prior_quarter=expected_prior_quarter,
+            impossible_keys=prior_llm_impossible_keys,
+        ) if prior_context_valid else []
+        if final_prior_missing and config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.skip_llm:
+            prior_block_path = config.output_root / "prior_llm_final_blockers.csv"
+            write_csv(prior_block_path, final_prior_missing)
+            _record(
+                state,
+                GateResult(
+                    9,
+                    "Final scoring, HP buckets, RM buckets, and QoQ context",
+                    GateStatus.HARD_STOP,
+                    {
+                        **prior_summary,
+                        **prior_post_summary,
+                        "reason": "prior_llm_extract_required_for_final_scoring",
+                        "prior_llm_extract_missing_for_final_count": len(final_prior_missing),
+                        "prior_llm_extract_missing_for_final_tickers": sorted({_ticker(row.get("ticker")) for row in final_prior_missing})[:50],
+                        "prior_llm_extract_impossible_no_filings_count": len(prior_recovery_impossible),
+                    },
+                    {"prior_llm_final_blockers": str(prior_block_path), **prior_recovery_artifacts},
+                ),
+            )
+        final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows, prior_context_rows=prior_rows_for_final)
+        final_summary = {**final_summary, **prior_summary, **prior_post_summary, "prior_llm_extract_impossible_no_filings_count": len(prior_recovery_impossible)}
         final_path = config.output_root / f"fundamental_final_scores_{config.as_of}.csv"
         final_artifacts = write_final_scores_csv(final_path, final_rows, final_summary)
         write_daily_status(

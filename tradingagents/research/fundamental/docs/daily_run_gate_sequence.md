@@ -6,30 +6,32 @@ This is the daily operator flow. It must happen inside `fundamental-run-today`.
 Do not create a second independent pipeline.
 
 1. Start from the master start list: 2021Q4 SEC-evidence tickers.
-2. Add today's dealflow tickers.
+2. Add all unprocessed dealflow tickers since the last successful final run. Default daily command includes recent dated dealflow handoffs ending on today's run date.
 3. For new dealflow names, resolve ticker to company ID, company name, and CIK.
 4. If the local SEC ticker map misses, check trusted panel data, SEC facts, then SEC directly.
 5. Mark source clearly: master start, existing master, today's dealflow add, or rejected.
 6. Remove only names that truly cannot be tied to SEC filings or tradable price data.
-7. Check SEC cache for earnings 8-K, press-release exhibit, 10-Q/10-K, and company facts.
-8. If SEC evidence is missing, fetch it now and save it to cache.
+7. Check SEC cache for the run quarter and required prior quarter. The run quarter is the quarter for the run date; the prior quarter is calculated from it, not hard-coded. Check earnings 8-K, press-release exhibit, 10-Q/10-K, company facts, and required prior-quarter LLM evidence.
+8. If SEC evidence is missing for either required quarter, fetch it now and save it to cache.
 9. Check Yahoo price cache.
 10. If price data is missing, fetch it now and save it to cache.
 11. Calculate pre-LLM score.
 12. Assign Tier 0-4, HP, and RM flags.
 13. Decide which rows need LLM.
 14. Build LLM packets.
-15. If packets cannot be built, recover/fetch evidence inside the daily run before stopping.
-16. Run or queue LLM extraction.
-17. Validate LLM output.
-18. Calculate post-LLM score.
-19. Calculate final score.
-20. Select Top 10 Core.
-21. Select Plus 5 Exception.
-22. Run shadow refill review.
-23. Emit final CSVs, Top15 files, shadow files, and clear rejection/status files.
+15. If current-quarter or required prior-quarter packets cannot be built, recover/fetch evidence inside the daily run before stopping.
+16. If a required prior-quarter LLM extract is missing, build/fetch that prior-quarter packet inside the same run.
+17. Run or queue LLM extraction.
+18. Validate LLM output.
+19. Calculate post-LLM score.
+20. Calculate final score only after required prior LLM extracts are complete or proven impossible because no earnings filing exists.
+21. Select Top 10 Core.
+22. Select Plus 5 Exception.
+23. Run shadow refill review.
+24. Emit final CSVs, Top15 files, shadow files, and clear rejection/status files.
 
 Key rule: LLM evidence recovery happens inside the daily run before final scoring. No separate recovery pipeline.
+Key rule: prior-quarter LLM recovery also happens inside the daily run. Final scoring is blocked until the prior LLM extract is complete or SEC evidence proves no prior earnings filing exists.
 
 ## Implemented command
 
@@ -65,6 +67,7 @@ The run then appends today's scout/dealflow names, scores the broad universe, ru
 Daily scout names are not the universe. They are append/update inputs.
 
 If LLM work is queued instead of completed, the run is pending, not final. Final publish requires validated post-LLM rows.
+If prior-quarter LLM work is queued, the run is also pending, not final. The rerun must validate both current-quarter and required prior-quarter LLM rows before final scoring.
 
 ## Required run modes
 
@@ -195,17 +198,19 @@ Determine what data is already available before fetching anything. Separate pre-
 - SEC companyfacts cache
 - archive index cache
 - documents cache
-- current quarter
+- run quarter
+- required prior quarter, calculated from the run quarter
 
 ## Required checks
 
 For each ticker, check:
 
-- companyfacts availability.
-- required 8-K Item 2.02 metadata.
-- earnings press-release/exhibit metadata.
-- periodic 10-Q/10-K metadata.
-- required document materialization in local cache.
+- run-quarter companyfacts availability.
+- run-quarter required 8-K Item 2.02 metadata.
+- run-quarter earnings press-release/exhibit metadata.
+- run-quarter periodic 10-Q/10-K metadata.
+- run-quarter required document materialization in local cache.
+- required prior-quarter LLM evidence for rows that need prior-quarter LLM review.
 - foreign issuer / no domestic 10-Q or 10-K pattern.
 
 ## Important distinction

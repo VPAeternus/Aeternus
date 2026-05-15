@@ -29,13 +29,13 @@ def normalize_coverage_summary(raw: Mapping[str, Any], *, universe_count: int, c
     return summary
 
 
-def run_sec_coverage_manifest(*, out_root: Path, universe_csv: Path, eligible_json: Path, quarter: str, live_sec_root: Path) -> dict[str, Any]:
+def run_sec_coverage_manifest(*, out_root: Path, universe_csv: Path, eligible_json: Path, quarter: str, live_sec_root: Path, as_of: str | None = None) -> dict[str, Any]:
     from tradingagents.research.fundamental.src.sec_pipeline import cache_coverage_manifest as manifest
     out_root.mkdir(parents=True, exist_ok=True)
     target = out_root / "final_dealflow_tickers_sec_eligible.json"
     if eligible_json.resolve() != target.resolve():
         shutil.copy2(eligible_json, target)
-    manifest.configure(out=out_root, live=live_sec_root, quarters=[quarter]); manifest.UNIVERSE_CSV = universe_csv; manifest.TICKERS_JSON = target
+    manifest.configure(out=out_root, live=live_sec_root, quarters=[quarter], as_of=as_of); manifest.UNIVERSE_CSV = universe_csv; manifest.TICKERS_JSON = target
     with contextlib.redirect_stdout(io.StringIO()):
         manifest.main()
     summary_path = out_root / "sec_coverage_summary.json"

@@ -96,6 +96,20 @@ def cache_path(item: dict[str, Any]) -> Path:
     return LIVE / safe
 
 
+def fetch_failure_path(item: dict[str, Any]) -> Path:
+    safe = ''.join(ch if ch.isalnum() or ch in '_.-' else '_' for ch in str(item['cache_key']).strip('/'))
+    return LIVE / 'fetch_failures' / f'{safe}.json'
+
+
+def mark_fetch_unavailable(item: dict[str, Any], err: dict[str, Any]) -> None:
+    path = fetch_failure_path(item)
+    atomic_write_json(path, {'status': 'unavailable', 'recorded_at': now_iso(), 'item': item, 'error': err})
+
+
+def is_nonfatal_missing(err: dict[str, Any]) -> bool:
+    return int(err.get('http_code') or 0) in {404, 410} and not bool(err.get('rate_limited'))
+
+
 def load_done() -> set[str]:
     if not PROGRESS_PATH.exists():
         return set()
@@ -284,6 +298,7 @@ def main() -> None:
         'eligible_queue_items': len(items),
         'cached_existing': 0,
         'fetched': 0,
+        'unavailable': 0,
         'skipped_done': 0,
         'workers': MAX_WORKERS,
         'max_requests_per_second': MAX_REQUESTS_PER_SECOND,
@@ -304,6 +319,16 @@ def main() -> None:
                 except Exception as exc:  # noqa: BLE001 - stop on hard SEC/network failures.
                     err = error_payload(idx, item, exc)
                     errors.append(err)
+                    if is_nonfatal_missing(err):
+                        mark_fetch_unavailable(item, err)
+                        done.add(str(item['cache_key']))
+                        last_index = max(last_index, idx)
+                        stats['unavailable'] += 1
+                        completed_since_checkpoint += 1
+                        if completed_since_checkpoint >= CHECKPOINT_EVERY:
+                            completed_since_checkpoint = 0
+                            save_progress(done, stats | {'last_index': last_index})
+                        continue
                     save_progress(done, stats | {'last_index': idx, 'stopped': True, 'error': err})
                     atomic_write_json(DOWNLOAD_MANIFEST_PATH, {'status': 'stopped_error', 'stats': stats, 'errors': errors})
                     print(json.dumps(err, indent=2, sort_keys=True), flush=True)
@@ -322,7 +347,7 @@ def main() -> None:
                     print(json.dumps({'progress': last_index, 'done_count': len(done), 'fetched': stats['fetched'], 'cached_existing': stats['cached_existing']}), flush=True)
 
     manifest = {
-        'status': 'complete',
+        'status': 'complete_with_unavailable' if errors else 'complete',
         'updated_at': now_iso(),
         'queue_path': str(QUEUE_PATH),
         'eligible_ticker_count': len(eligible_tickers()),

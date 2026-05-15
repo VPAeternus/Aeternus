@@ -11,7 +11,9 @@ Purpose: define the data required to calculate daily fundamental scores correctl
 - Do not use `10-Q` / `10-K` alone for official Top 10 + Plus 5 LLM selection. It is base-score evidence only.
 - Official LLM-required rows need fresh earnings evidence: primary earnings `8-K` or press-release exhibit. This includes Tier 1-4 rows, HP production/research extension rows, and repricing-momentum extension rows.
 - Do not publish Top 10 + Plus 5 without prior-quarter context. `2026Q1` is required for a `2026Q2` final run because QoQ fields drive HP/RM/shadow-refill logic.
+- Daily runs must derive the run quarter from the run date or explicit `--quarter`; the required prior quarter is calculated from that run quarter. Do not hard-code a quarter in SEC coverage or prior-LLM recovery logic.
 - Apply prior-quarter context before LLM eligibility in official runs so RM-only names can compute `entry_qoq_pct` and enter LLM extraction when `repricing_momentum_extension` is true.
+- If a current LLM-required row needs prior-quarter LLM data, final scoring must wait until that prior LLM extract is complete or SEC evidence proves no earnings `8-K` / press-release filing exists.
 - Never make the user remember these rules. Check this contract before every fundamental readiness/final-publish claim.
 
 ## Required Inputs Per Ticker
@@ -35,6 +37,8 @@ Purpose: define the data required to calculate daily fundamental scores correctl
   - entry open present.
 - Rows missing required score inputs must be explicitly quarantined, not silently fake-scored.
 - LLM-required rows require fresh earnings evidence for official LLM review and Top 10 + Plus 5 eligibility. This includes Tier 1-4 rows, HP production/research extension rows, and repricing-momentum extension rows.
+- LLM-required rows also require the prior-quarter LLM extract when prior-quarter comparison affects scoring. If it is missing, the daily run must build/fetch the prior-quarter evidence packet and run or queue that extraction before final scoring.
+- SEC evidence checks must cover the run quarter and the required prior quarter for rows that need prior-quarter LLM review.
 - Fresh earnings evidence means either a press release exhibit, usually `8-K Exhibit 99.1`, or a primary earnings `8-K`.
 - Quarterly filing text alone is not enough for official Top 10 + Plus 5 LLM review because the critical LLM fields depend on fresh earnings narrative.
 - Missing `8-K Item 2.02` is acceptable for base scoring only. Use the quarterly filing date as the signal date fallback, but quarantine the row from LLM/final high-conviction selection until fresh earnings evidence exists.
@@ -70,6 +74,7 @@ Before LLM/final publish, verify:
 - `score_input_quarantine_count` is explicit and acceptable.
 - `entry_price_quarantine` is empty for the publish universe, or excluded names are explicitly quarantined.
 - `llm_packets` count equals LLM-required score-ready names with fresh earnings evidence: Tier 1-4 plus HP production/research extension plus repricing-momentum extension.
+- Prior-quarter LLM recovery packets are included when needed. A run is not final until those extracts validate, unless SEC evidence proves no prior earnings filing exists.
 - Gate 7 `tier_classification.csv` may already include QoQ-derived RM fields; Gate 9 still validates that prior context is complete before publish.
 - Prior quarter exists for final selection. For a `2026Q2` run, process `2026Q1` before Top 10 + Plus 5 + shadow refill.
 - `final_score_rows + explicit_quarantine_count = broad_universe_count`.

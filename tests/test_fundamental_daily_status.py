@@ -45,3 +45,14 @@ def test_daily_status_labels_existing_master_additions_plainly():
     )
 
     assert rows[0]["source_status"] == "existing_master_addition"
+
+
+def test_daily_status_fills_source_for_prior_quarter_packet_rows():
+    rows = build_daily_status_rows(
+        quarter="2026Q2",
+        universe_rows=[{"ticker": "AAA", "quarter": "2026Q2", "cik": "1", "company_title": "AAA Inc", "daily_source_label": "today_dealflow_add"}],
+        packet_rows=[{"ticker": "AAA", "quarter": "2026Q1"}],
+    )
+
+    by_key = {(row["ticker"], row["quarter"]): row for row in rows}
+    assert by_key[("AAA", "2026Q1")]["source_status"] == "master_start"

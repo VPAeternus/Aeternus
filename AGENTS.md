@@ -49,7 +49,7 @@ Build the Aeternus Investment Intelligence Platform - a next-generation research
 - Be concise but complete
 
 ### Communication
-- For fundamental scoring work, follow `tradingagents/research/fundamental/docs/scoring_input_contract.md` before judging readiness or final publish. Never make the user re-explain SEC evidence, fresh earnings 8-K/press-release, fetch-loop, score-input quarantine, or prior-quarter requirements.
+- For fundamental scoring work, follow `tradingagents/research/fundamental/docs/scoring_input_contract.md` before judging readiness or final publish. Never make the user re-explain SEC evidence, fresh earnings 8-K/press-release, fetch-loop, score-input quarantine, prior-quarter requirements, or the rule that final scoring must wait for required prior LLM extracts unless no prior earnings filing exists.
 - Use simple, understandable English first. Avoid technical jargon unless the user asks for it.
 - When an internal term is necessary, define it in one plain sentence before using it.
 - Speak in operator language first, not implementation language.
