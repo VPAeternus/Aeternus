@@ -98,12 +98,15 @@ def _cache_files(paths: Iterable[Path]) -> list[Path]:
         if not path:
             continue
         expanded = path.expanduser()
-        if expanded.is_file() and expanded.suffix.lower() == ".parquet":
+        if expanded.is_file() and expanded.suffix.lower() in {".parquet", ".csv"}:
             files.append(expanded)
         elif expanded.is_dir():
             files.extend(sorted(expanded.glob("prices*.parquet")))
+            files.extend(sorted(expanded.glob("prices*.csv")))
             files.extend(sorted(expanded.glob("review_price_cache*.parquet")))
+            files.extend(sorted(expanded.glob("review_price_cache*.csv")))
             files.extend(sorted(expanded.glob("**/price_history.parquet")))
+            files.extend(sorted(expanded.glob("**/price_history.csv")))
     seen: set[Path] = set()
     deduped: list[Path] = []
     for path in files:
@@ -238,13 +241,16 @@ def load_cached_review_price_rows(paths: Iterable[Path], *, tickers: list[str], 
     wanted = {_ticker(ticker) for ticker in tickers if _ticker(ticker)}
     by_key: dict[tuple[str, str], dict[str, Any]] = {}
     for path in _cache_files(paths):
-        columns = _parquet_columns_for_wanted(path, wanted)
-        if columns == []:
-            continue
-        if columns is None:
-            columns = _parquet_columns_for_narrow(path)
         try:
-            frame = pd.read_parquet(path, columns=columns) if columns else pd.read_parquet(path)
+            if path.suffix.lower() == ".csv":
+                frame = pd.read_csv(path)
+            else:
+                columns = _parquet_columns_for_wanted(path, wanted)
+                if columns == []:
+                    continue
+                if columns is None:
+                    columns = _parquet_columns_for_narrow(path)
+                frame = pd.read_parquet(path, columns=columns) if columns else pd.read_parquet(path)
         except Exception:
             continue
         if isinstance(frame.columns, pd.MultiIndex):
@@ -280,8 +286,14 @@ def store_review_price_rows(rows: list[Mapping[str, Any]], *, output_root: Path,
             out["dollar_volume"] = out["close"] * out["volume"]
             materialized.append(out)
     path.parent.mkdir(parents=True, exist_ok=True)
-    pd.DataFrame(materialized).to_parquet(path, index=False)
-    return path
+    frame = pd.DataFrame(materialized)
+    try:
+        frame.to_parquet(path, index=False)
+        return path
+    except ImportError:
+        csv_path = path.with_suffix(".csv")
+        frame.to_csv(csv_path, index=False)
+        return csv_path
 
 
 def _coverage_reason(row: Mapping[str, Any] | None) -> str:
