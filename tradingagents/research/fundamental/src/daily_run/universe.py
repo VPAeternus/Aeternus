@@ -21,6 +21,20 @@ def _ticker(value: Any) -> str:
     return str(value or "").upper().replace(".", "-").strip()
 
 
+def _daily_source_label(item: Mapping[str, Any], *, source_name: str) -> str:
+    existing = str(item.get("daily_source_label") or "").strip()
+    if existing in {"master_start", "existing_master_addition", "rejected"}:
+        return existing
+    if existing == "today_dealflow_add":
+        return "existing_master_addition"
+    source = str(item.get("master_universe_source") or item.get("stock_source_type") or source_name)
+    if source == "daily_scout_append":
+        return "existing_master_addition"
+    if "master_start" in source or "start_2021Q4" in source:
+        return "master_start"
+    return "master_start"
+
+
 def _master_row(item: Mapping[str, Any], *, quarter: str, source_name: str) -> dict[str, Any] | None:
     ticker = _ticker(item.get("symbol") or item.get("ticker"))
     if not ticker:
@@ -30,6 +44,7 @@ def _master_row(item: Mapping[str, Any], *, quarter: str, source_name: str) -> d
         "company_title": str(item.get("company_title", item.get("title", ""))).strip(),
         "cik_status": str(item.get("cik_status") or "resolved").strip(), "quarter": quarter,
         "master_universe_source": source_name, "dealflow_source_stage": "master_fundamental_universe", "scouts_json": "[]",
+        "daily_source_label": _daily_source_label(item, source_name=source_name),
     }
 
 
@@ -118,13 +133,14 @@ def build_combined_universe(
                 "cik_status": str(resolved.get("cik_status") or "resolved"),
                 "quarter": quarter,
                 "master_universe_source": "daily_scout_append",
+                "daily_source_label": "today_dealflow_add",
                 "dealflow_source_stage": source_stage,
                 "scouts_json": json.dumps(list(scout_meta.get("scouts", []) or []), sort_keys=True),
             }
             new_scouts.append(ticker)
         else:
             rejected = rejected_new.get(ticker, {})
-            rejected_scouts.append({"ticker": ticker, "quarter": quarter, "dealflow_source_stage": source_stage, **rejected})
+            rejected_scouts.append({**rejected, "ticker": ticker, "quarter": quarter, "dealflow_source_stage": source_stage, "source_status": "rejected", "daily_source_label": "rejected"})
     rows = [by_ticker[ticker] for ticker in sorted(by_ticker)]
     write_csv(output_csv, rows)
     rejection_path = output_csv.parent / "dealflow_identity_rejections.csv"
