@@ -1601,3 +1601,17 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
   - macro-neutral forces `macro_regime_fit=50`
   - downstream core/momentum/asymmetry/lane values are recomputed
   - selection uses production `legacy_rank_function`, not a standalone score sort
+
+## Architecture Addendum (2026-05-14T00:00:00) — Fundamental Daily Run Is the Single Recovery Path
+
+- `fundamental-run-today` is the main daily path for the fundamental framework; do not create a separate recovery pipeline for normal daily needs.
+- Daily dealflow tickers are checked against the main list, then resolved to ticker/company/CIK before Gate 2; unresolved new names are rejected before scoring with a clear reason.
+- The current-quarter master JSON is the full combined daily list and is the JSON handed to later SEC coverage steps.
+- SEC/Yahoo gaps are handled inside the daily run:
+  - companyfacts fallback uses shared `cache/sec/facts_TICKER.json`.
+  - raw SEC document fallback uses shared SEC raw document roots.
+  - price lookup checks cache first, fetches only missing names, then writes fetched rows back to cache.
+- LLM evidence recovery happens before packet hard-stop; default SEC fetch only runs when a fetch queue/service exists.
+- Daily status/reason output is `daily_ticker_status.csv`.
+- Broad-final Gate 7 must hard-stop when LLM-required rows remain without usable evidence after recovery; those rows cannot silently bypass Gate 8.
+- Persistent master additions ledger is for resolved new dealflow tickers that reached final scored rows after successful publish, not merely tickers resolved at Gate 2.

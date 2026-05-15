@@ -58,6 +58,9 @@ class DailyRunConfig:
     review_allow_live_price_fetch: bool = True
     allow_missing_handoff: bool = False
     allow_date_quarter_mismatch: bool = False
+    master_additions_ledger_path: Path | None = None
+    identity_complete_panel_path: Path | None = None
+    identity_refreshed_sec_ticker_map_path: Path | None = None
 
     @property
     def run_mode(self) -> RunMode:

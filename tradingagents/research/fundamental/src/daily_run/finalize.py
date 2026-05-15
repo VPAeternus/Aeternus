@@ -211,7 +211,13 @@ def publish_top15_and_shadow(
         top15 = select_top15_from_csv(
             scores_csv,
             output_root,
-            {"selection_date": as_of, "enabled": True, "core_n": 10, "exception_slots": 5},
+            {
+                "selection_date": as_of,
+                "enabled": True,
+                "core_n": 10,
+                "exception_slots": 5,
+                "coverage_gating": bool(coverage_manifest),
+            },
             coverage_manifest,
         )
         shadow = select_top15_core_deterioration_refill_shadow_from_csv(
@@ -222,6 +228,7 @@ def publish_top15_and_shadow(
                 "enabled": True,
                 "core_n": 10,
                 "exception_slots": 5,
+                "coverage_gating": bool(coverage_manifest),
                 "core_deterioration_refill": {"enabled": True, "mode": "strict"},
             },
             coverage_manifest,

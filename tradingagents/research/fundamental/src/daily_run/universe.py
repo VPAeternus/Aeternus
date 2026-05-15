@@ -21,6 +21,20 @@ def _ticker(value: Any) -> str:
     return str(value or "").upper().replace(".", "-").strip()
 
 
+def _daily_source_label(item: Mapping[str, Any], *, source_name: str) -> str:
+    existing = str(item.get("daily_source_label") or "").strip()
+    if existing in {"master_start", "existing_master_addition", "rejected"}:
+        return existing
+    if existing == "today_dealflow_add":
+        return "existing_master_addition"
+    source = str(item.get("master_universe_source") or item.get("stock_source_type") or source_name)
+    if source == "daily_scout_append":
+        return "existing_master_addition"
+    if "master_start" in source or "start_2021Q4" in source:
+        return "master_start"
+    return "master_start"
+
+
 def _master_row(item: Mapping[str, Any], *, quarter: str, source_name: str) -> dict[str, Any] | None:
     ticker = _ticker(item.get("symbol") or item.get("ticker"))
     if not ticker:
@@ -30,6 +44,7 @@ def _master_row(item: Mapping[str, Any], *, quarter: str, source_name: str) -> d
         "company_title": str(item.get("company_title", item.get("title", ""))).strip(),
         "cik_status": str(item.get("cik_status") or "resolved").strip(), "quarter": quarter,
         "master_universe_source": source_name, "dealflow_source_stage": "master_fundamental_universe", "scouts_json": "[]",
+        "daily_source_label": _daily_source_label(item, source_name=source_name),
     }
 
 
@@ -85,12 +100,22 @@ def _load_scout_payload(path: Path | None) -> tuple[list[str], dict[str, Any], s
     return tickers, dict(payload.get("metadata_by_ticker") or {}), str(payload.get("source_stage") or "")
 
 
-def build_combined_universe(*, master_universe_path: Path, handoff_path: Path | None, quarter: str, output_csv: Path, unresolved_new_scouts: Mapping[str, Mapping[str, Any]] | None = None) -> UniverseBuildResult:
+def build_combined_universe(
+    *,
+    master_universe_path: Path,
+    handoff_path: Path | None,
+    quarter: str,
+    output_csv: Path,
+    unresolved_new_scouts: Mapping[str, Mapping[str, Any]] | None = None,
+    rejected_new_scouts: Mapping[str, Mapping[str, Any]] | None = None,
+) -> UniverseBuildResult:
     master_rows = _load_master_rows(master_universe_path, quarter)
     by_ticker = {row["ticker"]: dict(row) for row in master_rows}
     scouts, metadata, source_stage = _load_scout_payload(handoff_path)
-    resolved_new = {str(k).upper(): dict(v) for k, v in (unresolved_new_scouts or {}).items()}
+    resolved_new = {str(k).upper().replace(".", "-"): dict(v) for k, v in (unresolved_new_scouts or {}).items()}
+    rejected_new = {str(k).upper().replace(".", "-"): dict(v) for k, v in (rejected_new_scouts or {}).items()}
     new_scouts = []
+    rejected_scouts = []
     for ticker in scouts:
         scout_meta = dict(metadata.get(ticker) or {})
         if ticker in by_ticker:
@@ -98,14 +123,41 @@ def build_combined_universe(*, master_universe_path: Path, handoff_path: Path | 
             by_ticker[ticker]["scouts_json"] = json.dumps(list(scout_meta.get("scouts", []) or []), sort_keys=True)
             continue
         resolved = resolved_new.get(ticker, {})
-        by_ticker[ticker] = {"ticker": ticker, "symbol": ticker, "cik": str(resolved.get("cik", "")).strip(), "company_title": str(resolved.get("company_title", "")).strip(), "cik_status": str(resolved.get("cik_status") or ("resolved" if resolved.get("cik") else "not_resolved")), "quarter": quarter, "master_universe_source": "daily_scout_append", "dealflow_source_stage": source_stage, "scouts_json": json.dumps(list(scout_meta.get("scouts", []) or []), sort_keys=True)}
-        new_scouts.append(ticker)
+        if str(resolved.get("cik", "")).strip() and str(resolved.get("company_title", "")).strip():
+            by_ticker[ticker] = {
+                **resolved,
+                "ticker": ticker,
+                "symbol": ticker,
+                "cik": str(resolved.get("cik", "")).strip(),
+                "company_title": str(resolved.get("company_title", "")).strip(),
+                "cik_status": str(resolved.get("cik_status") or "resolved"),
+                "quarter": quarter,
+                "master_universe_source": "daily_scout_append",
+                "daily_source_label": "today_dealflow_add",
+                "dealflow_source_stage": source_stage,
+                "scouts_json": json.dumps(list(scout_meta.get("scouts", []) or []), sort_keys=True),
+            }
+            new_scouts.append(ticker)
+        else:
+            rejected = rejected_new.get(ticker, {})
+            rejected_scouts.append({**rejected, "ticker": ticker, "quarter": quarter, "dealflow_source_stage": source_stage, "source_status": "rejected", "daily_source_label": "rejected"})
     rows = [by_ticker[ticker] for ticker in sorted(by_ticker)]
     write_csv(output_csv, rows)
-    summary = {"master_count": len(master_rows), "scout_count": len(scouts), "combined_count": len(rows), "new_scout_count": len(new_scouts), "new_scouts": new_scouts, "missing_cik_count": sum(1 for row in rows if not row.get("cik"))}
+    rejection_path = output_csv.parent / "dealflow_identity_rejections.csv"
+    write_csv(rejection_path, rejected_scouts)
+    summary = {
+        "master_count": len(master_rows),
+        "scout_count": len(scouts),
+        "combined_count": len(rows),
+        "new_scout_count": len(new_scouts),
+        "rejected_new_scout_count": len(rejected_scouts),
+        "new_scouts": new_scouts,
+        "rejected_new_scouts": [row["ticker"] for row in rejected_scouts],
+        "missing_cik_count": sum(1 for row in rows if not row.get("cik")),
+    }
     summary_path = output_csv.parent / "universe_gate_summary.json"
     write_json_atomic(summary_path, summary)
-    return UniverseBuildResult(rows, summary, {"universe_csv": str(output_csv), "universe_summary": str(summary_path)})
+    return UniverseBuildResult(rows, summary, {"universe_csv": str(output_csv), "universe_summary": str(summary_path), "dealflow_identity_rejections": str(rejection_path)})
 
 
 def validate_universe_gate(rows: list[dict[str, Any]], *, run_mode: RunMode, scout_count: int, min_broad_universe_count: int, artifacts: dict[str, str]) -> GateResult:

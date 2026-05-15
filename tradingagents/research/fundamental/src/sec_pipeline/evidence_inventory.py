@@ -15,7 +15,7 @@ from tradingagents.research.fundamental.src.daily_run.artifacts import write_csv
 
 
 DEFAULT_SEC_ROOT = Path("/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec")
-DEFAULT_PARSER_ROOT = Path("tradingagents/research/fundamental/Growth/earnings_8k_sec_parser")
+DEFAULT_PARSER_ROOT = Path("tradingagents/research/fundamental") / "Growth" / "earnings_8k_sec_parser"
 DEFAULT_PANEL_ROOT = Path("outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2")
 DEFAULT_PRICE_ROOT = Path("/Users/aeternusholdings/.cache/autoresearch_fundamentals")
 
