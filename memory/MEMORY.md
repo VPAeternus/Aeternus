@@ -11,6 +11,8 @@ Permanent contract: `tradingagents/research/fundamental/docs/scoring_input_contr
 ## Persistent Communication Preference
 
 - Use operator/plain-English language first, especially in live step-by-step workflows.
+- Use simple, understandable English going forward. Avoid technical jargon unless the user asks for it.
+- When an internal term is unavoidable, define it first in one plain sentence before using it.
 - Do not lead with CLI flags, file internals, implementation jargon, or technical mechanics unless the user asks for exact commands.
 - Next-step answers should use this default shape: "Next step in plain English:" followed by 1-3 short bullets with business action and reason.
 - Use user-facing terms: "main list" not "current universe", "comparison data" not "context names", "ready for LLM" not "eligible packets".
@@ -1501,6 +1503,24 @@ AETERNUS_SCORE = (fundamental × 0.30) + (technical × 0.25) +
   - `observed_value`
   - `delta_to_pass`
   - `artifacts`
+
+## Architecture Addendum (2026-05-13T17:10:02-04:00) — Fundamental Review List Can Start From SEC Universe
+
+- Fundamental daily runs can now build the review stock list from the SEC company ticker map instead of inheriting the old historical ticker list.
+- Operator switch: `fundamental-run-today --build-review-list-from-sec`.
+- The new review-list filter lives in `tradingagents/research/fundamental/src/daily_run/review_list_filter.py`.
+- Required keep rules:
+  - earnings `8-K`
+  - press-release exhibit
+  - periodic filing
+  - core company data needed before scoring
+  - raw Yahoo OHLCV
+  - raw close `>= 2`
+  - `ADV60 >= 500,000` shares
+- Rejected tickers are saved with clear reasons in `review_stock_list_rejections_<quarter>.csv`.
+- Review-list price checks use cached parquet data by default from `/Users/aeternusholdings/.cache/autoresearch_fundamentals`.
+- Live Yahoo review-list fetch is disabled unless `--allow-live-review-price-fetch` is passed.
+- 2026Q2 cache-only count result: `10,348` SEC map names -> `1,148` strict SEC-ready -> `1,132` company-data-ready -> `1,115` cached-price names -> `791` final after close/ADV.
 
 - The investigation backend now consumes hypothesis-ledger evidence for reject reasoning where available:
   - `universe_gate_edge` / `universe_gate_haystack`

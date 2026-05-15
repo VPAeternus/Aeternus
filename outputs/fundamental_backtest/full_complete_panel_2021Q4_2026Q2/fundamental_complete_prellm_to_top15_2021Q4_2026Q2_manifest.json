@@ -1,0 +1,435 @@
+{
+  "build_id": "complete-panel-2026-05-13-v4-filled",
+  "column_count": 315,
+  "created_at": "2026-05-13T11:14:07-04:00",
+  "duplicate_ticker_quarter_count": 0,
+  "fill_v2": {
+    "after_sha256": "b40d5d33ae3d6222fc43eb7ee495be589ae8404dc6b6c3517be5339ca479068f",
+    "before_sha256": "9cb4fbb5764e927d195ed5479d998b166007e7a5ee46683fb5f517ce793d699a",
+    "fill_audit_csv": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2_fill_audit.csv",
+    "fill_summary": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2_fill_summary.json",
+    "filled_fields": [
+      {
+        "field": "revenue_value",
+        "filled_rows": 22007
+      },
+      {
+        "field": "net_income_value",
+        "filled_rows": 22040
+      },
+      {
+        "field": "assets_value",
+        "filled_rows": 22035
+      },
+      {
+        "field": "operating_cash_flow_value",
+        "filled_rows": 22001
+      },
+      {
+        "field": "investing_cash_flow_value",
+        "filled_rows": 22021
+      },
+      {
+        "field": "financing_cash_flow_value",
+        "filled_rows": 22029
+      },
+      {
+        "field": "symbol",
+        "filled_rows": 22303
+      },
+      {
+        "field": "cik",
+        "filled_rows": 0
+      },
+      {
+        "field": "company_title",
+        "filled_rows": 22108
+      },
+      {
+        "field": "revenue_bucket",
+        "filled_rows": 0
+      },
+      {
+        "field": "entry_open_date",
+        "filled_rows": 22303
+      },
+      {
+        "field": "entry_open_source",
+        "filled_rows": 22303
+      }
+    ],
+    "filled_fields_second_pass": [
+      {
+        "field": "revenue_value",
+        "filled_rows_second_pass": 194
+      },
+      {
+        "field": "net_income_value",
+        "filled_rows_second_pass": 194
+      },
+      {
+        "field": "assets_value",
+        "filled_rows_second_pass": 194
+      },
+      {
+        "field": "operating_cash_flow_value",
+        "filled_rows_second_pass": 194
+      },
+      {
+        "field": "investing_cash_flow_value",
+        "filled_rows_second_pass": 194
+      },
+      {
+        "field": "financing_cash_flow_value",
+        "filled_rows_second_pass": 194
+      },
+      {
+        "field": "cik",
+        "filled_rows_second_pass": 22303
+      },
+      {
+        "field": "company_title",
+        "filled_rows_second_pass": 195
+      },
+      {
+        "field": "revenue_bucket",
+        "filled_rows_second_pass": 0
+      },
+      {
+        "field": "symbol",
+        "filled_rows_second_pass": 0
+      },
+      {
+        "field": "entry_open_date",
+        "filled_rows_second_pass": 0
+      },
+      {
+        "field": "entry_open_source",
+        "filled_rows_second_pass": 0
+      }
+    ],
+    "financial_rows_with_any_missing_after_fill": 7,
+    "financial_rows_with_any_missing_after_fill_by_quarter": {
+      "2021Q4": 3,
+      "2022Q1": 1,
+      "2022Q2": 1,
+      "2022Q3": 1,
+      "2022Q4": 1
+    },
+    "financial_values_source_counts": {
+      "xbrl_universal_features_csv": 21967,
+      "current_daily_final_scores": 1299,
+      "rebuilt_from_cached_companyfacts": 194,
+      "xbrl_universal_features_csv+companyfacts_extended_strict": 101,
+      "xbrl_universal_features_csv+companyfacts_extended_relaxed_filed_date": 40,
+      "rebuilt_from_cached_companyfacts+companyfacts_extended_strict": 1
+    },
+    "rebuilt_from_cached_facts_attempted_rows": 195,
+    "rebuilt_from_cached_facts_rows_with_source": 195
+  },
+  "manifest_version": "fundamental_complete_panel_2021Q4_2026Q2_v1",
+  "missing_required_feature_columns_in_output": [],
+  "notes": [
+    "Historical stale single 2026Q2 row from combined_all_tiers...partial.csv was dropped and replaced with current 2026Q2 daily final score rows.",
+    "Outcome return columns are diagnostic labels only; top15/shadow selection annotations come from frozen selector artifacts, not from return labels.",
+    "First-class required feature schema is outputs/fundamental_backtest/feature_schema.json; all required feature columns are present in the output CSV.",
+    "Extended companyfacts fill applied to partial XBRL financial blanks; strict as-of facts used first, then marked relaxed-filed-date facts where historical rows had no as-of fact. Remaining raw financial blanks are source-unavailable and listed in financial_values_missing_fields.",
+    "2026Q2 post_llm_tier_* legacy subtier flags were derived from canonical current tier buckets and post-LLM fields using add_post_llm_subtiers(); historical rows were left unchanged."
+  ],
+  "output_csv": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv",
+  "output_csv_sha256": "517e17bdc87e8cf4b3160ad964a210bad6b671d95c45e63a843a5b0ab55f5d8d",
+  "quarter_counts": {
+    "2021Q4": 1194,
+    "2022Q1": 1201,
+    "2022Q2": 1209,
+    "2022Q3": 1218,
+    "2022Q4": 1221,
+    "2023Q1": 1221,
+    "2023Q2": 1220,
+    "2023Q3": 1246,
+    "2023Q4": 1251,
+    "2024Q1": 1263,
+    "2024Q2": 1261,
+    "2024Q3": 1276,
+    "2024Q4": 1247,
+    "2025Q1": 1248,
+    "2025Q2": 1247,
+    "2025Q3": 1265,
+    "2025Q4": 1260,
+    "2026Q1": 1255,
+    "2026Q2": 1299
+  },
+  "required_feature_schema_column_count": 64,
+  "required_feature_schema_path": "outputs/fundamental_backtest/feature_schema.json",
+  "required_feature_schema_version": "fundamental_pit_schema_v1",
+  "row_count": 23602,
+  "selection_annotations": {
+    "primary_shadow_variant_for_2021Q4_2026Q1": "top15_v4_core_deterioration_refill_strict",
+    "primary_shadow_variant_for_2026Q2": "high_conviction_top15_v4_core_deterioration_refill_shadow_current_2026Q2",
+    "primary_top15_variant_for_2021Q4_2026Q1": "high_conviction_top15_v3_exception_sleeve",
+    "primary_top15_variant_for_2026Q2": "high_conviction_top15_current_operating_2026Q2",
+    "shadow_demoted_core_rows": 9,
+    "shadow_replacement_rows": 9,
+    "shadow_selected_counts_by_quarter": {
+      "2021Q4": 12,
+      "2022Q1": 15,
+      "2022Q2": 15,
+      "2022Q3": 14,
+      "2022Q4": 15,
+      "2023Q1": 15,
+      "2023Q2": 15,
+      "2023Q3": 15,
+      "2023Q4": 15,
+      "2024Q1": 15,
+      "2024Q2": 15,
+      "2024Q3": 15,
+      "2024Q4": 15,
+      "2025Q1": 15,
+      "2025Q2": 15,
+      "2025Q3": 15,
+      "2025Q4": 15,
+      "2026Q1": 6,
+      "2026Q2": 15
+    },
+    "top15_selected_counts_by_quarter": {
+      "2021Q4": 11,
+      "2022Q1": 12,
+      "2022Q2": 13,
+      "2022Q3": 10,
+      "2022Q4": 11,
+      "2023Q1": 11,
+      "2023Q2": 10,
+      "2023Q3": 10,
+      "2023Q4": 10,
+      "2024Q1": 12,
+      "2024Q2": 10,
+      "2024Q3": 13,
+      "2024Q4": 10,
+      "2025Q1": 11,
+      "2025Q2": 12,
+      "2025Q3": 10,
+      "2025Q4": 10,
+      "2026Q1": 5,
+      "2026Q2": 15
+    }
+  },
+  "source_inputs": [
+    {
+      "dropped_stale_2026Q2_rows": 1,
+      "input_rows": 22304,
+      "path": "tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv",
+      "role": "historical_raw_combined",
+      "sha256": "d4e372fc03381721028e8c3bc98c3e12958c9110874736f434a70cc9f2b9975b",
+      "used_rows": 22303
+    },
+    {
+      "path": "eval_results/fundamental/2026-05-12_2026Q2_hp_rm_final_v3/fundamental_final_scores_2026-05-12.csv",
+      "role": "current_2026Q2_final_scores",
+      "sha256": "56ecbb919d5c31c1b9a90f4a443bb52a6890328c527f939c924b4f3f70363b68",
+      "used_rows": 1299
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/selected_names_by_quarter_top15.csv",
+      "primary_variant": "high_conviction_top15_v3_exception_sleeve",
+      "role": "historical_top15_selected",
+      "sha256": "ddf3368ff7ba6b36b3322428baa7ededb3e4f9e1f92d9d6d1c00b2e203d526d4"
+    },
+    {
+      "path": "eval_results/fundamental/2026-05-12_2026Q2_hp_rm_final_v3/high_conviction_top15.csv",
+      "role": "current_top15_selected",
+      "sha256": "f7425137b59b48c1ce05315d1b5d93d1c4c294b7e419a0da549c3051f7a1b207"
+    },
+    {
+      "path": "outputs/fundamental_backtest/high_conviction_top15_exception_sleeve/core_deterioration_refill_shadow_selected.csv",
+      "primary_variant": "top15_v4_core_deterioration_refill_strict",
+      "role": "historical_shadow_selected",
+      "sha256": "1dc753b2f17842cfb831282dfe0c2d846c309767d65bb1e1bdf609f3e1a8e5bf"
+    },
+    {
+      "path": "eval_results/fundamental/2026-05-12_2026Q2_hp_rm_final_v3/high_conviction_top15_core_deterioration_refill_shadow.csv",
+      "role": "current_shadow_selected",
+      "sha256": "31dad5e4a532d757c7dadc8a83d5900e400927c87834a9f9671537e3ac64ca6d"
+    }
+  ],
+  "stage_counts": {
+    "eligible_for_backtest_rows": 21182,
+    "hp_any_rows": 531,
+    "llm_complete_derived_rows": 6519,
+    "llm_required_derived_rows": 7617,
+    "post_llm_any_rows": 6519,
+    "pre_llm_candidate_rows": 23450,
+    "rm_any_rows": 1354,
+    "tier_1_to_4_any_rows": 4178
+  },
+  "fill_v3": {
+    "after_sha256": "64aabc63f9ec40aaf23104e81c6de11b29c7c5b15317c1077c8fbafbcbce831d",
+    "before_sha256": "b40d5d33ae3d6222fc43eb7ee495be589ae8404dc6b6c3517be5339ca479068f",
+    "fill_audit_csv": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2_fill_audit.csv",
+    "fill_summary": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2_fill_summary.json",
+    "before_blank_core_counts": {
+      "revenue_value": 102,
+      "net_income_value": 69,
+      "assets_value": 74,
+      "operating_cash_flow_value": 108,
+      "investing_cash_flow_value": 88,
+      "financing_cash_flow_value": 80
+    },
+    "after_blank_core_counts": {
+      "revenue_value": 5,
+      "net_income_value": 0,
+      "assets_value": 2,
+      "operating_cash_flow_value": 0,
+      "investing_cash_flow_value": 0,
+      "financing_cash_flow_value": 0
+    },
+    "filled_cell_counts_by_mode": {
+      "companyfacts_extended_relaxed_filed_date": 198,
+      "companyfacts_extended_strict": 316
+    },
+    "filled_cell_counts_by_field_and_mode": [
+      {
+        "field": "assets_value",
+        "mode": "companyfacts_extended_relaxed_filed_date",
+        "filled_cells": 33
+      },
+      {
+        "field": "assets_value",
+        "mode": "companyfacts_extended_strict",
+        "filled_cells": 39
+      },
+      {
+        "field": "financing_cash_flow_value",
+        "mode": "companyfacts_extended_relaxed_filed_date",
+        "filled_cells": 33
+      },
+      {
+        "field": "financing_cash_flow_value",
+        "mode": "companyfacts_extended_strict",
+        "filled_cells": 47
+      },
+      {
+        "field": "investing_cash_flow_value",
+        "mode": "companyfacts_extended_relaxed_filed_date",
+        "filled_cells": 35
+      },
+      {
+        "field": "investing_cash_flow_value",
+        "mode": "companyfacts_extended_strict",
+        "filled_cells": 53
+      },
+      {
+        "field": "net_income_value",
+        "mode": "companyfacts_extended_relaxed_filed_date",
+        "filled_cells": 30
+      },
+      {
+        "field": "net_income_value",
+        "mode": "companyfacts_extended_strict",
+        "filled_cells": 39
+      },
+      {
+        "field": "operating_cash_flow_value",
+        "mode": "companyfacts_extended_relaxed_filed_date",
+        "filled_cells": 33
+      },
+      {
+        "field": "operating_cash_flow_value",
+        "mode": "companyfacts_extended_strict",
+        "filled_cells": 75
+      },
+      {
+        "field": "revenue_value",
+        "mode": "companyfacts_extended_relaxed_filed_date",
+        "filled_cells": 34
+      },
+      {
+        "field": "revenue_value",
+        "mode": "companyfacts_extended_strict",
+        "filled_cells": 63
+      }
+    ],
+    "rows_with_financial_values_still_missing": 7,
+    "rows_with_financial_values_still_missing_by_quarter": {
+      "2021Q4": 3,
+      "2022Q1": 1,
+      "2022Q2": 1,
+      "2022Q3": 1,
+      "2022Q4": 1
+    },
+    "score_rows_touched": 143,
+    "pre_llm_rank_blanks_filled": 138
+  },
+  "fill_v4": {
+    "created_at": "2026-05-13T11:14:07-04:00",
+    "before_sha256": "64aabc63f9ec40aaf23104e81c6de11b29c7c5b15317c1077c8fbafbcbce831d",
+    "after_sha256": "517e17bdc87e8cf4b3160ad964a210bad6b671d95c45e63a843a5b0ab55f5d8d",
+    "scope": "2026Q2 rows only",
+    "filled_columns": [
+      "post_llm_tier_1_1_flag",
+      "post_llm_tier_1_2_flag",
+      "post_llm_tier_1_3_flag",
+      "post_llm_tier_1_4_flag",
+      "post_llm_tier_2_1_flag",
+      "post_llm_tier_2_2_flag",
+      "post_llm_tier_2_3_flag",
+      "post_llm_tier_3_1_flag",
+      "post_llm_tier_3_2_flag",
+      "post_llm_tier_3_3_flag",
+      "post_llm_tier_3_4_flag",
+      "post_llm_tier_4_1_flag",
+      "post_llm_tier_4_2_flag",
+      "post_llm_tier_4_3_flag",
+      "post_llm_sub_tier_bucket"
+    ],
+    "before_blank_counts": {
+      "post_llm_tier_1_1_flag": 1299,
+      "post_llm_tier_1_2_flag": 1299,
+      "post_llm_tier_1_3_flag": 1299,
+      "post_llm_tier_1_4_flag": 1299,
+      "post_llm_tier_2_1_flag": 1299,
+      "post_llm_tier_2_2_flag": 1299,
+      "post_llm_tier_2_3_flag": 1299,
+      "post_llm_tier_3_1_flag": 1299,
+      "post_llm_tier_3_2_flag": 1299,
+      "post_llm_tier_3_3_flag": 1299,
+      "post_llm_tier_3_4_flag": 1299,
+      "post_llm_tier_4_1_flag": 1299,
+      "post_llm_tier_4_2_flag": 1299,
+      "post_llm_tier_4_3_flag": 1299
+    },
+    "after_blank_counts": {
+      "post_llm_tier_1_1_flag": 0,
+      "post_llm_tier_1_2_flag": 0,
+      "post_llm_tier_1_3_flag": 0,
+      "post_llm_tier_1_4_flag": 0,
+      "post_llm_tier_2_1_flag": 0,
+      "post_llm_tier_2_2_flag": 0,
+      "post_llm_tier_2_3_flag": 0,
+      "post_llm_tier_3_1_flag": 0,
+      "post_llm_tier_3_2_flag": 0,
+      "post_llm_tier_3_3_flag": 0,
+      "post_llm_tier_3_4_flag": 0,
+      "post_llm_tier_4_1_flag": 0,
+      "post_llm_tier_4_2_flag": 0,
+      "post_llm_tier_4_3_flag": 0
+    },
+    "q2_subtier_flag_positive_counts": {
+      "post_llm_tier_1_1_flag": 108,
+      "post_llm_tier_1_2_flag": 65,
+      "post_llm_tier_1_3_flag": 54,
+      "post_llm_tier_1_4_flag": 48,
+      "post_llm_tier_2_1_flag": 66,
+      "post_llm_tier_2_2_flag": 39,
+      "post_llm_tier_2_3_flag": 31,
+      "post_llm_tier_3_1_flag": 37,
+      "post_llm_tier_3_2_flag": 15,
+      "post_llm_tier_3_3_flag": 18,
+      "post_llm_tier_3_4_flag": 8,
+      "post_llm_tier_4_1_flag": 24,
+      "post_llm_tier_4_2_flag": 14,
+      "post_llm_tier_4_3_flag": 11
+    },
+    "q2_rows_with_any_subtier_flag": 110,
+    "q2_post_llm_sub_tier_bucket_nonblank_rows": 110
+  }
+}

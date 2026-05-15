@@ -18,13 +18,17 @@ LLM extraction must not run on the full 1,200+ universe by default. LLM extracti
    - Expected size: ~1,200+ tickers.
    - Canonical input format: JSON list or JSON object with `items`; each item needs `ticker` or `symbol`, `cik`, and company title metadata.
    - Compatibility input: CSV with `ticker` or `symbol` plus `cik`.
-   - Current example artifact: `final_dealflow_tickers_sec_eligible.json` had `1,276` tickers.
+   - Current master start file: `tradingagents/research/fundamental/data/master_fundamental_universe_start_2021Q4.json`.
+   - Current master start count: `1,251` tickers, all with CIK/company title after fallback.
+   - Daily master also reads append-only additions from `tradingagents/research/fundamental/data/master_fundamental_universe_additions.jsonl` when present.
+   - The immutable 2021Q4 start file is not edited by daily runs.
 
 2. Append daily scout tickers into the master universe.
    - Daily scout tickers are new evidence/discovery inputs.
    - Deduplicate by ticker.
    - Preserve CIK/company metadata.
    - Do not replace the master universe with only daily scouts.
+   - New resolved names are appended to the additions ledger after identity and SEC filer verification pass.
 
 3. Refresh SEC/cache coverage for the combined master universe.
    - Use SEC cached submissions/companyfacts/documents where possible.
@@ -49,6 +53,7 @@ LLM extraction must not run on the full 1,200+ universe by default. LLM extracti
    - Output must be one standard `post_llm_scores.csv`.
    - Validate one row per expected LLM packet/sample_id.
    - Resume batch files when interrupted.
+   - If LLM is queued instead of completed, the daily run is pending, not final.
 
 7. Merge post-LLM results back into the full master scored universe.
    - Tier 0 rows remain scored with no/post-LLM-neutral fields.
@@ -115,6 +120,7 @@ Current partial fix:
 - `--llm-mode skip|post-file|in-session|external|subagent` exists.
 - It can run external Codex LLM extraction and post-file scoring.
 - It still needs explicit broad-universe + Tier 0–4 LLM filter wiring.
+- `subagent` queue mode must not publish final output until a validated `post_llm_scores.csv` is supplied through `post-file`.
 
 ## Hard guardrails for future agents
 
