@@ -1,3 +1,4 @@
+import csv
 import json
 from tradingagents.research.fundamental.src.daily_run.identity import IdentityResolution
 from tradingagents.research.fundamental.src.daily_run.models import DailyRunConfig, GateStatus, RunMode
@@ -6,7 +7,7 @@ from tradingagents.research.fundamental.src.daily_run.universe import build_comb
 
 
 def _write_master_json(path):
-    path.write_text(json.dumps({"items": [{"symbol": "AAA", "cik": "1", "company_title": "AAA Inc"}, {"symbol": "BBB", "cik": "2", "company_title": "BBB Inc"}, {"symbol": "CCC", "cik": "3", "company_title": "CCC Inc"}]}))
+    path.write_text(json.dumps({"items": [{"symbol": "AAA", "cik": "1", "company_title": "AAA Inc", "stock_source_type": "master_start_2021Q4_sec_evidence"}, {"symbol": "BBB", "cik": "2", "company_title": "BBB Inc", "stock_source_type": "master_start_2021Q4_sec_evidence"}, {"symbol": "CCC", "cik": "3", "company_title": "CCC Inc", "master_universe_source": "daily_scout_append", "daily_source_label": "today_dealflow_add"}]}))
 
 
 def _write_handoff(path):
@@ -23,6 +24,10 @@ def test_build_combined_universe_appends_scouts_without_replacing_master(tmp_pat
     assert result.summary["combined_count"] == 4
     assert result.summary["new_scout_count"] == 1
     assert [row["ticker"] for row in result.rows] == ["AAA", "BBB", "CCC", "DDD"]
+    by_ticker = {row["ticker"]: row for row in result.rows}
+    assert by_ticker["AAA"]["daily_source_label"] == "master_start"
+    assert by_ticker["CCC"]["daily_source_label"] == "existing_master_addition"
+    assert by_ticker["DDD"]["daily_source_label"] == "today_dealflow_add"
     assert result.rows[-1]["dealflow_source_stage"] == "scout_ticker_summary"
 
 
@@ -43,7 +48,10 @@ def test_build_combined_universe_rejects_unresolved_new_scouts(tmp_path):
     assert result.summary["combined_count"] == 3
     assert result.summary["rejected_new_scout_count"] == 1
     assert [row["ticker"] for row in result.rows] == ["AAA", "BBB", "CCC"]
-    assert (tmp_path / "dealflow_identity_rejections.csv").read_text(encoding="utf-8")
+    with (tmp_path / "dealflow_identity_rejections.csv").open(newline="", encoding="utf-8") as handle:
+        rejection_rows = list(csv.DictReader(handle))
+    assert rejection_rows[0]["source_status"] == "rejected"
+    assert rejection_rows[0]["daily_source_label"] == "rejected"
 
 
 def test_orchestrator_resolves_new_dealflow_before_gate2(tmp_path):

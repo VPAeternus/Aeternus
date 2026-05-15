@@ -34,6 +34,25 @@ def _base_row(ticker: str, quarter: str) -> dict[str, Any]:
     return {column: "" for column in STATUS_COLUMNS} | {"ticker": ticker, "quarter": quarter}
 
 
+def _plain_source_status(row: Mapping[str, Any], *, default: str) -> str:
+    raw = str(
+        row.get("daily_source_label")
+        or row.get("source_status")
+        or row.get("master_universe_source")
+        or row.get("stock_source_type")
+        or default
+    ).strip()
+    if raw in {"master_start", "existing_master_addition", "today_dealflow_add", "rejected"}:
+        return raw
+    if raw == "daily_scout_append":
+        return "existing_master_addition"
+    if "master_start" in raw or "start_2021Q4" in raw:
+        return "master_start"
+    if raw in {"", "main_stock_list"}:
+        return default
+    return raw
+
+
 def _ensure(rows: dict[tuple[str, str], dict[str, Any]], key: tuple[str, str]) -> dict[str, Any]:
     if key not in rows:
         rows[key] = _base_row(key[0], key[1])
@@ -60,13 +79,13 @@ def build_daily_status_rows(
     for raw in universe_rows:
         key = _key(raw, quarter)
         row = _ensure(rows, key)
-        row["source_status"] = str(raw.get("master_universe_source") or "main_stock_list")
+        row["source_status"] = _plain_source_status(raw, default="master_start")
         row["identity_status"] = "resolved" if raw.get("cik") and raw.get("company_title") else "missing_identity"
 
     for raw in identity_rejections:
         key = _key(raw, quarter)
         row = _ensure(rows, key)
-        row["source_status"] = str(raw.get("source_status") or "today_dealflow_add")
+        row["source_status"] = "rejected"
         row["identity_status"] = str(raw.get("identity_status") or "unresolved")
         row["final_score_status"] = "rejected"
         row["rejection_reason"] = str(raw.get("rejection_reason") or raw.get("identity_status") or "")
