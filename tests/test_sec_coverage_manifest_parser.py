@@ -127,3 +127,41 @@ def test_primary_8k_plus_periodic_is_llm_ready_without_press_release_exhibit_aft
     assert row["earnings_8k_primary_document"] == k_doc
     assert row["earnings_exhibit_document"] == ""
     assert "earnings_exhibit_metadata" not in row["missing_inputs"]
+
+
+def test_daily_as_of_uses_latest_earnings_event_not_calendar_quarter_start(tmp_path):
+    k_acc = "0001045810-26-000019"
+    q_acc = "0001045810-26-000021"
+    k_doc = "nvda-earnings.htm"
+    q_doc = "nvda-20260125.htm"
+    ex_doc = "nvda-ex991.htm"
+    submission = {
+        "filings": {
+            "recent": {
+                "form": ["8-K", "10-K", "8-K"],
+                "filingDate": ["2026-02-25", "2026-02-25", "2026-05-27"],
+                "reportDate": ["2026-02-25", "2026-01-25", "2026-05-27"],
+                "acceptanceDateTime": ["2026-02-25T16:00:00.000Z", "2026-02-25T16:01:00.000Z", "2026-05-27T16:00:00.000Z"],
+                "accessionNumber": [k_acc, q_acc, "0001045810-26-000099"],
+                "items": ["2.02", "", "2.02"],
+                "primaryDocument": [k_doc, q_doc, "future-earnings.htm"],
+            }
+        }
+    }
+    out = _seed_manifest_inputs(
+        tmp_path,
+        ticker="NVDA",
+        cik="1045810",
+        submission=submission,
+        docs=[(k_acc, k_doc), (k_acc, ex_doc), (q_acc, q_doc)],
+    )
+    _write_json(tmp_path / "live_sec" / "archive_indexes" / "0001045810" / f"{k_acc.replace('-', '')}.json", {"directory": {"item": [{"name": k_doc}, {"name": ex_doc}]}})
+    manifest.configure(out=out, live=tmp_path / "live_sec", quarters=["2026Q2"], as_of="2026-05-15")
+
+    manifest.main()
+
+    row = _read_single_manifest_row(out)
+    assert row["coverage_status"] == "CACHED_READY"
+    assert row["earnings_8k_accession"] == k_acc
+    assert row["earnings_exhibit_document"] == ex_doc
+    assert row["periodic_accession"] == q_acc

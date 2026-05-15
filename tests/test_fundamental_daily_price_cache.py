@@ -115,3 +115,40 @@ def test_daily_price_cache_fetches_when_cached_rows_are_before_needed_entry_date
     assert result.summary["daily_price_partial_cache_ticker_count"] == 1
     assert result.summary["daily_price_live_fetch_ticker_count"] == 1
     assert any(row["ticker"] == "CCC" and row["date"] == "2026-05-11" for row in result.rows)
+
+
+def test_daily_price_cache_fetches_missing_tickers_from_their_own_start_dates(tmp_path):
+    calls = []
+
+    def provider(tickers, *, start, end):
+        calls.append({"tickers": list(tickers), "start": start, "end": end})
+        return [
+            {
+                "ticker": ticker,
+                "date": start,
+                "open": 9.0,
+                "high": 10.0,
+                "low": 8.0,
+                "close": 9.5,
+                "volume": 700_000,
+            }
+            for ticker in tickers
+        ]
+
+    result = load_or_fetch_price_rows(
+        ["OLD", "NEW"],
+        start="2010-01-25",
+        end="2026-05-13",
+        cache_paths=[tmp_path / "missing_cache"],
+        price_provider=provider,
+        output_root=tmp_path / "run",
+        quarter="2026Q2",
+        as_of="2026-05-12",
+        required_start_by_ticker={"OLD": "2010-01-25", "NEW": "2026-05-10"},
+    )
+
+    assert calls == [
+        {"tickers": ["OLD"], "start": "2010-01-25", "end": "2026-05-13"},
+        {"tickers": ["NEW"], "start": "2026-05-10", "end": "2026-05-13"},
+    ]
+    assert result.summary["daily_price_live_fetch_ticker_count"] == 2

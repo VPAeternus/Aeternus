@@ -59,6 +59,11 @@ def _ensure(rows: dict[tuple[str, str], dict[str, Any]], key: tuple[str, str]) -
     return rows[key]
 
 
+def _set_source_if_blank(row: dict[str, Any], raw: Mapping[str, Any], *, default: str) -> None:
+    if not row.get("source_status"):
+        row["source_status"] = _plain_source_status(raw, default=default)
+
+
 def build_daily_status_rows(
     *,
     quarter: str,
@@ -92,12 +97,14 @@ def build_daily_status_rows(
 
     for raw in coverage_rows:
         row = _ensure(rows, _key(raw, quarter))
+        _set_source_if_blank(row, raw, default="master_start")
         row["sec_status"] = str(raw.get("coverage_status") or "")
         if raw.get("missing_inputs") and not row["rejection_reason"]:
             row["rejection_reason"] = str(raw.get("missing_inputs"))
 
     for raw in pre_rows:
         row = _ensure(rows, _key(raw, quarter))
+        _set_source_if_blank(row, raw, default="master_start")
         row["pre_llm_status"] = "ready" if str(raw.get("pre_llm_fundamental_bucket") or "") != "not_scored" else "missing_score_inputs"
 
     for raw in price_quarantine:
@@ -129,6 +136,7 @@ def build_daily_status_rows(
         ticker = _ticker(raw.get("ticker"))
         qtr = str(raw.get("quarter") or quarter)
         row = _ensure(rows, (ticker, qtr))
+        _set_source_if_blank(row, raw, default="master_start")
         row["llm_packet_status"] = "packet_built"
 
     for raw in packet_quarantine:

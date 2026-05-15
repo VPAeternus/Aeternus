@@ -658,6 +658,7 @@ def fundamental_run_today(
     master_universe: str = typer.Option("", "--master-universe", help="Broad master universe path; canonical JSON with items, CSV accepted for compatibility"),
     handoff: str = typer.Option("", "--handoff", help="Daily scout handoff JSON path"),
     allow_missing_handoff: bool = typer.Option(False, "--allow-missing-handoff", help="Allow broad-final or scout-smoke to run without a daily handoff"),
+    dealflow_backlog_days: int = typer.Option(7, "--dealflow-backlog-days", min=1, help="Include dated dealflow handoffs from this many days ending on --date"),
     allow_date_quarter_mismatch: bool = typer.Option(False, "--allow-date-quarter-mismatch", help="Allow as-of date and quarter to differ in broad-final mode"),
     output_root: str = typer.Option("", "--output-root", help="Output root; defaults to tradingagents/research/fundamental/runs/<date>/<quarter>/daily"),
     sec_live_root: str = typer.Option("", "--sec-live-root", help="SEC live cache root"),
@@ -779,6 +780,7 @@ def fundamental_run_today(
             review_price_cache_path=review_price_cache_path,
             review_allow_live_price_fetch=allow_live_review_price_fetch,
             allow_missing_handoff=allow_missing_handoff,
+            dealflow_backlog_days=dealflow_backlog_days,
             allow_date_quarter_mismatch=allow_date_quarter_mismatch,
         )
         services = DailyRunServices(run_llm=None if effective_skip_llm else _daily_run_llm_service)

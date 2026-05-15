@@ -18,6 +18,8 @@ BLOCKED_FIELDS = {
     "current_return_pct",
 }
 
+PRIOR_LLM_PREFIX = "prior_llm_"
+
 
 def _key(row: dict[str, Any]) -> tuple[str, str]:
     return str(row.get("ticker", "")).upper(), str(row.get("quarter", ""))
@@ -56,7 +58,18 @@ def build_llm_packets(
                     "document_url": doc.get("document_url", ""),
                 }
             )
-        safe_candidate = {key: value for key, value in candidate.items() if key not in BLOCKED_FIELDS}
+        prior_llm_extract = {
+            key[len(PRIOR_LLM_PREFIX):]: value
+            for key, value in candidate.items()
+            if key.startswith(PRIOR_LLM_PREFIX) and str(value).strip()
+        }
+        safe_candidate = {
+            key: value
+            for key, value in candidate.items()
+            if key not in BLOCKED_FIELDS and not key.startswith(PRIOR_LLM_PREFIX)
+        }
+        if prior_llm_extract:
+            safe_candidate["prior_llm_extract"] = prior_llm_extract
         packets.append(
             {
                 **safe_candidate,

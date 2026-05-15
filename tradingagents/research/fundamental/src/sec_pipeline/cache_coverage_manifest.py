@@ -16,10 +16,11 @@ UNIVERSE_CSV = _CONFIG.universe_csv
 SEC_CACHE = _CONFIG.sec_cache
 LIVE = _CONFIG.live
 QUARTERS = list(_CONFIG.quarters)
+AS_OF_DATE = ''
 
 
-def configure(*, out: Path | str | None = None, live: Path | str | None = None, quarters: list[str] | tuple[str, ...] | None = None, window_slug: str | None = None) -> None:
-    global _CONFIG, OUT, TICKERS_JSON, UNIVERSE_CSV, SEC_CACHE, LIVE, QUARTERS
+def configure(*, out: Path | str | None = None, live: Path | str | None = None, quarters: list[str] | tuple[str, ...] | None = None, window_slug: str | None = None, as_of: str | None = None) -> None:
+    global _CONFIG, OUT, TICKERS_JSON, UNIVERSE_CSV, SEC_CACHE, LIVE, QUARTERS, AS_OF_DATE
     _CONFIG = SecPipelineConfig(
         out=Path(out) if out is not None else _CONFIG.out,
         live=Path(live) if live is not None else _CONFIG.live,
@@ -32,6 +33,7 @@ def configure(*, out: Path | str | None = None, live: Path | str | None = None, 
     SEC_CACHE = _CONFIG.sec_cache
     LIVE = _CONFIG.live
     QUARTERS = list(_CONFIG.quarters)
+    AS_OF_DATE = str(as_of or '').strip()
 
 
 def q_bounds(q: str) -> tuple[date, date]:
@@ -40,6 +42,16 @@ def q_bounds(q: str) -> tuple[date, date]:
     em = sm + 2
     end = date(y, 12, 31) if em == 12 else date(y, em + 1, 1) - timedelta(days=1)
     return start, end
+
+
+def event_bounds(q: str) -> tuple[date, date, bool]:
+    start, end = q_bounds(q)
+    as_of = parse_date(AS_OF_DATE)
+    if not as_of:
+        return start, end, False
+    # Daily runs must respect each company's fiscal calendar.  Use the latest
+    # earnings event already public as of the run date, not calendar quarter starts.
+    return as_of - timedelta(days=180), min(end, as_of), True
 
 
 def parse_date(v: Any) -> date | None:
@@ -120,6 +132,23 @@ def doc_path(ticker: str, accession: str, doc: str) -> Path:
     return LIVE / 'documents' / f"{ticker.upper()}_{accession.replace('-', '')}_{doc}"
 
 
+def fetch_failure_path(cache_key: str) -> Path:
+    safe = ''.join(ch if ch.isalnum() or ch in '_.-' else '_' for ch in str(cache_key).strip('/'))
+    return LIVE / 'fetch_failures' / f'{safe}.json'
+
+
+def fetch_unavailable(cache_key: str) -> bool:
+    path = fetch_failure_path(cache_key)
+    if not path.exists():
+        return False
+    try:
+        payload = json.loads(path.read_text(encoding='utf-8'))
+    except Exception:
+        return False
+    code = int(((payload.get('error') or {}).get('http_code') or 0))
+    return code in {404, 410}
+
+
 def complete_submission_path(cik10: str, accession: str) -> Path:
     return LIVE / 'complete_submissions' / cik10 / f"{accession.replace('-', '')}.txt"
 
@@ -177,7 +206,7 @@ def main() -> None:
             blockers.append({'ticker': ticker, 'blocker_type': 'foreign_issuer_no_10q_10k_in_cached_recent', 'cik': cik, 'company_title': title, 'forms': sorted(forms)})
 
         for q in QUARTERS:
-            start, end = q_bounds(q)
+            start, end, daily_as_of_mode = event_bounds(q)
             missing: list[str] = []
             notes: list[str] = []
             queue_items: list[dict[str, Any]] = []
@@ -197,7 +226,7 @@ def main() -> None:
             item_202.sort(key=lambda r: r['filing_date'])
             periodic = [r for r in filings if r['form'] in {'10-Q', '10-K'} and parse_date(r['filing_date']) and parse_date(r['filing_date']) <= end]
             periodic.sort(key=lambda r: r['filing_date'])
-            selected_8k = item_202[0] if item_202 else {}
+            selected_8k = item_202[-1] if daily_as_of_mode and item_202 else (item_202[0] if item_202 else {})
             selected_periodic = periodic[-1] if periodic else {}
             exhibit_doc = ''
 
@@ -249,6 +278,9 @@ def main() -> None:
                 status = 'NEEDS_FETCH'
             ticker_summary[ticker][status] += 1
             for item in queue_items:
+                if fetch_unavailable(str(item.get('cache_key', ''))):
+                    notes.append(f"fetch_unavailable={item.get('kind')}:{item.get('cache_key')}")
+                    continue
                 item['quarter'] = q
                 fetch_queue.append(item)
             rows.append({

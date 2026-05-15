@@ -45,7 +45,26 @@ def _weak_companyfacts_payload():
 
 
 def _write_prior_context(path, tickers=("T0", "T1", "T2", "T3", "T4"), quarter="2026Q1"):
-    rows = [{"ticker": ticker, "quarter": quarter, "entry_open": "10", "entry_qoq_pct": "5", "pre_llm_fundamental_score": "1", "score_addition": "10"} for ticker in tickers]
+    rows = [
+        {
+            "ticker": ticker,
+            "quarter": quarter,
+            "entry_open": "10",
+            "entry_qoq_pct": "5",
+            "pre_llm_fundamental_score": "1",
+            "score_addition": "10",
+            "causal_change": "2",
+            "negative_revision_risk": "1",
+            "narrative_delta_bucket": "constructive",
+            "operating_leverage_quality": "1",
+            "durability": "1",
+            "proof_alignment": "2",
+            "post_llm_candidate_flag": "1",
+            "post_llm_high_priority_flag": "0",
+            "post_llm_demote_flag": "0",
+        }
+        for ticker in tickers
+    ]
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
 
@@ -175,6 +194,255 @@ def test_orchestrator_final_mode_preserves_broad_rows_filters_llm_and_requires_q
     assert guard["status"] == "pass"
     assert result.artifacts["operator_final_scores_csv"] == str(final_dir / "fundamental_final_scores.csv")
     assert "complete_panel_csv" not in result.artifacts
+
+
+def test_orchestrator_quarantines_no_periodic_filing_before_price_gate(tmp_path):
+    master = tmp_path / "master.json"
+    master.write_text(json.dumps({"items": [{"symbol": "GOOD", "cik": "1", "company_title": "Good Inc"}, {"symbol": "ADR", "cik": "2", "company_title": "Foreign ADR"}]}))
+    handoff = tmp_path / "handoff.json"
+    handoff.write_text(json.dumps({"tickers": [], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
+    prior = tmp_path / "prior_scores.csv"
+    _write_prior_context(prior, tickers=("GOOD",), quarter="2026Q1")
+    live = tmp_path / "live_sec"
+    (live / "companyfacts").mkdir(parents=True)
+    (live / "companyfacts" / "CIK0000000001.json").write_text(json.dumps(_weak_companyfacts_payload()))
+    (live / "companyfacts" / "CIK0000000002.json").write_text(json.dumps(_weak_companyfacts_payload()))
+
+    def fake_coverage(*, out_root, universe_csv, eligible_json, quarter, live_sec_root):
+        manifest = out_root / f"sec_coverage_manifest_{quarter}.csv"
+        rows = [
+            {"ticker": "GOOD", "quarter": quarter, "coverage_status": "CACHED_READY", "missing_inputs": "", "notes": "", "earnings_8k_accession": "00000000-GOOD", "earnings_8k_filing_date": "2026-05-08", "earnings_8k_primary_document": "8k.htm", "earnings_exhibit_document": "ex99.htm", "periodic_accession": "00000000-GOODQ", "periodic_form": "10-Q", "periodic_filing_date": "2026-05-08", "periodic_primary_document": "10q.htm"},
+            {"ticker": "ADR", "quarter": quarter, "coverage_status": "BLOCKED_METADATA_OR_ISSUER_REALITY", "missing_inputs": "10q_10k_metadata", "notes": "foreign_issuer_or_no_domestic_10q_10k", "earnings_8k_accession": "", "earnings_8k_filing_date": "", "earnings_8k_primary_document": "", "earnings_exhibit_document": "", "periodic_accession": "", "periodic_form": "", "periodic_filing_date": "", "periodic_primary_document": ""},
+        ]
+        with manifest.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+            writer.writeheader()
+            writer.writerows(rows)
+        return {"ticker_count": 2, "status_counts": {"CACHED_READY": 1, "BLOCKED_METADATA_OR_ISSUER_REALITY": 1}, "missing_input_counts": {"10q_10k_metadata": 1}, "fetch_queue_count": 0, "blocked_tickers": ["ADR"], "outputs": {"manifest_csv": str(manifest)}}
+
+    def fake_prices(tickers, *, start, end, **kwargs):
+        assert tickers == ["GOOD"]
+        return [{"ticker": "GOOD", "date": "2026-05-11", "open": 8, "close": 8}]
+
+    cfg = DailyRunConfig(
+        as_of="2026-05-12",
+        quarter="2026Q2",
+        mode="broad-master-final",
+        output_root=tmp_path / "run",
+        master_universe_path=master,
+        handoff_path=handoff,
+        sec_live_root=live,
+        skip_llm=True,
+        prior_context_path=prior,
+        min_broad_universe_count=2,
+    )
+    result = run_daily_fundamental(cfg, services=DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage))
+
+    gate6 = next(g for g in result.gates if g.gate_number == 6)
+    assert gate6.status == GateStatus.PASS
+    assert gate6.summary["missing_entry_open"] == 0
+    assert gate6.summary["sec_reality_quarantine_count"] == 1
+    with (cfg.output_root / "score_input_quarantine.csv").open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    assert rows[0]["ticker"] == "ADR"
+    assert rows[0]["score_input_quarantine_reason"] == "missing_periodic_10q_10k"
+
+
+def test_orchestrator_rejects_llm_required_rows_when_no_earnings_8k_exists(tmp_path):
+    master = tmp_path / "master.json"
+    master.write_text(json.dumps({"items": [{"symbol": "GOOD", "cik": "1", "company_title": "Good Inc"}, {"symbol": "NO8K", "cik": "2", "company_title": "No 8-K Inc"}]}))
+    handoff = tmp_path / "handoff.json"
+    handoff.write_text(json.dumps({"tickers": [], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
+    prior = tmp_path / "prior_scores.csv"
+    _write_prior_context(prior, tickers=("GOOD",), quarter="2026Q1")
+    live = tmp_path / "live_sec"
+    (live / "companyfacts").mkdir(parents=True)
+    (live / "companyfacts" / "CIK0000000001.json").write_text(json.dumps(_weak_companyfacts_payload()))
+    (live / "companyfacts" / "CIK0000000002.json").write_text(json.dumps(_companyfacts_payload()))
+
+    def fake_coverage(*, out_root, universe_csv, eligible_json, quarter, live_sec_root):
+        manifest = out_root / f"sec_coverage_manifest_{quarter}.csv"
+        rows = [
+            {"ticker": "GOOD", "quarter": quarter, "coverage_status": "CACHED_READY", "missing_inputs": "", "notes": "", "earnings_8k_accession": "00000000-GOOD", "earnings_8k_filing_date": "2026-05-08", "earnings_8k_primary_document": "8k.htm", "earnings_exhibit_document": "ex99.htm", "periodic_accession": "00000000-GOODQ", "periodic_form": "10-Q", "periodic_filing_date": "2026-05-08", "periodic_primary_document": "10q.htm"},
+            {"ticker": "NO8K", "quarter": quarter, "coverage_status": "CACHED_READY", "missing_inputs": "", "notes": "no_item_2_02_8k_using_periodic_only", "earnings_8k_accession": "", "earnings_8k_filing_date": "", "earnings_8k_primary_document": "", "earnings_exhibit_document": "", "periodic_accession": "00000000-NO8KQ", "periodic_form": "10-Q", "periodic_filing_date": "2026-05-08", "periodic_primary_document": "10q.htm"},
+        ]
+        with manifest.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+            writer.writeheader()
+            writer.writerows(rows)
+        return {"ticker_count": 2, "status_counts": {"CACHED_READY": 2}, "missing_input_counts": {}, "fetch_queue_count": 0, "blocked_tickers": [], "outputs": {"manifest_csv": str(manifest)}}
+
+    def fake_prices(tickers, *, start, end, **kwargs):
+        return [{"ticker": ticker, "date": "2026-05-11", "open": 8, "close": 8} for ticker in tickers]
+
+    cfg = DailyRunConfig(
+        as_of="2026-05-12",
+        quarter="2026Q2",
+        mode="broad-master-final",
+        output_root=tmp_path / "run",
+        master_universe_path=master,
+        handoff_path=handoff,
+        sec_live_root=live,
+        skip_llm=True,
+        prior_context_path=prior,
+        min_broad_universe_count=2,
+    )
+    result = run_daily_fundamental(cfg, services=DailyRunServices(price_provider=fake_prices, run_coverage=fake_coverage))
+
+    gate7 = next(g for g in result.gates if g.gate_number == 7)
+    assert gate7.status == GateStatus.PASS
+    assert gate7.summary["non_fetchable_llm_evidence_rejection_count"] == 1
+    assert gate7.summary["llm_required_quarantine_count"] == 0
+    with (cfg.output_root / "score_input_quarantine.csv").open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    assert rows[0]["ticker"] == "NO8K"
+    assert rows[0]["score_input_quarantine_reason"] == "no_earnings_8k_or_press_release_found"
+
+
+def test_orchestrator_attaches_prior_llm_extract_to_packets(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path, skip_llm=True)
+    _write_prior_context(cfg.prior_context_path, tickers=("T0", "T1", "T2", "T3", "T4"), quarter="2026Q1")
+    rows = []
+    with cfg.prior_context_path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        if row["ticker"] == "T1":
+            row.update({"causal_change": "3", "narrative_delta_bucket": "constructive", "post_llm_candidate_flag": "1", "post_llm_high_priority_flag": "1", "post_llm_demote_flag": "0", "negative_revision_risk": "1", "operating_leverage_quality": "2", "durability": "2", "proof_alignment": "3"})
+    with cfg.prior_context_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(dict.fromkeys(key for row in rows for key in row)))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    result = run_daily_fundamental(cfg, services=services)
+
+    assert next(g for g in result.gates if g.gate_number == 8).status == GateStatus.SKIPPED
+    packets = [json.loads(line) for line in (cfg.output_root / "lake" / "artifacts" / "2026Q2_llm_packets.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    t1 = next(packet for packet in packets if packet["ticker"] == "T1")
+    assert t1["prior_llm_extract"]["causal_change"] == 3.0
+    assert t1["prior_llm_extract"]["narrative_delta_bucket"] == "constructive"
+
+
+def test_orchestrator_builds_prior_llm_recovery_packet_and_requires_completion(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    rows = []
+    with cfg.prior_context_path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        if row["ticker"] == "T1":
+            for field in orchestrator_module.PRIOR_LLM_FIELDS:
+                row[field] = ""
+    with cfg.prior_context_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(dict.fromkeys(key for row in rows for key in row)))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    def fake_llm(*, packets_path, output_root, config):
+        packets = [json.loads(line) for line in packets_path.read_text().splitlines() if line.strip()]
+        assert [packet["sample_id"] for packet in packets] == ["T1_2026Q2", "T2_2026Q2", "T1_2026Q1"]
+        out = output_root / "post_llm_scores.csv"
+        output_rows = [
+            {
+                "sample_id": packet["sample_id"],
+                "ticker": packet["ticker"],
+                "quarter": packet["quarter"],
+                "post_llm_candidate_flag": "1",
+                "post_llm_high_priority_flag": "1",
+                "post_llm_demote_flag": "0",
+                "causal_change": "3",
+                "negative_revision_risk": "1",
+                "narrative_delta_bucket": "constructive",
+                "operating_leverage_quality": "1",
+                "durability": "1",
+                "proof_alignment": "2",
+            }
+            for packet in packets
+        ]
+        with out.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(output_rows[0]))
+            writer.writeheader()
+            writer.writerows(output_rows)
+        return out
+
+    result = run_daily_fundamental(cfg, services=DailyRunServices(**{**services.__dict__, "run_llm": fake_llm}))
+
+    assert result.summary["final"] is True
+    gate7 = next(g for g in result.gates if g.gate_number == 7)
+    assert gate7.summary["prior_llm_recovery_needed_count"] == 1
+    assert gate7.summary["prior_llm_recovery_packet_count"] == 1
+    gate8 = next(g for g in result.gates if g.gate_number == 8)
+    assert gate8.summary["expected_count"] == 3
+
+
+def test_prior_llm_recovery_candidates_keep_current_identity_when_prior_context_has_blank_cik():
+    candidates = orchestrator_module._prior_recovery_candidate_rows(
+        current_rows=[
+            {
+                "ticker": "T1",
+                "symbol": "T1",
+                "cik": "123456",
+                "company_title": "T1 Inc",
+                "title": "T1 Inc",
+            }
+        ],
+        prior_rows=[
+            {
+                "ticker": "T1",
+                "quarter": "2026Q1",
+                "cik": "",
+                "company_title": "",
+                "entry_open": "10",
+            }
+        ],
+        expected_prior_quarter="2026Q1",
+    )
+
+    assert candidates == [
+        {
+            "ticker": "T1",
+            "quarter": "2026Q1",
+            "cik": "123456",
+            "company_title": "T1 Inc",
+            "entry_open": "10",
+            "symbol": "T1",
+            "title": "T1 Inc",
+            "llm_eligible": 1,
+            "llm_recovery_role": "prior_quarter_required_for_final_scoring",
+        }
+    ]
+
+
+def test_prior_recovery_context_builds_prior_price_and_pre_llm_score(tmp_path):
+    live = tmp_path / "live_sec"
+    (live / "companyfacts").mkdir(parents=True)
+    (live / "companyfacts" / "CIK0000123456.json").write_text(json.dumps(_companyfacts_payload()))
+    cfg = DailyRunConfig(as_of="2026-05-15", quarter="2026Q2", mode="broad-master-final", output_root=tmp_path / "run")
+
+    def fake_prices(tickers, *, start, end, **kwargs):
+        assert tickers == ["T1"]
+        return [{"ticker": "T1", "date": "2026-02-10", "open": 10, "close": 10}]
+
+    rows, quarantine, summary = orchestrator_module._build_prior_recovery_context_rows(
+        candidates=[{"ticker": "T1", "quarter": "2026Q1", "cik": "123456", "company_title": "T1 Inc"}],
+        coverage_rows=[
+            {
+                "ticker": "T1",
+                "quarter": "2026Q1",
+                "earnings_8k_filing_date": "2026-02-06",
+                "periodic_filing_date": "2026-02-06",
+                "periodic_accession": "00000000-T1Q",
+                "periodic_primary_document": "10q.htm",
+            }
+        ],
+        expected_prior_quarter="2026Q1",
+        config=cfg,
+        live_root=live,
+        price_provider=fake_prices,
+    )
+
+    assert quarantine == []
+    assert summary["prior_recovery_context_ready_count"] == 1
+    assert rows[0]["entry_open"] == 10
+    assert rows[0]["pre_llm_fundamental_score"] != ""
 
 
 def test_orchestrator_broad_final_hard_stops_when_required_llm_evidence_stays_quarantined(tmp_path):
@@ -425,8 +693,8 @@ def test_orchestrator_uses_prior_qoq_before_llm_eligibility_for_rm_only_candidat
     )
     prior = tmp_path / "prior_scores.csv"
     rows = [
-        {"ticker": "RMX", "quarter": "2026Q1", "entry_open": "10", "entry_qoq_pct": "0", "pre_llm_fundamental_score": "-3"},
-        {"ticker": "SAFE", "quarter": "2026Q1", "entry_open": "30", "entry_qoq_pct": "0", "pre_llm_fundamental_score": "8"},
+        {"ticker": "RMX", "quarter": "2026Q1", "entry_open": "10", "entry_qoq_pct": "0", "pre_llm_fundamental_score": "-3", "causal_change": "2", "negative_revision_risk": "1", "narrative_delta_bucket": "constructive", "operating_leverage_quality": "1", "durability": "1", "proof_alignment": "2", "post_llm_candidate_flag": "1", "post_llm_high_priority_flag": "0", "post_llm_demote_flag": "0"},
+        {"ticker": "SAFE", "quarter": "2026Q1", "entry_open": "30", "entry_qoq_pct": "0", "pre_llm_fundamental_score": "8", "causal_change": "2", "negative_revision_risk": "1", "narrative_delta_bucket": "constructive", "operating_leverage_quality": "1", "durability": "1", "proof_alignment": "2", "post_llm_candidate_flag": "1", "post_llm_high_priority_flag": "0", "post_llm_demote_flag": "0"},
     ]
     with prior.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)

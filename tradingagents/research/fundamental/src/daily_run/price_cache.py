@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable, Mapping
+from collections import defaultdict
 
 from .review_list_filter import fetch_review_price_rows, load_cached_review_price_rows, store_review_price_rows
 
@@ -48,14 +49,19 @@ def load_or_fetch_price_rows(
     artifacts: dict[str, str] = {}
 
     if missing_tickers and allow_live_fetch:
-        fetch_start = min([required_starts.get(ticker, start) for ticker in missing_tickers] or [start])
-        live_rows = fetch_review_price_rows(
-            missing_tickers,
-            start=fetch_start,
-            end=end,
-            price_provider=price_provider,
-            batch_size=batch_size,
-        )
+        tickers_by_start: dict[str, list[str]] = defaultdict(list)
+        for ticker in missing_tickers:
+            tickers_by_start[required_starts.get(ticker, start)].append(ticker)
+        for fetch_start, group in sorted(tickers_by_start.items()):
+            live_rows.extend(
+                fetch_review_price_rows(
+                    group,
+                    start=fetch_start,
+                    end=end,
+                    price_provider=price_provider,
+                    batch_size=batch_size,
+                )
+            )
         live_tickers = {_ticker(row.get("ticker")) for row in live_rows}
         if live_rows:
             for label, root in {"daily_live_price_run_cache": output_root, "daily_live_price_shared_cache": shared_cache_root}.items():
