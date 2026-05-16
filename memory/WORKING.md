@@ -1,5 +1,9 @@
 # Current Session State
 
+**Current note:** Completed final review and consolidation for `2026-05-15` dealflow after X-feed finished. X-feed manifest is finalized and ready for dealflow: passes `1-16` complete, missing passes `[]`, merged symbols `30`, themes `16`, edges `199`. Rebuilt final handoff as non-X scouts + X-feed + active manual watchlist. Final count is `144` unique tickers. Source counts: non-X scout unique `110`, X-feed unique `30`, active manual watchlist `23`, X new to non-X scouts `20`, manual new to scouts and X `14`. Verified `final_dealflow_tickers.json` and `total_unique_tickers.json` contain no `score`, `rank`, `deal_flow_score`, `core_score`, or `triage_score` keys. Spot-checked expected names: `NVDA`, `NBIS`, `HOOD`, `SOFI`, `NFLX`, `COST`, `PENG`, `P`, `NOK`, `AVGO`, and `QCLS` are present with source metadata. Last updated 2026-05-15T07:59:49-04:00.
+
+**Current note:** Ran `2026-05-15` non-X dealflow scouts with X manually disabled in-process. Preflight: technical universe refresh `515` unique tickers from `SPY/QQQ/DOW`; commodity scan `0`; DoD scan `0` with API 400 warnings for categories `621` and `237`; technical signal sync `516` tickers, `1030` inserted rows, `25` buy-zone states, with Yahoo missing-price warning for `CTRA`. Source run: liquidity refresh `832/852`, breakout `62`, 13F `68`, insider `2`, FVG `3`, FMA `5`, technical ignition/IV/commodity/DoD `0`, `x_manual_feed=0`, scout-only total `110` unique and `140` mentions. Rebuilt final non-X handoff to include active manual watchlist: final `129` unique tickers, with `23` active manual names and `19` manual-only vs non-X scouts. Verified `scout_ticker_summary.json`, `final_dealflow_tickers.json`, and `total_unique_tickers.json` contain no `score`, `rank`, `deal_flow_score`, `core_score`, or `triage_score` keys. Artifacts under `eval_results/deal_flow/2026-05-15/`. Last updated 2026-05-15T07:35:32-04:00.
+
 **Current note:** Merged `origin/main` daily orchestration work while preserving local fundamental coverage/dealflow notes. Remote additions now present in main include Task 1 active master materialization, daily identity resolution, cache-first price writeback, companyfacts fallback, daily ticker status output, coverage-aware Top10/Plus5/shadow publish, Gate 7 hard-stop for unrecovered LLM-required evidence gaps, and persistent master additions ledger writes only for new dealflow tickers that reach final scored rows after publish. Remote verification before merge: daily/review/CLI/architecture suite `114 passed, 2 warnings`, py_compile passed, `git diff --check` passed, final review no actionable defects. Last updated 2026-05-14T16:45:00-04:00.
 
 **Current note:** Added manual watchlist seeds `QCLS`, `CBRS`, `FLNC`, `FCEL`, `DGXX`, `P`, and `PENG`, then rebuilt the `2026-05-14` final dealflow ticker handoff with non-X scouts + X-feed + active manual watchlist. Final union count is now `150` tickers. Inputs: non-X scout unique `108`, X-feed unique `35`, active manual watchlist unique `23`. Source deltas: X added `25` names not in non-X scouts; manual added `17` names not already in non-X scouts or X. Verification: all seven requested symbols are present and no `score`, `rank`, `deal_flow_score`, `core_score`, or `triage_score` keys exist in final handoff. Last updated 2026-05-14T13:03:07-04:00.
@@ -169,6 +173,18 @@
 ---
 
 ## Completed Today
+
+- Daily X-feed Grok automation ran for `2026-05-15`:
+  - completed passes `1-16`
+  - target model used: `Grok 4.3 (beta)`
+  - final readiness: `ready=True`, finalized manifest exists
+  - raw archives: 16
+  - merged symbols: 30
+  - Theme Emergence Graph: 30 tickers, 16 multi-ticker themes, 199 edges
+  - edge types: `account_mentions_ticker`, `ticker_linked_to_theme`, `ticker_co_mentioned`
+  - low-yield valid passes: `8`, `9`, `11`, `14`, `15`
+  - pass `16`, `Blindspot & Unmapped Ticker Audit`, added `NOK`, `PENG`, `AAOI`, `MP`, `BZAI`
+  - operational note: run completed without recovery extraction; direct DOM prompt set + submit-button click worked, Grok Copy button not used
 
 - Daily X-feed Grok automation ran for `2026-05-14`:
   - completed passes `1-16`
@@ -2974,3 +2990,53 @@
 - Full cache-only result: `10,348` SEC names -> `791` kept, `524` rejected, `9,033` pending fetch-needed.
 - Gates 1-7 and 9 passed; LLM/publish skipped by diagnostic flags.
 - Verification: `python3 -m pytest tests/test_fundamental_review_list_filter.py -q` -> `8 passed`; touched daily-run files `compileall` passed.
+
+## Current fundamental daily prior-LLM rule
+
+- Official daily final scoring now treats required prior-quarter LLM extract as a hard dependency.
+- If a current row is LLM-required and prior LLM fields are missing, the daily run builds/fetches a prior-quarter LLM recovery packet inside the same run.
+- The LLM job includes both current-quarter packets and required prior-quarter recovery packets.
+- Final scoring hard-stops until required prior LLM rows validate, unless SEC evidence proves no prior earnings 8-K / press-release filing exists.
+- Docs updated: `tradingagents/research/fundamental/docs/scoring_input_contract.md` and `daily_run_gate_sequence.md`.
+- Verification: focused daily-run suite `38 passed`; `py_compile` passed. Full repo suite still has unrelated existing failures outside this area.
+- Latest 2026-05-15 skip-LLM daily verification run passed Gates 1-9: `tradingagents/research/fundamental/runs/2026-05-15/2026Q2/daily_verify_fetch_liveprice_skipllm_094825`.
+- Latest counts: universe `1,333`; current LLM packets `378`; prior recovery packets `14`; prior impossible/no filings `2`; about `104` prior LLM-required rows still need prior evidence recovery before a true final LLM/post-file publish.
+- Fixes added during verification: SEC 404 fetch does not stop whole run; price fetch groups by ticker-specific start date; missing price rows quarantine instead of blocking broad run.
+
+## Current fundamental daily SEC cache cleanup
+
+- Deleted legacy raw SEC HTML cache `/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/filings_html`; free disk increased to about `156Gi`.
+- Verified official daily/consolidated scoring paths are not tied to `filings_html`; current daily cache uses `live_sec/*` plus fallback `sec_docs_text`, `sec_docs_html`, and `earnings_8k_raw`.
+- Refilled current run SEC queue into `live_sec` for `2026Q2` run `daily_verify_backlog_step2_105834`.
+- Current-quarter SEC fetch queue is now `0`; status counts: `1,353` cached ready, `21` blocked by filing reality/metadata. Remaining current blockers are not fetchable queue items: `10q_10k_metadata=21`, `companyfacts=1`.
+- Required prior-quarter recovery queue for `2026Q1` is also `0` after fetching `TRAW` periodic document.
+- Remaining prior blocker is identity metadata in old recovery artifact: `104` prior rows have unresolved CIK, so next fix is rebuilding/enriching prior recovery candidates before final LLM/final scoring.
+- Fixed prior recovery identity merge: if prior-context row has blank CIK/company name, recovery candidate now fills identity from current resolved row while keeping prior score fields.
+- Rebuilt verification run: `tradingagents/research/fundamental/runs/2026-05-15/2026Q2/daily_verify_prior_identity_fix_v2`.
+- Prior recovery after fix: `132` rows, CIK blanks `0`, company title blanks `0`, prior SEC fetch queue `0`, prior blockers `0`, prior packets `129`, impossible/no filings `3` (`DRVN`, `KOS`, `TRAW`), missing evidence file empty.
+- Current-quarter queue remains `0`; final rows `1,316`; Gates 1-9 passed with LLM/publish skipped.
+- Verification: red regression test failed before fix; focused tests `tests/test_fundamental_daily_orchestrator_contract.py tests/test_llm_packets.py tests/test_sec_coverage_manifest_parser.py -q` -> `29 passed`; `compileall` and `git diff --check` passed.
+
+## Current fundamental daily final run
+
+- User clarified no external API model is needed; daily run can use in-session/subagent model, or reuse validated post-LLM output.
+- Ran in-session LLM first with `--llm-mode in-session --llm-model gpt-5.5 --llm-reasoning-effort high`; it completed `65/65` batches with `0` batch errors.
+- That run correctly stopped at Gate 9 because `28` current LLM-complete rows lacked prior-quarter comparison fields, even though prior LLM extracts existed.
+- Fixed daily run so prior recovery now builds both prior LLM packets and prior comparison data: prior price, prior pre-LLM score, and QoQ context.
+- Verification: targeted prior-context test passed; full daily orchestrator contract `23 passed`; LLM packet + SEC coverage parser tests `7 passed`; `compileall` and `git diff --check` passed.
+- Final daily publish rerun used saved post-LLM CSV with `--llm-mode post-file`, not a fresh model call.
+- Successful run: `tradingagents/research/fundamental/runs/2026-05-15/2026Q2/daily_postfile_prior_context_fix_v1`.
+- Gates `1-10` passed. Final rows `1,316`; LLM-complete QoQ-ready rows `387/387`; QoQ-missing rows `0`.
+- Prior impossible/no earnings filing count remains `3`: `DRVN`, `KOS`, `TRAW`.
+- Top15 tickers: `AIOT`, `CTOS`, `ICHR`, `RXT`, `UIS`, `WEST`, `AAOI`, `NNBR`, `COMP`, `NRGV`, `VIAV`, `PARR`, `ADTN`, `XPER`, `WTTR`.
+- Core deterioration review rows: `ICHR`, `UIS`, `NNBR`.
+
+## Current fundamental daily readiness cleanup
+
+- New branch/worktree: `/Users/aeternusholdings/.config/superpowers/worktrees/Aeternus/feature/fundamental-daily-readiness`.
+- Added `fundamental-run-smoke`: cache-only SEC/price preflight, no LLM, no publish, mode `scout-smoke`.
+- Added `publish_readiness_summary.json` and `.md` to every daily run finish.
+- Readiness summary reports: gates passed, LLM complete, prior context complete, QoQ missing count, Top15 emitted, shadow replacement count, core deterioration names.
+- Verified real smoke run: `tradingagents/research/fundamental/runs/2026-05-15/2026Q2/smoke_readiness_v2`.
+- Smoke result: Gates 1-7 and 9 passed, Gate 8 skipped, Gate 10 skipped, readiness status `not_final`, QoQ missing `0`, prior context complete `true`, LLM expected packets `74`.
+- Verification: `tests/test_fundamental_daily_orchestrator_contract.py tests/test_cli_fundamental_run_today.py -q` -> `34 passed`; compileall and `git diff --check` passed.

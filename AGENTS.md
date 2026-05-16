@@ -51,6 +51,14 @@ Build the Aeternus Investment Intelligence Platform - a next-generation research
 ### Communication
 - For fundamental scoring work, follow `tradingagents/research/fundamental/docs/scoring_input_contract.md` before judging readiness or final publish. Never make the user re-explain SEC evidence, fresh earnings 8-K/press-release, fetch-loop, score-input quarantine, prior-quarter requirements, or the rule that final scoring must wait for required prior LLM extracts unless no prior earnings filing exists.
 - Use simple, understandable English first. Avoid technical jargon unless the user asks for it.
+- When explaining daily fundamental run blockers, always use this plain shape:
+  - "What happened:" one sentence.
+  - "Why:" one sentence.
+  - "Fix:" one sentence.
+  - "Current status:" one sentence.
+- Say "earnings press release / earnings 8-K" instead of "Item 2.02" unless the user asks for the exact SEC filing label.
+- Say "the company did not file the earnings document we need" instead of "non-fetchable LLM evidence" or "LLM-required quarantine."
+- Say "ready for LLM review" instead of "eligible packets"; say "LLM job file" instead of "subagent job" unless discussing implementation.
 - When an internal term is necessary, define it in one plain sentence before using it.
 - Speak in operator language first, not implementation language.
 - For step-by-step live workflows, use this default shape: "Next step in plain English:" followed by 1-3 short bullets with business action and reason.
