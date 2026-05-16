@@ -25,6 +25,96 @@ def test_fundamental_run_today_help_exposes_complete_panel_options():
     assert "--complete-panel-output-root" in result.output
 
 
+def test_fundamental_run_smoke_help_exists():
+    result = runner.invoke(app, ["fundamental-run-smoke", "--help"], env={"COLUMNS": "240"})
+    assert result.exit_code == 0
+    assert "--master-universe" in result.output
+    assert "--handoff" in result.output
+    assert "--prior-final-scores" in result.output
+
+
+def test_fundamental_run_smoke_uses_scout_smoke_skip_llm(monkeypatch, tmp_path):
+    captured = {}
+
+    def fake_run_daily_fundamental(cfg, services=None):
+        captured["cfg"] = cfg
+        return type(
+            "Result",
+            (),
+            {
+                "summary": {"final": False, "stopped": "", "artifacts": {}},
+                "gates": [],
+            },
+        )()
+
+    monkeypatch.setattr("tradingagents.research.fundamental.src.daily_run.orchestrator.run_daily_fundamental", fake_run_daily_fundamental)
+    master = tmp_path / "master.json"
+    master.write_text(json.dumps({"items": [{"symbol": "AAA", "cik": "1", "company_title": "AAA Inc"}]}))
+    handoff = tmp_path / "handoff.json"
+    handoff.write_text(json.dumps({"tickers": ["AAA"], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
+    prior = tmp_path / "prior.csv"
+    prior.write_text("ticker,quarter,entry_open,entry_qoq_pct,pre_llm_fundamental_score\nAAA,2026Q1,10,0,1\n")
+
+    result = runner.invoke(
+        app,
+        [
+            "fundamental-run-smoke",
+            "--date",
+            "2026-05-12",
+            "--quarter",
+            "2026Q2",
+            "--master-universe",
+            str(master),
+            "--handoff",
+            str(handoff),
+            "--prior-final-scores",
+            str(prior),
+            "--output-root",
+            str(tmp_path / "run"),
+            "--format",
+            "json",
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    assert captured["cfg"].mode == "scout-smoke"
+    assert captured["cfg"].skip_llm is True
+    assert captured["cfg"].skip_fetch is True
+    assert captured["cfg"].review_allow_live_price_fetch is False
+    assert captured["cfg"].prior_context_path == prior
+
+
+def test_fundamental_run_smoke_enforces_minimum_broad_universe(tmp_path):
+    master = tmp_path / "master.json"
+    master.write_text(json.dumps({"items": [{"symbol": "AAA", "cik": "1", "company_title": "AAA Inc"}]}))
+    handoff = tmp_path / "handoff.json"
+    handoff.write_text(json.dumps({"tickers": ["AAA"], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
+
+    result = runner.invoke(
+        app,
+        [
+            "fundamental-run-smoke",
+            "--date",
+            "2026-05-12",
+            "--quarter",
+            "2026Q2",
+            "--master-universe",
+            str(master),
+            "--handoff",
+            str(handoff),
+            "--output-root",
+            str(tmp_path / "run"),
+            "--min-broad-universe-count",
+            "2",
+            "--format",
+            "json",
+        ],
+    )
+
+    assert result.exit_code == 2
+    assert "smoke_master_universe_too_small" in result.output
+
+
 def test_fundamental_run_today_rejects_missing_mode(tmp_path):
     result = runner.invoke(app, ["fundamental-run-today", "--mode", "", "--output-root", str(tmp_path)])
     assert result.exit_code != 0

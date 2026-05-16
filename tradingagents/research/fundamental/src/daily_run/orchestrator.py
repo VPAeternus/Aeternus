@@ -10,12 +10,12 @@ from typing import Any, Callable, Mapping
 from uuid import uuid4
 
 from tradingagents.research.fundamental.src.config.cache_paths import market_cache_root, sec_cache_root
-from tradingagents.research.fundamental.src.features.common import prior_quarter
+from tradingagents.research.fundamental.src.features.common import clean, prior_quarter
 
 from .artifacts import write_csv, write_json_atomic, write_text_atomic
 from .coverage import coverage_gate_result, load_raw_documents_from_coverage, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
 from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_filtered_llm_packets
-from .finalize import add_qoq_context, build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
+from .finalize import QOQ_REQUIRED_FIELDS, add_qoq_context, build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
 from .identity import IdentityResolution, load_sec_ticker_rows, resolve_ticker_identity
 from .master_source import ADDITIONS_LEDGER, append_master_additions, materialize_master_universe
@@ -160,6 +160,132 @@ def _write_final_report(state: DailyRunState, summary: dict[str, Any]) -> Path:
     return report_path
 
 
+def _csv_row_count(path_value: str | Path | None) -> int:
+    if not path_value:
+        return 0
+    path = Path(path_value)
+    if not path.is_file() or path.stat().st_size == 0:
+        return 0
+    with path.open(newline="", encoding="utf-8") as handle:
+        return sum(1 for _ in csv.DictReader(handle))
+
+
+def _read_tickers_from_csv(path_value: str | Path | None) -> list[str]:
+    if not path_value:
+        return []
+    path = Path(path_value)
+    if not path.is_file() or path.stat().st_size == 0:
+        return []
+    with path.open(newline="", encoding="utf-8") as handle:
+        return [_ticker(row.get("ticker")) for row in csv.DictReader(handle) if _ticker(row.get("ticker"))]
+
+
+def _shadow_replacement_count(state: DailyRunState) -> int:
+    shadow_json = state.artifacts.get("shadow_json")
+    if shadow_json and Path(shadow_json).is_file():
+        try:
+            payload = json.loads(Path(shadow_json).read_text(encoding="utf-8"))
+            summary = payload.get("core_deterioration_refill_summary") if isinstance(payload, dict) else {}
+            if isinstance(summary, dict):
+                return int(summary.get("replacement_count") or 0)
+        except Exception:
+            pass
+    return _csv_row_count(state.artifacts.get("shadow_core_deterioration_refill_shadow_replacements"))
+
+
+def _qoq_match_count(rows: list[dict[str, Any]]) -> int:
+    return sum(1 for row in rows if all(clean(row.get(field)) for field in QOQ_REQUIRED_FIELDS))
+
+
+def _qoq_match_rows_for_readiness(final_summary: dict[str, Any], tier_summary: dict[str, Any]) -> int:
+    if "llm_eligible_qoq_context_match_rows" in final_summary:
+        return int(final_summary.get("llm_eligible_qoq_context_match_rows") or 0)
+    if "llm_eligible_qoq_context_match_rows" in tier_summary:
+        return int(tier_summary.get("llm_eligible_qoq_context_match_rows") or 0)
+    return int(final_summary.get("qoq_context_match_rows") or 0)
+
+
+def _write_publish_readiness_summary(state: DailyRunState, *, final: bool, stopped: str) -> dict[str, str]:
+    by_gate = {gate.gate_number: gate for gate in state.gates}
+    hard_stop_gates = [gate.gate_number for gate in state.gates if gate.status == GateStatus.HARD_STOP]
+    gates_passed = bool(state.gates) and not hard_stop_gates
+    tier_gate = by_gate.get(7)
+    llm_gate = by_gate.get(8)
+    final_gate = by_gate.get(9)
+    publish_gate = by_gate.get(10)
+    tier_summary = tier_gate.summary if tier_gate else {}
+    llm_summary = llm_gate.summary if llm_gate else {}
+    final_summary = final_gate.summary if final_gate else {}
+    publish_summary = publish_gate.summary if publish_gate else {}
+    llm_eligible_count = int(tier_summary.get("llm_eligible_count") or 0)
+    qoq_missing_count = int(final_summary.get("llm_complete_qoq_missing_rows") or 0)
+    prior_missing_count = int(final_summary.get("prior_llm_extract_missing_for_final_count") or 0)
+    qoq_context_match_rows = _qoq_match_rows_for_readiness(final_summary, tier_summary)
+    prior_context_loaded = bool(final_summary.get("prior_context_loaded"))
+    prior_duplicate_count = int(final_summary.get("prior_duplicate_key_count") or 0)
+    expected_prior_context_rows = int(final_summary.get("expected_prior_context_rows") or 0)
+    prior_context_complete = bool(
+        final_gate
+        and prior_context_loaded
+        and prior_duplicate_count == 0
+        and expected_prior_context_rows > 0
+        and qoq_context_match_rows >= llm_eligible_count
+        and qoq_missing_count == 0
+        and prior_missing_count == 0
+    )
+    expected_llm = int(llm_summary.get("expected_count") or llm_summary.get("packet_count") or 0)
+    completed_llm = int(llm_summary.get("completed_count") or 0)
+    llm_complete = bool(llm_gate and llm_gate.status == GateStatus.PASS and (expected_llm == 0 or completed_llm == expected_llm))
+    top15_emitted = bool(state.artifacts.get("top15_csv") and Path(state.artifacts["top15_csv"]).is_file())
+    core_tickers = _read_tickers_from_csv(state.artifacts.get("top15_core_deterioration_review_queue"))
+    readiness = {
+        "status": "pass" if final and gates_passed and llm_complete and prior_context_complete and top15_emitted else ("blocked" if hard_stop_gates else "not_final"),
+        "final": final,
+        "stopped": stopped,
+        "gates_passed": gates_passed,
+        "hard_stop_gates": hard_stop_gates,
+        "llm_complete": llm_complete,
+        "llm_expected_count": expected_llm,
+        "llm_completed_count": completed_llm,
+        "llm_eligible_count": llm_eligible_count,
+        "prior_context_complete": prior_context_complete,
+        "prior_context_loaded": prior_context_loaded,
+        "prior_context_reason": str(final_summary.get("reason") or ""),
+        "expected_prior_context_rows": expected_prior_context_rows,
+        "prior_duplicate_key_count": prior_duplicate_count,
+        "qoq_context_match_rows": qoq_context_match_rows,
+        "qoq_missing_count": qoq_missing_count,
+        "prior_llm_missing_for_final_count": prior_missing_count,
+        "top15_emitted": top15_emitted,
+        "top15_selected_count": int(publish_summary.get("top15_selected_count") or 0),
+        "shadow_selected_count": int(publish_summary.get("shadow_selected_count") or 0),
+        "shadow_replacement_count": _shadow_replacement_count(state),
+        "core_deterioration_count": len(core_tickers),
+        "core_deterioration_tickers": core_tickers,
+    }
+    json_path = state.config.output_root / "publish_readiness_summary.json"
+    md_path = state.config.output_root / "publish_readiness_summary.md"
+    write_json_atomic(json_path, readiness)
+    lines = [
+        "# Publish Readiness",
+        "",
+        f"Status: {readiness['status']}",
+        f"Final run: {readiness['final']}",
+        f"Gates passed: {readiness['gates_passed']}",
+        f"LLM complete: {readiness['llm_complete']} ({completed_llm}/{expected_llm})",
+        f"Prior context complete: {readiness['prior_context_complete']}",
+        f"QoQ prior matches: {qoq_context_match_rows}/{llm_eligible_count}",
+        f"QoQ missing count: {qoq_missing_count}",
+        f"Top15 emitted: {readiness['top15_emitted']}",
+        f"Shadow replacements: {readiness['shadow_replacement_count']}",
+        f"Core deterioration names: {', '.join(core_tickers) if core_tickers else 'none'}",
+    ]
+    if hard_stop_gates:
+        lines.append(f"Hard-stop gates: {', '.join(str(gate) for gate in hard_stop_gates)}")
+    write_text_atomic(md_path, "\n".join(lines) + "\n")
+    return {"publish_readiness_summary_json": str(json_path), "publish_readiness_summary_md": str(md_path)}
+
+
 def _emit_complete_panel(state: DailyRunState) -> None:
     output_root = state.config.complete_panel_output_root or state.config.output_root / "complete_panel"
     try:
@@ -219,6 +345,7 @@ def _emit_complete_panel(state: DailyRunState) -> None:
 
 def _finish(state: DailyRunState, *, final: bool, stopped: str = "") -> DailyRunResult:
     summary = {"run_id": state.run_id, "as_of": state.config.as_of, "quarter": state.config.quarter, "mode": state.config.run_mode.value, "final": final, "stopped": stopped, "gate_statuses": [{"gate": g.gate_number, "name": g.gate_name, "status": g.status.value} for g in state.gates], "artifacts": state.artifacts}
+    state.artifacts.update(_write_publish_readiness_summary(state, final=final, stopped=stopped))
     report_path = _write_final_report(state, summary)
     state.artifacts["daily_fundamental_run_report"] = str(report_path)
     summary["artifacts"] = state.artifacts
@@ -1357,6 +1484,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         gate7_summary.update(prior_recovery_summary)
         gate7_summary.update(
             {
+                "llm_eligible_qoq_context_match_rows": _qoq_match_count(eligible_rows),
                 "llm_required_quarantine_count": len(blocking_llm_quarantine),
                 "llm_required_quarantine_tickers": sorted({_ticker(row.get("ticker")) for row in blocking_llm_quarantine})[:50],
                 "non_fetchable_llm_evidence_rejection_count": len(non_fetchable_llm_rejections),
@@ -1427,7 +1555,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                 job_path = config.output_root / "llm_subagent_job.json"
                 if job_path.exists():
                     artifacts["llm_subagent_job"] = str(job_path)
-                _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {"reason": reason}, artifacts))
+                _record(state, GateResult(8, "LLM packet, extraction, and validation", GateStatus.HARD_STOP, {**packet_summary, "completed_count": 0, "reason": reason}, artifacts))
             validation_gate = validate_post_llm_csv(post_llm_path, expected_sample_ids={p["sample_id"] for p in packets})
             validation_gate.summary = {**packet_summary, **validation_gate.summary}
             validation_gate.artifacts.update({"llm_packets": str(packet_path), "llm_empty_evidence_quarantine": str(empty_q_path)})
@@ -1467,6 +1595,9 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                 ),
             )
         final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows, prior_context_rows=prior_rows_for_final)
+        final_summary["llm_eligible_qoq_context_match_rows"] = _qoq_match_count(
+            [row for row in final_rows if clean(row.get("llm_status")) == "complete"]
+        )
         final_summary = {**final_summary, **prior_summary, **prior_post_summary, "prior_llm_extract_impossible_no_filings_count": len(prior_recovery_impossible)}
         final_path = config.output_root / f"fundamental_final_scores_{config.as_of}.csv"
         final_artifacts = write_final_scores_csv(final_path, final_rows, final_summary)
@@ -1488,7 +1619,22 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         )
         final_artifacts["daily_ticker_status"] = str(daily_status_path)
         explicit_invalid_quarantine_count = len(price_quarantine) + len(score_input_quarantine)
-        _record(state, validate_broad_final_scores(final_rows=final_rows, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=explicit_invalid_quarantine_count, run_mode=config.run_mode, artifacts=final_artifacts, prior_context_summary=prior_summary))
+        _record(
+            state,
+            validate_broad_final_scores(
+                final_rows=final_rows,
+                broad_universe_count=len(universe.rows),
+                explicit_invalid_quarantine_count=explicit_invalid_quarantine_count,
+                run_mode=config.run_mode,
+                artifacts=final_artifacts,
+                prior_context_summary={
+                    **prior_summary,
+                    "qoq_context_match_rows": final_summary.get("qoq_context_match_rows", 0),
+                    "qoq_context_input_rows": final_summary.get("qoq_context_input_rows", 0),
+                    "llm_eligible_qoq_context_match_rows": final_summary.get("llm_eligible_qoq_context_match_rows", 0),
+                },
+            ),
+        )
 
         if config.run_mode == RunMode.BROAD_MASTER_FINAL and not config.skip_llm:
             publish_gate = (services.publish or publish_top15_and_shadow)(scores_csv=final_path, output_root=config.output_root, as_of=config.as_of, broad_universe_count=len(universe.rows), explicit_invalid_quarantine_count=explicit_invalid_quarantine_count, coverage_manifest=coverage_csv if coverage_csv.exists() else None)
