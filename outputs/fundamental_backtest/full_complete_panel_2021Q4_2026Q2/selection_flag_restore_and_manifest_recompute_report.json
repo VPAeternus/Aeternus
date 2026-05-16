@@ -1,0 +1,49 @@
+{
+  "blank_counts_by_required_field": {
+    "assets_value": 2,
+    "financing_cash_flow_value": 0,
+    "investing_cash_flow_value": 0,
+    "llm_status": 22303,
+    "net_income_value": 0,
+    "operating_cash_flow_value": 0,
+    "post_llm_candidate_flag": 0,
+    "revenue_value": 5,
+    "top15_selected": 0
+  },
+  "blank_flag_fill_report": {
+    "fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv": {
+      "blank_flag_cells_filled": 111479,
+      "rows": 23619
+    },
+    "fundamental_complete_prellm_to_top15_2026Q2.csv": {
+      "copied_from": "fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv"
+    }
+  },
+  "qtr_sha256": "7b0ad0d7b00d6a7a916909cd001622d66a90f32346daebef606b828e9efcfa37",
+  "range_sha256": "7b0ad0d7b00d6a7a916909cd001622d66a90f32346daebef606b828e9efcfa37",
+  "range_shadow_selected_count": 272,
+  "range_top15_selected_count": 206,
+  "restore_reports": {
+    "fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv": {
+      "changed_fields": 112531,
+      "missing_historical_keys": 0,
+      "rows": 23619
+    },
+    "fundamental_complete_prellm_to_top15_2026Q2.csv": {
+      "copied_from": "fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv"
+    }
+  },
+  "selected_any_variant_repairs": {
+    "fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv": 30,
+    "fundamental_complete_prellm_to_top15_2026Q2.csv": 30
+  },
+  "selected_metadata_repairs": {
+    "shadow_variant_blank_after_repair": 0,
+    "top15_operating_setting_blank_after_repair": 0,
+    "top15_portfolio_treatment_blank_after_repair": 0,
+    "top15_selection_rank_blank_after_repair": 0,
+    "top15_variant_blank_after_repair": 0
+  },
+  "validation_error_count": 0,
+  "validation_passed": true
+}

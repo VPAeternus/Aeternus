@@ -9,11 +9,21 @@ from tradingagents.research.fundamental.src.panel.selection_annotations import (
 def test_attach_selection_annotations_marks_top15_and_shadow(tmp_path):
     rows = [
         {"ticker": "AAA", "quarter": "2026Q2"},
-        {"ticker": "BBB", "quarter": "2026Q2"},
+        {
+            "ticker": "BBB",
+            "quarter": "2026Q2",
+            "shadow_any_variant_selected": "0",
+        },
     ]
     top15 = tmp_path / "high_conviction_top15.csv"
     top15.write_text(
-        "ticker,selection_rank,selected_sleeve,top15_bucket\nAAA,1,core,Top 10 core\n"
+        "ticker,selection_rank,selected_sleeve,top15_bucket,"
+        "portfolio_treatment,operating_setting,"
+        "operating_setting_validation_status,reason_codes,override_reason_codes\n"
+        "AAA,1,core,Top 10 core,core_buy_underwriting,"
+        "high_conviction_top15_v3_exception_sleeve,"
+        "observed_data_top15_exception_sleeve_not_full_akg_macro_validation,"
+        "[],[]\n"
     )
     shadow = tmp_path / "shadow.csv"
     shadow.write_text(
@@ -29,12 +39,29 @@ def test_attach_selection_annotations_marks_top15_and_shadow(tmp_path):
     )
     by_ticker = {row["ticker"]: row for row in out}
     assert by_ticker["AAA"]["top15_selected"] == "1"
+    assert by_ticker["AAA"]["top15_any_variant_selected"] == "1"
     assert by_ticker["AAA"]["top15_selection_rank"] == "1"
     assert by_ticker["AAA"]["top15_selected_sleeve"] == "core"
     assert by_ticker["AAA"]["top15_bucket"] == "Top 10 core"
+    assert by_ticker["AAA"]["top15_portfolio_treatment"] == "core_buy_underwriting"
+    assert (
+        by_ticker["AAA"]["top15_operating_setting"]
+        == "high_conviction_top15_v3_exception_sleeve"
+    )
+    assert by_ticker["AAA"]["top15_reason_codes"] == "[]"
+    assert by_ticker["AAA"]["top15_override_reason_codes"] == "[]"
+    assert (
+        by_ticker["AAA"]["top15_variant"]
+        == "high_conviction_top15_current_operating_2026Q2"
+    )
     assert by_ticker["BBB"]["shadow_selected"] == "1"
+    assert by_ticker["BBB"]["shadow_any_variant_selected"] == "1"
     assert by_ticker["BBB"]["shadow_selection_rank"] == "1"
     assert by_ticker["BBB"]["shadow_selected_sleeve"] == "core"
+    assert (
+        by_ticker["BBB"]["shadow_variant"]
+        == "high_conviction_top15_v4_core_deterioration_refill_shadow_current_2026Q2"
+    )
     assert (
         by_ticker["BBB"]["shadow_refill_status"]
         == "shadow_refill_review_only_not_official"
@@ -66,6 +93,41 @@ def test_attach_selection_annotations_fills_unselected_flags(tmp_path):
     assert summary["shadow_selected_count"] == 0
 
 
+def test_attach_selection_annotations_preserves_prior_quarter_selection_flags(tmp_path):
+    rows = [
+        {
+            "ticker": "OLD",
+            "quarter": "2026Q1",
+            "top15_selected": "1",
+            "top15_any_variant_selected": "1",
+            "top15_selection_rank": "4",
+            "shadow_selected": "1",
+            "shadow_any_variant_selected": "1",
+            "shadow_selection_rank": "5",
+        },
+        {"ticker": "NEW", "quarter": "2026Q2"},
+    ]
+    top15 = tmp_path / "high_conviction_top15.csv"
+    top15.write_text("ticker,selection_rank\nNEW,1\n")
+
+    out, summary = attach_selection_annotations(
+        rows,
+        top15_csv=top15,
+        quarter="2026Q2",
+    )
+
+    by_key = {(row["quarter"], row["ticker"]): row for row in out}
+    old = by_key[("2026Q1", "OLD")]
+    assert old["top15_selected"] == "1"
+    assert old["top15_any_variant_selected"] == "1"
+    assert old["top15_selection_rank"] == "4"
+    assert old["shadow_selected"] == "1"
+    assert old["shadow_any_variant_selected"] == "1"
+    assert old["shadow_selection_rank"] == "5"
+    assert by_key[("2026Q2", "NEW")]["top15_selected"] == "1"
+    assert summary["top15_selected_count"] == 1
+
+
 def test_attach_selection_annotations_does_not_mutate_input(tmp_path):
     rows = [{"ticker": "aaa", "quarter": "2026Q2"}]
     top15 = tmp_path / "high_conviction_top15.csv"
@@ -81,6 +143,30 @@ def test_attach_selection_annotations_does_not_mutate_input(tmp_path):
     assert out[0]["ticker"] == "aaa"
     assert out[0]["top15_selected"] == "1"
     assert out[0]["top15_selection_rank"] == "7"
+
+
+def test_attach_selection_annotations_synthesizes_missing_global_rank(tmp_path):
+    rows = [
+        {"ticker": "AAA", "quarter": "2026Q2"},
+        {"ticker": "BBB", "quarter": "2026Q2"},
+    ]
+    top15 = tmp_path / "high_conviction_top15.csv"
+    top15.write_text(
+        "ticker,selection_rank,selected_sleeve_rank,portfolio_treatment\n"
+        "AAA,1,1,core_buy_underwriting\n"
+        "BBB,,1,exception_research_or_starter_underwriting\n"
+    )
+
+    out, _summary = attach_selection_annotations(
+        rows,
+        top15_csv=top15,
+        quarter="2026Q2",
+    )
+    by_ticker = {row["ticker"]: row for row in out}
+
+    assert by_ticker["BBB"]["top15_selection_rank"] == "2"
+    assert by_ticker["BBB"]["top15_reason_codes"] == "[]"
+    assert by_ticker["BBB"]["top15_override_reason_codes"] == "[]"
 
 
 def test_attach_selection_annotations_auto_top15_uses_official_config(

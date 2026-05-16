@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import shutil
 from collections import Counter
 from datetime import date
 from pathlib import Path
@@ -62,13 +63,19 @@ def build_complete_panel(
     artifact_paths = _artifact_paths(run_root, final_scores_csv)
     final_rows = _read_csv(final_scores_csv)
     final_sha = _sha256_file(final_scores_csv)
+    source_run_root = _portable_run_root_path(run_root, output_root, Path.cwd().resolve())
+    source_artifact = _portable_source_artifact_path(
+        final_scores_csv,
+        output_root,
+        Path.cwd().resolve(),
+    )
     rows, normalize_summary = normalize_complete_panel_rows(
         final_rows,
         source_name="fundamental_final_scores",
         facts_by_ticker=facts_by_ticker,
         as_of=as_of_date if facts_by_ticker is not None else None,
-        source_run_root=str(run_root),
-        source_artifact=str(final_scores_csv),
+        source_run_root=source_run_root,
+        source_artifact=source_artifact,
         source_artifact_sha256=final_sha,
     )
 
@@ -98,12 +105,13 @@ def build_complete_panel(
         prior_rows, prior_errors = _load_prior_panel(prior_panel_path)
 
     rows = _append_non_overlapping_prior_rows(rows, prior_rows)
+    validation_rows = [{**row, **_ordered_row(row)} for row in rows]
 
     validation = validate_complete_panel(
-        rows,
+        validation_rows,
         required_columns=REQUIRED_COMPLETE_PANEL_COLUMNS,
         allowed_missing_reasons=_allowed_missing_reasons(allow_missing_financials),
-        expected_quarters=_expected_quarters(rows),
+        expected_quarters=_expected_quarters(validation_rows),
         forbidden_selection_columns=FORBIDDEN_SELECTION_COLUMNS,
         quarter=quarter,
         top15_rows=top15_rows,
@@ -111,7 +119,6 @@ def build_complete_panel(
     )
     if prior_errors:
         validation = _with_extra_errors(validation, prior_errors)
-
     rows = [_ordered_row(row) for row in rows]
 
     stem = f"fundamental_complete_prellm_to_top15_{quarter}"
@@ -126,7 +133,7 @@ def build_complete_panel(
         rows,
         artifact_paths=artifact_paths,
         normalize_summary=normalize_summary,
-        selection_summary=selection_summary,
+        selection_summary=_portable_selection_summary(selection_summary, output_root),
         output_sha=output_sha,
     )
     _write_json(manifest_path, manifest)
@@ -235,10 +242,11 @@ def _expected_quarters(rows: list[dict[str, Any]]) -> list[str]:
 
 
 def _ordered_row(row: dict[str, Any]) -> dict[str, str]:
-    return {
-        field: _stringify(row.get(field, default_for_field(field)))
-        for field in REQUIRED_COMPLETE_PANEL_COLUMNS
-    }
+    out: dict[str, str] = {}
+    for field in REQUIRED_COMPLETE_PANEL_COLUMNS:
+        value = row.get(field, default_for_field(field))
+        out[field] = default_for_field(field) if _is_blank(value) else _stringify(value)
+    return out
 
 
 def _build_manifest(
@@ -281,6 +289,75 @@ def _build_manifest(
     }
 
 
+def _portable_selection_summary(
+    selection_summary: dict[str, Any],
+    output_root: Path,
+) -> dict[str, Any]:
+    repo_root = Path.cwd().resolve()
+    out = dict(selection_summary)
+    source_paths = dict(out.get("source_paths") or {})
+    for key in ("top15_csv", "shadow_csv"):
+        source_paths[key] = _portable_manifest_path(source_paths.get(key, ""), output_root, repo_root)
+    out["source_paths"] = source_paths
+    out["top15_source_path"] = source_paths.get("top15_csv", "")
+    out["shadow_source_path"] = source_paths.get("shadow_csv", "")
+    return out
+
+
+def _portable_manifest_path(value: str, output_root: Path, repo_root: Path) -> str:
+    if not value:
+        return ""
+    path = Path(value)
+    try:
+        resolved = path.resolve()
+    except OSError:
+        return str(path)
+    try:
+        return resolved.relative_to(repo_root).as_posix()
+    except ValueError:
+        pass
+    if resolved.exists():
+        mirror_dir = output_root / "selection_sources"
+        mirror_dir.mkdir(parents=True, exist_ok=True)
+        mirror_path = mirror_dir / resolved.name
+        if mirror_path.resolve() != resolved:
+            shutil.copy2(resolved, mirror_path)
+        try:
+            return mirror_path.resolve().relative_to(repo_root).as_posix()
+        except ValueError:
+            return mirror_path.as_posix()
+    return str(path)
+
+
+def _portable_run_root_path(run_root: Path, output_root: Path, repo_root: Path) -> str:
+    resolved = Path(run_root).resolve()
+    try:
+        return resolved.relative_to(repo_root).as_posix()
+    except ValueError:
+        mirror_dir = output_root / "source_artifacts" / resolved.name
+        mirror_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            return mirror_dir.resolve().relative_to(repo_root).as_posix()
+        except ValueError:
+            return mirror_dir.as_posix()
+
+
+def _portable_source_artifact_path(path: Path, output_root: Path, repo_root: Path) -> str:
+    resolved = Path(path).resolve()
+    try:
+        return resolved.relative_to(repo_root).as_posix()
+    except ValueError:
+        run_dir = output_root / "source_artifacts" / resolved.parent.name
+        run_dir.mkdir(parents=True, exist_ok=True)
+        mirror_path = run_dir / resolved.name
+        if mirror_path.resolve() != resolved:
+            shutil.copy2(resolved, mirror_path)
+        try:
+            return mirror_path.resolve().relative_to(repo_root).as_posix()
+        except ValueError:
+            return mirror_path.as_posix()
+
+
 def _read_csv(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         return [{key: value for key, value in row.items()} for row in csv.DictReader(handle)]
@@ -288,7 +365,11 @@ def _read_csv(path: Path) -> list[dict[str, str]]:
 
 def _write_csv(path: Path, rows: list[dict[str, str]]) -> None:
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=REQUIRED_COMPLETE_PANEL_COLUMNS)
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=REQUIRED_COMPLETE_PANEL_COLUMNS,
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

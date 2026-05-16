@@ -1,0 +1,142 @@
+{
+  "blank_counts_by_required_field": {
+    "assets_value": 2,
+    "financing_cash_flow_value": 0,
+    "investing_cash_flow_value": 0,
+    "llm_status": 22303,
+    "net_income_value": 0,
+    "operating_cash_flow_value": 0,
+    "post_llm_candidate_flag": 0,
+    "revenue_value": 5,
+    "top15_selected": 0
+  },
+  "historical_backfill_from_filled_panel": {
+    "applied_at": "2026-05-15T20:49:28",
+    "filled_counts": {
+      "asset_efficiency_score": 96,
+      "assets_value": 22301,
+      "cik": 22303,
+      "cik_status": 22303,
+      "company_title": 22303,
+      "current_2026q2_source_sha256": 22303,
+      "entry_open_date": 22303,
+      "entry_open_source": 22303,
+      "entry_score_rank_by_quarter": 22303,
+      "fcf_proxy_score": 138,
+      "feature_schema_path": 22303,
+      "financial_values_source": 22303,
+      "financial_values_source_file": 22303,
+      "financing_cash_flow_value": 22303,
+      "financing_dependence_score": 104,
+      "historical_source_sha256": 22303,
+      "identity_fill_source": 22303,
+      "investing_cash_flow_value": 22303,
+      "net_income_value": 22303,
+      "operating_cash_flow_score": 132,
+      "operating_cash_flow_value": 22303,
+      "panel_build_id": 22303,
+      "panel_build_timestamp": 22303,
+      "pre_llm_fundamental_missing_fields": 5,
+      "pre_llm_fundamental_score": 138,
+      "pre_llm_rank_by_score_quarter": 22289,
+      "profitability_score": 96,
+      "revenue_bucket": 96,
+      "revenue_value": 22298,
+      "shadow_core_deterioration_reason_codes": 9,
+      "shadow_core_deterioration_strict_override_required": 9,
+      "shadow_core_refill_source": 173,
+      "shadow_demoted_core_candidate_rank_x": 9,
+      "shadow_demoted_core_candidate_rank_y": 9,
+      "shadow_demoted_core_replacement_ticker": 9,
+      "shadow_demoted_replacement_for": 9,
+      "shadow_replacement_core_candidate_rank_x": 9,
+      "shadow_replacement_core_candidate_rank_y": 9,
+      "shadow_replacement_delta_90d_pct": 9,
+      "shadow_replacement_for_demoted_ticker": 9,
+      "shadow_right_tail_exception_score": 84,
+      "shadow_selected_sleeve": 257,
+      "shadow_selected_sleeve_rank": 257,
+      "shadow_selection_rank": 257,
+      "shadow_variant": 257,
+      "shadow_variants_selected": 359,
+      "top15_operating_setting": 18,
+      "top15_operating_setting_validation_status": 18,
+      "top15_portfolio_treatment": 18,
+      "top15_right_tail_exception_reason_codes": 18,
+      "top15_right_tail_exception_score": 18,
+      "top15_right_tail_exception_score_contributions": 18,
+      "top15_right_tail_exception_warning_codes": 18,
+      "top15_selected_sleeve": 191,
+      "top15_selected_sleeve_rank": 191,
+      "top15_selection_rank": 191,
+      "top15_variant": 191,
+      "top15_variants_selected": 191
+    },
+    "source_csv": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv"
+  },
+  "missing_reasons_by_field": {
+    "assets_value": {
+      "companyfacts_not_supplied": 2
+    },
+    "llm_status": {
+      "not_populated_by_normalize": 22303
+    },
+    "revenue_value": {
+      "companyfacts_not_supplied": 5
+    }
+  },
+  "normalize_summary": {
+    "field_population_status": "complete_schema_defaults_applied",
+    "rows": 1316,
+    "source_name": "fundamental_final_scores"
+  },
+  "output_sha256": "7b0ad0d7b00d6a7a916909cd001622d66a90f32346daebef606b828e9efcfa37",
+  "row_count": 23619,
+  "row_counts_by_quarter": {
+    "2021Q4": 1194,
+    "2022Q1": 1201,
+    "2022Q2": 1209,
+    "2022Q3": 1218,
+    "2022Q4": 1221,
+    "2023Q1": 1221,
+    "2023Q2": 1220,
+    "2023Q3": 1246,
+    "2023Q4": 1251,
+    "2024Q1": 1263,
+    "2024Q2": 1261,
+    "2024Q3": 1276,
+    "2024Q4": 1247,
+    "2025Q1": 1248,
+    "2025Q2": 1247,
+    "2025Q3": 1265,
+    "2025Q4": 1260,
+    "2026Q1": 1255,
+    "2026Q2": 1316
+  },
+  "schema_version": "fundamental_complete_panel_v1",
+  "selection_summary": {
+    "official_selected_count": 15,
+    "quarter": "2026Q2",
+    "shadow_missing_selected_tickers": [],
+    "shadow_selected_count": 15,
+    "shadow_source_path": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/selection_sources/high_conviction_top15_core_deterioration_refill_shadow.csv",
+    "source_paths": {
+      "shadow_csv": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/selection_sources/high_conviction_top15_core_deterioration_refill_shadow.csv",
+      "top15_csv": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/selection_sources/high_conviction_top15.csv"
+    },
+    "top15_missing_selected_tickers": [],
+    "top15_selected_count": 15,
+    "top15_source_path": "outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/selection_sources/high_conviction_top15.csv"
+  },
+  "shadow_selected_count": 272,
+  "source_artifact_hashes": {
+    "fundamental_final_scores_2026-05-15.csv": "d04535093e845725afacf256db2ef43c843fdf28db11158e8565dc2f542e2109",
+    "high_conviction_top15.csv": "61ebb5e8419ebbf1e81b6f7101792b66523f1111c4adfd867fdf280217faf8d0",
+    "high_conviction_top15_core_deterioration_refill_shadow.csv": "9e38584fade2709a3742f66321302690ea0c8acad899c1afd456110beb7497ef",
+    "llm_eligibility.csv": "e899196c316e9df6f3df6285bbfd45e24de70031aaa21e2cac6f1de83c2a59b9",
+    "llm_quarantine.csv": "c3f82a0768c2431a173bd3da33a5465a1794f21e8d67b64a00d3f232f8db0179",
+    "score_input_quarantine.csv": "d574dac141f9670bf4eb42db2462e3dee6c92666dd83d5ae14c9636e91af6388",
+    "tier_classification.csv": "41053ff08d171e62fceb4f20b640a92901fe54e39df52eddc35c0c1ed5a3943b"
+  },
+  "top15_selected_count": 206
+}

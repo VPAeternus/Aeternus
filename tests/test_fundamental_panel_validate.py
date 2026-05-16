@@ -108,6 +108,36 @@ def test_validate_complete_panel_top15_identity_uses_quarter_fallback():
     assert result["passed"] is True
 
 
+def test_validate_complete_panel_identity_check_ignores_prior_quarters():
+    result = validate_complete_panel(
+        [
+            {"ticker": "OLD", "quarter": "2026Q1", "top15_selected": "1"},
+            {"ticker": "NEW", "quarter": "2026Q2", "top15_selected": "1"},
+        ],
+        top15_rows=[
+            {"ticker": "OLD", "quarter": "2026Q1"},
+            {"ticker": "NEW", "quarter": "2026Q2"},
+        ],
+        quarter="2026Q2",
+    )
+
+    assert result["passed"] is True
+
+
+def test_validate_complete_panel_rejects_stale_selector_quarter():
+    result = validate_complete_panel(
+        [{"ticker": "NEW", "quarter": "2026Q2", "top15_selected": "0"}],
+        top15_rows=[{"ticker": "OLD", "quarter": "2026Q1"}],
+        quarter="2026Q2",
+    )
+
+    assert result["passed"] is False
+    assert any(
+        error["code"] == "top15_selector_quarter_mismatch"
+        for error in result["errors"]
+    )
+
+
 def test_validate_complete_panel_shadow_identity_uses_quarter_fallback():
     result = validate_complete_panel(
         [{"ticker": "BBB", "quarter": "2026Q2", "shadow_selected": "1"}],

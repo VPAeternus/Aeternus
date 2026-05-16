@@ -215,20 +215,35 @@ def _add_identity_mismatch_error(
 ) -> None:
     if selected_rows is None:
         return
+    requested_quarter = _normalize_quarter(quarter) if quarter is not None else None
     panel_selected = {
         (_normalize_quarter(row.get("quarter")), _normalize_ticker(row.get("ticker")))
         for row in panel_rows
         if _is_selected(row.get(f"{prefix}_selected"))
+        and (requested_quarter is None or _normalize_quarter(row.get("quarter")) == requested_quarter)
     }
-    expected_selected = {
-        (
-            _normalize_quarter(row.get("quarter") or quarter),
-            _normalize_ticker(row.get("ticker")),
-        )
-        for row in selected_rows
-    }
+    normalized_selected = list(selected_rows)
+    expected_selected = set()
+    stale_quarters: set[str] = set()
+    for row in normalized_selected:
+        row_quarter = _normalize_quarter(row.get("quarter") or quarter)
+        ticker = _normalize_ticker(row.get("ticker"))
+        if requested_quarter is not None and row_quarter != requested_quarter:
+            if row_quarter:
+                stale_quarters.add(row_quarter)
+            continue
+        expected_selected.add((row_quarter, ticker))
     panel_selected.discard(("", ""))
     expected_selected.discard(("", ""))
+    if requested_quarter is not None and normalized_selected and not expected_selected:
+        errors.append(
+            {
+                "code": f"{prefix}_selector_quarter_mismatch",
+                "quarter": requested_quarter,
+                "selector_quarters": sorted(stale_quarters),
+            }
+        )
+        return
     if panel_selected != expected_selected:
         errors.append(
             {

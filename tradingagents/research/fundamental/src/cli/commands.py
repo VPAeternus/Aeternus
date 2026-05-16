@@ -650,8 +650,10 @@ def _write_subagent_llm_job(*, out_root: Path, packets_path: Path, output_dir: P
     return job_path
 
 
+@app.command("fundamental-run-quarter")
 @app.command("fundamental-run-today")
 def fundamental_run_today(
+    ctx: typer.Context,
     date: str = typer.Option("", "--date", help="Run date YYYY-MM-DD; defaults to today"),
     quarter: str = typer.Option("", "--quarter", help="Fundamental quarter, e.g. 2026Q2; defaults from date"),
     mode: str = typer.Option(..., "--mode", help="Run mode: broad-master-final|scout-smoke|diagnostic-only"),
@@ -708,6 +710,7 @@ def fundamental_run_today(
     panel_root = Path(complete_panel_output_root.strip()) if complete_panel_output_root.strip() else None
     sec_ticker_map_path = Path(sec_ticker_map.strip()) if sec_ticker_map.strip() else None
     review_price_cache_path = Path(review_price_cache.strip()) if review_price_cache.strip() else None
+    allow_quarter_run_mismatch = allow_date_quarter_mismatch or ctx.info_name == "fundamental-run-quarter"
 
     def _daily_run_llm_service(*, packets_path: Path, output_root: Path, config: DailyRunConfig) -> Path | None:
         if llm_mode_value == "post-file":
@@ -781,7 +784,7 @@ def fundamental_run_today(
             review_allow_live_price_fetch=allow_live_review_price_fetch,
             allow_missing_handoff=allow_missing_handoff,
             dealflow_backlog_days=dealflow_backlog_days,
-            allow_date_quarter_mismatch=allow_date_quarter_mismatch,
+            allow_date_quarter_mismatch=allow_quarter_run_mismatch,
         )
         services = DailyRunServices(run_llm=None if effective_skip_llm else _daily_run_llm_service)
         result = run_daily_fundamental(cfg, services=services)
@@ -794,6 +797,60 @@ def fundamental_run_today(
         console.print(f"[green]Daily fundamental run[/green] final={result.summary.get('final')} stopped={result.summary.get('stopped')} manifest={out / 'run_manifest.json'}")
     if mode.strip().lower() == "broad-master-final" and any(gate.status.value == "hard_stop" for gate in result.gates):
         raise typer.Exit(2)
+
+
+@app.command("fundamental-append-pit-master")
+def fundamental_append_pit_master(
+    quarter: str = typer.Option(..., "--quarter", help="Quarter to append, e.g. 2022Q1"),
+    as_of: str = typer.Option(..., "--as-of", help="Point-in-time as-of date YYYY-MM-DD"),
+    master_csv: str = typer.Option("outputs/fundamental_backtest/pit_master/fundamental_pit_master.csv", "--master-csv", help="PIT master CSV to append/replace"),
+    panel_csv: str = typer.Option("", "--panel-csv", help="Canonical complete-panel CSV for this quarter"),
+    run_root: str = typer.Option("", "--run-root", help="Run root containing complete_panel/fundamental_complete_prellm_to_top15_<quarter>.csv"),
+    run_id: str = typer.Option("", "--run-id", help="Run id; inferred from run_identity.json or panel folder when omitted"),
+    official_latest: bool = typer.Option(True, "--official-latest/--not-official-latest", help="Mark this run as official latest for the quarter"),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Append or replace one canonical quarter snapshot into the PIT master CSV."""
+    from tradingagents.research.fundamental.src.panel.pit_master import (
+        append_pit_master,
+        discover_complete_panel,
+        infer_run_id,
+    )
+
+    panel_path = Path(panel_csv.strip()) if panel_csv.strip() else None
+    run_path = Path(run_root.strip()) if run_root.strip() else None
+    if panel_path is None:
+        if run_path is None:
+            console.print("[red]provide --panel-csv or --run-root[/red]")
+            raise typer.Exit(1)
+        try:
+            panel_path = discover_complete_panel(run_path, quarter)
+        except Exception as exc:  # noqa: BLE001
+            console.print(f"[red]complete panel discovery failed:[/red] {exc}")
+            raise typer.Exit(1)
+    run_id_value = run_id.strip() or infer_run_id(run_path, panel_path)
+
+    try:
+        result = append_pit_master(
+            panel_csv=panel_path,
+            master_csv=Path(master_csv),
+            quarter=quarter,
+            as_of=as_of,
+            run_id=run_id_value,
+            official_latest=official_latest,
+        )
+    except Exception as exc:  # noqa: BLE001
+        console.print(f"[red]PIT master append failed:[/red] {exc}")
+        raise typer.Exit(1)
+
+    if format.strip().lower() == "json":
+        console.print(json.dumps(result, indent=2, sort_keys=True, default=str))
+    else:
+        console.print(
+            f"[green]PIT master[/green] {result['master_csv']} "
+            f"rows={result['rows_written']} appended={result['appended_rows']} "
+            f"replaced={result['replaced_rows']} latest={result['official_latest']}"
+        )
 
 
 @app.command("fundamental-run-smoke")

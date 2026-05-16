@@ -1,21 +1,19 @@
 # Fundamental Complete Panel 2021Q4-2026Q2
 
-Generated `2026-05-13T09:37:50-04:00`.
+Refreshed `2026-05-16` from the latest validated `2026-05-15` daily run.
 
 Main CSV: `outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2.csv`
 Manifest: `outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2_manifest.json`
 Columns: `outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2_columns.json`
+Validation: `outputs/fundamental_backtest/full_complete_panel_2021Q4_2026Q2/fundamental_complete_prellm_to_top15_2021Q4_2026Q2_validation.json`
 
-Rows: `23602`. Columns: `311`.
+Rows: `23619`. Columns: `330`.
 
 Build notes:
-- Historical rows use `tradingagents/research/fundamental/Growth/earnings_8k_sec_parser/combined_all_tiers_hp_extensions_llm_rank_scores_2021Q4_2026Q1_partial.csv` through `2026Q1`.
-- Stale historical `2026Q2` rows dropped: `1`.
-- Current `2026Q2` rows appended from `eval_results/fundamental/2026-05-12_2026Q2_hp_rm_final_v3/fundamental_final_scores_2026-05-12.csv`: `1299`.
-- Required feature schema: `outputs/fundamental_backtest/feature_schema.json`; missing required columns: `[]`.
-- `top15_selected` uses primary historical variant `high_conviction_top15_v3_exception_sleeve` plus current `2026Q2` Top15 artifact.
-- `shadow_selected` uses primary historical strict shadow refill variant `top15_v4_core_deterioration_refill_strict` plus current `2026Q2` shadow artifact.
-- Return columns are diagnostic labels only; selector annotations come from frozen selection artifacts.
+- Historical rows use the canonical `2021Q4` through `2026Q1` prior panel from `fundamental-history-complete-panel`.
+- Current `2026Q2` rows come from `daily_postfile_prior_context_fix_v1/fundamental_final_scores_2026-05-15.csv`: `1316`.
+- Validation passed: duplicate ticker-quarter rows `0`, full-panel Top15 selected `206`, full-panel shadow selected `272`. Current 2026Q2 selected counts remain `15` and `15`.
+- The range-named file is a compatibility copy of the canonical `fundamental_complete_prellm_to_top15_2026Q2.csv` output.
 
 ## Fill V2
 
@@ -40,4 +38,3 @@ Applied extended cached-companyfacts fill on 2026-05-13 for partial raw financia
 ## 2026Q2 Post-LLM Subtier Fill
 
 Filled legacy `post_llm_tier_*_flag` columns for `2026Q2` from canonical current-run fields (`tier_1_bucket` through `tier_4_bucket`, `post_llm_candidate_flag`, `post_llm_high_priority_flag`, `causal_change`, `negative_revision_risk`, `narrative_delta_bucket`, and prior-quarter `score_addition`). Historical rows were left unchanged. Q2 rows with any derived subtier flag: `110`. Output SHA256: `517e17bdc87e8cf4b3160ad964a210bad6b671d95c45e63a843a5b0ab55f5d8d`.
-

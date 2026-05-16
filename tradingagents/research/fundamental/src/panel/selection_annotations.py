@@ -19,8 +19,16 @@ TOP15_METADATA_FIELDS = {
     "top15_bucket_order": "top15_bucket_order",
     "top15_role": "top15_role",
     "top15_model": "top15_model",
+    "portfolio_treatment": "top15_portfolio_treatment",
     "top15_portfolio_treatment": "top15_portfolio_treatment",
+    "operating_setting": "top15_operating_setting",
+    "top15_operating_setting": "top15_operating_setting",
+    "operating_setting_validation_status": "top15_operating_setting_validation_status",
+    "top15_operating_setting_validation_status": "top15_operating_setting_validation_status",
+    "reason_codes": "top15_reason_codes",
     "top15_reason_codes": "top15_reason_codes",
+    "override_reason_codes": "top15_override_reason_codes",
+    "top15_override_reason_codes": "top15_override_reason_codes",
     "right_tail_exception_score": "top15_right_tail_exception_score",
     "right_tail_exception_reason_codes": "top15_right_tail_exception_reason_codes",
     "right_tail_exception_warning_codes": "top15_right_tail_exception_warning_codes",
@@ -217,6 +225,9 @@ def _selection_rows_by_key(path: Path, quarter: str) -> dict[tuple[str, str], di
         row_quarter = _normalize_quarter(row.get("quarter")) or quarter
         if row_quarter != quarter:
             continue
+        row = dict(row)
+        if not _has_value(row.get("selection_rank")):
+            row["selection_rank"] = str(len(by_key) + 1)
         by_key[(quarter, ticker)] = row
     return by_key
 
@@ -249,21 +260,39 @@ def _annotate_row(
     out = dict(row)
     is_requested_quarter = _normalize_quarter(out.get("quarter")) == quarter
 
-    if is_requested_quarter and top15_selection:
-        out["top15_selected"] = "1"
-        out["top15_any_variant_selected"] = out.get("top15_any_variant_selected") or "1"
-        _copy_metadata(out, top15_selection, TOP15_METADATA_FIELDS, "top15_")
-    else:
-        for field in TOP15_FLAG_FIELDS:
-            out[field] = "0"
+    if is_requested_quarter:
+        if top15_selection:
+            out["top15_selected"] = "1"
+            out["top15_any_variant_selected"] = "1"
+            _copy_metadata(out, top15_selection, TOP15_METADATA_FIELDS, "top15_")
+            _fill_default_variant(
+                out,
+                variant_field="top15_variant",
+                variants_field="top15_variants_selected",
+                variant=f"high_conviction_top15_current_operating_{quarter}",
+            )
+            _fill_if_blank(out, "top15_reason_codes", "[]")
+            _fill_if_blank(out, "top15_override_reason_codes", "[]")
+        else:
+            for field in TOP15_FLAG_FIELDS:
+                out[field] = "0"
 
-    if is_requested_quarter and shadow_selection:
-        out["shadow_selected"] = "1"
-        out["shadow_any_variant_selected"] = out.get("shadow_any_variant_selected") or "1"
-        _copy_metadata(out, shadow_selection, SHADOW_METADATA_FIELDS, "shadow_")
-    else:
-        for field in SHADOW_FLAG_FIELDS:
-            out[field] = "0"
+        if shadow_selection:
+            out["shadow_selected"] = "1"
+            out["shadow_any_variant_selected"] = "1"
+            _copy_metadata(out, shadow_selection, SHADOW_METADATA_FIELDS, "shadow_")
+            _fill_default_variant(
+                out,
+                variant_field="shadow_variant",
+                variants_field="shadow_variants_selected",
+                variant=(
+                    "high_conviction_top15_v4_core_deterioration_refill_shadow"
+                    f"_current_{quarter}"
+                ),
+            )
+        else:
+            for field in SHADOW_FLAG_FIELDS:
+                out[field] = "0"
 
     return out
 
@@ -283,6 +312,24 @@ def _copy_metadata(
             continue
         if source.startswith(prefix) and _has_value(value):
             out[source] = value
+
+
+def _fill_default_variant(
+    out: dict[str, Any],
+    *,
+    variant_field: str,
+    variants_field: str,
+    variant: str,
+) -> None:
+    if not _has_value(out.get(variant_field)):
+        out[variant_field] = variant
+    if not _has_value(out.get(variants_field)):
+        out[variants_field] = out[variant_field]
+
+
+def _fill_if_blank(out: dict[str, Any], field: str, value: str) -> None:
+    if not _has_value(out.get(field)):
+        out[field] = value
 
 
 def _normalize_ticker(value: Any) -> str:
