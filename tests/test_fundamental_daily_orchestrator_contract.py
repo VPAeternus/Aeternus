@@ -1,7 +1,7 @@
 import csv
 import json
 import tradingagents.research.fundamental.src.daily_run.orchestrator as orchestrator_module
-from tradingagents.research.fundamental.src.daily_run.models import DailyRunConfig, GateResult, GateStatus
+from tradingagents.research.fundamental.src.daily_run.models import DailyRunConfig, DailyRunState, GateResult, GateStatus
 from tradingagents.research.fundamental.src.daily_run.orchestrator import DailyRunServices, run_daily_fundamental
 
 
@@ -196,6 +196,82 @@ def test_orchestrator_final_mode_preserves_broad_rows_filters_llm_and_requires_q
     assert "complete_panel_csv" not in result.artifacts
 
 
+def test_orchestrator_writes_plain_publish_readiness_summary(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    result = run_daily_fundamental(cfg, services=services)
+
+    readiness_json = cfg.output_root / "publish_readiness_summary.json"
+    readiness_md = cfg.output_root / "publish_readiness_summary.md"
+    assert readiness_json.exists()
+    assert readiness_md.exists()
+    readiness = json.loads(readiness_json.read_text(encoding="utf-8"))
+    assert readiness["status"] == "pass"
+    assert readiness["gates_passed"] is True
+    assert readiness["llm_complete"] is True
+    assert readiness["prior_context_complete"] is True
+    assert readiness["qoq_missing_count"] == 0
+    assert readiness["top15_emitted"] is True
+    assert readiness["shadow_replacement_count"] == 0
+    assert result.artifacts["publish_readiness_summary_json"] == str(readiness_json)
+    assert "Status: pass" in readiness_md.read_text(encoding="utf-8")
+
+
+def test_publish_readiness_does_not_mark_missing_prior_context_complete(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path, mode="scout-smoke", skip_llm=True)
+    cfg = DailyRunConfig(**{**cfg.__dict__, "prior_context_path": None})
+
+    result = run_daily_fundamental(cfg, services=services)
+
+    readiness = json.loads((cfg.output_root / "publish_readiness_summary.json").read_text(encoding="utf-8"))
+    assert result.summary["final"] is False
+    assert readiness["prior_context_loaded"] is False
+    assert readiness["prior_context_complete"] is False
+    assert readiness["prior_context_reason"] == "missing_prior_final_scores"
+
+
+def test_publish_readiness_requires_prior_match_for_llm_eligible_rows(tmp_path):
+    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode="scout-smoke", output_root=tmp_path / "run")
+    state = DailyRunState(config=cfg, run_id="test")
+    for gate_number in range(1, 11):
+        summary = {}
+        if gate_number == 7:
+            summary = {"llm_eligible_count": 2}
+        if gate_number == 8:
+            summary = {"packet_count": 2}
+        if gate_number == 9:
+            summary = {
+                "prior_context_loaded": True,
+                "expected_prior_context_rows": 10,
+                "prior_duplicate_key_count": 0,
+                "qoq_context_match_rows": 0,
+                "llm_complete_qoq_missing_rows": 0,
+                "prior_llm_extract_missing_for_final_count": 0,
+            }
+        state.record(GateResult(gate_number, f"Gate {gate_number}", GateStatus.PASS, summary, {}))
+
+    artifacts = orchestrator_module._write_publish_readiness_summary(state, final=False, stopped="publish_skipped")
+
+    readiness = json.loads((cfg.output_root / "publish_readiness_summary.json").read_text(encoding="utf-8"))
+    assert artifacts["publish_readiness_summary_json"] == str(cfg.output_root / "publish_readiness_summary.json")
+    assert readiness["prior_context_complete"] is False
+    assert readiness["llm_eligible_count"] == 2
+    assert readiness["qoq_context_match_rows"] == 0
+
+
+def test_publish_readiness_preserves_packet_count_when_llm_is_queued(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    result = run_daily_fundamental(cfg, services=DailyRunServices(**{**services.__dict__, "run_llm": None}))
+
+    gate8 = next(g for g in result.gates if g.gate_number == 8)
+    assert gate8.status == GateStatus.HARD_STOP
+    assert gate8.summary["packet_count"] == 2
+
+    readiness = json.loads((cfg.output_root / "publish_readiness_summary.json").read_text(encoding="utf-8"))
+    assert readiness["llm_expected_count"] == 2
+    assert readiness["llm_completed_count"] == 0
+    assert "LLM complete: False (0/2)" in (cfg.output_root / "publish_readiness_summary.md").read_text(encoding="utf-8")
+
+
 def test_orchestrator_quarantines_no_periodic_filing_before_price_gate(tmp_path):
     master = tmp_path / "master.json"
     master.write_text(json.dumps({"items": [{"symbol": "GOOD", "cik": "1", "company_title": "Good Inc"}, {"symbol": "ADR", "cik": "2", "company_title": "Foreign ADR"}]}))
@@ -371,6 +447,54 @@ def test_orchestrator_builds_prior_llm_recovery_packet_and_requires_completion(t
     assert gate7.summary["prior_llm_recovery_packet_count"] == 1
     gate8 = next(g for g in result.gates if g.gate_number == 8)
     assert gate8.summary["expected_count"] == 3
+
+
+def test_readiness_uses_post_recovery_qoq_context_for_final_run(tmp_path):
+    cfg, services = _fake_orchestrator_fixture(tmp_path)
+    with cfg.prior_context_path.open(newline="", encoding="utf-8") as handle:
+        rows = [row for row in csv.DictReader(handle) if row["ticker"] != "T1"]
+    with cfg.prior_context_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    def fake_llm(*, packets_path, output_root, config):
+        packets = [json.loads(line) for line in packets_path.read_text().splitlines() if line.strip()]
+        assert [packet["sample_id"] for packet in packets] == ["T1_2026Q2", "T2_2026Q2", "T1_2026Q1"]
+        out = output_root / "post_llm_scores.csv"
+        output_rows = [
+            {
+                "sample_id": packet["sample_id"],
+                "ticker": packet["ticker"],
+                "quarter": packet["quarter"],
+                "post_llm_candidate_flag": "1",
+                "post_llm_high_priority_flag": "1",
+                "post_llm_demote_flag": "0",
+                "causal_change": "3",
+                "negative_revision_risk": "1",
+                "narrative_delta_bucket": "constructive",
+                "operating_leverage_quality": "1",
+                "durability": "1",
+                "proof_alignment": "2",
+            }
+            for packet in packets
+        ]
+        with out.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(output_rows[0]))
+            writer.writeheader()
+            writer.writerows(output_rows)
+        return out
+
+    result = run_daily_fundamental(cfg, services=DailyRunServices(**{**services.__dict__, "run_llm": fake_llm}))
+
+    assert result.summary["final"] is True
+    gate7 = next(g for g in result.gates if g.gate_number == 7)
+    assert gate7.summary["llm_eligible_qoq_context_match_rows"] == 1
+    readiness = json.loads((cfg.output_root / "publish_readiness_summary.json").read_text(encoding="utf-8"))
+    assert readiness["status"] == "pass"
+    assert readiness["prior_context_complete"] is True
+    assert readiness["qoq_context_match_rows"] == 2
+    assert readiness["llm_eligible_count"] == 2
 
 
 def test_prior_llm_recovery_candidates_keep_current_identity_when_prior_context_has_blank_cik():

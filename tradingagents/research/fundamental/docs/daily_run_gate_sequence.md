@@ -39,6 +39,12 @@ Use:
 
 `python -m cli.main fundamental-run-today --mode broad-master-final --date <YYYY-MM-DD> --quarter <YYYYQ#> --master-universe <path> --prior-final-scores <prior-quarter-comparison-csv>`
 
+Use this first for a cheap daily preflight:
+
+`python -m cli.main fundamental-run-smoke --date <YYYY-MM-DD> --quarter <YYYYQ#> --master-universe <path> --handoff <final_dealflow_tickers.json> --prior-final-scores <prior-quarter-comparison-csv>`
+
+The smoke command runs `scout-smoke`, skips LLM, skips publish, and writes `publish_readiness_summary.json` / `.md` so the operator can see whether gates, prior context, and QoQ wiring are healthy before the final run.
+
 The legacy `fundamental` command remains scout-smoke/backward-compatible. It is not the official broad daily final run.
 
 
@@ -129,6 +135,8 @@ Stop if:
 ## Output artifacts
 
 - `run_manifest.json`
+- `publish_readiness_summary.json`
+- `publish_readiness_summary.md`
 - `source_hashes.json`
 - immutable copied inputs under `snapshots/`
 

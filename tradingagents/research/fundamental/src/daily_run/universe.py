@@ -166,6 +166,9 @@ def validate_universe_gate(rows: list[dict[str, Any]], *, run_mode: RunMode, sco
     if run_mode == RunMode.BROAD_MASTER_FINAL and (row_count < min_broad_universe_count or row_count <= scout_count):
         summary["reason"] = "broad_master_universe_too_small_or_scout_only"
         return GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, summary, artifacts)
+    if run_mode == RunMode.SCOUT_SMOKE and row_count < min_broad_universe_count:
+        summary["reason"] = "smoke_master_universe_too_small"
+        return GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, summary, artifacts)
     if missing_cik:
         summary["reason"] = "missing_cik"
         return GateResult(2, "Universe construction and drift control", GateStatus.HARD_STOP, summary, artifacts)

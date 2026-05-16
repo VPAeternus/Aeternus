@@ -796,6 +796,65 @@ def fundamental_run_today(
         raise typer.Exit(2)
 
 
+@app.command("fundamental-run-smoke")
+def fundamental_run_smoke(
+    date: str = typer.Option("", "--date", help="Run date YYYY-MM-DD; defaults to today"),
+    quarter: str = typer.Option("", "--quarter", help="Fundamental quarter, e.g. 2026Q2; defaults from date"),
+    master_universe: str = typer.Option("", "--master-universe", help="Broad master universe path; canonical JSON with items, CSV accepted for compatibility"),
+    handoff: str = typer.Option("", "--handoff", help="Daily scout handoff JSON path"),
+    prior_final_scores: str = typer.Option("", "--prior-final-scores", help="Prior-quarter comparison data CSV for smoke validation"),
+    output_root: str = typer.Option("", "--output-root", help="Output root; defaults to tradingagents/research/fundamental/runs/<date>/<quarter>/smoke"),
+    sec_live_root: str = typer.Option("", "--sec-live-root", help="SEC live cache root"),
+    allow_missing_handoff: bool = typer.Option(False, "--allow-missing-handoff", help="Allow smoke run without a daily handoff"),
+    dealflow_backlog_days: int = typer.Option(7, "--dealflow-backlog-days", min=1, help="Include dated dealflow handoffs from this many days ending on --date"),
+    fetch_sec: bool = typer.Option(False, "--fetch-sec/--no-fetch-sec", help="Allow SEC fetch during smoke; default is cache-only"),
+    min_broad_universe_count: int = typer.Option(1, "--min-broad-universe-count", help="Minimum broad universe count for smoke"),
+    format: str = typer.Option("table", "--format", help="Output format: table|json"),
+):
+    """Run a cheap daily smoke check: dealflow, SEC/price wiring, prior context; no LLM publish."""
+    from tradingagents.research.fundamental.src.daily_run.models import DailyRunConfig
+    from tradingagents.research.fundamental.src.daily_run.orchestrator import run_daily_fundamental
+    from tradingagents.research.fundamental.src.pipeline.dealflow_adapter import current_quarter
+
+    run_date = date.strip() or _dt.date.today().isoformat()
+    run_quarter = quarter.strip() or current_quarter(_dt.date.fromisoformat(run_date))
+    out = Path(output_root.strip()) if output_root.strip() else default_daily_run_root(run_date, run_quarter).with_name("smoke")
+    master_path = Path(master_universe.strip()) if master_universe.strip() else None
+    handoff_path = Path(handoff.strip()) if handoff.strip() else Path("eval_results") / "deal_flow" / run_date / "final_dealflow_tickers.json"
+    handoff_path_value = handoff_path if handoff.strip() or handoff_path.exists() or allow_missing_handoff else None
+    prior_context_path = Path(prior_final_scores.strip()) if prior_final_scores.strip() else None
+    sec_root = Path(sec_live_root.strip()) if sec_live_root.strip() else None
+    try:
+        cfg = DailyRunConfig(
+            as_of=run_date,
+            quarter=run_quarter,
+            mode="scout-smoke",
+            output_root=out,
+            master_universe_path=master_path,
+            handoff_path=handoff_path_value,
+            sec_live_root=sec_root,
+            skip_fetch=not fetch_sec,
+            skip_llm=True,
+            llm_mode="skip",
+            prior_context_path=prior_context_path,
+            min_broad_universe_count=min_broad_universe_count,
+            review_allow_live_price_fetch=False,
+            allow_missing_handoff=allow_missing_handoff,
+            dealflow_backlog_days=dealflow_backlog_days,
+        )
+        result = run_daily_fundamental(cfg)
+    except Exception as exc:  # noqa: BLE001
+        console.print(f"[red]fundamental-run-smoke failed:[/red] {exc}")
+        raise typer.Exit(1)
+    if format.strip().lower() == "json":
+        console.print(json.dumps(result.summary, indent=2, sort_keys=True, default=str))
+    else:
+        readiness = result.artifacts.get("publish_readiness_summary_json", "")
+        console.print(f"[green]Daily smoke run[/green] stopped={result.summary.get('stopped')} manifest={out / 'run_manifest.json'} readiness={readiness}")
+    if any(gate.status.value == "hard_stop" for gate in result.gates):
+        raise typer.Exit(2)
+
+
 @app.command("fundamental")
 def fundamental(
     date: str = typer.Option("", "--date", help="Dealflow handoff date YYYY-MM-DD; defaults to today"),
