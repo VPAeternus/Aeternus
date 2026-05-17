@@ -6,7 +6,7 @@ FUNDAMENTAL_ROOT = ROOT / "tradingagents" / "research" / "fundamental"
 if str(FUNDAMENTAL_ROOT) not in sys.path:
     sys.path.insert(0, str(FUNDAMENTAL_ROOT))
 
-from src.features.llm_extraction import result_schema, validate_llm_result
+from src.features.llm_extraction import read_cached_llm_rows_for_packets, result_schema, save_llm_rows_to_cache, validate_llm_result
 from src.features.theme_acceleration import compute_theme_acceleration_score
 
 
@@ -91,3 +91,18 @@ def test_theme_acceleration_score_is_capped():
         filing_theme_customer_win_flag=1,
         filing_theme_capacity_expansion_flag=1,
     )) == 15
+
+
+def test_llm_cache_round_trips_validated_rows(tmp_path):
+    cache_csv = tmp_path / "llm_cache.csv"
+    packet = _packet()
+    row = validate_llm_result(_payload(), packet)
+
+    save_summary = save_llm_rows_to_cache([row], cache_csv=cache_csv)
+    cached_rows, missing_packets, read_summary = read_cached_llm_rows_for_packets([packet], cache_csv=cache_csv)
+
+    assert save_summary["llm_cache_upserted_count"] == 1
+    assert read_summary["llm_cache_hit_count"] == 1
+    assert missing_packets == []
+    assert cached_rows[0]["sample_id"] == "AAA_2026Q1"
+    assert cached_rows[0]["secondary_themes"] == "[\"ai_data_center\"]"

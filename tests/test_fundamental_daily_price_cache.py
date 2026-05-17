@@ -117,6 +117,45 @@ def test_daily_price_cache_fetches_when_cached_rows_are_before_needed_entry_date
     assert any(row["ticker"] == "CCC" and row["date"] == "2026-05-11" for row in result.rows)
 
 
+def test_daily_price_cache_fetches_when_cached_open_is_nan(tmp_path):
+    cache_path = store_review_price_rows(
+        [
+            {
+                "ticker": "NAN",
+                "date": "2026-05-11",
+                "open": float("nan"),
+                "high": 11.0,
+                "low": 9.0,
+                "close": 10.5,
+                "volume": 600_000,
+            }
+        ],
+        output_root=tmp_path / "cache",
+        quarter="2026Q2",
+        as_of="2026-05-12",
+    )
+    calls = []
+
+    def provider(tickers, *, start, end):
+        calls.append(list(tickers))
+        return [{"ticker": "NAN", "date": "2026-05-11", "open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5, "volume": 600_000}]
+
+    result = load_or_fetch_price_rows(
+        ["NAN"],
+        start="2026-05-11",
+        end="2026-05-13",
+        cache_paths=[cache_path],
+        price_provider=provider,
+        output_root=tmp_path / "run",
+        quarter="2026Q2",
+        as_of="2026-05-12",
+    )
+
+    assert calls == [["NAN"]]
+    assert result.summary["daily_price_partial_cache_ticker_count"] == 1
+    assert result.summary["daily_price_live_fetch_ticker_count"] == 1
+
+
 def test_daily_price_cache_fetches_missing_tickers_from_their_own_start_dates(tmp_path):
     calls = []
 

@@ -69,6 +69,18 @@ def _write_prior_context(path, tickers=("T0", "T1", "T2", "T3", "T4"), quarter="
         writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
 
 
+def test_prior_recovery_treats_missing_prior_filing_as_impossible():
+    row = {
+        "coverage_status": "BLOCKED_METADATA_OR_ISSUER_REALITY",
+        "missing_inputs": "10q_10k_metadata",
+        "notes": "no_item_2_02_8k_using_periodic_only",
+        "earnings_8k_accession": "",
+        "earnings_8k_primary_document": "",
+        "earnings_exhibit_document": "",
+    }
+    assert orchestrator_module._coverage_proves_no_earnings_evidence(row) is True
+
+
 def _fake_orchestrator_fixture(tmp_path, mode="broad-master-final", skip_llm=False, fake_llm=None):
     master = tmp_path / "master.json"; _write_master(master, count=5)
     handoff = tmp_path / "handoff.json"; handoff.write_text(json.dumps({"tickers": [], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
@@ -447,6 +459,16 @@ def test_orchestrator_builds_prior_llm_recovery_packet_and_requires_completion(t
     assert gate7.summary["prior_llm_recovery_packet_count"] == 1
     gate8 = next(g for g in result.gates if g.gate_number == 8)
     assert gate8.summary["expected_count"] == 3
+
+
+def test_partial_prior_llm_defaults_still_require_recovery():
+    missing = orchestrator_module._prior_llm_missing_rows(
+        rows=[{"ticker": "T1", "quarter": "2026Q2"}],
+        prior_rows=[{"ticker": "T1", "quarter": "2026Q1", "post_llm_demote_severity": "none"}],
+        expected_prior_quarter="2026Q1",
+    )
+
+    assert [row["ticker"] for row in missing] == ["T1"]
 
 
 def test_readiness_uses_post_recovery_qoq_context_for_final_run(tmp_path):

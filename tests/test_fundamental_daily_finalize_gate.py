@@ -17,6 +17,34 @@ def test_build_final_scores_preserves_broad_rows_when_post_llm_is_subset():
     assert "rm_buy_review_flag" in rows[0]
 
 
+def test_build_final_scores_does_not_let_post_llm_overwrite_fresh_price_fields():
+    broad = [_base("AAA")]
+    post_llm = [
+        {
+            "ticker": "AAA",
+            "quarter": "2026Q2",
+            "tradable_date": "5/10/26",
+            "entry_open": "999",
+            "pre_llm_fundamental_score": "-4",
+            "post_llm_candidate_flag": "1",
+            "post_llm_high_priority_flag": "1",
+            "post_llm_demote_flag": "0",
+            "causal_change": "3",
+            "negative_revision_risk": "1",
+            "narrative_delta_bucket": "constructive",
+            "operating_leverage_quality": "1",
+            "durability": "1",
+            "proof_alignment": "2",
+        }
+    ]
+    rows, summary = build_final_scores(broad, as_of="2026-05-12", post_llm_rows=post_llm)
+    assert rows[0]["tradable_date"] == "2026-05-11"
+    assert float(rows[0]["entry_open"]) == 12
+    assert float(rows[0]["pre_llm_fundamental_score"]) == 3
+    assert rows[0]["llm_status"] == "complete"
+    assert summary["final_score_rows"] == 1
+
+
 def _valid_prior_summary():
     return {"prior_context_loaded": True, "expected_prior_context_rows": 4, "prior_duplicate_key_count": 0}
 
@@ -44,6 +72,15 @@ def test_validate_broad_final_scores_hard_stops_when_llm_complete_qoq_missing():
     assert gate.status == GateStatus.HARD_STOP
     assert gate.summary["reason"] == "llm_complete_rows_missing_qoq_context"
     assert gate.summary["llm_complete_qoq_missing_tickers"] == ["AAA"]
+
+
+def test_validate_broad_final_scores_allows_qoq_missing_when_prior_filing_impossible():
+    rows = [{"ticker": "AAA", "llm_status": "complete", "entry_qoq_pct": "", "score_change": "1", "prior_pre_llm_fundamental_score": "3"}]
+    prior = {**_valid_prior_summary(), "prior_llm_extract_impossible_no_filings_tickers": ["AAA"]}
+    gate = validate_broad_final_scores(final_rows=rows, broad_universe_count=1, explicit_invalid_quarantine_count=0, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={}, prior_context_summary=prior)
+    assert gate.status == GateStatus.PASS
+    assert gate.summary["llm_complete_qoq_missing_rows"] == 0
+    assert gate.summary["llm_complete_qoq_allowed_missing_tickers"] == ["AAA"]
 
 
 def test_publish_passes_coverage_gating_to_top15_and_shadow(tmp_path, monkeypatch):

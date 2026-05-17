@@ -20,6 +20,36 @@ from tradingagents.research.fundamental.src.storage import add_run_lineage, make
 
 
 FORBIDDEN_PIPELINE_A_COLUMNS = ENTRY_SCORE_FORBIDDEN_COLUMNS | {"candidate_monitoring"}
+POST_LLM_PREFIXES = ("post_llm_", "filing_theme_")
+POST_LLM_ALLOWED_COLUMNS = {
+    "sample_id",
+    "ticker",
+    "quarter",
+    "causal_change",
+    "negative_revision_risk",
+    "narrative_delta_bucket",
+    "operating_leverage_quality",
+    "durability",
+    "proof_alignment",
+    "story_vs_numbers_gap_penalty",
+    "confidence",
+    "evidence_positive",
+    "evidence_risk",
+    "primary_theme",
+    "secondary_themes",
+    "theme_tags",
+    "theme_confidence",
+    "theme_role",
+    "theme_driver_type",
+    "theme_momentum",
+    "theme_evidence",
+    "theme_acceleration_score",
+    "theme_tailwind_score",
+    "theme_driver_summary",
+    "theme_evidence_summary",
+    "llm_status",
+    "missing_critical_llm_fields",
+}
 
 
 def _strip_monitoring_columns(row: dict[str, Any]) -> dict[str, Any]:
@@ -36,6 +66,14 @@ def _merge_by_key(base_rows: list[dict[str, Any]], *side_tables: list[dict[str, 
         side = {_row_key(row): row for row in table}
         merged = [{**row, **side.get(_row_key(row), {})} for row in merged]
     return merged
+
+
+def _post_llm_only(row: dict[str, Any]) -> dict[str, Any]:
+    return {
+        key: value
+        for key, value in row.items()
+        if key in POST_LLM_ALLOWED_COLUMNS or any(key.startswith(prefix) for prefix in POST_LLM_PREFIXES)
+    }
 
 
 def route_candidate_state(row: dict[str, Any], entry_score: int) -> str:
@@ -57,7 +95,8 @@ def build_signal_tables(
     post_llm_rows: list[dict[str, Any]] | None = None,
     prior_rows: list[dict[str, Any]] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
-    rows = _merge_by_key(rows, post_llm_rows or [])
+    post_llm_projection = [_post_llm_only(row) for row in (post_llm_rows or [])]
+    rows = _merge_by_key(rows, post_llm_projection)
     bases: list[dict[str, Any]] = []
     output: list[dict[str, Any]] = []
     tier_rows: list[dict[str, Any]] = []

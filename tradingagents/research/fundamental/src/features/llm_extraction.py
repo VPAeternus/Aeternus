@@ -9,6 +9,7 @@ import tempfile
 from pathlib import Path
 from typing import Any, Callable
 
+from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_root
 from tradingagents.research.fundamental.src.features.common import clean
 from tradingagents.research.fundamental.src.features.theme_acceleration import THEME_ACCELERATION_FIELDS, normalized_theme_acceleration_fields
 
@@ -375,6 +376,98 @@ def _batched(items: list[dict[str, Any]], size: int) -> list[list[dict[str, Any]
     return [items[idx : idx + size] for idx in range(0, len(items), size)]
 
 
+def default_llm_cache_csv() -> Path:
+    return sec_cache_root("llm_extractions", "daily_post_llm_cache.csv")
+
+
+def _decode_csv_row(row: dict[str, Any]) -> dict[str, Any]:
+    out = dict(row)
+    for field in ("secondary_themes", "theme_tags", "theme_evidence"):
+        value = out.get(field)
+        if isinstance(value, str):
+            text = value.strip()
+            if text.startswith("["):
+                try:
+                    out[field] = json.loads(text)
+                except Exception:
+                    out[field] = []
+            elif text:
+                out[field] = [text]
+            else:
+                out[field] = []
+    return out
+
+
+def read_cached_llm_rows_for_packets(
+    packets: list[dict[str, Any]],
+    *,
+    cache_csv: Path | None = None,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    cache_path = cache_csv or default_llm_cache_csv()
+    packet_by_id = {clean(packet.get("sample_id")): packet for packet in packets if clean(packet.get("sample_id"))}
+    found: dict[str, dict[str, Any]] = {}
+    invalid = 0
+    if cache_path.exists() and cache_path.stat().st_size:
+        with cache_path.open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            if reader.fieldnames and "sample_id" in reader.fieldnames:
+                for raw in reader:
+                    sample_id = clean(raw.get("sample_id"))
+                    packet = packet_by_id.get(sample_id)
+                    if packet is None or sample_id in found:
+                        continue
+                    try:
+                        found[sample_id] = validate_llm_result(_decode_csv_row(raw), packet)
+                    except Exception:
+                        invalid += 1
+    missing = [packet for packet in packets if clean(packet.get("sample_id")) not in found]
+    return [found[sample_id] for sample_id in sorted(found)], missing, {
+        "llm_cache_path": str(cache_path),
+        "llm_cache_expected_count": len(packet_by_id),
+        "llm_cache_hit_count": len(found),
+        "llm_cache_missing_count": len(missing),
+        "llm_cache_invalid_count": invalid,
+    }
+
+
+def write_post_llm_csv(rows: list[dict[str, Any]], output_csv: Path) -> Path:
+    output_csv.parent.mkdir(parents=True, exist_ok=True)
+    with output_csv.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows([{field: row.get(field, "") for field in CSV_FIELDS} for row in rows])
+    return output_csv
+
+
+def save_llm_rows_to_cache(rows: list[dict[str, Any]], *, cache_csv: Path | None = None) -> dict[str, Any]:
+    cache_path = cache_csv or default_llm_cache_csv()
+    existing: dict[str, dict[str, Any]] = {}
+    if cache_path.exists() and cache_path.stat().st_size:
+        with cache_path.open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            if reader.fieldnames and "sample_id" in reader.fieldnames:
+                for row in reader:
+                    sample_id = clean(row.get("sample_id"))
+                    if sample_id:
+                        existing[sample_id] = {field: row.get(field, "") for field in CSV_FIELDS}
+    upserted = 0
+    for row in rows:
+        sample_id = clean(row.get("sample_id"))
+        if not sample_id:
+            continue
+        existing[sample_id] = {field: row.get(field, "") for field in CSV_FIELDS}
+        upserted += 1
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile("w", newline="", encoding="utf-8", dir=cache_path.parent, delete=False) as tmp:
+        writer = csv.DictWriter(tmp, fieldnames=CSV_FIELDS, extrasaction="ignore")
+        writer.writeheader()
+        for sample_id in sorted(existing):
+            writer.writerow(existing[sample_id])
+        tmp_path = Path(tmp.name)
+    tmp_path.replace(cache_path)
+    return {"llm_cache_path": str(cache_path), "llm_cache_upserted_count": upserted, "llm_cache_total_rows": len(existing)}
+
+
 def run_llm_batches(
     packets: list[dict[str, Any]],
     *,
@@ -385,6 +478,7 @@ def run_llm_batches(
     batch_size: int = 8,
     resume: bool = True,
     max_attempts: int = 2,
+    shared_cache_csv: Path | None = None,
 ) -> list[dict[str, Any]]:
     output_dir.mkdir(parents=True, exist_ok=True)
     written: list[dict[str, Any]] = []
@@ -407,6 +501,8 @@ def run_llm_batches(
                     raise ValueError("LLM result count mismatch")
                 normalized = [validate_llm_result(result, packet) for result, packet in zip(results, batch)]
                 out_path.write_text(json.dumps(normalized, indent=2), encoding="utf-8")
+                if shared_cache_csv is not None:
+                    save_llm_rows_to_cache(normalized, cache_csv=shared_cache_csv)
                 written.extend(normalized)
                 break
             except Exception as exc:  # noqa: BLE001

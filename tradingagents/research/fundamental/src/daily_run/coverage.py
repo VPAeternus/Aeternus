@@ -50,6 +50,49 @@ def run_sec_fetch_once(*, out_root: Path, live_sec_root: Path) -> dict[str, Any]
     return json.loads(download.DOWNLOAD_MANIFEST_PATH.read_text(encoding="utf-8"))
 
 
+def materialize_alias_documents_from_queue(*, out_root: Path, live_sec_root: Path) -> dict[str, Any]:
+    """Copy already-cached SEC docs to alias ticker filenames requested by the queue."""
+
+    queue_path = out_root / "sec_fetch_queue_resumable.json"
+    docs_root = live_sec_root / "documents"
+    if not queue_path.exists() or not docs_root.exists():
+        return {"alias_document_materialized_count": 0, "alias_document_missing_count": 0}
+    try:
+        queue = json.loads(queue_path.read_text(encoding="utf-8"))
+    except Exception:
+        return {"alias_document_materialized_count": 0, "alias_document_missing_count": 0}
+
+    materialized: list[dict[str, str]] = []
+    missing: list[dict[str, str]] = []
+    for item in queue.get("items", []) or []:
+        accession = str(item.get("accession") or "").replace("-", "")
+        if item.get("kind") != "complete_submission" or not accession:
+            continue
+        for doc in item.get("documents", []) or []:
+            cache_key = str(doc.get("cache_key") or "").strip("/")
+            document = str(doc.get("document") or "")
+            if not cache_key or not document:
+                continue
+            target = live_sec_root / cache_key
+            if target.exists():
+                continue
+            matches = sorted(docs_root.glob(f"*_{accession}_{document}"))
+            source = next((path for path in matches if path.is_file() and path != target), None)
+            if source is None:
+                missing.append({"ticker": str(item.get("ticker") or ""), "cache_key": cache_key})
+                continue
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
+            materialized.append({"ticker": str(item.get("ticker") or ""), "source": str(source), "target": str(target)})
+
+    return {
+        "alias_document_materialized_count": len(materialized),
+        "alias_document_missing_count": len(missing),
+        "alias_document_materialized": materialized[:50],
+        "alias_document_missing": missing[:50],
+    }
+
+
 def coverage_gate_result(summary: Mapping[str, Any], *, artifact_paths: Mapping[str, str]) -> GateResult:
     return GateResult(3, "Filing and companyfacts coverage", GateStatus(summary.get("gate_status", GateStatus.PASS.value)), dict(summary), dict(artifact_paths))
 

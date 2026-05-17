@@ -4,6 +4,7 @@ from __future__ import annotations
 from cli.common import *  # noqa: F401,F403
 
 import datetime as _dt
+import csv
 import json
 import os
 import subprocess
@@ -569,6 +570,7 @@ def _run_in_session_llm(
     model: str,
     reasoning_effort: str,
     batch_size: int,
+    shared_cache_csv: Path | None = None,
 ) -> Path:
     from tradingagents.research.fundamental.src.features.llm_extraction import read_packets, run_llm_batches, write_consolidated_csv
     from tradingagents.research.fundamental.src.storage import add_run_lineage, make_pipeline_run_id, source_file_hash, write_table
@@ -581,6 +583,7 @@ def _run_in_session_llm(
         reasoning_effort=reasoning_effort,
         batch_size=batch_size,
         resume=True,
+        shared_cache_csv=shared_cache_csv,
     )
     write_consolidated_csv(output_dir, output_csv)
     lineage = add_run_lineage(rows, pipeline_run_id=make_pipeline_run_id("llm"), as_of_date=as_of, source_hash=source_file_hash(packets_path))
@@ -713,39 +716,89 @@ def fundamental_run_today(
     allow_quarter_run_mismatch = allow_date_quarter_mismatch or ctx.info_name == "fundamental-run-quarter"
 
     def _daily_run_llm_service(*, packets_path: Path, output_root: Path, config: DailyRunConfig) -> Path | None:
+        from tradingagents.research.fundamental.src.features.llm_extraction import (
+            default_llm_cache_csv,
+            read_cached_llm_rows_for_packets,
+            read_packets,
+            write_post_llm_csv,
+        )
+
+        packets = read_packets(packets_path)
+        cached_rows, missing_packets, cache_summary = read_cached_llm_rows_for_packets(packets)
+        cache_summary_path = output_root / "llm_cache_reuse_summary.json"
+        cache_summary_path.write_text(json.dumps(cache_summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        cached_csv = output_root / "cached_post_llm_scores.csv"
+        if cached_rows:
+            write_post_llm_csv(cached_rows, cached_csv)
+        if not missing_packets:
+            return write_post_llm_csv(cached_rows, llm_csv)
+
+        def _combine_with_cached(missing_csv: Path) -> Path:
+            with missing_csv.open(newline="", encoding="utf-8") as handle:
+                missing_rows = list(csv.DictReader(handle))
+            return write_post_llm_csv(cached_rows + missing_rows, llm_csv)
+
+        effective_packets_path = packets_path
+        effective_output_dir = llm_dir
+        effective_output_csv = llm_csv
+        if cached_rows:
+            effective_packets_path = output_root / "lake" / "artifacts" / f"{config.quarter}_llm_packets_missing_cache.jsonl"
+            effective_packets_path.parent.mkdir(parents=True, exist_ok=True)
+            effective_packets_path.write_text(
+                "".join(json.dumps(packet, ensure_ascii=True) + "\n" for packet in missing_packets),
+                encoding="utf-8",
+            )
+            effective_output_dir = output_root / "llm_batches_missing_cache"
+            effective_output_csv = output_root / "missing_post_llm_scores.csv"
+
         if llm_mode_value == "post-file":
             if post_llm_path is None or not post_llm_path.exists() or post_llm_path.stat().st_size == 0:
                 raise RuntimeError("--llm-mode post-file requires a non-empty --post-llm CSV")
             return post_llm_path
         if llm_mode_value == "subagent":
-            _write_subagent_llm_job(
+            job_path = _write_subagent_llm_job(
                 out_root=output_root,
-                packets_path=packets_path,
-                output_dir=llm_dir,
-                output_csv=llm_csv,
+                packets_path=effective_packets_path,
+                output_dir=effective_output_dir,
+                output_csv=effective_output_csv,
                 lake_root=output_root / "lake",
                 as_of=run_date,
                 model=llm_model,
                 reasoning_effort=llm_reasoning_effort,
                 batch_size=llm_batch_size,
             )
+            if cached_rows:
+                job_payload = json.loads(job_path.read_text(encoding="utf-8"))
+                job_payload.update(
+                    {
+                        "cached_post_llm_csv": str(cached_csv),
+                        "missing_output_csv": str(effective_output_csv),
+                        "combined_output_csv": str(llm_csv),
+                        "cache_hit_count": len(cached_rows),
+                        "missing_packet_count": len(missing_packets),
+                        "required_result": "Run LLM extraction on missing packets, combine cached_post_llm_csv + missing_output_csv into combined_output_csv, then rerun fundamental with --llm-mode post-file --post-llm combined_output_csv.",
+                    }
+                )
+                job_path.write_text(json.dumps(job_payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
             return None
         fundamental_root = Path("tradingagents") / "research" / "fundamental"
         if llm_mode_value == "in-session":
-            return _run_in_session_llm(
-                packets_path=packets_path,
-                output_dir=llm_dir,
-                output_csv=llm_csv,
+            completed_path = _run_in_session_llm(
+                packets_path=effective_packets_path,
+                output_dir=effective_output_dir,
+                output_csv=effective_output_csv,
                 lake_root=output_root / "lake",
                 as_of=run_date,
                 model=llm_model,
                 reasoning_effort=llm_reasoning_effort,
                 batch_size=llm_batch_size,
+                shared_cache_csv=default_llm_cache_csv(),
             )
-        return _run_external_llm(
-            packets_path=packets_path,
-            output_dir=llm_dir,
-            output_csv=llm_csv,
+            return _combine_with_cached(completed_path) if cached_rows else completed_path
+        completed_path = _run_external_llm(
+            packets_path=effective_packets_path,
+            output_dir=effective_output_dir,
+            output_csv=effective_output_csv,
             lake_root=output_root / "lake",
             as_of=run_date,
             model=llm_model,
@@ -753,6 +806,7 @@ def fundamental_run_today(
             batch_size=llm_batch_size,
             fundamental_root=fundamental_root,
         )
+        return _combine_with_cached(completed_path) if cached_rows else completed_path
 
     try:
         cfg = DailyRunConfig(

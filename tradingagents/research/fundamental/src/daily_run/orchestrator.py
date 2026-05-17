@@ -11,9 +11,11 @@ from uuid import uuid4
 
 from tradingagents.research.fundamental.src.config.cache_paths import market_cache_root, sec_cache_root
 from tradingagents.research.fundamental.src.features.common import clean, prior_quarter
+from tradingagents.research.fundamental.src.features.llm_extraction import save_llm_rows_to_cache
+from tradingagents.research.fundamental.src.features.post_llm_scores import REQUIRED_LLM_FIELDS
 
 from .artifacts import write_csv, write_json_atomic, write_text_atomic
-from .coverage import coverage_gate_result, load_raw_documents_from_coverage, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
+from .coverage import coverage_gate_result, load_raw_documents_from_coverage, materialize_alias_documents_from_queue, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
 from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_filtered_llm_packets
 from .finalize import QOQ_REQUIRED_FIELDS, add_qoq_context, build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
@@ -559,15 +561,19 @@ def _non_fetchable_no_earnings_evidence(row: Mapping[str, Any]) -> bool:
 
 
 def _coverage_proves_no_earnings_evidence(row: Mapping[str, Any]) -> bool:
-    if str(row.get("missing_inputs") or "").strip():
-        return False
     if str(row.get("earnings_8k_accession") or "").strip():
         return False
     if str(row.get("earnings_8k_primary_document") or "").strip():
         return False
     if str(row.get("earnings_exhibit_document") or "").strip():
         return False
-    return "no_item_2_02_8k_using_periodic_only" in str(row.get("notes") or "")
+    notes = str(row.get("notes") or "")
+    if "no_item_2_02_8k_using_periodic_only" not in notes:
+        return False
+    missing = str(row.get("missing_inputs") or "").strip()
+    if not missing:
+        return True
+    return str(row.get("coverage_status") or "").strip() == "BLOCKED_METADATA_OR_ISSUER_REALITY"
 
 
 PRIOR_LLM_FIELDS = (
@@ -594,9 +600,9 @@ def _attach_prior_llm_extract(rows: list[dict[str, Any]], prior_rows: list[dict[
     for raw in rows:
         row = dict(raw)
         prior = prior_by_ticker.get(_ticker(row.get("ticker"))) or {}
-        available = {field: prior.get(field) for field in PRIOR_LLM_FIELDS if str(prior.get(field) or "").strip()}
-        if available:
+        if _has_llm_extract(prior):
             attached += 1
+            available = {field: prior.get(field) for field in PRIOR_LLM_FIELDS if clean(prior.get(field)) != ""}
             for field, value in available.items():
                 row[f"prior_llm_{field}"] = value
         else:
@@ -606,7 +612,7 @@ def _attach_prior_llm_extract(rows: list[dict[str, Any]], prior_rows: list[dict[
 
 
 def _has_llm_extract(row: Mapping[str, Any]) -> bool:
-    return any(str(row.get(field) or "").strip() for field in PRIOR_LLM_FIELDS)
+    return all(clean(row.get(field)) != "" for field in REQUIRED_LLM_FIELDS)
 
 
 def _merge_prior_llm_from_post_rows(
@@ -725,9 +731,9 @@ def _build_prior_recovery_context_rows(
     ready = [
         row
         for row in priced_rows
-        if row.get("entry_open")
-        and str(row.get("pre_llm_fundamental_bucket", "")).strip() != "not_scored"
-        and str(row.get("pre_llm_fundamental_score", "")).strip()
+        if clean(row.get("entry_open"))
+        and clean(row.get("pre_llm_fundamental_bucket")) != "not_scored"
+        and clean(row.get("pre_llm_fundamental_score"))
     ]
     summary = {
         "prior_recovery_context_rows": len(priced_rows),
@@ -755,7 +761,7 @@ def _merge_prior_recovery_context(
         base = by_key.get(key, {})
         merged = dict(base)
         for field, value in recovery.items():
-            if str(value or "").strip() and not str(merged.get(field, "") or "").strip():
+            if clean(value) and not clean(merged.get(field)):
                 merged[field] = value
         merged["ticker"] = key[0]
         merged["quarter"] = key[1]
@@ -1319,18 +1325,25 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             fetch_passes: list[dict[str, Any]] = []
             initial_fetch_queue = coverage_summary["fetch_queue_count"]
             pass_number = 0
-            while coverage_summary["fetch_queue_count"] and pass_number < max(1, int(config.max_sec_fetch_passes)):
-                pass_number += 1
-                before_fetch_queue = coverage_summary["fetch_queue_count"]
-                fetch_manifest = fetcher(out_root=config.output_root, live_sec_root=live_root)
+            pre_fetch_alias_summary = materialize_alias_documents_from_queue(out_root=config.output_root, live_sec_root=live_root)
+            if int(pre_fetch_alias_summary.get("alias_document_materialized_count") or 0):
                 coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=active_master_universe_path, quarter=config.quarter, live_sec_root=live_root)
                 companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
                 coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
                 coverage_summary.update(companyfacts_fallback_summary)
-                fetch_passes.append({"pass": pass_number, "initial_fetch_queue_count": before_fetch_queue, "post_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_manifest": fetch_manifest})
+            while coverage_summary["fetch_queue_count"] and pass_number < max(1, int(config.max_sec_fetch_passes)):
+                pass_number += 1
+                before_fetch_queue = coverage_summary["fetch_queue_count"]
+                fetch_manifest = fetcher(out_root=config.output_root, live_sec_root=live_root)
+                alias_summary = materialize_alias_documents_from_queue(out_root=config.output_root, live_sec_root=live_root)
+                coverage_raw = coverage_runner(out_root=config.output_root, universe_csv=universe_csv, eligible_json=active_master_universe_path, quarter=config.quarter, live_sec_root=live_root)
+                companyfacts_ready = len(universe.rows) - int((coverage_raw.get("missing_input_counts", {}) or {}).get("companyfacts", 0))
+                coverage_summary = normalize_coverage_summary(coverage_raw, universe_count=len(universe.rows), companyfacts_ready_count=companyfacts_ready)
+                coverage_summary.update(companyfacts_fallback_summary)
+                fetch_passes.append({"pass": pass_number, "initial_fetch_queue_count": before_fetch_queue, "post_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_manifest": fetch_manifest, "alias_materialization": alias_summary})
             gate_status = GateStatus.HARD_STOP if coverage_summary["fetch_queue_count"] else GateStatus.PASS
             reason = "fetch_queue_remaining_after_max_passes" if coverage_summary["fetch_queue_count"] else "fetch_queue_drained"
-            _record(state, GateResult(4, "Fetch and materialization", gate_status, {"initial_fetch_queue_count": initial_fetch_queue, "final_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_pass_count": len(fetch_passes), "max_sec_fetch_passes": config.max_sec_fetch_passes, "reason": reason, "fetch_passes": fetch_passes}, coverage_summary.get("outputs", {})))
+            _record(state, GateResult(4, "Fetch and materialization", gate_status, {"initial_fetch_queue_count": initial_fetch_queue, "final_fetch_queue_count": coverage_summary["fetch_queue_count"], "fetch_pass_count": len(fetch_passes), "max_sec_fetch_passes": config.max_sec_fetch_passes, "reason": reason, "pre_fetch_alias_materialization": pre_fetch_alias_summary, "fetch_passes": fetch_passes}, coverage_summary.get("outputs", {})))
         else:
             _record(state, GateResult(4, "Fetch and materialization", GateStatus.PASS, {"fetch_queue_count": coverage_summary["fetch_queue_count"], "reason": "no_fetchable_queue_or_skip_fetch"}, {}))
 
@@ -1562,6 +1575,9 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
             _record(state, validation_gate)
 
         post_rows = _read_csv(post_llm_path) if post_llm_path else []
+        if post_rows:
+            cache_summary = save_llm_rows_to_cache(post_rows)
+            state.artifacts["llm_shared_cache"] = str(cache_summary.get("llm_cache_path", ""))
         prior_rows_with_recovery_context = _merge_prior_recovery_context(
             prior_rows,
             prior_recovery_context_rows,
@@ -1594,11 +1610,24 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                     {"prior_llm_final_blockers": str(prior_block_path), **prior_recovery_artifacts},
                 ),
             )
-        final_rows, final_summary = build_final_scores(tiered_rows, as_of=config.as_of, post_llm_rows=post_rows, prior_context_rows=prior_rows_for_final)
+        prior_impossible_tickers = sorted({_ticker(row.get("ticker")) for row in prior_recovery_impossible})
+        final_rows, final_summary = build_final_scores(
+            tiered_rows,
+            as_of=config.as_of,
+            post_llm_rows=post_rows,
+            prior_context_rows=prior_rows_for_final,
+            allowed_missing_qoq_tickers=set(prior_impossible_tickers),
+        )
         final_summary["llm_eligible_qoq_context_match_rows"] = _qoq_match_count(
             [row for row in final_rows if clean(row.get("llm_status")) == "complete"]
         )
-        final_summary = {**final_summary, **prior_summary, **prior_post_summary, "prior_llm_extract_impossible_no_filings_count": len(prior_recovery_impossible)}
+        final_summary = {
+            **final_summary,
+            **prior_summary,
+            **prior_post_summary,
+            "prior_llm_extract_impossible_no_filings_count": len(prior_recovery_impossible),
+            "prior_llm_extract_impossible_no_filings_tickers": prior_impossible_tickers[:50],
+        }
         final_path = config.output_root / f"fundamental_final_scores_{config.as_of}.csv"
         final_artifacts = write_final_scores_csv(final_path, final_rows, final_summary)
         write_daily_status(
@@ -1632,6 +1661,7 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                     "qoq_context_match_rows": final_summary.get("qoq_context_match_rows", 0),
                     "qoq_context_input_rows": final_summary.get("qoq_context_input_rows", 0),
                     "llm_eligible_qoq_context_match_rows": final_summary.get("llm_eligible_qoq_context_match_rows", 0),
+                    "prior_llm_extract_impossible_no_filings_tickers": final_summary.get("prior_llm_extract_impossible_no_filings_tickers", []),
                 },
             ),
         )

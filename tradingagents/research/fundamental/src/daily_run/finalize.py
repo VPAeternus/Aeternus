@@ -96,18 +96,22 @@ def add_qoq_context(rows: list[dict[str, Any]], prior_rows: list[dict[str, Any]]
     return enriched, {"qoq_context_match_rows": matched, "qoq_context_input_rows": len(rows)}
 
 
-def _qoq_presence_summary(final_rows: list[dict[str, Any]]) -> dict[str, Any]:
+def _qoq_presence_summary(final_rows: list[dict[str, Any]], *, allowed_missing_tickers: set[str] | None = None) -> dict[str, Any]:
+    allowed = {ticker.strip().upper() for ticker in (allowed_missing_tickers or set()) if ticker.strip()}
     llm_complete = [row for row in final_rows if clean(row.get("llm_status")) == "complete"]
     missing = [
         clean(row.get("ticker")).upper()
         for row in llm_complete
         if any(not clean(row.get(field)) for field in QOQ_REQUIRED_FIELDS)
     ]
+    blocking_missing = [ticker for ticker in missing if ticker not in allowed]
     return {
         "llm_complete_rows": len(llm_complete),
-        "llm_complete_qoq_ready_rows": len(llm_complete) - len(missing),
-        "llm_complete_qoq_missing_rows": len(missing),
-        "llm_complete_qoq_missing_tickers": missing[:50],
+        "llm_complete_qoq_ready_rows": len(llm_complete) - len(blocking_missing),
+        "llm_complete_qoq_missing_rows": len(blocking_missing),
+        "llm_complete_qoq_missing_tickers": blocking_missing[:50],
+        "llm_complete_qoq_allowed_missing_rows": len(missing) - len(blocking_missing),
+        "llm_complete_qoq_allowed_missing_tickers": [ticker for ticker in missing if ticker in allowed][:50],
     }
 
 
@@ -117,6 +121,7 @@ def build_final_scores(
     as_of: str,
     post_llm_rows: list[dict[str, Any]] | None,
     prior_context_rows: list[dict[str, Any]] | None = None,
+    allowed_missing_qoq_tickers: set[str] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     rows_for_scoring, qoq_summary = add_qoq_context(broad_rows, prior_context_rows or [])
     signal_rows, tier_rows, pre_rows = build_signal_tables(
@@ -133,7 +138,7 @@ def build_final_scores(
         "tier_rows": len(tier_rows),
         "pre_rows": len(pre_rows),
         **qoq_summary,
-        **_qoq_presence_summary(signal_rows),
+        **_qoq_presence_summary(signal_rows, allowed_missing_tickers=allowed_missing_qoq_tickers),
     }
     return signal_rows, summary
 
@@ -148,8 +153,9 @@ def validate_broad_final_scores(
     prior_context_summary: dict[str, Any] | None = None,
 ) -> GateResult:
     reconciled = len(final_rows) + int(explicit_invalid_quarantine_count)
-    qoq_summary = _qoq_presence_summary(final_rows)
     prior_summary = dict(prior_context_summary or {})
+    allowed_missing_tickers = set(prior_summary.get("prior_llm_extract_impossible_no_filings_tickers") or [])
+    qoq_summary = _qoq_presence_summary(final_rows, allowed_missing_tickers=allowed_missing_tickers)
     summary = {
         "final_score_rows": len(final_rows),
         "explicit_invalid_quarantine_count": int(explicit_invalid_quarantine_count),

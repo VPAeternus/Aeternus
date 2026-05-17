@@ -1,4 +1,6 @@
-from tradingagents.research.fundamental.src.daily_run.coverage import classify_coverage_summary, load_raw_documents_from_coverage, normalize_coverage_summary, should_continue_fetch
+import json
+
+from tradingagents.research.fundamental.src.daily_run.coverage import classify_coverage_summary, load_raw_documents_from_coverage, materialize_alias_documents_from_queue, normalize_coverage_summary, should_continue_fetch
 from tradingagents.research.fundamental.src.daily_run.models import GateStatus
 
 
@@ -58,3 +60,34 @@ def test_load_raw_documents_searches_shared_sec_cache(tmp_path):
 
     assert {doc["document_type"] for doc in docs} == {"primary_8k", "earnings_exhibit", "periodic_10q_10k"}
     assert (live / "documents" / "AAA_00000000AAA_ex99.htm").exists()
+
+
+def test_materialize_alias_documents_from_queue_copies_parent_ticker_docs(tmp_path):
+    out = tmp_path / "run"
+    live = tmp_path / "live_sec"
+    docs = live / "documents"
+    docs.mkdir(parents=True)
+    accession = "000168504023000026"
+    (docs / f"BHF_{accession}_bhf-20230508.htm").write_text("<html>8-K</html>", encoding="utf-8")
+    (docs / f"BHF_{accession}_q12023bhfearningspressrele.htm").write_text("<html>press release</html>", encoding="utf-8")
+    queue = {
+        "items": [
+            {
+                "kind": "complete_submission",
+                "ticker": "BHFAO",
+                "accession": "0001685040-23-000026",
+                "documents": [
+                    {"document": "bhf-20230508.htm", "cache_key": f"documents/BHFAO_{accession}_bhf-20230508.htm"},
+                    {"document": "q12023bhfearningspressrele.htm", "cache_key": f"documents/BHFAO_{accession}_q12023bhfearningspressrele.htm"},
+                ],
+            }
+        ]
+    }
+    out.mkdir()
+    (out / "sec_fetch_queue_resumable.json").write_text(json.dumps(queue), encoding="utf-8")
+
+    summary = materialize_alias_documents_from_queue(out_root=out, live_sec_root=live)
+
+    assert summary["alias_document_materialized_count"] == 2
+    assert (docs / f"BHFAO_{accession}_bhf-20230508.htm").exists()
+    assert (docs / f"BHFAO_{accession}_q12023bhfearningspressrele.htm").exists()

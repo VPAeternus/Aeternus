@@ -1,12 +1,19 @@
 from __future__ import annotations
 
+import math
+from numbers import Real
 from typing import Any
 
 
 def clean(value: Any) -> str:
     if value is None:
         return ""
-    return str(value).strip()
+    if isinstance(value, Real) and math.isnan(float(value)):
+        return ""
+    text = str(value).strip()
+    if text.lower() in {"nan", "null"}:
+        return ""
+    return text
 
 
 def to_float(value: Any) -> float | None:

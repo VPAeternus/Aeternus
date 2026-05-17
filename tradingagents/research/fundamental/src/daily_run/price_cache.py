@@ -5,6 +5,8 @@ from pathlib import Path
 from typing import Any, Callable, Mapping
 from collections import defaultdict
 
+from tradingagents.research.fundamental.src.features.common import clean
+
 from .review_list_filter import fetch_review_price_rows, load_cached_review_price_rows, store_review_price_rows
 
 
@@ -111,6 +113,6 @@ def _usable_price_tickers(
             continue
         date_text = str(row.get("date") or "")[:10]
         required_start = required_starts.get(ticker, default_start)
-        if required_start <= date_text and row.get("open") not in {None, ""}:
+        if required_start <= date_text and clean(row.get("open")):
             usable.add(ticker)
     return usable

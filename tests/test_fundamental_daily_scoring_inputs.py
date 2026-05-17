@@ -1,4 +1,5 @@
 import json
+import math
 from tradingagents.research.fundamental.src.daily_run.scoring_inputs import build_pre_llm_from_companyfacts_cache, derive_tradable_date_from_coverage, materialize_companyfacts_fallbacks
 
 
@@ -82,3 +83,21 @@ def test_attach_entry_prices_uses_next_available_market_open():
     assert priced[0]["entry_open_date"] == "2026-02-17"
     assert quarantine == []
     assert summary["entry_open_ready"] == 1
+
+
+def test_attach_entry_prices_treats_nan_entry_open_as_missing():
+    from tradingagents.research.fundamental.src.daily_run.scoring_inputs import attach_entry_prices
+    rows = [{"ticker": "AAA", "quarter": "2026Q2", "tradable_date": "2026-05-11", "entry_open": math.nan}]
+    def fake_price_provider(tickers, *, start, end):
+        return [{"ticker": "AAA", "date": "2026-05-11", "open": 12.34, "close": 13.0}]
+    priced, quarantine, summary = attach_entry_prices(rows, as_of="2026-05-12", price_provider=fake_price_provider)
+    assert priced[0]["entry_open"] == 12.34
+    assert quarantine == []
+    assert summary["entry_open_ready"] == 1
+
+
+def test_common_clean_keeps_none_string_but_blanks_nan():
+    from tradingagents.research.fundamental.src.features.common import clean
+    assert clean("none") == "none"
+    assert clean(float("nan")) == ""
+    assert clean("nan") == ""
