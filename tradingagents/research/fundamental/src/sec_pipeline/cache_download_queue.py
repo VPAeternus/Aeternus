@@ -228,6 +228,10 @@ def materialize_complete_submission_documents(item: dict[str, Any], payload: byt
 def fetch_item(index: int, item: dict[str, Any]) -> dict[str, Any]:
     key = str(item['cache_key'])
     path = cache_path(item)
+    if item.get('kind') == 'complete_submission' and item_cache_complete(item):
+        if path.exists():
+            materialize_complete_submission_documents(item, path.read_bytes())
+        return {'ok': True, 'cached': True, 'index': index, 'key': key, 'item': item}
     if path.exists():
         cached_payload = path.read_bytes()
         validate_payload(path, cached_payload)
@@ -236,24 +240,26 @@ def fetch_item(index: int, item: dict[str, Any]) -> dict[str, Any]:
         return {'ok': True, 'cached': True, 'index': index, 'key': key, 'item': item}
     url = item_url(item)
     payload = fetch_bytes(url)
-    write_atomic(path, payload)
     if item.get('kind') == 'complete_submission':
         materialize_complete_submission_documents(item, payload)
+        return {'ok': True, 'cached': False, 'index': index, 'key': key, 'item': item, 'bytes': len(payload), 'stored_full_submission': False}
+    write_atomic(path, payload)
     return {'ok': True, 'cached': False, 'index': index, 'key': key, 'item': item, 'bytes': len(payload)}
 
 
 def item_cache_complete(item: dict[str, Any]) -> bool:
     try:
         path = cache_path(item)
-        if not path.exists():
-            return False
-        validate_payload(path, path.read_bytes())
         if item.get('kind') == 'complete_submission':
             for doc in item.get('documents', []) or []:
                 doc_path = LIVE / str(doc.get('cache_key', '')).strip('/')
                 if not doc_path.exists():
                     return False
                 validate_payload(doc_path, doc_path.read_bytes())
+            return True
+        if not path.exists():
+            return False
+        validate_payload(path, path.read_bytes())
         return True
     except Exception:
         return False
