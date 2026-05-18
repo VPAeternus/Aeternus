@@ -1,0 +1,29 @@
+{
+  "core_deterioration_count": 3,
+  "core_deterioration_tickers": [
+    "SWBI",
+    "AIOT",
+    "MTRX"
+  ],
+  "expected_prior_context_rows": 1233,
+  "final": true,
+  "gates_passed": true,
+  "hard_stop_gates": [],
+  "llm_complete": true,
+  "llm_completed_count": 78,
+  "llm_eligible_count": 56,
+  "llm_expected_count": 78,
+  "prior_context_complete": true,
+  "prior_context_loaded": true,
+  "prior_context_reason": "",
+  "prior_duplicate_key_count": 0,
+  "prior_llm_missing_for_final_count": 0,
+  "qoq_context_match_rows": 56,
+  "qoq_missing_count": 0,
+  "shadow_replacement_count": 0,
+  "shadow_selected_count": 15,
+  "status": "pass",
+  "stopped": "",
+  "top15_emitted": true,
+  "top15_selected_count": 15
+}

@@ -1,0 +1,312 @@
+{
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Run identity and immutable snapshot",
+      "status": "pass",
+      "summary": {
+        "as_of": "2026-03-31",
+        "mode": "broad-master-final",
+        "quarter": "2026Q1",
+        "run_id": "daily_2f030543a756",
+        "snapshots": {
+          "master_universe": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/snapshots/master_universe.json"
+        },
+        "source_hashes": {
+          "handoff": "",
+          "master_universe": "71e2146b2de8c04d7bb3da04954c3867489df876472df9b5118f5500757f7c59",
+          "sec_ticker_map": ""
+        }
+      }
+    },
+    {
+      "gate": 2,
+      "name": "Universe construction and drift control",
+      "status": "pass",
+      "summary": {
+        "handoff_missing": true,
+        "handoff_policy": "allowed_missing",
+        "identity_rejected_new_count": 0,
+        "identity_resolved_new_count": 0,
+        "missing_cik_count": 0,
+        "row_count": 1251,
+        "scout_count": 0
+      }
+    },
+    {
+      "gate": 3,
+      "name": "Filing and companyfacts coverage",
+      "status": "pass",
+      "summary": {
+        "blocked_tickers": [
+          "NOK",
+          "SILC",
+          "TSEM"
+        ],
+        "companyfacts_fallback_copied_count": 0,
+        "companyfacts_fallback_copied_tickers": [],
+        "companyfacts_fallback_missing_count": 0,
+        "companyfacts_fallback_missing_tickers": [],
+        "companyfacts_fallback_root": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec",
+        "companyfacts_ready_count": 1251,
+        "coverage_status_counts": {
+          "BLOCKED_METADATA_OR_ISSUER_REALITY": 3,
+          "CACHED_READY": 1248
+        },
+        "fetch_queue_count": 0,
+        "gate_status": "pass",
+        "llm_doc_ready_count": 1248,
+        "missing_input_counts": {
+          "10q_10k_metadata": 3
+        },
+        "outputs": {
+          "blockers": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_coverage_blockers.json",
+          "fetch_queue": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_fetch_queue_resumable.json",
+          "manifest_csv": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_coverage_manifest_2026Q1.csv"
+        },
+        "pre_llm_blocked": false,
+        "remaining_work_type": "metadata_or_parser_routing",
+        "ticker_count": 1251
+      }
+    },
+    {
+      "gate": 4,
+      "name": "Fetch and materialization",
+      "status": "pass",
+      "summary": {
+        "fetch_queue_count": 0,
+        "reason": "no_fetchable_queue_or_skip_fetch"
+      }
+    },
+    {
+      "gate": 5,
+      "name": "Pre-LLM scoring readiness",
+      "status": "pass",
+      "summary": {
+        "companyfacts_cached": 1251,
+        "companyfacts_fallback_cached": 0,
+        "pre_llm_not_scored": 1054,
+        "pre_llm_scored": 197,
+        "universe_rows": 1251
+      }
+    },
+    {
+      "gate": 6,
+      "name": "Trade date, price, and entry-open",
+      "status": "pass",
+      "summary": {
+        "daily_price_cache_paths": [
+          "/Users/aeternusholdings/.cache/autoresearch_fundamentals",
+          "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3"
+        ],
+        "daily_price_cached_ticker_count": 1248,
+        "daily_price_cached_usable_ticker_count": 1238,
+        "daily_price_end_exclusive": "2026-04-01",
+        "daily_price_live_fetch_allowed": true,
+        "daily_price_live_fetch_row_count": 0,
+        "daily_price_live_fetch_ticker_count": 0,
+        "daily_price_missing_cache_ticker_count": 10,
+        "daily_price_partial_cache_ticker_count": 10,
+        "daily_price_partial_cache_tickers": [
+          "FDS",
+          "HSY",
+          "JILL",
+          "NCNO",
+          "RILY",
+          "RILYN",
+          "RILYZ",
+          "ROST",
+          "TITN",
+          "TJX"
+        ],
+        "daily_price_requested_ticker_count": 1248,
+        "daily_price_start": "2025-11-06",
+        "daily_price_still_missing_ticker_count": 10,
+        "daily_price_still_missing_tickers": [
+          "FDS",
+          "HSY",
+          "JILL",
+          "NCNO",
+          "RILY",
+          "RILYN",
+          "RILYZ",
+          "ROST",
+          "TITN",
+          "TJX"
+        ],
+        "entry_open_ready": 1238,
+        "missing_entry_open": 10,
+        "reason": "price_quarantine_recorded",
+        "rows": 1248,
+        "score_input_quarantine_count": 1048,
+        "score_input_ready": 193,
+        "sec_reality_quarantine_count": 3,
+        "sec_reality_quarantine_tickers": [
+          "NOK",
+          "SILC",
+          "TSEM"
+        ],
+        "tier_input_rows": 193
+      }
+    },
+    {
+      "gate": 7,
+      "name": "Tier 0-4 and LLM eligibility",
+      "status": "pass",
+      "summary": {
+        "llm_eligible_count": 56,
+        "llm_eligible_qoq_context_match_rows": 56,
+        "llm_evidence_cache_recovered_count": 0,
+        "llm_evidence_fetch_manifest": {
+          "cache_root": "/Users/aeternusholdings/Documents/GitHub/AeternusHoldings/cache/sec/live_sec",
+          "eligible_queue_items": 0,
+          "eligible_ticker_count": 1251,
+          "errors": [],
+          "queue_path": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_fetch_queue_resumable.json",
+          "stats": {
+            "cached_existing": 0,
+            "eligible_queue_items": 0,
+            "fetched": 0,
+            "max_requests_per_second": 8.0,
+            "skipped_done": 0,
+            "unavailable": 0,
+            "workers": 8
+          },
+          "status": "complete",
+          "updated_at": "2026-05-18T17:48:47.650435+00:00"
+        },
+        "llm_evidence_fetch_recovery_attempted": true,
+        "llm_evidence_missing_after_fetch": 2,
+        "llm_evidence_missing_before_fetch": 2,
+        "llm_evidence_still_missing_count": 2,
+        "llm_quarantine_count": 135,
+        "llm_required_quarantine_count": 0,
+        "llm_required_quarantine_tickers": [],
+        "non_fetchable_llm_evidence_rejection_count": 2,
+        "non_fetchable_llm_evidence_rejection_tickers": [
+          "CTLP",
+          "PLCE"
+        ],
+        "pre_tier_qoq_context_input_rows": 193,
+        "pre_tier_qoq_context_loaded": true,
+        "pre_tier_qoq_context_match_rows": 192,
+        "prior_llm_extract_attached_count": 33,
+        "prior_llm_extract_missing_count": 23,
+        "prior_llm_recovery_broad_universe_count": 1251,
+        "prior_llm_recovery_eligible_count": 22,
+        "prior_llm_recovery_empty_evidence_count": 0,
+        "prior_llm_recovery_fetch_pass_count": 0,
+        "prior_llm_recovery_fetch_passes": [],
+        "prior_llm_recovery_final_fetch_queue_count": 0,
+        "prior_llm_recovery_impossible_no_filings_count": 1,
+        "prior_llm_recovery_missing_evidence_count": 0,
+        "prior_llm_recovery_needed_count": 23,
+        "prior_llm_recovery_packet_count": 22,
+        "prior_recovery_context_companyfacts_cached": 23,
+        "prior_recovery_context_companyfacts_fallback_cached": 0,
+        "prior_recovery_context_entry_open_ready": 23,
+        "prior_recovery_context_missing_entry_open": 0,
+        "prior_recovery_context_missing_price_count": 0,
+        "prior_recovery_context_missing_score_count": 5,
+        "prior_recovery_context_pre_llm_not_scored": 5,
+        "prior_recovery_context_pre_llm_scored": 18,
+        "prior_recovery_context_ready_count": 18,
+        "prior_recovery_context_rows": 23,
+        "prior_recovery_context_universe_rows": 23,
+        "tier_0_count": 67,
+        "tier_1_count": 36,
+        "tier_2_count": 22,
+        "tier_3_count": 15,
+        "tier_4_count": 12,
+        "tiered_count": 193
+      }
+    },
+    {
+      "gate": 8,
+      "name": "LLM packet, extraction, and validation",
+      "status": "pass",
+      "summary": {
+        "broad_universe_count": 1251,
+        "completed_count": 78,
+        "current_eligible_count": 56,
+        "current_packet_count": 56,
+        "duplicate_sample_ids": [],
+        "eligible_count": 78,
+        "empty_evidence_count": 0,
+        "empty_evidence_count_after_recovery": 0,
+        "empty_evidence_count_before_recovery": 0,
+        "empty_evidence_recovery_attempted": false,
+        "expected_count": 78,
+        "missing_sample_ids": [],
+        "packet_count": 78,
+        "prior_llm_recovery_impossible_no_filings_count": 1,
+        "prior_llm_recovery_missing_evidence_count": 0,
+        "prior_llm_recovery_packet_count": 22,
+        "rows_missing_required_fields": {},
+        "unexpected_sample_ids": []
+      }
+    },
+    {
+      "gate": 9,
+      "name": "Final scoring, HP buckets, RM buckets, and QoQ context",
+      "status": "pass",
+      "summary": {
+        "broad_universe_count": 1251,
+        "expected_prior_context_rows": 1233,
+        "expected_prior_quarter": "2025Q4",
+        "explicit_invalid_quarantine_count": 1060,
+        "final_score_rows": 191,
+        "llm_complete_qoq_allowed_missing_rows": 0,
+        "llm_complete_qoq_allowed_missing_tickers": [],
+        "llm_complete_qoq_missing_rows": 0,
+        "llm_complete_qoq_missing_tickers": [],
+        "llm_complete_qoq_ready_rows": 56,
+        "llm_complete_rows": 56,
+        "llm_eligible_qoq_context_match_rows": 56,
+        "prior_context_loaded": true,
+        "prior_context_path": "tradingagents/research/fundamental/runs/2025-12-31/2025Q4/walkforward_clean_v1/fundamental_final_scores_2025-12-31.csv",
+        "prior_context_rows": 1233,
+        "prior_duplicate_key_count": 0,
+        "prior_duplicate_keys": [],
+        "prior_llm_extract_impossible_no_filings_tickers": [
+          "CRDO"
+        ],
+        "qoq_context_input_rows": 191,
+        "qoq_context_match_rows": 191,
+        "reconciled_count": 1251
+      }
+    },
+    {
+      "gate": 10,
+      "name": "Top10 + Plus5 + shadow refill publish",
+      "status": "pass",
+      "summary": {
+        "broad_universe_count": 1251,
+        "explicit_invalid_quarantine_count": 1060,
+        "input_rows": 191,
+        "reconciled_count": 1251,
+        "shadow_selected_count": 15,
+        "top15_selected_count": 15
+      }
+    },
+    {
+      "gate": 11,
+      "name": "Complete panel emission",
+      "status": "pass",
+      "summary": {
+        "validation": {
+          "duplicate_ticker_quarter_count": 0,
+          "errors": [],
+          "passed": true,
+          "required_columns_missing": [],
+          "row_count": 191,
+          "shadow_selected_count": 15,
+          "top15_selected_count": 15,
+          "warnings": []
+        }
+      }
+    }
+  ],
+  "quarter": "2026Q1",
+  "run_root": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3"
+}

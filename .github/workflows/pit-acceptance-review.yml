@@ -1,0 +1,48 @@
+name: PIT Acceptance Review
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: pit-acceptance-review-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  focused:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Focused PIT timing tests
+        run: python -m pytest tests/test_fundamental_daily_scoring_inputs.py tests/test_fundamental_row_contract.py -q
+      - name: Validate portable acceptance evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("docs/pit_acceptance_review")
+          summary = json.loads((root / "acceptance_summary.json").read_text())
+          for quarter in ("2022Q1", "2026Q1"):
+              item = summary["quarters"][quarter]
+              assert item["all_gates_passed"] is True, quarter
+              assert [gate["gate"] for gate in item["gate_statuses"]] == list(range(1, 12)), quarter
+              assert all(gate["name"] for gate in item["gate_statuses"]), quarter
+              assert all(gate["status"] == "pass" for gate in item["gate_statuses"]), quarter
+              assert item["publish_readiness_status"] == "pass", quarter
+              assert item["complete_panel_validation_passed"] is True, quarter
+              assert item["blocking_error_count"] == 0, quarter
+              assert item["warning_count"] == 0, quarter
+              assert item["llm_completed_count"] == item["llm_expected_count"], quarter
+          PY
+      - name: Whitespace check
+        run: git diff --check

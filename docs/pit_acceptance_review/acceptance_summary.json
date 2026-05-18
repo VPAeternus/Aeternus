@@ -1,0 +1,158 @@
+{
+  "accepted_code_commit": "5a32fe5d1d87e3922c2da80539e45427de01a57a",
+  "generated_at_utc": "2026-05-18T18:03:44.989500+00:00",
+  "purpose": "Portable proof bundle for GPT Pro review of PIT repair full acceptance runs.",
+  "quarters": {
+    "2022Q1": {
+      "all_gates_passed": true,
+      "blocking_error_count": 0,
+      "complete_panel_rows": 201,
+      "complete_panel_validation_errors": 0,
+      "complete_panel_validation_passed": true,
+      "complete_panel_validation_warnings": 0,
+      "final": true,
+      "final_score_rows": 201,
+      "gate_statuses": [
+        {
+          "gate": 1,
+          "name": "Run identity and immutable snapshot",
+          "status": "pass"
+        },
+        {
+          "gate": 2,
+          "name": "Universe construction and drift control",
+          "status": "pass"
+        },
+        {
+          "gate": 3,
+          "name": "Filing and companyfacts coverage",
+          "status": "pass"
+        },
+        {
+          "gate": 4,
+          "name": "Fetch and materialization",
+          "status": "pass"
+        },
+        {
+          "gate": 5,
+          "name": "Pre-LLM scoring readiness",
+          "status": "pass"
+        },
+        {
+          "gate": 6,
+          "name": "Trade date, price, and entry-open",
+          "status": "pass"
+        },
+        {
+          "gate": 7,
+          "name": "Tier 0-4 and LLM eligibility",
+          "status": "pass"
+        },
+        {
+          "gate": 8,
+          "name": "LLM packet, extraction, and validation",
+          "status": "pass"
+        },
+        {
+          "gate": 9,
+          "name": "Final scoring, HP buckets, RM buckets, and QoQ context",
+          "status": "pass"
+        },
+        {
+          "gate": 10,
+          "name": "Top10 + Plus5 + shadow refill publish",
+          "status": "pass"
+        },
+        {
+          "gate": 11,
+          "name": "Complete panel emission",
+          "status": "pass"
+        }
+      ],
+      "llm_completed_count": 36,
+      "llm_expected_count": 36,
+      "publish_readiness_status": "pass",
+      "run_root": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3",
+      "shadow_replacement_count": 0,
+      "shadow_selected_count": 11,
+      "top15_selected_count": 11,
+      "warning_count": 0
+    },
+    "2026Q1": {
+      "all_gates_passed": true,
+      "blocking_error_count": 0,
+      "complete_panel_rows": 191,
+      "complete_panel_validation_errors": 0,
+      "complete_panel_validation_passed": true,
+      "complete_panel_validation_warnings": 0,
+      "final": true,
+      "final_score_rows": 191,
+      "gate_statuses": [
+        {
+          "gate": 1,
+          "name": "Run identity and immutable snapshot",
+          "status": "pass"
+        },
+        {
+          "gate": 2,
+          "name": "Universe construction and drift control",
+          "status": "pass"
+        },
+        {
+          "gate": 3,
+          "name": "Filing and companyfacts coverage",
+          "status": "pass"
+        },
+        {
+          "gate": 4,
+          "name": "Fetch and materialization",
+          "status": "pass"
+        },
+        {
+          "gate": 5,
+          "name": "Pre-LLM scoring readiness",
+          "status": "pass"
+        },
+        {
+          "gate": 6,
+          "name": "Trade date, price, and entry-open",
+          "status": "pass"
+        },
+        {
+          "gate": 7,
+          "name": "Tier 0-4 and LLM eligibility",
+          "status": "pass"
+        },
+        {
+          "gate": 8,
+          "name": "LLM packet, extraction, and validation",
+          "status": "pass"
+        },
+        {
+          "gate": 9,
+          "name": "Final scoring, HP buckets, RM buckets, and QoQ context",
+          "status": "pass"
+        },
+        {
+          "gate": 10,
+          "name": "Top10 + Plus5 + shadow refill publish",
+          "status": "pass"
+        },
+        {
+          "gate": 11,
+          "name": "Complete panel emission",
+          "status": "pass"
+        }
+      ],
+      "llm_completed_count": 78,
+      "llm_expected_count": 78,
+      "publish_readiness_status": "pass",
+      "run_root": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3",
+      "shadow_replacement_count": 0,
+      "shadow_selected_count": 15,
+      "top15_selected_count": 15,
+      "warning_count": 0
+    }
+  },
+  "scope": "Small summaries and hashes only; large run CSVs remain local outputs."
+}
