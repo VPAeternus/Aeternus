@@ -15,6 +15,9 @@ def test_build_final_scores_preserves_broad_rows_when_post_llm_is_subset():
     assert "entry_score_0_100" in rows[0]
     assert "hp_structure_score" in rows[0]
     assert "rm_buy_review_flag" in rows[0]
+    assert rows[0]["score_producing_flag"] == "1"
+    assert rows[0]["accepted_row_flag"] == "1"
+    assert rows[0]["diagnostic_only_flag"] == "0"
 
 
 def test_build_final_scores_does_not_let_post_llm_overwrite_fresh_price_fields():

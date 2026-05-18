@@ -4,7 +4,7 @@ This module is intentionally data-only. Exporters and normalizers should import
 these constants instead of redefining complete-panel column contracts.
 """
 
-COMPLETE_PANEL_SCHEMA_VERSION = "fundamental_complete_panel_v1"
+COMPLETE_PANEL_SCHEMA_VERSION = "fundamental_complete_panel_v2"
 
 IDENTITY_COLUMNS = (
     "quarter",
@@ -32,6 +32,17 @@ PRICE_AND_SOURCE_COLUMNS = (
     "source_available_date",
     "financial_cutoff_date",
     "disclosure_available_date",
+    "fiscal_period_start",
+    "fiscal_period_end",
+    "target_period_end",
+    "fiscal_year",
+    "fiscal_period",
+    "period_context_source",
+    "period_context_confidence",
+    "period_context_missing_reason",
+    "score_producing_flag",
+    "accepted_row_flag",
+    "diagnostic_only_flag",
     "tradable_date",
     "tradable_date_alias_source",
     "entry_open",
@@ -109,6 +120,42 @@ PRE_LLM_COLUMNS = (
     "periodic_form",
     "periodic_filing_date",
     "periodic_primary_document",
+)
+
+FINANCIAL_VALUE_FIELDS = (
+    "revenue_value",
+    "net_income_value",
+    "assets_value",
+    "operating_cash_flow_value",
+    "investing_cash_flow_value",
+    "financing_cash_flow_value",
+)
+
+FINANCIAL_PROVENANCE_SUFFIXES = (
+    "fact_namespace",
+    "fact_concept",
+    "fact_unit",
+    "fact_start",
+    "fact_end",
+    "fact_filed",
+    "fact_form",
+    "fact_accession",
+    "fact_period_type",
+    "fact_selection_reason",
+    "fact_missing_reason",
+    "fact_is_exact_accession",
+    "fact_is_consolidated",
+    "fact_dimensions",
+    "fact_segment",
+    "fact_frame",
+    "derivation_formula",
+    "derivation_source_facts_json",
+)
+
+FINANCIAL_PROVENANCE_COLUMNS = tuple(
+    f"{field}_{suffix}"
+    for field in FINANCIAL_VALUE_FIELDS
+    for suffix in FINANCIAL_PROVENANCE_SUFFIXES
 )
 
 TIER_COLUMNS = (
@@ -461,6 +508,7 @@ REQUIRED_COMPLETE_PANEL_COLUMNS = (
     IDENTITY_COLUMNS
     + PRICE_AND_SOURCE_COLUMNS
     + PRE_LLM_COLUMNS
+    + FINANCIAL_PROVENANCE_COLUMNS
     + TIER_COLUMNS
     + HP_COLUMNS
     + LLM_COLUMNS

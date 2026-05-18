@@ -212,7 +212,7 @@ def _load_prior_panel(prior_panel_path) -> tuple[list[dict[str, str]], list[dict
 
     manifest = _read_json(manifest_path)
     validation = _read_json(validation_path)
-    if manifest.get("schema_version") != COMPLETE_PANEL_SCHEMA_VERSION:
+    if manifest.get("schema_version") not in {"fundamental_complete_panel_v1", COMPLETE_PANEL_SCHEMA_VERSION}:
         return [], [
             {
                 "code": "prior_panel_schema_mismatch",

@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from tradingagents.research.fundamental.src.panel.schema import COMPLETE_PANEL_SCHEMA_VERSION
+
 
 PIT_COLUMNS = (
     "pit_as_of",
@@ -152,7 +154,7 @@ def _validate_canonical_panel(panel_csv: Path) -> None:
     if validation.get("passed") is not True:
         raise ValueError(f"complete panel validation did not pass: {validation_path}")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("schema_version") != "fundamental_complete_panel_v1":
+    if manifest.get("schema_version") not in {"fundamental_complete_panel_v1", COMPLETE_PANEL_SCHEMA_VERSION}:
         raise ValueError(f"complete panel manifest schema mismatch: {manifest_path}")
     expected_hash = str(manifest.get("output_sha256") or "").strip()
     actual_hash = _sha256_file(panel_csv)

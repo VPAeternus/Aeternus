@@ -133,7 +133,7 @@ def _has_pit_financial_context(row: dict[str, Any]) -> bool:
 
 def _pit_companyfacts_to_pre_llm_input(companyfacts: dict[str, Any], *, row: dict[str, Any]) -> dict[str, Any]:
     context = dict(row)
-    if not clean(context.get("target_period_end")):
+    if not clean(context.get("target_period_end")) or not clean(context.get("fiscal_period_end")):
         context.update(
             derive_period_context(
                 companyfacts,
@@ -173,6 +173,17 @@ def _row_availability_fields(row: dict[str, Any]) -> dict[str, Any]:
         "source_available_date": source_date,
         "financial_cutoff_date": row.get("financial_cutoff_date", "") or source_date,
         "disclosure_available_date": source_date,
+        "fiscal_period_start": row.get("fiscal_period_start", ""),
+        "fiscal_period_end": row.get("fiscal_period_end", ""),
+        "target_period_end": row.get("target_period_end", ""),
+        "fiscal_year": row.get("fiscal_year", ""),
+        "fiscal_period": row.get("fiscal_period", ""),
+        "period_context_source": row.get("period_context_source", ""),
+        "period_context_confidence": row.get("period_context_confidence", ""),
+        "period_context_missing_reason": row.get("period_context_missing_reason", ""),
+        "score_producing_flag": row.get("score_producing_flag", "1"),
+        "accepted_row_flag": row.get("accepted_row_flag", "0"),
+        "diagnostic_only_flag": row.get("diagnostic_only_flag", "0"),
         "cik10": cik10,
         "security_id": f"CIK{cik10}" if cik10 else "",
         "ticker_as_of_decision_date": ticker,

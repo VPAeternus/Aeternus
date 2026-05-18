@@ -140,6 +140,10 @@ def build_final_scores(
         **qoq_summary,
         **_qoq_presence_summary(signal_rows, allowed_missing_tickers=allowed_missing_qoq_tickers),
     }
+    for row in signal_rows:
+        row["score_producing_flag"] = row.get("score_producing_flag") or "1"
+        row["accepted_row_flag"] = "1"
+        row["diagnostic_only_flag"] = row.get("diagnostic_only_flag") or "0"
     return signal_rows, summary
 
 
