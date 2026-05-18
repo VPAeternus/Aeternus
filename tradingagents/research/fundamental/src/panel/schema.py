@@ -374,6 +374,8 @@ POPULATION_DIAGNOSTIC_COLUMNS = (
     "financial_values_concepts",
     "financial_values_source_file",
     "financial_values_missing_fields",
+    "score_recompute_required_flag",
+    "score_recompute_reason",
     "identity_fill_source",
     "field_population_status",
 )

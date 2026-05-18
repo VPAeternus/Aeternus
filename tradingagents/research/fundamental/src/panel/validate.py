@@ -89,6 +89,7 @@ def validate_complete_panel(
     _add_identity_mismatch_error(panel_rows, top15_rows, "top15", errors, quarter)
     _add_identity_mismatch_error(panel_rows, shadow_rows, "shadow", errors, quarter)
     _add_forbidden_selection_errors(panel_rows, forbidden_columns, errors)
+    _add_score_recompute_errors(panel_rows, errors)
 
     top15_selected_count = sum(
         1 for row in panel_rows if _is_selected(row.get("top15_selected"))
@@ -271,6 +272,24 @@ def _add_forbidden_selection_errors(
     leaked = sorted(forbidden_columns.intersection(used_columns))
     for column in leaked:
         errors.append({"code": "forbidden_selection_column", "column": column})
+
+
+def _add_score_recompute_errors(
+    rows: list[Mapping[str, Any]],
+    errors: list[dict[str, Any]],
+) -> None:
+    for index, row in enumerate(rows):
+        if str(row.get("score_recompute_required_flag") or "").strip() != "1":
+            continue
+        errors.append(
+            {
+                "code": "post_score_financial_rewrite",
+                "row_index": index,
+                "quarter": row.get("quarter", ""),
+                "ticker": row.get("ticker", ""),
+                "reason": row.get("score_recompute_reason", ""),
+            }
+        )
 
 
 def _split_columns(value) -> set[str]:

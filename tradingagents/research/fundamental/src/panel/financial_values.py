@@ -14,6 +14,7 @@ FINANCIAL_VALUE_FIELDS = (
 )
 
 MISSING_REASON_UNAVAILABLE_AS_OF = "source_fact_unavailable_as_of"
+SCORE_RECOMPUTE_REASON_FINANCIAL_REWRITE = "financial_values_changed_after_scoring"
 
 CONCEPTS_BY_NAMESPACE = {
     "us-gaap": {
@@ -82,6 +83,7 @@ def fill_financial_values(
     out = []
     rows_with_missing = 0
     rows_with_relaxed = 0
+    rows_with_recompute_required = 0
 
     for row in rows:
         filled = dict(row)
@@ -91,12 +93,32 @@ def fill_financial_values(
         selected: dict[str, _SelectedFact] = {}
         missing_fields = []
         used_relaxed = False
+        score_recompute_required = False
+        scored_row = bool(str(row.get("pre_llm_fundamental_score") or "").strip())
 
         for field in FINANCIAL_VALUE_FIELDS:
             fact = _select_fact(companyfacts, field, row_as_of, allow_relaxed=False)
-            if fact is None and allow_relaxed_filed_date:
+            if fact is None and allow_relaxed_filed_date and not scored_row:
                 fact = _select_fact(companyfacts, field, row_as_of, allow_relaxed=True)
                 used_relaxed = fact is not None
+
+            if scored_row:
+                existing_value = row.get(field)
+                if _is_blank(existing_value):
+                    filled[field] = ""
+                    filled[f"{field}_missing_reason"] = (
+                        filled.get(f"{field}_missing_reason") or "scored_financial_value_missing"
+                    )
+                    missing_fields.append(field)
+                    score_recompute_required = True
+                    continue
+                filled[field] = str(existing_value)
+                filled[f"{field}_missing_reason"] = filled.get(f"{field}_missing_reason") or ""
+                if fact is not None:
+                    selected[field] = fact
+                    if not _values_equal(existing_value, fact.value):
+                        score_recompute_required = True
+                continue
 
             if fact is None:
                 filled[field] = ""
@@ -116,6 +138,13 @@ def fill_financial_values(
         filled["financial_values_namespace"] = ";".join(namespaces)
         filled["financial_values_concepts"] = ";".join(concepts)
         filled["financial_values_missing_fields"] = ",".join(missing_fields)
+        if score_recompute_required:
+            filled["score_recompute_required_flag"] = "1"
+            filled["score_recompute_reason"] = SCORE_RECOMPUTE_REASON_FINANCIAL_REWRITE
+            rows_with_recompute_required += 1
+        else:
+            filled["score_recompute_required_flag"] = filled.get("score_recompute_required_flag") or "0"
+            filled["score_recompute_reason"] = filled.get("score_recompute_reason") or ""
 
         if missing_fields:
             rows_with_missing += 1
@@ -127,6 +156,7 @@ def fill_financial_values(
         "rows": len(out),
         "rows_with_any_missing_financial_value": rows_with_missing,
         "rows_with_relaxed_filed_date": rows_with_relaxed,
+        "rows_with_score_recompute_required": rows_with_recompute_required,
     }
     return out, summary
 
@@ -235,3 +265,14 @@ def _parse_iso_date(value: str) -> date | None:
 
 def _stringify_value(value: Any) -> str:
     return str(value)
+
+
+def _is_blank(value: Any) -> bool:
+    return value is None or str(value).strip() == ""
+
+
+def _values_equal(left: Any, right: Any) -> bool:
+    try:
+        return float(str(left).strip()) == float(str(right).strip())
+    except (TypeError, ValueError):
+        return str(left).strip() == str(right).strip()
