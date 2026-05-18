@@ -26,12 +26,14 @@ def test_normalize_derives_legacy_post_llm_subtiers_from_canonical_fields():
     assert summary["rows"] == 1
 
 
-def test_normalize_fills_flag_blanks_with_zero():
+def test_normalize_preserves_missing_source_flags_and_derives_separate_flags():
     rows = [{"ticker": "BBB", "quarter": "2026Q2", "post_llm_candidate_flag": ""}]
     out, _ = normalize_complete_panel_rows(rows, source_name="daily_final_scores")
     assert out[0]["top15_selected"] == "0"
     assert out[0]["shadow_selected"] == "0"
-    assert out[0]["post_llm_candidate_flag"] == "0"
+    assert out[0]["post_llm_candidate_flag"] == ""
+    assert out[0]["post_llm_candidate_derived_flag"] == "0"
+    assert out[0]["post_llm_missing_reason"] == "source_not_populated"
 
 
 def test_normalize_converts_label_values_in_flag_fields_to_one():

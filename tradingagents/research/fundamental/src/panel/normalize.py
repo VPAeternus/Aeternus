@@ -233,6 +233,12 @@ _POST_LLM_ANY_FIELDS = (
     "proof_alignment",
 )
 
+_SOURCE_FLAG_FIELDS = (
+    "post_llm_candidate_flag",
+    "post_llm_high_priority_flag",
+    "post_llm_demote_flag",
+)
+
 
 def _derive_pre_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out = dict(row)
@@ -248,6 +254,12 @@ def _derive_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out = dict(row)
     llm_status = str(out.get("llm_status") or "").strip().lower()
     llm_complete = llm_status == "complete" or _truthy_marker(out.get("has_post_llm"))
+    for field in _SOURCE_FLAG_FIELDS:
+        if _is_blank(out.get(field)) and _is_blank(out.get("post_llm_missing_reason")):
+            out["post_llm_missing_reason"] = "source_not_populated"
+    out["post_llm_candidate_derived_flag"] = "1" if _truthy_marker(out.get("post_llm_candidate_flag")) else "0"
+    out["post_llm_high_priority_derived_flag"] = "1" if _truthy_marker(out.get("post_llm_high_priority_flag")) else "0"
+    out["post_llm_demote_derived_flag"] = "1" if _truthy_marker(out.get("post_llm_demote_flag")) else "0"
     out["llm_required_derived_flag"] = out.get("pre_llm_candidate_flag") or _derived_flag(
         out, _PRE_LLM_CANDIDATE_FIELDS
     )
@@ -328,7 +340,7 @@ def _complete_schema_row(row: dict[str, str]) -> dict[str, str]:
     out = dict(row)
     for field in REQUIRED_COMPLETE_PANEL_COLUMNS:
         if _is_blank(out.get(field)):
-            out[field] = "0" if field in FLAG_FIELDS else default_for_field(field)
+            out[field] = "" if field in _SOURCE_FLAG_FIELDS else "0" if field in FLAG_FIELDS else default_for_field(field)
 
     for field in REQUIRED_NONBLANK_FIELDS:
         if _is_blank(out.get(field)):
@@ -338,6 +350,8 @@ def _complete_schema_row(row: dict[str, str]) -> dict[str, str]:
 
     for field in FLAG_FIELDS:
         if _is_blank(out.get(field)):
+            if field in _SOURCE_FLAG_FIELDS:
+                continue
             out[field] = "0"
         else:
             out[field] = _normalize_flag(out[field])

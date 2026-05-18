@@ -62,6 +62,32 @@ def test_entry_score_populates_legacy_aliases():
     assert scored["compatibility_alias_source"] == "current_entry_score"
 
 
+def test_theme_score_ignored_when_theme_source_is_after_decision_date():
+    scored = compute_entry_score(
+        {
+            **_base_row(),
+            "theme_tailwind_score": "20",
+            "theme_source_available_date": "2026-05-20",
+            "decision_date": "2026-05-10",
+        }
+    )
+
+    assert scored["theme_tailwind_score"] == 0
+
+
+def test_static_theme_taxonomy_ignored_unless_allowed_for_historical_scoring():
+    scored = compute_entry_score(
+        {
+            **_base_row(),
+            "theme_tailwind_score": "20",
+            "theme_source_type": "static_taxonomy",
+            "theme_score_allowed_for_historical_scoring": "false",
+        }
+    )
+
+    assert scored["theme_tailwind_score"] == 0
+
+
 def test_return_labels_use_calendar_day_legacy_default():
     rows = [
         {"ticker": "AAA", "date": "2026-01-02", "open": 100, "close": 100},

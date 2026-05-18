@@ -142,6 +142,9 @@ HP_COLUMNS = (
 LLM_COLUMNS = (
     "llm_required_derived_flag",
     "llm_complete_derived_flag",
+    "post_llm_candidate_derived_flag",
+    "post_llm_high_priority_derived_flag",
+    "post_llm_demote_derived_flag",
     "force_llm_extraction",
     "llm_status",
     "llm_status_missing_reason",
@@ -232,6 +235,13 @@ THEME_COLUMNS = (
     "theme_driver_type",
     "theme_momentum",
     "theme_evidence",
+    "theme_source_type",
+    "theme_source_date",
+    "theme_source_available_date",
+    "theme_evidence_accession",
+    "theme_evidence_hash",
+    "theme_pit_valid_flag",
+    "theme_score_allowed_for_historical_scoring",
     "theme_evidence_summary",
     "theme_driver_summary",
     "theme_active",
@@ -434,7 +444,6 @@ REQUIRED_NONBLANK_FIELDS = (
     "investing_cash_flow_value",
     "financing_cash_flow_value",
     "llm_status",
-    "post_llm_candidate_flag",
     "top15_selected",
 )
 
