@@ -54,6 +54,14 @@ def test_entry_score_ignores_future_return_monitoring_and_rank_labels():
     assert "winner_90d_30pct" not in injected["entry_score_inputs"]
 
 
+def test_entry_score_populates_legacy_aliases():
+    scored = compute_entry_score(_base_row())
+
+    assert scored["base_entry_raw_score"] == scored["entry_raw_score"]
+    assert scored["base_entry_score_0_100"] == scored["entry_score_0_100"]
+    assert scored["compatibility_alias_source"] == "current_entry_score"
+
+
 def test_return_labels_use_calendar_day_legacy_default():
     rows = [
         {"ticker": "AAA", "date": "2026-01-02", "open": 100, "close": 100},

@@ -404,6 +404,7 @@ POPULATION_DIAGNOSTIC_COLUMNS = (
     "financial_values_missing_fields",
     "score_recompute_required_flag",
     "score_recompute_reason",
+    "compatibility_alias_source",
     "identity_fill_source",
     "field_population_status",
 )

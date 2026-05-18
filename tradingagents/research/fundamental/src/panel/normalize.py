@@ -62,6 +62,7 @@ def normalize_complete_panel_rows(
     normalized = _derive_post_llm_subtiers(normalized)
     normalized = [_derive_pre_llm_flags(row) for row in normalized]
     normalized = [_derive_llm_flags(row) for row in normalized]
+    normalized = [_derive_compatibility_aliases(row) for row in normalized]
     normalized = _derive_quarter_ranks(normalized)
     out = [_complete_schema_row(row) for row in normalized]
     summary: dict[str, Any] = {
@@ -255,6 +256,20 @@ def _derive_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out["post_llm_any_flag"] = "1" if llm_complete or any(
         _truthy_marker(out.get(field)) for field in _POST_LLM_ANY_FIELDS
     ) else "0"
+    return out
+
+
+def _derive_compatibility_aliases(row: dict[str, str]) -> dict[str, str]:
+    out = dict(row)
+    alias_source = False
+    if _is_blank(out.get("base_entry_raw_score")) and not _is_blank(out.get("entry_raw_score")):
+        out["base_entry_raw_score"] = out["entry_raw_score"]
+        alias_source = True
+    if _is_blank(out.get("base_entry_score_0_100")) and not _is_blank(out.get("entry_score_0_100")):
+        out["base_entry_score_0_100"] = out["entry_score_0_100"]
+        alias_source = True
+    if alias_source and _is_blank(out.get("compatibility_alias_source")):
+        out["compatibility_alias_source"] = "current_entry_score"
     return out
 
 

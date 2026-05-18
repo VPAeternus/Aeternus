@@ -241,12 +241,15 @@ def compute_entry_score(row: dict[str, Any], prior_row: dict[str, Any] | None = 
         "theme_tailwind_score": theme_score,
         "theme_external_confirmation_score": theme_external_confirmation_score(clean_row),
         "risk_penalty_score": penalty,
+        "base_entry_raw_score": raw_score,
+        "base_entry_score_0_100": entry_score,
         "entry_raw_score": raw_score,
         "entry_score_0_100": entry_score,
         "entry_score_0_100_bucket": entry_score_bucket(entry_score),
         "entry_score_label": score_label(entry_score),
         "hard_reject_reason": reject,
         "entry_score_inputs": ";".join(sorted(clean_row)),
+        "compatibility_alias_source": "current_entry_score",
     }
 
 

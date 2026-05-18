@@ -164,6 +164,17 @@ def test_normalize_returns_complete_schema_rows_without_mutating_input():
     assert summary["rows"] == 1
 
 
+def test_normalize_fills_legacy_entry_score_aliases():
+    out, _ = normalize_complete_panel_rows(
+        [{"ticker": "AAA", "quarter": "2026Q2", "entry_raw_score": "42", "entry_score_0_100": "88"}],
+        source_name="daily_final_scores",
+    )
+
+    assert out[0]["base_entry_raw_score"] == "42"
+    assert out[0]["base_entry_score_0_100"] == "88"
+    assert out[0]["compatibility_alias_source"] == "current_entry_score"
+
+
 def test_normalize_uses_companyfacts_when_supplied():
     rows = [{"ticker": "AAA", "quarter": "2026Q2", "entry_open_date": "2026-05-12"}]
     facts = {
