@@ -48,6 +48,7 @@ SHADOW_METADATA_FIELDS = {
     "top15_model": "shadow_top15_model",
     "portfolio_treatment": "shadow_portfolio_treatment",
     "core_refill_source": "shadow_core_refill_source",
+    "core_deterioration_refill_shadow": "shadow_core_deterioration_refill_shadow_flag",
     "demoted_replacement_for": "shadow_demoted_replacement_for",
     "shadow_refill_status": "shadow_refill_status",
     "right_tail_exception_score": "shadow_right_tail_exception_score",

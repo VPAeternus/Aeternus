@@ -65,6 +65,10 @@ CORE_DETERIORATION_REFILL_FIELDS = [
     "core_deterioration_review_flag", "core_deterioration_downgrade_flag", "core_deterioration_strict_override_required",
     "core_deterioration_reason_codes",
 ]
+CORE_DETERIORATION_REFILL_SUMMARY_FIELDS = [
+    "mode", "demoted_count", "replacement_count", "blocked_from_exception_count",
+    "selected_count", "core_count", "exception_count", "input_count",
+]
 DAILY_RECOMMENDATION_BULLETS = [
     "Run broad discovery / source Top-30.",
     "Deep-analyze selected names.",
@@ -392,18 +396,19 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
     ranked = pool["ranked_rows"]
     warnings = list(pool.get("warnings", []))
 
-    blocked_tickers: set[str] = set()
-    for raw in rows:
-        ticker = str(raw.get("ticker") or raw.get("symbol") or "").strip().upper()
-        if ticker and should_refill_demote_core_row(_core_flag_row(raw, 999999), refill_cfg.mode):
-            blocked_tickers.add(ticker)
+    demoted_core_tickers: set[str] = set()
+    for candidate in ranked:
+        rank = int(candidate.get("core_candidate_rank") or 0)
+        ticker = str(candidate.get("ticker", "")).strip().upper()
+        if rank <= cfg.core_n and ticker and should_refill_demote_core_row(_core_flag_row(candidate, rank), refill_cfg.mode):
+            demoted_core_tickers.add(ticker)
 
     core_raw: list[dict[str, Any]] = []
     demoted_raw: list[dict[str, Any]] = []
     for candidate in ranked:
         ticker = str(candidate.get("ticker", "")).strip().upper()
         rank = int(candidate.get("core_candidate_rank") or 0)
-        if ticker in blocked_tickers:
+        if ticker in demoted_core_tickers:
             if rank <= cfg.core_n:
                 demoted_raw.append(candidate)
             continue
@@ -433,7 +438,7 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         _annotate_operating_guidance(row)
         core_rows.append(_strip_shadow_artifact_outcome_fields(_public_row(row)))
 
-    exception_blocks = blocked_tickers if refill_cfg.block_deterioration_from_exceptions else set()
+    exception_blocks = demoted_core_tickers if refill_cfg.block_deterioration_from_exceptions else set()
     exceptions, exception_warnings = ([], ["EXCEPTION_SLEEVE_DISABLED"]) if not cfg.enabled else _select_exception_sleeve(
         core_rows, rows, cfg, coverage=coverage, coverage_enabled=coverage_enabled, blocked_tickers=exception_blocks
     )
@@ -648,13 +653,30 @@ def select_top15_core_deterioration_refill_shadow_from_csv(
     out_root.mkdir(parents=True, exist_ok=True)
     date = str(result["config_snapshot"].get("selection_date") or (config.get("selection_date", "") if isinstance(config, Mapping) else ""))
     csv_path = out_root / "high_conviction_top15_core_deterioration_refill_shadow.csv"
+    selected_alias_path = out_root / "core_deterioration_refill_shadow_selected.csv"
     json_path = out_root / "high_conviction_top15_core_deterioration_refill_shadow.json"
     replacements_path = out_root / "core_deterioration_refill_shadow_replacements.csv"
+    summary_path = out_root / "core_deterioration_refill_shadow_summary.csv"
     result["date"] = date
-    result["output_paths"] = {"csv": str(csv_path), "json": str(json_path), "core_deterioration_refill_shadow_replacements": str(replacements_path)}
+    result["output_paths"] = {
+        "csv": str(csv_path),
+        "json": str(json_path),
+        "core_deterioration_refill_shadow_selected": str(selected_alias_path),
+        "core_deterioration_refill_shadow_replacements": str(replacements_path),
+        "core_deterioration_refill_shadow_summary": str(summary_path),
+    }
     artifact_result = _safe_shadow_artifact_result(result)
     _write_csv(csv_path, artifact_result["selected_rows"])
+    _write_csv(selected_alias_path, artifact_result["selected_rows"])
     _write_csv_with_fields(replacements_path, artifact_result.get("core_deterioration_refill_rows", []), CORE_DETERIORATION_REFILL_FIELDS)
+    summary_row = {
+        **artifact_result.get("core_deterioration_refill_summary", {}),
+        "selected_count": artifact_result.get("summary", {}).get("selected_count", 0),
+        "core_count": artifact_result.get("summary", {}).get("core_count", 0),
+        "exception_count": artifact_result.get("summary", {}).get("exception_count", 0),
+        "input_count": artifact_result.get("summary", {}).get("input_count", 0),
+    }
+    _write_csv_with_fields(summary_path, [summary_row], CORE_DETERIORATION_REFILL_SUMMARY_FIELDS)
     json_path.write_text(json.dumps(artifact_result, indent=2, sort_keys=True), encoding="utf-8")
     return artifact_result
 

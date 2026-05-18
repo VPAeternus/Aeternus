@@ -27,8 +27,8 @@ def test_attach_selection_annotations_marks_top15_and_shadow(tmp_path):
     )
     shadow = tmp_path / "shadow.csv"
     shadow.write_text(
-        "ticker,selection_rank,selected_sleeve,shadow_refill_status\n"
-        "BBB,1,core,shadow_refill_review_only_not_official\n"
+        "ticker,selection_rank,selected_sleeve,core_deterioration_refill_shadow,shadow_refill_status\n"
+        "BBB,1,core,1,shadow_refill_review_only_not_official\n"
     )
 
     out, summary = attach_selection_annotations(
@@ -66,6 +66,7 @@ def test_attach_selection_annotations_marks_top15_and_shadow(tmp_path):
         by_ticker["BBB"]["shadow_refill_status"]
         == "shadow_refill_review_only_not_official"
     )
+    assert by_ticker["BBB"]["shadow_core_deterioration_refill_shadow_flag"] == "1"
     assert summary["top15_selected_count"] == 1
     assert summary["shadow_selected_count"] == 1
 

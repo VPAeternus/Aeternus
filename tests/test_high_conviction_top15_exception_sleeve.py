@@ -609,6 +609,28 @@ def test_top15_refill_shadow_writer_omits_outcome_headers(tmp_path):
     assert all("delta" not in column for column in replacement_header)
     assert all("target" not in column for column in replacement_header)
 
+    selected_alias = output_dir / "core_deterioration_refill_shadow_selected.csv"
+    summary_csv = output_dir / "core_deterioration_refill_shadow_summary.csv"
+    assert selected_alias.exists()
+    assert summary_csv.exists()
+    with selected_alias.open(newline="", encoding="utf-8") as handle:
+        selected_alias_header = [column.lower() for column in next(csv.reader(handle))]
+    assert selected_alias_header == selected_header
+    with summary_csv.open(newline="", encoding="utf-8") as handle:
+        summary_rows = list(csv.DictReader(handle))
+    assert summary_rows == [
+        {
+            "mode": "strict",
+            "demoted_count": "1",
+            "replacement_count": "1",
+            "blocked_from_exception_count": "1",
+            "selected_count": "10",
+            "core_count": "10",
+            "exception_count": "0",
+            "input_count": "12",
+        }
+    ]
+
 
 def test_top15_refill_shadow_selector_omits_outcome_fields_from_public_rows():
     outcome_fields = {
@@ -679,17 +701,18 @@ def test_top15_refill_shadow_pairs_multiple_demotions_with_replacements_in_rank_
     assert [(row["demoted_ticker"], row["replacement_ticker"]) for row in diagnostics] == [("BAD1", "NEXT1"), ("BAD2", "NEXT2")]
 
 
-def test_top15_refill_shadow_blocks_below_cutoff_deterioration_from_exceptions():
+def test_top15_refill_shadow_allows_non_demoted_deterioration_in_plus5():
     from tradingagents.research.fundamental.src.selection.high_conviction_top10 import select_high_conviction_top15_core_deterioration_refill_shadow
 
     rows = [row(f"C{i}", 100 - i) for i in range(10)]
     rows += [
-        row("BADX", 85, score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="", rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum", rm2_weak_acceleration="RM2 - Weak-bucket acceleration", rm4_persistent_repricing_wave="RM4 - Persistent repricing wave"),
-        row("GOODX", 50, rm1_low_price_dislocation_momentum="1", primary_theme="AI"),
+        row("BADX", 85, score_change="-2", negative_revision_risk="2", pre_llm_fundamental_bucket="weak", primary_theme="", market_repricing_score="11", rm1_low_price_dislocation_momentum="RM1 - Low-price dislocation momentum", rm2_weak_acceleration="RM2 - Weak-bucket acceleration", rm4_persistent_repricing_wave="RM4 - Persistent repricing wave"),
+        row("GOODX", 50),
     ]
     result = select_high_conviction_top15_core_deterioration_refill_shadow(rows, {"enabled": True, "exception_slots": 1, "core_deterioration_refill": {"enabled": True, "mode": "strict"}})
-    assert "BADX" not in [r["ticker"] for r in result["selected_rows"]]
-    assert [r["ticker"] for r in result["exception_rows"]] == ["GOODX"]
+    assert "BADX" in [r["ticker"] for r in result["selected_rows"]]
+    assert [r["ticker"] for r in result["exception_rows"]] == ["BADX"]
+    assert result["core_deterioration_refill_summary"]["blocked_from_exception_count"] == 0
 
 
 def test_top15_refill_shadow_blocks_core_ineligible_deterioration_from_exceptions():
