@@ -22,8 +22,22 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Focused PIT timing tests
-        run: python -m pytest tests/test_fundamental_daily_scoring_inputs.py tests/test_fundamental_row_contract.py -q
+      - name: Focused PIT timing and panel tests
+        run: >-
+          python -m pytest
+          tests/test_fundamental_daily_scoring_inputs.py
+          tests/test_fundamental_daily_finalize_gate.py
+          tests/test_fundamental_panel_schema.py
+          tests/test_fundamental_panel_normalize.py
+          tests/test_fundamental_panel_exporter.py
+          tests/test_fundamental_panel_validate.py
+          tests/test_fundamental_pit_master.py
+          tests/test_fundamental_pit_master_reconciliation_gate.py
+          tests/test_fundamental_row_contract.py
+          tests/test_fundamental_panel_financial_values.py
+          tests/test_fundamental_panel_financial_no_rewrite.py
+          tests/test_fundamental_trading_calendar.py
+          -q
       - name: Validate portable acceptance evidence
         run: |
           python - <<'PY'
@@ -43,6 +57,14 @@ jobs:
               assert item["blocking_error_count"] == 0, quarter
               assert item["warning_count"] == 0, quarter
               assert item["llm_completed_count"] == item["llm_expected_count"], quarter
+              assert item["complete_panel_schema_version"] == "fundamental_complete_panel_v2", quarter
+              proof = item["complete_panel_self_contained_pit_provenance"]
+              assert proof["missing_self_contained_columns"] == 0, quarter
+              assert proof["required_period_or_flag_blank_cells"] == 0, quarter
+              assert proof["financial_provenance_required_blank_cells"] == 0, quarter
+              assert proof["derived_qtd_missing_source_json"] == 0, quarter
+              assert proof["final_to_complete_key_mismatch_count"] == 0, quarter
+              assert proof["final_to_complete_value_mismatch_count"] == 0, quarter
           PY
       - name: Whitespace check
         run: git diff --check

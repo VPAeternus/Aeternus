@@ -1,17 +1,17 @@
 # PIT Acceptance Review Commands
 
-Accepted code commit: `5a32fe5d1d87e3922c2da80539e45427de01a57a`
+Accepted code commit: `364b91933ff6d6cccc6afa6c64609a5f0cf5a322`
 
-These commands produced the portable evidence summarized in this folder.
+These commands produced the portable evidence summarized in this folder. Large CSVs stay local; hashes are recorded in `artifact_hashes.csv`.
 
 ## Focused tests
 
 ```bash
-/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_fundamental_daily_scoring_inputs.py tests/test_fundamental_row_contract.py -q
+/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 -m pytest tests/test_fundamental_daily_scoring_inputs.py tests/test_fundamental_daily_finalize_gate.py tests/test_fundamental_panel_schema.py tests/test_fundamental_panel_normalize.py tests/test_fundamental_panel_exporter.py tests/test_fundamental_panel_validate.py tests/test_fundamental_pit_master.py tests/test_fundamental_pit_master_reconciliation_gate.py tests/test_fundamental_row_contract.py tests/test_fundamental_panel_financial_values.py tests/test_fundamental_panel_financial_no_rewrite.py tests/test_fundamental_trading_calendar.py -q
 git diff --check
 ```
 
-Result recorded during run: `18 passed`; `git diff --check` passed.
+Result recorded during run: `83 passed`; `git diff --check` passed before code commits.
 
 ## 2022Q1 full acceptance
 
@@ -26,8 +26,8 @@ Result recorded during run: `18 passed`; `git diff --check` passed.
   --post-llm tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v1/post_llm_scores_expected_36.csv \
   --allow-missing-handoff \
   --emit-complete-panel \
-  --output-root tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3 \
-  --complete-panel-output-root tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3/complete_panel \
+  --output-root tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5 \
+  --complete-panel-output-root tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5/complete_panel \
   --format json
 ```
 
@@ -44,7 +44,7 @@ Result recorded during run: `18 passed`; `git diff --check` passed.
   --post-llm tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v1/post_llm_scores_expected_78.csv \
   --allow-missing-handoff \
   --emit-complete-panel \
-  --output-root tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3 \
-  --complete-panel-output-root tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/complete_panel \
+  --output-root tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5 \
+  --complete-panel-output-root tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5/complete_panel \
   --format json
 ```

@@ -8,9 +8,9 @@
         "as_of": "2022-03-31",
         "mode": "broad-master-final",
         "quarter": "2022Q1",
-        "run_id": "daily_06df453fc44f",
+        "run_id": "daily_7d7f17faecfa",
         "snapshots": {
-          "master_universe": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3/snapshots/master_universe.json"
+          "master_universe": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5/snapshots/master_universe.json"
         },
         "source_hashes": {
           "handoff": "",
@@ -60,9 +60,9 @@
           "10q_10k_metadata": 34
         },
         "outputs": {
-          "blockers": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3/sec_coverage_blockers.json",
-          "fetch_queue": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3/sec_fetch_queue_resumable.json",
-          "manifest_csv": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3/sec_coverage_manifest_2022Q1.csv"
+          "blockers": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5/sec_coverage_blockers.json",
+          "fetch_queue": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5/sec_fetch_queue_resumable.json",
+          "manifest_csv": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5/sec_coverage_manifest_2022Q1.csv"
         },
         "pre_llm_blocked": false,
         "remaining_work_type": "metadata_or_parser_routing",
@@ -97,7 +97,7 @@
       "summary": {
         "daily_price_cache_paths": [
           "/Users/aeternusholdings/.cache/autoresearch_fundamentals",
-          "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3"
+          "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5"
         ],
         "daily_price_cached_ticker_count": 1217,
         "daily_price_cached_usable_ticker_count": 1204,
@@ -318,7 +318,5 @@
         }
       }
     }
-  ],
-  "quarter": "2022Q1",
-  "run_root": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3"
+  ]
 }

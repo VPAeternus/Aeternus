@@ -1,16 +1,27 @@
 {
-  "accepted_code_commit": "5a32fe5d1d87e3922c2da80539e45427de01a57a",
-  "generated_at_utc": "2026-05-18T18:03:44.989500+00:00",
-  "purpose": "Portable proof bundle for GPT Pro review of PIT repair full acceptance runs.",
+  "accepted_code_commit": "364b91933ff6d6cccc6afa6c64609a5f0cf5a322",
+  "generated_at_utc": "2026-05-18T19:28:46.188133+00:00",
+  "purpose": "Portable proof bundle for GPT Pro review of PIT repair full acceptance runs, including complete-panel field-level provenance.",
   "quarters": {
     "2022Q1": {
       "all_gates_passed": true,
       "blocking_error_count": 0,
+      "complete_panel_columns": 528,
       "complete_panel_rows": 201,
+      "complete_panel_schema_version": "fundamental_complete_panel_v2",
+      "complete_panel_self_contained_pit_provenance": {
+        "derived_qtd_missing_source_json": 0,
+        "final_to_complete_key_mismatch_count": 0,
+        "final_to_complete_value_mismatch_count": 0,
+        "financial_provenance_required_blank_cells": 0,
+        "missing_self_contained_columns": 0,
+        "required_period_or_flag_blank_cells": 0
+      },
       "complete_panel_validation_errors": 0,
       "complete_panel_validation_passed": true,
       "complete_panel_validation_warnings": 0,
       "final": true,
+      "final_score_columns": 354,
       "final_score_rows": 201,
       "gate_statuses": [
         {
@@ -72,7 +83,7 @@
       "llm_completed_count": 36,
       "llm_expected_count": 36,
       "publish_readiness_status": "pass",
-      "run_root": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3",
+      "run_root": "tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5",
       "shadow_replacement_count": 0,
       "shadow_selected_count": 11,
       "top15_selected_count": 11,
@@ -81,11 +92,22 @@
     "2026Q1": {
       "all_gates_passed": true,
       "blocking_error_count": 0,
+      "complete_panel_columns": 528,
       "complete_panel_rows": 191,
+      "complete_panel_schema_version": "fundamental_complete_panel_v2",
+      "complete_panel_self_contained_pit_provenance": {
+        "derived_qtd_missing_source_json": 0,
+        "final_to_complete_key_mismatch_count": 0,
+        "final_to_complete_value_mismatch_count": 0,
+        "financial_provenance_required_blank_cells": 0,
+        "missing_self_contained_columns": 0,
+        "required_period_or_flag_blank_cells": 0
+      },
       "complete_panel_validation_errors": 0,
       "complete_panel_validation_passed": true,
       "complete_panel_validation_warnings": 0,
       "final": true,
+      "final_score_columns": 338,
       "final_score_rows": 191,
       "gate_statuses": [
         {
@@ -147,12 +169,11 @@
       "llm_completed_count": 78,
       "llm_expected_count": 78,
       "publish_readiness_status": "pass",
-      "run_root": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3",
+      "run_root": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5",
       "shadow_replacement_count": 0,
       "shadow_selected_count": 15,
       "top15_selected_count": 15,
       "warning_count": 0
     }
-  },
-  "scope": "Small summaries and hashes only; large run CSVs remain local outputs."
+  }
 }

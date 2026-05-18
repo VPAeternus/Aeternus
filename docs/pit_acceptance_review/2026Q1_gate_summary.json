@@ -8,9 +8,9 @@
         "as_of": "2026-03-31",
         "mode": "broad-master-final",
         "quarter": "2026Q1",
-        "run_id": "daily_2f030543a756",
+        "run_id": "daily_35e3b84962e1",
         "snapshots": {
-          "master_universe": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/snapshots/master_universe.json"
+          "master_universe": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5/snapshots/master_universe.json"
         },
         "source_hashes": {
           "handoff": "",
@@ -60,9 +60,9 @@
           "10q_10k_metadata": 3
         },
         "outputs": {
-          "blockers": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_coverage_blockers.json",
-          "fetch_queue": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_fetch_queue_resumable.json",
-          "manifest_csv": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_coverage_manifest_2026Q1.csv"
+          "blockers": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5/sec_coverage_blockers.json",
+          "fetch_queue": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5/sec_fetch_queue_resumable.json",
+          "manifest_csv": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5/sec_coverage_manifest_2026Q1.csv"
         },
         "pre_llm_blocked": false,
         "remaining_work_type": "metadata_or_parser_routing",
@@ -97,7 +97,7 @@
       "summary": {
         "daily_price_cache_paths": [
           "/Users/aeternusholdings/.cache/autoresearch_fundamentals",
-          "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3"
+          "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5"
         ],
         "daily_price_cached_ticker_count": 1248,
         "daily_price_cached_usable_ticker_count": 1238,
@@ -162,7 +162,7 @@
           "eligible_queue_items": 0,
           "eligible_ticker_count": 1251,
           "errors": [],
-          "queue_path": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3/sec_fetch_queue_resumable.json",
+          "queue_path": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5/sec_fetch_queue_resumable.json",
           "stats": {
             "cached_existing": 0,
             "eligible_queue_items": 0,
@@ -173,7 +173,7 @@
             "workers": 8
           },
           "status": "complete",
-          "updated_at": "2026-05-18T17:48:47.650435+00:00"
+          "updated_at": "2026-05-18T19:25:42.015630+00:00"
         },
         "llm_evidence_fetch_recovery_attempted": true,
         "llm_evidence_missing_after_fetch": 2,
@@ -306,7 +306,5 @@
         }
       }
     }
-  ],
-  "quarter": "2026Q1",
-  "run_root": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3"
+  ]
 }
