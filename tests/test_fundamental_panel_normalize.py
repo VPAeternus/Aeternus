@@ -82,6 +82,64 @@ def test_normalize_derives_pre_llm_and_aggregate_flags():
     assert by_ticker["T0"]["hp_any_flag"] == "1"
 
 
+def test_normalize_derives_llm_flags_and_quarter_ranks():
+    rows = [
+        {
+            "ticker": "BBB",
+            "quarter": "2026Q2",
+            "tier_1_bucket": "Tier 1 - Balanced priority feed",
+            "pre_llm_fundamental_score": "5",
+            "entry_score_0_100": "80",
+            "llm_status": "complete",
+            "post_llm_candidate_flag": "1",
+            "causal_change": "3",
+        },
+        {
+            "ticker": "AAA",
+            "quarter": "2026Q2",
+            "tier_1_bucket": "Tier 1 - Balanced priority feed",
+            "pre_llm_fundamental_score": "7",
+            "entry_score_0_100": "60",
+            "llm_status": "pending",
+        },
+        {
+            "ticker": "CCC",
+            "quarter": "2026Q2",
+            "pre_llm_fundamental_score": "9",
+            "entry_score_0_100": "95",
+            "llm_status": "not_required",
+        },
+        {
+            "ticker": "DDD",
+            "quarter": "2026Q1",
+            "tier_2_bucket": "Tier 2 - High-priority compact feed",
+            "pre_llm_fundamental_score": "4",
+            "entry_score_0_100": "70",
+            "llm_status": "complete",
+            "post_llm_demote_flag": "1",
+        },
+    ]
+    out, _ = normalize_complete_panel_rows(rows, source_name="daily_final_scores")
+    by_ticker = {row["ticker"]: row for row in out}
+
+    assert by_ticker["AAA"]["pre_llm_rank_by_score_quarter"] == "1"
+    assert by_ticker["BBB"]["pre_llm_rank_by_score_quarter"] == "2"
+    assert by_ticker["CCC"]["pre_llm_rank_by_score_quarter"] == ""
+    assert by_ticker["DDD"]["pre_llm_rank_by_score_quarter"] == "1"
+    assert by_ticker["CCC"]["entry_score_rank_by_quarter"] == "1"
+    assert by_ticker["BBB"]["entry_score_rank_by_quarter"] == "2"
+    assert by_ticker["AAA"]["entry_score_rank_by_quarter"] == "3"
+    assert by_ticker["DDD"]["entry_score_rank_by_quarter"] == "1"
+    assert by_ticker["AAA"]["llm_required_derived_flag"] == "1"
+    assert by_ticker["AAA"]["llm_complete_derived_flag"] == "0"
+    assert by_ticker["BBB"]["llm_required_derived_flag"] == "1"
+    assert by_ticker["BBB"]["llm_complete_derived_flag"] == "1"
+    assert by_ticker["BBB"]["has_post_llm"] == "1"
+    assert by_ticker["BBB"]["post_llm_any_flag"] == "1"
+    assert by_ticker["DDD"]["post_llm_any_flag"] == "1"
+    assert by_ticker["CCC"]["llm_required_derived_flag"] == "0"
+
+
 def test_normalize_returns_complete_schema_rows_without_mutating_input():
     rows = [{"ticker": "ccc", "quarter": "2026Q2", "entry_score_0_100": "88"}]
     out, summary = normalize_complete_panel_rows(
@@ -99,6 +157,9 @@ def test_normalize_returns_complete_schema_rows_without_mutating_input():
     assert out[0]["source_run_root"] == "eval_results/fundamental/run"
     assert out[0]["source_artifact"] == "fundamental_final_scores.csv"
     assert out[0]["source_artifact_sha256"] == "abc123"
+    assert out[0]["panel_build_id"] == "panel_abc123"
+    assert out[0]["panel_build_timestamp"]
+    assert out[0]["feature_schema_path"] == "tradingagents/research/fundamental/src/panel/schema.py"
     assert out[0]["entry_score_0_100"] == "88"
     assert summary["rows"] == 1
 

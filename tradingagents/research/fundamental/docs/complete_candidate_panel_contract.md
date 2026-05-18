@@ -58,6 +58,17 @@ Aggregate flags are derived from their source columns:
 - `hp_any_flag`: any HP bucket/extension
 - `rm_any_flag`: any RM bucket/extension/review flag
 
+Other derived review fields:
+
+- `pre_llm_rank_by_score_quarter`: rank within quarter by
+  `pre_llm_fundamental_score`, only for rows where `pre_llm_candidate_flag = 1`
+- `entry_score_rank_by_quarter`: rank within quarter by `entry_score_0_100`
+- `llm_required_derived_flag`: same candidate pool as `pre_llm_candidate_flag`
+- `llm_complete_derived_flag`: `1` when `llm_status = complete`
+- `has_post_llm`: `1` when the row has completed LLM review
+- `post_llm_any_flag`: `1` when the row has completed LLM review or any
+  post-LLM signal/demotion field is populated
+
 ## Allowed missing reasons
 
 Default allowed reasons:

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from datetime import date
+from datetime import UTC, date, datetime
+from pathlib import Path
 from typing import Any
 
 import pandas as pd
@@ -18,6 +19,8 @@ from tradingagents.research.fundamental.src.panel.schema import (
     default_for_field,
     missing_reason_field,
 )
+
+FEATURE_SCHEMA_PATH = "tradingagents/research/fundamental/src/panel/schema.py"
 
 
 def normalize_complete_panel_rows(
@@ -58,6 +61,8 @@ def normalize_complete_panel_rows(
 
     normalized = _derive_post_llm_subtiers(normalized)
     normalized = [_derive_pre_llm_flags(row) for row in normalized]
+    normalized = [_derive_llm_flags(row) for row in normalized]
+    normalized = _derive_quarter_ranks(normalized)
     out = [_complete_schema_row(row) for row in normalized]
     summary: dict[str, Any] = {
         "rows": len(out),
@@ -103,15 +108,39 @@ def _normalize_provenance(
     out["panel_row_source"] = out.get("panel_row_source") or source_name
     out["source_file"] = out.get("source_file") or (source_artifact or "")
     out["feature_schema_version"] = out.get("feature_schema_version") or COMPLETE_PANEL_SCHEMA_VERSION
+    out["feature_schema_path"] = out.get("feature_schema_path") or FEATURE_SCHEMA_PATH
     out["source_run_root"] = out.get("source_run_root") or (source_run_root or "")
     out["source_artifact"] = out.get("source_artifact") or (source_artifact or "")
     out["source_artifact_sha256"] = out.get("source_artifact_sha256") or (
         source_artifact_sha256 or ""
     )
+    out["panel_build_id"] = out.get("panel_build_id") or _panel_build_id(
+        source_artifact_sha256=source_artifact_sha256,
+        source_artifact=source_artifact,
+        source_name=source_name,
+    )
+    out["panel_build_timestamp"] = out.get("panel_build_timestamp") or _utc_timestamp()
     out["field_population_status"] = (
         out.get("field_population_status") or "complete_schema_defaults_applied"
     )
     return out
+
+
+def _panel_build_id(
+    *,
+    source_artifact_sha256: str | None,
+    source_artifact: str | None,
+    source_name: str,
+) -> str:
+    if source_artifact_sha256:
+        return f"panel_{source_artifact_sha256[:12]}"
+    if source_artifact:
+        return f"panel_{Path(source_artifact).stem}"
+    return f"panel_{source_name}"
+
+
+def _utc_timestamp() -> str:
+    return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def _fill_financial_defaults(row: dict[str, str]) -> dict[str, str]:
@@ -191,6 +220,18 @@ _PRE_LLM_CANDIDATE_FIELDS = (
     "repricing_momentum_extension",
 )
 
+_POST_LLM_ANY_FIELDS = (
+    "post_llm_candidate_flag",
+    "post_llm_high_priority_flag",
+    "post_llm_demote_flag",
+    "causal_change",
+    "negative_revision_risk",
+    "narrative_delta_bucket",
+    "operating_leverage_quality",
+    "durability",
+    "proof_alignment",
+)
+
 
 def _derive_pre_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out = dict(row)
@@ -200,6 +241,61 @@ def _derive_pre_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out["rm_any_flag"] = _derived_flag(out, _RM_FIELDS)
     out["pre_llm_candidate_flag"] = _derived_flag(out, _PRE_LLM_CANDIDATE_FIELDS)
     return out
+
+
+def _derive_llm_flags(row: dict[str, str]) -> dict[str, str]:
+    out = dict(row)
+    llm_status = str(out.get("llm_status") or "").strip().lower()
+    llm_complete = llm_status == "complete" or _truthy_marker(out.get("has_post_llm"))
+    out["llm_required_derived_flag"] = out.get("pre_llm_candidate_flag") or _derived_flag(
+        out, _PRE_LLM_CANDIDATE_FIELDS
+    )
+    out["llm_complete_derived_flag"] = "1" if llm_complete else "0"
+    out["has_post_llm"] = "1" if llm_complete or _truthy_marker(out.get("has_post_llm")) else "0"
+    out["post_llm_any_flag"] = "1" if llm_complete or any(
+        _truthy_marker(out.get(field)) for field in _POST_LLM_ANY_FIELDS
+    ) else "0"
+    return out
+
+
+def _derive_quarter_ranks(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    out = [dict(row) for row in rows]
+    pre_indexes = [
+        idx
+        for idx, row in enumerate(out)
+        if _truthy_marker(row.get("pre_llm_candidate_flag"))
+        and _to_float(row.get("pre_llm_fundamental_score")) is not None
+    ]
+    entry_indexes = [
+        idx for idx, row in enumerate(out) if _to_float(row.get("entry_score_0_100")) is not None
+    ]
+    _assign_rank(out, pre_indexes, score_field="pre_llm_fundamental_score", rank_field="pre_llm_rank_by_score_quarter")
+    _assign_rank(out, entry_indexes, score_field="entry_score_0_100", rank_field="entry_score_rank_by_quarter")
+    return out
+
+
+def _assign_rank(rows: list[dict[str, str]], indexes: list[int], *, score_field: str, rank_field: str) -> None:
+    by_quarter: dict[str, list[int]] = {}
+    for idx in indexes:
+        by_quarter.setdefault(str(rows[idx].get("quarter") or "").strip(), []).append(idx)
+    for quarter_indexes in by_quarter.values():
+        quarter_indexes.sort(
+            key=lambda idx: (
+                -(_to_float(rows[idx].get(score_field)) or 0.0),
+                str(rows[idx].get("ticker") or ""),
+            )
+        )
+        for rank, idx in enumerate(quarter_indexes, start=1):
+            rows[idx][rank_field] = str(rank)
+
+
+def _to_float(value: Any) -> float | None:
+    if _is_blank(value):
+        return None
+    try:
+        return float(str(value).strip())
+    except ValueError:
+        return None
 
 
 def _derived_flag(row: dict[str, str], fields: tuple[str, ...]) -> str:
