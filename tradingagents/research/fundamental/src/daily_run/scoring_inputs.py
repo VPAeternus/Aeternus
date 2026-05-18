@@ -287,6 +287,13 @@ def attach_entry_prices(
             rows_by_ticker.setdefault(ticker, []).append(item)
     for ticker_rows in rows_by_ticker.values():
         ticker_rows.sort(key=lambda item: str(item.get("date", "")))
+    market_sessions = sorted(
+        {
+            str(item.get("date", ""))[:10]
+            for item in price_rows
+            if clean(item.get("date")) and clean(item.get("open"))
+        }
+    )
     output: list[dict[str, Any]] = []
     quarantine: list[dict[str, Any]] = []
     for row in rows:
@@ -294,24 +301,31 @@ def attach_entry_prices(
         if clean(out.get("tradable_date")) and not clean(out.get("entry_open")):
             ticker = str(out.get("ticker", "")).upper()
             tradable_date = str(out.get("tradable_date", ""))
+            expected_session = _first_session_on_or_after(market_sessions, tradable_date)
             match = next(
                 (
                     item for item in rows_by_ticker.get(ticker, [])
-                    if tradable_date <= str(item.get("date", "")) <= as_of
+                    if (expected_session or tradable_date) <= str(item.get("date", "")) <= as_of
                     and clean(item.get("open"))
                 ),
                 None,
             )
             if match is not None:
                 entry_date = str(match.get("date", tradable_date))[:10]
+                entry_gap = _session_gap(market_sessions, expected_session, entry_date)
                 raw_open = match.get("open")
                 adjusted_open = match.get("adj_open") or match.get("split_adjusted_entry_price") or raw_open
                 out["entry_open"] = raw_open
                 out["entry_open_date"] = entry_date
                 out["entry_open_source"] = "price_provider_open"
-                out["expected_market_session_after_decision"] = tradable_date
-                out["entry_open_gap_sessions"] = "0" if entry_date == tradable_date else "1"
-                out["entry_date_adjustment_reason"] = "" if entry_date == tradable_date else "missing_ticker_price_or_holiday"
+                out["expected_market_session_after_decision"] = expected_session or tradable_date
+                out["entry_open_gap_sessions"] = str(entry_gap)
+                out["entry_date_adjustment_reason"] = _entry_date_adjustment_reason(
+                    rows_by_ticker.get(ticker, []),
+                    expected_session or tradable_date,
+                    entry_date,
+                    entry_gap,
+                )
                 out["tradable_date"] = entry_date
                 out["tradable_date_alias_source"] = "entry_open_date"
                 out["price_adjustment_mode"] = "split_adjusted_for_returns"
@@ -337,6 +351,36 @@ def attach_entry_prices(
         output.append(out)
     summary = {"rows": len(rows), "entry_open_ready": len(rows) - len(quarantine), "missing_entry_open": len(quarantine)}
     return output, quarantine, summary
+
+
+def _first_session_on_or_after(sessions: list[str], value: str) -> str:
+    return next((session for session in sessions if session >= value), "")
+
+
+def _session_gap(sessions: list[str], expected: str, entry_date: str) -> int:
+    if not expected or expected == entry_date:
+        return 0
+    try:
+        return max(0, sessions.index(entry_date) - sessions.index(expected))
+    except ValueError:
+        return 1
+
+
+def _entry_date_adjustment_reason(
+    ticker_rows: list[dict[str, Any]],
+    expected: str,
+    entry_date: str,
+    gap: int,
+) -> str:
+    if gap <= 0:
+        return ""
+    prior_or_expected = [
+        row for row in ticker_rows
+        if clean(row.get("date")) and str(row.get("date", ""))[:10] <= expected and clean(row.get("open"))
+    ]
+    if not prior_or_expected:
+        return "ticker_not_listed_yet"
+    return "missing_price_vendor_row"
 
 
 def _adjustment_factor(raw_open: Any, adjusted_open: Any) -> str:

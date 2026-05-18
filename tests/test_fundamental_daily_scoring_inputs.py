@@ -257,6 +257,43 @@ def test_attach_entry_prices_uses_next_available_market_open():
     assert summary["entry_open_ready"] == 1
 
 
+def test_attach_entry_prices_treats_market_holiday_as_no_entry_drift():
+    from tradingagents.research.fundamental.src.daily_run.scoring_inputs import attach_entry_prices
+    rows = [{"ticker": "AAA", "quarter": "2026Q1", "tradable_date": "2026-02-16"}]
+
+    def fake_price_provider(tickers, *, start, end):
+        return [{"ticker": "AAA", "date": "2026-02-17", "open": 15.0, "close": 15.5}]
+
+    priced, quarantine, _summary = attach_entry_prices(rows, as_of="2026-02-28", price_provider=fake_price_provider)
+    assert priced[0]["expected_market_session_after_decision"] == "2026-02-17"
+    assert priced[0]["entry_open_date"] == "2026-02-17"
+    assert priced[0]["entry_open_gap_sessions"] == "0"
+    assert priced[0]["entry_date_adjustment_reason"] == ""
+    assert quarantine == []
+
+
+def test_attach_entry_prices_labels_first_listing_drift():
+    from tradingagents.research.fundamental.src.daily_run.scoring_inputs import attach_entry_prices
+    rows = [
+        {"ticker": "AAA", "quarter": "2026Q2", "tradable_date": "2026-05-11"},
+        {"ticker": "BBB", "quarter": "2026Q2", "tradable_date": "2026-05-11"},
+    ]
+
+    def fake_price_provider(tickers, *, start, end):
+        return [
+            {"ticker": "BBB", "date": "2026-05-11", "open": 9.0, "close": 9.5},
+            {"ticker": "AAA", "date": "2026-05-12", "open": 15.0, "close": 15.5},
+        ]
+
+    priced, quarantine, _summary = attach_entry_prices(rows, as_of="2026-05-31", price_provider=fake_price_provider)
+    aaa = next(row for row in priced if row["ticker"] == "AAA")
+    assert aaa["expected_market_session_after_decision"] == "2026-05-11"
+    assert aaa["entry_open_date"] == "2026-05-12"
+    assert aaa["entry_open_gap_sessions"] == "1"
+    assert aaa["entry_date_adjustment_reason"] == "ticker_not_listed_yet"
+    assert quarantine == []
+
+
 def test_attach_entry_prices_treats_nan_entry_open_as_missing():
     from tradingagents.research.fundamental.src.daily_run.scoring_inputs import attach_entry_prices
     rows = [{"ticker": "AAA", "quarter": "2026Q2", "tradable_date": "2026-05-11", "entry_open": math.nan}]
