@@ -151,6 +151,7 @@ def _pit_companyfacts_to_pre_llm_input(companyfacts: dict[str, Any], *, row: dic
     context["decision_date"] = context.get("decision_date") or source_available_date
     contract = build_row_contract(context, decision_date_rule=str(context.get("decision_date_rule") or "full_evidence"))
     selected = select_pit_financials(companyfacts, contract, fields=FIELD_CONCEPTS)
+    selected.update(_row_availability_fields(contract))
     missing_fields = [field for field in FIELD_CONCEPTS if not clean(selected.get(field))]
     if missing_fields:
         selected["score_input_quarantine_reason"] = _append_reason(
@@ -159,6 +160,56 @@ def _pit_companyfacts_to_pre_llm_input(companyfacts: dict[str, Any], *, row: dic
         )
         selected["pit_financial_missing_fields"] = ";".join(missing_fields)
     return selected
+
+
+def _row_availability_fields(row: dict[str, Any]) -> dict[str, Any]:
+    ticker = str(row.get("ticker") or row.get("symbol") or "").upper()
+    cik10 = _cik10(row.get("cik"))
+    source_date = row.get("source_available_date") or row.get("decision_date") or ""
+    effective_date = _ticker_mapping_effective_date(row)
+    return {
+        "decision_date_rule": row.get("decision_date_rule", ""),
+        "decision_date": row.get("decision_date", ""),
+        "source_available_date": source_date,
+        "financial_cutoff_date": row.get("financial_cutoff_date", "") or source_date,
+        "disclosure_available_date": source_date,
+        "cik10": cik10,
+        "security_id": f"CIK{cik10}" if cik10 else "",
+        "ticker_as_of_decision_date": ticker,
+        "ticker_mapping_source": _ticker_mapping_source(row),
+        "ticker_mapping_source_date": effective_date,
+        "ticker_mapping_effective_date": effective_date,
+        "ticker_mapping_pit_valid_flag": "1" if cik10 and effective_date else "0",
+        "ticker_mapping_missing_reason": "" if cik10 and effective_date else "missing_cik_or_effective_date",
+        "price_ticker_used": str(row.get("yahoo_ticker") or ticker).upper(),
+        "facts_cik_used": cik10,
+        "ticker_cik_mapping_confidence": "high" if cik10 else "",
+    }
+
+
+def _ticker_mapping_source(row: dict[str, Any]) -> str:
+    return str(
+        row.get("ticker_mapping_source")
+        or row.get("master_universe_source")
+        or row.get("stock_source_type")
+        or row.get("daily_source_label")
+        or row.get("identity_status")
+        or "provided_universe_row"
+    )
+
+
+def _ticker_mapping_effective_date(row: dict[str, Any]) -> str:
+    explicit = row.get("ticker_mapping_effective_date") or row.get("universe_membership_effective_date")
+    if clean(explicit):
+        return str(explicit)[:10]
+    source = _ticker_mapping_source(row)
+    if "master_start_2021Q4" in source or ("master" in source and "2021Q4" in source):
+        return "2021-12-31"
+    if clean(row.get("source_available_date")):
+        return str(row.get("source_available_date"))[:10]
+    if clean(row.get("decision_date")):
+        return str(row.get("decision_date"))[:10]
+    return ""
 
 
 def _latest_date(*values: Any) -> str:
@@ -241,14 +292,50 @@ def attach_entry_prices(
                 None,
             )
             if match is not None:
-                out["entry_open"] = match.get("open")
-                out["entry_open_date"] = match.get("date", tradable_date)
+                entry_date = str(match.get("date", tradable_date))[:10]
+                raw_open = match.get("open")
+                adjusted_open = match.get("adj_open") or match.get("split_adjusted_entry_price") or raw_open
+                out["entry_open"] = raw_open
+                out["entry_open_date"] = entry_date
                 out["entry_open_source"] = "price_provider_open"
+                out["expected_market_session_after_decision"] = tradable_date
+                out["entry_open_gap_sessions"] = "0" if entry_date == tradable_date else "1"
+                out["entry_date_adjustment_reason"] = "" if entry_date == tradable_date else "missing_ticker_price_or_holiday"
+                out["tradable_date"] = entry_date
+                out["tradable_date_alias_source"] = "entry_open_date"
+                out["price_adjustment_mode"] = "split_adjusted_for_returns"
+                out["entry_open_price_basis"] = "raw_open"
+                out["return_price_basis"] = "split_adjusted"
+                out["entry_open_raw"] = raw_open
+                out["entry_open_adjusted_for_return_calc"] = adjusted_open
+                out["adjustment_factor"] = _adjustment_factor(raw_open, adjusted_open)
+                out["price_reference_date"] = entry_date
+                out["price_reference_time"] = "market_open"
+                out["price_reference_source"] = "price_cache_open"
+                out["price_reference_used_for_scoring_flag"] = "1"
+                out["score_timing_mode"] = "post_open_research_score"
+                out["execution_timing_mode"] = "next_session_executable"
+                out["execution_after_score_timestamp_flag"] = "0"
+                out["execution_date"] = ""
+                out["execution_price"] = ""
+                out["execution_price_source"] = ""
         if not clean(out.get("entry_open")):
             quarantine.append({"ticker": out.get("ticker", ""), "quarter": out.get("quarter", ""), "quarantine_reason": "missing_entry_open"})
         output.append(out)
     summary = {"rows": len(rows), "entry_open_ready": len(rows) - len(quarantine), "missing_entry_open": len(quarantine)}
     return output, quarantine, summary
+
+
+def _adjustment_factor(raw_open: Any, adjusted_open: Any) -> str:
+    try:
+        raw = float(raw_open)
+        adjusted = float(adjusted_open)
+    except (TypeError, ValueError):
+        return ""
+    if raw == 0:
+        return ""
+    factor = adjusted / raw
+    return str(int(factor)) if factor.is_integer() else str(factor)
 
 
 def _accepts_required_start_by_ticker(price_provider: Callable[..., list[dict[str, Any]]]) -> bool:

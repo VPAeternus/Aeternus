@@ -71,6 +71,7 @@ def test_build_pre_llm_from_companyfacts_does_not_require_earnings_exhibit(tmp_p
                 "source_available_date": "2022-05-01",
                 "financial_cutoff_date": "2022-05-01",
                 "decision_date": "2022-05-01",
+                "master_universe_source": "master_fundamental_universe_start_2021Q4.json",
             }
         ],
         companyfacts_root=facts_root,
@@ -102,6 +103,7 @@ def test_build_pre_llm_uses_pit_financial_values_before_scoring(tmp_path):
                 "source_available_date": "2022-05-01",
                 "financial_cutoff_date": "2022-05-01",
                 "decision_date": "2022-05-01",
+                "master_universe_source": "master_fundamental_universe_start_2021Q4.json",
             }
         ],
         companyfacts_root=facts_root,
@@ -114,6 +116,17 @@ def test_build_pre_llm_uses_pit_financial_values_before_scoring(tmp_path):
     assert rows[0]["revenue_value_fact_filed"] == "2022-05-01"
     assert rows[0]["revenue_bucket"] == "$100M-$500M"
     assert rows[0]["pre_llm_fundamental_bucket"] != "not_scored"
+    assert rows[0]["decision_date_rule"] == "full_evidence"
+    assert rows[0]["decision_date"] == "2022-05-01"
+    assert rows[0]["financial_cutoff_date"] == "2022-05-01"
+    assert rows[0]["cik10"] == "0000000001"
+    assert rows[0]["security_id"] == "CIK0000000001"
+    assert rows[0]["ticker_as_of_decision_date"] == "AAA"
+    assert rows[0]["ticker_mapping_source"] == "master_fundamental_universe_start_2021Q4.json"
+    assert rows[0]["ticker_mapping_effective_date"] == "2021-12-31"
+    assert rows[0]["ticker_mapping_pit_valid_flag"] == "1"
+    assert rows[0]["price_ticker_used"] == "AAA"
+    assert rows[0]["facts_cik_used"] == "0000000001"
 
 
 def test_build_pre_llm_quarantines_missing_pit_financial_provenance(tmp_path):
@@ -194,9 +207,17 @@ def test_attach_entry_prices_quarantines_missing_price_rows():
     rows = [{"ticker": "AAA", "quarter": "2026Q2", "tradable_date": "2026-05-11"}, {"ticker": "BBB", "quarter": "2026Q2", "tradable_date": "2026-05-11"}]
     def fake_price_provider(tickers, *, start, end):
         assert start == "2026-05-11"; assert end == "2026-05-13"
-        return [{"ticker": "AAA", "date": "2026-05-11", "open": 12.34, "close": 13.0}]
+        return [{"ticker": "AAA", "date": "2026-05-11", "open": 12.34, "adj_open": 11.11, "close": 13.0}]
     priced, quarantine, summary = attach_entry_prices(rows, as_of="2026-05-12", price_provider=fake_price_provider)
-    assert next(row for row in priced if row["ticker"] == "AAA")["entry_open"] == 12.34
+    aaa = next(row for row in priced if row["ticker"] == "AAA")
+    assert aaa["entry_open"] == 12.34
+    assert aaa["entry_open_raw"] == 12.34
+    assert aaa["entry_open_adjusted_for_return_calc"] == 11.11
+    assert aaa["entry_open_price_basis"] == "raw_open"
+    assert aaa["return_price_basis"] == "split_adjusted"
+    assert aaa["price_adjustment_mode"] == "split_adjusted_for_returns"
+    assert aaa["price_reference_used_for_scoring_flag"] == "1"
+    assert aaa["score_timing_mode"] == "post_open_research_score"
     assert [row["ticker"] for row in quarantine] == ["BBB"]
     assert quarantine[0]["quarantine_reason"] == "missing_entry_open"
     assert summary["entry_open_ready"] == 1
