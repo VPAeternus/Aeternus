@@ -1,5 +1,6 @@
 import csv
 import hashlib
+import inspect
 import json
 
 from typer.testing import CliRunner
@@ -172,13 +173,22 @@ def test_infer_run_id_uses_run_folder_when_panel_is_in_complete_panel(tmp_path):
 def test_fundamental_run_quarter_alias_and_pit_append_help():
     alias = runner.invoke(app, ["fundamental-run-quarter", "--help"], env={"COLUMNS": "240"})
     assert alias.exit_code == 0
-    assert "--quarter" in alias.output
-    assert "--emit-complete-panel" in alias.output
+    run_quarter = _registered_command_callback("fundamental-run-quarter")
+    assert "quarter" in inspect.signature(run_quarter).parameters
+    assert "emit_complete_panel" in inspect.signature(run_quarter).parameters
 
     append = runner.invoke(app, ["fundamental-append-pit-master", "--help"], env={"COLUMNS": "240"})
     assert append.exit_code == 0
-    assert "--panel-csv" in append.output
-    assert "--master-csv" in append.output
+    append_pit = _registered_command_callback("fundamental-append-pit-master")
+    assert "panel_csv" in inspect.signature(append_pit).parameters
+    assert "master_csv" in inspect.signature(append_pit).parameters
+
+
+def _registered_command_callback(name: str):
+    for command in app.registered_commands:
+        if command.name == name:
+            return command.callback
+    raise AssertionError(f"missing command: {name}")
 
 
 def test_fundamental_run_quarter_allows_date_quarter_mismatch(monkeypatch, tmp_path):
