@@ -20,6 +20,11 @@ ENTRY_SCORE_FORBIDDEN_COLUMNS = {
     "return_since_purchase_pct",
     "active_monitoring_score_0_100",
     "monitoring_score_0_100",
+    "final_rank_score_0_100",
+    "rank_score_label",
+    "monitoring_status",
+    "winner_90d_30pct",
+    "loser_90d_minus30pct",
 }
 
 

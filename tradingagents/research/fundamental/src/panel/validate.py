@@ -34,6 +34,8 @@ FORBIDDEN_SELECTION_COLUMNS = frozenset(
         "monitoring_score_0_100",
         "active_monitoring_score_0_100",
         "final_rank_score_0_100",
+        "rank_score_label",
+        "monitoring_status",
         "rank_score_0_100",
         "current_return_pct",
         "return_since_signal_pct",
@@ -69,7 +71,7 @@ def validate_complete_panel(
         if allowed_missing_reasons is None
         else set(allowed_missing_reasons)
     )
-    forbidden_columns = set(forbidden_selection_columns or ())
+    forbidden_columns = set(FORBIDDEN_SELECTION_COLUMNS if forbidden_selection_columns is None else forbidden_selection_columns)
     errors: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
 

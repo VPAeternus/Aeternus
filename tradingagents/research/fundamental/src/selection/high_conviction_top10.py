@@ -79,6 +79,74 @@ DAILY_RECOMMENDATION_BULLETS = [
     "Apply macro permission manually/live until PIT macro fields are historically validated.",
     "Continue forward-validating AKG theme acceleration / T5_RESCAN because historical PIT fields are blank.",
 ]
+SELECTION_FORBIDDEN_INPUT_COLUMNS = frozenset(
+    {
+        "return_10d_pct",
+        "return_20d_pct",
+        "return_30d_pct",
+        "return_60d_pct",
+        "return_90d_pct",
+        "winner_90d_30pct",
+        "loser_90d_minus30pct",
+        "monitoring_score_0_100",
+        "active_monitoring_score_0_100",
+        "final_rank_score_0_100",
+        "rank_score_label",
+        "monitoring_status",
+        "current_return_pct",
+        "return_since_signal_pct",
+        "return_since_purchase_pct",
+    }
+)
+SELECTION_FORBIDDEN_PREFIXES = ("return_", "return_since_", "future_", "forward_", "target_")
+SELECTION_ALLOWED_INPUT_COLUMNS = frozenset(
+    set(HP_SIGNAL_FIELDS)
+    | set(RM_SIGNAL_FIELDS)
+    | set(EXPLICIT_OVERRIDE_FIELDS)
+    | {
+        "ticker",
+        "symbol",
+        "quarter",
+        "cik",
+        "cik_status",
+        "document_status",
+        "hard_reject_reason",
+        "confidence",
+        "entry_score_0_100",
+        "score",
+        "score_change",
+        "negative_revision_risk",
+        "pre_llm_fundamental_bucket",
+        "primary_theme",
+        "sector",
+        "rm_buy_review_flag",
+        "market_repricing_score",
+        "repricing_momentum_priority",
+        "repricing_momentum_extension",
+        "hp_LLM_best",
+        "hp1_quality_pullback",
+        "hp2_dislocation_momentum_priority",
+        "hp2_dislocation_momentum_watch",
+        "hp3_large_quality_theme_exception",
+        "hp4_score_reacceleration_watch",
+        "hp_production_extension",
+        "hp_research_extension",
+        "theme_tailwind_score",
+        "theme_acceleration_score",
+        "theme_acceleration_research_visibility",
+        "theme_acceleration_rescan_flag",
+        "akg_universe_tier",
+        "risk_penalty_score",
+        "lane",
+        "decision_type",
+        "source",
+        "thesis_tags",
+        "risk_tags",
+        "macro_entry_action",
+        "macro_position_size_multiplier",
+    }
+)
+SELECTION_RANKING_SOURCE_COLUMNS = ",".join(sorted(SELECTION_ALLOWED_INPUT_COLUMNS))
 
 
 @dataclass(frozen=True)
@@ -260,6 +328,7 @@ def select_high_conviction_top10(
     for rank, row in enumerate(selected, start=1):
         row["selection_rank"] = rank
         row["selected"] = True
+        _annotate_selection_inputs(row)
         _annotate_operating_guidance(row)
     for row in ranked:
         if row["_row_id"] not in selected_ids:
@@ -431,6 +500,7 @@ def select_high_conviction_top15_core_deterioration_refill_shadow(
         row["portfolio_treatment"] = "top10_core_shadow_refill_review_not_official"
         row["core_deterioration_refill_shadow"] = 1
         row["core_refill_source"] = "original_top10" if int(row.get("core_candidate_rank") or 0) <= cfg.core_n else "next_ranked_core_candidate"
+        _annotate_selection_inputs(row)
         _apply_top15_plain_english_labels(row, bucket="top10_core", shadow=True)
         row.setdefault("right_tail_exception_score", "")
         row.setdefault("right_tail_exception_reason_codes", [])
@@ -854,6 +924,7 @@ def _select_exception_sleeve(
         row["selected_sleeve"] = "right_tail_exception"
         row["selected_sleeve_rank"] = rank
         row["portfolio_treatment"] = "exception_research_or_starter_underwriting"
+        _annotate_selection_inputs(row)
         _apply_top15_plain_english_labels(row, bucket="plus5_exception")
         row["right_tail_exception_warning_codes"] = warnings
     if sum(1 for r in selected if _single_rm_signal_bucket(r)) < min(2, len([c for c in candidates if _single_rm_signal_bucket(c)])):
@@ -880,6 +951,10 @@ def _annotate_operating_guidance(row: dict[str, Any]) -> None:
     row["hp_operating_guidance"] = "HP_USEFUL_BUT_HIGHER_LEFT_TAIL_RISK" if hp_bucket != "0" else "NO_HP_LEFT_TAIL_RISK_FLAG"
     row["macro_permission_guidance"] = "APPLY_MANUAL_LIVE_MACRO_PERMISSION_UNTIL_PIT_MACRO_VALIDATED"
     row["akg_theme_validation_guidance"] = "FORWARD_VALIDATE_AKG_THEME_ACCELERATION_AND_T5_RESCAN"
+
+
+def _annotate_selection_inputs(row: dict[str, Any]) -> None:
+    row["selection_ranking_source_columns"] = SELECTION_RANKING_SOURCE_COLUMNS
 
 
 def _operating_recommendation_snapshot(selected: Sequence[Mapping[str, Any]], cfg: Mapping[str, Any]) -> dict[str, Any]:
