@@ -51,6 +51,32 @@ def _with_demote_defaults(row: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
+def _legacy_post_llm_score_fields(row: dict[str, Any]) -> dict[str, Any]:
+    out = dict(row)
+    if clean(out.get("post_llm_fundamental_score")):
+        out.setdefault("post_llm_fundamental_score_source", "provided")
+        return out
+    try:
+        score = (
+            int(out.get("causal_change"))
+            + int(out.get("proof_alignment"))
+            + int(out.get("durability"))
+            + int(out.get("operating_leverage_quality"))
+            - int(out.get("negative_revision_risk"))
+            - int(out.get("story_vs_numbers_gap_penalty") or 0)
+        )
+    except (TypeError, ValueError):
+        out["post_llm_fundamental_score_missing_reason"] = "missing_llm_component_for_derived_score"
+        return out
+    score = max(-5, min(10, score))
+    out["post_llm_fundamental_score"] = str(score)
+    out["post_llm_fundamental_bucket"] = (
+        "inflecting" if score >= 7 else "constructive" if score >= 3 else "neutral" if score >= 0 else "deteriorating"
+    )
+    out["post_llm_fundamental_score_source"] = "derived_from_llm_components"
+    return out
+
+
 def classify_llm_status(row: dict[str, Any], llm_row: dict[str, Any] | None = None) -> dict[str, Any]:
     merged = _with_demote_defaults({**row, **(llm_row or {})})
     if not needs_llm(row):
@@ -72,10 +98,10 @@ def classify_llm_status(row: dict[str, Any], llm_row: dict[str, Any] | None = No
             "research_priority": research_priority,
             "missing_critical_llm_fields": ";".join(missing),
         })
-    return _with_demote_defaults({
+    return _legacy_post_llm_score_fields(_with_demote_defaults({
         **merged,
         "llm_status": "complete",
         "entry_score_is_provisional": 0,
         "llm_required_for_full_buy_flag": 0,
         "missing_critical_llm_fields": "",
-    })
+    }))

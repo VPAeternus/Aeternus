@@ -7,21 +7,163 @@ def _companyfacts_payload():
     return {"facts": {"us-gaap": {"Revenues": {"units": {"USD": [{"end": "2026-03-31", "val": 1_000_000_000}]}}, "NetIncomeLoss": {"units": {"USD": [{"end": "2026-03-31", "val": 120_000_000}]}}, "Assets": {"units": {"USD": [{"end": "2026-03-31", "val": 800_000_000}]}}, "NetCashProvidedByUsedInOperatingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": 150_000_000}]}}, "NetCashProvidedByUsedInInvestingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -50_000_000}]}}, "NetCashProvidedByUsedInFinancingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -10_000_000}]}}}}}
 
 
+def _pit_fact(concept, *, val, start="2022-01-01", end="2022-03-31", filed="2022-05-01", accn="0000000000-22-000001"):
+    return {
+        concept: {
+            "units": {
+                "USD": [
+                    {
+                        "accn": accn,
+                        "form": "10-Q",
+                        "fy": 2022,
+                        "fp": "Q1",
+                        "start": start,
+                        "end": end,
+                        "filed": filed,
+                        "val": val,
+                    }
+                ]
+            }
+        }
+    }
+
+
+def _pit_companyfacts_with_future_revenue():
+    concepts = {}
+    for payload in [
+        _pit_fact("Revenues", val=100_000_000),
+        _pit_fact("NetIncomeLoss", val=20_000_000),
+        _pit_fact("NetCashProvidedByUsedInOperatingActivities", val=30_000_000),
+        _pit_fact("NetCashProvidedByUsedInInvestingActivities", val=-10_000_000),
+        _pit_fact("NetCashProvidedByUsedInFinancingActivities", val=-5_000_000),
+        _pit_fact("Assets", val=200_000_000, start="", end="2022-03-31"),
+    ]:
+        concepts.update(payload)
+    concepts["Revenues"]["units"]["USD"].append(
+        {
+            "accn": "0000000000-22-000001",
+            "form": "10-Q",
+            "fy": 2026,
+            "fp": "Q1",
+            "start": "2026-01-01",
+            "end": "2026-03-31",
+            "filed": "2026-05-01",
+            "val": 999_000_000,
+        }
+    )
+    return {"facts": {"us-gaap": concepts}}
+
+
 def test_build_pre_llm_from_companyfacts_does_not_require_earnings_exhibit(tmp_path):
     facts_root = tmp_path / "companyfacts"; facts_root.mkdir()
-    (facts_root / "CIK0000000001.json").write_text(json.dumps(_companyfacts_payload()))
-    rows, summary = build_pre_llm_from_companyfacts_cache(universe_rows=[{"ticker": "AAA", "cik": "1", "quarter": "2026Q2"}], companyfacts_root=facts_root, quarter="2026Q2")
+    (facts_root / "CIK0000000001.json").write_text(json.dumps(_pit_companyfacts_with_future_revenue()))
+    rows, summary = build_pre_llm_from_companyfacts_cache(
+        universe_rows=[
+            {
+                "ticker": "AAA",
+                "cik": "1",
+                "quarter": "2022Q1",
+                "periodic_accession": "0000000000-22-000001",
+                "periodic_form": "10-Q",
+                "periodic_filing_date": "2022-05-01",
+                "periodic_primary_document": "aaa-20220331.htm",
+                "target_period_end": "2022-03-31",
+                "source_available_date": "2022-05-01",
+                "financial_cutoff_date": "2022-05-01",
+                "decision_date": "2022-05-01",
+                "master_universe_source": "master_fundamental_universe_start_2021Q4.json",
+            }
+        ],
+        companyfacts_root=facts_root,
+        quarter="2022Q1",
+    )
     assert summary["companyfacts_cached"] == 1
     assert summary["pre_llm_scored"] == 1
     assert rows[0]["pre_llm_fundamental_bucket"] in {"strong", "good", "mixed", "weak"}
-    assert rows[0]["revenue_bucket"] == "$1B-$2B"
+    assert rows[0]["revenue_bucket"] == "$100M-$500M"
+
+
+def test_build_pre_llm_uses_pit_financial_values_before_scoring(tmp_path):
+    facts_root = tmp_path / "companyfacts"
+    facts_root.mkdir()
+    (facts_root / "CIK0000000001.json").write_text(json.dumps(_pit_companyfacts_with_future_revenue()))
+
+    rows, summary = build_pre_llm_from_companyfacts_cache(
+        universe_rows=[
+            {
+                "ticker": "AAA",
+                "cik": "1",
+                "quarter": "2022Q1",
+                "periodic_accession": "0000000000-22-000001",
+                "periodic_form": "10-Q",
+                "periodic_filing_date": "2022-05-01",
+                "periodic_primary_document": "aaa-20220331.htm",
+                "earnings_8k_filing_date": "2022-04-20",
+                "target_period_end": "2022-03-31",
+                "source_available_date": "2022-05-01",
+                "financial_cutoff_date": "2022-05-01",
+                "decision_date": "2022-05-01",
+                "master_universe_source": "master_fundamental_universe_start_2021Q4.json",
+            }
+        ],
+        companyfacts_root=facts_root,
+        quarter="2022Q1",
+    )
+
+    assert summary["pre_llm_scored"] == 1
+    assert rows[0]["revenue_value"] == 100_000_000
+    assert rows[0]["revenue_value_fact_end"] == "2022-03-31"
+    assert rows[0]["revenue_value_fact_filed"] == "2022-05-01"
+    assert rows[0]["revenue_bucket"] == "$100M-$500M"
+    assert rows[0]["pre_llm_fundamental_bucket"] != "not_scored"
+    assert rows[0]["decision_date_rule"] == "full_evidence"
+    assert rows[0]["decision_date"] == "2022-05-01"
+    assert rows[0]["financial_cutoff_date"] == "2022-05-01"
+    assert rows[0]["cik10"] == "0000000001"
+    assert rows[0]["security_id"] == "CIK0000000001"
+    assert rows[0]["ticker_as_of_decision_date"] == "AAA"
+    assert rows[0]["ticker_mapping_source"] == "master_fundamental_universe_start_2021Q4.json"
+    assert rows[0]["ticker_mapping_effective_date"] == "2021-12-31"
+    assert rows[0]["ticker_mapping_pit_valid_flag"] == "1"
+    assert rows[0]["price_ticker_used"] == "AAA"
+    assert rows[0]["facts_cik_used"] == "0000000001"
+
+
+def test_build_pre_llm_quarantines_missing_pit_financial_provenance(tmp_path):
+    facts_root = tmp_path / "companyfacts"
+    facts_root.mkdir()
+    (facts_root / "CIK0000000001.json").write_text(json.dumps({"facts": {"us-gaap": {}}}))
+
+    rows, summary = build_pre_llm_from_companyfacts_cache(
+        universe_rows=[
+            {
+                "ticker": "AAA",
+                "cik": "1",
+                "quarter": "2022Q1",
+                "periodic_accession": "0000000000-22-000001",
+                "periodic_form": "10-Q",
+                "periodic_filing_date": "2022-05-01",
+                "periodic_primary_document": "aaa-20220331.htm",
+                "target_period_end": "2022-03-31",
+                "source_available_date": "2022-05-01",
+                "financial_cutoff_date": "2022-05-01",
+                "decision_date": "2022-05-01",
+            }
+        ],
+        companyfacts_root=facts_root,
+        quarter="2022Q1",
+    )
+
+    assert summary["pre_llm_not_scored"] == 1
+    assert rows[0]["pre_llm_fundamental_bucket"] == "not_scored"
+    assert "missing_pit_financial_provenance" in rows[0]["score_input_quarantine_reason"]
 
 
 def test_companyfacts_fallback_materializes_shared_cache_before_scoring(tmp_path):
     facts_root = tmp_path / "live" / "companyfacts"
     fallback_root = tmp_path / "shared_sec"
     fallback_root.mkdir()
-    (fallback_root / "facts_AAA.json").write_text(json.dumps(_companyfacts_payload()))
+    (fallback_root / "facts_AAA.json").write_text(json.dumps(_pit_companyfacts_with_future_revenue()))
 
     summary = materialize_companyfacts_fallbacks(
         universe_rows=[{"ticker": "AAA", "cik": "1"}],
@@ -29,10 +171,24 @@ def test_companyfacts_fallback_materializes_shared_cache_before_scoring(tmp_path
         fallback_root=fallback_root,
     )
     rows, score_summary = build_pre_llm_from_companyfacts_cache(
-        universe_rows=[{"ticker": "AAA", "cik": "1", "quarter": "2026Q2"}],
+        universe_rows=[
+            {
+                "ticker": "AAA",
+                "cik": "1",
+                "quarter": "2022Q1",
+                "periodic_accession": "0000000000-22-000001",
+                "periodic_form": "10-Q",
+                "periodic_filing_date": "2022-05-01",
+                "periodic_primary_document": "aaa-20220331.htm",
+                "target_period_end": "2022-03-31",
+                "source_available_date": "2022-05-01",
+                "financial_cutoff_date": "2022-05-01",
+                "decision_date": "2022-05-01",
+            }
+        ],
         companyfacts_root=facts_root,
         fallback_root=fallback_root,
-        quarter="2026Q2",
+        quarter="2022Q1",
     )
 
     assert summary["companyfacts_fallback_copied_count"] == 1
@@ -51,9 +207,17 @@ def test_attach_entry_prices_quarantines_missing_price_rows():
     rows = [{"ticker": "AAA", "quarter": "2026Q2", "tradable_date": "2026-05-11"}, {"ticker": "BBB", "quarter": "2026Q2", "tradable_date": "2026-05-11"}]
     def fake_price_provider(tickers, *, start, end):
         assert start == "2026-05-11"; assert end == "2026-05-13"
-        return [{"ticker": "AAA", "date": "2026-05-11", "open": 12.34, "close": 13.0}]
+        return [{"ticker": "AAA", "date": "2026-05-11", "open": 12.34, "adj_open": 11.11, "close": 13.0}]
     priced, quarantine, summary = attach_entry_prices(rows, as_of="2026-05-12", price_provider=fake_price_provider)
-    assert next(row for row in priced if row["ticker"] == "AAA")["entry_open"] == 12.34
+    aaa = next(row for row in priced if row["ticker"] == "AAA")
+    assert aaa["entry_open"] == 12.34
+    assert aaa["entry_open_raw"] == 12.34
+    assert aaa["entry_open_adjusted_for_return_calc"] == 11.11
+    assert aaa["entry_open_price_basis"] == "raw_open"
+    assert aaa["return_price_basis"] == "split_adjusted"
+    assert aaa["price_adjustment_mode"] == "split_adjusted_for_returns"
+    assert aaa["price_reference_used_for_scoring_flag"] == "1"
+    assert aaa["score_timing_mode"] == "post_open_research_score"
     assert [row["ticker"] for row in quarantine] == ["BBB"]
     assert quarantine[0]["quarantine_reason"] == "missing_entry_open"
     assert summary["entry_open_ready"] == 1

@@ -20,6 +20,11 @@ ENTRY_SCORE_FORBIDDEN_COLUMNS = {
     "return_since_purchase_pct",
     "active_monitoring_score_0_100",
     "monitoring_score_0_100",
+    "final_rank_score_0_100",
+    "rank_score_label",
+    "monitoring_status",
+    "winner_90d_30pct",
+    "loser_90d_minus30pct",
 }
 
 
@@ -109,10 +114,22 @@ def fundamental_rerating_score(row: dict[str, Any], prior_pre_score: float | Non
 
 
 def theme_tailwind_score(row: dict[str, Any]) -> int:
+    if not _theme_score_pit_allowed(row):
+        return 0
     existing = to_float(row.get("theme_tailwind_score"))
     if existing is not None and existing > 0:
         return max(0, min(20, int(existing)))
     return assign_theme_tailwind_score(row, detect_candidate_themes(row), {})
+
+
+def _theme_score_pit_allowed(row: dict[str, Any]) -> bool:
+    source_available = clean(row.get("theme_source_available_date"))
+    decision_date = clean(row.get("decision_date"))
+    if source_available and decision_date and source_available[:10] > decision_date[:10]:
+        return False
+    if clean(row.get("theme_source_type")).lower() == "static_taxonomy":
+        return flag(row.get("theme_score_allowed_for_historical_scoring"))
+    return True
 
 
 def theme_external_confirmation_score(row: dict[str, Any]) -> int:
@@ -236,12 +253,15 @@ def compute_entry_score(row: dict[str, Any], prior_row: dict[str, Any] | None = 
         "theme_tailwind_score": theme_score,
         "theme_external_confirmation_score": theme_external_confirmation_score(clean_row),
         "risk_penalty_score": penalty,
+        "base_entry_raw_score": raw_score,
+        "base_entry_score_0_100": entry_score,
         "entry_raw_score": raw_score,
         "entry_score_0_100": entry_score,
         "entry_score_0_100_bucket": entry_score_bucket(entry_score),
         "entry_score_label": score_label(entry_score),
         "hard_reject_reason": reject,
         "entry_score_inputs": ";".join(sorted(clean_row)),
+        "compatibility_alias_source": "current_entry_score",
     }
 
 

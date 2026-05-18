@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 import shutil
@@ -53,6 +54,17 @@ CSV_FIELDS = [
     "theme_tailwind_score",
     "theme_driver_summary",
     "theme_evidence_summary",
+    "llm_source_accessions",
+    "llm_source_document_dates",
+    "llm_source_available_date",
+    "llm_prompt_input_hash",
+    "llm_prompt_input_allowed_docs_only",
+    "llm_generated_at",
+    "llm_model",
+    "llm_output_hash",
+    "llm_cache_key",
+    "source_packet_path",
+    "reasoning_effort",
 ]
 
 DEMOTE_SEVERITIES = {"none", "soft", "hard", "unknown"}
@@ -226,6 +238,7 @@ def _score_addition_for(bucket: str, risk: int) -> int:
 def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict[str, Any]:
     if clean(payload.get("sample_id")) != clean(packet.get("sample_id")):
         raise ValueError(f"sample_id mismatch: {payload.get('sample_id')} != {packet.get('sample_id')}")
+    _validate_packet_source_availability(packet)
     causal = _int_field(payload, "causal_change", 0, 3)
     proof = _int_field(payload, "proof_alignment", 0, 3)
     durability = _int_field(payload, "durability", 0, 2)
@@ -320,9 +333,48 @@ def validate_llm_result(payload: dict[str, Any], packet: dict[str, Any]) -> dict
             "theme_tailwind_score": theme_tailwind,
             "theme_driver_summary": clean(payload.get("theme_driver_summary")),
             "theme_evidence_summary": clean(payload.get("theme_evidence_summary") or payload.get("theme_driver_summary")),
+            "llm_source_accessions": clean(packet.get("llm_source_accessions")),
+            "llm_source_document_dates": clean(packet.get("llm_source_document_dates")),
+            "llm_source_available_date": _latest_source_date(packet.get("llm_source_document_dates")),
+            "llm_prompt_input_hash": clean(packet.get("llm_prompt_input_hash")),
+            "llm_prompt_input_allowed_docs_only": clean(packet.get("llm_prompt_input_allowed_docs_only") or "1"),
+            "llm_generated_at": clean(payload.get("llm_generated_at")),
+            "llm_model": clean(payload.get("llm_model") or packet.get("llm_model") or packet.get("model")),
+            "llm_output_hash": clean(payload.get("llm_output_hash")) or _payload_hash(payload),
+            "llm_cache_key": clean(packet.get("llm_cache_key")),
+            "source_packet_path": clean(packet.get("source_packet_path")),
+            "reasoning_effort": clean(packet.get("reasoning_effort")),
         }
     )
     return normalized
+
+
+def _split_dates(value: Any) -> list[str]:
+    if isinstance(value, list):
+        raw = value
+    else:
+        raw = re.split(r"[;,]", str(value or ""))
+    return [str(item).strip()[:10] for item in raw if str(item).strip()]
+
+
+def _latest_source_date(value: Any) -> str:
+    dates = _split_dates(value)
+    return max(dates) if dates else ""
+
+
+def _validate_packet_source_availability(packet: dict[str, Any]) -> None:
+    if clean(packet.get("llm_prompt_input_allowed_docs_only")) not in {"", "1", "true", "True"}:
+        raise ValueError("LLM packet includes disallowed source documents")
+    decision_date = clean(packet.get("decision_date") or packet.get("source_available_date"))
+    if not decision_date:
+        return
+    for doc_date in _split_dates(packet.get("llm_source_document_dates")):
+        if doc_date > decision_date[:10]:
+            raise ValueError(f"future LLM source document: {doc_date} > {decision_date[:10]}")
+
+
+def _payload_hash(payload: dict[str, Any]) -> str:
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, default=str).encode("utf-8")).hexdigest()
 
 
 def extract_json_payload(raw: str) -> Any:

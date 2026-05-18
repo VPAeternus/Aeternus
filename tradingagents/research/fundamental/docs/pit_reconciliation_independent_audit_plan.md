@@ -4,6 +4,13 @@ Purpose: give another model a clean, evidence-first plan to independently verify
 
 Do not fix code during this audit. First prove root cause.
 
+Current generated PIT master status:
+
+- Invalid for historical validation.
+- Reason: financial values are not PIT-safe.
+- Machine-readable status: `/Users/aeternusholdings/Documents/Aeternus/outputs/fundamental_backtest/pit_master/reconciliation_status.json`
+- Plain notice: `/Users/aeternusholdings/Documents/Aeternus/tradingagents/research/fundamental/docs/current_pit_master_invalid_notice.md`
+
 ## Audit Question
 
 For the same `quarter + ticker`, should generated values match the uploaded historical combined file?
@@ -321,4 +328,3 @@ Generated historical PIT master can be trusted only if:
 - Same LLM packet/source produces same LLM fields, or differences are documented.
 - Universe adds/removes are explained per ticker.
 - Reconciliation report is generated every time the master PIT CSV is built.
-

@@ -26,12 +26,14 @@ def test_normalize_derives_legacy_post_llm_subtiers_from_canonical_fields():
     assert summary["rows"] == 1
 
 
-def test_normalize_fills_flag_blanks_with_zero():
+def test_normalize_preserves_missing_source_flags_and_derives_separate_flags():
     rows = [{"ticker": "BBB", "quarter": "2026Q2", "post_llm_candidate_flag": ""}]
     out, _ = normalize_complete_panel_rows(rows, source_name="daily_final_scores")
     assert out[0]["top15_selected"] == "0"
     assert out[0]["shadow_selected"] == "0"
-    assert out[0]["post_llm_candidate_flag"] == "0"
+    assert out[0]["post_llm_candidate_flag"] == ""
+    assert out[0]["post_llm_candidate_derived_flag"] == "0"
+    assert out[0]["post_llm_missing_reason"] == "source_not_populated"
 
 
 def test_normalize_converts_label_values_in_flag_fields_to_one():
@@ -162,6 +164,17 @@ def test_normalize_returns_complete_schema_rows_without_mutating_input():
     assert out[0]["feature_schema_path"] == "tradingagents/research/fundamental/src/panel/schema.py"
     assert out[0]["entry_score_0_100"] == "88"
     assert summary["rows"] == 1
+
+
+def test_normalize_fills_legacy_entry_score_aliases():
+    out, _ = normalize_complete_panel_rows(
+        [{"ticker": "AAA", "quarter": "2026Q2", "entry_raw_score": "42", "entry_score_0_100": "88"}],
+        source_name="daily_final_scores",
+    )
+
+    assert out[0]["base_entry_raw_score"] == "42"
+    assert out[0]["base_entry_score_0_100"] == "88"
+    assert out[0]["compatibility_alias_source"] == "current_entry_score"
 
 
 def test_normalize_uses_companyfacts_when_supplied():

@@ -62,6 +62,7 @@ def normalize_complete_panel_rows(
     normalized = _derive_post_llm_subtiers(normalized)
     normalized = [_derive_pre_llm_flags(row) for row in normalized]
     normalized = [_derive_llm_flags(row) for row in normalized]
+    normalized = [_derive_compatibility_aliases(row) for row in normalized]
     normalized = _derive_quarter_ranks(normalized)
     out = [_complete_schema_row(row) for row in normalized]
     summary: dict[str, Any] = {
@@ -232,6 +233,12 @@ _POST_LLM_ANY_FIELDS = (
     "proof_alignment",
 )
 
+_SOURCE_FLAG_FIELDS = (
+    "post_llm_candidate_flag",
+    "post_llm_high_priority_flag",
+    "post_llm_demote_flag",
+)
+
 
 def _derive_pre_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out = dict(row)
@@ -247,6 +254,12 @@ def _derive_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out = dict(row)
     llm_status = str(out.get("llm_status") or "").strip().lower()
     llm_complete = llm_status == "complete" or _truthy_marker(out.get("has_post_llm"))
+    for field in _SOURCE_FLAG_FIELDS:
+        if _is_blank(out.get(field)) and _is_blank(out.get("post_llm_missing_reason")):
+            out["post_llm_missing_reason"] = "source_not_populated"
+    out["post_llm_candidate_derived_flag"] = "1" if _truthy_marker(out.get("post_llm_candidate_flag")) else "0"
+    out["post_llm_high_priority_derived_flag"] = "1" if _truthy_marker(out.get("post_llm_high_priority_flag")) else "0"
+    out["post_llm_demote_derived_flag"] = "1" if _truthy_marker(out.get("post_llm_demote_flag")) else "0"
     out["llm_required_derived_flag"] = out.get("pre_llm_candidate_flag") or _derived_flag(
         out, _PRE_LLM_CANDIDATE_FIELDS
     )
@@ -255,6 +268,20 @@ def _derive_llm_flags(row: dict[str, str]) -> dict[str, str]:
     out["post_llm_any_flag"] = "1" if llm_complete or any(
         _truthy_marker(out.get(field)) for field in _POST_LLM_ANY_FIELDS
     ) else "0"
+    return out
+
+
+def _derive_compatibility_aliases(row: dict[str, str]) -> dict[str, str]:
+    out = dict(row)
+    alias_source = False
+    if _is_blank(out.get("base_entry_raw_score")) and not _is_blank(out.get("entry_raw_score")):
+        out["base_entry_raw_score"] = out["entry_raw_score"]
+        alias_source = True
+    if _is_blank(out.get("base_entry_score_0_100")) and not _is_blank(out.get("entry_score_0_100")):
+        out["base_entry_score_0_100"] = out["entry_score_0_100"]
+        alias_source = True
+    if alias_source and _is_blank(out.get("compatibility_alias_source")):
+        out["compatibility_alias_source"] = "current_entry_score"
     return out
 
 
@@ -313,7 +340,7 @@ def _complete_schema_row(row: dict[str, str]) -> dict[str, str]:
     out = dict(row)
     for field in REQUIRED_COMPLETE_PANEL_COLUMNS:
         if _is_blank(out.get(field)):
-            out[field] = "0" if field in FLAG_FIELDS else default_for_field(field)
+            out[field] = "" if field in _SOURCE_FLAG_FIELDS else "0" if field in FLAG_FIELDS else default_for_field(field)
 
     for field in REQUIRED_NONBLANK_FIELDS:
         if _is_blank(out.get(field)):
@@ -323,6 +350,8 @@ def _complete_schema_row(row: dict[str, str]) -> dict[str, str]:
 
     for field in FLAG_FIELDS:
         if _is_blank(out.get(field)):
+            if field in _SOURCE_FLAG_FIELDS:
+                continue
             out[field] = "0"
         else:
             out[field] = _normalize_flag(out[field])
