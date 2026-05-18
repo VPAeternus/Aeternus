@@ -167,6 +167,8 @@ LLM_COLUMNS = (
     "in_tier4_post_llm_file",
     "in_hp1_hp4_post_llm_file",
     "post_llm_fundamental_score",
+    "post_llm_fundamental_score_source",
+    "post_llm_fundamental_score_missing_reason",
     "post_llm_fundamental_bucket",
     "post_llm_score_delta",
     "post_llm_any_flag",
@@ -192,6 +194,17 @@ LLM_COLUMNS = (
     "evidence_risk",
     "demote_risk_flag",
     "deteriorating_risk_flag",
+    "llm_source_accessions",
+    "llm_source_document_dates",
+    "llm_source_available_date",
+    "llm_prompt_input_hash",
+    "llm_prompt_input_allowed_docs_only",
+    "llm_generated_at",
+    "llm_model",
+    "llm_output_hash",
+    "llm_cache_key",
+    "source_packet_path",
+    "reasoning_effort",
 )
 
 REPRICING_MOMENTUM_COLUMNS = (

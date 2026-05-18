@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import hashlib
+import json
 from typing import Any
 
 
@@ -49,6 +51,7 @@ def build_llm_packets(
             text = str(doc.get("clean_text") or doc.get("raw_text") or "").strip()
             if not text:
                 continue
+            doc_date = _doc_available_date(doc)
             evidence.append(text[:max_chars_per_doc])
             doc_refs.append(
                 {
@@ -56,6 +59,7 @@ def build_llm_packets(
                     "accession": doc.get("accession", ""),
                     "document_name": doc.get("document_name", ""),
                     "document_url": doc.get("document_url", ""),
+                    "document_date": doc_date,
                 }
             )
         prior_llm_extract = {
@@ -70,14 +74,37 @@ def build_llm_packets(
         }
         if prior_llm_extract:
             safe_candidate["prior_llm_extract"] = prior_llm_extract
-        packets.append(
-            {
-                **safe_candidate,
-                "sample_id": f"{ticker}_{quarter}",
-                "ticker": ticker,
-                "quarter": quarter,
-                "evidence_snippets": evidence,
-                "document_refs": doc_refs,
-            }
-        )
+        source_dates = [str(ref.get("document_date") or "").strip() for ref in doc_refs if str(ref.get("document_date") or "").strip()]
+        source_accessions = [str(ref.get("accession") or "").strip() for ref in doc_refs if str(ref.get("accession") or "").strip()]
+        packet = {
+            **safe_candidate,
+            "sample_id": f"{ticker}_{quarter}",
+            "ticker": ticker,
+            "quarter": quarter,
+            "evidence_snippets": evidence,
+            "document_refs": doc_refs,
+            "llm_source_accessions": ";".join(source_accessions),
+            "llm_source_document_dates": ";".join(source_dates),
+            "llm_source_available_date": max(source_dates) if source_dates else "",
+            "llm_prompt_input_allowed_docs_only": "1",
+        }
+        packet["llm_prompt_input_hash"] = hashlib.sha256(
+            json.dumps(
+                {
+                    "sample_id": packet["sample_id"],
+                    "evidence_snippets": packet["evidence_snippets"],
+                    "document_refs": packet["document_refs"],
+                },
+                sort_keys=True,
+            ).encode("utf-8")
+        ).hexdigest()
+        packets.append(packet)
     return packets
+
+
+def _doc_available_date(doc: dict[str, Any]) -> str:
+    for key in ("filing_date", "document_date", "filed", "accepted_date", "event_date"):
+        value = str(doc.get(key) or "").strip()
+        if value:
+            return value[:10]
+    return ""
