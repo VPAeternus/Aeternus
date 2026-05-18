@@ -14,31 +14,54 @@ def _write_handoff(path):
     path.write_text(json.dumps({"tickers": ["T1"], "metadata_by_ticker": {}, "source_stage": "daily_scout"}))
 
 
-def _companyfacts_payload():
+def _fact_values(*, val, accessions, start="2026-01-01", end="2026-03-31", filed="2026-05-08"):
+    return [
+        {
+            "accn": accession,
+            "form": "10-Q",
+            "fy": 2026,
+            "fp": "Q1",
+            "start": start,
+            "end": end,
+            "filed": filed,
+            "val": val,
+        }
+        for accession in accessions
+    ]
+
+
+def _test_periodic_accessions():
+    tickers = ("T0", "T1", "T2", "T3", "T4", "GOOD", "NO8K", "LOW", "RMX", "SAFE")
+    return [f"00000000-{ticker}Q" for ticker in tickers]
+
+
+def _companyfacts_payload(accessions=None, *, start="2026-01-01", end="2026-03-31", filed="2026-05-08"):
+    accessions = accessions or _test_periodic_accessions()
     return {
         "facts": {
             "us-gaap": {
-                "Revenues": {"units": {"USD": [{"end": "2026-03-31", "val": 1_000_000_000}]}},
-                "NetIncomeLoss": {"units": {"USD": [{"end": "2026-03-31", "val": 120_000_000}]}},
-                "Assets": {"units": {"USD": [{"end": "2026-03-31", "val": 800_000_000}]}},
-                "NetCashProvidedByUsedInOperatingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": 150_000_000}]}},
-                "NetCashProvidedByUsedInInvestingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -50_000_000}]}},
-                "NetCashProvidedByUsedInFinancingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -10_000_000}]}},
+                "Revenues": {"units": {"USD": _fact_values(val=1_000_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "NetIncomeLoss": {"units": {"USD": _fact_values(val=120_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "Assets": {"units": {"USD": _fact_values(val=800_000_000, accessions=accessions, start="", end=end, filed=filed)}},
+                "NetCashProvidedByUsedInOperatingActivities": {"units": {"USD": _fact_values(val=150_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "NetCashProvidedByUsedInInvestingActivities": {"units": {"USD": _fact_values(val=-50_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "NetCashProvidedByUsedInFinancingActivities": {"units": {"USD": _fact_values(val=-10_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
             }
         }
     }
 
 
-def _weak_companyfacts_payload():
+def _weak_companyfacts_payload(accessions=None, *, start="2026-01-01", end="2026-03-31", filed="2026-05-08"):
+    accessions = accessions or _test_periodic_accessions()
     return {
         "facts": {
             "us-gaap": {
-                "Revenues": {"units": {"USD": [{"end": "2026-03-31", "val": 500_000_000}]}},
-                "NetIncomeLoss": {"units": {"USD": [{"end": "2026-03-31", "val": -100_000_000}]}},
-                "Assets": {"units": {"USD": [{"end": "2026-03-31", "val": 1_000_000_000}]}},
-                "NetCashProvidedByUsedInOperatingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -50_000_000}]}},
-                "NetCashProvidedByUsedInInvestingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": -50_000_000}]}},
-                "NetCashProvidedByUsedInFinancingActivities": {"units": {"USD": [{"end": "2026-03-31", "val": 100_000_000}]}},
+                "Revenues": {"units": {"USD": _fact_values(val=500_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "NetIncomeLoss": {"units": {"USD": _fact_values(val=-100_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "Assets": {"units": {"USD": _fact_values(val=1_000_000_000, accessions=accessions, start="", end=end, filed=filed)}},
+                "NetCashProvidedByUsedInOperatingActivities": {"units": {"USD": _fact_values(val=-50_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "NetCashProvidedByUsedInInvestingActivities": {"units": {"USD": _fact_values(val=-50_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
+                "NetCashProvidedByUsedInFinancingActivities": {"units": {"USD": _fact_values(val=100_000_000, accessions=accessions, start=start, end=end, filed=filed)}},
             }
         }
     }
@@ -560,7 +583,16 @@ def test_prior_llm_recovery_candidates_keep_current_identity_when_prior_context_
 def test_prior_recovery_context_builds_prior_price_and_pre_llm_score(tmp_path):
     live = tmp_path / "live_sec"
     (live / "companyfacts").mkdir(parents=True)
-    (live / "companyfacts" / "CIK0000123456.json").write_text(json.dumps(_companyfacts_payload()))
+    (live / "companyfacts" / "CIK0000123456.json").write_text(
+        json.dumps(
+            _companyfacts_payload(
+                accessions=["00000000-T1Q"],
+                start="2025-10-01",
+                end="2025-12-31",
+                filed="2026-02-06",
+            )
+        )
+    )
     cfg = DailyRunConfig(as_of="2026-05-15", quarter="2026Q2", mode="broad-master-final", output_root=tmp_path / "run")
 
     def fake_prices(tickers, *, start, end, **kwargs):

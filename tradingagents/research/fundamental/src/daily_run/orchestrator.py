@@ -1347,13 +1347,17 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         else:
             _record(state, GateResult(4, "Fetch and materialization", GateStatus.PASS, {"fetch_queue_count": coverage_summary["fetch_queue_count"], "reason": "no_fetchable_queue_or_skip_fetch"}, {}))
 
-        pre_rows, pre_summary = build_pre_llm_from_companyfacts_cache(universe_rows=universe.rows, companyfacts_root=live_root / "companyfacts", quarter=config.quarter, fallback_root=sec_cache_root())
-        pre_path = config.output_root / "pre_llm_scores.csv"; write_csv(pre_path, pre_rows)
-        _record(state, GateResult(5, "Pre-LLM scoring readiness", GateStatus.PASS, pre_summary, {"pre_llm_scores": str(pre_path)}))
-
         coverage_csv = Path(coverage_raw.get("outputs", {}).get("manifest_csv", config.output_root / f"sec_coverage_manifest_{config.quarter}.csv"))
         coverage_rows = _read_csv(coverage_csv)
         coverage_by_key = {(r.get("ticker", "").upper(), r.get("quarter", "")): r for r in coverage_rows}
+        scoring_seed_rows = [
+            {**row, **coverage_by_key.get((row.get("ticker", "").upper(), row.get("quarter", config.quarter)), {})}
+            for row in universe.rows
+        ]
+        pre_rows, pre_summary = build_pre_llm_from_companyfacts_cache(universe_rows=scoring_seed_rows, companyfacts_root=live_root / "companyfacts", quarter=config.quarter, fallback_root=sec_cache_root())
+        pre_path = config.output_root / "pre_llm_scores.csv"; write_csv(pre_path, pre_rows)
+        _record(state, GateResult(5, "Pre-LLM scoring readiness", GateStatus.PASS, pre_summary, {"pre_llm_scores": str(pre_path)}))
+
         pre_with_dates = []
         sec_reality_quarantine = []
         for row in pre_rows:

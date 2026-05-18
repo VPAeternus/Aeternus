@@ -9,8 +9,11 @@ from typing import Any, Callable
 from tradingagents.research.fundamental.src.config.cache_paths import sec_cache_root
 from tradingagents.research.fundamental.src.features.common import clean
 from tradingagents.research.fundamental.src.features.pre_llm_scores import build_pre_llm_rows
+from tradingagents.research.fundamental.src.ingest.companyfacts_pit import FIELD_CONCEPTS, select_pit_financials
+from tradingagents.research.fundamental.src.ingest.period_context import derive_period_context
 from tradingagents.research.fundamental.src.ingest.xbrl import companyfacts_to_pre_llm_input
 
+from .row_contract import build_row_contract
 from .artifacts import write_text_atomic
 
 
@@ -107,13 +110,17 @@ def build_pre_llm_from_companyfacts_cache(
                 fallback_cached += 1
         if facts_path and facts_path.exists():
             cached += 1
-            facts_input.update(
-                companyfacts_to_pre_llm_input(
-                    json.loads(facts_path.read_text(encoding="utf-8")),
-                    ticker=ticker,
-                    quarter=quarter,
+            companyfacts = json.loads(facts_path.read_text(encoding="utf-8"))
+            if _has_pit_financial_context(row):
+                facts_input.update(_pit_companyfacts_to_pre_llm_input(companyfacts, row={**row, "ticker": ticker, "quarter": quarter}))
+            else:
+                facts_input.update(
+                    companyfacts_to_pre_llm_input(
+                        companyfacts,
+                        ticker=ticker,
+                        quarter=quarter,
+                    )
                 )
-            )
         input_rows.append({**row, **facts_input, "ticker": ticker, "quarter": quarter})
 
     scored = build_pre_llm_rows(input_rows)
@@ -125,6 +132,51 @@ def build_pre_llm_from_companyfacts_cache(
         "pre_llm_not_scored": sum(1 for row in scored if row.get("pre_llm_fundamental_bucket") == "not_scored"),
     }
     return scored, summary
+
+
+def _has_pit_financial_context(row: dict[str, Any]) -> bool:
+    return clean(row.get("periodic_accession")) or clean(row.get("target_period_end")) or clean(row.get("periodic_filing_date"))
+
+
+def _pit_companyfacts_to_pre_llm_input(companyfacts: dict[str, Any], *, row: dict[str, Any]) -> dict[str, Any]:
+    context = dict(row)
+    if not clean(context.get("target_period_end")):
+        context.update(
+            derive_period_context(
+                companyfacts,
+                periodic_accession=context.get("periodic_accession", ""),
+                periodic_form=context.get("periodic_form", ""),
+                periodic_filing_date=context.get("periodic_filing_date", ""),
+            )
+        )
+    source_available_date = context.get("source_available_date") or _latest_date(
+        context.get("earnings_8k_filing_date"),
+        context.get("periodic_filing_date"),
+    )
+    context["source_available_date"] = source_available_date
+    context["financial_cutoff_date"] = context.get("financial_cutoff_date") or source_available_date
+    context["decision_date"] = context.get("decision_date") or source_available_date
+    contract = build_row_contract(context, decision_date_rule=str(context.get("decision_date_rule") or "full_evidence"))
+    selected = select_pit_financials(companyfacts, contract, fields=FIELD_CONCEPTS)
+    missing_fields = [field for field in FIELD_CONCEPTS if not clean(selected.get(field))]
+    if missing_fields:
+        selected["score_input_quarantine_reason"] = _append_reason(
+            selected.get("score_input_quarantine_reason"),
+            "missing_pit_financial_provenance",
+        )
+        selected["pit_financial_missing_fields"] = ";".join(missing_fields)
+    return selected
+
+
+def _latest_date(*values: Any) -> str:
+    parsed = sorted(item.isoformat() for item in (_parse_date(value) for value in values) if item is not None)
+    return parsed[-1] if parsed else ""
+
+
+def _append_reason(existing: Any, reason: str) -> str:
+    reasons = {item for item in str(existing or "").split(";") if item}
+    reasons.add(reason)
+    return ";".join(sorted(reasons))
 
 
 def split_score_ready_rows(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
