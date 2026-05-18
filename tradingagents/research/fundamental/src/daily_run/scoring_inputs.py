@@ -319,6 +319,8 @@ def attach_entry_prices(
                 out["execution_date"] = ""
                 out["execution_price"] = ""
                 out["execution_price_source"] = ""
+                out["non_executable_research_score_flag"] = "1"
+                out["execution_timing_missing_reason"] = "post_open_research_score_not_executable_same_open"
         if not clean(out.get("entry_open")):
             quarantine.append({"ticker": out.get("ticker", ""), "quarter": out.get("quarter", ""), "quarantine_reason": "missing_entry_open"})
         output.append(out)

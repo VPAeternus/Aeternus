@@ -135,6 +135,22 @@ def test_entry_open_scoring_requires_later_execution_price_or_research_label():
     assert "execution_not_after_score_timestamp" in validate_row_contract(contract)
 
 
+def test_entry_open_research_score_label_is_allowed_when_non_executable():
+    contract = build_row_contract(
+        _valid_row(
+            price_reference_used_for_scoring_flag="1",
+            score_timing_mode="post_open_research_score",
+            execution_timing_mode="next_session_executable",
+            execution_after_score_timestamp_flag="0",
+            non_executable_research_score_flag="1",
+            diagnostic_only_flag="0",
+        ),
+        decision_date_rule="full_evidence",
+    )
+
+    assert "execution_not_after_score_timestamp" not in validate_row_contract(contract)
+
+
 def test_ticker_mapping_must_be_effective_by_decision_date():
     contract = build_row_contract(
         _valid_row(ticker_mapping_effective_date="2026-01-01"),

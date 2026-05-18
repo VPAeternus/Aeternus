@@ -66,7 +66,7 @@ def _validate_execution_timing(row: dict[str, Any], issues: list[str]) -> None:
         return
     if _truthy(row.get("execution_after_score_timestamp_flag")):
         return
-    if _truthy(row.get("diagnostic_only_flag")):
+    if _truthy(row.get("diagnostic_only_flag")) or _truthy(row.get("non_executable_research_score_flag")):
         return
     issues.append("execution_not_after_score_timestamp")
 

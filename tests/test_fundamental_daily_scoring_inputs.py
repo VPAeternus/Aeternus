@@ -218,6 +218,8 @@ def test_attach_entry_prices_quarantines_missing_price_rows():
     assert aaa["price_adjustment_mode"] == "split_adjusted_for_returns"
     assert aaa["price_reference_used_for_scoring_flag"] == "1"
     assert aaa["score_timing_mode"] == "post_open_research_score"
+    assert aaa["non_executable_research_score_flag"] == "1"
+    assert aaa["execution_timing_missing_reason"] == "post_open_research_score_not_executable_same_open"
     assert [row["ticker"] for row in quarantine] == ["BBB"]
     assert quarantine[0]["quarantine_reason"] == "missing_entry_open"
     assert summary["entry_open_ready"] == 1

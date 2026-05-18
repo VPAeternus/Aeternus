@@ -56,6 +56,8 @@ PRICE_AND_SOURCE_COLUMNS = (
     "execution_price",
     "execution_price_source",
     "execution_after_score_timestamp_flag",
+    "non_executable_research_score_flag",
+    "execution_timing_missing_reason",
     "prior_entry_open",
     "entry_qoq_pct",
     "prior_entry_qoq_pct",
