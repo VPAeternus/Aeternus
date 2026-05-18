@@ -14,6 +14,7 @@ FACT_TAGS = {
 
 
 def latest_fact_value(companyfacts: dict[str, Any], tags: list[str], *, end: str | None = None) -> Any:
+    """Legacy helper. Do not use for score-producing historical PIT rows."""
     facts = companyfacts.get("facts", {}).get("us-gaap", {})
     best = None
     for tag in tags:
@@ -30,6 +31,7 @@ def latest_fact_value(companyfacts: dict[str, Any], tags: list[str], *, end: str
 
 
 def companyfacts_to_pre_llm_input(companyfacts: dict[str, Any], *, ticker: str, quarter: str, end: str | None = None) -> dict[str, Any]:
+    """Legacy helper. Use companyfacts_pit for score-producing historical PIT rows."""
     row = {"ticker": ticker, "quarter": quarter}
     for field, tags in FACT_TAGS.items():
         row[field] = latest_fact_value(companyfacts, tags, end=end)
