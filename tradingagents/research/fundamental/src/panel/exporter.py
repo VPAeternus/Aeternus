@@ -24,6 +24,10 @@ from tradingagents.research.fundamental.src.panel.validate import (
     FORBIDDEN_SELECTION_COLUMNS,
     validate_complete_panel,
 )
+from tradingagents.research.fundamental.src.reconciliation.pit_master_reconcile import (
+    validate_pit_master_rows,
+    write_reconciliation_outputs,
+)
 
 REQUIRED_FINAL_SCORES_PATTERN = "fundamental_final_scores_*.csv"
 OPTIONAL_ARTIFACT_NAMES = (
@@ -119,6 +123,10 @@ def build_complete_panel(
     )
     if prior_errors:
         validation = _with_extra_errors(validation, prior_errors)
+    reconciliation = validate_pit_master_rows(validation_rows)
+    reconciliation_paths = write_reconciliation_outputs(reconciliation, output_root / "reconciliation_audit")
+    if reconciliation["blocking_errors"]:
+        validation = _with_extra_errors(validation, reconciliation["blocking_errors"])
     rows = [_ordered_row(row) for row in rows]
 
     stem = f"fundamental_complete_prellm_to_top15_{quarter}"
@@ -134,6 +142,8 @@ def build_complete_panel(
         artifact_paths=artifact_paths,
         normalize_summary=normalize_summary,
         selection_summary=_portable_selection_summary(selection_summary, output_root),
+        reconciliation_summary=reconciliation,
+        reconciliation_paths=reconciliation_paths,
         output_sha=output_sha,
     )
     _write_json(manifest_path, manifest)
@@ -255,6 +265,8 @@ def _build_manifest(
     artifact_paths: dict[str, Path],
     normalize_summary: dict[str, Any],
     selection_summary: dict[str, Any],
+    reconciliation_summary: dict[str, Any] | None = None,
+    reconciliation_paths: dict[str, str] | None = None,
     output_sha: str,
 ) -> dict[str, Any]:
     blank_counts = {
@@ -285,6 +297,8 @@ def _build_manifest(
         "shadow_selected_count": sum(1 for row in rows if row.get("shadow_selected") == "1"),
         "selection_summary": selection_summary,
         "normalize_summary": normalize_summary,
+        "reconciliation_summary": reconciliation_summary or {},
+        "reconciliation_paths": reconciliation_paths or {},
         "output_sha256": output_sha,
     }
 

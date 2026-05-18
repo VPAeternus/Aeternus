@@ -56,12 +56,30 @@ def _pit_companyfacts_with_future_revenue():
 
 def test_build_pre_llm_from_companyfacts_does_not_require_earnings_exhibit(tmp_path):
     facts_root = tmp_path / "companyfacts"; facts_root.mkdir()
-    (facts_root / "CIK0000000001.json").write_text(json.dumps(_companyfacts_payload()))
-    rows, summary = build_pre_llm_from_companyfacts_cache(universe_rows=[{"ticker": "AAA", "cik": "1", "quarter": "2026Q2"}], companyfacts_root=facts_root, quarter="2026Q2")
+    (facts_root / "CIK0000000001.json").write_text(json.dumps(_pit_companyfacts_with_future_revenue()))
+    rows, summary = build_pre_llm_from_companyfacts_cache(
+        universe_rows=[
+            {
+                "ticker": "AAA",
+                "cik": "1",
+                "quarter": "2022Q1",
+                "periodic_accession": "0000000000-22-000001",
+                "periodic_form": "10-Q",
+                "periodic_filing_date": "2022-05-01",
+                "periodic_primary_document": "aaa-20220331.htm",
+                "target_period_end": "2022-03-31",
+                "source_available_date": "2022-05-01",
+                "financial_cutoff_date": "2022-05-01",
+                "decision_date": "2022-05-01",
+            }
+        ],
+        companyfacts_root=facts_root,
+        quarter="2022Q1",
+    )
     assert summary["companyfacts_cached"] == 1
     assert summary["pre_llm_scored"] == 1
     assert rows[0]["pre_llm_fundamental_bucket"] in {"strong", "good", "mixed", "weak"}
-    assert rows[0]["revenue_bucket"] == "$1B-$2B"
+    assert rows[0]["revenue_bucket"] == "$100M-$500M"
 
 
 def test_build_pre_llm_uses_pit_financial_values_before_scoring(tmp_path):
@@ -132,7 +150,7 @@ def test_companyfacts_fallback_materializes_shared_cache_before_scoring(tmp_path
     facts_root = tmp_path / "live" / "companyfacts"
     fallback_root = tmp_path / "shared_sec"
     fallback_root.mkdir()
-    (fallback_root / "facts_AAA.json").write_text(json.dumps(_companyfacts_payload()))
+    (fallback_root / "facts_AAA.json").write_text(json.dumps(_pit_companyfacts_with_future_revenue()))
 
     summary = materialize_companyfacts_fallbacks(
         universe_rows=[{"ticker": "AAA", "cik": "1"}],
@@ -140,10 +158,24 @@ def test_companyfacts_fallback_materializes_shared_cache_before_scoring(tmp_path
         fallback_root=fallback_root,
     )
     rows, score_summary = build_pre_llm_from_companyfacts_cache(
-        universe_rows=[{"ticker": "AAA", "cik": "1", "quarter": "2026Q2"}],
+        universe_rows=[
+            {
+                "ticker": "AAA",
+                "cik": "1",
+                "quarter": "2022Q1",
+                "periodic_accession": "0000000000-22-000001",
+                "periodic_form": "10-Q",
+                "periodic_filing_date": "2022-05-01",
+                "periodic_primary_document": "aaa-20220331.htm",
+                "target_period_end": "2022-03-31",
+                "source_available_date": "2022-05-01",
+                "financial_cutoff_date": "2022-05-01",
+                "decision_date": "2022-05-01",
+            }
+        ],
         companyfacts_root=facts_root,
         fallback_root=fallback_root,
-        quarter="2026Q2",
+        quarter="2022Q1",
     )
 
     assert summary["companyfacts_fallback_copied_count"] == 1

@@ -11,7 +11,6 @@ from tradingagents.research.fundamental.src.features.common import clean
 from tradingagents.research.fundamental.src.features.pre_llm_scores import build_pre_llm_rows
 from tradingagents.research.fundamental.src.ingest.companyfacts_pit import FIELD_CONCEPTS, select_pit_financials
 from tradingagents.research.fundamental.src.ingest.period_context import derive_period_context
-from tradingagents.research.fundamental.src.ingest.xbrl import companyfacts_to_pre_llm_input
 
 from .row_contract import build_row_contract
 from .artifacts import write_text_atomic
@@ -114,13 +113,7 @@ def build_pre_llm_from_companyfacts_cache(
             if _has_pit_financial_context(row):
                 facts_input.update(_pit_companyfacts_to_pre_llm_input(companyfacts, row={**row, "ticker": ticker, "quarter": quarter}))
             else:
-                facts_input.update(
-                    companyfacts_to_pre_llm_input(
-                        companyfacts,
-                        ticker=ticker,
-                        quarter=quarter,
-                    )
-                )
+                facts_input["score_input_quarantine_reason"] = "missing_pit_financial_context"
         input_rows.append({**row, **facts_input, "ticker": ticker, "quarter": quarter})
 
     scored = build_pre_llm_rows(input_rows)
