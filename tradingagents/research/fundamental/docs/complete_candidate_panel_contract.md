@@ -42,6 +42,22 @@ Every row must conform to `REQUIRED_COMPLETE_PANEL_COLUMNS` for schema version
 Required financial/value blanks must carry an allowed missing reason in the
 matching `*_missing_reason` field.
 
+## Derived pre-LLM flags
+
+`pre_llm_candidate_flag` means the row passed the pre-LLM filter and needs LLM
+review before final scoring: Tier 1-4, HP production/research extension, or
+repricing-momentum extension.
+
+Tier 0 alone does not set `pre_llm_candidate_flag` because Tier 0 does not run
+LLM by default.
+
+Aggregate flags are derived from their source columns:
+
+- `tier_0_to_4_any_flag`: any Tier 0-4 bucket
+- `tier_1_to_4_any_flag`: any Tier 1-4 bucket
+- `hp_any_flag`: any HP bucket/extension
+- `rm_any_flag`: any RM bucket/extension/review flag
+
 ## Allowed missing reasons
 
 Default allowed reasons:

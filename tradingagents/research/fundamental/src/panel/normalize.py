@@ -57,6 +57,7 @@ def normalize_complete_panel_rows(
         normalized = [_fill_financial_defaults(row) for row in normalized]
 
     normalized = _derive_post_llm_subtiers(normalized)
+    normalized = [_derive_pre_llm_flags(row) for row in normalized]
     out = [_complete_schema_row(row) for row in normalized]
     summary: dict[str, Any] = {
         "rows": len(out),
@@ -135,6 +136,81 @@ def _derive_post_llm_subtiers(rows: list[dict[str, Any]]) -> list[dict[str, str]
     df = pd.DataFrame(rows)
     df = add_post_llm_subtiers(df)
     return [_copy_string_row(row) for row in df.to_dict(orient="records")]
+
+
+_TIER_0_TO_4_FIELDS = (
+    "tier_bucket",
+    "tier_0_bucket",
+    "tier_1_bucket",
+    "tier_2_bucket",
+    "tier_3_bucket",
+    "tier_4_bucket",
+)
+
+_TIER_1_TO_4_FIELDS = (
+    "tier_1_bucket",
+    "tier_2_bucket",
+    "tier_3_bucket",
+    "tier_4_bucket",
+)
+
+_HP_FIELDS = (
+    "hp0_high_price_broad",
+    "hp1_quality_pullback",
+    "hp2_dislocation_momentum_priority",
+    "hp2_dislocation_momentum_watch",
+    "hp3_large_quality_theme_exception",
+    "hp4_score_reacceleration_watch",
+    "hp_production_extension",
+    "hp_research_extension",
+    "hp1_LLM_best",
+    "hp2_LLM_best",
+    "hp2_watch_LLM_best",
+    "hp3_theme_confirmed",
+    "hp4_LLM_supported",
+    "hp_LLM_best",
+)
+
+_RM_FIELDS = (
+    "rm1_low_price_dislocation_momentum",
+    "rm2_weak_acceleration",
+    "rm3_mid_price_dislocation_momentum",
+    "rm4_persistent_repricing_wave",
+    "repricing_momentum_priority",
+    "repricing_momentum_extension",
+    "rm_buy_review_flag",
+)
+
+_PRE_LLM_CANDIDATE_FIELDS = (
+    "tier_1_bucket",
+    "tier_2_bucket",
+    "tier_3_bucket",
+    "tier_4_bucket",
+    "hp_production_extension",
+    "hp_research_extension",
+    "repricing_momentum_extension",
+)
+
+
+def _derive_pre_llm_flags(row: dict[str, str]) -> dict[str, str]:
+    out = dict(row)
+    out["tier_0_to_4_any_flag"] = _derived_flag(out, _TIER_0_TO_4_FIELDS)
+    out["tier_1_to_4_any_flag"] = _derived_flag(out, _TIER_1_TO_4_FIELDS)
+    out["hp_any_flag"] = _derived_flag(out, _HP_FIELDS)
+    out["rm_any_flag"] = _derived_flag(out, _RM_FIELDS)
+    out["pre_llm_candidate_flag"] = _derived_flag(out, _PRE_LLM_CANDIDATE_FIELDS)
+    return out
+
+
+def _derived_flag(row: dict[str, str], fields: tuple[str, ...]) -> str:
+    return "1" if any(_truthy_marker(row.get(field)) for field in fields) else "0"
+
+
+def _truthy_marker(value: Any) -> bool:
+    if _is_blank(value):
+        return False
+    cleaned = str(value).strip().lower()
+    return cleaned not in {"0", "0.0", "false", "no", "n", "none", "null"}
 
 
 def _complete_schema_row(row: dict[str, str]) -> dict[str, str]:

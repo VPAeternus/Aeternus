@@ -46,6 +46,42 @@ def test_normalize_converts_label_values_in_flag_fields_to_one():
     assert out[0]["extended_candidate_universe"] == "1"
 
 
+def test_normalize_derives_pre_llm_and_aggregate_flags():
+    rows = [
+        {
+            "ticker": "T1",
+            "quarter": "2026Q2",
+            "tier_1_bucket": "Tier 1 - Balanced priority feed",
+            "hp1_quality_pullback": "1",
+            "repricing_momentum_extension": "1",
+        },
+        {
+            "ticker": "HPX",
+            "quarter": "2026Q2",
+            "hp_production_extension": "1",
+        },
+        {
+            "ticker": "T0",
+            "quarter": "2026Q2",
+            "tier_0_bucket": "Tier 0 - Broad right-tail scouting universe",
+            "hp0_high_price_broad": "1",
+        },
+    ]
+    out, _ = normalize_complete_panel_rows(rows, source_name="daily_final_scores")
+    by_ticker = {row["ticker"]: row for row in out}
+
+    assert by_ticker["T1"]["pre_llm_candidate_flag"] == "1"
+    assert by_ticker["T1"]["tier_0_to_4_any_flag"] == "1"
+    assert by_ticker["T1"]["tier_1_to_4_any_flag"] == "1"
+    assert by_ticker["T1"]["hp_any_flag"] == "1"
+    assert by_ticker["T1"]["rm_any_flag"] == "1"
+    assert by_ticker["HPX"]["pre_llm_candidate_flag"] == "1"
+    assert by_ticker["T0"]["pre_llm_candidate_flag"] == "0"
+    assert by_ticker["T0"]["tier_0_to_4_any_flag"] == "1"
+    assert by_ticker["T0"]["tier_1_to_4_any_flag"] == "0"
+    assert by_ticker["T0"]["hp_any_flag"] == "1"
+
+
 def test_normalize_returns_complete_schema_rows_without_mutating_input():
     rows = [{"ticker": "ccc", "quarter": "2026Q2", "entry_score_0_100": "88"}]
     out, summary = normalize_complete_panel_rows(
