@@ -29,6 +29,9 @@ Files:
 - `final_to_complete_consistency.csv`: final-score to complete-panel consistency
 - `artifact_hashes.csv`: SHA-256 hashes for local large artifacts
 - `commands.md`: run and validation command record
+- `master_v2_column_audit.csv`: every PIT master v2 column, blank count, sample values, and keep/drop reason
+- `master_v2_column_audit_summary.json`: compact blank-column audit summary
+- `master_v2_column_audit.md`: human-readable column audit summary
 
 Large artifacts remain local and are zipped separately under `outputs/review_bundles/`.
 
@@ -36,3 +39,4 @@ Blank-column cleanup:
 - PIT master v2 now enriches useful LLM audit fields from per-quarter post-LLM/packet files before export.
 - Columns still 100% blank after enrichment are removed from the CSV.
 - Removed-column list is in `master_blank_column_audit.csv`.
+- Current full-column audit shows `0` fully blank columns in `fundamental_pit_master_v2.csv`.
