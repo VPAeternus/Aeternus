@@ -1,158 +1,165 @@
 {
-  "blank_columns_removed_count": 110,
-  "column_count": 424,
-  "generated_at_utc": "2026-05-19T11:00:21.326317+00:00",
-  "llm_enrichment_counts": {
-    "blocking_issues": 815,
-    "causal_change": 1897,
-    "confidence": 1897,
-    "detected_driver_category": 7040,
-    "detected_driver_name": 7029,
-    "durability": 1897,
-    "event_date": 7040,
-    "evidence_positive": 1881,
-    "evidence_risk": 1896,
-    "llm_model": 7302,
-    "llm_output_hash": 7040,
-    "llm_prompt_input_allowed_docs_only": 7040,
-    "llm_prompt_input_hash": 7040,
-    "llm_source_accessions": 7040,
-    "llm_source_available_date": 7302,
-    "llm_source_document_dates": 7302,
-    "narrative_delta_bucket": 1897,
-    "narrative_delta_score": 7040,
-    "negative_revision_risk": 1897,
-    "operating_leverage_quality": 1897,
-    "post_llm_demote_evidence": 905,
-    "post_llm_demote_reason_code": 904,
-    "primary_theme": 1862,
-    "proof_alignment": 1897,
-    "reasoning_effort": 7302,
-    "sample_id": 1897,
-    "score_addition": 7040,
-    "secondary_themes": 1897,
-    "source_packet_path": 7302,
-    "story_vs_numbers_gap_penalty": 1897,
-    "theme_acceleration_score": 1897,
-    "theme_confidence": 1897,
-    "theme_driver_summary": 1861,
-    "theme_driver_type": 1897,
-    "theme_evidence": 1897,
-    "theme_evidence_summary": 1862,
-    "theme_momentum": 1897,
-    "theme_role": 1897,
-    "theme_tags": 1897
-  },
-  "llm_enrichment_source_counts": {
-    "post_llm_scores": 107584
-  },
+  "blank_columns_removed_count": 126,
+  "column_count": 408,
+  "generated_at_utc": "2026-05-19T12:38:26.958125+00:00",
   "output_csv": "outputs/fundamental_backtest/pit_master/fundamental_pit_master_v2.csv",
-  "output_sha256": "be973c75d1ef15eca3680ff056088d4e354795a98773dee7f9d58aaeb00f789b",
-  "row_count": 17651,
+  "output_sha256": "59b13b2b55b9e86973d4bd74f34da370b1a4dc8064e55b1e4747ddc651721380",
+  "row_count": 17642,
   "schema_version": "fundamental_pit_master_v2",
-  "size_bytes": 237007160,
+  "size_bytes": 231231588,
   "source_quarters": [
     {
       "as_of": "2022-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2022-06-30/2022Q2/walkforward_pit_v2_fix2/complete_panel/fundamental_complete_prellm_to_top15_2022Q2.csv",
+      "panel_sha256": "7e8883fedd7091cda6e400d04b8dbc0a8fc77fe45f1e3d9d4c360845d0711e8f",
       "quarter": "2022Q2",
       "role": "bootstrap_prior",
+      "row_count": 1009,
       "run_root": "tradingagents/research/fundamental/runs/2022-06-30/2022Q2/walkforward_pit_v2_fix2"
     },
     {
       "as_of": "2022-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2022-09-30/2022Q3/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2022Q3.csv",
+      "panel_sha256": "a245d0132d0108299c9b064c888a43e46fbed07efab862c4e5798cdb62f29bd3",
       "quarter": "2022Q3",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2022-09-30/2022Q3/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1014,
+      "run_root": "tradingagents/research/fundamental/runs/2022-09-30/2022Q3/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2022-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2022-12-31/2022Q4/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2022Q4.csv",
+      "panel_sha256": "4d0f74236160e6dd95d18beba6831ea21c4736dda1c8b89902734de089214cec",
       "quarter": "2022Q4",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2022-12-31/2022Q4/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1026,
+      "run_root": "tradingagents/research/fundamental/runs/2022-12-31/2022Q4/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2023-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-03-31/2023Q1/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2023Q1.csv",
+      "panel_sha256": "305cfafe45d96ea4b87c13f03a1b721029b447835dc041224bdd20ec66ce1025",
       "quarter": "2023Q1",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2023-03-31/2023Q1/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 975,
+      "run_root": "tradingagents/research/fundamental/runs/2023-03-31/2023Q1/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2023-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-06-30/2023Q2/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2023Q2.csv",
+      "panel_sha256": "a10fd36f89ceb5bd322744f4d65aba3728f81bc8f175ef1b17509a7974fbf16c",
       "quarter": "2023Q2",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2023-06-30/2023Q2/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1030,
+      "run_root": "tradingagents/research/fundamental/runs/2023-06-30/2023Q2/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2023-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-09-30/2023Q3/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2023Q3.csv",
+      "panel_sha256": "a48cd4e797e2d990e45a232ea478f26e5ed4d502fe1a310886a33dcb59179842",
       "quarter": "2023Q3",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2023-09-30/2023Q3/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1031,
+      "run_root": "tradingagents/research/fundamental/runs/2023-09-30/2023Q3/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2023-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-12-31/2023Q4/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2023Q4.csv",
+      "panel_sha256": "d44bb4e58ff70c38c34365259cad387e63992e7d5cf188a3875cdd29438a16cc",
       "quarter": "2023Q4",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2023-12-31/2023Q4/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1042,
+      "run_root": "tradingagents/research/fundamental/runs/2023-12-31/2023Q4/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2024-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-03-31/2024Q1/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2024Q1.csv",
+      "panel_sha256": "a67cfb895ed76808904a0cf45f5af8a6448b3e0e33fdb8c2b410f58d06e65e40",
       "quarter": "2024Q1",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2024-03-31/2024Q1/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1014,
+      "run_root": "tradingagents/research/fundamental/runs/2024-03-31/2024Q1/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2024-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-06-30/2024Q2/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2024Q2.csv",
+      "panel_sha256": "d0510cf981c42aa16acaeb952d5305e85407b9d5f222ad7c198db9905f0d4047",
       "quarter": "2024Q2",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2024-06-30/2024Q2/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1059,
+      "run_root": "tradingagents/research/fundamental/runs/2024-06-30/2024Q2/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2024-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-09-30/2024Q3/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2024Q3.csv",
+      "panel_sha256": "cb9a6a6d2ced910ae1ed549bec30689bab4ef085eb15834dec6d807c648e2f5e",
       "quarter": "2024Q3",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2024-09-30/2024Q3/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1064,
+      "run_root": "tradingagents/research/fundamental/runs/2024-09-30/2024Q3/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2024-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-12-31/2024Q4/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2024Q4.csv",
+      "panel_sha256": "d2b748b6c137f2babefa8c3e8ed0ff715401fe615210119612a45255d44f37c4",
       "quarter": "2024Q4",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2024-12-31/2024Q4/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1063,
+      "run_root": "tradingagents/research/fundamental/runs/2024-12-31/2024Q4/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2025-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-03-31/2025Q1/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2025Q1.csv",
+      "panel_sha256": "b63d6ecacbab54d0ca6b3f3e6037e4a61bdb2e4f2dc9cf61e4f767eb298f41be",
       "quarter": "2025Q1",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2025-03-31/2025Q1/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1006,
+      "run_root": "tradingagents/research/fundamental/runs/2025-03-31/2025Q1/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2025-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-06-30/2025Q2/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2025Q2.csv",
+      "panel_sha256": "8a389c59c9b12422de58b3fa49e820b097d6c6fbb1c5c9d229b108683bd4f5e8",
       "quarter": "2025Q2",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2025-06-30/2025Q2/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1054,
+      "run_root": "tradingagents/research/fundamental/runs/2025-06-30/2025Q2/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2025-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-09-30/2025Q3/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2025Q3.csv",
+      "panel_sha256": "62fca74d2a1a7f9befdc5445f207e4eb3ba40b000cd7df08572e50ecbada4c9e",
       "quarter": "2025Q3",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2025-09-30/2025Q3/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1068,
+      "run_root": "tradingagents/research/fundamental/runs/2025-09-30/2025Q3/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2025-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-12-31/2025Q4/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2025Q4.csv",
+      "panel_sha256": "766f19b5e546f5cd36a81857f6d093ba79da1f342a468056de7fdc5be172d732",
       "quarter": "2025Q4",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2025-12-31/2025Q4/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1065,
+      "run_root": "tradingagents/research/fundamental/runs/2025-12-31/2025Q4/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2026-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2026Q1.csv",
+      "panel_sha256": "f5d9d109c2845c350fedc40a16acac94976af921d938eb55df1103d7ddf831f4",
       "quarter": "2026Q1",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1019,
+      "run_root": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/walkforward_pit_v2_periodfix_20260519"
     },
     {
       "as_of": "2026-05-15",
+      "panel_csv": "tradingagents/research/fundamental/runs/2026-05-15/2026Q2/walkforward_pit_v2_periodfix_20260519/complete_panel/fundamental_complete_prellm_to_top15_2026Q2.csv",
+      "panel_sha256": "8ca7bc09554a203fe521e9649cf9634aeb5d856cb7c3568e38134e50b4b4e9bc",
       "quarter": "2026Q2",
       "role": "walkforward",
-      "run_root": "tradingagents/research/fundamental/runs/2026-05-15/2026Q2/walkforward_pit_v2_rebuild_20260518"
+      "row_count": 1103,
+      "run_root": "tradingagents/research/fundamental/runs/2026-05-15/2026Q2/walkforward_pit_v2_periodfix_20260519"
     }
   ]
 }

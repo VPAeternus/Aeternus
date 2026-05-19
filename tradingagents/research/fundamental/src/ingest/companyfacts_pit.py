@@ -67,7 +67,10 @@ def _select_field(companyfacts: dict[str, Any], row: dict[str, Any], field: str)
     cutoff = _parse_date(row.get("financial_cutoff_date") or row.get("source_available_date"))
     target_end = _parse_date(row.get("target_period_end"))
     periodic_accession = normalize_accession(row.get("periodic_accession"))
-    exact_required = bool(periodic_accession and _truthy(row.get("score_producing_flag")))
+    score_producing = _truthy(row.get("score_producing_flag"))
+    if score_producing and target_end is None:
+        return _empty_field(field, "missing_target_period_end")
+    exact_required = bool(periodic_accession and score_producing)
 
     all_items = [
         item for item in _iter_fact_items(companyfacts, concepts)
@@ -90,6 +93,8 @@ def _select_field(companyfacts: dict[str, Any], row: dict[str, Any], field: str)
 
     if field in INSTANT_FIELDS:
         target_items = [item for item in consolidated if _is_target_period(item, target_end)] if target_end else []
+        if target_end and not target_items:
+            return _empty_field(field, "missing_target_period_fact")
         return _selected(field, _prefer_usd_best_by_end(target_items or consolidated), "instant", "selected_instant_fact")
 
     direct = [item for item in consolidated if _is_target_period(item, target_end) and _is_quarter_duration(item)]

@@ -2,17 +2,17 @@
   "bundle_dir": "/Users/aeternusholdings/Documents/Aeternus/outputs/review_bundles/pit_walkforward_review_20260519",
   "bundle_file_hashes_inside_zip": "pit_walkforward_review_20260519/bundle_file_hashes.csv",
   "contents": [
-    "docs/pit_walkforward_review proof bundle including full column audit",
+    "docs/pit_walkforward_review proof bundle with periodfix audit",
     "fundamental_pit_master_v2 CSV and sidecars",
-    "per-quarter final/complete-panel/top15/shadow/gate/readiness/reconciliation artifacts",
-    "LLM packet/post-LLM files when present",
-    "sampled SEC CompanyFacts, SEC ticker map, and price cache samples"
+    "per-quarter periodfix final/complete-panel/top15/shadow/gate/readiness/reconciliation artifacts",
+    "LLM packet/post-LLM source files",
+    "sampled SEC CompanyFacts, SEC ticker map, and price cache samples when present"
   ],
-  "generated_at_utc": "2026-05-19T11:10:56.944796+00:00",
+  "generated_at_utc": "2026-05-19T12:43:42.500080+00:00",
   "manifest_excluded_from_zip": true,
   "manifest_exclusion_reason": "Avoid circular zip hash; committed manifest records final zip hash.",
-  "range": "2022Q2 bootstrap prior plus 2022Q3-2026Q2 walkforward",
+  "range": "2022Q2 bootstrap prior plus 2022Q3-2026Q2 periodfix walkforward",
   "zip_path": "/Users/aeternusholdings/Documents/Aeternus/outputs/review_bundles/pit_walkforward_review_20260519.zip",
-  "zip_sha256": "2502e7a54fb80ba6545e8a400e193561eab9eafe4a07cbe511ff85c714a6d60d",
-  "zip_size_bytes": 75220516
+  "zip_sha256": "ad5707b0126fb6ec90554e8ca0e86115583f1d765afe5f1e85f6b90d2335e241",
+  "zip_size_bytes": 69322252
 }

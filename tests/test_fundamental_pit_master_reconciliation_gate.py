@@ -13,6 +13,10 @@ def _base_row(**extra):
         "decision_date": "2026-05-10",
         "source_available_date": "2026-05-10",
         "target_period_end": "2026-03-31",
+        "fiscal_period_start": "2026-01-01",
+        "fiscal_period_end": "2026-03-31",
+        "period_context_source": "companyfacts_accession",
+        "period_context_missing_reason": "",
         "periodic_accession": "0000000000-26-000001",
         "entry_open_date": "2026-05-11",
         "entry_open": "10",
@@ -62,6 +66,34 @@ def test_reconciliation_gate_fails_wrong_accession():
     )
 
     assert "blocking_wrong_accession" in _codes(result)
+
+
+def test_reconciliation_gate_fails_missing_period_context_for_accepted_score_row():
+    result = validate_pit_master_rows(
+        [
+            _base_row(
+                target_period_end="",
+                fiscal_period_start="",
+                fiscal_period_end="",
+                period_context_source="",
+                period_context_missing_reason="ambiguous_period_context",
+            )
+        ]
+    )
+
+    assert "blocking_missing_target_period_end" in _codes(result)
+    assert "blocking_missing_fiscal_period_start" in _codes(result)
+    assert "blocking_missing_fiscal_period_end" in _codes(result)
+    assert "blocking_missing_period_context_source" in _codes(result)
+    assert "blocking_period_context_missing_reason_present" in _codes(result)
+
+
+def test_reconciliation_gate_fails_fact_end_before_target_period():
+    result = validate_pit_master_rows(
+        [_base_row(assets_value_fact_end="2025-03-31")]
+    )
+
+    assert "blocking_fact_end_not_target_period" in _codes(result)
 
 
 def test_reconciliation_gate_fails_post_score_rewrite_and_tradable_mismatch():

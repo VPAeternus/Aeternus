@@ -226,6 +226,44 @@ def test_instant_fact_uses_target_period_not_comparative_balance_sheet():
     assert selected["assets_value_fact_end"] == "2022-01-01"
 
 
+def test_instant_fact_rejects_comparative_balance_sheet_when_target_missing():
+    companyfacts = _facts(
+        {
+            "Assets": {
+                "USD": [
+                    _fact(end="2021-06-30", filed="2022-08-01", val=900),
+                ]
+            }
+        }
+    )
+
+    selected = select_pit_financials(
+        companyfacts,
+        _row(target_period_end=""),
+        fields=["assets_value"],
+    )
+
+    assert selected["assets_value"] == ""
+    assert selected["assets_value_fact_missing_reason"] == "missing_target_period_end"
+
+
+def test_instant_fact_rejects_comparative_balance_sheet_when_target_exists():
+    companyfacts = _facts(
+        {
+            "Assets": {
+                "USD": [
+                    _fact(end="2021-06-30", filed="2022-08-01", val=900),
+                ]
+            }
+        }
+    )
+
+    selected = select_pit_financials(companyfacts, _row(), fields=["assets_value"])
+
+    assert selected["assets_value"] == ""
+    assert selected["assets_value_fact_missing_reason"] == "missing_target_period_fact"
+
+
 def test_ytd_derivation_rejects_future_prior_ytd():
     companyfacts = _facts(
         {

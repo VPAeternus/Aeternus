@@ -63,15 +63,29 @@ def _check_row(row: Mapping[str, Any], index: int, errors: list[dict[str, Any]],
     decision_date = _date(row.get("decision_date"))
     source_available = _date(row.get("source_available_date") or row.get("decision_date"))
     target_end = _date(row.get("target_period_end"))
+    strict_score_row = _strict_score_row(row)
 
     _require(row, index, "decision_date_rule", "blocking_missing_decision_date_rule", errors)
     _require(row, index, "entry_open_date", "blocking_missing_entry_open_date", errors)
     _require(row, index, "entry_open", "blocking_missing_entry_open", errors)
+    if strict_score_row:
+        _require(row, index, "target_period_end", "blocking_missing_target_period_end", errors)
+        _require(row, index, "fiscal_period_start", "blocking_missing_fiscal_period_start", errors)
+        _require(row, index, "fiscal_period_end", "blocking_missing_fiscal_period_end", errors)
+        _require(row, index, "period_context_source", "blocking_missing_period_context_source", errors)
+        if not _blank(row.get("period_context_missing_reason")):
+            _error(
+                errors,
+                row,
+                index,
+                "blocking_period_context_missing_reason_present",
+                reason=row.get("period_context_missing_reason", ""),
+            )
     if _clean(row.get("tradable_date")) and _clean(row.get("entry_open_date")) and _clean(row.get("tradable_date")) != _clean(row.get("entry_open_date")):
         _error(errors, row, index, "blocking_tradable_date_mismatch", field="tradable_date")
     _check_entry_gap(row, index, errors)
     _check_price_basis(row, index, errors)
-    _check_financials(row, index, source_available, target_end, errors)
+    _check_financials(row, index, source_available, target_end, errors, strict_score_row=strict_score_row)
     _check_score_recompute(row, index, errors)
     _check_llm(row, index, decision_date, errors)
     _check_theme(row, index, decision_date, errors)
@@ -84,6 +98,8 @@ def _check_financials(
     source_available: str,
     target_end: str,
     errors: list[dict[str, Any]],
+    *,
+    strict_score_row: bool,
 ) -> None:
     required_accession = normalize_accession(row.get("periodic_accession"))
     for field in FINANCIAL_FIELDS:
@@ -100,6 +116,8 @@ def _check_financials(
             _error(errors, row, index, "blocking_future_fact_leakage", field=field, fact_filed=filed, source_available_date=source_available)
         if target_end and end > target_end:
             _error(errors, row, index, "blocking_future_period_fact", field=field, fact_end=end, target_period_end=target_end)
+        if strict_score_row and target_end and end != target_end:
+            _error(errors, row, index, "blocking_fact_end_not_target_period", field=field, fact_end=end, target_period_end=target_end)
         if required_accession and accession != required_accession:
             _error(errors, row, index, "blocking_wrong_accession", field=field)
         if _clean(row.get(f"{field}_fact_is_consolidated")) not in {"1", "true", "True"}:
@@ -161,6 +179,14 @@ def _check_selection_columns(row: Mapping[str, Any], index: int, errors: list[di
 def _require(row: Mapping[str, Any], index: int, field: str, code: str, errors: list[dict[str, Any]]) -> None:
     if _blank(row.get(field)):
         _error(errors, row, index, code, field=field)
+
+
+def _strict_score_row(row: Mapping[str, Any]) -> bool:
+    return (
+        _truthy(row.get("score_producing_flag"))
+        and _truthy(row.get("accepted_row_flag"))
+        and not _truthy(row.get("diagnostic_only_flag"))
+    )
 
 
 def _error(errors: list[dict[str, Any]], row: Mapping[str, Any], index: int, code: str, **extra: Any) -> None:
