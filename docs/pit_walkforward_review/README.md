@@ -31,3 +31,8 @@ Files:
 - `commands.md`: run and validation command record
 
 Large artifacts remain local and are zipped separately under `outputs/review_bundles/`.
+
+Blank-column cleanup:
+- PIT master v2 now enriches useful LLM audit fields from per-quarter post-LLM/packet files before export.
+- Columns still 100% blank after enrichment are removed from the CSV.
+- Removed-column list is in `master_blank_column_audit.csv`.
