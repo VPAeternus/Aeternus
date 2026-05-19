@@ -1,0 +1,131 @@
+{
+  "column_count": 534,
+  "generated_at_utc": "2026-05-19T10:39:00.724788+00:00",
+  "output_csv": "outputs/fundamental_backtest/pit_master/fundamental_pit_master_v2.csv",
+  "output_sha256": "2e7a2e42bb2fc58d05dcf35050d93e2187b35627b2cd441330b50c63899d3bd9",
+  "row_count": 17651,
+  "schema_version": "fundamental_pit_master_v2",
+  "size_bytes": 233436995,
+  "source_panel_count": 17,
+  "source_quarters": [
+    {
+      "as_of": "2022-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2022-06-30/2022Q2/walkforward_pit_v2_fix2/complete_panel/fundamental_complete_prellm_to_top15_2022Q2.csv",
+      "panel_sha256": "7e8883fedd7091cda6e400d04b8dbc0a8fc77fe45f1e3d9d4c360845d0711e8f",
+      "quarter": "2022Q2",
+      "role": "bootstrap_prior"
+    },
+    {
+      "as_of": "2022-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2022-09-30/2022Q3/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2022Q3.csv",
+      "panel_sha256": "3cda200bc8f95371b24687d8fe00cf36ff18b0f386cedc8c2b6f2ef162514928",
+      "quarter": "2022Q3",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2022-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2022-12-31/2022Q4/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2022Q4.csv",
+      "panel_sha256": "269eaf66193c13cf3f9fc8e7c51f6dcacf254c9e33ce4fef389056a6b7be70b8",
+      "quarter": "2022Q4",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2023-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-03-31/2023Q1/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2023Q1.csv",
+      "panel_sha256": "38425972ed8444b21fb3eb5d83d4eb723c558c777686008c29c3afef42c62de3",
+      "quarter": "2023Q1",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2023-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-06-30/2023Q2/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2023Q2.csv",
+      "panel_sha256": "e1d5fba41ab7e8f6990840f699850ef5b0790da281cadb791c10923b8dc340ff",
+      "quarter": "2023Q2",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2023-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-09-30/2023Q3/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2023Q3.csv",
+      "panel_sha256": "16fd556acc214ec821d885ed175ca38d55de8124b570f8049ba87d039c5e902d",
+      "quarter": "2023Q3",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2023-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2023-12-31/2023Q4/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2023Q4.csv",
+      "panel_sha256": "bc3fdd0b2893f6dfa72cb0fff05095b29e235ffce9cbc4674a181154963c76fa",
+      "quarter": "2023Q4",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2024-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-03-31/2024Q1/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2024Q1.csv",
+      "panel_sha256": "0995672d5be8d068591b148e31222e0d5942c1aba258f982331b14b280790e82",
+      "quarter": "2024Q1",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2024-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-06-30/2024Q2/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2024Q2.csv",
+      "panel_sha256": "706b93a77c21cac338772806ff4e4d7074e8ddfd6003158c88cf6a2920c1959b",
+      "quarter": "2024Q2",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2024-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-09-30/2024Q3/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2024Q3.csv",
+      "panel_sha256": "e664f6332915b1f42ae840638a891e9fe76a54b53552919997b315e09af91c66",
+      "quarter": "2024Q3",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2024-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2024-12-31/2024Q4/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2024Q4.csv",
+      "panel_sha256": "2bc090684282261cbabc12ce40d5ecd3f7320169f21c8afe82f65131e9bc25dc",
+      "quarter": "2024Q4",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2025-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-03-31/2025Q1/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2025Q1.csv",
+      "panel_sha256": "dd97bf436511899fe915fcea12eab9dfbb7c9a1766c4bdb36c1948f8c11cd404",
+      "quarter": "2025Q1",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2025-06-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-06-30/2025Q2/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2025Q2.csv",
+      "panel_sha256": "4cbe5e370b864b31711bd67f99998e633da9fee1a49ceb36c18a711addd408ff",
+      "quarter": "2025Q2",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2025-09-30",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-09-30/2025Q3/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2025Q3.csv",
+      "panel_sha256": "ec7842f50fb5b975d4db32825940ee4d59ca8e373c67e7c65325485b20470fcf",
+      "quarter": "2025Q3",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2025-12-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2025-12-31/2025Q4/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2025Q4.csv",
+      "panel_sha256": "8641679d78fa830b12b041c93b17e6b09d9c2108f1e2860957f7823751bb0113",
+      "quarter": "2025Q4",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2026-03-31",
+      "panel_csv": "tradingagents/research/fundamental/runs/2026-03-31/2026Q1/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2026Q1.csv",
+      "panel_sha256": "3004fb99635c4559c78623940ae807f88bafe6c6a63a128a554a8ef3cfda7ec6",
+      "quarter": "2026Q1",
+      "role": "walkforward"
+    },
+    {
+      "as_of": "2026-05-15",
+      "panel_csv": "tradingagents/research/fundamental/runs/2026-05-15/2026Q2/walkforward_pit_v2_rebuild_20260518/complete_panel/fundamental_complete_prellm_to_top15_2026Q2.csv",
+      "panel_sha256": "956247f85fa86469534021f94737cd2190ed5886ef7eb2fd4e06829c123c6f6a",
+      "quarter": "2026Q2",
+      "role": "walkforward"
+    }
+  ]
+}

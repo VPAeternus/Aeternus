@@ -3136,7 +3136,15 @@
   - LLM output rows may be returned in a different order than packets, so batch validation now matches by `sample_id`.
   - Reruns must not blindly reuse stale `batch_*.json` files or assemble output CSVs by scanning stale batch folders; in-session/external runners now write exactly validated returned rows.
 - Verification: focused PIT/daily/LLM suite `77 passed`; `git diff --check` passed.
-- Status: code/run changes uncommitted unless user asks to commit.
+- Committed and pushed code fixes on `main`: `9d9b78d5 fix(fundamental): harden PIT walkforward rebuild`.
+- GPT Pro audit bundle generated:
+  - small committed proof bundle: `docs/pit_walkforward_review/`
+  - final PIT master sidecars: `outputs/fundamental_backtest/pit_master/fundamental_pit_master_v2_{manifest,columns,validation,reconciliation_status}.json`
+  - local large PIT master CSV: `outputs/fundamental_backtest/pit_master/fundamental_pit_master_v2.csv`
+  - local upload zip: `outputs/review_bundles/pit_walkforward_review_20260519.zip`
+- Upload zip SHA-256: `0d91ab9f1c66bce326e48f8d32dda9b0d5c8f4544c1a024ee98a669fb55ebb03`.
+- Zip contents: proof bundle, PIT master v2 CSV/sidecars, per-quarter final/complete/top15/shadow/gates/readiness/reconciliation artifacts, LLM packets/post-LLM files where present, sampled SEC CompanyFacts/ticker map/price cache files.
+- Proof bundle validation passed locally; large CSV/zip intentionally remain uncommitted.
 
 ## Current fundamental 2026Q2 focus run
 
