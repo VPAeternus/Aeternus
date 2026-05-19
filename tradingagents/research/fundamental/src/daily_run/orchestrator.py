@@ -17,7 +17,7 @@ from tradingagents.research.fundamental.src.features.post_llm_scores import REQU
 from .artifacts import write_csv, write_json_atomic, write_text_atomic
 from .coverage import coverage_gate_result, load_raw_documents_from_coverage, materialize_alias_documents_from_queue, normalize_coverage_summary, run_sec_coverage_manifest, run_sec_fetch_once
 from .eligibility import assign_daily_tiers, build_llm_eligibility, build_tier_filtered_llm_packets
-from .finalize import QOQ_REQUIRED_FIELDS, add_qoq_context, build_final_scores, load_prior_context, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
+from .finalize import QOQ_REQUIRED_FIELDS, add_qoq_context, build_final_scores, load_prior_context, load_prior_context_unavailable_tickers, publish_top15_and_shadow, validate_broad_final_scores, write_final_scores_csv
 from .llm_validation import validate_post_llm_csv
 from .identity import IdentityResolution, load_sec_ticker_rows, resolve_ticker_identity
 from .master_source import ADDITIONS_LEDGER, append_master_additions, materialize_master_universe
@@ -221,6 +221,7 @@ def _write_publish_readiness_summary(state: DailyRunState, *, final: bool, stopp
     publish_summary = publish_gate.summary if publish_gate else {}
     llm_eligible_count = int(tier_summary.get("llm_eligible_count") or 0)
     qoq_missing_count = int(final_summary.get("llm_complete_qoq_missing_rows") or 0)
+    qoq_allowed_missing_count = int(final_summary.get("llm_complete_qoq_allowed_missing_rows") or 0)
     prior_missing_count = int(final_summary.get("prior_llm_extract_missing_for_final_count") or 0)
     qoq_context_match_rows = _qoq_match_rows_for_readiness(final_summary, tier_summary)
     prior_context_loaded = bool(final_summary.get("prior_context_loaded"))
@@ -231,7 +232,7 @@ def _write_publish_readiness_summary(state: DailyRunState, *, final: bool, stopp
         and prior_context_loaded
         and prior_duplicate_count == 0
         and expected_prior_context_rows > 0
-        and qoq_context_match_rows >= llm_eligible_count
+        and qoq_context_match_rows + qoq_allowed_missing_count >= llm_eligible_count
         and qoq_missing_count == 0
         and prior_missing_count == 0
     )
@@ -257,6 +258,7 @@ def _write_publish_readiness_summary(state: DailyRunState, *, final: bool, stopp
         "prior_duplicate_key_count": prior_duplicate_count,
         "qoq_context_match_rows": qoq_context_match_rows,
         "qoq_missing_count": qoq_missing_count,
+        "qoq_allowed_missing_count": qoq_allowed_missing_count,
         "prior_llm_missing_for_final_count": prior_missing_count,
         "top15_emitted": top15_emitted,
         "top15_selected_count": int(publish_summary.get("top15_selected_count") or 0),
@@ -1392,6 +1394,8 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
         _record(state, GateResult(6, "Trade date, price, and entry-open", price_status, {**price_summary, **daily_price_summary, **score_input_summary, "tier_input_rows": len(score_ready_rows), "reason": "price_quarantine_recorded" if price_quarantine else ""}, {"entry_price_quarantine": str(price_q_path), "score_input_quarantine": str(score_q_path), **daily_price_artifacts}))
 
         prior_rows, prior_summary = load_prior_context(config.prior_context_path, current_quarter=config.quarter)
+        prior_context_unavailable_tickers, prior_unavailable_summary = load_prior_context_unavailable_tickers(config.prior_context_path, current_quarter=config.quarter)
+        prior_summary.update(prior_unavailable_summary)
         tier_input_rows = score_ready_rows
         pre_tier_qoq_summary: dict[str, Any] = {
             "pre_tier_qoq_context_loaded": bool(prior_summary.get("prior_context_loaded")),
@@ -1615,12 +1619,13 @@ def run_daily_fundamental(config: DailyRunConfig, services: DailyRunServices | N
                 ),
             )
         prior_impossible_tickers = sorted({_ticker(row.get("ticker")) for row in prior_recovery_impossible})
+        allowed_missing_qoq_tickers = set(prior_impossible_tickers) | set(prior_context_unavailable_tickers)
         final_rows, final_summary = build_final_scores(
             tiered_rows,
             as_of=config.as_of,
             post_llm_rows=post_rows,
             prior_context_rows=prior_rows_for_final,
-            allowed_missing_qoq_tickers=set(prior_impossible_tickers),
+            allowed_missing_qoq_tickers=allowed_missing_qoq_tickers,
         )
         final_summary["llm_eligible_qoq_context_match_rows"] = _qoq_match_count(
             [row for row in final_rows if clean(row.get("llm_status")) == "complete"]

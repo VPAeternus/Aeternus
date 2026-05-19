@@ -572,7 +572,7 @@ def _run_in_session_llm(
     batch_size: int,
     shared_cache_csv: Path | None = None,
 ) -> Path:
-    from tradingagents.research.fundamental.src.features.llm_extraction import read_packets, run_llm_batches, write_consolidated_csv
+    from tradingagents.research.fundamental.src.features.llm_extraction import read_packets, run_llm_batches, write_post_llm_csv
     from tradingagents.research.fundamental.src.storage import add_run_lineage, make_pipeline_run_id, source_file_hash, write_table
 
     packets = read_packets(packets_path)
@@ -585,7 +585,7 @@ def _run_in_session_llm(
         resume=True,
         shared_cache_csv=shared_cache_csv,
     )
-    write_consolidated_csv(output_dir, output_csv)
+    write_post_llm_csv(rows, output_csv)
     lineage = add_run_lineage(rows, pipeline_run_id=make_pipeline_run_id("llm"), as_of_date=as_of, source_hash=source_file_hash(packets_path))
     write_table(lake_root, "post_llm_scores", lineage)
     return output_csv

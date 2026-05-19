@@ -1,4 +1,4 @@
-from tradingagents.research.fundamental.src.daily_run.finalize import build_final_scores, publish_top15_and_shadow, validate_broad_final_scores
+from tradingagents.research.fundamental.src.daily_run.finalize import build_final_scores, load_prior_context_unavailable_tickers, publish_top15_and_shadow, validate_broad_final_scores
 from tradingagents.research.fundamental.src.daily_run.models import GateStatus, RunMode
 
 
@@ -84,6 +84,30 @@ def test_validate_broad_final_scores_allows_qoq_missing_when_prior_filing_imposs
     assert gate.status == GateStatus.PASS
     assert gate.summary["llm_complete_qoq_missing_rows"] == 0
     assert gate.summary["llm_complete_qoq_allowed_missing_tickers"] == ["AAA"]
+
+
+def test_validate_broad_final_scores_allows_qoq_missing_when_prior_row_was_quarantined():
+    rows = [{"ticker": "AAA", "llm_status": "complete", "entry_qoq_pct": "", "score_change": "", "prior_pre_llm_fundamental_score": ""}]
+    prior = {**_valid_prior_summary(), "prior_context_unavailable_tickers": ["AAA"]}
+    gate = validate_broad_final_scores(final_rows=rows, broad_universe_count=1, explicit_invalid_quarantine_count=0, run_mode=RunMode.BROAD_MASTER_FINAL, artifacts={}, prior_context_summary=prior)
+    assert gate.status == GateStatus.PASS
+    assert gate.summary["llm_complete_qoq_missing_rows"] == 0
+    assert gate.summary["llm_complete_qoq_allowed_missing_tickers"] == ["AAA"]
+
+
+def test_load_prior_context_unavailable_tickers_reads_prior_quarantine_files(tmp_path):
+    prior_scores = tmp_path / "fundamental_final_scores_2022-06-30.csv"
+    prior_scores.write_text("ticker,quarter\nBBB,2022Q1\n", encoding="utf-8")
+    (tmp_path / "score_input_quarantine.csv").write_text(
+        "ticker,quarter,score_input_quarantine_reason\nAAA,2022Q1,missing_fundamental_score_inputs\nCCC,2021Q4,missing_fundamental_score_inputs\n",
+        encoding="utf-8",
+    )
+
+    tickers, summary = load_prior_context_unavailable_tickers(prior_scores, current_quarter="2022Q2")
+
+    assert tickers == {"AAA"}
+    assert summary["prior_context_unavailable_count"] == 1
+    assert summary["prior_context_unavailable_tickers"] == ["AAA"]
 
 
 def test_publish_passes_coverage_gating_to_top15_and_shadow(tmp_path, monkeypatch):

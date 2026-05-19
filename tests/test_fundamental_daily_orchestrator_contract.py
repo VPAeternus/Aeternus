@@ -293,6 +293,39 @@ def test_publish_readiness_requires_prior_match_for_llm_eligible_rows(tmp_path):
     assert readiness["qoq_context_match_rows"] == 0
 
 
+def test_publish_readiness_counts_allowed_qoq_missing_as_complete(tmp_path):
+    cfg = DailyRunConfig(as_of="2026-05-12", quarter="2026Q2", mode="broad-master-final", output_root=tmp_path / "run")
+    state = DailyRunState(config=cfg, run_id="test")
+    top15 = cfg.output_root / "high_conviction_top15.csv"
+    top15.parent.mkdir(parents=True, exist_ok=True)
+    top15.write_text("ticker\nAAA\n", encoding="utf-8")
+    state.artifacts["top15_csv"] = str(top15)
+    for gate_number in range(1, 11):
+        summary = {}
+        if gate_number == 7:
+            summary = {"llm_eligible_count": 2}
+        if gate_number == 8:
+            summary = {"expected_count": 2, "completed_count": 2}
+        if gate_number == 9:
+            summary = {
+                "prior_context_loaded": True,
+                "expected_prior_context_rows": 10,
+                "prior_duplicate_key_count": 0,
+                "llm_eligible_qoq_context_match_rows": 1,
+                "llm_complete_qoq_missing_rows": 0,
+                "llm_complete_qoq_allowed_missing_rows": 1,
+                "prior_llm_extract_missing_for_final_count": 0,
+            }
+        state.record(GateResult(gate_number, f"Gate {gate_number}", GateStatus.PASS, summary, {}))
+
+    orchestrator_module._write_publish_readiness_summary(state, final=True, stopped="")
+
+    readiness = json.loads((cfg.output_root / "publish_readiness_summary.json").read_text(encoding="utf-8"))
+    assert readiness["status"] == "pass"
+    assert readiness["prior_context_complete"] is True
+    assert readiness["qoq_allowed_missing_count"] == 1
+
+
 def test_publish_readiness_preserves_packet_count_when_llm_is_queued(tmp_path):
     cfg, services = _fake_orchestrator_fixture(tmp_path)
     result = run_daily_fundamental(cfg, services=DailyRunServices(**{**services.__dict__, "run_llm": None}))

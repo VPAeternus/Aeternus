@@ -1,5 +1,9 @@
 # Current Session State
 
+**Current note:** Replaced `AGENTS.md` with the user's new project golden rules: topology-first codebase cartography, verify connections/invariants before code, simplicity, surgical changes, goal-driven verification, deterministic code over model use, explicit token budgets, conflict surfacing, read-before-write, intent-based tests, checkpoints, convention matching, and fail-loud behavior. Verified file content after replacement. Last updated 2026-05-18T19:28:51-04:00.
+
+**Current note:** Fixed full walkforward restart blocker found after GPT Pro approval. Root cause: PIT CompanyFacts selector mishandled 10-K comparison-year facts. It picked by filing date only, so annual/QTD derivation could choose older comparative-year values and falsely quarantine many Q1 rows. Fixes: duration fields now derive Q4/QTD from the target period only; instant fields now choose the target balance-sheet date; prior-quarter QoQ gate now allows explicitly quarantined prior rows without inventing values, and publish readiness counts those allowed missing QoQ rows. Rebuilt `2022Q1` comparison context at `tradingagents/research/fundamental/runs/2022-03-31/2022Q1/qoq_context_asof_2022Q2_pit_v2_fix1`: Gates `1-11` pass, final rows `962`. Rebuilt `2022Q2` at `tradingagents/research/fundamental/runs/2022-06-30/2022Q2/walkforward_pit_v2_fix2`: Gates `1-11` pass, publish readiness `pass`, final rows `1009`, LLM expected/completed `397/397`, QoQ missing `0`, allowed prior-unavailable QoQ `17`, Top15 `15`, shadow `15`, complete panel validation passed. Verification: focused PIT/daily suite `59 passed`; `git diff --check` passed. Changes are uncommitted. Last updated 2026-05-18T18:33:04-04:00.
+
 **Current note:** Addressed GPT Pro complete-panel auditability gap. Complete panel schema is now `fundamental_complete_panel_v2` and retains `target_period_end`, fiscal period fields, row status flags, and deterministic per-field financial provenance columns for all six financial fields. Also fixed entry-date drift classification: holidays use actual market sessions and first-listing drift is labeled `ticker_not_listed_yet`. Full v5 acceptance roots: `tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v5` and `tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v5`; both passed Gates `1-11`, publish readiness, complete-panel validation, and reconciliation with `0` errors/warnings. Portable bundle `docs/pit_acceptance_review/` now includes `complete_panel_provenance_audit.csv`: missing self-contained columns `0`, required period/flag blanks `0`, financial provenance blanks `0`, derived-QTD missing source JSON `0`, final-to-complete key/value mismatches `0` for both quarters. Verification: focused PIT/panel suite `83 passed`; portable evidence validator passed; `git diff --check` passed. Last updated 2026-05-18T15:30:00-04:00.
 
 **Current note:** Completed GPT Pro next-stage full rebuild acceptance checks on merged `main`. Full non-smoke runs passed for `2022Q1` and `2026Q1` with Gate `8` LLM validation and Gate `10` Top10/Plus5/shadow publish enabled. Final roots: `tradingagents/research/fundamental/runs/2022-03-31/2022Q1/pit_repair_full_acceptance_v3` and `tradingagents/research/fundamental/runs/2026-03-31/2026Q1/pit_repair_full_acceptance_v3`. Publish readiness status `pass` for both; complete-panel reconciliation audit `blocking_errors.csv` and `warnings.csv` both empty; no selection future-field leakage. Added explicit non-executable research-score label fields for post-open research scoring: `non_executable_research_score_flag` and `execution_timing_missing_reason`. Verification: focused tests `18 passed`; final acceptance audit passed; `git diff --check` passed. Last updated 2026-05-18T13:50:21-04:00.
@@ -3107,14 +3111,32 @@
 
 ## Current fundamental walkforward status
 
-- Clean PIT walkforward is finalized through `2025Q2`.
-- Latest run root: `tradingagents/research/fundamental/runs/2025-06-30/2025Q2/walkforward_clean_v1`.
-- Latest prior context: `2025Q1` final scores.
-- `2025Q2` counts: final rows `1,227`; LLM packets `478`; current LLM-complete rows `359`; prior recovery rows `119`; QoQ missing rows `0`; Top15 rows `15`; shadow rows `15`; shadow refill replacements `0`.
-- Prior-impossible/no-filing names: `JILL`, `MTD`, `NCNO`.
-- PIT master: `outputs/fundamental_backtest/pit_master/fundamental_pit_master.csv`, `17,025` rows across `2022Q1`-`2025Q2`, duplicate ticker-quarter rows `0`.
-- Latest verification: focused daily/coverage/LLM tests `62 passed`; `git diff --check` passed.
-- Next quarter to run: `2025Q3`, with `2025Q2` final scores as prior comparison data.
+- Fixed-code PIT walkforward rebuild completed from `2022Q3` through `2026Q2` using suffix `walkforward_pit_v2_rebuild_20260518`.
+- `2022Q3` was started from `2022Q2` prior context: `tradingagents/research/fundamental/runs/2022-06-30/2022Q2/walkforward_pit_v2_fix2/fundamental_final_scores_2022-06-30.csv`.
+- Every rebuilt quarter passed publish readiness and complete-panel validation; every quarter emitted Top15 `15` and shadow `15`; QoQ missing rows `0`.
+- Verification summary written: `tradingagents/research/fundamental/runs/walkforward_pit_v2_rebuild_20260518_verification_summary.json`.
+- Final/complete row counts by quarter:
+  - `2022Q3`: `1015`
+  - `2022Q4`: `1026`
+  - `2023Q1`: `975`
+  - `2023Q2`: `1030`
+  - `2023Q3`: `1031`
+  - `2023Q4`: `1042`
+  - `2024Q1`: `1014`
+  - `2024Q2`: `1060`
+  - `2024Q3`: `1066`
+  - `2024Q4`: `1066`
+  - `2025Q1`: `1006`
+  - `2025Q2`: `1054`
+  - `2025Q3`: `1069`
+  - `2025Q4`: `1065`
+  - `2026Q1`: `1019`
+  - `2026Q2`: `1104`
+- Walkforward exposed two LLM resume/assembly bugs; both fixed:
+  - LLM output rows may be returned in a different order than packets, so batch validation now matches by `sample_id`.
+  - Reruns must not blindly reuse stale `batch_*.json` files or assemble output CSVs by scanning stale batch folders; in-session/external runners now write exactly validated returned rows.
+- Verification: focused PIT/daily/LLM suite `77 passed`; `git diff --check` passed.
+- Status: code/run changes uncommitted unless user asks to commit.
 
 ## Current fundamental 2026Q2 focus run
 

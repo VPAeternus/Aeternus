@@ -114,6 +114,118 @@ def test_q2_ytd_minus_q1_ytd_derives_qtd_net_income():
     assert selected["net_income_value_fact_period_type"] == "derived_qtd_from_ytd"
 
 
+def test_q4_annual_minus_q3_ytd_uses_target_year_not_comparative_year():
+    companyfacts = _facts(
+        {
+            "Revenues": {
+                "USD": [
+                    _fact(
+                        accn="0001193125-22-333333",
+                        form="10-K",
+                        fy=2021,
+                        fp="FY",
+                        start="2019-01-01",
+                        end="2019-12-31",
+                        filed="2022-02-24",
+                        val=100,
+                    ),
+                    _fact(
+                        accn="0001193125-22-333333",
+                        form="10-K",
+                        fy=2021,
+                        fp="FY",
+                        start="2020-01-01",
+                        end="2020-12-31",
+                        filed="2022-02-24",
+                        val=200,
+                    ),
+                    _fact(
+                        accn="0001193125-22-333333",
+                        form="10-K",
+                        fy=2021,
+                        fp="FY",
+                        start="2021-01-01",
+                        end="2021-12-31",
+                        filed="2022-02-24",
+                        val=1000,
+                    ),
+                    _fact(
+                        accn="0001193125-21-222222",
+                        form="10-Q",
+                        fy=2021,
+                        fp="Q3",
+                        start="2021-01-01",
+                        end="2021-09-30",
+                        filed="2021-11-04",
+                        val=700,
+                    ),
+                ]
+            }
+        }
+    )
+
+    selected = select_pit_financials(
+        companyfacts,
+        _row(
+            periodic_accession="0001193125-22-333333",
+            periodic_form="10-K",
+            target_period_end="2021-12-31",
+            source_available_date="2022-02-24",
+            financial_cutoff_date="2022-02-24",
+        ),
+        fields=["revenue_value"],
+    )
+
+    assert selected["revenue_value"] == 300
+    assert selected["revenue_value_fact_period_type"] == "derived_qtd_from_ytd"
+
+
+def test_instant_fact_uses_target_period_not_comparative_balance_sheet():
+    companyfacts = _facts(
+        {
+            "Assets": {
+                "USD": [
+                    _fact(
+                        accn="0001193125-22-333333",
+                        form="10-K",
+                        fy=2021,
+                        fp="FY",
+                        start="",
+                        end="2021-01-02",
+                        filed="2022-02-24",
+                        val=900,
+                    ),
+                    _fact(
+                        accn="0001193125-22-333333",
+                        form="10-K",
+                        fy=2021,
+                        fp="FY",
+                        start="",
+                        end="2022-01-01",
+                        filed="2022-02-24",
+                        val=1200,
+                    ),
+                ]
+            }
+        }
+    )
+
+    selected = select_pit_financials(
+        companyfacts,
+        _row(
+            periodic_accession="0001193125-22-333333",
+            periodic_form="10-K",
+            target_period_end="2022-01-01",
+            source_available_date="2022-02-24",
+            financial_cutoff_date="2022-02-24",
+        ),
+        fields=["assets_value"],
+    )
+
+    assert selected["assets_value"] == 1200
+    assert selected["assets_value_fact_end"] == "2022-01-01"
+
+
 def test_ytd_derivation_rejects_future_prior_ytd():
     companyfacts = _facts(
         {

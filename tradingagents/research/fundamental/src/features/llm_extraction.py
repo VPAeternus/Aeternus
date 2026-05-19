@@ -428,6 +428,30 @@ def _batched(items: list[dict[str, Any]], size: int) -> list[list[dict[str, Any]
     return [items[idx : idx + size] for idx in range(0, len(items), size)]
 
 
+def _validate_batch_results(results: Any, batch: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    if not isinstance(results, list) or len(results) != len(batch):
+        raise ValueError("LLM result count mismatch")
+    packet_by_id = {clean(packet.get("sample_id")): packet for packet in batch}
+    result_by_id: dict[str, dict[str, Any]] = {}
+    duplicate_ids: set[str] = set()
+    for result in results:
+        if not isinstance(result, dict):
+            raise ValueError("LLM result must be an object")
+        sample_id = clean(result.get("sample_id"))
+        if sample_id in result_by_id:
+            duplicate_ids.add(sample_id)
+        result_by_id[sample_id] = result
+    if duplicate_ids:
+        raise ValueError(f"duplicate LLM sample_ids: {sorted(duplicate_ids)}")
+    expected_ids = set(packet_by_id)
+    result_ids = set(result_by_id)
+    missing = sorted(expected_ids - result_ids)
+    unexpected = sorted(result_ids - expected_ids)
+    if missing or unexpected:
+        raise ValueError(f"LLM sample_id set mismatch: missing={missing} unexpected={unexpected}")
+    return [validate_llm_result(result_by_id[clean(packet.get("sample_id"))], packet) for packet in batch]
+
+
 def default_llm_cache_csv() -> Path:
     return sec_cache_root("llm_extractions", "daily_post_llm_cache.csv")
 
@@ -538,8 +562,15 @@ def run_llm_batches(
     for batch_index, batch in enumerate(_batched(packets, batch_size), start=1):
         out_path = output_dir / f"batch_{batch_index:04d}.json"
         if resume and out_path.exists():
-            written.extend(json.loads(out_path.read_text(encoding="utf-8")))
-            continue
+            try:
+                saved_rows = json.loads(out_path.read_text(encoding="utf-8"))
+                saved_ids = {clean(row.get("sample_id")) for row in saved_rows if isinstance(row, dict)}
+                expected_ids = {clean(packet.get("sample_id")) for packet in batch}
+                if saved_ids == expected_ids:
+                    written.extend(_validate_batch_results(saved_rows, batch))
+                    continue
+            except Exception:
+                pass
         prompt = build_prompt(batch)
         (output_dir / f"batch_{batch_index:04d}_prompt.txt").write_text(prompt, encoding="utf-8")
         last_error: Exception | None = None
@@ -549,9 +580,7 @@ def run_llm_batches(
                 (output_dir / f"batch_{batch_index:04d}_attempt_{attempt}_raw.txt").write_text(raw, encoding="utf-8")
                 parsed = extract_json_payload(raw)
                 results = parsed["results"] if isinstance(parsed, dict) and "results" in parsed else parsed
-                if not isinstance(results, list) or len(results) != len(batch):
-                    raise ValueError("LLM result count mismatch")
-                normalized = [validate_llm_result(result, packet) for result, packet in zip(results, batch)]
+                normalized = _validate_batch_results(results, batch)
                 out_path.write_text(json.dumps(normalized, indent=2), encoding="utf-8")
                 if shared_cache_csv is not None:
                     save_llm_rows_to_cache(normalized, cache_csv=shared_cache_csv)

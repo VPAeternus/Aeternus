@@ -89,13 +89,14 @@ def _select_field(companyfacts: dict[str, Any], row: dict[str, Any], field: str)
         return _empty_field(field, "missing_pit_fact")
 
     if field in INSTANT_FIELDS:
-        return _selected(field, _best_by_filed(consolidated), "instant", "selected_instant_fact")
+        target_items = [item for item in consolidated if _is_target_period(item, target_end)] if target_end else []
+        return _selected(field, _prefer_usd_best_by_end(target_items or consolidated), "instant", "selected_instant_fact")
 
     direct = [item for item in consolidated if _is_target_period(item, target_end) and _is_quarter_duration(item)]
     if direct:
         return _selected(field, _prefer_usd(direct), "quarterly", "selected_quarterly_fact")
 
-    derived = _derive_qtd_from_ytd(field, consolidated, all_items, cutoff)
+    derived = _derive_qtd_from_ytd(field, consolidated, all_items, cutoff, target_end)
     if derived:
         return derived
     return _empty_field(field, "missing_prior_ytd_for_qtd_derivation")
@@ -106,8 +107,14 @@ def _derive_qtd_from_ytd(
     current_items: list[dict[str, Any]],
     all_items: list[dict[str, Any]],
     cutoff: date | None,
+    target_end: date | None,
 ) -> dict[str, Any] | None:
-    current_ytd = [item for item in current_items if item.get("start") and not _is_quarter_duration(item)]
+    current_ytd = [
+        item for item in current_items
+        if item.get("start")
+        and not _is_quarter_duration(item)
+        and (target_end is None or _parse_date(item.get("end")) == target_end)
+    ]
     if not current_ytd:
         return None
     current = _prefer_usd(current_ytd)
@@ -214,6 +221,10 @@ def _is_target_period(item: dict[str, Any], target_end: date | None) -> bool:
 
 def _prefer_usd(items: list[dict[str, Any]]) -> dict[str, Any]:
     return _best_by_filed([item for item in items if item.get("unit") == "USD"] or items)
+
+
+def _prefer_usd_best_by_end(items: list[dict[str, Any]]) -> dict[str, Any]:
+    return _best_by_end_then_filed([item for item in items if item.get("unit") == "USD"] or items)
 
 
 def _best_by_filed(items: list[dict[str, Any]]) -> dict[str, Any]:

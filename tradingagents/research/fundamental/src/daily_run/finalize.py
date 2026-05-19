@@ -12,6 +12,7 @@ from .models import GateResult, GateStatus, RunMode
 
 
 QOQ_REQUIRED_FIELDS = ("entry_qoq_pct", "score_change", "prior_pre_llm_fundamental_score")
+PRIOR_CONTEXT_UNAVAILABLE_FILES = ("score_input_quarantine.csv", "entry_price_quarantine.csv")
 
 
 def _row_key(row: dict[str, Any]) -> tuple[str, str]:
@@ -61,6 +62,39 @@ def load_prior_context(path: Path | None, *, current_quarter: str) -> tuple[list
     elif not expected_rows:
         summary["reason"] = "no_rows_for_expected_prior_quarter"
     return expected_rows, summary
+
+
+def load_prior_context_unavailable_tickers(path: Path | None, *, current_quarter: str) -> tuple[set[str], dict[str, Any]]:
+    expected = _expected_prior_quarter(current_quarter)
+    if path is None:
+        return set(), {
+            "prior_context_unavailable_count": 0,
+            "prior_context_unavailable_tickers": [],
+            "prior_context_unavailable_files": [],
+        }
+    root = path.parent
+    tickers: set[str] = set()
+    files: list[str] = []
+    reasons: set[str] = set()
+    for filename in PRIOR_CONTEXT_UNAVAILABLE_FILES:
+        source = root / filename
+        if not source.exists() or source.stat().st_size == 0:
+            continue
+        files.append(str(source))
+        for row in read_rows(source):
+            ticker = clean(row.get("ticker")).upper()
+            if ticker and clean(row.get("quarter")) == expected:
+                tickers.add(ticker)
+                reason = clean(row.get("score_input_quarantine_reason") or row.get("entry_price_quarantine_reason") or row.get("quarantine_reason"))
+                if reason:
+                    reasons.add(reason)
+    return tickers, {
+        "prior_context_unavailable_count": len(tickers),
+        "prior_context_unavailable_tickers": sorted(tickers),
+        "prior_context_unavailable_tickers_sample": sorted(tickers)[:50],
+        "prior_context_unavailable_files": files,
+        "prior_context_unavailable_reasons": sorted(reasons)[:25],
+    }
 
 
 def add_qoq_context(rows: list[dict[str, Any]], prior_rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
@@ -159,6 +193,7 @@ def validate_broad_final_scores(
     reconciled = len(final_rows) + int(explicit_invalid_quarantine_count)
     prior_summary = dict(prior_context_summary or {})
     allowed_missing_tickers = set(prior_summary.get("prior_llm_extract_impossible_no_filings_tickers") or [])
+    allowed_missing_tickers.update(prior_summary.get("prior_context_unavailable_tickers") or [])
     qoq_summary = _qoq_presence_summary(final_rows, allowed_missing_tickers=allowed_missing_tickers)
     summary = {
         "final_score_rows": len(final_rows),

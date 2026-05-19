@@ -1,6 +1,10 @@
+import json
+import csv
+
 from tradingagents.research.fundamental.src.features.llm_extraction import (
     CSV_FIELDS,
     result_schema,
+    run_llm_batches,
     validate_llm_result,
 )
 from tradingagents.research.fundamental.src.features.post_llm_scores import classify_llm_status
@@ -55,6 +59,10 @@ def valid_payload(**extra):
     }
     base.update(extra)
     return base
+
+
+def valid_payload_for(sample_id: str, ticker: str, quarter: str = "2024Q4"):
+    return valid_payload(sample_id=sample_id, ticker=ticker, quarter=quarter)
 
 
 def test_llm_schema_declares_demote_severity_fields():
@@ -118,3 +126,96 @@ def test_old_rows_default_demote_fields_safely():
     assert out["post_llm_demote_reason_code"] == ""
     assert out["post_llm_demote_overrideable"] == 0
     assert out["post_llm_demote_evidence"] == ""
+
+
+def test_llm_batches_accept_same_sample_ids_when_model_reorders_results(tmp_path):
+    packets = [
+        {"sample_id": "AAA_2024Q4", "quarter": "2024Q4", "ticker": "AAA", "event_date": "2024-11-01"},
+        {"sample_id": "BBB_2024Q4", "quarter": "2024Q4", "ticker": "BBB", "event_date": "2024-11-01"},
+    ]
+
+    def invoker(_prompt, _schema, _model, _reasoning_effort):
+        return json.dumps({
+            "results": [
+                valid_payload_for("BBB_2024Q4", "BBB"),
+                valid_payload_for("AAA_2024Q4", "AAA"),
+            ]
+        })
+
+    rows = run_llm_batches(
+        packets,
+        output_dir=tmp_path / "llm_batches",
+        invoker=invoker,
+        model="test",
+        reasoning_effort="low",
+        batch_size=2,
+    )
+
+    assert [row["sample_id"] for row in rows] == ["AAA_2024Q4", "BBB_2024Q4"]
+
+
+def test_llm_batches_ignore_stale_resume_file_when_batch_sample_ids_changed(tmp_path):
+    output_dir = tmp_path / "llm_batches"
+    output_dir.mkdir()
+    (output_dir / "batch_0001.json").write_text(json.dumps([{"sample_id": "STALE_2024Q4"}]), encoding="utf-8")
+    packets = [
+        {"sample_id": "BBB_2024Q4", "quarter": "2024Q4", "ticker": "BBB", "event_date": "2024-11-01"},
+    ]
+    calls = 0
+
+    def invoker(_prompt, _schema, _model, _reasoning_effort):
+        nonlocal calls
+        calls += 1
+        return json.dumps({"results": [valid_payload_for("BBB_2024Q4", "BBB")]})
+
+    rows = run_llm_batches(
+        packets,
+        output_dir=output_dir,
+        invoker=invoker,
+        model="test",
+        reasoning_effort="low",
+        batch_size=1,
+    )
+
+    assert calls == 1
+    assert [row["sample_id"] for row in rows] == ["BBB_2024Q4"]
+
+
+def test_in_session_llm_writes_returned_rows_not_stale_batch_directory(tmp_path, monkeypatch):
+    from tradingagents.research.fundamental.src.cli import commands
+    from tradingagents.research.fundamental.src.features import llm_extraction
+    from tradingagents.research.fundamental.src import storage
+
+    packets_path = tmp_path / "packets.jsonl"
+    packets_path.write_text(
+        json.dumps({"sample_id": "BBB_2024Q4", "quarter": "2024Q4", "ticker": "BBB", "event_date": "2024-11-01"}) + "\n",
+        encoding="utf-8",
+    )
+    output_dir = tmp_path / "llm_batches"
+    output_dir.mkdir()
+    (output_dir / "batch_0001.json").write_text(json.dumps([{"sample_id": "STALE_2024Q4"}]), encoding="utf-8")
+    output_csv = tmp_path / "post_llm_scores.csv"
+    current_row = validate_llm_result(
+        valid_payload_for("BBB_2024Q4", "BBB"),
+        {"sample_id": "BBB_2024Q4", "quarter": "2024Q4", "ticker": "BBB", "event_date": "2024-11-01"},
+    )
+
+    def fake_run_llm_batches(*_args, **_kwargs):
+        return [current_row]
+
+    monkeypatch.setattr(llm_extraction, "run_llm_batches", fake_run_llm_batches)
+    monkeypatch.setattr(storage, "write_table", lambda *_args, **_kwargs: None)
+
+    commands._run_in_session_llm(
+        packets_path=packets_path,
+        output_dir=output_dir,
+        output_csv=output_csv,
+        lake_root=tmp_path / "lake",
+        as_of="2024-12-31",
+        model="test",
+        reasoning_effort="low",
+        batch_size=1,
+    )
+
+    rows = list(csv.DictReader(output_csv.open()))
+    assert [row["sample_id"] for row in rows] == ["BBB_2024Q4"]
